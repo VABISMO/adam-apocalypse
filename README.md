@@ -1,6 +1,7 @@
 
-# APOCALYPSE OF ADAM PAPER 
+# APOCALYPSE OF ADAM  
 
+### Paper 
 
 [📄 View the PDF](pdf/lector-del-cielo_EN.pdf)
 
