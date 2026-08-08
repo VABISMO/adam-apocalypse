@@ -1,6 +1,6 @@
 
 <iframe src="./pdf/lector-del-cielo_EN.pdf" width="100%" height="600px"></iframe>
-
+[📄 Ver el PDF](./pdf/lector-del-cielo_EN.pd)
 
 # Caeli Reader (קורא השמים)
 
