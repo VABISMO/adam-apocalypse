@@ -114,6 +114,8 @@ V.Nos
 
 Julian S.
 
+*last incarnation
+
 ## Literature
 
 - Sefer Yetzirah. Ed. A. Hayman (2004); trans. A. Kaplan (1990).
