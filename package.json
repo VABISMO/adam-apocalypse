@@ -1,0 +1,10 @@
+{
+  "name": "caeli-reader",
+  "version": "3.1.0",
+  "private": true,
+  "description": "Caeli Reader — the stellar alphabet of the Sefer Yetzirah",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

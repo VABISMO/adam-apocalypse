@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230b0e14'/%3E%3Cpath d='M12 2 L14.6 8.6 L22 9.3 L16.3 14.1 L18.2 21.3 L12 17.3 L5.8 21.3 L7.7 14.1 L2 9.3 L9.4 8.6 Z' fill='%23e8c87a'/%3E%3C/svg%3E" />
+<title>Caeli Reader · the stellar alphabet of the Sefer Yetzirah</title>
+<style>
+  :root{
+    --bg:#0b0e14; --panel:#131826; --panel2:#1a2030; --line:#283145;
+    --txt:#e7ecf5; --dim:#8a96ad; --gold:#e8c87a; --blue:#7fb0ff; --green:#6fe0a0; --red:#ff8a8a; --warn:#ffcf6a; --violet:#c79bff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+  .wrap{max-width:1120px;margin:0 auto;padding:22px 18px 90px}
+  h1{font-size:1.5rem;margin:0 0 2px;font-weight:700}
+  h1 .he{color:var(--gold);font-size:1.7rem}
+  h1 .en{color:var(--dim);font-size:1.05rem;font-weight:500}
+  .sub{color:var(--dim);font-size:.92rem;margin-bottom:16px}
+  h2{font-size:1.05rem;margin:0 0 12px;color:var(--blue);font-weight:600;letter-spacing:.3px}
+  h2 .he{color:var(--gold);font-size:1.3rem}
+  h3{font-size:.95rem;margin:14px 0 8px;color:var(--violet);font-weight:600}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+  .he{font-size:1.6rem;line-height:1;vertical-align:middle}
+  .gk{font-size:1.45rem;line-height:1;vertical-align:middle}
+  table{border-collapse:collapse;width:100%;font-size:.9rem}
+  th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--dim);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.5px}
+  .letter-cell{font-size:1.5rem;width:50px;text-align:center}
+  .deg{color:var(--dim);font-variant-numeric:tabular-nums}
+  .boundary{color:var(--warn);font-weight:600}
+  .controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  button{background:var(--panel2);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:.9rem;cursor:pointer}
+  button:hover{border-color:var(--blue)}
+  button.on{border-color:var(--green);color:var(--green)}
+  input[type=date],input[type=text],input[type=number]{background:var(--panel2);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:8px;font-size:.9rem;font-family:inherit}
+  .sentence{font-size:1.5rem;letter-spacing:6px;direction:rtl;text-align:right;color:var(--gold);padding:8px 0 0}
+  .tcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:12px}
+  .tcard{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px}
+  .tcard.always{border-color:var(--violet)}
+  .tcard .the{font-size:1.9rem;color:var(--gold)}
+  .tcard.always .the{color:var(--violet)}
+  .tcard .read{font-size:.78rem;color:var(--dim);letter-spacing:1px;margin-top:2px}
+  .tcard .trans{font-weight:600;margin-top:4px}
+  .tcard .g{font-size:.76rem;margin-top:6px;color:var(--dim)}
+  .tcard .simp{font-size:.72rem;color:var(--blue);margin-top:3px}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  @media(max-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
+  .card{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:12px;text-align:center}
+  .card .l{font-size:2.2rem;color:var(--gold);display:block;margin-bottom:4px}
+  .card .src{font-size:.78rem;color:var(--dim)}
+  .card .src b{color:var(--txt)}
+  .card.missing .l{color:var(--red);opacity:.6}
+  .week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+  @media(max-width:640px){.week{grid-template-columns:repeat(4,1fr)}}
+  .day{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:9px 4px;text-align:center}
+  .day .dn{font-size:.7rem;color:var(--dim);text-transform:uppercase}
+  .day .pl{font-size:.72rem;color:var(--blue)}
+  .day .l{font-size:1.5rem;color:var(--gold)}
+  .day.today{border-color:var(--green);box-shadow:0 0 0 2px var(--green) inset}
+  .day.today .dn{color:var(--green)}
+  .tl{display:flex;flex-wrap:wrap;gap:2px}
+  .tl .d{width:9px;height:13px;background:#1c2333;border-radius:2px}
+  .tl .d.on{background:var(--gold)}
+  .tl .d.cur{outline:2px solid var(--green);outline-offset:-1px}
+  .tl .d.on.cur{background:var(--green)}
+  .legend{font-size:.8rem;color:var(--dim);margin-top:8px}
+  .muted{color:var(--dim);font-size:.86rem}
+  .note{font-size:.8rem;color:var(--dim);margin-top:8px}
+  .pill{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:20px;padding:2px 10px;font-size:.78rem;color:var(--dim)}
+  .pill.ok{color:var(--green);border-color:var(--green)}
+  .pill.no{color:var(--red);border-color:#5a3030}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .row{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+  a{color:var(--blue)}
+  .key{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:1px 8px;font-size:.78rem;color:var(--dim);margin:2px}
+  .key.on{color:var(--green);border-color:var(--green)}
+  .key.off{opacity:.4;text-decoration:line-through}
+  .key.click{cursor:pointer}
+  .key.click:hover{border-color:var(--blue)}
+  .gw{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:6px 8px;border:1px solid var(--line);border-radius:8px;margin-bottom:6px;background:var(--panel2)}
+  .gw.ok{border-color:var(--green)}
+  .gw.no{border-color:#5a3030}
+  .gw .w{font-size:1.4rem;color:var(--gold)}
+  .gw .es{font-weight:600}
+  .era{padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel2);margin-bottom:6px}
+  .era.now{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold) inset}
+  .era.next{border-color:var(--violet)}
+  .era .top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+  .era .ehe{font-size:1.5rem}
+  .era .yr{color:var(--dim);font-size:.82rem;font-variant-numeric:tabular-nums}
+  .era .desc{font-size:.8rem;color:var(--dim);margin-top:3px}
+
+  /* tabs */
+  .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:20;border-bottom:1px solid var(--line)}
+  .tab{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:7px 13px;font-size:.83rem;cursor:pointer;color:var(--dim);white-space:nowrap;user-select:none}
+  .tab:hover{border-color:var(--blue);color:var(--txt)}
+  .tab.active{background:var(--blue);color:#0b0e14;border-color:var(--blue);font-weight:600}
+  .subtabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .subtab{background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:6px 12px;font-size:.82rem;cursor:pointer;color:var(--dim);white-space:nowrap;user-select:none}
+  .subtab:hover{border-color:var(--violet);color:var(--txt)}
+  .subtab.active{background:var(--violet);color:#0b0e14;border-color:var(--violet);font-weight:600}
+  .fig{margin:14px auto;padding:12px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;text-align:center;max-width:100%}
+  .fig svg{max-width:100%;height:auto}
+  .fig .cap{font-size:.78rem;color:var(--dim);margin-top:8px}
+
+  /* magic squares */
+  .kamea{display:inline-grid;gap:2px;background:var(--line);padding:2px;border-radius:6px;margin:4px}
+  .kamea .kc{background:var(--panel2);width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-variant-numeric:tabular-nums}
+  .kamea .kc.hl{background:#243657;color:var(--gold);font-weight:700}
+  .kbox{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:10px}
+  .chips{display:flex;gap:6px;flex-wrap:wrap}
+  .chip{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:4px 9px;font-size:.8rem}
+  code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:.85em}
+  .big{font-size:1.15rem;color:var(--gold)}
+  ul.muted{margin:4px 0 0;padding-left:20px}
+  .iv{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Caeli Reader <span class="he">קורא השמים</span></h1>
+  <div class="sub">The stellar alphabet of the <b>Sefer Yetzirah</b>: Hebrew letters read in the sky. Real planet positions (astronomy-engine), the full Strong lexicon, the reuse rule, Genesis 1:1 and zodiacal ages by precession — plus every calculator from the article (gematria, sigils, kameot, 72 angels, saros, ayanamsa, Revelation isopsephy…).</div>
+  <div id="root"></div>
+</div>
+
+<script type="module" src="app.bundle.js"></script>
+</body>
+</html>

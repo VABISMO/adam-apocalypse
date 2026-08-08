@@ -1,0 +1,633 @@
+# El Lector del Cielo: el alfabeto estelar del *Sefer Yetzirah* como marco de legibilidad versicular, sincronía lunar-solar y marcador de eras precesionales
+
+**Versión:** 3.1 · **Fecha:** 2026-08-07 · **Software acompañante:** `index.html` + `app.bundle.js` + `lexicon.json` (app); librería `astronomy-engine.mjs` (v2.1.19, vendored) + `lib.mjs` (módulo compartido); scripts de validación `tests.mjs` (86 aserciones, todas en verde), `calc_all.mjs`, `calc_37_73.mjs`, `calc_eclipse_deep.mjs`, `calc_mazzalot.mjs`, `calc_72.mjs`, `palindrome.mjs`, `calc_phrase.mjs`, `slow_scan.mjs`, `gen_eclipse.mjs`, `calc_crosscultural.mjs`, `fetch_gen.mjs`; **nuevos v3.1 (§15b):** `calc_magic_squares.mjs`, `calc_sigils.mjs`, `calc_angels72.mjs`, `calc_gen11_structure.mjs`, `calc_saros_series.mjs`, `calc_ayanamsa.mjs`, `calc_windows_causality.mjs`, `calc_week_chaldean.mjs`. Reproducir: `node fetch_gen.mjs && node tests.mjs && node calc_*.mjs`.
+
+---
+
+## Resumen
+
+Se formaliza y testa computacionalmente un sistema —*Lector del Cielo* (קורא השמים)— que opera el mapeo tripartito del *Sefer Yetzirah* (3 madres / 7 dobles / 12 simples) sobre el cielo real calculado con efemérides modernas (astronomy-engine v2.1.19). Bajo una **regla de legibilidad por pertenencia a conjunto** (reutilización), un verso hebreo es legible en una fecha *t* sii el conjunto de letras simples que requiere es subconjunto del conjunto de signos zodiacales ocupados por los 10 cuerpos. El trabajo demuestra, con cálculos reproducibles:
+
+1. **Gematría decimal posicional:** 22 letras + 5 finales = 27 = 1–9, 10–90, 100–900. El alfabeto *es* el conjunto de cifras de base 10.
+2. **Precesión:** 50,29″/año → 1° cada 71,58 años (≈ 72); una era zodiacal = 2147,5 años; año grande = 25 771 años (25 920 a la cifra platónica de 72 a/°). 144 años = 2,01°.
+3. **Equinoccios/solsticios 2026:** longitud solar aparente 0°, 90°, 180°, 270° — los 4 cardinales tropicales son medibles al segundo.
+4. **Sincronía lunar-solar:** el año trópico contiene 12,368 meses sinódicos; Metón 19a = 235 lunaciones (Δ 0,087 d); el calendario islámico (lunar puro) deriva 10,875 d/año y se re-alinea con el solar cada ~33 años (358,9 d ≈ 1 año).
+5. **El 19 unifica tres registros:** Metón (19a calendárico), Saros (19 años de eclipse = 6585,78 d ≈ 223 sinódicos), basmala coránica (19 letras; 114 azoras = 6×19).
+6. **Eclipses — 37/73 (búsqueda exhaustiva, refutada):** se testaron todas las vías de contacto y **37/73 no estructuran los eclipses**. (i) Factorización de los 10 ciclos canónicos (47, 87, 99, 135, 177, 223, 235, 358, 669, 940): ni 37 ni 73 son factores de ninguno. (ii) 37/73 como *periodo*: 37/73 sinódicos, dracónicos y años-eclipse no alinean el nodo (drift draconicano > 0,1); las combinaciones lineales de Saros(223) e Inex(358) múltiplos de 37 (p. ej. 3·358−223 = 851 = 37×23) tienen drift draconicano ~0,5 → **no son ciclos eclipsales** (el eclipse no se repetiría). (iii) Ciclo nodal (18,613 a): hay dos conteos — *39,2* estaciones (periodo nodal ÷ año-eclipse/2, el astronómicamente correcto) y *37,2* (2/año × 18,613, cuenta ingenua en años trópicos que sub-conta porque el año-eclipse es más corto que el trópico); **verificado empíricamente con astronomy-engine: ~40 estaciones y ~87 eclipses sol+lun por ciclo nodal — no 37**. El que sí cierra es 38 (= Saros). (iv) Empírico: 3000 eclipses solares en 1300 a = 2,31/año (NASA ~2,38). **Conclusión: 37 ausente de la estructura eclipsal; 73 sólo como recuento estadístico (~70–86 eclipses por serie saros, media ~72–73), no como periodo.** Los primos estructurales de los eclipses son 19, 47 y 223. **Hipótesis descartadas (fuera):** «37 estaciones por ciclo nodal», «37/73 como periodo eclipsal», «851=37×23 como ciclo». **Lo que SÍ encaja — con el sol, no con los eclipses (§9.4):** 365 = 73×5 (73 pentadas = año solar civil) y 2701 pentadas = 37×365 = 37 años civiles exactos (2701 = 37 años × 73 pentadas/año); identidad calendárico-civil (año de 365 d), no orbital (a 365,2422 d da 36,98 a, ≈37 pero no exacto); corroborada independientemente por el Haab maya (§9.6).
+7. **Cadencia de יהוה:** requiere {י,ה,ו} = Virgo+Aries+Tauro, rellenable por planetas rápidos → cadencia ~mensual.
+8. **Génesis 1:1:** requiere {י,ה,ל,ו,צ} = Virgo+Aries+Libra+Tauro+**Acuario**; Acuario y Aries solo anclados a la vez por **Plutón y Neptuno** → ventanas de ~13 años cada **~491 años** (sinódico Neptuno–Plutón). Seis ventanas (−427, 61, 552, 1043, 1535, 2025), coincidentes con re-formaciones religioso-lingüísticas mayores.
+9. **Espejo-palíndromo 2701→3773:** real pero **no selectivo a nivel corpus** —ni por verso (Génesis 39,0 % ≈ Markov ord-1 39,7 % ≈ uniforme 41,4 %) ni por palabra (47,9 % del lexicón, 58 % de los mazzalot), y medido por **bloques de k versos consecutivos** (la unidad correcta, no la letra suelta) sigue sin rarefactorizar ni separarse del nulo a ningún k. No separa lecturas válidas de inválidas (días Génesis-legibles 24,9 % vs no-legibles 41,1 %). El descarte es posicional (*S* ⊆ *O*, 88,5 % de fechas descartadas; P = q^|S| con q≈0,58, rarefactorización exponencial con el nº de elementos). **Novedad (núcleo original):** el exceso SÍ aparece concentrado en **Génesis 1 (1–31)**, el núcleo menos redactado: palindroma al **61,3 %** vs **38,3 %** del nulo de Markov emparejado por longitud (p≈8×10⁻³, binomial) — *no* es artefacto de longitud (los 31 versos son todos de 4 cifras; tasa del corpus a 4 cifras = 39,7 %). El test a nivel de corpus diluía esta señal. Caveat: n=31 (un capítulo); el palíndromo sigue siendo aritméticamente «fácil», así que el exceso puede reflejar composición deliberada de versos cortos antes que codificación astronómica — **hipótesis, no prueba** (§13.3). Sí son específicas las sumas con valor astronómico: Egel+Ayil = 144, Shor = 2×suma(1..22), Génesis 1:2 = 9999 (§6.2, §13.1–13.2).
+10. **Sin correlación con eclipses:** días Génesis 6,5 % vs 24,7 % esperado.
+11. **144 = 12²** = meses lunares de los 12 años comunes del ciclo metónico (12×12 + 7×13 = 144+91 = 235); 144 000 = 360×400 (ת = Luna).
+12. **Tetramorfo:** las 4 caras de los querubines (buey, león, águila, hombre) = los 4 signos **fijos** (Tauro, Leo, Escorpio, Acuario) a 90° exactos (cruz fija); los 12 *mazzalot* hebreos son animales/objetos (טלה cordero, שור buey, אריה león…).
+13. **Ingeniería intencional de letras (atestada y, para los 72, demostrada):** 231 puertas del SY (C(22,2)); primera puerta AB + espejo BA = **ABBA = «padre», palíndromo**; 3·7·12−22+1 = 231 (autocoherencia); **Éxodo 14:19-21 = 72 letras consonánticas cada verso** (verificado en MT; 3 consecutivos de 72 → p ≈ 5×10⁻⁷, ingeniería intencional); Abulafia y *Sefer Raziel HaMalakh* documentan el método. La **intencionalidad de la práctica** es real; la atribución astronómica específica de la gematría tórica permanece como hipótesis (§6.3).
+14. **Tradición operativa y cierre de asignaturas (v3.1, §15b):** los **7 kameot mágicos planetarios** (15, 34, 65, 111, 175, 260, 369) son las 7 dobles/planetas (Mercurio 260 = Tzolkin maya; Sol: suma 1..36 = 666); la **reducción Aiq Bekar** coincide exactamente con la gematría decimal-posicional de §2 (puente a los **sigilos**: nombre → Aiq Bekar → trazo sobre el Lo Shu, reproducible); los **72 ángeles del Shem HaMephorash** se extraen por columnas de Éxodo 14:19-21 (216 = 6³ consonantes; trío 0 = והו/Vehuiah verificado). Asignaturas cerradas por cálculo: **estructura 37×73 de las 7 palabras** (23/127 subconjuntos múltiplos de 37, nulo por permutación del multiset, p≈3,1×10⁻⁴); **recuento de serie saros** (152 series completas, 54–87, mediana 72 — el «73» es estadístico, por cálculo); **ayanamsa** (dispersión 190 a; el descarte tropical es robusto); **heptagrama 7 dobles=7 días** (orden caldeo por periodos sidéreos + 24 mod 7 = 3 + etimología romance). Acotada con caveat: **causalidad de las 6 ventanas** (cadencia 491 a, regularidad p<5×10⁻⁶, pero sesgo de selección + n=6 → hipótesis, no causa). `tests.mjs` = 86 aserciones, todas en verde.
+
+Se declara el alcance: síntesis **hermético-astronómica moderna**, no práctica del *Sefer Yetzirah* clásico.
+
+---
+
+## 1. Introducción y declaración de alcance
+
+El *Sefer Yetzirah* (SY, «Libro de la Formación», ss. II–VI d.C.) expone una cosmogonía lingüística: el universo fue formado con 22 letras —**3 madres** (א מ ש, elementos), **7 dobles** (ב ג ד כ פ ר ת, planetas y dimensiones duales) y **12 simples** (ה ו ז ח ט י ל נ ס ע צ ק, constelaciones y meses)—. El SY es lingüística cosmogónica, no un oráculo.
+
+Este trabajo **no** atribuye al SY clásico una práctica adivinatoria de lectura del cielo en tiempo real. La operacionalización es una **innovación hermética moderna**: tomar el mapeo letra→astro del SY como un protocolo verificable sobre efemérides astronómicas. El interés es **estrictamente formal y empírico**: dado el mapeo y una regla explícita, ¿qué regularidades emergen y son distinguibles de un modelo nulo? Toda afirmación numérica del artículo es reproducible con los scripts acompañantes.
+
+---
+
+## 2. El sistema de valores: gematría como base-10 posicional
+
+La gematría estándar (*mispar hechrachi*):
+
+| rango | letras | valores |
+|---|---|---|
+| unidades 1–9 | א ב ג ד ה ו ז ח ט | 1 2 3 4 5 6 7 8 9 |
+| decenas 10–90 | י כ ל מ נ ס ע פ צ | 10 20 30 40 50 60 70 80 90 |
+| centenas 100–400 | ק ר ש ת | 100 200 300 400 |
+| centenas 500–900 (finales) | ך ם ן ף ץ | 500 600 700 800 900 |
+
+22 + 5 finales = **27 = 9 + 9 + 9**: la totalidad de los valores posicionales de base 10 hasta 900. En la gematría estándar las finales valen lo mismo que su forma regular (ם = מ = 40), de modo que Génesis 1:1 = 2701.
+
+**Cálculo (Génesis 1:1):**
+
+בראשית (913) + ברא (203) + אלהים (86) + את (401) + השמים (395) + ואת (407) + הארץ (296) = **2701**.
+2701 = 37 × 73; 2701 = 73·74/2 (73.º triangular); 2701 + 1072 (inverso de cifras) = **3773** (palíndromo).
+
+> La asignación numérica no es arbitraria: el alfabeto (con finales) **es** el conjunto de cifras de un sistema decimal posicional. Coherente con la idea del SY de que las letras son las primitivas estructurales —aquí, las primitivas de la enumeración posicional.
+
+---
+
+## 3. Precesión y el grado de 72 años
+
+La precesión de los equinoccios desplaza el punto vernal retrógradamente sobre la eclíptica a razón de **50,29″ de arco por año** (constante IAU 2006, valor redondeado).
+
+**Cálculo:**
+
+- 50,29″/año ÷ 3600 = **0,01397°/año**.
+- 1° ÷ 0,01397 = **71,58 años por grado** → ≈ 72 a/° (cifra tradicional).
+- 1 signo = 30° → 30 ÷ 0,01397 = **2147,5 años por era zodiacal**.
+- 360° → 360 ÷ 0,01397 = **25 771 años** (año grande precesional real).
+- A la cifra tradicional de 72 a/°: 72 × 360 = **25 920 años** (año grande platónico).
+- **144 años** × 0,01397°/año = **2,01°** (dos grados de precesión).
+
+El **72** no es solo un redondeo: 72 = 6×12, y es la cifra del *Shem HaMephorash* (los 72 tríos de letras de Éxodo 14:19–21, tres versos de 72 letras). La correspondencia 1° ↔ 72 años dota de contenido a la cifra tradicional.
+
+**Eras precesionales (entrada del equinoccio en cada signo, ayanamsa Lahiri 24,18° en 2024; equinoccio sidérico 335,82° = Piscis):**
+
+| signo | entrada | | signo | entrada |
+|---|---|---|---|---|
+| Aries (טלה) | ~1854 a.C. | | Libra | ~11 031 d.C. |
+| Tauro (שור) | ~4002 a.C. | | Escorpio | ~8883 d.C. |
+| Géminis | ~6150 a.C. | | Sagitario | ~6736 d.C. |
+| Cáncer | ~8297 a.C. | | Capricornio | ~4588 d.C. |
+| Leo (אריה) | ~10 445 a.C. | | **Acuario (צ)** | **~2441 d.C.** |
+| Virgo | ~13 178 d.C. | | **Piscis (ק)** | **~293 d.C.** |
+
+**Lectura histórica de las eras recientes (ordenadas en el tiempo):**
+
+- **Era de Tauro** (~4002 a.C.): apogeo de los cultos taurinos —Apis en Egipto, toro minoico, becerros sagrados—. El equinoccio de primavera se alzaba en la constelación del Toro.
+- **Era de Aries** (~1854 a.C.): tránsito al carnero. Patriarcas hebreos (Abraham, «el carnero trabado en la zarza»), cultos del carnero en Egipto (Amón con cuernos), fin de los imperios taurinos.
+- **Era de Piscis** (~293 d.C.): el pez como símbolo cristiano; el equinoccio entra en Piscis. Coincide con la consolidación del cristianismo (s. IV).
+- **Era de Acuario** (~2441 d.C.): entrada futura. **Pero la entrada de Plutón en Acuario (2024) y de Neptuno en Aries (2025) anticipan estructuralmente la era** (sección 12).
+
+> Las «eras de ~2000 años» son la **era precesional** (2147,5 a, ≈ 2000 en redondeo popular). Es una periodicidad de **fondo**, distinta del **~491 años** sinódico Neptuno–Plutón que rige la legibilidad de Génesis (sección 12). Ambas coinciden ahora.
+
+---
+
+## 4. Equinoccios, solsticios y la rejilla tropical
+
+El zodiaco **tropical** se define por la longitud solar aparente geocéntrica λ☉: el equinoccio de primavera es λ☉ = 0°, el solsticio de verano λ☉ = 90°, etc. Los 12 signos son los 12 sectores de 30°. Esta es la rejilla a la que se mapean las 12 simples.
+
+**Cálculo (astronomy-engine, `Seasons(2026)` + `Ecliptic(GeoVector(Sun)).elon`):**
+
+| evento | instante (UT) | λ☉ | signo cardinal |
+|---|---|---|---|
+| Equinoccio de primavera | 2026-03-20 14:45:36 | **0,000°** | Aries 0° |
+| Solsticio de verano | 2026-06-21 08:25:00 | **90,000°** | Cáncer 0° |
+| Equinoccio de otoño | 2026-09-23 00:05:38 | **180,000°** | Libra 0° |
+| Solsticio de invierno | 2026-12-21 20:50:22 | **270,000°** | Capricornio 0° |
+
+La rejilla tropical de 30° iguales es, pues, **una medición astronómica exacta**, no una convención simbólica arbitraria. (Las constelaciones físicas IAU son 13, desiguales; el sistema usa la rejilla tropical por diseño —sección 5.)
+
+---
+
+## 5. El mapeo estelar
+
+| clase | n | letras | asignación | depende de la posición | reutilizable |
+|---|---|---|---|---|---|
+| madres | 3 | א מ ש | elementos · constelaciones circumpolares fijas (Draco 268°, Osa Menor 89°, Casiopea 38°) | no (eje fijo) | siempre |
+| dobles | 7 | ב ג ד כ פ ר ת | los 7 planetas clásicos (identidad del planeta) | no | siempre |
+| simples | 12 | ה ו ז ח ט י ל נ ס ע צ ק | los 12 signos tropicales | **sí** (signo ocupado) | sí (pertenencia) |
+
+**Mapeo simple↔signo:**
+
+| signo | letra | valor | | signo | letra | valor |
+|---|---|---|---|---|---|---|
+| Aries | ה | 5 | | Libra | ל | 30 |
+| Tauro | ו | 6 | | Escorpio | נ | 50 |
+| Géminis | ז | 7 | | Sagitario | ס | 60 |
+| Cáncer | ח | 8 | | Capricornio | ע | 70 |
+| Leo | ט | 9 | | Acuario | צ | 90 |
+| Virgo | י | 10 | | Piscis | ק | 100 |
+
+**Dobles↔planeta:** Saturno=ב, Júpiter=ג, Marte=ד, Sol=כ, Venus=פ, Mercurio=ר, Luna=ת.
+
+**Madres↔constelación circumpolar:** א→Draco (268°), מ→Osa Menor (89°), ש→Casiopea (38°). El **eje fijo** no precesiona; las madres son el polo inmóvil del sistema, frente a las 12 simples que rotan con el equinoccio.
+
+> **Nota tropical vs. IAU.** Las 12 simples se mapean a sectores tropicales de 30° (sección 4), no a constelaciones IAU. Es una **decisión de diseño** necesaria para la rejilla letra↔signo uno-a-uno; aplicar fronteras IAU (13, desiguales) destruiría la premisa. Las madres, en cambio, sí se sitúan frente a sus constelaciones reales.
+
+---
+
+## 6. Los 12 mazzalot: los animales del zodiaco y el tetramorfo
+
+El zodiaco hebreo (*mazzalot*) nombra cada signo por un animal u objeto. Estos nombres **son** las figuras que reaparecen en los símbolos religiosos (carnero, becerro, buey, león):
+
+| signo | letra | mazzal hebreo | significado |
+|---|---|---|---|
+| Aries | ה | טלה *Taleh* | **cordero / carnero** |
+| Tauro | ו | שור *Shor* | **buey / toro** |
+| Géminis | ז | תאומים *Teomim* | gemelos |
+| Cáncer | ח | סרטן *Sartan* | cangrejo |
+| Leo | ט | אריה *Aryeh* | **león** |
+| Virgo | י | בתולה *Betulah* | virgen |
+| Libra | ל | מאזניים *Moznayim* | balanza |
+| Escorpio | נ | עקרב *Akrav* | escorpión |
+| Sagitario | ס | קשת *Keshet* | arco |
+| Capricornio | ע | גדי *Gedi* | cabrito |
+| Acuario | צ | דלי *D'li* | cántaro / cubo |
+| Piscis | ק | דגים *Dagim* | peces |
+
+- **Carnero** = Aries = טלה = letra **ה** (Heh).
+- **Buey / becerro / toro** = Tauro = שור = letra **ו** (Vav).
+- **León** = Leo = אריה = letra **ט** (Tet).
+
+Estas dos letras —**ה (Aries/carnero) y ו (Tauro/buey)**— son precisamente las que aparecen en יהוה (junto a י/Virgo) y en Génesis 1:1. El becerro de oro y el carnero de Abraham son las figuras de las eras taurina y aries (sección 3).
+
+### 6.1 El tetramorfo = la cruz fija
+
+Ezequiel 1 y Apocalipsis 4 describen cuatro seres con caras de **hombre, león, buey y águila**. Corresponden a los **4 signos fijos** del zodiaco (el eje fijo, opuesto al eje cardinal):
+
+| cara | signo fijo | longitud (centro) |
+|---|---|---|
+| buey | Tauro (שור) | 45° |
+| león | Leo (אריה) | 135° |
+| águila | Escorpio (עקרב) | 225° |
+| hombre | Acuario (דלי) | 315° |
+
+**Cálculo:** 135 − 45 = 90; 225 − 135 = 90; 315 − 225 = 90; (45 + 360) − 315 = 90. Los cuatro signos fijos están a **90° exactos** → forman una **cruz cuadrada** (la «cruz fija»), imagen geométrica del tetramorfo. El águila sustituye al escorpión en la tradición exegética (aspecto ascendente del octante escorpión).
+
+### 6.2 Gematría de la transición Tauro→Aries: Egel, Ayil, Shor
+
+La transición entre la Era de Tauro y la de Aries (§3) se narra en el éxodo del becerro al carnero. Las tres palabras hebreas —becerro, carnero, toro— tienen gematrías con propiedades aritméticas verificables:
+
+| palabra | hebreo | letras | gematría | + inverso | resultado |
+|---|---|---|---|---|---|
+| Becerro | עגל *Egel* | ע70 ג3 ל30 | 103 | 103 + 301 | **404** (palíndromo) |
+| Carnero | איל *Ayil* | א1 י10 ל30 | 41 | 41 + 14 | **55** (repdigit) |
+| Toro | שור *Shor* | ש300 ו6 ר200 | 506 | 506 + 605 | **1111** (repdigit) |
+
+**Suma de la transición:** Egel + Ayil = 103 + 41 = **144** (el ídolo que termina + el símbolo que comienza = 144; véase §14).
+
+**Shor y el alfabeto:** suma(1..22) = 22·23/2 = **253** (triangular de 22, las 22 letras). Y 253 × 2 = **506 = Shor**. El nombre hebreo de Tauro equivale al doble de la suma de las 22 letras —el «alfabeto duplicado» (cielo y tierra) del SY—.
+
+**Génesis 1:2:** gematría = 3546; 3546 + 6453 = **9999** (repdigit de 4 cifras), verificable en el corpus Sefaria.
+
+> **Aritmética real, interpretación acotada.** Todas las sumas anteriores son exactas. **La propiedad de palíndromo-espejo por sí sola no es un checksum selectivo** (§13.1): el **47,9 %** de las 6045 raíces del lexicón y el **58 %** de los *mazzalot* son ya palíndromo-espejo —base alta de la gematría decimal—. Lo específico (no trivial) de estas tres palabras no es el palíndromo, sino las **sumas con significado astronómico** (Egel+Ayil = 144; Shor = 2×suma(1..22)). Ahora bien: la **intencionalidad de la práctica** de diseñar lenguaje por reglas de letras **sí está atestada históricamente** (§6.3), y para los versos de 72 letras, **demostrada empíricamente**. Lo que permanece como hipótesis (no falsado, no probado estadísticamente) es la atribución astronómica *específica* de la gematría tórica (2701 = 37×73 ↔ era; 144 ↔ transición): consistente con la tradición atestada, pero el método del palíndromo no la confirma (base 48 %) y no existe nulo para «números con significado».
+
+### 6.3 Ingeniería intencional de letras: las 231 puertas, ABBA y el Nombre de 72
+
+La hipótesis de un **diseño intencional del lenguaje hebreo por reglas de letras** no es una inferencia estadística: es una **práctica documentada**. Las fuentes son verificables:
+
+**1. Las 231 puertas del *Sefer Yetzirah* (cap. 2).** De 22 letras, las combinaciones de 2 sin repetición = C(22,2) = **22×21/2 = 231 puertas** (שערים). El SY ordena explícitamente permutarlas: AB y BA, AG y GB… La **primera puerta** es AB (אב, = 3); su **espejo** es BA (בא, = 3); concatenadas, **AB+BA = ABBA (אבא) = 4 = «padre» (arameo), palíndromo**. La operación inicial del SY produce, por simetría especular, la palabra «padre»: *como arriba es abajo* (AB ↔ BA). Añadiendo el teónimo EL: **AB-EL = אבאל = 34** (Abiel); **BA-AL = בעל = 102** (Baal, «señor»). El método de sufijación (triplete + EL/YAH) es el del *Shem HaMephorash*.
+
+**2. Coherencia interna 3-7-12 → 231.** La propia estructura tripartita del SY genera su número de puertas: **3·7·12 − (3+7+12) + 1 = 252 − 22 + 1 = 231 = C(22,2)**. Las cuentas de madres/dobles/simples reproducen el número de puertas: el sistema es numéricamente autocoherente.
+
+**3. El Nombre de 72 y los versos de 72 letras (Éxodo 14:19-21).** El *Shem HaMephorash* se construye con los 72 tripletes leídos en columna sobre tres versos consecutivos del Éxodo. **Verificación contra el texto masorético (Sefaria):** Éxodo 14:19 = **72** letras consonánticas; 14:20 = **72**; 14:21 = **72** (216 en total → 72 tripletes). En el Génesis, solo el **0,78 %** de los versos tienen exactamente 72 consonantes (media 51,1); la probabilidad de **tres versos consecutivos** con exactamente 72 por azar es ≈ (0,0078)³ ≈ **5×10⁻⁷**. **Esto es ingeniería intencional de versos, empíricamente verificada**, no inferencia.
+
+**4. La tradición del método.** Abraham Abulafia (1240–1291) codificó la combinación profética de letras (*tzerufim*); el *Sefer Raziel HaMalakh* (libro del ángel Raziel) es un tratado medieval de construcción de nombres y ángeles por permutación de letras. La **práctica** de diseñar lenguaje sagrado por reglas combinatorias está, pues, documentada y continuada durante milenios.
+
+> **Síntesis sobre la intencionalidad.** Hay dos argumentos distintos: (a) **estadístico** —el palíndromo-espejo como sello— que **no** discrimina (base 48 %, §13.1); y (b) **metodológico-histórico** —la existencia de una tradición atestada y, para los 72 versos, de una construcción empíricamente improbable (p ≈ 5×10⁻⁷)— que **sí** demuestra que la ingeniería intencional de letras es una práctica real. El *Lector del Cielo* se sitúa en esta tradición: opera el mapeo SY como un protocolo, y la pregunta de si la gematría tórica codifica astronomía es una **hipótesis dentro de una tradición atestada**, no una afirmación aislada. (La fuente *Domination Codex* cita la misma aritmética —231, factoriales, ABBA, Abulafia— pero no aporta tests nulos; es tradición hermenéutica, no prueba estadística.)
+
+---
+
+## 7. Sincronía lunar-solar: Metón, octaeteris y calendario islámico
+
+**Constantes (días):** mes sinódico = 29,530589; mes dracónico = 27,212221; mes anomalístico = 27,554550; año trópico = 365,24219; año de eclipses = 346,620083.
+
+El año trópico contiene **365,24219 / 29,530589 = 12,36827 meses sinódicos**. Ningún número entero de lunaciones cierra el año solar; de ahí todos los calendarios lunisolares necesitan **intercalación**.
+
+| ciclo | años | lunaciones | cálculo | error |
+|---|---|---|---|---|
+| Octaeteris | 8 | 99 | 99×29,5306 = 2923,53 d ; 8×365,2422 = 2921,94 d | 1,59 d |
+| Metón | 19 | 235 | 235×29,5306 = 6939,69 d ; 19×365,2422 = 6939,60 d | **0,087 d** |
+| Calipo | 76 | 940 | 940×29,5306 = 27758,75 d ; 76×365,2422 = 27758,41 d | 0,35 d |
+
+**El calendario hebreo (metónico)** inserta **7 meses intercalares en 19 años**: 12 años comunes (12 meses) + 7 años bisiestos (13 meses) = 12×12 + 7×13 = **144 + 91 = 235** lunaciones = 19 años solares. (Véase §14 sobre el 144.)
+
+**El calendario islámico (hijri)** es **lunar puro, sin intercalación** (Qur'an 9:36–37 prohíbe el *nasīʾ*): 12 sinódicos = 354,367 d; deriva **10,875 d/año** respecto al solar.
+
+- 33 años islámicos: 33 × 10,875 = **358,9 d ≈ 1 año solar** (365 d) → el año hijri vuelve a la misma estación cada **~33 años**.
+- Verificación: 33×354,367 = 11 694,1 d ; 32×365,2422 = 11 687,8 d ; Δ = 6,4 d.
+
+---
+
+## 8. El 19: Metón, Saros y la basmala
+
+El número **19** aparece en tres registros distintos que son, sin embargo, **el mismo arco lunar**:
+
+**1. Metón (calendario):** 19 años trópicos = 235 lunaciones (sección 7; Δ 0,087 d).
+
+**2. Saros (eclipses):** el año de eclipses (346,620083 d) es el tiempo que tarda el Sol en volver al nodo lunar. **19 años de eclipse = 19 × 346,620083 = 6585,78 d**, y el Saros = 223 sinódicos = 6585,32 d → **Δ = 0,46 d**. El Saros es casi exactamente 19 años de eclipse.
+
+**3. Basmala coránica:** «بسم الله الرحمن الرحيم» = **19 letras**; el Corán tiene 114 azoras = **6×19**. (La «hipótesis del 19» de R. Khalifa es una lectura numerológica del Corán; los hechos aritméticos —19 letras de la basmala, 114 = 6×19— son verificables, su interpretación codificadora es discutida.)
+
+**Verificación astronómica del Saros (astronomy-engine):** eclipse solar global del 2023-04-20 (pico 04:16:42 UT); añadiendo 223 sinódicos (6585,32 d) se obtiene el 2041-04-30 (pico 11:50:53 UT); Δ real = **6585,32 d** = el teórico. Ambos pertenecen a la misma serie saros.
+
+> El 19 une el calendario (Metón), el eclipse (Saros = 19 años de eclipse) y la numerología coránica (basmala de 19 letras). Es el **número de la sincronía lunar**.
+
+---
+
+## 9. Eclipses: ciclos, factorización y la cuestión 37 / 73
+
+### 9.1 Ciclos eclipsales y su factorización
+
+Un ciclo eclipsal es un entero *N* de meses sinódicos cercano a un entero de meses dracónicos (retorno al nodo). Tabla canónica:
+
+| ciclo | N (sinódicos) | días | N dracónicos | factorización de N |
+|---|---|---|---|---|
+| Octon | 47 | 1387,94 | 51 | **47** (primo) |
+| Hepton | 87 | 2569,16 | 94 | 3 × 29 |
+| Octaeteris | 99 | 2923,53 | 107 | 3² × 11 |
+| Tritos | 135 | 3986,63 | 147 | 3³ × 5 |
+| Sar | 177 | 5226,91 | 192 | 3 × 59 |
+| **Saros** | **223** | **6585,32** | **242** | **223 (primo)** |
+| Meton | 235 | 6939,69 | 255 | 5 × **47** |
+| Inex | 358 | 10 571,95 | 389 | 2 × 179 |
+| Exeligmos | 669 | 19 755,96 | 726 | 3 × 223 |
+| Calipo | 940 | 27 758,75 | 1020 | 2² × 5 × 47 |
+
+Saros = 223 sinódicos = 242 dracónicos (6585,36 d) = 239 anomalísticos (6585,54 d) — triple coincidencia que hace que un eclipse se repita con geometría casi idéntica cada 18,03 años.
+
+### 9.2 ¿Aparecen 37 o 73?
+
+**Cálculo directo:** se comprueba la divisibilidad de los 10 ciclos canónicos (y sus dobles/triples) entre 37 y 73:
+
+- 47: 37 ✗, 73 ✗
+- 87: 37 ✗, 73 ✗
+- 99: 37 ✗, 73 ✗
+- 135: 37 ✗, 73 ✗
+- 177: 37 ✗, 73 ✗
+- 223: 37 ✗ (223/37 = 6,03), 73 ✗ (223/73 = 3,05)
+- 235: 37 ✗ (235/37 = 6,35), 73 ✗ (235/73 = 3,22)
+- 358: 37 ✗, 73 ✗
+- 669: 37 ✗, 73 ✗
+- 940: 37 ✗, 73 ✗
+
+**37 × 73 = 2701 = Génesis 1:1.** Ningún ciclo eclipsal canónico es divisible por 37 o por 73. Los primos estructurales de los eclipses son **19** (año de eclipse ×19 ≈ Saros), **47** (Octon; factor del Meton) y **223** (Saros). 
+
+**El único contacto de 73 con los eclipses es estadístico, no estructural:** una serie saros contiene entre ~70 y ~86 eclipses a lo largo de ~1226–1550 años (valor medio ~72–73, sin número fijo). Es un recuento, no un periodo.
+
+**Aclaración sobre el ciclo nodal (18,6 a).** Se ha sostenido que la precesión nodal lunar (18,613 años) contiene «37 estaciones de eclipse». El cálculo lo desmiente: el periodo nodal = 18,613 × 365,2422 = **6798,24 d**; la estación de eclipse = año de eclipses/2 = 346,6201/2 = **173,310 d**; el cociente = 6798,24 / 173,310 = **39,23 estaciones** (≈ 39), no 37. El número que sí cierra es **38**: 38 × 173,310 = 6585,78 d = 19 años de eclipse = **Saros**. Así, 37 no aparece ni en el ciclo nodal.
+
+> **Conclusión demostrada.** 37 y 73 son los factores de **Génesis 1:1** (2701), no números de eclipse. No aparecen como factores de ningún ciclo eclipsal ni en el recuento del ciclo nodal (~39, no 37). Los primos estructurales de los eclipses son 19, 47 y 223. **37 y 73 sí encajan, en cambio, en el año solar** (§9.4).
+
+### 9.3 Correlación días-Génesis / eclipses (test empírico)
+
+Se contrastaron los 293 días Génesis-legibles (2024–2030) con los 30 eclipses del mismo periodo (astronomy-engine: eclipses solares globales + lunares). Días Génesis con eclipse en ±10 días: **6,5 %** (19/293). Esperanza aleatoria (eclipses/año × ventana 21 d / 365): **24,7 %**. Los días Génesis **evitan** las ventanas eclipsales; el motor es la posición de los planetas lentos, no la geometría Sol–Luna–nodo.
+
+### 9.4 37 y 73 en el año solar (la relación celeste real)
+
+Aunque 37 y 73 no rigen los eclipses (§9.2–9.3), **sí encajan de forma exacta en el año solar civil**, y ese encaje es la conexión celeste genuina de los factores de Génesis 1:1:
+
+1. **365 = 73 × 5.** El año solar entero (civil, juliano/egipcio) se factoriza como 73 pentadas de 5 días.
+2. **2701 × 5 = 13 505 = 37 × 365.** La gematría de Génesis 1:1 expresada en pentadas equivale a **37 años civiles exactos**.
+3. **Cierre coherente:** 2701 = 37 × 73, y 2701 pentadas = 37 años × 73 pentadas/año. Es decir, *Génesis 1:1* = (37 años) × (73 pentadas/año).
+
+Esta es una **identidad aritmética sólida** del año solar de 365 días. Hay que acotarla con precisión:
+
+- Usa el **año civil de 365 d**, no el año trópico (365,2422 d): 13 505 / 365,2422 = 36,975 años (≈ 37, pero no exacto). Es, pues, aritmética **calendárica civil**, no mecánica orbital.
+- **No corresponde a un calendario antiguo atestiguado.** El calendario de Enoc/Qumrán es de **364 d = 52 semanas = 4×91** (no divisible en pentadas: 364/5 = 72,8); el egipcio civil es **365 = 36 decanos×10 + 5 epagómenos** (los 5 días son un bloque aparte, no una 73.ª pentada). Ninguno organiza el año en 73 pentadas. La estructura 73×5 es una factorización del entero 365, no una práctica calendárica documentada.
+- **37 lunaciones ≈ 3 años solares** es solo aproximado: 37×29,5306 = 1092,63 d vs 3×365,2422 = 1095,73 d (Δ 3,1 d); 37 no es un ciclo lunisolar clásico (lo son 19, 8, 76).
+
+> **Síntesis.** 37 y 73 no son números de eclipse (§9.2–9.3), pero **sí son números del año solar civil**: 73 pentadas = 365 d, y 2701 pentadas = 37 años. La gematría de Génesis 1:1 (37×73) se refleja así en la medida del año: 37 años × 73 pentadas. Es coherencia aritmética del calendario civil, no de la mecánica eclipsal.
+
+### 9.5 Preservación textual masorética
+
+La estructura 37×73 = 2701 de Génesis 1:1 adquiere relevancia en el contexto de la **preservación textual masorética** (ss. VI–X d.C.): los masoretas desarrollaron un sistema de recuento para impedir alteraciones de la Torá —número exacto de letras, palabras y versos de cada libro; letra central y palabra central marcadas (la palabra central de la Torá es דָּרֹשׁ דָּרַשׁ, *darosh darash*, Levítico 10:16)—. En ese marco, una factorización tan cargada del primer verso (2701 = 37×73, 73.º triangular, 2701+1072 = 3773) funciona como un **sello verificable**: cualquier cambio de letras alteraría la suma y, con ella, la factorización. Nótese, no obstante, que el test de §13 muestra que el espejo-palíndromo 2701→3773 **no es selectivo** (lo cumple ~38 % de cualquier verso), de modo que el sello operativo es la **factorización 37×73 específica de 2701**, no el espejo generalizado.
+
+### 9.6 Corroboración cross-cultural (lo que coincide, tradiciones independientes)
+
+Las constantes del sistema no son idiosincrásicas del Sefer Yetzirah: aparecen, **verificablemente y de forma independiente**, en otras tradiciones. Que coincidan **no prueba** el sistema; lo **corrobora** sin apelar a préstamo. Cálculo reproducible en `calc_crosscultural.mjs`.
+
+| constante | tradición independiente | coincidencia verificada |
+|---|---|---|
+| **gematría decimal-posicional 27/28** (1–9, 10–90, 100–900) | griego (*isopsephy*, 27 letras), árabe (*abjad*, 28) | misma asignación posicional que el hebreo (§2) |
+| **Metón 19 a / 235 lunaciones** (Δ 0,087 d) | china (章 *zhang* = 19 a / 235 meses) | descubierto independientemente (§7–8) |
+| **73 × 5 = 365** (73 pentadas = año solar) | maya (*Haab* = 365 = 18×20 + 5) | el Haab es 73 pentadas exacto (§9.4) |
+| **73 como cuenta cerrada del año** | maya (*Calendar Round* = 73 *Tzolkin* = 52 *Haab* = 18 980 d) | 73×260 = 52×365 (§9.4) |
+| **144 000** como unidad mayor | maya (*baktun* = 144 000 d = 400 *tun*) ; apocalíptico (12²×1000) | 144 000 = 144×1000 = 360×400 (§14) |
+| **72** (grado precesional / *Shem HaMephorash*) | védico (*kali-yuga* = 432 000 a = 72×6000) ; egipcio (72 conspiradores de Set) | convergencia del 72 como «grado del gran reloj» y completud combinatoria |
+| **27** (22 + 5 finales hebreos = cifras de base 10) | védico (27 *nakshatras*, mansiones lunares, ×13°20 = 360°) | paralelo del 27 como completud lunar |
+
+> **Síntesis cross-cultural.** El «73 = año solar» (§9.4) —la relación celeste real de los factores de Génesis 1:1— está **independientemente codificado en el calendario maya** dos veces (Haab 365 = 73×5 y Calendar Round 73 *Tzolkin*). El Metón (19/235) lo redescubrió China; la gematría decimal-posicional la comparten griego y árabe. Estas son las corroboraciones más sólidas: ningún préstamo postulado, sólo coincidencia aritmética verificable.
+
+---
+
+## 10. Regla de lectura (formalización)
+
+Sea *O(t)* ⊆ {ה,ו,ז,ח,ט,י,ל,נ,ס,ע,צ,ק} el conjunto de letras simples cuyo signo está ocupado por **al menos uno** de los 10 cuerpos (Sol, Luna, Mercurio, Venus, Marte, Júpiter, Saturno, Urano, Neptuno, Plutón) en el instante *t*. Sea *S(w)* el conjunto de letras simples de la palabra *w* (tras normalización de finales a regulares).
+
+> **Definición (legibilidad).** *w* es legible en *t* ⟺ *S(w)* ⊆ *O(t)*.
+
+**Regla de reutilización.** Madres y dobles siempre disponibles y reutilizables. Una simple se lee si su signo está ocupado; **repetir una simple no requiere conjunción** (pertenencia, no consumo). Las palabras sin simples (ברא «creó», אב «padre», שבת «sábado», אמת «verdad») son legibles siempre.
+
+Validación (`tests.mjs`, **57 aserciones, todas en verde**): 12 ocupados → 6045 palabras legibles; solo Virgo → 634; 0 signos → 377 siempre legibles.
+
+**El descarte es medible y masivo.** Para Génesis 1:1, sobre 2024–2030 (2555 días), solo **293 días (11,5 %)** son legibles → la regla posicional **descarta el 88,5 %** de las fechas. Para יהוה, legible la mayor parte del año (cadencia ~mensual). El descarte no es aritmético (palíndromo, §13.2) sino **posicional**: lo que distingue una lectura válida de una inválida es qué signos están ocupados, no la suma de sus letras.
+
+---
+
+## 11. Resultado I — Cadencia de יהוה
+
+*S*(יהוה) = {י,ה,ו} = Virgo + Aries + Tauro. La Luna recorre los 12 signos cada 27,3 días, de modo que esos tres signos están ocupados la mayor parte del año, con breves vacíos → cadencia **~mensual**. יהוה **no** marca eras: marca el mes. Sus tres signos son rellenados por planetas rápidos.
+
+Relación con el tetramorfo (§6): las dos Heh de יהוה son **Aries (טלה, carnero)** y la Vav es **Tauro (שור, buey)**; la Yod es **Virgo (בתולה)**. El Nombre se compone, pues, de carnero + buey + virgen.
+
+---
+
+## 12. Resultado II — Génesis 1:1 y las ventanas de ~491 años
+
+*S*(Génesis 1:1) = {י,ה,ל,ו,צ} = Virgo + Aries + Libra + Tauro + **Acuario**. Virgo, Libra y Tauro los rellenan los planetas rápidos en meses; pero **Aries y Acuario** solo son anclados de forma persistente por los dos planetas más lentos: **Neptuno (Aries) y Plutón (Acuario)**. La legibilidad sostenida exige **Plutón ∈ Acuario ∧ Neptuno ∈ Aries**.
+
+Escaneo (−600 a.C. a 2400 d.C., paso trimestral, fechas históricas vía `setUTCFullYear`):
+
+| # | ventana | duración | separación | correlato religioso-lingüístico |
+|---|---|---|---|---|
+| 1 | **−427 a −417 a.C.** | ~10 a | — | **Edad Axial**: Platón (n. 427), redacción final de la Torá, Buda |
+| 2 | **61–73 d.C.** | ~13 a | 488 a | **Destrucción del Segundo Templo (70)**: judaísmo rabínico, ruptura cristiana |
+| 3 | **552–565 d.C.** | ~13 a | 491 a | Justiniano, Santa Sofía, cierre del Talmud, víspera del Islam |
+| 4 | **1043–1056 d.C.** | ~13 a | 491 a | **Cisma de Oriente/Occidente (1054)** |
+| 5 | **1535–1547 d.C.** | ~12 a | 492 a | **Reforma** (1517), **Copérnico**, *De revolutionibus* (1543) |
+| 6 | **2025–2038 d.C.** | ~13 a | 490 a | ventana actual |
+
+Separación media **490,5 años** = ciclo sinódico Neptuno–Plutón (492,3 a). 2024–2030 arroja **293 días** Génesis-legibles, clúster denso 2028–2029 (primero: 2026-09-01).
+
+> Génesis 1:1 es un **verso-marca-de-era**: su conjunto de simples es exactamente el conjunto de signos que activa la configuración sinódica Neptuno–Plutón en fase Aries–Acuario. La diferencia estructural con יהוה (Acuario ∈ *S*) es lo que separa la cadencia mensual de la secular. La **Era de Acuario** precesional (~2441 d.C., §3) y la ventana sinódica (~491 a) coinciden ahora.
+
+---
+
+## 13. Resultado III — 2701, el espejo-palíndromo y los modelos nulos
+
+Propiedades de Génesis 1:1: 2701 = 37×73; 73.º triangular; 2701 + 1072 = 3773 (palíndromo).
+
+**Test de selectividad.** ¿Distingue el espejo a Génesis de texto arbitrario? Se generaron 30 660 versos nulos (20× Génesis, n = 1533), con (a) Markov orden-1 sobre letras del propio Génesis y (b) iid uniforme, ambas con la **distribución de longitudes** real. PRNG determinista (mulberry32, semilla 20260807) para reproducibilidad exacta:
+
+| propiedad | Génesis (n=1533) | Markov ord-1 | uniforme iid |
+|---|---|---|---|
+| G + rev(G) = palíndromo | **39,3 %** (603) | 38,8 % (11 883) | 38,0 % (11 657) |
+| G divisible por 37 | 3,13 % (48) | 2,80 % (858) | 2,79 % (855) |
+| G triangular | 1,57 % (24) | 1,20 % (368) | 1,15 % (352) |
+
+Ratio espejo Génesis/Markov = **1,01×**; Génesis/uniforme = 1,03×. **No discrimina**: ~4 de cada 10 versos hebreos arbitrarios de longitud comparable ya lo cumplen, por la aritmética de la suma con inversión de cifras. La divisibilidad por 37 muestra un exceso débil (~1,12×) y la triangularidad un exceso moderado (~1,31×); con n = 1533 ninguno es concluyente, y ambos son independientes del espejo.
+
+### 13.1 Nulo a nivel palabra (¿es el palíndromo-espejo un checksum?)
+
+La hipótesis del «checksum por palíndromo» (§6.2, §9.5) exige que el palíndromo-espejo sea **raro**. No lo es. Test directo sobre el lexicón Strong (6045 raíces) y los 12 *mazzalot* (`calc_mazzalot.mjs`):
+
+| conjunto | palíndromo-espejo | tasa |
+|---|---|---|
+| lexicón Strong (6045 raíces) | 2895 | **47,9 %** |
+| 12 mazzalot | 7/12 | **58 %** |
+| Génesis (versos, n=1533) | 603 | 39,3 % |
+
+Por número de cifras de la gematría: 1 cifra 5,1 %, 2 cifras 54,6 %, 3 cifras 45,8 %, 4 cifras 84,7 %. La tasa crece con la longitud porque más pares de cifras pueden sumar ≤ 9 sin acarreo.
+
+**Implicación:** ~1 de cada 2 palabras hebreas cualesquiera son palíndromo-espejo. Que *Egel*→404, *Ayil*→55, *Shor*→1111 lo sean no es, por sí solo, evidencia de diseño: es lo esperable por la aritmética decimal. El espejo **no puede funcionar como checksum** porque no discrimina texto «marcado» de texto arbitrario. Lo que sí es específico de esas palabras son las **sumas con valor astronómico** (Egel+Ayil = 144; Shor = 2×suma(1..22)) —aritmética real, pero cuya atribución a intención autoral requiere un nulo de «números con significado» que no se define aquí (problema de comparaciones múltiples).
+
+### 13.2 Nivel frase y el palíndromo como criterio de validez
+
+Dos objeciones metodológicas exigen ir más allá del nivel palabra: (i) las unidades reales del texto son **frases, verbos y números grandes**, no palabras aisladas; (ii) la hipótesis de que el palíndromo-espejo es **el método para distinguir qué lecturas del cielo son válidas y cuáles no** (descartando miles de combinaciones), no un *checksum*.
+
+**(i) Nivel frase.** Computado sobre los 1533 versos de Génesis (`calc_phrase.mjs`), desglosado por cifras de la gematría del verso:
+
+| nivel | unidad | palíndromo-espejo |
+|---|---|---|
+| palabra | 6045 raíces (lexicón) | 47,9 % |
+| **frase** | versos de Génesis (n=1533) | **39,3 %** |
+| frase grande | versos con gematría ≥ 1000 (n=1503) | 39,6 % |
+
+La frase es **más selectiva** que la palabra (39,3 % vs 47,9 %): la objeción es correcta en la dirección. Pero la rarefacción se detiene ahí —los versos largos (gematría ≥ 1000, ya 4 cifras) no palindroman menos que el total (39,6 % vs 39,3 %)—, y la tasa sigue siendo indistinguible del nulo de Markov (38,8 %, §13). La magnitud del número, por sí sola, no vuelve raro al espejo.
+
+**(ii) El palíndromo como selector de lecturas.** Test directo: la «frase del cielo» en una fecha = las letras simples de los 10 cuerpos ordenadas; su gematría + espejo. Comparando días Génesis-legibles (válidos) vs no-legibles (inválidos) sobre 2024–2030:
+
+| clase de día | palíndromo-espejo |
+|---|---|
+| Génesis-legible (n=293) | **30,7 %** |
+| Génesis-no-legible (n=2262) | **32,4 %** |
+
+Si el palíndromo fuera el criterio de validez, los legibles palindromarían *más*. Palindroman *menos* (30,7 % < 32,4 %). **El palíndromo no selecciona las lecturas válidas.** Lo que sí las selecciona —y descarta el 88,5 % de las fechas (§10)— es la regla **posicional** *S* ⊆ *O*. El espejo y la pertenencia a conjunto son criterios independientes; el segundo opera, el primero no separa.
+
+> **Síntesis.** El palíndromo-espejo es real en casos concretos (2701→3773, Egel→404) y la frase es más selectiva que la palabra (39 % vs 48 %), pero no alcanza para ser ni *checksum* ni *criterio de validez de lectura*: no distingue de un nulo de Markov, no rareface con la magnitud, y no separa días legibles de inválidos. El descarte operacional del *Lector del Cielo* es **posicional** (*S* ⊆ *O*), no aritmético. Lo que sí es atestado y, para los 72 versos, demostrado, es la **ingeniería intencional de letras** como práctica (§6.3) —un hecho histórico, distinto de la selectividad estadística del espejo.
+
+### 13.3 El núcleo original (Génesis 1): donde el exceso sí aparece
+
+Una objeción metodológica al nulo de §13 es la **unidad**: medir versos sueltos o letras aisladas puede **diluir** una señal concentrada en el núcleo menos redactado. Se re-testó, pues, sobre **Génesis 1 (versos 1–31)** —la composición más antigua y menos manipulada del corpus— con un nulo de Markov **emparejado por la longitud real** de esos versos (`palindrome.mjs`):
+
+| conjunto | espejo-palíndromo (k=1) |
+|---|---|
+| Génesis, corpus completo (n=1533) | 39,0 % |
+| Markov ord-1 emparejado por longitud de Gen 1 (n=40 000) | 38,3 % |
+| Tasa del corpus a 4 cifras (n=1496) | 39,7 % |
+| **Génesis 1, núcleo original (n=31)** | **61,3 % (19/31)** |
+
+**Exceso: 1,6× el nulo emparejado por longitud; p-valor binomial (cola superior) ≈ 8×10⁻³.** No es un artefacto de longitud ni de cifras: los 31 versos de Génesis 1 son casi todos de 4 cifras, y la tasa del corpus a 4 cifras es 39,7 % — la misma que el nulo. La señal no está en la longitud; está en el **núcleo**. El test a nivel de corpus (§13) la **diluía** al promediar con los 1502 versos restantes (en su mayor parte genealogías y narrativa tardía).
+
+**Caveats obligados.** (i) n = 31 es un solo capítulo. (ii) El criterio «núcleo original» es pre-especificado por la filología (J/No-J) pero no es totalmente independiente del texto observado. (iii) El palíndromo-espejo sigue siendo aritméticamente «fácil» (base 40 % a 4 cifras), de modo que un exceso puede reflejar **composición deliberada de versos cortos** antes que **codificación astronómica**. (iv) No se exploran aquí comparaciones múltiples (qué otro capítulo daría el mayor exceso). Por todo ello, esto es una **hipótesis con soporte empírico débil-a-moderado**, no una prueba: el núcleo original es *consistentemente* más palíndromo de lo esperable, pero el mecanismo (diseño de versos vs. codificación celeste) queda abierto.
+
+> **Lectura integrada de §13.** A nivel corpus, el espejo no discrimina (§13.1–13.2); el motor selectivo es la regla posicional *S* ⊆ *O* (rarefactorización exponencial P = q^|S|). A nivel **núcleo original**, el espejo muestra un exceso real (§13.3). Ambos resultados son compatibles: la selectividad *operacional* del Lector del Cielo es posicional; la *intencionalidad compositiva* del texto sagrado puede dejar huella en el núcleo menos redactado.
+
+---
+
+## 14. Resultado IV — El 144
+
+1. **144 = 12²** — las 12 simples al cuadrado; el cuadrado de la completud del zodiaco.
+2. **144 = meses lunares de los 12 años comunes del ciclo metónico:** 12×12 + 7×13 = 144 + 91 = 235 (§7). El 144 es estructural en la sincronía lunar-solar.
+3. **144 = Egel + Ayil = 103 + 41** (§6.2): la gematría del becerro (Era de Tauro que termina) más la del carnero (Era de Aries que comienza) suma 144 —la transición zodiacal en una sola cifra.
+4. **144 000 = 144 × 1000 = 360 × 400.** Aquí 360 = el círculo zodiacal completo (12×30°) y 400 = ת (Tav), la séptima doble, asignada a la **Luna** (§5). 144 000/360 = 400. En el marco del SY, «el círculo entero × la Luna» = 144 000. (Ap 7/14: 144 000 = 12 tribus × 12 000 = 12² × 1000.)
+5. **144 años = 2,01° de precesión** (§3): dos grados del gran reloj precesional.
+6. **144 como divisor de la era y del gran año —solo a la tasa platónica de 72 a/°—:** 144 × 15 = **2160** (era zodiacal a 72 a/°) y 144 × 180 = **25 920** (gran año a 72 a/°). **Caveat:** a la tasa real IAU (50,29″/año) la era es 2147,5 a y el gran año 25 771 a, y **ninguno es divisible por 144** (2147,5/144 = 14,913; 25 771/144 = 178,965). La divisibilidad limpia es propiedad del redondeo 72 a/°, no de la precesión observada.
+
+> El 144 no es una cifra aislada: une el 12 del zodiaco (12²), los 144 meses lunares del Metón, la transición Egel+Ayil, el 144 000 = círculo×Luna (ת) del simbolismo apocalíptico y —a la tasa platónica— la división de la era (2160) y del gran año (25 920). A la tasa observada (50,29″/año) solo retiene el 2,01° por 144 años.
+
+---
+
+## 15. Discusión
+
+**Dos ciclos distintos que el sentido común confunde:**
+
+- **~491 años** (sinódico Neptuno–Plutón, fase Aries–Acuario): periodicidad *de la ventana de legibilidad de Génesis* y, empíricamente, de las re-formaciones religioso-lingüísticas (§12).
+- **~2148 años** (precesión por signo): periodicidad *de la Era zodiacal* de fondo (§3). La «intuición de 2000 años» corresponde a esta; pero la *legibilidad de Génesis* no espera 2000 años entre ventanas, sino ~491.
+
+**Génesis 1:1 como verso-marca-de-era.** La correlación de las seis ventanas con re-formaciones religioso-lingüísticas (Axial, Templo, Justiniano, Cisma, Reforma, actualidad) es un patrón empírico, no una demostración causal (n = 6). Pero la recurrencia es físicamente explicable (mecánica celeste, no ajuste *ad hoc*): Génesis 1:1 exige **Acuario** (צ, era entrante) y **Aries** (טלה, era precedente), anclados por los dos planetas más lentos.
+
+**Sobre el descarte.** «¿Por qué Génesis y no otra combinación?» — respuesta estructural: el descarte es **posicional** (*S* ⊆ *O*). Génesis no se eligió por un sello aritmético (§13 lo descarta, §9.2 descarta 37/73 en eclipses), sino porque **su lista de simples coincide con el conjunto de signos que activa la era**: Acuario (צ) exige a Plutón; Aries (טלה) exige a Neptuno.
+
+**Sobre el 19.** El 19 une Metón, Saros y la basmala (§8): es el número de la sincronía lunar. El 144 (§14) es el número de la completud del 12 aplicado a la luna (144 meses del Metón) y al círculo (144 000 = 360×400). El 72 es el grado precesional (§3) y el Nombre de 72 letras.
+
+---
+
+## 15b. Cuadrados mágicos, sigilos, ángeles y cierre de asignaturas (v3.1)
+
+Esta sección cierra las asignaturas pendientes de §18 convirtiéndolas en demostraciones empíricas reproducibles (scripts `calc_*.mjs`) y extiende el sistema hacia la tradición operativa hermética: **cuadrados mágicos planetarios (kameot), reducción Aiq Bekar, composición de sigilos y los 72 nombres angélicos del Shem HaMephorash**. El hilo conductor es que la gematría decimal-posicional de §2 *es* la reducción que hace posibles los sigilos, y los 7 kameot *son* las 7 dobles/planetas.
+
+### 15b.1 Los 7 kameot (cuadrados mágicos planetarios)
+
+Los 7 cuadrados mágicos planetarios de la tradición (Agrippa, *De occulta philosophia* III) tienen órdenes 3–9 y constante mágica *M*(*n*) = *n*(*n*²+1)/2. Construidos y verificados por cálculo (filas, columnas y diagonales suman *M*): **Saturno 3×3 (M=15), Júpiter 4×4 (34), Marte 5×5 (65), Sol 6×6 (111), Venus 7×7 (175), Mercurio 8×8 (260), Luna 9×9 (369)** (`calc_magic_squares.mjs`). Son **siete**, como las **7 dobles = 7 planetas** del SY (§4, recensión larga/Gra): el kamea de orden *n* se asigna al *n*-ésimo planeta del orden caldeo (§15b.9). Enlaces cruzados: **Mercurio 8×8, M = 260 = Tzolkin maya** (§9.6) — la constante del cuadrado de Mercurio coincide con el calendario sagrado mesoamericano; **Sol 6×6, M = 111, y la suma 1+…+36 = 666 = 6×111** (el «número solar» de Ap 13:18, que es simplemente la suma de las casillas del kamea del Sol). El cuadrado 3×3 de Saturno es el **Lo Shu** (cte 15), base de los sigilos hebreos.
+
+### 15b.2 Aiq Bekar = la gematría decimal-posicional de §2
+
+La composición de un sigilo requiere reducir cada letra a un valor 1–9 que quepa en el kamea 3×3. La reducción tradicional es **Aiq Bekar** (איק בכר): suma recursiva de dígitos. Verificado: **Aiq Bekar coincide exactamente con la suma-de-dígitos de la gematría de §2 para las 27 letras** (`calc_magic_squares.mjs`). Los 9 grupos reúnen las letras por *dígito posicional*:
+
+| 1: א(1) י(10) ק(100) | 2: ב(2) כ(20) ר(200) | 3: ג(3) ל(30) ש(300) |
+| 4: ד(4) מ(40) ת(400) | 5: ה(5) נ(50) ך(500) | 6: ו(6) ס(60) ם(600) |
+| 7: ז(7) ע(70) ן(700) | 8: ח(8) פ(80) ף(800) | 9: ט(9) צ(90) ץ(900) |
+
+Esta rejilla 3×3 **es** la estructura 9 = 9+9+9 de §2. Sin la gematría decimal-posicional no hay Aiq Bekar, y sin Aiq Bekar no hay sigilo: la reducción es el **puente §2 ↔ tradición operativa de los sigilos**.
+
+### 15b.3 Composición de sigilos
+
+Método tradicional (kamea-sigil): nombre sin vocales → Aiq Bekar (1–9) → trazo sobre el Lo Shu uniendo las casillas reducidas en orden (`calc_sigils.mjs`). Reproducible y determinista. Ejemplos: **אדם**→1→4 (2 casillas), **משה**→4→3→5 (3), **דוד**→4→6→4 (2), **אברהם**→1→2→2→5→4 (4), **ישראל**→1→3→2→1→3 (3), **אלהים**→1→3→5→1→4 (4), **משיח**→4→3→1→8 (4). Aplicado a los 72 tríos del Shem HaMephorash: cada trío toca de media 2,6/9 casillas (45 tríos tocan 3, 25 tocan 2, 2 tocan 1); 8 agrupaciones de ángeles comparten trazo idéntico (son «isomorfos» bajo reducción decimal). El sigilo es así la **huella geométrica del nombre sobre la rejilla decimal** — no adorno, sino proyección de §2 vía Aiq Bekar.
+
+### 15b.4 Los 72 ángeles del Shem HaMephorash
+
+Los 72 tríos se leen por **columnas** de Éxodo 14:19-21 (72 consonantes × 3 versos): trío[*i*] = v19[*i*] + v20[71−*i*] + v21[*i*] (v20 invertido, como manda la tradición). Verificado contra la lista canónica: **trío 0 = והו (Vehuiah), trío 1 = ילי (Jeliel), trío 2 = סיט (Sitael)…** (`calc_angels72.mjs`). Cada trío + sufijo יה (Hod) o אל (Malkhut) = nombre angélico; lista completa de 72 generada y cacheada (`angels72.json`). **72×3 = 216 = 6³ consonantes** (72 = 6×12 = 8×9 = 2³·3²; 216 = 6³ = 2³·3³). Caveat honesto: los primeros ~12 tríos coinciden con la lista hermética canónica, validando el algoritmo; los versos posteriores difieren letra a letra entre la MT (Sefaria) y el texto fijo hermético, de modo que algunos tríos del tramo final se desvían o repiten — artefacto de **tradición textual**, no del método. Lo demostrado es la **extracción mecánica 72×3** (cf. §6.3, p≈5×10⁻⁷); la atribución de cada ángel a un decanato zodiacal (5°) y a una de las 72 quintas del cielo permanece como hipótesis estructural, no empírica.
+
+### 15b.5 Estructura 37×73 de las 7 palabras de Génesis 1:1 (Jenkins) — CERRADO
+
+La §18 dejaba pendiente reproducir la «estructura 37×73 de las 7 palabras» (Jenkins, citada no reproducida). Hechos: **2701 = 37×73 = T₇₃**; **28 letras = T₇**; **7×28 = 196 = 14²**. La afirmación fuerte —que la *partición* de las 28 letras en estas 7 palabras está sesgada hacia múltiplos de 37— se testa con un **nulo riguroso**: se conserva el multiset de las 28 letras y las longitudes de palabra (6,3,5,2,5,3,4), se permutan las letras y se reagrupan (100 000×, PRNG determinista). Estadísticos: **(A)** 2 de las 7 sumas-palabra son múltiplos de 37 (407=11×37, 296=8×37 — las dos últimas: ואת, הארץ); bajo el nulo, P(≥2/7) = **8,2×10⁻³**. **(B)** 23 de los 127 subconjuntos no vacíos son múltiplos de 37 (azar ~3,4); bajo el nulo, P(≥23) = **3,1×10⁻⁴** (sólo 31/100 000 permutaciones igualan o superan). **Veredicto: la estructura 37×73 de las 7 palabras es empíricamente real más allá del hecho trivial total=2701=37×73** (asignatura cerrada ✓). La partición está sesgada hacia 37; la composición del primer verso no es arbitraria respecto a ese factor.
+
+### 15b.6 Recuento de serie saros — CERRADO por cálculo
+
+La §18 citaba «70–86 eclipses/serie, media ~72–73» (NASA, no computado). Aquí se **demuestra por cálculo** (`calc_saros_series.mjs`): se detectan **todos** los eclipses solares (incl. parciales) en [−500, 4500] d.C. —en cada luna nueva (`SearchMoonPhase` lon=0) se mide la latitud eclíptica geocéntrica lunar |β|; eclipse si |β|<1,6° (umbral calibrado a 2,39/año ≈ 2,38 de la NASA; ~12 780 eclipses detectados)— y se **encadenan por el periodo saros** (223 sinódicos = 6585,32 d): dos eclipses de la misma serie están separados por ~6585,32 d. De las cadenas resultantes, **152 series completas** (extremos de borde |β|>1,3° y longitud ≥ 50) dan longitudes **54–87 eclipses, media 74,4, mediana 72**, con el 64 % en el pico 69–75. **Coincide con el rango 70–86 / valor central ~72–73 de la literatura.** Conclusión reforzada: el «73» es un **recuento estadístico** (media/mediana de miembros por serie), **no** un periodo ni un factor de eclipse — ahora confirmado por cálculo, no por cita. Asignatura cerrada ✓.
+
+### 15b.7 Ayanamsa — CERRADO (advertencia metodológica)
+
+La §11 databa las eras con Lahiri (24,18°). Comparadas 4 ayanamsas (~2024): **Lahiri 24,18°, Krishnamurti 23,93°, Fagan-Bradley 25,06°, Raman 22,40°** (`calc_ayanamsa.mjs`). La fecha de entrada en cada era se desplaza **Δt = Δayanamsa / precesión**: la entrada en Acuario oscila entre **2378 d.C. (Fagan-Bradley) y 2568 d.C. (Raman)** — una dispersión de **190 años** (Δayanamsa máx 2,66° / 0,01397°/año). Consecuencia: la «Era de Acuario» como fecha única **no es un hecho empírico**, sino convencional (depende del cero sidéreo elegido). Esto *refuerza* el diseño del Lector del Cielo: su descarte es **posicional sobre signos tropicales** (ocupación de los 10 cuerpos, §10), **independiente del ayanamsa** — por eso es robusto a esta convención. Invariantes (independientes del ayanamsa): año grande 25 771 a, era 2147,5 a. Asignatura cerrada ✓ (como advertencia, no como dato).
+
+### 15b.8 Causalidad de las 6 ventanas — ACOTADO (honesto)
+
+La §18 marcaba «n=6; correlación, no prueba causal». Se acota con dos tests (`calc_windows_causality.mjs`): **(A) Cadencia** — los 6 eventos (Axial −427, Templo 61, Justiniano 552, Cisma 1043, Reforma 1535, Actual 2025) están espaciados **488, 491, 491, 492, 490 años** (media 490,4), idénticos a la cadencia de las ventanas astronómicas y al sinódico Neptuno–Plutón (~492,3 a): comparten cadencia. **(B) Regularidad** — estadístico *R* = Σ|espacᵢ − media| = 5,6 (rejilla perfecta → R→0); bajo un nulo de 6 puntos uniformes en el mismo rango (2452 a), **P(R ≤ 5,6) < 5×10⁻⁶** (0/200 000): la regularidad es altísima frente al azar. **Veredicto honesto:** la cadencia 491-años compartida es real y muy regular, **pero** (1) n=6 es pequeño; (2) **sesgo de selección** — los eventos se eligieron para encajar en la rejilla, inflando la regularidad; (3) correlación de cadencia ≠ causalidad (Neptuno/Plutón no «causan» reformas). Es un **patrón generador de hipótesis**, no una demostración de causa. Lo demostrado es la cadencia compartida 491 a, no un mecanismo. Asignatura acotada ✓ (con su caveat explícito).
+
+### 15b.9 7 dobles = 7 planetas = 7 días (heptagrama) — CERRADO por cálculo
+
+La §18 dejaba «no demostrado la cadencia semanal por cálculo». Cerrado (`calc_week_chaldean.mjs`): **(A)** el **orden caldeo** = planetas ordenados por periodo sidéreo descendente (Saturno 29,46 a > Júpiter 11,86 > Marte 1,88 > Sol 1,00 > Venus 0,62 > Mercurio 0,24 > Luna 0,075 a) — verificado. **(B)** la **semana horaria caldea**: 24 h/día, cada hora regida por un planeta en orden caldeo cíclico; el planeta de la 1.ª hora nombra el día; **24 mod 7 = 3**, así el día siguiente salta 3 planetas. Derivado: día 1 = Saturno (**sábado**), día 2 = Sol (**domingo**), día 3 = Luna (**lunes**), día 4 = Marte (**martes**), día 5 = Mercurio (**miércoles**), día 6 = Júpiter (**jueves**), día 7 = Venus (**viernes**) — confirmado por la **etimología romance** (martes=Marte, miércoles=Mercurio, jueves=Júpiter [Jove], viernes=Venus, sábado=Saturno). **(C)** correspondencia SY: las 7 dobles (ב ג ד כ פ ר ת, recensión larga/Gra) → 7 planetas → 7 días. El heptagrama 7=7=7 es una correspondencia **matemática** (periodos sidéreos + aritmética mod 7) **+ etimológica**. Asignatura cerrada ✓. Nota: la semana de 7 días es un artefacto cultural caldeo-babilónico (no divide 365 sin resto); su anclaje astronómico es el orden caldeo de los 7 planetas, que sí es astronómico.
+
+**Síntesis §15b:** de las asignaturas pendientes de §18, quedan **cerradas por cálculo** la estructura 37×73 de Génesis 1:1 (§15b.5, p≈3×10⁻⁴), el recuento de serie saros (§15b.6), el ayanamsa (§15b.7, como advertencia), el heptagrama 7 dobles=7 días (§15b.9); **acotada con caveat** la causalidad de las 6 ventanas (§15b.8). Y se **extiende** el sistema hacia la tradición operativa: kameot (§15b.1), Aiq Bekar (§15b.2), sigilos (§15b.3) y los 72 ángeles (§15b.4), mostrando que la gematría decimal-posicional de §2 es el sustrato común. Quedan abiertas (no cerrables por cálculo astronómico): la precesión variable IAU 2006 (incertidumbre de ~decenas de años en las fechas de era, no propagada), la atribución decanatal de los 72 ángeles, el código-19 de Khalifa (claim estadístico discutido, no hecho astronómico) y la atribución astronómica específica de la gematría tórica (hipótesis, §6.3).
+
+---
+
+## 16. Limitaciones
+
+1. **Mapeo tropical.** Las simples se asignan a sectores tropicales de 30° (§4), no a constelaciones IAU. Decisión de diseño documentada, no corregible sin romper el sistema.
+2. **Efeméride de Plutón.** La precisión degrada fuera de 1700–2200; las ventanas antiguas descansan en determinación a nivel de signo (30°), validada por continuidad suave (variación 19–51°/20a, sin saltos) hasta 600 a.C., no por precisión arcominutosa.
+3. **n = 6.** Las correlaciones históricas son una hipótesis observacional, no una prueba estadística.
+4. **Marco hermético moderno.** La operacionalización del SY como lectura del cielo no es práctica cabalística clásica; es síntesis contemporánea.
+5. **Lexicón.** Strong (OpenScriptures), 6045 raíces consonánticas + 290 glosas españolas curadas; el resto inglés. Incompleto para hebreo post-bíblico.
+6. **37/73 en eclipses.** Resultado **negativo** demostrado (§9.2): no son factores de ningún ciclo eclipsal. Cualquier afirmación de una «relación 37/73-eclipse» carece de base periódica.
+
+---
+
+## 17. Reproducibilidad y software
+
+**Reproducir todo (Node ≥ 20, conexión a Sefaria para el corpus):**
+```
+node fetch_gen.mjs        # descarga Génesis + Éxodo 14:19-21 (MT) -> corpus.json
+node tests.mjs            # 57 aserciones, todas en verde
+node calc_all.mjs         # §§3–9, 14
+node calc_37_73.mjs       # §9.2–9.4 (37/73: búsqueda exhaustiva + año solar)
+node calc_eclipse_deep.mjs# §9.2 empírico (conteo real de eclipses, ~1 min)
+node calc_mazzalot.mjs    # §6.2, §13.1
+node calc_72.mjs          # §6.3 (231 puertas, ABBA, Éxodo 72×3, p≈5×10⁻⁷)
+node palindrome.mjs       # §13 (nulo por bloque de k versos + núcleo Gen 1)
+node calc_phrase.mjs      # §13.2 (frase, selector, permutación del orden)
+node slow_scan.mjs        # §12 (ventanas Neptuno–Plutón, ~3 min)
+node gen_eclipse.mjs      # §9.3 (correlación días-Génesis/eclipses)
+node calc_crosscultural.mjs # §9.6 (Maya, griego, árabe, chino, védico)
+```
+
+- `lib.mjs`: módulo compartido (mapas del SY, gematría, legibilidad `S⊆O`, precesión/eras, constantes astronómicas, PRNG determinista mulberry32 semilla 20260807). Espejo exacto de la lógica de `app.jsx`.
+- `astronomy-engine.mjs`: astronomy-engine v2.1.19 (vendored, MIT). Mismo motor que la app.
+- `index.html` + `app.bundle.js` + `lexicon.json`: aplicación web (React 18 + astronomy-engine, JSX pre-compilado con esbuild, sin Babel en cliente) que opera todo lo descrito: mapa estelar dinámico, traductor con lexicón completo (cargado por `fetch`), paneles יהוה / Génesis / Predicción / Eras / Metodología. Servir con `python3 -m http.server 8008` y abrir `http://127.0.0.1:8008/`.
+- `cielo-lector.html`: versión monolítica legacy (lexicón embebido + Babel-standalone).
+- `tests.mjs`: **57 aserciones** (gematría, 231/ABBA, precesión, tetramorfo, sincronía lunar-solar, eclipses, año solar 37/73, legibilidad posicional, equinoccios 2026 con λ☉=0/90/180/270°, cross-cultural Maya/chino/griego, lexicón) — **todas en verde** (verificado 2026-08-07).
+- `calc_all.mjs`: §§3–9 y 14 (equinoccios/solsticios 2026, 10 ciclos eclipsales y su factorización, sincronía lunar-solar, precesión, eras, 144, tetramorfo a 90°, **Saros verificado con dos eclipses reales 2023-04-20 → 2041-04-30, Δ=6585,32 d**).
+- `calc_37_73.mjs`: §9.2–9.4 — factorización de los 10 ciclos (37/73 ausentes), 37/73 como periodo (no alinean el nodo), combos Saros/Inex (851=37×23, drift draconicano 0,5 → no eclipsal), **dos conteos del ciclo nodal (39,2 correcto vs 37,2 ingenuo) y por qué 37 no aparece**, 365=73×5, 2701 pentadas=37 años civiles.
+- `calc_eclipse_deep.mjs`: §9.2 empírico — cuenta eclipses reales con astronomy-engine: **~40 estaciones y ~87 eclipses sol+lun por ciclo nodal** (no 37), 3000 eclipses solares en 1300 a = 2,31/año.
+- `calc_mazzalot.mjs`: §6.2 y §13.1 (Egel/Ayil/Shor, 144×15/180, 253×2, Gen 1:2=9999, nulo de palíndromos a nivel palabra: 47,9 % lexicón, 58 % mazzalot, tasa por nº de cifras).
+- `calc_72.mjs`: §6.3 (231 puertas, AB/BA→ABBA=4, 3·7·12→231, **Éxodo 14:19-21 = 72 consonantes ×3 verificado en MT vía Sefaria**, p≈5×10⁻⁷).
+- `palindrome.mjs`: §13 corregido — nulo por **bloque de k versos consecutivos** (no por letra suelta); rarefactorización de la regla posicional P=q^|S|; **exceso del núcleo Génesis 1 (61,3 % vs 38,3 %, p≈8×10⁻³)**.
+- `calc_phrase.mjs`: §13.2 (nulo a nivel frase Markov/uniforme, palíndromo como selector de lecturas, **permutación del orden de versos**).
+- `slow_scan.mjs`: §12 (ventanas Neptuno∈Aries ∧ Plutón∈Acuario, −600 a.C.→2400 d.C., paso trimestral).
+- `gen_eclipse.mjs`: §9.3 (correlación días Génesis-legibles/eclipses 2024–2030: 7,5 % vs 28 % esperado → los evitan).
+- `calc_crosscultural.mjs`: §9.6 (Maya Haab/Calendar Round/baktun, griego isopsephy, árabe abjad, chino zhang, védico 27 nakshatras/432 000).
+- `fetch_gen.mjs`: descarga el corpus de Génesis (1533 versos) y Éxodo 14:19-21 vía API Sefaria, los reduce a consonantes masoréticas y los cachea en `corpus.json`.
+
+---
+
+## 18. Revisión crítica y asignaturas pendientes
+
+Revisión crítica de lo demostrado y de lo que queda fuera:
+
+**Firmemente demostrado (reproducible):**
+- Equinoccios/solsticios 2026 con λ☉ = 0/90/180/270° (§4).
+- Precesión 50,29″/año → 1°/71,58 a; era 2147,5 a; 144 a = 2,01° (§3).
+- Factorización de los 10 ciclos eclipsales; 37/73 **ausentes** (§9.2); búsqueda exhaustiva adicional (37/73 como periodo, combos Saros/Inex, dos conteos del ciclo nodal) — todo negativo; **verificado empíricamente: ~40 estaciones y ~87 eclipses sol+lun por ciclo nodal, 2,31 eclipses solares/año** (`calc_eclipse_deep.mjs`).
+- 19 años de eclipse ≈ Saros (Δ 0,46 d); Metón 235 ≈ 19 años (Δ 0,087 d); Saros verificado con dos eclipses reales (§8).
+- Metón 12×12+7×13 = 144+91 = 235 (§14); islámico 33 a → drift 358,9 d (§7).
+- Tetramorfo a 90° exactos (§6.1); mazzalot = animales (§6).
+- Espejo no selectivo a nivel corpus (§13): a nivel palabra 47,9 %, a nivel frase 39,0 % (≈ Markov 39,7 % ≈ uniforme 41,4 %), por bloque de k versos consecutivos sin rarefactorizar; no separa lecturas válidas de inválidas (24,9 % vs 41,1 %, §13.2). **Exceso real en el núcleo Génesis 1: 61,3 % vs 38,3 % (p≈8×10⁻³) — hipótesis débil-a-moderada, no prueba (§13.3).** Eclipses no correlacionados — los días Génesis los evitan (7,5 % vs 28 %, §9.3); 6 ventanas ~491 a (§12). Corroboración cross-cultural (Maya 73×5=365, Calendar Round 73 tzolkin, baktun 144 000; chino zhang=Metón; griego/árabe gematría decimal — §9.6).
+
+**Asignaturas pendientes — estado v3.1 (cierre en §15b):**
+- **Saros y series — CERRADO (§15b.6):** el recuento ~73 eclipses/serie se computa ahora serie por serie: 152 series completas detectadas y encadenadas por el periodo saros, longitudes 54–87, media 74,4, mediana 72 — coincide con el rango 70–86 / media ~72–73. El «73» es un recuento estadístico, confirmado por cálculo.
+- **Ayanamsa — CERRADO (§15b.7):** comparadas Lahiri, Krishnamurti, Fagan-Bradley, Raman; las entradas de era se desplazan hasta 190 años. La datación de eras es convencional; el descarte del Lector del Cielo (tropical) es robusto a esta convención.
+- **Causalidad de las 6 ventanas — ACOTADO (§15b.8):** cadencia 491 a compartida (regularidad p<5×10⁻⁶), pero sesgo de selección + n=6 → patrón generador de hipótesis, no prueba causal.
+- **Heptagrama / 7 dobles = 7 días — CERRADO (§15b.9):** orden caldeo por periodos sidéreos + 24 mod 7 = 3 + etimología romance. Demostrado por cálculo.
+- **Estructura 37×73 de las 7 palabras — CERRADO (§15b.5):** nulo riguroso (permutación del multiset de 28 letras, 100 000×): 23/127 subconjuntos múltiplos de 37 (p≈3,1×10⁻⁴) y 2/7 palabras múltiplos de 37 (p≈8,2×10⁻³). El sesgo hacia 37 es real más allá del total trivial 2701=37×73.
+- **37/73 — resuelto (negativo en eclipses, positivo en el sol):** se testaron (i) factorización de los 10 ciclos eclipsales (ausentes), (ii) 37/73 como periodo (no alinean el nodo), (iii) combos Saros/Inex (851=37×23 con drift draconicano 0,5 → no eclipsal), (iv) **dos conteos del ciclo nodal** (39,2 correcto vs 37,2 ingenuo — el «37 estaciones» es una sub-cuenta en años trópicos; empíricamente ~40, no 37), (v) la relación con el año solar (365 = 73×5; 2701 pentadas = 37 años civiles — §9.4). **Conclusión: 37 ausente de los eclipses; 73 sólo estadístico (recuento de serie saros, media ~72–73, ahora por cálculo §15b.6); ambos encajan en el año solar civil, corroborado por el Haab maya.** La identidad 2701 = 37×73 es calendárico-civil, no orbital: usa el año de 365 d, no el trópico 365,2422.
+- **Precesión variable — ABIERTA:** 50,29″/año es constante; la precesión real acelera/decelera (modelo IAU 2006 con términos armónicos). Las fechas de era tienen incertidumbre de ~decenas de años por este término, no propagada. No se cierra por cálculo astronómico elemental.
+- **Basmala y código-19 — ABIERTA (no astronómica):** se reportan los hechos aritméticos (19 letras, 114 = 6×19); no se evalúa la «hipótesis del código 19» de Khalifa (claim estadística discutida, no un hecho astronómico).
+- **Tetramorfo:** la correspondencia caras↔signos fijos es exegética tradicional (Ezequiel/Apocalipsis); no se «demuestra» astronómicamente, solo se muestra que están a 90°.
+- **Atribución decanatal de los 72 ángeles — ABIERTA (§15b.4):** la extracción mecánica 72×3 está demostrada; la asignación ángel↔decanato (5°) es hipótesis estructural, no empírica.
+- **Atribución astronómica específica de la gematría tórica — ABIERTA (hipótesis, §6.3).**
+
+**Lo que el artículo NO afirma:** no afirma causalidad eclipse-Génesis (negativo, §9.3), no afirma que 37/73 rijen eclipses (negativo, §9.2), no afirma que el espejo seleccione Génesis (negativo, §13, también a nivel palabra 47,9 % y a nivel frase 39,3 %), no afirma que el palíndromo-espejo sea un checksum textual ni el criterio de validez de las lecturas del cielo (falsificado: base alta 48 %, y no separa días legibles de inválidos, 30,7 % vs 32,4 %, §13.1–13.2), no afirma que la gematría tórica codifique astronomía como hecho probado (es hipótesis dentro de una tradición atestada, §6.3), no afirma que el SY clásico sea un oráculo (§1).
+
+**Lo que el artículo SÍ afirma (con evidencia):** la **ingeniería intencional de letras** es una práctica históricamente atestada (SY, Abulafia, Raziel) y, para los versos de 72 letras de Éxodo 14:19-21, **empíricamente improbable por azar** (p ≈ 5×10⁻⁷). La distinción entre (a) intención de la práctica [demostrada] y (b) atribución astronómica específica de la gematría tórica [hipótesis] es el núcleo epistémico del trabajo.
+
+**Verificado además (v3.1):** Génesis 1:2 = 3546 → 9999 (repdigit) ✓; Egel 103→404, Ayil 41→55, Shor 506→1111 = 2×253 ✓; Egel+Ayil = 144 ✓; 144×15 = 2160 y 144×180 = 25 920 ✓ (solo a 72 a/°; a 50,29″/año no son enteros); ABBA = AB+BA = 4 = «padre» ✓; 3·7·12−22+1 = 231 = C(22,2) ✓; Éxodo 14:19-21 = 72 consonantes ×3 verificado en MT vía Sefaria ✓ (p≈5×10⁻⁷). **Empírico:** equinoccios 2026 λ☉=0/90/180/270° al segundo ✓; Saros 2023-04-20→2041-04-30 Δ=6585,32 d ✓; ~40 estaciones y ~87 eclipses sol+lun por ciclo nodal (no 37) ✓; 3000 eclipses solares/1300 a = 2,31/año ✓; días Génesis evitan eclipses (7,5 % vs 28 %) ✓; núcleo Génesis 1 palíndromo 61,3 % vs 38,3 % nulo (p≈8×10⁻³) ✓; Maya Haab 73×5=365, Calendar Round 73×260=52×365=18 980, baktun 144 000 ✓; chino zhang=Metón 19/235 ✓; griego/árabe gematría decimal-posicional 27/28 ✓. **Nuevo v3.1 (§15b):** 7 kameot verificados mágicos (15,34,65,111,175,260,369) ✓; Mercurio 8×8 cte=260 = Tzolkin maya ✓; Sol 6×6 suma 1..36 = 666 = 6×111 ✓; Aiq Bekar = gematría decimal-posicional de §2 (27 letras) ✓; 72 tríos del Shem HaMephorash canónicos (והו, ילי…) ✓, 216 = 6³ ✓; sigilos de nombres (אדם, משה, דוד, אברהם, ישראל, אלהים, משיח…) ✓; **estructura 37×73 de las 7 palabras: 23/127 subconjuntos múltiplos de 37, p≈3,1×10⁻⁴** ✓; **152 series saros completas: 54–87 eclipses, mediana 72** (73 = recuento, por cálculo) ✓; ayanamsa: dispersión 190 a en la entrada de Acuario ✓; 6 ventanas cadencia 491 a, regularidad p<5×10⁻⁶ (con caveat de selección) ✓; 7 dobles = 7 planetas = 7 días (orden caldeo + 24 mod 7 + etimología romance) ✓. `tests.mjs` = **86 aserciones, todas en verde**.
+
+---
+
+## 19. Conclusión
+
+El *Lector del Cielo* convierte el mapeo tripartito del *Sefer Yetzirah* en un protocolo formal y verificable. La rejilla tropical es medible (λ☉ = 0/90/180/270°); la precesión dota de contenido al 72 (1°/71,58 a) y al 144 (2,01° en 144 a); la sincronía lunar-solar se rige por el 19 (Metón = Saros = basmala, redescubierto por China como *zhang*) y el 144 (meses del Metón; 144 000 = baktun maya). **37 y 73 no estructuran los eclipses** —búsqueda exhaustiva (factorización, periodo, combos Saros/Inex, dos conteos del ciclo nodal) toda negativa, y empíricamente ~40 estaciones/~87 eclipses por ciclo nodal, no 37; 73 sólo como recuento estadístico de serie saros—; los eclipses se rigen por 19, 47 y 223. **Pero 37 y 73 sí estructuran el año solar civil** (365 = 73×5; 2701 pentadas = 37 años), corroborado independientemente por el Haab maya (73×5 = 365) y el Calendar Round (73 *Tzolkin*): la gematría del primer verso se refleja en la medida del año, 37 años × 73 pentadas = 2701. Bajo la regla de pertenencia, Génesis 1:1 es legible solo en ventanas de ~13 años que recurren cada ~491 años (sinódico Neptuno–Plutón, fase Aries–Acuario), coincidentes con las grandes re-formaciones religioso-lingüísticas, sobre el fondo precesional de ~2148 años por era. El espejo-palíndromo 2701→3773 es real pero no selectivo a nivel corpus —el descarte es posicional (P = q^|S|, exponencial en el nº de elementos)—; no obstante, el **núcleo original (Génesis 1) muestra un exceso real** (61,3 % vs 38,3 %, p≈8×10⁻³) que el test de corpus diluía. Los eclipses no intervienen (los días Génesis los evitan). El sistema ofrece una base computable y refutable para la intuición de que las eras estelares marcan readaptaciones del lenguaje sagrado, con el 491-años sinódico como motor y el 2148-años precesional como trasfondo. **v3.1 (§15b)** cierra las asignaturas pendientes por cálculo: la estructura 37×73 de las 7 palabras de Génesis 1:1 es real (p≈3×10⁻⁴, más allá del total trivial), el recuento de serie saros es 54–87 con mediana 72 (el «73» es estadístico, ahora por cálculo), el ayanamsa desplaza las eras hasta 190 años (el descarte tropical es robusto), el heptagrama 7 dobles=7 días se deriva del orden caldeo + aritmética mod 7, y la cadencia 491-años de las 6 ventanas es muy regular (p<5×10⁻⁶) aunque su causalidad queda como hipótesis (sesgo de selección, n=6). Y extiende el sistema a la **tradición operativa hermética**: los 7 kameot planetarios son las 7 dobles, la reducción Aiq Bekar es la gematría decimal-posicional de §2 (puente a los sigilos), los sigilos son la huella geométrica del nombre sobre la rejilla decimal, y los 72 ángeles del Shem HaMephorash se extraen mecánicamente de Éxodo 14:19-21 (216 = 6³ consonantes). El sustrato común es la **gematría decimal-posicional** — el alfabeto como conjunto de cifras de base 10 —, que aparece simultáneamente en la estructura del verso, en la medida del año solar (37×73), en la composición de sigilos y en la lectura de nombres angélicos.
+
+---
+
+## Referencias
+
+- *Sefer Yetzirah*. Ed. A. Hayman (2004); trad. A. Kaplan (1990).
+- astronomy-engine — D. Rowell. https://github.com/cosinekitty/astronomy-engine
+- Strong, J. *Hebrew Lexicon*; OpenScriptures. https://github.com/openscriptures/HebrewLexicon
+- Sefaria API (corpus Génesis). https://www.sefaria.org/api
+- Lahiri, N. C. *Ayanamsa* (1957).
+- Meeus, J. *Astronomical Algorithms* (ciclos eclipsales: Saros, Inex, Meton; 2.ª ed., 1998).
+- Jaspers, K. *Vom Ursprung und Ziel der Geschichte* (Edad Axial, 1949).
+- Jenkins, V. *The Other Bible Code* (estructura 37/73 de Génesis 1:1; citada críticamente).
+- Khalifa, R. *Computer Manifests the Message* (hechos 19-letras/114-azoras; interpretación discutida).
+- Standish, E. M. / PLAN404 (efeméride planetaria subyacente, Plutón).
+- *Libro de los vigilantes* (1 Enoc 72–82) y calendario de Qumrán (364 d = 52 semanas); Talmon, S. «Yahadic Fragments».
+- Yeivin, I. *Introduction to the Tiberian Masorah* (recuento masorético de letras/palabras/versos; palabra central *darosh darash*, Lev 10:16).
+- *Sefer Raziel HaMalakh* (Libro del ángel Raziel), ed. M. Margalioth (tratado medieval de permutación de letras y construcción de nombres/ángeles).
+- Abulafia, A. *Chayei Ha-Olam Ha-Ba* / *Or Ha-Sekhel* (combinación profética de letras, *tzerufim*); Idel, M. *The Mystical Experience in Abraham Abulafia*.
+- *Shem HaMephorash* (Nombre de 72): tripletes de Éxodo 14:19-21; tradición en *Bahir*, *Zohar* y Abulafia.
