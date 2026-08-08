@@ -1,5 +1,5 @@
 
-# APOCALYPSE OF ADAM  
+# ADAM APOCALYPSE
 
 ### Paper 
 
