@@ -105,3 +105,9 @@ Files: `web/index.html` + `web/app.bundle.js` + symlinks `lexicon.json`/`angels7
 - **Ayanamsa (v3.1):** 4 systems shift the entry into Aquarius by up to 190 years — dating of eras is conventional; the tropical exclusion is robust (`calc_ayanamsa.mjs`).
 - **6 windows (v3.1):** shared 491-year cadence, regularity p<5×10⁻⁶ — but selection bias + n=6 → hypothesis, not causation (`calc_windows_causality.mjs`).
 - Cross-cultural: Meton (Chinese *zhang*), decimal gematria (Greek/Arabic), 144,000 (Maya baktun), 72 (Vedic/Egyptian), **Mercury 260 = Tzolk'in (magic square)**.
+
+## Authors
+
+AncientEncoder
+V.Nos
+Julian S.
