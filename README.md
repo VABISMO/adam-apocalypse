@@ -69,7 +69,7 @@ node calc_windows_causality.mjs # §15b.8  (6 windows: 491-year cadence, regular
 node calc_week_chaldean.mjs # §15b.9      (7 Doubles = 7 planets = 7 days; Chaldean order + mod 7)
 ```
 
-## Web app (English, tab-based)
+## Web app
 
 ```bash
 cd web
