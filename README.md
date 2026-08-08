@@ -113,3 +113,29 @@ AncientEncoder
 V.Nos
 
 Julian S.
+
+## Literature
+
+- Sefer Yetzirah. Ed. A. Hayman (2004); trans. A. Kaplan (1990).
+- astronomy-engine — D. Rowell. https://github.com/cosinekitty/astronomy-engine
+- Strong, J. Hebrew Lexicon; OpenScriptures. https://github.com/openscriptures/HebrewLexicon
+- Sefaria API (Genesis corpus). https://www.sefaria.org/api
+- Lahiri, N. C. Ayanamsa (1957).
+- Meeus, J. Astronomical Algorithms (eclipse cycles: Saros, Inex, Meton; 2nd ed., 1998).
+- Jaspers, K. Vom Ursprung und Ziel der Geschichte (Axial Age, 1949).
+- Jenkins, V. The Other Bible Code (37/73 structure of Genesis 1:1; cited critically).
+- Khalifa, R. Computer Manifests the Message (19-letters/114-suras facts; disputed interpretation).
+- Standish, E. M. / PLAN404 (underlying planetary ephemeris, Pluto).
+- Book of the Watchers (1 Enoch 72–82) and the Qumran calendar (364 d = 52 weeks); Talmon, S. "Yahadic Fragments".
+- Yeivin, I. Introduction to the Tiberian Masorah (Masoretic count of letters/words/verses; central word darosh darash, Lev 10:16).
+- Sefer Raziel HaMalakh (Book of the angel Raziel), ed. M. Margalioth (medieval treatise on letter permutation and the construction of names/angels).
+- Abulafia, A. Chayei Ha-Olam Ha-Ba / Or Ha-Sekhel (prophetic combination of letters, tzerufim); Idel, M. The Mystical Experience in Abraham Abulafia.
+- Shem HaMephorash (Name of 72): triplets of Exodus 14:19-21; tradition in Bahir, Zohar, and Abulafia.
+- Saadia Gaon, Commentary on the Sefer Yetzirah (c. 931 CE): first explicit assignment 7 doubles→7 planets (geocentric order) and 12 simples→12 signs.
+- Ibn Ezra, A. Sefer ha-Shem (1148), Sefer ha-Olam, Reshit Hokhmah (1147): gematria of the Tetragrammaton; astronomy/astrology (mazzalot, 28 mansions, precession/trepidation).
+- al-Buni, A. Shams al-Maʿārif (13th c.): magic squares, 99 Names, abjad isopsephy (Islamic analogue of practical Kabbalah).
+- Ibn Arabi, Futūḥāt al-Makkiyya ch.198: 28 letters ↔ 28 lunar mansions ↔ 7 planets (Sufi parallel of the letter↔star correspondence).
+- Aleppo Codex (c. 920 CE) and Leningrad Codex (1008/9 CE): Masoretic (MT) base of the consonantal count of Exodus 14:19-21.
+- Agrippa von Nettesheim, H. C. De occulta philosophia III (1531/33): first attestation of the sigil-on-kamea method and of the Aiq Bekar table in Christian-Renaissance Kabbalah.
+- Domination Codex (hermeneutical source cited in §6.3; same 231/ABBA/Abulafia arithmetic, no null tests).
+- Idel, M. "Sefer Razi'el ha-Mal'akh — A Conduit of Medieval Ashkenazi Culture", Aschkenas 34/2 (2024); Rebiger, B. "Zur Redaktionsgeschichte des Sefer Razi'el ha-Mal'akh", FJB 32 (2005).
