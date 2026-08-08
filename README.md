@@ -17,9 +17,6 @@
 <img width="1156" height="768" alt="image" src="https://github.com/user-attachments/assets/a346323d-261f-4833-ae4f-2a5dafea1363" />
 
 
-
-[📄 View the PDF](pdf/lector-del-cielo_EN.pdf)
-
 # Caeli Reader (קורא השמים)
 
 Operationalization of the tripartite mapping of the *Sefer Yetzirah* (3 Mothers / 7 Doubles / 12 Simples) onto real astronomical ephemerides (*astronomy-engine*). Article version: **3.1**.
