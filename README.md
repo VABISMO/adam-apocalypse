@@ -1,6 +1,16 @@
 
 # APOCALYPSE OF ADAM PAPER 
 
+
+[📄 View the PDF](pdf/lector-del-cielo_EN.pdf)
+
+<img width="1156" height="603" alt="image" src="https://github.com/user-attachments/assets/e57db731-4697-494f-b273-8c61ee288edd" />
+
+
+<img width="1156" height="768" alt="image" src="https://github.com/user-attachments/assets/a346323d-261f-4833-ae4f-2a5dafea1363" />
+
+
+
 [📄 View the PDF](pdf/lector-del-cielo_EN.pdf)
 
 # Caeli Reader (קורא השמים)
