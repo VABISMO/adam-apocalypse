@@ -3,7 +3,7 @@
 
 ### Web APP
 
-[Adam Apocalypse Paper](https://adam-apocalypse.onrender.com/)
+[Adam Apocalypse APP](https://adam-apocalypse.onrender.com/)
 
 ### Paper 
 
