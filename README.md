@@ -110,9 +110,7 @@ Files: `web/index.html` + `web/app.bundle.js` + symlinks `lexicon.json`/`angels7
 
 AncientEncoder
 
-V.Nos
-
-Julian S.
+Bartman081523
 
 *last incarnation
 
