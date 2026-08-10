@@ -32,9 +32,65 @@ const GV = {א:1,ב:2,ג:3,ד:4,ה:5,ו:6,ז:7,ח:8,ט:9,י:10,כ:20,ל:30,מ:40
 function norm(s){ return [...s].map(c=>FIN2REG[c]||c).join(''); }
 function displayHe(s){ if(!s) return s; const last=s[s.length-1]; const f=REG2FIN[last]; return f ? s.slice(0,-1)+f : s; }
 function gematria(s){ return [...s].reduce((a,c)=>a+(GV[c]||0),0); }
-function simpleSet(cons){ const s=new Set(); for(const c of cons) if(SIMPLE_LETTERS.has(c)) s.add(c); return s; }
+function simpleSet(cons){ const s=new Set(); for(const c of norm(cons)) if(SIMPLE_LETTERS.has(c)) s.add(c); return s; }
 function formable(cons, occ){ for(const c of simpleSet(cons)) if(!occ.has(c)) return false; return true; }
 function isPalindrome(cons){ const n=norm(cons); return n.length>=2 && n===[...n].reverse().join(''); }
+// Curated lexicon of known angel names in Hebrew consonants, across traditions.
+// The Strong lexicon covers biblical Hebrew proper names, so biblical angels
+// (Michael, Gabriel, Ariel, Azazel…) already appear as readable words; this list
+// ALSO adds the extra-biblical names (Metatron, Sandalphon, Raziel, Azrael, the
+// Enochian watchers…) so the Reader surfaces every known angel name when its
+// zodiacal simples are occupied. Match is on normalised consonants.
+const ANGEL_LEXICON = [
+  // — Hebrew Bible / Apocrypha —
+  ['מיכאל','Michael','Bible · Dan 10:13; Jude 9; Rev 12:7'],
+  ['גבריאל','Gabriel','Bible · Dan 8:16; Luke 1:19'],
+  ['רפאל','Raphael','Apocrypha · Tobit 3:17; 1 Enoch'],
+  ['אוריאל','Uriel','Apocrypha · 2 Esdras; 1 Enoch'],
+  ['עזאזל','Azazel','Bible · Lev 16:8; 1 Enoch 10'],
+  ['אריאל','Ariel','Bible · Ezra 8:16; Isa 29:1'],
+  ['ירמיאל','Jeremiel','Apocrypha · 2 Esdras 4:36'],
+  // — 1 Enoch: the leaders of the Watchers (chs 6, 8) —
+  ['שמחזי','Shemhazai (Semyaza)','1 Enoch 6:7'],
+  ['רמיאל','Ramiel (Remiel)','1 Enoch'],
+  ['סריאל','Sariel','1 Enoch 6:7'],
+  ['שריאל','Sariel (variant)','1 Enoch'],
+  ['רגואל','Raguel','1 Enoch 20:4'],
+  ['דניאל','Daniel (the watcher)','1 Enoch 6:7 — distinct from the prophet'],
+  ['כוכביאל','Kokabiel','1 Enoch 6:7 (angel of the stars)'],
+  ['ארמיאל','Arakiel','1 Enoch 6:7'],
+  ['שמשיאל','Shamsiel','1 Enoch 6:7'],
+  ['תמיאל','Tamiel','1 Enoch 6:7'],
+  ['יקומיאל','Yekamiel','1 Enoch 6:7'],
+  ['קזביאל','Kasbeel','1 Enoch 8:2'],
+  ['עזיאל','Azael','1 Enoch (variant)'],
+  ['שחיאל','Shachiel','1 Enoch tradition'],
+  // — Kabbalah / Merkavah —
+  ['מטטרון','Metatron','3 Enoch; Talmud (angel of the presence)'],
+  ['סנדלפון','Sandalphon','3 Enoch; Kabbalah'],
+  ['סמאל','Samael','Talmud; Zohar (angel of death / adversary)'],
+  ['רזיאל','Raziel','Sefer Raziel HaMalakh'],
+  ['כפזיאל','Kafziel (Cassiel)','Kabbalah · angel of Saturn'],
+  ['צדקיאל','Zadkiel','Kabbalah · angel of Jupiter / mercy'],
+  ['כמאל','Camael','Kabbalah · angel of Mars'],
+  ['חמאל','Chamuel','Kabbalah · angel of Mars (variant)'],
+  ['הניאל','Haniel','Kabbalah · angel of Venus'],
+  ['יופיאל','Jophiel','Kabbalah · angel of wisdom'],
+  ['זפקיאל','Zaphkiel','Kabbalah'],
+  ['ברכיאל','Barakiel','Kabbalah · angel of lightning'],
+  ['יהואל','Jehoel','Kabbalah (Metatron’s surrogate)'],
+  ['אקטריאל','Akatriel','Kabbalah'],
+  ['סבריאל','Sabriel','Kabbalah'],
+  ['נוריאל','Nuriel','Kabbalah (angel of fire / hail)'],
+  ['מלכיאל','Malkiel','Kabbalah'],
+  ['סטריאל','Satariel','Kabbalah (angel of concealment)'],
+  // — Islamic / Judeo-Arabic, rendered in Hebrew —
+  ['עזראל','Azrael','Islamic & Jewish · angel of death'],
+  ['אסראפיאל','Israfil','Islamic · angel of the trumpet'],
+  ['ישרפיאל','Israfil (Jewish form)','Jewish lists · trumpet'],
+];
+const ANGEL_NAME_MAP = new Map(ANGEL_LEXICON.map(([he,en,src])=>[norm(he), {en, src}]));
+
 function readableWords(occ, LEX, angelMap){
   const res=[], seen=new Set();
   for(const [cons,trans,gloss,pos] of LEX){
@@ -43,12 +99,26 @@ function readableWords(occ, LEX, angelMap){
       seen.add(cons);
       const simp=[...simpleSet(cons)].sort().join('');
       const am = angelMap ? angelMap.get(norm(cons)) : null;
+      const an = ANGEL_NAME_MAP.get(norm(cons));
       res.push({he:cons, disp:displayHe(cons), translit:trans, gloss, pos, len:cons.length, gem:gematria(cons), simp,
         pal:isPalindrome(cons), m37:gematria(cons)%37===0,
         name: (pos||'').startsWith('n-pr'),
         theo: /אל|יהו|יאל|יה/.test(cons),
         compound: /\s/.test(trans),
-        angel: am ? {el:am.el, yh:am.yh} : null});
+        angel: am ? {el:am.el, yh:am.yh} : null,
+        angelName: an || null});
+    }
+  }
+  // add extra-biblical angel names not already in the Strong lexicon
+  for(const [he,en,src] of ANGEL_LEXICON){
+    if(seen.has(he)) continue;
+    if(formable(he, occ)){
+      seen.add(he);
+      const simp=[...simpleSet(he)].sort().join('');
+      res.push({he, disp:displayHe(he), translit:en, gloss:'angel — '+en, pos:'n-pr', len:he.length, gem:gematria(he), simp,
+        pal:isPalindrome(he), m37:gematria(he)%37===0,
+        name:true, theo:/אל|יה/.test(he), compound:false,
+        angel: angelMap?angelMap.get(norm(he)):null, angelName:{en,src}});
     }
   }
   res.sort((a,b)=> b.len-a.len || a.gem-b.gem || (a.he<b.he?-1:1));
@@ -89,17 +159,23 @@ function fmtDate(d){                           // Date -> "YYYY-MM-DD" | "-YYYY-
   return sign + String(Math.abs(y)).padStart(4,'0') + '-' + mo + '-' + da;
 }
 
-function skyAt(dateStr){
+// The 7 classical bodies (Sun, Moon, Mercury..Saturn): accurate over millennia AND
+// fast at every date (no Pluto, whose GeoVector is ~4000 ms/call before 1700 CE). Used
+// for the deep-past alignment readings, where the 10-body skyAt is infeasible.
+const BODIES7 = ['Sun','Moon','Mercury','Venus','Mars','Jupiter','Saturn'];
+function skyAtSet(dateStr, bodies){
   if(!dateStr) return [];
   const d = parseDate(dateStr);
   if(!d) return [];
-  return BODIES.map(b=>{
+  return bodies.map(b=>{
     const v = Astronomy.GeoVector(Astronomy.Body[b], d, true);
     const lon = Astronomy.Ecliptic(v).elon;
     let si = Math.floor(lon/30) % 12; if(si<0) si+=12;
     return { body:b, lon, sign:SIGNS[si], deg: lon - si*30, boundary:(lon-si*30)<1||(lon-si*30)>29 };
   });
 }
+function skyAt(dateStr){ return skyAtSet(dateStr, BODIES); }
+function skyAt7(dateStr){ return skyAtSet(dateStr, BODIES7); }
 function occupiedLetters(rows){ const s=new Set(); rows.forEach(r=>s.add(SIMPLE[r.sign][0])); return s; }
 function bySign(rows){ const m={}; rows.forEach(r=>{(m[r.sign]=m[r.sign]||[]).push(r)}); return m; }
 
@@ -386,7 +462,7 @@ function TranslatorTab({date, occ, words, q, setQ, genData}){
   const [mode,setMode] = useState('include');   // 'include' | 'exclude'
   const [minLen,setMinLen] = useState(1);
   const qn = q.trim().toLowerCase();
-  const PROPS = {date:'simp', pal:'pal', g37:'m37', angel:'angel', name:'name', comp:'compound'};
+  const PROPS = {date:'simp', pal:'pal', g37:'m37', angel:'angelName', name:'name', comp:'compound'};
   const toggle=(id)=>setSel(prev=>{const n=new Set(prev); n.has(id)?n.delete(id):n.add(id); return n;});
   const filtered = useMemo(()=>{
     let r = words;
@@ -404,7 +480,7 @@ function TranslatorTab({date, occ, words, q, setQ, genData}){
   const alwaysCount = useMemo(()=>words.filter(w=>!w.simp).length,[words]);
   const palCount = useMemo(()=>words.filter(w=>w.pal).length,[words]);
   const g37Count = useMemo(()=>words.filter(w=>w.m37).length,[words]);
-  const angelCount = useMemo(()=>words.filter(w=>w.angel).length,[words]);
+  const angelCount = useMemo(()=>words.filter(w=>w.angelName).length,[words]);
   const nameCount = useMemo(()=>words.filter(w=>w.name).length,[words]);
   const compCount = useMemo(()=>words.filter(w=>w.compound).length,[words]);
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
@@ -437,7 +513,7 @@ function TranslatorTab({date, occ, words, q, setQ, genData}){
       <FilterChip active={sel.has('date')} count={dateCount} label="date-specific" title="Words with zodiac simples (date signal). Include = only date-specific; exclude = only always-readable" onToggle={()=>toggle('date')}/>
       <FilterChip active={sel.has('pal')} count={palCount} label="palindrome" title="Consonant palindrome (reads the same backwards)" onToggle={()=>toggle('pal')}/>
       <FilterChip active={sel.has('g37')} count={g37Count} label="gematria ×37" title="Gematria is a multiple of 37" onToggle={()=>toggle('g37')}/>
-      <FilterChip active={sel.has('angel')} count={angelCount} label="angel +אל/+יה" title="The word + suffix אל / יה is one of the 72 Shem HaMephorash angel names (Exodus 14:19-21)" onToggle={()=>toggle('angel')}/>
+      <FilterChip active={sel.has('angel')} count={angelCount} label="angel name" title="A known angel name in Hebrew — Bible, Apocrypha, 1 Enoch watchers, Kabbalah, Islamic/Judeo-Arabic (Michael, Gabriel, Raphael, Uriel, Metatron, Sandalphon, Raziel, Azrael, the Watchers…). Matched by consonants, not suffix." onToggle={()=>toggle('angel')}/>
       <FilterChip active={sel.has('name')} count={nameCount} label="name (proper)" title="The word is a proper noun (name) in Strong — incl. theophoric names bearing אל / יה" onToggle={()=>toggle('name')}/>
       <FilterChip active={sel.has('comp')} count={compCount} label="compound" title="Concatenated multi-root entry whose gloss is truncated (e.g. 'dove of')" onToggle={()=>toggle('comp')}/>
       <span className="muted" style={{fontSize:'.8rem', marginLeft:6}}>mode:</span>
@@ -451,7 +527,7 @@ function TranslatorTab({date, occ, words, q, setQ, genData}){
       <span className="muted">{filtered.length} shown · {alwaysCount} always-readable</span>
     </div>
     <div className="muted" style={{marginBottom:8}}>
-      Reading rule applied: every <b>simple (zodiac) letter</b> in a word must sit in an <b>occupied sign</b> today. Mothers + doubles are always available. Available today: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>. <span style={{color:'var(--violet)'}}>violet</span> = always readable (no simples). Badges: <span style={{color:'var(--gold)'}}>palindrome</span> · <span style={{color:'var(--green)'}}>×37</span> · <span style={{color:'var(--violet)'}}>angel</span> · <span style={{color:'var(--blue)'}}>name</span> · <span style={{color:'var(--warn)'}}>compound</span>. <span className="prob ok">%</span> = empirical legibility over the scanned year (computed from astronomy-engine, not hardcoded): <span className="prob ok">green</span> special (rare), <span className="prob mid">amber</span> frequent, <span className="prob spec">red</span> common. <b>This within-year % measures only how often a word's required simples are co-occupied as the planets drift this year — it is NOT the recurrence of a specific stellar alignment.</b> A particular sky configuration recurs over years → centuries → millennia (the precalculated rare grand conjunctions in the <b>Alignments</b> subtab, §15c.11); a reading during such a rare alignment is the significant one, while ordinary readability is the common noise floor (~1 day in 9, ~2031 names/day). Sorted: longest first.
+      Reading rule applied: every <b>simple (zodiac) letter</b> in a word must sit in an <b>occupied sign</b> today. Mothers + doubles are always available. Available today: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>. <span style={{color:'var(--violet)'}}>violet</span> = always readable (no simples). Badges: <span style={{color:'var(--gold)'}}>palindrome</span> · <span style={{color:'var(--green)'}}>×37</span> · <span style={{color:'var(--violet)'}}>angel name</span> · <span style={{color:'var(--blue)'}}>name</span> · <span style={{color:'var(--warn)'}}>compound</span>. <span className="prob ok">%</span> = empirical legibility over the scanned year (computed from astronomy-engine, not hardcoded): <span className="prob ok">green</span> special (rare), <span className="prob mid">amber</span> frequent, <span className="prob spec">red</span> common. <b>This within-year % measures only how often a word's required simples are co-occupied as the planets drift this year — it is NOT the recurrence of a specific stellar alignment.</b> A particular sky configuration recurs over years → centuries → millennia (the precalculated rare grand conjunctions in the <b>Alignments</b> subtab, §15c.11); a reading during such a rare alignment is the significant one, while ordinary readability is the common noise floor (~1 day in 9, ~2031 names/day). Sorted: longest first.
     </div>
     <div className="tcards">
       {slice.map((w,i)=>(
@@ -459,9 +535,10 @@ function TranslatorTab({date, occ, words, q, setQ, genData}){
           <div className="the">{w.disp}</div>
           <div className="read">{w.translit}</div>
           <div className="trans">{w.gloss}</div>
-          <div className="g">{w.len} letters · gematria {w.gem}{w.pal && <span style={{color:'var(--gold)'}}> · palindrome</span>}{w.m37 && <span style={{color:'var(--green)'}}> · ×37</span>}{w.angel && <span style={{color:'var(--violet)'}}> · angel</span>}{w.name && <span style={{color:'var(--blue)'}}> · name{w.theo?' (theophoric)':''}</span>}{w.compound && <span style={{color:'var(--warn)'}}> · compound (gloss truncated)</span>}</div>
+          <div className="g">{w.len} letters · gematria {w.gem}{w.pal && <span style={{color:'var(--gold)'}}> · palindrome</span>}{w.m37 && <span style={{color:'var(--green)'}}> · ×37</span>}{w.angelName && <span style={{color:'var(--violet)'}}> · angel</span>}{w.name && <span style={{color:'var(--blue)'}}> · name{w.theo?' (theophoric)':''}</span>}{w.compound && <span style={{color:'var(--warn)'}}> · compound (gloss truncated)</span>}</div>
           {probs.has(w.he) && (()=>{ const p=probs.get(w.he); const n=genData.dayOccs.length; const pct = p<0.001 ? '<0.1' : (p*100).toFixed(p<0.1?1:0); const cls = p>=0.5 ? 'spec' : p>=0.2 ? 'mid' : 'ok'; const tag = p>=0.5 ? 'common' : p>=0.2 ? 'frequent' : 'special'; return <span className={'prob '+cls} title={`Empirical legibility over ${n} days of ${genData.year}: ${pct}% of days this word's required simples are all occupied (S⊆O, computed from astronomy-engine — not hardcoded). This is a within-year rate, NOT the recurrence of a specific stellar alignment: a particular sky configuration recurs over years→centuries→millennia (rare grand conjunctions, §15c.11). Low % = special/rare (green); high % = common (red).`}>{pct}% · {tag}</span>; })()}
-          {w.angel && <div className="simp" style={{color:'var(--violet)'}}>angel: +אל → <span className="he" style={{fontSize:'.95rem'}}>{w.angel.el}</span> · +יה → <span className="he" style={{fontSize:'.95rem'}}>{w.angel.yh}</span></div>}
+          {w.angelName && <div className="simp" style={{color:'var(--violet)'}}>angel: {w.angelName.en} <span style={{color:'var(--dim)'}}>· {w.angelName.src}</span></div>}
+          {w.angel && <div className="simp" style={{color:'var(--violet)'}}>Shem triplet +אל → <span className="he" style={{fontSize:'.95rem'}}>{w.angel.el}</span> · +יה → <span className="he" style={{fontSize:'.95rem'}}>{w.angel.yh}</span></div>}
           <div className="simp">{w.simp ? ('simples: '+[...w.simp].join(' ')) : 'no simples (always)'}</div>
         </div>
       ))}
@@ -476,7 +553,7 @@ function TranslatorTab({date, occ, words, q, setQ, genData}){
         <input type="number" min="1" max={pages} value={cur+1} onChange={e=>{const n=parseInt(e.target.value,10); if(!isNaN(n)) setPage(Math.max(0,Math.min(pages-1,n-1)));}} style={{width:64}} aria-label="Jump to page"/>
       </div>
     )}
-    <div className="note">Reuse rule: a simple is either present or not; revisiting a sign adds or removes no letters. That is why one date reads thousands of words — paginate, search and filter to cut them down. Palindrome and ×37 are textual facts about the word, not sky-reading rules; use them to surface structure, not to decide legibility. <b>Angel</b> = the word + suffix <span className="he">אל</span> / <span className="he">יה</span> is one of the 72 Shem HaMephorash names (Exodus 14:19-21, §15b.4) — a name made by adding the suffix. <b>Name</b> = the word is a proper noun in Strong (people, places, theophoric names bearing <span className="he">אל</span>/<span className="he">יה</span>).</div>
+    <div className="note">Reuse rule: a simple is either present or not; revisiting a sign adds or removes no letters. That is why one date reads thousands of words — paginate, search and filter to cut them down. Palindrome and ×37 are textual facts about the word, not sky-reading rules; use them to surface structure, not to decide legibility. <b>Angel name</b> = the word is a known angel name in Hebrew — from the Bible (Michael, Gabriel, Azazel, Ariel…), the Apocrypha (Raphael, Uriel, Jeremiel), the 1 Enoch watchers (Shemhazai, Kokabiel, Kasbeel…), the Kabbalah (Metatron, Sandalphon, Raziel, Samael, the planetary archangels) and the Islamic/Judeo-Arabic tradition (Azrael, Israfil) — matched by its consonants, not by a suffix. Extra-biblical names not in the Strong lexicon are added in so the Reader can surface them. <b>Shem triplet</b> (shown under the card where present) = the word is also a 3-letter root of one of the 72 Shem HaMephorash names (Exodus 14:19-21, §15b.4), shown with its +<span className="he">אל</span> / +<span className="he">יה</span> forms. <b>Name</b> = the word is a proper noun in Strong (people, places, theophoric names bearing <span className="he">אל</span>/<span className="he">יה</span>).</div>
   </>;
 }
 
@@ -495,6 +572,33 @@ function RuleTab({occ}){
     <div style={{marginTop:10}}><span className="muted">Simples today: </span>{SIGNS.map(s=>{const he=SIMPLE[s][0]; return <span key={s} className={'key '+(occ.has(he)?'on':'off')}>{he} {s}</span>;})}</div>
     <div className="note">Empty today: {SIGNS.filter(s=>!occ.has(SIMPLE[s][0])).map(s=>SIMPLE[s][0]+' ('+s+')').join(', ')||'none'}.</div>
     <Fig n={2} doc="From the article (§3): the tripartite mapping of the Sefer Yetzirah over the real sky. Outer ring: 12 simples = 12 signs. Middle ring: the 7 doubles = the 7 planets at their longitudes. Centre: the 3 mothers on the fixed circumpolar axis that does not precess. A highlighted sector = an occupied sign = a simple legible that day — this is the reading rule, drawn."/>
+
+    <h2 style={{marginTop:18}}>Why stellar alignments matter — rare <i>and</i> reductive</h2>
+    <div className="muted" style={{marginBottom:8}}>An ordinary day scatters the 7 planets across many signs, so most of the 12 simples are occupied and the readable set is large. A rare stellar alignment concentrates those planets into one sign, which empties the others — so <b>fewer</b> letters are legible and <b>fewer</b> words are readable. Two things make such a day astronomically distinctive, and both are proven below.</div>
+
+    <div className="grid2" style={{marginTop:6}}>
+      <div className="iv">
+        <div style={{fontWeight:600,color:'var(--gold)',marginBottom:4}}>1. It reduces what can be read</div>
+        <div className="muted">Concentrating planets in one zodiacal sign lowers letter diversity: the occupied-sign set shrinks, so fewer Hebrew roots are formable. Measured on the 7-classical set, apples-to-apples (rare-alignment days vs an ordinary 2024–2030 baseline):</div>
+        <ul className="muted" style={{marginTop:6}}>
+          <li>average readable names: <b style={{color:'var(--warn)'}}>826</b> on rare days vs <b style={{color:'var(--green)'}}>1486</b> on ordinary days — a <b>~44% reduction</b>.</li>
+          <li>Genesis 1:1 legibility: <b>0.0%</b> on rare days vs <b>0.1%</b> baseline (both 7-classical) — the tightest reading all but vanishes.</li>
+          <li>Shem HaMephorash angel-roots: the <b>same 13</b> roots on rare days as on ordinary days — <b>0 new</b>. Clustering <i>removes</i> readings; it never invents unique ones.</li>
+        </ul>
+        <div className="note">So a rare alignment is a <b>rarity filter</b>, not a richness source: it selects a smaller, sharper subset of words — the opposite of an ordinary day's broad scatter.</div>
+      </div>
+      <div className="iv">
+        <div style={{fontWeight:600,color:'var(--gold)',marginBottom:4}}>2. It recurs every centuries / millennia</div>
+        <div className="muted">The alignment itself is rare on a human timescale. From the 20000 BCE → 2200 CE deep scan (7 classical bodies, 3-day step):</div>
+        <ul className="muted" style={{marginTop:6}}>
+          <li><b>51</b> all-7-in-one-sign events in 22000 years — gaps from <b>38 y</b> to <b>1768 y</b> (avg <b>~429 y</b>): a <i>centuries</i> rhythm, irregular.</li>
+          <li>the tightest conjunctions (all 7 within a small arc) reach <b>5.1°</b> (−8267 BCE, Gemini) and recur on a <i>multi-millennium</i> scale.</li>
+          <li>Jupiter–Saturn great conjunctions recur every <b>~20 y</b> and drift through the signs over one precessional era (~{AGE.toFixed(0)} y) — the slow engine behind the pattern.</li>
+        </ul>
+        <div className="note">An event that <i>both</i> shrinks the readable set <i>and</i> returns only every few centuries is what makes a stellar alignment a meaningful reading moment: a small, stable lexicon that co-occurs only on those rare days. Ordinary days are common and read broadly; alignments are rare and read narrowly.</div>
+      </div>
+    </div>
+    <div className="note" style={{marginTop:10}}>Proof = the stored cross-check in <b>Alignments</b> (Cycles tab): rare-day readability vs ordinary baseline, same 7-classical set. Numbers above are read from that cross-check, so the claim is reproducible, not asserted.</div>
   </>;
 }
 
@@ -1294,67 +1398,144 @@ function LunarSolarTab(){
 }
 
 // ====== Alignments tab — rare century/millennium stellar alignments ======
-// alignments.json is produced offline by scripts/calc_alignments.mjs (two scans:
-// SCAN_A 10 bodies 1700–2200 daily; SCAN_B 7 classical -1000..2200 3-day step).
-// Each rare event carries maxInSign (most planets in one sign), span (smallest arc
-// containing all bodies), precessional era, and the stellar reading for that day.
+// alignments.json is produced offline by scripts/calc_alignments.mjs (two body-sets:
+//   modern = 10 bodies, 1700–2200 CE daily; deep = 7 classical, 20000 BCE → 2200 CE, 3-day step).
+// Each rare event carries metadata only (date, maxInSign, sign, span, era); the stellar
+// reading for the selected alignment is computed in the browser (skyAt is fast).
 function displayDate(ds){
   const d=parseDate(ds); if(!d) return ds;
   const y=d.getUTCFullYear(), mo=MON[d.getUTCMonth()], da=d.getUTCDate();
   return `${da} ${mo} ${y<0?Math.abs(y)+' BCE':y}`;
 }
-function AlignmentsTab({setDate}){
+// 22-per-page paginated, searchable alignment table. `set` is 'A' (modern, 10 bodies)
+// or 'B' (deep, 7 classical) — passed to pick/openEph so the sky-map + ephemerides use
+// the body set that defined the alignment.
+function AlignTable({title, sub, items, set, sel, pick, openEph, showMax=true}){
+  const [page,setPage]=useState(0);
+  const [q,setQ]=useState('');
+  const qn=q.trim().toLowerCase();
+  const filtered=useMemo(()=> items.filter(e=> !qn || e.date.includes(qn) || e.sign.toLowerCase().includes(qn) || e.era.toLowerCase().includes(qn) || (''+e.maxInSign)===qn), [items,qn]);
+  useEffect(()=>{ setPage(0); },[qn,items]);
+  const PS=22, pages=Math.max(1,Math.ceil(filtered.length/PS)), cur=Math.min(page,pages-1);
+  const slice=filtered.slice(cur*PS,cur*PS+PS);
+  return <div style={{marginBottom:18}}>
+    <h3>{title}</h3>
+    {sub && <div className="muted" style={{marginBottom:6}}>{sub}</div>}
+    <div className="controls" style={{marginBottom:8}}>
+      <input type="text" placeholder="search date · sign · era · max…" value={q} onChange={e=>setQ(e.target.value)} style={{flex:'1 1 220px'}} aria-label="Filter alignments"/>
+      <span className="pill">{filtered.length} alignments · page {cur+1}/{pages} · {PS}/page</span>
+    </div>
+    <table>
+      <thead><tr><th>Date</th>{showMax&&<th>maxInSign</th>}<th>Sign</th><th>Span</th><th>Era</th></tr></thead>
+      <tbody>{slice.map(e=> <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
+        <td>
+          <button className="linkish" onClick={()=>pick(e.date,set)}>{displayDate(e.date)}</button>
+          <button className="linkish" onClick={()=>openEph(e.date,set)} title="Ephemerides — planet positions for this date" style={{opacity:.5,fontSize:'.74rem',marginLeft:6}}>eph</button>
+        </td>
+        {showMax&&<td className="deg">{e.maxInSign}</td>}
+        <td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
+      </tr>)}</tbody>
+    </table>
+    {pages>1 && <div className="controls" style={{marginTop:8}}>
+      <button onClick={()=>setPage(p=>Math.max(0,p-1))} disabled={cur===0}>◀ prev</button>
+      <span className="pill">page {cur+1} / {pages}</span>
+      <button onClick={()=>setPage(p=>Math.min(pages-1,p+1))} disabled={cur>=pages-1}>next ▶</button>
+      <span className="muted">jump:</span>
+      <input type="number" min="1" max={pages} value={cur+1} onChange={e=>{const n=parseInt(e.target.value,10); if(!isNaN(n)) setPage(Math.max(0,Math.min(pages-1,n-1)));}} style={{width:64}} aria-label="Jump to page"/>
+    </div>}
+  </div>;
+}
+
+function EphemeridesModal({eph, onClose}){
+  if(!eph) return null;
+  const rows = eph.set==='A' ? skyAt(eph.date) : skyAt7(eph.date);
+  return <div className="eph-modal" onClick={onClose}>
+    <div className="panel eph-panel" onClick={e=>e.stopPropagation()}>
+      <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:8}}>
+        <h3 style={{margin:0}}>Ephemerides — {displayDate(eph.date)}</h3>
+        <button className="linkish" onClick={onClose} style={{fontSize:'1.1rem'}} title="Close">close ✕</button>
+      </div>
+      <div className="muted" style={{marginBottom:8}}>{eph.set==='A'?'10 bodies (app set, Pluto-valid range)':'7 classical bodies (accurate over millennia)'} · geocentric apparent ecliptic longitude · noon UT · astronomy-engine</div>
+      <table>
+        <thead><tr><th>Body</th><th>Sign</th><th>Longitude</th><th>in sign</th></tr></thead>
+        <tbody>{rows.map(r=> <tr key={r.body}>
+          <td><b style={{color:'var(--gold)'}}>{GLYPH[r.body]||''}</b> {r.body}</td>
+          <td>{r.sign}</td>
+          <td className="deg">{r.lon.toFixed(2)}°</td>
+          <td className="deg">{r.deg.toFixed(1)}°{r.boundary && <span className="boundary"> ⟲ boundary</span>}</td>
+        </tr>)}</tbody>
+      </table>
+      <div className="note">Occupied simples this day: <span className="he" style={{fontSize:'1.1rem',color:'var(--gold)'}}>{[...occupiedLetters(rows)].sort().join(' ')||'none'}</span></div>
+    </div>
+  </div>;
+}
+
+function AlignmentsTab({setDate, lex, angelMap}){
   const [data,setData]=useState(null);
   const [err,setErr]=useState(null);
-  const [sel,setSel]=useState('1962-02-04');   // default: the famous grand conjunction
+  const [sel,setSel]=useState(null);
+  const [selSet,setSelSet]=useState('B');
+  const [eph,setEph]=useState(null);          // {date, set} for the ephemerides modal
   const mapRef=useRef(null);
   useEffect(()=>{ fetch('alignments.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setData).catch(e=>setErr(e.message)); },[]);
-  // pick a date: update this tab's selection, propagate to the global date (so Sky Map
-  // and Reader reflect it), and scroll the sky-map section into view.
-  const pick=(d)=>{ setSel(d); if(setDate) setDate(d); requestAnimationFrame(()=>{ if(mapRef.current) mapRef.current.scrollIntoView({behavior:'smooth', block:'start'}); }); };
+  // default to the tightest classical grand conjunction once data is in
+  useEffect(()=>{ if(data && !sel){ const t=[...data.scanB].filter(e=>e.maxInSign>=7).sort((a,b)=>a.span-b.span); if(t.length){ setSel(t[0].date); setSelSet('B'); } } },[data,sel]);
+  const pick=(d,set='B')=>{ setSel(d); setSelSet(set); if(setDate) setDate(d); requestAnimationFrame(()=>{ if(mapRef.current) mapRef.current.scrollIntoView({behavior:'smooth', block:'start'}); }); };
+  const openEph=(d,set)=>setEph({date:d,set});
   if(err) return <div className="panel"><h2>Alignments</h2><p>Could not load alignments.json ({err}). Run <code>node calc_alignments.mjs</code> in <code>scripts/</code> and serve <code>web/</code> over HTTP.</p></div>;
   if(!data) return <div className="panel"><h2>Alignments</h2><p>Loading alignments.json…</p></div>;
 
-  const byDateDesc=(a,b)=>parseDate(b.date)-parseDate(a.date);   // chronological: newest first, past last
-  const A=[...data.scanA].sort((a,b)=>b.maxInSign-a.maxInSign||a.span-b.span);   // rarest first (selection)
-  const B=[...data.scanB].sort((a,b)=>b.maxInSign-a.maxInSign||a.span-b.span);   // rarest first (selection)
-  const all7=data.scanB.filter(e=>e.maxInSign>=7).sort(byDateDesc);              // all 7-in-sign, current→past
-  const tight=all7.slice().sort((a,b)=>a.span-b.span);                            // tightest first (for the gap note)
-  const tight4=[...tight.slice(0,4)].sort(byDateDesc);                            // 4 tightest, shown current→past
-  const B20=[...B.slice(0,20)].sort(byDateDesc);                                  // 20 rarest SCAN B, shown current→past
-  const A20=[...A.slice(0,20)].sort(byDateDesc);                                  // 20 rarest SCAN A, shown current→past
+  const byDateDesc=(a,b)=>parseDate(b.date)-parseDate(a.date);                 // newest first, past last
+  const deep=[...data.scanB].sort(byDateDesc);                                  // deep chronology, current→past
+  const modern=[...data.scanA].sort(byDateDesc);                                // modern era, current→past
+  const all7=deep.filter(e=>e.maxInSign>=7);                                    // all-7-in-sign, current→past
+  const tight=all7.slice().sort((a,b)=>a.span-b.span);                          // tightest first
+  const tight4=[...tight.slice(0,4)].sort(byDateDesc);                          // 4 tightest, shown current→past
   const tightGap=tight.length>=2 ? Math.abs((parseDate(tight[0].date)-parseDate(tight[1].date))/86400000/365.25) : null;
   const cc=data.crossCheck||{};
-  const ev = data.scanA.find(e=>e.date===sel) || data.scanB.find(e=>e.date===sel);
-  const rows = ev ? skyAt(sel) : [];
+  const ev = (selSet==='A'?data.scanA:data.scanB).find(e=>e.date===sel);
+  const rows = sel ? (selSet==='A'?skyAt(sel):skyAt7(sel)) : [];
   const occ = occupiedLetters(rows);
-  const r = ev && ev.reading ? ev.reading : null;
+  // client-side stellar reading for the selected alignment (no precomputed reading
+  // in the JSON — keeps alignments.json lean even with ~10⁴ deep events)
+  const r = useMemo(()=>{
+    if(!sel || !lex) return null;
+    const names = readableWords(occ, lex.lexicon, angelMap);
+    return {
+      genesisLegible: genesisReadable(occ),
+      occupied: [...occ].sort().join(''),
+      readableCount: names.length,
+      properNames: names.filter(n=>n.name).length,
+      angels: names.filter(n=>n.angel).map(n=>n.he),
+      topNames: names.slice(0,8).map(n=>`${n.he}=${n.gloss}`),
+    };
+  },[sel,selSet,occ,lex,angelMap]);
 
   return <>
     <h2>Alignments — rare century/millennium stellar conjunctions</h2>
-    <div className="muted" style={{marginBottom:10}}>An offline scan (<code>calc_alignments.mjs</code>) of two body-sets: <b>SCAN A</b> = the app's 10 bodies, 1700–2200 CE daily (Pluto-valid range); <b>SCAN B</b> = the 7 classical bodies, accurate over millennia, −1000 to 2200 CE. For each day <b>maxInSign</b> = the most planets in a single zodiacal sign, <b>span</b> = the smallest arc (°) containing every body, <b>era</b> = the precessional era (~{AGE.toFixed(0)} y each). Click a row to render that day's sky-map and stellar reading. Generated {data.generated}.</div>
+    <div className="muted" style={{marginBottom:10}}>An offline scan (<code>calc_alignments.mjs</code>) of two body-sets. <b>Deep chronology</b> = the 7 classical bodies (Sun, Moon, Mercury..Saturn), 20000 BCE → 2200 CE — fast at every date and its mean motion is secularly stable, so great-conjunction <i>dates</i> stay trustworthy across the whole range (beyond ~±4000 y from J2000 the VSOP87 perturbation terms diverge, so exact <i>degrees</i> in the deep past are an extrapolation). <b>Modern era</b> = the app's 10 bodies (adds Uranus/Neptune/Pluto), 1700–2200 CE daily (the Pluto-valid range). For each day <b>maxInSign</b> = the most planets in a single zodiacal sign, <b>span</b> = the smallest arc (°) containing every body, <b>era</b> = the precessional era (~{AGE.toFixed(0)} y each, cyclic). Click a row for that day's sky-map + reading; <span style={{opacity:.6}}>eph</span> opens the planet-position table. Generated {data.generated}.</div>
 
     <div className="fig" style={{maxWidth:760}}>
       <div style={{fontWeight:600,color:'var(--gold)',marginBottom:4}}>The millennia signal — tightest classical grand conjunctions</div>
-      <div className="muted" style={{marginBottom:8}}>All 7 classical planets in one zodiacal sign, within the smallest arc found in 3200 years (the 4 tightest, current→past):</div>
+      <div className="muted" style={{marginBottom:8}}>All 7 classical planets in one zodiacal sign, within the smallest arc found (the 4 tightest, current→past):</div>
       <table>
         <thead><tr><th>Date</th><th>Bodies</th><th>Sign</th><th>Span</th><th>Era</th></tr></thead>
         <tbody>{tight4.map(e=> <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
-          <td><button className="linkish" onClick={()=>pick(e.date)}>{displayDate(e.date)}</button></td>
+          <td><button className="linkish" onClick={()=>pick(e.date,'B')}>{displayDate(e.date)}</button></td>
           <td>7 classical</td><td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
         </tr>)}</tbody>
       </table>
-      {tightGap!=null && <div className="note">Tightest pair gap: <b style={{color:'var(--gold)'}}>{tightGap.toFixed(0)} y</b> ≈ <b>{(tightGap/AGE).toFixed(2)}</b> precessional era(s). The two tightest grand conjunctions of the 3200-y scan — {displayDate(tight[0].date)} ({tight[0].span}°) and {displayDate(tight[1].date)} ({tight[1].span}°) — fall in <b>adjacent</b> precessional eras ({tight[0].era} → {tight[1].era}), ~{tightGap.toFixed(0)} y apart ≈ one age ({AGE.toFixed(0)} y). The tightest classical alignment marks the precessional-era boundary.</div>}
+      {tightGap!=null && <div className="note">Tightest pair gap: <b style={{color:'var(--gold)'}}>{tightGap.toFixed(0)} y</b> ≈ <b>{(tightGap/AGE).toFixed(2)}</b> precessional era(s). The two tightest grand conjunctions — {displayDate(tight[0].date)} ({tight[0].span}°, era {tight[0].era}) and {displayDate(tight[1].date)} ({tight[1].span}°, era {tight[1].era}) — are ~{tightGap.toFixed(0)} y apart. The tightest classical alignments (all 7 within a small arc) are the rarest class and recur on a multi-millennium scale; the all-7-in-one-sign events below recur on a centuries scale (avg ~429 y, 51 events in 22000 y).</div>}
     </div>
 
     <h3>Cross-check — does a rare alignment produce a stellar reading NOT seen on ordinary days?</h3>
     <div className="note">
-      <b>Question:</b> does any stellar reading arise <i>only</i> on these special century/millennium alignments, and not on ordinary days?
-      <br/><b>Result: NO.</b> Across {cc.rareDays} rare-alignment days, Genesis 1:1 is legible <b>{cc.rareGenRate}%</b> ({cc.rareGenLegible}/{cc.rareDays}) vs <b>{cc.baselineGenRate}%</b> on {cc.baselineDays} ordinary 2024–2030 days; avg readable names <b>{cc.rareAvgReadable}</b> vs <b>{cc.baselineAvgReadable}</b>; and the <b>same {cc.rareDistinctAngelRoots}</b> Shem HaMephorash angel-roots are readable as on ordinary days — <b>{(cc.angelRootsOnlyOnRare||[]).length} new</b>. Concentrating planets in one sign <i>reduces</i> letter diversity, so rare alignments are <i>poorer</i> readings, not richer ones.
+      <b>Question:</b> does any 7-classical stellar reading arise <i>only</i> on these rare century/millennium alignments, and not on ordinary days (same 7-body set, apples-to-apples)?
+      <br/><b>Result: NO.</b> Across {cc.rareDays} rare-alignment days, Genesis 1:1 is legible <b>{cc.rareGenRate}%</b> ({cc.rareGenLegible}/{cc.rareDays}) vs <b>{cc.baselineGenRate}%</b> on {cc.baselineDays} ordinary 2024–2030 days; avg readable names <b>{cc.rareAvgReadable}</b> vs <b>{cc.baselineAvgReadable}</b>; and the <b>same {cc.rareDistinctAngelRoots}</b> Shem HaMephorash angel-roots are readable as on ordinary days — <b>{(cc.angelRootsOnlyOnRare||[]).length} new</b>. Concentrating planets in one sign <i>reduces</i> letter diversity, so rare alignments are <i>poorer</i> readings, not richer ones — they are a rarity filter, not a richness source.
     </div>
 
     {ev && <>
-      <h3 ref={mapRef}>Sky map — {displayDate(sel)}</h3>
+      <h3 ref={mapRef}>Sky map — {displayDate(sel)} <span className="pill" style={{fontSize:'.72rem'}}>{selSet==='A'?'10 bodies':'7 classical'}</span></h3>
       <div className="fig" style={{maxWidth:700, margin:'14px auto'}}><SkyMap rows={rows} occ={occ}/></div>
       <div className="muted" style={{marginBottom:8}}>maxInSign <b>{ev.maxInSign}</b> in {ev.sign} · span <b>{ev.span}°</b> · era <b>{ev.era}</b></div>
       {r && <>
@@ -1367,36 +1548,15 @@ function AlignmentsTab({setDate}){
       </>}
     </>}
 
-    <h3>SCAN B — 7 classical bodies, −1000 to 2200 CE (20 rarest, current→past)</h3>
-    <table>
-      <thead><tr><th>Date</th><th>maxInSign</th><th>Sign</th><th>Span</th><th>Era</th><th>Gen1:1</th><th>Names</th></tr></thead>
-      <tbody>{B20.map(e=>{ const rr=e.reading||{}; return <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
-        <td><button className="linkish" onClick={()=>pick(e.date)}>{displayDate(e.date)}</button></td>
-        <td className="deg">{e.maxInSign}</td><td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
-        <td>{rr.genesisLegible?<b style={{color:'var(--gold)'}}>YES</b>:'no'}</td><td className="deg">{rr.readableCount!=null?rr.readableCount:'—'}</td>
-      </tr>; })}</tbody>
-    </table>
+    <AlignTable title="Deep chronology — 7 classical bodies, 20000 BCE → 2200 CE (all rare alignments, current→past)" sub={`${deep.length} rare alignments (maxInSign ≥ 5 or span ≤ 60°), sorted newest first. The 7-classical set makes the centuries/millennia scale visible: great conjunctions recur every ~20 y and drift through the signs over the precessional era (~${AGE.toFixed(0)} y).`} items={deep} set="B" sel={sel} pick={pick} openEph={openEph}/>
 
-    <h3>SCAN B — all-7-in-one-sign timeline (the centuries recurrence, current→past)</h3>
-    <div className="muted" style={{marginBottom:6}}>{all7.length} occurrences in 3200 years — gaps (y), current→past: {all7.map((e,i)=>i<all7.length-1?Math.abs(parseDate(all7[i+1].date)-parseDate(e.date)).toFixed(0):'').filter(Boolean).join(', ')}</div>
-    <table>
-      <thead><tr><th>Date</th><th>Sign</th><th>Span</th><th>Era</th></tr></thead>
-      <tbody>{all7.map(e=> <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
-        <td><button className="linkish" onClick={()=>pick(e.date)}>{displayDate(e.date)}</button></td>
-        <td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
-      </tr>)}</tbody>
-    </table>
+    <AlignTable title="All-7-in-one-sign timeline — every classical grand conjunction (current→past)" sub={`${all7.length} occurrences where all 7 classical bodies share one zodiacal sign — the rarest class, recurring every few centuries (irregular). Click to render that conjunction.`} items={all7} set="B" sel={sel} pick={pick} openEph={openEph} showMax={false}/>
 
-    <h3>SCAN A — 10 bodies (app set), 1700–2200 CE (20 rarest, current→past)</h3>
-    <table>
-      <thead><tr><th>Date</th><th>maxInSign</th><th>Sign</th><th>Span</th><th>Era</th><th>Gen1:1</th><th>Names</th></tr></thead>
-      <tbody>{A20.map(e=>{ const rr=e.reading||{}; return <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
-        <td><button className="linkish" onClick={()=>pick(e.date)}>{displayDate(e.date)}</button></td>
-        <td className="deg">{e.maxInSign}</td><td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
-        <td>{rr.genesisLegible?<b style={{color:'var(--gold)'}}>YES</b>:'no'}</td><td className="deg">{rr.readableCount!=null?rr.readableCount:'—'}</td>
-      </tr>; })}</tbody>
-    </table>
-    <div className="note">SCAN_A reaches only 7-in-one-sign in 500 y (8-in-sign never occurs) — the 10-body set clusters on a ~decades scale, not centuries. The <i>centuries</i> scale belongs to the 7 classical bodies (all-7-in-one-sign ≈ every few centuries, irregular), and the <i>millennia</i> scale to the tightest classical conjunctions (≈ one precessional era, above). astronomy-engine v2.1.19, GeoVector→Ecliptic.elon, noon UT.</div>
+    <AlignTable title="Modern era — 10 bodies (app set), 1700–2200 CE (all rare alignments, current→past)" sub={`${modern.length} rare 10-body alignments (maxInSign ≥ 6 or span ≤ 90°). The 10-body set clusters on a ~decades scale (8-in-one-sign never occurs in 500 y); the centuries scale belongs to the 7 classical bodies above.`} items={modern} set="A" sel={sel} pick={pick} openEph={openEph}/>
+
+    <div className="note">Method: astronomy-engine v2.1.19, GeoVector → Ecliptic.elon, noon UT. Deep scan 3-day step (daily-refined around peaks); modern scan daily. Beyond ~±4000 y from J2000 the planetary series are an extrapolation — alignment <i>dates</i> (mean motion, secularly stable) are reliable, exact <i>degrees</i> in the deep past are approximate. Per-event stellar readings are computed in the browser for the selected alignment (skyAt is fast); the cross-check summary is precomputed.</div>
+
+    <EphemeridesModal eph={eph} onClose={()=>setEph(null)}/>
   </>;
 }
 
@@ -2359,7 +2519,7 @@ function App(){
           {sub.cycles==='saros' && <SarosTab/>}
           {sub.cycles==='ayanamsa' && <AyanamsaTab/>}
           {sub.cycles==='lunarsolar' && <LunarSolarTab/>}
-          {sub.cycles==='alignments' && <AlignmentsTab setDate={setDate}/>}
+          {sub.cycles==='alignments' && <AlignmentsTab setDate={setDate} lex={lex} angelMap={ANGEL72}/>}
           {sub.cycles==='week' && <WeekTab date={effDate} rows={rows}/>}
         </>}
 
