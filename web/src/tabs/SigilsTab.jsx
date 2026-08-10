@@ -163,7 +163,7 @@ function AngelsTab(){
   const [data,setData]=useState(null);
   const [err,setErr]=useState(null);
   const [q,setQ]=useState('');
-  useEffect(()=>{ fetch('angels72.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setData).catch(e=>setErr(e.message)); },[]);
+  useEffect(()=>{ fetch('/angels72.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setData).catch(e=>setErr(e.message)); },[]);
   if(err) return <div className="panel"><h2>72 Angels</h2><p>Could not load angels72.json ({err}). Serve the web/ folder over HTTP (python3 -m http.server 8008).</p></div>;
   if(!data) return <div className="muted">Loading the 72 Shem HaMephorash triplets…</div>;
   const qn=q.trim().toLowerCase();

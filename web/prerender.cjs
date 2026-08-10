@@ -87,10 +87,10 @@ var require_react_production_min = __commonJS({
     var I = Array.isArray;
     var J = Object.prototype.hasOwnProperty;
     var K = { current: null };
-    var L = { key: true, ref: true, __self: true, __source: true };
+    var L2 = { key: true, ref: true, __self: true, __source: true };
     function M(a, b, e) {
       var d, c = {}, k = null, h = null;
-      if (null != b) for (d in void 0 !== b.ref && (h = b.ref), void 0 !== b.key && (k = "" + b.key), b) J.call(b, d) && !L.hasOwnProperty(d) && (c[d] = b[d]);
+      if (null != b) for (d in void 0 !== b.ref && (h = b.ref), void 0 !== b.key && (k = "" + b.key), b) J.call(b, d) && !L2.hasOwnProperty(d) && (c[d] = b[d]);
       var g = arguments.length - 2;
       if (1 === g) c.children = e;
       else if (1 < g) {
@@ -208,7 +208,7 @@ var require_react_production_min = __commonJS({
         void 0 !== b.ref && (k = b.ref, h = K.current);
         void 0 !== b.key && (c = "" + b.key);
         if (a.type && a.type.defaultProps) var g = a.type.defaultProps;
-        for (f in b) J.call(b, f) && !L.hasOwnProperty(f) && (d[f] = void 0 === b[f] && void 0 !== g ? g[f] : b[f]);
+        for (f in b) J.call(b, f) && !L2.hasOwnProperty(f) && (d[f] = void 0 === b[f] && void 0 !== g ? g[f] : b[f]);
       }
       var f = arguments.length - 2;
       if (1 === f) d.children = e;
@@ -2980,7 +2980,7 @@ var require_react_dom_server_legacy_node_production_min = __commonJS({
     var I = null;
     var J = null;
     var K = false;
-    var L = false;
+    var L2 = false;
     var M = 0;
     var N = null;
     var O = 0;
@@ -2998,7 +2998,7 @@ var require_react_dom_server_legacy_node_production_min = __commonJS({
     }
     function tb() {
       ob = H = null;
-      L = false;
+      L2 = false;
       I = null;
       O = 0;
       J = N = null;
@@ -3054,7 +3054,7 @@ var require_react_dom_server_legacy_node_production_min = __commonJS({
     }
     function wb(a, b, c) {
       if (25 <= O) throw Error("Too many re-renders. React limits the number of renders to prevent an infinite loop.");
-      if (a === H) if (L = true, a = { action: c, next: null }, null === N && (N = /* @__PURE__ */ new Map()), c = N.get(b), void 0 === c) N.set(b, a);
+      if (a === H) if (L2 = true, a = { action: c, next: null }, null === N && (N = /* @__PURE__ */ new Map()), c = N.get(b), void 0 === c) N.set(b, a);
       else {
         for (b = c; null !== b.next; ) b = b.next;
         b.next = a;
@@ -3153,7 +3153,7 @@ var require_react_dom_server_legacy_node_production_min = __commonJS({
       H = {};
       ob = b;
       M = 0;
-      for (a = c(d, f); L; ) L = false, M = 0, O += 1, J = null, a = c(d, f);
+      for (a = c(d, f); L2; ) L2 = false, M = 0, O += 1, J = null, a = c(d, f);
       tb();
       return a;
     }
@@ -4076,7 +4076,7 @@ var require_react_dom_server_node_production_min = __commonJS({
         }
       }
     }
-    var L = x(">");
+    var L2 = x(">");
     var Ha = x("/>");
     function M(a, b, c) {
       if (null != b) {
@@ -4110,7 +4110,7 @@ var require_react_dom_server_node_production_min = __commonJS({
             K(a, d, e, g);
         }
       }
-      a.push(L);
+      a.push(L2);
       M(a, f, c);
       return "string" === typeof c ? (a.push(F(c)), null) : c;
     }
@@ -4148,7 +4148,7 @@ var require_react_dom_server_node_production_min = __commonJS({
                 K(a, d, p, h);
             }
           }
-          a.push(L);
+          a.push(L2);
           M(a, g, e);
           return e;
         case "option":
@@ -4182,7 +4182,7 @@ var require_react_dom_server_node_production_min = __commonJS({
           }
           else "" + g === c && a.push(Ja);
           else n && a.push(Ja);
-          a.push(L);
+          a.push(L2);
           M(a, p, h);
           return h;
         case "textarea":
@@ -4204,7 +4204,7 @@ var require_react_dom_server_node_production_min = __commonJS({
               K(a, d, h, m);
           }
           null === e && null !== g && (e = g);
-          a.push(L);
+          a.push(L2);
           if (null != p) {
             if (null != e) throw Error("If you supply `defaultValue` on a <textarea>, do not pass children.");
             if (qa(p) && 1 < p.length) throw Error("<textarea> can only have at most one child.");
@@ -4248,7 +4248,7 @@ var require_react_dom_server_node_production_min = __commonJS({
             default:
               K(a, d, C, e);
           }
-          a.push(L);
+          a.push(L2);
           return null;
         case "title":
           a.push(N("title"));
@@ -4262,7 +4262,7 @@ var require_react_dom_server_node_production_min = __commonJS({
             default:
               K(a, d, v, g);
           }
-          a.push(L);
+          a.push(L2);
           return e;
         case "listing":
         case "pre":
@@ -4278,7 +4278,7 @@ var require_react_dom_server_node_production_min = __commonJS({
             default:
               K(a, d, m, h);
           }
-          a.push(L);
+          a.push(L2);
           if (null != g) {
             if (null != e) throw Error("Can only set one of `children` or `props.dangerouslySetInnerHTML`.");
             if ("object" !== typeof g || !("__html" in g)) throw Error("`props.dangerouslySetInnerHTML` must be in the form `{__html: ...}`. Please visit https://reactjs.org/link/dangerously-set-inner-html for more information.");
@@ -4347,7 +4347,7 @@ var require_react_dom_server_node_production_min = __commonJS({
             default:
               ha(n) && "function" !== typeof h && "symbol" !== typeof h && a.push(I, n, J, F(h), H);
           }
-          a.push(L);
+          a.push(L2);
           M(a, g, e);
           return e;
       }
@@ -5430,10 +5430,10 @@ var require_react_dom_server_legacy_node_development = __commonJS({
     if (process.env.NODE_ENV !== "production") {
       (function() {
         "use strict";
-        var React8 = require_react();
+        var React9 = require_react();
         var stream = require("stream");
         var ReactVersion = "18.3.1";
-        var ReactSharedInternals = React8.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React9.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function warn(format) {
           {
             {
@@ -7339,7 +7339,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
         }
         function flattenOptionChildren(children) {
           var content = "";
-          React8.Children.forEach(children, function(child) {
+          React9.Children.forEach(children, function(child) {
             if (child == null) {
               return;
             }
@@ -10876,10 +10876,10 @@ var require_react_dom_server_node_development = __commonJS({
     if (process.env.NODE_ENV !== "production") {
       (function() {
         "use strict";
-        var React8 = require_react();
+        var React9 = require_react();
         var util = require("util");
         var ReactVersion = "18.3.1";
-        var ReactSharedInternals = React8.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React9.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function warn(format) {
           {
             {
@@ -12882,7 +12882,7 @@ var require_react_dom_server_node_development = __commonJS({
         }
         function flattenOptionChildren(children) {
           var content = "";
-          React8.Children.forEach(children, function(child) {
+          React9.Children.forEach(children, function(child) {
             if (child == null) {
               return;
             }
@@ -16325,7 +16325,7 @@ var require_server_node = __commonJS({
 var import_node_fs = __toESM(require("node:fs"));
 var import_node_path = __toESM(require("node:path"));
 var import_node_url = require("node:url");
-var import_react7 = __toESM(require_react());
+var import_react8 = __toESM(require_react());
 var import_server = __toESM(require_server_node());
 
 // src/pages/ProphetsPage.jsx
@@ -17615,7 +17615,7 @@ function CalcMoon(time) {
     const m = a.array[x - a.min];
     m.array[y - m.min] = v;
   }
-  let S, MAX, ARG, FAC, I, J, T2, DGAM, DLAM, N, GAM1C, SINPI, L0, L, LS, F, D, DL0, DL, DLS, DF, DD, DS;
+  let S, MAX, ARG, FAC, I, J, T2, DGAM, DLAM, N, GAM1C, SINPI, L0, L2, LS, F, D, DL0, DL, DLS, DF, DD, DS;
   let coArray = DeclareArray2(-6, 6, 1, 4);
   let siArray = DeclareArray2(-6, 6, 1, 4);
   function CO(x, y) {
@@ -17655,14 +17655,14 @@ function CalcMoon(time) {
   DD = DL0 - DLS;
   DGAM = -3332e-9 * Sine(0.59734 - 5.37261 * T) - 539e-9 * Sine(0.35498 - 5.37899 * T) - 64e-9 * Sine(0.39943 - 5.37511 * T);
   L0 = PI2 * Frac(0.60643382 + 1336.85522467 * T - 313e-8 * T2) + DL0 / ARC;
-  L = PI2 * Frac(0.37489701 + 1325.55240982 * T + 2565e-8 * T2) + DL / ARC;
+  L2 = PI2 * Frac(0.37489701 + 1325.55240982 * T + 2565e-8 * T2) + DL / ARC;
   LS = PI2 * Frac(0.99312619 + 99.99735956 * T - 44e-8 * T2) + DLS / ARC;
   F = PI2 * Frac(0.25909118 + 1342.2278298 * T - 892e-8 * T2) + DF / ARC;
   D = PI2 * Frac(0.82736186 + 1236.85308708 * T - 397e-8 * T2) + DD / ARC;
   for (I = 1; I <= 4; ++I) {
     switch (I) {
       case 1:
-        ARG = L;
+        ARG = L2;
         MAX = 4;
         FAC = 1.000002208;
         break;
@@ -19028,6 +19028,21 @@ function GlossPage({ word, date, rows: rows2, occ: occ2, genData: genData2, onBa
   })), /* @__PURE__ */ import_react6.default.createElement("div", { className: "legend" }, req.length === 0 ? /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, "every day \xB7 ", tl.n, " days") : /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, tl.onDays.length, " of ", tl.n, " days (", probsAll != null ? probsAll.toFixed(probsAll < 1 ? 1 : 0) : "?", "%) \xB7 first ", tl.onDays.length ? displayDate(fmtDate(makeDate(genData2.year, 1, 1 + tl.onDays[0]))) : "\u2014", " \xB7 last ", tl.onDays.length ? displayDate(fmtDate(makeDate(genData2.year, 1, 1 + tl.onDays[tl.onDays.length - 1]))) : "\u2014"))) : /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted" }, "Run the Predictor scan for this year to see the day-by-day timeline.")), wikiTitle && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginTop: 14, padding: 16 } }, /* @__PURE__ */ import_react6.default.createElement("h3", { style: { marginTop: 0 } }, "Wikipedia \u2014 ", wikiTitle), wiki3 && wiki3.loading && /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted" }, "Looking up ", wikiTitle, " on Wikipedia\u2026"), wiki3 && wiki3.error && /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted", style: { color: "var(--red)" } }, "No Wikipedia article found for \u201C", wikiTitle, "\u201D (", wiki3.error, ")."), wiki3 && wiki3.j && /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, wiki3.j.type === "disambiguation" ? /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted" }, "\u201C", wiki3.j.title, "\u201D is a disambiguation page \u2014 see ", /* @__PURE__ */ import_react6.default.createElement("a", { href: wiki3.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer" }, "Wikipedia"), " for the list of meanings.") : /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", gap: 14, flexWrap: "wrap", alignItems: "flex-start" } }, wiki3.j.thumbnail && /* @__PURE__ */ import_react6.default.createElement("img", { src: wiki3.j.thumbnail.source, alt: wiki3.j.title, style: { maxWidth: 160, maxHeight: 200, borderRadius: 8, border: "1px solid var(--line)" } }), /* @__PURE__ */ import_react6.default.createElement("div", { style: { flex: "1 1 320px" } }, wiki3.j.description && /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted", style: { marginBottom: 6 } }, wiki3.j.description), /* @__PURE__ */ import_react6.default.createElement("div", null, wiki3.j.extract), /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react6.default.createElement("a", { href: wiki3.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer" }, "Read more on Wikipedia \u2192")))))), !wiki3 && /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted" }, "Preparing Wikipedia lookup\u2026")), /* @__PURE__ */ import_react6.default.createElement("div", { className: "note", style: { marginTop: 14 } }, "This single-reading page is a shareable deep link: ", /* @__PURE__ */ import_react6.default.createElement("code", null, typeof window !== "undefined" ? window.location.href : ""), ". The sky map, gloss and year timeline are computed live from astronomy-engine planet positions; the Wikipedia panel (shown for proper and angel names) is the free Wikipedia REST summary API."));
 }
 
+// src/Footer.jsx
+var import_react7 = __toESM(require_react());
+var GITHUB = "https://github.com/VABISMO/adam-apocalypse";
+var PAPER = "https://adam-apocalypse-paper.onrender.com/";
+function Col({ title, children }) {
+  return /* @__PURE__ */ import_react7.default.createElement("section", { className: "ft-col" }, /* @__PURE__ */ import_react7.default.createElement("h4", { className: "ft-h" }, title), children);
+}
+function L({ href, children, ext = false }) {
+  return /* @__PURE__ */ import_react7.default.createElement("a", { className: "ft-a", href, ...ext ? { target: "_blank", rel: "noreferrer" } : {} }, children);
+}
+function Footer() {
+  const year = 2026;
+  return /* @__PURE__ */ import_react7.default.createElement("footer", { className: "site-footer" }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react7.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react7.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions (astronomy-engine) map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react7.default.createElement(L, { href: PAPER, ext: true }, "The paper \u2014 The Reader of the Sky \u2197"), /* @__PURE__ */ import_react7.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react7.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react7.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react7.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Felipe II"), /* @__PURE__ */ import_react7.default.createElement(L, { href: "/alignments" }, "Stellar alignments (171 fiches)"), /* @__PURE__ */ import_react7.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react7.default.createElement(L, { href: "/" }, "Sky reader app")), /* @__PURE__ */ import_react7.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react7.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react7.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react7.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react7.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react7.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react7.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react7.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react7.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react7.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react7.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react7.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react7.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react7.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react7.default.createElement("span", null, "\xA9 ", year, " V. Nos & Julian S. \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react7.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react7.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
+}
+
 // scripts/prerender.jsx
 var import_meta = {};
 var __here = typeof __dirname !== "undefined" ? __dirname : import_node_path.default.dirname((0, import_node_url.fileURLToPath)(import_meta.url));
@@ -19093,6 +19108,8 @@ function shell({ title, desc, keywords, path: routePath, jsonld, body }) {
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230b0e14'/%3E%3Cpath d='M12 2 L14.6 8.6 L22 9.3 L16.3 14.1 L18.2 21.3 L12 17.3 L5.8 21.3 L7.7 14.1 L2 9.3 L9.4 8.6 Z' fill='%23e8c87a'/%3E%3C/svg%3E" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#0b0e14" />
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}" />
 <meta name="keywords" content="${esc(keywords)}" />
@@ -19145,7 +19162,7 @@ writeHtml("prophets/index.html", shell({
   keywords: "prophets timeline, Adam to Jacob Frank, biblical prophets, apocalyptic writers, Sabbateanism, Frankism, revelation chronology, merkabah mysticism, Apocalypse of Adam",
   path: "/prophets",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Prophets \u2014 Adam to Jacob Frank", url: SITE + "/prophets" }),
-  body: R(import_react7.default.createElement(ProphetsPage))
+  body: R(/* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement(ProphetsPage, null), /* @__PURE__ */ import_react8.default.createElement(Footer, null)))
 }));
 writeHtml("mages/index.html", shell({
   title: "Magi timeline \u2014 Daniel to Felipe II | Apocalypse of Adam",
@@ -19153,11 +19170,11 @@ writeHtml("mages/index.html", shell({
   keywords: "magi timeline, Daniel magi, Shadrach Meshach Abednego, Ramon Llull Ars Magna, Alfonso X, Felipe II, Christian Kabbalah, Hermeticism, Renaissance magic, Apocalypse of Adam",
   path: "/mages",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Magi \u2014 Daniel to Felipe II", url: SITE + "/mages" }),
-  body: R(import_react7.default.createElement(MagesPage))
+  body: R(/* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement(MagesPage, null), /* @__PURE__ */ import_react8.default.createElement(Footer, null)))
 }));
 function AlignmentsIndex() {
   const rowsA = alignments.scanA;
-  return /* @__PURE__ */ import_react7.default.createElement("div", null, /* @__PURE__ */ import_react7.default.createElement("h1", null, "Stellar alignments \u2014 rare century & millennium conjunctions"), /* @__PURE__ */ import_react7.default.createElement("p", { className: "muted" }, "Every rare stellar alignment from a 10-body scan (Sun, Moon, 8 planets): the planets concentrated in a single zodiac sign, with the tightest enclosing arc and the precessional era. ", rowsA.length, " alignments. Each links to its fiche with a sky map, alignment metrics, and the top readable Hebrew names."), /* @__PURE__ */ import_react7.default.createElement("table", { style: { width: "100%", fontSize: ".86rem" } }, /* @__PURE__ */ import_react7.default.createElement("thead", null, /* @__PURE__ */ import_react7.default.createElement("tr", null, ["Date", "Max in one sign", "Sign", "Span (\xB0)", "Era", "Fiche"].map((h, i) => /* @__PURE__ */ import_react7.default.createElement("th", { key: i, style: { textAlign: i === 0 || i === 5 ? "left" : "right", padding: "4px 8px" } }, h)))), /* @__PURE__ */ import_react7.default.createElement("tbody", null, rowsA.map((e, i) => /* @__PURE__ */ import_react7.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react7.default.createElement("td", { style: { padding: "4px 8px" } }, e.date), /* @__PURE__ */ import_react7.default.createElement("td", { style: { padding: "4px 8px", textAlign: "right" } }, e.maxInSign), /* @__PURE__ */ import_react7.default.createElement("td", { style: { padding: "4px 8px" } }, signEN(e.sign)), /* @__PURE__ */ import_react7.default.createElement("td", { style: { padding: "4px 8px", textAlign: "right" }, className: "deg" }, e.span.toFixed(1)), /* @__PURE__ */ import_react7.default.createElement("td", { style: { padding: "4px 8px" } }, signEN(e.era)), /* @__PURE__ */ import_react7.default.createElement("td", { style: { padding: "4px 8px" } }, /* @__PURE__ */ import_react7.default.createElement("a", { href: `/align/${e.date}` }, "view fiche \u2192")))))));
+  return /* @__PURE__ */ import_react8.default.createElement("div", null, /* @__PURE__ */ import_react8.default.createElement("h1", null, "Stellar alignments \u2014 rare century & millennium conjunctions"), /* @__PURE__ */ import_react8.default.createElement("p", { className: "muted" }, "Every rare stellar alignment from a 10-body scan (Sun, Moon, 8 planets): the planets concentrated in a single zodiac sign, with the tightest enclosing arc and the precessional era. ", rowsA.length, " alignments. Each links to its fiche with a sky map, alignment metrics, and the top readable Hebrew names."), /* @__PURE__ */ import_react8.default.createElement("table", { style: { width: "100%", fontSize: ".86rem" } }, /* @__PURE__ */ import_react8.default.createElement("thead", null, /* @__PURE__ */ import_react8.default.createElement("tr", null, ["Date", "Max in one sign", "Sign", "Span (\xB0)", "Era", "Fiche"].map((h, i) => /* @__PURE__ */ import_react8.default.createElement("th", { key: i, style: { textAlign: i === 0 || i === 5 ? "left" : "right", padding: "4px 8px" } }, h)))), /* @__PURE__ */ import_react8.default.createElement("tbody", null, rowsA.map((e, i) => /* @__PURE__ */ import_react8.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react8.default.createElement("td", { style: { padding: "4px 8px" } }, e.date), /* @__PURE__ */ import_react8.default.createElement("td", { style: { padding: "4px 8px", textAlign: "right" } }, e.maxInSign), /* @__PURE__ */ import_react8.default.createElement("td", { style: { padding: "4px 8px" } }, signEN(e.sign)), /* @__PURE__ */ import_react8.default.createElement("td", { style: { padding: "4px 8px", textAlign: "right" }, className: "deg" }, e.span.toFixed(1)), /* @__PURE__ */ import_react8.default.createElement("td", { style: { padding: "4px 8px" } }, signEN(e.era)), /* @__PURE__ */ import_react8.default.createElement("td", { style: { padding: "4px 8px" } }, /* @__PURE__ */ import_react8.default.createElement("a", { href: `/align/${e.date}` }, "view fiche \u2192")))))));
 }
 writeHtml("alignments/index.html", shell({
   title: "Stellar alignments \u2014 rare century & millennium conjunctions | Apocalypse of Adam",
@@ -19165,13 +19182,13 @@ writeHtml("alignments/index.html", shell({
   keywords: "stellar alignments, planetary conjunctions, rare astronomy, zodiac concentration, precession, tightest arc, 10-body conjunction, Hebrew sky reading, Apocalypse of Adam",
   path: "/alignments",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Stellar alignments", url: SITE + "/alignments", numberOfItems: alignments.scanA.length }),
-  body: R(/* @__PURE__ */ import_react7.default.createElement(AlignmentsIndex, null))
+  body: R(/* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement(AlignmentsIndex, null), /* @__PURE__ */ import_react8.default.createElement(Footer, null)))
 }));
 function ReadingsIndex() {
-  return /* @__PURE__ */ import_react7.default.createElement("div", null, /* @__PURE__ */ import_react7.default.createElement("h1", null, "Sky readings \u2014 Hebrew words readable in the stars"), /* @__PURE__ */ import_react7.default.createElement("p", { className: "muted" }, "Every consonantal Hebrew root in the lexicon (", LEX.length, " entries) has a reading fiche: its Hebrew letters, transliteration, gloss, gematria, the zodiac simple letters it requires, and its year-legibility timeline. Each links to its single-reading page."), /* @__PURE__ */ import_react7.default.createElement("div", { className: "tcards" }, LEX.map((row, i) => {
+  return /* @__PURE__ */ import_react8.default.createElement("div", null, /* @__PURE__ */ import_react8.default.createElement("h1", null, "Sky readings \u2014 Hebrew words readable in the stars"), /* @__PURE__ */ import_react8.default.createElement("p", { className: "muted" }, "Every consonantal Hebrew root in the lexicon (", LEX.length, " entries) has a reading fiche: its Hebrew letters, transliteration, gloss, gematria, the zodiac simple letters it requires, and its year-legibility timeline. Each links to its single-reading page."), /* @__PURE__ */ import_react8.default.createElement("div", { className: "tcards" }, LEX.map((row, i) => {
     const [cons, trans, gloss, pos] = row;
     const enc = encodeURIComponent(cons);
-    return /* @__PURE__ */ import_react7.default.createElement("a", { key: i, href: `/reader/${enc}`, className: "tcard", style: { textDecoration: "none", display: "block" } }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "the" }, /* @__PURE__ */ import_react7.default.createElement("span", { className: "he", style: { fontSize: "1.3rem" } }, cons)), /* @__PURE__ */ import_react7.default.createElement("div", { className: "read" }, trans), /* @__PURE__ */ import_react7.default.createElement("div", { className: "trans" }, gloss), /* @__PURE__ */ import_react7.default.createElement("div", { className: "g muted", style: { fontSize: ".78rem" } }, pos || "\u2014"));
+    return /* @__PURE__ */ import_react8.default.createElement("a", { key: i, href: `/reader/${enc}`, className: "tcard", style: { textDecoration: "none", display: "block" } }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "the" }, /* @__PURE__ */ import_react8.default.createElement("span", { className: "he", style: { fontSize: "1.3rem" } }, cons)), /* @__PURE__ */ import_react8.default.createElement("div", { className: "read" }, trans), /* @__PURE__ */ import_react8.default.createElement("div", { className: "trans" }, gloss), /* @__PURE__ */ import_react8.default.createElement("div", { className: "g muted", style: { fontSize: ".78rem" } }, pos || "\u2014"));
   })));
 }
 writeHtml("readings/index.html", shell({
@@ -19180,7 +19197,7 @@ writeHtml("readings/index.html", shell({
   keywords: "Hebrew readings, sky reading glossary, consonantal roots, Hebrew gematria, zodiac simple letters, Sefer Yetzirah, 72 angels, lexicon, Apocalypse of Adam",
   path: "/readings",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Sky readings", url: SITE + "/readings", numberOfItems: LEX.length }),
-  body: R(/* @__PURE__ */ import_react7.default.createElement(ReadingsIndex, null))
+  body: R(/* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement(ReadingsIndex, null), /* @__PURE__ */ import_react8.default.createElement(Footer, null)))
 }));
 var nAlign = 0;
 for (const e of alignments.scanA) {
@@ -19211,7 +19228,7 @@ for (const e of alignments.scanA) {
     url: SITE + `/align/${date}`,
     location: { "@type": "Place", name: `Zodiac sign ${meta.sign}` }
   });
-  const body = R(import_react7.default.createElement(AlignmentFicha, { date, lex: lexicon, angelMap, onBack: () => {
+  const body = R(import_react8.default.createElement(AlignmentFicha, { date, lex: lexicon, angelMap, onBack: () => {
   } }));
   writeHtml(`align/${date}/index.html`, shell({ title, desc, keywords, path: `/align/${date}`, jsonld, body }));
   nAlign++;
@@ -19234,7 +19251,7 @@ for (const row of LEX) {
     url: SITE + `/reader/${encodeURIComponent(he)}`,
     inDefinedTermSet: "Hebrew Sky-Reading Lexicon"
   });
-  const body = R(import_react7.default.createElement(GlossPage, { word: w, date: REF_DATE, rows, occ, genData, onBack: () => {
+  const body = R(import_react8.default.createElement(GlossPage, { word: w, date: REF_DATE, rows, occ, genData, onBack: () => {
   } }));
   writeHtml(`reader/${he}/index.html`, shell({ title, desc, keywords, path: `/reader/${encodeURIComponent(he)}`, jsonld, body }));
   nGloss++;
@@ -19286,7 +19303,86 @@ Sitemap: ${SITE}/sitemap_readings.xml
 Sitemap: ${SITE}/sitemap_hub.xml
 `
 );
-console.log(`prerender done: ${nAlign} alignment fiches, ${nGloss} gloss fiches, 4 hub pages, sitemaps + robots.txt`);
+var llmsTxt = `# The Apocalypse of Adam
+
+> Hebrew letters read in the sky. Real planet positions (astronomy-engine) map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable Hebrew names. A stellar-alphabet reader and calculator suite (gematria, 72 angels, ELS/Torah codes, Temurah, Ziruph, rare planetary alignments, Psalms-by-date) behind the paper "The Reader of the Sky".
+
+## Pages
+- [Sky reader app](${SITE}/) \u2014 interactive calculators (11 tabs: Cycles, Sky Map, Reader, Reading, Time, Gematria, Sigils, Revelations, Psalms, Codes, Methodology)
+- [Prophets timeline \u2014 Adam to Jacob Frank](${SITE}/prophets)
+- [Magi timeline \u2014 Daniel to Felipe II](${SITE}/mages)
+- [Stellar alignments](${SITE}/alignments) \u2014 171 rare-alignment fiches (/align/<date>)
+- [Sky readings](${SITE}/readings) \u2014 6045 Hebrew gloss fiches (/reader/<he>)
+
+## Machine-readable
+- [llms-full.txt](${SITE}/llms-full.txt) \u2014 full site description + WebMCP tool catalogue
+- [sitemap.xml](${SITE}/sitemap.xml) \u2014 index to all URLs (171 alignments + 6045 glosses)
+- [robots.txt](${SITE}/robots.txt)
+- [site.webmanifest](${SITE}/site.webmanifest)
+- JSON datasets: [/alignments.json](${SITE}/alignments.json) \xB7 [/lexicon.json](${SITE}/lexicon.json) \xB7 [/angels72.json](${SITE}/angels72.json)
+
+## Notes
+- This site exposes WebMCP tools (document.modelContext) for browser AI agents: read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info. See llms-full.txt for schemas.
+- Authors: V. Nos & Julian S. Source: https://github.com/VABISMO/adam-apocalypse
+- Paper: https://adam-apocalypse-paper.onrender.com/
+`;
+import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "llms.txt"), llmsTxt);
+var llmsFull = `# The Apocalypse of Adam \u2014 full site description for LLMs
+
+> Hebrew letters read in the sky: real planet positions (astronomy-engine) map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable Hebrew names. The reuse rule S\u2286O (a word's required simple letters must be among the signs occupied by the planets) decides what is readable on each date. This is the live computational engine behind the paper "The Reader of the Sky".
+
+## What it does
+For any Gregorian date (BCE supported as -YYYY-MM-DD), the app computes the geocentric ecliptic longitudes of the 10 bodies (Sun, Moon, Mercury\u2013Neptune, Pluto), maps each to a zodiac sign, and reads the corresponding Sefer Yetzirah simple letter (Aries\u2192Heh, Taurus\u2192Vav, \u2026 Pisces\u2192Qoph). The set of occupied letters O is the "alphabet" of the sky that day; any Hebrew word whose simple letters are a subset of O is "readable" that day. Rare stellar alignments (most planets concentrated in one sign) are catalogued as rare readings.
+
+## Hub pages
+- [Sky reader app](${SITE}/) \u2014 11 tabs: Cycles (Alignments/Saros/Ayanamsa/Lunar-Solar/Week), Sky Map, Reader (glossary + per-word ficha), Reading (Reading Rule / YHVH / Genesis 1:1), Time (Predictor / Ages), Gematria (Hebrew/Greek/Arabic/Indian + Aiq Bekar), Sigils (Sigil Forge / Kameot / 72 Angels), Revelations (9 cultures), Psalms (by date), Codes (ELS / Temurah / Ziruph), Methodology.
+- [Prophets](${SITE}/prophets) \u2014 33 prophetic/revelatory figures Adam \u2192 Jacob Frank (biblical, apocalyptic, mystical, Sabbatean-Frankist), with a timeline.
+- [Magi](${SITE}/mages) \u2014 24 magi and royal-sage figures (Daniel, Shadrach, Meshach, Abednego \u2192 Ramon Llull \u2192 Alfonso X \u2192 Felipe II), each with a Wikipedia-grounded biography and a ficha of their most important works.
+- [Stellar alignments](${SITE}/alignments) \u2014 index of 171 rare century/millennium conjunctions; each fiche at /align/<date> has a sky map, alignment metrics (max-in-sign, tightest arc, era), and the top readable names.
+- [Sky readings](${SITE}/readings) \u2014 index of all 6045 consonantal Hebrew roots; each gloss fiche at /reader/<he> has the Hebrew letters, transliteration, gloss, gematria, required simple letters, and a year-legibility timeline.
+
+## WebMCP tools (document.modelContext.registerTool)
+Available to browser AI agents when the API is present (Chrome origin trial). All wrap the same pure compute core the UI uses.
+1. read_sky \u2014 input {date} \u2192 occupied signs, readable simples, era, Genesis-legible, top readable names.
+2. alignment_metrics \u2014 input {date} \u2192 max-in-sign, sign, tightest arc (\xB0), era, occupied signs, bodies-per-sign.
+3. word_gloss \u2014 input {hebrew} \u2192 transliteration, gloss, part of speech, gematria, required simple letters, is-name, is-angel.
+4. search_words \u2014 input {query, max?} \u2192 lexicon entries matching transliteration/gloss/Hebrew.
+5. gematria_value \u2014 input {text, system?: hebrew|greek|arabic|katapayadi} \u2192 numeric value + per-letter breakdown.
+6. prophet_info \u2014 input {name?} \u2192 prophet entry (years, region, role, thread) or the full list of 33.
+7. mage_info \u2014 input {name?} \u2192 mage biography + works ficha, or the full list of 24.
+
+## JSON datasets
+- /alignments.json \u2014 rare-alignment scan (scanA 10-body 1700\u20132200, scanB 7-classical -1000\u20132200).
+- /lexicon.json \u2014 6045 consonantal Hebrew roots (Strong, OpenScriptures) with transliteration, gloss, POS.
+- /angels72.json \u2014 72 Shem HaMephorash triplets from Exodus 14:19-21 with angel names (EL/YH).
+
+## Sources
+- Ephemerides: astronomy-engine (https://github.com/cosinekitty/astronomy-engine)
+- Frame: Sefer Yetzirah (https://en.wikipedia.org/wiki/Sefer_Yetirah)
+- Lexicon: Strong Hebrew lexicon (https://github.com/openscriptures/HebrewLexicon)
+- Paper: https://adam-apocalypse-paper.onrender.com/
+- Source: https://github.com/VABISMO/adam-apocalypse
+- Authors: V. Nos & Julian S.
+`;
+import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "llms-full.txt"), llmsFull);
+var ICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230b0e14'/%3E%3Cpath d='M12 2 L14.6 8.6 L22 9.3 L16.3 14.1 L18.2 21.3 L12 17.3 L5.8 21.3 L7.7 14.1 L2 9.3 L9.4 8.6 Z' fill='%23e8c87a'/%3E%3C/svg%3E";
+var manifest = {
+  name: "The Apocalypse of Adam \u2014 Hebrew Sky Reader",
+  short_name: "Apocalypse of Adam",
+  description: "Reads Hebrew words written in the sky: real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah.",
+  start_url: "/",
+  scope: "/",
+  display: "standalone",
+  background_color: "#0b0e14",
+  theme_color: "#0b0e14",
+  lang: "en",
+  categories: ["science", "education", "reference"],
+  icons: [
+    { src: ICON, sizes: "192x192 512x512", type: "image/svg+xml", purpose: "any" }
+  ]
+};
+import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "site.webmanifest"), JSON.stringify(manifest, null, 2));
+console.log(`prerender done: ${nAlign} alignment fiches, ${nGloss} gloss fiches, 4 hub pages, sitemaps + robots.txt + llms.txt + llms-full.txt + site.webmanifest`);
 /**
     @preserve
 

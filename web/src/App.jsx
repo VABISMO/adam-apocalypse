@@ -4,6 +4,7 @@ import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, F
 import { SubTabs } from './ui.jsx';
 import { BASE_TITLE, BASE_DESC, setRouteMeta } from './seo.jsx';
 import { Footer } from './Footer.jsx';
+import { registerWebMCPTools } from './webmcp.jsx';
 import { SkyTab } from './tabs/SkyTab.jsx';
 import { TranslatorTab, GlossPage, findWord } from './tabs/ReaderTab.jsx';
 import { RuleTab, YhvhTab, GenesisTab } from './tabs/ReadingTab.jsx';
@@ -62,8 +63,10 @@ function App(){
   const [q,setQ]=useState('');
   const [loc,setLoc]=useState(()=> typeof window!=='undefined' ? (window.location.pathname+window.location.hash) : '/');
 
-  useEffect(()=>{ fetch('lexicon.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setLex).catch(e=>setLexErr(e.message)); },[]);
-  useEffect(()=>{ fetch('angels72.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setAngels).catch(()=>{}); },[]);
+  // Absolute paths: the SPA boots on path routes (/prophets, /reader/<he>…) where a
+  // relative 'lexicon.json' would resolve to /prophets/lexicon.json → 404.
+  useEffect(()=>{ fetch('/lexicon.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setLex).catch(e=>setLexErr(e.message)); },[]);
+  useEffect(()=>{ fetch('/angels72.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setAngels).catch(()=>{}); },[]);
   useEffect(()=>{
     const h=()=>setLoc(window.location.pathname+window.location.hash);
     window.addEventListener('popstate',h); window.addEventListener('hashchange',h);
@@ -80,6 +83,10 @@ function App(){
   const yhvhOk=occ.has('י')&&occ.has('ה')&&occ.has('ו');
   const genesisOk=genesisReadable(occ);
   const ANGEL72=useMemo(()=>{ const m=new Map(); if(angels) angels.triplets.forEach((t,i)=>{ m.set(norm(t), {el:angels.angelsEL[i], yh:angels.angelsYH[i]}); }); return m; },[angels]);
+  // Expose the app's stellar computation to browser AI agents via WebMCP
+  // (document.modelContext). No-op where the API is absent. Registered once the lexicon is
+  // loaded so word/search tools have data; re-registration is idempotent + best-effort.
+  useEffect(()=>{ if(lex) registerWebMCPTools({ lex, angelMap: ANGEL72 }); },[lex,ANGEL72]);
   const words=useMemo(()=> lex?readableWords(occ,lex.lexicon,ANGEL72):[],[occ,lex,ANGEL72]);
   const sentence=rows.map(r=>SIMPLE[r.sign][0]).join(' ');
   const year = (()=>{ const d=parseDate(effDate); return d ? d.getUTCFullYear() : 2026; })();

@@ -381,7 +381,7 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData}){
   const [topView,setTopView]=useState('date'); // 'date' (this sky) | 'always' (every day)
   const mapRef=useRef(null);
   const [dayOccs7,setDayOccs7]=useState(null); // 7-classical occupied-sets over a reference year (top-8 legibility %)
-  useEffect(()=>{ fetch('alignments.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setData).catch(e=>setErr(e.message)); },[]);
+  useEffect(()=>{ fetch('/alignments.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setData).catch(e=>setErr(e.message)); },[]);
   // default to the tightest classical grand conjunction once data is in
   useEffect(()=>{ if(data && !sel){ const t=[...data.scanB].filter(e=>e.maxInSign>=7).sort((a,b)=>a.span-b.span); if(t.length){ setSel(t[0].date); setSelSet('B'); } } },[data,sel]);
   // 7-classical year scan (once, on lex load): the within-year occupied-sign distribution

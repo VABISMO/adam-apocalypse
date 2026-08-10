@@ -22,7 +22,7 @@ globalThis.navigator = window.navigator;
 globalThis.requestAnimationFrame = window.requestAnimationFrame;
 globalThis.cancelAnimationFrame = window.cancelAnimationFrame;
 
-const FILES = { 'lexicon.json': 'lexicon.json', 'alignments.json': 'alignments.json', 'angels72.json': 'angels72.json' };
+const FILES = { 'lexicon.json': 'lexicon.json', 'alignments.json': 'alignments.json', 'angels72.json': 'angels72.json', 'genesis_els.json': 'data/genesis_els.json', 'psalms_he.json': 'data/psalms_he.json' };
 globalThis.fetch = (url) => {
   const name = String(url).replace(/^.*\//, '');
   if (FILES[name]) {
@@ -60,6 +60,10 @@ if (mountErr) {
   check('home: 11 tabs present', tabCount === 11, `found ${tabCount}`);
   check('home: panel content renders', !!doc.querySelector('.panel'));
   check('footer renders', !!doc.querySelector('.site-footer'));
+  check('footer: column grid renders', !!doc.querySelector('.ft-grid'));
+  const ftH = doc.querySelectorAll('.ft-h').length;
+  check('footer: 4 column headers', ftH === 4, `found ${ftH}`);
+  check('footer: machine-readable section (llms.txt/sitemap)', /llms\.txt|sitemap/i.test(doc.body.textContent||''));
   // Cycles → Alignments is default; the alignments list or sky map should be present
   const bodyText = doc.body.textContent || '';
   check('home: Cycles/Alignments default content', /alignment|sky|zodiac|cycle/i.test(bodyText));

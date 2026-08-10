@@ -202,8 +202,8 @@ function loadPsalmsData(){
   if(_PSALMS_CACHE) return Promise.resolve(_PSALMS_CACHE);
   if(_PSALMS_PROMISE) return _PSALMS_PROMISE;
   _PSALMS_PROMISE = Promise.all([
-    fetch('data/genesis_els.json').then(r=>{ if(!r.ok) throw new Error('genesis_els.json HTTP '+r.status); return r.json(); }),
-    fetch('data/psalms_he.json').then(r=>{ if(!r.ok) throw new Error('psalms_he.json HTTP '+r.status); return r.json(); }),
+    fetch('/data/genesis_els.json').then(r=>{ if(!r.ok) throw new Error('genesis_els.json HTTP '+r.status); return r.json(); }),
+    fetch('/data/psalms_he.json').then(r=>{ if(!r.ok) throw new Error('psalms_he.json HTTP '+r.status); return r.json(); }),
   ]).then(([gen,ps])=>{ _PSALMS_CACHE={elsText:gen.text, psalms:ps, idx:null}; return _PSALMS_CACHE; });
   return _PSALMS_PROMISE;
 }
