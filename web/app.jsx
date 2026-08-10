@@ -1497,9 +1497,11 @@ function AlignmentsTab({setDate, lex, angelMap}){
   const rows = sel ? (selSet==='A'?skyAt(sel):skyAt7(sel)) : [];
   const occ = occupiedLetters(rows);
   // client-side stellar reading for the selected alignment (no precomputed reading
-  // in the JSON — keeps alignments.json lean even with ~10⁴ deep events)
-  const r = useMemo(()=>{
-    if(!sel || !lex) return null;
+  // in the JSON — keeps alignments.json lean even with ~10⁴ deep events). Plain const,
+  // NOT a hook: a useMemo here would sit after the early returns above and break the
+  // Rules of Hooks (first render data=null returns early → next render runs the memo →
+  // "more hooks than previous render" crash). readableWords on one day is cheap.
+  const r = (sel && lex) ? (() => {
     const names = readableWords(occ, lex.lexicon, angelMap);
     return {
       genesisLegible: genesisReadable(occ),
@@ -1509,7 +1511,7 @@ function AlignmentsTab({setDate, lex, angelMap}){
       angels: names.filter(n=>n.angel).map(n=>n.he),
       topNames: names.slice(0,8).map(n=>`${n.he}=${n.gloss}`),
     };
-  },[sel,selSet,occ,lex,angelMap]);
+  })() : null;
 
   return <>
     <h2>Alignments — rare century/millennium stellar conjunctions</h2>
