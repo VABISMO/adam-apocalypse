@@ -79,7 +79,9 @@ python3 -m http.server 8008
 # open http://127.0.0.1:8008/   (lexicon.json + angels72.json are loaded via fetch; DO NOT open with file://)
 ```
 
-Files: `web/index.html` + `web/app.bundle.js` + symlinks `lexicon.json`/`angels72.json`/`astronomy-engine.mjs`/`alignments.json` (React 18 + astronomy-engine, no Babel on the client). Source: `web/app.jsx`. Each section of the article and each calculator is a tab (star map, angle calculation, star reading, gematria+Aiq Bekar, sigil forging, 7 magic squares, 72 angels, Saros, ayanamsa, lunar-solar, alignments, Revelation/isopsephy, cross-cultural…). Legacy monolithic version: `pdf/cielo-lector.html`.
+Files: `web/index.html` + `web/app.bundle.js` + symlinks `lexicon.json`/`angels72.json`/`astronomy-engine.mjs`/`alignments.json` (React 18 + astronomy-engine, no Babel on the client). Source: `web/app.jsx`. Each section of the article and each calculator is a tab (star map, angle calculation, star reading, gematria+Aiq Bekar, sigil forging, 7 magic squares, 72 angels, Saros, ayanamsa, lunar-solar, alignments, Revelation/isopsephy, cross-cultural, daily Psalms…). Legacy monolithic version: `pdf/cielo-lector.html`.
+
+**Daily Psalms tab** (v3.5): a JavaScript port of the `daily-psalms-api` pipeline (`gitlab.com/ch-zz/daily-psalms-api`, route `/api/psalm`) — name + date-in-words → gematria (137.036 adjustment) → ELS step over Genesis → Hebrew gematria of the ELS string → shortest matching Psalms phrase (subharmonic ÷2…÷128 fallback). No server or `.db`: the 418 MB upstream SQLite index is rebuilt in-browser from two small bundled JSONs — `web/data/genesis_els.json` (the exact ELS source string, consonants + maqafim) and `web/data/psalms_he.json` (Sefaria MT, 150 chapters, 2527 verses) — so it runs on a free static host (builds in ~90 ms, ~5.6k unique sums).
 
 ## Files
 

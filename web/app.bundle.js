@@ -26685,7 +26685,7 @@ function RevelationHebrewTab({ date, rows, occ, words, genData, genYear }) {
   const nameCount = (words || []).filter((w) => w.name).length;
   const angelCount = (words || []).filter((w) => w.angel).length;
   const genDays = genData && genData.list ? genData.list.length : null;
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Revelation \u2014 the sky as a sealed scroll (\xA715c) \xB7 isopsephy"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A structural reading, not a confessional exegesis. Revelation (c. 95 CE) shares the late-Jewish symbolic cosmos (merkabah + creator-letters + 360/7/12) with the textualised Sefer Yetzirah \u2014 they ", /* @__PURE__ */ import_react.default.createElement("b", null, "converge without borrowing"), ". Rev 13:18 is the only NT verse that ", /* @__PURE__ */ import_react.default.createElement("b", null, "commands a gematria calculation"), "."), /* @__PURE__ */ import_react.default.createElement("h3", null, "Sefer Raziel HaMalakh \u2014 \u201Ccalculate to see the generations\u201D"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "An older sibling text frames exactly what this app does: ", /* @__PURE__ */ import_react.default.createElement("b", null, "compute the planets and the zodiacal signs in their fixed order, and so read the generations from beginning to end"), ". From the Spanish ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer Raziel HaMalakh"), " (p. 144 of the source PDF):"), /* @__PURE__ */ import_react.default.createElement("blockquote", { style: { borderLeft: "3px solid var(--gold)", margin: "8px 0", paddingLeft: 14, color: "var(--txt)" } }, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CCombina los signos y la rueda. Graba y calcula y asigna y numera. Considera los c\xE1lculos de los planetas y los signos del zod\xEDaco. Calcula los per\xEDodos y dando vueltas los planetas. De aquellos suspendidos y los signos del zod\xEDaco en el orden perpetuo, ve con la luz. Calcula en orden para ver las generaciones. Prepara para verlos desde el principio hasta el final."), /* @__PURE__ */ import_react.default.createElement("br", null), /* @__PURE__ */ import_react.default.createElement("br", null), /* @__PURE__ */ import_react.default.createElement("i", null, "Est\xE1 escrito, quien act\xFAa y crea, proclama las generaciones desde el principio, antes de la creaci\xF3n del universo. Para comprender las acciones de cada hombre en la rectitud y la maldad, decreta sobre cada uno. De acuerdo a las obras, prepara las obras entre el bien y el mal.\u201D")), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "\u2014 ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer Raziel HaMalakh"), " (Spanish ed.), p. 144. The \u201C144\u201D the eye reads as ", /* @__PURE__ */ import_react.default.createElement("i", null, "ve144 con la luz"), " is the page number the text extractor merged into \u201Cve con la luz\u201D \u2014 a real textual fact of the document, and 144 = 12\xB2 = the New Jerusalem wall (Rev 21:17) / the 144,000 sealed (Rev 7:4)."), /* @__PURE__ */ import_react.default.createElement("h3", null, "Verified on ", date, " \u2014 the mock of today"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Each line of the Raziel instruction, mapped to what the apparatus actually computes today (live, not asserted):"), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Raziel instruction"), /* @__PURE__ */ import_react.default.createElement("th", null, "Computed on ", date))), /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CCalcula los per\xEDodos y dando vueltas los planetas\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, (rows || []).length, " bodies, ecliptic longitude \u2192 sign. Today: ", (rows || []).map((r) => `${r.body} ${r.deg.toFixed(0)}\xB0\u2192${r.sign}`).join(" \xB7 "), ".")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201Clos signos del zod\xEDaco en el orden perpetuo\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "12 signs \xD7 30\xB0, fixed order. Today ", /* @__PURE__ */ import_react.default.createElement("b", null, (occ || /* @__PURE__ */ new Set()).size), " occupied: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ || []].sort().join(" ") || "none"), ".")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201Cve [144] con la luz\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "144 = ", /* @__PURE__ */ import_react.default.createElement("b", null, "12\xB2"), " = the New Jerusalem wall (Rev 21:17) / 144,000 sealed (Rev 7:4) = (zodiac)\xB2.")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CCalcula en orden para ver las generaciones\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "The Reader enumerates every readable name today: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, (words || []).length), " names (the generations ", /* @__PURE__ */ import_react.default.createElement("i", null, "now"), ") \u2014 incl. ", /* @__PURE__ */ import_react.default.createElement("b", null, nameCount), " proper names and ", /* @__PURE__ */ import_react.default.createElement("b", null, angelCount), " Shem HaMephorash angel-roots (word + suffix ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D0\u05DC"), "/", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D9\u05D4"), ").")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CPrepara para verlos desde el principio hasta el final\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "The Predictor scans the whole year ", genYear, " (beginning \u2192 end): ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, genDays != null ? genDays : "\u2026"), " days where Genesis 1:1 is legible = the generations across time.")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201Cdecreta sobre cada uno\u2026 entre el bien y el mal\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "Revelation's judgment: the sky read as a decree on each \u2014 the sealed scroll opened (Rev 5\u20138), the same letters that name the generations now judging them.")))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { marginBottom: 12 } }, "Verdict: the Raziel instruction is not metaphor. ", /* @__PURE__ */ import_react.default.createElement("b", null, "Calculate the planets"), " = astronomy-engine longitudes; ", /* @__PURE__ */ import_react.default.createElement("b", null, "the signs in perpetual order"), " = the 12 simples; ", /* @__PURE__ */ import_react.default.createElement("b", null, "see the generations from beginning to end"), " = the Reader (today's names) + the Predictor (the year's legible days). The \u201Cnames of the ancestors and those to come\u201D are the readable names of any date \u2014 past or future \u2014 and the apparatus enumerates them."), /* @__PURE__ */ import_react.default.createElement("h3", null, "15c.9 \xB7 The two registers of the Name \u2014 the eternal and the temporal"), /* @__PURE__ */ import_react.default.createElement("p", { className: "muted" }, "The reading rule opens a theological contrast the apparatus makes measurable. 3 ", /* @__PURE__ */ import_react.default.createElement("i", null, "mothers"), " (aleph, mem, shin \u2014 primordial elements, fixed) + 7 ", /* @__PURE__ */ import_react.default.createElement("i", null, "doubles"), " (bet, gimel, dalet, kaf, pe, resh, tav \u2014 the 7 planets, always available) do not depend on the zodiac; the 12 ", /* @__PURE__ */ import_react.default.createElement("i", null, "simples"), " do. A word of only mothers+doubles is ", /* @__PURE__ */ import_react.default.createElement("b", null, "always readable"), " \u2014 it transcends the sky. A word of simples is ", /* @__PURE__ */ import_react.default.createElement("b", null, "gated"), " \u2014 readable only when its signs are occupied, i.e. in time."), /* @__PURE__ */ import_react.default.createElement("p", { className: "muted" }, "The always-readable tier holds the theological anchors:"), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Hebrew"), /* @__PURE__ */ import_react.default.createElement("th", null, "translation"), /* @__PURE__ */ import_react.default.createElement("th", null, "letters"), /* @__PURE__ */ import_react.default.createElement("th", null, "gematria"), /* @__PURE__ */ import_react.default.createElement("th", null, "note"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D1\u05E8\u05D0"), /* @__PURE__ */ import_react.default.createElement("td", null, "to create"), /* @__PURE__ */ import_react.default.createElement("td", null, "2 doubles + 1 mother"), /* @__PURE__ */ import_react.default.createElement("td", null, "203"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "the act of creation")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D0\u05D1"), /* @__PURE__ */ import_react.default.createElement("td", null, "father"), /* @__PURE__ */ import_react.default.createElement("td", null, "1 mother + 1 double"), /* @__PURE__ */ import_react.default.createElement("td", null, "3"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "\u2014")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D0\u05DE"), /* @__PURE__ */ import_react.default.createElement("td", null, "mother"), /* @__PURE__ */ import_react.default.createElement("td", null, "2 mothers"), /* @__PURE__ */ import_react.default.createElement("td", null, "41"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "\u2014")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05E9\u05D1\u05EA"), /* @__PURE__ */ import_react.default.createElement("td", null, "sabbath (rest)"), /* @__PURE__ */ import_react.default.createElement("td", null, "1 mother + 2 doubles"), /* @__PURE__ */ import_react.default.createElement("td", null, "702 = 27\xD726"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "the whole alphabet \xD7 the Name")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D0\u05DE\u05EA"), /* @__PURE__ */ import_react.default.createElement("td", null, "truth"), /* @__PURE__ */ import_react.default.createElement("td", null, "2 mothers + 1 double"), /* @__PURE__ */ import_react.default.createElement("td", null, "441 = 21\xB2"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "the seal of God is Truth")))), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Truth (\u05D0\u05DE\u05EA) = 441 = 21\xB2"), ", and 21 = C(7,2) = seals + trumpets + bowls (\xA715c.3). The rabbinic \u201Cthe seal of the Holy One is Truth (\u05D0\u05DE\u05EA)\u201D is the same 21 that structures the sealed scroll of Revelation \u2014 the seal, squared."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Sabbath (\u05E9\u05D1\u05EA) = 702 = 27 \xD7 26"), ": the alphabet with finals (27) \xD7 \u05D9\u05D4\u05D5\u05D4 (26). Rest = the whole language \xD7 the Name."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "\u05D9\u05D4\u05D5\u05D4 is built entirely of simples"), " \u2014 yod (Virgo), he (Aries), vav (Taurus) \u2014 three temporal letters, none eternal. The Name is ", /* @__PURE__ */ import_react.default.createElement("i", null, "never"), " always-readable: bound to the turning sky, legible only in its windows (the ~monthly cadence of \xA711, \u201Cthe cadence of \u05D9\u05D4\u05D5\u05D4\u201D).")), /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { marginBottom: 12 } }, "The sealed scroll of Revelation is the zodiac, and the names divide as the scroll does: the ", /* @__PURE__ */ import_react.default.createElement("b", null, "eternal"), " register (mothers+doubles: create, father, mother, sabbath, truth\u2026) readable always, needing no opening; the ", /* @__PURE__ */ import_react.default.createElement("b", null, "temporal"), " register (the 12 simples: ", /* @__PURE__ */ import_react.default.createElement("b", null, "\u05D9\u05D4\u05D5\u05D4"), ") \u2014 the Name of \u201Cwho was and is and is to come\u201D (Rev 1:4), readable only when the sky computes it, only when the scroll is opened. Truth is the seal (441 = 21\xB2); the Name is what the seal guards. He who opens the scroll (Rev 5) is he who can calculate the temporal Name \u2014 and the eternal tier was never sealed."), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Greek (\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2) or Hebrew (\u05D0\u05D1\u05D3\u05D5\u05DF)", style: { flex: "1 1 280px" } }), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, hebrew != null ? "Hebrew gematria" : "Greek isopsephy", ": ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, hebrew != null ? hebrew : greek))), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Name"), /* @__PURE__ */ import_react.default.createElement("th", null, "Reading"), /* @__PURE__ */ import_react.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react.default.createElement("th", null, "Notes"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, verified.map((v, i) => /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, v[0] ? /* @__PURE__ */ import_react.default.createElement("span", { className: /[א-ת]/.test(v[0]) ? "he" : "gk", style: { fontSize: "1.4rem" } }, v[0]) : ""), /* @__PURE__ */ import_react.default.createElement("td", null, v[1]), /* @__PURE__ */ import_react.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, v[2]), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, v[3]))))), /* @__PURE__ */ import_react.default.createElement("h3", null, "The arithmetic of Revelation \u2192 Sefer Yetzirah"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "The 111 family"), ": 666 = 6\xD7111 (the beast, the 6 falling short of 7 = the material); 888 = 8\xD7111 (Christ, the 8 = the eighth day, beyond-7 = resurrection). 666/888 = 3/4. Beast and Christ are the same 111 scaled by 6 and by 8."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Apollyon = 1461 = the Sothic cycle"), ": 1461 vague Egyptian years (= 1460 Julian) is the return period of the heliacal rising of ", /* @__PURE__ */ import_react.default.createElement("b", null, "Sirius"), " (the dog star). The 5th seal-trumpet where Apollyon appears is literally about a star falling from heaven and opening the abyss (Rev 9:1). Rev 9:11 gives the name in ", /* @__PURE__ */ import_react.default.createElement("b", null, "both"), " systems \u2014 Hebrew (Abaddon, 63) and Greek (Apollyon, 1461) \u2014 a gematria/isopsephy bridge. ", /* @__PURE__ */ import_react.default.createElement("em", null, "1461 is an arithmetic fact; that John meant Sirius is a hypothesis (strong, but not intent).")), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "7 seals + 7 trumpets + 7 bowls = 21 = C(7,2)"), " = the distinct pairs among the 7 doubles. + 7 thunders sealed (hidden) = 28 = the 28 lunar mansions / the abjad."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "144,000 sealed = 12\xB2 \xD7 10\xB3"), " = (zodiac)\xB2 \xD7 millennium. The New Jerusalem is a ", /* @__PURE__ */ import_react.default.createElement("b", null, "cube"), " of edge 12,000 stadia = 3 mothers (3 dimensions) \xD7 edge 12 (the simples); 12\xB3 = 1728; wall 144 = 12\xB2 cubits; 24 elders + 4 creatures = 28."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Judgment fractions"), " climb in twelfths: \xBC = 3/12 \u2192 \u2153 = 4/12 \u2192 1 = 12/12; each heptad raises the fraction by one zodiacal sign."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "3\xBD = the half-heptad"), " = the beast's domain: 1260 days = 3\xBD \xD7 360 = half of 7 \xD7 the degree-circle (theological, not orbital)."), /* @__PURE__ */ import_react.default.createElement("li", null, "The 7 seals = the 7 doubles ", /* @__PURE__ */ import_react.default.createElement("b", null, "inscribed & silent"), "; the 7 trumpets = the same 7 doubles ", /* @__PURE__ */ import_react.default.createElement("b", null, "sounded"), " (the shofar) \u2014 the \u201Ctwo tongues\u201D (stop/fricative) of the SY. The 7th seal = silence in heaven = the Sabbath = the 7th double at rest.")), /* @__PURE__ */ import_react.default.createElement("h3", null, "The sky as a sealed scroll \u2014 the biblical phrases"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Revelation is one long act of ", /* @__PURE__ */ import_react.default.createElement("b", null, "reading the sky as writing"), ": a sealed scroll, letters that sound, stars that fall, a city measured in 12s. Every one of these images maps onto the Sefer Yetzirah frame (3 mothers / 7 doubles / 12 simples). The full list, with reference and its reading in the system:"), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Phrase"), /* @__PURE__ */ import_react.default.createElement("th", null, "Ref."), /* @__PURE__ */ import_react.default.createElement("th", null, "Reading in the system"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, PHRASES.map((p, i) => /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201C", p[0], "\u201D")), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, p[1]), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted", dangerouslySetInnerHTML: { __html: p[2] } }))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Two roots reach further back than Revelation: ", /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CThe heavens declare the glory of God; day to day pours out speech\u201D"), " (Ps 19:1-2) and ", /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CLift up your eyes on high and see: who created these? He brings out their host by number\u201D"), " (Isa 40:26) \u2014 the OT seed of the sky-as-text idea that Revelation dramatizes and the Sefer Yetzirah formalises."), /* @__PURE__ */ import_react.default.createElement(Fig, { n: 11, doc: "From the article (\xA715c.1): Rev 6:14 \u2014 the zodiacal band (the 12 simples) as a written scroll that rolls up; the stars (the constellation-letters) fall out of their seats. \u201CI am the Alpha and the Omega\u201D = the bounds of the alphabet = the cosmos as text. The Lamb who opens the sealed scroll is the one who can read the sky as a book \u2014 the Caeli Reader." }), /* @__PURE__ */ import_react.default.createElement(Fig, { n: 12, doc: "From the article (\xA715c.4): Rev 21 \u2014 the New Jerusalem is a cube of edge 12,000 stadia (the 3 mothers = the 3 dimensions \xD7 edge 12 = the simples; 12\xB3 = 1728), walled in 144 = 12\xB2 cubits, with 12 gates + 12 foundations = 24 (= 12 tribes + 12 apostles). The 144,000 sealed = 12\xB2 \xD7 10\xB3 = (zodiac)\xB2 \xD7 (millennium = 10 sefirot cubed)." }), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2") }, "\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u03A7\u03C1\u03B9\u03C3\u03C4\u03CC\u03C2") }, "\u03A7\u03C1\u03B9\u03C3\u03C4\u03CC\u03C2"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD") }, "\u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05D3\u05D5\u05DF") }, "\u05D0\u05D1\u05D3\u05D5\u05DF")));
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Revelation \u2014 the sky as a sealed scroll (\xA715c) \xB7 isopsephy"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A structural reading, not a confessional exegesis. Revelation (c. 95 CE) shares the late-Jewish symbolic cosmos (merkabah + creator-letters + 360/7/12) with the textualised Sefer Yetzirah \u2014 they ", /* @__PURE__ */ import_react.default.createElement("b", null, "converge without borrowing"), ". Rev 13:18 is the only NT verse that ", /* @__PURE__ */ import_react.default.createElement("b", null, "commands a gematria calculation"), "."), /* @__PURE__ */ import_react.default.createElement("h3", null, "Sefer Raziel HaMalakh \u2014 \u201Ccalculate to see the generations\u201D"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "An older sibling text frames exactly what this app does: ", /* @__PURE__ */ import_react.default.createElement("b", null, "compute the planets and the zodiacal signs in their fixed order, and so read the generations from beginning to end"), ". From the Spanish ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer Raziel HaMalakh"), " (p. 144 of the source PDF):"), /* @__PURE__ */ import_react.default.createElement("blockquote", { style: { borderLeft: "3px solid var(--gold)", margin: "8px 0", paddingLeft: 14, color: "var(--txt)" } }, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CCombina los signos y la rueda. Graba y calcula y asigna y numera. Considera los c\xE1lculos de los planetas y los signos del zod\xEDaco. Calcula los per\xEDodos y dando vueltas los planetas. De aquellos suspendidos y los signos del zod\xEDaco en el orden perpetuo, ve con la luz. Calcula en orden para ver las generaciones. Prepara para verlos desde el principio hasta el final."), /* @__PURE__ */ import_react.default.createElement("br", null), /* @__PURE__ */ import_react.default.createElement("br", null), /* @__PURE__ */ import_react.default.createElement("i", null, "Est\xE1 escrito, quien act\xFAa y crea, proclama las generaciones desde el principio, antes de la creaci\xF3n del universo. Para comprender las acciones de cada hombre en la rectitud y la maldad, decreta sobre cada uno. De acuerdo a las obras, prepara las obras entre el bien y el mal.\u201D")), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "\u2014 ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer Raziel HaMalakh"), " (Spanish ed.), p. 144. The \u201C144\u201D the eye reads as ", /* @__PURE__ */ import_react.default.createElement("i", null, "ve144 con la luz"), " is the page number the text extractor merged into \u201Cve con la luz\u201D \u2014 a real textual fact of the document, and 144 = 12\xB2 = the New Jerusalem wall (Rev 21:17) / the 144,000 sealed (Rev 7:4)."), /* @__PURE__ */ import_react.default.createElement("h3", null, "The Raziel instruction, computed on today's sky"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Each line of the Raziel instruction, mapped to what the apparatus computes live (not asserted):"), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Raziel instruction"), /* @__PURE__ */ import_react.default.createElement("th", null, "Computed on ", date))), /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CCalcula los per\xEDodos y dando vueltas los planetas\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, (rows || []).length, " bodies, ecliptic longitude \u2192 sign. Today: ", (rows || []).map((r) => `${r.body} ${r.deg.toFixed(0)}\xB0\u2192${r.sign}`).join(" \xB7 "), ".")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201Clos signos del zod\xEDaco en el orden perpetuo\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "12 signs \xD7 30\xB0, fixed order. Today ", /* @__PURE__ */ import_react.default.createElement("b", null, (occ || /* @__PURE__ */ new Set()).size), " occupied: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ || []].sort().join(" ") || "none"), ".")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201Cve [144] con la luz\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "144 = ", /* @__PURE__ */ import_react.default.createElement("b", null, "12\xB2"), " = the New Jerusalem wall (Rev 21:17) / 144,000 sealed (Rev 7:4) = (zodiac)\xB2.")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CCalcula en orden para ver las generaciones\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "The Reader enumerates every readable name today: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, (words || []).length), " names (the generations ", /* @__PURE__ */ import_react.default.createElement("i", null, "now"), ") \u2014 incl. ", /* @__PURE__ */ import_react.default.createElement("b", null, nameCount), " proper names and ", /* @__PURE__ */ import_react.default.createElement("b", null, angelCount), " Shem HaMephorash angel-roots (word + suffix ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D0\u05DC"), "/", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D9\u05D4"), ").")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CPrepara para verlos desde el principio hasta el final\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "The Predictor scans the whole year ", genYear, " (beginning \u2192 end): ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, genDays != null ? genDays : "\u2026"), " days where Genesis 1:1 is legible = the generations across time.")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201Cdecreta sobre cada uno\u2026 entre el bien y el mal\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "Revelation's judgment: the sky read as a decree on each \u2014 the sealed scroll opened (Rev 5\u20138), the same letters that name the generations now judging them.")))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { marginBottom: 12 } }, "Verdict: the Raziel instruction is not metaphor. ", /* @__PURE__ */ import_react.default.createElement("b", null, "Calculate the planets"), " = astronomy-engine longitudes; ", /* @__PURE__ */ import_react.default.createElement("b", null, "the signs in perpetual order"), " = the 12 simples; ", /* @__PURE__ */ import_react.default.createElement("b", null, "see the generations from beginning to end"), " = the Reader (today's names) + the Predictor (the year's legible days). The \u201Cnames of the ancestors and those to come\u201D are the readable names of any date \u2014 past or future \u2014 and the apparatus enumerates them."), /* @__PURE__ */ import_react.default.createElement("h3", null, "15c.9 \xB7 The two registers of the Name \u2014 the eternal and the temporal"), /* @__PURE__ */ import_react.default.createElement("p", { className: "muted" }, "The reading rule opens a theological contrast the apparatus makes measurable. 3 ", /* @__PURE__ */ import_react.default.createElement("i", null, "mothers"), " (aleph, mem, shin \u2014 primordial elements, fixed) + 7 ", /* @__PURE__ */ import_react.default.createElement("i", null, "doubles"), " (bet, gimel, dalet, kaf, pe, resh, tav \u2014 the 7 planets, always available) do not depend on the zodiac; the 12 ", /* @__PURE__ */ import_react.default.createElement("i", null, "simples"), " do. A word of only mothers+doubles is ", /* @__PURE__ */ import_react.default.createElement("b", null, "always readable"), " \u2014 it transcends the sky. A word of simples is ", /* @__PURE__ */ import_react.default.createElement("b", null, "gated"), " \u2014 readable only when its signs are occupied, i.e. in time."), /* @__PURE__ */ import_react.default.createElement("p", { className: "muted" }, "The always-readable tier holds the theological anchors:"), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Hebrew"), /* @__PURE__ */ import_react.default.createElement("th", null, "translation"), /* @__PURE__ */ import_react.default.createElement("th", null, "letters"), /* @__PURE__ */ import_react.default.createElement("th", null, "gematria"), /* @__PURE__ */ import_react.default.createElement("th", null, "note"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D1\u05E8\u05D0"), /* @__PURE__ */ import_react.default.createElement("td", null, "to create"), /* @__PURE__ */ import_react.default.createElement("td", null, "2 doubles + 1 mother"), /* @__PURE__ */ import_react.default.createElement("td", null, "203"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "the act of creation")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D0\u05D1"), /* @__PURE__ */ import_react.default.createElement("td", null, "father"), /* @__PURE__ */ import_react.default.createElement("td", null, "1 mother + 1 double"), /* @__PURE__ */ import_react.default.createElement("td", null, "3"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "\u2014")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D0\u05DE"), /* @__PURE__ */ import_react.default.createElement("td", null, "mother"), /* @__PURE__ */ import_react.default.createElement("td", null, "2 mothers"), /* @__PURE__ */ import_react.default.createElement("td", null, "41"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "\u2014")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05E9\u05D1\u05EA"), /* @__PURE__ */ import_react.default.createElement("td", null, "sabbath (rest)"), /* @__PURE__ */ import_react.default.createElement("td", null, "1 mother + 2 doubles"), /* @__PURE__ */ import_react.default.createElement("td", null, "702 = 27\xD726"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "the whole alphabet \xD7 the Name")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D0\u05DE\u05EA"), /* @__PURE__ */ import_react.default.createElement("td", null, "truth"), /* @__PURE__ */ import_react.default.createElement("td", null, "2 mothers + 1 double"), /* @__PURE__ */ import_react.default.createElement("td", null, "441 = 21\xB2"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "the seal of God is Truth")))), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Truth (\u05D0\u05DE\u05EA) = 441 = 21\xB2"), ", and 21 = C(7,2) = seals + trumpets + bowls (\xA715c.3). The rabbinic \u201Cthe seal of the Holy One is Truth (\u05D0\u05DE\u05EA)\u201D is the same 21 that structures the sealed scroll of Revelation \u2014 the seal, squared."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Sabbath (\u05E9\u05D1\u05EA) = 702 = 27 \xD7 26"), ": the alphabet with finals (27) \xD7 \u05D9\u05D4\u05D5\u05D4 (26). Rest = the whole language \xD7 the Name."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "\u05D9\u05D4\u05D5\u05D4 is built entirely of simples"), " \u2014 yod (Virgo), he (Aries), vav (Taurus) \u2014 three temporal letters, none eternal. The Name is ", /* @__PURE__ */ import_react.default.createElement("i", null, "never"), " always-readable: bound to the turning sky, legible only in its windows (the ~monthly cadence of \xA711, \u201Cthe cadence of \u05D9\u05D4\u05D5\u05D4\u201D).")), /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { marginBottom: 12 } }, "The sealed scroll of Revelation is the zodiac, and the names divide as the scroll does: the ", /* @__PURE__ */ import_react.default.createElement("b", null, "eternal"), " register (mothers+doubles: create, father, mother, sabbath, truth\u2026) readable always, needing no opening; the ", /* @__PURE__ */ import_react.default.createElement("b", null, "temporal"), " register (the 12 simples: ", /* @__PURE__ */ import_react.default.createElement("b", null, "\u05D9\u05D4\u05D5\u05D4"), ") \u2014 the Name of \u201Cwho was and is and is to come\u201D (Rev 1:4), readable only when the sky computes it, only when the scroll is opened. Truth is the seal (441 = 21\xB2); the Name is what the seal guards. He who opens the scroll (Rev 5) is he who can calculate the temporal Name \u2014 and the eternal tier was never sealed."), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Greek (\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2) or Hebrew (\u05D0\u05D1\u05D3\u05D5\u05DF)", style: { flex: "1 1 280px" } }), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, hebrew != null ? "Hebrew gematria" : "Greek isopsephy", ": ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, hebrew != null ? hebrew : greek))), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Name"), /* @__PURE__ */ import_react.default.createElement("th", null, "Reading"), /* @__PURE__ */ import_react.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react.default.createElement("th", null, "Notes"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, verified.map((v, i) => /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, v[0] ? /* @__PURE__ */ import_react.default.createElement("span", { className: /[א-ת]/.test(v[0]) ? "he" : "gk", style: { fontSize: "1.4rem" } }, v[0]) : ""), /* @__PURE__ */ import_react.default.createElement("td", null, v[1]), /* @__PURE__ */ import_react.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, v[2]), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, v[3]))))), /* @__PURE__ */ import_react.default.createElement("h3", null, "The arithmetic of Revelation \u2192 Sefer Yetzirah"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "The 111 family"), ": 666 = 6\xD7111 (the beast, the 6 falling short of 7 = the material); 888 = 8\xD7111 (Christ, the 8 = the eighth day, beyond-7 = resurrection). 666/888 = 3/4. Beast and Christ are the same 111 scaled by 6 and by 8."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Apollyon = 1461 = the Sothic cycle"), ": 1461 vague Egyptian years (= 1460 Julian) is the return period of the heliacal rising of ", /* @__PURE__ */ import_react.default.createElement("b", null, "Sirius"), " (the dog star). The 5th seal-trumpet where Apollyon appears is literally about a star falling from heaven and opening the abyss (Rev 9:1). Rev 9:11 gives the name in ", /* @__PURE__ */ import_react.default.createElement("b", null, "both"), " systems \u2014 Hebrew (Abaddon, 63) and Greek (Apollyon, 1461) \u2014 a gematria/isopsephy bridge. ", /* @__PURE__ */ import_react.default.createElement("em", null, "1461 is an arithmetic fact; that John meant Sirius is a hypothesis (strong, but not intent).")), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "7 seals + 7 trumpets + 7 bowls = 21 = C(7,2)"), " = the distinct pairs among the 7 doubles. + 7 thunders sealed (hidden) = 28 = the 28 lunar mansions / the abjad."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "144,000 sealed = 12\xB2 \xD7 10\xB3"), " = (zodiac)\xB2 \xD7 millennium. The New Jerusalem is a ", /* @__PURE__ */ import_react.default.createElement("b", null, "cube"), " of edge 12,000 stadia = 3 mothers (3 dimensions) \xD7 edge 12 (the simples); 12\xB3 = 1728; wall 144 = 12\xB2 cubits; 24 elders + 4 creatures = 28."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Judgment fractions"), " climb in twelfths: \xBC = 3/12 \u2192 \u2153 = 4/12 \u2192 1 = 12/12; each heptad raises the fraction by one zodiacal sign."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "3\xBD = the half-heptad"), " = the beast's domain: 1260 days = 3\xBD \xD7 360 = half of 7 \xD7 the degree-circle (theological, not orbital)."), /* @__PURE__ */ import_react.default.createElement("li", null, "The 7 seals = the 7 doubles ", /* @__PURE__ */ import_react.default.createElement("b", null, "inscribed & silent"), "; the 7 trumpets = the same 7 doubles ", /* @__PURE__ */ import_react.default.createElement("b", null, "sounded"), " (the shofar) \u2014 the \u201Ctwo tongues\u201D (stop/fricative) of the SY. The 7th seal = silence in heaven = the Sabbath = the 7th double at rest.")), /* @__PURE__ */ import_react.default.createElement("h3", null, "The sky as a sealed scroll \u2014 the biblical phrases"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Revelation is one long act of ", /* @__PURE__ */ import_react.default.createElement("b", null, "reading the sky as writing"), ": a sealed scroll, letters that sound, stars that fall, a city measured in 12s. Every one of these images maps onto the Sefer Yetzirah frame (3 mothers / 7 doubles / 12 simples). The full list, with reference and its reading in the system:"), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Phrase"), /* @__PURE__ */ import_react.default.createElement("th", null, "Ref."), /* @__PURE__ */ import_react.default.createElement("th", null, "Reading in the system"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, PHRASES.map((p, i) => /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201C", p[0], "\u201D")), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, p[1]), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted", dangerouslySetInnerHTML: { __html: p[2] } }))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Two roots reach further back than Revelation: ", /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CThe heavens declare the glory of God; day to day pours out speech\u201D"), " (Ps 19:1-2) and ", /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CLift up your eyes on high and see: who created these? He brings out their host by number\u201D"), " (Isa 40:26) \u2014 the OT seed of the sky-as-text idea that Revelation dramatizes and the Sefer Yetzirah formalises."), /* @__PURE__ */ import_react.default.createElement(Fig, { n: 11, doc: "From the article (\xA715c.1): Rev 6:14 \u2014 the zodiacal band (the 12 simples) as a written scroll that rolls up; the stars (the constellation-letters) fall out of their seats. \u201CI am the Alpha and the Omega\u201D = the bounds of the alphabet = the cosmos as text. The Lamb who opens the sealed scroll is the one who can read the sky as a book \u2014 the Caeli Reader." }), /* @__PURE__ */ import_react.default.createElement(Fig, { n: 12, doc: "From the article (\xA715c.4): Rev 21 \u2014 the New Jerusalem is a cube of edge 12,000 stadia (the 3 mothers = the 3 dimensions \xD7 edge 12 = the simples; 12\xB3 = 1728), walled in 144 = 12\xB2 cubits, with 12 gates + 12 foundations = 24 (= 12 tribes + 12 apostles). The 144,000 sealed = 12\xB2 \xD7 10\xB3 = (zodiac)\xB2 \xD7 (millennium = 10 sefirot cubed)." }), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2") }, "\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u03A7\u03C1\u03B9\u03C3\u03C4\u03CC\u03C2") }, "\u03A7\u03C1\u03B9\u03C3\u03C4\u03CC\u03C2"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD") }, "\u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05D3\u05D5\u05DF") }, "\u05D0\u05D1\u05D3\u05D5\u05DF")));
 }
 var REV_CLS = { "(a)": "var(--green)", "(b)": "var(--warn)", "(c)": "var(--blue)", "(u)": "var(--red)" };
 function ClassTag({ c }) {
@@ -26936,6 +26936,514 @@ function RevelationsTab({ sub, setSubTab, date, rows, occ, words, genData, genYe
 function MethodTab({ esGlossCount }) {
   return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Methodology & scope"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted", style: { marginTop: 4, lineHeight: 1.7 } }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Frame:"), " a modern hermetic-astronomical synthesis. The classical ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer Yetzirah"), " is cosmogonic linguistics, not an oracle; this operationalisation is a contemporary reading, not traditional kabbalistic practice."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Simple\u2194sign mapping:"), " equal 30\xB0 tropical sectors (not IAU constellations, which are unequal and 13). A symbolic convention necessary for the one-to-one letter\u2194sign grid. The mothers are placed opposite their real circumpolar constellations (Draco, Ursa Minor, Cassiopea)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Astronomy:"), " astronomy-engine v2.1.19, geocentric apparent ecliptic longitude (", /* @__PURE__ */ import_react.default.createElement("code", null, "GeoVector\u2192Ecliptic.elon"), "), noon UT."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Lexicon:"), " Strong (OpenScriptures), 6045 consonantal roots."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Pluto ephemeris:"), " precision degrades outside 1700\u20132200; ancient windows rely on sign-level (30\xB0) determination, validated by smooth continuity, not arcminute precision."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Negative results (tested):"), " the mirror-palindrome 2701\u21923773 does not discriminate at corpus level (Genesis 39.3% \u2248 Markov 39.2% \u2248 uniform 38.4%); Genesis-days do not correlate with eclipses (7.5% observed vs 28% expected \u2014 they avoid them)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Positive results:"), " 37/73 fit the civil solar year (365=73\xD75; 2701 pentads = 37 years), corroborated by the Maya Haab and Calendar Round; Genesis 1 core palindromes 51.6% vs 37.4% paired null (p\u22480.076, borderline \u2014 not significant, but very close; hypothesis)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Positive results v3.1 (\xA715b):"), " 37\xD773 structure of the 7 Genesis words demonstrated (23/127 subsets, p\u22483.1\xD710\u207B\u2074); saros-series count by calculation (152 series, 54\u201387, median 72); 7 kameot = 7 doubles (Mercury 260 = Tzolkin); Aiq Bekar = decimal-positional gematria of \xA72 (bridge to sigils); 72 Shem HaMephorash angels from Exodus (216=6\xB3); the 7-doubles=7-days heptagram (Chaldean order + mod 7 + Romance etymology); ayanamsa: 190-year spread (tropical discard robust); 6 windows 491-year cadence (p<5\xD710\u207B\u2076, hypothesis not cause)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Validation:"), " 88 assertions in ", /* @__PURE__ */ import_react.default.createElement("code", null, "scripts/tests.mjs"), " \u2014 all green. Scripts in ", /* @__PURE__ */ import_react.default.createElement("code", null, "scripts/"), "; paper in ", /* @__PURE__ */ import_react.default.createElement("code", null, "paper/index.html"), ".")));
 }
+var PSALM_ADJ = 137.035999177;
+var SUBHARMONIC_DIVISORS = [1, 2, 4, 8, 16, 32, 64, 128];
+var PSALM_GEM = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4,
+  e: 5,
+  f: 6,
+  g: 7,
+  h: 8,
+  i: 9,
+  j: 600,
+  k: 10,
+  l: 20,
+  m: 30,
+  n: 40,
+  o: 50,
+  p: 60,
+  q: 70,
+  r: 80,
+  s: 90,
+  t: 100,
+  u: 200,
+  v: 700,
+  w: 900,
+  x: 300,
+  y: 400,
+  z: 500,
+  "\u0627": 1,
+  "\u0623": 1,
+  "\u0625": 1,
+  "\u0622": 1,
+  "\u0628": 2,
+  "\u062C": 3,
+  "\u062F": 4,
+  "\u0647": 5,
+  "\u0648": 6,
+  "\u0632": 7,
+  "\u062D": 8,
+  "\u0637": 9,
+  "\u064A": 10,
+  "\u0649": 10,
+  "\u0643": 20,
+  "\u06A9": 20,
+  "\u0644": 30,
+  "\u0645": 40,
+  "\u0646": 50,
+  "\u0633": 60,
+  "\u0639": 70,
+  "\u0641": 80,
+  "\u0635": 90,
+  "\u0642": 100,
+  "\u0631": 200,
+  "\u0634": 300,
+  "\u062A": 400,
+  "\u062B": 500,
+  "\u062E": 600,
+  "\u0630": 700,
+  "\u0636": 800,
+  "\u0638": 900,
+  "\u063A": 1e3,
+  "\u0671": 1,
+  "\u0640": 0,
+  "\u0629": 400,
+  "\u0624": 6,
+  "\u0626": 10,
+  "\u0621": 1,
+  "\u0679": 400,
+  "\u067E": 2,
+  "\u0686": 3,
+  "\u0698": 7,
+  "\u06AF": 20,
+  "\u06AD": 20,
+  "\u06BA": 50,
+  "\u06C0": 5,
+  "\u06D2": 10,
+  "\u060B": 0,
+  "\u05D0": 1,
+  "\u05D1": 2,
+  "\u05D2": 3,
+  "\u05D3": 4,
+  "\u05D4": 5,
+  "\u05D5": 6,
+  "\u05D6": 7,
+  "\u05D7": 8,
+  "\u05D8": 9,
+  "\u05D9": 10,
+  "\u05DB": 20,
+  "\u05DA": 500,
+  "\u05DC": 30,
+  "\u05DE": 40,
+  "\u05DD": 600,
+  "\u05E0": 50,
+  "\u05DF": 700,
+  "\u05E1": 60,
+  "\u05E2": 70,
+  "\u05E4": 80,
+  "\u05E3": 800,
+  "\u05E6": 90,
+  "\u05E5": 900,
+  "\u05E7": 100,
+  "\u05E8": 200,
+  "\u05E9": 300,
+  "\u05EA": 400,
+  "\u03B1": 1,
+  "\u03B2": 2,
+  "\u03B3": 3,
+  "\u03B4": 4,
+  "\u03B5": 5,
+  "\u03DD": 6,
+  "\u03B6": 7,
+  "\u03B7": 8,
+  "\u03B8": 9,
+  "\u03B9": 10,
+  "\u03BA": 20,
+  "\u03BB": 30,
+  "\u03BC": 40,
+  "\u03BD": 50,
+  "\u03BE": 60,
+  "\u03BF": 70,
+  "\u03C0": 80,
+  "\u03DF": 90,
+  "\u03C1": 100,
+  "\u03C3": 200,
+  "\u03C4": 300,
+  "\u03C5": 400,
+  "\u03C6": 500,
+  "\u03C7": 600,
+  "\u03C8": 700,
+  "\u03C9": 800,
+  "\u03E1": 900,
+  "\u03C2": 200,
+  "\u03F2": 200,
+  "\u0391": 1,
+  "\u0392": 2,
+  "\u0393": 3,
+  "\u0394": 4,
+  "\u0395": 5,
+  "\u03DC": 6,
+  "\u0396": 7,
+  "\u0397": 8,
+  "\u0398": 9,
+  "\u0399": 10,
+  "\u039A": 20,
+  "\u039B": 30,
+  "\u039C": 40,
+  "\u039D": 50,
+  "\u039E": 60,
+  "\u039F": 70,
+  "\u03A0": 80,
+  "\u03DE": 90,
+  "\u03A1": 100,
+  "\u03A3": 200,
+  "\u03A4": 300,
+  "\u03A5": 400,
+  "\u03A6": 500,
+  "\u03A7": 600,
+  "\u03A8": 700,
+  "\u03A9": 800,
+  "\u03E0": 900,
+  "\u03F9": 200,
+  "\u0915": 1,
+  "\u0916": 2,
+  "\u0917": 3,
+  "\u0918": 4,
+  "\u0919": 5,
+  "\u091A": 6,
+  "\u091B": 7,
+  "\u091C": 8,
+  "\u091D": 9,
+  "\u091E": 0,
+  "\u091F": 1,
+  "\u0920": 2,
+  "\u0921": 3,
+  "\u0922": 4,
+  "\u0923": 5,
+  "\u0924": 6,
+  "\u0925": 7,
+  "\u0926": 8,
+  "\u0927": 9,
+  "\u0928": 0,
+  "\u092A": 1,
+  "\u092B": 2,
+  "\u092C": 3,
+  "\u092D": 4,
+  "\u092E": 5,
+  "\u092F": 1,
+  "\u0930": 2,
+  "\u0932": 3,
+  "\u0935": 4,
+  "\u0936": 5,
+  "\u0937": 6,
+  "\u0938": 7,
+  "\u0939": 8
+};
+for (const _pk in PSALM_GEM) {
+  if (_pk.length === 1 && _pk >= "a" && _pk <= "z") PSALM_GEM[_pk.toUpperCase()] = PSALM_GEM[_pk];
+}
+function psalmStripDiacritics(text) {
+  return String(text).normalize("NFD").replace(/[\p{Mn}\p{Cf}]/gu, "");
+}
+function psalmGematria(text) {
+  if (!text) return 0;
+  let t = 0;
+  for (const c of text) t += PSALM_GEM[c] || 0;
+  return t;
+}
+function psalmGematriaSum(name, dateWords) {
+  const combined = `${name || ""} ${dateWords || ""}`;
+  if (!combined.trim()) return null;
+  const numbers = combined.match(/\d+/g) || [];
+  const numberSum = numbers.reduce((a, n) => a + parseInt(n, 10), 0);
+  const textNoNums = combined.replace(/\d+/g, "");
+  return psalmGematria(psalmStripDiacritics(textNoNums)) + numberSum;
+}
+var PSALM_ONES = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+var PSALM_TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+var PSALM_ORD_DAY = ["", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth", "thirteenth", "fourteenth", "fifteenth", "sixteenth", "seventeenth", "eighteenth", "nineteenth", "twentieth", "twenty-first", "twenty-second", "twenty-third", "twenty-fourth", "twenty-fifth", "twenty-sixth", "twenty-seventh", "twenty-eighth", "twenty-ninth", "thirtieth", "thirty-first"];
+var PSALM_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var PSALM_HYPH_EXCL = /* @__PURE__ */ new Set([30, 40, 50, 60, 70, 80, 90]);
+function num2words(n) {
+  if (n === 0) return "zero";
+  if (n < 0) return "minus " + num2words(-n);
+  if (n < 20) return PSALM_ONES[n];
+  if (n < 100) {
+    const t = Math.floor(n / 10), o = n % 10;
+    return o ? PSALM_TENS[t] + "-" + PSALM_ONES[o] : PSALM_TENS[t];
+  }
+  if (n < 1e3) {
+    const h = Math.floor(n / 100), r = n % 100;
+    return r ? PSALM_ONES[h] + " hundred " + num2words(r) : PSALM_ONES[h] + " hundred";
+  }
+  if (n < 1e6) {
+    const th = Math.floor(n / 1e3), r = n % 1e3;
+    return r ? num2words(th) + " thousand " + num2words(r) : num2words(th) + " thousand";
+  }
+  return String(n);
+}
+function psalmYearWords(year) {
+  if (year >= 1100 && year <= 1999) {
+    const century = Math.floor(year / 100), rem = year % 100;
+    let yw2 = num2words(century) + " hundred";
+    if (rem !== 0) {
+      let rw = num2words(rem);
+      if (rem >= 21 && rem <= 99 && !PSALM_HYPH_EXCL.has(rem)) {
+        const tens = Math.floor(rem / 10) * 10, ones = rem % 10;
+        if (ones !== 0) rw = num2words(tens) + "-" + num2words(ones);
+      }
+      yw2 += " " + rw;
+    }
+    return yw2;
+  }
+  let yw = num2words(year);
+  if (year > 2e3) {
+    const rem = year % 100;
+    if (rem >= 21 && rem <= 99 && !PSALM_HYPH_EXCL.has(rem)) {
+      const base = year - rem, tens = Math.floor(rem / 10) * 10, ones = rem % 10;
+      if (ones !== 0) yw = num2words(base) + " " + num2words(tens) + "-" + num2words(ones);
+    }
+  } else if (year < 1100) {
+    const rem = year % 100;
+    if (rem >= 21 && rem <= 99 && !PSALM_HYPH_EXCL.has(rem)) {
+      const thousands = Math.floor(year / 1e3) * 1e3;
+      if (thousands) {
+        const tens = Math.floor(rem / 10) * 10, ones = rem % 10;
+        if (ones !== 0) yw = num2words(thousands) + " " + num2words(tens) + "-" + num2words(ones);
+      }
+    }
+  }
+  return yw;
+}
+function dateToWordsGregorian(dateStr) {
+  let s = dateStr || "";
+  if (/^\d{4}-00-00$/.test(s)) s = s.slice(0, 4);
+  else if (/^\d{4}-\d{2}-00$/.test(s)) s = s.slice(0, 7);
+  let year = null, month = null, dayOrd = null, m;
+  if (m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s)) {
+    year = +m[1];
+    month = +m[2];
+    dayOrd = PSALM_ORD_DAY[+m[3]] || null;
+  } else if (m = /^(\d{4})-(\d{2})$/.exec(s)) {
+    year = +m[1];
+    month = +m[2];
+  } else if (m = /^(\d{4})$/.exec(s)) {
+    year = +m[1];
+  } else return "";
+  const parts = [];
+  const monthName = month >= 1 && month <= 12 ? PSALM_MONTHS[month - 1] : null;
+  if (dayOrd && monthName) parts.push(dayOrd, monthName);
+  else if (monthName) parts.push(monthName);
+  if (year != null) parts.push(psalmYearWords(year).replace(/,/g, ""));
+  return parts.join(" ");
+}
+var HEBREW_MONTH_NAMES = ["\u05E0\u05D9\u05E1\u05DF", "\u05D0\u05D9\u05D9\u05E8", "\u05E1\u05D9\u05D5\u05D5\u05DF", "\u05EA\u05DE\u05D5\u05D6", "\u05D0\u05D1", "\u05D0\u05DC\u05D5\u05DC", "\u05EA\u05E9\u05E8\u05D9", "\u05D7\u05E9\u05D5\u05D5\u05DF", "\u05DB\u05E1\u05DC\u05D5", "\u05D8\u05D1\u05EA", "\u05E9\u05D1\u05D8", "\u05D0\u05D3\u05E8"];
+var HEBREW_LEAP_MONTH_NAMES = { 12: "\u05D0\u05D3\u05E8 \u05D0", 13: "\u05D0\u05D3\u05E8 \u05D1" };
+function hebrewDayWord(day) {
+  const base = { 1: "\u05E8\u05D0\u05E9\u05D5\u05DF", 2: "\u05E9\u05E0\u05D9", 3: "\u05E9\u05DC\u05D9\u05E9\u05D9", 4: "\u05E8\u05D1\u05D9\u05E2\u05D9", 5: "\u05D7\u05DE\u05D9\u05E9\u05D9", 6: "\u05E9\u05D9\u05E9\u05D9", 7: "\u05E9\u05D1\u05D9\u05E2\u05D9", 8: "\u05E9\u05DE\u05D9\u05E0\u05D9", 9: "\u05EA\u05E9\u05D9\u05E2\u05D9", 10: "\u05E2\u05E9\u05D9\u05E8\u05D9" };
+  if (day <= 10) return base[day] || "";
+  if (day < 20) {
+    const o2 = { 1: "\u05D0\u05D7\u05D3", 2: "\u05E9\u05E0\u05D9\u05DD", 3: "\u05E9\u05DC\u05D5\u05E9\u05D4", 4: "\u05D0\u05E8\u05D1\u05E2\u05D4", 5: "\u05D7\u05DE\u05E9\u05D4", 6: "\u05E9\u05E9\u05D4", 7: "\u05E9\u05D1\u05E2\u05D4", 8: "\u05E9\u05DE\u05D5\u05E0\u05D4", 9: "\u05EA\u05E9\u05E2\u05D4" };
+    return o2[day - 10] + " \u05E2\u05E9\u05E8";
+  }
+  const tens = { 20: "\u05E2\u05E9\u05E8\u05D9\u05DD", 30: "\u05E9\u05DC\u05D5\u05E9\u05D9\u05DD" };
+  if (tens[day]) return tens[day];
+  const o = { 1: "\u05D0\u05D7\u05D3", 2: "\u05E9\u05E0\u05D9\u05DD", 3: "\u05E9\u05DC\u05D5\u05E9\u05D4", 4: "\u05D0\u05E8\u05D1\u05E2\u05D4", 5: "\u05D7\u05DE\u05E9\u05D4", 6: "\u05E9\u05E9\u05D4", 7: "\u05E9\u05D1\u05E2\u05D4", 8: "\u05E9\u05DE\u05D5\u05E0\u05D4", 9: "\u05EA\u05E9\u05E2\u05D4" };
+  return o[day - 20] + " \u05D5\u05E2\u05E9\u05E8\u05D9\u05DD";
+}
+function hebrewYearWord(year) {
+  const parts = [];
+  if (year >= 1e3) {
+    const th = { 1: "\u05D0\u05DC\u05E3", 2: "\u05D0\u05DC\u05E4\u05D9\u05D9\u05DD", 3: "\u05E9\u05DC\u05D5\u05E9\u05EA \u05D0\u05DC\u05E4\u05D9\u05DD", 4: "\u05D0\u05E8\u05D1\u05E2\u05EA \u05D0\u05DC\u05E4\u05D9\u05DD", 5: "\u05D7\u05DE\u05E9\u05EA \u05D0\u05DC\u05E4\u05D9\u05DD", 6: "\u05E9\u05E9\u05EA \u05D0\u05DC\u05E4\u05D9\u05DD", 7: "\u05E9\u05D1\u05E2\u05EA \u05D0\u05DC\u05E4\u05D9\u05DD", 8: "\u05E9\u05DE\u05D5\u05E0\u05EA \u05D0\u05DC\u05E4\u05D9\u05DD", 9: "\u05EA\u05E9\u05E2\u05EA \u05D0\u05DC\u05E4\u05D9\u05DD" };
+    const t = Math.floor(year / 1e3);
+    if (th[t]) parts.push(th[t]);
+    year -= t * 1e3;
+  }
+  const hundreds = { 100: "\u05DE\u05D0\u05D4", 200: "\u05DE\u05D0\u05EA\u05D9\u05D9\u05DD", 300: "\u05E9\u05DC\u05D5\u05E9 \u05DE\u05D0\u05D5\u05EA", 400: "\u05D0\u05E8\u05D1\u05E2 \u05DE\u05D0\u05D5\u05EA", 500: "\u05D7\u05DE\u05E9 \u05DE\u05D0\u05D5\u05EA", 600: "\u05E9\u05E9 \u05DE\u05D0\u05D5\u05EA", 700: "\u05E9\u05D1\u05E2 \u05DE\u05D0\u05D5\u05EA", 800: "\u05E9\u05DE\u05D5\u05E0\u05D4 \u05DE\u05D0\u05D5\u05EA", 900: "\u05EA\u05E9\u05E2 \u05DE\u05D0\u05D5\u05EA" };
+  if (year >= 100) {
+    const h = Math.floor(year / 100) * 100;
+    if (hundreds[h]) parts.push(hundreds[h]);
+    year -= h;
+  }
+  const ones = { 1: "\u05D0\u05D7\u05EA", 2: "\u05E9\u05EA\u05D9\u05DD", 3: "\u05E9\u05DC\u05D5\u05E9", 4: "\u05D0\u05E8\u05D1\u05E2", 5: "\u05D7\u05DE\u05E9", 6: "\u05E9\u05E9", 7: "\u05E9\u05D1\u05E2", 8: "\u05E9\u05DE\u05D5\u05E0\u05D4", 9: "\u05EA\u05E9\u05E2" };
+  const tens = { 10: "\u05E2\u05E9\u05E8", 20: "\u05E2\u05E9\u05E8\u05D9\u05DD", 30: "\u05E9\u05DC\u05D5\u05E9\u05D9\u05DD", 40: "\u05D0\u05E8\u05D1\u05E2\u05D9\u05DD", 50: "\u05D7\u05DE\u05D9\u05E9\u05D9\u05DD", 60: "\u05E9\u05D9\u05E9\u05D9\u05DD", 70: "\u05E9\u05D1\u05E2\u05D9\u05DD", 80: "\u05E9\u05DE\u05D5\u05E0\u05D9\u05DD", 90: "\u05EA\u05E9\u05E2\u05D9\u05DD" };
+  if (year === 0) {
+  } else if (ones[year]) parts.push(ones[year]);
+  else if (tens[year]) parts.push(tens[year]);
+  else {
+    const t = Math.floor(year / 10) * 10, o = year - t;
+    if (ones[o] && tens[t]) parts.push(ones[o] + " \u05D5" + tens[t]);
+  }
+  return parts.join(" \u05D5");
+}
+function dateToWordsJewish(dateStr) {
+  let s = dateStr || "";
+  if (/^\d{4}-00-00$/.test(s)) s = s.slice(0, 4);
+  else if (/^\d{4}-\d{2}-00$/.test(s)) s = s.slice(0, 7);
+  let m;
+  if (m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s)) {
+    const year = +m[1], month = +m[2], day = +m[3];
+    if (month < 1 || month > 13 || day < 1 || day > 30) return "";
+    const bd = hebrewDayWord(day);
+    const dayWord = bd.includes(" ") ? "\u05D4" + bd.split(" ")[0] + " " + bd.split(" ").slice(1).join(" ") : "\u05D4" + bd;
+    const monthName = HEBREW_LEAP_MONTH_NAMES[month] || HEBREW_MONTH_NAMES[month - 1];
+    if (!monthName) return "";
+    return `${dayWord} \u05D1${monthName} \u05E9\u05E0\u05EA ${hebrewYearWord(year)}`;
+  }
+  if (m = /^(\d{4})-(\d{2})$/.exec(s)) {
+    const year = +m[1], month = +m[2];
+    if (month < 1 || month > 13) return "";
+    const monthName = HEBREW_LEAP_MONTH_NAMES[month] || HEBREW_MONTH_NAMES[month - 1];
+    if (!monthName) return "";
+    return `${monthName} \u05E9\u05E0\u05EA ${hebrewYearWord(year)}`;
+  }
+  if (m = /^(\d{4})$/.exec(s)) return `\u05E9\u05E0\u05EA ${hebrewYearWord(+m[1])}`;
+  return "";
+}
+function elsGenesis(elsText, step) {
+  if (step < 1 || !elsText) return "";
+  let out = "";
+  for (let pos = 0; pos < elsText.length; pos += step) out += elsText[pos];
+  return out;
+}
+var _PSALMS_CACHE = null;
+var _PSALMS_PROMISE = null;
+function loadPsalmsData() {
+  if (_PSALMS_CACHE) return Promise.resolve(_PSALMS_CACHE);
+  if (_PSALMS_PROMISE) return _PSALMS_PROMISE;
+  _PSALMS_PROMISE = Promise.all([
+    fetch("data/genesis_els.json").then((r) => {
+      if (!r.ok) throw new Error("genesis_els.json HTTP " + r.status);
+      return r.json();
+    }),
+    fetch("data/psalms_he.json").then((r) => {
+      if (!r.ok) throw new Error("psalms_he.json HTTP " + r.status);
+      return r.json();
+    })
+  ]).then(([gen, ps]) => {
+    _PSALMS_CACHE = { elsText: gen.text, psalms: ps, idx: null };
+    return _PSALMS_CACHE;
+  });
+  return _PSALMS_PROMISE;
+}
+function buildPsalmsIndex(psalms) {
+  const idx = /* @__PURE__ */ new Map();
+  psalms.chapters.forEach((verses, ci) => {
+    const chapter = ci + 1;
+    verses.forEach((v, vi) => {
+      const verse = vi + 1;
+      const words = v.split(/\s+/).filter((w) => w.length > 0);
+      for (let i = 0; i < words.length; i++) {
+        let run = [], g = 0;
+        for (let j = i; j < words.length; j++) {
+          const w = words[j];
+          for (const c of w) g += PSALM_GEM[c] || 0;
+          run.push(w);
+          const phrase = run.join(" ");
+          const len = phrase.length;
+          const prev = idx.get(g);
+          if (!prev || len < prev.len) idx.set(g, { words: phrase, chapter, verse, len });
+        }
+      }
+    });
+  });
+  return idx;
+}
+function findPsalmMatch(idx, gsum, useSubharmonic) {
+  if (gsum == null || gsum < 1) return { match: null, divisor: null, queried: null };
+  if (useSubharmonic) {
+    const g = +gsum;
+    for (const d of SUBHARMONIC_DIVISORS) {
+      const q = Math.floor(g / d);
+      if (q < 1) break;
+      const m2 = idx.get(q);
+      if (m2) return { match: m2, divisor: d, queried: q };
+    }
+    return { match: null, divisor: null, queried: null };
+  }
+  const m = idx.get(gsum);
+  return m ? { match: m, divisor: 1, queried: gsum } : { match: null, divisor: 1, queried: gsum };
+}
+async function computePsalm(name, dateStr, { adjusted = true, calendar = "gregorian", subharmonic = true } = {}) {
+  const data = await loadPsalmsData();
+  if (!data.idx) data.idx = buildPsalmsIndex(data.psalms);
+  const dateWords = calendar === "jewish" ? dateToWordsJewish(dateStr) : dateToWordsGregorian(dateStr);
+  let rawGsum = psalmGematriaSum(name, dateWords);
+  if (rawGsum == null) return { error: "Could not calculate the gematria sum \u2014 a name and/or a date is needed." };
+  const isAdj = adjusted && calendar !== "jewish";
+  let gsum = isAdj ? Math.ceil(rawGsum + rawGsum / PSALM_ADJ) : rawGsum;
+  let elsText = "", elsGsum = gsum, bypassed = false;
+  if (calendar === "jewish") {
+    bypassed = true;
+  } else {
+    elsText = elsGenesis(data.elsText, gsum);
+    elsGsum = psalmGematria(elsText);
+  }
+  const { match, divisor, queried } = findPsalmMatch(data.idx, elsGsum, subharmonic);
+  return {
+    input: {
+      name,
+      date: dateStr,
+      date_words: dateWords,
+      calendar,
+      raw_gematria_sum: rawGsum,
+      initial_gematria_sum: gsum,
+      adjusted: isAdj
+    },
+    els_result: { text: elsText, step: gsum, book: "Genesis", gematria_sum: elsGsum, bypassed },
+    psalm: match ? {
+      words: match.words,
+      chapter: match.chapter,
+      verse: match.verse,
+      reference: `Psalms ${match.chapter}:${match.verse}`,
+      url: `https://www.biblegateway.com/passage/?search=Psalms+${match.chapter}&version=CJB`,
+      queried_gematria_sum: queried,
+      original_gematria_sum: elsGsum,
+      subharmonic_divisor: divisor
+    } : {
+      error: "No matching Psalm found for the ELS gematria (even after subharmonic fallback).",
+      queried_gematria_sum: queried,
+      original_gematria_sum: elsGsum,
+      subharmonic_divisor: divisor
+    }
+  };
+}
+function PsalmsTab() {
+  const today = (() => {
+    try {
+      return (/* @__PURE__ */ new Date()).toISOString().slice(0, 10);
+    } catch (e) {
+      return "2026-08-10";
+    }
+  })();
+  const [name, setName] = (0, import_react.useState)("");
+  const [date, setDate] = (0, import_react.useState)(today);
+  const [calendar, setCalendar] = (0, import_react.useState)("gregorian");
+  const [adjusted, setAdjusted] = (0, import_react.useState)(true);
+  const [subharmonic, setSubharmonic] = (0, import_react.useState)(true);
+  const [res, setRes] = (0, import_react.useState)(null);
+  const [loading, setLoading] = (0, import_react.useState)(false);
+  const [err, setErr] = (0, import_react.useState)(null);
+  const [ready, setReady] = (0, import_react.useState)(false);
+  const [showEls, setShowEls] = (0, import_react.useState)(false);
+  (0, import_react.useEffect)(() => {
+    loadPsalmsData().then(() => setReady(true)).catch((e) => setErr("Data load failed: " + e.message));
+  }, []);
+  async function run() {
+    setLoading(true);
+    setErr(null);
+    setShowEls(false);
+    try {
+      setRes(await computePsalm(name, date, { adjusted, calendar, subharmonic }));
+    } catch (e) {
+      setErr(e.message);
+    }
+    setLoading(false);
+  }
+  const elsLong = res && res.els_result && res.els_result.text.length > 400;
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Daily Psalms \u2014 name & date \u2192 Genesis ELS \u2192 Psalm"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A JavaScript port of the ", /* @__PURE__ */ import_react.default.createElement("i", null, "daily-psalms-api"), " pipeline (", /* @__PURE__ */ import_react.default.createElement("code", null, "gitlab.com/ch-zz/daily-psalms-api"), ", route ", /* @__PURE__ */ import_react.default.createElement("code", null, "/api/psalm"), "). The gematria of your ", /* @__PURE__ */ import_react.default.createElement("b", null, "name + the date written out in words"), " sets an Equidistant-Letter-Sequence step over ", /* @__PURE__ */ import_react.default.createElement("b", null, "Genesis"), "; the gematria of that ELS string is then matched to the ", /* @__PURE__ */ import_react.default.createElement("b", null, "shortest Hebrew phrase in the Psalms"), " with the same value (falling back through octave sub-harmonics \xF72, \xF74 \u2026 \xF7128). All data is bundled \u2014 the phrase index is built in your browser, so nothing depends on a server or a database upload."), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: name, onChange: (e) => setName(e.target.value), placeholder: "Name (Latin / Hebrew / Greek / Arabic)", style: { flex: "1 1 260px" } }), /* @__PURE__ */ import_react.default.createElement("input", { type: "date", value: date, onChange: (e) => setDate(e.target.value), style: { flex: "0 0 170px" } }), /* @__PURE__ */ import_react.default.createElement("select", { value: calendar, onChange: (e) => setCalendar(e.target.value), style: { flex: "0 0 200px" } }, /* @__PURE__ */ import_react.default.createElement("option", { value: "gregorian" }, "Gregorian (ELS on Genesis)"), /* @__PURE__ */ import_react.default.createElement("option", { value: "jewish" }, "Jewish (ELS bypassed)"))), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react.default.createElement("label", { style: { display: "inline-flex", gap: 6, alignItems: "center", cursor: "pointer" } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "checkbox", checked: adjusted, onChange: (e) => setAdjusted(e.target.checked) }), " 137.036 adjustment"), /* @__PURE__ */ import_react.default.createElement("label", { style: { display: "inline-flex", gap: 6, alignItems: "center", cursor: "pointer" } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "checkbox", checked: subharmonic, onChange: (e) => setSubharmonic(e.target.checked) }), " subharmonic fallback (\xF72\u2026\xF7128)"), /* @__PURE__ */ import_react.default.createElement("button", { onClick: run, disabled: !ready || loading, className: "key" }, loading ? "Computing\u2026" : ready ? "Reveal Psalm" : "Loading data\u2026"), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted", style: { marginLeft: "auto" } }, ready ? "phrase index ready" : "building phrase index\u2026")), err && /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { color: "var(--red)" } }, err), res && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, res.error ? /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { color: "var(--red)" } }, res.error) : /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h3", null, "Input"), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "name"), /* @__PURE__ */ import_react.default.createElement("td", null, res.input.name || /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "\u2014"))), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "date"), /* @__PURE__ */ import_react.default.createElement("td", null, res.input.date, " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "(", res.input.calendar, ")"))), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "date in words"), /* @__PURE__ */ import_react.default.createElement("td", null, res.input.date_words ? res.input.calendar === "jewish" ? /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { direction: "rtl" } }, res.input.date_words) : res.input.date_words : /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "\u2014"))), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "raw gematria sum"), /* @__PURE__ */ import_react.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, res.input.raw_gematria_sum)), res.input.adjusted && /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "adjusted sum (+sum \xF7 137.035999177, ceiled)"), /* @__PURE__ */ import_react.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, res.input.initial_gematria_sum)))), /* @__PURE__ */ import_react.default.createElement("h3", null, "ELS result \u2014 Genesis"), res.els_result.bypassed ? /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Jewish calendar: the ELS scan of Genesis is bypassed and the raw gematria sum (", /* @__PURE__ */ import_react.default.createElement("b", null, res.els_result.gematria_sum), ") feeds the Psalm match directly (upstream behaviour).") : /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "step (every Nth letter)"), /* @__PURE__ */ import_react.default.createElement("td", null, res.els_result.step)), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "gematria of the ELS string"), /* @__PURE__ */ import_react.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, res.els_result.gematria_sum)))), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 4 } }, "ELS string (", res.els_result.text.length, " chars):"), /* @__PURE__ */ import_react.default.createElement("div", { className: "he", style: {
+    direction: "rtl",
+    fontSize: "1.1rem",
+    lineHeight: 1.8,
+    wordBreak: "break-all",
+    maxHeight: elsLong && !showEls ? "7.5em" : null,
+    overflow: elsLong && !showEls ? "hidden" : null,
+    marginBottom: 6
+  } }, res.els_result.text || " "), elsLong && /* @__PURE__ */ import_react.default.createElement("div", { className: "click muted", onClick: () => setShowEls(!showEls) }, showEls ? "\u25B2 collapse" : "\u25BC expand full string")), /* @__PURE__ */ import_react.default.createElement("h3", null, "Psalm"), res.psalm.error ? /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { color: "var(--red)" } }, res.psalm.error) : /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { className: "he", style: { direction: "rtl", fontSize: "1.6rem", lineHeight: 1.7, marginBottom: 8 } }, res.psalm.words), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "reference"), /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("b", null, res.psalm.reference), " \u2014 ", /* @__PURE__ */ import_react.default.createElement("a", { href: res.psalm.url, target: "_blank", rel: "noopener noreferrer" }, "BibleGateway (CJB)"))), res.psalm.subharmonic_divisor && res.psalm.subharmonic_divisor > 1 && /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "subharmonic divisor"), /* @__PURE__ */ import_react.default.createElement("td", null, "\xF7", res.psalm.subharmonic_divisor, " \u2014 the ELS gematria \xF7 ", res.psalm.subharmonic_divisor, " = ", res.psalm.queried_gematria_sum, " matched")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "queried gematria"), /* @__PURE__ */ import_react.default.createElement("td", null, res.psalm.queried_gematria_sum)), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "ELS gematria (original)"), /* @__PURE__ */ import_react.default.createElement("td", null, res.psalm.original_gematria_sum))))))));
+}
 var TABS = [
   ["sky", "Sky Map"],
   ["translator", "Reader"],
@@ -26945,6 +27453,7 @@ var TABS = [
   ["sigils", "Sigils"],
   ["cycles", "Cycles"],
   ["revelation", "Revelations"],
+  ["psalms", "Psalms"],
   ["method", "Methodology"]
 ];
 var SUB = {
@@ -27035,7 +27544,7 @@ function App() {
   if (lexErr) return /* @__PURE__ */ import_react.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react.default.createElement("h2", null, "Error"), /* @__PURE__ */ import_react.default.createElement("p", null, "Could not load lexicon.json (", lexErr, "). Serve the ", /* @__PURE__ */ import_react.default.createElement("code", null, "web/"), " folder over HTTP (", /* @__PURE__ */ import_react.default.createElement("code", null, "python3 -m http.server 8008"), ") and open ", /* @__PURE__ */ import_react.default.createElement("code", null, "http://127.0.0.1:8008/"), "."));
   if (!lex) return /* @__PURE__ */ import_react.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react.default.createElement("h2", null, "Loading lexicon\u2026"), /* @__PURE__ */ import_react.default.createElement("p", null, "Reading lexicon.json (6045 consonantal roots)."));
   const setSubTab = (g) => (id) => setSub((s) => ({ ...s, [g]: id }));
-  return /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react.default.createElement("div", { key: id, role: "tab", "aria-selected": active === id, className: "tab" + (active === id ? " active" : ""), onClick: () => setActive(id) }, label))), /* @__PURE__ */ import_react.default.createElement("section", { className: "panel" }, active === "sky" && /* @__PURE__ */ import_react.default.createElement(SkyTab, { date: effDate, rawDate: date, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step }), active === "translator" && /* @__PURE__ */ import_react.default.createElement(TranslatorTab, { date: effDate, occ, words, q, setQ, genData }), active === "reading" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.reading, active: sub.reading, onChange: setSubTab("reading") }), sub.reading === "rule" && /* @__PURE__ */ import_react.default.createElement(RuleTab, { occ }), sub.reading === "yhvh" && /* @__PURE__ */ import_react.default.createElement(YhvhTab, { date: effDate, occ, yhvhOk, bs }), sub.reading === "genesis" && /* @__PURE__ */ import_react.default.createElement(GenesisTab, { date: effDate, occ, genesisOk })), active === "time" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.time, active: sub.time, onChange: setSubTab("time") }), sub.time === "predictor" && /* @__PURE__ */ import_react.default.createElement(PredictorTab, { date: effDate, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear }), sub.time === "ages" && /* @__PURE__ */ import_react.default.createElement(AgesTab, { date: effDate, rows })), active === "gematria" && /* @__PURE__ */ import_react.default.createElement(GematriaTab, null), active === "sigils" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.sigils, active: sub.sigils, onChange: setSubTab("sigils") }), sub.sigils === "sigil" && /* @__PURE__ */ import_react.default.createElement(SigilTab, null), sub.sigils === "kameot" && /* @__PURE__ */ import_react.default.createElement(KameotTab, null), sub.sigils === "angels" && /* @__PURE__ */ import_react.default.createElement(AngelsTab, null)), active === "cycles" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.cycles, active: sub.cycles, onChange: setSubTab("cycles") }), sub.cycles === "saros" && /* @__PURE__ */ import_react.default.createElement(SarosTab, null), sub.cycles === "ayanamsa" && /* @__PURE__ */ import_react.default.createElement(AyanamsaTab, null), sub.cycles === "lunarsolar" && /* @__PURE__ */ import_react.default.createElement(LunarSolarTab, null), sub.cycles === "alignments" && /* @__PURE__ */ import_react.default.createElement(AlignmentsTab, null), sub.cycles === "week" && /* @__PURE__ */ import_react.default.createElement(WeekTab, { date: effDate, rows })), active === "revelation" && /* @__PURE__ */ import_react.default.createElement(RevelationsTab, { sub: sub.revelation, setSubTab: setSubTab("revelation"), date: effDate, rows, occ, words, genData, genYear }), active === "method" && /* @__PURE__ */ import_react.default.createElement(MethodTab, { esGlossCount: Object.keys(lex.esGloss || {}).length })), /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { textAlign: "center", marginTop: 14 } }, "Positions: ", /* @__PURE__ */ import_react.default.createElement("a", { href: "https://github.com/cosinekitty/astronomy-engine", target: "_blank", rel: "noreferrer" }, "astronomy-engine"), " \xB7 frame: ", /* @__PURE__ */ import_react.default.createElement("a", { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", target: "_blank", rel: "noreferrer" }, "Sefer Yetzirah"), " \xB7 lexicon: ", /* @__PURE__ */ import_react.default.createElement("a", { href: "https://github.com/openscriptures/HebrewLexicon", target: "_blank", rel: "noreferrer" }, "Strong (OpenScriptures)")));
+  return /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react.default.createElement("div", { key: id, role: "tab", "aria-selected": active === id, className: "tab" + (active === id ? " active" : ""), onClick: () => setActive(id) }, label))), /* @__PURE__ */ import_react.default.createElement("section", { className: "panel" }, active === "sky" && /* @__PURE__ */ import_react.default.createElement(SkyTab, { date: effDate, rawDate: date, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step }), active === "translator" && /* @__PURE__ */ import_react.default.createElement(TranslatorTab, { date: effDate, occ, words, q, setQ, genData }), active === "reading" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.reading, active: sub.reading, onChange: setSubTab("reading") }), sub.reading === "rule" && /* @__PURE__ */ import_react.default.createElement(RuleTab, { occ }), sub.reading === "yhvh" && /* @__PURE__ */ import_react.default.createElement(YhvhTab, { date: effDate, occ, yhvhOk, bs }), sub.reading === "genesis" && /* @__PURE__ */ import_react.default.createElement(GenesisTab, { date: effDate, occ, genesisOk })), active === "time" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.time, active: sub.time, onChange: setSubTab("time") }), sub.time === "predictor" && /* @__PURE__ */ import_react.default.createElement(PredictorTab, { date: effDate, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear }), sub.time === "ages" && /* @__PURE__ */ import_react.default.createElement(AgesTab, { date: effDate, rows })), active === "gematria" && /* @__PURE__ */ import_react.default.createElement(GematriaTab, null), active === "sigils" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.sigils, active: sub.sigils, onChange: setSubTab("sigils") }), sub.sigils === "sigil" && /* @__PURE__ */ import_react.default.createElement(SigilTab, null), sub.sigils === "kameot" && /* @__PURE__ */ import_react.default.createElement(KameotTab, null), sub.sigils === "angels" && /* @__PURE__ */ import_react.default.createElement(AngelsTab, null)), active === "cycles" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.cycles, active: sub.cycles, onChange: setSubTab("cycles") }), sub.cycles === "saros" && /* @__PURE__ */ import_react.default.createElement(SarosTab, null), sub.cycles === "ayanamsa" && /* @__PURE__ */ import_react.default.createElement(AyanamsaTab, null), sub.cycles === "lunarsolar" && /* @__PURE__ */ import_react.default.createElement(LunarSolarTab, null), sub.cycles === "alignments" && /* @__PURE__ */ import_react.default.createElement(AlignmentsTab, null), sub.cycles === "week" && /* @__PURE__ */ import_react.default.createElement(WeekTab, { date: effDate, rows })), active === "revelation" && /* @__PURE__ */ import_react.default.createElement(RevelationsTab, { sub: sub.revelation, setSubTab: setSubTab("revelation"), date: effDate, rows, occ, words, genData, genYear }), active === "psalms" && /* @__PURE__ */ import_react.default.createElement(PsalmsTab, null), active === "method" && /* @__PURE__ */ import_react.default.createElement(MethodTab, { esGlossCount: Object.keys(lex.esGloss || {}).length })), /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { textAlign: "center", marginTop: 14 } }, "Positions: ", /* @__PURE__ */ import_react.default.createElement("a", { href: "https://github.com/cosinekitty/astronomy-engine", target: "_blank", rel: "noreferrer" }, "astronomy-engine"), " \xB7 frame: ", /* @__PURE__ */ import_react.default.createElement("a", { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", target: "_blank", rel: "noreferrer" }, "Sefer Yetzirah"), " \xB7 lexicon: ", /* @__PURE__ */ import_react.default.createElement("a", { href: "https://github.com/openscriptures/HebrewLexicon", target: "_blank", rel: "noreferrer" }, "Strong (OpenScriptures)")));
 }
 if (typeof document !== "undefined") {
   const root = document.getElementById("root");
@@ -27048,6 +27557,7 @@ export {
   Heptagram,
   MetonDiagram,
   PrecessionDiagram,
+  PsalmsTab,
   RevelationGnosticTab,
   RevelationHebrewTab,
   RevelationPersianTab,
@@ -27057,11 +27567,14 @@ export {
   SarosDiagram,
   YearInput,
   abjad,
+  computePsalm,
+  dateToWordsGregorian,
   fmtDate,
   isopsephy,
   katapayadi,
   makeDate,
-  parseDate
+  parseDate,
+  psalmGematria
 };
 /**
     @preserve
