@@ -1419,7 +1419,7 @@ function displayDate(ds){
 // 22-per-page paginated, searchable alignment table. `set` is 'A' (modern, 10 bodies)
 // or 'B' (deep, 7 classical) — passed to pick/openEph so the sky-map + ephemerides use
 // the body set that defined the alignment.
-function AlignTable({title, sub, items, set, sel, pick, openEph, showMax=true}){
+function AlignTable({title, sub, items, set, sel, pick, openEph, goReader, showMax=true}){
   const [page,setPage]=useState(0);
   const [q,setQ]=useState('');
   const [yr,setYr]=useState('');          // year filter — empty = show all (as before)
@@ -1449,12 +1449,15 @@ function AlignTable({title, sub, items, set, sel, pick, openEph, showMax=true}){
       <span className="pill">{filtered.length} alignments · page {cur+1}/{pages} · {PS}/page</span>
     </div>
     <table>
-      <thead><tr><th>Date</th>{showMax&&<th>maxInSign</th>}<th>Sign</th><th>Span</th><th>Era</th><th>History</th></tr></thead>
+      <thead><tr><th>Date</th>{showMax&&<th>maxInSign</th>}<th>Sign</th><th>Span</th><th>Era</th><th>Actions</th></tr></thead>
       <tbody>{slice.map(e=> <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
         <td><button className="linkish" onClick={()=>pick(e.date,set)}>{displayDate(e.date)}</button></td>
         {showMax&&<td className="deg">{e.maxInSign}</td>}
         <td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
-        <td><button onClick={()=>openEph(e,set)} title="What historically happened on this date (Wikipedia On This Day + AI search, opens a modal)" aria-label={`What happened on ${e.date}`} style={{fontSize:'.76rem',padding:'3px 9px',whiteSpace:'nowrap'}}>📜 what happened</button></td>
+        <td><div style={{display:'flex',gap:4,flexWrap:'wrap'}}>
+          <button onClick={()=>openEph(e,set)} title="What historically happened on this date (Wikipedia On This Day + AI search, opens a modal)" aria-label={`What happened on ${e.date}`} style={{fontSize:'.76rem',padding:'3px 9px',whiteSpace:'nowrap'}}>📜 what happened</button>
+          <button onClick={()=>goReader(e.date)} title="Open this day in the Reader tab (the readable names of that sky)" aria-label={`Open ${e.date} in Reader`} style={{fontSize:'.76rem',padding:'3px 9px',whiteSpace:'nowrap'}}>📖 Reader</button>
+        </div></td>
       </tr>)}</tbody>
     </table>
     {pages>1 && <div className="controls" style={{marginTop:8}}>
@@ -1544,7 +1547,7 @@ function EphemeridesModal({eph, onClose}){
   </div>;
 }
 
-function AlignmentsTab({setDate, lex, angelMap, genData}){
+function AlignmentsTab({setDate, goReader, lex, angelMap, genData}){
   const [data,setData]=useState(null);
   const [err,setErr]=useState(null);
   const [sel,setSel]=useState(null);
@@ -1624,7 +1627,7 @@ function AlignmentsTab({setDate, lex, angelMap, genData}){
 
   return <>
     <h2>Alignments — rare century/millennium stellar conjunctions</h2>
-    <div className="muted" style={{marginBottom:10}}>An offline scan (<code>calc_alignments.mjs</code>) of two body-sets. <b>Deep chronology</b> = the 7 classical bodies (Sun, Moon, Mercury..Saturn), 20000 BCE → 2200 CE — fast at every date and its mean motion is secularly stable, so great-conjunction <i>dates</i> stay trustworthy across the whole range (beyond ~±4000 y from J2000 the VSOP87 perturbation terms diverge, so exact <i>degrees</i> in the deep past are an extrapolation). <b>Modern era</b> = the app's 10 bodies (adds Uranus/Neptune/Pluto), 1700–2200 CE daily (the Pluto-valid range). For each day <b>maxInSign</b> = the most planets in a single zodiacal sign, <b>span</b> = the smallest arc (°) containing every body, <b>era</b> = the precessional era (~{AGE.toFixed(0)} y each, cyclic). Click a row for that day's sky-map + reading (your place in the list is kept); filter by year or search; <span style={{opacity:.6}}>📜 what happened</span> opens what historically happened on that date (Wikipedia On This Day + an AI search link). Generated {data.generated}.</div>
+    <div className="muted" style={{marginBottom:10}}>An offline scan (<code>calc_alignments.mjs</code>) of two body-sets. <b>Deep chronology</b> = the 7 classical bodies (Sun, Moon, Mercury..Saturn), 20000 BCE → 2200 CE — fast at every date and its mean motion is secularly stable, so great-conjunction <i>dates</i> stay trustworthy across the whole range (beyond ~±4000 y from J2000 the VSOP87 perturbation terms diverge, so exact <i>degrees</i> in the deep past are an extrapolation). <b>Modern era</b> = the app's 10 bodies (adds Uranus/Neptune/Pluto), 1700–2200 CE daily (the Pluto-valid range). For each day <b>maxInSign</b> = the most planets in a single zodiacal sign, <b>span</b> = the smallest arc (°) containing every body, <b>era</b> = the precessional era (~{AGE.toFixed(0)} y each, cyclic). Click a row for that day's sky-map + reading (your place in the list is kept); filter by year or search; <span style={{opacity:.6}}>📜 what happened</span> opens what historically happened on that date (Wikipedia On This Day + an AI search link); <span style={{opacity:.6}}>📖 Reader</span> opens that day in the Reader tab (its readable names). Generated {data.generated}.</div>
 
     <div className="fig" style={{maxWidth:760}}>
       <div style={{fontWeight:600,color:'var(--gold)',marginBottom:4}}>The millennia signal — tightest classical grand conjunctions</div>
@@ -1679,11 +1682,11 @@ function AlignmentsTab({setDate, lex, angelMap, genData}){
       </>}
     </>}
 
-    <AlignTable title="Deep chronology — 7 classical bodies, 20000 BCE → 2200 CE (all rare alignments, current→past)" sub={`${deep.length} rare alignments (maxInSign ≥ 5 or span ≤ 60°), sorted newest first. The 7-classical set makes the centuries/millennia scale visible: great conjunctions recur every ~20 y and drift through the signs over the precessional era (~${AGE.toFixed(0)} y).`} items={deep} set="B" sel={sel} pick={pick} openEph={openEph}/>
+    <AlignTable title="Deep chronology — 7 classical bodies, 20000 BCE → 2200 CE (all rare alignments, current→past)" sub={`${deep.length} rare alignments (maxInSign ≥ 5 or span ≤ 60°), sorted newest first. The 7-classical set makes the centuries/millennia scale visible: great conjunctions recur every ~20 y and drift through the signs over the precessional era (~${AGE.toFixed(0)} y).`} items={deep} set="B" sel={sel} pick={pick} openEph={openEph} goReader={goReader}/>
 
-    <AlignTable title="All-7-in-one-sign timeline — every classical grand conjunction (current→past)" sub={`${all7.length} occurrences where all 7 classical bodies share one zodiacal sign — the rarest class, recurring every few centuries (irregular). Click to render that conjunction.`} items={all7} set="B" sel={sel} pick={pick} openEph={openEph} showMax={false}/>
+    <AlignTable title="All-7-in-one-sign timeline — every classical grand conjunction (current→past)" sub={`${all7.length} occurrences where all 7 classical bodies share one zodiacal sign — the rarest class, recurring every few centuries (irregular). Click to render that conjunction.`} items={all7} set="B" sel={sel} pick={pick} openEph={openEph} goReader={goReader} showMax={false}/>
 
-    <AlignTable title="Modern era — 10 bodies (app set), 1700–2200 CE (all rare alignments, current→past)" sub={`${modern.length} rare 10-body alignments (maxInSign ≥ 6 or span ≤ 90°). The 10-body set clusters on a ~decades scale (8-in-one-sign never occurs in 500 y); the centuries scale belongs to the 7 classical bodies above.`} items={modern} set="A" sel={sel} pick={pick} openEph={openEph}/>
+    <AlignTable title="Modern era — 10 bodies (app set), 1700–2200 CE (all rare alignments, current→past)" sub={`${modern.length} rare 10-body alignments (maxInSign ≥ 6 or span ≤ 90°). The 10-body set clusters on a ~decades scale (8-in-one-sign never occurs in 500 y); the centuries scale belongs to the 7 classical bodies above.`} items={modern} set="A" sel={sel} pick={pick} openEph={openEph} goReader={goReader}/>
 
     <div className="note">Method: astronomy-engine v2.1.19, GeoVector → Ecliptic.elon, noon UT. Deep scan 3-day step (daily-refined around peaks); modern scan daily. Beyond ~±4000 y from J2000 the planetary series are an extrapolation — alignment <i>dates</i> (mean motion, secularly stable) are reliable, exact <i>degrees</i> in the deep past are approximate. Per-event stellar readings are computed in the browser for the selected alignment (skyAt is fast); the cross-check summary is precomputed.</div>
 
@@ -2938,7 +2941,7 @@ function App(){
           {sub.cycles==='saros' && <SarosTab/>}
           {sub.cycles==='ayanamsa' && <AyanamsaTab/>}
           {sub.cycles==='lunarsolar' && <LunarSolarTab/>}
-          {sub.cycles==='alignments' && <AlignmentsTab setDate={setDate} lex={lex} angelMap={ANGEL72} genData={genData}/>}
+          {sub.cycles==='alignments' && <AlignmentsTab setDate={setDate} goReader={(d)=>{ setDate(d); setActive('translator'); }} lex={lex} angelMap={ANGEL72} genData={genData}/>}
           {sub.cycles==='week' && <WeekTab date={effDate} rows={rows}/>}
         </>}
 
