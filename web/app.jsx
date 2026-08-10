@@ -1435,14 +1435,12 @@ function AlignTable({title, sub, items, set, sel, pick, openEph, showMax=true}){
       <span className="pill">{filtered.length} alignments · page {cur+1}/{pages} · {PS}/page</span>
     </div>
     <table>
-      <thead><tr><th>Date</th>{showMax&&<th>maxInSign</th>}<th>Sign</th><th>Span</th><th>Era</th></tr></thead>
+      <thead><tr><th>Date</th>{showMax&&<th>maxInSign</th>}<th>Sign</th><th>Span</th><th>Era</th><th>Eph</th></tr></thead>
       <tbody>{slice.map(e=> <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
-        <td>
-          <button className="linkish" onClick={()=>pick(e.date,set)}>{displayDate(e.date)}</button>
-          <button className="linkish" onClick={()=>openEph(e.date,set)} title="Ephemerides — planet positions for this date" style={{opacity:.5,fontSize:'.74rem',marginLeft:6}}>eph</button>
-        </td>
+        <td><button className="linkish" onClick={()=>pick(e.date,set)}>{displayDate(e.date)}</button></td>
         {showMax&&<td className="deg">{e.maxInSign}</td>}
         <td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
+        <td><button onClick={()=>openEph(e.date,set)} title="Ephemerides — planet positions for this date (opens a modal)" aria-label={`Ephemerides for ${e.date}`} style={{fontSize:'.76rem',padding:'3px 9px',whiteSpace:'nowrap'}}>☉ ephemerides</button></td>
       </tr>)}</tbody>
     </table>
     {pages>1 && <div className="controls" style={{marginTop:8}}>
@@ -1485,6 +1483,7 @@ function AlignmentsTab({setDate, lex, angelMap}){
   const [sel,setSel]=useState(null);
   const [selSet,setSelSet]=useState('B');
   const [eph,setEph]=useState(null);          // {date, set} for the ephemerides modal
+  const [topView,setTopView]=useState('date'); // 'date' (this sky) | 'always' (every day)
   const mapRef=useRef(null);
   useEffect(()=>{ fetch('alignments.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setData).catch(e=>setErr(e.message)); },[]);
   // default to the tightest classical grand conjunction once data is in
@@ -1510,15 +1509,21 @@ function AlignmentsTab({setDate, lex, angelMap}){
   // NOT a hook: a useMemo here would sit after the early returns above and break the
   // Rules of Hooks (first render data=null returns early → next render runs the memo →
   // "more hooks than previous render" crash). readableWords on one day is cheap.
+  // "Importance" ranking: proper names (biblical people/places) first, then longest, then
+  // lowest gematria — so the top surfaces the notable biblical names that occur on this sky.
   const r = (sel && lex) ? (() => {
     const names = readableWords(occ, lex.lexicon, angelMap);
+    const byImp=(a,b)=>((b.name?1:0)-(a.name?1:0))||(b.len-a.len)||(a.gem-b.gem);
     return {
       genesisLegible: genesisReadable(occ),
       occupied: [...occ].sort().join(''),
       readableCount: names.length,
       properNames: names.filter(n=>n.name).length,
       angels: names.filter(n=>n.angel).map(n=>n.he),
-      topNames: names.slice(0,8),
+      // date-specific: ≥1 zodiac simple → readable BECAUSE of this alignment's sky (changes with date)
+      topDate: names.filter(n=>n.simp).sort(byImp).slice(0,8),
+      // always-readable: no zodiac simples (mothers+doubles only) → readable every day (never changes)
+      topAlways: names.filter(n=>!n.simp).sort(byImp).slice(0,8),
     };
   })() : null;
 
@@ -1552,9 +1557,16 @@ function AlignmentsTab({setDate, lex, angelMap}){
       {r && <>
         <div className="muted" style={{marginBottom:8}}>Genesis 1:1 legible: <b style={{color:r.genesisLegible?'var(--gold)':'var(--warn)'}}>{r.genesisLegible?'YES':'no'}</b> · readable names: <b>{r.readableCount}</b> · proper names: <b>{r.properNames}</b> · occupied simples: <span className="he" style={{fontSize:'1.15rem',color:'var(--gold)'}}>{r.occupied||'—'}</span></div>
         {r.angels && r.angels.length>0 && <div className="muted" style={{marginBottom:10}}>Shem HaMephorash angel-roots readable: <span className="he">{r.angels.join(' ')}</span></div>}
-        {r.topNames && r.topNames.length>0 && <>
-          <h3>Top readable names ({r.topNames.length})</h3>
-          <div className="tcards" style={{gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))'}}>{r.topNames.map((n,i)=>(
+        {r && (r.topDate.length>0 || r.topAlways.length>0) && <>
+          <div className="controls" style={{marginTop:6, marginBottom:4}}>
+            <span className="muted" style={{fontSize:'.82rem'}}>top readable names:</span>
+            <button className={topView==='date'?'on':''} onClick={()=>setTopView('date')} aria-pressed={topView==='date'}>this sky ({r.topDate.length})</button>
+            <button className={topView==='always'?'on':''} onClick={()=>setTopView('always')} aria-pressed={topView==='always'}>always-readable ({r.topAlways.length})</button>
+          </div>
+          <div className="muted" style={{marginBottom:6,fontSize:'.82rem'}}>{topView==='date'
+            ? <>Date-specific — the most important names whose zodiac letters are among <b>this alignment's</b> occupied signs, so the list changes with the alignment. Proper names first, then longest.</>
+            : <>Always-readable — words with no zodiac letters (mothers + doubles only), readable on <b>every</b> day, so this list never changes (e.g. <span className="he">ארפכשד</span> Arphaxad, <span className="he">פרמשתא</span> Parmashta, <span className="he">שמאבר</span> Shem-eber). Proper names first, then longest.</>}</div>
+          <div className="tcards" style={{gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))'}}>{(topView==='date'?r.topDate:r.topAlways).map((n,i)=>(
             <div key={i} className={'tcard'+(n.simp?'':' always')}>
               <div className="the">{n.disp||n.he}</div>
               <div className="read">{n.translit}</div>
