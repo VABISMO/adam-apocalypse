@@ -1,0 +1,657 @@
+Cyrillic numerals - Wikipedia 
+
+ Jump to content 
+
+ From Wikipedia, the free encyclopedia 
+
+ Numeral system derived from the Cyrillic script 
+ Tower clock with Cyrillic numerals at the Saint Jovan Bigorski Monastery , North Macedonia 
+ Reverse of silver half ruble (left) and copper beard token featuring the year 1705 in Cyrillic numerals (҂АѰЕ) 
+ Part of a series on Numeral systems 
+ Place-value notation 
+ Hindu–Arabic numerals 
+ Western Arabic 
+ Eastern Arabic 
+
+ Bengali 
+ Devanagari 
+ Gujarati 
+ Gurmukhi 
+ Odia 
+ Sinhala 
+ Tamil 
+ Malayalam 
+ Telugu 
+ Kannada 
+ Dzongkha 
+
+ Tibetan 
+ Balinese 
+ Burmese 
+ Javanese 
+ Khmer 
+ Lao 
+ Mongolian 
+ Sundanese 
+ Thai 
+
+ Other systems 
+ History 
+
+ Ancient 
+
+ Babylonian 
+
+ Post-classical 
+
+ Cistercian 
+ Mayan 
+ Muisca 
+ Pentadic 
+ Quipu 
+ Rumi 
+
+ Contemporary 
+
+ Cherokee 
+ Kaktovik (Iñupiaq) 
+
+ By radix/base 
+ Common radices/bases 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 8 
+ 10 
+ 11 
+ 12 
+ 16 
+ 20 
+ 60 
+
+ Non-standard radices/bases 
+
+ Bijective   ( 1 ) 
+ Signed-digit   ( balanced ternary ) 
+ Mixed   ( factorial ) 
+ Negative 
+ Complex   ( 2 i ) 
+ Non-integer   ( φ ) 
+ Asymmetric 
+
+ Sign-value notation 
+ Non-alphabetic 
+ Contemporary East Asian 
+
+ Chinese 
+ Hokkien 
+ Suzhou 
+ Japanese 
+ Korean 
+ Vietnamese 
+
+ Historic East Asian 
+
+ Counting rods 
+ Tangut 
+
+ Other non-alphabetic 
+
+ Aegean 
+ Attic 
+ Aztec 
+ Brahmi 
+ Chuvash 
+ Egyptian 
+ Etruscan 
+ Kharosthi 
+ Prehistoric counting 
+ Proto-cuneiform 
+ Roman 
+ Tally marks 
+
+ Alphabetic 
+ Abjad 
+ Armenian 
+ Alphasyllabic 
+ Akṣarapallī 
+ Āryabhaṭa 
+ Kaṭapayādi 
+ Coptic 
+ Cyrillic 
+ Geʽez 
+ Georgian 
+ Glagolitic 
+ Greek 
+ Hebrew 
+
+ List of numeral systems v t e 
+
+ This article contains special characters . Without proper rendering support , you may see question marks, boxes, or other symbols . 
+
+ Cyrillic numerals are a numeral system derived from the Cyrillic script , developed in the First Bulgarian Empire in the late 10th century. It was used in the First Bulgarian Empire and by South and East Slavic peoples . [ 1 ] The system was used in Russia as late as the early 18th century, when Peter the Great replaced it with Hindu-Arabic numerals as part of his civil script reform initiative. [ 2 ] [ 3 ] Cyrillic numbers played a role in Peter the Great's currency reform plans, too, with silver wire kopecks issued after 1696 and mechanically minted coins issued between 1700 and 1722 inscribed with the date using Cyrillic numerals. [ 4 ] By 1725, Russian Imperial coins had transitioned to Arabic numerals. [ 5 ] The Cyrillic numerals may still be found in books written in the Church Slavonic language . [ 6 ] 
+
+ General description [ edit ] 
+ The system is a quasi-decimal alphabetic numeral system , equivalent to the Ionian numeral system but written with the corresponding graphemes of the Cyrillic script . The order is based on the original Greek alphabet rather than the standard Cyrillic alphabetical order. [ 7 ] 
+
+ A separate letter is assigned to each unit (1, 2, ... 9), each multiple of ten (10, 20, ... 90), and each multiple of one hundred (100, 200, ... 900). To distinguish numbers from text, a titlo (   ҃ ) is sometimes drawn over the numbers, or they are set apart with dots. [ 8 ] The numbers are written as pronounced in Slavonic , [ 9 ] generally from the high value position to the low value position, with the exception of 11 through 19, which are written and pronounced with the ones unit before the tens; for example, ЗІ (17) is "семнадсять" (literally seven-on-ten , cf. the English seven-teen ). [ 2 ] 
+
+ Examples: 
+ ( ҂аѱ҃ѕ ) – 1706 
+ ( ҂зр︮и︯і ) – 7118 
+ A long titlo may be used for long runs of numbers: ҂з︮р︦н︦і︯ . 
+
+ To evaluate a Cyrillic number, the values of all the figures are added up: for example, ѰЗ is 700 + 7, making 707. If the number is greater than 999 (ЦЧѲ), the thousands sign (҂) is used to multiply the number's value: for example, ҂Ѕ is 6000, while ҂Л҂В is parsed as 30,000 + 2000, making 32,000. To produce larger numbers, a modifying sign is used to encircle the number being multiplied. [ 10 ] Two scales existed in such cases (similar to the long and short scales ): one is 'Малый счёт' or Lesser Count, giving a new name and sign every order of magnitude, and the other is 'Великий счёт' or Greater Count, where every name and sign is the previous one squared, up until 10 48 - instead of going to 10 96 , it goes to 10 49 . [ 11 ] [ 12 ] 
+
+ Modifying signs used to denote values 1000 and greater. For example, А҉   denotes 1 million. 
+
+ Table of values [ edit ] 
+
+ Value Greek Cyrillic 
+ Value Greek Cyrillic 
+ Value Greek Cyrillic 
+
+ 1 Αʹ А 
+ 10 Ιʹ І 
+ 100 Ρʹ Р 
+
+ 2 Βʹ В 
+ 20 Κʹ К 
+ 200 Σʹ С 
+
+ 3 Γʹ Г 
+ 30 Λʹ Л 
+ 300 Τʹ Т 
+
+ 4 Δʹ Д 
+ 40 Μʹ М 
+ 400 Υʹ У or Ѵ or Ꙋ 
+
+ 5 Εʹ Е 
+ 50 Νʹ Н 
+ 500 Φʹ Ф 
+
+ 6 Ϛ ʹ or Ϝ ʹ Ѕ 
+ 60 Ξʹ Ѯ or Ч † 
+ 600 Χʹ Х 
+
+ 7 Ζʹ З 
+ 70 Οʹ О 
+ 700 Ψʹ Ѱ 
+
+ 8 Ηʹ И 
+ 80 Πʹ П 
+ 800 Ωʹ Ѡ or Ѿ or Ꙍ 
+
+ 9 Θʹ Ѳ 
+ 90 Ϟ ʹ or Ϙ ʹ Ч or Ҁ † 
+ 900 Ϡ ʹ or Ͳ ʹ Ц or Ѧ 
+
+ ^† In some varieties of Western Cyrillic, Ч was used for 60 and Ҁ was used for 90. 
+
+ Cyrillic modifying signs 
+
+ Name (English) [ 11 ] 
+ Lesser count multiplier 
+ Greater count multiplier 
+ Sign 
+
+ Тысѫщи (Thousand) 1,000 1,000   ҂     
+
+ Тьма (Myriad) 10,000 1,000,000      ⃝ 
+
+ Лєгєонъ (Legion) 100,000 10 12     ҈ 
+
+ Лєѡдръ (Legion of Legions) 1,000,000 10 24     ҉ 
+
+ Вранъ (Raven/Crow) 10,000,000 10 48     ꙰ 
+
+ Клада (Trough/Log) 100,000,000 10 49     ꙱ 
+
+ Тьма тьмъ (Many Myriad) 1,000,000,000 10 50     ꙲ 
+
+ Computing codes [ edit ] 
+
+ character 
+ ◌҃ 
+ ◌︮ 
+ ◌︦ 
+ ◌︯ 
+ ҂ 
+
+ Unicode name 
+ COMBINING CYRILLIC TITLO 
+ COMBINING CYRILLIC TITLO LEFT HALF 
+ COMBINING CONJOINING MACRON 
+ COMBINING CYRILLIC TITLO RIGHT HALF 
+ CYRILLIC THOUSANDS SIGN 
+
+ character encoding 
+ decimal hex 
+ decimal hex 
+ decimal hex 
+ decimal hex 
+ decimal hex 
+
+ Unicode 
+ 1155 0483 
+ 65070 
+ FE2E 
+ 65062 
+ FE26 
+ 65071 
+ FE2F 1154 0482 
+
+ UTF-8 
+ 210 131 D2 83 
+ 239 184 174 
+ EF B8 AE 
+ 239 184 166 
+ EF B8 A6 
+ 239 184 175 
+ EF B8 AF 210 130 D2 82 
+
+ Numeric character reference 
+ & #1155; & #x0483; 
+ & #65070; 
+ & #xFE2E; 
+ & #65062; 
+ & #xFE26; 
+ & #65071; 
+ & #xFE2F; & #1154; & #x0482; 
+
+ character 
+   ⃝ 
+   ҈ 
+   ҉ 
+   ꙰ 
+   ꙱ 
+   ꙲ 
+
+ Unicode name 
+ COMBINING ENCLOSING CIRCLE (Cyrillic combining ten thousands sign) COMBINING CYRILLIC HUNDRED THOUSANDS SIGN COMBINING CYRILLIC MILLIONS SIGN COMBINING CYRILLIC TEN MILLIONS SIGN COMBINING CYRILLIC HUNDRED MILLIONS SIGN 
+ COMBINING CYRILLIC BILLIONS SIGN 
+
+ character encoding 
+ decimal hex 
+ decimal hex 
+ decimal hex 
+ decimal hex 
+ decimal hex 
+ decimal hex 
+
+ Unicode 
+ 8413 
+ 20DD 1160 0488 1161 0489 42608 A670 42609 A671 
+ 42610 
+ A672 
+
+ UTF-8 
+ 226 131 157 
+ E2 83 9D 210 136 D2 88 210 137 D2 89 234 153 176 EA 99 B0 234 153 177 EA 99 B1 
+ 234 153 178 
+ EA 99 B2 
+
+ Numeric character reference 
+ & #8413; 
+ & #x20DD; & #1160; & #x0488; & #1161; & #x0489; & #42608; & #xA670; & #42609; & #xA671; 
+ & #42610; 
+ & #xA672; 
+
+ See also [ edit ] 
+ Early Cyrillic alphabet 
+ Glagolitic alphabet 
+ Glagolitic numerals 
+ Greek numerals 
+ Relationship of Cyrillic and Glagolitic scripts 
+
+ References [ edit ] 
+ ↑ Dejić, Mirko (2013). "How the old Slavs (Serbs) wrote numbers". BSHM Bulletin: Journal of the British Society for the History of Mathematics . 29 (1): 2– 17. doi : 10.1080/17498430.2013.805559 . ISSN   1749-8430 . S2CID   121899464 . 
+ 1 2 Chrisomalis, Stephen (2010). Numerical Notation: A Comparative History . Cambridge, England: Cambridge University Press. pp.   180– 182. ISBN   978-1-139-48533-3 . Retrieved 2016-12-28 . 
+ ↑ Yefimov, Vladimir (2002), "Civil Type and Kis Cyrillic" , in Berry, John D. (ed.), Language Culture Type: International Type Design in the Age of Unicode , New York City: Graphis Press, pp.   369– 147, ISBN   978-1932026016 , retrieved 2017-01-02 
+ ↑ Teplyakov, Sergei (2011). "How To Identify & Interpret Cyrillic Dates on Russian Coins of Peter I The Great" . Metal Detecting World . Retrieved 2016-12-30 . 
+ ↑ Lorković, Tatjana (2003). "Coins and Medals of Imperial Russia" . Yale University Library . Retrieved 2016-12-30 . 
+ ↑ Looijen, Maarten (2015). Over Getallen Gesproken/Talking About Numbers (in Dutch and English) (2nd   ed.). Zaltbommel, Netherlands: Van Haren Publishing. pp.   59– 60. ISBN   978-94-018-0601-5 . 
+ ↑ Ager, Simon. "Omniglot: Cyrillic Script" . Retrieved 2016-12-29 . 
+ ↑ Gesang, Philipp (2013), Typesetting Cyrillic Numerals with ConTEXt MkIV (PDF) , p.   3, archived from the original (PDF) on 2016-12-30 , retrieved 2016-12-29 
+ ↑ Lunt, Horace Gray (2001). Old Church Slavonic Grammar (7th   ed.). Berlin, Germany: Walter de Gruyter. pp.   16– 18. ISBN   978-3-11-016284-4 . 
+ ↑ Gamanovich, Alypy (2001). Shaw, John (ed.). Grammar of the Church Slavonic Language . Jordanville, New York: Holy Trinity Monastery. ISBN   978-0884650645 . Retrieved 2016-12-28 . 
+ 1 2 Козловский, Станислав (2007-02-25). "У больших чисел громкие имена" [ Big Names of Large Numbers ] . Вокруг Света (in Russian). Moscow . Retrieved 2017-01-02 . 
+ ↑ A. Kent; H. Lancour; J.E. Daily; W.Z. Nasri, eds. (1979). "Slavic Paleography" . Encyclopedia of Library and Information Science . Vol.   27. New York, NY: Marcel Dekker Inc. pp.   510– 520. ISBN   978-0-8247-2027-8 . Retrieved 26 March 2018 . 
+
+ External links [ edit ] 
+ Media related to Cyrillic numerals at Wikimedia Commons 
+
+ v t e Cyrillic script Italics indicate that the language no longer uses Cyrillic Cyrillic alphabets 
+ Early 
+ Abaza 
+ Abkhaz 
+ Albanian 
+ Aleut 
+ Avar 
+ Azerbaijani 
+ Balochi 
+ Bashkir 
+ Belarusian 
+ Bosnian 
+ Bulgarian 
+ Buryat 
+ Chechen 
+ Crimean Tatar 
+ Dargwa 
+ Dungan 
+ Even 
+ Evenki 
+ Gagauz 
+ Ingush 
+ Interslavic 
+ Kalmyk 
+ Karakalpak 
+ Karelian 
+ Kazakh 
+ Khakas 
+ Kildin Sámi 
+ Komi 
+ Kurdish 
+ Kyrgyz 
+ Lezgin 
+ Macedonian 
+ Mansi 
+ Mongolian 
+ Montenegrin 
+ Mordvinic 
+ Nivkh 
+ Nogai 
+ Polish 
+ Ossetian 
+ Pannonian Rusyn 
+ Romani 
+ Romanian 
+ transitional 
+ Moldovan 
+ Russian 
+ Rusyn 
+ Serbian 
+ Tat 
+ Judeo-Tat 
+ Tatar 
+ Tajik 
+ Tlingit 
+ Turkmen 
+ Udege 
+ Udmurt 
+ Ukrainian 
+ Uyghur 
+ Uzbek 
+ Yakut 
+ Siberian Yupik 
+ Chaplino dialect 
+ Naukan Yupik 
+ Cyrillization of 
+ Arabic 
+ Chinese 
+ French 
+ German 
+ Greek 
+ Japanese 
+ Korean 
+ Lithuanian 
+ Manchu 
+ Polish 
+ Letters of the Cyrillic script Primary letters 
+ Аа 
+ Бб 
+ Вв 
+ Гг 
+ Дд 
+ Ее 
+ Жж 
+ Зз 
+ Ии 
+ Іі 
+ Йй 
+ Кк 
+ Лл 
+ Мм 
+ Нн 
+ Оо 
+ Пп 
+ Рр 
+ Сс 
+ Тт 
+ Уу 
+ Фф 
+ Хх 
+ Цц 
+ Чч 
+ Шш 
+ Щщ 
+ Ъъ 
+ Ыы 
+ Ьь 
+ Ээ 
+ Юю 
+ Яя 
+ Other Slavic letters 
+ А̂а̂ 
+ А̄а̄ 
+ Ӑӑ 
+ Ӓӓ 
+ Ѓѓ 
+ Ґґ 
+ Ђђ 
+ Е̂е̂ 
+ Е̄е̄ 
+ Ёё 
+ Єє 
+ З́з́ 
+ Ѕѕ 
+ Її 
+ Ꙇꙇ 
+ И̂и̂ 
+ Ӣӣ 
+ Ӥӥ 
+ Јј 
+ Љљ 
+ Њњ 
+ О̂о̂ 
+ О̄о̄ 
+ Ӧӧ 
+ С́с́ 
+ Ќќ 
+ Ћћ 
+ У̂у̂ 
+ Ӯӯ 
+ Ўў 
+ Ӱӱ 
+ Џџ 
+ Ꙏꙏ 
+ Non-Slavic letters 
+ А̊а̊ 
+ А̃а̃ 
+ Ӓ̄ӓ̄ 
+ Ӕӕ 
+ Әә 
+ Ә̃ә̃ 
+ Ӛӛ 
+ В̌в̌ 
+ Ԝԝ 
+ Ҕҕ 
+ Ғғ 
+ Ӻӻ 
+ Ғ̌ғ̌ 
+ Ӷӷ/Г̡г̡ 
+ Д̌д̌ 
+ Д̆д̆ 
+ Ӗӗ 
+ Е̃е̃ 
+ Ё̄ё̄ 
+ Є̈є̈ 
+ Ԑԑ 
+ Җҗ 
+ Ӝӝ 
+ Ӂӂ 
+ Ҙҙ 
+ Ӟӟ 
+ З̌з̌ 
+ Ӡӡ 
+ И̃и̃ 
+ Ҋҋ 
+ Ққ 
+ Ӄӄ 
+ Ҡҡ 
+ Ҟҟ 
+ Ҝҝ 
+ Ԛԛ 
+ Л́л́ 
+ Ӆӆ 
+ Ԯԯ 
+ Ԓԓ 
+ Ӎӎ 
+ ᵸ 
+ Ӊӊ 
+ Ԩԩ 
+ Ңң 
+ Ӈӈ 
+ Ҥҥ 
+ О̆о̆ 
+ О̃о̃ 
+ Өө 
+ Ө̄ө̄ 
+ Ө̆ө̆ 
+ Ӫӫ 
+ Ԥԥ 
+ Р̌р̌ 
+ Ҏҏ 
+ Ҫҫ 
+ Т̌т̌ 
+ Ҭҭ 
+ Ᲊᲊ 
+ У̃у̃ 
+ Ӳӳ 
+ У̊у̊ 
+ Ұұ 
+ Үү 
+ Х̌х̌ 
+ Ҳҳ 
+ Ӽӽ 
+ Ӿӿ 
+ Һһ 
+ Ԧԧ 
+ Ҵҵ 
+ Ҷҷ 
+
+ Ӵӵ 
+ Ӌӌ 
+ Ч̡ч̡ 
+ Ҹҹ 
+ Ч̣ч̣ 
+ Ҽҽ 
+ Ҿҿ 
+ Ы̄ы̄ 
+ Ӹӹ 
+ Ҍҍ 
+ Ҩҩ 
+ Э̄э̄ 
+ Ӭӭ 
+ Ӭ̄ӭ̄ 
+ Ю̆ю̆ 
+ Ю̈ю̈ 
+ Ю̄ю̄ 
+ Я̆я̆ 
+ Я̄я̄ 
+ Ӏ 
+ Archaic Slavic letters 
+ А̨а̨ 
+ Ꙣꙣ 
+ Ꙉꙉ 
+ Ꙥꙥ 
+ Ꙧꙧ 
+ O variants 
+ Ꙋꙋ 
+ Х̾х̾ 
+ Ѡѡ 
+ Ѿѿ 
+ Ꙡꙡ 
+ Ѣѣ 
+ Я̈я̈ 
+ Ꙗꙗ 
+ Ѥѥ 
+ Ѫѫ 
+ Ѧѧ 
+ Ѯѯ 
+ Ѱѱ 
+ Ѳѳ 
+ Ѵѵ 
+ Ҁҁ 
+ Archaic non-Slavic letters 
+ Б̣б̣ 
+ Г̧г̧ 
+ Г̄г̄ 
+ Г̆г̆ 
+ Ԁԁ 
+ Ԃԃ 
+ Ꚁꚁ 
+
+ Ꚅꚅ 
+ Ԅԅ 
+ Ԇԇ 
+ Ꚉꚉ 
+ Ԫԫ 
+ Ꚃꚃ 
+ Ꚕꚕ 
+
+ Ј̵ј̵ 
+ К̀к̀ 
+ К̄к̄ 
+ К̂к̂ 
+ Ԟԟ 
+
+ Ԡԡ 
+ Ԉԉ 
+ Ԕԕ 
+ Ԋԋ 
+ Ԣԣ 
+ Н̄н̄ 
+
+ Ҧҧ 
+
+ Ԗԗ 
+ Ԍԍ 
+ Ԏԏ 
+ Ꚋꚋ 
+ Ꚍꚍ 
+ Ꚏꚏ 
+ Ꚑꚑ 
+ Ԭԭ 
+ Ꚓꚓ 
+
+ Ꚗꚗ 
+ Ԙԙ 
+ Ꙟꙟ 
+ Archaic diacritics 
+ palatalization sign (◌ ҄ ) 
+ pokrytie (◌҇) 
+ titlo (◌҃) 
+ Combinations of Cyrillic letters 
+ Digraphs 
+ Multigraphs 
+
+ Glagolitic script 
+ Cyrillic numerals 
+ Scientific transliteration of Cyrillic 
+
+ Retrieved from " https://en.wikipedia.org/w/index.php?title=Cyrillic_numerals&oldid=1364926787 " 
+ Categories : Cyrillic script Cyrillo-Methodian studies Alphabetic numeral systems Numerals Church Slavonic language Bulgarian inventions Science and technology in Russia Hidden categories: Articles with short description Short description matches Wikidata Pages using sidebar with the child parameter CS1 Dutch-language sources (nl) CS1 Russian-language sources (ru) Commons category link is on Wikidata 
+
+ Search 
+
+ Search 
+
+ Cyrillic numerals 
+
+ 30 languages 
+
+ Add topic

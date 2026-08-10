@@ -1,0 +1,760 @@
+Hebrew numerals - Wikipedia 
+
+ Jump to content 
+
+ From Wikipedia, the free encyclopedia 
+
+ Numeral system using letters of the Hebrew alphabet 
+ Part of a series on Numeral systems 
+ Place-value notation 
+ Hindu–Arabic numerals 
+ Western Arabic 
+ Eastern Arabic 
+
+ Bengali 
+ Devanagari 
+ Gujarati 
+ Gurmukhi 
+ Odia 
+ Sinhala 
+ Tamil 
+ Malayalam 
+ Telugu 
+ Kannada 
+ Dzongkha 
+
+ Tibetan 
+ Balinese 
+ Burmese 
+ Javanese 
+ Khmer 
+ Lao 
+ Mongolian 
+ Sundanese 
+ Thai 
+
+ Other systems 
+ History 
+
+ Ancient 
+
+ Babylonian 
+
+ Post-classical 
+
+ Cistercian 
+ Mayan 
+ Muisca 
+ Pentadic 
+ Quipu 
+ Rumi 
+
+ Contemporary 
+
+ Cherokee 
+ Kaktovik (Iñupiaq) 
+
+ By radix/base 
+ Common radices/bases 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 8 
+ 10 
+ 11 
+ 12 
+ 16 
+ 20 
+ 60 
+
+ Non-standard radices/bases 
+
+ Bijective   ( 1 ) 
+ Signed-digit   ( balanced ternary ) 
+ Mixed   ( factorial ) 
+ Negative 
+ Complex   ( 2 i ) 
+ Non-integer   ( φ ) 
+ Asymmetric 
+
+ Sign-value notation 
+ Non-alphabetic 
+ Contemporary East Asian 
+
+ Chinese 
+ Hokkien 
+ Suzhou 
+ Japanese 
+ Korean 
+ Vietnamese 
+
+ Historic East Asian 
+
+ Counting rods 
+ Tangut 
+
+ Other non-alphabetic 
+
+ Aegean 
+ Attic 
+ Aztec 
+ Brahmi 
+ Chuvash 
+ Egyptian 
+ Etruscan 
+ Kharosthi 
+ Prehistoric counting 
+ Proto-cuneiform 
+ Roman 
+ Tally marks 
+
+ Alphabetic 
+ Abjad 
+ Armenian 
+ Alphasyllabic 
+ Akṣarapallī 
+ Āryabhaṭa 
+ Kaṭapayādi 
+ Coptic 
+ Cyrillic 
+ Geʽez 
+ Georgian 
+ Glagolitic 
+ Greek 
+ Hebrew 
+
+ List of numeral systems v t e 
+ The system of Hebrew numerals is a quasi-decimal alphabetic numeral system using the letters of the Hebrew alphabet .
+The system was adapted from that of the Greek numerals sometime between 200 and 78 BCE, the latter being the date of the earliest archeological evidence. [ 1 ] 
+
+ The current numeral system is also known as the Hebrew alphabetic numerals to contrast with earlier systems of writing numerals used in classical antiquity. These systems were inherited from usage in the Aramaic and Phoenician scripts, attested from c.   800 BCE in the Samaria Ostraca . 
+
+ The Greek system was adopted in Hellenistic Judaism and had been in use in Greece since about the 5th century BCE. [ 2 ] 
+
+ In this system, there is no notation for zero , and the numeric values for individual letters are added together. Each unit (1–9) is assigned a separate letter, each tens (10–90) a separate letter, and the first four hundreds (100, 200, 300, 400) a separate letter. The later hundreds (500, 600, 700, 800 and 900) are represented by the sum of two or three letters representing the first four hundreds. To represent numbers from 1,000 to 999,999, the same letters are reused to serve as thousands, tens of thousands, and hundreds of thousands. Gematria , a type of Jewish numerology, uses these transformations extensively. 
+
+ In Israel today, the decimal system of Hindu–Arabic numeral system , such as 0, 1, 2, 3, etc., is used in almost all cases, such as money, age, date on the civil calendar . The Hebrew numerals are used only in special cases, such as when using the Hebrew calendar , or numbering a list, similar to a, b, c, d, etc., much as Roman numerals are used in the West. 
+
+ Numbers [ edit ] 
+ The Hebrew language has names for common numbers that range from zero to one million. Letters of the Hebrew alphabet are used to represent numbers in a few traditional contexts, such as in calendars. In other situations, numerals from the Hindu–Arabic numeral system are used. Cardinal and ordinal numbers must agree in gender with the noun they are describing. If there is no such noun (e.g., in telephone numbers), the feminine form is used. For ordinal numbers greater than ten, the cardinal is used. Multiples of ten above the value 20 have no gender (20, 30, 40, ... are genderless), unless the number has the digit 1 in the tens position (110, 210, 310, ...). 
+
+ The lower clock on the Jewish Town Hall building in Prague , with Hebrew numerals in counterclockwise order 
+ Early 20th century pocket watches with Hebrew numerals in clockwise order ( Jewish Museum, Berlin ) 
+
+ Ordinal values [ edit ] 
+
+ Ordinal (English) 
+ Ordinal (Hebrew) 
+
+ Masculine 
+ Feminine 
+
+ First 
+ (rishon) רִאשׁוֹן 
+ (rishona) רִאשׁוֹנָה 
+
+ Second 
+ (sheni) שֵׁנִי 
+ (shniya) שְׁנִיָּה 
+
+ Third 
+ (shlishi) שְׁלִישִׁי 
+ (shlishit) שְׁלִישִׁית 
+
+ Fourth 
+ (revi'i) רְבִיעִי 
+ (revi'it) רְבִיעִית 
+
+ Fifth 
+ (chamishi) חֲמִישִׁי 
+ (chamishit) חֲמִישִׁית 
+
+ Sixth 
+ (shishi) שִׁשִּׁי 
+ (shishit) שִׁשִּׁית 
+
+ Seventh 
+ (shvi'i) שְׁבִיעִי 
+ (shvi'it) שְׁבִיעִית 
+
+ Eighth 
+ (shmini) שְׁמִינִי 
+ (shminit) שְׁמִינִית 
+
+ Ninth 
+ (tshi'i) תְּשִׁיעִי 
+ (tshi'it) תְּשִׁיעִית 
+
+ Tenth 
+ ('asiri) עֲשִׂירִי 
+ ('asirit) עֲשִׂירִית 
+
+ Note: For ordinal numbers greater than 10, cardinal numbers are used instead. 
+
+ Cardinal values [ edit ] 
+
+ Hindu-Arabic numerals 
+ Hebrew numerals 
+ Cardinal (ex. one, two, three) 
+
+ Masculine 
+ Feminine 
+
+ 0 
+
+ (efes) אֶפֶס 
+
+ 1 
+ א (alef) 
+ (eḥadh) אֶחָד 
+ (aḥath) אַחַת 
+
+ 2 
+ ב (bet) 
+ (shənayim) שְׁנַיִם 
+ (shətayim) שְׁתַּיִם 
+
+ 3 
+ ג (gimel) 
+ (shəloshah) שְׁלֹושָׁה 
+ (shalosh) שָׁלֹושׁ 
+
+ 4 
+ ד (dalet) 
+ (arəba'ah) אַרְבָּעָה 
+ (arəba') אַרְבַּע 
+
+ 5 
+ ה (he) 
+ (ḥamisha) חֲמִשָּׁה 
+ (ḥamesh) חָמֵשׁ 
+
+ 6 
+ ו (vav) 
+ (shishah) שִׁשָּׁה 
+ (shesh) שֵׁשׁ 
+
+ 7 
+ ז (zayin) 
+ (shivə'ah) שִׁבְעָה 
+ (sheva') שֶׁבַע 
+
+ 8 
+ ח (ḥet) 
+ (shəmonah) שְׁמוֹנָה 
+ (shəmoneh) שְׁמוֹנֶה 
+
+ 9 
+ ט (tet) 
+ (tishə'ah) תִּשְׁעָה 
+ (tesha') תֵּשַׁע 
+
+ 10 
+ י (yod) 
+ ('asara) עֲשָׂרָה 
+ ('eser) עֶשֶׂר 
+
+ 11 
+ יא 
+ (aḥadh-'asar) אֲחַד-עָשָׂר 
+ (aḥath-'esəreh) אֲחַת-עֶשְׂרֵה 
+
+ 12 
+ יב 
+ (shəneym-'asar) שְׁנֵים-עָשָׂר 
+ (shəteym-'esreh) שְׁתֵּים-עֶשְׂרֵה 
+
+ 13 
+ יג 
+ (shəloshah-'asar) שְׁלֹושָה-עָשָׂר 
+ (shəlosh-'esreh) שְׁלֹושׁ-עֶשְׂרֵה 
+
+ 14 
+ יד 
+ (arəba'ah-'asar) אַרְבָּעָה-עָשָׂר 
+ (arəba'-'esreh) אַרְבַּע-עֶשְׂרֵה 
+
+ 15 
+ ט״ו or י״ה 
+ (ḥamishah-'asar) חֲמִשָּׁה-עָשָׂר 
+ (ḥamesh-'esreh) חֲמֵשׁ-עֶשְׂרֵה 
+
+ 16 
+ ט״ז or י״ו 
+ (shishah-'asar) שִׁשָּׁה-עָשָׂר 
+ (shesh-'esreh) שֵׁש-עֶשְׂרֵה 
+
+ 17 
+ יז 
+ (shivə'ah-'asar) שִׁבְעָה-עָשָׂר 
+ (shəva'-'esreh) שְׁבַע-עֶשְׂרֵה 
+
+ 18 
+ יח 
+ (shəmonah-'asar) שְׁמוֹנָה-עָשָׂר 
+ (shəmoneh-'esreh) שְמוֹנֶה-עֶשְׂרֵה 
+
+ 19 
+ יט 
+ (tishə'ah-'asar) תִּשְׁעָה-עָשָׂר 
+ (təsha'-'esreh) תְּשַׁע-עֶשְׂרֵה 
+
+ 20 
+ כ or ך (kaf) 
+ ('esərim) עֶשְׂרִים 
+
+ 30 
+ ל (lamed) 
+ (shəloshim) שְׁלֹושִׁים 
+
+ 40 
+ מ or ם (mem) 
+ (arəba'im) אַרְבָּעִים 
+
+ 50 
+ נ or ן (nun) 
+ (ḥamishim) חֲמִשִּׁים 
+
+ 60 
+ ס (samekh) 
+ (shishim) שִׁשִּׁים 
+
+ 70 
+ ע ('ayin) 
+ (shivə'im) שִׁבְעִים 
+
+ 80 
+ פ or ף (pe) 
+ (shəmonim) שְׁמוֹנִים 
+
+ 90 
+ צ or ץ (tsadi) 
+ (tishə'im) תִּשְׁעִים 
+
+ 100 
+ ק (qof) 
+ (me'ah) מֵאָה 
+
+ 200 
+ ר (resh) 
+ (ma'atayim) מָאתַיִם 
+
+ 300 
+ ש (shin) 
+ (shəlosh me'oth) שְׁלֹושׁ מֵאוֹת 
+
+ 400 
+ ת (tav) 
+ (arəba' me'oth) אַרְבַּע מֵאוֹת 
+
+ 500 
+ ך 
+ (ḥamesh me'oth) חֲמֵשׁ מֵאוֹת 
+
+ 600 
+ ם 
+ (shesh me'oth) שֵׁשׁ מֵאוֹת 
+
+ 700 
+ ן 
+ (shəva me'oth) שְׁבַע מֵאוֹת 
+
+ 800 
+ ף 
+ (shəmone me'oth) שְׁמוֹנֶה מֵאוֹת 
+
+ 900 
+ ץ 
+ (təsha' me'oth) תְּשַׁע מֵאוֹת 
+
+ 1000 
+ א׳ 
+ (elef) אֶלֶף 
+
+ 2000 
+ ב׳ 
+ (alpaym) אַלְפַּיִם 
+
+ 5000 
+ ה׳ 
+ (ḥamesheth alafim) חֲמֵשֶׁת אֲלָפִים 
+
+ 10 000 
+ י׳ 
+ (aseret alafim) עֲשֶׂרֶת אֲלָפִים or (revava) רְבָבָה or (ribbo) רִבּוֹא 
+
+ 100 000 
+ ק׳ 
+ (mea elef) מֵאָה אֶלֶף or (aseret ribbo) עֲשֶׂרֶת רִבּוֹא 
+
+ 1 000 000 
+
+ (miliyon) מִילְיוֹן or (mea ribbo) מֵאָה רִבּוֹא 
+
+ 10 000 000 
+
+ (asara miliyon) עֲשָׂרָה מִילְיוֹן or (elef ribbo) אֶלֶף רִבּוֹא 
+
+ 100 000 000 
+
+ (mea miliyon) מֵאָה מִילְיוֹן or (ribbo ribbo'ot) רִבּוֹא רִבּוֹאוֹת or (ribbo revavot) רִבּוֹא רְבָבוֹת 
+
+ 1 000 000 000 
+
+ (miliyard) מִילְיַרְדּ 
+
+ 1 000 000 000 000 
+
+ (trilyon) טְרִילְיוֹן 
+
+ 10 15 
+
+ (kwadrilyon) קְוַדְרִילְיוֹן 
+
+ 10 18 
+
+ (kwintilyon) קְוִינְטִילְיוֹן 
+
+ Note: Officially, numbers greater than a million were represented by the long scale . However, since January 21, 2013, the modified short scale (under which the long scale milliard is substituted for the strict short scale billion), which was already the colloquial standard, became official. [ 3 ] 
+
+ Collective numerals [ edit ] 
+
+ Table of collective numerals and their declensions [ 4 ] [ 5 ] 
+
+ Number 
+ We masc. 
+ We fem. 
+ You masc. 
+ You fem. 
+ They masc. 
+ They fem. 
+
+ Two together 
+ (shnenu) שְׁנֵינוּ 
+ (shtenu) שְׁתֵּינוּ 
+ (shnechem) שְׁנֵיכֶם 
+ (shtechen) שְׁתֵּיכֶן 
+ (shnehem) שְׁנֵיהֶם 
+ (shtehen) שְׁתֵּיהֶן 
+
+ Three together 
+ (shloshtenu) שְׁלָשְׁתֵּנוּ 
+ (shlosht'chem) שְׁלָשְׁתְּכֶם 
+ (shlosht'chen) שְׁלָשְׁתְּכֶן 
+ (shloshtam) שְׁלָשְׁתָּם 
+ (shloshtan) שְׁלָשְׁתָּן 
+
+ Four together 
+ (arba'tenu) אַרבַּעְתֵּנוּ 
+ (arba'tchem) אַרבַּעְתְּכֶם 
+ (arba'tchen) אַרבַּעְתְּכֶן 
+ (arba'tam) אַרבַּעְתָּם 
+ (arba'tan) אַרבַּעְתָּן 
+
+ Five together 
+ (chamishtenu) חֲמִשְׁתֵּנוּ 
+ (chamisht'chem) חֲמִשְׁתְּכֶם 
+ (chamisht'chen) חֲמִשְׁתְּכֶן 
+ (chamishtam) חֲמִשְׁתָּם 
+ (chamishtan) חֲמִשְׁתָּן 
+
+ Six together 
+ (shishtenu) שִׁשְׁתֵּנוּ 
+ (shisht'chem) שִׁשְׁתְּכֶם 
+ (shisht'chen) שִׁשְׁתְּכֶן 
+ (shishtam) שִׁשְׁתָּם 
+ (shishtan) שִׁשְׁתָּן 
+
+ Seven together 
+ (shva'tenu) שְׁבַעְתֵּנוּ 
+ (shva'tchem) שְׁבַעְתְּכֶם 
+ (shva'tchen) שְׁבַעְתְּכֶן 
+ (shva'tam) שְׁבַעְתָּם 
+ (shva'tan) שְׁבַעְתָּן 
+
+ Eight together 
+ (shmonatenu) שְׁמוֹנָתֵנוּ 
+ (shmonatchem) שְׁמוֹנָתְכֶם 
+ (shmonatchen) שְׁמוֹנָתְכֶן 
+ (shmonatam) שְׁמוֹנָתָם 
+ (shmonatan) שְׁמוֹנָתָן 
+
+ Nine together 
+ (tsha'tenu) תְּשַׁעְתֵּנוּ 
+ (tsha'tchem) תְּשַׁעְתְּכֶם 
+ (tsha'tchen) תְּשַׁעְתְּכֶן 
+ (tsha'tam) תְּשַׁעְתָּם 
+ (tsha'tan) תְּשַׁעְתָּן 
+
+ Ten together 
+ (asartenu) עֲשַׂרתֵּנוּ 
+ (asart'chem) עֲשַׂרתְּכֶם 
+ (asart'chen) עֲשַׂרתְּכֶן 
+ (asartam) עֲשַׂרתָּם 
+ (asartan) עֲשַׂרתָּן 
+
+ Speaking and writing [ edit ] 
+ Cardinal and ordinal numbers must agree in gender (masculine or feminine; mixed groups are treated as masculine) with the noun they are describing. If there is no such noun (e.g. a telephone number or a house number in a street address), the feminine form is used. Ordinal numbers must also agree in number and definite status like other adjectives. The cardinal number precedes the noun (e.g., shlosha yeladim ), except for the number one which succeeds it (e.g., yeled echad ). The number two is special: shnayim (m.) and shtayim (f.) become shney (m.) and shtey (f.) when followed by the noun they count. For ordinal numbers (numbers indicating position) greater than ten the cardinal is used. 
+
+ Calculations [ edit ] 
+ The Hebrew numeric system operates on the additive principle in which the numeric values of the letters are added together to form the total. For example, 177 is represented as קעז which (from right to left) corresponds to 100 + 70 + 7 = 177. 
+
+ Mathematically, this type of system requires 27 letters (1–9, 10–90, 100–900). In practice, the last letter, tav (which has the value 400), is used in combination with itself or other letters from qof (100) onwards to generate numbers from 500 and above. Alternatively, the 22-letter Hebrew numeral set is sometimes extended to 27 by using 5 sofit (final) forms of the Hebrew letters. [ 6 ] 
+
+ Key exceptions [ edit ] 
+ By convention, the numbers 15 and 16 are represented as ט״ו ‎ (9 + 6) and ט״ז ‎ (9 + 7), respectively, in order to refrain from using the two-letter combinations י-ה ‎ (10 + 5) and י-ו ‎ (10 + 6), which are alternate written forms for the Name of God in everyday writing. In the calendar, this manifests every full moon since all Hebrew months start on a new moon (see for example: Tu BiShvat ). 
+
+ This convention developed some time in the Middle Ages; before that, it was common to write 15 and 16 as י״ה ‎ and י״ו ‎ . [ 7 ] [ 8 ] 
+
+ Combinations which would spell out words with negative connotations are sometimes avoided by switching the order of the letters. For instance, 744 which should be written as תשמ״ד ‎ (meaning "you/it will be destroyed") might instead be written as תשד״מ or תמש״ד (meaning "end to demon"). 
+
+ Use of final letters [ edit ] 
+ The Hebrew numeral system has sometimes been extended to include the five final letter forms— ך for 500, ם for 600, ן for 700, ף for 800, ץ for 900. Usually though the final letter form are used with the same value as the regular letter form— ך for 20, ם for 40, ן for 50, ף for 80, ץ for 90. 
+
+ The ordinary additive forms for 500 to 900 are ת״ק , ת״ר , ת״ש , ת״ת and תת״ק . 
+
+ Gershayim [ edit ] 
+ A tombstone from 1935 in Baiersdorf , Germany , reading:
+ נפטר ביום כׄ אייר 
+ ונקבר ביום כׄגׄ אייר 
+ שנת תׄרׄצׄהׄ לפׄק 
+In English:
+ Passed away on day 20 Iyar 
+And buried on day 23 Iyar 
+Year 695 without the thousands [i.e. year 5695] 
+Note the dots above each letter in each number. 
+ Gershayim (U+05F4 in Unicode , and resembling a double quote mark) (sometimes erroneously referred to as merkha'ot , which is Hebrew for double quote) are inserted before (to the right of) the last (leftmost) letter to indicate that the sequence of letters represents something other than a word. This is used in the case where a number is represented by two or more Hebrew numerals ( e.g., 28 → כ״ח ‎ ). 
+
+ Similarly, a single geresh (U+05F3 in Unicode, and resembling a single quote mark) is appended after (to the left of) a single letter to indicate that the letter represents a number rather than a (one-letter) word. This is used in the case where a number is represented by a single Hebrew numeral ( e.g. 100 → ק׳ ‎ ). 
+
+ Note that geresh and gershayim merely indicate " not a (normal) word. " Context usually determines whether they indicate a number or something else (such as an abbreviation ). 
+
+ When the number is used for chapters, verses, pages, lines, etc. there is no need to put on the number a geresh / gershayim . [ 9 ] 
+
+ An alternative method found in old manuscripts and still found on modern-day tombstones is to put a dot above each letter of the number. 
+
+ Decimals [ edit ] 
+ In print, Arabic numerals are employed in Modern Hebrew for most purposes. Hebrew numerals are used nowadays primarily for writing the days and years of the Hebrew calendar ; for references to traditional Jewish texts (particularly for Biblical chapter and verse and for Talmudic folios); for bulleted or numbered lists (similar to A , B , C , etc. , in English); and in numerology ( gematria ). 
+
+ Thousands and date formats [ edit ] 
+ Thousands are counted separately, and the thousands count precedes the rest of the number (to the right , since Hebrew is read from right to left). There are no special marks to signify that the "count" is starting over with thousands, which can theoretically lead to ambiguity, although a single quote mark is sometimes used after the letter. When specifying years of the Hebrew calendar in the present millennium, writers usually omit the thousands (which is presently 5 [ ה ]), but if they do not, this is accepted to mean 5,000, with no ambiguity. The current Israeli coinage includes the thousands. [ clarification needed ] 
+
+ Date examples [ edit ] 
+
+ "Monday, 15 Adar 5764" (where 5764 = 5(×1000) + 400 + 300 + 60 + 4, and 15 = 9 + 6): 
+
+ In full (with thousands): "Monday, 15(th) of Adar, 5764" 
+ ‫ יום שני ט״ו באדר ה׳תשס״ד ‬ 
+
+ Common usage (omitting thousands): "Monday, 15(th) of Adar, (5)764" 
+ ‫ יום שני ט״ו באדר תשס״ד ‬ 
+
+ "Thursday, 3 Nisan 5767" (where 5767 = 5(×1000) + 400 + 300 + 60 + 7): 
+
+ In full (with thousands): "Thursday, 3(rd) of Nisan, 5767" 
+ ‫ יום חמישי ג׳ בניסן ה׳תשס״ז ‬ 
+
+ Common usage (omitting thousands): "Thursday, 3(rd) of Nisan, (5)767" 
+ ‫ יום חמישי ג׳ בניסן תשס״ז ‬ 
+
+ To see how today's date in the Hebrew calendar is written, see, for example, Hebcal date converter . 
+
+ Recent years [ edit ] 
+ 5786 (2025 – 26) = תשפ״ו 
+
+ 5785 (2024 – 25) = ה׳תשפ״ה 
+
+ 5784 (2023 – 24) = ה׳תשפ״ד 
+
+ 5783 (2022 – 23) = ה׳תשפ״ג 
+
+ ... 
+
+ 5772 (2011 – 12) = ה׳תשע״ב 
+
+ 5771 (2010 – 11) = ה׳תשע״א 
+
+ 5770 (2009 – 10) = ה׳תש״ע 
+
+ 5769 (2008 – 09) = ה׳תשס״ט 
+
+ ... 
+
+ 5761 (2000 – 01) = ה׳תשס״א 
+
+ 5760 (1999 – 2000) = ה׳תש״ס 
+
+ Similar systems [ edit ] 
+
+ The Abjad numerals are equivalent to the Hebrew numerals up to 400. The Greek numerals differ from the Hebrew ones from 90 upwards because in the Greek alphabet there is no equivalent for tsade ( צ ). 
+
+ See also [ edit ] 
+ Bible code , a purported set of secret messages encoded within the Torah. 
+ Gematria , Jewish system of assigning numerical value to a word or phrase. 
+ Hebrew calendar 
+ Notarikon , a method of deriving a word by using each of its initial letters. 
+ Sephirot , the 10 attributes/emanations found in Kabbalah. 
+ Significance of numbers in Judaism 
+ Base 32 , a system that can be written with both all Arabic numerals and all Hebrew letters, much as how Base 36 is written with all Arabic numerals and roman letters. 
+
+ References [ edit ] 
+
+ ↑ Rosenstock, B. (2017). Transfinite Life: Oskar Goldberg and the Vitalist Imagination . Indiana University Press. p.   61. ISBN   978-0253029973 . 
+ ↑ Stephen Chrisomalis, Numerical Notation: A Comparative History , Cambridge University Press, 2010,
+ p. 157 ; Solomon Gandz, Hebrew Numerals , Proceedings of the American Academy for Jewish Research
+Vol. 4, (1932 - 1933), pp. 53-112. 
+ ↑ "מונחי רפואת הלב, ענייני דקדוק ועוד אושרו באקדמיה (תשע"ג, 2013)" . 7 February 2013. 
+ ↑ "תחומים 4.3 השימוש בשם המספר - האקדמיה ללשון העברית" . 
+ ↑ "Spisok chislitel'nykh" . 
+ ↑ According to Gandz (p. 96), cited above, this use of the sofit letters was not widely accepted and soon abandoned. 
+ ↑ Nestle, E. (1884-01-01). "ו״ט = 15" . Zeitschrift für die Alttestamentliche Wissenschaft (in German). 4 (Jahresband): 249– 250. doi : 10.1515/zatw.1884.4.1.249 . ISSN   1613-0103 . 
+ ↑ יעקב שמואל שפיגל. עמודים בתולדות הספר העברי - בשערי הדפוס . פתח תקווה. 2014. עמ' 381-391 
+ ↑ "כללי הפיסוק - האקדמיה ללשון העברית" (in Hebrew). 31 - note 1. 
+
+ External links [ edit ] 
+
+ Wikimedia Commons has media related to Clocks with Hebrew numerals . 
+
+   Gesenius' Hebrew Grammar ,   §97 , §98 , §134 
+ Gematria Chart on inner.org 
+ Hebrew Number Chart 1 to 1 Million with English Transliteration 
+
+ v t e Hebrew language History 
+ Biblical ( northern dialect ) 
+ Mishnaic 
+ Medieval 
+ Modern 
+ Writing 
+ Alphabet 
+ history 
+ Transliteration to English / from English 
+ Gematria 
+ Ancient Hebrew writings 
+ inscriptions 
+ papyri 
+ List of Hebrew Bible manuscripts 
+ Reading traditions 
+ Ashkenazi 
+ Sephardi 
+ Romaniote 
+ Italian 
+ Mizrahi ( Syrian ) 
+ Yemenite 
+ Samaritan 
+ Tiberian (extinct) 
+ Palestinian (extinct) 
+ Babylonian (extinct) 
+ Orthography Eras 
+ Biblical 
+ Scripts 
+ Rashi 
+ Braille 
+ Ashuri 
+ Cursive 
+ Crowning 
+ Paleo-Hebrew 
+ Samaritan 
+ Solitreo 
+ Alphabet 
+ Alef 
+ Bet 
+ Gimel 
+ Dalet 
+ Hei 
+ Vav 
+ Zayin 
+ Ḥet 
+ Tet 
+ Yud 
+ Kaf 
+ Lamed 
+ Mem 
+ Nun 
+ Samech 
+ Ayin 
+ Pei 
+ Tsadi 
+ Kuf 
+ Resh 
+ Shin 
+ Tav 
+ Niqqud 
+ Tiberian 
+ Babylonian 
+ Palestinian 
+ Samaritan 
+
+ Shva 
+ Hiriq 
+ Tzere 
+ Segol 
+ Patach 
+ Kamatz 
+ Holam 
+ Kubutz/shuruk 
+ Dagesh 
+ Mappiq 
+ Maqaf 
+ Rafe 
+ Sin/Shin dot 
+ Spelling 
+ with Niqqud / missing / full 
+ Mater lectionis 
+ Abbreviations 
+ Plene scriptum 
+ Punctuation 
+ Diacritics 
+ Meteg 
+ Cantillation 
+ Geresh 
+ Gershayim 
+ Inverted nun 
+ Shekel sign 
+ Numerals 
+ Phonology 
+ Biblical Hebrew 
+ Modern Hebrew 
+ Philippi's law 
+
+ Law of attenuation 
+ Grammar 
+ Biblical 
+ Modern 
+
+ Verbal morphology 
+ Semitic roots 
+ Prefixes 
+ Suffixes 
+ Segolate 
+ Vav-consecutive 
+ Academic 
+ Revival 
+ Academy 
+ Study 
+ Ulpan 
+ Keyboard 
+ Hebrew / Israeli literature 
+ Names 
+ Surnames 
+ Unicode and HTML 
+ Reference works 
+ Gesenius' Hebrew Grammar 
+ Gesenius' Hebrew and Chaldee Lexicon to the Old Testament Scriptures 
+ Brown–Driver–Briggs 
+ Strong's Concordance 
+ Hebrew and Aramaic Lexicon of the Old Testament 
+
+ Retrieved from " https://en.wikipedia.org/w/index.php?title=Hebrew_numerals&oldid=1352402836 " 
+ Categories : Hebrew alphabet Hebrew language Alphabetic numeral systems Numerals Hidden categories: Articles with short description Short description is different from Wikidata Pages using sidebar with the child parameter CS1 German-language sources (de) CS1 Hebrew-language sources (he) Wikipedia articles needing clarification from June 2014 Commons category link is on Wikidata 
+
+ Search 
+
+ Search 
+
+ Hebrew numerals 
+
+ 24 languages 
+
+ Add topic

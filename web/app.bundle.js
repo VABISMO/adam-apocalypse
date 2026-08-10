@@ -6052,11 +6052,11 @@ var require_react_dom_development = __commonJS({
             return false;
           }
         }
-        function onScheduleRoot(root3, children) {
+        function onScheduleRoot(root2, children) {
           {
             if (injectedHook && typeof injectedHook.onScheduleFiberRoot === "function") {
               try {
-                injectedHook.onScheduleFiberRoot(rendererID, root3, children);
+                injectedHook.onScheduleFiberRoot(rendererID, root2, children);
               } catch (err) {
                 if (!hasLoggedError) {
                   hasLoggedError = true;
@@ -6066,10 +6066,10 @@ var require_react_dom_development = __commonJS({
             }
           }
         }
-        function onCommitRoot(root3, eventPriority) {
+        function onCommitRoot(root2, eventPriority) {
           if (injectedHook && typeof injectedHook.onCommitFiberRoot === "function") {
             try {
-              var didError = (root3.current.flags & DidCapture) === DidCapture;
+              var didError = (root2.current.flags & DidCapture) === DidCapture;
               if (enableProfilerTimer) {
                 var schedulerPriority;
                 switch (eventPriority) {
@@ -6089,9 +6089,9 @@ var require_react_dom_development = __commonJS({
                     schedulerPriority = NormalPriority;
                     break;
                 }
-                injectedHook.onCommitFiberRoot(rendererID, root3, schedulerPriority, didError);
+                injectedHook.onCommitFiberRoot(rendererID, root2, schedulerPriority, didError);
               } else {
-                injectedHook.onCommitFiberRoot(rendererID, root3, void 0, didError);
+                injectedHook.onCommitFiberRoot(rendererID, root2, void 0, didError);
               }
             } catch (err) {
               {
@@ -6103,10 +6103,10 @@ var require_react_dom_development = __commonJS({
             }
           }
         }
-        function onPostCommitRoot(root3) {
+        function onPostCommitRoot(root2) {
           if (injectedHook && typeof injectedHook.onPostCommitFiberRoot === "function") {
             try {
-              injectedHook.onPostCommitFiberRoot(rendererID, root3);
+              injectedHook.onPostCommitFiberRoot(rendererID, root2);
             } catch (err) {
               {
                 if (!hasLoggedError) {
@@ -6605,14 +6605,14 @@ var require_react_dom_development = __commonJS({
               return lanes;
           }
         }
-        function getNextLanes(root3, wipLanes) {
-          var pendingLanes = root3.pendingLanes;
+        function getNextLanes(root2, wipLanes) {
+          var pendingLanes = root2.pendingLanes;
           if (pendingLanes === NoLanes) {
             return NoLanes;
           }
           var nextLanes = NoLanes;
-          var suspendedLanes = root3.suspendedLanes;
-          var pingedLanes = root3.pingedLanes;
+          var suspendedLanes = root2.suspendedLanes;
+          var pingedLanes = root2.pingedLanes;
           var nonIdlePendingLanes = pendingLanes & NonIdleLanes;
           if (nonIdlePendingLanes !== NoLanes) {
             var nonIdleUnblockedLanes = nonIdlePendingLanes & ~suspendedLanes;
@@ -6656,9 +6656,9 @@ var require_react_dom_development = __commonJS({
           if ((nextLanes & InputContinuousLane) !== NoLanes) {
             nextLanes |= pendingLanes & DefaultLane;
           }
-          var entangledLanes = root3.entangledLanes;
+          var entangledLanes = root2.entangledLanes;
           if (entangledLanes !== NoLanes) {
-            var entanglements = root3.entanglements;
+            var entanglements = root2.entanglements;
             var lanes = nextLanes & entangledLanes;
             while (lanes > 0) {
               var index2 = pickArbitraryLaneIndex(lanes);
@@ -6669,8 +6669,8 @@ var require_react_dom_development = __commonJS({
           }
           return nextLanes;
         }
-        function getMostRecentEventTime(root3, lanes) {
-          var eventTimes = root3.eventTimes;
+        function getMostRecentEventTime(root2, lanes) {
+          var eventTimes = root2.eventTimes;
           var mostRecentEventTime = NoTimestamp;
           while (lanes > 0) {
             var index2 = pickArbitraryLaneIndex(lanes);
@@ -6727,11 +6727,11 @@ var require_react_dom_development = __commonJS({
               return NoTimestamp;
           }
         }
-        function markStarvedLanesAsExpired(root3, currentTime) {
-          var pendingLanes = root3.pendingLanes;
-          var suspendedLanes = root3.suspendedLanes;
-          var pingedLanes = root3.pingedLanes;
-          var expirationTimes = root3.expirationTimes;
+        function markStarvedLanesAsExpired(root2, currentTime) {
+          var pendingLanes = root2.pendingLanes;
+          var suspendedLanes = root2.suspendedLanes;
+          var pingedLanes = root2.pingedLanes;
+          var expirationTimes = root2.expirationTimes;
           var lanes = pendingLanes;
           while (lanes > 0) {
             var index2 = pickArbitraryLaneIndex(lanes);
@@ -6742,16 +6742,16 @@ var require_react_dom_development = __commonJS({
                 expirationTimes[index2] = computeExpirationTime(lane, currentTime);
               }
             } else if (expirationTime <= currentTime) {
-              root3.expiredLanes |= lane;
+              root2.expiredLanes |= lane;
             }
             lanes &= ~lane;
           }
         }
-        function getHighestPriorityPendingLanes(root3) {
-          return getHighestPriorityLanes(root3.pendingLanes);
+        function getHighestPriorityPendingLanes(root2) {
+          return getHighestPriorityLanes(root2.pendingLanes);
         }
-        function getLanesToRetrySynchronouslyOnError(root3) {
-          var everythingButOffscreen = root3.pendingLanes & ~OffscreenLane;
+        function getLanesToRetrySynchronouslyOnError(root2) {
+          var everythingButOffscreen = root2.pendingLanes & ~OffscreenLane;
           if (everythingButOffscreen !== NoLanes) {
             return everythingButOffscreen;
           }
@@ -6776,12 +6776,12 @@ var require_react_dom_development = __commonJS({
         function includesOnlyTransitions(lanes) {
           return (lanes & TransitionLanes) === lanes;
         }
-        function includesBlockingLane(root3, lanes) {
+        function includesBlockingLane(root2, lanes) {
           var SyncDefaultLanes = InputContinuousHydrationLane | InputContinuousLane | DefaultHydrationLane | DefaultLane;
           return (lanes & SyncDefaultLanes) !== NoLanes;
         }
-        function includesExpiredLane(root3, lanes) {
-          return (lanes & root3.expiredLanes) !== NoLanes;
+        function includesExpiredLane(root2, lanes) {
+          return (lanes & root2.expiredLanes) !== NoLanes;
         }
         function isTransitionLane(lane) {
           return (lane & TransitionLanes) !== NoLanes;
@@ -6842,20 +6842,20 @@ var require_react_dom_development = __commonJS({
           }
           return laneMap;
         }
-        function markRootUpdated(root3, updateLane, eventTime) {
-          root3.pendingLanes |= updateLane;
+        function markRootUpdated(root2, updateLane, eventTime) {
+          root2.pendingLanes |= updateLane;
           if (updateLane !== IdleLane) {
-            root3.suspendedLanes = NoLanes;
-            root3.pingedLanes = NoLanes;
+            root2.suspendedLanes = NoLanes;
+            root2.pingedLanes = NoLanes;
           }
-          var eventTimes = root3.eventTimes;
+          var eventTimes = root2.eventTimes;
           var index2 = laneToIndex(updateLane);
           eventTimes[index2] = eventTime;
         }
-        function markRootSuspended(root3, suspendedLanes) {
-          root3.suspendedLanes |= suspendedLanes;
-          root3.pingedLanes &= ~suspendedLanes;
-          var expirationTimes = root3.expirationTimes;
+        function markRootSuspended(root2, suspendedLanes) {
+          root2.suspendedLanes |= suspendedLanes;
+          root2.pingedLanes &= ~suspendedLanes;
+          var expirationTimes = root2.expirationTimes;
           var lanes = suspendedLanes;
           while (lanes > 0) {
             var index2 = pickArbitraryLaneIndex(lanes);
@@ -6864,20 +6864,20 @@ var require_react_dom_development = __commonJS({
             lanes &= ~lane;
           }
         }
-        function markRootPinged(root3, pingedLanes, eventTime) {
-          root3.pingedLanes |= root3.suspendedLanes & pingedLanes;
+        function markRootPinged(root2, pingedLanes, eventTime) {
+          root2.pingedLanes |= root2.suspendedLanes & pingedLanes;
         }
-        function markRootFinished(root3, remainingLanes) {
-          var noLongerPendingLanes = root3.pendingLanes & ~remainingLanes;
-          root3.pendingLanes = remainingLanes;
-          root3.suspendedLanes = NoLanes;
-          root3.pingedLanes = NoLanes;
-          root3.expiredLanes &= remainingLanes;
-          root3.mutableReadLanes &= remainingLanes;
-          root3.entangledLanes &= remainingLanes;
-          var entanglements = root3.entanglements;
-          var eventTimes = root3.eventTimes;
-          var expirationTimes = root3.expirationTimes;
+        function markRootFinished(root2, remainingLanes) {
+          var noLongerPendingLanes = root2.pendingLanes & ~remainingLanes;
+          root2.pendingLanes = remainingLanes;
+          root2.suspendedLanes = NoLanes;
+          root2.pingedLanes = NoLanes;
+          root2.expiredLanes &= remainingLanes;
+          root2.mutableReadLanes &= remainingLanes;
+          root2.entangledLanes &= remainingLanes;
+          var entanglements = root2.entanglements;
+          var eventTimes = root2.eventTimes;
+          var expirationTimes = root2.expirationTimes;
           var lanes = noLongerPendingLanes;
           while (lanes > 0) {
             var index2 = pickArbitraryLaneIndex(lanes);
@@ -6888,9 +6888,9 @@ var require_react_dom_development = __commonJS({
             lanes &= ~lane;
           }
         }
-        function markRootEntangled(root3, entangledLanes) {
-          var rootEntangledLanes = root3.entangledLanes |= entangledLanes;
-          var entanglements = root3.entanglements;
+        function markRootEntangled(root2, entangledLanes) {
+          var rootEntangledLanes = root2.entangledLanes |= entangledLanes;
+          var entanglements = root2.entanglements;
           var lanes = rootEntangledLanes;
           while (lanes) {
             var index2 = pickArbitraryLaneIndex(lanes);
@@ -6905,7 +6905,7 @@ var require_react_dom_development = __commonJS({
             lanes &= ~lane;
           }
         }
-        function getBumpedLaneForHydration(root3, renderLanes2) {
+        function getBumpedLaneForHydration(root2, renderLanes2) {
           var renderLane = getHighestPriorityLane(renderLanes2);
           var lane;
           switch (renderLane) {
@@ -6945,16 +6945,16 @@ var require_react_dom_development = __commonJS({
               lane = NoLane;
               break;
           }
-          if ((lane & (root3.suspendedLanes | renderLanes2)) !== NoLane) {
+          if ((lane & (root2.suspendedLanes | renderLanes2)) !== NoLane) {
             return NoLane;
           }
           return lane;
         }
-        function addFiberToLanesMap(root3, fiber, lanes) {
+        function addFiberToLanesMap(root2, fiber, lanes) {
           if (!isDevToolsPresent) {
             return;
           }
-          var pendingUpdatersLaneMap = root3.pendingUpdatersLaneMap;
+          var pendingUpdatersLaneMap = root2.pendingUpdatersLaneMap;
           while (lanes > 0) {
             var index2 = laneToIndex(lanes);
             var lane = 1 << index2;
@@ -6963,12 +6963,12 @@ var require_react_dom_development = __commonJS({
             lanes &= ~lane;
           }
         }
-        function movePendingFibersToMemoized(root3, lanes) {
+        function movePendingFibersToMemoized(root2, lanes) {
           if (!isDevToolsPresent) {
             return;
           }
-          var pendingUpdatersLaneMap = root3.pendingUpdatersLaneMap;
-          var memoizedUpdaters = root3.memoizedUpdaters;
+          var pendingUpdatersLaneMap = root2.pendingUpdatersLaneMap;
+          var memoizedUpdaters = root2.memoizedUpdaters;
           while (lanes > 0) {
             var index2 = laneToIndex(lanes);
             var lane = 1 << index2;
@@ -6985,7 +6985,7 @@ var require_react_dom_development = __commonJS({
             lanes &= ~lane;
           }
         }
-        function getTransitionsForLanes(root3, lanes) {
+        function getTransitionsForLanes(root2, lanes) {
           {
             return null;
           }
@@ -7032,8 +7032,8 @@ var require_react_dom_development = __commonJS({
           }
           return IdleEventPriority;
         }
-        function isRootDehydrated(root3) {
-          var currentState = root3.current.memoizedState;
+        function isRootDehydrated(root2) {
+          var currentState = root2.current.memoizedState;
           return currentState.isDehydrated;
         }
         var _attemptSynchronousHydration;
@@ -7204,8 +7204,8 @@ var require_react_dom_development = __commonJS({
                   return;
                 }
               } else if (tag === HostRoot) {
-                var root3 = nearestMounted.stateNode;
-                if (isRootDehydrated(root3)) {
+                var root2 = nearestMounted.stateNode;
+                if (isRootDehydrated(root2)) {
                   queuedTarget.blockedOn = getContainerFromFiber(nearestMounted);
                   return;
                 }
@@ -7439,8 +7439,8 @@ var require_react_dom_development = __commonJS({
                 }
                 targetInst = null;
               } else if (tag === HostRoot) {
-                var root3 = nearestMounted.stateNode;
-                if (isRootDehydrated(root3)) {
+                var root2 = nearestMounted.stateNode;
+                if (isRootDehydrated(root2)) {
                   return getContainerFromFiber(nearestMounted);
                 }
                 targetInst = null;
@@ -7576,16 +7576,16 @@ var require_react_dom_development = __commonJS({
           });
           return listener;
         }
-        var root2 = null;
+        var root = null;
         var startText = null;
         var fallbackText = null;
         function initialize(nativeEventTarget) {
-          root2 = nativeEventTarget;
+          root = nativeEventTarget;
           startText = getText();
           return true;
         }
         function reset() {
-          root2 = null;
+          root = null;
           startText = null;
           fallbackText = null;
         }
@@ -7615,10 +7615,10 @@ var require_react_dom_development = __commonJS({
           return fallbackText;
         }
         function getText() {
-          if ("value" in root2) {
-            return root2.value;
+          if ("value" in root) {
+            return root.value;
           }
-          return root2.textContent;
+          return root.textContent;
         }
         function getEventCharCode(nativeEvent) {
           var charCode;
@@ -8435,8 +8435,8 @@ var require_react_dom_development = __commonJS({
             node = node.parentNode;
           }
         }
-        function getNodeForCharacterOffset(root3, offset) {
-          var node = getLeafNode(root3);
+        function getNodeForCharacterOffset(root2, offset) {
+          var node = getLeafNode(root2);
           var nodeStart = 0;
           var nodeEnd = 0;
           while (node) {
@@ -10229,8 +10229,8 @@ var require_react_dom_development = __commonJS({
             case DOCUMENT_NODE:
             case DOCUMENT_FRAGMENT_NODE: {
               type = nodeType === DOCUMENT_NODE ? "#document" : "#fragment";
-              var root3 = rootContainerInstance.documentElement;
-              namespace = root3 ? root3.namespaceURI : getChildNamespace(null, "");
+              var root2 = rootContainerInstance.documentElement;
+              namespace = root2 ? root2.namespaceURI : getChildNamespace(null, "");
               break;
             }
             default: {
@@ -12856,8 +12856,8 @@ var require_react_dom_development = __commonJS({
             parent = parent.return;
           }
           if (node.tag === HostRoot) {
-            var root3 = node.stateNode;
-            return root3;
+            var root2 = node.stateNode;
+            return root2;
           } else {
             return null;
           }
@@ -12938,7 +12938,7 @@ var require_react_dom_development = __commonJS({
             return enqueueConcurrentClassUpdate(fiber, sharedQueue, update, lane);
           }
         }
-        function entangleTransitions(root3, fiber, lane) {
+        function entangleTransitions(root2, fiber, lane) {
           var updateQueue = fiber.updateQueue;
           if (updateQueue === null) {
             return;
@@ -12946,10 +12946,10 @@ var require_react_dom_development = __commonJS({
           var sharedQueue = updateQueue.shared;
           if (isTransitionLane(lane)) {
             var queueLanes = sharedQueue.lanes;
-            queueLanes = intersectLanes(queueLanes, root3.pendingLanes);
+            queueLanes = intersectLanes(queueLanes, root2.pendingLanes);
             var newQueueLanes = mergeLanes(queueLanes, lane);
             sharedQueue.lanes = newQueueLanes;
-            markRootEntangled(root3, newQueueLanes);
+            markRootEntangled(root2, newQueueLanes);
           }
         }
         function enqueueCapturedUpdate(workInProgress2, capturedUpdate) {
@@ -13375,13 +13375,13 @@ var require_react_dom_development = __commonJS({
           }
           workInProgressSources.length = 0;
         }
-        function registerMutableSourceForHydration(root3, mutableSource) {
+        function registerMutableSourceForHydration(root2, mutableSource) {
           var getVersion = mutableSource._getVersion;
           var version = getVersion(mutableSource._source);
-          if (root3.mutableSourceEagerHydrationData == null) {
-            root3.mutableSourceEagerHydrationData = [mutableSource, version];
+          if (root2.mutableSourceEagerHydrationData == null) {
+            root2.mutableSourceEagerHydrationData = [mutableSource, version];
           } else {
-            root3.mutableSourceEagerHydrationData.push(mutableSource, version);
+            root2.mutableSourceEagerHydrationData.push(mutableSource, version);
           }
         }
         var ReactCurrentDispatcher$1 = ReactSharedInternals.ReactCurrentDispatcher, ReactCurrentBatchConfig$2 = ReactSharedInternals.ReactCurrentBatchConfig;
@@ -13850,11 +13850,11 @@ var require_react_dom_development = __commonJS({
                 }
               }
             }
-            var root3 = getWorkInProgressRoot();
-            if (root3 === null) {
+            var root2 = getWorkInProgressRoot();
+            if (root2 === null) {
               throw new Error("Expected a work-in-progress root. This is a bug in React. Please file an issue.");
             }
-            if (!includesBlockingLane(root3, renderLanes)) {
+            if (!includesBlockingLane(root2, renderLanes)) {
               pushStoreConsistencyCheck(fiber, getSnapshot, nextSnapshot);
             }
           }
@@ -13895,11 +13895,11 @@ var require_react_dom_development = __commonJS({
           workInProgressHook !== null && workInProgressHook.memoizedState.tag & HasEffect) {
             fiber.flags |= Passive;
             pushEffect(HasEffect | Passive$1, updateStoreInstance.bind(null, fiber, inst, nextSnapshot, getSnapshot), void 0, null);
-            var root3 = getWorkInProgressRoot();
-            if (root3 === null) {
+            var root2 = getWorkInProgressRoot();
+            if (root2 === null) {
               throw new Error("Expected a work-in-progress root. This is a bug in React. Please file an issue.");
             }
-            if (!includesBlockingLane(root3, renderLanes)) {
+            if (!includesBlockingLane(root2, renderLanes)) {
               pushStoreConsistencyCheck(fiber, getSnapshot, nextSnapshot);
             }
           }
@@ -13951,9 +13951,9 @@ var require_react_dom_development = __commonJS({
           }
         }
         function forceStoreRerender(fiber) {
-          var root3 = enqueueConcurrentRenderForLane(fiber, SyncLane);
-          if (root3 !== null) {
-            scheduleUpdateOnFiber(root3, fiber, SyncLane, NoTimestamp);
+          var root2 = enqueueConcurrentRenderForLane(fiber, SyncLane);
+          if (root2 !== null) {
+            scheduleUpdateOnFiber(root2, fiber, SyncLane, NoTimestamp);
           }
         }
         function mountState(initialState) {
@@ -14262,8 +14262,8 @@ var require_react_dom_development = __commonJS({
         }
         function mountId() {
           var hook = mountWorkInProgressHook();
-          var root3 = getWorkInProgressRoot();
-          var identifierPrefix = root3.identifierPrefix;
+          var root2 = getWorkInProgressRoot();
+          var identifierPrefix = root2.identifierPrefix;
           var id;
           if (getIsHydrating()) {
             var treeId = getTreeId();
@@ -14302,11 +14302,11 @@ var require_react_dom_development = __commonJS({
           if (isRenderPhaseUpdate(fiber)) {
             enqueueRenderPhaseUpdate(queue, update);
           } else {
-            var root3 = enqueueConcurrentHookUpdate(fiber, queue, update, lane);
-            if (root3 !== null) {
+            var root2 = enqueueConcurrentHookUpdate(fiber, queue, update, lane);
+            if (root2 !== null) {
               var eventTime = requestEventTime();
-              scheduleUpdateOnFiber(root3, fiber, lane, eventTime);
-              entangleTransitionUpdate(root3, queue, lane);
+              scheduleUpdateOnFiber(root2, fiber, lane, eventTime);
+              entangleTransitionUpdate(root2, queue, lane);
             }
           }
           markUpdateInDevTools(fiber, lane);
@@ -14354,11 +14354,11 @@ var require_react_dom_development = __commonJS({
                 }
               }
             }
-            var root3 = enqueueConcurrentHookUpdate(fiber, queue, update, lane);
-            if (root3 !== null) {
+            var root2 = enqueueConcurrentHookUpdate(fiber, queue, update, lane);
+            if (root2 !== null) {
               var eventTime = requestEventTime();
-              scheduleUpdateOnFiber(root3, fiber, lane, eventTime);
-              entangleTransitionUpdate(root3, queue, lane);
+              scheduleUpdateOnFiber(root2, fiber, lane, eventTime);
+              entangleTransitionUpdate(root2, queue, lane);
             }
           }
           markUpdateInDevTools(fiber, lane);
@@ -14378,13 +14378,13 @@ var require_react_dom_development = __commonJS({
           }
           queue.pending = update;
         }
-        function entangleTransitionUpdate(root3, queue, lane) {
+        function entangleTransitionUpdate(root2, queue, lane) {
           if (isTransitionLane(lane)) {
             var queueLanes = queue.lanes;
-            queueLanes = intersectLanes(queueLanes, root3.pendingLanes);
+            queueLanes = intersectLanes(queueLanes, root2.pendingLanes);
             var newQueueLanes = mergeLanes(queueLanes, lane);
             queue.lanes = newQueueLanes;
-            markRootEntangled(root3, newQueueLanes);
+            markRootEntangled(root2, newQueueLanes);
           }
         }
         function markUpdateInDevTools(fiber, lane, action) {
@@ -15272,8 +15272,8 @@ var require_react_dom_development = __commonJS({
             while (parentFiber !== null) {
               switch (parentFiber.tag) {
                 case HostRoot:
-                  var root3 = parentFiber.stateNode;
-                  root3.effectDuration += elapsedTime;
+                  var root2 = parentFiber.stateNode;
+                  root2.effectDuration += elapsedTime;
                   return;
                 case Profiler:
                   var parentStateNode = parentFiber.stateNode;
@@ -15292,9 +15292,9 @@ var require_react_dom_development = __commonJS({
             while (parentFiber !== null) {
               switch (parentFiber.tag) {
                 case HostRoot:
-                  var root3 = parentFiber.stateNode;
-                  if (root3 !== null) {
-                    root3.passiveEffectDuration += elapsedTime;
+                  var root2 = parentFiber.stateNode;
+                  if (root2 !== null) {
+                    root2.passiveEffectDuration += elapsedTime;
                   }
                   return;
                 case Profiler:
@@ -15419,10 +15419,10 @@ var require_react_dom_development = __commonJS({
               }
               update.callback = callback;
             }
-            var root3 = enqueueUpdate(fiber, update, lane);
-            if (root3 !== null) {
-              scheduleUpdateOnFiber(root3, fiber, lane, eventTime);
-              entangleTransitions(root3, fiber, lane);
+            var root2 = enqueueUpdate(fiber, update, lane);
+            if (root2 !== null) {
+              scheduleUpdateOnFiber(root2, fiber, lane, eventTime);
+              entangleTransitions(root2, fiber, lane);
             }
             {
               markStateUpdateScheduled(fiber, lane);
@@ -15441,10 +15441,10 @@ var require_react_dom_development = __commonJS({
               }
               update.callback = callback;
             }
-            var root3 = enqueueUpdate(fiber, update, lane);
-            if (root3 !== null) {
-              scheduleUpdateOnFiber(root3, fiber, lane, eventTime);
-              entangleTransitions(root3, fiber, lane);
+            var root2 = enqueueUpdate(fiber, update, lane);
+            if (root2 !== null) {
+              scheduleUpdateOnFiber(root2, fiber, lane, eventTime);
+              entangleTransitions(root2, fiber, lane);
             }
             {
               markStateUpdateScheduled(fiber, lane);
@@ -15462,10 +15462,10 @@ var require_react_dom_development = __commonJS({
               }
               update.callback = callback;
             }
-            var root3 = enqueueUpdate(fiber, update, lane);
-            if (root3 !== null) {
-              scheduleUpdateOnFiber(root3, fiber, lane, eventTime);
-              entangleTransitions(root3, fiber, lane);
+            var root2 = enqueueUpdate(fiber, update, lane);
+            if (root2 !== null) {
+              scheduleUpdateOnFiber(root2, fiber, lane, eventTime);
+              entangleTransitions(root2, fiber, lane);
             }
             {
               markForceUpdateScheduled(fiber, lane);
@@ -16052,11 +16052,11 @@ var require_react_dom_development = __commonJS({
           }
           return update;
         }
-        function attachPingListener(root3, wakeable, lanes) {
-          var pingCache = root3.pingCache;
+        function attachPingListener(root2, wakeable, lanes) {
+          var pingCache = root2.pingCache;
           var threadIDs;
           if (pingCache === null) {
-            pingCache = root3.pingCache = new PossiblyWeakMap$1();
+            pingCache = root2.pingCache = new PossiblyWeakMap$1();
             threadIDs = /* @__PURE__ */ new Set();
             pingCache.set(wakeable, threadIDs);
           } else {
@@ -16068,16 +16068,16 @@ var require_react_dom_development = __commonJS({
           }
           if (!threadIDs.has(lanes)) {
             threadIDs.add(lanes);
-            var ping = pingSuspendedRoot.bind(null, root3, wakeable, lanes);
+            var ping = pingSuspendedRoot.bind(null, root2, wakeable, lanes);
             {
               if (isDevToolsPresent) {
-                restorePendingUpdaters(root3, lanes);
+                restorePendingUpdaters(root2, lanes);
               }
             }
             wakeable.then(ping, ping);
           }
         }
-        function attachRetryListener(suspenseBoundary, root3, wakeable, lanes) {
+        function attachRetryListener(suspenseBoundary, root2, wakeable, lanes) {
           var wakeables = suspenseBoundary.updateQueue;
           if (wakeables === null) {
             var updateQueue = /* @__PURE__ */ new Set();
@@ -16111,7 +16111,7 @@ var require_react_dom_development = __commonJS({
           } while (node !== null);
           return null;
         }
-        function markSuspenseBoundaryShouldCapture(suspenseBoundary, returnFiber, sourceFiber, root3, rootRenderLanes) {
+        function markSuspenseBoundaryShouldCapture(suspenseBoundary, returnFiber, sourceFiber, root2, rootRenderLanes) {
           if ((suspenseBoundary.mode & ConcurrentMode) === NoMode) {
             if (suspenseBoundary === returnFiber) {
               suspenseBoundary.flags |= ShouldCapture;
@@ -16137,11 +16137,11 @@ var require_react_dom_development = __commonJS({
           suspenseBoundary.lanes = rootRenderLanes;
           return suspenseBoundary;
         }
-        function throwException(root3, returnFiber, sourceFiber, value, rootRenderLanes) {
+        function throwException(root2, returnFiber, sourceFiber, value, rootRenderLanes) {
           sourceFiber.flags |= Incomplete;
           {
             if (isDevToolsPresent) {
-              restorePendingUpdaters(root3, rootRenderLanes);
+              restorePendingUpdaters(root2, rootRenderLanes);
             }
           }
           if (value !== null && typeof value === "object" && typeof value.then === "function") {
@@ -16155,15 +16155,15 @@ var require_react_dom_development = __commonJS({
             var suspenseBoundary = getNearestSuspenseBoundaryToCapture(returnFiber);
             if (suspenseBoundary !== null) {
               suspenseBoundary.flags &= ~ForceClientRender;
-              markSuspenseBoundaryShouldCapture(suspenseBoundary, returnFiber, sourceFiber, root3, rootRenderLanes);
+              markSuspenseBoundaryShouldCapture(suspenseBoundary, returnFiber, sourceFiber, root2, rootRenderLanes);
               if (suspenseBoundary.mode & ConcurrentMode) {
-                attachPingListener(root3, wakeable, rootRenderLanes);
+                attachPingListener(root2, wakeable, rootRenderLanes);
               }
-              attachRetryListener(suspenseBoundary, root3, wakeable);
+              attachRetryListener(suspenseBoundary, root2, wakeable);
               return;
             } else {
               if (!includesSyncLane(rootRenderLanes)) {
-                attachPingListener(root3, wakeable, rootRenderLanes);
+                attachPingListener(root2, wakeable, rootRenderLanes);
                 renderDidSuspendDelayIfPossible();
                 return;
               }
@@ -16178,7 +16178,7 @@ var require_react_dom_development = __commonJS({
                 if ((_suspenseBoundary.flags & ShouldCapture) === NoFlags) {
                   _suspenseBoundary.flags |= ForceClientRender;
                 }
-                markSuspenseBoundaryShouldCapture(_suspenseBoundary, returnFiber, sourceFiber, root3, rootRenderLanes);
+                markSuspenseBoundaryShouldCapture(_suspenseBoundary, returnFiber, sourceFiber, root2, rootRenderLanes);
                 queueHydrationError(createCapturedValueAtFiber(value, sourceFiber));
                 return;
               }
@@ -16681,13 +16681,13 @@ var require_react_dom_development = __commonJS({
           return workInProgress2.child;
         }
         function pushHostRootContext(workInProgress2) {
-          var root3 = workInProgress2.stateNode;
-          if (root3.pendingContext) {
-            pushTopLevelContextObject(workInProgress2, root3.pendingContext, root3.pendingContext !== root3.context);
-          } else if (root3.context) {
-            pushTopLevelContextObject(workInProgress2, root3.context, false);
+          var root2 = workInProgress2.stateNode;
+          if (root2.pendingContext) {
+            pushTopLevelContextObject(workInProgress2, root2.pendingContext, root2.pendingContext !== root2.context);
+          } else if (root2.context) {
+            pushTopLevelContextObject(workInProgress2, root2.context, false);
           }
-          pushHostContainer(workInProgress2, root3.containerInfo);
+          pushHostContainer(workInProgress2, root2.containerInfo);
         }
         function updateHostRoot(current2, workInProgress2, renderLanes2) {
           pushHostRootContext(workInProgress2);
@@ -16700,7 +16700,7 @@ var require_react_dom_development = __commonJS({
           cloneUpdateQueue(current2, workInProgress2);
           processUpdateQueue(workInProgress2, nextProps, null, renderLanes2);
           var nextState = workInProgress2.memoizedState;
-          var root3 = workInProgress2.stateNode;
+          var root2 = workInProgress2.stateNode;
           var nextChildren = nextState.element;
           if (prevState.isDehydrated) {
             var overrideState = {
@@ -17288,14 +17288,14 @@ var require_react_dom_development = __commonJS({
             }
             var hasContextChanged2 = includesSomeLane(renderLanes2, current2.childLanes);
             if (didReceiveUpdate || hasContextChanged2) {
-              var root3 = getWorkInProgressRoot();
-              if (root3 !== null) {
-                var attemptHydrationAtLane = getBumpedLaneForHydration(root3, renderLanes2);
+              var root2 = getWorkInProgressRoot();
+              if (root2 !== null) {
+                var attemptHydrationAtLane = getBumpedLaneForHydration(root2, renderLanes2);
                 if (attemptHydrationAtLane !== NoLane && attemptHydrationAtLane !== suspenseState.retryLane) {
                   suspenseState.retryLane = attemptHydrationAtLane;
                   var eventTime = NoTimestamp;
                   enqueueConcurrentRenderForLane(current2, attemptHydrationAtLane);
-                  scheduleUpdateOnFiber(root3, current2, attemptHydrationAtLane, eventTime);
+                  scheduleUpdateOnFiber(root2, current2, attemptHydrationAtLane, eventTime);
                 }
               }
               renderDidSuspendDelayIfPossible();
@@ -17740,7 +17740,7 @@ var require_react_dom_development = __commonJS({
           switch (workInProgress2.tag) {
             case HostRoot:
               pushHostRootContext(workInProgress2);
-              var root3 = workInProgress2.stateNode;
+              var root2 = workInProgress2.stateNode;
               resetHydrationState();
               break;
             case HostComponent:
@@ -18516,7 +18516,7 @@ var require_react_dom_development = __commonJS({
               return null;
             }
             case HostRoot: {
-              var root3 = workInProgress2.stateNode;
+              var root2 = workInProgress2.stateNode;
               popHostContainer(workInProgress2);
               popTopLevelContextObject(workInProgress2);
               resetWorkInProgressVersions();
@@ -18582,7 +18582,7 @@ var require_react_dom_development = __commonJS({
               break;
             }
             case HostRoot: {
-              var root3 = interruptedWork.stateNode;
+              var root2 = interruptedWork.stateNode;
               popHostContainer(interruptedWork);
               popTopLevelContextObject(interruptedWork);
               resetWorkInProgressVersions();
@@ -18709,8 +18709,8 @@ var require_react_dom_development = __commonJS({
         }
         var focusedInstanceHandle = null;
         var shouldFireAfterActiveInstanceBlur = false;
-        function commitBeforeMutationEffects(root3, firstChild) {
-          focusedInstanceHandle = prepareForCommit(root3.containerInfo);
+        function commitBeforeMutationEffects(root2, firstChild) {
+          focusedInstanceHandle = prepareForCommit(root2.containerInfo);
           nextEffect = firstChild;
           commitBeforeMutationEffects_begin();
           var shouldFire = shouldFireAfterActiveInstanceBlur;
@@ -18789,8 +18789,8 @@ var require_react_dom_development = __commonJS({
               }
               case HostRoot: {
                 {
-                  var root3 = finishedWork.stateNode;
-                  clearContainer(root3.containerInfo);
+                  var root2 = finishedWork.stateNode;
+                  clearContainer(root2.containerInfo);
                 }
                 break;
               }
@@ -18930,8 +18930,8 @@ var require_react_dom_development = __commonJS({
                   outer: while (parentFiber !== null) {
                     switch (parentFiber.tag) {
                       case HostRoot:
-                        var root3 = parentFiber.stateNode;
-                        root3.passiveEffectDuration += passiveEffectDuration;
+                        var root2 = parentFiber.stateNode;
+                        root2.passiveEffectDuration += passiveEffectDuration;
                         break outer;
                       case Profiler:
                         var parentStateNode = parentFiber.stateNode;
@@ -19089,8 +19089,8 @@ var require_react_dom_development = __commonJS({
                     outer: while (parentFiber !== null) {
                       switch (parentFiber.tag) {
                         case HostRoot:
-                          var root3 = parentFiber.stateNode;
-                          root3.effectDuration += effectDuration;
+                          var root2 = parentFiber.stateNode;
+                          root2.effectDuration += effectDuration;
                           break outer;
                         case Profiler:
                           var parentStateNode = parentFiber.stateNode;
@@ -19406,7 +19406,7 @@ var require_react_dom_development = __commonJS({
         }
         var hostParent = null;
         var hostParentIsContainer = false;
-        function commitDeletionEffects(root3, returnFiber, deletedFiber) {
+        function commitDeletionEffects(root2, returnFiber, deletedFiber) {
           {
             var parent = returnFiber;
             findParent: while (parent !== null) {
@@ -19432,7 +19432,7 @@ var require_react_dom_development = __commonJS({
             if (hostParent === null) {
               throw new Error("Expected to find a host parent. This error is likely caused by a bug in React. Please file an issue.");
             }
-            commitDeletionEffectsOnFiber(root3, returnFiber, deletedFiber);
+            commitDeletionEffectsOnFiber(root2, returnFiber, deletedFiber);
             hostParent = null;
             hostParentIsContainer = false;
           }
@@ -19615,22 +19615,22 @@ var require_react_dom_development = __commonJS({
             });
           }
         }
-        function commitMutationEffects(root3, finishedWork, committedLanes) {
+        function commitMutationEffects(root2, finishedWork, committedLanes) {
           inProgressLanes = committedLanes;
-          inProgressRoot = root3;
+          inProgressRoot = root2;
           setCurrentFiber(finishedWork);
-          commitMutationEffectsOnFiber(finishedWork, root3);
+          commitMutationEffectsOnFiber(finishedWork, root2);
           setCurrentFiber(finishedWork);
           inProgressLanes = null;
           inProgressRoot = null;
         }
-        function recursivelyTraverseMutationEffects(root3, parentFiber, lanes) {
+        function recursivelyTraverseMutationEffects(root2, parentFiber, lanes) {
           var deletions = parentFiber.deletions;
           if (deletions !== null) {
             for (var i = 0; i < deletions.length; i++) {
               var childToDelete = deletions[i];
               try {
-                commitDeletionEffects(root3, parentFiber, childToDelete);
+                commitDeletionEffects(root2, parentFiber, childToDelete);
               } catch (error2) {
                 captureCommitPhaseError(childToDelete, parentFiber, error2);
               }
@@ -19641,13 +19641,13 @@ var require_react_dom_development = __commonJS({
             var child = parentFiber.child;
             while (child !== null) {
               setCurrentFiber(child);
-              commitMutationEffectsOnFiber(child, root3);
+              commitMutationEffectsOnFiber(child, root2);
               child = child.sibling;
             }
           }
           setCurrentFiber(prevDebugFiber);
         }
-        function commitMutationEffectsOnFiber(finishedWork, root3, lanes) {
+        function commitMutationEffectsOnFiber(finishedWork, root2, lanes) {
           var current2 = finishedWork.alternate;
           var flags = finishedWork.flags;
           switch (finishedWork.tag) {
@@ -19655,7 +19655,7 @@ var require_react_dom_development = __commonJS({
             case ForwardRef:
             case MemoComponent:
             case SimpleMemoComponent: {
-              recursivelyTraverseMutationEffects(root3, finishedWork);
+              recursivelyTraverseMutationEffects(root2, finishedWork);
               commitReconciliationEffects(finishedWork);
               if (flags & Update) {
                 try {
@@ -19683,7 +19683,7 @@ var require_react_dom_development = __commonJS({
               return;
             }
             case ClassComponent: {
-              recursivelyTraverseMutationEffects(root3, finishedWork);
+              recursivelyTraverseMutationEffects(root2, finishedWork);
               commitReconciliationEffects(finishedWork);
               if (flags & Ref) {
                 if (current2 !== null) {
@@ -19693,7 +19693,7 @@ var require_react_dom_development = __commonJS({
               return;
             }
             case HostComponent: {
-              recursivelyTraverseMutationEffects(root3, finishedWork);
+              recursivelyTraverseMutationEffects(root2, finishedWork);
               commitReconciliationEffects(finishedWork);
               if (flags & Ref) {
                 if (current2 !== null) {
@@ -19730,7 +19730,7 @@ var require_react_dom_development = __commonJS({
               return;
             }
             case HostText: {
-              recursivelyTraverseMutationEffects(root3, finishedWork);
+              recursivelyTraverseMutationEffects(root2, finishedWork);
               commitReconciliationEffects(finishedWork);
               if (flags & Update) {
                 {
@@ -19750,7 +19750,7 @@ var require_react_dom_development = __commonJS({
               return;
             }
             case HostRoot: {
-              recursivelyTraverseMutationEffects(root3, finishedWork);
+              recursivelyTraverseMutationEffects(root2, finishedWork);
               commitReconciliationEffects(finishedWork);
               if (flags & Update) {
                 {
@@ -19758,7 +19758,7 @@ var require_react_dom_development = __commonJS({
                     var prevRootState = current2.memoizedState;
                     if (prevRootState.isDehydrated) {
                       try {
-                        commitHydratedContainer(root3.containerInfo);
+                        commitHydratedContainer(root2.containerInfo);
                       } catch (error2) {
                         captureCommitPhaseError(finishedWork, finishedWork.return, error2);
                       }
@@ -19769,12 +19769,12 @@ var require_react_dom_development = __commonJS({
               return;
             }
             case HostPortal: {
-              recursivelyTraverseMutationEffects(root3, finishedWork);
+              recursivelyTraverseMutationEffects(root2, finishedWork);
               commitReconciliationEffects(finishedWork);
               return;
             }
             case SuspenseComponent: {
-              recursivelyTraverseMutationEffects(root3, finishedWork);
+              recursivelyTraverseMutationEffects(root2, finishedWork);
               commitReconciliationEffects(finishedWork);
               var offscreenFiber = finishedWork.child;
               if (offscreenFiber.flags & Visibility) {
@@ -19807,10 +19807,10 @@ var require_react_dom_development = __commonJS({
               ) {
                 var prevOffscreenSubtreeWasHidden = offscreenSubtreeWasHidden;
                 offscreenSubtreeWasHidden = prevOffscreenSubtreeWasHidden || _wasHidden;
-                recursivelyTraverseMutationEffects(root3, finishedWork);
+                recursivelyTraverseMutationEffects(root2, finishedWork);
                 offscreenSubtreeWasHidden = prevOffscreenSubtreeWasHidden;
               } else {
-                recursivelyTraverseMutationEffects(root3, finishedWork);
+                recursivelyTraverseMutationEffects(root2, finishedWork);
               }
               commitReconciliationEffects(finishedWork);
               if (flags & Visibility) {
@@ -19841,7 +19841,7 @@ var require_react_dom_development = __commonJS({
               return;
             }
             case SuspenseListComponent: {
-              recursivelyTraverseMutationEffects(root3, finishedWork);
+              recursivelyTraverseMutationEffects(root2, finishedWork);
               commitReconciliationEffects(finishedWork);
               if (flags & Update) {
                 attachSuspenseRetryListeners(finishedWork);
@@ -19852,7 +19852,7 @@ var require_react_dom_development = __commonJS({
               return;
             }
             default: {
-              recursivelyTraverseMutationEffects(root3, finishedWork);
+              recursivelyTraverseMutationEffects(root2, finishedWork);
               commitReconciliationEffects(finishedWork);
               return;
             }
@@ -19872,15 +19872,15 @@ var require_react_dom_development = __commonJS({
             finishedWork.flags &= ~Hydrating;
           }
         }
-        function commitLayoutEffects(finishedWork, root3, committedLanes) {
+        function commitLayoutEffects(finishedWork, root2, committedLanes) {
           inProgressLanes = committedLanes;
-          inProgressRoot = root3;
+          inProgressRoot = root2;
           nextEffect = finishedWork;
-          commitLayoutEffects_begin(finishedWork, root3, committedLanes);
+          commitLayoutEffects_begin(finishedWork, root2, committedLanes);
           inProgressLanes = null;
           inProgressRoot = null;
         }
-        function commitLayoutEffects_begin(subtreeRoot, root3, committedLanes) {
+        function commitLayoutEffects_begin(subtreeRoot, root2, committedLanes) {
           var isModernRoot = (subtreeRoot.mode & ConcurrentMode) !== NoMode;
           while (nextEffect !== null) {
             var fiber = nextEffect;
@@ -19889,7 +19889,7 @@ var require_react_dom_development = __commonJS({
               var isHidden = fiber.memoizedState !== null;
               var newOffscreenSubtreeIsHidden = isHidden || offscreenSubtreeIsHidden;
               if (newOffscreenSubtreeIsHidden) {
-                commitLayoutMountEffects_complete(subtreeRoot, root3, committedLanes);
+                commitLayoutMountEffects_complete(subtreeRoot, root2, committedLanes);
                 continue;
               } else {
                 var current2 = fiber.alternate;
@@ -19909,7 +19909,7 @@ var require_react_dom_development = __commonJS({
                   commitLayoutEffects_begin(
                     child,
                     // New root; bubble back up to here and stop.
-                    root3,
+                    root2,
                     committedLanes
                   );
                   child = child.sibling;
@@ -19917,7 +19917,7 @@ var require_react_dom_development = __commonJS({
                 nextEffect = fiber;
                 offscreenSubtreeIsHidden = prevOffscreenSubtreeIsHidden;
                 offscreenSubtreeWasHidden = prevOffscreenSubtreeWasHidden;
-                commitLayoutMountEffects_complete(subtreeRoot, root3, committedLanes);
+                commitLayoutMountEffects_complete(subtreeRoot, root2, committedLanes);
                 continue;
               }
             }
@@ -19925,18 +19925,18 @@ var require_react_dom_development = __commonJS({
               firstChild.return = fiber;
               nextEffect = firstChild;
             } else {
-              commitLayoutMountEffects_complete(subtreeRoot, root3, committedLanes);
+              commitLayoutMountEffects_complete(subtreeRoot, root2, committedLanes);
             }
           }
         }
-        function commitLayoutMountEffects_complete(subtreeRoot, root3, committedLanes) {
+        function commitLayoutMountEffects_complete(subtreeRoot, root2, committedLanes) {
           while (nextEffect !== null) {
             var fiber = nextEffect;
             if ((fiber.flags & LayoutMask) !== NoFlags) {
               var current2 = fiber.alternate;
               setCurrentFiber(fiber);
               try {
-                commitLayoutEffectOnFiber(root3, current2, fiber, committedLanes);
+                commitLayoutEffectOnFiber(root2, current2, fiber, committedLanes);
               } catch (error2) {
                 captureCommitPhaseError(fiber, fiber.return, error2);
               }
@@ -20063,11 +20063,11 @@ var require_react_dom_development = __commonJS({
             nextEffect = fiber.return;
           }
         }
-        function commitPassiveMountEffects(root3, finishedWork, committedLanes, committedTransitions) {
+        function commitPassiveMountEffects(root2, finishedWork, committedLanes, committedTransitions) {
           nextEffect = finishedWork;
-          commitPassiveMountEffects_begin(finishedWork, root3, committedLanes, committedTransitions);
+          commitPassiveMountEffects_begin(finishedWork, root2, committedLanes, committedTransitions);
         }
-        function commitPassiveMountEffects_begin(subtreeRoot, root3, committedLanes, committedTransitions) {
+        function commitPassiveMountEffects_begin(subtreeRoot, root2, committedLanes, committedTransitions) {
           while (nextEffect !== null) {
             var fiber = nextEffect;
             var firstChild = fiber.child;
@@ -20075,17 +20075,17 @@ var require_react_dom_development = __commonJS({
               firstChild.return = fiber;
               nextEffect = firstChild;
             } else {
-              commitPassiveMountEffects_complete(subtreeRoot, root3, committedLanes, committedTransitions);
+              commitPassiveMountEffects_complete(subtreeRoot, root2, committedLanes, committedTransitions);
             }
           }
         }
-        function commitPassiveMountEffects_complete(subtreeRoot, root3, committedLanes, committedTransitions) {
+        function commitPassiveMountEffects_complete(subtreeRoot, root2, committedLanes, committedTransitions) {
           while (nextEffect !== null) {
             var fiber = nextEffect;
             if ((fiber.flags & Passive) !== NoFlags) {
               setCurrentFiber(fiber);
               try {
-                commitPassiveMountOnFiber(root3, fiber, committedLanes, committedTransitions);
+                commitPassiveMountOnFiber(root2, fiber, committedLanes, committedTransitions);
               } catch (error2) {
                 captureCommitPhaseError(fiber, fiber.return, error2);
               }
@@ -20488,7 +20488,7 @@ var require_react_dom_development = __commonJS({
           }
           return claimNextRetryLane();
         }
-        function scheduleUpdateOnFiber(root3, fiber, lane, eventTime) {
+        function scheduleUpdateOnFiber(root2, fiber, lane, eventTime) {
           checkForNestedUpdates();
           {
             if (isRunningInsertionEffect) {
@@ -20500,25 +20500,25 @@ var require_react_dom_development = __commonJS({
               didScheduleUpdateDuringPassiveEffects = true;
             }
           }
-          markRootUpdated(root3, lane, eventTime);
-          if ((executionContext & RenderContext) !== NoLanes && root3 === workInProgressRoot) {
+          markRootUpdated(root2, lane, eventTime);
+          if ((executionContext & RenderContext) !== NoLanes && root2 === workInProgressRoot) {
             warnAboutRenderPhaseUpdatesInDEV(fiber);
           } else {
             {
               if (isDevToolsPresent) {
-                addFiberToLanesMap(root3, fiber, lane);
+                addFiberToLanesMap(root2, fiber, lane);
               }
             }
             warnIfUpdatesNotWrappedWithActDEV(fiber);
-            if (root3 === workInProgressRoot) {
+            if (root2 === workInProgressRoot) {
               if ((executionContext & RenderContext) === NoContext) {
                 workInProgressRootInterleavedUpdatedLanes = mergeLanes(workInProgressRootInterleavedUpdatedLanes, lane);
               }
               if (workInProgressRootExitStatus === RootSuspendedWithDelay) {
-                markRootSuspended$1(root3, workInProgressRootRenderLanes);
+                markRootSuspended$1(root2, workInProgressRootRenderLanes);
               }
             }
-            ensureRootIsScheduled(root3, eventTime);
+            ensureRootIsScheduled(root2, eventTime);
             if (lane === SyncLane && executionContext === NoContext && (fiber.mode & ConcurrentMode) === NoMode && // Treat `act` as if it's inside `batchedUpdates`, even in legacy mode.
             !ReactCurrentActQueue$1.isBatchingLegacy) {
               resetRenderTimer();
@@ -20526,11 +20526,11 @@ var require_react_dom_development = __commonJS({
             }
           }
         }
-        function scheduleInitialHydrationOnRoot(root3, lane, eventTime) {
-          var current2 = root3.current;
+        function scheduleInitialHydrationOnRoot(root2, lane, eventTime) {
+          var current2 = root2.current;
           current2.lanes = lane;
-          markRootUpdated(root3, lane, eventTime);
-          ensureRootIsScheduled(root3, eventTime);
+          markRootUpdated(root2, lane, eventTime);
+          ensureRootIsScheduled(root2, eventTime);
         }
         function isUnsafeClassRenderPhaseUpdate(fiber) {
           return (
@@ -20539,20 +20539,20 @@ var require_react_dom_development = __commonJS({
             (executionContext & RenderContext) !== NoContext
           );
         }
-        function ensureRootIsScheduled(root3, currentTime) {
-          var existingCallbackNode = root3.callbackNode;
-          markStarvedLanesAsExpired(root3, currentTime);
-          var nextLanes = getNextLanes(root3, root3 === workInProgressRoot ? workInProgressRootRenderLanes : NoLanes);
+        function ensureRootIsScheduled(root2, currentTime) {
+          var existingCallbackNode = root2.callbackNode;
+          markStarvedLanesAsExpired(root2, currentTime);
+          var nextLanes = getNextLanes(root2, root2 === workInProgressRoot ? workInProgressRootRenderLanes : NoLanes);
           if (nextLanes === NoLanes) {
             if (existingCallbackNode !== null) {
               cancelCallback$1(existingCallbackNode);
             }
-            root3.callbackNode = null;
-            root3.callbackPriority = NoLane;
+            root2.callbackNode = null;
+            root2.callbackPriority = NoLane;
             return;
           }
           var newCallbackPriority = getHighestPriorityLane(nextLanes);
-          var existingCallbackPriority = root3.callbackPriority;
+          var existingCallbackPriority = root2.callbackPriority;
           if (existingCallbackPriority === newCallbackPriority && // Special case related to `act`. If the currently scheduled task is a
           // Scheduler task, rather than an `act` task, cancel it and re-scheduled
           // on the `act` queue.
@@ -20569,13 +20569,13 @@ var require_react_dom_development = __commonJS({
           }
           var newCallbackNode;
           if (newCallbackPriority === SyncLane) {
-            if (root3.tag === LegacyRoot) {
+            if (root2.tag === LegacyRoot) {
               if (ReactCurrentActQueue$1.isBatchingLegacy !== null) {
                 ReactCurrentActQueue$1.didScheduleLegacyUpdate = true;
               }
-              scheduleLegacySyncCallback(performSyncWorkOnRoot.bind(null, root3));
+              scheduleLegacySyncCallback(performSyncWorkOnRoot.bind(null, root2));
             } else {
-              scheduleSyncCallback(performSyncWorkOnRoot.bind(null, root3));
+              scheduleSyncCallback(performSyncWorkOnRoot.bind(null, root2));
             }
             {
               if (ReactCurrentActQueue$1.current !== null) {
@@ -20608,12 +20608,12 @@ var require_react_dom_development = __commonJS({
                 schedulerPriorityLevel = NormalPriority;
                 break;
             }
-            newCallbackNode = scheduleCallback$1(schedulerPriorityLevel, performConcurrentWorkOnRoot.bind(null, root3));
+            newCallbackNode = scheduleCallback$1(schedulerPriorityLevel, performConcurrentWorkOnRoot.bind(null, root2));
           }
-          root3.callbackPriority = newCallbackPriority;
-          root3.callbackNode = newCallbackNode;
+          root2.callbackPriority = newCallbackPriority;
+          root2.callbackNode = newCallbackNode;
         }
-        function performConcurrentWorkOnRoot(root3, didTimeout) {
+        function performConcurrentWorkOnRoot(root2, didTimeout) {
           {
             resetNestedUpdateFlag();
           }
@@ -20622,77 +20622,77 @@ var require_react_dom_development = __commonJS({
           if ((executionContext & (RenderContext | CommitContext)) !== NoContext) {
             throw new Error("Should not already be working.");
           }
-          var originalCallbackNode = root3.callbackNode;
+          var originalCallbackNode = root2.callbackNode;
           var didFlushPassiveEffects = flushPassiveEffects();
           if (didFlushPassiveEffects) {
-            if (root3.callbackNode !== originalCallbackNode) {
+            if (root2.callbackNode !== originalCallbackNode) {
               return null;
             }
           }
-          var lanes = getNextLanes(root3, root3 === workInProgressRoot ? workInProgressRootRenderLanes : NoLanes);
+          var lanes = getNextLanes(root2, root2 === workInProgressRoot ? workInProgressRootRenderLanes : NoLanes);
           if (lanes === NoLanes) {
             return null;
           }
-          var shouldTimeSlice = !includesBlockingLane(root3, lanes) && !includesExpiredLane(root3, lanes) && !didTimeout;
-          var exitStatus = shouldTimeSlice ? renderRootConcurrent(root3, lanes) : renderRootSync(root3, lanes);
+          var shouldTimeSlice = !includesBlockingLane(root2, lanes) && !includesExpiredLane(root2, lanes) && !didTimeout;
+          var exitStatus = shouldTimeSlice ? renderRootConcurrent(root2, lanes) : renderRootSync(root2, lanes);
           if (exitStatus !== RootInProgress) {
             if (exitStatus === RootErrored) {
-              var errorRetryLanes = getLanesToRetrySynchronouslyOnError(root3);
+              var errorRetryLanes = getLanesToRetrySynchronouslyOnError(root2);
               if (errorRetryLanes !== NoLanes) {
                 lanes = errorRetryLanes;
-                exitStatus = recoverFromConcurrentError(root3, errorRetryLanes);
+                exitStatus = recoverFromConcurrentError(root2, errorRetryLanes);
               }
             }
             if (exitStatus === RootFatalErrored) {
               var fatalError = workInProgressRootFatalError;
-              prepareFreshStack(root3, NoLanes);
-              markRootSuspended$1(root3, lanes);
-              ensureRootIsScheduled(root3, now());
+              prepareFreshStack(root2, NoLanes);
+              markRootSuspended$1(root2, lanes);
+              ensureRootIsScheduled(root2, now());
               throw fatalError;
             }
             if (exitStatus === RootDidNotComplete) {
-              markRootSuspended$1(root3, lanes);
+              markRootSuspended$1(root2, lanes);
             } else {
-              var renderWasConcurrent = !includesBlockingLane(root3, lanes);
-              var finishedWork = root3.current.alternate;
+              var renderWasConcurrent = !includesBlockingLane(root2, lanes);
+              var finishedWork = root2.current.alternate;
               if (renderWasConcurrent && !isRenderConsistentWithExternalStores(finishedWork)) {
-                exitStatus = renderRootSync(root3, lanes);
+                exitStatus = renderRootSync(root2, lanes);
                 if (exitStatus === RootErrored) {
-                  var _errorRetryLanes = getLanesToRetrySynchronouslyOnError(root3);
+                  var _errorRetryLanes = getLanesToRetrySynchronouslyOnError(root2);
                   if (_errorRetryLanes !== NoLanes) {
                     lanes = _errorRetryLanes;
-                    exitStatus = recoverFromConcurrentError(root3, _errorRetryLanes);
+                    exitStatus = recoverFromConcurrentError(root2, _errorRetryLanes);
                   }
                 }
                 if (exitStatus === RootFatalErrored) {
                   var _fatalError = workInProgressRootFatalError;
-                  prepareFreshStack(root3, NoLanes);
-                  markRootSuspended$1(root3, lanes);
-                  ensureRootIsScheduled(root3, now());
+                  prepareFreshStack(root2, NoLanes);
+                  markRootSuspended$1(root2, lanes);
+                  ensureRootIsScheduled(root2, now());
                   throw _fatalError;
                 }
               }
-              root3.finishedWork = finishedWork;
-              root3.finishedLanes = lanes;
-              finishConcurrentRender(root3, exitStatus, lanes);
+              root2.finishedWork = finishedWork;
+              root2.finishedLanes = lanes;
+              finishConcurrentRender(root2, exitStatus, lanes);
             }
           }
-          ensureRootIsScheduled(root3, now());
-          if (root3.callbackNode === originalCallbackNode) {
-            return performConcurrentWorkOnRoot.bind(null, root3);
+          ensureRootIsScheduled(root2, now());
+          if (root2.callbackNode === originalCallbackNode) {
+            return performConcurrentWorkOnRoot.bind(null, root2);
           }
           return null;
         }
-        function recoverFromConcurrentError(root3, errorRetryLanes) {
+        function recoverFromConcurrentError(root2, errorRetryLanes) {
           var errorsFromFirstAttempt = workInProgressRootConcurrentErrors;
-          if (isRootDehydrated(root3)) {
-            var rootWorkInProgress = prepareFreshStack(root3, errorRetryLanes);
+          if (isRootDehydrated(root2)) {
+            var rootWorkInProgress = prepareFreshStack(root2, errorRetryLanes);
             rootWorkInProgress.flags |= ForceClientRender;
             {
-              errorHydratingContainer(root3.containerInfo);
+              errorHydratingContainer(root2.containerInfo);
             }
           }
-          var exitStatus = renderRootSync(root3, errorRetryLanes);
+          var exitStatus = renderRootSync(root2, errorRetryLanes);
           if (exitStatus !== RootErrored) {
             var errorsFromSecondAttempt = workInProgressRootRecoverableErrors;
             workInProgressRootRecoverableErrors = errorsFromFirstAttempt;
@@ -20709,7 +20709,7 @@ var require_react_dom_development = __commonJS({
             workInProgressRootRecoverableErrors.push.apply(workInProgressRootRecoverableErrors, errors);
           }
         }
-        function finishConcurrentRender(root3, exitStatus, lanes) {
+        function finishConcurrentRender(root2, exitStatus, lanes) {
           switch (exitStatus) {
             case RootInProgress:
             case RootFatalErrored: {
@@ -20719,52 +20719,52 @@ var require_react_dom_development = __commonJS({
             // statement, but eslint doesn't know about invariant, so it complains
             // if I do. eslint-disable-next-line no-fallthrough
             case RootErrored: {
-              commitRoot(root3, workInProgressRootRecoverableErrors, workInProgressTransitions);
+              commitRoot(root2, workInProgressRootRecoverableErrors, workInProgressTransitions);
               break;
             }
             case RootSuspended: {
-              markRootSuspended$1(root3, lanes);
+              markRootSuspended$1(root2, lanes);
               if (includesOnlyRetries(lanes) && // do not delay if we're inside an act() scope
               !shouldForceFlushFallbacksInDEV()) {
                 var msUntilTimeout = globalMostRecentFallbackTime + FALLBACK_THROTTLE_MS - now();
                 if (msUntilTimeout > 10) {
-                  var nextLanes = getNextLanes(root3, NoLanes);
+                  var nextLanes = getNextLanes(root2, NoLanes);
                   if (nextLanes !== NoLanes) {
                     break;
                   }
-                  var suspendedLanes = root3.suspendedLanes;
+                  var suspendedLanes = root2.suspendedLanes;
                   if (!isSubsetOfLanes(suspendedLanes, lanes)) {
                     var eventTime = requestEventTime();
-                    markRootPinged(root3, suspendedLanes);
+                    markRootPinged(root2, suspendedLanes);
                     break;
                   }
-                  root3.timeoutHandle = scheduleTimeout(commitRoot.bind(null, root3, workInProgressRootRecoverableErrors, workInProgressTransitions), msUntilTimeout);
+                  root2.timeoutHandle = scheduleTimeout(commitRoot.bind(null, root2, workInProgressRootRecoverableErrors, workInProgressTransitions), msUntilTimeout);
                   break;
                 }
               }
-              commitRoot(root3, workInProgressRootRecoverableErrors, workInProgressTransitions);
+              commitRoot(root2, workInProgressRootRecoverableErrors, workInProgressTransitions);
               break;
             }
             case RootSuspendedWithDelay: {
-              markRootSuspended$1(root3, lanes);
+              markRootSuspended$1(root2, lanes);
               if (includesOnlyTransitions(lanes)) {
                 break;
               }
               if (!shouldForceFlushFallbacksInDEV()) {
-                var mostRecentEventTime = getMostRecentEventTime(root3, lanes);
+                var mostRecentEventTime = getMostRecentEventTime(root2, lanes);
                 var eventTimeMs = mostRecentEventTime;
                 var timeElapsedMs = now() - eventTimeMs;
                 var _msUntilTimeout = jnd(timeElapsedMs) - timeElapsedMs;
                 if (_msUntilTimeout > 10) {
-                  root3.timeoutHandle = scheduleTimeout(commitRoot.bind(null, root3, workInProgressRootRecoverableErrors, workInProgressTransitions), _msUntilTimeout);
+                  root2.timeoutHandle = scheduleTimeout(commitRoot.bind(null, root2, workInProgressRootRecoverableErrors, workInProgressTransitions), _msUntilTimeout);
                   break;
                 }
               }
-              commitRoot(root3, workInProgressRootRecoverableErrors, workInProgressTransitions);
+              commitRoot(root2, workInProgressRootRecoverableErrors, workInProgressTransitions);
               break;
             }
             case RootCompleted: {
-              commitRoot(root3, workInProgressRootRecoverableErrors, workInProgressTransitions);
+              commitRoot(root2, workInProgressRootRecoverableErrors, workInProgressTransitions);
               break;
             }
             default: {
@@ -20815,12 +20815,12 @@ var require_react_dom_development = __commonJS({
           }
           return true;
         }
-        function markRootSuspended$1(root3, suspendedLanes) {
+        function markRootSuspended$1(root2, suspendedLanes) {
           suspendedLanes = removeLanes(suspendedLanes, workInProgressRootPingedLanes);
           suspendedLanes = removeLanes(suspendedLanes, workInProgressRootInterleavedUpdatedLanes);
-          markRootSuspended(root3, suspendedLanes);
+          markRootSuspended(root2, suspendedLanes);
         }
-        function performSyncWorkOnRoot(root3) {
+        function performSyncWorkOnRoot(root2) {
           {
             syncNestedUpdateFlag();
           }
@@ -20828,40 +20828,40 @@ var require_react_dom_development = __commonJS({
             throw new Error("Should not already be working.");
           }
           flushPassiveEffects();
-          var lanes = getNextLanes(root3, NoLanes);
+          var lanes = getNextLanes(root2, NoLanes);
           if (!includesSomeLane(lanes, SyncLane)) {
-            ensureRootIsScheduled(root3, now());
+            ensureRootIsScheduled(root2, now());
             return null;
           }
-          var exitStatus = renderRootSync(root3, lanes);
-          if (root3.tag !== LegacyRoot && exitStatus === RootErrored) {
-            var errorRetryLanes = getLanesToRetrySynchronouslyOnError(root3);
+          var exitStatus = renderRootSync(root2, lanes);
+          if (root2.tag !== LegacyRoot && exitStatus === RootErrored) {
+            var errorRetryLanes = getLanesToRetrySynchronouslyOnError(root2);
             if (errorRetryLanes !== NoLanes) {
               lanes = errorRetryLanes;
-              exitStatus = recoverFromConcurrentError(root3, errorRetryLanes);
+              exitStatus = recoverFromConcurrentError(root2, errorRetryLanes);
             }
           }
           if (exitStatus === RootFatalErrored) {
             var fatalError = workInProgressRootFatalError;
-            prepareFreshStack(root3, NoLanes);
-            markRootSuspended$1(root3, lanes);
-            ensureRootIsScheduled(root3, now());
+            prepareFreshStack(root2, NoLanes);
+            markRootSuspended$1(root2, lanes);
+            ensureRootIsScheduled(root2, now());
             throw fatalError;
           }
           if (exitStatus === RootDidNotComplete) {
             throw new Error("Root did not complete. This is a bug in React.");
           }
-          var finishedWork = root3.current.alternate;
-          root3.finishedWork = finishedWork;
-          root3.finishedLanes = lanes;
-          commitRoot(root3, workInProgressRootRecoverableErrors, workInProgressTransitions);
-          ensureRootIsScheduled(root3, now());
+          var finishedWork = root2.current.alternate;
+          root2.finishedWork = finishedWork;
+          root2.finishedLanes = lanes;
+          commitRoot(root2, workInProgressRootRecoverableErrors, workInProgressTransitions);
+          ensureRootIsScheduled(root2, now());
           return null;
         }
-        function flushRoot(root3, lanes) {
+        function flushRoot(root2, lanes) {
           if (lanes !== NoLanes) {
-            markRootEntangled(root3, mergeLanes(lanes, SyncLane));
-            ensureRootIsScheduled(root3, now());
+            markRootEntangled(root2, mergeLanes(lanes, SyncLane));
+            ensureRootIsScheduled(root2, now());
             if ((executionContext & (RenderContext | CommitContext)) === NoContext) {
               resetRenderTimer();
               flushSyncCallbacks();
@@ -20934,12 +20934,12 @@ var require_react_dom_development = __commonJS({
           subtreeRenderLanes = subtreeRenderLanesCursor.current;
           pop(subtreeRenderLanesCursor, fiber);
         }
-        function prepareFreshStack(root3, lanes) {
-          root3.finishedWork = null;
-          root3.finishedLanes = NoLanes;
-          var timeoutHandle = root3.timeoutHandle;
+        function prepareFreshStack(root2, lanes) {
+          root2.finishedWork = null;
+          root2.finishedLanes = NoLanes;
+          var timeoutHandle = root2.timeoutHandle;
           if (timeoutHandle !== noTimeout) {
-            root3.timeoutHandle = noTimeout;
+            root2.timeoutHandle = noTimeout;
             cancelTimeout(timeoutHandle);
           }
           if (workInProgress !== null) {
@@ -20950,8 +20950,8 @@ var require_react_dom_development = __commonJS({
               interruptedWork = interruptedWork.return;
             }
           }
-          workInProgressRoot = root3;
-          var rootWorkInProgress = createWorkInProgress(root3.current, null);
+          workInProgressRoot = root2;
+          var rootWorkInProgress = createWorkInProgress(root2.current, null);
           workInProgress = rootWorkInProgress;
           workInProgressRootRenderLanes = subtreeRenderLanes = workInProgressRootIncludedLanes = lanes;
           workInProgressRootExitStatus = RootInProgress;
@@ -20967,7 +20967,7 @@ var require_react_dom_development = __commonJS({
           }
           return rootWorkInProgress;
         }
-        function handleError(root3, thrownValue) {
+        function handleError(root2, thrownValue) {
           do {
             var erroredWork = workInProgress;
             try {
@@ -20993,7 +20993,7 @@ var require_react_dom_development = __commonJS({
                   markComponentErrored(erroredWork, thrownValue, workInProgressRootRenderLanes);
                 }
               }
-              throwException(root3, erroredWork.return, erroredWork, thrownValue, workInProgressRootRenderLanes);
+              throwException(root2, erroredWork.return, erroredWork, thrownValue, workInProgressRootRenderLanes);
               completeUnitOfWork(erroredWork);
             } catch (yetAnotherThrownValue) {
               thrownValue = yetAnotherThrownValue;
@@ -21052,23 +21052,23 @@ var require_react_dom_development = __commonJS({
         function renderHasNotSuspendedYet() {
           return workInProgressRootExitStatus === RootInProgress;
         }
-        function renderRootSync(root3, lanes) {
+        function renderRootSync(root2, lanes) {
           var prevExecutionContext = executionContext;
           executionContext |= RenderContext;
           var prevDispatcher = pushDispatcher();
-          if (workInProgressRoot !== root3 || workInProgressRootRenderLanes !== lanes) {
+          if (workInProgressRoot !== root2 || workInProgressRootRenderLanes !== lanes) {
             {
               if (isDevToolsPresent) {
-                var memoizedUpdaters = root3.memoizedUpdaters;
+                var memoizedUpdaters = root2.memoizedUpdaters;
                 if (memoizedUpdaters.size > 0) {
-                  restorePendingUpdaters(root3, workInProgressRootRenderLanes);
+                  restorePendingUpdaters(root2, workInProgressRootRenderLanes);
                   memoizedUpdaters.clear();
                 }
-                movePendingFibersToMemoized(root3, lanes);
+                movePendingFibersToMemoized(root2, lanes);
               }
             }
             workInProgressTransitions = getTransitionsForLanes();
-            prepareFreshStack(root3, lanes);
+            prepareFreshStack(root2, lanes);
           }
           {
             markRenderStarted(lanes);
@@ -21078,7 +21078,7 @@ var require_react_dom_development = __commonJS({
               workLoopSync();
               break;
             } catch (thrownValue) {
-              handleError(root3, thrownValue);
+              handleError(root2, thrownValue);
             }
           } while (true);
           resetContextDependencies();
@@ -21099,24 +21099,24 @@ var require_react_dom_development = __commonJS({
             performUnitOfWork(workInProgress);
           }
         }
-        function renderRootConcurrent(root3, lanes) {
+        function renderRootConcurrent(root2, lanes) {
           var prevExecutionContext = executionContext;
           executionContext |= RenderContext;
           var prevDispatcher = pushDispatcher();
-          if (workInProgressRoot !== root3 || workInProgressRootRenderLanes !== lanes) {
+          if (workInProgressRoot !== root2 || workInProgressRootRenderLanes !== lanes) {
             {
               if (isDevToolsPresent) {
-                var memoizedUpdaters = root3.memoizedUpdaters;
+                var memoizedUpdaters = root2.memoizedUpdaters;
                 if (memoizedUpdaters.size > 0) {
-                  restorePendingUpdaters(root3, workInProgressRootRenderLanes);
+                  restorePendingUpdaters(root2, workInProgressRootRenderLanes);
                   memoizedUpdaters.clear();
                 }
-                movePendingFibersToMemoized(root3, lanes);
+                movePendingFibersToMemoized(root2, lanes);
               }
             }
             workInProgressTransitions = getTransitionsForLanes();
             resetRenderTimer();
-            prepareFreshStack(root3, lanes);
+            prepareFreshStack(root2, lanes);
           }
           {
             markRenderStarted(lanes);
@@ -21126,7 +21126,7 @@ var require_react_dom_development = __commonJS({
               workLoopConcurrent();
               break;
             } catch (thrownValue) {
-              handleError(root3, thrownValue);
+              handleError(root2, thrownValue);
             }
           } while (true);
           resetContextDependencies();
@@ -21230,20 +21230,20 @@ var require_react_dom_development = __commonJS({
             workInProgressRootExitStatus = RootCompleted;
           }
         }
-        function commitRoot(root3, recoverableErrors, transitions) {
+        function commitRoot(root2, recoverableErrors, transitions) {
           var previousUpdateLanePriority = getCurrentUpdatePriority();
           var prevTransition = ReactCurrentBatchConfig$3.transition;
           try {
             ReactCurrentBatchConfig$3.transition = null;
             setCurrentUpdatePriority(DiscreteEventPriority);
-            commitRootImpl(root3, recoverableErrors, transitions, previousUpdateLanePriority);
+            commitRootImpl(root2, recoverableErrors, transitions, previousUpdateLanePriority);
           } finally {
             ReactCurrentBatchConfig$3.transition = prevTransition;
             setCurrentUpdatePriority(previousUpdateLanePriority);
           }
           return null;
         }
-        function commitRootImpl(root3, recoverableErrors, transitions, renderPriorityLevel) {
+        function commitRootImpl(root2, recoverableErrors, transitions, renderPriorityLevel) {
           do {
             flushPassiveEffects();
           } while (rootWithPendingPassiveEffects !== null);
@@ -21251,8 +21251,8 @@ var require_react_dom_development = __commonJS({
           if ((executionContext & (RenderContext | CommitContext)) !== NoContext) {
             throw new Error("Should not already be working.");
           }
-          var finishedWork = root3.finishedWork;
-          var lanes = root3.finishedLanes;
+          var finishedWork = root2.finishedWork;
+          var lanes = root2.finishedLanes;
           {
             markCommitStarted(lanes);
           }
@@ -21268,16 +21268,16 @@ var require_react_dom_development = __commonJS({
               }
             }
           }
-          root3.finishedWork = null;
-          root3.finishedLanes = NoLanes;
-          if (finishedWork === root3.current) {
+          root2.finishedWork = null;
+          root2.finishedLanes = NoLanes;
+          if (finishedWork === root2.current) {
             throw new Error("Cannot commit the same tree as before. This error is likely caused by a bug in React. Please file an issue.");
           }
-          root3.callbackNode = null;
-          root3.callbackPriority = NoLane;
+          root2.callbackNode = null;
+          root2.callbackPriority = NoLane;
           var remainingLanes = mergeLanes(finishedWork.lanes, finishedWork.childLanes);
-          markRootFinished(root3, remainingLanes);
-          if (root3 === workInProgressRoot) {
+          markRootFinished(root2, remainingLanes);
+          if (root2 === workInProgressRoot) {
             workInProgressRoot = null;
             workInProgress = null;
             workInProgressRootRenderLanes = NoLanes;
@@ -21302,17 +21302,17 @@ var require_react_dom_development = __commonJS({
             var prevExecutionContext = executionContext;
             executionContext |= CommitContext;
             ReactCurrentOwner$2.current = null;
-            var shouldFireAfterActiveInstanceBlur2 = commitBeforeMutationEffects(root3, finishedWork);
+            var shouldFireAfterActiveInstanceBlur2 = commitBeforeMutationEffects(root2, finishedWork);
             {
               recordCommitTime();
             }
-            commitMutationEffects(root3, finishedWork, lanes);
-            resetAfterCommit(root3.containerInfo);
-            root3.current = finishedWork;
+            commitMutationEffects(root2, finishedWork, lanes);
+            resetAfterCommit(root2.containerInfo);
+            root2.current = finishedWork;
             {
               markLayoutEffectsStarted(lanes);
             }
-            commitLayoutEffects(finishedWork, root3, lanes);
+            commitLayoutEffects(finishedWork, root2, lanes);
             {
               markLayoutEffectsStopped();
             }
@@ -21321,7 +21321,7 @@ var require_react_dom_development = __commonJS({
             setCurrentUpdatePriority(previousPriority);
             ReactCurrentBatchConfig$3.transition = prevTransition;
           } else {
-            root3.current = finishedWork;
+            root2.current = finishedWork;
             {
               recordCommitTime();
             }
@@ -21329,7 +21329,7 @@ var require_react_dom_development = __commonJS({
           var rootDidHavePassiveEffects = rootDoesHavePassiveEffects;
           if (rootDoesHavePassiveEffects) {
             rootDoesHavePassiveEffects = false;
-            rootWithPendingPassiveEffects = root3;
+            rootWithPendingPassiveEffects = root2;
             pendingPassiveEffectsLanes = lanes;
           } else {
             {
@@ -21337,27 +21337,27 @@ var require_react_dom_development = __commonJS({
               rootWithPassiveNestedUpdates = null;
             }
           }
-          remainingLanes = root3.pendingLanes;
+          remainingLanes = root2.pendingLanes;
           if (remainingLanes === NoLanes) {
             legacyErrorBoundariesThatAlreadyFailed = null;
           }
           {
             if (!rootDidHavePassiveEffects) {
-              commitDoubleInvokeEffectsInDEV(root3.current, false);
+              commitDoubleInvokeEffectsInDEV(root2.current, false);
             }
           }
           onCommitRoot(finishedWork.stateNode, renderPriorityLevel);
           {
             if (isDevToolsPresent) {
-              root3.memoizedUpdaters.clear();
+              root2.memoizedUpdaters.clear();
             }
           }
           {
             onCommitRoot$1();
           }
-          ensureRootIsScheduled(root3, now());
+          ensureRootIsScheduled(root2, now());
           if (recoverableErrors !== null) {
-            var onRecoverableError = root3.onRecoverableError;
+            var onRecoverableError = root2.onRecoverableError;
             for (var i = 0; i < recoverableErrors.length; i++) {
               var recoverableError = recoverableErrors[i];
               var componentStack = recoverableError.stack;
@@ -21374,19 +21374,19 @@ var require_react_dom_development = __commonJS({
             firstUncaughtError = null;
             throw error$1;
           }
-          if (includesSomeLane(pendingPassiveEffectsLanes, SyncLane) && root3.tag !== LegacyRoot) {
+          if (includesSomeLane(pendingPassiveEffectsLanes, SyncLane) && root2.tag !== LegacyRoot) {
             flushPassiveEffects();
           }
-          remainingLanes = root3.pendingLanes;
+          remainingLanes = root2.pendingLanes;
           if (includesSomeLane(remainingLanes, SyncLane)) {
             {
               markNestedUpdateScheduled();
             }
-            if (root3 === rootWithNestedUpdates) {
+            if (root2 === rootWithNestedUpdates) {
               nestedUpdateCount++;
             } else {
               nestedUpdateCount = 0;
-              rootWithNestedUpdates = root3;
+              rootWithNestedUpdates = root2;
             }
           } else {
             nestedUpdateCount = 0;
@@ -21432,7 +21432,7 @@ var require_react_dom_development = __commonJS({
           }
           var transitions = pendingPassiveTransitions;
           pendingPassiveTransitions = null;
-          var root3 = rootWithPendingPassiveEffects;
+          var root2 = rootWithPendingPassiveEffects;
           var lanes = pendingPassiveEffectsLanes;
           rootWithPendingPassiveEffects = null;
           pendingPassiveEffectsLanes = NoLanes;
@@ -21448,31 +21448,31 @@ var require_react_dom_development = __commonJS({
           }
           var prevExecutionContext = executionContext;
           executionContext |= CommitContext;
-          commitPassiveUnmountEffects(root3.current);
-          commitPassiveMountEffects(root3, root3.current, lanes, transitions);
+          commitPassiveUnmountEffects(root2.current);
+          commitPassiveMountEffects(root2, root2.current, lanes, transitions);
           {
             var profilerEffects = pendingPassiveProfilerEffects;
             pendingPassiveProfilerEffects = [];
             for (var i = 0; i < profilerEffects.length; i++) {
               var _fiber = profilerEffects[i];
-              commitPassiveEffectDurations(root3, _fiber);
+              commitPassiveEffectDurations(root2, _fiber);
             }
           }
           {
             markPassiveEffectsStopped();
           }
           {
-            commitDoubleInvokeEffectsInDEV(root3.current, true);
+            commitDoubleInvokeEffectsInDEV(root2.current, true);
           }
           executionContext = prevExecutionContext;
           flushSyncCallbacks();
           {
             if (didScheduleUpdateDuringPassiveEffects) {
-              if (root3 === rootWithPassiveNestedUpdates) {
+              if (root2 === rootWithPassiveNestedUpdates) {
                 nestedPassiveUpdateCount++;
               } else {
                 nestedPassiveUpdateCount = 0;
-                rootWithPassiveNestedUpdates = root3;
+                rootWithPassiveNestedUpdates = root2;
               }
             } else {
               nestedPassiveUpdateCount = 0;
@@ -21480,9 +21480,9 @@ var require_react_dom_development = __commonJS({
             isFlushingPassiveEffects = false;
             didScheduleUpdateDuringPassiveEffects = false;
           }
-          onPostCommitRoot(root3);
+          onPostCommitRoot(root2);
           {
-            var stateNode = root3.current.stateNode;
+            var stateNode = root2.current.stateNode;
             stateNode.effectDuration = 0;
             stateNode.passiveEffectDuration = 0;
           }
@@ -21508,11 +21508,11 @@ var require_react_dom_development = __commonJS({
         function captureCommitPhaseErrorOnRoot(rootFiber, sourceFiber, error2) {
           var errorInfo = createCapturedValueAtFiber(error2, sourceFiber);
           var update = createRootErrorUpdate(rootFiber, errorInfo, SyncLane);
-          var root3 = enqueueUpdate(rootFiber, update, SyncLane);
+          var root2 = enqueueUpdate(rootFiber, update, SyncLane);
           var eventTime = requestEventTime();
-          if (root3 !== null) {
-            markRootUpdated(root3, SyncLane, eventTime);
-            ensureRootIsScheduled(root3, eventTime);
+          if (root2 !== null) {
+            markRootUpdated(root2, SyncLane, eventTime);
+            ensureRootIsScheduled(root2, eventTime);
           }
         }
         function captureCommitPhaseError(sourceFiber, nearestMountedAncestor, error$1) {
@@ -21538,11 +21538,11 @@ var require_react_dom_development = __commonJS({
               if (typeof ctor.getDerivedStateFromError === "function" || typeof instance.componentDidCatch === "function" && !isAlreadyFailedLegacyErrorBoundary(instance)) {
                 var errorInfo = createCapturedValueAtFiber(error$1, sourceFiber);
                 var update = createClassErrorUpdate(fiber, errorInfo, SyncLane);
-                var root3 = enqueueUpdate(fiber, update, SyncLane);
+                var root2 = enqueueUpdate(fiber, update, SyncLane);
                 var eventTime = requestEventTime();
-                if (root3 !== null) {
-                  markRootUpdated(root3, SyncLane, eventTime);
-                  ensureRootIsScheduled(root3, eventTime);
+                if (root2 !== null) {
+                  markRootUpdated(root2, SyncLane, eventTime);
+                  ensureRootIsScheduled(root2, eventTime);
                 }
                 return;
               }
@@ -21553,32 +21553,32 @@ var require_react_dom_development = __commonJS({
             error("Internal React error: Attempted to capture a commit phase error inside a detached tree. This indicates a bug in React. Likely causes include deleting the same fiber more than once, committing an already-finished tree, or an inconsistent return pointer.\n\nError message:\n\n%s", error$1);
           }
         }
-        function pingSuspendedRoot(root3, wakeable, pingedLanes) {
-          var pingCache = root3.pingCache;
+        function pingSuspendedRoot(root2, wakeable, pingedLanes) {
+          var pingCache = root2.pingCache;
           if (pingCache !== null) {
             pingCache.delete(wakeable);
           }
           var eventTime = requestEventTime();
-          markRootPinged(root3, pingedLanes);
-          warnIfSuspenseResolutionNotWrappedWithActDEV(root3);
-          if (workInProgressRoot === root3 && isSubsetOfLanes(workInProgressRootRenderLanes, pingedLanes)) {
+          markRootPinged(root2, pingedLanes);
+          warnIfSuspenseResolutionNotWrappedWithActDEV(root2);
+          if (workInProgressRoot === root2 && isSubsetOfLanes(workInProgressRootRenderLanes, pingedLanes)) {
             if (workInProgressRootExitStatus === RootSuspendedWithDelay || workInProgressRootExitStatus === RootSuspended && includesOnlyRetries(workInProgressRootRenderLanes) && now() - globalMostRecentFallbackTime < FALLBACK_THROTTLE_MS) {
-              prepareFreshStack(root3, NoLanes);
+              prepareFreshStack(root2, NoLanes);
             } else {
               workInProgressRootPingedLanes = mergeLanes(workInProgressRootPingedLanes, pingedLanes);
             }
           }
-          ensureRootIsScheduled(root3, eventTime);
+          ensureRootIsScheduled(root2, eventTime);
         }
         function retryTimedOutBoundary(boundaryFiber, retryLane) {
           if (retryLane === NoLane) {
             retryLane = requestRetryLane(boundaryFiber);
           }
           var eventTime = requestEventTime();
-          var root3 = enqueueConcurrentRenderForLane(boundaryFiber, retryLane);
-          if (root3 !== null) {
-            markRootUpdated(root3, retryLane, eventTime);
-            ensureRootIsScheduled(root3, eventTime);
+          var root2 = enqueueConcurrentRenderForLane(boundaryFiber, retryLane);
+          if (root2 !== null) {
+            markRootUpdated(root2, retryLane, eventTime);
+            ensureRootIsScheduled(root2, eventTime);
           }
         }
         function retryDehydratedSuspenseBoundary(boundaryFiber) {
@@ -21767,12 +21767,12 @@ var require_react_dom_development = __commonJS({
             }
           }
         }
-        function restorePendingUpdaters(root3, lanes) {
+        function restorePendingUpdaters(root2, lanes) {
           {
             if (isDevToolsPresent) {
-              var memoizedUpdaters = root3.memoizedUpdaters;
+              var memoizedUpdaters = root2.memoizedUpdaters;
               memoizedUpdaters.forEach(function(schedulingFiber) {
-                addFiberToLanesMap(root3, schedulingFiber, lanes);
+                addFiberToLanesMap(root2, schedulingFiber, lanes);
               });
             }
           }
@@ -21830,9 +21830,9 @@ var require_react_dom_development = __commonJS({
             }
           }
         }
-        function warnIfSuspenseResolutionNotWrappedWithActDEV(root3) {
+        function warnIfSuspenseResolutionNotWrappedWithActDEV(root2) {
           {
-            if (root3.tag !== LegacyRoot && isConcurrentActEnvironment() && ReactCurrentActQueue$1.current === null) {
+            if (root2.tag !== LegacyRoot && isConcurrentActEnvironment() && ReactCurrentActQueue$1.current === null) {
               error("A suspended resource finished loading inside a test, but the event was not wrapped in act(...).\n\nWhen testing, code that resolves suspended data should be wrapped into act(...):\n\nact(() => {\n  /* finish loading suspended data */\n});\n/* assert on the output */\n\nThis ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act");
             }
           }
@@ -21956,7 +21956,7 @@ var require_react_dom_development = __commonJS({
             failedBoundaries.add(fiber);
           }
         }
-        var scheduleRefresh = function(root3, update) {
+        var scheduleRefresh = function(root2, update) {
           {
             if (resolveFamily === null) {
               return;
@@ -21964,18 +21964,18 @@ var require_react_dom_development = __commonJS({
             var staleFamilies = update.staleFamilies, updatedFamilies = update.updatedFamilies;
             flushPassiveEffects();
             flushSync(function() {
-              scheduleFibersWithFamiliesRecursively(root3.current, updatedFamilies, staleFamilies);
+              scheduleFibersWithFamiliesRecursively(root2.current, updatedFamilies, staleFamilies);
             });
           }
         };
-        var scheduleRoot = function(root3, element) {
+        var scheduleRoot = function(root2, element) {
           {
-            if (root3.context !== emptyContextObject) {
+            if (root2.context !== emptyContextObject) {
               return;
             }
             flushPassiveEffects();
             flushSync(function() {
-              updateContainer(element, root3, null, null);
+              updateContainer(element, root2, null, null);
             });
           }
         };
@@ -22034,13 +22034,13 @@ var require_react_dom_development = __commonJS({
             }
           }
         }
-        var findHostInstancesForRefresh = function(root3, families) {
+        var findHostInstancesForRefresh = function(root2, families) {
           {
             var hostInstances = /* @__PURE__ */ new Set();
             var types = new Set(families.map(function(family) {
               return family.current;
             }));
-            findHostInstancesForMatchingFibersRecursively(root3.current, types, hostInstances);
+            findHostInstancesForMatchingFibersRecursively(root2.current, types, hostInstances);
             return hostInstances;
           }
         };
@@ -22593,10 +22593,10 @@ var require_react_dom_development = __commonJS({
           }
         }
         function createFiberRoot(containerInfo, tag, hydrate2, initialChildren, hydrationCallbacks, isStrictMode, concurrentUpdatesByDefaultOverride, identifierPrefix, onRecoverableError, transitionCallbacks) {
-          var root3 = new FiberRootNode(containerInfo, tag, hydrate2, identifierPrefix, onRecoverableError);
+          var root2 = new FiberRootNode(containerInfo, tag, hydrate2, identifierPrefix, onRecoverableError);
           var uninitializedFiber = createHostRootFiber(tag, isStrictMode);
-          root3.current = uninitializedFiber;
-          uninitializedFiber.stateNode = root3;
+          root2.current = uninitializedFiber;
+          uninitializedFiber.stateNode = root2;
           {
             var _initialState = {
               element: initialChildren,
@@ -22609,7 +22609,7 @@ var require_react_dom_development = __commonJS({
             uninitializedFiber.memoizedState = _initialState;
           }
           initializeUpdateQueue(uninitializedFiber);
-          return root3;
+          return root2;
         }
         var ReactVersion = "18.3.1";
         function createPortal(children, containerInfo, implementation) {
@@ -22692,16 +22692,16 @@ var require_react_dom_development = __commonJS({
         }
         function createHydrationContainer(initialChildren, callback, containerInfo, tag, hydrationCallbacks, isStrictMode, concurrentUpdatesByDefaultOverride, identifierPrefix, onRecoverableError, transitionCallbacks) {
           var hydrate2 = true;
-          var root3 = createFiberRoot(containerInfo, tag, hydrate2, initialChildren, hydrationCallbacks, isStrictMode, concurrentUpdatesByDefaultOverride, identifierPrefix, onRecoverableError);
-          root3.context = getContextForSubtree(null);
-          var current2 = root3.current;
+          var root2 = createFiberRoot(containerInfo, tag, hydrate2, initialChildren, hydrationCallbacks, isStrictMode, concurrentUpdatesByDefaultOverride, identifierPrefix, onRecoverableError);
+          root2.context = getContextForSubtree(null);
+          var current2 = root2.current;
           var eventTime = requestEventTime();
           var lane = requestUpdateLane(current2);
           var update = createUpdate(eventTime, lane);
           update.callback = callback !== void 0 && callback !== null ? callback : null;
           enqueueUpdate(current2, update, lane);
-          scheduleInitialHydrationOnRoot(root3, lane, eventTime);
-          return root3;
+          scheduleInitialHydrationOnRoot(root2, lane, eventTime);
+          return root2;
         }
         function updateContainer(element, container, parentComponent, callback) {
           {
@@ -22738,10 +22738,10 @@ var require_react_dom_development = __commonJS({
             }
             update.callback = callback;
           }
-          var root3 = enqueueUpdate(current$1, update, lane);
-          if (root3 !== null) {
-            scheduleUpdateOnFiber(root3, current$1, lane, eventTime);
-            entangleTransitions(root3, current$1, lane);
+          var root2 = enqueueUpdate(current$1, update, lane);
+          if (root2 !== null) {
+            scheduleUpdateOnFiber(root2, current$1, lane, eventTime);
+            entangleTransitions(root2, current$1, lane);
           }
           return lane;
         }
@@ -22760,19 +22760,19 @@ var require_react_dom_development = __commonJS({
         function attemptSynchronousHydration$1(fiber) {
           switch (fiber.tag) {
             case HostRoot: {
-              var root3 = fiber.stateNode;
-              if (isRootDehydrated(root3)) {
-                var lanes = getHighestPriorityPendingLanes(root3);
-                flushRoot(root3, lanes);
+              var root2 = fiber.stateNode;
+              if (isRootDehydrated(root2)) {
+                var lanes = getHighestPriorityPendingLanes(root2);
+                flushRoot(root2, lanes);
               }
               break;
             }
             case SuspenseComponent: {
               flushSync(function() {
-                var root4 = enqueueConcurrentRenderForLane(fiber, SyncLane);
-                if (root4 !== null) {
+                var root3 = enqueueConcurrentRenderForLane(fiber, SyncLane);
+                if (root3 !== null) {
                   var eventTime = requestEventTime();
-                  scheduleUpdateOnFiber(root4, fiber, SyncLane, eventTime);
+                  scheduleUpdateOnFiber(root3, fiber, SyncLane, eventTime);
                 }
               });
               var retryLane = SyncLane;
@@ -22799,10 +22799,10 @@ var require_react_dom_development = __commonJS({
             return;
           }
           var lane = SelectiveHydrationLane;
-          var root3 = enqueueConcurrentRenderForLane(fiber, lane);
-          if (root3 !== null) {
+          var root2 = enqueueConcurrentRenderForLane(fiber, lane);
+          if (root2 !== null) {
             var eventTime = requestEventTime();
-            scheduleUpdateOnFiber(root3, fiber, lane, eventTime);
+            scheduleUpdateOnFiber(root2, fiber, lane, eventTime);
           }
           markRetryLaneIfNotHydrated(fiber, lane);
         }
@@ -22811,10 +22811,10 @@ var require_react_dom_development = __commonJS({
             return;
           }
           var lane = requestUpdateLane(fiber);
-          var root3 = enqueueConcurrentRenderForLane(fiber, lane);
-          if (root3 !== null) {
+          var root2 = enqueueConcurrentRenderForLane(fiber, lane);
+          if (root2 !== null) {
             var eventTime = requestEventTime();
-            scheduleUpdateOnFiber(root3, fiber, lane, eventTime);
+            scheduleUpdateOnFiber(root2, fiber, lane, eventTime);
           }
           markRetryLaneIfNotHydrated(fiber, lane);
         }
@@ -22927,9 +22927,9 @@ var require_react_dom_development = __commonJS({
               hook.memoizedState = newState;
               hook.baseState = newState;
               fiber.memoizedProps = assign({}, fiber.memoizedProps);
-              var root3 = enqueueConcurrentRenderForLane(fiber, SyncLane);
-              if (root3 !== null) {
-                scheduleUpdateOnFiber(root3, fiber, SyncLane, NoTimestamp);
+              var root2 = enqueueConcurrentRenderForLane(fiber, SyncLane);
+              if (root2 !== null) {
+                scheduleUpdateOnFiber(root2, fiber, SyncLane, NoTimestamp);
               }
             }
           };
@@ -22940,9 +22940,9 @@ var require_react_dom_development = __commonJS({
               hook.memoizedState = newState;
               hook.baseState = newState;
               fiber.memoizedProps = assign({}, fiber.memoizedProps);
-              var root3 = enqueueConcurrentRenderForLane(fiber, SyncLane);
-              if (root3 !== null) {
-                scheduleUpdateOnFiber(root3, fiber, SyncLane, NoTimestamp);
+              var root2 = enqueueConcurrentRenderForLane(fiber, SyncLane);
+              if (root2 !== null) {
+                scheduleUpdateOnFiber(root2, fiber, SyncLane, NoTimestamp);
               }
             }
           };
@@ -22953,9 +22953,9 @@ var require_react_dom_development = __commonJS({
               hook.memoizedState = newState;
               hook.baseState = newState;
               fiber.memoizedProps = assign({}, fiber.memoizedProps);
-              var root3 = enqueueConcurrentRenderForLane(fiber, SyncLane);
-              if (root3 !== null) {
-                scheduleUpdateOnFiber(root3, fiber, SyncLane, NoTimestamp);
+              var root2 = enqueueConcurrentRenderForLane(fiber, SyncLane);
+              if (root2 !== null) {
+                scheduleUpdateOnFiber(root2, fiber, SyncLane, NoTimestamp);
               }
             }
           };
@@ -22964,9 +22964,9 @@ var require_react_dom_development = __commonJS({
             if (fiber.alternate) {
               fiber.alternate.pendingProps = fiber.pendingProps;
             }
-            var root3 = enqueueConcurrentRenderForLane(fiber, SyncLane);
-            if (root3 !== null) {
-              scheduleUpdateOnFiber(root3, fiber, SyncLane, NoTimestamp);
+            var root2 = enqueueConcurrentRenderForLane(fiber, SyncLane);
+            if (root2 !== null) {
+              scheduleUpdateOnFiber(root2, fiber, SyncLane, NoTimestamp);
             }
           };
           overridePropsDeletePath = function(fiber, path) {
@@ -22974,9 +22974,9 @@ var require_react_dom_development = __commonJS({
             if (fiber.alternate) {
               fiber.alternate.pendingProps = fiber.pendingProps;
             }
-            var root3 = enqueueConcurrentRenderForLane(fiber, SyncLane);
-            if (root3 !== null) {
-              scheduleUpdateOnFiber(root3, fiber, SyncLane, NoTimestamp);
+            var root2 = enqueueConcurrentRenderForLane(fiber, SyncLane);
+            if (root2 !== null) {
+              scheduleUpdateOnFiber(root2, fiber, SyncLane, NoTimestamp);
             }
           };
           overridePropsRenamePath = function(fiber, oldPath, newPath) {
@@ -22984,15 +22984,15 @@ var require_react_dom_development = __commonJS({
             if (fiber.alternate) {
               fiber.alternate.pendingProps = fiber.pendingProps;
             }
-            var root3 = enqueueConcurrentRenderForLane(fiber, SyncLane);
-            if (root3 !== null) {
-              scheduleUpdateOnFiber(root3, fiber, SyncLane, NoTimestamp);
+            var root2 = enqueueConcurrentRenderForLane(fiber, SyncLane);
+            if (root2 !== null) {
+              scheduleUpdateOnFiber(root2, fiber, SyncLane, NoTimestamp);
             }
           };
           scheduleUpdate = function(fiber) {
-            var root3 = enqueueConcurrentRenderForLane(fiber, SyncLane);
-            if (root3 !== null) {
-              scheduleUpdateOnFiber(root3, fiber, SyncLane, NoTimestamp);
+            var root2 = enqueueConcurrentRenderForLane(fiber, SyncLane);
+            if (root2 !== null) {
+              scheduleUpdateOnFiber(root2, fiber, SyncLane, NoTimestamp);
             }
           };
           setErrorHandler = function(newShouldErrorImpl) {
@@ -23058,8 +23058,8 @@ var require_react_dom_development = __commonJS({
           this._internalRoot = internalRoot;
         }
         ReactDOMHydrationRoot.prototype.render = ReactDOMRoot.prototype.render = function(children) {
-          var root3 = this._internalRoot;
-          if (root3 === null) {
+          var root2 = this._internalRoot;
+          if (root2 === null) {
             throw new Error("Cannot update an unmounted root.");
           }
           {
@@ -23070,9 +23070,9 @@ var require_react_dom_development = __commonJS({
             } else if (typeof arguments[1] !== "undefined") {
               error("You passed a second argument to root.render(...) but it only accepts one argument.");
             }
-            var container = root3.containerInfo;
+            var container = root2.containerInfo;
             if (container.nodeType !== COMMENT_NODE) {
-              var hostInstance = findHostInstanceWithNoPortals(root3.current);
+              var hostInstance = findHostInstanceWithNoPortals(root2.current);
               if (hostInstance) {
                 if (hostInstance.parentNode !== container) {
                   error("render(...): It looks like the React-rendered content of the root container was removed without using React. This is not supported and will cause errors. Instead, call root.unmount() to empty a root's container.");
@@ -23080,7 +23080,7 @@ var require_react_dom_development = __commonJS({
               }
             }
           }
-          updateContainer(children, root3, null, null);
+          updateContainer(children, root2, null, null);
         };
         ReactDOMHydrationRoot.prototype.unmount = ReactDOMRoot.prototype.unmount = function() {
           {
@@ -23088,17 +23088,17 @@ var require_react_dom_development = __commonJS({
               error("unmount(...): does not support a callback argument. To execute a side effect after rendering, declare it in a component body with useEffect().");
             }
           }
-          var root3 = this._internalRoot;
-          if (root3 !== null) {
+          var root2 = this._internalRoot;
+          if (root2 !== null) {
             this._internalRoot = null;
-            var container = root3.containerInfo;
+            var container = root2.containerInfo;
             {
               if (isAlreadyRendering()) {
                 error("Attempted to synchronously unmount a root while React was already rendering. React cannot finish unmounting the root until the current render has completed, which may lead to a race condition.");
               }
             }
             flushSync(function() {
-              updateContainer(null, root3, null, null);
+              updateContainer(null, root2, null, null);
             });
             unmarkContainerAsRoot(container);
           }
@@ -23136,11 +23136,11 @@ var require_react_dom_development = __commonJS({
               transitionCallbacks = options2.transitionCallbacks;
             }
           }
-          var root3 = createContainer(container, ConcurrentRoot, null, isStrictMode, concurrentUpdatesByDefaultOverride, identifierPrefix, onRecoverableError);
-          markContainerAsRoot(root3.current, container);
+          var root2 = createContainer(container, ConcurrentRoot, null, isStrictMode, concurrentUpdatesByDefaultOverride, identifierPrefix, onRecoverableError);
+          markContainerAsRoot(root2.current, container);
           var rootContainerElement = container.nodeType === COMMENT_NODE ? container.parentNode : container;
           listenToAllSupportedEvents(rootContainerElement);
-          return new ReactDOMRoot(root3);
+          return new ReactDOMRoot(root2);
         }
         function ReactDOMHydrationRoot(internalRoot) {
           this._internalRoot = internalRoot;
@@ -23178,16 +23178,16 @@ var require_react_dom_development = __commonJS({
               onRecoverableError = options2.onRecoverableError;
             }
           }
-          var root3 = createHydrationContainer(initialChildren, null, container, ConcurrentRoot, hydrationCallbacks, isStrictMode, concurrentUpdatesByDefaultOverride, identifierPrefix, onRecoverableError);
-          markContainerAsRoot(root3.current, container);
+          var root2 = createHydrationContainer(initialChildren, null, container, ConcurrentRoot, hydrationCallbacks, isStrictMode, concurrentUpdatesByDefaultOverride, identifierPrefix, onRecoverableError);
+          markContainerAsRoot(root2.current, container);
           listenToAllSupportedEvents(container);
           if (mutableSources) {
             for (var i = 0; i < mutableSources.length; i++) {
               var mutableSource = mutableSources[i];
-              registerMutableSourceForHydration(root3, mutableSource);
+              registerMutableSourceForHydration(root2, mutableSource);
             }
           }
-          return new ReactDOMHydrationRoot(root3);
+          return new ReactDOMHydrationRoot(root2);
         }
         function isValidContainer(node) {
           return !!(node && (node.nodeType === ELEMENT_NODE || node.nodeType === DOCUMENT_NODE || node.nodeType === DOCUMENT_FRAGMENT_NODE || !disableCommentsAsDOMContainers));
@@ -23249,11 +23249,11 @@ var require_react_dom_development = __commonJS({
             if (typeof callback === "function") {
               var originalCallback = callback;
               callback = function() {
-                var instance = getPublicRootInstance(root3);
+                var instance = getPublicRootInstance(root2);
                 originalCallback.call(instance);
               };
             }
-            var root3 = createHydrationContainer(
+            var root2 = createHydrationContainer(
               initialChildren,
               callback,
               container,
@@ -23268,12 +23268,12 @@ var require_react_dom_development = __commonJS({
               // identifierPrefix
               noopOnRecoverableError
             );
-            container._reactRootContainer = root3;
-            markContainerAsRoot(root3.current, container);
+            container._reactRootContainer = root2;
+            markContainerAsRoot(root2.current, container);
             var rootContainerElement = container.nodeType === COMMENT_NODE ? container.parentNode : container;
             listenToAllSupportedEvents(rootContainerElement);
             flushSync();
-            return root3;
+            return root2;
           } else {
             var rootSibling;
             while (rootSibling = container.lastChild) {
@@ -23322,21 +23322,21 @@ var require_react_dom_development = __commonJS({
             warnOnInvalidCallback$1(callback === void 0 ? null : callback, "render");
           }
           var maybeRoot = container._reactRootContainer;
-          var root3;
+          var root2;
           if (!maybeRoot) {
-            root3 = legacyCreateRootFromDOMContainer(container, children, parentComponent, callback, forceHydrate);
+            root2 = legacyCreateRootFromDOMContainer(container, children, parentComponent, callback, forceHydrate);
           } else {
-            root3 = maybeRoot;
+            root2 = maybeRoot;
             if (typeof callback === "function") {
               var originalCallback = callback;
               callback = function() {
-                var instance = getPublicRootInstance(root3);
+                var instance = getPublicRootInstance(root2);
                 originalCallback.call(instance);
               };
             }
-            updateContainer(children, root3, parentComponent, callback);
+            updateContainer(children, root2, parentComponent, callback);
           }
-          return getPublicRootInstance(root3);
+          return getPublicRootInstance(root2);
         }
         var didWarnAboutFindDOMNode = false;
         function findDOMNode(componentOrElement) {
@@ -25853,6 +25853,7 @@ function readableWords(occ, LEX, angelMap) {
         m37: gematria(cons) % 37 === 0,
         name: (pos || "").startsWith("n-pr"),
         theo: /אל|יהו|יאל|יה/.test(cons),
+        compound: /\s/.test(trans),
         angel: am ? { el: am.el, yh: am.yh } : null
       });
     }
@@ -25860,8 +25861,36 @@ function readableWords(occ, LEX, angelMap) {
   res.sort((a, b) => b.len - a.len || a.gem - b.gem || (a.he < b.he ? -1 : 1));
   return res;
 }
+function daysInMonth(y, mo) {
+  if (mo === 2) return y % 4 === 0 && (y % 100 !== 0 || y % 400 === 0) ? 29 : 28;
+  return [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][mo - 1];
+}
+function makeDate(y, mo, da, h = 12) {
+  const d = new Date(Date.UTC(2e3, mo - 1, da, h, 0, 0));
+  d.setUTCFullYear(y);
+  return d;
+}
+function parseDate(str) {
+  if (!str) return null;
+  const m = /^(-?\d{1,5})-(\d{2})-(\d{2})$/.exec(str);
+  if (!m) return null;
+  const y = parseInt(m[1], 10), mo = parseInt(m[2], 10), da = parseInt(m[3], 10);
+  if (mo < 1 || mo > 12 || da < 1 || da > daysInMonth(y, mo)) return null;
+  const d = makeDate(y, mo, da);
+  return isNaN(d.getTime()) ? null : d;
+}
+function fmtDate(d) {
+  const y = d.getUTCFullYear();
+  const mo = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const da = String(d.getUTCDate()).padStart(2, "0");
+  if (y >= 1 && y <= 9999) return String(y).padStart(4, "0") + "-" + mo + "-" + da;
+  const sign = y < 0 ? "-" : "";
+  return sign + String(Math.abs(y)).padStart(4, "0") + "-" + mo + "-" + da;
+}
 function skyAt(dateStr) {
-  const d = /* @__PURE__ */ new Date(dateStr + "T12:00:00Z");
+  if (!dateStr) return [];
+  const d = parseDate(dateStr);
+  if (!d) return [];
   return BODIES.map((b) => {
     const v = GeoVector(Body[b], d, true);
     const lon = Ecliptic(v).elon;
@@ -25900,6 +25929,13 @@ var PREC = 50.29 / 3600;
 var AGE = 30 / PREC;
 var FULL = 360 / PREC;
 var AYANAMSIS = 24.18;
+var SYN = 29.530589;
+var DRAC = 27.212221;
+var ANOM = 27.55455;
+var TROP = 365.24219;
+var ECLY = 346.620083;
+var HALAKIM_DAY = 24 * 1080;
+var MOLAD = 29 + 12 / 24 + 793 / HALAKIM_DAY;
 var EQUINOX_LON = (360 - AYANAMSIS) % 360;
 function ageBoundaries(ayan = AYANAMSIS) {
   const eqLon = (360 - ayan) % 360;
@@ -25925,9 +25961,8 @@ var ERA_WINDOWS = [
   { w: "1535\u20131547", ev: "Reformation (1517); Copernicus, De revolutionibus (1543)" },
   { w: "2025\u20132038", ev: "current window" }
 ];
-var FINALS = { "\u05DA": 500, "\u05DD": 600, "\u05DF": 700, "\u05E3": 800, "\u05E5": 900 };
 function letterVal(ch) {
-  return FINALS[ch] ?? GV[ch];
+  return GV[FIN2REG[ch] || ch] ?? 0;
 }
 function reduce9(v) {
   let s = v;
@@ -25938,7 +25973,7 @@ var LO_SHU = [[4, 9, 2], [3, 5, 7], [8, 1, 6]];
 var LO_POS = {};
 for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) LO_POS[LO_SHU[i][j]] = [i, j];
 function sigilPath(name) {
-  const letters = [...norm(name)].filter((ch) => GV[ch] || FINALS[ch]);
+  const letters = [...norm(name)].filter((ch) => GV[ch]);
   const reduced = letters.map((ch) => reduce9(letterVal(ch)));
   const cells = [];
   for (const r of reduced) {
@@ -25948,7 +25983,7 @@ function sigilPath(name) {
 }
 function aiqGroups() {
   const g = { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [] };
-  const all = "\u05D0\u05D1\u05D2\u05D3\u05D4\u05D5\u05D6\u05D7\u05D8\u05D9\u05DB\u05DC\u05DE\u05E0\u05E1\u05E2\u05E4\u05E6\u05E7\u05E8\u05E9\u05EA\u05DA\u05DD\u05DF\u05E3\u05E5";
+  const all = "\u05D0\u05D1\u05D2\u05D3\u05D4\u05D5\u05D6\u05D7\u05D8\u05D9\u05DB\u05DC\u05DE\u05E0\u05E1\u05E2\u05E4\u05E6\u05E7\u05E8\u05E9\u05EA";
   for (const ch of all) {
     const v = letterVal(ch);
     g[reduce9(v)].push(ch + "" + v);
@@ -26039,6 +26074,26 @@ function isopsephy(s) {
   }
   return v;
 }
+var ABJAD = { \u0627: 1, \u0628: 2, \u062C: 3, \u062F: 4, \u0647: 5, \u0648: 6, \u0632: 7, \u062D: 8, \u0637: 9, \u064A: 10, \u0643: 20, \u0644: 30, \u0645: 40, \u0646: 50, \u0633: 60, \u0639: 70, \u0641: 80, \u0635: 90, \u0642: 100, \u0631: 200, \u0634: 300, \u062A: 400, \u062B: 500, \u062E: 600, \u0630: 700, \u0636: 800, \u0638: 900, \u063A: 1e3 };
+function abjad(s) {
+  let v = 0;
+  for (const ch of s) {
+    if (ABJAD[ch] != null) v += ABJAD[ch];
+  }
+  return v;
+}
+var KTP = { \u0915: 1, \u0916: 2, \u0917: 3, \u0918: 4, \u0919: 5, \u091F: 1, \u0920: 2, \u0921: 3, \u0922: 4, \u0923: 5, \u092A: 1, \u092B: 2, \u092C: 3, \u092D: 4, \u092E: 5, \u092F: 1, \u0930: 2, \u0932: 3, \u0935: 4, \u0936: 5, \u091A: 6, \u091B: 7, \u091C: 8, \u091D: 9, \u091E: 0, \u0924: 6, \u0925: 7, \u0926: 8, \u0927: 9, \u0928: 0, \u0937: 6, \u0938: 7, \u0939: 8 };
+function katapayadi(s) {
+  const chars = [...s];
+  const digits = [];
+  for (let i = 0; i < chars.length; i++) {
+    const c = chars[i];
+    if (!/[क-हक़-य़]/.test(c)) continue;
+    if (chars[i + 1] === "\u094D") continue;
+    if (KTP[c] != null) digits.push(KTP[c]);
+  }
+  return digits.reverse().join("");
+}
 function countSubset(arr, div) {
   let cnt = 0;
   const n = arr.length;
@@ -26049,7 +26104,7 @@ function countSubset(arr, div) {
   }
   return cnt;
 }
-function SkyMap({ rows, occ, yhvhOk, genesisOk }) {
+function SkyMap({ rows, occ }) {
   const C = 220, R = 196, Rp = 120;
   const pt = (lon, r) => {
     const a = lon * Math.PI / 180;
@@ -26060,20 +26115,7 @@ function SkyMap({ rows, occ, yhvhOk, genesisOk }) {
   rows.forEach((r) => {
     signCount[r.sign] = (signCount[r.sign] || 0) + 1;
   });
-  const yod = rows.find((r) => r.sign === "Virgo");
-  const heh = rows.find((r) => r.sign === "Aries");
-  const vav = rows.find((r) => r.sign === "Taurus");
-  const order = [];
-  if (yod) order.push({ r: yod, l: "\u05D9" });
-  if (heh) order.push({ r: heh, l: "\u05D4" });
-  if (vav) order.push({ r: vav, l: "\u05D5" });
-  if (heh) order.push({ r: heh, l: "\u05D4" });
-  const contrib = new Set(order.map((o) => o.r.body));
-  const pathStr = order.map((o, i) => {
-    const [x, y] = pt(o.r.lon, Rp);
-    return (i ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
-  }).join(" ");
-  return /* @__PURE__ */ import_react.default.createElement("svg", { viewBox: "0 0 440 440", width: "340", height: "340", style: { maxWidth: "100%" }, role: "img", "aria-label": `Sky map: ${occ.size} signs occupied; YHVH ${yhvhOk ? "readable" : "not readable"}; Genesis ${genesisOk ? "readable" : "not readable"}` }, /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: R, fill: "#0e1320", stroke: "#283145", strokeWidth: "2" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: Rp + 22, fill: "none", stroke: "#1c2333", strokeWidth: "1" }), SIGNS.map((s, i) => {
+  return /* @__PURE__ */ import_react.default.createElement("svg", { viewBox: "0 0 440 440", width: "100%", height: "auto", style: { maxWidth: "100%" }, role: "img", "aria-label": `Sky map: ${occ.size} of 12 signs occupied` }, /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: R, fill: "#0e1320", stroke: "#283145", strokeWidth: "2" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: Rp + 22, fill: "none", stroke: "#1c2333", strokeWidth: "1" }), SIGNS.map((s, i) => {
     const [x0, y0] = pt(i * 30, R), [x1, y1] = pt((i + 1) * 30, R);
     const on = occ.has(SIMPLE[s][0]);
     return /* @__PURE__ */ import_react.default.createElement("path", { key: s, d: `M ${C} ${C} L ${x0} ${y0} A ${R} ${R} 0 0 0 ${x1} ${y1} Z`, fill: on ? "rgba(127,176,255,0.10)" : "transparent", stroke: on ? "#3a4762" : "#283145", strokeWidth: "0.7" });
@@ -26082,13 +26124,10 @@ function SkyMap({ rows, occ, yhvhOk, genesisOk }) {
     const [nx, ny] = pt(i * 30 + 15, R - 3);
     const on = occ.has(SIMPLE[s][0]), n = signCount[s] || 0;
     return /* @__PURE__ */ import_react.default.createElement("g", { key: s }, /* @__PURE__ */ import_react.default.createElement("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "21", fill: on ? "#cfe0ff" : "#5a647a" }, SIMPLE[s][0]), /* @__PURE__ */ import_react.default.createElement("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "8.5", fill: on ? "#8aa0c0" : "#424b5e" }, s, n > 1 ? " \xB7\xD7" + n : ""));
-  }), order.length >= 2 && /* @__PURE__ */ import_react.default.createElement("path", { d: pathStr, fill: "none", stroke: "#e8c87a", strokeWidth: "2.4", strokeDasharray: yhvhOk ? "none" : "5 4", opacity: "0.9", strokeLinejoin: "round" }), rows.map((r) => {
+  }), rows.map((r) => {
     const [px, py] = pt(r.lon, Rp);
-    if (contrib.has(r.body)) {
-      return /* @__PURE__ */ import_react.default.createElement("g", { key: r.body }, /* @__PURE__ */ import_react.default.createElement("circle", { cx: px, cy: py, r: "12", fill: "#e8c87a", stroke: "#fff3d0", strokeWidth: "1" }), /* @__PURE__ */ import_react.default.createElement("text", { x: px, y: py, textAnchor: "middle", dominantBaseline: "middle", fontSize: "14", fill: "#0b0e14", fontWeight: "bold" }, order.find((o) => o.r.body === r.body).l));
-    }
     return /* @__PURE__ */ import_react.default.createElement("g", { key: r.body }, /* @__PURE__ */ import_react.default.createElement("circle", { cx: px, cy: py, r: "8.5", fill: "#131826", stroke: "#7fb0ff", strokeWidth: "1.2" }), /* @__PURE__ */ import_react.default.createElement("text", { x: px, y: py, textAnchor: "middle", dominantBaseline: "middle", fontSize: "12", fill: "#7fb0ff" }, GLYPH[r.body]), r.boundary && /* @__PURE__ */ import_react.default.createElement("circle", { cx: px, cy: py, r: "11.5", fill: "none", stroke: "#ffcf6a", strokeWidth: "1", strokeDasharray: "2 2", opacity: "0.8" }));
-  }), /* @__PURE__ */ import_react.default.createElement("text", { x: C, y: 16, textAnchor: "middle", fontSize: "11", fill: yhvhOk ? "#e8c87a" : "#ff8a8a" }, "\u05D9\u05D4\u05D5\u05D4 ", yhvhOk ? "\u2713" : "\u2717"), /* @__PURE__ */ import_react.default.createElement("text", { x: C, y: 30, textAnchor: "middle", fontSize: "9.5", fill: genesisOk ? "#6fe0a0" : "#ff8a8a" }, "Genesis ", genesisOk ? "\u2713" : "\u2717"), /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: "32", fill: "#0e1320", stroke: "#2a3346", strokeWidth: "1", strokeDasharray: "3 3" }), MOTHER_LON.map(([h, con, lon]) => {
+  }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: "32", fill: "#0e1320", stroke: "#2a3346", strokeWidth: "1", strokeDasharray: "3 3" }), MOTHER_LON.map(([h, con, lon]) => {
     const [lx, ly] = pt(lon, 18);
     const [nx, ny] = pt(lon, 38);
     const [ox, oy] = pt(lon, R - 24);
@@ -26096,78 +26135,139 @@ function SkyMap({ rows, occ, yhvhOk, genesisOk }) {
     return /* @__PURE__ */ import_react.default.createElement("g", { key: h }, /* @__PURE__ */ import_react.default.createElement("line", { x1: sx, y1: sy, x2: ox, y2: oy, stroke: "#33405a", strokeWidth: "0.6", strokeDasharray: "2 3", opacity: "0.55" }), /* @__PURE__ */ import_react.default.createElement("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "19", fill: "#9aa6bd" }, h), /* @__PURE__ */ import_react.default.createElement("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "5.6", fill: "#5d6883" }, con));
   }), /* @__PURE__ */ import_react.default.createElement("text", { x: C, y: C + 34, textAnchor: "middle", fontSize: "6.5", fill: "#525d72" }, "3 mothers \xB7 fixed circumpolar axis"));
 }
-function SigilSVG({ name }) {
-  const { cells } = sigilPath(name);
-  if (cells.length < 2) return /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Enter a name with at least 2 Hebrew consonants.");
-  const S = 150, pad = 18, cell = (S - 2 * pad) / 3;
-  const center = (v) => {
-    const [i, j] = LO_POS[v];
-    return [pad + cell * (j + 0.5), pad + cell * (i + 0.5)];
-  };
-  const d = cells.map((c, i) => {
-    const [x, y] = center(c.v);
-    return (i ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
-  }).join(" ");
-  const used = new Set(cells.map((c) => c.v));
-  return /* @__PURE__ */ import_react.default.createElement("svg", { viewBox: `0 0 ${S} ${S}`, width: S, height: S, role: "img", "aria-label": `Sigil of ${name}` }, /* @__PURE__ */ import_react.default.createElement("rect", { x: "0", y: "0", width: S, height: S, fill: "#0e1320", rx: "8" }), LO_SHU.flat().map((v, idx) => {
-    const [i, j] = Object.entries(LO_POS).find(([k]) => +k === v)[1];
-    const cx = pad + cell * (j + 0.5), cy = pad + cell * (i + 0.5);
-    return /* @__PURE__ */ import_react.default.createElement("g", { key: idx }, /* @__PURE__ */ import_react.default.createElement("rect", { x: pad + cell * j + 2, y: pad + cell * i + 2, width: cell - 4, height: cell - 4, rx: "4", fill: used.has(v) ? "#243657" : "#131826", stroke: "#283145", strokeWidth: "1" }), /* @__PURE__ */ import_react.default.createElement("text", { x: cx, y: cy - 4, textAnchor: "middle", dominantBaseline: "middle", fontSize: "11", fill: used.has(v) ? "#e8c87a" : "#5d6883" }, v), used.has(v) && /* @__PURE__ */ import_react.default.createElement("text", { x: cx, y: cy + 8, textAnchor: "middle", dominantBaseline: "middle", fontSize: "7", fill: "#8aa0c0" }, cells.findIndex((c) => c.v === v) + 1));
-  }), /* @__PURE__ */ import_react.default.createElement("path", { d, fill: "none", stroke: "#e8c87a", strokeWidth: "2.2", opacity: "0.9", strokeLinejoin: "round", strokeLinecap: "round" }), cells.map((c, i) => {
-    const [x, y] = center(c.v);
-    return /* @__PURE__ */ import_react.default.createElement("circle", { key: i, cx: x, cy: y, r: i === 0 || i === cells.length - 1 ? 4 : 2.6, fill: i === 0 ? "#6fe0a0" : i === cells.length - 1 ? "#ff8a8a" : "#e8c87a" });
-  }));
-}
-function KameaGrid({ n, hl }) {
-  const sq = buildMagic(n);
-  const M = n * (n * n + 1) / 2;
-  const hlset = hl ? new Set(hl) : null;
-  return /* @__PURE__ */ import_react.default.createElement("div", { className: "kamea", style: { gridTemplateColumns: `repeat(${n},auto)` } }, sq.flat().map((v, i) => /* @__PURE__ */ import_react.default.createElement("div", { key: i, className: "kc" + (hlset && hlset.has(v) ? " hl" : "") }, v)));
-}
 function Fig({ n, doc }) {
   const f = FIGS[n];
   if (!f) return null;
   return /* @__PURE__ */ import_react.default.createElement("div", { className: "fig", role: "img", "aria-label": `Figure ${n}` }, /* @__PURE__ */ import_react.default.createElement("div", { dangerouslySetInnerHTML: { __html: f.svg } }), /* @__PURE__ */ import_react.default.createElement("div", { className: "cap" }, f.cap), doc && /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginTop: 6, textAlign: "left" } }, doc));
 }
-function SkyTab({ date, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step }) {
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => step(-1) }, "\u25C0 day"), /* @__PURE__ */ import_react.default.createElement("input", { type: "date", value: date, onChange: (e) => setDate(e.target.value), "aria-label": "Date" }), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => step(1) }, "day \u25B6"), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => step(7) }, "+ week"), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => setDate("2026-08-08") }, "today"), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "noon UT \xB7 geocentric apparent positions \xB7 ecliptic longitude")), /* @__PURE__ */ import_react.default.createElement("div", { className: "row" }, /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "0 0 auto" } }, /* @__PURE__ */ import_react.default.createElement(SkyMap, { rows, occ, yhvhOk, genesisOk })), /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "1 1 240px" } }, /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "The wheel is the ecliptic: 12 signs, each with its simple letter. A sector ", /* @__PURE__ */ import_react.default.createElement("b", null, "lights up"), " when a planet is inside it \u2014 that is the simple read today. \u201C\xD7N\u201D = N planets in that sign (informational; the reuse rule needs no conjunction to repeat a letter). \u26A0 = planet within <1\xB0 of a boundary."), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Today: ", /* @__PURE__ */ import_react.default.createElement("b", null, occSigns.size), " signs occupied, ", /* @__PURE__ */ import_react.default.createElement("b", null, 12 - occSigns.size), " empty. Readable simples: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ].sort().join(" ")), "."), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D9\u05D4\u05D5\u05D4"), " (with reuse) forms from just 3 signs: ", /* @__PURE__ */ import_react.default.createElement("b", null, "\u05D9"), "(Virgo)+", /* @__PURE__ */ import_react.default.createElement("b", null, "\u05D4"), "(Aries)+", /* @__PURE__ */ import_react.default.createElement("b", null, "\u05D5"), "(Taurus). The second ", /* @__PURE__ */ import_react.default.createElement("b", null, "\u05D4"), " reuses Aries. Gold line: \u05D9\u2192\u05D4\u2192\u05D5\u2192\u05D4."), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "At the ", /* @__PURE__ */ import_react.default.createElement("b", null, "centre"), ", the 3 mothers ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D0 \u05DE \u05E9"), ": a fixed circumpolar axis, each ", /* @__PURE__ */ import_react.default.createElement("b", null, "opposite its constellation"), " (Draco, Ursa Minor, Cassiopea), linked to its zodiac sector."))), /* @__PURE__ */ import_react.default.createElement("h3", null, "Angle table \u2014 ecliptic longitude per body (", date, ")"), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Body"), /* @__PURE__ */ import_react.default.createElement("th", null, "Sign"), /* @__PURE__ */ import_react.default.createElement("th", null, "Longitude"), /* @__PURE__ */ import_react.default.createElement("th", null, "Degree in sign"), /* @__PURE__ */ import_react.default.createElement("th", null, "Simple"), /* @__PURE__ */ import_react.default.createElement("th", null, "Double"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, rows.map((r) => /* @__PURE__ */ import_react.default.createElement("tr", { key: r.body }, /* @__PURE__ */ import_react.default.createElement("td", null, GLYPH[r.body], " ", r.body), /* @__PURE__ */ import_react.default.createElement("td", null, r.sign), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, r.lon.toFixed(2), "\xB0"), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, r.deg.toFixed(2), "\xB0 ", r.boundary && /* @__PURE__ */ import_react.default.createElement("span", { className: "boundary" }, "\u26A0")), /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, SIMPLE[r.sign][0]), /* @__PURE__ */ import_react.default.createElement("br", null), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, SIMPLE[r.sign][1], "=", SIMPLE[r.sign][2])), /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, DOUBLES[r.body] ? /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { color: "var(--blue)" } }, DOUBLES[r.body][0]), /* @__PURE__ */ import_react.default.createElement("br", null), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, DOUBLES[r.body][1])) : /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "\u2014")))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Stellar reading (simple letters of the 10 bodies, slow \u2192 fast):"), /* @__PURE__ */ import_react.default.createElement("div", { className: "sentence" }, sentence));
+var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+function DateEntry({ value, onChange }) {
+  const d = parseDate(value) || parseDate("2026-08-08");
+  const y = d.getUTCFullYear(), mo = d.getUTCMonth() + 1, da = d.getUTCDate();
+  const [ys, setYs] = (0, import_react.useState)(String(y));
+  (0, import_react.useEffect)(() => setYs(String(y)), [y]);
+  const dim = daysInMonth(y, mo);
+  const set = (ny, nm, nd) => onChange(fmtDate(makeDate(ny, nm, Math.min(nd, daysInMonth(ny, nm)))));
+  const commitYear = () => {
+    const n = parseInt(ys, 10);
+    if (!isNaN(n)) set(n, mo, da);
+    else setYs(String(y));
+  };
+  return /* @__PURE__ */ import_react.default.createElement("span", { style: { display: "inline-flex", gap: 5, alignItems: "center" } }, /* @__PURE__ */ import_react.default.createElement(
+    "input",
+    {
+      type: "text",
+      inputMode: "numeric",
+      value: ys,
+      style: { width: 78 },
+      title: "year \u2014 negative = BCE",
+      onChange: (e) => setYs(e.target.value),
+      onBlur: commitYear,
+      onKeyDown: (e) => {
+        if (e.key === "Enter") e.target.blur();
+      },
+      "aria-label": "Year (negative = BCE)"
+    }
+  ), /* @__PURE__ */ import_react.default.createElement("select", { value: mo, onChange: (e) => set(y, parseInt(e.target.value, 10), da), "aria-label": "Month" }, MON.map((n, i) => /* @__PURE__ */ import_react.default.createElement("option", { key: n, value: i + 1 }, n))), /* @__PURE__ */ import_react.default.createElement("select", { value: da, onChange: (e) => set(y, mo, parseInt(e.target.value, 10)), "aria-label": "Day" }, Array.from({ length: dim }, (_, i) => /* @__PURE__ */ import_react.default.createElement("option", { key: i + 1, value: i + 1 }, i + 1))), y < 0 && /* @__PURE__ */ import_react.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, Math.abs(y), " BCE"));
+}
+function YearInput({ value, onCommit, width = 90, title = "year \u2014 negative = BCE" }) {
+  const [s, setS] = (0, import_react.useState)(String(value));
+  (0, import_react.useEffect)(() => setS(String(value)), [value]);
+  const commit = () => {
+    const n = parseInt(s, 10);
+    if (!isNaN(n) && n !== value) onCommit(n);
+    else setS(String(value));
+  };
+  return /* @__PURE__ */ import_react.default.createElement(
+    "input",
+    {
+      type: "text",
+      inputMode: "numeric",
+      value: s,
+      style: { width },
+      title,
+      onChange: (e) => setS(e.target.value),
+      onBlur: commit,
+      onKeyDown: (e) => {
+        if (e.key === "Enter") e.target.blur();
+      },
+      "aria-label": "Year (negative = BCE)"
+    }
+  );
+}
+function SkyTab({ date, rawDate, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step }) {
+  const dateEmpty = !rawDate || !parseDate(rawDate);
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => step(-1) }, "\u25C0 day"), /* @__PURE__ */ import_react.default.createElement(DateEntry, { value: rawDate, onChange: setDate }), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => step(1) }, "day \u25B6"), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => step(7) }, "+ week"), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => setDate("2026-08-08") }, "today"), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "noon UT \xB7 geocentric apparent positions \xB7 ecliptic longitude", dateEmpty && /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--warn)" } }, " \xB7 enter a date \u2014 showing ", date))), /* @__PURE__ */ import_react.default.createElement("div", { className: "row" }, /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "1 1 100%" } }, /* @__PURE__ */ import_react.default.createElement(SkyMap, { rows, occ }))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Today: ", /* @__PURE__ */ import_react.default.createElement("b", null, occSigns.size), " signs occupied, ", /* @__PURE__ */ import_react.default.createElement("b", null, 12 - occSigns.size), " empty. Readable simples: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ].sort().join(" ") || "none"), ". A sector ", /* @__PURE__ */ import_react.default.createElement("b", null, "lights up"), " when a planet is inside it; \u201C\xD7N\u201D = N planets in that sign (informational \u2014 the reuse rule needs no conjunction to repeat a letter). Centre: the 3 mothers ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D0 \u05DE \u05E9"), " on a fixed circumpolar axis. \u05D9\u05D4\u05D5\u05D4 / Genesis legibility live in their own Reading tabs."), /* @__PURE__ */ import_react.default.createElement("h3", null, "Angle table \u2014 ecliptic longitude per body (", date, ")"), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Body"), /* @__PURE__ */ import_react.default.createElement("th", null, "Sign"), /* @__PURE__ */ import_react.default.createElement("th", null, "Longitude"), /* @__PURE__ */ import_react.default.createElement("th", null, "Degree in sign"), /* @__PURE__ */ import_react.default.createElement("th", null, "Simple"), /* @__PURE__ */ import_react.default.createElement("th", null, "Double"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, rows.map((r) => /* @__PURE__ */ import_react.default.createElement("tr", { key: r.body }, /* @__PURE__ */ import_react.default.createElement("td", null, GLYPH[r.body], " ", r.body), /* @__PURE__ */ import_react.default.createElement("td", null, r.sign), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, r.lon.toFixed(2), "\xB0"), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, r.deg.toFixed(2), "\xB0 ", r.boundary && /* @__PURE__ */ import_react.default.createElement("span", { className: "boundary" }, "\u26A0")), /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, SIMPLE[r.sign][0]), /* @__PURE__ */ import_react.default.createElement("br", null), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, SIMPLE[r.sign][1], "=", SIMPLE[r.sign][2])), /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, DOUBLES[r.body] ? /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { color: "var(--blue)" } }, DOUBLES[r.body][0]), /* @__PURE__ */ import_react.default.createElement("br", null), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, DOUBLES[r.body][1])) : /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "\u2014")))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Stellar reading (simple letters of the 10 bodies, slow \u2192 fast):"), /* @__PURE__ */ import_react.default.createElement("div", { className: "sentence" }, sentence), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("b", null, "Precession & the map:"), " planet positions are computed for the actual date (astronomy-engine works for any year, past or future \u2014 including BCE, enter a negative year above), so the map reflects the real sky of that day. The 12 letter\u2194sign sectors are ", /* @__PURE__ */ import_react.default.createElement("b", null, "tropical"), " \u2014 anchored to the equinox (Aries = \u03BB\u2609=0\xB0), so they do ", /* @__PURE__ */ import_react.default.createElement("b", null, "not"), " precess and stay fixed to the seasons. ", /* @__PURE__ */ import_react.default.createElement("b", null, "This is normal and intended:"), " the zodiac here is the fixed symbolic grid for reading letters, not the precessing sky. The slow drift of the sidereal constellations against the signs (precession, 50.29\u2033/yr, 1\xB0 per ~72 yr) is tracked separately in the ", /* @__PURE__ */ import_react.default.createElement("b", null, "Ages"), " and ", /* @__PURE__ */ import_react.default.createElement("b", null, "Ayanamsa"), " tabs (precessional ages, Lahiri 24.18\xB0). So: ", /* @__PURE__ */ import_react.default.createElement("b", null, "tropical signs = the fixed grid that does NOT rotate with precession"), " (Raziel p.115 confirms: ", /* @__PURE__ */ import_react.default.createElement("i", null, "\u201Clos signos del zod\xEDaco est\xE1n fijos\u201D"), "); sidereal constellations = the precessing sky, handled in those tabs."));
 }
 var PAGE_SIZE = 48;
-function TranslatorTab({ date, occ, words, q, setQ }) {
+function FilterChip({ active, count, label, title, onToggle }) {
+  return /* @__PURE__ */ import_react.default.createElement("button", { className: active ? "on" : "", onClick: onToggle, title, "aria-pressed": active }, label, " (", count, ")");
+}
+function TranslatorTab({ date, occ, words, q, setQ, genData }) {
   const [page, setPage] = (0, import_react.useState)(0);
-  const [onlyDate, setOnlyDate] = (0, import_react.useState)(true);
-  const [pal, setPal] = (0, import_react.useState)(false);
-  const [g37, setG37] = (0, import_react.useState)(false);
-  const [angel, setAngel] = (0, import_react.useState)(false);
-  const [name, setName] = (0, import_react.useState)(false);
+  const [sel, setSel] = (0, import_react.useState)(/* @__PURE__ */ new Set(["date"]));
+  const [mode, setMode] = (0, import_react.useState)("include");
   const [minLen, setMinLen] = (0, import_react.useState)(1);
   const qn = q.trim().toLowerCase();
+  const PROPS = { date: "simp", pal: "pal", g37: "m37", angel: "angel", name: "name", comp: "compound" };
+  const toggle = (id) => setSel((prev) => {
+    const n = new Set(prev);
+    n.has(id) ? n.delete(id) : n.add(id);
+    return n;
+  });
   const filtered = (0, import_react.useMemo)(() => {
     let r = words;
     if (qn) r = r.filter((w) => (w.gloss || "").toLowerCase().includes(qn) || w.translit.toLowerCase().includes(qn) || w.disp.includes(q.trim()));
-    if (onlyDate) r = r.filter((w) => w.simp);
-    if (pal) r = r.filter((w) => w.pal);
-    if (g37) r = r.filter((w) => w.m37);
-    if (angel) r = r.filter((w) => w.angel);
-    if (name) r = r.filter((w) => w.name);
+    if (sel.size) {
+      const ids = [...sel];
+      if (mode === "include") r = r.filter((w) => ids.every((id) => w[PROPS[id]]));
+      else r = r.filter((w) => !ids.some((id) => w[PROPS[id]]));
+    }
     if (minLen > 1) r = r.filter((w) => w.len >= minLen);
     return r;
-  }, [words, qn, onlyDate, pal, g37, angel, name, minLen]);
+  }, [words, qn, sel, mode, minLen]);
   (0, import_react.useEffect)(() => {
     setPage(0);
-  }, [qn, date, onlyDate, pal, g37, angel, name, minLen]);
+  }, [qn, date, sel, mode, minLen]);
+  const dateCount = (0, import_react.useMemo)(() => words.filter((w) => w.simp).length, [words]);
   const alwaysCount = (0, import_react.useMemo)(() => words.filter((w) => !w.simp).length, [words]);
   const palCount = (0, import_react.useMemo)(() => words.filter((w) => w.pal).length, [words]);
   const g37Count = (0, import_react.useMemo)(() => words.filter((w) => w.m37).length, [words]);
   const angelCount = (0, import_react.useMemo)(() => words.filter((w) => w.angel).length, [words]);
   const nameCount = (0, import_react.useMemo)(() => words.filter((w) => w.name).length, [words]);
+  const compCount = (0, import_react.useMemo)(() => words.filter((w) => w.compound).length, [words]);
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const cur = Math.min(page, pages - 1);
   const slice = filtered.slice(cur * PAGE_SIZE, cur * PAGE_SIZE + PAGE_SIZE);
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Reader \u2014 everything readable on ", date, " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, words.length, " words")), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 8 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", placeholder: "search by gloss or transliteration\u2026", value: q, onChange: (e) => setQ(e.target.value), style: { flex: "1 1 240px" }, autoFocus: true, "aria-label": "Search readable words" })), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 8, flexWrap: "wrap" } }, /* @__PURE__ */ import_react.default.createElement("button", { className: onlyDate ? "on" : "", onClick: () => setOnlyDate((v) => !v), title: "Hide words with no zodiac simples \u2014 they read every day and carry no date signal" }, "only date-specific"), /* @__PURE__ */ import_react.default.createElement("button", { className: pal ? "on" : "", onClick: () => setPal((v) => !v), title: "Consonant palindrome (reads the same backwards)" }, "palindrome (", palCount, ")"), /* @__PURE__ */ import_react.default.createElement("button", { className: g37 ? "on" : "", onClick: () => setG37((v) => !v), title: "Gematria is a multiple of 37" }, "gematria \xD7 37 (", g37Count, ")"), /* @__PURE__ */ import_react.default.createElement("button", { className: angel ? "on" : "", onClick: () => setAngel((v) => !v), title: "The word + suffix \u05D0\u05DC / \u05D9\u05D4 is one of the 72 Shem HaMephorash angel names (Exodus 14:19-21)" }, "angel +\u05D0\u05DC/+\u05D9\u05D4 (", angelCount, ")"), /* @__PURE__ */ import_react.default.createElement("button", { className: name ? "on" : "", onClick: () => setName((v) => !v), title: "The word is a proper noun (name) in the Strong lexicon \u2014 incl. theophoric names bearing \u05D0\u05DC / \u05D9\u05D4" }, "name (proper) (", nameCount, ")"), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "min length"), /* @__PURE__ */ import_react.default.createElement("input", { type: "number", min: "1", max: "12", value: minLen, onChange: (e) => {
+  const probs = (0, import_react.useMemo)(() => {
+    const m = /* @__PURE__ */ new Map();
+    if (!genData?.dayOccs) return m;
+    const n = genData.dayOccs.length || 1;
+    for (const w of slice) {
+      const req = w.simp ? [...w.simp] : [];
+      if (!req.length) {
+        m.set(w.he, 1);
+        continue;
+      }
+      let c = 0;
+      for (const o of genData.dayOccs) if (req.every((x) => o.has(x))) c++;
+      m.set(w.he, c / n);
+    }
+    return m;
+  }, [slice, genData]);
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Reader \u2014 everything readable on ", date, " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, words.length, " words")), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 8 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", placeholder: "search by gloss or transliteration\u2026", value: q, onChange: (e) => setQ(e.target.value), style: { flex: "1 1 240px" }, autoFocus: true, "aria-label": "Search readable words" })), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 6, fontSize: ".8rem" } }, "Select filters, then choose a mode. ", /* @__PURE__ */ import_react.default.createElement("b", null, "Include \u2713"), " keeps only words matching ", /* @__PURE__ */ import_react.default.createElement("b", null, "all"), " selected filters; ", /* @__PURE__ */ import_react.default.createElement("b", null, "Exclude \u2717"), " drops words matching ", /* @__PURE__ */ import_react.default.createElement("b", null, "any"), " selected filter. With no filter selected, all words show. Glosses are Strong's English."), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 8, flexWrap: "wrap", alignItems: "center" } }, /* @__PURE__ */ import_react.default.createElement("span", { className: "muted", style: { fontSize: ".8rem" } }, "filters:"), /* @__PURE__ */ import_react.default.createElement(FilterChip, { active: sel.has("date"), count: dateCount, label: "date-specific", title: "Words with zodiac simples (date signal). Include = only date-specific; exclude = only always-readable", onToggle: () => toggle("date") }), /* @__PURE__ */ import_react.default.createElement(FilterChip, { active: sel.has("pal"), count: palCount, label: "palindrome", title: "Consonant palindrome (reads the same backwards)", onToggle: () => toggle("pal") }), /* @__PURE__ */ import_react.default.createElement(FilterChip, { active: sel.has("g37"), count: g37Count, label: "gematria \xD737", title: "Gematria is a multiple of 37", onToggle: () => toggle("g37") }), /* @__PURE__ */ import_react.default.createElement(FilterChip, { active: sel.has("angel"), count: angelCount, label: "angel +\u05D0\u05DC/+\u05D9\u05D4", title: "The word + suffix \u05D0\u05DC / \u05D9\u05D4 is one of the 72 Shem HaMephorash angel names (Exodus 14:19-21)", onToggle: () => toggle("angel") }), /* @__PURE__ */ import_react.default.createElement(FilterChip, { active: sel.has("name"), count: nameCount, label: "name (proper)", title: "The word is a proper noun (name) in Strong \u2014 incl. theophoric names bearing \u05D0\u05DC / \u05D9\u05D4", onToggle: () => toggle("name") }), /* @__PURE__ */ import_react.default.createElement(FilterChip, { active: sel.has("comp"), count: compCount, label: "compound", title: "Concatenated multi-root entry whose gloss is truncated (e.g. 'dove of')", onToggle: () => toggle("comp") }), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted", style: { fontSize: ".8rem", marginLeft: 6 } }, "mode:"), /* @__PURE__ */ import_react.default.createElement("button", { className: mode === "include" ? "on" : "", onClick: () => setMode("include"), title: "Keep only words matching ALL selected filters", "aria-pressed": mode === "include" }, "\u2713 include"), /* @__PURE__ */ import_react.default.createElement("button", { className: mode === "exclude" ? "ex" : "", onClick: () => setMode("exclude"), title: "Drop words matching ANY selected filter", "aria-pressed": mode === "exclude" }, "\u2717 exclude"), sel.size > 0 && /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => setSel(/* @__PURE__ */ new Set()), title: "Clear all selected filters", style: { fontSize: ".78rem" } }, "clear (", sel.size, ")")), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 8, flexWrap: "wrap", alignItems: "center" } }, /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "min length"), /* @__PURE__ */ import_react.default.createElement("input", { type: "number", min: "1", max: "12", value: minLen, onChange: (e) => {
     const n = parseInt(e.target.value, 10);
     setMinLen(isNaN(n) || n < 1 ? 1 : n);
-  }, style: { width: 56 }, "aria-label": "Minimum word length" }), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, filtered.length, " shown \xB7 ", alwaysCount, " always-readable hidden", onlyDate ? "" : " (shown)")), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Reading rule applied: every ", /* @__PURE__ */ import_react.default.createElement("b", null, "simple (zodiac) letter"), " in a word must sit in an ", /* @__PURE__ */ import_react.default.createElement("b", null, "occupied sign"), " today. Mothers + doubles are always available. Available today: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ].sort().join(" ") || "none"), ". ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--violet)" } }, "violet"), " = always readable (no simples). Badges: ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--gold)" } }, "palindrome"), " \xB7 ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--green)" } }, "\xD737"), " \xB7 ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--violet)" } }, "angel"), " \xB7 ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--blue)" } }, "name"), ". Sorted: longest first."), /* @__PURE__ */ import_react.default.createElement("div", { className: "tcards" }, slice.map((w, i) => /* @__PURE__ */ import_react.default.createElement("div", { key: w.he + w.translit + i, className: "tcard" + (w.simp ? "" : " always") }, /* @__PURE__ */ import_react.default.createElement("div", { className: "the" }, w.disp), /* @__PURE__ */ import_react.default.createElement("div", { className: "read" }, w.translit), /* @__PURE__ */ import_react.default.createElement("div", { className: "trans" }, w.gloss), /* @__PURE__ */ import_react.default.createElement("div", { className: "g" }, w.len, " letters \xB7 gematria ", w.gem, w.pal && /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--gold)" } }, " \xB7 palindrome"), w.m37 && /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--green)" } }, " \xB7 \xD737"), w.angel && /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--violet)" } }, " \xB7 angel"), w.name && /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--blue)" } }, " \xB7 name", w.theo ? " (theophoric)" : "")), w.angel && /* @__PURE__ */ import_react.default.createElement("div", { className: "simp", style: { color: "var(--violet)" } }, "angel: +\u05D0\u05DC \u2192 ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, w.angel.el), " \xB7 +\u05D9\u05D4 \u2192 ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, w.angel.yh)), /* @__PURE__ */ import_react.default.createElement("div", { className: "simp" }, w.simp ? "simples: " + [...w.simp].join(" ") : "no simples (always)")))), filtered.length === 0 && /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { padding: "18px 0" } }, "No words match these filters on ", date, ". Loosen a filter or pick another date."), filtered.length > PAGE_SIZE && /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginTop: 12 } }, /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => setPage((p) => Math.max(0, p - 1)), disabled: cur === 0, className: cur === 0 ? "" : "" }, "\u25C0 prev"), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "page ", cur + 1, " / ", pages, " \xB7 ", filtered.length, " words \xB7 ", PAGE_SIZE, "/page"), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => setPage((p) => Math.min(pages - 1, p + 1)), disabled: cur >= pages - 1 }, "next \u25B6"), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "jump:"), /* @__PURE__ */ import_react.default.createElement("input", { type: "number", min: "1", max: pages, value: cur + 1, onChange: (e) => {
+  }, style: { width: 56 }, "aria-label": "Minimum word length" }), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, filtered.length, " shown \xB7 ", alwaysCount, " always-readable")), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Reading rule applied: every ", /* @__PURE__ */ import_react.default.createElement("b", null, "simple (zodiac) letter"), " in a word must sit in an ", /* @__PURE__ */ import_react.default.createElement("b", null, "occupied sign"), " today. Mothers + doubles are always available. Available today: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ].sort().join(" ") || "none"), ". ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--violet)" } }, "violet"), " = always readable (no simples). Badges: ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--gold)" } }, "palindrome"), " \xB7 ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--green)" } }, "\xD737"), " \xB7 ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--violet)" } }, "angel"), " \xB7 ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--blue)" } }, "name"), " \xB7 ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--warn)" } }, "compound"), ". ", /* @__PURE__ */ import_react.default.createElement("span", { className: "prob ok" }, "%"), " = legibility over the scanned year (computed, not hardcoded): ", /* @__PURE__ */ import_react.default.createElement("span", { className: "prob ok" }, "green"), " special (rare), ", /* @__PURE__ */ import_react.default.createElement("span", { className: "prob mid" }, "amber"), " frequent, ", /* @__PURE__ */ import_react.default.createElement("span", { className: "prob spec" }, "red"), " common \u2014 each pill also shows the recurrence (\u2248 every N d). Sorted: longest first."), /* @__PURE__ */ import_react.default.createElement("div", { className: "tcards" }, slice.map((w, i) => /* @__PURE__ */ import_react.default.createElement("div", { key: w.he + w.translit + i, className: "tcard" + (w.simp ? "" : " always") }, /* @__PURE__ */ import_react.default.createElement("div", { className: "the" }, w.disp), /* @__PURE__ */ import_react.default.createElement("div", { className: "read" }, w.translit), /* @__PURE__ */ import_react.default.createElement("div", { className: "trans" }, w.gloss), /* @__PURE__ */ import_react.default.createElement("div", { className: "g" }, w.len, " letters \xB7 gematria ", w.gem, w.pal && /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--gold)" } }, " \xB7 palindrome"), w.m37 && /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--green)" } }, " \xB7 \xD737"), w.angel && /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--violet)" } }, " \xB7 angel"), w.name && /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--blue)" } }, " \xB7 name", w.theo ? " (theophoric)" : ""), w.compound && /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--warn)" } }, " \xB7 compound (gloss truncated)")), probs.has(w.he) && (() => {
+    const p = probs.get(w.he);
+    const n = genData.dayOccs.length;
+    const pct = p < 1e-3 ? "<0.1" : (p * 100).toFixed(p < 0.1 ? 1 : 0);
+    const cls = p >= 0.5 ? "spec" : p >= 0.2 ? "mid" : "ok";
+    const tag = p >= 0.5 ? "common" : p >= 0.2 ? "frequent" : "special";
+    const leg = p * n;
+    const cad = leg <= 1 ? "\u2248 once / year" : leg >= n ? "every day" : `\u2248 every ${Math.max(1, Math.round(n / leg))} d`;
+    return /* @__PURE__ */ import_react.default.createElement("span", { className: "prob " + cls, title: `Empirical legibility over ${n} days of ${genData.year}: ${pct}% of days this word's required simples are all occupied (S\u2286O, computed from astronomy-engine \u2014 not a hardcoded value). Recurrence: ${cad}. Low % = special/rare (green); high % = common (red).` }, pct, "% \xB7 ", tag, " \xB7 ", cad);
+  })(), w.angel && /* @__PURE__ */ import_react.default.createElement("div", { className: "simp", style: { color: "var(--violet)" } }, "angel: +\u05D0\u05DC \u2192 ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, w.angel.el), " \xB7 +\u05D9\u05D4 \u2192 ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, w.angel.yh)), /* @__PURE__ */ import_react.default.createElement("div", { className: "simp" }, w.simp ? "simples: " + [...w.simp].join(" ") : "no simples (always)")))), filtered.length === 0 && /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { padding: "18px 0" } }, "No words match these filters on ", date, ". Loosen a filter or pick another date."), filtered.length > PAGE_SIZE && /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginTop: 12 } }, /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => setPage((p) => Math.max(0, p - 1)), disabled: cur === 0, className: cur === 0 ? "" : "" }, "\u25C0 prev"), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "page ", cur + 1, " / ", pages, " \xB7 ", filtered.length, " words \xB7 ", PAGE_SIZE, "/page"), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => setPage((p) => Math.min(pages - 1, p + 1)), disabled: cur >= pages - 1 }, "next \u25B6"), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "jump:"), /* @__PURE__ */ import_react.default.createElement("input", { type: "number", min: "1", max: pages, value: cur + 1, onChange: (e) => {
     const n = parseInt(e.target.value, 10);
     if (!isNaN(n)) setPage(Math.max(0, Math.min(pages - 1, n - 1)));
   }, style: { width: 64 }, "aria-label": "Jump to page" })), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Reuse rule: a simple is either present or not; revisiting a sign adds or removes no letters. That is why one date reads thousands of words \u2014 paginate, search and filter to cut them down. Palindrome and \xD737 are textual facts about the word, not sky-reading rules; use them to surface structure, not to decide legibility. ", /* @__PURE__ */ import_react.default.createElement("b", null, "Angel"), " = the word + suffix ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D0\u05DC"), " / ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D9\u05D4"), " is one of the 72 Shem HaMephorash names (Exodus 14:19-21, \xA715b.4) \u2014 a name made by adding the suffix. ", /* @__PURE__ */ import_react.default.createElement("b", null, "Name"), " = the word is a proper noun in Strong (people, places, theophoric names bearing ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D0\u05DC"), "/", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D9\u05D4"), ")."));
@@ -26182,7 +26282,7 @@ function YhvhTab({ date, occ, yhvhOk, bs }) {
   return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "The 4 letters of ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D9\u05D4\u05D5\u05D4"), " on ", date, " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "pill " + (yhvhOk ? "ok" : "no") }, yhvhOk ? "readable" : "not readable")), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "With reuse, 3 signs suffice: ", /* @__PURE__ */ import_react.default.createElement("b", null, "\u05D9"), "(Virgo) + ", /* @__PURE__ */ import_react.default.createElement("b", null, "\u05D4"), "(Aries, twice) + ", /* @__PURE__ */ import_react.default.createElement("b", null, "\u05D5"), "(Taurus). No conjunction needed."), /* @__PURE__ */ import_react.default.createElement("div", { className: "cards" }, /* @__PURE__ */ import_react.default.createElement("div", { className: "card" + (occ.has("\u05D9") ? "" : " missing") }, /* @__PURE__ */ import_react.default.createElement("span", { className: "l" }, "\u05D9"), /* @__PURE__ */ import_react.default.createElement("div", { style: { fontSize: ".8rem", fontWeight: 600 } }, "Yod"), /* @__PURE__ */ import_react.default.createElement("div", { className: "src" }, "needs Virgo"), /* @__PURE__ */ import_react.default.createElement("div", { className: "src" }, bs["Virgo"]?.length ? /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, "from ", /* @__PURE__ */ import_react.default.createElement("b", null, bs["Virgo"][0].body), " \xB7 ", bs["Virgo"][0].deg.toFixed(1), "\xB0") : /* @__PURE__ */ import_react.default.createElement("b", null, "no planet"))), /* @__PURE__ */ import_react.default.createElement("div", { className: "card" + (occ.has("\u05D4") ? "" : " missing") }, /* @__PURE__ */ import_react.default.createElement("span", { className: "l" }, "\u05D4"), /* @__PURE__ */ import_react.default.createElement("div", { style: { fontSize: ".8rem", fontWeight: 600 } }, "Heh (1st)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "src" }, "needs Aries"), /* @__PURE__ */ import_react.default.createElement("div", { className: "src" }, bs["Aries"]?.length ? /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, "from ", /* @__PURE__ */ import_react.default.createElement("b", null, bs["Aries"][0].body), " \xB7 ", bs["Aries"][0].deg.toFixed(1), "\xB0") : /* @__PURE__ */ import_react.default.createElement("b", null, "no planet"))), /* @__PURE__ */ import_react.default.createElement("div", { className: "card" + (occ.has("\u05D5") ? "" : " missing") }, /* @__PURE__ */ import_react.default.createElement("span", { className: "l" }, "\u05D5"), /* @__PURE__ */ import_react.default.createElement("div", { style: { fontSize: ".8rem", fontWeight: 600 } }, "Vav"), /* @__PURE__ */ import_react.default.createElement("div", { className: "src" }, "needs Taurus"), /* @__PURE__ */ import_react.default.createElement("div", { className: "src" }, bs["Taurus"]?.length ? /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, "from ", /* @__PURE__ */ import_react.default.createElement("b", null, bs["Taurus"][0].body), " \xB7 ", bs["Taurus"][0].deg.toFixed(1), "\xB0") : /* @__PURE__ */ import_react.default.createElement("b", null, "no planet"))), /* @__PURE__ */ import_react.default.createElement("div", { className: "card" + (occ.has("\u05D4") ? "" : " missing") }, /* @__PURE__ */ import_react.default.createElement("span", { className: "l" }, "\u05D4"), /* @__PURE__ */ import_react.default.createElement("div", { style: { fontSize: ".8rem", fontWeight: 600 } }, "Heh (2nd)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "src" }, "reuses Aries"), /* @__PURE__ */ import_react.default.createElement("div", { className: "src" }, bs["Aries"]?.length ? /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, "same ", /* @__PURE__ */ import_react.default.createElement("b", null, bs["Aries"][0].body)) : /* @__PURE__ */ import_react.default.createElement("b", null, "no planet")))), /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: 12, padding: "12px 14px", background: "var(--panel2)", borderRadius: 8 } }, yhvhOk ? /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "It forms today (", date, "):"), /* @__PURE__ */ import_react.default.createElement("div", { className: "big" }, "\u05D9 (", bs["Virgo"][0].body, ") \u2192 \u05D4 (", bs["Aries"][0].body, ") \u2192 \u05D5 (", bs["Taurus"][0].body, ") \u2192 \u05D4 (", bs["Aries"][0].body, " reused)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "big" }, "= ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D9\u05D4\u05D5\u05D4"), " \xB7 \u201Cthe One who is / Eternal\u201D \xB7 gematria 26")) : /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "It does not form ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D9\u05D4\u05D5\u05D4"), " today. Missing:"), ["\u05D9:Virgo", "\u05D4:Aries", "\u05D5:Taurus"].filter((x) => !occ.has(x[0])).map((x, i) => {
     const [l, s] = x.split(":");
     return /* @__PURE__ */ import_react.default.createElement("div", { key: i, className: "note", style: { color: "var(--red)" } }, /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, l), " \u2192 needs ", s, " \xB7 no planet today");
-  }))), /* @__PURE__ */ import_react.default.createElement(Fig, { n: 4, doc: "From the article (\xA74): the cadence of \u05D9\u05D4\u05D5\u05D4. The golden line traces \u05D9\u2192\u05D4\u2192\u05D5\u2192\u05D4 over Virgo-Aries-Taurus-Aries, occupied by fast planets (a date on which \u05D9\u05D4\u05D5\u05D4 is legible). Without Aquarius (\u05E6) in the set it is not Genesis \u2014 the cadence is monthly, not secular." }));
+  }))));
 }
 function GenesisTab({ date, occ, genesisOk }) {
   const lengths = [6, 3, 5, 2, 5, 3, 4];
@@ -26199,17 +26299,128 @@ function GenesisTab({ date, occ, genesisOk }) {
   }), /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: 10, padding: "10px 14px", background: "var(--panel2)", borderRadius: 8 } }, /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "Standard gematria total: "), /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)", fontSize: "1.15rem" } }, GEN_TOTAL), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, " = 913 + 203 + 86 + 401 + 395 + 407 + 296 \xB7 2701 = 37\xD773 \xB7 triangular T\u2087\u2083 \xB7 2701+1072 = 3773 (mirror-palindrome, but non-selective: ~38% of a random text does the same).")), /* @__PURE__ */ import_react.default.createElement("h3", null, "37\xD773 structure of the 7 words (\xA715b.5 \u2014 verified)"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, "Total = 2701 = 37\xD773 = T\u2087\u2083. Letter count = ", totalLetters, " = T\u2087 (7+8/2\xD7\u2026 = 28). 7 words \xD7 ", totalLetters, " letters = ", 7 * totalLetters, " = 14\xB2."), /* @__PURE__ */ import_react.default.createElement("li", null, "Word-sums that are multiples of 37: ", /* @__PURE__ */ import_react.default.createElement("b", null, words37, "/7"), " (407 = 11\xD737, 296 = 8\xD737 \u2014 the last two)."), /* @__PURE__ */ import_react.default.createElement("li", null, "Subsets (of 2\u2077\u22121 = 127) whose sum is a multiple of 37: ", /* @__PURE__ */ import_react.default.createElement("b", null, sub37, "/127"), " (uniform chance \u2248 ", 127 / 37, "\u22483.4)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--green)" } }, "Null"), ": 100,000 permutations of the 28-letter multiset regrouped into the fixed lengths (6,3,5,2,5,3,4), mulberry32 seed 20260807 \u2192 subsets p \u2248 ", /* @__PURE__ */ import_react.default.createElement("b", null, "3.1\xD710\u207B\u2074"), "; words p \u2248 8.2\xD710\u207B\xB3. The partition is genuinely biased toward 37, beyond the trivial total=2701=37\xD773.")), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Genesis opens in ~13-year windows recurring every ~491 years (the Neptune\u2013Pluto synodic cycle). Previous: 427 BCE (Axial Age), 61 CE (Temple), 552, 1043 (Schism), 1535 (Reformation/Copernicus). Current: 2025\u20132038."), /* @__PURE__ */ import_react.default.createElement(Fig, { n: 10, doc: "From the article (\xA715b.5): the 7 words and their gematrias. The two gold bars are the words that are multiples of 37 (\u05D5\u05D0\u05EA 407=11\xD737, \u05D4\u05D0\u05E8\u05E5 296=8\xD737). The permutation null shows the bias toward 37 is real (p\u22483.1\xD710\u207B\u2074), beyond the trivial total 2701=37\xD773." }));
 }
 function PredictorTab({ date, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear }) {
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Predictor \u2014 days with readable Genesis in ", genYear, " ", loading && /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "computing\u2026")), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => stepYear(-1) }, "\u25C0 ", genYear - 1), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, genYear), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => stepYear(1) }, genYear + 1, " \u25B6"), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => setGenYear(year) }, "this year")), genData && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Total: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, genData.list.length), " days in ", genYear, ". Gold = readable Genesis; green outline = chosen date (", date, ")."), /* @__PURE__ */ import_react.default.createElement("div", { className: "tl", style: { marginTop: 10 }, role: "img", "aria-label": `Calendar ${genYear}: ${genData.list.length} readable days` }, Array.from({ length: genYear % 4 === 0 && (genYear % 100 !== 0 || genYear % 400 === 0) ? 366 : 365 }, (_, i) => {
-    const ds = new Date(Date.UTC(genYear, 0, 1 + i, 12)).toISOString().slice(0, 10);
-    return /* @__PURE__ */ import_react.default.createElement("div", { key: i, className: "d" + (genData.days.has(ds) ? " on" : "") + (ds === date ? " cur" : ""), title: ds + (genData.days.has(ds) ? " \xB7 Genesis" : "") + (ds === date ? " \xB7 date" : "") });
-  })), /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: 10 } }, /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "Readable dates in ", genYear, ": "), genData.list.length === 0 ? /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "none this year.") : genData.list.map((d) => /* @__PURE__ */ import_react.default.createElement("span", { key: d, className: "key on click", onClick: () => setDate(d) }, d))), /* @__PURE__ */ import_react.default.createElement("div", { className: "legend" }, "Move years with \u25C0 \u25B6 to see the 2028\u20132029 cluster (Pluto settled in Aquarius, Neptune in Aries).")));
+  const [custom, setCustom] = (0, import_react.useState)("");
+  const [sel, setSel] = (0, import_react.useState)("\u05D9\u05D4\u05D5\u05D4");
+  const nDays = genYear % 4 === 0 && (genYear % 100 !== 0 || genYear % 400 === 0) ? 366 : 365;
+  const curDoy = (0, import_react.useMemo)(() => {
+    const d = parseDate(date);
+    if (!d) return -1;
+    if (d.getUTCFullYear() !== genYear) return -1;
+    return Math.floor((d.getTime() - makeDate(genYear, 1, 1).getTime()) / 864e5);
+  }, [date, genYear]);
+  const presets = [
+    ["\u05D9\u05D4\u05D5\u05D4", "YHVH \xB7 the temporal Name"],
+    ["\u05D0\u05D4\u05D9\u05D4", "Ehyeh \xB7 I am"],
+    ["\u05DE\u05E9\u05D9\u05D7", "Messiah"],
+    ["\u05D0\u05D1\u05D3\u05D5\u05DF", "Abaddon"],
+    ["\u05D9\u05E9\u05E8\u05D0\u05DC", "Israel"],
+    ["\u05D0\u05DC\u05D4\u05D9\u05DD", "Elohim"],
+    ["\u05D1\u05E8\u05D0\u05E9\u05D9\u05EA", "Bereshit \xB7 Genesis 1:1"],
+    ["\u05D0\u05DE\u05EA", "Emet \xB7 truth (always)"],
+    ["\u05E9\u05D1\u05EA", "Shabbat \xB7 rest (always)"]
+  ];
+  function wordDoyList(word) {
+    if (!genData || !genData.dayOccs) return [];
+    const req = simpleSet(norm(word));
+    const out = [];
+    for (let i = 0; i < genData.dayOccs.length; i++) {
+      let ok = true;
+      for (const c of req) {
+        if (!genData.dayOccs[i].has(c)) {
+          ok = false;
+          break;
+        }
+      }
+      if (ok) out.push(i);
+    }
+    return out;
+  }
+  function ProbPill({ count }) {
+    const pct = nDays ? count / nDays * 100 : 0;
+    const tag = pct >= 80 ? "common" : pct >= 40 ? "frequent" : pct >= 10 ? "occasional" : "special";
+    const cls = pct >= 40 ? "spec" : pct >= 10 ? "mid" : "ok";
+    return /* @__PURE__ */ import_react.default.createElement("span", { className: "prob " + cls }, pct.toFixed(1), "% \xB7 ", tag);
+  }
+  function CalendarRow({ word, label }) {
+    const days = wordDoyList(word);
+    const daySet = (0, import_react.useMemo)(() => new Set(days), [days.join(",")]);
+    const cad = days.length > 0 ? (nDays / days.length).toFixed(1) : "\u2014";
+    const isSel = sel === word;
+    return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { style: { display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 6 } }, /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: "1.5rem", color: isSel ? "var(--green)" : "var(--gold)", cursor: "pointer" }, onClick: () => setSel(word), title: "click to select" }, displayHe(word)), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted", style: { flex: "0 0 180px" } }, label), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "readable ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, days.length), "/", nDays, " \xB7 ~every ", cad, " d"), /* @__PURE__ */ import_react.default.createElement(ProbPill, { count: days.length })), /* @__PURE__ */ import_react.default.createElement("div", { className: "tl", role: "img", "aria-label": `${word}: ${days.length} readable days in ${genYear}` }, Array.from({ length: nDays }, (_, i) => {
+      const on = daySet.has(i);
+      return /* @__PURE__ */ import_react.default.createElement("div", { key: i, className: "d" + (on ? " on" : "") + (i === curDoy ? " cur" : ""), title: `${genYear}-${String(i + 1).padStart(3, "0")} (doy ${i + 1})${on ? " \xB7 readable" : ""}${i === curDoy ? " \xB7 date" : ""}` });
+    })));
+  }
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Predictor \u2014 gloss frequency across ", genYear, " ", loading && /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "computing\u2026")), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "For each gloss the strip shows the whole year (one square per day). ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, "Gold"), " = the word is readable that day (all its required zodiacal simples occupied); ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--green)" } }, "green outline"), " = the chosen date (", date, "). Words built only of mothers+doubles (Emet, Shabbat) have no zodiacal simples \u2192 readable every day. The cadence (\u2248every N days) measures how common each gloss is. Click a word to list its dates below."), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => stepYear(-1) }, "\u25C0 ", genYear - 1), /* @__PURE__ */ import_react.default.createElement(YearInput, { value: genYear, onCommit: setGenYear }), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => stepYear(1) }, genYear + 1, " \u25B6"), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => setGenYear(year) }, "this year"), genYear < 0 && /* @__PURE__ */ import_react.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, Math.abs(genYear), " BCE")), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: custom, onChange: (e) => setCustom(e.target.value), placeholder: "add a Hebrew word, e.g. \u05D0\u05D4\u05D9\u05D4", style: { flex: "1 1 220px" } }), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => {
+    if (/[א-ת]/.test(custom)) {
+      setSel(custom);
+    }
+  }, disabled: !/[א-ת]/.test(custom) }, "add gloss")), genData && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, presets.map(([w, l]) => /* @__PURE__ */ import_react.default.createElement(CalendarRow, { key: w, word: w, label: l })), /[א-ת]/.test(custom) && /* @__PURE__ */ import_react.default.createElement(CalendarRow, { word: norm(custom), label: `custom: ${custom}` }), /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: 12 } }, /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "Readable dates of ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: "1.2rem", color: "var(--green)" } }, displayHe(sel)), " in ", genYear, " (click to set the date): "), (() => {
+    const days = wordDoyList(sel);
+    if (days.length === 0) return /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "none this year.");
+    return days.slice(0, 200).map((i) => {
+      const ds = fmtDate(makeDate(genYear, 1, 1 + i));
+      return /* @__PURE__ */ import_react.default.createElement("span", { key: ds, className: "key on click", onClick: () => setDate(ds) }, ds);
+    });
+  })(), wordDoyList(sel).length > 200 && /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, " \u2026 (", wordDoyList(sel).length, " total)")), /* @__PURE__ */ import_react.default.createElement("div", { className: "legend" }, "Move years with \u25C0 \u25B6. The 2028\u20132029 cluster (Pluto in Aquarius, Neptune in Aries) lifts the rare glosses' counts.")));
+}
+function Heptagram() {
+  const cx = 170, cy = 150, R = 120;
+  const planets = ["Saturn", "Jupiter", "Mars", "Sun", "Venus", "Mercury", "Moon"];
+  const dayOf = { Saturn: "Sat", Sun: "Sun", Moon: "Mon", Mars: "Tue", Mercury: "Wed", Jupiter: "Thu", Venus: "Fri" };
+  const he = ["\u05D1", "\u05D2", "\u05D3", "\u05DB", "\u05E4", "\u05E8", "\u05EA"];
+  const pt = (i) => {
+    const a = (-90 + i * 360 / 7) * Math.PI / 180;
+    return [cx + R * Math.cos(a), cy + R * Math.sin(a)];
+  };
+  const order = [0, 3, 6, 2, 5, 1, 4, 0];
+  const starD = order.map((k, j) => {
+    const [x, y] = pt(k);
+    return (j === 0 ? "M" : "L") + x.toFixed(1) + " " + y.toFixed(1);
+  }).join(" ") + " Z";
+  return /* @__PURE__ */ import_react.default.createElement("svg", { viewBox: "0 0 340 300", width: "100%", style: { maxWidth: 340 }, role: "img", "aria-label": "Chaldean heptagram" }, /* @__PURE__ */ import_react.default.createElement("path", { d: starD, fill: "none", stroke: "#e8c87a", strokeWidth: "1.4", opacity: "0.85" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx, cy, r: R, fill: "none", stroke: "#283145", strokeWidth: "1" }), planets.map((p, i) => {
+    const [x, y] = pt(i);
+    return /* @__PURE__ */ import_react.default.createElement("g", { key: p }, /* @__PURE__ */ import_react.default.createElement("circle", { cx: x, cy: y, r: "18", fill: "#1a2030", stroke: "#7fb0ff", strokeWidth: "1.4" }), /* @__PURE__ */ import_react.default.createElement("text", { x, y: y - 1, textAnchor: "middle", fontSize: "15", fill: "#e8c87a" }, GLYPH[p]), /* @__PURE__ */ import_react.default.createElement("text", { x, y: y + 11, textAnchor: "middle", fontSize: "13", fill: "#7fb0ff", fontFamily: "serif" }, he[i]), /* @__PURE__ */ import_react.default.createElement("text", { x, y: y - 26, textAnchor: "middle", fontSize: "10", fill: "#8a96ad" }, p, " \xB7 ", dayOf[p]));
+  }), /* @__PURE__ */ import_react.default.createElement("text", { x: cx, y: cy - 6, textAnchor: "middle", fontSize: "11", fill: "#8a96ad" }, "Chaldean order"), /* @__PURE__ */ import_react.default.createElement("text", { x: cx, y: cy + 10, textAnchor: "middle", fontSize: "11", fill: "#e8c87a" }, "7 = 7 = 7"), /* @__PURE__ */ import_react.default.createElement("text", { x: cx, y: cy + 26, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "sidereal \xB7 mod 7 \xB7 days"));
+}
+function SarosDiagram() {
+  return /* @__PURE__ */ import_react.default.createElement("svg", { viewBox: "0 0 460 220", width: "100%", style: { maxWidth: 460 }, role: "img", "aria-label": "Eclipse node geometry" }, /* @__PURE__ */ import_react.default.createElement("rect", { x: "40", y: "98", width: "380", height: "24", fill: "#6fe0a0", opacity: "0.07" }), /* @__PURE__ */ import_react.default.createElement("line", { x1: "40", y1: "110", x2: "420", y2: "110", stroke: "#7fb0ff", strokeWidth: "1.5" }), /* @__PURE__ */ import_react.default.createElement("line", { x1: "60", y1: "95", x2: "400", y2: "125", stroke: "#c79bff", strokeWidth: "1.3", strokeDasharray: "5 4" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: "230", cy: "110", r: "16", fill: "#e8c87a" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: "230", cy: "110", r: "16", fill: "none", stroke: "#ffcf6a", strokeWidth: "1" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: "262", cy: "110", r: "6", fill: "#1a2030", stroke: "#6fe0a0", strokeWidth: "1.4" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: "120", cy: "92", r: "6", fill: "#1a2030", stroke: "#ff8a8a", strokeWidth: "1.4" }), /* @__PURE__ */ import_react.default.createElement("text", { x: "230", y: "74", textAnchor: "middle", fontSize: "10", fill: "#ffcf6a" }, "node \xB7 eclipse season"), /* @__PURE__ */ import_react.default.createElement("text", { x: "262", y: "135", textAnchor: "middle", fontSize: "9", fill: "#6fe0a0" }, "Moon at node \u2192 eclipse"), /* @__PURE__ */ import_react.default.createElement("text", { x: "120", y: "80", textAnchor: "middle", fontSize: "9", fill: "#ff8a8a" }, "Moon far from node \u2192 none"), /* @__PURE__ */ import_react.default.createElement("text", { x: "40", y: "92", fontSize: "9", fill: "#7fb0ff" }, "ecliptic (Sun's path)"), /* @__PURE__ */ import_react.default.createElement("text", { x: "300", y: "140", fontSize: "9", fill: "#c79bff" }, "Moon's path \xB7 5.1\xB0 incline"), /* @__PURE__ */ import_react.default.createElement("text", { x: "40", y: "158", fontSize: "9", fill: "#6fe0a0" }, "|\u03B2| < 1.6\xB0 window (scan threshold)"));
+}
+function PrecessionDiagram() {
+  const cx = 230, cy = 130, R = 120, r = 70;
+  const seg = (i, cls, lab) => {
+    const a1 = (-90 + i * 30) * Math.PI / 180, a2 = (-90 + (i + 1) * 30) * Math.PI / 180;
+    const x1 = cx + R * Math.cos(a1), y1 = cy + R * Math.sin(a1), x2 = cx + R * Math.cos(a2), y2 = cy + R * Math.sin(a2);
+    const mx = cx + (R - 22) * Math.cos((a1 + a2) / 2), my = cy + (R - 22) * Math.sin((a1 + a2) / 2);
+    return /* @__PURE__ */ import_react.default.createElement("g", { key: i }, /* @__PURE__ */ import_react.default.createElement("path", { d: `M ${cx} ${cy} L ${x1} ${y1} A ${R} ${R} 0 0 1 ${x2} ${y2} Z`, fill: cls, stroke: "#283145", strokeWidth: "0.8" }), /* @__PURE__ */ import_react.default.createElement("text", { x: mx, y: my, textAnchor: "middle", dominantBaseline: "middle", fontSize: "9", fill: "#8a96ad" }, lab));
+  };
+  const ayAng = (-90 + 24.18) * Math.PI / 180;
+  const tx = cx + R * Math.cos(-90 * Math.PI / 180), ty = cy + R * Math.sin(-90 * Math.PI / 180);
+  const sx = cx + R * Math.cos(ayAng), sy = cy + R * Math.sin(ayAng);
+  return /* @__PURE__ */ import_react.default.createElement("svg", { viewBox: "0 0 460 280", width: "100%", style: { maxWidth: 460 }, role: "img", "aria-label": "Precession: tropical vs sidereal zodiac" }, /* @__PURE__ */ import_react.default.createElement("circle", { cx, cy, r: R, fill: "#1a2030", stroke: "#283145" }), SIGNS.map((s, i) => seg(i, i % 2 ? "#131826" : "#1a2030", s.slice(0, 3))), /* @__PURE__ */ import_react.default.createElement("line", { x1: cx, y1: cy, x2: tx, y2: ty, stroke: "#e8c87a", strokeWidth: "2" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: tx, cy: ty, r: "5", fill: "#e8c87a" }), /* @__PURE__ */ import_react.default.createElement("text", { x: tx, y: ty - 10, textAnchor: "middle", fontSize: "9", fill: "#e8c87a" }, "\u2648 tropical 0\xB0 (fixed to equinox \u2014 does NOT precess)"), /* @__PURE__ */ import_react.default.createElement("line", { x1: cx, y1: cy, x2: sx, y2: sy, stroke: "#c79bff", strokeWidth: "2", strokeDasharray: "4 3" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: sx, cy: sy, r: "5", fill: "#c79bff" }), /* @__PURE__ */ import_react.default.createElement("text", { x: sx + 10, y: sy + 4, fontSize: "9", fill: "#c79bff" }, "sidereal 0\xB0 (fixed to stars \u2014 precesses)"), /* @__PURE__ */ import_react.default.createElement("path", { d: `M ${cx + (R - 34) * Math.cos(-90 * Math.PI / 180)} ${cy + (R - 34) * Math.sin(-90 * Math.PI / 180)} A ${R - 34} ${R - 34} 0 0 1 ${cx + (R - 34) * Math.cos(ayAng)} ${cy + (R - 34) * Math.sin(ayAng)}`, fill: "none", stroke: "#ffcf6a", strokeWidth: "1.4" }), /* @__PURE__ */ import_react.default.createElement("text", { x: cx + (R - 50) * Math.cos((-90 + 12) * Math.PI / 180), y: cy + (R - 50) * Math.sin((-90 + 12) * Math.PI / 180) + 3, textAnchor: "middle", fontSize: "9", fill: "#ffcf6a" }, "ayanamsa 24.18\xB0"), /* @__PURE__ */ import_react.default.createElement("path", { d: `M ${cx} ${cy + 44} A 44 44 0 0 0 ${cx - 31} ${cy + 31}`, fill: "none", stroke: "#8a96ad", strokeWidth: "1.2", markerEnd: "url(#ar)" }), /* @__PURE__ */ import_react.default.createElement("defs", null, /* @__PURE__ */ import_react.default.createElement("marker", { id: "ar", markerWidth: "6", markerHeight: "6", refX: "3", refY: "3", orient: "auto" }, /* @__PURE__ */ import_react.default.createElement("path", { d: "M0 0 L6 3 L0 6 Z", fill: "#8a96ad" }))), /* @__PURE__ */ import_react.default.createElement("text", { x: cx, y: cy, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "precession \u2192"));
+}
+function MetonDiagram() {
+  const cx = 160, cy = 110, R = 95;
+  const leap = /* @__PURE__ */ new Set([3, 6, 8, 11, 14, 17, 19]);
+  const pt = (y) => {
+    const a = (-90 + (y - 1) * 360 / 19) * Math.PI / 180;
+    return [cx + R * Math.cos(a), cy + R * Math.sin(a)];
+  };
+  return /* @__PURE__ */ import_react.default.createElement("svg", { viewBox: "0 0 360 220", width: "100%", style: { maxWidth: 360 }, role: "img", "aria-label": "Metonic 19-year cycle" }, /* @__PURE__ */ import_react.default.createElement("circle", { cx, cy, r: R + 14, fill: "none", stroke: "#283145" }), Array.from({ length: 19 }, (_, i) => i + 1).map((y) => {
+    const [x, yp] = pt(y);
+    const L = leap.has(y);
+    return /* @__PURE__ */ import_react.default.createElement("g", { key: y }, /* @__PURE__ */ import_react.default.createElement("circle", { cx: x, cy: yp, r: L ? 13 : 10, fill: L ? "#e8c87a" : "#1a2030", stroke: L ? "#e8c87a" : "#283145", strokeWidth: "1.2" }), /* @__PURE__ */ import_react.default.createElement("text", { x, y: yp + 3, textAnchor: "middle", fontSize: "9", fill: L ? "#0b0e14" : "#8a96ad", fontWeight: L ? 700 : 400 }, L ? "13" : "12"), /* @__PURE__ */ import_react.default.createElement("text", { x, y: L ? yp - 19 : yp - 16, textAnchor: "middle", fontSize: "8", fill: "#8a96ad" }, y));
+  }), /* @__PURE__ */ import_react.default.createElement("text", { x: cx, y: cy - 8, textAnchor: "middle", fontSize: "11", fill: "#e8c87a" }, "19 yr"), /* @__PURE__ */ import_react.default.createElement("text", { x: cx, y: cy + 6, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "= 235 months"), /* @__PURE__ */ import_react.default.createElement("text", { x: cx, y: cy + 20, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "7 leap + 12 common"));
 }
 function WeekTab({ date, rows }) {
   return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "The week \u2014 7 doubles = 7 planets = 7 days \xB7 where each is on ", date), /* @__PURE__ */ import_react.default.createElement("div", { className: "week" }, WEEK.map(([day, plan], idx) => {
     const r = rows.find((x) => x.body === plan);
-    const isToday = idx === (/* @__PURE__ */ new Date(date + "T12:00:00Z")).getUTCDay();
+    const isToday = (() => {
+      const d = parseDate(date);
+      return d ? idx === d.getUTCDay() : false;
+    })();
     return /* @__PURE__ */ import_react.default.createElement("div", { key: day, className: "day" + (isToday ? " today" : "") }, /* @__PURE__ */ import_react.default.createElement("div", { className: "dn" }, day, isToday ? " \xB7 date" : ""), /* @__PURE__ */ import_react.default.createElement("div", { className: "pl" }, plan), /* @__PURE__ */ import_react.default.createElement("div", { className: "l" }, DOUBLES[plan][0]), /* @__PURE__ */ import_react.default.createElement("div", { className: "pl" }, r ? /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, r.sign, " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: "1rem" } }, SIMPLE[r.sign][0])) : "\u2014"));
-  })), /* @__PURE__ */ import_react.default.createElement("h3", null, "Chaldean order \u2014 the heptagram 7 = 7 = 7 (\xA715b.9, verified)"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "(A) Sidereal periods"), ", slow \u2192 fast: Saturn (29.46 a) > Jupiter (11.86) > Mars (1.88) > Sun (1.00) > Venus (0.615) > Mercury (0.241) > Moon (0.075). This is the Chaldean order \u2014 an astronomical fact."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "(B) Hourly week"), ": 24 h/day, each hour ruled by the next planet in Chaldean order. The planet of the 1st hour names the day. 24 mod 7 = 3 \u2192 the next day jumps 3 planets."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "(C) Etymology"), ": Tuesday = Mars/Martes, Wednesday = Mercury/Mi\xE9rcoles, Thursday = Jupiter/Jueves, Friday = Venus/Viernes, Saturday = Saturn/S\xE1bado \u2014 the Romance names preserve the planet."), /* @__PURE__ */ import_react.default.createElement("li", null, "The 7 doubles (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) are the 7 planets; the 7 planets are the 7 days. The heptagram 7=7=7 closes by sidereal periods + mod-7 arithmetic + etymology. ", /* @__PURE__ */ import_react.default.createElement("b", null, "Note"), ": the 7-day week is a cultural (Chaldean-Babylonian) artefact, not a continuous astronomical cycle; its astronomical anchor is the Chaldean order of the 7 planets, which is real.")), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Each planet (a double) travels through the 12 signs (simples); that planet is read in a different sign depending on the day."));
+  })), /* @__PURE__ */ import_react.default.createElement("h3", null, "Chaldean order \u2014 the heptagram 7 = 7 = 7 (\xA715b.9, verified)"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "(A) Sidereal periods"), ", slow \u2192 fast: Saturn (29.46 a) > Jupiter (11.86) > Mars (1.88) > Sun (1.00) > Venus (0.615) > Mercury (0.241) > Moon (0.075). This is the Chaldean order \u2014 an astronomical fact."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "(B) Hourly week"), ": 24 h/day, each hour ruled by the next planet in Chaldean order. The planet of the 1st hour names the day. 24 mod 7 = 3 \u2192 the next day jumps 3 planets."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "(C) Etymology"), ": Tuesday = Mars/Martes, Wednesday = Mercury/Mi\xE9rcoles, Thursday = Jupiter/Jueves, Friday = Venus/Viernes, Saturday = Saturn/S\xE1bado \u2014 the Romance names preserve the planet."), /* @__PURE__ */ import_react.default.createElement("li", null, "The 7 doubles (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) are the 7 planets; the 7 planets are the 7 days. The heptagram 7=7=7 closes by sidereal periods + mod-7 arithmetic + etymology. ", /* @__PURE__ */ import_react.default.createElement("b", null, "Note"), ": the 7-day week is a cultural (Chaldean-Babylonian) artefact, not a continuous astronomical cycle; its astronomical anchor is the Chaldean order of the 7 planets, which is real.")), /* @__PURE__ */ import_react.default.createElement("div", { className: "fig" }, /* @__PURE__ */ import_react.default.createElement(Heptagram, null), /* @__PURE__ */ import_react.default.createElement("div", { className: "cap" }, "The Chaldean heptagram \u2014 7 planets in sidereal order on the ring; the gold ", `{7/3}`, " star traces weekday order (Sat\u2192Sun\u2192Mon\u2192Tue\u2192Wed\u2192Thu\u2192Fri), each day jumping 3 planets (24 h mod 7 = 3). 7 doubles = 7 planets = 7 days.")), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Each planet (a double) travels through the 12 signs (simples); that planet is read in a different sign depending on the day."));
 }
 function AgesTab({ date, rows }) {
   const ages = (0, import_react.useMemo)(() => ageBoundaries(), []);
@@ -26224,22 +26435,50 @@ function AgesTab({ date, rows }) {
   })), /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { marginTop: 8 } }, "Pluto in Aquarius (", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05E6"), ") and Neptune in Aries (", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D4"), ") are the two anchors that make Genesis 1:1 readable. The Age of Aquarius (~", yrLabel(ages.find((a) => a.sign === "Aquarius").start), ", precessional) and the Neptune\u2013Pluto synodic cycle (~491 y) coincide now.")), /* @__PURE__ */ import_react.default.createElement(Fig, { n: 9, doc: "From the article (\xA715b.8): the six ~13-year windows in which Genesis 1:1 is legible (Neptune\u2208Aries \u2227 Pluto\u2208Aquarius), mean separation 490.5 y = the Neptune\u2013Pluto synodic. Each marks a major religious-linguistic re-formation. Regularity p < 5\xD710\u207B\u2076; caveat: n=6 and selection bias \u2014 hypothesis, not cause." }));
 }
 function GematriaTab() {
+  const [gSub, setGSub] = (0, import_react.useState)("hebrew");
+  const subs = [["hebrew", "Hebrew"], ["greek", "Greek"], ["arabic", "Arabic"], ["indian", "Indian"], ["more", "More"]];
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Gematria \u2014 letter-number systems across cultures (\xA72, \xA715b.2)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "Every culture with a written alphabet developed a letter\u2192number system. The additive isopsephies (Hebrew, Greek, Arabic, Coptic, Cyrillic) share one structure \u2014 units 1\u20139, tens 10\u201390, hundreds 100\u2013900/1000 \u2014 because all descend from the Phoenician/Greek scheme. India is different: the katapayadi is ", /* @__PURE__ */ import_react.default.createElement("b", null, "positional"), " (right-to-left) and the \u0100ryabha\u1E6Da is consonant\xD7vowel-power. Pre-1500 systems only; post-1500 constructions are flagged."), /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: subs, active: gSub, onChange: setGSub }), gSub === "hebrew" && /* @__PURE__ */ import_react.default.createElement(GematriaHebrew, null), gSub === "greek" && /* @__PURE__ */ import_react.default.createElement(GematriaGreek, null), gSub === "arabic" && /* @__PURE__ */ import_react.default.createElement(GematriaArabic, null), gSub === "indian" && /* @__PURE__ */ import_react.default.createElement(GematriaIndian, null), gSub === "more" && /* @__PURE__ */ import_react.default.createElement(GematriaMore, null));
+}
+function GematriaHebrew() {
   const [inp, setInp] = (0, import_react.useState)("\u05DE\u05E9\u05D9\u05D7");
+  const [big, setBig] = (0, import_react.useState)(false);
   const c = norm(inp);
-  const letters = [...c].filter((ch) => GV[ch] || FINALS[ch]);
+  const letters = [...c].filter((ch) => GV[ch]);
   const total = letters.reduce((a, ch) => a + letterVal(ch), 0);
   const groups = aiqGroups();
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Gematria & Aiq Bekar (\xA72, \xA715b.2)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Hebrew name, e.g. \u05DE\u05E9\u05D9\u05D7 / \u05D0\u05D1\u05E8\u05D4\u05DD", style: { flex: "1 1 260px" } }), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "letters: ", letters.length)), letters.length > 0 && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Letter"), /* @__PURE__ */ import_react.default.createElement("th", null, "Name"), /* @__PURE__ */ import_react.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react.default.createElement("th", null, "Aiq Bekar (1\u20139)"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, letters.map((ch, i) => {
-    const name = Object.entries({ ...Object.fromEntries(Object.entries(GV)), ...{ "\u05DA": "Kaph-final", "\u05DD": "Mem-final", "\u05DF": "Nun-final", "\u05E3": "Pe-final", "\u05E5": "Tzaddi-final" } });
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Hebrew name, e.g. \u05DE\u05E9\u05D9\u05D7 / \u05D0\u05D1\u05E8\u05D4\u05DD", style: { flex: "1 1 260px" } }), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "letters: ", letters.length), /* @__PURE__ */ import_react.default.createElement("button", { className: "subtab" + (big ? " active" : ""), onClick: () => setBig((b) => !b), title: "Mispar Gadol: finals = 500\u2013900 (off = Mispar Hechrachi, finals = regular). Genesis 1:1 = 2701 needs Hechrachi." }, "Mispar Gadol ", big ? "ON" : "off")), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "22-letter gematria, \u05D0=1 \u2026 \u05EA=400. ", /* @__PURE__ */ import_react.default.createElement("b", null, "Mispar Hechrachi"), " (default): final letters count as their regular value \u2014 required for Gen 1:1 = 2701 = 37\xD773. ", /* @__PURE__ */ import_react.default.createElement("b", null, "Mispar Gadol"), ": finals = 500\u2013900. ", /* @__PURE__ */ import_react.default.createElement("b", null, "Mispar Katan Mispari"), ' = the digital-root reduction (below, "Aiq Bekar").'), letters.length > 0 && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Letter"), /* @__PURE__ */ import_react.default.createElement("th", null, "Name"), /* @__PURE__ */ import_react.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react.default.createElement("th", null, "Reduction (1\u20139)"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, letters.map((ch, i) => {
     return /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, displayHe(c).includes(ch) ? ch : ch)), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, ch), /* @__PURE__ */ import_react.default.createElement("td", { className: "big" }, letterVal(ch)), /* @__PURE__ */ import_react.default.createElement("td", { className: "big", style: { color: "var(--blue)" } }, reduce9(letterVal(ch))));
-  }))), /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: 10, padding: "12px 14px", background: "var(--panel2)", borderRadius: 8 } }, /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "Standard gematria: "), /* @__PURE__ */ import_react.default.createElement("b", { className: "big" }, total), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, " \xB7 Aiq Bekar reduction: "), /* @__PURE__ */ import_react.default.createElement("b", { className: "big", style: { color: "var(--blue)" } }, reduce9(total) === 0 ? 9 : reduce9(total)))), /* @__PURE__ */ import_react.default.createElement("h3", null, "Aiq Bekar = the decimal-positional gematria of \xA72"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Each letter reduces (sum of digits) to 1\u20139. The 9 groups are exactly the decimal grid ", `{1,10,100},{2,20,200},\u2026,{9,90,900}`, " \u2014 the 9 = 9+9+9 structure of \xA72. Without this reduction there is no sigil (\xA715b.3): it is the bridge \xA72 \u2192 kamea \u2192 trace."), /* @__PURE__ */ import_react.default.createElement("div", { className: "grid2" }, [1, 2, 3, 4, 5, 6, 7, 8, 9].map((g) => /* @__PURE__ */ import_react.default.createElement("div", { key: g, className: "kbox" }, /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, g), " \xB7 ", groups[g].join(", ")))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05E8\u05D4\u05DD") }, "\u05D0\u05D1\u05E8\u05D4\u05DD"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05E9\u05DC\u05DE\u05D4") }, "\u05E9\u05DC\u05DE\u05D4"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05DC\u05D4\u05D9\u05DD") }, "\u05D0\u05DC\u05D4\u05D9\u05DD"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05D3\u05D5\u05DF") }, "\u05D0\u05D1\u05D3\u05D5\u05DF"), " (Abaddon = 63 = 7\xD79)."));
+  }))), /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: 10, padding: "12px 14px", background: "var(--panel2)", borderRadius: 8 } }, /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "Standard gematria: "), /* @__PURE__ */ import_react.default.createElement("b", { className: "big" }, total), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, " \xB7 Mispar Katan (digital root): "), /* @__PURE__ */ import_react.default.createElement("b", { className: "big", style: { color: "var(--blue)" } }, reduce9(total) === 0 ? 9 : reduce9(total)))), /* @__PURE__ */ import_react.default.createElement("h3", null, "The 22 letters \u2192 digital-root groups (Mispar Katan Mispari)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Each of the 22 letters reduces (sum of digits) to 1\u20139. Groups 1\u20134 gather three letters each (units / tens / hundreds 100\u2013400); groups 5\u20139 gather two (the hundreds stop at 400 \u2014 ancient Hebrew has only 22 letters, no medieval 500\u2013900 finals). This digital root is the bridge to the kamea: without it there is no sigil (\xA715b.3). ", /* @__PURE__ */ import_react.default.createElement("b", null, "Terminology note:"), " this reduction is ", /* @__PURE__ */ import_react.default.createElement("i", null, "Mispar Katan Mispari"), '; "Aiq Bekar" properly names a 10\xD7 letter-substitution cipher, not this reduction.'), /* @__PURE__ */ import_react.default.createElement("div", { className: "grid2" }, [1, 2, 3, 4, 5, 6, 7, 8, 9].map((g) => /* @__PURE__ */ import_react.default.createElement("div", { key: g, className: "kbox" }, /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, g), " \xB7 ", groups[g].join(", ")))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05E8\u05D4\u05DD") }, "\u05D0\u05D1\u05E8\u05D4\u05DD"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05E9\u05DC\u05DE\u05D4") }, "\u05E9\u05DC\u05DE\u05D4"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05DC\u05D4\u05D9\u05DD") }, "\u05D0\u05DC\u05D4\u05D9\u05DD"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05D3\u05D5\u05DF") }, "\u05D0\u05D1\u05D3\u05D5\u05DF"), " (Abaddon = 63 = 7\xD79). Gen 1:1 = ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D1\u05E8\u05D0\u05E9\u05D9\u05EA") }, "\u05D1\u05E8\u05D0\u05E9\u05D9\u05EA"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05DC\u05D4\u05D9\u05DD") }, "\u05D0\u05DC\u05D4\u05D9\u05DD"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D4\u05E9\u05DE\u05D9\u05DD") }, "\u05D4\u05E9\u05DE\u05D9\u05DD"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D4\u05D0\u05E8\u05E5") }, "\u05D4\u05D0\u05E8\u05E5"), " \u2192 913+86+395+401+407+296+203 = 2701 = 37\xD773."));
+}
+function GematriaGreek() {
+  const [inp, setInp] = (0, import_react.useState)("\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2");
+  const v = isopsephy(inp);
+  const ex = [["\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2", "Jesus", 888, "8\xD7111"], ["\u03A7\u03C1\u03B9\u03C3\u03C4\u03CC\u03C2", "Christ", 1480, "40\xD737"], ["Jesus + Christ", "", 2368, "64\xD737 = 888+1480"], ["\u039A\u03CD\u03C1\u03B9\u03BF\u03C2", "Lord", 800, ""], ["\u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD", "Apollyon (Rev 9:11)", 1461, "Sothic cycle"], ["666", "the beast (Rev 13:18)", 666, "6\xD7111 = \u03A31..36"]];
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Greek, e.g. \u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2 / \u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD", style: { flex: "1 1 280px" } }), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "isopsephy: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, v))), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "27 letters: 24 standard + 3 archaic retained only as numerals (digamma \u03DD/\u03DB=6, koppa \u03DF/\u03D9=90, sampi \u03E1=900). Final sigma \u03C2 = 200. Additive \u2014 no reduction. Thousands reuse \u03B1\u2013\u03B8 with a lower keraia (\u0375\u03B1=1000)."), /* @__PURE__ */ import_react.default.createElement("table", { style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Units 1\u20139"), /* @__PURE__ */ import_react.default.createElement("th", null, "Tens 10\u201390"), /* @__PURE__ */ import_react.default.createElement("th", null, "Hundreds 100\u2013900"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "gk" }, "\u03B1 \u03B2 \u03B3 \u03B4 \u03B5 \u03DB \u03B6 \u03B7 \u03B8"), /* @__PURE__ */ import_react.default.createElement("td", { className: "gk" }, "\u03B9 \u03BA \u03BB \u03BC \u03BD \u03BE \u03BF \u03C0 \u03DF"), /* @__PURE__ */ import_react.default.createElement("td", { className: "gk" }, "\u03C1 \u03C3 \u03C4 \u03C5 \u03C6 \u03C7 \u03C8 \u03C9 \u03E1")), /* @__PURE__ */ import_react.default.createElement("tr", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("td", null, "1 2 3 4 5 6 7 8 9"), /* @__PURE__ */ import_react.default.createElement("td", null, "10 20 30 40 50 60 70 80 90"), /* @__PURE__ */ import_react.default.createElement("td", null, "100 200 300 400 500 600 700 800 900")))), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Name"), /* @__PURE__ */ import_react.default.createElement("th", null, "Reading"), /* @__PURE__ */ import_react.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react.default.createElement("th", null, "Notes"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, ex.map((r, i) => /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, r[0] ? /* @__PURE__ */ import_react.default.createElement("span", { className: "gk", style: { fontSize: "1.4rem" } }, r[0]) : ""), /* @__PURE__ */ import_react.default.createElement("td", null, r[1]), /* @__PURE__ */ import_react.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, r[2]), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, r[3]))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("b", null, "666 / original referent:"), " the scholarly consensus is the ", /* @__PURE__ */ import_react.default.createElement("i", null, "Hebrew"), " gematria \u05E0\u05E8\u05D5\u05DF \u05E7\u05E1\u05E8 (Neron Kesar) = 666; the Latin form (dropping final nun) = 616 (alternate manuscript). No single Greek word is widely accepted as the original Revelation 666. ", /* @__PURE__ */ import_react.default.createElement("b", null, "Apollyon 1461 \u2194 Sothic"), " is an esoteric parallel (arithmetic exact), not a scholarly lexicon entry."));
+}
+function GematriaArabic() {
+  const [inp, setInp] = (0, import_react.useState)("\u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646 \u0627\u0644\u0631\u062D\u064A\u0645");
+  const v = abjad(inp);
+  const letters = [...inp].filter((ch) => ABJAD[ch]);
+  const ex = [["\u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646 \u0627\u0644\u0631\u062D\u064A\u0645", "Bismillah", 786, "19 letters; 2+60+40+66+329+289"], ["\u0627\u0644\u0644\u0647", "Allah", 66, ""], ["\u0645\u062D\u0645\u062F", "Muhammad", 92, ""], ["\u0639\u0644\u064A", "Ali", 110, ""], ["\u062D\u0633\u064A\u0646", "Husayn", 128, ""]];
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", dir: "rtl", lang: "ar", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Arabic, e.g. \u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646 \u0627\u0644\u0631\u062D\u064A\u0645", style: { flex: "1 1 320px", textAlign: "right" } }), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "abjad (\u1E25is\u0101b al-jummal): ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, v))), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "28 letters in the ", /* @__PURE__ */ import_react.default.createElement("b", null, "abjad (\u1E24ij\u0101\u02BE\u012B) order"), " \u2014 the numeral order, ", /* @__PURE__ */ import_react.default.createElement("i", null, "not"), " the alphabetical alifb\u0101\u02BE\u012B order (\u0627\u0628 \u062A \u062B\u2026). Mnemonic: \u02BEabjad hawwaz \u1E25u\u1E6D\u1E6D\u012B kalaman sa\u02BFfa\u1E63 qarashat thakhadh \u1E0Da\u1E93agh. Additive. (The Maghrebi/archaic variant differs at 6 positions \u2014 not shown.)"), /* @__PURE__ */ import_react.default.createElement("table", { style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Units 1\u20139"), /* @__PURE__ */ import_react.default.createElement("th", null, "Tens 10\u201390"), /* @__PURE__ */ import_react.default.createElement("th", null, "Hundreds 100\u2013900"), /* @__PURE__ */ import_react.default.createElement("th", null, "1000"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", dir: "rtl", style: { fontSize: "1.25rem" } }, "\u0627 \u0628 \u062C \u062F \u0647 \u0648 \u0632 \u062D \u0637"), /* @__PURE__ */ import_react.default.createElement("td", { className: "he", dir: "rtl", style: { fontSize: "1.25rem" } }, "\u064A \u0643 \u0644 \u0645 \u0646 \u0633 \u0639 \u0641 \u0635"), /* @__PURE__ */ import_react.default.createElement("td", { className: "he", dir: "rtl", style: { fontSize: "1.25rem" } }, "\u0642 \u0631 \u0634 \u062A \u062B \u062E \u0630 \u0636 \u0638"), /* @__PURE__ */ import_react.default.createElement("td", { className: "he", dir: "rtl", style: { fontSize: "1.25rem" } }, "\u063A")), /* @__PURE__ */ import_react.default.createElement("tr", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("td", null, "1 2 3 4 5 6 7 8 9"), /* @__PURE__ */ import_react.default.createElement("td", null, "10 20 30 40 50 60 70 80 90"), /* @__PURE__ */ import_react.default.createElement("td", null, "100 200 300 400 500 600 700 800 900"), /* @__PURE__ */ import_react.default.createElement("td", null, "1000")))), letters.length > 0 && /* @__PURE__ */ import_react.default.createElement("div", { style: { marginBottom: 10, padding: "10px 14px", background: "var(--panel2)", borderRadius: 8 } }, /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, "letters: "), letters.map((ch, i) => /* @__PURE__ */ import_react.default.createElement("span", { key: i, className: "he", dir: "rtl", style: { fontSize: "1.3rem", marginLeft: 6 } }, ch, "=", ABJAD[ch]))), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Phrase"), /* @__PURE__ */ import_react.default.createElement("th", null, "Reading"), /* @__PURE__ */ import_react.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react.default.createElement("th", null, "Notes"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, ex.map((r, i) => /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "he", dir: "rtl", style: { fontSize: "1.3rem" } }, r[0])), /* @__PURE__ */ import_react.default.createElement("td", null, r[1]), /* @__PURE__ */ import_react.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, r[2]), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, r[3]))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("b", null, "The 19 Bismillah claim:"), " \u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646 \u0627\u0644\u0631\u062D\u064A\u0645 = 19 letters (the alif of the article is counted) \u2014 the count is correct; the Code-19 / Rashad Khalifa debate rests on it. ", /* @__PURE__ */ import_react.default.createElement("b", null, "786"), " is the abjad sum, used as a shorthand for Bismillah in South Asia (some scholars call it bid\u02BFah). Both are tradition, not Quran text."));
+}
+function GematriaIndian() {
+  const [inp, setInp] = (0, import_react.useState)("\u0917\u092A\u094D\u092F\u092D\u093E\u0917\u094D\u092F");
+  const dec = katapayadi(inp);
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Devanagari consonants, e.g. \u0905\u0928\u0941\u0937\u094D\u091F\u0941\u092D\u094D\u0928 (or any)", style: { flex: "1 1 320px" } }), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "decoded (right-to-left): ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, dec || "\u2014"))), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, /* @__PURE__ */ import_react.default.createElement("b", null, "Katapayadi"), " (Haridatta, 683 CE; Kerala school, pre-1500): consonants \u2192 digits, read ", /* @__PURE__ */ import_react.default.createElement("b", null, "right-to-left"), ' (\u0905\u0919\u094D\u0915\u093E\u0928\u093E\u0902 \u0935\u093E\u092E\u0924\u094B \u0917\u0924\u093F\u0903, "numbers go from left to right" reversed). ', /* @__PURE__ */ import_react.default.createElement("b", null, "Vowels = 0"), "; \u0928, \u091E = 0. In a conjunct, only the ", /* @__PURE__ */ import_react.default.createElement("b", null, "last"), " consonant carries a value. Named for the four consonants heading the four groups (\u0915 \u091F \u092A \u092F, all = 1). This is ", /* @__PURE__ */ import_react.default.createElement("b", null, "positional"), ", not additive isopsephy."), /* @__PURE__ */ import_react.default.createElement("table", { style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Digit"), /* @__PURE__ */ import_react.default.createElement("th", null, "ka-group"), /* @__PURE__ */ import_react.default.createElement("th", null, "\u1E6Da-group"), /* @__PURE__ */ import_react.default.createElement("th", null, "pa-group"), /* @__PURE__ */ import_react.default.createElement("th", null, "ya-group"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, [["1", "\u0915", "\u091F", "\u092A", "\u092F"], ["2", "\u0916", "\u0920", "\u092B", "\u0930"], ["3", "\u0917", "\u0921", "\u092C", "\u0932"], ["4", "\u0918", "\u0922", "\u092D", "\u0935"], ["5", "\u0919", "\u0923", "\u092E", "\u0936"], ["6", "\u091A", "\u0924", "\u2014", "\u0937"], ["7", "\u091B", "\u0925", "\u2014", "\u0938"], ["8", "\u091C", "\u0926", "\u2014", "\u0939"], ["9", "\u091D", "\u0927", "\u2014", "\u2014"], ["0", "\u091E", "\u0928", "\u2014", "\u2014"]].map((r) => /* @__PURE__ */ import_react.default.createElement("tr", { key: r[0] }, /* @__PURE__ */ import_react.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, r[0]), r.slice(1).map((c, i) => /* @__PURE__ */ import_react.default.createElement("td", { key: i, className: "he", style: { fontSize: "1.3rem" } }, c)))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("b", null, "Famous encodings (\u03C0):"), " the Kara\u1E47apaddhati verse (Kerala school, 15th c.) decodes to ", /* @__PURE__ */ import_react.default.createElement("b", null, "31415926536"), " (\u03C0 to 10 places) under the standard right-to-left rule. The 31-place gop\u012Bbh\u0101gya verse ", /* @__PURE__ */ import_react.default.createElement("i", null, "violates"), " the reversal rule \u2014 a standard decoder will not reproduce it. ", /* @__PURE__ */ import_react.default.createElement("b", null, "Flag:"), ' "\u0915\u091F\u092A\u092F\u093E\u0926\u093F encodes 31416" is FALSE \u2014 the name is etymological ("starting with ka,\u1E6Da,pa,ya"), not a numerical encoding.'), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginTop: 8 } }, "The Sanskrit vargas (5 consonant classes) and the 14 Shiva Sutras are ", /* @__PURE__ */ import_react.default.createElement("b", null, "phonological/grammatical"), ", NOT gematria \u2014 no numbers are assigned. The sacred numbers 108 (= 27 nakshatras \xD7 4 p\u0101das), 1008, 432,000 are fixed constants, not letter-sums."));
+}
+function GematriaMore() {
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h3", null, "\u0100ryabha\u1E6Da numeration (India, early 6th c. CE) \u2014 positional, not additive"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "A true alphasyllabic numeral: ", /* @__PURE__ */ import_react.default.createElement("b", null, "consonant = fixed value 1\u2013100; vowel = power-of-100 multiplier"), "; syllable = consonant \xD7 vowel. e.g. \u0915\u093F = \u0915(1) \xD7 100 = 100; \u0939\u094C = \u0939(100) \xD7 10\xB9\u2076 = 10\xB9\u2078. Concatenated least-significant first. Pre-1500. This is a large-number positional notation, ", /* @__PURE__ */ import_react.default.createElement("b", null, "not"), " a word-summing gematria."), /* @__PURE__ */ import_react.default.createElement("table", { style: { marginBottom: 12 } }, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Category"), /* @__PURE__ */ import_react.default.createElement("th", null, "Consonants \u2192 values"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "Velar"), /* @__PURE__ */ import_react.default.createElement("td", { className: "he" }, "\u09151 \u09162 \u09173 \u09184 \u09195")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "Palatal"), /* @__PURE__ */ import_react.default.createElement("td", { className: "he" }, "\u091A6 \u091B7 \u091C8 \u091D9 \u091E10")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "Retroflex"), /* @__PURE__ */ import_react.default.createElement("td", { className: "he" }, "\u091F11 \u092012 \u092113 \u092214 \u092315")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "Dental"), /* @__PURE__ */ import_react.default.createElement("td", { className: "he" }, "\u092416 \u092517 \u092618 \u092719 \u092820")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "Labial"), /* @__PURE__ */ import_react.default.createElement("td", { className: "he" }, "\u092A21 \u092B22 \u092C23 \u092D24 \u092E25")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "Semivowels"), /* @__PURE__ */ import_react.default.createElement("td", { className: "he" }, "\u092F30 \u093040 \u093250 \u093560")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "Fricatives"), /* @__PURE__ */ import_react.default.createElement("td", { className: "he" }, "\u093670 \u093780 \u093890 \u0939100")), /* @__PURE__ */ import_react.default.createElement("tr", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("td", null, "Vowel mult."), /* @__PURE__ */ import_react.default.createElement("td", null, "a=1, i=100, u=10\u2074, \u1E5B=10\u2076, \u1E37=10\u2078, e=10\xB9\u2070, ai=10\xB9\xB2, o=10\xB9\u2074, au=10\xB9\u2076")))), /* @__PURE__ */ import_react.default.createElement("h3", null, "Cyrillic (10th c., Greek-derived) \u2014 true pre-1500 isopsephy"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Direct adaptation of Byzantine Greek isopsephy. Order follows Greek, not Cyrillic alphabetical. Borrowed letters \u046E(ksi)=60, \u0470(psi)=700, \u0472(theta)=9 carry numerals; Slavic-only letters (\u0431 \u0436 \u0448 \u0449\u2026) get NO value. e.g. \u0470\u0417 = 700+7 = 707."), /* @__PURE__ */ import_react.default.createElement("h3", null, "Coptic \u2014 Greek + Fai=90"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Essentially Greek isopsephy reused, with ONE Demotic addition: ", /* @__PURE__ */ import_react.default.createElement("b", null, "\u03E5 (Fai) = 90"), ', filling the Greek qoppa slot. The other 5 Demotic letters have no numeric value. Treat as "Greek + Fai=90."'), /* @__PURE__ */ import_react.default.createElement("h3", null, "POST-1500 / NOT gematria (flagged)"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Latin A-Z gematria"), " \u2014 ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--red)" } }, "post-1500"), ". No pre-1500 full Latin A-Z system exists. Earliest: Rudolff 1525; famous: ", /* @__PURE__ */ import_react.default.createElement("b", null, "Agrippa, De Occulta Philosophia (1532), Bk II ch. XX"), " (A=1\u2026Z=500). e.g. IESUS = 394. A Renaissance construction \u2014 flag, do not treat as ancient."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Roman numerals"), " \u2014 7 symbols (I V X L C D M), additive/subtractive. Numeral notation, ", /* @__PURE__ */ import_react.default.createElement("b", null, "not"), " word-summing isopsephy."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Runic calendars"), " \u2014 16 Younger Futhark runes encode golden numbers 1\u201316 + 3 special (Metonic calendrical), not gematria."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Ogham"), " \u2014 the 20 fid have NO numeric assignment; stroke-count is phonological organization."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Chinese stroke-count divination"), " (\u6E2C\u5B57) \u2014 pre-1500 roots but NO fixed standardized stroke\u2192number table; systematized only post-1612.")));
 }
 function SigilTab() {
   const [inp, setInp] = (0, import_react.useState)("\u05DE\u05E9\u05D9\u05D7");
   const sp = sigilPath(inp);
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Sigil Forge \u2014 name \u2192 Aiq Bekar \u2192 Lo Shu trace (\xA715b.3)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The traditional kamea-sigil method: (1) take the name (consonants); (2) reduce each letter to 1\u20139 by Aiq Bekar; (3) on Saturn's kamea (the Lo Shu 3\xD73) mark the reduced cells in order and join them \u2014 the trace ", /* @__PURE__ */ import_react.default.createElement("b", null, "is"), " the sigil; (4) consecutive repeats collapse (the pen does not lift). ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--green)" } }, "Green"), " = first cell, ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--red)" } }, "red"), " = last."), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Hebrew name, e.g. \u05DE\u05E9\u05D9\u05D7", style: { flex: "1 1 260px" } }), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "cells used: ", sp.cellsUsed.length, "/9")), /* @__PURE__ */ import_react.default.createElement("div", { className: "sigil-grid", style: { display: "flex", gap: 24, flexWrap: "wrap", alignItems: "flex-start" } }, /* @__PURE__ */ import_react.default.createElement(SigilSVG, { name: inp }), /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "1 1 220px" } }, /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Letters: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, sp.letters.map(displayHe).join(" "))), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Values: ", sp.letters.map((ch) => letterVal(ch)).join(", ")), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Aiq Bekar (1\u20139): ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--blue)" } }, sp.reduced.join("  "))), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Trace (consecutive repeats collapsed):"), /* @__PURE__ */ import_react.default.createElement("div", { className: "big", style: { color: "var(--gold)" } }, sp.cells.map((c) => c.v).join(" \u2192 ") || "\u2014"), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "The sigil is the geometric footprint of the name on the decimal grid (Aiq Bekar). It is deterministic and reproducible from the name alone. ", /* @__PURE__ */ import_react.default.createElement("em", null, "Caveat (\xA76.3 / \xA715b.3):"), " the sigil-over-kamea method is Renaissance (Agrippa, 1531), not medieval Jewish."), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D3\u05DD") }, "\u05D0\u05D3\u05DD"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05DE\u05E9\u05D4") }, "\u05DE\u05E9\u05D4"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D9\u05E9\u05E8\u05D0\u05DC") }, "\u05D9\u05E9\u05E8\u05D0\u05DC"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D5\u05D4\u05D5") }, "\u05D5\u05D4\u05D5"), " (1st Shem HaMephorash angel)."))), /* @__PURE__ */ import_react.default.createElement(Fig, { n: 7, doc: "From the article (\xA715b.3): the Lo Shu (Saturn 3\xD73, M=15) with the 9 Aiq Bekar groups overlaid \u2014 each cell gathers the letters whose gematria digit-sums to it. The golden trace is the sigil of \u05DE\u05E9\u05D9\u05D7 (Messiah): Aiq Bekar 4\xB73\xB71\xB78, the reduced cells joined in order. Aiq Bekar = the digit-sum of the decimal-positional gematria of \xA72 \u2014 the bridge from alphabet to sigil." }));
+  const isHeb = /[א-ת]/.test(inp);
+  const entries = isHeb ? [...norm(inp)].filter((ch) => GV[ch]).map((ch) => ({ l: displayHe(ch), v: letterVal(ch) })) : [...inp.toUpperCase().replace(/[^A-Z]/g, "")].map((ch) => ({ l: ch, v: ch.charCodeAt(0) - 64 }));
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Sigil Forge \u2014 the Aiq Bekar / Lo Shu sigil (Saturn 3\xD73, \xA715b.3)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The kamea-sigil method: (1) take the name (consonants); (2) reduce each letter's gematria to its digital root 1\u20139 (Aiq Bekar); (3) mark those cells on the Lo Shu (Saturn 3\xD73) in order and join them \u2014 the trace ", /* @__PURE__ */ import_react.default.createElement("b", null, "is"), " the sigil; (4) consecutive repeats collapse (the pen does not lift). Aiq Bekar = the digit-sum of the 22-letter gematria of \xA72, the bridge from alphabet to sigil. ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--green)" } }, "Green"), " = first cell, ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--red)" } }, "red"), " = last. The ", /* @__PURE__ */ import_react.default.createElement("b", null, "Kameot"), " tab traces the same name on all 7 planetary squares (Saturn \u2192 Moon)."), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Hebrew name, e.g. \u05DE\u05E9\u05D9\u05D7", style: { flex: "1 1 260px" }, autoFocus: true }), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "Aiq Bekar cells used: ", sp.cellsUsed.length, "/9")), /* @__PURE__ */ import_react.default.createElement("div", { className: "row", style: { alignItems: "flex-start" } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "0 0 auto" } }, /* @__PURE__ */ import_react.default.createElement(KameaSigil, { n: 3, word: inp, compact: true })), /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "1 1 200px" } }, /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Letters: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, entries.map((e) => e.l).join(" ") || "\u2014")), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Values: ", entries.map((e) => e.v).join(", ") || "\u2014"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Aiq Bekar (1\u20139): ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--blue)" } }, sp.reduced.join("  ") || "\u2014")), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Saturn trace (repeats collapsed):"), /* @__PURE__ */ import_react.default.createElement("div", { className: "big", style: { color: "var(--gold)" } }, sp.cells.map((c) => c.v).join(" \u2192 ") || "\u2014"), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "The sigil is the geometric footprint of the name on the Lo Shu \u2014 deterministic from the name alone. The ", /* @__PURE__ */ import_react.default.createElement("b", null, "Kameot"), " tab traces the same name on all 7 planetary squares (Saturn \u2192 Moon): each square's different modulus n\xB2 = 9,16,25,36,49,64,81 yields a distinct sigil per planet. ", /* @__PURE__ */ import_react.default.createElement("em", null, "Caveat (\xA76.3 / \xA715b.3):"), " the sigil-over-kamea method is Renaissance (Agrippa, 1531), not medieval Jewish."), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D3\u05DD") }, "\u05D0\u05D3\u05DD"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05DE\u05E9\u05D4") }, "\u05DE\u05E9\u05D4"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D9\u05E9\u05E8\u05D0\u05DC") }, "\u05D9\u05E9\u05E8\u05D0\u05DC"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D5\u05D4\u05D5") }, "\u05D5\u05D4\u05D5"), " (1st Shem angel) \xB7 ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("MICHAEL") }, "MICHAEL")))), /* @__PURE__ */ import_react.default.createElement(Fig, { n: 7, doc: "From the article (\xA715b.3): the Lo Shu (Saturn 3\xD73, M=15) with the 9 Aiq Bekar groups overlaid \u2014 each cell gathers the letters whose gematria digit-sums to it. The golden trace is the sigil of \u05DE\u05E9\u05D9\u05D7 (Messiah): Aiq Bekar 4\xB73\xB71\xB78, the reduced cells joined in order. Aiq Bekar = the digit-sum of the 22-letter gematria of \xA72 \u2014 the bridge from alphabet to sigil." }));
 }
-function KameaSigil({ n, word }) {
+function KameaSigil({ n, word, compact }) {
   const sq = buildMagic(n);
   const N = n * n;
   const pos = {};
@@ -26247,7 +26486,7 @@ function KameaSigil({ n, word }) {
   const isHeb = /[א-ת]/.test(word);
   let entries;
   if (isHeb) {
-    entries = [...norm(word)].filter((ch) => GV[ch] || FINALS[ch]).map((ch) => ({ l: displayHe(ch), v: letterVal(ch) }));
+    entries = [...norm(word)].filter((ch) => GV[ch]).map((ch) => ({ l: displayHe(ch), v: letterVal(ch) }));
   } else {
     entries = [...word.toUpperCase().replace(/[^A-Z]/g, "")].map((ch) => ({ l: ch, v: ch.charCodeAt(0) - 64 }));
   }
@@ -26282,18 +26521,38 @@ function KameaSigil({ n, word }) {
     const r = k === 0 || k === path.length - 1 ? 4.5 : 2.8;
     const fill = k === 0 ? "#6fe0a0" : k === path.length - 1 ? "#ff8a8a" : "#e8c87a";
     return /* @__PURE__ */ import_react.default.createElement("circle", { key: k, cx: x, cy: y, r, fill, stroke: "#0b0e14", strokeWidth: "0.6" });
-  })), /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: 8, minWidth: 200 } }, /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, isHeb ? "Hebrew gematria (finals included)" : "Latin A=1\u2026Z=26", " \u2192 reduced into the square (n\xB2=", N, ")", n === 3 ? " \u2014 for Saturn n\xB2=9 this is the digital root = the Aiq Bekar method of \xA715b.3" : "", "."), entries.length === 0 ? /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Type a word to trace its sigil on this kamea.") : /* @__PURE__ */ import_react.default.createElement("table", { style: { marginTop: 6 } }, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Letter"), /* @__PURE__ */ import_react.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react.default.createElement("th", null, "Cell"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, entries.map((e, i) => /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("span", { className: isHeb ? "he" : "gk", style: { fontSize: "1.2rem" } }, e.l)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, e.v), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, targets[i]))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginTop: 6 } }, "Trace (", path.length, " pts, repeats collapsed): ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, path.join(" \u2192 ") || "\u2014"), " \xB7 cells ", used.size, "/", N)));
+  })), !compact && /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: 8, minWidth: 200 } }, /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, isHeb ? "Hebrew gematria (22 letters; finals = base letter)" : "Latin A=1\u2026Z=26", " \u2192 reduced into the square (n\xB2=", N, ")", n === 3 ? " \u2014 for Saturn n\xB2=9 this is the digital root = the Aiq Bekar method of \xA715b.3" : "", "."), entries.length === 0 ? /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Type a word to trace its sigil on this kamea.") : /* @__PURE__ */ import_react.default.createElement("table", { style: { marginTop: 6 } }, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Letter"), /* @__PURE__ */ import_react.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react.default.createElement("th", null, "Cell"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, entries.map((e, i) => /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("span", { className: isHeb ? "he" : "gk", style: { fontSize: "1.2rem" } }, e.l)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, e.v), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, targets[i]))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginTop: 6 } }, "Trace (", path.length, " pts, repeats collapsed): ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, path.join(" \u2192 ") || "\u2014"), " \xB7 cells ", used.size, "/", N)));
 }
 function KameotTab() {
   const [word, setWord] = (0, import_react.useState)("\u05D9\u05D4\u05D5\u05D4");
   const [planet, setPlanet] = (0, import_react.useState)("Saturn");
   const [pn, n, pdbl] = KAMEOT.find((k) => k[0] === planet);
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "The 7 kameot \u2014 planetary magic squares + sigil tracer (\xA715b.1, \xA715b.3)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "7 magic squares \u2194 7 doubles \u2194 7 planets (Sefer Yetzirah \xA74). Type a word (Hebrew or English/Latin), pick a planet, and trace its sigil on that kamea: each letter \u2192 value \u2192 cell on the square (values reduced modulo n\xB2; for Saturn n\xB2=9 this is the digital root = Aiq Bekar). ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--green)" } }, "green"), " = first, ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--red)" } }, "red"), " = last; consecutive repeats collapse (the pen does not lift)."), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: word, onChange: (e) => setWord(e.target.value), placeholder: "Hebrew (\u05D9\u05D4\u05D5\u05D4) or English (MICHAEL)", style: { flex: "1 1 260px" }, autoFocus: true }), /* @__PURE__ */ import_react.default.createElement("select", { value: planet, onChange: (e) => setPlanet(e.target.value), "aria-label": "Planet kamea", style: { background: "var(--panel2)", color: "var(--txt)", border: "1px solid var(--line)", borderRadius: 8, padding: "8px", fontSize: ".9rem" } }, KAMEOT.map(([p, nn]) => /* @__PURE__ */ import_react.default.createElement("option", { key: p, value: p }, GLYPH[p], " ", p, " (", nn, "\xD7", nn, ")")))), /* @__PURE__ */ import_react.default.createElement("div", { className: "row", style: { alignItems: "flex-start" } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "0 0 auto" } }, /* @__PURE__ */ import_react.default.createElement(KameaSigil, { n, word })), /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "1 1 200px" } }, /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Planet: ", /* @__PURE__ */ import_react.default.createElement("b", null, GLYPH[planet], " ", planet), " \xB7 ", n, "\xD7", n, " kamea \xB7 double ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, pdbl), " \xB7 constant ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, n * (n * n + 1) / 2), "."), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "How the trace is built: letters of the word \u2192 gematria value (Hebrew, finals included; or A=1\u2026Z=26 for Latin) \u2192 reduce each value into the square's range (1\u2026n\xB2) by ((value\u22121) mod n\xB2)+1 \u2192 mark those cells in order \u2192 join them. For ", /* @__PURE__ */ import_react.default.createElement("b", null, "Saturn"), " (n\xB2=9) this reduces to the digital root \u2014 exactly the Aiq Bekar \u2192 Lo Shu method verified in \xA715b.3 and used in the Sigil Forge tab."), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setWord("\u05D9\u05D4\u05D5\u05D4") }, "\u05D9\u05D4\u05D5\u05D4"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setWord("\u05DE\u05E9\u05D9\u05D7") }, "\u05DE\u05E9\u05D9\u05D7"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setWord("\u05D0\u05D3\u05DD") }, "\u05D0\u05D3\u05DD"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setWord("MICHAEL") }, "MICHAEL"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setWord("RAPHAEL") }, "RAPHAEL"), " \u2014 then switch planet."), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("em", null, "Caveat (\xA76.3 / \xA715b.3):"), " the sigil-over-kamea method is Renaissance (Agrippa, 1531), not medieval Jewish. The English A=1\u2026Z=26 mapping is a modern Latin gematria, not traditional."))), /* @__PURE__ */ import_react.default.createElement("h3", null, "All 7 kameot (reference)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "grid2" }, KAMEOT.map(([planet2, n2, dbl]) => {
-    const M = n2 * (n2 * n2 + 1) / 2, total = n2 * n2 * M;
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "The 7 kameot \u2014 planetary magic squares + sigil tracer (\xA715b.1, \xA715b.3)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "7 magic squares \u2194 7 doubles \u2194 7 planets (Sefer Yetzirah \xA74). Type a word (Hebrew or English/Latin), pick a planet, and trace its sigil on that kamea: each letter \u2192 value \u2192 cell on the square (values reduced modulo n\xB2; for Saturn n\xB2=9 this is the digital root = Aiq Bekar). ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--green)" } }, "green"), " = first, ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "var(--red)" } }, "red"), " = last; consecutive repeats collapse (the pen does not lift)."), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: word, onChange: (e) => setWord(e.target.value), placeholder: "Hebrew (\u05D9\u05D4\u05D5\u05D4) or English (MICHAEL)", style: { flex: "1 1 260px" }, autoFocus: true }), /* @__PURE__ */ import_react.default.createElement("select", { value: planet, onChange: (e) => setPlanet(e.target.value), "aria-label": "Planet kamea", style: { background: "var(--panel2)", color: "var(--txt)", border: "1px solid var(--line)", borderRadius: 8, padding: "8px", fontSize: ".9rem" } }, KAMEOT.map(([p, nn]) => /* @__PURE__ */ import_react.default.createElement("option", { key: p, value: p }, GLYPH[p], " ", p, " (", nn, "\xD7", nn, ")")))), /* @__PURE__ */ import_react.default.createElement("div", { className: "row", style: { alignItems: "flex-start" } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "0 0 auto" } }, /* @__PURE__ */ import_react.default.createElement(KameaSigil, { n, word })), /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "1 1 200px" } }, /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Planet: ", /* @__PURE__ */ import_react.default.createElement("b", null, GLYPH[planet], " ", planet), " \xB7 ", n, "\xD7", n, " kamea \xB7 double ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, pdbl), " \xB7 constant ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, n * (n * n + 1) / 2), "."), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "How the trace is built: letters of the word \u2192 gematria value (Hebrew, 22 letters \u2014 finals = base letter, no 500\u2013900; or A=1\u2026Z=26 for Latin) \u2192 reduce each value into the square's range (1\u2026n\xB2) by ((value\u22121) mod n\xB2)+1 \u2192 mark those cells in order \u2192 join them. For ", /* @__PURE__ */ import_react.default.createElement("b", null, "Saturn"), " (n\xB2=9) this reduces to the digital root \u2014 exactly the Aiq Bekar \u2192 Lo Shu method verified in \xA715b.3 and used in the Sigil Forge tab."), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setWord("\u05D9\u05D4\u05D5\u05D4") }, "\u05D9\u05D4\u05D5\u05D4"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setWord("\u05DE\u05E9\u05D9\u05D7") }, "\u05DE\u05E9\u05D9\u05D7"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setWord("\u05D0\u05D3\u05DD") }, "\u05D0\u05D3\u05DD"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setWord("MICHAEL") }, "MICHAEL"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setWord("RAPHAEL") }, "RAPHAEL"), " \u2014 then switch planet."), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("em", null, "Caveat (\xA76.3 / \xA715b.3):"), " the sigil-over-kamea method is Renaissance (Agrippa, 1531), not medieval Jewish. The English A=1\u2026Z=26 mapping is a modern Latin gematria, not traditional."))), /* @__PURE__ */ import_react.default.createElement("h3", null, "All 7 kameot \u2014 ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: "1.1rem" } }, word ? displayHe(norm(word)) : ""), " traced on each square"), /* @__PURE__ */ import_react.default.createElement("div", { className: "tcards", style: { gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))" } }, KAMEOT.map(([planet2, n2, dbl]) => {
+    const M = n2 * (n2 * n2 + 1) / 2;
     const sq = buildMagic(n2);
     const ok = isMagic(sq);
-    return /* @__PURE__ */ import_react.default.createElement("div", { key: planet2, className: "kbox" }, /* @__PURE__ */ import_react.default.createElement("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 } }, /* @__PURE__ */ import_react.default.createElement("b", null, GLYPH[planet2], " ", planet2), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, n2, "\xD7", n2, " \xB7 double ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: "1.1rem" } }, dbl))), /* @__PURE__ */ import_react.default.createElement(KameaGrid, { n: n2 }), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginTop: 6 } }, "constant ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, M), " \xB7 sum ", /* @__PURE__ */ import_react.default.createElement("b", null, total), " \xB7 magic ", ok ? "\u2713" : "\u2717"));
+    return /* @__PURE__ */ import_react.default.createElement("div", { key: planet2, className: "kbox", style: { textAlign: "center" } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 } }, /* @__PURE__ */ import_react.default.createElement("b", null, GLYPH[planet2], " ", planet2), /* @__PURE__ */ import_react.default.createElement("span", { className: "muted" }, n2, "\xD7", n2, " \xB7 M=", M)), /* @__PURE__ */ import_react.default.createElement("div", { style: { display: "flex", justifyContent: "center" } }, /* @__PURE__ */ import_react.default.createElement(KameaSigil, { n: n2, word, compact: true })), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginTop: 6 } }, "double ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: "1rem" } }, dbl), " \xB7 constant ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, M), " \xB7 magic ", ok ? "\u2713" : "\u2717"));
   })), /* @__PURE__ */ import_react.default.createElement("h3", null, "Cross-links (\xA715b.1.D)"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Mercury"), " 8\xD78 constant = 260 = the Maya ", /* @__PURE__ */ import_react.default.createElement("b", null, "Tzolkin"), " (260 days)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Sun"), " 6\xD76 constant = 111; sum 1..36 = 666 = 6\xD7111 (the \u201Csolar number\u201D, Rev 13:18 \u2014 see the Revelation tab)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Saturn"), " 3\xD73 = the Lo Shu, constant 15 = \u05D9\u05D4 (10+5); total 45 = \u05DE\u05D4 (40+5), \u201CWhat?\u201D."), /* @__PURE__ */ import_react.default.createElement("li", null, "The 7 kameot = the 7 days of the planetary week in Chaldean order (see the Week tab).")), /* @__PURE__ */ import_react.default.createElement(Fig, { n: 6, doc: "From the article (\xA715b.1): the 7 planetary kameot, orders 3\u20139 in Chaldean order, with constants M(n)=n(n\xB2+1)/2. Saturn 3\xD73 = the Lo Shu (M=15, basis of the sigils); Mercury 8\xD78 (M=260) = the Maya Tzolkin; the Sun 6\xD76 sums 1+\u2026+36 = 666 = 6\xD7111." }));
+}
+function AngelsCircle({ triplets }) {
+  const C = 240;
+  const ang = (i) => (-90 + i * 5) * Math.PI / 180;
+  const pt = (r, a) => [C + r * Math.cos(a), C + r * Math.sin(a)];
+  const Rout = 212, RtickIn = 200, Rnum = 224, RlabOut = 188, RlabIn = 168;
+  return /* @__PURE__ */ import_react.default.createElement("svg", { viewBox: "0 0 480 482", width: "100%", height: "auto", style: { maxWidth: 470, margin: "0 auto" }, role: "img", "aria-label": "72 angels around the precessional circle" }, /* @__PURE__ */ import_react.default.createElement("rect", { x: "0", y: "0", width: "480", height: "482", fill: "#0e1320", rx: "10" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: Rout, fill: "none", stroke: "#283145", strokeWidth: "1.4" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: RlabOut + 10, fill: "none", stroke: "#1c2333", strokeWidth: "0.7" }), triplets.map((t, i) => {
+    const a = ang(i);
+    const [x0, y0] = pt(Rout, a);
+    const [x1, y1] = pt(RtickIn, a);
+    const major = i % 6 === 0;
+    return /* @__PURE__ */ import_react.default.createElement("line", { key: "t" + i, x1: x0, y1: y0, x2: x1, y2: y1, stroke: major ? "#7fb0ff" : "#33405a", strokeWidth: major ? 1.3 : 0.6 });
+  }), triplets.map((t, i) => {
+    const a = ang(i);
+    const outer = i % 2 === 0;
+    const rl = outer ? RlabOut : RlabIn;
+    const [lx, ly] = pt(rl, a);
+    const [nx, ny] = pt(Rnum, a);
+    return /* @__PURE__ */ import_react.default.createElement("g", { key: "a" + i }, /* @__PURE__ */ import_react.default.createElement("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "8.6", fill: outer ? "#e8c87a" : "#c9a558", fontFamily: "serif" }, t), /* @__PURE__ */ import_react.default.createElement("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "5", fill: "#5d6883" }, i + 1));
+  }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: "58", fill: "#0e1320", stroke: "#2a3346", strokeWidth: "0.8" }), /* @__PURE__ */ import_react.default.createElement("text", { x: C, y: C - 18, textAnchor: "middle", fontSize: "24", fill: "#e8c87a", fontFamily: "serif" }, "72"), /* @__PURE__ */ import_react.default.createElement("text", { x: C, y: C - 2, textAnchor: "middle", fontSize: "8", fill: "#8aa0c0" }, "5\xB0 per angel \xB7 360\xB0/72"), /* @__PURE__ */ import_react.default.createElement("text", { x: C, y: C + 13, textAnchor: "middle", fontSize: "7.6", fill: "#7fb0ff" }, "1\xB0 / 72 yr precession"), /* @__PURE__ */ import_react.default.createElement("text", { x: C, y: C + 25, textAnchor: "middle", fontSize: "6.8", fill: "#5d6883" }, "72 \xD7 360 = 25 920 yr"));
 }
 function AngelsTab() {
   const [data, setData] = (0, import_react.useState)(null);
@@ -26310,7 +26569,7 @@ function AngelsTab() {
   const qn = q.trim().toLowerCase();
   const rows = data.triplets.map((t, i) => ({ i: i + 1, trio: t, el: t + "\u05D0\u05DC", yh: t + "\u05D9\u05D4", gemEL: data.gemEL ? data.gemEL[i] : gematria(norm(t + "\u05D0\u05DC")), gemYH: data.gemYH ? data.gemYH[i] : gematria(norm(t + "\u05D9\u05D4")) }));
   const filtered = qn ? rows.filter((r) => r.trio.includes(qn) || "" + r.i === qn || r.el.includes(qn) || r.yh.includes(qn)) : rows;
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "The 72 angels \u2014 Shem HaMephorash from Exodus 14:19-21 (\xA715b.4)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "72 consonants \xD7 3 verses. The 72 triplets are read by ", /* @__PURE__ */ import_react.default.createElement("b", null, "columns"), ": tr\xEDos[i] = v19[i] + v20[71\u2212i] + v21[i] (v20 read backwards, as tradition requires). 72\xD73 = 216 = 6\xB3. Triplet 0 = ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D5\u05D4\u05D5"), " = Vehuiah (canonical \u2713). Each triplet + suffix ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D0\u05DC"), " (Hod) or ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D9\u05D4"), " (Malkhut) gives the angelic name."), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: q, onChange: (e) => setQ(e.target.value), placeholder: "filter by # or triplet\u2026", style: { flex: "1 1 220px" } }), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, filtered.length, " of 72")), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "#"), /* @__PURE__ */ import_react.default.createElement("th", null, "Triplet"), /* @__PURE__ */ import_react.default.createElement("th", null, "+\u05D0\u05DC (Hod)"), /* @__PURE__ */ import_react.default.createElement("th", null, "gem"), /* @__PURE__ */ import_react.default.createElement("th", null, "+\u05D9\u05D4 (Malkhut)"), /* @__PURE__ */ import_react.default.createElement("th", null, "gem"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, filtered.map((r) => /* @__PURE__ */ import_react.default.createElement("tr", { key: r.i }, /* @__PURE__ */ import_react.default.createElement("td", null, r.i), /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, r.trio)), /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, r.el)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, r.gemEL), /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, r.yh)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, r.gemYH))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("em", null, "Caveat (\xA76.3):"), " the mechanical extraction 72\xD73 from Exodus is demonstrated (p\u22485\xD710\u207B\u2077); the method is medieval (Rashi, 11th c.); the decanatal attribution (each angel \u2192 5\xB0) is a hypothesis, not demonstrated here. The sigil of each triplet is computed on the Sigil Forge tab."), /* @__PURE__ */ import_react.default.createElement(Fig, { n: 8, doc: "From the article (\xA715b.4): the three columns of Exodus 14:19-21 read in parallel \u2014 v19 downward, v20 upward (inverted, as tradition requires), v21 downward \u2014 so row i yields trio[i]. 72 \xD7 3 = 216 = 6\xB3 consonants \u2192 72 triplets (Shem HaMephorash). The first trios \u05D5\u05D4\u05D5 (Vehuiah), \u05D9\u05DC\u05D9 (Jeliel), \u05E1\u05D9\u05D8 (Sitael)\u2026 are verified against the canonical list." }));
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "The 72 angels \u2014 Shem HaMephorash from Exodus 14:19-21 (\xA715b.4)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "72 consonants \xD7 3 verses. The 72 triplets are read by ", /* @__PURE__ */ import_react.default.createElement("b", null, "columns"), ": tr\xEDos[i] = v19[i] + v20[71\u2212i] + v21[i] (v20 read backwards, as tradition requires). 72\xD73 = 216 = 6\xB3. Triplet 0 = ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D5\u05D4\u05D5"), " = Vehuiah (canonical \u2713). Each triplet + suffix ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D0\u05DC"), " (Hod) or ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D9\u05D4"), " (Malkhut) gives the angelic name."), /* @__PURE__ */ import_react.default.createElement("h3", null, "The 72 around the precessional circle"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "The 72 angels placed one every 5\xB0 (360\xB0/72). This is the precessional clock: precession carries the equinox \u2248 1\xB0 every 71.6 \u2248 ", /* @__PURE__ */ import_react.default.createElement("b", null, "72 years"), ", so ", /* @__PURE__ */ import_react.default.createElement("b", null, "72 = the years per degree of precession"), ", and each 5\xB0 angel = ~360 yr of precession; the full 72-division circuit = 72 \xD7 360 \u2248 ", /* @__PURE__ */ import_react.default.createElement("b", null, "25 920 yr"), " \u2014 the traditional Platonic great year (modern value 25 772 yr). Major ticks every 6th (the 12 decans). The decanatal attribution (each Shem angel \u2192 5\xB0) is traditional; the precessional reading is a mnemonic, not a physical model."), /* @__PURE__ */ import_react.default.createElement("div", { style: { marginBottom: 14 } }, /* @__PURE__ */ import_react.default.createElement(AngelsCircle, { triplets: data.triplets })), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: q, onChange: (e) => setQ(e.target.value), placeholder: "filter by # or triplet\u2026", style: { flex: "1 1 220px" } }), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, filtered.length, " of 72")), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "#"), /* @__PURE__ */ import_react.default.createElement("th", null, "Triplet"), /* @__PURE__ */ import_react.default.createElement("th", null, "+\u05D0\u05DC (Hod)"), /* @__PURE__ */ import_react.default.createElement("th", null, "gem"), /* @__PURE__ */ import_react.default.createElement("th", null, "+\u05D9\u05D4 (Malkhut)"), /* @__PURE__ */ import_react.default.createElement("th", null, "gem"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, filtered.map((r) => /* @__PURE__ */ import_react.default.createElement("tr", { key: r.i }, /* @__PURE__ */ import_react.default.createElement("td", null, r.i), /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, r.trio)), /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, r.el)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, r.gemEL), /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, r.yh)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, r.gemYH))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("em", null, "Caveat (\xA76.3):"), " the mechanical extraction 72\xD73 from Exodus is demonstrated (p\u22485\xD710\u207B\u2077); the method is medieval (Rashi, 11th c.); the decanatal attribution (each angel \u2192 5\xB0) is a hypothesis, not demonstrated here. The sigil of each triplet is computed on the Sigil Forge tab."));
 }
 function SarosTab() {
   const [yr, setYr] = (0, import_react.useState)(2026);
@@ -26320,14 +26579,14 @@ function SarosTab() {
     setBusy(true);
     setTimeout(() => {
       const out = [];
-      let cur = new Date(Date.UTC(y, 0, 1, 12));
-      const endMs = Date.UTC(y + 1, 0, 1, 12);
+      let cur = makeDate(y, 1, 1);
+      const endMs = makeDate(y + 1, 1, 1).getTime();
       let guard = 0;
       while (cur.getTime() < endMs && guard++ < 40) {
         const t = SearchMoonPhase(0, cur, 40);
         if (!t) break;
         const lat = EclipticGeoMoon(t).lat;
-        const ds = t.date.toISOString().slice(0, 10);
+        const ds = fmtDate(t.date);
         if (Math.abs(lat) < 1.6) out.push({ ds, beta: lat, kind: Math.abs(lat) < 0.6 ? "central" : "partial" });
         cur = new Date(t.date.getTime() + 2 * 864e5);
       }
@@ -26338,7 +26597,7 @@ function SarosTab() {
   (0, import_react.useEffect)(() => {
     scan(yr);
   }, [yr]);
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Saros \u2014 solar eclipses & the 73 statistic (\xA715b.6, \xA79)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A live scan: every new moon in the chosen year, a solar eclipse if the Moon's ecliptic latitude |\u03B2| < 1.6\xB0 (the same threshold calibrated in ", /* @__PURE__ */ import_react.default.createElement("code", null, "calc_saros_series.mjs"), "). One year is fast; the full 5000-year enumeration that counts saros series members runs offline."), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => setYr(yr - 1) }, "\u25C0 ", yr - 1), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, yr), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => setYr(yr + 1) }, yr + 1, " \u25B6"), busy && /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "scanning\u2026")), list && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Solar eclipses in ", list.y, ": ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, list.out.length)), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Date"), /* @__PURE__ */ import_react.default.createElement("th", null, "\u03B2 (Moon lat)"), /* @__PURE__ */ import_react.default.createElement("th", null, "Type"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, list.out.length === 0 && /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "none"), /* @__PURE__ */ import_react.default.createElement("td", null), /* @__PURE__ */ import_react.default.createElement("td", null)), list.out.map((e) => /* @__PURE__ */ import_react.default.createElement("tr", { key: e.ds }, /* @__PURE__ */ import_react.default.createElement("td", null, e.ds), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, e.beta.toFixed(3), "\xB0"), /* @__PURE__ */ import_react.default.createElement("td", null, e.kind === "central" ? '<b style="color:var(--gold)">central</b>' : "partial")))))), /* @__PURE__ */ import_react.default.createElement("h3", null, "The saros-series count (\xA715b.6 \u2014 verified by calculation)"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, "The saros = 223 synodic months = 6585.32 d. Eclipses of one series are separated by ~6585.32 d; a chain = a saros series."), /* @__PURE__ */ import_react.default.createElement("li", null, "Full enumeration (5000 years, all new moons, |\u03B2| < 1.6\xB0): ", /* @__PURE__ */ import_react.default.createElement("b", null, "152 complete series, lengths 54\u201387, median 72"), ". The \u201C73\u201D is a ", /* @__PURE__ */ import_react.default.createElement("b", null, "statistical count"), " (mean/median members per series) \u2014 not a period and not an eclipse factor."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--red)" } }, "Negative result (\xA79):"), " 37/73 do ", /* @__PURE__ */ import_react.default.createElement("b", null, "not"), " structure eclipses (factorisation, period, nodal-cycle stations ~40/~87 \u2014 all negative). 73 appears ", /* @__PURE__ */ import_react.default.createElement("i", null, "only"), " as the saros-series member count.")));
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Saros \u2014 solar eclipses & the saros series (\xA715b.6, \xA79)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A live scan: every new moon in the chosen year, a solar eclipse if the Moon's ecliptic latitude |\u03B2| < 1.6\xB0 (the same threshold calibrated in ", /* @__PURE__ */ import_react.default.createElement("code", null, "calc_saros_series.mjs"), "). One year is fast; the full 5000-year enumeration that counts saros series members runs offline."), /* @__PURE__ */ import_react.default.createElement("div", { className: "fig" }, /* @__PURE__ */ import_react.default.createElement(SarosDiagram, null), /* @__PURE__ */ import_react.default.createElement("div", { className: "cap" }, "Why eclipses cluster at nodes: the Moon's path is inclined 5.1\xB0 to the ecliptic and crosses it only twice per month. A new moon within the |\u03B2|<1.6\xB0 window (green band) = solar eclipse; elsewhere = a normal new moon. The scan tests exactly this.")), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => setYr(yr - 1) }, "\u25C0 ", yr - 1), /* @__PURE__ */ import_react.default.createElement(YearInput, { value: yr, onCommit: setYr }), /* @__PURE__ */ import_react.default.createElement("button", { onClick: () => setYr(yr + 1) }, yr + 1, " \u25B6"), yr < 0 && /* @__PURE__ */ import_react.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, Math.abs(yr), " BCE"), busy && /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, "scanning\u2026")), list && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("div", { className: "muted" }, "Solar eclipses in ", list.y, ": ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, list.out.length)), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Date"), /* @__PURE__ */ import_react.default.createElement("th", null, "\u03B2 (Moon lat)"), /* @__PURE__ */ import_react.default.createElement("th", null, "Type"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, list.out.length === 0 && /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "none"), /* @__PURE__ */ import_react.default.createElement("td", null), /* @__PURE__ */ import_react.default.createElement("td", null)), list.out.map((e) => /* @__PURE__ */ import_react.default.createElement("tr", { key: e.ds }, /* @__PURE__ */ import_react.default.createElement("td", null, e.ds), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, e.beta.toFixed(3), "\xB0"), /* @__PURE__ */ import_react.default.createElement("td", null, e.kind === "central" ? '<b style="color:var(--gold)">central</b>' : "partial")))))), /* @__PURE__ */ import_react.default.createElement("h3", null, "The saros-series count (\xA715b.6 \u2014 verified by calculation)"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, "The saros = 223 synodic months = ", /* @__PURE__ */ import_react.default.createElement("b", null, (223 * SYN).toFixed(2), " d"), ". Eclipses of one series are separated by ~", (223 * SYN).toFixed(2), " d; a chain = a saros series."), /* @__PURE__ */ import_react.default.createElement("li", null, "Full enumeration (5000 years, all new moons, |\u03B2| < 1.6\xB0): ", /* @__PURE__ */ import_react.default.createElement("b", null, "152 complete series, lengths 54\u201387, median 72"), " \u2014 the empirical member count of a saros series.")), /* @__PURE__ */ import_react.default.createElement("h3", null, "Hebrew stellar-alphabet mnemonics for eclipse seasons"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "The ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer Yetzirah"), " does not predict eclipses, and the ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer Raziel"), " (p.144: \u201Ccombina los signos y la rueda\u2026 calcula los per\xEDodos\u2026 calcula para ver las generaciones\u201D) gives the letter-astronomy scaffold but no eclipse algorithm. The real engine is the Hebrew calendar, and its constants are the SY's constants:"), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Astronomy"), /* @__PURE__ */ import_react.default.createElement("th", null, "Stellar alphabet (SY)"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "Molad = 29d 12h 793p = ", /* @__PURE__ */ import_react.default.createElement("b", null, MOLAD.toFixed(6), " d")), /* @__PURE__ */ import_react.default.createElement("td", null, "\u2248 synodic month ", /* @__PURE__ */ import_react.default.createElement("b", null, SYN.toFixed(6), " d"), " \u21D2 a conjunction engine (eclipse = conjunction/opposition near a node)")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "Metonic cycle = ", /* @__PURE__ */ import_react.default.createElement("b", null, "19 yr"), " (12 common + 7 leap)"), /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("b", null, "19 = 7 doubles + 12 simples"), " (the SY's own partition)")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "7 leap years of the 19-yr cycle"), /* @__PURE__ */ import_react.default.createElement("td", null, "= the ", /* @__PURE__ */ import_react.default.createElement("b", null, "7 doubles"), " (mnemonic)")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "28 lunar mansions (node / Moon path)"), /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("b", null, "28 = T\u2087"), " \u2014 triangular number of the 7 doubles")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "Saros \u2248 19 eclipse years (\u0394 ", (19 * ECLY - 223 * SYN).toFixed(2), " d)"), /* @__PURE__ */ import_react.default.createElement("td", null, "the SY's ", /* @__PURE__ */ import_react.default.createElement("b", null, "19"), " structures the saros")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "Saros = 223 synodic = 242 draconic months"), /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("b", null, "242 \u2212 223 = 19"), " \u2014 the SY number embedded in the saros")))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Sources the Hebrew calendar actually uses (absent from the rest of this app): molad + tekufot (Shmuel/Ada), ", /* @__PURE__ */ import_react.default.createElement("i", null, "Baraita of Samuel"), " (the one Jewish source with a nodal cycle), Maimonides ", /* @__PURE__ */ import_react.default.createElement("i", null, "Kiddush HaChodesh"), " (mean lunar motion), Ibn Ezra ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer ha-Olam"), " (28 mansions, precession). ", /* @__PURE__ */ import_react.default.createElement("b", null, "Caveat:"), " these mnemonics predict ", /* @__PURE__ */ import_react.default.createElement("i", null, "eclipse seasons"), " (a window near a node), not individual eclipses or paths; the molad + 19-yr cycle is a real calculation engine, the stellar-alphabet constants are a mnemonic, not a physical model."));
 }
 function AyanamsaTab() {
   const AYA = { "Lahiri (Chitrapaksha)": 24.18, "Krishnamurti (KP)": 23.93, "Fagan-Bradley": 25.06, "Raman": 22.4 };
@@ -26349,14 +26608,13 @@ function AyanamsaTab() {
   }
   const allD = Object.values(aqu);
   const spread = Math.max(...allD) - Math.min(...allD);
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Ayanamsa \u2014 sensitivity of the precessional ages (\xA715b.7)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The Ages tab dates the eras with Lahiri (24.18\xB0). Other ayanamsas shift every era boundary by \u0394ayanamsa / precession \u2014 up to ~190 years between extremes. The \u201CAge of Aquarius\u201D is not a clean astronomical prediction; it depends on the chosen sidereal zero. Caeli Reader does ", /* @__PURE__ */ import_react.default.createElement("b", null, "not"), " date ages by ayanamsa but by ", /* @__PURE__ */ import_react.default.createElement("b", null, "tropical"), " sign occupation (the 10 bodies) \u2014 independent of the ayanamsa, so its discard is robust."), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Ayanamsa"), /* @__PURE__ */ import_react.default.createElement("th", null, "value (\xB0, ~2024)"), /* @__PURE__ */ import_react.default.createElement("th", null, "Aquarius entry"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, Object.entries(AYA).map(([name, a]) => /* @__PURE__ */ import_react.default.createElement("tr", { key: name }, /* @__PURE__ */ import_react.default.createElement("td", null, name), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, a.toFixed(2)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, yrLabel(aqu[name])))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Spread of the Aquarius entry: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, spread.toFixed(0), " years"), ". Invariants (independent of ayanamsa): great year = 360\xB0/PREC = ", Math.round(FULL), " y; one age = 30\xB0/PREC = ", AGE.toFixed(1), " y."));
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Ayanamsa \u2014 sensitivity of the precessional ages (\xA715b.7)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The Ages tab dates the eras with Lahiri (24.18\xB0). Other ayanamsas shift every era boundary by \u0394ayanamsa / precession \u2014 up to ~190 years between extremes. The \u201CAge of Aquarius\u201D is not a clean astronomical prediction; it depends on the chosen sidereal zero. Caeli Reader does ", /* @__PURE__ */ import_react.default.createElement("b", null, "not"), " date ages by ayanamsa but by ", /* @__PURE__ */ import_react.default.createElement("b", null, "tropical"), " sign occupation (the 10 bodies) \u2014 independent of the ayanamsa, so its discard is robust."), /* @__PURE__ */ import_react.default.createElement("div", { className: "fig" }, /* @__PURE__ */ import_react.default.createElement(PrecessionDiagram, null), /* @__PURE__ */ import_react.default.createElement("div", { className: "cap" }, "Tropical Aries 0\xB0 (gold) is fixed to the vernal equinox \u2014 it does ", /* @__PURE__ */ import_react.default.createElement("b", null, "not"), " precess, so the Reader's 12 letter\u2194sign sectors never rotate. Sidereal Aries 0\xB0 (violet) is fixed to the stars and precesses away from it; the gap is the ayanamsa (24.18\xB0 today). This is why the zodiacs here don't move with precession \u2014 by design.")), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Ayanamsa"), /* @__PURE__ */ import_react.default.createElement("th", null, "value (\xB0, ~2024)"), /* @__PURE__ */ import_react.default.createElement("th", null, "Aquarius entry"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, Object.entries(AYA).map(([name, a]) => /* @__PURE__ */ import_react.default.createElement("tr", { key: name }, /* @__PURE__ */ import_react.default.createElement("td", null, name), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, a.toFixed(2)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, yrLabel(aqu[name])))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Spread of the Aquarius entry: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, spread.toFixed(0), " years"), ". Invariants (independent of ayanamsa): great year = 360\xB0/PREC = ", Math.round(FULL), " y; one age = 30\xB0/PREC = ", AGE.toFixed(1), " y."));
 }
 function LunarSolarTab() {
-  const SYN = 29.530589, TROP = 365.24219, DRAC = 27.212221, ANOM = 27.55455;
   const meton19 = 19 * TROP, meton235 = 235 * SYN;
   const oct8 = 8 * TROP, oct99 = 99 * SYN;
   const isl33lunar = 33 * 12 * SYN, isl33solar = 33 * TROP;
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Lunar\u2013Solar synchronisation \u2014 Meton, octaeteris, Islamic (\xA77\u2013\xA78)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The 19-year lunisolar cycle (Meton) and its cross-cultural echoes. All numbers computed live from SYN = ", SYN, " and TROP = ", TROP, "."), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Cycle"), /* @__PURE__ */ import_react.default.createElement("th", null, "Relation"), /* @__PURE__ */ import_react.default.createElement("th", null, "Days (lunar)"), /* @__PURE__ */ import_react.default.createElement("th", null, "Days (solar)"), /* @__PURE__ */ import_react.default.createElement("th", null, "\u0394"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Meton"), " (19a / 235m)"), /* @__PURE__ */ import_react.default.createElement("td", null, "12\xD712 + 7\xD713 = 144 + 91 = 235"), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, meton235.toFixed(2)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, meton19.toFixed(2)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, (meton235 - meton19).toFixed(3))), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Octaeteris"), " (8a / 99m)"), /* @__PURE__ */ import_react.default.createElement("td", null, "8\xD712 + 3 = 99"), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, oct99.toFixed(2)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, oct8.toFixed(2)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, (oct99 - oct8).toFixed(3))), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "Islamic 33y (33\xD712m)"), /* @__PURE__ */ import_react.default.createElement("td", null, "drift of the Hijri year"), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, isl33lunar.toFixed(0)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, isl33solar.toFixed(0)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, (isl33lunar - isl33solar).toFixed(0))))), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Meton"), ": 19 tropical years \u2248 235 synodic months (\u0394 \u2248 ", (meton235 - meton19).toFixed(2), " d). 235 = 12\xD712 + 7\xD713 \u2014 the 12\xB2 appears here too (cf. 144 in the Revelation tab)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Octaeteris"), ": 8 years \u2248 99 months (the older, rougher cycle; \u0394 \u2248 ", (oct99 - oct8).toFixed(2), " d)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Islamic"), ": a 33-year cycle brings the lunar calendar back near the solar year (drift \u2248 ", (isl33lunar - isl33solar).toFixed(0), " d over 33 y \u2248 11 d/y)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "China"), ": the \u7AE0 (zh\u0101ng) = 19 years = 235 months = Meton, discovered independently."), /* @__PURE__ */ import_react.default.createElement("li", null, "Draconic month ", DRAC, " d \xB7 anomalistic ", ANOM, " d \xB7 eclipse year ", 346.62, " d \u2192 saros 223\xD7SYN = 6585.32 d (see the Saros tab).")));
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Lunar\u2013Solar synchronisation \u2014 Meton, octaeteris, Islamic (\xA77\u2013\xA78)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The 19-year lunisolar cycle (Meton) and its cross-cultural echoes. All numbers computed live from SYN = ", SYN, " and TROP = ", TROP, "."), /* @__PURE__ */ import_react.default.createElement("div", { className: "fig" }, /* @__PURE__ */ import_react.default.createElement(MetonDiagram, null), /* @__PURE__ */ import_react.default.createElement("div", { className: "cap" }, "The Metonic 19-year cycle: 7 leap years (13 months, gold = the 7 doubles) + 12 common years (12 months) = 235 lunations \u2248 19 tropical years. 19 = 7 doubles + 12 simples \u2014 the SY's own partition is the lunisolar cycle.")), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Cycle"), /* @__PURE__ */ import_react.default.createElement("th", null, "Relation"), /* @__PURE__ */ import_react.default.createElement("th", null, "Days (lunar)"), /* @__PURE__ */ import_react.default.createElement("th", null, "Days (solar)"), /* @__PURE__ */ import_react.default.createElement("th", null, "\u0394"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Meton"), " (19a / 235m)"), /* @__PURE__ */ import_react.default.createElement("td", null, "12\xD712 + 7\xD713 = 144 + 91 = 235"), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, meton235.toFixed(2)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, meton19.toFixed(2)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, (meton235 - meton19).toFixed(3))), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Octaeteris"), " (8a / 99m)"), /* @__PURE__ */ import_react.default.createElement("td", null, "8\xD712 + 3 = 99"), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, oct99.toFixed(2)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, oct8.toFixed(2)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, (oct99 - oct8).toFixed(3))), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, "Islamic 33y (33\xD712m)"), /* @__PURE__ */ import_react.default.createElement("td", null, "drift of the Hijri year"), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, isl33lunar.toFixed(0)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, isl33solar.toFixed(0)), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, (isl33lunar - isl33solar).toFixed(0))))), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Meton"), ": 19 tropical years \u2248 235 synodic months (\u0394 \u2248 ", (meton235 - meton19).toFixed(2), " d). 235 = 12\xD712 + 7\xD713 \u2014 the 12\xB2 appears here too (cf. 144 in the Revelation tab)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Octaeteris"), ": 8 years \u2248 99 months (the older, rougher cycle; \u0394 \u2248 ", (oct99 - oct8).toFixed(2), " d)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Islamic"), ": a 33-year cycle brings the lunar calendar back near the solar year (drift \u2248 ", (isl33lunar - isl33solar).toFixed(0), " d over 33 y \u2248 11 d/y)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "China"), ": the \u7AE0 (zh\u0101ng) = 19 years = 235 months = Meton, discovered independently."), /* @__PURE__ */ import_react.default.createElement("li", null, "Draconic month ", DRAC, " d \xB7 anomalistic ", ANOM, " d \xB7 eclipse year ", ECLY.toFixed(2), " d \u2192 saros 223\xD7SYN = ", (223 * SYN).toFixed(2), " d (see the Saros tab).")));
 }
 var PHRASES = [
   ["The sky vanished like a scroll that is rolled up, and every mountain and island was removed", "Rev 6:14", "The zodiac <b>is the scroll</b>: 12 signs inscribed, rolled along the ecliptic. Echoes Isa 34:4."],
@@ -26376,7 +26634,7 @@ var PHRASES = [
   ["I saw a new heaven and a new earth; the first heaven and earth had passed away", "Rev 21:1", "A <b>new alphabet / new sky</b> = precessional renewal; one era passes, the next is inscribed."],
   ["Write what you see in a book", "Rev 1:11, 19", "The explicit command to <b>read the sky as letters and write it down</b> \u2014 the hermeneutic of the whole book."]
 ];
-function RevelationTab({ date, rows, occ, words, genData, genYear }) {
+function RevelationHebrewTab({ date, rows, occ, words, genData, genYear }) {
   const [inp, setInp] = (0, import_react.useState)("\u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD");
   const verified = [
     ["\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2", "Jesus", 888, "8\xD7111"],
@@ -26393,21 +26651,245 @@ function RevelationTab({ date, rows, occ, words, genData, genYear }) {
   const genDays = genData && genData.list ? genData.list.length : null;
   return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Revelation \u2014 the sky as a sealed scroll (\xA715c) \xB7 isopsephy"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A structural reading, not a confessional exegesis. Revelation (c. 95 CE) shares the late-Jewish symbolic cosmos (merkabah + creator-letters + 360/7/12) with the textualised Sefer Yetzirah \u2014 they ", /* @__PURE__ */ import_react.default.createElement("b", null, "converge without borrowing"), ". Rev 13:18 is the only NT verse that ", /* @__PURE__ */ import_react.default.createElement("b", null, "commands a gematria calculation"), "."), /* @__PURE__ */ import_react.default.createElement("h3", null, "Sefer Raziel HaMalakh \u2014 \u201Ccalculate to see the generations\u201D"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "An older sibling text frames exactly what this app does: ", /* @__PURE__ */ import_react.default.createElement("b", null, "compute the planets and the zodiacal signs in their fixed order, and so read the generations from beginning to end"), ". From the Spanish ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer Raziel HaMalakh"), " (p. 144 of the source PDF):"), /* @__PURE__ */ import_react.default.createElement("blockquote", { style: { borderLeft: "3px solid var(--gold)", margin: "8px 0", paddingLeft: 14, color: "var(--txt)" } }, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CCombina los signos y la rueda. Graba y calcula y asigna y numera. Considera los c\xE1lculos de los planetas y los signos del zod\xEDaco. Calcula los per\xEDodos y dando vueltas los planetas. De aquellos suspendidos y los signos del zod\xEDaco en el orden perpetuo, ve con la luz. Calcula en orden para ver las generaciones. Prepara para verlos desde el principio hasta el final."), /* @__PURE__ */ import_react.default.createElement("br", null), /* @__PURE__ */ import_react.default.createElement("br", null), /* @__PURE__ */ import_react.default.createElement("i", null, "Est\xE1 escrito, quien act\xFAa y crea, proclama las generaciones desde el principio, antes de la creaci\xF3n del universo. Para comprender las acciones de cada hombre en la rectitud y la maldad, decreta sobre cada uno. De acuerdo a las obras, prepara las obras entre el bien y el mal.\u201D")), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "\u2014 ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer Raziel HaMalakh"), " (Spanish ed.), p. 144. The \u201C144\u201D the eye reads as ", /* @__PURE__ */ import_react.default.createElement("i", null, "ve144 con la luz"), " is the page number the text extractor merged into \u201Cve con la luz\u201D \u2014 a real textual fact of the document, and 144 = 12\xB2 = the New Jerusalem wall (Rev 21:17) / the 144,000 sealed (Rev 7:4)."), /* @__PURE__ */ import_react.default.createElement("h3", null, "Verified on ", date, " \u2014 the mock of today"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Each line of the Raziel instruction, mapped to what the apparatus actually computes today (live, not asserted):"), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Raziel instruction"), /* @__PURE__ */ import_react.default.createElement("th", null, "Computed on ", date))), /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CCalcula los per\xEDodos y dando vueltas los planetas\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, (rows || []).length, " bodies, ecliptic longitude \u2192 sign. Today: ", (rows || []).map((r) => `${r.body} ${r.deg.toFixed(0)}\xB0\u2192${r.sign}`).join(" \xB7 "), ".")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201Clos signos del zod\xEDaco en el orden perpetuo\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "12 signs \xD7 30\xB0, fixed order. Today ", /* @__PURE__ */ import_react.default.createElement("b", null, (occ || /* @__PURE__ */ new Set()).size), " occupied: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ || []].sort().join(" ") || "none"), ".")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201Cve [144] con la luz\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "144 = ", /* @__PURE__ */ import_react.default.createElement("b", null, "12\xB2"), " = the New Jerusalem wall (Rev 21:17) / 144,000 sealed (Rev 7:4) = (zodiac)\xB2.")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CCalcula en orden para ver las generaciones\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "The Reader enumerates every readable name today: ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, (words || []).length), " names (the generations ", /* @__PURE__ */ import_react.default.createElement("i", null, "now"), ") \u2014 incl. ", /* @__PURE__ */ import_react.default.createElement("b", null, nameCount), " proper names and ", /* @__PURE__ */ import_react.default.createElement("b", null, angelCount), " Shem HaMephorash angel-roots (word + suffix ", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D0\u05DC"), "/", /* @__PURE__ */ import_react.default.createElement("span", { className: "he" }, "\u05D9\u05D4"), ").")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CPrepara para verlos desde el principio hasta el final\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "The Predictor scans the whole year ", genYear, " (beginning \u2192 end): ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, genDays != null ? genDays : "\u2026"), " days where Genesis 1:1 is legible = the generations across time.")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201Cdecreta sobre cada uno\u2026 entre el bien y el mal\u201D")), /* @__PURE__ */ import_react.default.createElement("td", null, "Revelation's judgment: the sky read as a decree on each \u2014 the sealed scroll opened (Rev 5\u20138), the same letters that name the generations now judging them.")))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { marginBottom: 12 } }, "Verdict: the Raziel instruction is not metaphor. ", /* @__PURE__ */ import_react.default.createElement("b", null, "Calculate the planets"), " = astronomy-engine longitudes; ", /* @__PURE__ */ import_react.default.createElement("b", null, "the signs in perpetual order"), " = the 12 simples; ", /* @__PURE__ */ import_react.default.createElement("b", null, "see the generations from beginning to end"), " = the Reader (today's names) + the Predictor (the year's legible days). The \u201Cnames of the ancestors and those to come\u201D are the readable names of any date \u2014 past or future \u2014 and the apparatus enumerates them."), /* @__PURE__ */ import_react.default.createElement("h3", null, "15c.9 \xB7 The two registers of the Name \u2014 the eternal and the temporal"), /* @__PURE__ */ import_react.default.createElement("p", { className: "muted" }, "The reading rule opens a theological contrast the apparatus makes measurable. 3 ", /* @__PURE__ */ import_react.default.createElement("i", null, "mothers"), " (aleph, mem, shin \u2014 primordial elements, fixed) + 7 ", /* @__PURE__ */ import_react.default.createElement("i", null, "doubles"), " (bet, gimel, dalet, kaf, pe, resh, tav \u2014 the 7 planets, always available) do not depend on the zodiac; the 12 ", /* @__PURE__ */ import_react.default.createElement("i", null, "simples"), " do. A word of only mothers+doubles is ", /* @__PURE__ */ import_react.default.createElement("b", null, "always readable"), " \u2014 it transcends the sky. A word of simples is ", /* @__PURE__ */ import_react.default.createElement("b", null, "gated"), " \u2014 readable only when its signs are occupied, i.e. in time."), /* @__PURE__ */ import_react.default.createElement("p", { className: "muted" }, "The always-readable tier holds the theological anchors:"), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Hebrew"), /* @__PURE__ */ import_react.default.createElement("th", null, "translation"), /* @__PURE__ */ import_react.default.createElement("th", null, "letters"), /* @__PURE__ */ import_react.default.createElement("th", null, "gematria"), /* @__PURE__ */ import_react.default.createElement("th", null, "note"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D1\u05E8\u05D0"), /* @__PURE__ */ import_react.default.createElement("td", null, "to create"), /* @__PURE__ */ import_react.default.createElement("td", null, "2 doubles + 1 mother"), /* @__PURE__ */ import_react.default.createElement("td", null, "203"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "the act of creation")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D0\u05D1"), /* @__PURE__ */ import_react.default.createElement("td", null, "father"), /* @__PURE__ */ import_react.default.createElement("td", null, "1 mother + 1 double"), /* @__PURE__ */ import_react.default.createElement("td", null, "3"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "\u2014")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D0\u05DE"), /* @__PURE__ */ import_react.default.createElement("td", null, "mother"), /* @__PURE__ */ import_react.default.createElement("td", null, "2 mothers"), /* @__PURE__ */ import_react.default.createElement("td", null, "41"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "\u2014")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05E9\u05D1\u05EA"), /* @__PURE__ */ import_react.default.createElement("td", null, "sabbath (rest)"), /* @__PURE__ */ import_react.default.createElement("td", null, "1 mother + 2 doubles"), /* @__PURE__ */ import_react.default.createElement("td", null, "702 = 27\xD726"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "the whole alphabet \xD7 the Name")), /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D0\u05DE\u05EA"), /* @__PURE__ */ import_react.default.createElement("td", null, "truth"), /* @__PURE__ */ import_react.default.createElement("td", null, "2 mothers + 1 double"), /* @__PURE__ */ import_react.default.createElement("td", null, "441 = 21\xB2"), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, "the seal of God is Truth")))), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Truth (\u05D0\u05DE\u05EA) = 441 = 21\xB2"), ", and 21 = C(7,2) = seals + trumpets + bowls (\xA715c.3). The rabbinic \u201Cthe seal of the Holy One is Truth (\u05D0\u05DE\u05EA)\u201D is the same 21 that structures the sealed scroll of Revelation \u2014 the seal, squared."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Sabbath (\u05E9\u05D1\u05EA) = 702 = 27 \xD7 26"), ": the alphabet with finals (27) \xD7 \u05D9\u05D4\u05D5\u05D4 (26). Rest = the whole language \xD7 the Name."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "\u05D9\u05D4\u05D5\u05D4 is built entirely of simples"), " \u2014 yod (Virgo), he (Aries), vav (Taurus) \u2014 three temporal letters, none eternal. The Name is ", /* @__PURE__ */ import_react.default.createElement("i", null, "never"), " always-readable: bound to the turning sky, legible only in its windows (the ~monthly cadence of \xA711, \u201Cthe cadence of \u05D9\u05D4\u05D5\u05D4\u201D).")), /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { marginBottom: 12 } }, "The sealed scroll of Revelation is the zodiac, and the names divide as the scroll does: the ", /* @__PURE__ */ import_react.default.createElement("b", null, "eternal"), " register (mothers+doubles: create, father, mother, sabbath, truth\u2026) readable always, needing no opening; the ", /* @__PURE__ */ import_react.default.createElement("b", null, "temporal"), " register (the 12 simples: ", /* @__PURE__ */ import_react.default.createElement("b", null, "\u05D9\u05D4\u05D5\u05D4"), ") \u2014 the Name of \u201Cwho was and is and is to come\u201D (Rev 1:4), readable only when the sky computes it, only when the scroll is opened. Truth is the seal (441 = 21\xB2); the Name is what the seal guards. He who opens the scroll (Rev 5) is he who can calculate the temporal Name \u2014 and the eternal tier was never sealed."), /* @__PURE__ */ import_react.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Greek (\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2) or Hebrew (\u05D0\u05D1\u05D3\u05D5\u05DF)", style: { flex: "1 1 280px" } }), /* @__PURE__ */ import_react.default.createElement("span", { className: "pill" }, hebrew != null ? "Hebrew gematria" : "Greek isopsephy", ": ", /* @__PURE__ */ import_react.default.createElement("b", { style: { color: "var(--gold)" } }, hebrew != null ? hebrew : greek))), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Name"), /* @__PURE__ */ import_react.default.createElement("th", null, "Reading"), /* @__PURE__ */ import_react.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react.default.createElement("th", null, "Notes"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, verified.map((v, i) => /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", { className: "letter-cell" }, v[0] ? /* @__PURE__ */ import_react.default.createElement("span", { className: /[א-ת]/.test(v[0]) ? "he" : "gk", style: { fontSize: "1.4rem" } }, v[0]) : ""), /* @__PURE__ */ import_react.default.createElement("td", null, v[1]), /* @__PURE__ */ import_react.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, v[2]), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, v[3]))))), /* @__PURE__ */ import_react.default.createElement("h3", null, "The arithmetic of Revelation \u2192 Sefer Yetzirah"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "The 111 family"), ": 666 = 6\xD7111 (the beast, the 6 falling short of 7 = the material); 888 = 8\xD7111 (Christ, the 8 = the eighth day, beyond-7 = resurrection). 666/888 = 3/4. Beast and Christ are the same 111 scaled by 6 and by 8."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Apollyon = 1461 = the Sothic cycle"), ": 1461 vague Egyptian years (= 1460 Julian) is the return period of the heliacal rising of ", /* @__PURE__ */ import_react.default.createElement("b", null, "Sirius"), " (the dog star). The 5th seal-trumpet where Apollyon appears is literally about a star falling from heaven and opening the abyss (Rev 9:1). Rev 9:11 gives the name in ", /* @__PURE__ */ import_react.default.createElement("b", null, "both"), " systems \u2014 Hebrew (Abaddon, 63) and Greek (Apollyon, 1461) \u2014 a gematria/isopsephy bridge. ", /* @__PURE__ */ import_react.default.createElement("em", null, "1461 is an arithmetic fact; that John meant Sirius is a hypothesis (strong, but not intent).")), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "7 seals + 7 trumpets + 7 bowls = 21 = C(7,2)"), " = the distinct pairs among the 7 doubles. + 7 thunders sealed (hidden) = 28 = the 28 lunar mansions / the abjad."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "144,000 sealed = 12\xB2 \xD7 10\xB3"), " = (zodiac)\xB2 \xD7 millennium. The New Jerusalem is a ", /* @__PURE__ */ import_react.default.createElement("b", null, "cube"), " of edge 12,000 stadia = 3 mothers (3 dimensions) \xD7 edge 12 (the simples); 12\xB3 = 1728; wall 144 = 12\xB2 cubits; 24 elders + 4 creatures = 28."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Judgment fractions"), " climb in twelfths: \xBC = 3/12 \u2192 \u2153 = 4/12 \u2192 1 = 12/12; each heptad raises the fraction by one zodiacal sign."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "3\xBD = the half-heptad"), " = the beast's domain: 1260 days = 3\xBD \xD7 360 = half of 7 \xD7 the degree-circle (theological, not orbital)."), /* @__PURE__ */ import_react.default.createElement("li", null, "The 7 seals = the 7 doubles ", /* @__PURE__ */ import_react.default.createElement("b", null, "inscribed & silent"), "; the 7 trumpets = the same 7 doubles ", /* @__PURE__ */ import_react.default.createElement("b", null, "sounded"), " (the shofar) \u2014 the \u201Ctwo tongues\u201D (stop/fricative) of the SY. The 7th seal = silence in heaven = the Sabbath = the 7th double at rest.")), /* @__PURE__ */ import_react.default.createElement("h3", null, "The sky as a sealed scroll \u2014 the biblical phrases"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Revelation is one long act of ", /* @__PURE__ */ import_react.default.createElement("b", null, "reading the sky as writing"), ": a sealed scroll, letters that sound, stars that fall, a city measured in 12s. Every one of these images maps onto the Sefer Yetzirah frame (3 mothers / 7 doubles / 12 simples). The full list, with reference and its reading in the system:"), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Phrase"), /* @__PURE__ */ import_react.default.createElement("th", null, "Ref."), /* @__PURE__ */ import_react.default.createElement("th", null, "Reading in the system"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, PHRASES.map((p, i) => /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement("i", null, "\u201C", p[0], "\u201D")), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, p[1]), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted", dangerouslySetInnerHTML: { __html: p[2] } }))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Two roots reach further back than Revelation: ", /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CThe heavens declare the glory of God; day to day pours out speech\u201D"), " (Ps 19:1-2) and ", /* @__PURE__ */ import_react.default.createElement("i", null, "\u201CLift up your eyes on high and see: who created these? He brings out their host by number\u201D"), " (Isa 40:26) \u2014 the OT seed of the sky-as-text idea that Revelation dramatizes and the Sefer Yetzirah formalises."), /* @__PURE__ */ import_react.default.createElement(Fig, { n: 11, doc: "From the article (\xA715c.1): Rev 6:14 \u2014 the zodiacal band (the 12 simples) as a written scroll that rolls up; the stars (the constellation-letters) fall out of their seats. \u201CI am the Alpha and the Omega\u201D = the bounds of the alphabet = the cosmos as text. The Lamb who opens the sealed scroll is the one who can read the sky as a book \u2014 the Caeli Reader." }), /* @__PURE__ */ import_react.default.createElement(Fig, { n: 12, doc: "From the article (\xA715c.4): Rev 21 \u2014 the New Jerusalem is a cube of edge 12,000 stadia (the 3 mothers = the 3 dimensions \xD7 edge 12 = the simples; 12\xB3 = 1728), walled in 144 = 12\xB2 cubits, with 12 gates + 12 foundations = 24 (= 12 tribes + 12 apostles). The 144,000 sealed = 12\xB2 \xD7 10\xB3 = (zodiac)\xB2 \xD7 (millennium = 10 sefirot cubed)." }), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2") }, "\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u03A7\u03C1\u03B9\u03C3\u03C4\u03CC\u03C2") }, "\u03A7\u03C1\u03B9\u03C3\u03C4\u03CC\u03C2"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD") }, "\u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD"), " ", /* @__PURE__ */ import_react.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05D3\u05D5\u05DF") }, "\u05D0\u05D1\u05D3\u05D5\u05DF")));
 }
-function CrossCulturalTab() {
-  const rows = [
-    ["Maya", "Tzolkin = 260; Haab = 365 = 73\xD75", "73 appears twice: 73 pentads = solar year (Haab) and 73 tzolkin = 1 Calendar Round (52\xD7365). Independent of Hebrew."],
-    ["Maya", "Baktun = 144,000 d = 400 tun", "144,000 = 144\xD71000; 144 = 12\xB2. The Long Count uses 144,000 as its major unit (cf. Rev 7 sealed)."],
-    ["Greek", "27 letters (9+9+9), values 1\u20139, 10\u201390, 100\u2013900", "Same decimal-positional assignment as Hebrew (\xA72). Convergence, not borrowing."],
-    ["Arabic", "28-letter abjad, 1\u20139, 10\u201390, 100\u2013900 + 1000", "Same decimal-positional sequence (\xA72)."],
-    ["Chinese", "\u7AE0 (zh\u0101ng) = 19 years = 235 months", "The Metonic cycle discovered independently in China (\xA77\u20138)."],
-    ["Vedic", "27 nakshatras \xD7 13\xB020 = 360\xB0; kali-yuga = 432,000 y", "27 = 22+5 Hebrew; 432,000 = 72\xD76000 (72 = precessional degree, \xA73)."],
-    ["Babylonia", "sar = 3600 = 60\xB2; 60\xD76 = 360\xB0 \u2192 12\xD730\xB0", "Sexagesimal base \u2192 the 12 signs \xD7 30\xB0 grid."],
-    ["Hebrew/Egyptian", "72 = precessional degree / Shem HaMephorash", "72 years/degree (\xA73); 72 conspirators of Set; 72 languages; 72\xD76 = 432 (yuga base)."]
+var REV_CLS = { "(a)": "var(--green)", "(b)": "var(--warn)", "(c)": "var(--blue)", "(u)": "var(--red)" };
+function ClassTag({ c }) {
+  const col = REV_CLS[c] || "var(--dim)";
+  return /* @__PURE__ */ import_react.default.createElement("span", { className: "pill", style: { color: col, borderColor: col, fontSize: ".68rem", padding: "1px 7px" } }, c);
+}
+function SrcList({ items }) {
+  return /* @__PURE__ */ import_react.default.createElement("details", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react.default.createElement("summary", { className: "muted", style: { cursor: "pointer" } }, "sources (", items.length, ")"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted", style: { marginTop: 6 } }, items.map((s, i) => /* @__PURE__ */ import_react.default.createElement("li", { key: i }, /* @__PURE__ */ import_react.default.createElement("a", { href: s[1], target: "_blank", rel: "noreferrer" }, s[0])))));
+}
+function Section({ name, rows }) {
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h3", null, name), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Claim"), /* @__PURE__ */ import_react.default.createElement("th", null, "Number"), /* @__PURE__ */ import_react.default.createElement("th", null), /* @__PURE__ */ import_react.default.createElement("th", null, "Note"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, rows.map((r, i) => /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", null, r[0]), /* @__PURE__ */ import_react.default.createElement("td", { className: "big", style: { color: "var(--gold)", whiteSpace: "nowrap" } }, r[1]), /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement(ClassTag, { c: r[2] })), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, r[3]))))));
+}
+var REV_SUMMARY = [
+  ["7", "7 planets / powers / heavens", "Hebrew \xB7 Gnostic \xB7 Sufi \xB7 Vedic \xB7 Egyptian", "(a)"],
+  ["12", "12 signs / authorities / ages", "Hebrew \xB7 Gnostic \xB7 Sufi \xB7 Vedic", "(a)"],
+  ["28", "28 lunar mansions / letters / vertebrae", "Sufi \xB7 Vedic \xB7 Chinese", "(a)"],
+  ["72", "72 nations / languages / Yasna ch. / precessional \xB0", "Hebrew \xB7 Gnostic \xB7 Egyptian \xB7 Avestan", "(a)/(c)"],
+  ["360", "360\xB0 / 360 powers / 360 veins / spokes / days", "Hebrew \xB7 Gnostic \xB7 Sufi \xB7 Egyptian \xB7 Vedic", "(a)"],
+  ["720", "720 = 360\xD72 (year-wheel sons, days + nights)", "Vedic (RV 1.164.11)", "(a)"],
+  ["365", "365 days / angels", "Hebrew \xB7 Gnostic \xB7 Egyptian", "(a)"],
+  ["14", "14 luminous/dark \xB7 13+1 voices", "Gnostic \xB7 Sufi", "(c)"],
+  ["19", "Metonic 19 yr \xB7 19 keepers of Hell", "Hebrew \xB7 Chinese \xB7 Greco-Babylonian \xB7 Quran", "(a)/(b)"],
+  ["22", "22 Hebrew letters (Sefer Yetzirah)", "Hebrew only \u2014 NOT cross-cultural", "(c)"],
+  ["37 / 73", "Gen 1:1 \xB7 73\xD75=365 civil", "Hebrew only \u2014 NOT cross-cultural", "(c)"],
+  ["144 / 144000", "(zodiac)\xB2 / sealed / Long-Count unit", "Hebrew-Christian \xB7 Maya", "(c)"],
+  ["1260 / 42 mo", "half-heptad \xB7 beast domain", "Hebrew-Christian only", "(c)"]
+];
+function RevelationMayaTab() {
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Maya \u2014 independent 73, 144000, 260"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The Maya calendar corroborates 73, 144, 260 and 365 with no contact with Hebrew or Revelation \u2014 the strongest independent witnesses to the system's constants."), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Maya astronomy", rows: [
+    ["Tzolkin 260-day sacred round", "260", "(a)", "= the Mercury 8\xD78 kamea constant (\xA715b.1). 260 = 4\xD75\xD713."],
+    ["Haab 365 = 73 \xD7 5", "365", "(a)", "73 pentads of 5 days = the civil solar year (cf. Hebrew 73\xD75=365, \xA79.4)."],
+    ["Calendar Round = 73 \xD7 260 = 52 \xD7 365", "18,980", "(a)", "73 tzolkin cycles = 52 Haab years. 73 appears twice \u2014 pentads and tzolkin-rounds."],
+    ["Baktun = 144,000 days = 400 \xD7 360", "144,000", "(a)/(c)", "144,000 = 144\xD71000 = 12\xB2\xD710\xB3 \u2014 the Long Count major unit (cf. Rev 7:4 sealed). Independent of Revelation."],
+    ["144 = 12\xB2", "144", "(c)", "the square of the zodiac \u2014 Maya and Revelation agree without contact."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(SrcList, { items: [["Maya Long Count (Wikipedia)", "https://en.wikipedia.org/wiki/Mesoamerican_Long_Count"], ["Tzolkin (Wikipedia)", "https://en.wikipedia.org/wiki/Tzolk%27in"]] }));
+}
+function RevelationChineseTab() {
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Chinese \u2014 independent Meton & 28 mansions"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "Chinese astronomy independently recovered the Metonic 19-year cycle and runs a 28-lunar-mansion scheme \u2014 convergences with no borrowing."), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Chinese astronomy", rows: [
+    ["\u7AE0 zh\u0101ng = 19 years = 235 months", "19 / 235", "(a)", "the Metonic cycle, discovered independently in China (\xA77\u20138). 19 = 7 doubles + 12 simples in the SY."],
+    ["28 lunar mansions (xiu \u5BBF)", "28", "(a)", "28 stations along the equator \u2014 same 28 = T\u2087 = abjad / Sufi letters."],
+    ["24 solar terms (12 \xD7 2)", "24", "(a)", "12 major + 12 minor solar terms = 12 signs \xD7 2."],
+    ["sexagenary cycle = 12 \xD7 5", "60", "(a)", "12 Earthly Branches \xD7 5 Elements; 60 = 12\xD75."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(SrcList, { items: [["Metonic cycle (Wikipedia)", "https://en.wikipedia.org/wiki/Metonic_cycle"], ["Chinese lunar mansions (Wikipedia)", "https://en.wikipedia.org/wiki/Twenty-Eight_Mansions"]] }));
+}
+function RevelationVedicTab() {
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Indian / Vedic \u2014 the year-wheel, 7 metres, 27 nakshatras"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The \u1E5Ag Veda Samhita (c. 1500\u20131000 BCE) is the oldest text here and carries the system's constants in its own idiom: a ", /* @__PURE__ */ import_react.default.createElement("b", null, "12-spoked / 360-spoke year-wheel"), ", ", /* @__PURE__ */ import_react.default.createElement("b", null, "720 sons"), ", ", /* @__PURE__ */ import_react.default.createElement("b", null, "7 metres"), ", the ", /* @__PURE__ */ import_react.default.createElement("b", null, "7 horses of S\u016Brya"), ", and the ", /* @__PURE__ */ import_react.default.createElement("b", null, "27/28 nakshatras"), ". Mined from the Griffith translation (source copies in ", /* @__PURE__ */ import_react.default.createElement("code", null, "library/rig-veda/"), ")."), /* @__PURE__ */ import_react.default.createElement(Section, { name: "\u1E5Ag Veda 1.164 \u2014 the riddle of the year-wheel (strongest Vedic overlap)", rows: [
+    ['"Twelve are the fellies, and the wheel is single; three are the naves"', "12 / 3", "(a)", "RV 1.164.48 \u2014 a wheel of 12 (the months/signs) on 3 (the mothers?), undivided."],
+    ['"therein are set together spokes three hundred and sixty"', "360", "(a)", "RV 1.164.48 \u2014 360 spokes = the degrees/days of the year. The explicit 12\xD730."],
+    ['"seven hundred Sons and twenty stand, O Agni"', "720", "(a)", "RV 1.164.11 \u2014 720 = 360\xD72 = days + nights = the full year of the wheel."],
+    ['"with the syllable they form seven metres"', "7", "(a)", "RV 1.164.24 \u2014 the 7 chandas (metres) of Vedic verse."],
+    ['"the six twin pairs are called \u1E5A\u1E63is\u2026 the seventh single-born"', "6+1", "(c)", "RV 1.164.15 \u2014 6 paired + 1 alone = the 7, structurally like the 7 doubles (2 tongues / 1 single)."],
+    ['"Speech hath been measured out in four divisions"', "4", "(c)", "RV 1.164.45 \u2014 3 hidden + 1 spoken = the 3 mothers + the manifest (cf. the 3 soft + 4 hard of the SY)."],
+    ['"Two Birds with fair wings\u2026 in the same tree"', "2", "(c)", "RV 1.164.20 \u2014 the Self and the soul on the cosmic tree (a pan-Indo-Iranian image)."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "The 7 chandas (Vedic metres) \u2014 the 7 as poetic measure", rows: [
+    ["G\u0101yatr\u012B = 24 syllables", "24", "(a)", "3\xD78. The simplest metre."],
+    ["U\u1E63\u1E47ih = 28", "28", "(a)", "= the lunar mansions \u2014 28 appears as a metre."],
+    ["Anu\u1E63\u1E6Dubh = 32", "32", "(a)", "4\xD78; later the \u015Bloka of epic verse."],
+    ["B\u1E5Bhat\u012B = 36", "36", "(a)", "4\xD79."],
+    ["Pankti = 40", "40", "(a)", "5\xD78."],
+    ["Tri\u1E63\u1E6Dubh = 44", "44", "(a)", "4\xD711; the dominant metre of the \u1E5Ag Veda."],
+    ["Jagat\u012B = 48", "48", "(a)", "6\xD78."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "S\u016Brya, the Adityas, the Nasadiya", rows: [
+    ['"Seven Bay Steeds harnessed to thy car" \u2014 S\u016Brya', "7", "(a)", "RV 1.50.8 \u2014 the 7 horses of the Sun = the 7 days / 7 colours of the spectrum (traditional)."],
+    ['"Eight are the Sons of Aditi\u2026 with seven she went to meet the Gods; she cast Martanda far away"', "8 \u2192 7+1", "(a)/(c)", "RV 10.72.8\u20139 \u2014 8 Adityas, 7 + the mortal Martanda (the throwaway = the material), structurally like 8 vs 7."],
+    ['"Darkness was hidden by darkness\u2026 that One, breathing without wind, by its own impulse"', "1", "(c)", "RV 10.129 (Nasadiya) \u2014 the uncreated One before being/non-being (the cosmogonic seed)."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Cosmology \u2014 nakshatras, rasis, yugas", rows: [
+    ["27 nakshatras \xD7 13\xB020\u2032 = 360\xB0", "27 / 360", "(a)", "27 lunar mansions (or 28 with Abhijit); 27 = 22 Hebrew + 5 finals, structurally."],
+    ["12 rasis \xD7 30\xB0 = 360\xB0", "12 / 360", "(a)", "the 12-sign zodiac, India receiving it from Babylonia/Greece."],
+    ["Kali-yuga = 432,000 years", "432,000", "(c)", "= 72 \xD7 6000; 432 = 72\xD76 \u2014 the yuga base (cf. Berossos\u2019s Chaldean 432,000)."]
+  ] }), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("b", null, "Not Rig Vedic (flagged):"), " the 12 Adityas and 108 are ", /* @__PURE__ */ import_react.default.createElement("i", null, "later"), " Vedic / Puranic, not \u1E5Ag Veda Samhita. 108 = 27 nakshatras \xD7 4 p\u0101das (or 12 \xD7 9) \u2014 a later sacred number, not an \u1E5Ag Vedic constant. The \u1E5Ag Vedic set is 7 (metres/horses), 12, 27/28, 360, 720."), /* @__PURE__ */ import_react.default.createElement(SrcList, { items: [
+    ["\u1E5Ag Veda 1.164 (Griffith, sacred-texts)", "https://www.sacred-texts.com/hin/rigveda/rv01164.htm"],
+    ["\u1E5Ag Veda 10.72 Aditi (Griffith)", "https://www.sacred-texts.com/hin/rigveda/rv10072.htm"],
+    ["\u1E5Ag Veda 1.50 S\u016Brya (Griffith)", "https://www.sacred-texts.com/hin/rigveda/rv01050.htm"],
+    ["Nakshatra (Wikipedia)", "https://en.wikipedia.org/wiki/Nakshatra"],
+    ["Yuga Cycle (Wikipedia)", "https://en.wikipedia.org/wiki/Yuga_Cycle"]
+  ] }));
+}
+function RevelationEgyptianTab() {
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Egyptian \u2014 365, 36 decans, Sothis 1461, 72"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "Egypt gives the 365-day civil year, the 36 decans (\u2192 the zodiac), the Sothic 1461-year Sirius cycle, and 72 conspirators of Set."), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Egyptian astronomy & myth", rows: [
+    ["365-day civil year", "365", "(a)", "the Egyptian civil calendar (12\xD730 + 5 epagomenal); = the 365 angels of the Apocryphon of John."],
+    ["36 decans \xD7 10 = 360 (+5)", "36 / 360", "(a)", "36 ten-day asterisms \u2192 the 36 decans that seed the 12-sign zodiac (3 decans/sign)."],
+    ["Sothic cycle = 1461 years", "1,461", "(a)", "1461 vague civil years (= 1460 Julian): the heliacal rising of Sirius resets the calendar (cf. Apollyon 1461, \xA715c)."],
+    ["72 conspirators of Set", "72", "(c)", "the 72 accomplices in the murder of Osiris \u2192 72 nations/languages (cf. Shem HaMephorash 72, \xA715b.5)."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(SrcList, { items: [["Egyptian calendar (Wikipedia)", "https://en.wikipedia.org/wiki/Egyptian_calendar"], ["Sothic cycle (Wikipedia)", "https://en.wikipedia.org/wiki/Sothic_cycle"], ["Decan (Wikipedia)", "https://en.wikipedia.org/wiki/Decan"]] }));
+}
+function RevelationPersianTab() {
+  const asrc = [
+    ["Yasna 28\u201334 Ahunavaiti Gatha (avesta.org SBE)", "https://www.avesta.org/yasna/y28to34.htm"],
+    ["Vendidad (Vendidad) fargard 1 \u2014 16 lands (SBE)", "https://www.avesta.org/vendidad/vd1sbe.htm"],
+    ["Vendidad fargard 2 \u2014 Yima / Vara (SBE)", "https://www.avesta.org/vendidad/vd2sbe.htm"],
+    ["Vendidad fargard 22 \u2014 99,999 diseases (SBE)", "https://www.avesta.org/vendidad/vd22sbe.htm"],
+    ["Yasht 13 Farvardin (SBE)", "https://www.avesta.org/ka/yt13sbe.htm"],
+    ["Zoroastrianism (Encyclopaedia Iranica)", "https://www.iranicaonline.org/articles/zoroastrianism"]
   ];
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Cross-cultural convergence (\xA79.6)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "Real arithmetic convergences, verified. No cultural borrowing is claimed \u2014 only independent corroboration of the system's constants."), /* @__PURE__ */ import_react.default.createElement("table", null, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Tradition"), /* @__PURE__ */ import_react.default.createElement("th", null, "Constant"), /* @__PURE__ */ import_react.default.createElement("th", null, "What it shares"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, rows.map((r, i) => /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", null, r[0]), /* @__PURE__ */ import_react.default.createElement("td", null, r[1]), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, r[2]))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("b", null, "What the system shares, verifiably:"), " decimal-positional gematria 27/28 (Hebrew/Greek/Arabic); Meton 19a/235 (Greco-Babylonian, Chinese); 73\xD75=365 and 73-tzolkin Calendar Round (Hebrew civil, Maya); 144,000 as major unit (Revelation, Maya Long Count); 72 as precessional degree / completeness (Hebrew, Vedic, Egyptian). None proves the system; they independently corroborate it."));
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Persian / Avestan \u2014 7 Amesha Spentas, 16 lands, 72 Yasna chapters"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The ", /* @__PURE__ */ import_react.default.createElement("i", null, "Avesta"), " (the Zoroastrian scripture, Gathas c. 1000 BCE; Young Avestan and Vendidad later) is the Indo-Iranian sibling of the \u1E5Ag Veda and carries the constants in its own frame: the ", /* @__PURE__ */ import_react.default.createElement("b", null, "7 Amesha Spentas"), ", ", /* @__PURE__ */ import_react.default.createElement("b", null, "16 sacred lands"), ", ", /* @__PURE__ */ import_react.default.createElement("b", null, "21 Yashts"), ", ", /* @__PURE__ */ import_react.default.createElement("b", null, "72 Yasna chapters"), ", and the striking ", /* @__PURE__ */ import_react.default.createElement("b", null, "99,999 diseases"), ". Mined from the SBE translation (source copies in ", /* @__PURE__ */ import_react.default.createElement("code", null, "library/avesta/"), ")."), /* @__PURE__ */ import_react.default.createElement(Section, { name: "The 7 Amesha Spentas \u2014 the Bountiful Immortals", rows: [
+    ["7 Amesha Spentas (Vohu Manah, Asha Vahishta, Khshathra Vairya, Spenta Armaiti, Haurvatat, Ameterat, + Ahura Mazda)", "7", "(c)", "Yasna 28\u201334 (Ahunavaiti Gatha): 6 emanations + the Lord = 7; the 7 correspond to the 7 creations (sky, water, earth, plants, animals, metals, fire). The closest Avestan parallel to the 7 doubles."],
+    ['"the seven, who are the lords" / "the seven that have the best rule"', "7", "(a)", "Yasna 39.3 \u2014 the 7 named lords of creation."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Vendidad \u2014 16 lands, Yima, 99,999 diseases", rows: [
+    ["16 sacred lands created by Ahura Mazda (Vendidad 1)", "16", "(a)", "vd1: 16 ideal lands, each with a paired evil-counterpart. 16 = 4\xB2 (cf. the 4 mothers\xD74, or the doubled 8)."],
+    ["Yima's Vara \u2014 a three-storied enclosure for the seed", "3 / 9", "(c)", "vd2: Yima/Khshaeta builds a refuge against the winter. The three rows (three, six, ninefold) echo 3\xD73."],
+    ["99,999 diseases (Vendidad 22)", "99,999", "(c)", "vd22: 99,999 diseases and 99,999 cures \u2014 the most striking Avestan large number; cf. the limitless legions of Revelation."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Structure \u2014 Yasna, Yashts", rows: [
+    ["Yasna = 72 chapters", "72", "(a)", "the Yasna liturgy (including the Gathas) runs to 72 chapters = the same 72 as the nations/languages/angels."],
+    ["21 Yashts (hymns to the yazatas)", "21", "(a)", "21 = C(7,2) = the seals/trumpets/bowls (\xA715c.3); the Yashts honor the 21 divine entities."],
+    ['72+5 = 77 "good names" of Ahura Mazda (tradition)', "77", "(c)", "later tradition: 72 + 5 = 77 names; 72 recurs."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Cosmology", rows: [
+    ["12 \xD7 30 = 360\xB0 zodiac (received from Babylonia)", "12 / 360", "(a)", "the 12-sign frame shared across Persia, India, Greece, and the Hebrew SY."],
+    ["Haoma = the plant of immortality", "\u2014", "(c)", "the Indo-Iranian soma/haoma \u2014 the Vedic Soma (RV 9) and the Avestan Haoma are the same rite."]
+  ] }), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("b", null, "Boundary respected:"), " the Gathas (Yasna 28\u201354, the oldest stratum, attributed to Zarathushtra) are kept distinct from the later Young Avestan / Vendidad material. The 7 Amesha Spentas are Gathic; the 99,999 and the 16 lands are Vendidad (later)."), /* @__PURE__ */ import_react.default.createElement(SrcList, { items: asrc }));
+}
+function RevelationSufiTab() {
+  const sufiSrc = [
+    ["Ramlan & Ludovico (2023), Religions", "https://doi.org/10.3390/rel14060692"],
+    ["Ra\u0161i\u0107 (2023), J. Sufi Studies", "https://doi.org/10.1163/22105956-bja10029"],
+    ["Chodkiewicz, Futuhat & its Commentators", "https://ibnarabisociety.org/the-futuhat-makkiyya-and-its-commentators-michel-chodkiewicz/"],
+    ["Morris, Ibn Arabi on the Barzakh", "https://ibnarabisociety.org/wp-content/uploads/PDFs/Morris_Ibn-Arabi-on-the-barzakh.pdf"],
+    ["SEP \u2014 Ikhwan al-Safa", "https://plato.stanford.edu/entries/ikhwan-al-safa/"],
+    ["De Callata\xFF, Ikhwan on Animals (2022)", "https://doi.org/10.5617/jais.9879"],
+    ["Varisco, al-Buni Lunar Stations (Arabica 2017)", "https://brill.com/view/journals/arab/64/3-4/article-p487_487.xml"],
+    ["Gardiner, Forbidden Knowledge? al-Buni (JAIS 2012)", "https://journals.uio.no/JAIS/article/view/4618"],
+    ["Usluer, Hurufi Cosmology (2024)", "https://dergipark.org.tr/en/download/article-file/3630967"],
+    ["Iranica \u2014 Hurufism", "https://www.iranicaonline.org/articles/horufism/"],
+    ["Hadith 73 sects (Abu Dawud 4596)", "https://en.tohed.com/hadith/abu-dawud/4596/"],
+    ["Hadith 72 branches (Bukhari 9)", "https://sunnah.com/bukhari:9"],
+    ["Hadith 70,000 tawakkul (Bukhari 6233)", "https://livingnoor.com/quran/hadiths/sahih-al-bukhari/6233"]
+  ];
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Islamic / Sufi \u2014 28 letters = 28 mansions, Hurufi 360 = 6\xD7(28+32)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The Arabic letter-science ('ilm al-huruf) is the closest non-Hebrew sibling of the Sefer Yetzirah: ", /* @__PURE__ */ import_react.default.createElement("b", null, "28 letters = 28 lunar mansions"), " recurs in Ibn al-Arabi, the Ikhwan al-Safa, the received ", /* @__PURE__ */ import_react.default.createElement("i", null, "Shams al-ma'arif"), ", and the Hurufiyya. The Hurufi equation ", /* @__PURE__ */ import_react.default.createElement("b", null, "360\xB0 = 6 \xD7 (28 + 32)"), " directly welds the astronomical circle to the Arabic/Persian letter-counts. The Quran itself carries the constants in its own text (Pickthall translation, source copies in ", /* @__PURE__ */ import_react.default.createElement("code", null, "library/quran/"), ")."), /* @__PURE__ */ import_react.default.createElement(Section, { name: "The Quran \u2014 in the text (Pickthall)", rows: [
+    ['"seven heavens, and of the earth the like thereof"', "7 + 7", "(c)", '65:12 \u2014 7 heavens + 7 earths; cf. 67:3 "seven heavens in harmony (tib\u0101qan)", 71:15.'],
+    ['"the number of the months with Allah is twelve months"', "12", "(c)", "9:36 \u2014 12 lunar months, 4 sacred; 9:37 condemns nas\u012B\u02BE (intercalation) \u2192 the strict lunar calendar."],
+    ['"for the moon We have appointed mansions (man\u0101zil)"', "28", "(a)/(c)", '36:39 \u2014 the WORD man\u0101zil is in the text; the COUNT 28 is from Arabic astronomy, not the verse. (53:1 "an-najm" = Pleiades/Venus in tafsir, NOT the 28 mansions.)'],
+    ['"Above it are nineteen"', "19", "(b)", "74:30 \u2014 19 keepers over Hell; the only explicit 19 in the Quran (Islamic-distinctive, cf. Metonic 19 elsewhere)."],
+    ['"seven of the oft-repeated (al-math\u0101n\u012B) and the great Quran"', "7", "(c)", `15:87 \u2014 "seven oft-repeated"; identification with al-F\u0101tiha's 7 verses is traditional tafsir, not the text.`],
+    ['"the sun and the moon [move] by calculation (\u1E25isb\u0101n)"', "\u2014", "(a)", '55:5; cf. 6:96, 10:5 \u2014 reckoning; 36:40 "each floats in an orbit."']
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Not in the Quran text (flagged)", rows: [
+    ["360 \u2014 NOT a Quran verse", "\u2014", "(u)", "360 appears only in tafsir (al-Tabari: 360 sunrises) and hadith (360 joints/idols); the lunar year is 354. A Late-Antique symbolic number absorbed into cosmology."],
+    ["99 Names \u2014 hadith, not text", "99", "(b)/(u)", "Sahih Muslim 2675 states only the NUMBER 99; the LISTS (Tirmidhi 3507 etc.) are graded gharib/mudraj and differ between collections."],
+    ["73 sects \u2014 hadith", "73", "(b)", 'Abu Dawud 4596 (Hasan Sahih) = "73 sects"; the "72 in Hell, 1 saved" addition (4597) is weak/fabricated (al-Shawkani: fabrication). 72\u226073 \u2014 do not conflate.'],
+    ["Bismillah abjad = 786", "786", "(c)", '\u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646 \u0627\u0644\u0631\u062D\u064A\u0645 = 2+60+40+66+329+289 = 786 (19 letters). Verifiable arithmetic; the use of "786" for Bismillah is tradition, not Quran text.'],
+    ["114 suras / 6236 verses", "114 / 6236", "(c)", "structural only, NOT cosmic."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Ibn al-Arabi (1165\u20131240) \u2014 Futuhat al-Makkiyya", rows: [
+    ["28 Arabic letters = 28 lunar mansions", "28", "(c)", 'each letter \u2194 a mansion \u2194 a lunar phase (Futuhat ch. 198, Vol II 390\u2013478; not "ch. 2" \u2014 the locus is ch. 198).'],
+    ["29th letter (lam-alif) = the qutb", "29", "(c)", '"If not for that twenty-ninth, the 28 would not be stabilized" \u2014 the cosmic pole.'],
+    ["14 luminous (undotted) \u2194 14 waxing; 14 dark \u2194 14 waning", "14+14", "(c)", "14th letter ra (= full moon / badr); 28th (waw) = darkest phase."],
+    ["7 heavens; Sun at the heart of the 7", "7", "(a)/(c)", "Futuhat Ch. 371; earth spherical and rotating."],
+    ["114 abode-chapters \u2194 114 Quran suras", "114", "(c)", "114 = 6\xD719; the Futuhat mirrors the Quran in reverse."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Ikhwan al-Safa (Brethren of Purity, 10th c. Basra)", rows: [
+    ["7 planets; 12 signs = 12 world-ages", "7 / 12", "(a)", "12 ages of decreasing length; Adam created in the 7th age (Virgo)."],
+    ["28 lunar mansions = 28 vertebrae of the spine", "28", "(a)/(c)", 'Epistle 22: "every organ agrees in number with some category of existent beings."'],
+    ["360 veins in the body \u2194 360\xB0 of the zodiac", "360", "(c)", "alongside 12 orifices and 28 vertebrae (Epistle 22)."],
+    ["36,000-year precession; 360,000-year great cycle", "36k / 360k", "(b)", 'Epistle 36: equinoctial precession \u2192 geological interchange; "Annus Platonicus."']
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "al-Buni (d. ca. 1225) \u2014 received Shams al-ma'arif al-kubra", rows: [
+    ["28 mansions \u2194 28 letters (14 undotted / 14 dotted)", "28", "(c)", "14 luminous \u2192 14 visible mansions (benefic); 14 dark \u2192 14 hidden (malefic)."],
+    ["abjad 1\u20261000 builds magic squares (awfaq)", "\u2014", "(c)", "squares tied to divine names, planets, intentions."],
+    ['12 signs \u2194 12 letters of "La ilaha illa Allah"', "12", "(c)", "integrating mansions, 7 planets, and divine unity."],
+    ["AUTHORSHIP CAVEAT", "\u2014", "(u)", 'the famous Shams al-kubra is a pseudepigraphic Ottoman compilation (Gardiner/Coulon), not by al-Buni himself. Cite as "received Shams al-kubra."']
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Hurufiyya \u2014 Fazlallah Astarabadi (d. 1394)", rows: [
+    ["28 letters = 28 mansions = 28 lines on the face", "28", "(c)", "the lettrist incarnation: letters/mansions substantively present in the human form."],
+    ["360\xB0 = 6 \xD7 (28 + 32)", "360", "(c)", "six directions \xD7 (28 Arabic + 32 Persian letters) \u2014 fuses the astronomical circle to the letter-counts (Usluer 2024)."],
+    ["32 Persian letters = 32 pre-eternal words taught to Adam", "32", "(c)", "28 Arabic (to Muhammad) vs 32 Persian (to Adam); 32 human teeth confirm physiologically."],
+    ["khatt al-istiw\u0101 divides the zodiac into 14 + 14", "14+14", "(c)", "14 maternal/visible + 14 paternal/hidden."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "The 72 / 73 / 70,000 hadiths (do not conflate)", rows: [
+    ["73 sects (al-iftiraq)", "73", "(b)", 'core = Hasan/Sahih; the "72 in Hell, 1 saved" addition is only in weaker chains.'],
+    ["72 branches of faith", "72", "(c)", 'scholastic derivation from the sahih "over seventy branches" hadith \u2014 the exact 72 is later, not in the sahih text.'],
+    ["70,000 enter Paradise without account", "70,000", "(b)", "a separate tawakkul hadith (Bukhari); not the sects, not the branches."]
+  ] }), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("b", null, "Not found in pre-1500 Sufi sources:"), " 19, 22, 37, 144, 144000, 1260, 42 months, and a direct 365 \u2014 these are Hebrew/Sefer Yetzirah or Revelation constants, absent from the Arabic-Islamic corpus. Their absence is itself a finding."), /* @__PURE__ */ import_react.default.createElement(SrcList, { items: sufiSrc }));
+}
+function RevelationGnosticTab() {
+  const gsrc = [
+    ["Apocalypse of Adam (text)", "https://earlychristianwritings.com/text/adam.html"],
+    ["Apocryphon of John (Wisse)", "https://pseudepigrapha.com/apocrypha_nt/apocjn.html"],
+    ["On the Origin of the World (text)", "https://earlychristianwritings.com/text/originworld.html"],
+    ["Eugnostos the Blessed (text)", "https://earlychristianwritings.com/text/eugnostos.html"],
+    ["Concept of Our Great Power (text)", "http://earlychristianwritings.com/text/greatpower.html"],
+    ["Ple\u0161e, Fate/Astrology in Gnosticism (2007)", "https://www.scribd.com/document/382360129/Fate-Providence-and-Astrology-in-Gnosticism-1-The-Apocryphon-of-John-Zlatko-Plese-pdf"]
+  ];
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Gnostic / Nag Hammadi \u2014 365 angels, 72 languages, the 12\u219272\u2192360 cascade"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The Nag Hammadi library (Coptic Gnostic codices, copies of 1st\u20133rd-c. originals) carries the cleanest astronomical overlaps: ", /* @__PURE__ */ import_react.default.createElement("b", null, "365 angels"), " (Apocryphon of John) = the solar year; ", /* @__PURE__ */ import_react.default.createElement("b", null, "72 gods = 72 languages"), " (Origin of the World); the ", /* @__PURE__ */ import_react.default.createElement("b", null, "12 \u2192 72 \u2192 360"), " cascade (Eugnostos) mirroring 12 months / 360 days. The Apocalypse of Adam supplies the eschatological register (12 / 13 / 14 kingdoms)."), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Apocalypse of Adam (NHC V,5) \u2014 eschatological register", rows: [
+    ['Adam reveals to Seth "in the 700th year"', "700", "(c)", "testamentary frame echoing Genesis 5; no explicit star/planet references."],
+    ["seed of Ham & Japheth establish 12 kingdoms", "12", "(b)", "12 false mythic origins."],
+    ["13 kingdoms each give a false oracle of the Illuminator's birth", "13", "(c)", "explicitly numbered 1st\u201313th; each gives a false cosmogony (a spirit, a prophet, a virgin womb, a drop from heaven, a cloud, the nine Muses, two illuminators\u2026)."],
+    ['13th kingdom: "every birth of their ruler is a word"', "13 / word", "(b)/(c)", `the 13th oracle \u2014 the messiah's birth <b>is</b> a word, and "this word received a mandate\u2026 glory and power." <b>Not</b> "born of a word alone" (a common misreading) \u2014 the text says the ruler's every birth <i>is</i> a word. The closest the NH comes to the creator-word / Sefer Yetzirah letter-theology.`],
+    ['14th voice \u2014 "the generation without a king"', "14", "(c)", 'the kingless generation alone says the truth: "God chose him from all the aeons." 13 false + 1 true = 14 voices (structural 14, not Matthew 1:17).'],
+    ['Illuminator "will for a third time pass by"', "3", "(b)", "eschatological prophecy of the Ph\u014Dt\u0113r."],
+    ["400,000 join the seed of Seth", "400,000", "(b)", "eschatological number."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Apocryphon of John (NHC II,1)", rows: [
+    ["365 angels fashion Adam's body", "365", "(a)", "= days of the solar year \u2014 the single strongest astronomical overlap in NH."],
+    ['7 powers = "the sevenness of the week"', "7", "(a)", "7 planets / 7 weekdays."],
+    ["12 authorities; 7 kings + 5 = 12", "12", "(a)", "12 zodiac / months."],
+    ["4 lights preside over 12 aeons", "4 / 12", "(c)", "4 lights \xD7 3 aeons each."],
+    ["72 pentads underlying the melothesia", "72", "(u)", "Ple\u0161e reconstruction of the Egyptian 72\xD75-day periods; NOT explicit in the text."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "On the Origin of the World (NHC II,5)", rows: [
+    ["7 heavens of chaos", "7", "(a)", "7 planets."],
+    ["12 gods of chaos (the zodiac)", "12", "(a)", '"above the twelve gods of chaos."'],
+    ["64 forms (8 shapes \xD7 4 corners) + 7 archangels + Sabaoth = 72", "64 / 72", "(c)", "the strongest 72 overlap: 72 gods rule the 72 languages of the peoples (cf. Deut 32:8 LXX)."],
+    ["49 demons (7 offspring \xD7 7)", "49", "(c)", "7\xD77."],
+    ['930 years of Adam; luminaries for "signs, seasons, years, months, days"', "930", "(c)", "echoes Genesis 5:5; the luminaries mark time."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Eugnostos the Blessed (NHC III,3 / V,1)", rows: [
+    ["12 \u2192 72 \u2192 360 cascade", "12/72/360", "(c)", "12 powers \u2192 72 powers (12 pairs) \u2192 360 powers (72 \xD7 5); mirrored by 12 months / 360 days."],
+    ["12 aeons \xB7 72 heavens (12\xD76) \xB7 360 firmaments (72\xD75)", "12/72/360", "(c)", "the cleanest numerical cascade in the corpus \u2014 maps directly onto the project."],
+    ["360 days of the year = type of the 360 powers", "360", "(a)", "Egyptian 360-day civil calendar (NOT 365)."],
+    ["8 = the Ogdoad", "8", "(c)", "the Assembly of the Eighth."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "Concept of Our Great Power (NHC VI,4)", rows: [
+    [`120 appears 3\xD7 (age-limit, Noah's preaching, "the perfect number")`, "120", "(c)"],
+    ["final conflagration after 1,460 years", "1,460", "(b)", "Wisse translation (some cite 1,468 \u2014 UNVERIFIED discrepancy)."],
+    ["72 tongues", "72", "(c)"]
+  ] }), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("b", null, "Not found in Nag Hammadi:"), " 144, 144000, 1260, 42 months, 19, 22, 28, 37, 73 \u2014 these belong to Revelation / Hebrew / Sufi, not the Gnostic corpus."), /* @__PURE__ */ import_react.default.createElement(SrcList, { items: gsrc }));
+}
+function RevelationRazielTab() {
+  const rsrc = [
+    ["Sefer Raziel HaMalakh \u2014 Spanish ed. (322pp, source PDF)", "pdf/razielbook.pdf"],
+    ["Sefer Raziel HaMalakh \u2014 Hebrew ed. (90pp, source PDF)", "pdf/raziel-hebrew.pdf"]
+  ];
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Sefer Raziel HaMalakh \u2014 the indisputable findings (\xA79.6)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer Raziel HaMalakh"), " (Book of the Angel Raziel) is the older sibling of the ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer Yetzirah"), " in this register: a late-antique / early-medieval manual of letter-astronomy that tells the reader to ", /* @__PURE__ */ import_react.default.createElement("b", null, "compute the planets and the fixed zodiacal signs to read the generations"), ". Mined 2026-08-10 from the two source PDFs in ", /* @__PURE__ */ import_react.default.createElement("code", null, "pdf/"), " \u2014 the Spanish ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sepher Raziel Hamelach"), " (322pp, clean text) and the Hebrew edition (90pp, OCR-garbled but cross-confirming). Page refs = Spanish PDF. Only findings verified against the text are listed; loose coincidences are flagged at the end."), /* @__PURE__ */ import_react.default.createElement(Section, { name: "1 \xB7 Alphabet \u2194 astronomy (the core thesis \u2014 strongest validation)", rows: [
+    ["22-letter gematria explicit, \u05D0=1 \u2026 \u05EA=400, NO 500\u2013900 finals", "22", "(a)", 'p.95: "Aleph es 1, Beth es 2 \u2026 Qoph 100, Resh 200, Shin 300, Tau 400." = the SAME ancient system this app uses (not Mispar Gadol).'],
+    ["Triangular numbers T(2..9) by letter", "T(n)", "(a)", "p.95: \u05D0\u05D1\u21923, \u05D2\u21926, \u05D3\u219210, \u05D4\u219215, \u05D5\u219221, \u05D6(Zayin,7)\u219228, \u05D7(8)\u219236, \u05D8(9)\u219245. Confirms T(7)=28 = lunar mansions and gives the full series."],
+    ["12 simples \u2194 12 hours day + 12 night, 12 months, 12 signs, 12 tribes", "12", "(a)", "p.106 \u2014 the explicit 12-simples\u219412-signs mapping this app reads."],
+    ["22 letters in 3 palaces, engraved with each sign", "22 / 3", "(c)", "p.226 \u2014 22\u2194signs via 3 palaces (= the 3 mothers)."],
+    ["3 letters (the mothers) \u2194 12 signs", "3 / 12", "(c)", "p.81."],
+    ["Raziel cites the Sefer Yetzirah directly", "\u2014", "(a)", 'Heb p.24: "as written in Sefer Yetzirah: ten sefirot\u2026" \u2014 Raziel is built on the SY.']
+  ] }), /* @__PURE__ */ import_react.default.createElement("h3", null, "1b \xB7 The triangular series T(2..9) \u2014 the lunar-mansion key"), /* @__PURE__ */ import_react.default.createElement("table", { style: { marginBottom: 6 } }, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Letter"), /* @__PURE__ */ import_react.default.createElement("th", null, "n"), /* @__PURE__ */ import_react.default.createElement("th", null, "T(n) = n(n+1)/2"), /* @__PURE__ */ import_react.default.createElement("th", null, "astronomy"))), /* @__PURE__ */ import_react.default.createElement("tbody", null, [["\u05D0", 1, 1, "unity"], ["\u05D1", 2, 3, "\u2014"], ["\u05D2", 3, 6, "\u2014"], ["\u05D3", 4, 10, "\u2014"], ["\u05D4", 5, 15, "\u2014"], ["\u05D5", 6, 21, "\u2014"], ["\u05D6", 7, 28, "28 lunar mansions"], ["\u05D7", 8, 36, "\u2014"], ["\u05D8", 9, 45, "\u2014"]].map((r) => /* @__PURE__ */ import_react.default.createElement("tr", { key: r[0] }, /* @__PURE__ */ import_react.default.createElement("td", { className: "he", style: { fontSize: "1.2rem", color: "var(--gold)" } }, r[0]), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg" }, r[1]), /* @__PURE__ */ import_react.default.createElement("td", { className: "deg", style: { color: "var(--gold)" } }, r[2]), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, r[3]))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { marginBottom: 12 } }, "Zayin (\u05D6=7) \u2192 T(7)=28 = the 28 lunar mansions (Manzil), tying the 7 doubles to the Moon's path \u2014 the same 28 the Saros mnemonic panel uses."), /* @__PURE__ */ import_react.default.createElement(Section, { name: "2 \xB7 The 72 / 73 / 28 / 248+365", rows: [
+    ["72 names derived from Genesis 1:1 (Bereshit \u2192 Bohu)", "72", "(a)", "= the Shem HaMephorash triplets (\u05D5\u05D4\u05D5/\u05D9\u05DC\u05D9/\u05E1\u05D9\u05D8\u2026). Variant of the Exodus-14:19-21 extraction this app uses; Raziel is Genesis-centric like the project."],
+    ["72 letters from patriarchs + 12 tribes + Sabbatai + Yesheron", "72", "(c)", "Abraham\u2026Benjamin."],
+    ["73 names of God inscribed on the right", "73", "(c)", 'p.72; Heb p.24 "\u05E2\u05F4\u05D2 \u05E9\u05DE\u05D5\u05EA" = 73 names \u2014 attests 73 (= 2701 = 37\xD773).'],
+    ["28 Malachim per lunar month (Tammuz & Adar = 28)", "28", "(a)", "p.148 \u2014 28 = lunar mansions tied to the Hebrew months."],
+    ["248 mighty [limbs] + 365 degrees = 613", "248+365", "(a)", "the 613 structure (248 positive + 365 negative commandments); 365 = degrees/days."]
+  ] }), /* @__PURE__ */ import_react.default.createElement(Section, { name: "3 \xB7 Astronomy scaffold", rows: [
+    ["360\xB0 \u2192 12 signs (Aries\u2026Pisces), each 30\xB0", "360 / 12", "(a)", "p.146-147 \u2014 base-60 sexagesimal subdivision chain (60\xD760\xD760\u2026)."],
+    ['"Los signos del zod\xEDaco est\xE1n fijos" \u2014 the signs are FIXED', "fixed", "(a)", "p.115 \u2014 tropical (equinox-anchored), non-precessing grid. Directly supports this app's tropical-vs-sidereal split: the Reader's 12 sectors do NOT rotate with precession (see Sky tab note)."],
+    ["4 tekufot (Nis\xE1n/Tammuz/Tishri/Tevet), each 3 months = 12", "4 / 12", "(a)", "p.114; Heb p.10 lists all 12 signs across 4 tekufot with month-angels. Sun qualities: warm / hot-dry / cold-moist / cold-dry."],
+    ["7 planets in Chaldean order", "7", "(a)", "p.114-115 \u2014 \u05E9\u05D1\u05EA\u05D0\u05D9/\u05E6\u05D3\u05E7/\u05DE\u05D0\u05D3\u05D9\u05DD/\u05E9\u05DE\u05E9/\u05E0\u05D5\u05D2\u05D4/\u05DB\u05D5\u05DB\u05D1/\u05DC\u05D1\u05E0\u05D4."],
+    ["Planet periods: Saturn 30y, Jupiter 12y", "30 / 12", "(a)", "Both match real sidereal periods (29.46 / 11.86 yr). 28-year & 36-year cycles also present (see caveat)."],
+    ["Draqon Dinor (the dragon) surrounding the 7 planets", "Draco", "(a)", "p.146 \u2014 the Draco axis = this app's 3rd mother (Shin \xB7 Cassiopea axis / circumpolar)."],
+    ["Planet-angel assignments", "7", "(c)", "Saturn=Gabriel, Jupiter=Tzedeqial, Mars=Samael, Sun=Raphael, Venus=Anael, Mercury=Beraqial, Moon=Chesedial; Michael = force in the Sun."]
+  ] }), /* @__PURE__ */ import_react.default.createElement("h3", null, "4 \xB7 Loose \u2014 do not force"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "7\xD770 = 490"), " (p.71) \u2248 the 491-year Neptune\u2013Pluto Genesis window. An arithmetic-mnemonic coincidence, ", /* @__PURE__ */ import_react.default.createElement("b", null, "not"), " a real link \u2014 flagged, not claimed."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, '"23 princes of the signs"'), " (p.147) \u2014 unclear; does not map to any app constant. Left unmapped."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "The 28-year cycle"), " the Spanish PDF attributes to Venus is likely a garbled tekufat-chamah (the 28-year solar cycle), since real Venus sidereal = 225 days. Needs clean Hebrew verification before any claim.")), /* @__PURE__ */ import_react.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react.default.createElement("b", null, "Why this matters:"), " Raziel independently attests the apparatus this app is built on \u2014 the 22-letter gematria, the triangular-to-28 lunar key, the 12\u2194signs mapping, the fixed tropical zodiac, the 72-from-Genesis, the 7 Chaldean planets, and the Draco axis \u2014 in a text that explicitly instructs the reader to ", /* @__PURE__ */ import_react.default.createElement("i", null, "calculate"), " them. That is corroboration of the ", /* @__PURE__ */ import_react.default.createElement("i", null, "method"), ", not a prediction."), /* @__PURE__ */ import_react.default.createElement(SrcList, { items: rsrc }));
+}
+function RevelationsTab({ sub, setSubTab, date, rows, occ, words, genData, genYear }) {
+  const subtabs = [["hebrew", "Hebrew \xB7 Christian"], ["raziel", "Raziel"], ["gnostic", "Gnostic / Nag Hammadi"], ["vedic", "Indian / Vedic"], ["persian", "Persian / Avestan"], ["sufi", "Islamic / Sufi"], ["egyptian", "Egyptian"], ["maya", "Maya"], ["chinese", "Chinese"]];
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Revelations \u2014 the constants across all cultures (\xA715c, \xA79.6)"), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "Revelation = the cross-cultural register: every tradition that independently carries the system's constants (gematria, prophecies, cosmology). No cultural borrowing is claimed \u2014 only independent corroboration. Class tags: ", /* @__PURE__ */ import_react.default.createElement(ClassTag, { c: "(a)" }), " verifiable astronomy \xB7 ", /* @__PURE__ */ import_react.default.createElement(ClassTag, { c: "(b)" }), " eschatological/prophecy \xB7 ", /* @__PURE__ */ import_react.default.createElement(ClassTag, { c: "(c)" }), " cosmological-doctrine \xB7 ", /* @__PURE__ */ import_react.default.createElement(ClassTag, { c: "(u)" }), " unverified."), /* @__PURE__ */ import_react.default.createElement("h3", null, "Cross-cultural numeric summary \u2014 project constants vs. the corpora"), /* @__PURE__ */ import_react.default.createElement("table", { style: { marginBottom: 6 } }, /* @__PURE__ */ import_react.default.createElement("thead", null, /* @__PURE__ */ import_react.default.createElement("tr", null, /* @__PURE__ */ import_react.default.createElement("th", null, "Constant"), /* @__PURE__ */ import_react.default.createElement("th", null, "Meaning"), /* @__PURE__ */ import_react.default.createElement("th", null, "Where attested"), /* @__PURE__ */ import_react.default.createElement("th", null))), /* @__PURE__ */ import_react.default.createElement("tbody", null, REV_SUMMARY.map((r, i) => /* @__PURE__ */ import_react.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react.default.createElement("td", { className: "big", style: { color: "var(--gold)", whiteSpace: "nowrap" } }, r[0]), /* @__PURE__ */ import_react.default.createElement("td", null, r[1]), /* @__PURE__ */ import_react.default.createElement("td", { className: "muted" }, r[2]), /* @__PURE__ */ import_react.default.createElement("td", null, /* @__PURE__ */ import_react.default.createElement(ClassTag, { c: r[3] })))))), /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react.default.createElement("b", null, "Load-bearing for accuracy:"), " 22, 37, 73, 144, 1260, 42 months are NOT securely attested in either Nag Hammadi or pre-1500 Sufi sources \u2014 they are Hebrew/Sefer Yetzirah (22) or Revelation (144, 1260, 42) constants. The citable cross-cultural overlaps concentrate on ", /* @__PURE__ */ import_react.default.createElement("b", null, "7, 12, 28, 72, 360, 365, 14"), "."), /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: subtabs, active: sub, onChange: setSubTab }), sub === "hebrew" && /* @__PURE__ */ import_react.default.createElement(RevelationHebrewTab, { date, rows, occ, words, genData, genYear }), sub === "raziel" && /* @__PURE__ */ import_react.default.createElement(RevelationRazielTab, null), sub === "maya" && /* @__PURE__ */ import_react.default.createElement(RevelationMayaTab, null), sub === "chinese" && /* @__PURE__ */ import_react.default.createElement(RevelationChineseTab, null), sub === "vedic" && /* @__PURE__ */ import_react.default.createElement(RevelationVedicTab, null), sub === "sufi" && /* @__PURE__ */ import_react.default.createElement(RevelationSufiTab, null), sub === "egyptian" && /* @__PURE__ */ import_react.default.createElement(RevelationEgyptianTab, null), sub === "gnostic" && /* @__PURE__ */ import_react.default.createElement(RevelationGnosticTab, null), sub === "persian" && /* @__PURE__ */ import_react.default.createElement(RevelationPersianTab, null));
 }
 function MethodTab({ esGlossCount }) {
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Methodology & scope"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted", style: { marginTop: 4, lineHeight: 1.7 } }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Frame:"), " a modern hermetic-astronomical synthesis. The classical ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer Yetzirah"), " is cosmogonic linguistics, not an oracle; this operationalisation is a contemporary reading, not traditional kabbalistic practice."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Simple\u2194sign mapping:"), " equal 30\xB0 tropical sectors (not IAU constellations, which are unequal and 13). A symbolic convention necessary for the one-to-one letter\u2194sign grid. The mothers are placed opposite their real circumpolar constellations (Draco, Ursa Minor, Cassiopea)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Astronomy:"), " astronomy-engine v2.1.19, geocentric apparent ecliptic longitude (", /* @__PURE__ */ import_react.default.createElement("code", null, "GeoVector\u2192Ecliptic.elon"), "), noon UT."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Lexicon:"), " Strong (OpenScriptures), 6045 consonantal roots."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Pluto ephemeris:"), " precision degrades outside 1700\u20132200; ancient windows rely on sign-level (30\xB0) determination, validated by smooth continuity, not arcminute precision."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Negative results (tested):"), " the mirror-palindrome 2701\u21923773 does not discriminate at corpus level (Genesis 39.0% \u2248 Markov 39.7% \u2248 uniform 41.4%); 37/73 do not structure eclipses; Genesis-days do not correlate with eclipses (7.5% observed vs 28% expected \u2014 they avoid them)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Positive results:"), " 37/73 fit the civil solar year (365=73\xD75; 2701 pentads = 37 years), corroborated by the Maya Haab and Calendar Round; Genesis 1 core palindromes 61.3% vs 38.3% paired null (p\u22488\xD710\u207B\xB3, hypothesis)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Positive results v3.1 (\xA715b):"), " 37\xD773 structure of the 7 Genesis words demonstrated (23/127 subsets, p\u22483.1\xD710\u207B\u2074); saros-series count by calculation (152 series, 54\u201387, median 72); 7 kameot = 7 doubles (Mercury 260 = Tzolkin); Aiq Bekar = decimal-positional gematria of \xA72 (bridge to sigils); 72 Shem HaMephorash angels from Exodus (216=6\xB3); the 7-doubles=7-days heptagram (Chaldean order + mod 7 + Romance etymology); ayanamsa: 190-year spread (tropical discard robust); 6 windows 491-year cadence (p<5\xD710\u207B\u2076, hypothesis not cause)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Validation:"), " 86 assertions in ", /* @__PURE__ */ import_react.default.createElement("code", null, "scripts/tests.mjs"), " \u2014 all green. Scripts in ", /* @__PURE__ */ import_react.default.createElement("code", null, "scripts/"), "; article in ", /* @__PURE__ */ import_react.default.createElement("code", null, "article/lector-del-cielo-articulo.md"), ".")));
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("h2", null, "Methodology & scope"), /* @__PURE__ */ import_react.default.createElement("ul", { className: "muted", style: { marginTop: 4, lineHeight: 1.7 } }, /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Frame:"), " a modern hermetic-astronomical synthesis. The classical ", /* @__PURE__ */ import_react.default.createElement("i", null, "Sefer Yetzirah"), " is cosmogonic linguistics, not an oracle; this operationalisation is a contemporary reading, not traditional kabbalistic practice."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Simple\u2194sign mapping:"), " equal 30\xB0 tropical sectors (not IAU constellations, which are unequal and 13). A symbolic convention necessary for the one-to-one letter\u2194sign grid. The mothers are placed opposite their real circumpolar constellations (Draco, Ursa Minor, Cassiopea)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Astronomy:"), " astronomy-engine v2.1.19, geocentric apparent ecliptic longitude (", /* @__PURE__ */ import_react.default.createElement("code", null, "GeoVector\u2192Ecliptic.elon"), "), noon UT."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Lexicon:"), " Strong (OpenScriptures), 6045 consonantal roots."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Pluto ephemeris:"), " precision degrades outside 1700\u20132200; ancient windows rely on sign-level (30\xB0) determination, validated by smooth continuity, not arcminute precision."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Negative results (tested):"), " the mirror-palindrome 2701\u21923773 does not discriminate at corpus level (Genesis 39.3% \u2248 Markov 39.7% \u2248 uniform 41.1%); Genesis-days do not correlate with eclipses (7.5% observed vs 28% expected \u2014 they avoid them)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Positive results:"), " 37/73 fit the civil solar year (365=73\xD75; 2701 pentads = 37 years), corroborated by the Maya Haab and Calendar Round; Genesis 1 core palindromes 61.3% vs 38.3% paired null (p\u22488\xD710\u207B\xB3, hypothesis)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Positive results v3.1 (\xA715b):"), " 37\xD773 structure of the 7 Genesis words demonstrated (23/127 subsets, p\u22483.1\xD710\u207B\u2074); saros-series count by calculation (152 series, 54\u201387, median 72); 7 kameot = 7 doubles (Mercury 260 = Tzolkin); Aiq Bekar = decimal-positional gematria of \xA72 (bridge to sigils); 72 Shem HaMephorash angels from Exodus (216=6\xB3); the 7-doubles=7-days heptagram (Chaldean order + mod 7 + Romance etymology); ayanamsa: 190-year spread (tropical discard robust); 6 windows 491-year cadence (p<5\xD710\u207B\u2076, hypothesis not cause)."), /* @__PURE__ */ import_react.default.createElement("li", null, /* @__PURE__ */ import_react.default.createElement("b", null, "Validation:"), " 86 assertions in ", /* @__PURE__ */ import_react.default.createElement("code", null, "scripts/tests.mjs"), " \u2014 all green. Scripts in ", /* @__PURE__ */ import_react.default.createElement("code", null, "scripts/"), "; article in ", /* @__PURE__ */ import_react.default.createElement("code", null, "article/lector-del-cielo-articulo.md"), ".")));
 }
 var TABS = [
   ["sky", "Sky Map"],
@@ -26416,15 +26898,15 @@ var TABS = [
   ["time", "Time"],
   ["sigils", "Sigils"],
   ["cycles", "Cycles"],
-  ["revelation", "Revelation"],
-  ["crosscultural", "Cross-Cultural"],
+  ["revelation", "Revelations"],
   ["method", "Methodology"]
 ];
 var SUB = {
   reading: [["rule", "Reading Rule"], ["yhvh", "YHVH"], ["genesis", "Genesis 1:1"]],
   time: [["predictor", "Predictor"], ["ages", "Ages"]],
   sigils: [["gematria", "Gematria"], ["sigil", "Sigil Forge"], ["kameot", "Kameot"], ["angels", "72 Angels"]],
-  cycles: [["saros", "Saros"], ["ayanamsa", "Ayanamsa"], ["lunarsolar", "Lunar-Solar"], ["week", "Week"]]
+  cycles: [["saros", "Saros"], ["ayanamsa", "Ayanamsa"], ["lunarsolar", "Lunar-Solar"], ["week", "Week"]],
+  revelation: [["hebrew", "Hebrew \xB7 Christian"], ["raziel", "Raziel"], ["gnostic", "Gnostic / Nag Hammadi"], ["vedic", "Indian / Vedic"], ["persian", "Persian / Avestan"], ["sufi", "Islamic / Sufi"], ["egyptian", "Egyptian"], ["maya", "Maya"], ["chinese", "Chinese"]]
 };
 function SubTabs({ items, active, onChange }) {
   return /* @__PURE__ */ import_react.default.createElement("div", { className: "subtabs", role: "tablist" }, items.map(([id, label]) => /* @__PURE__ */ import_react.default.createElement("div", { key: id, role: "tab", "aria-selected": active === id, className: "subtab" + (active === id ? " active" : ""), onClick: () => onChange(id) }, label)));
@@ -26432,7 +26914,7 @@ function SubTabs({ items, active, onChange }) {
 function App() {
   const today = "2026-08-08";
   const [active, setActive] = (0, import_react.useState)("sky");
-  const [sub, setSub] = (0, import_react.useState)({ reading: "rule", time: "predictor", sigils: "gematria", cycles: "saros" });
+  const [sub, setSub] = (0, import_react.useState)({ reading: "rule", time: "predictor", sigils: "gematria", cycles: "saros", revelation: "hebrew" });
   const [lex, setLex] = (0, import_react.useState)(null);
   const [lexErr, setLexErr] = (0, import_react.useState)(null);
   const [angels, setAngels] = (0, import_react.useState)(null);
@@ -26454,7 +26936,11 @@ function App() {
     }).then(setAngels).catch(() => {
     });
   }, []);
-  const rows = (0, import_react.useMemo)(() => skyAt(date), [date]);
+  const effDate = (0, import_react.useMemo)(() => {
+    if (!date) return today;
+    return parseDate(date) ? date : today;
+  }, [date]);
+  const rows = (0, import_react.useMemo)(() => skyAt(effDate), [effDate]);
   const occ = (0, import_react.useMemo)(() => occupiedLetters(rows), [rows]);
   const occSigns = (0, import_react.useMemo)(() => new Set(rows.map((r) => r.sign)), [rows]);
   const bs = (0, import_react.useMemo)(() => bySign(rows), [rows]);
@@ -26469,16 +26955,22 @@ function App() {
   }, [angels]);
   const words = (0, import_react.useMemo)(() => lex ? readableWords(occ, lex.lexicon, ANGEL72) : [], [occ, lex, ANGEL72]);
   const sentence = rows.map((r) => SIMPLE[r.sign][0]).join(" ");
-  const year = parseInt(date.slice(0, 4), 10);
+  const year = (() => {
+    const d = parseDate(effDate);
+    return d ? d.getUTCFullYear() : 2026;
+  })();
   function scanYear(y) {
     setLoading(true);
     setTimeout(() => {
-      const days = [];
-      for (let i = 0; i < 365; i++) {
-        const ds = new Date(Date.UTC(y, 0, 1 + i, 12, 0, 0)).toISOString().slice(0, 10);
-        if (genesisReadable(occupiedLetters(skyAt(ds)))) days.push(ds);
+      const days = [], dayOccs = [];
+      const nDays = y % 4 === 0 && (y % 100 !== 0 || y % 400 === 0) ? 366 : 365;
+      for (let i = 0; i < nDays; i++) {
+        const ds = fmtDate(makeDate(y, 1, 1 + i));
+        const o = occupiedLetters(skyAt(ds));
+        dayOccs.push(o);
+        if (genesisReadable(o)) days.push(ds);
       }
-      setGenData({ year: y, days: new Set(days), list: days });
+      setGenData({ year: y, days: new Set(days), list: days, dayOccs });
       setLoading(false);
     }, 20);
   }
@@ -26486,9 +26978,10 @@ function App() {
     if (lex) scanYear(genYear);
   }, [genYear, lex]);
   function step(n) {
-    const d = /* @__PURE__ */ new Date(date + "T12:00:00Z");
+    const d = parseDate(effDate);
+    if (!d) return;
     d.setUTCDate(d.getUTCDate() + n);
-    setDate(d.toISOString().slice(0, 10));
+    setDate(fmtDate(d));
   }
   function stepYear(n) {
     setGenYear(genYear + n);
@@ -26496,10 +26989,34 @@ function App() {
   if (lexErr) return /* @__PURE__ */ import_react.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react.default.createElement("h2", null, "Error"), /* @__PURE__ */ import_react.default.createElement("p", null, "Could not load lexicon.json (", lexErr, "). Serve the ", /* @__PURE__ */ import_react.default.createElement("code", null, "web/"), " folder over HTTP (", /* @__PURE__ */ import_react.default.createElement("code", null, "python3 -m http.server 8008"), ") and open ", /* @__PURE__ */ import_react.default.createElement("code", null, "http://127.0.0.1:8008/"), "."));
   if (!lex) return /* @__PURE__ */ import_react.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react.default.createElement("h2", null, "Loading lexicon\u2026"), /* @__PURE__ */ import_react.default.createElement("p", null, "Reading lexicon.json (6045 consonantal roots)."));
   const setSubTab = (g) => (id) => setSub((s) => ({ ...s, [g]: id }));
-  return /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react.default.createElement("div", { key: id, role: "tab", "aria-selected": active === id, className: "tab" + (active === id ? " active" : ""), onClick: () => setActive(id) }, label))), /* @__PURE__ */ import_react.default.createElement("section", { className: "panel" }, active === "sky" && /* @__PURE__ */ import_react.default.createElement(SkyTab, { date, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step }), active === "translator" && /* @__PURE__ */ import_react.default.createElement(TranslatorTab, { date, occ, words, q, setQ }), active === "reading" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.reading, active: sub.reading, onChange: setSubTab("reading") }), sub.reading === "rule" && /* @__PURE__ */ import_react.default.createElement(RuleTab, { occ }), sub.reading === "yhvh" && /* @__PURE__ */ import_react.default.createElement(YhvhTab, { date, occ, yhvhOk, bs }), sub.reading === "genesis" && /* @__PURE__ */ import_react.default.createElement(GenesisTab, { date, occ, genesisOk })), active === "time" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.time, active: sub.time, onChange: setSubTab("time") }), sub.time === "predictor" && /* @__PURE__ */ import_react.default.createElement(PredictorTab, { date, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear }), sub.time === "ages" && /* @__PURE__ */ import_react.default.createElement(AgesTab, { date, rows })), active === "sigils" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.sigils, active: sub.sigils, onChange: setSubTab("sigils") }), sub.sigils === "gematria" && /* @__PURE__ */ import_react.default.createElement(GematriaTab, null), sub.sigils === "sigil" && /* @__PURE__ */ import_react.default.createElement(SigilTab, null), sub.sigils === "kameot" && /* @__PURE__ */ import_react.default.createElement(KameotTab, null), sub.sigils === "angels" && /* @__PURE__ */ import_react.default.createElement(AngelsTab, null)), active === "cycles" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.cycles, active: sub.cycles, onChange: setSubTab("cycles") }), sub.cycles === "saros" && /* @__PURE__ */ import_react.default.createElement(SarosTab, null), sub.cycles === "ayanamsa" && /* @__PURE__ */ import_react.default.createElement(AyanamsaTab, null), sub.cycles === "lunarsolar" && /* @__PURE__ */ import_react.default.createElement(LunarSolarTab, null), sub.cycles === "week" && /* @__PURE__ */ import_react.default.createElement(WeekTab, { date, rows })), active === "revelation" && /* @__PURE__ */ import_react.default.createElement(RevelationTab, { date, rows, occ, words, genData, genYear }), active === "crosscultural" && /* @__PURE__ */ import_react.default.createElement(CrossCulturalTab, null), active === "method" && /* @__PURE__ */ import_react.default.createElement(MethodTab, { esGlossCount: Object.keys(lex.esGloss || {}).length })), /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { textAlign: "center", marginTop: 14 } }, "Positions: ", /* @__PURE__ */ import_react.default.createElement("a", { href: "https://github.com/cosinekitty/astronomy-engine", target: "_blank", rel: "noreferrer" }, "astronomy-engine"), " \xB7 frame: ", /* @__PURE__ */ import_react.default.createElement("a", { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", target: "_blank", rel: "noreferrer" }, "Sefer Yetzirah"), " \xB7 lexicon: ", /* @__PURE__ */ import_react.default.createElement("a", { href: "https://github.com/openscriptures/HebrewLexicon", target: "_blank", rel: "noreferrer" }, "Strong (OpenScriptures)")));
+  return /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react.default.createElement("div", { key: id, role: "tab", "aria-selected": active === id, className: "tab" + (active === id ? " active" : ""), onClick: () => setActive(id) }, label))), /* @__PURE__ */ import_react.default.createElement("section", { className: "panel" }, active === "sky" && /* @__PURE__ */ import_react.default.createElement(SkyTab, { date: effDate, rawDate: date, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step }), active === "translator" && /* @__PURE__ */ import_react.default.createElement(TranslatorTab, { date: effDate, occ, words, q, setQ, genData }), active === "reading" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.reading, active: sub.reading, onChange: setSubTab("reading") }), sub.reading === "rule" && /* @__PURE__ */ import_react.default.createElement(RuleTab, { occ }), sub.reading === "yhvh" && /* @__PURE__ */ import_react.default.createElement(YhvhTab, { date: effDate, occ, yhvhOk, bs }), sub.reading === "genesis" && /* @__PURE__ */ import_react.default.createElement(GenesisTab, { date: effDate, occ, genesisOk })), active === "time" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.time, active: sub.time, onChange: setSubTab("time") }), sub.time === "predictor" && /* @__PURE__ */ import_react.default.createElement(PredictorTab, { date: effDate, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear }), sub.time === "ages" && /* @__PURE__ */ import_react.default.createElement(AgesTab, { date: effDate, rows })), active === "sigils" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.sigils, active: sub.sigils, onChange: setSubTab("sigils") }), sub.sigils === "gematria" && /* @__PURE__ */ import_react.default.createElement(GematriaTab, null), sub.sigils === "sigil" && /* @__PURE__ */ import_react.default.createElement(SigilTab, null), sub.sigils === "kameot" && /* @__PURE__ */ import_react.default.createElement(KameotTab, null), sub.sigils === "angels" && /* @__PURE__ */ import_react.default.createElement(AngelsTab, null)), active === "cycles" && /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(SubTabs, { items: SUB.cycles, active: sub.cycles, onChange: setSubTab("cycles") }), sub.cycles === "saros" && /* @__PURE__ */ import_react.default.createElement(SarosTab, null), sub.cycles === "ayanamsa" && /* @__PURE__ */ import_react.default.createElement(AyanamsaTab, null), sub.cycles === "lunarsolar" && /* @__PURE__ */ import_react.default.createElement(LunarSolarTab, null), sub.cycles === "week" && /* @__PURE__ */ import_react.default.createElement(WeekTab, { date: effDate, rows })), active === "revelation" && /* @__PURE__ */ import_react.default.createElement(RevelationsTab, { sub: sub.revelation, setSubTab: setSubTab("revelation"), date: effDate, rows, occ, words, genData, genYear }), active === "method" && /* @__PURE__ */ import_react.default.createElement(MethodTab, { esGlossCount: Object.keys(lex.esGloss || {}).length })), /* @__PURE__ */ import_react.default.createElement("div", { className: "note", style: { textAlign: "center", marginTop: 14 } }, "Positions: ", /* @__PURE__ */ import_react.default.createElement("a", { href: "https://github.com/cosinekitty/astronomy-engine", target: "_blank", rel: "noreferrer" }, "astronomy-engine"), " \xB7 frame: ", /* @__PURE__ */ import_react.default.createElement("a", { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", target: "_blank", rel: "noreferrer" }, "Sefer Yetzirah"), " \xB7 lexicon: ", /* @__PURE__ */ import_react.default.createElement("a", { href: "https://github.com/openscriptures/HebrewLexicon", target: "_blank", rel: "noreferrer" }, "Strong (OpenScriptures)")));
 }
-var root = document.getElementById("root");
-(0, import_client.createRoot)(root).render(/* @__PURE__ */ import_react.default.createElement(App, null));
+if (typeof document !== "undefined") {
+  const root = document.getElementById("root");
+  (0, import_client.createRoot)(root).render(/* @__PURE__ */ import_react.default.createElement(App, null));
+}
+export {
+  App,
+  DateEntry,
+  GematriaTab,
+  Heptagram,
+  MetonDiagram,
+  PrecessionDiagram,
+  RevelationGnosticTab,
+  RevelationHebrewTab,
+  RevelationPersianTab,
+  RevelationRazielTab,
+  RevelationSufiTab,
+  RevelationVedicTab,
+  SarosDiagram,
+  YearInput,
+  abjad,
+  fmtDate,
+  isopsephy,
+  katapayadi,
+  makeDate,
+  parseDate
+};
 /**
     @preserve
 

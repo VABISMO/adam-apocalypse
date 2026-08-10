@@ -1,0 +1,734 @@
+Āryabhaṭa numeration - Wikipedia 
+
+ Jump to content 
+
+ From Wikipedia, the free encyclopedia 
+
+ (Redirected from Aryabhata numeration ) 
+
+ Alpha-syllabic numeral system 
+ This article needs more citations . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . Find sources:   "Āryabhaṭa numeration"   –   news   · newspapers   · books   · scholar   · JSTOR ( April 2019 ) ( Learn how and when to remove this message ) "Sanskrit numerals" redirects here. For the basic numerals of Sanskrit, see Sanskrit grammar §   Numerals . 
+ Part of a series on Numeral systems 
+ Place-value notation 
+ Hindu–Arabic numerals 
+ Western Arabic 
+ Eastern Arabic 
+
+ Bengali 
+ Devanagari 
+ Gujarati 
+ Gurmukhi 
+ Odia 
+ Sinhala 
+ Tamil 
+ Malayalam 
+ Telugu 
+ Kannada 
+ Dzongkha 
+
+ Tibetan 
+ Balinese 
+ Burmese 
+ Javanese 
+ Khmer 
+ Lao 
+ Mongolian 
+ Sundanese 
+ Thai 
+
+ Other systems 
+ History 
+
+ Ancient 
+
+ Babylonian 
+
+ Post-classical 
+
+ Cistercian 
+ Mayan 
+ Muisca 
+ Pentadic 
+ Quipu 
+ Rumi 
+
+ Contemporary 
+
+ Cherokee 
+ Kaktovik (Iñupiaq) 
+
+ By radix/base 
+ Common radices/bases 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 8 
+ 10 
+ 11 
+ 12 
+ 16 
+ 20 
+ 60 
+
+ Non-standard radices/bases 
+
+ Bijective   ( 1 ) 
+ Signed-digit   ( balanced ternary ) 
+ Mixed   ( factorial ) 
+ Negative 
+ Complex   ( 2 i ) 
+ Non-integer   ( φ ) 
+ Asymmetric 
+
+ Sign-value notation 
+ Non-alphabetic 
+ Contemporary East Asian 
+
+ Chinese 
+ Hokkien 
+ Suzhou 
+ Japanese 
+ Korean 
+ Vietnamese 
+
+ Historic East Asian 
+
+ Counting rods 
+ Tangut 
+
+ Other non-alphabetic 
+
+ Aegean 
+ Attic 
+ Aztec 
+ Brahmi 
+ Chuvash 
+ Egyptian 
+ Etruscan 
+ Kharosthi 
+ Prehistoric counting 
+ Proto-cuneiform 
+ Roman 
+ Tally marks 
+
+ Alphabetic 
+ Abjad 
+ Armenian 
+ Alphasyllabic 
+ Akṣarapallī 
+ Āryabhaṭa 
+ Kaṭapayādi 
+ Coptic 
+ Cyrillic 
+ Geʽez 
+ Georgian 
+ Glagolitic 
+ Greek 
+ Hebrew 
+
+ List of numeral systems v t e 
+
+ Āryabhaṭa numeration is an alphasyllabic numeral system based on Sanskrit phonemes . It was introduced in the early 6th century in India by Āryabhaṭa , in the first chapter titled Gītika Padam of his Aryabhatiya . It attributes a numerical value to each syllable of the form consonant+vowel possible in Sanskrit phonology , from ka = 1 up to hau = 10 18 . 
+
+ History [ edit ] 
+ The basis of this number system is mentioned in the second stanza of the first chapter of Aryabhatiya . 
+
+ The Varga (Group/Class) letters ka to ma are to be placed in the varga (square) places (1st, 100th, 10000th, etc.) and Avarga letters like ya , ra , la .. have to be placed in Avarga places (10th, 1000th, 100000th, etc.). 
+
+ The Varga letters ka to ma have values from 1, 2, 3 .. up to 25 and Avarga letters ya to ha have values 30, 40, 50 .. up to 100. In the Varga and Avarga letters, beyond the ninth vowel (place), new symbols can be used. 
+
+ The values for vowels are as follows: a = 1; i = 100; u = 10000; ṛ = 1000000 and so on. 
+
+ Aryabhata used this number system for representing both small and large numbers in his mathematical and astronomical calculations. 
+
+ This system can even be used to represent fractions and mixed fractions. For example, nga is 1 ⁄ 5 , nja is 1 ⁄ 10 and jhardam ( jha =9; its half) = 4 + 1 ⁄ 2 . [ further explanation needed ] 
+
+ Example [ edit ] 
+
+ Example:   299,792,458 
+
+ 10 0 10 1 
+ 10 2 10 3 
+ 10 4 10 5 
+ 10 6 10 7 
+ 10 8 
+
+   85, 
+   42, 
+   97, 
+   99, 
+ 2 
+
+ जल 
+ घिनि 
+ झुशु 
+ झृसृ 
+ खॢ 
+
+ ja-la 
+ ghi-ni 
+ jhu-śu 
+ jhṛ-sṛ 
+ khḷ 
+
+ The traditional Indian digit order is reversed compared to the modern way. By consequence, Āryabhaṭa began with the ones before the tens; then the hundreds and the thousands; then the myriad and the lakh (10 5 ) and so on. (cf. Indian numbering system ) 
+
+ Another example might be ङिशिबुणॢष्खृ ṅiśibuṇḷṣkhṛ , [ 1 ] 1 582 237 500 . Note that in this case, 10 6 (ṛ) and 10 8 (ḷ) parts are swapped, and 10 6 (ṛ) part is ligature. [ why? ] 
+
+ Another example from Aryabhatiya is a verse for table of sines . [ 2 ] 
+
+ makhi bhakhi phakhi dhakhi ṇakhi ñakhi 
+ ṅakhi hasjha skaki kiṣga śghakhi kighva 
+ ghlaki kigra hakya dhaki kica sga jhaśa 
+ ṅva kla pta pha cha kala-ardha-jyāḥ 
+
+ Numeral table [ edit ] 
+
+ In citing the values of Āryabhaṭa numbers, the short vowels अ, इ, उ, ऋ, ऌ, ए, and ओ are invariably used. However, the Āryabhaṭa system did not distinguish between long and short vowels. This table only cites the full slate of क-derived (1 × 10 x ) values, but these are valid throughout the list of numeric syllables. [ 3 ] 
+
+ The   33 × 9   =   297   Sanskrit alphabetic numerical syllables 
+
+ Nine vowels or syllabics 
+
+ - a 
+ - i 
+ - u 
+ - ṛ 
+ - ḷ 
+ - e 
+ - ai 
+ - o 
+ - au 
+
+ अ 
+ इ 
+ उ 
+ ऋ 
+ ऌ 
+ ए 
+ ऐ 
+ ओ 
+ औ 
+
+ × 
+
+   10 0 
+   10 2 
+   10 4 
+   10 6 
+   10 8 
+   10 10 
+ 10 12 
+   10 14 
+ 10 16 
+
+ Five velar plosives 
+
+ k - 
+ क 
+ 1 
+
+ क   or   का ka 
+ कि   or   की ki 
+ कु   or   कू ku 
+ कृ   or   कॄ kṛ 
+ कॢ   or   कॣ kḷ 
+ के   or   कॆ ke 
+ कै kai 
+ को   or   कॊ ko 
+ कौ kau 
+
+ kh - 
+ ख 
+ 2 
+
+ ख kha 
+ खि khi 
+ खु khu 
+ खृ khṛ 
+ खॢ khḷ 
+ खे khe 
+ खै khai 
+ खो kho 
+ खौ khau 
+
+ g - 
+ ग 
+ 3 
+
+ ग ga 
+ गि gi 
+ गु gu 
+ गृ gṛ 
+ गॢ gḷ 
+ गे ge 
+ गै gai 
+ गो go 
+ गौ gau 
+
+ gh - 
+ घ 
+ 4 
+
+ घ gha 
+ घि ghi 
+ घु ghu 
+ घृ ghṛ 
+ घॢ ghḷ 
+ घे ghe 
+ घै ghai 
+ घो gho 
+ घौ ghau 
+
+ ṅ - 
+ ङ 
+ 5 
+
+ ङ ṅa 
+ ङि ṅi 
+ ङु ṅu 
+ ङृ ṅṛ 
+ ङॢ ṅḷ 
+ ङे ṅe 
+ ङै ṅai 
+ ङो ṅo 
+ ङौ ṅau 
+
+ Five palatal plosives 
+
+ c - 
+ च 
+ 6 
+
+ च ca 
+ चि ci 
+ चु cu 
+ चृ cṛ 
+ चॢ cḷ 
+ चे ce 
+ चै cai 
+ चो co 
+ चौ cau 
+
+ ch - 
+ छ 
+ 7 
+
+ छि chi 
+ छु chu 
+ छृ chṛ 
+ छॢ chḷ 
+ छे che 
+ छै chai 
+ छो cho 
+ छौ chau 
+
+ j - 
+ ज 
+ 8 
+
+ ज ja 
+ जि ji 
+ जु ju 
+ जृ jṛ 
+ जॢ jḷ 
+ जे je 
+ जै jai 
+ जो jo 
+ जौ jau 
+
+ jh - 
+ झ 
+ 9 
+
+ झ jha 
+ झि jhi 
+ झु jhu 
+ झृ jhṛ 
+ झॢ jhḷ 
+ झे jhe 
+ झै jhai 
+ झो jho 
+ झौ jhau 
+
+ ñ - 
+ ञ 
+ 10 
+
+ ञ ña 
+ ञि ñi 
+ ञु ñu 
+ ञृ ñṛ 
+ ञॢ ñḷ 
+ ञे ñe 
+ ञै ñai 
+ ञो ño 
+ ञौ ñau 
+
+ Five retroflex plosives 
+
+ ṭ - 
+ ट 
+ 11 
+
+ ट ṭa 
+ टि ṭi 
+ टु ṭu 
+ टृ ṭṛ 
+ टॢ ṭḷ 
+ टे ṭe 
+ टै ṭai 
+ टो ṭo 
+ टौ ṭau 
+
+ ṭh - 
+ ठ 
+ 12 
+
+ ठ ṭha 
+ ठि ṭhi 
+ ठु ṭhu 
+ ठृ ṭhṛ 
+ ठॢ ṭhḷ 
+ ठे ṭhe 
+ ठै ṭhai 
+ ठो ṭho 
+ ठौ ṭhau 
+
+ ḍ - 
+ ड 
+ 13 
+
+ ड ḍa 
+ डि ḍi 
+ डु ḍu 
+ डृ ḍṛ 
+ डॢ ḍḷ 
+ डे ḍe 
+ डै ḍai 
+ डो ḍo 
+ डौ ḍau 
+
+ ḍh - 
+ ढ 
+ 14 
+
+ ढ ḍha 
+ ढि ḍhi 
+ ढु ḍhu 
+ ढृ ḍhṛ 
+ ढॢ ḍhḷ 
+ ढे ḍhe 
+ ढै ḍhai 
+ ढो ḍho 
+ ढौ ḍhau 
+
+ ṇ - 
+ ण 
+ 15 
+
+ ण ṇa 
+ णि ṇi 
+ णु ṇu 
+ णृ ṇṛ 
+ णॢ ṇḷ 
+ णे ṇe 
+ णै ṇai 
+ णो ṇo 
+ णौ ṇau 
+
+ Five dental plosives 
+
+ t - 
+ त 
+ 16 
+
+ त ta 
+ ति ti 
+ तु tu 
+ तृ tṛ 
+ तॢ tḷ 
+ ते te 
+ तै tai 
+ तो to 
+ तौ tau 
+
+ th - 
+ थ 
+ 17 
+
+ थ tha 
+ थि thi 
+ थु thu 
+ थृ thṛ 
+ थॢ thḷ 
+ थे the 
+ थै thai 
+ थो tho 
+ थौ thau 
+
+ d - 
+ द 
+ 18 
+
+ द da 
+ दि di 
+ दु du 
+ दृ dṛ 
+ दॢ dḷ 
+ दे de 
+ दै dai 
+ दो do 
+ दौ dau 
+
+ dh - 
+ ध 
+ 19 
+
+ ध dha 
+ धि dhi 
+ धु dhu 
+ धृ dhṛ 
+ धॢ dhḷ 
+ धे dhe 
+ धै dhai 
+ धो dho 
+ धौ dhau 
+
+ n - 
+ न 
+ 20 
+
+ न na 
+ नि ni 
+ नु nu 
+ नृ nṛ 
+ नॢ nḷ 
+ ने ne 
+ नै nai 
+ नो no 
+ नौ nau 
+
+ Five labial plosives 
+
+ p - 
+ प 
+ 21 
+
+ प pa 
+ पि pi 
+ पु pu 
+ पृ pṛ 
+ पॢ pḷ 
+ पे pe 
+ पै pai 
+ पो po 
+ पौ pau 
+
+ ph - 
+ फ 
+ 22 
+
+ फ pha 
+ फि phi 
+ फु phu 
+ फृ phṛ 
+ फॢ phḷ 
+ फे phe 
+ फै phai 
+ फो pho 
+ फौ phau 
+
+ b - 
+ ब 
+ 23 
+
+ ब ba 
+ बि bi 
+ बु bu 
+ बृ bṛ 
+ बॢ bḷ 
+ बे be 
+ बै bai 
+ बो bo 
+ बौ bau 
+
+ bh - 
+ भ 
+ 24 
+
+ भ bha 
+ भि bhi 
+ भु bhu 
+ भृ bhṛ 
+ भॢ bhḷ 
+ भे bhe 
+ भै bhai 
+ भो bho 
+ भौ bhau 
+
+ m - 
+ म 
+ 25 
+
+ म ma 
+ मि mi 
+ मु mu 
+ मृ mṛ 
+ मॢ mḷ 
+ मे me 
+ मै mai 
+ मो mo 
+ मौ mau 
+
+ Four approximants or trill 
+
+ y - 
+ य 
+ 30 
+
+ य ya 
+ यि yi 
+ यु yu 
+ यृ yṛ 
+ यॢ yḷ 
+ ये ye 
+ यै yai 
+ यो yo 
+ यौ yau 
+
+ r - 
+ र 
+ 40 
+
+ र ra 
+ रि ri 
+ रु ru 
+ रृ rṛ 
+ रॢ rḷ 
+ रे re 
+ रै rai 
+ रो ro 
+ रौ rau 
+
+ l - 
+ ल 
+ 50 
+
+ ल la 
+ लि li 
+ लु lu 
+ लृ lṛ 
+ लॢ lḷ 
+ ले le 
+ लै lai 
+ लो lo 
+ लौ lau 
+
+ v - 
+ व 
+ 60 
+
+ व va 
+ वि vi 
+ वु vu 
+ वृ vṛ 
+ वॢ vḷ 
+ वे ve 
+ वै vai 
+ वो vo 
+ वौ vau 
+
+ Three coronal fricatives 
+
+ ś - 
+ श 
+ 70 
+
+ श śa 
+ शि śi 
+ शु śu 
+ शृ śṛ 
+ शॢ śḷ 
+ शे śe 
+ शै śai 
+ शो śo 
+ शौ śau 
+
+ ṣ - 
+ ष 
+ 80 
+
+ ष ṣa 
+ षि ṣi 
+ षु ṣu 
+ षृ ṣṛ 
+ षॢ ṣḷ 
+ षे ṣe 
+ षै ṣai 
+ षो ṣo 
+ षौ ṣau 
+
+ s - 
+ स 
+ 90 
+
+ स sa 
+ सि si 
+ सु su 
+ सृ sṛ 
+ सॢ sḷ 
+ से se 
+ सै sai 
+ सो so 
+ सौ sau 
+
+ One glottal fricative 
+
+ h - 
+ ह 
+ 100 
+
+ ह ha 
+ हि hi 
+ हु hu 
+ हृ hṛ 
+ हॢ hḷ 
+ हे he 
+ है hai 
+ हो ho 
+ हौ hau 
+
+ See also [ edit ] 
+ Aksharapalli 
+ Bhutasamkhya system 
+ Katapayadi system 
+ IAST 
+
+ References [ edit ] 
+
+ ↑ Āryabhaṭīya 1(gītikā).3 
+ ↑ Roddam, Narasimha (2001). "Sines in terse verse" . Nature . 414 (6866). Macmillan Magazines Ltd.: 851. Bibcode : 2001Natur.414..851N . doi : 10.1038/414851a . PMID   11780041 . S2CID   197930 . 
+
+ ↑ Ifrah, Georges (2000). The Universal History of Numbers. From Prehistory to the Invention of the Computer . New York: John Wiley & Sons. pp.   447 –450. ISBN   0-471-39340-1 . 
+
+ Kurt Elfering: Die Mathematik des Aryabhata I. Text, Übersetzung aus dem Sanskrit und Kommentar . Wilhelm Fink Verlag, München, 1975, ISBN   3-7705-1326-6 
+ Georges Ifrah: The Universal History of Numbers. From Prehistory to the Invention of the Computer . John Wiley & Sons, New York, 2000, ISBN   0-471-39340-1 . 
+ B. L. van der Waerden: Erwachende Wissenschaft. Ägyptische, babylonische und griechische Mathematik . Birkhäuser-Verlag, Basel Stuttgart, 1966, ISBN   3-7643-0399-9 
+ Fleet, J. F. (January 1911). "Aryabhata's System of Expressing Numbers". Journal of the Royal Asiatic Society of Great Britain and Ireland . 43 : 109– 126. doi : 10.1017/S0035869X00040995 . ISSN   0035-869X . JSTOR   25189823 . S2CID   163070211 . 
+ Fleet, J. F. (1911). "Aryabhata's System of Expressing Numbers". The Journal of the Royal Asiatic Society of Great Britain and Ireland . 43 . Royal Asiatic Society of Great Britain and Ireland: 109– 126. doi : 10.1017/S0035869X00040995 . JSTOR   25189823 . S2CID   163070211 . 
+
+ Retrieved from " https://en.wikipedia.org/w/index.php?title=Āryabhaṭa_numeration&oldid=1368163661 " 
+ Categories : Numerals Classical ciphers Indian mathematics Hidden categories: Articles with short description Short description matches Wikidata Articles needing additional references from April 2019 All articles needing additional references Pages using sidebar with the child parameter Wikipedia articles needing clarification from March 2017 Articles containing Sanskrit-language text 
+
+ Search 
+
+ Search 
+
+ Āryabhaṭa numeration 
+
+ 18 languages 
+
+ Add topic

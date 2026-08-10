@@ -1,0 +1,1503 @@
+Coptic script - Wikipedia 
+
+ Jump to content 
+
+ From Wikipedia, the free encyclopedia 
+
+ (Redirected from Coptic numerals ) 
+
+ Script used for writing the Coptic language 
+ [https://bigenc.ru/linguistics/text/2095533 Coptic alphabet]/Great Russian Encyclopedia</ref> to present (in Coptic liturgy)"},"fam1":{"wt":"[[Egyptian hieroglyphs]]"},"fam2":{"wt":"[[Proto-Sinaitic]]"},"fam3":{"wt":"[[Phoenician alphabet]]"},"fam4":{"wt":"[[Greek script]] augmented by [[Demotic Egyptian script|Demotic]]"},"children":{"wt":"[[Old Nubian language#Writing system|Old Nubian]]"},"unicode":{"wt":"{{ublist |class=nowrap |[https://www.unicode.org/charts/PDF/U2C80.pdf U+2C80–U+2CFF] {{smaller|Coptic}} |[https://www.unicode.org/charts/PDF/U0370.pdf U+0370–U+03FF] {{smaller|Greek and Coptic}} |[https://www.unicode.org/charts/PDF/U102E0.pdf U+102E0–U+102FF] {{smaller|Coptic Epact Numbers}}}}"},"iso15924":{"wt":"Copt"}},"i":0}}]}'> Coptic script Script type Alphabet 
+ Period 2nd century AD [ 1 ] to present (in Coptic liturgy) Direction Left-to-right   Languages Coptic , Blemmyan , Nubian languages Related scripts Parent systems Egyptian hieroglyphs Proto-Sinaitic Phoenician alphabet Greek script augmented by Demotic Coptic script Child systems Old Nubian ISO 15924 ISO 15924 Copt (204) , ​ Coptic Unicode Unicode alias Coptic Unicode range U+2C80–U+2CFF Coptic U+0370–U+03FF Greek and Coptic U+102E0–U+102FF Coptic Epact Numbers   This article contains phonetic transcriptions in the International Phonetic Alphabet (IPA) . For an introductory guide on IPA symbols, see Help:IPA . For the distinction between [   ] , /   / and ⟨   ⟩ , see IPA §   Brackets and transcription delimiters . 
+
+ This article contains Coptic text. Without proper rendering support , you may see question marks, boxes, or other symbols instead of Coptic letters. 
+
+ The Coptic script is the script used for writing the Coptic language , the most recent development of Egyptian . The repertoire of glyphs is based on the uncial Greek alphabet , augmented by letters borrowed from the Egyptian Demotic . It was the first alphabetic script used for the Egyptian language . There are several Coptic alphabets , as the script varies greatly among the various dialects and eras of the Coptic language . 
+
+ History [ edit ] 
+ The Coptic alphabet 
+
+ Part of a series on the Copts 
+
+Culture 
+ Architecture 
+ Art 
+ Calendar 
+ Coptology 
+ Cross 
+ Encyclopedia 
+ Fasting 
+ History 
+ Identity 
+ Language 
+ Literature
+ Coptic 
+ Copto-Arabic 
+ Music 
+ Monasticism 
+ Names 
+ Nationalism 
+ Persecution 
+ Philosophy 
+ Rite 
+ Saints 
+ Toponymy 
+ Writing system 
+
+Regions 
+ Egypt 
+ Diaspora 
+ North America ( United States ( churches ), Canada ( churches )) 
+ Australia   ( churches ) 
+ Africa ( Sudan , Libya ) 
+ Asia 
+ Europe 
+ South America 
+
+Denominations 
+ Coptic Orthodox Church 
+ Coptic Catholic Church 
+ Greek Orthodox Patriarchate of Alexandria 
+ Protestantism 
+ Evangelical Church 
+
+ Christianity portal v t e 
+
+ History of the alphabet ‡ Entries marked with a double dagger are non-alphabetic 
+
+ Egyptian hieroglyphs ‡ 32nd century</span>"}]]}'>c. BCE
+ Hieratic ‡ 32nd c. BCE
+ Demotic ‡ 7th c. BCE
+ Meroitic 3rd c. BCE 
+ Proto-Sinaitic ‡ 19th c. BCE
+ Ugaritic 15th c. BCE 
+ Ancient South Arabian 9th c. BCE
+ Geʽez c.   5th c. BCE 
+ Phoenician 12th c. BCE
+ (see below ) 
+ Hangul 1443 
+ Thaana c.   1601 
+ Adlam 1989 
+
+ Phoenician 12th c. BCE
+ Paleo-Hebrew 10th c. BCE
+ Samaritan 6th c. BCE 
+ Aramaic 8th c. BCE
+ Unknown Kushan script 600–200 BCE 
+ Kharosthi 3rd c. BCE 
+ Brahmi 3rd c. BCE
+ ( Brahmic )
+ Pallava 4th century
+ Cham 4th century 
+ Dhives Akuru 6th century 
+ Khmer 611 
+ Tibetan 7th century
+ ʼPhags-pa 1269 
+ Devanagari 10th century
+ Canadian Aboriginal 1840 
+ Hebrew 3rd c. BCE 
+ Pahlavi ‡ 2nd c. BCE
+ Avestan 4th century 
+ Palmyrene 1st c. BCE 
+ Nabataean 2nd c. BCE
+ Arabic 4th century
+ N'Ko 1949 
+ Syriac 1st century
+ Sogdian 2nd century
+ Old Turkic 8th century
+ Old Hungarian c.   650 
+ Old Uyghur 
+ Mongolian 1204 
+ Mandaic 2nd century 
+ Greek 8th c. BCE
+ Etruscan 8th c. BCE
+ Latin 7th c. BCE
+ Deseret 1854 
+ Great Lakes Algonquian 19th century 
+ Blackfoot 1888 
+ Fraser 1915 
+ Saanich 1978 
+ Osage 2006 
+ Runic 2nd century 
+ Ogham 4th century 
+ Lycian 5th c. BCE 
+ Coptic 3rd century 
+ Gothic 3rd century 
+ Armenian 405
+ Caucasian Albanian c.   420 
+ Georgian c.   430 
+ Glagolitic 862 
+ Cyrillic c.   940 
+ Old Permic 1372 
+ Libyco-Berber 10th c. BCE
+ Tifinagh 4th century
+ Neo-Tifinagh 1970 
+ Paleohispanic 7th c. BCE 
+
+ The Coptic script has a long history going back to the Ptolemaic Kingdom , when the Greek alphabet was used to transcribe Demotic texts, with the aim of recording the correct pronunciation of Demotic. As early as the sixth century BC and as late as the second century AD, an entire series of pre-Christian religious texts were written in what scholars term Old Coptic , Egyptian language texts written in the Greek alphabet . 
+
+ In contrast to Old Coptic, seven additional Coptic letters were derived from Demotic, and many of these (though not all) are used in “true” form of Coptic writing. Coptic texts are associated with Christianity , Gnosticism , and Manichaeism . 
+
+ With the spread of early Christianity in Egypt, knowledge of Egyptian hieroglyphs was lost by the late third century, as well as Demotic script slightly later, making way for a writing system more closely associated with the Coptic Orthodox Church . By the fourth century, the Coptic script was "standardized", particularly for the Sahidic dialect. (There are a number of differences between the alphabets as used in the various dialects in Coptic). 
+
+ Coptic is not generally used today except by the members of the Coptic Orthodox Church to write their religious texts. All the Gnostic codices found at Nag Hammadi used the Coptic script. 
+
+ The most common Coptic dialect written today as a liturgical language for the Coptic Orthodox and Coptic Catholic Churches is the Bohairic dialect. 
+
+ The Old Nubian alphabet—used to write Old Nubian , a Nilo-Saharan language —is an uncial variant of the Coptic script, with additional characters borrowed from the Greek and Meroitic scripts. 
+
+ Form [ edit ] 
+ The Coptic script was the first Egyptian writing system to indicate vowels , making Coptic documents invaluable for the interpretation of earlier Egyptian texts. Some Egyptian syllables had sonorants but no vowels; in Sahidic, these were written in Coptic with a line above the entire syllable. Various scribal schools made limited use of diacritics: some used an apostrophe as a word divider and to mark clitics , a function of determinatives in logographic Egyptian; others used diereses over ⲓ and ⲩ to show that these started a new syllable, others a circumflex over any vowel for the same purpose. [ 2 ] 
+
+ The Coptic script's glyphs are largely based on the Greek alphabet, which is another help in interpreting older Egyptian texts. [ 3 ] It has 24 letters of Greek origin; 6 or 7 more were retained from Demotic , depending on the dialect (6 in Sahidic, another each in Bohairic and Akhmimic). [ 2 ] In addition to the alphabetic letters, the letter ϯ stood for the syllable /ti/ or /di/ . 
+
+ As the Coptic script is a variant of the Greek alphabet, [ 4 ] with a few added letters, it can be used to write Greek without any transliteration schemes. Latin equivalents would include the Icelandic alphabet (which likewise has added letters), or the Fraktur alphabet (which has distinctive forms). While initially unified with the Greek alphabet by Unicode , a proposal was later accepted to separate it, with the proposal noting that Coptic is never written using modern Greek letter-forms (unlike German, which may be written with Fraktur or Antiqua letter-forms), and that the Coptic letter-forms have closer mutual legibility with the Greek-based letters incorporated into the separately encoded Cyrillic alphabet than with the forms used in modern Greek. Because Coptic lowercases are usually small-caps forms of the capitals, a Greek would have little trouble reading Coptic letters, but Copts would struggle more with many of the Greek letters. [ 5 ] [ 6 ] 
+
+ Letters [ edit ] 
+ These are the letters that are used for writing the Coptic language. Coptic did not originally have case distinctions — they are a modern convention, as is the case with other classical languages like Latin . 
+
+ Uppercase (image) 
+ Lowercase (image) 
+ Uppercase (unicode) 
+ Lowercase (unicode) 
+ Numeric value 
+ Greek equivalent</span>"}]],"parts":[{"template":{"target":{"wt":"Abbr","href":"./Template:Abbr"},"params":{"1":{"wt":"equiv."},"2":{"wt":"equivalent"}},"i":0}}]}'>equiv. 
+ Latin transliteration</span>"}]],"parts":[{"template":{"target":{"wt":"Abbr","href":"./Template:Abbr"},"params":{"1":{"wt":"Latin translit."},"2":{"wt":"Latin transliteration"}},"i":0}}]}'>Latin translit. [ citation needed ] 
+ Sahidic pronunciation</span>"}]],"parts":[{"template":{"target":{"wt":"Abbr","href":"./Template:Abbr"},"params":{"1":{"wt":"pron."},"2":{"wt":"pronunciation"}},"i":0}}]}'>pron. [ 7 ] 
+ Bohairic pronunciation</span>"}]],"parts":[{"template":{"target":{"wt":"Abbr","href":"./Template:Abbr"},"params":{"1":{"wt":"pron."},"2":{"wt":"pronunciation"}},"i":0}}]}'>pron. [ 7 ] 
+ Late Coptic pronunciation</span>"}]],"parts":[{"template":{"target":{"wt":"Abbr","href":"./Template:Abbr"},"params":{"1":{"wt":"pron."},"2":{"wt":"pronunciation"}},"i":0}}]}'>pron. [ 8 ] 
+ Greco-Bohairic hover over IPA symbol for when pronunciation is used, if no message appears when hovering: pronounced such always</span>"}]],"parts":[{"template":{"target":{"wt":"Abbr","href":"./Template:Abbr"},"params":{"1":{"wt":"pron."},"2":{"wt":"hover over IPA symbol for when pronunciation is used, if no message appears when hovering: pronounced such always"}},"i":0}}]}'>pron. [ 9 ] 
+
+ Ⲁ</span>"}},"i":0}}]}'/> Ⲁ 
+ ⲁ</span>"}},"i":0}}]}'/> ⲁ 
+ 1 Α, α 
+ A, a 
+ / a / 
+
+ / æ / , / ɑ / 
+ / ä / 
+
+ Ⲃ</span>"}},"i":0}}]}'/> Ⲃ 
+ ⲃ</span>"}},"i":0}}]}'/> ⲃ 
+ 2 Β, β B, b 
+ / β / 
+ / β / (final [ b ] ) 
+ / w / (final [ b ] ) [ note 1 ] 
+ / v / , ( / b / before a consonant, at the end of a word, or in a name) 
+
+ Ⲅ</span>"}},"i":0}}]}'/> Ⲅ 
+ ⲅ</span>"}},"i":0}}]}'/> ⲅ 
+ 3 Γ, γ 
+ G, g 
+ / k / (marked Greek words) 
+ — 
+ / g / , ( / ɣ / before ⲁ, ⲟ, or ⲱ) 
+ / ɣ / , / g / (before / e̞ / or / i / ) , / ŋ / (before / g / or / k / ) 
+
+ Ⲇ</span>"}},"i":0}}]}'/> Ⲇ 
+ ⲇ</span>"}},"i":0}}]}'/> ⲇ 
+ 4 Δ, δ D, d 
+ / t / (marked Greek words) 
+ — 
+ / d / (marked Greek words) 
+ / ð / , ( / d / in a name) 
+
+ Ⲉ</span>"}},"i":0}}]}'/> Ⲉ 
+ ⲉ</span>"}},"i":0}}]}'/> ⲉ 
+ 5 Ε, ε E, e 
+ / ɛ / , / ə / ( ⲉⲓ = / i / , / j / ) 
+ / ɛ / , / ə / ( ⲓⲉ = / e / ) 
+ / æ / , / ɑ / ( ⲓⲉ = / e / ) 
+ / e̞ / 
+
+ Ⲋ</span>"}},"i":0}}]}'/> Ⲋ 
+ ⲋ</span>"}},"i":0}}]}'/> ⲋ 
+ 6 Ϛ , ϛ ( , ) (none) 
+
+ (none) 
+
+ Ⲍ</span>"}},"i":0}}]}'/> Ⲍ 
+ ⲍ</span>"}},"i":0}}]}'/> ⲍ 
+ 7 Ζ, ζ Z, z 
+ / s / (marked Greek words) 
+ — 
+ / z / (marked Greek words) 
+ / z / 
+
+ Ⲏ</span>"}},"i":0}}]}'/> Ⲏ 
+ ⲏ</span>"}},"i":0}}]}'/> ⲏ 
+ 8 Η, η Ē, ē 
+ / e / 
+ / e / 
+ / æ / , / ɑ / , / ɪ / 
+ / iː / 
+
+ Ⲑ</span>"}},"i":0}}]}'/> Ⲑ 
+ ⲑ</span>"}},"i":0}}]}'/> ⲑ 
+ 9 Θ, θ Th, th 
+ / t h / 
+ / tʰ / 
+ / t / 
+ / θ / 
+
+ Ⲓ</span>"}},"i":0}}]}'/> Ⲓ 
+ ⲓ</span>"}},"i":0}}]}'/> ⲓ 
+ 10 Ι, ι I, i 
+ / iː / , / j / 
+ / i / , / j / , / ə / ( ⲓⲉ = / e / ) 
+ / ɪ / , / j / ( ⲓⲉ = / e / ) 
+ / i / , / j / (before vowels) , / ɪ / (after vowels to form diphthongs) 
+
+ Ⲕ</span>"}},"i":0}}]}'/> Ⲕ 
+ ⲕ</span>"}},"i":0}}]}'/> ⲕ 
+ 20 Κ, κ K, k 
+ / k / 
+
+ Ⲗ</span>"}},"i":0}}]}'/> Ⲗ 
+ ⲗ</span>"}},"i":0}}]}'/> ⲗ 
+ 30 Λ, λ L, l 
+ / l / 
+
+ Ⲙ</span>"}},"i":0}}]}'/> Ⲙ 
+ ⲙ</span>"}},"i":0}}]}'/> ⲙ 
+ 40 Μ, μ M, m 
+ / m / 
+
+ Ⲛ</span>"}},"i":0}}]}'/> Ⲛ 
+ ⲛ</span>"}},"i":0}}]}'/> ⲛ 
+ 50 Ν, ν N, n 
+ / n / 
+
+ Ⲝ</span>"}},"i":0}}]}'/> Ⲝ 
+ ⲝ</span>"}},"i":0}}]}'/> ⲝ 
+ 60 Ξ, ξ Ks, ks 
+ / k s / (only in Greek loanwords) 
+ / k s / , [ e̞ k s ] (usually following a consonant, or sometimes when starting a word) 
+
+ Ⲟ</span>"}},"i":0}}]}'/> Ⲟ 
+ ⲟ</span>"}},"i":0}}]}'/> ⲟ 
+ 70 Ο, ο O, o 
+ / ɔ / ( ⲟⲩ = / u / , / w / ) 
+ / o / ( ⲟⲩ = / u / , / w / ) 
+ / o̞ / ( ⲟⲩ = / u / ) 
+
+ Ⲡ</span>"}},"i":0}}]}'/> Ⲡ 
+ ⲡ</span>"}},"i":0}}]}'/> ⲡ 
+ 80 Π, π P, p 
+ / p / 
+
+ / b / 
+ / p / 
+
+ Ⲣ</span>"}},"i":0}}]}'/> Ⲣ 
+ ⲣ</span>"}},"i":0}}]}'/> ⲣ 
+ 100 Ρ, ρ R, r 
+ / ɾ / ~ / r / 
+
+ Ⲥ</span>"}},"i":0}}]}'/> Ⲥ 
+ ⲥ</span>"}},"i":0}}]}'/> ⲥ 
+ 200 Σ, σ, ς S, s 
+ / s / 
+
+ Ⲧ</span>"}},"i":0}}]}'/> Ⲧ 
+ ⲧ</span>"}},"i":0}}]}'/> ⲧ 
+ 300 Τ, τ T, t 
+ / t / 
+ / t / 
+ / d / (final [ t ] ) 
+ / t / 
+
+ Ⲩ</span>"}},"i":0}}]}'/> Ⲩ 
+ ⲩ</span>"}},"i":0}}]}'/> ⲩ 
+ 400 Υ, υ U, u 
+ / w / ( ⲟⲩ = / u / , / w / ) 
+ / ɪ / , / w / ( ⲟⲩ = / u / , / w / ) 
+ / i / , / w / (between " ⲟ " and another vowel except " ⲱ ") , / v / (after / ɑ / ( ⲁ or / e̞ / ( ⲉ )) , / u / (digraph " ⲟⲩ ") 
+
+ Ⲫ</span>"}},"i":0}}]}'/> Ⲫ 
+ ⲫ</span>"}},"i":0}}]}'/> ⲫ 
+ 500 Φ, φ Ph, ph 
+ / p h / 
+ / pʰ / 
+ / b / ~ / f / 
+ / f / 
+
+ Ⲭ</span>"}},"i":0}}]}'/> Ⲭ 
+ ⲭ</span>"}},"i":0}}]}'/> ⲭ 
+ 600 Χ, χ Kh, kh 
+ / k h / 
+ / kʰ / 
+ / k / 
+ / k / (if the word is Coptic in origin) , / x / (if the word is Greek in origin) , / ç / (if the word is Greek in origin but before / e̞ / or / i / ) 
+
+ Ⲯ</span>"}},"i":0}}]}'/> Ⲯ 
+ ⲯ</span>"}},"i":0}}]}'/> ⲯ 
+ 700 Ψ, ψ Ps, ps 
+
+ [ b s ] (only in Greek loanwords) 
+ [ p s ] , [ e̞ p s ] (usually following a consonant) 
+
+ Ⲱ</span>"}},"i":0}}]}'/> Ⲱ 
+ ⲱ</span>"}},"i":0}}]}'/> ⲱ 
+ 800 Ω, ω Ō, ō 
+ / o / 
+ / o / 
+ / oː / 
+ / o̞ː / 
+
+ Ϣ</span>"}},"i":0}}]}'/> Ϣ 
+ ϣ</span>"}},"i":0}}]}'/> ϣ 
+ — (none) Š, š / Sh, sh 
+ / ʃ / 
+
+ Ϥ</span>"}},"i":0}}]}'/> Ϥ 
+ ϥ</span>"}},"i":0}}]}'/> ϥ 
+ 90 Ϙ , ϙ (numerical value) F, f 
+ / f / 
+
+ Ϧ</span>"}},"i":0}}]}'/> Ϧ 
+ ϧ</span>"}},"i":0}}]}'/> ϧ 
+ — (none) X, x / H̱, ẖ 
+ NA 
+ / x / 
+
+ Ⳉ</span>"}},"i":0}}]}'/> Ⳉ 
+ ⳉ</span>"}},"i":0}}]}'/> ⳉ 
+ — (none) 
+ only used in Akhmimic for / x / . No name is recorded. 
+
+ Ϩ</span>"}},"i":0}}]}'/> Ϩ 
+ ϩ</span>"}},"i":0}}]}'/> ϩ 
+ — (none) H, h 
+ / h / 
+
+ Ϫ</span>"}},"i":0}}]}'/> Ϫ 
+ ϫ</span>"}},"i":0}}]}'/> ϫ 
+ — (none) J, j 
+ / t͡ʃ / 
+ / t͡ʃ / 
+ / d͡ʒ / [ note 2 ] 
+ / g / , / d͡ʒ / (before / e̞ / or / i / ) 
+
+ Ϭ</span>"}},"i":0}}]}'/> Ϭ 
+ ϭ</span>"}},"i":0}}]}'/> ϭ 
+ — (none) 
+ C, c / Č, č 
+ / kʲ / 
+ / t͡ʃʰ / 
+ / ʃ / [ note 2 ] 
+ / tʃ / , [ e̞ tʃ ] (usually following a consonant) 
+
+ Ϯ</span>"}},"i":0}}]}'/> Ϯ 
+ ϯ</span>"}},"i":0}}]}'/> ϯ 
+ — Τι, τι Ti, ti 
+ / t i / 
+ / t i / [ note 3 ] 
+ / d i / 
+ / t i / 
+
+ Ⳁ</span>"}},"i":0}}]}'/> Ⳁ 
+ ⳁ</span>"}},"i":0}}]}'/> ⳁ 
+ 900 
+ Ϡ , ϡ (numerical value) 
+ (none) 
+
+ (none) 
+
+ ↑ Ⲃ seemed to have retained a [ β ] intervocalically in Late Coptic. 
+ 1 2 Ϫ and ϭ seemed to have merged in Late Coptic into one phoneme, / ʃ / , with [ d͡ʒ ] intervocalically. 
+ ↑ When part of the digraph ϯⲉ , it is pronounced [de] in Bohairic . 
+
+ Letters derived from Demotic [ edit ] 
+ Old Coptic had a large number of Demotic Egyptian characters, including some logograms. This was reduced to seven such characters, used for sounds not covered by the Greek alphabet (plus their modern lowercase forms): 
+
+ Hieroglyph 
+
+ Hieratic 
+
+ Demotic 
+
+ Coptic 
+ Transliteration</span>"}]],"parts":[{"template":{"target":{"wt":"Abbr","href":"./Template:Abbr"},"params":{"1":{"wt":"Translit."},"2":{"wt":"Transliteration"}},"i":0}}]}'>Translit. 
+ Late Coptic Pronunciation</span>"}]],"parts":[{"template":{"target":{"wt":"Abbr","href":"./Template:Abbr"},"params":{"1":{"wt":"pron."},"2":{"wt":"Pronunciation"}},"i":0}}]}'>pron. 
+
+ → → 
+ → Ϣ</span>"}},"i":0}}]}'/> Ϣ š / ʃ / 
+
+ → → 
+ → Ϥ</span>"}},"i":0}}]}'/> Ϥ f / f / 
+
+ → → 
+ → Ϧ</span>"}},"i":0}}]}'/> Ϧ x / x / 
+
+ → → 
+ → Ϩ</span>"}},"i":0}}]}'/> Ϩ h / h / 
+
+ → → 
+ → Ϫ</span>"}},"i":0}}]}'/> Ϫ j / d͡ʒ / 
+
+ → → 
+ → Ϭ</span>"}},"i":0}}]}'/> Ϭ c / ʃ / 
+
+ → → 
+ → Ϯ</span>"}},"i":0}}]}'/> Ϯ di / d i / 
+
+ Numerals [ edit ] 
+ Coptic numerals are an alphabetic numeral system in which numbers are indicated with letters of the alphabet, such as ⲫ</span>"}},"i":0}}]}'/> ⲫ for 500. [ 10 ] 
+The numerical value of the letters is based on Greek numerals . Sometimes numerical use is distinguished from text with a continuous overline above the letters, as with Greek and Cyrillic numerals . 
+
+ Sample text [ edit ] 
+ Below is the Lord's prayer in the Coptic language and script: [ 11 ] 
+ ⲡⲉⲛⲓⲱⲧ‌ ‌ⲉⲧϧⲉⲛ‌ ‌ⲛⲓⲫⲏⲟⲩⲓ‌ ‌ⲙⲁⲣⲉϥⲧⲟⲩⲃⲟ‌ ‌ⲛ̀ϫⲉ‌ ‌ⲡⲉⲕⲣⲁⲛ‌ ‌ⲙⲁⲣⲉⲥⲓ̀‌ ‌ⲛ̀ϫⲉ‌ ‌ⲧⲉⲕⲙⲉⲧⲟⲩⲣⲟ‌ ‌ⲡⲉⲧⲉϩⲛⲁⲕ‌ ‌ⲙⲁⲣⲉϥϣⲱⲡⲓ‌ ‌ⲙ̀ⲫ̀ⲣⲏϯ‌ ‌ϧⲉⲛ‌ ‌ⲧ̀ⲫⲉ‌ ‌ⲛⲉⲙ‌ ‌ϩⲓϫⲉⲛ‌ ‌ⲡⲓⲕⲁϩⲓ‌ ‌ⲡⲉⲛⲱⲓⲕ‌ ‌ⲛ̀ⲧⲉ‌ ‌ⲣⲁⲥϯ‌ ‌ⲙⲏⲓϥ‌ ‌ⲛⲁⲛ‌ ‌ⲙ̀ⲫⲟⲟⲩ‌ ‌ⲟⲩⲟϩ‌ ‌ⲭⲁ‌ ‌ⲛⲏⲉⲧⲉⲣⲟⲛ‌ ‌ⲛⲁⲛ‌ ‌ⲉ̀ⲃⲟⲗ‌ ‌ⲙ̀ⲫ̀ⲣⲏϯ‌ ‌ϩⲱⲛ‌ ‌ⲛ̀ⲧⲉⲛⲭⲱ‌ ‌ⲉ̀ⲃⲟⲗ‌ ‌ⲛ̀ⲛⲏⲉⲧⲉ‌ ‌ⲟⲩⲟⲛ‌ ‌ⲛ̀ⲧⲁⲛ‌ ‌ⲉ̀ⲣⲱⲟⲩ‌ ‌ⲟⲩⲟϩ‌ ‌ⲙ̀ⲡⲉⲣⲉⲛⲧⲉⲛ‌ ‌ⲉ̀ϧⲟⲩⲛ‌ ‌ⲉ̀ⲡⲓⲣⲁⲥⲙⲟⲥ‌ ‌ⲁⲗⲗⲁ‌ ‌ⲛⲁϩⲙⲉⲛ‌ ‌ⲉ̀ⲃⲟⲗϩⲁ‌ ‌ⲡⲓⲡⲉⲧϩⲱⲟⲩ‌ ‌ϧⲉⲛ‌ ‌Ⲡⲓⲭⲣⲓⲥⲧⲟⲥ‌ ‌Ⲓⲏⲥⲟⲩⲥ‌ ‌ⲡⲉⲛϭⲟⲓⲥ‌ ‌ϫⲉ‌ ‌ⲑⲱⲕ‌ ‌ⲧⲉ‌ ‌ϯⲙⲉⲧⲟⲩⲣⲟ‌ ‌ⲛⲉⲙ‌ ‌ϯϫⲟⲙ‌ ‌ⲛⲉⲙ‌ ‌ⲡⲓⲱⲟⲩ‌ ‌ϣⲁ‌ ‌ⲉⲛⲉϩ‌ ‌ⲁⲙⲏⲛ‌ 
+
+ Unicode [ edit ] 
+ Main articles: Greek and Coptic (Unicode block) , Coptic (Unicode block) , and Coptic Epact Numbers (Unicode block) 
+
+ In Unicode , most Coptic letters formerly shared codepoints with similar Greek letters, but a disunification was accepted for version 4.1, which appeared in 2005. The new Coptic block is U+2C80 to U+2CFF. Most fonts contained in mainstream operating systems use a distinctive Byzantine style for this block. The Greek block includes seven Coptic letters (U+03E2–U+03EF highlighted below) derived from Demotic, and these need to be included in any complete implementation of Coptic. 
+
+ Greek and Coptic [1] [2] Official Unicode Consortium code chart (PDF) 
+
+   0 1 2 3 4 5 6 7 8 9 A B C D E F 
+
+ U+037x 
+ Ͱ 
+ ͱ 
+ Ͳ 
+ ͳ 
+ ʹ 
+ ͵ 
+ Ͷ 
+ ͷ 
+
+ ͺ 
+ ͻ 
+ ͼ 
+ ͽ 
+ ; 
+ Ϳ 
+
+ U+038x 
+
+ ΄ 
+ ΅ 
+ Ά 
+ · 
+ Έ 
+ Ή 
+ Ί 
+
+ Ό 
+
+ Ύ 
+ Ώ 
+
+ U+039x 
+ ΐ 
+ Α 
+ Β 
+ Γ 
+ Δ 
+ Ε 
+ Ζ 
+ Η 
+ Θ 
+ Ι 
+ Κ 
+ Λ 
+ Μ 
+ Ν 
+ Ξ 
+ Ο 
+
+ U+03Ax 
+ Π 
+ Ρ 
+
+ Σ 
+ Τ 
+ Υ 
+ Φ 
+ Χ 
+ Ψ 
+ Ω 
+ Ϊ 
+ Ϋ 
+ ά 
+ έ 
+ ή 
+ ί 
+
+ U+03Bx 
+ ΰ 
+ α 
+ β 
+ γ 
+ δ 
+ ε 
+ ζ 
+ η 
+ θ 
+ ι 
+ κ 
+ λ 
+ μ 
+ ν 
+ ξ 
+ ο 
+
+ U+03Cx 
+ π 
+ ρ 
+ ς 
+ σ 
+ τ 
+ υ 
+ φ 
+ χ 
+ ψ 
+ ω 
+ ϊ 
+ ϋ 
+ ό 
+ ύ 
+ ώ 
+ Ϗ 
+
+ U+03Dx 
+ ϐ 
+ ϑ 
+ ϒ 
+ ϓ 
+ ϔ 
+ ϕ 
+ ϖ 
+ ϗ 
+ Ϙ 
+ ϙ 
+ Ϛ 
+ ϛ 
+ Ϝ 
+ ϝ 
+ Ϟ 
+ ϟ 
+
+ U+03Ex 
+ Ϡ 
+ ϡ 
+ Ϣ 
+ ϣ 
+ Ϥ 
+ ϥ 
+ Ϧ 
+ ϧ 
+ Ϩ 
+ ϩ 
+ Ϫ 
+ ϫ 
+ Ϭ 
+ ϭ 
+ Ϯ 
+ ϯ 
+
+ U+03Fx 
+ ϰ 
+ ϱ 
+ ϲ 
+ ϳ 
+ ϴ 
+ ϵ 
+ ϶ 
+ Ϸ 
+ ϸ 
+ Ϲ 
+ Ϻ 
+ ϻ 
+ ϼ 
+ Ͻ 
+ Ͼ 
+ Ͽ 
+
+ Notes 
+ 1. ^ As of Unicode version 17.0 
+ 2. ^ Grey areas indicate non-assigned code points 
+
+ Coptic [1] [2] Official Unicode Consortium code chart (PDF) 
+
+   0 1 2 3 4 5 6 7 8 9 A B C D E F 
+
+ U+2C8x 
+ Ⲁ 
+ ⲁ 
+ Ⲃ 
+ ⲃ 
+ Ⲅ 
+ ⲅ 
+ Ⲇ 
+ ⲇ 
+ Ⲉ 
+ ⲉ 
+ Ⲋ 
+ ⲋ 
+ Ⲍ 
+ ⲍ 
+ Ⲏ 
+ ⲏ 
+
+ U+2C9x 
+ Ⲑ 
+ ⲑ 
+ Ⲓ 
+ ⲓ 
+ Ⲕ 
+ ⲕ 
+ Ⲗ 
+ ⲗ 
+ Ⲙ 
+ ⲙ 
+ Ⲛ 
+ ⲛ 
+ Ⲝ 
+ ⲝ 
+ Ⲟ 
+ ⲟ 
+
+ U+2CAx 
+ Ⲡ 
+ ⲡ 
+ Ⲣ 
+ ⲣ 
+ Ⲥ 
+ ⲥ 
+ Ⲧ 
+ ⲧ 
+ Ⲩ 
+ ⲩ 
+ Ⲫ 
+ ⲫ 
+ Ⲭ 
+ ⲭ 
+ Ⲯ 
+ ⲯ 
+
+ U+2CBx 
+ Ⲱ 
+ ⲱ 
+ Ⲳ 
+ ⲳ 
+ Ⲵ 
+ ⲵ 
+ Ⲷ 
+ ⲷ 
+ Ⲹ 
+ ⲹ 
+ Ⲻ 
+ ⲻ 
+ Ⲽ 
+ ⲽ 
+ Ⲿ 
+ ⲿ 
+
+ U+2CCx 
+ Ⳁ 
+ ⳁ 
+ Ⳃ 
+ ⳃ 
+ Ⳅ 
+ ⳅ 
+ Ⳇ 
+ ⳇ 
+ Ⳉ 
+ ⳉ 
+ Ⳋ 
+ ⳋ 
+ Ⳍ 
+ ⳍ 
+ Ⳏ 
+ ⳏ 
+
+ U+2CDx 
+ Ⳑ 
+ ⳑ 
+ Ⳓ 
+ ⳓ 
+ Ⳕ 
+ ⳕ 
+ Ⳗ 
+ ⳗ 
+ Ⳙ 
+ ⳙ 
+ Ⳛ 
+ ⳛ 
+ Ⳝ 
+ ⳝ 
+ Ⳟ 
+ ⳟ 
+
+ U+2CEx 
+ Ⳡ 
+ ⳡ 
+ Ⳣ 
+ ⳣ 
+ ⳤ 
+ ⳥ 
+ ⳦ 
+ ⳧ 
+ ⳨ 
+ ⳩ 
+ ⳪ 
+ Ⳬ 
+ ⳬ 
+ Ⳮ 
+ ⳮ 
+ ⳯ 
+
+ U+2CFx 
+ ⳰ 
+ ⳱ 
+ Ⳳ 
+ ⳳ 
+
+ ⳹ 
+ ⳺ 
+ ⳻ 
+ ⳼ 
+ ⳽ 
+ ⳾ 
+ ⳿ 
+
+ Notes 
+ 1. ^ As of Unicode version 17.0 
+ 2. ^ Grey areas indicate non-assigned code points 
+
+ Coptic Epact Numbers [1] [2] Official Unicode Consortium code chart (PDF) 
+
+   0 1 2 3 4 5 6 7 8 9 A B C D E F 
+
+ U+102Ex 
+ 𐋠 
+ 𐋡 
+ 𐋢 
+ 𐋣 
+ 𐋤 
+ 𐋥 
+ 𐋦 
+ 𐋧 
+ 𐋨 
+ 𐋩 
+ 𐋪 
+ 𐋫 
+ 𐋬 
+ 𐋭 
+ 𐋮 
+ 𐋯 
+
+ U+102Fx 
+ 𐋰 
+ 𐋱 
+ 𐋲 
+ 𐋳 
+ 𐋴 
+ 𐋵 
+ 𐋶 
+ 𐋷 
+ 𐋸 
+ 𐋹 
+ 𐋺 
+ 𐋻 
+
+ Notes 
+ 1. ^ As of Unicode version 17.0 
+ 2. ^ Grey areas indicate non-assigned code points 
+
+ Diacritics and punctuation [ edit ] 
+
+ These are also included in the Unicode specification. 
+
+ Punctuation [ edit ] 
+ Latin alphabet punctuation (comma, period, question mark, semicolon, colon, hyphen) uses the regular Unicode codepoints for punctuation 
+ Dicolon: standard colon U+003A 
+ Middle dot: U+00B7 
+ En dash: U+2013 
+ Em dash: U+2014 
+ Slanted double hyphen: U+2E17 
+
+ Combining diacritics [ edit ] 
+
+ These are codepoints applied after that of the character they modify. 
+
+ Combining overstroke: U+0305 (= supralinear stroke) 
+ Combining character-joining overstroke (from middle of one character to middle of the next): U+035E 
+ Combining dot under a letter: U+0323 
+ Combining dot over a letter: U+0307 
+ Combining acute accent: U+0301 
+ Combining grave accent: U+0300 
+ Combining circumflex accent (caret shaped): U+0302 
+ Combining circumflex (curved shape) or inverted breve above: U+0311 
+ Combining circumflex as wide inverted breve above joining two letters: U+0361 
+ Combining diaeresis: U+0308 
+
+ Macrons and overlines [ edit ] 
+
+ Coptic uses U+0304 ◌ ̄ COMBINING MACRON to indicate syllabic consonants , for example ⲛ̄</span>"}},"i":0}}]}'/> ⲛ̄ . [ 12 ] [ 13 ] 
+
+ Coptic abbreviations use U+0305 ◌ ̅ COMBINING OVERLINE to draw a continuous line across the remaining letters of an abbreviated word. [ 13 ] [ 14 ] It extends from the left edge of the first letter to the right edge of the last letter. For example, ⲡ̅ⲛ̅ⲁ̅</span>"}},"i":0}}]}'/> ⲡ̅ⲛ̅ⲁ̅ , a common abbreviation for ⲡⲛⲉⲩⲙⲁ</span>"}},"i":0}}]}'/> ⲡⲛⲉⲩⲙⲁ 'spirit'. 
+
+ A different kind of overline uses U+FE24 ◌ ︤ COMBINING MACRON LEFT HALF , U+FE26 ◌ ︦ COMBINING CONJOINING MACRON , and U+FE25 ◌ ︥ COMBINING MACRON RIGHT HALF to distinguish the spelling of certain common words or to highlight proper names of divinities and heroes. [ 13 ] [ 14 ] 
+For this the line begins in the middle of the first letter and continues to the middle of the last letter. A few examples: ⲣ︤ⲙ︥</span>"}},"i":0}}]}'/> ⲣ︤ⲙ︥ , ϥ︤ⲛ︦ⲧ︥</span>"}},"i":0}}]}'/> ϥ︤ⲛ︦ⲧ︥ , ⲡ︤ϩ︦ⲣ︦ⲃ︥</span>"}},"i":0}}]}'/> ⲡ︤ϩ︦ⲣ︦ⲃ︥ . 
+
+ Sometimes numerical use of letters is indicated with a continuous line above them using U+0305 ◌ ̅ COMBINING OVERLINE as in ⲁ͵ⲱ̅ⲡ̅ⲏ̅</span>"}},"i":0}}]}'/> ⲁ͵ⲱ̅ⲡ̅ⲏ̅ for 1,888 (where " ⲁ͵</span>"}},"i":0}}]}'/> ⲁ͵ " is 1,000 and " ⲱ̅ⲡ̅ⲏ̅</span>"}},"i":0}}]}'/> ⲱ̅ⲡ̅ⲏ̅ " is 888). Multiples of 1,000 can be indicated by a continuous double line above using U+033F ◌ ̿ COMBINING DOUBLE OVERLINE as in ⲁ̿</span>"}},"i":0}}]}'/> ⲁ̿ for 1,000. 
+
+ See also [ edit ] 
+ Coptic pronunciation reform 
+ Institute of Coptic Studies 
+
+ References [ edit ] 
+
+ ↑ Coptic alphabet /Great Russian Encyclopedia 
+ 1 2 Ritner, Robert Kriech. 1996. "The Coptic Alphabet". In The World's Writing Systems , edited by Peter T. Daniels and William Bright. Oxford and New York: Oxford University Press. 1994:287–290. 
+ ↑ Campbell, George L. "Coptic." Compendium of the World's Writing Systems. 2nd ed. Vol. 1. Biddles LTD, 1991. 415. 
+ ↑ "Coptic" . Ancient Scripts . Archived from the original on 19 December 2017 . Retrieved 2 December 2017 . 
+ ↑ Everson, Michael; Mansour, Kamal (2002-05-08). "L2/02-205 N2444: Coptic supplementation in the BMP" (PDF) . 
+ ↑ For example: The composer's name "Dmitri Dmitriyevich Shostakovich" is Дмитрий Дмитриевич Шостакович in Cyrillic, and Ⲇⲙⲏⲧⲣⲓⲓ Ⲇⲙⲏⲧⲣⲓⲉⲃⲓϭ Ϣⲟⲥⲧⲁⲕⲟⲃⲓϭ in Coptic. 
+ 1 2 "Die Toponyme vorarabischen Ursprungs im modernen Ägypten" (PDF) . peust.de . 2010. Archived from the original (PDF) on 1 April 2025 . Retrieved 6 April 2025 . 
+ ↑ Before the Greco-Bohairic reforms of the mid 19th century. 
+ ↑ "The Coptic Language" (PDF) . Coptic Orthodox Diocese of the Southern United States . 
+ ↑ "Section 7.3: Coptic, Numerical Use of Letters" (PDF) . The Unicode Standard . The Unicode Consortium. July 2016. 
+ ↑ Coptic Orthodox Diocese of London. "Ⲡⲉⲛⲓⲱⲧ ⲉⲧϧⲉⲛ ⲛⲓⲫⲏⲟⲩⲓ / The Lord's prayer" . Coptic for All . Coptic Orthodox Diocese of London . Retrieved 9 July 2026 . 
+ ↑ "Revision of the Coptic block under ballot for the BMP of the UCS" (PDF) . ISO/IEC JTC1/SC2/WG2. 2004-04-20. 
+ 1 2 3 Everson, Michael ; Emmel, Stephen; Marjanen, Antti; Dunderberg, Ismo; Baines, John; Pedro, Susana; Emiliano, António (2007-05-12). "N3222R: Proposal to add additional characters for Coptic and Latin to the UCS" (PDF) . ISO/IEC JTC1/SC2/WG2. 
+ 1 2 "Section 7.3: Coptic, Supralineation" (PDF) . The Unicode Standard . The Unicode Consortium. July 2017. 
+
+ Quaegebeur, Jan. 1982. "De la préhistoire de l'écriture copte." Orientalia lovaniensia analecta 13:125–136. 
+ Kasser, Rodolphe. 1991. "Alphabet in Coptic, Greek". In The Coptic Encyclopedia , edited by Aziz S. Atiya . New York: Macmillan Publishing Company, Volume 8. 30–32. 
+ Kasser, Rodolphe. 1991. "Alphabets, Coptic". In The Coptic Encyclopedia , edited by Aziz S. Atiya. New York: Macmillan Publishing Company, Volume 8. 32–41. 
+ Kasser, Rodolphe. 1991. "Alphabets, Old Coptic". In The Coptic Encyclopedia , edited by Aziz S. Atiya. New York: Macmillan Publishing Company, Volume 8. 41–45. 
+ Wolfgang Kosack: Koptisches Handlexikon des Bohairischen. Koptisch – Deutsch – Arabisch. Verlag Christoph Brunner, Basel 2013, ISBN   978-3-9524018-9-7 . 
+
+ External links [ edit ] 
+
+ Wikimedia Commons has media related to Coptic script . 
+
+ Michael Everson 's Revised proposal to add the Coptic alphabet to the BMP of the UCS 
+ Final Proposal to Encode Coptic Epact Numbers in ISO/IEC 1064 
+ Copticsounds – a resource for the study of Coptic phonology 
+ Phonological overview of the Coptic alphabet in comparison to classical and modern Greek. 
+ Coptic Unicode input 
+ Michael Everson 's Antinoou : A standard font for Coptic supported by the International Association for Coptic Studies . 
+ Ifao N Copte – A professional Coptic font for researchers, students and publishers has been developed by the French institute of oriental archeology (IFAO). Unicode, Mac and Windows compatible, this free font is available through downloading from the IFAO website ( direct link ). 
+ Coptic fonts ; Coptic fonts made by Laurent Bourcellier & Jonathan Perez, type designers 
+ ⲡⲓⲥⲁϧⲟ Archived 2021-03-08 at the Wayback Machine : Coptic font support Archived 2021-01-25 at the Wayback Machine – how to install, use and manipulate Coptic ASCII and Unicode fonts 
+ Download Free Coptic Fonts 
+ The Coptic Alphabet (omniglot.com) 
+ GNU FreeFont Coptic range in serif face 
+
+ v t e Types of writing systems Overview 
+ History of writing 
+ Grapheme 
+ Lists 
+ Writing systems 
+ undeciphered 
+ inventors 
+ constructed 
+ Languages by writing system / by first written accounts 
+ Types Abjads 
+ Numerals 
+
+ Aramaic 
+ Hatran 
+ Arabic 
+ Elifba 
+ Egyptian hieroglyphs 
+ Elymaic 
+ Hebrew 
+ Ashuri 
+ Cursive 
+ Rashi 
+ Solitreo 
+ Tifinagh 
+ Mandaic 
+ Manichaean 
+ Nabataean 
+ Ancient North Arabian 
+ Paleo-Hebrew 
+ Pahlavi 
+ Book 
+ Inscriptional 
+ Inscriptional Parthian 
+ Psalter 
+ Pegon 
+ Phoenician 
+ Pitman shorthand 
+ Proto-Sinaitic 
+ Punic 
+ Samaritan 
+ South Arabian 
+ Zabur 
+ Musnad 
+ Sogdian 
+ Syriac 
+ ʾEsṭrangēlā 
+ Serṭā 
+ Maḏnḥāyā 
+ Teeline Shorthand 
+ Ugaritic 
+ Abugidas Brahmic Northern 
+ Bengali–Assamese 
+ Bhaiksuki 
+ Brahmi script 
+ Devanagari 
+ Dogri 
+ Gujarati 
+ Gupta 
+ Gurmukhi 
+ Kaithi 
+ Kalinga 
+ Khema 
+ Khojki 
+ Khudabadi 
+ Laṇḍā 
+ Lepcha 
+ Mahajani 
+ Marchen 
+ Meitei 
+ Modi 
+ Multani 
+ Nagari 
+ Nandinagari 
+ Nepalese scripts 
+ Bhujimol 
+ Golmol 
+ Himmol 
+ Kummol 
+ Kvemmol 
+ Kurukh 
+ Pachumol 
+ Newar 
+ Ranjana 
+ Tamyig 
+ Tirhuta 
+ Limbu 
+ Litumol 
+ Odia 
+ Karani 
+ ʼPhags-pa 
+ Sharada 
+ Siddhaṃ 
+ Soyombo 
+ Sylheti Nagri 
+ Takri 
+ Tibetan 
+ Uchen 
+ Umê 
+ Tocharian 
+ Zanabazar square 
+ Southern 
+ Ahom 
+ Balinese 
+ Batak 
+ Baybayin 
+ Bhattiprolu 
+ Buda 
+ Buhid 
+ Chakma 
+ Cham 
+ Fakkham 
+ Grantha 
+ Goykanadi 
+ Hanunoo 
+ Javanese 
+ Kadamba 
+ Kannada 
+ Karen 
+ Kawi 
+ Khmer 
+ Khom Thai 
+ Kulitan 
+ Lanna 
+ Langdi 
+ Lao 
+ Leke 
+ Lontara 
+ Bilang-bilang 
+ Makasar 
+ Malayalam 
+ Old Maldivian 
+ Dhives Akuru 
+ Eveyla Akuru 
+ Mon–Burmese 
+ Pallava 
+ Pyu 
+ Saurashtra 
+ Shan 
+ Sinhala 
+ Sukhothai 
+ Sundanese 
+ Old Sundanese 
+ Tagbanwa 
+ Tai Le 
+ New Tai Lue 
+ Tai Noi 
+ Tai Tham 
+ Tai Viet 
+ Lai Tay 
+ Tamil 
+ Tamil-Brahmi 
+ Tanchangya 
+ Telugu 
+ Thai 
+ Tigalari 
+ Ulu scripts 
+ Incung 
+ Lampung 
+ Lembak 
+ Ogan 
+ Pasemah 
+ Rejang 
+ Serawai 
+ Vatteluttu 
+ Kolezhuthu 
+ Malayanma 
+ Others 
+ Bharati 
+ Boyd's syllabic shorthand 
+ Canadian syllabics 
+ Blackfoot 
+ Déné syllabics 
+ Dham 
+ Fox I 
+ Geʽez 
+ Gunjala Gondi 
+ Japanese Braille 
+ Sarati 
+ Jenticha 
+ Kharosthi 
+ Mandombe 
+ Masaram Gondi 
+ Meroitic 
+ Miao 
+ Mwangwego 
+ Pahawh Hmong 
+ Sorang Sompeng 
+ Tengwar 
+ Thaana 
+ Thomas Natural Shorthand 
+ Warang Citi 
+ Rma 
+ Alphabets Linear 
+ Adlam 
+ Ariyaka 
+ Armenian 
+ Avestan 
+ Pazend 
+ Avoiuli 
+ Bassa Vah 
+ Carian 
+ Caucasian Albanian 
+ Cirth 
+ Coelbren 
+ Coorgi–Cox alphabet 
+ Coptic 
+ Cyrillic 
+ Serbian 
+ Early 
+ Deseret 
+ Duployan shorthand 
+ Chinook 
+ Eclectic shorthand 
+ Elbasan 
+ Enochian 
+ Etruscan 
+ Formosan 
+ Fox II 
+ Franklin's phonetic 
+ Fraser 
+ Gabelsberger shorthand 
+ Gadabuursi 
+ Garay alphabet 
+ Georgian 
+ Asomtavruli 
+ Nuskhuri 
+ Mkhedruli 
+ Veso Bey 
+ Glagolitic 
+ Gothic 
+ Gregg shorthand 
+ Greek ( Archaic ) 
+ Greco-Iberian alphabet 
+ Hangul 
+ Hanifi 
+ Hurûf-ı munfasıla 
+ Sunuwar 
+ Kaddare 
+ Kayah Li 
+ Klingon 
+ Latin 
+ Beneventan 
+ Blackletter 
+ Carolingian minuscule 
+ Fraktur 
+ Gaelic 
+ Insular 
+ IPA 
+ Kurrent 
+ Merovingian 
+ Sigla 
+ Sütterlin 
+ Tironian notes 
+ Visigothic 
+ Luo 
+ Lycian 
+ Lydian 
+ Manchu 
+ Medefaidrin 
+ Mru 
+ Mundari Bani 
+ N'Ko 
+ Ogham 
+ Ol Chiki 
+ Old Italic 
+ Old Permic 
+ Orkhon-Yenisei ( Old Hungarian ) 
+ Old Uyghur 
+ Mongolian 
+ Evenki 
+ Galik alphabet 
+ Manchu 
+ Oirat 
+ Vagindra 
+ Ol Onal 
+ Osage 
+ Osmanya 
+ Pau Cin Hau 
+ Phrygian 
+ Pisidian 
+ Runic 
+ Anglo-Saxon 
+ Cipher 
+ Dalecarlian 
+ Elder Futhark 
+ Younger Futhark 
+ Gothic 
+ Marcomannic 
+ Medieval 
+ Staveless 
+ Shavian 
+ Sidetic 
+ Sorang Sompeng 
+ Sunuwar 
+ Tifinagh 
+ Todhri 
+ Tolong Siki 
+ Vellara 
+ Visible Speech 
+ Vithkuqi 
+ Wancho 
+ Warang Citi 
+ Yezidi 
+ Zaghawa 
+ Non-linear 
+ Braille 
+ Flag semaphore 
+ Maritime flags 
+ Moon type 
+ New York Point 
+ Fingerspelling 
+ Telegraph code 
+ Ideograms 
+ Adinkra 
+ Aztec 
+ Blissymbols 
+ Dongba 
+ Ersu Shaba 
+ Emoji 
+ Isotype 
+ Kaidā 
+ Miꞌkmaw 
+ Mixtec 
+ New Epoch Notation Painting 
+ Nsibidi 
+ Anishinaabewibii'iganan 
+ Olmec 
+ Siglas poveiras 
+ Testerian 
+ Yerkish 
+ Zapotec 
+ Logograms Chinese family of scripts Chinese characters 
+ Simplified 
+ Traditional 
+ Oracle bone script 
+ Bronze scripts 
+ Seal script 
+ large 
+ small 
+ bird-worm 
+ Hanja 
+ Kanji 
+ Chữ Nôm 
+ Sawndip 
+ Bowen 
+ Chinese-influenced 
+ Jurchen 
+ Khitan large script 
+ Sui 
+ Tangut 
+ Cuneiform 
+ Akkadian 
+ Assyrian 
+ Elamite 
+ Hittite 
+ Luwian 
+ Sumerian 
+ Other logosyllabic 
+ Anatolian 
+ Bagam 
+ Cretan 
+ Isthmian 
+ Maya 
+ Proto-Elamite 
+ Tenevil 
+ Wiigwaasabak 
+ Yi (Classical) 
+ Logoconsonantal 
+ Demotic 
+ Hieratic 
+ Hieroglyphs 
+ Numerals 
+ Hindu-Arabic 
+ Abjad 
+ Attic (Greek) 
+ Muisca 
+ Roman 
+ Other 
+ Sitelen Pona 
+ Semi-syllabaries Full 
+ Linear Elamite 
+ Celtiberian 
+ Iberian 
+ Northeastern 
+ Southeastern 
+ Khom 
+ Dunging 
+ Redundant 
+ Espanca script 
+ Pahawh Hmong 
+ Khitan small script 
+ Southwest Paleohispanic 
+ Bopomofo 
+ Quốc Âm Tân Tự 
+ Sign languages 
+ ASLwrite 
+ SignWriting 
+ si5s 
+ Stokoe notation 
+ Syllabaries 
+ Afaka 
+ Bamum 
+ Bété 
+ Byblos 
+ Canadian Aboriginal 
+ Cherokee 
+ Cypriot 
+ Cypro-Minoan 
+ Ditema tsa Dinoko 
+ Eskayan 
+ Geba 
+ Great Lakes Algonquian 
+ Iban 
+ Idu 
+ Kana 
+ Hiragana 
+ Katakana 
+ Man'yōgana 
+ Hentaigana 
+ Sōgana 
+ Jindai moji 
+ Kikakui 
+ Kpelle 
+ Linear B 
+ Linear Elamite 
+ Lisu 
+ Loma 
+ Nüshu 
+ Nwagu Aneke script 
+ Old Persian cuneiform 
+ Sumerian 
+ Vai 
+ Woleai 
+ Yi 
+ Yugtun 
+ v t e Braille   ⠃⠗⠁⠊⠇⠇⠑ Braille cell 
+ 1829 braille 
+ International uniformity 
+ ASCII braille 
+ Unicode braille patterns 
+ Braille scripts French-ordered 
+ Albanian 
+ Cantonese 
+ Catalan 
+ Chinese (mainland Mandarin) (largely reassigned) 
+ Czech 
+ Dutch 
+ 6-dot 
+ 8-dot 
+ English ( Unified English ) 
+ Esperanto 
+ French 
+ German 
+ Ghanaian 
+ Guarani 
+ Hawaiian 
+ Hungarian 
+ Iñupiaq 
+ IPA 
+ Irish 
+ Italian 
+ Latvian 
+ Lithuanian 
+ Luxembourgish (extended to 8-dot) 
+ Maltese 
+ Māori 
+ Navajo 
+ Nigerian 
+ Philippine 
+ Polish 
+ Portuguese 
+ Romanian 
+ Samoan 
+ Slovak 
+ South African 
+ Spanish 
+ Taiwanese Mandarin (largely reassigned) 
+ Turkish ( Azerbaijani ) 
+ Vietnamese 
+ Welsh 
+ Yugoslav 
+ Zambian 
+ Nordic family 
+ Estonian 
+ Faroese 
+ Icelandic 
+ Scandinavian 
+ Danish 
+ Finnish 
+ Greenlandic 
+ Northern Sámi 
+ Norwegian 
+ Swedish 
+ Russian lineage family i.e. Cyrillic -mediated scripts 
+ Belarusian 
+ Bulgarian 
+ Kazakh 
+ Kyrgyz 
+ Mongolian 
+ Russian 
+ Tatar 
+ Ukrainian 
+ Egyptian lineage family i.e. Arabic -mediated scripts 
+ Arabic 
+ Persian 
+ Urdu (Pakistan) 
+ Indian lineage family i.e. Bharati Braille 
+ Devanagari (Hindi / Marathi / Nepali) 
+ Bengali (Bangla / Assamese) 
+ Gujarati 
+ Kannada 
+ Malayalam 
+ Odia 
+ Punjabi 
+ Sinhala 
+ Tamil 
+ Telugu 
+ Urdu (India) 
+ Other scripts 
+ Amharic 
+ Armenian 
+ Burmese 
+ Dzongkha (Bhutanese) 
+ Georgian 
+ Greek 
+ Hebrew 
+ Inuktitut (reassigned vowels) 
+ Khmer 
+ Thai and Lao (Japanese vowels) 
+ Tibetan 
+
+ Reordered 
+ Algerian Braille (obsolete) 
+ Frequency-based 
+ American Braille (obsolete) 
+ Independent 
+ Chinese semi-syllabaries 
+ Cantonese 
+ Mainland Chinese Mandarin 
+ Taiwanese Mandarin 
+ Two-cell Chinese (Shuangpin) 
+ Japanese 
+ Korean 
+ Eight-dot 
+ Dutch 
+ Luxembourgish 
+ Kanji 
+ Gardner–Salinas braille codes (GS8) 
+ Symbols in braille 
+ Braille music 
+ Canadian currency marks 
+ Computer Braille Code 
+ Gardner–Salinas braille codes (science; GS8/GS6) 
+ International Phonetic Alphabet (IPA) 
+ Nemeth braille code 
+ Braille technology 
+ Braille e-book 
+ Braille embosser 
+ Braille translator 
+ Braille watch 
+ Mountbatten Brailler 
+ Optical braille recognition 
+ Perforation 
+ Perkins Brailler 
+ Refreshable braille display 
+ Slate and stylus 
+ Braigo 
+ People 
+ Louis Braille 
+ Charles Barbier 
+ Róża Czacka 
+ Valentin Haüy 
+ Harris Mowbray 
+ Thakur Vishva Narain Singh 
+ María del Carmen Ortiz de Arce 
+ Sabriye Tenberken 
+ William Bell Wait 
+ Organisations 
+ Braille Institute of America 
+ Braille Without Borders 
+ Japan Braille Library 
+ National Braille Association 
+ Blindness organizations 
+ Schools for the blind 
+ American Printing House for the Blind 
+ Other tactile alphabets 
+ Decapoint 
+ Moon type 
+ New York Point 
+ Night writing 
+ Vibratese 
+ Related topics 
+ Accessible publishing 
+ Braille literacy 
+ RoboBraille 
+
+ Authority control databases International GND National koptské písmo</span>"}]]}'> Czech Republic 
+
+ Retrieved from " https://en.wikipedia.org/w/index.php?title=Coptic_script&oldid=1368449119#Numerals " 
+ Categories : Coptic language Greek alphabet Writing systems of Africa Ancient Egyptian language Alphabetic numeral systems Coptic Orthodox Church Hidden categories: Articles with short description Short description is different from Wikidata Scripts with ISO 15924 four-letter codes Pages with plain IPA Pages using contains special characters for widely supported languages All articles with unsourced statements Articles with unsourced statements from August 2024 Commons category link is on Wikidata Webarchive template wayback links 
+
+ Search 
+
+ Search 
+
+ Coptic script 
+
+ 57 languages 
+
+ Add topic

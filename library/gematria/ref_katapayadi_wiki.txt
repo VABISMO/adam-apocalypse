@@ -1,0 +1,802 @@
+Katapayadi system - Wikipedia 
+
+ Jump to content 
+
+ From Wikipedia, the free encyclopedia 
+
+ Ancient Indian alphasyllabic numeral system 
+
+ This article should specify the language of its non-English content using { { lang } } or { { langx } } , { { transliteration } } for transliterated languages, and { { IPA } } for phonetic transcriptions, with an appropriate ISO 639 code . Wikipedia's multilingual support templates may also be used. See why . ( August 2022 ) 
+
+ This article contains Indic text . Without proper rendering support , you may see question marks or boxes , misplaced vowels or missing conjuncts instead of Indic text. 
+
+ KaTaPaYadi System – Values 
+ Part of a series on Numeral systems 
+ Place-value notation 
+ Hindu–Arabic numerals 
+ Western Arabic 
+ Eastern Arabic 
+
+ Bengali 
+ Devanagari 
+ Gujarati 
+ Gurmukhi 
+ Odia 
+ Sinhala 
+ Tamil 
+ Malayalam 
+ Telugu 
+ Kannada 
+ Dzongkha 
+
+ Tibetan 
+ Balinese 
+ Burmese 
+ Javanese 
+ Khmer 
+ Lao 
+ Mongolian 
+ Sundanese 
+ Thai 
+
+ Other systems 
+ History 
+
+ Ancient 
+
+ Babylonian 
+
+ Post-classical 
+
+ Cistercian 
+ Mayan 
+ Muisca 
+ Pentadic 
+ Quipu 
+ Rumi 
+
+ Contemporary 
+
+ Cherokee 
+ Kaktovik (Iñupiaq) 
+
+ By radix/base 
+ Common radices/bases 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 8 
+ 10 
+ 11 
+ 12 
+ 16 
+ 20 
+ 60 
+
+ Non-standard radices/bases 
+
+ Bijective   ( 1 ) 
+ Signed-digit   ( balanced ternary ) 
+ Mixed   ( factorial ) 
+ Negative 
+ Complex   ( 2 i ) 
+ Non-integer   ( φ ) 
+ Asymmetric 
+
+ Sign-value notation 
+ Non-alphabetic 
+ Contemporary East Asian 
+
+ Chinese 
+ Hokkien 
+ Suzhou 
+ Japanese 
+ Korean 
+ Vietnamese 
+
+ Historic East Asian 
+
+ Counting rods 
+ Tangut 
+
+ Other non-alphabetic 
+
+ Aegean 
+ Attic 
+ Aztec 
+ Brahmi 
+ Chuvash 
+ Egyptian 
+ Etruscan 
+ Kharosthi 
+ Prehistoric counting 
+ Proto-cuneiform 
+ Roman 
+ Tally marks 
+
+ Alphabetic 
+ Abjad 
+ Armenian 
+ Alphasyllabic 
+ Akṣarapallī 
+ Āryabhaṭa 
+ Kaṭapayādi 
+ Coptic 
+ Cyrillic 
+ Geʽez 
+ Georgian 
+ Glagolitic 
+ Greek 
+ Hebrew 
+
+ List of numeral systems v t e 
+
+ Kaṭapayādi system ( Devanagari : कटपयादि, also known as Paralppēru , Malayalam: പരല്‍പ്പേര് ) of numerical notation is an ancient Indian alphasyllabic numeral system to depict letters to numerals for easy remembrance of numbers as words or verses . Assigning more than one letter to one numeral and nullifying certain other letters as valueless, this system provides the flexibility in forming meaningful words out of numbers which can be easily remembered. 
+
+ History [ edit ] 
+ The oldest available evidence of the use of Kaṭapayādi (Sanskrit: कटपयादि) system is from Grahacāraṇibandhana by Haridatta in 683 CE . [ 1 ] It has been used in Laghu·bhāskarīya·vivaraṇa written by Śaṅkara·nārāyaṇa in 869 CE . [ 2 ] 
+
+ In some astronomical texts popular in Kerala planetary positions were encoded in the Kaṭapayādi system. The first such work is considered to be the Chandra-vakyani of Vararuci , who is traditionally assigned to the fourth century CE . Therefore, sometime in the early first millennium is a reasonable estimate for the origin of the Kaṭapayādi system. [ 3 ] 
+
+ Aryabhata , in his treatise Ārya·bhaṭīya , is known to have used a similar, more complex system to represent astronomical numbers . There is no definitive evidence whether the Ka-ṭa-pa-yā-di system originated from Āryabhaṭa numeration . [ 4 ] 
+
+ Geographical spread of the use [ edit ] 
+ Almost all evidences of the use of Ka-ṭa-pa-yā-di system is from South India , especially Kerala . Not much is known about its use in North India. However, on a Sanskrit astrolabe discovered in North India , the degrees of the altitude are marked in the Kaṭapayādi system. It is preserved in the Sarasvati Bhavan Library of Sampurnanand Sanskrit University , Varanasi .
+ [ 5 ] 
+
+ The Ka-ṭa-pa-yā-di system is not confined to India. Some Pali chronograms based on the Ka-ṭa-pa-yā-di system have been discovered in Burma . [ 6 ] 
+
+ Rules and practices [ edit ] 
+ Following verse found in Śaṅkaravarman's Sadratnamāla explains the mechanism of the system. [ 7 ] [ 8 ] 
+
+ \nमिश्रे तूपान्त्यहल् संख्या न च चिन्त्यो हलस्वर:॥"}},"i":0}}]}'> नञावचश्च शून्यानि सङ्ख्याः कटपयादय:। 
+मिश्रे तूपान्त्यहल् संख्या न च चिन्त्यो हलस्वर:॥ 
+
+ Transliteration: 
+
+ ñayāvacas ca śūnyāni saṅkhyāḥ kaṭapayādayaḥ 
+ miśre tūpāntyahal saṅkhyā na ca cintyo halasvaraḥ 
+
+ Translation: na (न), ña (ञ) and a (अ)-s, i.e., vowels represent zero . The nine integers are represented by consonant group beginning with ka , ṭa , pa , ya . In a conjunct consonant, the last of the consonants alone will count. A consonant without a vowel is to be ignored. 
+
+ Explanation: The assignment of letters to the numerals are as per the following arrangement (In Devanagari, Kannada, Telugu & Malayalam scripts respectively) 
+
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 7 
+ 8 
+ 9 
+ 0 
+
+ ka क ಕ క ക 
+ kha ख ಖ ఖ ഖ 
+ ga ग ಗ గ ഗ 
+ gha घ ಘ ఘ ഘ 
+ nga ङ ಙ
+ ఙ ങ 
+ ca च ಚ చ ച 
+ cha छ ಛ ఛ ഛ 
+ ja ज ಜ జ ജ 
+ jha झ ಝ ఝ ഝ 
+ nya ञ ಞ ఞ ഞ 
+
+ ṭa ट ಟ ట ട 
+ ṭha ठ ಠ ఠ ഠ 
+ ḍa ड ಡ డ ഡ 
+ ḍha ढ ಢ ఢ ഢ 
+ ṇa ण ಣ ణ ണ 
+ ta त ತ త ത 
+ tha थ ಥ థ ഥ 
+ da द ದ ద ദ 
+ dha ध ಧ ధ ധ 
+ na न ನ న ന 
+
+ pa प ಪ ప പ 
+ pha फ ಫ ఫ ഫ 
+ ba ब బ ബ 
+ bha भ ಭ భ ഭ 
+ ma म ಮ మ മ 
+ – 
+ – 
+ – 
+ – 
+ – 
+
+ ya य ಯ య യ 
+ ra र ರ ర ര 
+ la ल ల ల ല 
+ va व ವ వ വ 
+ śa श ಶ శ ശ 
+ ṣa ष ಷ ష ഷ 
+ sa स ಸ స സ 
+ ha ह ಹ హ ഹ 
+ – 
+ – 
+
+ Consonants have numerals assigned as per the above table. For example, ba (ब) is always 3 whereas 5 can be represented by either nga (ङ) or ṇa (ण) or ma (म) or śha (श). 
+ All stand-alone vowels like a (अ) and ṛ (ऋ) are assigned to zero. 
+ In case of a conjunct, consonants attached to a non-vowel will be valueless. For example, kya (क्य) is formed by, k (क्) + y (य्) + a (अ). The only consonant standing with a vowel is ya (य). So the corresponding numeral for kya (क्य) will be 1. 
+ There is no way of representing the decimal separator in the system. 
+ Indians used the Hindu–Arabic numeral system for numbering, traditionally written in increasing place values from left to right. This is as per the rule " अङ्कानां वामतो गतिः " which means numbers go from right to left. 
+
+ Variations [ edit ] 
+ The consonant , ḷ (Malayālam: ള, Devanāgarī: ळ, Kannada: ಳ) is employed in works using the Kaṭapayādi system, like Mādhava's sine table . 
+ Late medieval practitioners do not map the stand-alone vowels to zero. But, it is sometimes considered valueless. 
+
+ Usage [ edit ] 
+
+ Mathematics and astronomy [ edit ] 
+ Mādhava's sine table constructed by 14th century Kerala mathematician - astronomer Mādhava of Saṅgama·grāma employs the Kaṭapayādi system to list the trigonometric sines of angles. 
+ Karaṇa·paddhati , written in the 15th century, has the following śloka for the value of pi (π) 
+
+ അനൂനനൂന്നാനനനുന്നനിത്യൈ- 
+ സ്സമാഹതാശ്ചക്രകലാവിഭക്താഃ 
+ ചണ്ഡാംശുചന്ദ്രാധമകുംഭിപാലൈര്‍- 
+ വ്യാസസ്തദര്‍ദ്ധം ത്രിഭമൗര്‍വിക സ്യാത്‌ 
+
+ Transliteration 
+
+ anūnanūnnānananunnanityai 
+ ssmāhatāścakra kalāvibhaktoḥ 
+ caṇḍāṃśucandrādhamakuṃbhipālair 
+ vyāsastadarddhaṃ tribhamaurvika syāt 
+
+ It gives the circumference of a circle of diameter, anūnanūnnānananunnanityai (10,000,000,000) as caṇḍāṃśucandrādhamakuṃbhipālair (31415926536). 
+
+ Śaṅkara·varman's Sad·ratna·mālā uses the Kaṭapayādi system. The first verse of Chapter 4 of the Sad·ratna·mālā ends with the line: [ 9 ] 
+
+ (स्याद्) भद्राम्बुधिसिद्धजन्मगणितश्रद्धा स्म यद् भूपगी: 
+
+ Transliteration 
+
+ (syād) bhadrāmbudhisiddhajanmagaṇitaśraddhā sma yad bhūpagīḥ 
+
+ Splitting the consonants in the relevant phrase gives, 
+
+ भ bha 
+ द् d 
+ रा rā 
+ म् m 
+ बु bu 
+ द् d 
+ धि dhi 
+ सि si 
+ द् d 
+ ध dha 
+ ज ja 
+ न् n 
+ म ma 
+ ग ga 
+ णि ṇi 
+ त ta 
+ श् ś 
+ र ra 
+ द् d 
+ धा dhā 
+ स् s 
+ म ma 
+ य ya 
+ द् d 
+ भू bhū 
+ प pa 
+ गी gī 
+
+ 4 
+ – 
+ 2 
+ – 
+ 3 
+ – 
+ 9 
+ 7 
+ – 
+ 9 
+ 8 
+ – 
+ 5 
+ 3 
+ 5 
+ 6 
+ – 
+ 2 
+ – 
+ 9 
+ – 
+ 5 
+ 1 
+ – 
+ 4 
+ 1 
+ 3 
+
+ Reversing the digits to modern-day usage of descending order of decimal places, we get 314159265358979324 which is the value of pi (π) to 17 decimal places, except the last digit might be rounded off to 4. 
+
+ This verse encrypts the value of pi (π) up to 31 decimal places. 
+
+ गोपीभाग्यमधुव्रात-शृङ्गिशोदधिसन्धिग॥
+ खलजीवितखाताव गलहालारसंधर॥ 
+
+ ಗೋಪೀಭಾಗ್ಯಮಧುವ್ರಾತ-ಶೃಂಗಿಶೋದಧಿಸಂಧಿಗ ||
+ ಖಲಜೀವಿತಖಾತಾವ ಗಲಹಾಲಾರಸಂಧರ || 
+ This verse directly yields the decimal equivalent of pi divided by 10: pi/10 = 0.31415926535897932384626433832792 
+
+ గోపీభాగ్యమధువ్రాత-శృంగిశోదధిసంధిగ |
+ ఖలజీవితఖాతావ గలహాలారసంధర || 
+ Traditionally, the order of digits are reversed to form the number, in katapayadi system. This rule is violated in this sloka. 
+
+ Carnatic music [ edit ] 
+ Melakarta chart as per Kaṭapayādi system 
+ The melakarta ragas of the Carnatic music are named so that the first two syllables of the name will give its number. This system is sometimes called the Ka-ta-pa-ya-di sankhya . The Swaras 'Sa' and 'Pa' are fixed, and here is how to get the other swaras from the melakarta number. 
+
+ Melakartas 1 through 36 have Ma1 and those from 37 through 72 have Ma2. 
+ The other notes are derived by noting the (integral part of the) quotient and remainder when one less than the melakarta number is divided by 6. If the melakarta number is greater than 36, subtract 36 from the melakarta number before performing this step. 
+ 'Ri' and 'Ga' positions: the raga will have:
+ Ri1 and Ga1 if the quotient is 0 
+ Ri1 and Ga2 if the quotient is 1 
+ Ri1 and Ga3 if the quotient is 2 
+ Ri2 and Ga2 if the quotient is 3 
+ Ri2 and Ga3 if the quotient is 4 
+ Ri3 and Ga3 if the quotient is 5 
+ 'Da' and 'Ni' positions: the raga will have:
+ Da1 and Ni1 if remainder is 0 
+ Da1 and Ni2 if remainder is 1 
+ Da1 and Ni3 if remainder is 2 
+ Da2 and Ni2 if remainder is 3 
+ Da2 and Ni3 if remainder is 4 
+ Da3 and Ni3 if remainder is 5 
+
+ See swaras in Carnatic music for details on above notation. 
+
+ Raga Dheerasankarabharanam [ edit ] 
+
+ The katapayadi scheme associates dha 
+
+ ↔ 
+
+ {\displaystyle \leftrightarrow } 
+
+ 9 and ra 
+
+ ↔ 
+
+ {\displaystyle \leftrightarrow } 
+
+ 2, hence the raga's melakarta number is 29 (92 reversed). 29 less than 36, hence Dheerasankarabharanam has Ma1. Divide 28 (1 less than 29) by 6, the quotient is 4 and the remainder 4. Therefore, this raga has Ri2, Ga3 (quotient is 4) and Da2, Ni3 (remainder is 4). Therefore, this raga's scale is Sa Ri2 Ga3 Ma1 Pa Da2 Ni3 SA . 
+
+ Raga MechaKalyani [ edit ] 
+
+ From the coding scheme Ma 
+
+ ↔ 
+
+ {\displaystyle \leftrightarrow } 
+
+ 5, Cha 
+
+ ↔ 
+
+ {\displaystyle \leftrightarrow } 
+
+ 6. Hence the raga's melakarta number is 65 (56 reversed). 65 is greater than 36. So MechaKalyani has Ma2. Since the raga's number is greater than 36 subtract 36 from it. 65–36=29. 28 (1 less than 29) divided by 6: quotient=4, remainder=4. Ri2 Ga3 occurs. Da2 Ni3 occurs. So MechaKalyani has the notes Sa Ri2 Ga3 Ma2 Pa Da2 Ni3 SA . 
+
+ Exception for Simhendramadhyamam [ edit ] 
+ As per the above calculation, we should get Sa 
+
+ ↔ 
+
+ {\displaystyle \leftrightarrow } 
+
+ 7, Ha 
+
+ ↔ 
+
+ {\displaystyle \leftrightarrow } 
+
+ 8 giving the number 87 instead of 57 for Simhendramadhyamam. This should be ideally Sa 
+
+ ↔ 
+
+ {\displaystyle \leftrightarrow } 
+
+ 7, Ma 
+
+ ↔ 
+
+ {\displaystyle \leftrightarrow } 
+
+ 5 giving the number 57. So it is believed that the name should be written as Sihmendramadhyamam (as in the case of Bra hm ana in Sanskrit). 
+
+ Representation of dates [ edit ] 
+ Important dates were remembered by converting them using Kaṭapayādi system. These dates are generally represented as number of days since the start of Kali Yuga . It is sometimes called kalidina sankhya . 
+
+ The Malayalam calendar known as kollavarsham (Malayalam: കൊല്ലവര്‍ഷം) was adopted in Kerala beginning from 825 CE , revamping some calendars. This date is remembered as āchārya vāgbhadā , converted using Kaṭapayādi into 1434160 days since the start of Kali Yuga . [ 10 ] 
+ Narayaniyam , written by Melpathur Narayana Bhattathiri , ends with the line, āyurārogyasaukhyam (ആയുരാരോഗ്യസൌഖ്യം) which means long-life, health and happiness. [ 11 ] 
+
+ In Malayalam 
+ ആയുരാരോഗ്യസൌഖ്യം 
+
+ In Devanagari 
+ आयुरारोग्यसौख्यम् 
+
+ In IAST 
+ āyurārogyasaukhyam 
+
+ Value as per Kaṭapayādi 
+ 1712210 
+
+ This number is the time at which the work was completed represented as number of days since the start of Kali Yuga as per the Malayalam calendar . 
+
+ Others [ edit ] 
+ Some people use the Kaṭapayādi system in naming newborns. [ 12 ] [ 13 ] 
+ The following verse compiled in Malayalam by Koduṅṅallur Kuññikkuṭṭan Taṃpurān using Kaṭapayādi is the number of days in the months of Gregorian Calendar . 
+
+ പലഹാരേ പാലു നല്ലൂ, പുലര്‍ന്നാലോ കലക്കിലാം 
+ ഇല്ലാ പാലെന്നു ഗോപാലന്‍ – ആംഗ്ലമാസദിനം ക്രമാല്‍ 
+
+ Transliteration 
+
+ palahāre pālu nallū, pularnnālo kalakkilāṃ 
+ illā pālennu gopālan – āṃgḷamāsadinaṃ kramāl 
+
+ Translation: Milk is best for breakfast, when it is morning, it should be stirred. But Gopālan says there is no milk – the number of days of English months in order. 
+ Converting pairs of letters using Kaṭapayādi yields – pala (പല) is 31, hāre (ഹാരേ) is 28, pālu പാലു = 31, nallū (നല്ലൂ) is 30, pular (പുലര്‍) is 31, nnālo (ന്നാലോ) is 30, kala (കല) is 31, kkilāṃ (ക്കിലാം) is 31, illā (ഇല്ലാ) is 30, pāle (പാലെ) is 31, nnu go (ന്നു ഗോ) is 30, pālan (പാലന്‍) is 31. 
+
+ See also [ edit ] 
+
+ Abjad numerals 
+ Aksharapalli 
+ Aryabhata numeration 
+ Bhutasamkhya system 
+ Gematria 
+ Greek numerals 
+ Kerala school of astronomy and mathematics 
+ Madhava's sine table 
+ Mnemonic major system 
+ Notarikon 
+ Temurah (Kabbalah) 
+ Alphasyllabic numeral system 
+
+ References [ edit ] 
+
+ ↑ Sreeramamula Rajeswara Sarma, THE KATAPAYADI SYSTEM OF NUMERICAL NOTATION AND ITS SPREAD OUTSIDE KERALA, Rev. d'Histoire de Mathmatique 18 (2012)
+
+ ↑ J J O'Connor; E F Robertson (November 2000). "Sankara Narayana" . School of Mathematics and Statistics, University of St Andrews, Scotland . Retrieved 1 January 2010 . 
+ ↑ Plofker, Kim (2009). Mathematics in India . Princeton University Press . p.   384. ISBN   978-0-691-12067-6 . 
+ ↑ J. F. Fleet (April 1912). "The Ka-ta-pa-ya-di Notation of the Second Arya-Siddhanta" . The Journal of the Royal Asiatic Society of Great Britain and Ireland . 44 (2). Royal Asiatic Society of Great Britain and Ireland : 459– 462. doi : 10.1017/S0035869X00043197 . JSTOR   25190035 . S2CID   163907655 . 
+ ↑ Sreeramamula Rajeswara Sarma (1999), Kaṭapayādi Notation on a Sanskrit Astrolabe. Ind. J. Hist. Sc.34(4) (1999) 
+ ↑ J.F. Fleet (July 1911). "The Katapayadi System of Expressing Numbers" . The Journal of the Royal Asiatic Society of Great Britain and Ireland . 43 (3). Royal Asiatic Society of Great Britain and Ireland : 788– 794. doi : 10.1017/S0035869X00041952 . JSTOR   25189917 . S2CID   163597699 . 
+ ↑ Sarma, K.V. (2001). "Sadratnamala of Sankara Varman". Indian Journal of History of Science (Indian National Academy of Science, New Delhi) 36 (3–4 (Supplement)): 1–58. "Archived copy" (PDF) . Archived from the original (PDF) on 2 April 2015 . Retrieved 17 December 2009 . {{ cite web }} : CS1 maint: archived copy as title ( link ) 
+ ↑ Anand Raman. "The Ancient Katapayadi Formula and the Modern Hashing Method" (PDF) . Archived from the original (PDF) on 16 June 2011. {{ cite journal }} : Cite journal requires | journal= ( help ) 
+ ↑ Sarma (2001), p. 26 
+ ↑ Francis Zimmerman, 1989, Lilavati, gracious lady of arithmetic – India – A Mathematical Mystery Tour "Lilavati, gracious lady of arithmetic - India - A Mathematical Mystery Tour | UNESCO Courier | Find Articles at BNET" . Archived from the original on 6 September 2009 . Retrieved 3 January 2010 . 
+ ↑ Dr. C Krishnan Namboodiri, Chekrakal Illam, Calicut, Namboothiti.com Dr. C Krishnan Namboodiri. " "Katapayaadi" or "Paralpperu" " . Namboothiri Websites Trust . Retrieved 1 January 2010 . 
+ ↑ Visti Larsen, Choosing the auspicious name [ permanent dead link ] 
+ ↑ "The Principles of Naming" . 
+
+ External links [ edit ] 
+ Kaṭapayādi Saṅkhyā, a Kaṭapayādi encoding-decoding system. 
+
+ Saṅkhyāpaddhatiḥ (सङ्ख्यापद्धतिः), a collection of ancient Indian alpha-syllabic numeral systems 
+
+ Further reading [ edit ] 
+ A.A. Hattangadi, Explorations in Mathematics, Universities Press (India) Pvt. Ltd., Hyderabad (2001) ISBN   81-7371-387-1 
+
+ v t e Kerala school of astronomy and mathematics Astronomers and mathematicians 
+ (Complete list) 
+ Acyuta Piṣāraṭi 
+ Azhvāñceri Taṃprākkaḷ 
+ Citrabhānu 
+ Dāmodara of Vațaśreņi 
+ Devācārya 
+ Govinda Bhattathiri 
+ Govindasvāmin 
+ Haridatta 
+ Jyeṣṭhadeva 
+ Kochukrishnan Asan 
+ Madhava of Sangamagrama 
+ Mazhamaṅgalaṃ Nārāyaṇan Naṃpūtiri 
+ Nīlakaņțha Sōmayāji 
+ Nīlakaṇṭha II 
+ Parameśvara of Vațaśśeri 
+ Śaṅkaranārāyaṇa 
+ Śaṅkara of Mahiṣamaṅgalam 
+ Putumana Somayāji 
+ Śankara Vāriyar 
+ Śaṅkara Varma of Kaṭattanāṭ 
+ Udayadivākara 
+ Vararuci I 
+ Vidyamadhava 
+ Treatises 
+ Aryabhatiya-bhashya ( Nīlakaņțha Sōmayāji ) 
+ Candrachayaganita 
+ Dasādhyāyi 
+ Drigganita 
+ Dṛkkaraṇa 
+ Gaṇitayuktayah 
+ Golavada 
+ Golasara 
+ Grahacāraṇinibandhana 
+ Jātaka-sāara-saṃgraha 
+ Jyotirmimamsa 
+ Jyotiśśāstra-saṃgraha 
+ Kanakkusāraṃ 
+ Karaṇapaddhati 
+ Kriyakramakari 
+ Laghuvivṛti (commentary on Tantrasamgraha ) 
+ Madhyamanayanaprakara 
+ Mahābhāskarīya Bhāshya 
+ Pañcabodha 
+ Sadratnamālā 
+ Sidhhantadarpana 
+ Spuṭanirṇaya 
+ Tantrasamgraha 
+ Venvaroha 
+ Yuktibhāṣā 
+ Concepts/Topics 
+ Chandravakyas 
+ Drigganita system 
+ Kaṭapayādi system 
+ Madhava's correction terms 
+ Madhava series 
+ Madhava's sine table 
+ Parahita system 
+ Places associated with members of the school 
+ Athavanad (Azhvanchery Thamprakkal) 
+ Alathiyur (Govinda Bhattathiri, etc) 
+ Kadathanadu (Sankara Varman) 
+ Mahodayapuram (Kodungallur) (Sankaranarayana) 
+ Kudallur (Madhava of Sangamagrama) 
+ Peruvanam (Mahishamangalam Sankaran Namputhiri) 
+ Thrikkandiyur (Nilakantha Somayaji, etc) 
+ Sivapuram (Thrissur) (Putumana Somayaji, etc) 
+ Tirunavaya (Haridatta) 
+
+ v t e Indian mathematics Mathematicians Ancient 
+ Apastamba 
+ Baudhayana 
+ Katyayana 
+ Manava 
+ Pāṇini 
+ Pingala 
+ Yajnavalkya 
+ Classical 
+ Āryabhaṭa I 
+ Āryabhaṭa II 
+ Bhāskara I 
+ Bhāskara II 
+ Melpathur Narayana Bhattathiri 
+ Brahmadeva 
+ Brahmagupta 
+ Govindasvāmi 
+ Halayudha 
+ Jyeṣṭhadeva 
+ Kamalakara 
+ Mādhava of Saṅgamagrāma 
+ Mahāvīra 
+ Mahendra Sūri 
+ Munishvara 
+ Narayana 
+ Parameshvara 
+ Achyuta Pisharati 
+ Jagannatha Samrat 
+ Nilakantha Somayaji 
+ Śrīpati 
+ Sridhara 
+ Gangesha Upadhyaya 
+ Varāhamihira 
+ Sankara Variar 
+ Virasena 
+ Modern 
+ Srinivasa Ramanujan 
+ Satyendra Nath Bose 
+ P.C. Mahalanobis 
+ Subrahmanyan Chandrasekhar 
+ C.R. Rao 
+ Veeravalli S. Varadarajan 
+ S. R. Srinivasa Varadhan 
+ K. R. Parthasarathy (probabilist) 
+ M. S. Narasimhan 
+ C. S. Seshadri 
+ Harish-Chandra 
+ Subbayya Sivasankaranarayana Pillai 
+ Tilak Raj Prabhakar 
+ Manjul Bhargava 
+ Akshay Venkatesh 
+ Ravi Vakil 
+ Kannan Soundararajan 
+ Shanti Swarup Bhatnagar Prize recipients in Mathematical Science 
+ Treatises 
+ Aryabhatiya 
+ Bakhshali manuscript 
+ Bijaganita 
+ Brāhmasphuṭasiddhānta 
+ Ganita Kaumudi 
+ Grahalaghava 
+ Kanakkusaram 
+ Karanapaddhati 
+ Līlāvatī 
+ Lokavibhaga 
+ Pātīgaṇita 
+ Paulisa Siddhanta 
+ Paitamaha Siddhanta 
+ Romaka Siddhanta 
+ Sadratnamala 
+ Siddhānta Shiromani 
+ Śulba Sūtras 
+ Surya Siddhanta 
+ Tantrasamgraha 
+ Vasishtha Siddhanta 
+ Veṇvāroha 
+ Yuktibhāṣā 
+ Yavanajataka 
+ Pioneering innovations 
+ Brahmi numerals 
+ Hindu–Arabic numeral system 
+ Symbol for zero (0) 
+ Infinite series expansions for the trigonometric functions 
+ Centres 
+ Kerala school of astronomy and mathematics 
+ Jantar Mantar ( Jaipur , New Delhi , Ujjain , Varanasi ) 
+ Historians of mathematics 
+ Bapudeva Sastri (1821–1900) 
+ Shankar Balakrishna Dikshit (1853–1898) 
+ Sudhakara Dvivedi (1855–1910) 
+ M. Rangacarya (1861–1916) 
+ P. C. Sengupta (1876–1962) 
+ B. B. Datta (1888–1958) 
+ T. Hayashi 
+ A. A. Krishnaswamy Ayyangar (1892– 1953) 
+ A. N. Singh (1901–1954) 
+ C. T. Rajagopal (1903–1978) 
+ T. A. Saraswati Amma (1918–2000) 
+ S. N. Sen (1918–1992) 
+ K. S. Shukla (1918–2007) 
+ K. V. Sarma (1919–2005) 
+ Translators 
+ Walter Eugene Clark 
+ Henry Thomas Colebrooke 
+ David Pingree 
+ Other regions 
+ Babylon 
+ China 
+ Greece 
+ Islamic mathematics 
+ Europe 
+ Modern institutions 
+ Indian Statistical Institute 
+ Bhaskaracharya Pratishthana 
+ Chennai Mathematical Institute 
+ Institute of Mathematical Sciences 
+ Indian Institute of Science 
+ Harish-Chandra Research Institute 
+ Homi Bhabha Centre for Science Education 
+ Ramanujan Institute for Advanced Study in Mathematics 
+ TIFR 
+
+ v t e Scientific research in Kerala Pre-19th century 
+ Achyuta Pisharati 
+ Candravakyas 
+ Citrabhanu 
+ Damodara 
+ Ganita-yukti-bhasa 
+ Govinda Bhattathiri 
+ Haridatta 
+ Jyā, koti-jyā and utkrama-jyā 
+ Jyeṣṭhadeva 
+ Jyotirmimamsa 
+ Karanapaddhati 
+ Katapayadi system 
+ Kriyakramakari 
+ Madhava of Sangamagrama 
+ Madhava series 
+ Madhava's sine table 
+ Melpathur Narayana Bhattathiri 
+ Nilakantha Somayaji 
+ Parameshvara 
+ Sadratnamala 
+ Śaṅkaranārāyaṇa 
+ Tantrasamgraha 
+ Organizations 
+ C-DAC Thiruvananthapuram 
+ Centre for Development Studies 
+ Centre for Earth Science Studies 
+ Centre for Mathematical Sciences (Kerala) 
+ Centre for Rural Management 
+ Centre of Science and Technology for Rural Development 
+ Cyberpark 
+ Kerala Mathematical Association 
+ Kerala Science and Technology Museum 
+ Kerala Science Congress 
+ Kerala Soil Museum 
+ Kerala State Council for Science, Technology and Environment 
+ Krishi Vigyan Kendra Kannur 
+ Liquid Propulsion Systems Centre 
+ Rajiv Gandhi Centre for Biotechnology 
+ Regional Agricultural Research Station, Pattambi 
+ Rice Research Station, Moncombu 
+ Vikram Sarabhai Space Centre 
+ Institutions 
+ Agricultural Research Station, Anakkayam 
+ Agricultural Research Station, Mannuthy 
+ Agronomic Research Station, Chalakudy 
+ Amrita Institute of Medical Sciences and Research Centre 
+ Aromatic and Medicinal Plants Research Station, Odakkali 
+ Banana Research Station, Kannara 
+ Cashew Research Station, Madakkathara 
+ Central Institute of Fisheries Technology 
+ Central Marine Fisheries Research Institute 
+ Central Tuber Crops Research Institute 
+ Centre for Marine Living Resources & Ecology 
+ College of Horticulture 
+ Crocodile Rehabilitation and Research Centre 
+ Institute of Handloom and Textile Technology 
+ Indian Institute of Science Education and Research, Thiruvananthapuram 
+ Indian Institute of Space Science and Technology 
+ Indian Institute of Spices Research 
+ Jubilee Mission Medical College and Research Institute 
+ Kerala Forest Research Institute 
+ Kerala School of Mathematics, Kozhikode 
+ Mar Athanasios College for Advanced Studies, Tiruvalla 
+ National Institute for Interdisciplinary Science and Technology 
+ National Institute of Speech and Hearing 
+ National Research Institute for Panchakarma 
+ Naval Physical and Oceanographic Laboratory 
+ Oriental Research Institute & Manuscripts Library 
+ Sree Chitra Tirunal Institute for Medical Sciences and Technology 
+ Srinivasa Ramanujan Institute of Basic Sciences 
+ St. Ephrem Ecumenical Research Institute 
+ Tropical Botanical Garden and Research Institute 
+ Vadakke Madham Brahmaswam Vedic Research Centre 
+ Scientists 
+ Ajit Varki 
+ C. V. Subramanian 
+ Dileep George 
+ E. C. George Sudarshan 
+ G. Madhavan Nair 
+ George Varghese 
+ K. R. Ramanathan 
+ K. Radhakrishnan 
+ M. G. K. Menon 
+ Matthew Pothen Thekaekara 
+ P. N. Vinayachandran 
+ Pisharoth Rama Pisharoty 
+ Pulickel Ajayan 
+ R. S. Krishnan 
+ Sainudeen Pattazhy 
+ T. A. Venkitasubramanian 
+ Thanu Padmanabhan 
+ Thomas Zacharia 
+ Vainu Bappu 
+ Varghese Mathai 
+ Vinod Scaria 
+ Other articles 
+ A Passage to Infinity 
+ FORV Sagar Sampada 
+ Swatantra 2014 
+ Techno-lodge 
+ Technology Business Incubator TBI-NITC 
+ A History of the Kerala School of Hindu Astronomy 
+
+ Templates 
+ Category 
+ WikiProject 
+ India portal 
+
+ Retrieved from " https://en.wikipedia.org/w/index.php?title=Katapayadi_system&oldid=1368270411 " 
+ Categories : Alphabetic numeral systems Mnemonics Indian mathematics Kerala school of astronomy and mathematics Hidden categories: Articles with short description Short description is different from Wikidata Use dmy dates from December 2019 Pages with non-English text lacking appropriate markup and no ISO hint Pages with non-English text lacking appropriate markup from August 2022 Pages using sidebar with the child parameter CS1 maint: archived copy as title CS1 errors: missing periodical Articles containing Sanskrit-language text CS1: unfit URL All articles with dead external links Articles with dead external links from October 2022 Articles with permanently dead external links 
+
+ Search 
+
+ Search 
+
+ Katapayadi system 
+
+ 7 languages 
+
+ Add topic

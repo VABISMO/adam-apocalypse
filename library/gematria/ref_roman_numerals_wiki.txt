@@ -1,0 +1,1750 @@
+Roman numerals - Wikipedia 
+
+ Jump to content 
+
+ From Wikipedia, the free encyclopedia 
+
+ Numbers in the Roman numeral system 
+ For the Latin names of numbers, see Latin numerals . 
+
+ This article contains special characters . Without proper rendering support , you may see question marks, boxes, or other symbols . 
+
+ Roman numerals on stern of the ship Cutty Sark showing draught in feet . The numbers range from 13 to 22, from bottom to top. 
+
+ Roman numerals are a numeral system that originated in ancient Rome and remained the usual way of writing numbers throughout Europe well into the Late Middle Ages . Like many other ancient numeral systems, Roman numerals are based on the additive principle: a number is written by concatenating individual symbols, each representing a fixed value, and the value of the resulting numeral phrase is the sum of the individual values of each letter. The modern style of Roman numerals uses only seven letters from the Latin alphabet as symbols: I meaning 1, V meaning 5, X meaning 10, L meaning 50, C meaning 100, D meaning 500, and M meaning 1000. For example, the Roman numeral XXVII represents the number 10 + 10 + 5 + 1 + 1 = 27 . When a smaller numeral symbol precedes a larger one, subtraction is implied; for example, the notation IV represents 5 − 1 = 4 and IX represents 10 − 1 = 9 . 
+
+ The use of Roman numerals has continued long after the decline of the Roman Empire . From the 14th century on, Roman numerals began to be replaced by the positional Hindu–Arabic numeral system ; however, this process was gradual, and the use of Roman numerals has persisted in some contexts, such as on clock faces . For instance, on the clock of Big Ben (designed in 1852), the hours from 1 to 12 are written as: 
+
+ I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII 
+
+ Other common uses include year numbers on monuments and buildings and copyright dates on the title screens of films and television programmes. MCM signifies 1000 + 1000 − 100 = 1900 , so 1912 is written MCMXII . For the years of the 21st century, MM indicates 2000, so 2026 (the current year) is written MMXXVI . 
+
+ Description 
+ Roman numerals use different symbols for each power of ten, and there is no zero symbol, in contrast with the place value notation of Arabic numerals (in which place-keeping zeros enable the same digit to represent different powers of ten). 
+
+ This allows some flexibility in notation, and there has never been an official or universally accepted standard for Roman numerals. Usage varied greatly in ancient Rome and became thoroughly chaotic in medieval times. The more recent restoration of a largely "classical" notation has gained popularity among some, while variant forms are used by some modern writers as seeking more "flexibility". [ 1 ] Roman numerals may be considered legally binding expressions of a number, as in U.S. copyright law before the Berne Convention Implementation Act of 1988 (where an "incorrect" or ambiguous numeral in a copyright notice could invalidate a copyright claim or affect the termination date of the copyright period). [ 2 ] 
+
+ Standard form 
+ The following table displays how Roman numerals are usually written in modern times: [ 3 ] 
+
+ Individual decimal places 
+
+ Thousands Hundreds Tens Units 
+
+ 1 M C X I 
+
+ 2 MM CC XX II 
+
+ 3 MMM CCC XXX III 
+
+ 4 CD XL IV 
+
+ 5 D L V 
+
+ 6 DC LX VI 
+
+ 7 DCC LXX VII 
+
+ 8 DCCC LXXX VIII 
+
+ 9 CM XC IX 
+
+ "}},"i":0}}]}'> The numerals for 4 ( IV ) and 9 ( IX ) are written using subtractive notation , [ 4 ] where the smaller symbol ( I ) is subtracted from the larger one ( V or X ), instead of IIII and VIIII . [ a ] Subtractive notation is also used for 40 ( XL ), 90 ( XC ), 400 ( CD ) and 900 ( CM ). [ 5 ] These are the only subtractive forms in standard use. 
+
+ A number containing two or more decimal digits is built by appending the Roman numeral equivalent for each, from highest to lowest, as in the following examples: 
+ 39 = XXX + IX = XXXIX . 
+ 246 = CC + XL + VI = CCXLVI . 
+ 789 = DCC + LXXX + IX = DCCLXXXIX . 
+ 2,421 = MM + CD + XX + I = MMCDXXI . 
+
+ Any missing place (represented by a zero in the place-value equivalent) is omitted, as in Latin (and English) speech: 
+ 160 = C + LX = CLX 
+ 207 = CC + VII = CCVII 
+ 1,009 = M + IX = MIX 
+ 1,066 = M + LX + VI = MLXVI [ 6 ] [ 7 ] 
+
+ The largest number that can be represented in this manner is 3,999 ( MMMCMXCIX ), but this is sufficient for the values for which Roman numerals are commonly used today, such as year numbers: 
+ 1776 = M + DCC + LXX + VI = MDCCLXXVI (the date written on the book held by the Statue of Liberty ). 
+ 1918 = M + CM + X + VIII = MCMXVIII (the first year of the Spanish flu pandemic) 
+ 1944 = M + CM + XL + IV = MCMXLIV (erroneous copyright notice of the 1954 movie The Last Time I Saw Paris ) [ 2 ] 
+ 2026 = MMXXVI (this year) [ b ] 
+
+ For larger numbers (4,000 and larger): Both before and after the introduction of Arabic numerals in the West, from ancient times through medieval and modern, users of Roman numerals have used various means to write larger numbers (see §   Large numbers below) . 
+
+ Other forms 
+ Forms exist that vary in one way or another from the general standard represented above. 
+
+ Other additive forms 
+ A clock face with the Roman numerals typical for clocks, in Bad Salzdetfurth , Germany 
+
+ While subtractive notation for 4, 40, and 400 ( IV , XL , and CD ) has been the usual form since Roman times [ citation needed ] [ dubious – discuss ] , additive notation to represent these numbers ( IIII , XXXX , and CCCC ) [ 8 ] very frequently continued to be used, including in compound numbers like 24 ( XXIIII ), [ 9 ] 74 ( LXXIIII ), [ 10 ] and 490 ( CCCCLXXXX ). [ 11 ] The additive forms for 9, 90, and 900 ( VIIII , [ 8 ] LXXXX , [ 12 ] and DCCCC [ 13 ] ) have also been used, although less often. 
+
+ The two conventions could be mixed in the same document or inscription, even in the same numeral. For example, on the numbered gates to the Colosseum , IIII is systematically used instead of IV , but subtractive notation is used for XL ; consequently, gate 44 is labelled XLIIII . [ 14 ] [ 15 ] ","href":"./Template:Sps"},"params":{"date":{"wt":"March 2026"}},"i":0}}]}'/> [ self-published source? ] 
+
+ Especially on tombstones and other funerary inscriptions, 5 and 50 have been occasionally written IIIII and XXXXX instead of V and L , and there are instances such as IIIIII and XXXXXX rather than VI or LX . [ 16 ] [ 17 ] 
+
+ Modern clock faces that use Roman numerals still very often use IIII for four o'clock but IX for nine o'clock, a practice that goes back to very early clocks such as the Wells Cathedral clock of the late 14th century. [ 18 ] [ 19 ] [ 20 ] However, this is far from universal: for example, the clock of Elizabeth Tower at the Palace of Westminster uses a subtractive IV for 4 o'clock. [ 19 ] {{Cite book |last=Asimov |first=Isaac |url=http://www.arvindguptatoys.com/arvindgupta/asimov-on-numbers.pdf |title=Asimov on Numbers |date=1966 |publisher=Pocket Books |page=12}}</ref> He did not say whose theory it was."}},"i":0}}]}'> [ c ] 
+
+ The year number on Admiralty Arch , London. The year 1910 is rendered as MDCCCCX , rather than the more usual MCMX 
+
+ Several monumental inscriptions created in the early 20th century use variant forms for "1900" (usually written MCM ). These vary from MDCCCCX for 1910 as seen on Admiralty Arch , London, to the more unusual, if not unique MDCDIII for 1903, on the north entrance to the Saint Louis Art Museum . [ 22 ] 
+
+ Epitaph of centurion Marcus Caelius, showing " XIIX " 
+
+ Other subtractive forms 
+ There are numerous historical examples of IIX being used for 8; for example, XIIX was used by officers of the Legio XVIII (18th Roman legion) to write their number. [ 23 ] [ 24 ] The notation appears prominently on the cenotaph of their senior centurion Marcus Caelius ( c.   45 BC – 9 AD). On the publicly displayed official Roman calendars known as Fasti , XIIX is used for the 18 days to the next Kalends , and XXIIX for the 28 days in February. The latter can be seen on the sole extant pre-Julian calendar, the Fasti Antiates Maiores . [ 25 ] 
+There are historical examples of other subtractive forms: IIIXX for 17, [ 26 ] IIXX for 18, [ 27 ] IIIC for 97, [ 28 ] IIC for 98, [ 29 ] [ 30 ] and IC for 99. [ 31 ] A possible explanation is that the word for 18 in Latin is duodeviginti ‍ —   literally "two from twenty"⁠ —   while 98 is duodecentum (two from hundred) and 99 is undecentum (one from hundred). [ 32 ] However, the explanation does not seem to apply to IIIXX and IIIC , since the Latin words for 17 and 97 were septendecim (seven ten) and nonaginta septem (ninety seven), respectively. 
+
+ The ROMAN() function in Microsoft Excel supports multiple subtraction modes depending on the " Form " setting. For example, the number "499" (usually CDXCIX ) can be rendered as LDVLIV ((500-50)+(50-5)+(5-1)), XDIX ((500-10)+(10-1)), VDIV ((500-5)+(5-1)) or ID (500-1). The relevant Microsoft help page offers no explanation for this function other than to describe its output as "more concise". [ 33 ] 
+
+ Non-standard variants 
+ Padlock used on the north gate of the Irish town of Athlone . "1613" in the date is rendered XVIXIII , (literally "16, 13") instead of MDCXIII . 
+ Excerpt from Bibliothèque nationale de France . [ 34 ] The Roman numeral for 500 is rendered as C V , instead of D . 
+
+ There are also historical examples of other additive and multiplicative forms, and forms which seem to reflect spoken phrases. Some of these variants may have been regarded as errors even by contemporaries. 
+
+ IIXX was how people associated with the XXII Roman Legion used to write their number. The practice may have been due to a common way to say "twenty-second" in Latin, namely duo et vice(n)sima (literally "two and twentieth") rather than the "regular" vice(n)sima secunda (twenty second). [ 35 ] Apparently, at least one ancient stonecutter mistakenly thought that the IIXX of "22nd Legion" stood for 18, and "corrected" it to XVIII . [ 35 ] 
+ Other numerals that do not fit the usual patterns—such as VXL for 45, instead of the usual XLV —may be due to scribal errors, or the writer's lack of familiarity with the system, rather than being genuine variant usage. 
+
+ Zero 
+ As a non- positional numeral system , Roman numerals have no "place-keeping" zeros. Furthermore, the system as used by the Romans lacked a numeral for the number zero itself (that is, what remains after 1 is subtracted from 1). The word nulla (the Latin word meaning "none") was used to represent 0, although the earliest attested instances are medieval. For instance Dionysius Exiguus used nulla alongside Roman numerals in a manuscript from 525 AD. [ 36 ] [ 37 ] About 725, Bede or one of his colleagues used the letter N , the initial of nulla or of nihil (the Latin word for "nothing") for 0, in a table of epacts , all written in Roman numerals. [ 38 ] 
+
+ The use of N to indicate "none" long survived in the historic apothecaries' system of measurement: used well into the 20th century to designate quantities in pharmaceutical prescriptions. [ 39 ] 
+
+ In later times, the Arabic numeral "0" has been used as a zero to open enumerations with Roman numbers. Examples include the 24-hour Shepherd Gate Clock from 1852 and tarot packs such as the 15th-century Sola Busca and the 20th century Rider–Waite packs. 
+
+ Fractions 
+ A triens coin ( 1 ⁄ 3 or 4 ⁄ 12 of an as ). Note the four dots ( ···· ) indicating its value. 
+ A semis coin ( 1 ⁄ 2 or 6 ⁄ 12 of an as ). Note the S indicating its value. 
+
+ The base "Roman fraction" is S , indicating 1 ⁄ 2 . The use of S (as in VIIS to indicate 7 + 1 ⁄ 2 ) is attested in some ancient inscriptions [ 40 ] and in the now rare apothecaries' system (usually in the form SS ): [ 39 ] but while Roman numerals for whole numbers are essentially decimal , S does not correspond to 5 ⁄ 10 , as one might expect, but 6 ⁄ 12 . 
+
+ The Romans used a duodecimal rather than a decimal system for fractions , as the divisibility of twelve 2</sup> × 3)"}},"i":0}}]}'>(12 = 2 2 × 3) makes it easier to handle the common fractions of 1 ⁄ 3 and 1 ⁄ 4 than does a system based on ten (10 = 2 × 5) . Notation for fractions other than 1 ⁄ 2 is mainly found on surviving Roman coins , many of which had values that were duodecimal fractions of the unit as . Fractions less than 1 ⁄ 2 are indicated by a dot ( · ) for each uncia "twelfth", the source of the English words inch and ounce ; dots are repeated for fractions up to five twelfths. Six twelfths (one half), is S for semis "half". Uncia dots were added to S for fractions from seven to eleven twelfths, just as tallies were added to V for whole numbers from six to nine. [ 41 ] The arrangement of the dots was variable and not necessarily linear . Five dots arranged like ( ⁙ ) (as on the face of a die ) are known as a quincunx , from the name of the Roman fraction/coin. The Latin words sextans and quadrans are the source of the English words sextant and quadrant . 
+
+ Each fraction from 1 ⁄ 12 to 12 ⁄ 12 had a name in Roman times; these corresponded to the names of the related coins: 
+
+ Fraction 
+ Roman numeral 
+ Name (nominative and genitive singular) 
+ Meaning 
+
+ 1 ⁄ 12 
+ · 
+ Uncia , unciae 
+ "Ounce" 
+
+ 2 ⁄ 12 = 1 ⁄ 6 
+ ·· or : 
+ Sextans , sextantis 
+ "Sixth" 
+
+ 3 ⁄ 12 = 1 ⁄ 4 
+ ··· or ∴ 
+ Quadrans , quadrantis 
+ "Quarter" 
+
+ 4 ⁄ 12 = 1 ⁄ 3 
+ ···· or ∷ 
+ Triens , trientis 
+ "Third" 
+
+ 5 ⁄ 12 
+ ····· or ⁙ 
+ Quincunx , quincuncis 
+ "Five-ounce" ( quinque unciae → quincunx ) 
+
+ 6 ⁄ 12 = 1 ⁄ 2 
+ S 
+ Semis , semissis 
+ "Half" 
+
+ 7 ⁄ 12 
+ S · 
+ Septunx, septuncis 
+ "Seven-ounce" ( septem unciae → septunx ) 
+
+ 8 ⁄ 12 = 2 ⁄ 3 
+ S ·· or S : 
+ Bes , bessis 
+ "Twice" (as in "twice a third") 
+
+ 9 ⁄ 12 = 3 ⁄ 4 
+ S ··· or S ∴ 
+ Dodrans , dodrantis or nonuncium, nonuncii 
+ "Less a quarter" ( de-quadrans → dodrans ) or "ninth ounce" ( nona uncia → nonuncium ) 
+
+ 10 ⁄ 12 = 5 ⁄ 6 
+ S ···· or S ∷ 
+ Dextans, dextantis or decunx, decuncis 
+ "Less a sixth" ( de-sextans → dextans ) or "ten ounces" ( decem unciae → decunx ) 
+
+ 11 ⁄ 12 
+ S ····· or S ⁙ 
+ Deunx, deuncis 
+ "Less an ounce" ( de-uncia → deunx ) 
+
+ 12 ⁄ 12 = 1 
+ I 
+ As , assis 
+ "Unit" 
+
+ Other Roman fractional notations included the following: 
+
+ Fraction 
+ Roman numeral 
+ Name (nominative and genitive singular) 
+ Meaning 
+
+ 1 ⁄ 1728 =12 −3 
+ 𐆕 
+ Siliqua , siliquae 
+
+ 1 ⁄ 288 
+ ℈ 
+ Scripulum, scripuli 
+ " scruple (unit) " 
+
+ 1 ⁄ 144 =12 −2 
+ 𐆔 
+ Dimidia sextula, dimidiae sextulae 
+ "half a sextula" 
+
+ 1 ⁄ 72 
+ 𐆓 
+ Sextula , sextulae 
+ " 1 ⁄ 6 of an uncia" 
+
+ 1 ⁄ 48 
+ Ↄ 
+ Sicilicus, sicilici 
+
+ 1 ⁄ 36 
+ 𐆓𐆓 
+ Binae sextulae, binarum sextularum (Exceptionally, these are plural forms.) 
+ "two sextulas" ( duella , duellae ) 
+
+ 1 ⁄ 24 
+ Σ or 𐆒 or Є 
+ Semuncia , semunciae 
+ " 1 ⁄ 2 uncia" ( semi- + uncia ) 
+
+ 1 ⁄ 8 
+ Σ · or 𐆒 · or Є · 
+ Sescuncia, sescunciae 
+ " 1 + 1 ⁄ 2 uncias" ( sesqui - + uncia ) 
+
+ Fractions could also be indicated with a slash through the last letter in a numeral (e.g. Ɨ ), which subtracted the number by an amount less than one (usually 1 ⁄ 2 ). [ 42 ] 
+
+ Large numbers 
+
+ The modern form can only write numbers up to 3999, and without M in early Roman times only numbers up to 899 could be written. Various schemes have been used over time to write larger numbers. 
+
+ Apostrophus 
+ "1630" on the Westerkerk in Amsterdam. " M " and " D " are given archaic apostrophus form. 
+
+ Using the apostrophus method, [ 43 ] 500 is written as IↃ , while 1,000 is written as CIↃ . [ 21 ] This system of encasing numbers to denote thousands (imagine the C s and Ↄ s as parentheses) had its origins in Etruscan numeral usage. 
+
+ Each additional set of C and Ↄ surrounding CIↃ raises the value by a factor of ten: CCIↃↃ represents 10,000 and CCCIↃↃↃ represents 100,000. Similarly, each additional Ↄ to the right of IↃ raises the value by a factor of ten: IↃↃ represents 5,000 and IↃↃↃ represents 50,000. Numerals larger than CCCIↃↃↃ do not occur. [ 44 ] 
+
+ Page from a 16th-century manual, showing a mixture of apostrophus and vinculum numbers (see in particular the ways of writing 10,000). 
+ IↃ = 500 
+ CIↃ = 1,000 
+ IↃↃ = 5,000 
+ CCIↃↃ = 10,000 
+ IↃↃↃ = 50,000 
+ CCCIↃↃↃ = 100,000 
+
+ Sometimes IↃ (500) is reduced to D , CIↃ (1,000) to ↀ , IↃↃ (5,000) to ↁ ; CCIↃↃ (10,000) to ↂ ; IↃↃↃ (50,000) to ↇ ; and CCCIↃↃↃ (100,000) to ↈ . [ 45 ] It is likely CIↃ (1000) influenced the later M [ citation needed ] . 
+
+ John Wallis is often credited with introducing the ⟨ ∞ ⟩ symbol for infinity , and one conjecture is his basing it on ↀ , since 1,000 was hyperbolically used to represent very large numbers. 
+
+ Vinculum 
+ Using the vinculum , conventional Roman numerals are multiplied by 1,000 by adding a "bar" or "overline", thus: [ 45 ] 
+ IV = 4,000 
+ XXV = 25,000 
+
+ The vinculum came into use in the late Republic , [ 46 ] and it was a common alternative to the apostrophic ↀ during the Imperial era around the Roman world (M for '1000' was not in use until the Medieval period). [ 47 ] [ 48 ] It continued in use in the Middle Ages, though it became known more commonly as titulus , [ 49 ] and it appears in modern editions of classical and medieval Latin texts. [ 50 ] [ 51 ] 
+
+ In an extension of the vinculum , a three-sided box (now sometimes printed as two vertical lines and a vinculum ) is used to multiply by 100,000, [ 52 ] [ 46 ] thus: 
+ XIII   XXXII p. = 1,332,000 paces (1,332 Roman miles ). [ d ] [ 51 ] 
+
+ Vinculum notation is distinct from the custom of adding an overline to a numeral simply to indicate that it is a number. Both usages can be seen on Roman inscriptions of the same period and general location, such as on the Antonine Wall . [ 53 ] [ 54 ] 
+
+ Other 
+
+ There are some examples of year numbers after 1000 written as two Roman numerals 1–99, e.g. 1613 as XVIXIII , corresponding to the common reading "sixteen thirteen" of such year numbers in English, or 1519 as X C V XIX as in French quinze-cent-dix-neuf (fifteen-hundred and nineteen), and similar readings in other languages. [ 55 ] 
+ In some French texts from the 15th century and later, one finds constructions like XX</sup>XIX"}},"i":0}}]}'/> IIII XX XIX for 99, reflecting the French reading of that number as quatre-vingt-dix-neuf (four-score and nineteen). [ 55 ] Similarly, in some English documents one finds, for example, 77 written as " xx</sup>xvii"}},"i":0}}]}'/> iii xx xvii " (which could be read "three-score and seventeen"). [ 56 ] 
+ A medieval accounting text from 1301 renders numbers like 13,573 as " XIII. M. V. C. III. XX. XIII ", that is, "13×1000 + 5×100 + 3×20 + 13". [ 57 ] 
+
+ Origin 
+ The system is closely associated with the ancient city-state of Rome and the Empire that it created. However, due to the scarcity of surviving examples, the origins of the system are obscure and there are several competing theories, all largely conjectural. 
+
+ Etruscan numerals 
+ Main article: Etruscan numerals 
+
+ Rome was founded sometime between 850 and 750 BC, next to the southern edge of the Etruscan domain, which covered a large part of north-central Italy. 
+
+ The Roman numerals, in particular, are directly derived from the Etruscan number symbols : ⟨ 𐌠 ⟩ , ⟨ 𐌡 ⟩ , ⟨ 𐌢 ⟩ , ⟨ 𐌣 ⟩ , and ⟨ 𐌟 ⟩ for 1, 5, 10, 50, and 100 (they had more symbols for larger numbers, but it is unknown which symbol represents which number). As in the basic Roman system, the Etruscans wrote the symbols that added to the desired number, from higher to lower value. Thus, the number 87, for example, would be written 50 + 10 + 10 + 10 + 5 + 1 + 1 = 𐌣𐌢𐌢𐌢𐌡𐌠𐌠 (this would appear as 𐌠𐌠𐌡𐌢𐌢𐌢𐌣 since Etruscan was written from right to left.) [ 58 ] 
+
+ The symbols ⟨ 𐌠 ⟩ and ⟨ 𐌡 ⟩ resembled letters of the Etruscan alphabet, but ⟨ 𐌢 ⟩ , ⟨ 𐌣 ⟩ , and ⟨ 𐌟 ⟩ did not. The Etruscans used the subtractive notation, too, but not like the Romans. They wrote 17, 18, and 19 as 𐌠𐌠𐌠𐌢𐌢, 𐌠𐌠𐌢𐌢, and 𐌠𐌢𐌢, mirroring the way they spoke those numbers ("three from twenty", etc.); and similarly for 27, 28, 29, 37, 38, etc. However, they did not write 𐌠𐌡 for 4 (nor 𐌢𐌣 for 40), and wrote 𐌡𐌠𐌠, 𐌡𐌠𐌠𐌠 and 𐌡𐌠𐌠𐌠𐌠 for 7, 8, and 9, respectively. [ 58 ] 
+
+ Early Roman numerals 
+ The early Roman numerals for 1, 10, and 100 were the Etruscan ones: ⟨ 𐌠 ⟩ , ⟨ 𐌢 ⟩ , and ⟨ 𐌟 ⟩ . The symbols for 5 and 50 changed from ⟨ 𐌡 ⟩ and ⟨ 𐌣 ⟩ to ⟨ V ⟩ and ⟨ ↆ ⟩ at some point. The latter had flattened to ⟨ ⊥ ⟩ (an inverted T) by the time of Augustus , and soon afterwards became identified with the graphically similar letter ⟨ L ⟩ . [ 44 ] 
+
+ The symbol for 100 was written variously as ⟨ 𐌟 ⟩ or ⟨ ↃIC ⟩ , and was then abbreviated to ⟨ Ↄ ⟩ or ⟨ C ⟩ , with ⟨ C ⟩ (which matched the Latin letter C ) finally winning out. It might have helped that C was the initial letter of CENTUM , Latin for "hundred". 
+
+ The numbers 500 and 1000 were denoted by V or X overlaid with a box or circle. Thus, 500 was like a Ɔ superimposed on a ⋌ or ⊢ , making it look like Þ</s>"}},"i":0}}]}'/> Þ . It became D</s>"}},"i":0}}]}'/> D or Ð by the time of Augustus, under the graphic influence of the letter D . It was later identified as the letter D ; an alternative symbol for "thousand" was a CIↃ , and half of a thousand or "five hundred" is the right half of the symbol, IↃ , and this may have been converted into D . [ 21 ] 
+
+ The notation for 1000 was a circled or boxed X : Ⓧ, ⊗ , ⊕ , and by Augustan times was partially identified with the Greek letter Φ phi . Over time, the symbol changed to Ψ and ↀ . The latter symbol further evolved into ∞ , then ⋈ , and eventually changed to M under the influence of the Latin word mille "thousand". [ 44 ] 
+
+ According to Paul Kayser, the basic numerical symbols were I , X , 𐌟 and Φ (or ⊕ ) and the intermediate ones were derived by taking half of those (half an X is V , half a 𐌟 is ↆ and half a Φ/⊕ is D ). Then 𐌟 and ↆ developed as mentioned above. [ 59 ] 
+
+ Entrance to section LII (52) of the Colosseum , with numerals still visible 
+
+ Classical Roman numerals 
+ The Colosseum was constructed in Rome in CE 72–80, [ 60 ] and while the original perimeter wall has largely disappeared, the numbered entrances from XXIII (23) to LIIII (54) survive, [ 61 ] to demonstrate that in Imperial times Roman numerals had already assumed their classical form: as largely standardised in current use . The most obvious anomaly ( a common one that persisted for centuries ) is the inconsistent use of subtractive notation - while XL is used for 40, IV is avoided in favour of IIII : in fact, gate 44 is labelled XLIIII . 
+
+ Use in the Middle Ages and Renaissance 
+ Lower case , or minuscule , letters were developed in the Middle Ages, well after the demise of the Western Roman Empire , and since that time lower-case versions of Roman numbers have also been commonly used: i , ii , iii , iv , and so on. 
+
+ 13th century example of iiij . 
+
+ Since the Middle Ages, a " j " has sometimes been substituted for the final " i " of a "lower-case" Roman numeral, such as " iij " for 3 or " vij " for 7. This " j " can be considered a swash variant of " i ". Into the early 20th century, the use of a final " j " was still sometimes used in medical prescriptions to prevent tampering with or misinterpretation of a number after it was written. 
+
+ Chronograms , messages with dates encoded into them, were popular during the Renaissance era. The chronogram would be a phrase containing the letters I , V , X , L , C , D , and M . By putting these letters together, the reader would obtain a number, usually indicating a particular year. [ 62 ] 
+
+ A superscript "o" (sometimes written directly above the symbol) was sometimes used as an ordinal indicator . [ 63 ] 
+
+ "Medieval Roman numerals" 
+ See also: Scribal abbreviation 
+ Numerals in documents and inscriptions from the Middle Ages sometimes include additional symbols, which today are called "medieval Roman numerals". Some simply substitute another letter for the standard one (such as " A " for " V ", or " Q " for " D "), while others serve as abbreviations for compound numerals (" O " for " XI ", or " F " for " XL "). This system was occasionally extended to include letters and numbers from other scripts, with Adriano Cappelli's comprehensive record of scribal numeral forms (published 1912) recording the use of forms of omega and sampi for 800 and 900 respectively, as they represented in the Gothic numeral system, as well as combinations of Latin letters, early Roman symbols and Hindu-Arabic numerals. [ 42 ] Although the medieval Roman numeral values for the letters of the Latin alphabet are still listed today in some dictionaries under the entries for those letters, their usage even at the time was inconsistent and never standard, and—with the aforementioned exception of M being accepted as a standard modern Roman numeral—they are not used in any meaningful capacity in modern times. 
+
+ Number 
+ Abbrev. 
+ Notes and etymology 
+
+ 5 
+ A , U 
+ A resembles an upside-down V. Also said to equal 500. 
+
+ 6 
+ ↅ 
+ Either from a ligature of VI , or from digamma (ϛ), the Greek numeral 6 (sometimes conflated with the στ ligature). [ 44 ] Cappelli records various handwriting forms of the symbol ranging from a form resembling a large lowercase u, the later Cyrillic И, an open-topped Latin alpha , and a capital G. 
+
+ 7 
+ S , Z 
+ Presumed abbreviation of septem , Latin for 7. 
+
+ 11 
+ O 
+ Presumed abbreviation of onze , French for 11. 
+
+ 40 
+ F 
+ Presumed abbreviation of English forty . 
+
+ 70 
+ S 
+ Also could stand for 7, with the same derivation. 
+
+ 80 
+ R 
+
+ 90 
+ N 
+ Presumed abbreviation of nonaginta , Latin for 90. (Ambiguous with N for "nothing" ( nihil )). 
+
+ 150 
+ Y 
+ Possibly derived from the lowercase y's shape. 
+
+ 151 
+ K 
+ Unusual, origin unknown; also said to stand for 250. [ 64 ] 
+
+ 160 
+ T 
+ Possibly derived from Greek tetra , as 4 × 40 = 160. 
+
+ 200 
+ H 
+ Could also stand for 2 (see also 𐆙, the symbol for the dupondius ). From a barring of two I 's. 
+
+ 250 
+ E 
+
+ 300 
+ B 
+
+ 400 
+ P , G 
+
+ 500 
+ Q 
+ Redundant with D ; abbreviates quingenti , Latin for 500. Also sometimes used—in particular, a form with a much longer descender extending rightward—for 500,000. [ 65 ] 
+
+ 800 
+ W 
+ Recorded in Cappelli as a rounded form resembling lowercase omega, paralleling the Gothic use of omega for the same value. 
+
+ 2000 
+ Z 
+
+ 5000 
+ ȹ 
+ A ligature of lowercase Q with the apostrophus ⟨ Ↄ ⟩ . 
+
+ 9000 
+ Ṫ , ₸ 
+ Cappelli notes that the T with double dot is only attested for Spanish-suited playing cards and may have been derived from the Gothic form of sampi , which used a T-like symbol resembling an up arrow to represent 900. 
+
+ Modern use 
+ Year 1575 in Arabic and Roman numbers 
+ By the 11th century, Arabic numerals had been introduced into Europe from al-Andalus , by way of Arab traders and arithmetic treatises. Roman numerals, however, proved very persistent, remaining in common use in the West well into the 14th and 15th centuries, even in accounting and other business records (where the actual calculations would have been made using an abacus ). Replacement by their more convenient "Arabic" equivalents was quite gradual, and Roman numerals are still used today in certain contexts. A few examples of their current use are: 
+
+ Spanish Real using IIII instead of IV as regnal number of Charles IV of Spain . 
+ Names of monarchs and popes, e.g. Elizabeth II of the United Kingdom, Pope Leo XIV . These are referred to as regnal numbers and are usually read as ordinals ; e.g. II is pronounced "the second". This tradition began in Europe sporadically in the Middle Ages , gaining widespread use in England during the reign of Henry VIII . Previously, the monarch was not known by numeral but by an epithet such as Edward the Confessor . Some monarchs (e.g. Charles IV of Spain , Louis XIV of France and William IV of Great Britain) seem to have preferred the use of IIII instead of IV on their coinage (see illustration). 
+ Generational suffixes , particularly in the U.S., for people sharing the same name across generations, such as William Howard Taft IV . These are also usually read as ordinals. 
+ In the French Republican Calendar , initiated during the French Revolution , years were numbered by Roman numerals – from the year I (1792) when this calendar was introduced to the year XIV (1805) when it was abandoned. 
+ The year of construction of the Cambridge Public Library (Massachusetts, U.S.), 1888, displayed in "standard" Roman numerals on its facade. The year of production of films, television shows and other works of art within the work itself. Outside reference to the work will use regular Arabic numerals. 
+ Hour marks on timepieces . In this context, 4 is often written IIII . 
+ The year of construction on building façades and cornerstones . 
+ Page numbering of prefaces and introductions of books, and sometimes of appendices and annexes, too. 
+ Book volume and chapter numbers, as well as the several acts within a play (e.g. Act iii , Scene 2). 
+ Sequels to some films, video games, and other works (as in Rocky II , Grand Theft Auto V , Myst III: Exile ). 
+ Outlines that use numbers to show hierarchical relationships. 
+ Occurrences of a recurring grand event, for instance:
+ The Summer and Winter Olympic Games (e.g. the XXI Olympic Winter Games ; the Games of the XXX Olympiad ). 
+ The Super Bowl , the annual championship game of the National Football League (e.g. Super Bowl XLII ; Super Bowl 50 was a one-time exception [ 66 ] ). 
+ WrestleMania , the annual professional wrestling event for WWE (e.g. WrestleMania XXX ). This usage has also been inconsistent. 
+ World War I and World War II . 
+
+ Specific disciplines 
+ In astronautics , United States rocket model variants are sometimes designated by Roman numerals, e.g. Titan I , Titan II , Titan III , Saturn I , Saturn V . 
+
+ In astronomy , the natural satellites or "moons" of the planets are designated by capital Roman numerals appended to the planet's name. For example, Titan 's designation is Saturn VI . [ 67 ] 
+
+ In chemistry , Roman numerals are sometimes used to denote the groups of the periodic table , but this has officially been deprecated in favour of Arabic numerals. [ 68 ] They are also used in the IUPAC nomenclature of inorganic chemistry , for the oxidation number of cations which can take on several different positive charges. They are also used for naming phases of polymorphic crystals , such as ice . 
+
+ In education , school grades (in the sense of year-groups rather than test scores) are sometimes referred to by a Roman numeral; for example, "grade IX " is sometimes seen for "grade 9". 
+
+ Stylised " IX " represents "9" in unit emblem of 9th Aero Squadron AEF, 1918. 
+
+ In entomology , the broods of the thirteen- and seventeen-year periodical cicadas are identified by Roman numerals. 
+
+ In graphic design , stylised Roman numerals may represent numeric values. 
+
+ In law , Roman numerals are commonly used to help organize legal codes as part of an alphanumeric outline . In citing UK Acts of Parliament within a given year (a given session until 1963), the chapter of a local act is given in lowercase Roman numerals, whereas that of a public act has plain Arabic numerals and a personal act has italic Arabic numerals. [ 69 ] 
+
+ In mathematics (including trigonometry , statistics , and calculus ), when a graph includes negative numbers, its quadrants are named using I , II , III , and IV . [ 70 ] These quadrant names signify positive numbers on both axes, negative numbers on the x-axis, negative numbers on both axes, and negative numbers on the y-axis, respectively. The use of Roman numerals to designate quadrants avoids confusion, since Arabic numerals are used for the actual data represented in the graph. 
+
+ In military unit designation, Roman numerals are often used to distinguish between units at different levels. This reduces possible confusion, especially when viewing operational or strategic level maps. In particular, army corps are often numbered using Roman numerals (for example, the American XVIII Airborne Corps or the Nazi III Panzerkorps) with Arabic numerals being used for divisions and armies. 
+
+ In music , Roman numerals are used in several contexts: 
+ Movements are often numbered using Roman numerals. 
+ In Roman numeral analysis , harmonic function is identified using Roman numerals. 
+ Individual strings of stringed instruments , such as the violin , are often denoted by Roman numerals, with higher numbers denoting lower strings. 
+
+ In pharmacy , Roman numerals were used with the now largely obsolete apothecaries' system of measurement: including SS to denote "one half" and N to denote "zero". [ 39 ] [ 71 ] 
+
+ In photography , Roman numerals (with zero) are used to denote varying levels of brightness when using the Zone System . 
+
+ In seismology , Roman numerals are used to designate degrees of the Mercalli intensity scale of earthquakes. 
+
+ Example of postage stamp from Ireland (Éire) franked using Roman numeral for the month 
+
+ In sport the team containing the "top" players and representing a nation or province, a club or a school at the highest level in (say) rugby union is often called the "1st XV ", while a lower-ranking cricket or American football team might be the "3rd XI ". 
+
+ In tarot , Roman numerals (with zero) are often used to denote the cards of the Major Arcana . 
+
+ In Ireland , Roman numerals were used until the late 1980s to indicate the month on postage Franking . In documents, Roman numerals are sometimes still used to indicate the month to avoid confusion over day/month/year or month/day/year formats. 
+
+ In theology and biblical scholarship , the Septuagint is often referred to as LXX , as this translation of the Old Testament into Greek is named for the legendary number of its translators ( septuaginta being Latin for "seventy"). 
+
+ Modern use in European languages other than English 
+ Some uses that are rare or never seen in English-speaking countries may be relatively common in parts of continental Europe and in other regions (e.g. Latin America ) that use a European language other than English. For instance: 
+
+ Capital or small capital Roman numerals are widely used in Romance languages to denote centuries , e.g. the French e</sup> siècle"}},"i":0}}]}'> xviii e siècle [ 72 ] and the Spanish siglo xviii for "18th century". Some Slavic and Turkic languages (especially in and adjacent to Russia) similarly favour Roman numerals (e.g. Russian XVIII век , Azeri XVIII əsr or Polish wiek XVIII [ 73 ] ). On the other hand, in Turkish and some Central European Slavic languages, like most Germanic languages , one writes "18." (with a period) before the local word for "century" (e.g. Turkish 18. yüzyıl , Czech 18. století ). 
+
+ When typing on Russian typewriters, the Roman-numeral "V" was replaced with "У" because the letter "V" is absent in the Russian Cyrillic alphabet. Additionally, the Roman-numeral "I" was replaced with "1", since this letter had been removed from the Russian alphabet by the 1918 reform of orthography ; in typewritten texts, 1 could look as 1 or I depending on the typewriter model. The numbers "II" and "III" were replaced with "П" and "Ш" respectively. For "X", the Cyrillic letter "Х" was used. For example, XVIII was typed as ХУШ. This style is sometimes maintained even when typing on a computer, either out of habit or due to the inconvenience of switching between Latin and Russian script for one or two letters. The numerals "L", "C", "D", and "M" were rarely used in Russian typewritten texts, although some Russian books on typewriting accepted replacing them by the Cyrillic letters "Л", "С", "Д", and "М". [ 74 ] [ 75 ] Roman numerals are quite a common way for writing ordinal numbers in Russian texts. The usage of Roman numerals to indicate occurrences of a recurring grand event in Russian is more common than in English; for example, they were used for Congresses of the Communist Party of the Soviet Union . Besides the cases mentioned above, Roman numerals are used in Russian for declensions and conjugations, blood types (the notations O, A, B, AB and I, II, III, IV are both well known in Russia), half-years and quarters of a year, etc. 
+
+ Roman numerals in Russian typewriting 
+ Number 
+ I 
+ II 
+ III 
+ IV 
+ V 
+ VI 
+ VII 
+ VIII 
+ IX 
+ X 
+ L 
+ C 
+ D 
+ M 
+
+ Typewritten 
+ 1 
+ П 
+ Ш 
+ 1У 
+ У 
+ У1 
+ УП 
+ УШ 
+ 1Х 
+ Х 
+ Л 
+ С 
+ Д 
+ М 
+
+ Boris Yeltsin 's signature, dated 10 November 1988, rendered as 10. XI .'88. 
+
+ Mixed Roman and Arabic numerals are sometimes used in numeric representations of dates (especially in formal letters and official documents, but also on tombstones). The month is written in Roman numerals, while the day is in Arabic numerals: "4. VI .1789" and " VI .4.1789" both refer unambiguously to 4 June 1789. 
+
+ Business hours table on a shop window in Vilnius , Lithuania. 
+
+ Roman numerals are sometimes used to represent the days of the week in hours-of-operation signs displayed in windows or on doors of businesses, [ 76 ] and sometimes in railway and bus timetables. Monday, taken as the first day of the week, is represented by I . Sunday is represented by VII . The hours of operation signs are tables composed of two columns where the left column is the day of the week in Roman numerals and the right column is a range of hours of operation from starting time to closing time. In the example case (left), the business opens from 10 a.m. to 7 p.m. on weekdays, 10 a.m. to 5 p.m. on Saturdays and is closed on Sundays . Note that the listing uses 24-hour time. 
+
+ Sign at 17.9 km on route SS4 Salaria , north of Rome, Italy. 
+
+ Roman numerals may also be used for floor numbering . [ 77 ] [ 78 ] For instance, apartments in central Amsterdam are indicated as 138- III , with both an Arabic numeral (number of the block or house) and a Roman numeral (floor number). The apartment on the ground floor is indicated as 138-huis . 
+
+ In Italy, where roads outside built-up areas have kilometre signs , major roads and motorways also mark 100-metre subdivisionals, using Roman numerals from I to IX for the smaller intervals. The sign ⁠ IX / 17 ⁠ thus marks 17.9   km. 
+
+ Certain Romance-speaking countries use Roman numerals to designate assemblies of their national legislatures. For instance, the composition of the Italian Parliament from 2018 to 2022 (elected in the 2018 Italian general election ) is called the XVIII Legislature of the Italian Republic (or more commonly the "XVIII Legislature"). 
+
+ A notable exception to the use of Roman numerals in Europe is in Greece, where Greek numerals (based on the Greek alphabet) are generally used in contexts where Roman numerals would be used elsewhere. 
+
+ Unicode 
+ The " Number Forms " block of the Unicode computer character set standard has a number of Roman numeral symbols in the range of code points from U+2160 to U+2188. [ 79 ] This range includes both upper- and lowercase numerals, as well as pre-combined characters for numbers up to 12. One justification for the existence of pre-combined numbers is to facilitate the setting of multiple-letter numbers (such as VIII) on a single horizontal line in Asian vertical text. The Unicode standard, however, includes special Roman numeral code points for compatibility only, stating that "[f]or most purposes, it is preferable to compose the Roman numerals from sequences of the appropriate Latin letters". [ 80 ] The block also includes some apostrophus symbols for large numbers, an old variant of " L " (50) similar to the Etruscan character, the Claudian letter "reversed C", etc. [ 81 ] 
+
+ See also 
+
+ Biquinary 
+ Egyptian numerals 
+ Hebrew numerals 
+ Kharosthi numerals 
+ Maya numerals 
+ Chinese numerals 
+ Roman abacus 
+ Proto-writing 
+
+ References 
+
+ Notes 
+
+ ↑ IV and IX not only have fewer characters than IIII and VIIII , but are less likely to be confused (especially at a quick glance) with III and VIII . [ citation needed ] 
+ ↑ This is the Coordinated Universal Time (UTC) year in which Wikipedia's cache of this page was last updated, so may be a few hours out of date. 
+ ↑ Isaac Asimov once mentioned an "interesting theory" that Romans avoided using IV because it was the initial letters of IVPITER , the Latin spelling of Jupiter , and might have seemed impious . [ 21 ] He did not say whose theory it was. 
+ ↑ XIII = 13 × 100,000 = 1,300,000 and XXXII = 32 × 1000 = 32,000, so ' XIII   XXXII = 1,332,000. p. is a common abbreviation for passus , paces, the Romans counting a pace as two steps. 
+
+ Citations 
+
+ ↑ Adams, Cecil (23 February 1990). "What is the proper way to style Roman numerals for the 1990s?" . The Straight Dope . 
+ 1 2 Hayes, David P. "Guide to Roman Numerals" . Copyright Registration and Renewal Information Chart and Web Site . 
+ ↑ Reddy, Indra K.; Khan, Mansoor A. (2003). "1 (Working with Arabic and Roman numerals)". Essential Math and Calculations for Pharmacy Technicians . CRC Press. p.   3. ISBN   978-0-203-49534-6 . Table 1-1 Roman and Arabic numerals (table very similar to the table here, apart from inclusion of Vinculum notation. 
+ ↑ Dehaene, Stanislas (1997). The Number Sense   : How the Mind Creates Mathematics . Oxford University Press. ISBN   9780199723096 . 288 pages. 
+ ↑ Hazewinkel, Michiel , ed. (1990). "Numbers, Representations of" . Encyclopaedia of Mathematics . Vol.   6. Springer. p.   502. ISBN   9781556080050 . 546 pages. 
+ ↑ Dela Cruz, M. L. P.; Torres, H. D. (2009). Number Smart Quest for Mastery: Teacher's Edition . Rex Bookstore, Inc. ISBN   9789712352164 . 
+ ↑ Martelli, Alex; Ascher, David (2002). Python Cookbook . O'Reilly Media Inc. ISBN   978-0-596-00167-4 . 
+ 1 2 Gaius Iulius Caesar. Commentarii de bello Gallico, Book II, Section 4   (in Latin) – via Wikisource . Book II, Section 4: "...   XV milia Atrebates, Ambianos X milia, Morinos XXV milia, Menapios VII milia, Caletos X milia, Veliocasses et Viromanduos totidem, Atuatucos XVIIII milia; ..." Book II, Section 8: "...   ab utroque latere eius collis transversam fossam obduxit circiter passuum CCCC et ad extremas fossas castella constituit..." Book IV, Section 15: "Nostri ad unum omnes incolumes, perpaucis vulneratis, ex tanti belli timore, cum hostium numerus capitum CCCCXXX milium fuisset, se in castra receperunt." Book VII, Section 4: "...   in hiberna remissis ipse se recipit die XXXX Bibracte." 
+ ↑ Rocca, Angelo (1612). De campanis commentarius . Rome: Guillelmo Faciotti. Title of a Plate : "Campana a XXIIII hominibus pulsata" ("Bell to be sounded by 24 men"). 
+ ↑ Gerard Ter Borch (1673): Portrait of Cornelis de Graef . Date on painting: "Out. XXIIII Jaer. // M. DC. LXXIIII". 
+ ↑ Gaius Plinius Secundus. Naturalis Historia, Book III   (in Latin) – via Wikisource . Book III: "Saturni vocatur, Caesaream Mauretaniae urbem CCLXXXXVII p[assum]. traiectus. reliqua in ora flumen Tader ... ortus in Cantabris haut procul oppido Iuliobrica, per CCCCL p. fluens ..." Book IV: "Epiri, Achaiae, Atticae, Thessalia in porrectum longitudo CCCCLXXXX traditur, latitudo CCLXXXXVII." Book VI: "tam vicinum Arsaniae fluere eum in regione Arrhene Claudius Caesar auctor est, ut, cum intumuere, confluant nec tamen misceantur leviorque Arsanias innatet MMMM ferme spatio, mox divisus in Euphraten mergatur." 
+ ↑ Bennet, Thomas (1731). Grammatica Hebræa, cum uberrima praxi in usum tironum ... Editio tertia . T. Astley. p.   24. Copy in the British Library; 149 pages. Page 24: "PRÆFIXA duo sunt viz. He emphaticum vel relativum (de quo Cap VI Reg. LXXXX.) & Shin cum Segal sequente Dagesh, quod denotat pronomen relativum ..." 
+ ↑ Della Mirandola, Pico (1486). Conclusiones sive Theses DCCCC [ Conclusions, or 900 Theses ] (in Latin). 
+ ↑ "360:12 tables, 24 chairs, and plenty of chalk" . Roman Numerals...not quite so simple . 2 January 2011. 
+ ↑ "Paul Lewis" . Roman Numerals...How they work . 13 November 2021. 
+ ↑ Reynolds, Joyce Maire; Spawforth, Anthony J. S. (1996). "numbers, Roman" . In Hornblower, Simon; Spawforth, Anthony (eds.). Oxford Classical Dictionary (3rd   ed.). Oxford University Press. ISBN   0-19-866172-X . 
+ ↑ Kennedy, Benjamin Hall (1923). The Revised Latin Primer . London: Longmans, Green & Co. 
+ ↑ Milham, W. I. (1947). Time & Timekeepers . New York: Macmillan. p.   196. 
+ 1 2 Pickover, Clifford A. (2003). Wonders of Numbers: Adventures in Mathematics, Mind, and Meaning . Oxford University Press. p.   282. ISBN   978-0-19-534800-2 . 
+ ↑ Adams, Cecil; Zotti, Ed (1988). More of the straight dope . Ballantine Books. p.   154 . ISBN   978-0-345-35145-6 . 
+ 1 2 3 Asimov, Isaac (1966). Asimov on Numbers (PDF) . Pocket Books. p.   12. 
+ ↑ "Gallery: Museum's North Entrance (1910)" . Saint Louis Art Museum. Archived from the original on 4 December 2010 . Retrieved 10 January 2014 . The inscription over the North Entrance to the Museum reads: 'Dedicated to Art and Free to All MDCDIII.' These roman [ sic ] numerals translate to 1903, indicating that the engraving was part of the original building designed for the 1904 World's Fair. 
+ ↑ Adkins, Lesley; Adkins, Roy A (2004). Handbook to life in ancient Rome (2   ed.). Facts On File. p.   270. ISBN   0-8160-5026-0 . 
+ ↑ Boyne, William (1968). A manual of Roman coins . p.   13. 
+ ↑ Degrassi, Atilius , ed. (1963). Inscriptiones Italiae . Vol.   13: Fasti et Elogia. Rome: Istituto Poligrafico dello Stato. Fasciculus 2: Fasti anni Numani et Iuliani. 
+ ↑ Lundorphio, Michaele Gaspar (1621). Acta publica inter invictissimos gloriosissimosque&c. ... et Ferdinandum II. Romanorum Imperatores... (in Latin). Ian-Friderici Weissii. p.   123. Page 123: " Sub Dato Pragæ IIIXX Decemb. A. C. M. DC. IIXX ". Page 126, end of the same document: " Dabantur Pragæ 17 Decemb. M. DC. IIXX ". 
+ ↑ Sulpicius à Munscrod, Raphael (1621). Vera Ac Germana Detecto Clandestinarvm Deliberationvm (in Latin). p.   16. Page 16, line 1: " repertum Originale Subdatum IIIXXX Aug. A. C. MDC.IIXX ". Page 41, upper right corner: " Decemb. A. C. MDC.IIXX ". Page 42, upper left corner: " Febr. A. C. MDC.XIX ". Page 70: " IIXX. die Maij sequentia in consilio noua ex Bohemia allata.... ". Page 71: " XIX. Maij . 
+ ↑ Tentzel, Wilhelm Ernst (1699). Als Ihre Königl. Majestät in Pohlen und ... (in German). p.   39. Page 39: " ... und der Umschrifft: LITHUANIA ASSERTA M. DC. IIIC [1699]. " 
+ ↑ Posner, Johann Caspar (1698). Mvndvs ante mvndvm sive De Chao Orbis Primordio (in Latin). Title page: " Ad diem jvlii A. O. R. M DC IIC ". 
+ ↑ Tentzel, Wilhelm Ernst (1700). Saxonia Nvmismatica: Das ist: Die Historie Des Durchlauchtigsten... (in German). p.   26. Page 26: " Die Revers hat eine feine Inscription : SERENISSIMO DN.DN... SENATUS.QVERNF. A. M DC IIC D. 18 OCT [year 1698 day 18 oct]. " 
+ ↑ Piccolomini, Enea Silvio (1698). Opera Geographica et Historica (in Latin) (1st   ed.). Helmstadt: J. M. Sustermann. Title page of first edition: " Bibliopolæ ibid. M DC IC ". 
+ ↑ Kennedy, Benjamin H. (1879). Latin grammar . London: Longmans, Green, and Co. p.   150 . ISBN   9781177808293 . {{ cite book }} : ISBN / Date incompatibility ( help ) 
+ ↑ "ROMAN function" . Microsoft Support . 
+ ↑ L' Atre périlleux et Yvain, le chevalier au lion . 1301–1350 – via Gallica. 
+ 1 2 Malone, Stephen James (August 2005). Legio XX Valeria Victrix: A Prosographical and Historical Study (PDF) (Thesis). Vol.   2. University of Nottingham. On page 396 it discusses many coins with "Leg. IIXX" and notes that it must be Legion 22. The footnote on that page says: "The form IIXX clearly reflecting the Latin duo et vicensima 'twenty-second': cf. X5398, legatus I[eg II] I et vicensim(ae) Pri[mi]g ; VI 1551, legatus leg] IIXX Prj ; III 14207.7, miles leg IIXX ; and III 10471-3, a vexillation drawn from four German legions including 'XVIII PR'—surely here the stonecutter's hypercorrection for IIXX PR. 
+ ↑ Bede: The Reckoning of Time . Translated by Wallis, Faith. Liverpool: Liverpool University Press. 2004 [725]. ISBN   0-85323-693-3 . 
+ ↑ Baker, Peter S.; Lapidge, Michael, eds. (1995) [1016]. Byrhtferth's Enchiridion . Early English Text Society. ISBN   978-0-19-722416-8 . 
+ ↑ Jones, C. W. (ed.). Opera Didascalica . Corpus Christianorum, Series Latina. Vol.   123C. 
+ 1 2 3 Bachenheimer, Bonnie S. (2010). Manual for Pharmacy Technicians . ISBN   978-1-58528-307-1 . 
+ ↑ "RIB 2208. Distance Slab of the Sixth Legion" . Roman Inscriptions in Britain . Retrieved 11 November 2020 . 
+ ↑ Maher, David W.; Makowski, John F. (2011). "Literary Evidence for Roman Arithmetic with Fractions" (PDF) . Classical Philology . 96 (4): 376– 399. doi : 10.1086/449557 . S2CID   15162149 . Archived from the original (PDF) on 27 August 2013. 
+ 1 2 Cappelli, Adriano (1912). "Numerazione romana" . Lexicon abbreviaturarum   : dizionario di abbreviature Latine ed Italiane (in Italian). Ulrico Hoepli. pp.   413– 421 . Retrieved 21 March 2025 . 
+ ↑ "Definition of Apostrophus" . www.merriam-webster.com . 
+ 1 2 3 4 Perry, David J. "Proposal to Add Additional Ancient Roman Characters to UCS" (PDF) . Archived from the original (PDF) on 22 June 2011. . 
+ 1 2 Ifrah, Georges (2000). The Universal History of Numbers: From Prehistory to the Invention of the Computer . Translated by David Bellos, E. F. Harding, Sophie Wood, Ian Monk. John Wiley & Sons. 
+ 1 2 Dilke, Oswald Ashton Wentworth (1987). Mathematics and measurement . Reading the past. London: British Museum Publications. p.   15. ISBN   978-0-7141-8067-0 . 
+ ↑ Chrisomalis, Stephen (2010). Numerical Notation: A Comparative History . Cambridge University Press. pp.   102– 109. ISBN   978-0-521-87818-0 . 
+ ↑ Gordon, Arthur E. (1982). Illustrated Introduction to Latin Epigraphy . Berkeley: University of California Press. pp.   122– 123. ISBN   0-520-05079-7 . 
+ ↑ Chrisomalis, Stephen (2010). Numerical Notation: A Comparative History . Cambridge University Press. p.   119. ISBN   978-0-521-87818-0 . 
+ ↑ Boethius (1867) [6th century AD]. De Institutione Arithmetica, libri duo (PDF) . B.G.Teubner. p.   42 . Retrieved 18 January 2023 . 
+ 1 2 Pliny (1961) [1st century AD]. Natural History . Loeb Classical Library. Vol.   L352. Harvard University Press. Book VI, XXVI, 100 (pp 414-415). 
+ ↑ Chrisomalis, Stephen (2010). Numerical Notation: A Comparative History . Cambridge University Press. pp.   402– 403. ISBN   978-0-521-87818-0 . 
+ ↑ "RIB 2208. Distance Slab of the Twentieth Legion" . Roman Inscriptions in Britain . Retrieved 9 November 2020 . 
+ ↑ "RIB 2171. Building Inscription of the Second and Twentieth Legions" . Roman Inscriptions in Britain . Retrieved 9 November 2020 . 
+ 1 2 os</sup> CCLXI-CCLXXXIV)"},"url":{"wt":"https://www.persee.fr/doc/bcrh_0770-6707_1862_num_31_3_3033"},"journal":{"wt":"Bulletin de la Commission royale d'Historie"},"volume":{"wt":"31"},"issue":{"wt":"3"},"pages":{"wt":"345–554"},"doi":{"wt":"10.3406/bcrh.1862.3033"}},"i":0}}]}'/> Gachard, M. (1862). "II. Analectes historiques, neuvième série (n os CCLXI-CCLXXXIV)" . Bulletin de la Commission royale d'Historie . 31 (3): 345– 554. doi : 10.3406/bcrh.1862.3033 . Page 347: me</sup> de febvrier, l'an IIII<sup>XX</sup>XIX [quatre-vingt-dix-neuf {{=}} 99]."}},"i":0}}]}'> Lettre de Philippe le Beau aux échevins..., quote: "Escript en nostre ville de Gand, le XXIIII me de febvrier, l'an IIII XX XIX [quatre-vingt-dix-neuf = 99]. " Page 356: c</sup>XIX [1519]."}},"i":0}}]}'> Lettre de l'achiduchesse Marguerite au conseil de Brabant..., quote: "... Escript à Bruxelles, le dernier jour de juing anno XV c XIX [1519]. " Page 374: Letters patentes de la rémission ... de la ville de Bruxelles, quote : " ... Op heden, tweentwintich ['twenty-two'] daegen in decembri, anno vyfthien hondert tweendertich ['fifteen hundred thirty-two'] ... Gegeven op ten vyfsten dach in deser jegewoirdige maent van decembri anno XV tweendertich [1532] vorschreven. " Page 419: me</sup> de juillet XV<sup>c</sup> huytante-six [1586]."}},"i":0}}]}'> Acte du duc de Parme portant approbation..., quote: "Faiet le XV me de juillet XV c huytante-six [1586]. ". 
+ ↑ Salter, Herbert Edward (1923). Registrum Annalium Collegii Mertonensis 1483–1521 . Vol.   76. Oxford Historical Society. 544 pages. Page 184 has the computation in pounds:shillings:pence (li:s:d) x:iii:iiii + xxi:viii:viii + xlv:xiiii:i = iii xx xvii:vi:i, i.e. 10:3:4 + 21:8:8 + 45:14:1 = 77:6:1. 
+ ↑ de Wailly; Delisle (1865) [1301]. "E Duo Codicibus Ceratis Johannis de Sancto Justo" [ From Two Texts in Wax by John of St Just ] . Recueil des historiens des Gaules et de la France. Par Martin Bouquet: Contenant la deuxieme livraison des monumens des regnes de saint Louis, de Philippe le Hardi, de Philippe le bel, de Louis X, de Philippe V et de Charles IV ... Jusqu'en MCCCXXVIII. Tome Vingt-Deuxième . Recueil des Historiens des Gaules et de la France (in Latin). Vol.   22. p.   530: SUMMA totalis, XIII. M. V. C. III. XX. XIII. l. III s. XI d. [ Sum total, 13 thousand 5 hundred 3 score 13 livres, 3 sous, 11 deniers. ] 
+ 1 2 Van Heems, Gilles (2009). "Nombre, chiffre, lettre: Formes et réformes. Des notations chiffrées de l'étrusque" [ Between Numbers and Letters: About Etruscan Notations of Numeral Sequences ] . Revue de philologie, de littérature et d'histoire anciennes (in French). 83 (1): 103– 130. ISSN   0035-1652 . 
+ ↑ Keyser, Paul (1988). "The Origin of the Latin Numerals 1 to 1000". American Journal of Archaeology . 92 (4): 529– 546. doi : 10.2307/505248 . JSTOR   505248 . S2CID   193086234 . 
+ ↑ Hopkins, Keith (2005). The Colosseum . Cambridge, MA: Harvard University Press . ISBN   978-0-674-01895-2 . 
+ ↑ Claridge, Amanda (1998). Rome: An Oxford Archaeological Guide (First ed.) . Oxford: Oxford University Press . ISBN   978-0-19-288003-1 . 
+ ↑ Bastedo, Walter A. Materia Medica: Pharmacology, Therapeutics and Prescription Writing for Students and Practitioners, 2nd ed. (Philadelphia, PA: W.B. Saunders, 1919) p582 . Retrieved 15 March 2010. 
+ ↑ "Example of superscript 'o' used as an ordinal indicator" . Archived from the original on 4 March 2016 . Retrieved 25 January 2014 . 
+ ↑ Bang, Jørgen (1962). Fremmedordbog (in Danish). Berlingske Ordbøger. 
+ ↑ Gordon, Arthur E. (1983). Illustrated Introduction to Latin Epigraphy . University of California Press . p.   44. ISBN   9780520038981 . Retrieved 3 October 2015 . 
+ ↑ Rosenthal, Gregg (4 June 2014). "NFL won't use Roman numerals for Super Bowl 50" . National Football League. Archived from the original on 1 December 2015 . Retrieved 5 November 2014 . 
+ ↑ "Planetary Satellite Discovery Circumstances" . JPL Solar System Dynamics . NASA. 15 November 2021 . Retrieved 7 January 2022 . 
+ ↑ Fluck, E. (1988). "New Notations in the Periodic Table" (PDF) . Pure Appl. Chem. 60 (3). IUPAC : 431– 436. doi : 10.1351/pac198860030431 . S2CID   96704008 . Retrieved 24 March 2012 . 
+ ↑ "Introduction to Private and Personal Acts" . legislation.gov.uk . p.   6. Listing, Numbering and Annotations of Acts . Retrieved 22 July 2024 . 
+ ↑ "2.1: Definition and Label Quadrants" . Mathematics LibreTexts . 4 August 2020 . Retrieved 31 January 2025 . 
+ ↑ Reddy, Indra K.; Khan, Mansoor A. (2003). Essential Math and Calculations for Pharmacy Technicians . CRC Press. ISBN   978-0-203-49534-6 . 
+ ↑ Lexique des règles typographiques en usage à l'imprimerie nationale (in French) (6th   ed.). Paris: Imprimerie nationale . March 2011. p.   126. ISBN   978-2-7433-0482-9 . On composera en chiffres romains petites capitales les nombres concernant   : ↲ 1. Les siècles. 
+ ↑ Burska, Katarzyna. "cyfry arabskie a zapis wieku" [ Arabic digits when formatting centuries ] . Poradnia językowa Uniwersytetu Łódzkiego (in Polish). University of Łódź. 
+ ↑ Березин, Борис Иванович (1984). Школа машинописи (in Russian). М.: Легкая и пищевая промышленность. p.   85. 
+ ↑ Озеран, Антонина Евгеньевна (1971). Машинопись (in Russian). Минск: Вышэйшая школа. p.   98. ISBN   978-5-458-48020-8 . Archived from the original on 25 May 2023. 
+ ↑ "Beginners latin" . nationalarchives.gov.uk . Archived from the original on 3 December 2013 . Retrieved 1 December 2013 . 
+ ↑ "Roman Arithmetic" . Southwestern Adventist University . Archived from the original on 22 November 2013 . Retrieved 1 December 2013 . 
+ ↑ "Roman Numerals History" . Archived from the original on 3 December 2013 . Retrieved 1 December 2013 . 
+ ↑ "Unicode Number Forms" (PDF) . 
+ ↑ "The Unicode Standard, Version 6.0 – Electronic edition" (PDF) . Unicode, Inc. 2011. p.   486. 
+ ↑ "Roman symbol" . symbolonly.com . 
+
+ Sources 
+ Menninger, Karl (1992). Number Words and Number Symbols: A Cultural History of Numbers . Dover Publications . ISBN   978-0-486-27096-8 . 
+
+ Further reading 
+
+ Library resources about Roman numerals 
+
+ Online books 
+ Resources in your library 
+ Resources in other libraries 
+
+ Aczel, Amir D. 2015. Finding Zero: A Mathematician's Odyssey to Uncover the Origins of Numbers. 1st edition. New York: Palgrave Macmillan. 
+ Goines, David Lance. A Constructed Roman Alphabet: A Geometric Analysis of the Greek and Roman Capitals and of the Arabic Numerals. Boston: D.R. Godine, 1982. 
+ Houston, Stephen D. 2012. The Shape of Script: How and Why Writing Systems Change. Santa Fe, NM: School for Advanced Research Press. 
+ Taisbak, Christian M. 1965. "Roman numerals and the abacus." Classica et medievalia 26: 147–60. 
+
+ External links 
+ "Roman Numerals (Totally Epic Guide)" . Know the Romans . Archived from the original on 10 May 2019. 
+
+ v t e Latin script 
+ History 
+ Spread 
+ Romanization 
+ Roman numerals 
+ Ligatures 
+ Alphabets ( list ) 
+ Classical Latin alphabet 
+ ISO basic Latin alphabet 
+ Phonetic alphabets
+ International Phonetic Alphabet 
+ X-SAMPA 
+ Spelling alphabet 
+ Letters ( list ) 
+
+ Letters of the ISO basic Latin alphabet 
+
+ Aa 
+ Bb 
+ Cc 
+ Dd 
+ Ee 
+ Ff 
+ Gg 
+ Hh 
+ Ii 
+ Jj 
+ Kk 
+ Ll 
+ Mm
+
+ Nn 
+ Oo 
+ Pp 
+ Qq 
+ Rr 
+ Ss 
+ Tt 
+ Uu 
+ Vv 
+ Ww 
+ Xx 
+ Yy 
+ Zz
+
+ Additional Latin letters 
+
+ Æ æ 
+ Ɑ ɑ 
+ Ʌ ʌ 
+ Ꞵ ꞵ 
+ Ð ð 
+ ẟ 
+ Ɛ ɛ 
+ Ə ə 
+ Ǝ ə 
+ Ɣ ɣ 
+ Ƣ ƣ 
+ Ɩ ɩ 
+ Ɥ ɥ 
+ Ꟛ ꟛ 
+ Ŋ ŋ
+
+ Œ œ 
+ Ɔ ɔ 
+ Ɤ ɤ 
+ Kʼ ĸ 
+ Ʀ ʀ 
+ ẞ ß 
+ Ʃ ʃ 
+ Ɯ ɯ 
+ Ʊ ʊ 
+ Ꞷ ꞷ 
+ Ʋ ʋ
+
+ Ƿ ƿ 
+ Ȝ ȝ 
+ ϴ θ 
+ Ʒ ʒ 
+ Ƹ ƹ 
+ Þ þ 
+ Ȣ ȣ 
+ Ꭓ ꭓ 
+ Ɂ ʔ ɂ 
+ ꟎ ʕ ꟏ 
+ ǀ 
+ ǁ 
+ ǂ 
+ ǃ 
+ ʘ 
+ ʻ 
+ ʼ 
+ Ꞌ ꞌ 
+ Ƨ ƨ 
+ Ꜫ ꜫ 
+ Ꜭ ꜭ 
+ Ƽ ƽ 
+ Ƅ ƅ 
+ 7 
+
+ Multigraphs Digraphs 
+ Ch 
+ Dz 
+ Dž 
+ Gh 
+ IJ 
+ Lj 
+ Ll 
+ Ly 
+ Nh 
+ Nj 
+ Ny 
+ Sh 
+ Sz 
+ Th 
+ Trigraphs 
+ dzs 
+ eau 
+ Tetragraphs 
+ ough 
+ Keyboard layouts ( list ) 
+ QWERTY 
+ QWERTZ 
+ AZERTY 
+ Dvorak 
+ Colemak 
+ BÉPO 
+ Neo 
+ Historical standards 
+ ISO/IEC 646 
+ Western Latin character sets 
+ Current standards 
+ Unicode 
+ DIN 91379: Unicode subset for Europe 
+ Lists 
+ Precomposed Latin characters in Unicode 
+ Letters used in mathematics, science, and engineering 
+ List of typographical symbols and punctuation marks 
+
+ Diacritics 
+ Palaeography 
+
+ v t e Ancient Rome topics 
+ Outline 
+ Timeline 
+ Index 
+ History 
+ Foundation 
+ Kingdom 
+ overthrow 
+ Republic 
+ Empire 
+ History 
+ Pax Romana 
+ Principate 
+ Dominate 
+ Western Empire 
+ fall 
+ historiography of the fall 
+ Byzantine Empire 
+ decline 
+ fall 
+ Later Roman Empire 
+ History 
+ Constitution 
+ History 
+ Kingdom 
+ Republic 
+ Empire 
+ Late Empire 
+ Senate 
+ Legislative assemblies 
+ Curiate 
+ Centuriate 
+ Tribal 
+ Plebeian 
+ Executive magistrates 
+ SPQR 
+ Law 
+ Twelve Tables 
+ Mos maiorum 
+ Citizenship 
+ Auctoritas 
+ Imperium 
+ Status 
+ Litigation 
+ Government 
+ Curia 
+ Forum 
+ Cursus honorum 
+ Collegiality 
+ Emperor 
+ Legatus 
+ Dux 
+ Officium 
+ Praefectus 
+ Vicarius 
+ Vigintisexviri 
+ Lictor 
+ Magister militum 
+ Imperator 
+ Princeps senatus 
+ Pontifex maximus 
+ Augustus 
+ Caesar 
+ Tetrarch 
+ Optimates and populares 
+ Province 
+ Magistrates Ordinary 
+ Consul 
+ Censor 
+ Praetor 
+ Tribune 
+ Tribune of the plebs 
+ Military tribune 
+ Quaestor 
+ Aedile 
+ Promagistrate 
+ Governor 
+ Extraordinary 
+ Rex 
+ Interrex 
+ Dictator 
+ Magister equitum 
+ Decemviri 
+ Consular tribune 
+ Triumvir 
+ Military 
+ History 
+ Borders 
+ Structural history 
+ Campaigns 
+ Political control 
+ Strategy 
+ Engineering 
+ Frontiers and fortifications 
+ castra 
+ Technology 
+ Army 
+ Legion 
+ Infantry tactics 
+ Personal equipment 
+ Siege engines 
+ Siege warfare 
+ Navy 
+ Auxiliaries 
+ Decorations and punishments 
+ Hippika gymnasia 
+ Economy 
+ Agriculture 
+ Deforestation 
+ Commerce 
+ Finance 
+ Currency 
+ Republican currency 
+ Imperial currency 
+ Poverty 
+ Culture 
+ Architecture 
+ Art 
+ Bathing 
+ Calendar 
+ Clothing 
+ Cosmetics 
+ Cuisine 
+ Education 
+ Family 
+ Pater familias 
+ Folklore 
+ Hairstyles 
+ Literature 
+ Music 
+ Mythology 
+ Religion 
+ Deities 
+ Romanization 
+ Romans 
+ Sexuality 
+ Spectacles 
+ Theatre 
+ Toys and games 
+ Wine 
+ Society 
+ Patricians 
+ Plebs 
+ Conflict of the Orders 
+ Secessio plebis 
+ Equites 
+ Gens 
+ Tribes 
+ Assembly 
+ Patronage 
+ Naming conventions 
+ Demography 
+ Women 
+ Marriage 
+ Adoption 
+ Slavery 
+ Bagaudae 
+ Hippodrome factions 
+ Technology 
+ Amphitheatres 
+ Aqueducts 
+ Bridges 
+ Circuses 
+ Civil engineering 
+ Concrete 
+ Domes 
+ Metallurgy 
+ Numerals 
+ Roads 
+ Sanitation 
+ Ships 
+ Temples 
+ Theatres 
+ Thermae 
+ Latin 
+ History 
+ Alphabet 
+ Versions
+ Old 
+ Classical 
+ Vulgar 
+ Late 
+ Medieval 
+ Renaissance 
+ Neo-Latin 
+ Contemporary 
+ Ecclesiastical 
+ Romance languages 
+ Writers Latin 
+ Aelius Donatus 
+ Ammianus Marcellinus 
+ Appuleius 
+ Asconius Pedianus 
+ Augustine 
+ Aurelius Victor 
+ Ausonius 
+ Boëthius 
+ Caesar 
+ Catullus 
+ Cassiodorus 
+ Censorinus 
+ Cicero 
+ Claudian 
+ Columella 
+ Cornelius Nepos 
+ Ennius 
+ Eutropius 
+ Fabius Pictor 
+ Sextus Pompeius Festus 
+ Rufus Festus 
+ Florus 
+ Frontinus 
+ Fronto 
+ Fulgentius 
+ Gellius 
+ Horace 
+ Hydatius 
+ Hyginus 
+ Jerome 
+ Jordanes 
+ Julius Paulus 
+ Justin 
+ Juvenal 
+ Lactantius 
+ Livy 
+ Lucan 
+ Lucretius 
+ Macrobius 
+ Marcellus Empiricus 
+ Marcus Aurelius 
+ Manilius 
+ Martial 
+ Nicolaus Damascenus 
+ Nonius Marcellus 
+ Obsequens 
+ Orosius 
+ Ovid 
+ Petronius 
+ Phaedrus 
+ Plautus 
+ Pliny the Elder 
+ Pliny the Younger 
+ Pomponius Mela 
+ Priscian 
+ Propertius 
+ Quadrigarius 
+ Quintilian 
+ Quintus Curtius Rufus 
+ Sallust 
+ Seneca the Elder 
+ Seneca the Younger 
+ Servius 
+ Sidonius Apollinaris 
+ Silius Italicus 
+ Statius 
+ Suetonius 
+ Symmachus 
+ Tacitus 
+ Terence 
+ Tertullian 
+ Tibullus 
+ Valerius Antias 
+ Valerius Maximus 
+ Varro 
+ Velleius Paterculus 
+ Verrius Flaccus 
+ Vergil 
+ Vitruvius 
+ Greek 
+ Aelian 
+ Aëtius of Amida 
+ Appian 
+ Arrian 
+ Cassius Dio 
+ Diodorus Siculus 
+ Diogenes Laertius 
+ Dionysius of Halicarnassus 
+ Dioscorides 
+ Eusebius of Caesaria 
+ Galen 
+ Herodian 
+ Josephus 
+ Julian 
+ Libanius 
+ Lucian 
+ Pausanias 
+ Philostratus 
+ Phlegon of Tralles 
+ Photius 
+ Plutarch 
+ Polyaenus 
+ Polybius 
+ Porphyrius 
+ Priscus 
+ Procopius 
+ Simplicius of Cilicia 
+ Sozomen 
+ Stephanus Byzantinus 
+ Strabo 
+ Themistius 
+ Theodoret 
+ Zonaras 
+ Zosimus 
+ Major cities 
+ Alexandria 
+ Antioch 
+ Aquileia 
+ Berytus 
+ Bononia 
+ Carthage 
+ Constantinopolis 
+ Eboracum 
+ Leptis Magna 
+ Londinium 
+ Lugdunum 
+ Lutetia 
+ Mediolanum 
+ Pompeii 
+ Ravenna 
+ Roma 
+ Smyrna 
+ Vindobona 
+ Volubilis 
+ Lists and other topics 
+ Cities and towns 
+ Climate 
+ Consuls 
+ Dictators 
+ Distinguished women 
+ Dynasties 
+ Emperors 
+ Empresses 
+ Fiction 
+ Film 
+ Generals 
+ Gentes 
+ Geographers 
+ Institutions 
+ Laws 
+ Legacy 
+ Legions 
+ Magistri equitum 
+ Nomina 
+ Pontifices maximi 
+ Praetors 
+ Quaestors 
+ Tribunes 
+ Roman–Iranian relations 
+ External wars and battles 
+ Civil wars and revolts 
+
+ v t e Types of writing systems Overview 
+ History of writing 
+ Grapheme 
+ Lists 
+ Writing systems 
+ undeciphered 
+ inventors 
+ constructed 
+ Languages by writing system / by first written accounts 
+ Types Abjads 
+ Numerals 
+
+ Aramaic 
+ Hatran 
+ Arabic 
+ Elifba 
+ Egyptian hieroglyphs 
+ Elymaic 
+ Hebrew 
+ Ashuri 
+ Cursive 
+ Rashi 
+ Solitreo 
+ Tifinagh 
+ Mandaic 
+ Manichaean 
+ Nabataean 
+ Ancient North Arabian 
+ Paleo-Hebrew 
+ Pahlavi 
+ Book 
+ Inscriptional 
+ Inscriptional Parthian 
+ Psalter 
+ Pegon 
+ Phoenician 
+ Pitman shorthand 
+ Proto-Sinaitic 
+ Punic 
+ Samaritan 
+ South Arabian 
+ Zabur 
+ Musnad 
+ Sogdian 
+ Syriac 
+ ʾEsṭrangēlā 
+ Serṭā 
+ Maḏnḥāyā 
+ Teeline Shorthand 
+ Ugaritic 
+ Abugidas Brahmic Northern 
+ Bengali–Assamese 
+ Bhaiksuki 
+ Brahmi script 
+ Devanagari 
+ Dogri 
+ Gujarati 
+ Gupta 
+ Gurmukhi 
+ Kaithi 
+ Kalinga 
+ Khema 
+ Khojki 
+ Khudabadi 
+ Laṇḍā 
+ Lepcha 
+ Mahajani 
+ Marchen 
+ Meitei 
+ Modi 
+ Multani 
+ Nagari 
+ Nandinagari 
+ Nepalese scripts 
+ Bhujimol 
+ Golmol 
+ Himmol 
+ Kummol 
+ Kvemmol 
+ Kurukh 
+ Pachumol 
+ Newar 
+ Ranjana 
+ Tamyig 
+ Tirhuta 
+ Limbu 
+ Litumol 
+ Odia 
+ Karani 
+ ʼPhags-pa 
+ Sharada 
+ Siddhaṃ 
+ Soyombo 
+ Sylheti Nagri 
+ Takri 
+ Tibetan 
+ Uchen 
+ Umê 
+ Tocharian 
+ Zanabazar square 
+ Southern 
+ Ahom 
+ Balinese 
+ Batak 
+ Baybayin 
+ Bhattiprolu 
+ Buda 
+ Buhid 
+ Chakma 
+ Cham 
+ Fakkham 
+ Grantha 
+ Goykanadi 
+ Hanunoo 
+ Javanese 
+ Kadamba 
+ Kannada 
+ Karen 
+ Kawi 
+ Khmer 
+ Khom Thai 
+ Kulitan 
+ Lanna 
+ Langdi 
+ Lao 
+ Leke 
+ Lontara 
+ Bilang-bilang 
+ Makasar 
+ Malayalam 
+ Old Maldivian 
+ Dhives Akuru 
+ Eveyla Akuru 
+ Mon–Burmese 
+ Pallava 
+ Pyu 
+ Saurashtra 
+ Shan 
+ Sinhala 
+ Sukhothai 
+ Sundanese 
+ Old Sundanese 
+ Tagbanwa 
+ Tai Le 
+ New Tai Lue 
+ Tai Noi 
+ Tai Tham 
+ Tai Viet 
+ Lai Tay 
+ Tamil 
+ Tamil-Brahmi 
+ Tanchangya 
+ Telugu 
+ Thai 
+ Tigalari 
+ Ulu scripts 
+ Incung 
+ Lampung 
+ Lembak 
+ Ogan 
+ Pasemah 
+ Rejang 
+ Serawai 
+ Vatteluttu 
+ Kolezhuthu 
+ Malayanma 
+ Others 
+ Bharati 
+ Boyd's syllabic shorthand 
+ Canadian syllabics 
+ Blackfoot 
+ Déné syllabics 
+ Dham 
+ Fox I 
+ Geʽez 
+ Gunjala Gondi 
+ Japanese Braille 
+ Sarati 
+ Jenticha 
+ Kharosthi 
+ Mandombe 
+ Masaram Gondi 
+ Meroitic 
+ Miao 
+ Mwangwego 
+ Pahawh Hmong 
+ Sorang Sompeng 
+ Tengwar 
+ Thaana 
+ Thomas Natural Shorthand 
+ Warang Citi 
+ Rma 
+ Alphabets Linear 
+ Adlam 
+ Ariyaka 
+ Armenian 
+ Avestan 
+ Pazend 
+ Avoiuli 
+ Bassa Vah 
+ Carian 
+ Caucasian Albanian 
+ Cirth 
+ Coelbren 
+ Coorgi–Cox alphabet 
+ Coptic 
+ Cyrillic 
+ Serbian 
+ Early 
+ Deseret 
+ Duployan shorthand 
+ Chinook 
+ Eclectic shorthand 
+ Elbasan 
+ Enochian 
+ Etruscan 
+ Formosan 
+ Fox II 
+ Franklin's phonetic 
+ Fraser 
+ Gabelsberger shorthand 
+ Gadabuursi 
+ Garay alphabet 
+ Georgian 
+ Asomtavruli 
+ Nuskhuri 
+ Mkhedruli 
+ Veso Bey 
+ Glagolitic 
+ Gothic 
+ Gregg shorthand 
+ Greek ( Archaic ) 
+ Greco-Iberian alphabet 
+ Hangul 
+ Hanifi 
+ Hurûf-ı munfasıla 
+ Sunuwar 
+ Kaddare 
+ Kayah Li 
+ Klingon 
+ Latin 
+ Beneventan 
+ Blackletter 
+ Carolingian minuscule 
+ Fraktur 
+ Gaelic 
+ Insular 
+ IPA 
+ Kurrent 
+ Merovingian 
+ Sigla 
+ Sütterlin 
+ Tironian notes 
+ Visigothic 
+ Luo 
+ Lycian 
+ Lydian 
+ Manchu 
+ Medefaidrin 
+ Mru 
+ Mundari Bani 
+ N'Ko 
+ Ogham 
+ Ol Chiki 
+ Old Italic 
+ Old Permic 
+ Orkhon-Yenisei ( Old Hungarian ) 
+ Old Uyghur 
+ Mongolian 
+ Evenki 
+ Galik alphabet 
+ Manchu 
+ Oirat 
+ Vagindra 
+ Ol Onal 
+ Osage 
+ Osmanya 
+ Pau Cin Hau 
+ Phrygian 
+ Pisidian 
+ Runic 
+ Anglo-Saxon 
+ Cipher 
+ Dalecarlian 
+ Elder Futhark 
+ Younger Futhark 
+ Gothic 
+ Marcomannic 
+ Medieval 
+ Staveless 
+ Shavian 
+ Sidetic 
+ Sorang Sompeng 
+ Sunuwar 
+ Tifinagh 
+ Todhri 
+ Tolong Siki 
+ Vellara 
+ Visible Speech 
+ Vithkuqi 
+ Wancho 
+ Warang Citi 
+ Yezidi 
+ Zaghawa 
+ Non-linear 
+ Braille 
+ Flag semaphore 
+ Maritime flags 
+ Moon type 
+ New York Point 
+ Fingerspelling 
+ Telegraph code 
+ Ideograms 
+ Adinkra 
+ Aztec 
+ Blissymbols 
+ Dongba 
+ Ersu Shaba 
+ Emoji 
+ Isotype 
+ Kaidā 
+ Miꞌkmaw 
+ Mixtec 
+ New Epoch Notation Painting 
+ Nsibidi 
+ Anishinaabewibii'iganan 
+ Olmec 
+ Siglas poveiras 
+ Testerian 
+ Yerkish 
+ Zapotec 
+ Logograms Chinese family of scripts Chinese characters 
+ Simplified 
+ Traditional 
+ Oracle bone script 
+ Bronze scripts 
+ Seal script 
+ large 
+ small 
+ bird-worm 
+ Hanja 
+ Kanji 
+ Chữ Nôm 
+ Sawndip 
+ Bowen 
+ Chinese-influenced 
+ Jurchen 
+ Khitan large script 
+ Sui 
+ Tangut 
+ Cuneiform 
+ Akkadian 
+ Assyrian 
+ Elamite 
+ Hittite 
+ Luwian 
+ Sumerian 
+ Other logosyllabic 
+ Anatolian 
+ Bagam 
+ Cretan 
+ Isthmian 
+ Maya 
+ Proto-Elamite 
+ Tenevil 
+ Wiigwaasabak 
+ Yi (Classical) 
+ Logoconsonantal 
+ Demotic 
+ Hieratic 
+ Hieroglyphs 
+ Numerals 
+ Hindu-Arabic 
+ Abjad 
+ Attic (Greek) 
+ Muisca 
+ Roman 
+ Other 
+ Sitelen Pona 
+ Semi-syllabaries Full 
+ Linear Elamite 
+ Celtiberian 
+ Iberian 
+ Northeastern 
+ Southeastern 
+ Khom 
+ Dunging 
+ Redundant 
+ Espanca script 
+ Pahawh Hmong 
+ Khitan small script 
+ Southwest Paleohispanic 
+ Bopomofo 
+ Quốc Âm Tân Tự 
+ Sign languages 
+ ASLwrite 
+ SignWriting 
+ si5s 
+ Stokoe notation 
+ Syllabaries 
+ Afaka 
+ Bamum 
+ Bété 
+ Byblos 
+ Canadian Aboriginal 
+ Cherokee 
+ Cypriot 
+ Cypro-Minoan 
+ Ditema tsa Dinoko 
+ Eskayan 
+ Geba 
+ Great Lakes Algonquian 
+ Iban 
+ Idu 
+ Kana 
+ Hiragana 
+ Katakana 
+ Man'yōgana 
+ Hentaigana 
+ Sōgana 
+ Jindai moji 
+ Kikakui 
+ Kpelle 
+ Linear B 
+ Linear Elamite 
+ Lisu 
+ Loma 
+ Nüshu 
+ Nwagu Aneke script 
+ Old Persian cuneiform 
+ Sumerian 
+ Vai 
+ Woleai 
+ Yi 
+ Yugtun 
+ v t e Braille   ⠃⠗⠁⠊⠇⠇⠑ Braille cell 
+ 1829 braille 
+ International uniformity 
+ ASCII braille 
+ Unicode braille patterns 
+ Braille scripts French-ordered 
+ Albanian 
+ Cantonese 
+ Catalan 
+ Chinese (mainland Mandarin) (largely reassigned) 
+ Czech 
+ Dutch 
+ 6-dot 
+ 8-dot 
+ English ( Unified English ) 
+ Esperanto 
+ French 
+ German 
+ Ghanaian 
+ Guarani 
+ Hawaiian 
+ Hungarian 
+ Iñupiaq 
+ IPA 
+ Irish 
+ Italian 
+ Latvian 
+ Lithuanian 
+ Luxembourgish (extended to 8-dot) 
+ Maltese 
+ Māori 
+ Navajo 
+ Nigerian 
+ Philippine 
+ Polish 
+ Portuguese 
+ Romanian 
+ Samoan 
+ Slovak 
+ South African 
+ Spanish 
+ Taiwanese Mandarin (largely reassigned) 
+ Turkish ( Azerbaijani ) 
+ Vietnamese 
+ Welsh 
+ Yugoslav 
+ Zambian 
+ Nordic family 
+ Estonian 
+ Faroese 
+ Icelandic 
+ Scandinavian 
+ Danish 
+ Finnish 
+ Greenlandic 
+ Northern Sámi 
+ Norwegian 
+ Swedish 
+ Russian lineage family i.e. Cyrillic -mediated scripts 
+ Belarusian 
+ Bulgarian 
+ Kazakh 
+ Kyrgyz 
+ Mongolian 
+ Russian 
+ Tatar 
+ Ukrainian 
+ Egyptian lineage family i.e. Arabic -mediated scripts 
+ Arabic 
+ Persian 
+ Urdu (Pakistan) 
+ Indian lineage family i.e. Bharati Braille 
+ Devanagari (Hindi / Marathi / Nepali) 
+ Bengali (Bangla / Assamese) 
+ Gujarati 
+ Kannada 
+ Malayalam 
+ Odia 
+ Punjabi 
+ Sinhala 
+ Tamil 
+ Telugu 
+ Urdu (India) 
+ Other scripts 
+ Amharic 
+ Armenian 
+ Burmese 
+ Dzongkha (Bhutanese) 
+ Georgian 
+ Greek 
+ Hebrew 
+ Inuktitut (reassigned vowels) 
+ Khmer 
+ Thai and Lao (Japanese vowels) 
+ Tibetan 
+
+ Reordered 
+ Algerian Braille (obsolete) 
+ Frequency-based 
+ American Braille (obsolete) 
+ Independent 
+ Chinese semi-syllabaries 
+ Cantonese 
+ Mainland Chinese Mandarin 
+ Taiwanese Mandarin 
+ Two-cell Chinese (Shuangpin) 
+ Japanese 
+ Korean 
+ Eight-dot 
+ Dutch 
+ Luxembourgish 
+ Kanji 
+ Gardner–Salinas braille codes (GS8) 
+ Symbols in braille 
+ Braille music 
+ Canadian currency marks 
+ Computer Braille Code 
+ Gardner–Salinas braille codes (science; GS8/GS6) 
+ International Phonetic Alphabet (IPA) 
+ Nemeth braille code 
+ Braille technology 
+ Braille e-book 
+ Braille embosser 
+ Braille translator 
+ Braille watch 
+ Mountbatten Brailler 
+ Optical braille recognition 
+ Perforation 
+ Perkins Brailler 
+ Refreshable braille display 
+ Slate and stylus 
+ Braigo 
+ People 
+ Louis Braille 
+ Charles Barbier 
+ Róża Czacka 
+ Valentin Haüy 
+ Harris Mowbray 
+ Thakur Vishva Narain Singh 
+ María del Carmen Ortiz de Arce 
+ Sabriye Tenberken 
+ William Bell Wait 
+ Organisations 
+ Braille Institute of America 
+ Braille Without Borders 
+ Japan Braille Library 
+ National Braille Association 
+ Blindness organizations 
+ Schools for the blind 
+ American Printing House for the Blind 
+ Other tactile alphabets 
+ Decapoint 
+ Moon type 
+ New York Point 
+ Night writing 
+ Vibratese 
+ Related topics 
+ Accessible publishing 
+ Braille literacy 
+ RoboBraille 
+
+ Roman numerals at Wikipedia's sister projects : Definitions from Wiktionary Media from Commons 
+
+ Retrieved from " https://en.wikipedia.org/w/index.php?title=Roman_numerals&oldid=1368567509 " 
+ Categories : Ancient Roman mathematics Latin script Legacy of the Roman Empire Numerals Numeral systems Hidden categories: Articles with short description Short description matches Wikidata Wikipedia indefinitely semi-protected pages Use dmy dates from October 2019 All articles with unsourced statements Articles with unsourced statements from November 2025 Articles with unsourced statements from January 2024 All accuracy disputes Articles with disputed statements from August 2026 CS1 Latin-language sources (la) Articles containing Latin-language text All articles with self-published sources Articles with self-published sources from March 2026 CS1: long volume value CS1 German-language sources (de) Articles containing German-language text CS1 errors: ISBN date CS1 Italian-language sources (it) Articles with unsourced statements from July 2026 Articles containing French-language text Articles containing Dutch-language text CS1 French-language sources (fr) CS1 Danish-language sources (da) Articles containing Spanish-language text Articles containing Russian-language text Articles containing Azerbaijani-language text Articles containing Polish-language text Articles containing Turkish-language text Articles containing Czech-language text CS1 Polish-language sources (pl) CS1 Russian-language sources (ru) CS1: unfit URL 
+
+ Search 
+
+ Search 
+
+ Roman numerals 
+
+ 118 languages 
+
+ Add topic

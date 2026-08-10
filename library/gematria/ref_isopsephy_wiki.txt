@@ -1,0 +1,160 @@
+Isopsephy - Wikipedia 
+
+ Jump to content 
+
+ From Wikipedia, the free encyclopedia 
+
+ Numerological connection between words whose letters' number values have equal sums 
+
+ In numerology , isopsephy (stressed on the I and the E ; [ 1 ] from Greek ἴσος (ísos)   ' equal ' and ψῆφος (psêphos)   ' count ' , literal translation</span>"}]],"parts":[{"template":{"target":{"wt":"lit","href":"./Template:Lit"},"params":{"1":{"wt":"pebble"}},"i":0}}]}'>lit.   ' pebble ' ) or isopsephism is the practice of adding up the number values of the letters in a word to form a single number. [ 2 ] The total number is then used as a metaphorical bridge to other words evaluating the equal number, [ 3 ] which satisfies isos or "equal" in the term. Ancient Greeks used counting boards for numerical calculation and accounting, with a counter generically called psephos ('pebble'), analogous to the Latin word calculus , from which the English calculate is derived. 
+
+ Isopsephy is related to gematria : the same practice using the Hebrew alphabet . It is also related to the ancient number systems of many other peoples (for the Arabic alphabet version, see Abjad numerals ). A gematria of Latin script languages was also popular in Europe from the Middle Ages to the Renaissance , and its legacy remains an influence in code-breaking and numerology . 
+
+ History [ edit ] 
+ Example of isopsephy from the Sanctuary of Artemis Orthia , 2nd century AD 
+ Until Arabic numerals were adopted and adapted from Indian numerals in the 8th and 9th centuries AD, and promoted in Europe by Fibonacci of Pisa with his 1202 book Liber Abaci , numerals were predominantly alphabetical. For instance in Ancient Greece , Greek numerals used the alphabet. It is just a short step [ citation needed ] from using letters of the alphabet in everyday arithmetic and mathematics to seeing numbers in words, and to writing with an awareness of the numerical dimension of words. 
+
+ An early reference to isopsephy, albeit of more-than-usual sophistication (employing multiplication rather than addition), is from the mathematician Apollonius of Perga , writing in the 3rd century BC. He asks: "Given the verse: ΑΡΤΕΜΙΔΟΣ ΚΛΕΙΤΕ ΚΡΑΤΟΣ ΕΞΟΧΟΝ ΕΝΝΕΑ ΚΟΥΡΑΙ ('Nine maidens, praise the glorious power of Artemis'), what does the product of all its elements equal?" [ 4 ] 
+
+ More conventional are the instances of isopsephy found in graffiti at Pompeii , dating from around 79 AD. One reads Φιλω ης αριθμος ϕμε , "I love her whose number is 545."
+Another says "Amerimnus thought upon his lady Harmonia for good. The number of her honorable name is 45." 
+
+ Suetonius , writing in 121 AD, reports a political slogan that someone wrote on a wall in Rome: 
+
+ Nero, Orestes, Alcmeon their mothers slew. 
+A calculation new. Nero his mother slew 
+
+ which appears to be another example. [ 5 ] [ 6 ] In Greek, Νερων, Nero, has the numerical value: 
+
+ Ν 50   + ε 5   + ρ 100   + ω 800   + ν 50   =   1005, Ν {} ε {} ρ {} ω {} ν {} {} 50 + 5 + 100 + 800 + 50 = 1005, 
+
+ the same value as: 
+
+     ( ι i 10     + δ d 4     + ι i 10     + α a 1     + ν n 50     )     +     ( μ m 40     + η e 8     + τ t 300     + ε e 5     + ρ r 100     + α a 1     )     +     ( α a 1     + π p 80     + ε e 5     + κ k 20     + τ t 300     + ε e 5     + ι i 10     + ν n 50     + ε e 5     ) {} ι {} δ {} ι {} α {} ν {} {} {} μ {} η {} τ {} ε {} ρ {} α {} {} {} α {} π {} ε {} κ {} τ {} ε {} ι {} ν {} ε {} {} i {} d {} i {} a {} n {} {} {} m {} e {} t {} e {} r {} a {} {} {} a {} p {} e {} k {} t {} e {} i {} n {} e {} ( 10 + 4 + 10 + 1 + 50 ) + ( 40 + 8 + 300 + 5 + 100 + 1 ) + ( 1 + 80 + 5 + 20 + 300 + 5 + 10 + 50 + 5 ) "He killed his own mother". 
+
+ A famous example is 666 in the Biblical Book of Revelation (13:18): "Here is wisdom. Let him that hath understanding count the number of the beast: for it is the number of a man; and his number is Six hundred threescore and six." The word rendered "count", ψηφισάτω , psephisato , has the same "pebble" root as the word isopsephy. [ 7 ] [ 8 ] 
+
+ Also in the 1st century AD, Leonidas of Alexandria created isopsephs, epigrams with equinumeral distichs, where the first hexameter and pentameter equal the next two verses in numerical value. He addressed some of them to Nero: [ 4 ] 
+
+ <span lang=\"grc\">Θυει σοι τοδε γραμμα γενεθλιακαισιν εν ὡραις,</span></span>[[Category:Articles containing Ancient Greek (to 1453)-language text]]\n<span title=\"Ancient Greek (to 1453)-language text\"><span lang=\"grc\">Καισαρ, Νειλαιη Μουσα Λεωνιδεω.</span></span>[[Category:Articles containing Ancient Greek (to 1453)-language text]]\n<span title=\"Ancient Greek (to 1453)-language text\"><span lang=\"grc\">Καλλιοπης γαρ ακαπνον αει θυος· εις δε νεωτα</span></span>[[Category:Articles containing Ancient Greek (to 1453)-language text]]\n<span title=\"Ancient Greek (to 1453)-language text\"><span lang=\"grc\">Ην εθελῃς, θυσει τουδε περισσοτερα.</span></span>[[Category:Articles containing Ancient Greek (to 1453)-language text]]"}}'> Θυει σοι τοδε γραμμα γενεθλιακαισιν εν ὡραις, 
+ Καισαρ, Νειλαιη Μουσα Λεωνιδεω. 
+ Καλλιοπης γαρ ακαπνον αει θυος· εις δε νεωτα 
+ Ην εθελῃς, θυσει τουδε περισσοτερα. 
+
+ This translates to: "The muse of Leonidas of the Nile offers up to thee, O Caesar, this writing, at the time of thy nativity; for the sacrifice of Calliope is always without smoke: but in the ensuing year he will offer up, if thou wilt, better things than this." Here the sum of both the first and second distich is 5699. In another of his distichs , the hexameter line is equal in number to its corresponding pentameter : 
+
+ <span lang=\"grc\">Εἱς προς ἑνα ψηφοισιν ισαζεται, ου δυο δοιοις</span></span>[[Category:Articles containing Ancient Greek (to 1453)-language text]],\n<span title=\"Ancient Greek (to 1453)-language text\"><span lang=\"grc\">Ου γαρ ετι στεργω την δολιχογραφιην</span></span>[[Category:Articles containing Ancient Greek (to 1453)-language text]]."}}'> Εἱς προς ἑνα ψηφοισιν ισαζεται, ου δυο δοιοις , 
+ Ου γαρ ετι στεργω την δολιχογραφιην . 
+
+ This translates to: "One line is made equal in number to one, not two to two; for I no longer approve of long epigrams." Here each line totals 4111. [ 9 ] 
+
+ A headstone found at the Temple of Artemis at Sparta Orthia is a 2nd-century AD example of isopsephic elegiac verse. It says: 
+
+ <span lang=\"grc\">ΟΡΘΕΙΗ ΔΩΡΟΝ ΛΕΟΝΤΕΥΣ ΑΝΕΘΗΚΕ ΒΟΑΓΟΣ ΒΨΛ</span></span>[[Category:Articles containing Ancient Greek (to 1453)-language text]]\n<span title=\"Ancient Greek (to 1453)-language text\"><span lang=\"grc\">ΜΩΑΝ ΝΙΚΗΣΑΣ ΚΑΙ ΤΑΔΕ ΕΠΑΘΛΑ ΛΑΒΩΝ ΒΨΛ</span></span>[[Category:Articles containing Ancient Greek (to 1453)-language text]]\n<span title=\"Ancient Greek (to 1453)-language text\"><span lang=\"grc\">ΚΑΙ ΜΕΣΤΕΨΕ ΠΑΤΗΡ ΕΙΣΑΡΙΘΜΟΙΣ ΕΠΕΣΙ ΒΨΛ</span></span>[[Category:Articles containing Ancient Greek (to 1453)-language text]]"}}'> ΟΡΘΕΙΗ ΔΩΡΟΝ ΛΕΟΝΤΕΥΣ ΑΝΕΘΗΚΕ ΒΟΑΓΟΣ ΒΨΛ 
+ ΜΩΑΝ ΝΙΚΗΣΑΣ ΚΑΙ ΤΑΔΕ ΕΠΑΘΛΑ ΛΑΒΩΝ ΒΨΛ 
+ ΚΑΙ ΜΕΣΤΕΨΕ ΠΑΤΗΡ ΕΙΣΑΡΙΘΜΟΙΣ ΕΠΕΣΙ ΒΨΛ 
+
+ It is the votive stele for a boy who won a competition in singing. The words in each line add up to ΄Β΄Ψ΄Λ , that is 2730, and that total is also given at the end of each line. Also in the 2nd century AD, Aelius Nicon of Pergamon , the Greek architect and builder described by his son, the famous physician Galen , as having "mastered all there was to know of the science of geometry and numbers", was a master in composing isopsephic works. [ 4 ] 
+
+ Letter values of the Greek alphabet [ edit ] 
+ In Greek, each unit (1, 2, ..., 9) was assigned a separate letter, each tens (10, 20, ..., 90) a separate letter, and each hundreds (100, 200, ..., 900) a separate letter. This requires 27 letters, so the 24-letter alphabet was extended by using three obsolete letters: digamma ϝ (also used are stigma ϛ or, in modern Greek, στ ) for 6, qoppa ϙ for 90, and sampi ϡ for 900. 
+
+ This alphabetic system operates on the additive principle in which the numeric values of the letters are added together to form the total. For example, 241 is represented as σμα (200 + 40 + 1). 
+
+ Letter (upper and lower case) Value Name Trans- literation 
+
+ Α α 1 Alpha a 
+
+ Β β 2 Beta b 
+
+ Γ γ 3 Gamma g 
+
+ Δ δ 4 Delta d 
+
+ Ε ε 5 Epsilon e 
+
+ ( Ϝ ϝ / Ϛ ϛ ) 6 Digamma (later Stigma ) w / st 
+
+ Ζ ζ 7 Zeta z 
+
+ Η η 8 Eta ē 
+
+ Θ θ 9 Theta th 
+
+ Ι ι 10 Iota i 
+
+ Κ κ 20 Kappa k 
+
+ Λ λ 30 Lambda l 
+
+ Μ μ 40 Mu m 
+
+ Ν ν 50 Nu n 
+
+ Ξ ξ 60 Xi x 
+
+ Ο ο 70 Omicron o 
+
+ Π π 80 Pi p 
+
+ ( Ϙ ϙ ) 90 Koppa q 
+
+ Ρ ρ 100 Rho r 
+
+ Σ σ 200 Sigma s 
+
+ Τ τ 300 Tau t 
+
+ Υ υ 400 Upsilon y 
+
+ Φ φ 500 Phi ph 
+
+ Χ χ 600 Chi ch 
+
+ Ψ ψ 700 Psi ps 
+
+ Ω ω 800 Omega ō 
+
+ ( Ϡ ϡ ) 900 Sampi ts 
+
+ See also [ edit ] 
+ About the Mystery of the Letters   – 6th-century anonymous Christian treatise 
+ Chronogram   – Inscription whereby specific letters stand for a date 
+ English Qaballa   – English Qaballa system of James Lees 
+ Hermetic Qabalah   – Western esoteric tradition 
+ Numerology   – Mystical properties of numbers 
+ Marcosians   – Gnostic sect founded by Marcus 
+ Sator Square   – Roman-era word square with a Latin palindrome 
+ Theomatics   – Numerological study of the Christian Bible 
+
+ Notes [ edit ] 
+
+ ↑ Variously / ˌ aɪ s ə ˈ s ɛ f i / , / ˌ aɪ s ə ˈ s iː f i / ; also / ˌ aɪ s oʊ -/ , /- p ˈ s ɛ f i / 
+ ↑ Ast, R.; Lougovaya, J. (2015). "The Art of Isopsephism in the Greco-Roman World". In Jördens, A. (ed.). Ägyptische Magie und ihre Umwelt . Wiesbaden: Harrassowitz. pp.   82– 98. 
+ ↑ Ifrah, Georges (1998). The universal history of numbers: from prehistory to the invention of the computer . p.   25. 6 
+ 1 2 3 Psychoyos, Dimitris K. (April 2005). "The forgotten art of isopsephy and the magic number KZ". Semiotica . 154 ( 1– 4): 157– 224. doi : 10.1515/semi.2005.2005.154-1-4.157 . S2CID   170540448 . 
+ ↑ Farbridge, Maurice H. (2003). Studies in Biblical and Semitic Symbolism . p.   94. ISBN   978-0-7661-3856-8 . 
+ ↑ The Lives of the Twelve Caesars , Nero, 39:2 in wikisource The footnote to this reads: "See the reference to the Rh. Mus. in the textual note. The numerical value of the Greek letters in Nero's name (1005) is the same as that of the rest of the sentence; hence we have an equation, Nero = the slayer of one's own mother." 
+ ↑ "Revelation 13 Barnes' Notes on the Bible" . Archived from the original on 2011-03-20 . Retrieved 2011-01-31 . 
+ ↑ Fuller, Samuel (1885). The Revelation of St. John the Divine Self-Interpreted . New York: Thomas Whittaker. p.   226 . 
+ ↑ "Revelation   13" . clarke.biblecommenter.com . Archived from the original on 2011-03-20 . Retrieved 2011-02-02 . 
+
+ Further reading [ edit ] 
+ Barry, Kieren (1999). The Greek Qabalah: Alphabetic Mysticism and Numerology in the Ancient World . Samuel Weiser . ISBN   1-57863-110-6 . 
+
+ External links [ edit ] 
+ Greek Gematria/Isopsephia Calculator – Requires Flash 8 or greater – Also Accepts Unicode Greek letters and will add them up for you 
+ Greek Isopsephia Line Calculator – Unicode – Flash not required 
+
+ Retrieved from " https://en.wikipedia.org/w/index.php?title=Isopsephy&oldid=1354927204 " 
+ Categories : Numerology Language and mysticism Hidden categories: Articles with short description Short description is different from Wikidata Articles containing Ancient Greek (to 1453)-language text Articles containing Latin-language text All articles with unsourced statements Articles with unsourced statements from September 2023 Articles containing Greek-language text 
+
+ Search 
+
+ Search 
+
+ Isopsephy 
+
+ 13 languages 
+
+ Add topic

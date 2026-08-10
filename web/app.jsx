@@ -47,6 +47,7 @@ function readableWords(occ, LEX, angelMap){
         pal:isPalindrome(cons), m37:gematria(cons)%37===0,
         name: (pos||'').startsWith('n-pr'),
         theo: /אל|יהו|יאל|יה/.test(cons),
+        compound: /\s/.test(trans),
         angel: am ? {el:am.el, yh:am.yh} : null});
     }
   }
@@ -54,8 +55,44 @@ function readableWords(occ, LEX, angelMap){
   return res;
 }
 
+// ====== Date plumbing (BCE / negative-year aware) ======
+// Stored string formats:  CE  "YYYY-MM-DD"   (year >= 1)
+//                         BCE "-YYYY-MM-DD"  (year <= -1, sign + 4-digit abs)
+// <input type="date"> cannot represent BCE, so the Sky tab uses DateEntry below.
+// `new Date(str+'T12:00:00Z')` and `toISOString().slice(0,10)` BOTH break for
+// negative years (extended ISO uses sign + 6 digits), so every date site goes
+// through parseDate / fmtDate / makeDate instead.
+function daysInMonth(y, mo){                   // mo = 1..12, proleptic Gregorian
+  if(mo===2) return (y%4===0 && (y%100!==0 || y%400===0)) ? 29 : 28;
+  return [31,28,31,30,31,30,31,31,30,31,30,31][mo-1];
+}
+function makeDate(y, mo, da, h=12){            // builds a noon-UT Date with literal year (no 0-99 remap)
+  const d = new Date(Date.UTC(2000, mo-1, da, h, 0, 0));
+  d.setUTCFullYear(y);                          // setUTCFullYear treats 0-99 and negatives literally
+  return d;
+}
+function parseDate(str){                       // "YYYY-MM-DD" | "-YYYY-MM-DD" -> Date | null
+  if(!str) return null;
+  const m = /^(-?\d{1,5})-(\d{2})-(\d{2})$/.exec(str);
+  if(!m) return null;
+  const y = parseInt(m[1],10), mo = parseInt(m[2],10), da = parseInt(m[3],10);
+  if(mo<1||mo>12||da<1||da>daysInMonth(y,mo)) return null;
+  const d = makeDate(y, mo, da);
+  return isNaN(d.getTime()) ? null : d;
+}
+function fmtDate(d){                           // Date -> "YYYY-MM-DD" | "-YYYY-MM-DD"
+  const y = d.getUTCFullYear();
+  const mo = String(d.getUTCMonth()+1).padStart(2,'0');
+  const da = String(d.getUTCDate()).padStart(2,'0');
+  if(y >= 1 && y <= 9999) return String(y).padStart(4,'0')+'-'+mo+'-'+da;
+  const sign = y < 0 ? '-' : '';
+  return sign + String(Math.abs(y)).padStart(4,'0') + '-' + mo + '-' + da;
+}
+
 function skyAt(dateStr){
-  const d = new Date(dateStr + 'T12:00:00Z');
+  if(!dateStr) return [];
+  const d = parseDate(dateStr);
+  if(!d) return [];
   return BODIES.map(b=>{
     const v = Astronomy.GeoVector(Astronomy.Body[b], d, true);
     const lon = Astronomy.Ecliptic(v).elon;
@@ -75,6 +112,12 @@ const GEN_TOTAL = 2701;
 const GEN_VALUES = GENESIS.map(([w])=>gematria(norm(w))); // 913,203,86,401,395,407,296
 
 const PREC = 50.29/3600, AGE = 30/PREC, FULL = 360/PREC, AYANAMSIS = 24.18;
+// Base astronomical constants (measured standards, mirroring scripts/lib.mjs). Derived
+// numbers shown to the user (saros = 223·SYN, molad, Δ, eclipse year…) are computed
+// from these — never written as hardcoded literals.
+const SYN = 29.530589, DRAC = 27.212221, ANOM = 27.554550, TROP = 365.24219, ECLY = 346.620083;
+const HALAKIM_DAY = 24*1080;                 // 1 day = 24 h × 1080 halakim (parts)
+const MOLAD = 29 + 12/24 + 793/HALAKIM_DAY;  // Hebrew molad: 29 d 12 h 793 parts
 const EQUINOX_LON = (360 - AYANAMSIS) % 360;
 function ageBoundaries(ayan=AYANAMSIS){
   const eqLon = (360 - ayan) % 360; const out=[];
@@ -97,13 +140,16 @@ const ERA_WINDOWS = [
 ];
 
 // ====== Aiq Bekar / sigils / kameot ======
-const FINALS = {'ך':500,'ם':600,'ן':700,'ף':800,'ץ':900};
-function letterVal(ch){ return FINALS[ch] ?? GV[ch]; }
+// Ancient 22-letter Hebrew gematria: א=1 … ת=400, no vowels. Final-form letters
+// (ך ם ן ף ץ) are allographs of their base letter and take its VALUE (ם=40 like מ),
+// NOT the medieval Mispar Gadol 500–900. This is the system the Sefer Yetzirah uses.
+const FINALS = new Set(['ך','ם','ן','ף','ץ']);
+function letterVal(ch){ return GV[FIN2REG[ch] || ch] ?? 0; }
 function reduce9(v){ let s=v; while(s>9) s=String(s).split('').reduce((a,d)=>a+ +d,0); return s===0?9:s; }
 const LO_SHU=[[4,9,2],[3,5,7],[8,1,6]];
 const LO_POS={}; for(let i=0;i<3;i++)for(let j=0;j<3;j++) LO_POS[LO_SHU[i][j]]=[i,j];
 function sigilPath(name){
-  const letters=[...norm(name)].filter(ch=>GV[ch]||FINALS[ch]);
+  const letters=[...norm(name)].filter(ch=>GV[ch]);
   const reduced=letters.map(ch=>reduce9(letterVal(ch)));
   const cells=[];
   for(const r of reduced){ if(!cells.length || cells[cells.length-1].v!==r) cells.push({v:r}); }
@@ -111,7 +157,7 @@ function sigilPath(name){
 }
 function aiqGroups(){
   const g={1:[],2:[],3:[],4:[],5:[],6:[],7:[],8:[],9:[]};
-  const all='אבגדהוזחטיכלמנסעפצקרשתךםןףץ';
+  const all='אבגדהוזחטיכלמנסעפצקרשת';   // 22 base letters (finals are allographs, same value)
   for(const ch of all){ const v=letterVal(ch); g[reduce9(v)].push(ch+''+v); }
   return g;
 }
@@ -160,28 +206,40 @@ function isopsephy(s){
   let v=0; for(const ch of n){ if(GREEK[ch]!=null) v+=GREEK[ch]; } return v;
 }
 
+// Arabic abjad (Mashriqi/eastern order) — the 28-letter numeral order
+const ABJAD = {ا:1,ب:2,ج:3,د:4,ه:5,و:6,ز:7,ح:8,ط:9,ي:10,ك:20,ل:30,م:40,ن:50,س:60,ع:70,ف:80,ص:90,ق:100,ر:200,ش:300,ت:400,ث:500,خ:600,ذ:700,ض:800,ظ:900,غ:1000};
+const ABJAD_NAME = {ا:'alif',ب:'ba',ج:'jim',د:'dal',ه:'ha',و:'waw',ز:'zay',ح:'ḥa',ط:'ṭa',ي:'ya',ك:'kaf',ل:'lam',م:'mim',ن:'nun',س:'sin',ع:'ayn',ف:'fa',ص:'ṣad',ق:'qaf',ر:'ra',ش:'shin',ت:'ta',ث:'tha',خ:'kha',ذ:'dhal',ض:'ḍad',ظ:'ẓha',غ:'ghayn'};
+function abjad(s){ let v=0; for(const ch of s){ if(ABJAD[ch]!=null) v+=ABJAD[ch]; } return v; }
+
+// Katapayadi — Indian consonant→digit (right-to-left reading). Vowels = 0.
+const KTP = {क:1,ख:2,ग:3,घ:4,ङ:5,ट:1,ठ:2,ड:3,ढ:4,ण:5,प:1,फ:2,ब:3,भ:4,म:5,य:1,र:2,ल:3,व:4,श:5,च:6,छ:7,ज:8,झ:9,ञ:0,त:6,थ:7,द:8,ध:9,न:0,ष:6,स:7,ह:8};
+function katapayadi(s){
+  // a consonant carries a value UNLESS immediately followed by virama (्) —
+  // i.e. only the cluster-final consonant (the one with a vowel) counts.
+  // Then read the digits right-to-left.
+  const chars=[...s];
+  const digits=[];
+  for(let i=0;i<chars.length;i++){
+    const c=chars[i];
+    if(!/[क-हक़-य़]/.test(c)) continue;          // only consonants
+    if(chars[i+1]==='्') continue;              // conjunct non-final -> no value
+    if(KTP[c]!=null) digits.push(KTP[c]);
+  }
+  return digits.reverse().join('');
+}
+
 // ====== subset multiples of 37 (Gen 1:1 structure) ======
 function countSubset(arr,div){ let cnt=0; const n=arr.length;
   for(let mask=1;mask<(1<<n);mask++){ let s=0; for(let i=0;i<n;i++) if(mask&(1<<i)) s+=arr[i]; if(s%div===0) cnt++; } return cnt; }
 
 // ====== SkyMap ======
-function SkyMap({rows, occ, yhvhOk, genesisOk}){
+function SkyMap({rows, occ}){
   const C=220, R=196, Rp=120;
   const pt=(lon,r)=>{const a=lon*Math.PI/180;return [C+r*Math.sin(a), C-r*Math.cos(a)];};
   const MOTHER_LON=[['א','Draco',268],['מ','Ursa Minor',89],['ש','Cassiopea',38]];
   const signCount={}; rows.forEach(r=>{signCount[r.sign]=(signCount[r.sign]||0)+1;});
-  const yod = rows.find(r=>r.sign==='Virgo');
-  const heh = rows.find(r=>r.sign==='Aries');
-  const vav = rows.find(r=>r.sign==='Taurus');
-  const order=[];
-  if(yod) order.push({r:yod,l:'י'});
-  if(heh) order.push({r:heh,l:'ה'});
-  if(vav) order.push({r:vav,l:'ו'});
-  if(heh) order.push({r:heh,l:'ה'});
-  const contrib=new Set(order.map(o=>o.r.body));
-  const pathStr = order.map((o,i)=>{const [x,y]=pt(o.r.lon,Rp);return (i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1);}).join(' ');
   return (
-    <svg viewBox="0 0 440 440" width="340" height="340" style={{maxWidth:'100%'}} role="img" aria-label={`Sky map: ${occ.size} signs occupied; YHVH ${yhvhOk?'readable':'not readable'}; Genesis ${genesisOk?'readable':'not readable'}`}>
+    <svg viewBox="0 0 440 440" width="100%" height="auto" style={{maxWidth:'100%'}} role="img" aria-label={`Sky map: ${occ.size} of 12 signs occupied`}>
       <circle cx={C} cy={C} r={R} fill="#0e1320" stroke="#283145" strokeWidth="2"/>
       <circle cx={C} cy={C} r={Rp+22} fill="none" stroke="#1c2333" strokeWidth="1"/>
       {SIGNS.map((s,i)=>{
@@ -197,23 +255,14 @@ function SkyMap({rows, occ, yhvhOk, genesisOk}){
           <text x={nx} y={ny} textAnchor="middle" dominantBaseline="middle" fontSize="8.5" fill={on?'#8aa0c0':'#424b5e'}>{s}{n>1?(' ·×'+n):''}</text>
         </g>;
       })}
-      {order.length>=2 && <path d={pathStr} fill="none" stroke="#e8c87a" strokeWidth="2.4" strokeDasharray={yhvhOk?'none':'5 4'} opacity="0.9" strokeLinejoin="round"/>}
       {rows.map(r=>{
         const [px,py]=pt(r.lon,Rp);
-        if(contrib.has(r.body)){
-          return <g key={r.body}>
-            <circle cx={px} cy={py} r="12" fill="#e8c87a" stroke="#fff3d0" strokeWidth="1"/>
-            <text x={px} y={py} textAnchor="middle" dominantBaseline="middle" fontSize="14" fill="#0b0e14" fontWeight="bold">{order.find(o=>o.r.body===r.body).l}</text>
-          </g>;
-        }
         return <g key={r.body}>
           <circle cx={px} cy={py} r="8.5" fill="#131826" stroke="#7fb0ff" strokeWidth="1.2"/>
           <text x={px} y={py} textAnchor="middle" dominantBaseline="middle" fontSize="12" fill="#7fb0ff">{GLYPH[r.body]}</text>
           {r.boundary && <circle cx={px} cy={py} r="11.5" fill="none" stroke="#ffcf6a" strokeWidth="1" strokeDasharray="2 2" opacity="0.8"/>}
         </g>;
       })}
-      <text x={C} y={16} textAnchor="middle" fontSize="11" fill={yhvhOk?'#e8c87a':'#ff8a8a'}>יהוה {yhvhOk?'✓':'✗'}</text>
-      <text x={C} y={30} textAnchor="middle" fontSize="9.5" fill={genesisOk?'#6fe0a0':'#ff8a8a'}>Genesis {genesisOk?'✓':'✗'}</text>
       <circle cx={C} cy={C} r="32" fill="#0e1320" stroke="#2a3346" strokeWidth="1" strokeDasharray="3 3"/>
       {MOTHER_LON.map(([h,con,lon])=>{
         const [lx,ly]=pt(lon,18); const [nx,ny]=pt(lon,38); const [ox,oy]=pt(lon,R-24); const [sx,sy]=pt(lon,44);
@@ -229,28 +278,6 @@ function SkyMap({rows, occ, yhvhOk, genesisOk}){
 }
 
 // ====== Sigil SVG (Lo Shu 3×3 trace) ======
-function SigilSVG({name}){
-  const { cells } = sigilPath(name);
-  if(cells.length<2) return <div className="muted">Enter a name with at least 2 Hebrew consonants.</div>;
-  const S=150, pad=18, cell=(S-2*pad)/3;
-  const center=(v)=>{ const [i,j]=LO_POS[v]; return [pad+cell*(j+0.5), pad+cell*(i+0.5)]; };
-  const d = cells.map((c,i)=>{ const [x,y]=center(c.v); return (i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1); }).join(' ');
-  const used=new Set(cells.map(c=>c.v));
-  return (
-    <svg viewBox={`0 0 ${S} ${S}`} width={S} height={S} role="img" aria-label={`Sigil of ${name}`}>
-      <rect x="0" y="0" width={S} height={S} fill="#0e1320" rx="8"/>
-      {LO_SHU.flat().map((v,idx)=>{ const [i,j]=Object.entries(LO_POS).find(([k])=>+k===v)[1]; const cx=pad+cell*(j+0.5), cy=pad+cell*(i+0.5);
-        return <g key={idx}>
-          <rect x={pad+cell*j+2} y={pad+cell*i+2} width={cell-4} height={cell-4} rx="4" fill={used.has(v)?'#243657':'#131826'} stroke="#283145" strokeWidth="1"/>
-          <text x={cx} y={cy-4} textAnchor="middle" dominantBaseline="middle" fontSize="11" fill={used.has(v)?'#e8c87a':'#5d6883'}>{v}</text>
-          {used.has(v) && <text x={cx} y={cy+8} textAnchor="middle" dominantBaseline="middle" fontSize="7" fill="#8aa0c0">{cells.findIndex(c=>c.v===v)+1}</text>}
-        </g>; })}
-      <path d={d} fill="none" stroke="#e8c87a" strokeWidth="2.2" opacity="0.9" strokeLinejoin="round" strokeLinecap="round"/>
-      {cells.map((c,i)=>{ const [x,y]=center(c.v); return <circle key={i} cx={x} cy={y} r={i===0||i===cells.length-1?4:2.6} fill={i===0?'#6fe0a0':i===cells.length-1?'#ff8a8a':'#e8c87a'}/>; })}
-    </svg>
-  );
-}
-
 // ====== Magic-square render ======
 function KameaGrid({n, hl}){
   const sq=buildMagic(n); const M=n*(n*n+1)/2;
@@ -271,25 +298,59 @@ function Fig({n, doc}){
   </div>;
 }
 
-function SkyTab({date, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step}){
+// Composite date entry: a year number (allows negative = BCE) + month + day selects.
+// Replaces <input type="date"> so the Sky tab can search BCE dates (e.g. -427 Axial Age).
+const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+// Composite date entry: year (text input, allows a leading "-" for BCE) + month + day selects.
+// Replaces <input type="date"> so the Sky tab can search BCE dates (e.g. -427 Axial Age).
+// The year is a free text field committed on blur/Enter, so the user can type "-427"
+// without the controlled input snapping "-" back to NaN mid-keystroke.
+function DateEntry({value, onChange}){
+  const d = parseDate(value) || parseDate('2026-08-08');
+  const y = d.getUTCFullYear(), mo = d.getUTCMonth()+1, da = d.getUTCDate();
+  const [ys,setYs]=useState(String(y));
+  useEffect(()=>setYs(String(y)),[y]);
+  const dim = daysInMonth(y, mo);
+  const set = (ny, nm, nd)=> onChange(fmtDate(makeDate(ny, nm, Math.min(nd, daysInMonth(ny, nm)))));
+  const commitYear=()=>{ const n=parseInt(ys,10); if(!isNaN(n)) set(n, mo, da); else setYs(String(y)); };
+  return <span style={{display:'inline-flex',gap:5,alignItems:'center'}}>
+    <input type="text" inputMode="numeric" value={ys} style={{width:78}} title="year — negative = BCE"
+      onChange={e=>setYs(e.target.value)} onBlur={commitYear}
+      onKeyDown={e=>{ if(e.key==='Enter') e.target.blur(); }} aria-label="Year (negative = BCE)"/>
+    <select value={mo} onChange={e=>set(y, parseInt(e.target.value,10), da)} aria-label="Month">
+      {MON.map((n,i)=><option key={n} value={i+1}>{n}</option>)}
+    </select>
+    <select value={da} onChange={e=>set(y, mo, parseInt(e.target.value,10))} aria-label="Day">
+      {Array.from({length:dim},(_,i)=><option key={i+1} value={i+1}>{i+1}</option>)}
+    </select>
+    {y<0 && <span className="muted" style={{fontSize:'.78rem'}}>{Math.abs(y)} BCE</span>}
+  </span>;
+}
+// Reusable year field (text, commits on blur/Enter) for the Predictor & Saros year scans.
+function YearInput({value, onCommit, width=90, title="year — negative = BCE"}){
+  const [s,setS]=useState(String(value));
+  useEffect(()=>setS(String(value)),[value]);
+  const commit=()=>{ const n=parseInt(s,10); if(!isNaN(n) && n!==value) onCommit(n); else setS(String(value)); };
+  return <input type="text" inputMode="numeric" value={s} style={{width}} title={title}
+    onChange={e=>setS(e.target.value)} onBlur={commit}
+    onKeyDown={e=>{ if(e.key==='Enter') e.target.blur(); }} aria-label="Year (negative = BCE)"/>;
+}
+
+function SkyTab({date, rawDate, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step}){
+  const dateEmpty = !rawDate || !parseDate(rawDate);
   return <>
     <div className="controls" style={{marginBottom:12}}>
       <button onClick={()=>step(-1)}>◀ day</button>
-      <input type="date" value={date} onChange={e=>setDate(e.target.value)} aria-label="Date"/>
+      <DateEntry value={rawDate} onChange={setDate}/>
       <button onClick={()=>step(1)}>day ▶</button>
       <button onClick={()=>step(7)}>+ week</button>
       <button onClick={()=>setDate('2026-08-08')}>today</button>
-      <span className="muted">noon UT · geocentric apparent positions · ecliptic longitude</span>
+      <span className="muted">noon UT · geocentric apparent positions · ecliptic longitude{dateEmpty && <span style={{color:'var(--warn)'}}> · enter a date — showing {date}</span>}</span>
     </div>
     <div className="row">
-      <div style={{flex:'0 0 auto'}}><SkyMap rows={rows} occ={occ} yhvhOk={yhvhOk} genesisOk={genesisOk}/></div>
-      <div style={{flex:'1 1 240px'}}>
-        <div className="muted">The wheel is the ecliptic: 12 signs, each with its simple letter. A sector <b>lights up</b> when a planet is inside it — that is the simple read today. “×N” = N planets in that sign (informational; the reuse rule needs no conjunction to repeat a letter). ⚠ = planet within &lt;1° of a boundary.</div>
-        <div className="note">Today: <b>{occSigns.size}</b> signs occupied, <b>{12-occSigns.size}</b> empty. Readable simples: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')}</b>.</div>
-        <div className="note"><span className="he">יהוה</span> (with reuse) forms from just 3 signs: <b>י</b>(Virgo)+<b>ה</b>(Aries)+<b>ו</b>(Taurus). The second <b>ה</b> reuses Aries. Gold line: י→ה→ו→ה.</div>
-        <div className="note">At the <b>centre</b>, the 3 mothers <span className="he">א מ ש</span>: a fixed circumpolar axis, each <b>opposite its constellation</b> (Draco, Ursa Minor, Cassiopea), linked to its zodiac sector.</div>
-      </div>
+      <div style={{flex:'1 1 100%'}}><SkyMap rows={rows} occ={occ}/></div>
     </div>
+    <div className="note">Today: <b>{occSigns.size}</b> signs occupied, <b>{12-occSigns.size}</b> empty. Readable simples: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>. A sector <b>lights up</b> when a planet is inside it; “×N” = N planets in that sign (informational — the reuse rule needs no conjunction to repeat a letter). Centre: the 3 mothers <span className="he">א מ ש</span> on a fixed circumpolar axis. יהוה / Genesis legibility live in their own Reading tabs.</div>
     <h3>Angle table — ecliptic longitude per body ({date})</h3>
     <table>
       <thead><tr><th>Body</th><th>Sign</th><th>Longitude</th><th>Degree in sign</th><th>Simple</th><th>Double</th></tr></thead>
@@ -307,56 +368,90 @@ function SkyTab({date, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sent
     </table>
     <div className="muted">Stellar reading (simple letters of the 10 bodies, slow → fast):</div>
     <div className="sentence">{sentence}</div>
+    <div className="note"><b>Precession &amp; the map:</b> planet positions are computed for the actual date (astronomy-engine works for any year, past or future — including BCE, enter a negative year above), so the map reflects the real sky of that day. The 12 letter↔sign sectors are <b>tropical</b> — anchored to the equinox (Aries = λ☉=0°), so they do <b>not</b> precess and stay fixed to the seasons. <b>This is normal and intended:</b> the zodiac here is the fixed symbolic grid for reading letters, not the precessing sky. The slow drift of the sidereal constellations against the signs (precession, 50.29″/yr, 1° per ~72 yr) is tracked separately in the <b>Ages</b> and <b>Ayanamsa</b> tabs (precessional ages, Lahiri 24.18°). So: <b>tropical signs = the fixed grid that does NOT rotate with precession</b> (Raziel p.115 confirms: <i>“los signos del zodíaco están fijos”</i>); sidereal constellations = the precessing sky, handled in those tabs.</div>
   </>;
 }
 
 const PAGE_SIZE = 48;
-function TranslatorTab({date, occ, words, q, setQ}){
+// tri-state filter: 0 = off, 1 = include (keep only matching), 2 = exclude (drop matching)
+function FilterChip({active, count, label, title, onToggle}){
+  return <button className={active?'on':''} onClick={onToggle} title={title} aria-pressed={active}>{label} ({count})</button>;
+}
+function TranslatorTab({date, occ, words, q, setQ, genData}){
   const [page,setPage] = useState(0);
-  const [onlyDate,setOnlyDate] = useState(true);
-  const [pal,setPal] = useState(false);
-  const [g37,setG37] = useState(false);
-  const [angel,setAngel] = useState(false);
-  const [name,setName] = useState(false);
+  // Filters are now binary (selected/not). A single global mode switch decides whether the
+  // selected filters INCLUDE (keep only words matching all of them) or EXCLUDE (drop words
+  // matching any of them). Default: include date-specific (=> only sky-dependent words).
+  const [sel,setSel] = useState(new Set(['date']));
+  const [mode,setMode] = useState('include');   // 'include' | 'exclude'
   const [minLen,setMinLen] = useState(1);
   const qn = q.trim().toLowerCase();
+  const PROPS = {date:'simp', pal:'pal', g37:'m37', angel:'angel', name:'name', comp:'compound'};
+  const toggle=(id)=>setSel(prev=>{const n=new Set(prev); n.has(id)?n.delete(id):n.add(id); return n;});
   const filtered = useMemo(()=>{
     let r = words;
     if(qn) r = r.filter(w => (w.gloss||'').toLowerCase().includes(qn) || w.translit.toLowerCase().includes(qn) || w.disp.includes(q.trim()));
-    if(onlyDate) r = r.filter(w=>w.simp);
-    if(pal) r = r.filter(w=>w.pal);
-    if(g37) r = r.filter(w=>w.m37);
-    if(angel) r = r.filter(w=>w.angel);
-    if(name) r = r.filter(w=>w.name);
+    if(sel.size){
+      const ids=[...sel];
+      if(mode==='include') r = r.filter(w => ids.every(id => w[PROPS[id]]));      // AND: must match all selected
+      else                  r = r.filter(w => !ids.some(id => w[PROPS[id]]));     // drop if matches any selected
+    }
     if(minLen>1) r = r.filter(w=>w.len>=minLen);
     return r;
-  }, [words, qn, onlyDate, pal, g37, angel, name, minLen]);
-  useEffect(()=>{ setPage(0); }, [qn, date, onlyDate, pal, g37, angel, name, minLen]);
-  const alwaysCount = useMemo(()=>words.filter(w=>!w.simp).length, [words]);
-  const palCount = useMemo(()=>words.filter(w=>w.pal).length, [words]);
-  const g37Count = useMemo(()=>words.filter(w=>w.m37).length, [words]);
-  const angelCount = useMemo(()=>words.filter(w=>w.angel).length, [words]);
-  const nameCount = useMemo(()=>words.filter(w=>w.name).length, [words]);
+  }, [words, qn, sel, mode, minLen]);
+  useEffect(()=>{ setPage(0); }, [qn, date, sel, mode, minLen]);
+  const dateCount = useMemo(()=>words.filter(w=>w.simp).length,[words]);
+  const alwaysCount = useMemo(()=>words.filter(w=>!w.simp).length,[words]);
+  const palCount = useMemo(()=>words.filter(w=>w.pal).length,[words]);
+  const g37Count = useMemo(()=>words.filter(w=>w.m37).length,[words]);
+  const angelCount = useMemo(()=>words.filter(w=>w.angel).length,[words]);
+  const nameCount = useMemo(()=>words.filter(w=>w.name).length,[words]);
+  const compCount = useMemo(()=>words.filter(w=>w.compound).length,[words]);
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const cur = Math.min(page, pages-1);
   const slice = filtered.slice(cur*PAGE_SIZE, cur*PAGE_SIZE + PAGE_SIZE);
+  // Per-gloss legibility probability — computed, not hardcoded. For each displayed word,
+  // count the exact fraction of days in the scanned Predictor year whose occupied simple
+  // set covers the word's required simples (the S⊆O rule, empirical — no independence
+  // assumption, no fixed q). Low % = special/rare (green); high % = common (red).
+  const probs = useMemo(()=>{
+    const m=new Map();
+    if(!genData?.dayOccs) return m;
+    const n=genData.dayOccs.length || 1;
+    for(const w of slice){
+      const req = w.simp ? [...w.simp] : [];
+      if(!req.length){ m.set(w.he,1); continue; }
+      let c=0; for(const o of genData.dayOccs) if(req.every(x=>o.has(x))) c++;
+      m.set(w.he, c/n);
+    }
+    return m;
+  },[slice,genData]);
   return <>
     <h2>Reader — everything readable on {date} <span className="pill">{words.length} words</span></h2>
     <div className="controls" style={{marginBottom:8}}>
       <input type="text" placeholder="search by gloss or transliteration…" value={q} onChange={e=>setQ(e.target.value)} style={{flex:'1 1 240px'}} autoFocus aria-label="Search readable words"/>
     </div>
-    <div className="controls" style={{marginBottom:8, flexWrap:'wrap'}}>
-      <button className={onlyDate?'on':''} onClick={()=>setOnlyDate(v=>!v)} title="Hide words with no zodiac simples — they read every day and carry no date signal">only date-specific</button>
-      <button className={pal?'on':''} onClick={()=>setPal(v=>!v)} title="Consonant palindrome (reads the same backwards)">palindrome ({palCount})</button>
-      <button className={g37?'on':''} onClick={()=>setG37(v=>!v)} title="Gematria is a multiple of 37">gematria × 37 ({g37Count})</button>
-      <button className={angel?'on':''} onClick={()=>setAngel(v=>!v)} title="The word + suffix אל / יה is one of the 72 Shem HaMephorash angel names (Exodus 14:19-21)">angel +אל/+יה ({angelCount})</button>
-      <button className={name?'on':''} onClick={()=>setName(v=>!v)} title="The word is a proper noun (name) in the Strong lexicon — incl. theophoric names bearing אל / יה">name (proper) ({nameCount})</button>
+    <div className="muted" style={{marginBottom:6, fontSize:'.8rem'}}>Select filters, then choose a mode. <b>Include ✓</b> keeps only words matching <b>all</b> selected filters; <b>Exclude ✗</b> drops words matching <b>any</b> selected filter. With no filter selected, all words show. Glosses are Strong's English.</div>
+    <div className="controls" style={{marginBottom:8, flexWrap:'wrap', alignItems:'center'}}>
+      <span className="muted" style={{fontSize:'.8rem'}}>filters:</span>
+      <FilterChip active={sel.has('date')} count={dateCount} label="date-specific" title="Words with zodiac simples (date signal). Include = only date-specific; exclude = only always-readable" onToggle={()=>toggle('date')}/>
+      <FilterChip active={sel.has('pal')} count={palCount} label="palindrome" title="Consonant palindrome (reads the same backwards)" onToggle={()=>toggle('pal')}/>
+      <FilterChip active={sel.has('g37')} count={g37Count} label="gematria ×37" title="Gematria is a multiple of 37" onToggle={()=>toggle('g37')}/>
+      <FilterChip active={sel.has('angel')} count={angelCount} label="angel +אל/+יה" title="The word + suffix אל / יה is one of the 72 Shem HaMephorash angel names (Exodus 14:19-21)" onToggle={()=>toggle('angel')}/>
+      <FilterChip active={sel.has('name')} count={nameCount} label="name (proper)" title="The word is a proper noun (name) in Strong — incl. theophoric names bearing אל / יה" onToggle={()=>toggle('name')}/>
+      <FilterChip active={sel.has('comp')} count={compCount} label="compound" title="Concatenated multi-root entry whose gloss is truncated (e.g. 'dove of')" onToggle={()=>toggle('comp')}/>
+      <span className="muted" style={{fontSize:'.8rem', marginLeft:6}}>mode:</span>
+      <button className={mode==='include'?'on':''} onClick={()=>setMode('include')} title="Keep only words matching ALL selected filters" aria-pressed={mode==='include'}>✓ include</button>
+      <button className={mode==='exclude'?'ex':''} onClick={()=>setMode('exclude')} title="Drop words matching ANY selected filter" aria-pressed={mode==='exclude'}>✗ exclude</button>
+      {sel.size>0 && <button onClick={()=>setSel(new Set())} title="Clear all selected filters" style={{fontSize:'.78rem'}}>clear ({sel.size})</button>}
+    </div>
+    <div className="controls" style={{marginBottom:8, flexWrap:'wrap', alignItems:'center'}}>
       <span className="muted">min length</span>
       <input type="number" min="1" max="12" value={minLen} onChange={e=>{const n=parseInt(e.target.value,10); setMinLen(isNaN(n)||n<1?1:n);}} style={{width:56}} aria-label="Minimum word length"/>
-      <span className="muted">{filtered.length} shown · {alwaysCount} always-readable hidden{onlyDate?'':' (shown)'}</span>
+      <span className="muted">{filtered.length} shown · {alwaysCount} always-readable</span>
     </div>
     <div className="muted" style={{marginBottom:8}}>
-      Reading rule applied: every <b>simple (zodiac) letter</b> in a word must sit in an <b>occupied sign</b> today. Mothers + doubles are always available. Available today: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>. <span style={{color:'var(--violet)'}}>violet</span> = always readable (no simples). Badges: <span style={{color:'var(--gold)'}}>palindrome</span> · <span style={{color:'var(--green)'}}>×37</span> · <span style={{color:'var(--violet)'}}>angel</span> · <span style={{color:'var(--blue)'}}>name</span>. Sorted: longest first.
+      Reading rule applied: every <b>simple (zodiac) letter</b> in a word must sit in an <b>occupied sign</b> today. Mothers + doubles are always available. Available today: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>. <span style={{color:'var(--violet)'}}>violet</span> = always readable (no simples). Badges: <span style={{color:'var(--gold)'}}>palindrome</span> · <span style={{color:'var(--green)'}}>×37</span> · <span style={{color:'var(--violet)'}}>angel</span> · <span style={{color:'var(--blue)'}}>name</span> · <span style={{color:'var(--warn)'}}>compound</span>. <span className="prob ok">%</span> = legibility over the scanned year (computed, not hardcoded): <span className="prob ok">green</span> special (rare), <span className="prob mid">amber</span> frequent, <span className="prob spec">red</span> common — each pill also shows the recurrence (≈ every N d). Sorted: longest first.
     </div>
     <div className="tcards">
       {slice.map((w,i)=>(
@@ -364,7 +459,8 @@ function TranslatorTab({date, occ, words, q, setQ}){
           <div className="the">{w.disp}</div>
           <div className="read">{w.translit}</div>
           <div className="trans">{w.gloss}</div>
-          <div className="g">{w.len} letters · gematria {w.gem}{w.pal && <span style={{color:'var(--gold)'}}> · palindrome</span>}{w.m37 && <span style={{color:'var(--green)'}}> · ×37</span>}{w.angel && <span style={{color:'var(--violet)'}}> · angel</span>}{w.name && <span style={{color:'var(--blue)'}}> · name{w.theo?' (theophoric)':''}</span>}</div>
+          <div className="g">{w.len} letters · gematria {w.gem}{w.pal && <span style={{color:'var(--gold)'}}> · palindrome</span>}{w.m37 && <span style={{color:'var(--green)'}}> · ×37</span>}{w.angel && <span style={{color:'var(--violet)'}}> · angel</span>}{w.name && <span style={{color:'var(--blue)'}}> · name{w.theo?' (theophoric)':''}</span>}{w.compound && <span style={{color:'var(--warn)'}}> · compound (gloss truncated)</span>}</div>
+          {probs.has(w.he) && (()=>{ const p=probs.get(w.he); const n=genData.dayOccs.length; const pct = p<0.001 ? '<0.1' : (p*100).toFixed(p<0.1?1:0); const cls = p>=0.5 ? 'spec' : p>=0.2 ? 'mid' : 'ok'; const tag = p>=0.5 ? 'common' : p>=0.2 ? 'frequent' : 'special'; const leg=p*n; const cad = leg<=1 ? '≈ once / year' : leg>=n ? 'every day' : `≈ every ${Math.max(1,Math.round(n/leg))} d`; return <span className={'prob '+cls} title={`Empirical legibility over ${n} days of ${genData.year}: ${pct}% of days this word's required simples are all occupied (S⊆O, computed from astronomy-engine — not a hardcoded value). Recurrence: ${cad}. Low % = special/rare (green); high % = common (red).`}>{pct}% · {tag} · {cad}</span>; })()}
           {w.angel && <div className="simp" style={{color:'var(--violet)'}}>angel: +אל → <span className="he" style={{fontSize:'.95rem'}}>{w.angel.el}</span> · +יה → <span className="he" style={{fontSize:'.95rem'}}>{w.angel.yh}</span></div>}
           <div className="simp">{w.simp ? ('simples: '+[...w.simp].join(' ')) : 'no simples (always)'}</div>
         </div>
@@ -422,7 +518,6 @@ function YhvhTab({date, occ, yhvhOk, bs}){
         {['י:Virgo','ה:Aries','ו:Taurus'].filter(x=>!occ.has(x[0])).map((x,i)=>{const [l,s]=x.split(':'); return <div key={i} className="note" style={{color:'var(--red)'}}><span className="he" style={{fontSize:'1.2rem'}}>{l}</span> → needs {s} · no planet today</div>;})}
       </>}
     </div>
-    <Fig n={4} doc="From the article (§4): the cadence of יהוה. The golden line traces י→ה→ו→ה over Virgo-Aries-Taurus-Aries, occupied by fast planets (a date on which יהוה is legible). Without Aquarius (צ) in the set it is not Genesis — the cadence is monthly, not secular."/>
   </>;
 }
 
@@ -462,29 +557,200 @@ function GenesisTab({date, occ, genesisOk}){
 }
 
 function PredictorTab({date, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear}){
-  return <>
-    <h2>Predictor — days with readable Genesis in {genYear} {loading && <span className="pill">computing…</span>}</h2>
-    <div className="controls" style={{marginBottom:10}}>
-      <button onClick={()=>stepYear(-1)}>◀ {genYear-1}</button>
-      <span className="pill">{genYear}</span>
-      <button onClick={()=>stepYear(1)}>{genYear+1} ▶</button>
-      <button onClick={()=>setGenYear(year)}>this year</button>
-    </div>
-    {genData && <>
-      <div className="muted">Total: <b style={{color:'var(--gold)'}}>{genData.list.length}</b> days in {genYear}. Gold = readable Genesis; green outline = chosen date ({date}).</div>
-      <div className="tl" style={{marginTop:10}} role="img" aria-label={`Calendar ${genYear}: ${genData.list.length} readable days`}>
-        {Array.from({length: genYear%4===0&&(genYear%100!==0||genYear%400===0)?366:365},(_,i)=>{
-          const ds=new Date(Date.UTC(genYear,0,1+i,12)).toISOString().slice(0,10);
-          return <div key={i} className={'d'+(genData.days.has(ds)?' on':'')+(ds===date?' cur':'')} title={ds+(genData.days.has(ds)?' · Genesis':'')+(ds===date?' · date':'')}></div>;
+  const [custom,setCustom]=useState('');
+  const [sel,setSel]=useState('יהוה');
+  const nDays = (genYear%4===0&&(genYear%100!==0||genYear%400===0))?366:365;
+  // day-of-year of the chosen date (for the green outline), only if same year
+  const curDoy = useMemo(()=>{
+    const d=parseDate(date); if(!d) return -1;
+    if(d.getUTCFullYear()!==genYear) return -1;
+    return Math.floor((d.getTime()-makeDate(genYear,1,1).getTime())/86400000);
+  },[date,genYear]);
+  // presets: spread from always-readable (no simples) to rare
+  const presets=[
+    ['יהוה','YHVH · the temporal Name'],
+    ['אהיה','Ehyeh · I am'],
+    ['משיח','Messiah'],
+    ['אבדון','Abaddon'],
+    ['ישראל','Israel'],
+    ['אלהים','Elohim'],
+    ['בראשית','Bereshit · Genesis 1:1'],
+    ['אמת','Emet · truth (always)'],
+    ['שבת','Shabbat · rest (always)'],
+  ];
+  function wordDoyList(word){
+    // returns array of day-of-year indices where `word` is readable, computed from dayOccs
+    if(!genData || !genData.dayOccs) return [];
+    const req=simpleSet(norm(word));
+    const out=[];
+    for(let i=0;i<genData.dayOccs.length;i++){
+      let ok=true;
+      for(const c of req){ if(!genData.dayOccs[i].has(c)){ ok=false; break; } }
+      if(ok) out.push(i);
+    }
+    return out;
+  }
+  function ProbPill({count}){
+    const pct=nDays?count/nDays*100:0;
+    const tag = pct>=80?'common':pct>=40?'frequent':pct>=10?'occasional':'special';
+    const cls = pct>=40?'spec':pct>=10?'mid':'ok';
+    return <span className={'prob '+cls}>{pct.toFixed(1)}% · {tag}</span>;
+  }
+  function CalendarRow({word,label}){
+    const days=wordDoyList(word);
+    const daySet=useMemo(()=>new Set(days),[days.join(',')]);
+    const cad = days.length>0 ? (nDays/days.length).toFixed(1) : '—';
+    const isSel = sel===word;
+    return <>
+      <div style={{display:'flex',alignItems:'center',gap:10,flexWrap:'wrap',marginBottom:6}}>
+        <span className="he" style={{fontSize:'1.5rem',color:isSel?'var(--green)':'var(--gold)',cursor:'pointer'}} onClick={()=>setSel(word)} title="click to select">{displayHe(word)}</span>
+        <span className="muted" style={{flex:'0 0 180px'}}>{label}</span>
+        <span className="pill">readable <b style={{color:'var(--gold)'}}>{days.length}</b>/{nDays} · ~every {cad} d</span>
+        <ProbPill count={days.length}/>
+      </div>
+      <div className="tl" role="img" aria-label={`${word}: ${days.length} readable days in ${genYear}`}>
+        {Array.from({length:nDays},(_,i)=>{
+          const on=daySet.has(i);
+          return <div key={i} className={'d'+(on?' on':'')+(i===curDoy?' cur':'')} title={`${genYear}-${String(i+1).padStart(3,'0')} (doy ${i+1})${on?' · readable':''}${i===curDoy?' · date':''}`}></div>;
         })}
       </div>
-      <div style={{marginTop:10}}>
-        <span className="muted">Readable dates in {genYear}: </span>
-        {genData.list.length===0 ? <span className="muted">none this year.</span> : genData.list.map(d=> <span key={d} className="key on click" onClick={()=>setDate(d)}>{d}</span>)}
+    </>;
+  }
+  return <>
+    <h2>Predictor — gloss frequency across {genYear} {loading && <span className="pill">computing…</span>}</h2>
+    <div className="muted" style={{marginBottom:10}}>For each gloss the strip shows the whole year (one square per day). <b style={{color:'var(--gold)'}}>Gold</b> = the word is readable that day (all its required zodiacal simples occupied); <b style={{color:'var(--green)'}}>green outline</b> = the chosen date ({date}). Words built only of mothers+doubles (Emet, Shabbat) have no zodiacal simples → readable every day. The cadence (≈every N days) measures how common each gloss is. Click a word to list its dates below.</div>
+    <div className="controls" style={{marginBottom:12}}>
+      <button onClick={()=>stepYear(-1)}>◀ {genYear-1}</button>
+      <YearInput value={genYear} onCommit={setGenYear}/>
+      <button onClick={()=>stepYear(1)}>{genYear+1} ▶</button>
+      <button onClick={()=>setGenYear(year)}>this year</button>
+      {genYear<0 && <span className="muted" style={{fontSize:'.78rem'}}>{Math.abs(genYear)} BCE</span>}
+    </div>
+    <div className="controls" style={{marginBottom:14}}>
+      <input type="text" value={custom} onChange={e=>setCustom(e.target.value)} placeholder="add a Hebrew word, e.g. אהיה" style={{flex:'1 1 220px'}}/>
+      <button onClick={()=>{ if(/[א-ת]/.test(custom)){ setSel(custom); } }} disabled={!/[א-ת]/.test(custom)}>add gloss</button>
+    </div>
+    {genData && <>
+      {presets.map(([w,l])=> <CalendarRow key={w} word={w} label={l}/>)}
+      {/[א-ת]/.test(custom) && <CalendarRow word={norm(custom)} label={`custom: ${custom}`}/>}
+      <div style={{marginTop:12}}>
+        <span className="muted">Readable dates of <span className="he" style={{fontSize:'1.2rem',color:'var(--green)'}}>{displayHe(sel)}</span> in {genYear} (click to set the date): </span>
+        {(()=>{
+          const days=wordDoyList(sel);
+          if(days.length===0) return <span className="muted">none this year.</span>;
+          return days.slice(0,200).map(i=>{
+            const ds=fmtDate(makeDate(genYear,1,1+i));
+            return <span key={ds} className="key on click" onClick={()=>setDate(ds)}>{ds}</span>;
+          });
+        })()}
+        {wordDoyList(sel).length>200 && <span className="muted"> … ({wordDoyList(sel).length} total)</span>}
       </div>
-      <div className="legend">Move years with ◀ ▶ to see the 2028–2029 cluster (Pluto settled in Aquarius, Neptune in Aries).</div>
+      <div className="legend">Move years with ◀ ▶. The 2028–2029 cluster (Pluto in Aquarius, Neptune in Aries) lifts the rare glosses' counts.</div>
     </>}
   </>;
+}
+
+// ====== Cycles tab — graphical representations (inline SVG, self-contained) ======
+
+// Chaldean heptagram: 7 planets in sidereal order around the ring; the {7/3} star joins
+// them in weekday order (each day jumps 3 planets, 24 h mod 7 = 3). 7 doubles = 7 days.
+function Heptagram(){
+  const cx=170, cy=150, R=120;
+  const planets=['Saturn','Jupiter','Mars','Sun','Venus','Mercury','Moon'];
+  const dayOf={Saturn:'Sat',Sun:'Sun',Moon:'Mon',Mars:'Tue',Mercury:'Wed',Jupiter:'Thu',Venus:'Fri'};
+  const he=['ב','ג','ד','כ','פ','ר','ת'];
+  const pt=i=>{ const a=(-90+i*360/7)*Math.PI/180; return [cx+R*Math.cos(a), cy+R*Math.sin(a)]; };
+  const order=[0,3,6,2,5,1,4,0];           // weekday (jump-3) order through the 7
+  const starD=order.map((k,j)=>{ const [x,y]=pt(k); return (j===0?'M':'L')+x.toFixed(1)+' '+y.toFixed(1); }).join(' ')+' Z';
+  return <svg viewBox="0 0 340 300" width="100%" style={{maxWidth:340}} role="img" aria-label="Chaldean heptagram">
+    <path d={starD} fill="none" stroke="#e8c87a" strokeWidth="1.4" opacity="0.85"/>
+    <circle cx={cx} cy={cy} r={R} fill="none" stroke="#283145" strokeWidth="1"/>
+    {planets.map((p,i)=>{ const [x,y]=pt(i); return <g key={p}>
+      <circle cx={x} cy={y} r="18" fill="#1a2030" stroke="#7fb0ff" strokeWidth="1.4"/>
+      <text x={x} y={y-1} textAnchor="middle" fontSize="15" fill="#e8c87a">{GLYPH[p]}</text>
+      <text x={x} y={y+11} textAnchor="middle" fontSize="13" fill="#7fb0ff" fontFamily="serif">{he[i]}</text>
+      <text x={x} y={y-26} textAnchor="middle" fontSize="10" fill="#8a96ad">{p} · {dayOf[p]}</text>
+    </g>; })}
+    <text x={cx} y={cy-6} textAnchor="middle" fontSize="11" fill="#8a96ad">Chaldean order</text>
+    <text x={cx} y={cy+10} textAnchor="middle" fontSize="11" fill="#e8c87a">7 = 7 = 7</text>
+    <text x={cx} y={cy+26} textAnchor="middle" fontSize="9" fill="#8a96ad">sidereal · mod 7 · days</text>
+  </svg>;
+}
+
+// Eclipse geometry: the ecliptic (Sun), the Moon's inclined path crossing at a node, and
+// the |β|<1.6° window that the live scan uses. Moon at node → eclipse; far from node → none.
+function SarosDiagram(){
+  return <svg viewBox="0 0 460 220" width="100%" style={{maxWidth:460}} role="img" aria-label="Eclipse node geometry">
+    <rect x="40" y="98" width="380" height="24" fill="#6fe0a0" opacity="0.07"/>
+    <line x1="40" y1="110" x2="420" y2="110" stroke="#7fb0ff" strokeWidth="1.5"/>
+    <line x1="60" y1="95" x2="400" y2="125" stroke="#c79bff" strokeWidth="1.3" strokeDasharray="5 4"/>
+    <circle cx="230" cy="110" r="16" fill="#e8c87a"/>
+    <circle cx="230" cy="110" r="16" fill="none" stroke="#ffcf6a" strokeWidth="1"/>
+    <circle cx="262" cy="110" r="6" fill="#1a2030" stroke="#6fe0a0" strokeWidth="1.4"/>
+    <circle cx="120" cy="92" r="6" fill="#1a2030" stroke="#ff8a8a" strokeWidth="1.4"/>
+    <text x="230" y="74" textAnchor="middle" fontSize="10" fill="#ffcf6a">node · eclipse season</text>
+    <text x="262" y="135" textAnchor="middle" fontSize="9" fill="#6fe0a0">Moon at node → eclipse</text>
+    <text x="120" y="80" textAnchor="middle" fontSize="9" fill="#ff8a8a">Moon far from node → none</text>
+    <text x="40" y="92" fontSize="9" fill="#7fb0ff">ecliptic (Sun's path)</text>
+    <text x="300" y="140" fontSize="9" fill="#c79bff">Moon's path · 5.1° incline</text>
+    <text x="40" y="158" fontSize="9" fill="#6fe0a0">|β| &lt; 1.6° window (scan threshold)</text>
+  </svg>;
+}
+
+// Precession: one zodiac wheel, two zero-points. Tropical Aries 0° is fixed to the equinox
+// (does NOT precess); sidereal Aries 0° is fixed to the stars and precesses away from it —
+// the gap is the ayanamsa (24.18° now). The sidereal frame rotates clockwise with precession.
+function PrecessionDiagram(){
+  const cx=230, cy=130, R=120, r=70;
+  const seg=(i,cls,lab)=>{ const a1=(-90+i*30)*Math.PI/180, a2=(-90+(i+1)*30)*Math.PI/180;
+    const x1=cx+R*Math.cos(a1), y1=cy+R*Math.sin(a1), x2=cx+R*Math.cos(a2), y2=cy+R*Math.sin(a2);
+    const mx=cx+(R-22)*Math.cos((a1+a2)/2), my=cy+(R-22)*Math.sin((a1+a2)/2);
+    return <g key={i}>
+      <path d={`M ${cx} ${cy} L ${x1} ${y1} A ${R} ${R} 0 0 1 ${x2} ${y2} Z`} fill={cls} stroke="#283145" strokeWidth="0.8"/>
+      <text x={mx} y={my} textAnchor="middle" dominantBaseline="middle" fontSize="9" fill="#8a96ad">{lab}</text>
+    </g>; };
+  // tropical Aries 0° at top (-90°); sidereal Aries 0° offset by +ayanamsa
+  const ayAng=(-90+24.18)*Math.PI/180;
+  const tx=cx+R*Math.cos(-90*Math.PI/180), ty=cy+R*Math.sin(-90*Math.PI/180);
+  const sx=cx+R*Math.cos(ayAng), sy=cy+R*Math.sin(ayAng);
+  return <svg viewBox="0 0 460 280" width="100%" style={{maxWidth:460}} role="img" aria-label="Precession: tropical vs sidereal zodiac">
+    <circle cx={cx} cy={cy} r={R} fill="#1a2030" stroke="#283145"/>
+    {SIGNS.map((s,i)=>seg(i, i%2? '#131826':'#1a2030', s.slice(0,3)))}
+    {/* tropical Aries 0° marker — fixed */}
+    <line x1={cx} y1={cy} x2={tx} y2={ty} stroke="#e8c87a" strokeWidth="2"/>
+    <circle cx={tx} cy={ty} r="5" fill="#e8c87a"/>
+    <text x={tx} y={ty-10} textAnchor="middle" fontSize="9" fill="#e8c87a">♈ tropical 0° (fixed to equinox — does NOT precess)</text>
+    {/* sidereal Aries 0° marker — precessing */}
+    <line x1={cx} y1={cy} x2={sx} y2={sy} stroke="#c79bff" strokeWidth="2" strokeDasharray="4 3"/>
+    <circle cx={sx} cy={sy} r="5" fill="#c79bff"/>
+    <text x={sx+10} y={sy+4} fontSize="9" fill="#c79bff">sidereal 0° (fixed to stars — precesses)</text>
+    {/* ayanamsa arc */}
+    <path d={`M ${cx+(R-34)*Math.cos(-90*Math.PI/180)} ${cy+(R-34)*Math.sin(-90*Math.PI/180)} A ${R-34} ${R-34} 0 0 1 ${cx+(R-34)*Math.cos(ayAng)} ${cy+(R-34)*Math.sin(ayAng)}`} fill="none" stroke="#ffcf6a" strokeWidth="1.4"/>
+    <text x={cx+ (R-50)*Math.cos((-90+12)*Math.PI/180)} y={cy+(R-50)*Math.sin((-90+12)*Math.PI/180)+3} textAnchor="middle" fontSize="9" fill="#ffcf6a">ayanamsa 24.18°</text>
+    {/* precession direction arrow */}
+    <path d={`M ${cx} ${cy+44} A 44 44 0 0 0 ${cx-31} ${cy+31}`} fill="none" stroke="#8a96ad" strokeWidth="1.2" markerEnd="url(#ar)"/>
+    <defs><marker id="ar" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#8a96ad"/></marker></defs>
+    <text x={cx} y={cy} textAnchor="middle" fontSize="9" fill="#8a96ad">precession →</text>
+  </svg>;
+}
+
+// Metonic 19-year cycle: 19 nodes around a ring. 7 leap years (13 months) in gold = the 7
+// doubles; 12 common (12 months). 19 yr ≈ 235 lunations. 19 = 7 doubles + 12 simples.
+function MetonDiagram(){
+  const cx=160, cy=110, R=95;
+  const leap=new Set([3,6,8,11,14,17,19]);
+  const pt=y=>{ const a=(-90+(y-1)*360/19)*Math.PI/180; return [cx+R*Math.cos(a), cy+R*Math.sin(a)]; };
+  return <svg viewBox="0 0 360 220" width="100%" style={{maxWidth:360}} role="img" aria-label="Metonic 19-year cycle">
+    <circle cx={cx} cy={cy} r={R+14} fill="none" stroke="#283145"/>
+    {Array.from({length:19},(_,i)=>i+1).map(y=>{ const [x,yp]=pt(y); const L=leap.has(y); return <g key={y}>
+      <circle cx={x} cy={yp} r={L?13:10} fill={L?'#e8c87a':'#1a2030'} stroke={L?'#e8c87a':'#283145'} strokeWidth="1.2"/>
+      <text x={x} y={yp+3} textAnchor="middle" fontSize="9" fill={L?'#0b0e14':'#8a96ad'} fontWeight={L?700:400}>{L?'13':'12'}</text>
+      <text x={x} y={L?yp-19:yp-16} textAnchor="middle" fontSize="8" fill="#8a96ad">{y}</text>
+    </g>; })}
+    <text x={cx} y={cy-8} textAnchor="middle" fontSize="11" fill="#e8c87a">19 yr</text>
+    <text x={cx} y={cy+6} textAnchor="middle" fontSize="9" fill="#8a96ad">= 235 months</text>
+    <text x={cx} y={cy+20} textAnchor="middle" fontSize="9" fill="#8a96ad">7 leap + 12 common</text>
+  </svg>;
 }
 
 function WeekTab({date, rows}){
@@ -493,7 +759,7 @@ function WeekTab({date, rows}){
     <div className="week">
       {WEEK.map(([day,plan],idx)=>{
         const r=rows.find(x=>x.body===plan);
-        const isToday = idx===new Date(date+'T12:00:00Z').getUTCDay();
+        const isToday = (()=>{ const d=parseDate(date); return d ? idx===d.getUTCDay() : false; })();
         return (
           <div key={day} className={'day'+(isToday?' today':'')}>
             <div className="dn">{day}{isToday?' · date':''}</div>
@@ -511,6 +777,7 @@ function WeekTab({date, rows}){
       <li><b>(C) Etymology</b>: Tuesday = Mars/Martes, Wednesday = Mercury/Miércoles, Thursday = Jupiter/Jueves, Friday = Venus/Viernes, Saturday = Saturn/Sábado — the Romance names preserve the planet.</li>
       <li>The 7 doubles (ב ג ד כ פ ר ת) are the 7 planets; the 7 planets are the 7 days. The heptagram 7=7=7 closes by sidereal periods + mod-7 arithmetic + etymology. <b>Note</b>: the 7-day week is a cultural (Chaldean-Babylonian) artefact, not a continuous astronomical cycle; its astronomical anchor is the Chaldean order of the 7 planets, which is real.</li>
     </ul>
+    <div className="fig"><Heptagram/><div className="cap">The Chaldean heptagram — 7 planets in sidereal order on the ring; the gold {`{7/3}`} star traces weekday order (Sat→Sun→Mon→Tue→Wed→Thu→Fri), each day jumping 3 planets (24 h mod 7 = 3). 7 doubles = 7 planets = 7 days.</div></div>
     <div className="note">Each planet (a double) travels through the 12 signs (simples); that planet is read in a different sign depending on the day.</div>
   </>;
 }
@@ -558,23 +825,39 @@ function AgesTab({date, rows}){
 }
 
 function GematriaTab(){
+  const [gSub,setGSub]=useState('hebrew');
+  const subs=[['hebrew','Hebrew'],['greek','Greek'],['arabic','Arabic'],['indian','Indian'],['more','More']];
+  return <>
+    <h2>Gematria — letter-number systems across cultures (§2, §15b.2)</h2>
+    <div className="muted" style={{marginBottom:10}}>Every culture with a written alphabet developed a letter→number system. The additive isopsephies (Hebrew, Greek, Arabic, Coptic, Cyrillic) share one structure — units 1–9, tens 10–90, hundreds 100–900/1000 — because all descend from the Phoenician/Greek scheme. India is different: the katapayadi is <b>positional</b> (right-to-left) and the Āryabhaṭa is consonant×vowel-power. Pre-1500 systems only; post-1500 constructions are flagged.</div>
+    <SubTabs items={subs} active={gSub} onChange={setGSub}/>
+    {gSub==='hebrew' && <GematriaHebrew/>}
+    {gSub==='greek'  && <GematriaGreek/>}
+    {gSub==='arabic' && <GematriaArabic/>}
+    {gSub==='indian' && <GematriaIndian/>}
+    {gSub==='more'   && <GematriaMore/>}
+  </>;
+}
+
+function GematriaHebrew(){
   const [inp,setInp]=useState('משיח');
+  const [big,setBig]=useState(false); // Mispar Gadol toggle
   const c=norm(inp);
-  const letters=[...c].filter(ch=>GV[ch]||FINALS[ch]);
+  const letters=[...c].filter(ch=>GV[ch]);
   const total=letters.reduce((a,ch)=>a+letterVal(ch),0);
   const groups=aiqGroups();
   return <>
-    <h2>Gematria &amp; Aiq Bekar (§2, §15b.2)</h2>
     <div className="controls" style={{marginBottom:10}}>
       <input type="text" value={inp} onChange={e=>setInp(e.target.value)} placeholder="Hebrew name, e.g. משיח / אברהם" style={{flex:'1 1 260px'}}/>
       <span className="pill">letters: {letters.length}</span>
+      <button className={'subtab'+(big?' active':'')} onClick={()=>setBig(b=>!b)} title="Mispar Gadol: finals = 500–900 (off = Mispar Hechrachi, finals = regular). Genesis 1:1 = 2701 needs Hechrachi.">Mispar Gadol {big?'ON':'off'}</button>
     </div>
+    <div className="muted" style={{marginBottom:8}}>22-letter gematria, א=1 … ת=400. <b>Mispar Hechrachi</b> (default): final letters count as their regular value — required for Gen 1:1 = 2701 = 37×73. <b>Mispar Gadol</b>: finals = 500–900. <b>Mispar Katan Mispari</b> = the digital-root reduction (below, "Aiq Bekar").</div>
     {letters.length>0 && <>
       <table>
-        <thead><tr><th>Letter</th><th>Name</th><th>Value</th><th>Aiq Bekar (1–9)</th></tr></thead>
+        <thead><tr><th>Letter</th><th>Name</th><th>Value</th><th>Reduction (1–9)</th></tr></thead>
         <tbody>
         {letters.map((ch,i)=>{
-          const name=Object.entries({...Object.fromEntries(Object.entries(GV)),...{'ך':'Kaph-final','ם':'Mem-final','ן':'Nun-final','ף':'Pe-final','ץ':'Tzaddi-final'}});
           return <tr key={i}><td className="letter-cell"><span className="he">{displayHe(c).includes(ch)?ch:ch}</span></td>
             <td className="muted">{ch}</td>
             <td className="big">{letterVal(ch)}</td>
@@ -584,52 +867,169 @@ function GematriaTab(){
       </table>
       <div style={{marginTop:10,padding:'12px 14px',background:'var(--panel2)',borderRadius:8}}>
         <span className="muted">Standard gematria: </span><b className="big">{total}</b>
-        <span className="muted"> · Aiq Bekar reduction: </span><b className="big" style={{color:'var(--blue)'}}>{reduce9(total)===0?9:reduce9(total)}</b>
+        <span className="muted"> · Mispar Katan (digital root): </span><b className="big" style={{color:'var(--blue)'}}>{reduce9(total)===0?9:reduce9(total)}</b>
       </div>
     </>}
-    <h3>Aiq Bekar = the decimal-positional gematria of §2</h3>
-    <div className="muted" style={{marginBottom:8}}>Each letter reduces (sum of digits) to 1–9. The 9 groups are exactly the decimal grid {`{1,10,100},{2,20,200},…,{9,90,900}`} — the 9 = 9+9+9 structure of §2. Without this reduction there is no sigil (§15b.3): it is the bridge §2 → kamea → trace.</div>
+    <h3>The 22 letters → digital-root groups (Mispar Katan Mispari)</h3>
+    <div className="muted" style={{marginBottom:8}}>Each of the 22 letters reduces (sum of digits) to 1–9. Groups 1–4 gather three letters each (units / tens / hundreds 100–400); groups 5–9 gather two (the hundreds stop at 400 — ancient Hebrew has only 22 letters, no medieval 500–900 finals). This digital root is the bridge to the kamea: without it there is no sigil (§15b.3). <b>Terminology note:</b> this reduction is <i>Mispar Katan Mispari</i>; "Aiq Bekar" properly names a 10× letter-substitution cipher, not this reduction.</div>
     <div className="grid2">
       {[1,2,3,4,5,6,7,8,9].map(g=> <div key={g} className="kbox"><b style={{color:'var(--gold)'}}>{g}</b> · {groups[g].join(', ')}</div>)}
     </div>
-    <div className="note">Try: <span className="key click" onClick={()=>setInp('אברהם')}>אברהם</span> <span className="key click" onClick={()=>setInp('שלמה')}>שלמה</span> <span className="key click" onClick={()=>setInp('אלהים')}>אלהים</span> <span className="key click" onClick={()=>setInp('אבדון')}>אבדון</span> (Abaddon = 63 = 7×9).</div>
+    <div className="note">Try: <span className="key click" onClick={()=>setInp('אברהם')}>אברהם</span> <span className="key click" onClick={()=>setInp('שלמה')}>שלמה</span> <span className="key click" onClick={()=>setInp('אלהים')}>אלהים</span> <span className="key click" onClick={()=>setInp('אבדון')}>אבדון</span> (Abaddon = 63 = 7×9). Gen 1:1 = <span className="key click" onClick={()=>setInp('בראשית')}>בראשית</span> <span className="key click" onClick={()=>setInp('אלהים')}>אלהים</span> <span className="key click" onClick={()=>setInp('השמים')}>השמים</span> <span className="key click" onClick={()=>setInp('הארץ')}>הארץ</span> → 913+86+395+401+407+296+203 = 2701 = 37×73.</div>
+  </>;
+}
+
+function GematriaGreek(){
+  const [inp,setInp]=useState('Ἰησοῦς');
+  const v=isopsephy(inp);
+  const ex=[['Ἰησοῦς','Jesus',888,'8×111'],['Χριστός','Christ',1480,'40×37'],['Jesus + Christ','',2368,'64×37 = 888+1480'],['Κύριος','Lord',800,''],['Ἀπολλύων','Apollyon (Rev 9:11)',1461,'Sothic cycle'],['666','the beast (Rev 13:18)',666,'6×111 = Σ1..36']];
+  return <>
+    <div className="controls" style={{marginBottom:10}}>
+      <input type="text" value={inp} onChange={e=>setInp(e.target.value)} placeholder="Greek, e.g. Ἰησοῦς / Ἀπολλύων" style={{flex:'1 1 280px'}}/>
+      <span className="pill">isopsephy: <b style={{color:'var(--gold)'}}>{v}</b></span>
+    </div>
+    <div className="muted" style={{marginBottom:8}}>27 letters: 24 standard + 3 archaic retained only as numerals (digamma ϝ/ϛ=6, koppa ϟ/ϙ=90, sampi ϡ=900). Final sigma ς = 200. Additive — no reduction. Thousands reuse α–θ with a lower keraia (͵α=1000).</div>
+    <table style={{marginBottom:10}}>
+      <thead><tr><th>Units 1–9</th><th>Tens 10–90</th><th>Hundreds 100–900</th></tr></thead>
+      <tbody>
+        <tr><td className="gk">α β γ δ ε ϛ ζ η θ</td><td className="gk">ι κ λ μ ν ξ ο π ϟ</td><td className="gk">ρ σ τ υ φ χ ψ ω ϡ</td></tr>
+        <tr className="muted"><td>1 2 3 4 5 6 7 8 9</td><td>10 20 30 40 50 60 70 80 90</td><td>100 200 300 400 500 600 700 800 900</td></tr>
+      </tbody>
+    </table>
+    <table>
+      <thead><tr><th>Name</th><th>Reading</th><th>Value</th><th>Notes</th></tr></thead>
+      <tbody>
+      {ex.map((r,i)=><tr key={i}><td className="letter-cell">{r[0]? <span className="gk" style={{fontSize:'1.4rem'}}>{r[0]}</span> : ''}</td><td>{r[1]}</td><td className="big" style={{color:'var(--gold)'}}>{r[2]}</td><td className="muted">{r[3]}</td></tr>)}
+      </tbody>
+    </table>
+    <div className="note"><b>666 / original referent:</b> the scholarly consensus is the <i>Hebrew</i> gematria נרון קסר (Neron Kesar) = 666; the Latin form (dropping final nun) = 616 (alternate manuscript). No single Greek word is widely accepted as the original Revelation 666. <b>Apollyon 1461 ↔ Sothic</b> is an esoteric parallel (arithmetic exact), not a scholarly lexicon entry.</div>
+  </>;
+}
+
+function GematriaArabic(){
+  const [inp,setInp]=useState('بسم الله الرحمن الرحيم');
+  const v=abjad(inp);
+  const letters=[...inp].filter(ch=>ABJAD[ch]);
+  const ex=[['بسم الله الرحمن الرحيم','Bismillah',786,'19 letters; 2+60+40+66+329+289'],['الله','Allah',66,''],['محمد','Muhammad',92,''],['علي','Ali',110,''],['حسين','Husayn',128,'']];
+  return <>
+    <div className="controls" style={{marginBottom:10}}>
+      <input type="text" dir="rtl" lang="ar" value={inp} onChange={e=>setInp(e.target.value)} placeholder="Arabic, e.g. بسم الله الرحمن الرحيم" style={{flex:'1 1 320px',textAlign:'right'}}/>
+      <span className="pill">abjad (ḥisāb al-jummal): <b style={{color:'var(--gold)'}}>{v}</b></span>
+    </div>
+    <div className="muted" style={{marginBottom:8}}>28 letters in the <b>abjad (Ḥijāʾī) order</b> — the numeral order, <i>not</i> the alphabetical alifbāʾī order (اب ت ث…). Mnemonic: ʾabjad hawwaz ḥuṭṭī kalaman saʿfaṣ qarashat thakhadh ḍaẓagh. Additive. (The Maghrebi/archaic variant differs at 6 positions — not shown.)</div>
+    <table style={{marginBottom:10}}>
+      <thead><tr><th>Units 1–9</th><th>Tens 10–90</th><th>Hundreds 100–900</th><th>1000</th></tr></thead>
+      <tbody>
+        <tr><td className="he" dir="rtl" style={{fontSize:'1.25rem'}}>ا ب ج د ه و ز ح ط</td><td className="he" dir="rtl" style={{fontSize:'1.25rem'}}>ي ك ل م ن س ع ف ص</td><td className="he" dir="rtl" style={{fontSize:'1.25rem'}}>ق ر ش ت ث خ ذ ض ظ</td><td className="he" dir="rtl" style={{fontSize:'1.25rem'}}>غ</td></tr>
+        <tr className="muted"><td>1 2 3 4 5 6 7 8 9</td><td>10 20 30 40 50 60 70 80 90</td><td>100 200 300 400 500 600 700 800 900</td><td>1000</td></tr>
+      </tbody>
+    </table>
+    {letters.length>0 && <div style={{marginBottom:10,padding:'10px 14px',background:'var(--panel2)',borderRadius:8}}>
+      <span className="muted">letters: </span>{letters.map((ch,i)=><span key={i} className="he" dir="rtl" style={{fontSize:'1.3rem',marginLeft:6}}>{ch}={ABJAD[ch]}</span>)}
+    </div>}
+    <table>
+      <thead><tr><th>Phrase</th><th>Reading</th><th>Value</th><th>Notes</th></tr></thead>
+      <tbody>
+      {ex.map((r,i)=><tr key={i}><td className="letter-cell"><span className="he" dir="rtl" style={{fontSize:'1.3rem'}}>{r[0]}</span></td><td>{r[1]}</td><td className="big" style={{color:'var(--gold)'}}>{r[2]}</td><td className="muted">{r[3]}</td></tr>)}
+      </tbody>
+    </table>
+    <div className="note"><b>The 19 Bismillah claim:</b> بسم الله الرحمن الرحيم = 19 letters (the alif of the article is counted) — the count is correct; the Code-19 / Rashad Khalifa debate rests on it. <b>786</b> is the abjad sum, used as a shorthand for Bismillah in South Asia (some scholars call it bidʿah). Both are tradition, not Quran text.</div>
+  </>;
+}
+
+function GematriaIndian(){
+  const [inp,setInp]=useState('गप्यभाग्य');
+  const dec=katapayadi(inp);
+  return <>
+    <div className="controls" style={{marginBottom:10}}>
+      <input type="text" value={inp} onChange={e=>setInp(e.target.value)} placeholder="Devanagari consonants, e.g. अनुष्टुभ्न (or any)" style={{flex:'1 1 320px'}}/>
+      <span className="pill">decoded (right-to-left): <b style={{color:'var(--gold)'}}>{dec||'—'}</b></span>
+    </div>
+    <div className="muted" style={{marginBottom:8}}><b>Katapayadi</b> (Haridatta, 683 CE; Kerala school, pre-1500): consonants → digits, read <b>right-to-left</b> (अङ्कानां वामतो गतिः, "numbers go from left to right" reversed). <b>Vowels = 0</b>; न, ञ = 0. In a conjunct, only the <b>last</b> consonant carries a value. Named for the four consonants heading the four groups (क ट प य, all = 1). This is <b>positional</b>, not additive isopsephy.</div>
+    <table style={{marginBottom:10}}>
+      <thead><tr><th>Digit</th><th>ka-group</th><th>ṭa-group</th><th>pa-group</th><th>ya-group</th></tr></thead>
+      <tbody>
+        {[['1','क','ट','प','य'],['2','ख','ठ','फ','र'],['3','ग','ड','ब','ल'],['4','घ','ढ','भ','व'],['5','ङ','ण','म','श'],['6','च','त','—','ष'],['7','छ','थ','—','स'],['8','ज','द','—','ह'],['9','झ','ध','—','—'],['0','ञ','न','—','—']].map(r=>(
+          <tr key={r[0]}><td className="big" style={{color:'var(--gold)'}}>{r[0]}</td>{r.slice(1).map((c,i)=><td key={i} className="he" style={{fontSize:'1.3rem'}}>{c}</td>)}</tr>
+        ))}
+      </tbody>
+    </table>
+    <div className="note"><b>Famous encodings (π):</b> the Karaṇapaddhati verse (Kerala school, 15th c.) decodes to <b>31415926536</b> (π to 10 places) under the standard right-to-left rule. The 31-place gopībhāgya verse <i>violates</i> the reversal rule — a standard decoder will not reproduce it. <b>Flag:</b> "कटपयादि encodes 31416" is FALSE — the name is etymological ("starting with ka,ṭa,pa,ya"), not a numerical encoding.</div>
+    <div className="muted" style={{marginTop:8}}>The Sanskrit vargas (5 consonant classes) and the 14 Shiva Sutras are <b>phonological/grammatical</b>, NOT gematria — no numbers are assigned. The sacred numbers 108 (= 27 nakshatras × 4 pādas), 1008, 432,000 are fixed constants, not letter-sums.</div>
+  </>;
+}
+
+function GematriaMore(){
+  return <>
+    <h3>Āryabhaṭa numeration (India, early 6th c. CE) — positional, not additive</h3>
+    <div className="muted" style={{marginBottom:8}}>A true alphasyllabic numeral: <b>consonant = fixed value 1–100; vowel = power-of-100 multiplier</b>; syllable = consonant × vowel. e.g. कि = क(1) × 100 = 100; हौ = ह(100) × 10¹⁶ = 10¹⁸. Concatenated least-significant first. Pre-1500. This is a large-number positional notation, <b>not</b> a word-summing gematria.</div>
+    <table style={{marginBottom:12}}>
+      <thead><tr><th>Category</th><th>Consonants → values</th></tr></thead>
+      <tbody>
+        <tr><td>Velar</td><td className="he">क1 ख2 ग3 घ4 ङ5</td></tr>
+        <tr><td>Palatal</td><td className="he">च6 छ7 ज8 झ9 ञ10</td></tr>
+        <tr><td>Retroflex</td><td className="he">ट11 ठ12 ड13 ढ14 ण15</td></tr>
+        <tr><td>Dental</td><td className="he">त16 थ17 द18 ध19 न20</td></tr>
+        <tr><td>Labial</td><td className="he">प21 फ22 ब23 भ24 म25</td></tr>
+        <tr><td>Semivowels</td><td className="he">य30 र40 ल50 व60</td></tr>
+        <tr><td>Fricatives</td><td className="he">श70 ष80 स90 ह100</td></tr>
+        <tr className="muted"><td>Vowel mult.</td><td>a=1, i=100, u=10⁴, ṛ=10⁶, ḷ=10⁸, e=10¹⁰, ai=10¹², o=10¹⁴, au=10¹⁶</td></tr>
+      </tbody>
+    </table>
+    <h3>Cyrillic (10th c., Greek-derived) — true pre-1500 isopsephy</h3>
+    <div className="muted" style={{marginBottom:8}}>Direct adaptation of Byzantine Greek isopsephy. Order follows Greek, not Cyrillic alphabetical. Borrowed letters Ѯ(ksi)=60, Ѱ(psi)=700, Ѳ(theta)=9 carry numerals; Slavic-only letters (б ж ш щ…) get NO value. e.g. ѰЗ = 700+7 = 707.</div>
+    <h3>Coptic — Greek + Fai=90</h3>
+    <div className="muted" style={{marginBottom:8}}>Essentially Greek isopsephy reused, with ONE Demotic addition: <b>ϥ (Fai) = 90</b>, filling the Greek qoppa slot. The other 5 Demotic letters have no numeric value. Treat as "Greek + Fai=90."</div>
+    <h3>POST-1500 / NOT gematria (flagged)</h3>
+    <ul className="muted">
+      <li><b>Latin A-Z gematria</b> — <span style={{color:'var(--red)'}}>post-1500</span>. No pre-1500 full Latin A-Z system exists. Earliest: Rudolff 1525; famous: <b>Agrippa, De Occulta Philosophia (1532), Bk II ch. XX</b> (A=1…Z=500). e.g. IESUS = 394. A Renaissance construction — flag, do not treat as ancient.</li>
+      <li><b>Roman numerals</b> — 7 symbols (I V X L C D M), additive/subtractive. Numeral notation, <b>not</b> word-summing isopsephy.</li>
+      <li><b>Runic calendars</b> — 16 Younger Futhark runes encode golden numbers 1–16 + 3 special (Metonic calendrical), not gematria.</li>
+      <li><b>Ogham</b> — the 20 fid have NO numeric assignment; stroke-count is phonological organization.</li>
+      <li><b>Chinese stroke-count divination</b> (測字) — pre-1500 roots but NO fixed standardized stroke→number table; systematized only post-1612.</li>
+    </ul>
   </>;
 }
 
 function SigilTab(){
   const [inp,setInp]=useState('משיח');
   const sp=sigilPath(inp);
+  const isHeb=/[א-ת]/.test(inp);
+  // build per-letter entries (same logic as KameaSigil, for the shared text panel)
+  const entries = isHeb
+    ? [...norm(inp)].filter(ch=>GV[ch]).map(ch=>({l:displayHe(ch), v:letterVal(ch)}))
+    : [...inp.toUpperCase().replace(/[^A-Z]/g,'')].map(ch=>({l:ch, v:ch.charCodeAt(0)-64}));
   return <>
-    <h2>Sigil Forge — name → Aiq Bekar → Lo Shu trace (§15b.3)</h2>
-    <div className="muted" style={{marginBottom:10}}>The traditional kamea-sigil method: (1) take the name (consonants); (2) reduce each letter to 1–9 by Aiq Bekar; (3) on Saturn's kamea (the Lo Shu 3×3) mark the reduced cells in order and join them — the trace <b>is</b> the sigil; (4) consecutive repeats collapse (the pen does not lift). <span style={{color:'var(--green)'}}>Green</span> = first cell, <span style={{color:'var(--red)'}}>red</span> = last.</div>
+    <h2>Sigil Forge — the Aiq Bekar / Lo Shu sigil (Saturn 3×3, §15b.3)</h2>
+    <div className="muted" style={{marginBottom:10}}>The kamea-sigil method: (1) take the name (consonants); (2) reduce each letter's gematria to its digital root 1–9 (Aiq Bekar); (3) mark those cells on the Lo Shu (Saturn 3×3) in order and join them — the trace <b>is</b> the sigil; (4) consecutive repeats collapse (the pen does not lift). Aiq Bekar = the digit-sum of the 22-letter gematria of §2, the bridge from alphabet to sigil. <span style={{color:'var(--green)'}}>Green</span> = first cell, <span style={{color:'var(--red)'}}>red</span> = last. The <b>Kameot</b> tab traces the same name on all 7 planetary squares (Saturn → Moon).</div>
     <div className="controls" style={{marginBottom:12}}>
-      <input type="text" value={inp} onChange={e=>setInp(e.target.value)} placeholder="Hebrew name, e.g. משיח" style={{flex:'1 1 260px'}}/>
-      <span className="pill">cells used: {sp.cellsUsed.length}/9</span>
+      <input type="text" value={inp} onChange={e=>setInp(e.target.value)} placeholder="Hebrew name, e.g. משיח" style={{flex:'1 1 260px'}} autoFocus/>
+      <span className="pill">Aiq Bekar cells used: {sp.cellsUsed.length}/9</span>
     </div>
-    <div className="sigil-grid" style={{display:'flex',gap:24,flexWrap:'wrap',alignItems:'flex-start'}}>
-      <SigilSVG name={inp}/>
-      <div style={{flex:'1 1 220px'}}>
-        <div className="muted">Letters: <b style={{color:'var(--gold)'}}>{sp.letters.map(displayHe).join(' ')}</b></div>
-        <div className="muted">Values: {sp.letters.map(ch=>letterVal(ch)).join(', ')}</div>
-        <div className="muted">Aiq Bekar (1–9): <b style={{color:'var(--blue)'}}>{sp.reduced.join('  ')}</b></div>
-        <div className="muted">Trace (consecutive repeats collapsed):</div>
+    <div className="row" style={{alignItems:'flex-start'}}>
+      <div style={{flex:'0 0 auto'}}><KameaSigil n={3} word={inp} compact/></div>
+      <div style={{flex:'1 1 200px'}}>
+        <div className="muted">Letters: <b style={{color:'var(--gold)'}}>{entries.map(e=>e.l).join(' ')||'—'}</b></div>
+        <div className="muted">Values: {entries.map(e=>e.v).join(', ')||'—'}</div>
+        <div className="muted">Aiq Bekar (1–9): <b style={{color:'var(--blue)'}}>{sp.reduced.join('  ')||'—'}</b></div>
+        <div className="muted">Saturn trace (repeats collapsed):</div>
         <div className="big" style={{color:'var(--gold)'}}>{sp.cells.map(c=>c.v).join(' → ') || '—'}</div>
-        <div className="note">The sigil is the geometric footprint of the name on the decimal grid (Aiq Bekar). It is deterministic and reproducible from the name alone. <em>Caveat (§6.3 / §15b.3):</em> the sigil-over-kamea method is Renaissance (Agrippa, 1531), not medieval Jewish.</div>
-        <div className="note">Try: <span className="key click" onClick={()=>setInp('אדם')}>אדם</span> <span className="key click" onClick={()=>setInp('משה')}>משה</span> <span className="key click" onClick={()=>setInp('ישראל')}>ישראל</span> <span className="key click" onClick={()=>setInp('והו')}>והו</span> (1st Shem HaMephorash angel).</div>
+        <div className="note">The sigil is the geometric footprint of the name on the Lo Shu — deterministic from the name alone. The <b>Kameot</b> tab traces the same name on all 7 planetary squares (Saturn → Moon): each square's different modulus n² = 9,16,25,36,49,64,81 yields a distinct sigil per planet. <em>Caveat (§6.3 / §15b.3):</em> the sigil-over-kamea method is Renaissance (Agrippa, 1531), not medieval Jewish.</div>
+        <div className="note">Try: <span className="key click" onClick={()=>setInp('אדם')}>אדם</span> <span className="key click" onClick={()=>setInp('משה')}>משה</span> <span className="key click" onClick={()=>setInp('ישראל')}>ישראל</span> <span className="key click" onClick={()=>setInp('והו')}>והו</span> (1st Shem angel) · <span className="key click" onClick={()=>setInp('MICHAEL')}>MICHAEL</span></div>
       </div>
     </div>
-    <Fig n={7} doc="From the article (§15b.3): the Lo Shu (Saturn 3×3, M=15) with the 9 Aiq Bekar groups overlaid — each cell gathers the letters whose gematria digit-sums to it. The golden trace is the sigil of משיח (Messiah): Aiq Bekar 4·3·1·8, the reduced cells joined in order. Aiq Bekar = the digit-sum of the decimal-positional gematria of §2 — the bridge from alphabet to sigil."/>
+    <Fig n={7} doc="From the article (§15b.3): the Lo Shu (Saturn 3×3, M=15) with the 9 Aiq Bekar groups overlaid — each cell gathers the letters whose gematria digit-sums to it. The golden trace is the sigil of משיח (Messiah): Aiq Bekar 4·3·1·8, the reduced cells joined in order. Aiq Bekar = the digit-sum of the 22-letter gematria of §2 — the bridge from alphabet to sigil."/>
   </>;
 }
 
-function KameaSigil({ n, word }){
+function KameaSigil({ n, word, compact }){
   const sq = buildMagic(n);
   const N = n*n;
   const pos = {}; for(let i=0;i<n;i++) for(let j=0;j<n;j++) pos[sq[i][j]]=[i,j];
   const isHeb = /[א-ת]/.test(word);
   let entries;
   if(isHeb){
-    entries = [...norm(word)].filter(ch=>GV[ch]||FINALS[ch]).map(ch=>({l:displayHe(ch), v:letterVal(ch)}));
+    entries = [...norm(word)].filter(ch=>GV[ch]).map(ch=>({l:displayHe(ch), v:letterVal(ch)}));
   } else {
     entries = [...word.toUpperCase().replace(/[^A-Z]/g,'')].map(ch=>({l:ch, v:ch.charCodeAt(0)-64}));
   }
@@ -652,8 +1052,8 @@ function KameaSigil({ n, word }){
       {path.length>=2 && <path d={d} fill="none" stroke="#e8c87a" strokeWidth="2.2" opacity="0.9" strokeLinejoin="round" strokeLinecap="round"/>}
       {path.map((v,k)=>{const [x,y]=center(v); const r=k===0||k===path.length-1?4.5:2.8; const fill=k===0?'#6fe0a0':k===path.length-1?'#ff8a8a':'#e8c87a'; return <circle key={k} cx={x} cy={y} r={r} fill={fill} stroke="#0b0e14" strokeWidth="0.6"/>;})}
     </svg>
-    <div style={{marginTop:8, minWidth:200}}>
-      <div className="muted">{isHeb?'Hebrew gematria (finals included)':'Latin A=1…Z=26'} → reduced into the square (n²={N}){n===3?' — for Saturn n²=9 this is the digital root = the Aiq Bekar method of §15b.3':''}.</div>
+    {!compact && <div style={{marginTop:8, minWidth:200}}>
+      <div className="muted">{isHeb?'Hebrew gematria (22 letters; finals = base letter)':'Latin A=1…Z=26'} → reduced into the square (n²={N}){n===3?' — for Saturn n²=9 this is the digital root = the Aiq Bekar method of §15b.3':''}.</div>
       {entries.length===0
         ? <div className="note">Type a word to trace its sigil on this kamea.</div>
         : <table style={{marginTop:6}}>
@@ -661,7 +1061,7 @@ function KameaSigil({ n, word }){
             <tbody>{entries.map((e,i)=><tr key={i}><td><span className={isHeb?'he':'gk'} style={{fontSize:'1.2rem'}}>{e.l}</span></td><td className="deg">{e.v}</td><td className="deg">{targets[i]}</td></tr>)}</tbody>
           </table>}
       <div className="muted" style={{marginTop:6}}>Trace ({path.length} pts, repeats collapsed): <b style={{color:'var(--gold)'}}>{path.join(' → ')||'—'}</b> · cells {used.size}/{N}</div>
-    </div>
+    </div>}
   </>;
 }
 
@@ -682,23 +1082,23 @@ function KameotTab(){
       <div style={{flex:'0 0 auto'}}><KameaSigil n={n} word={word}/></div>
       <div style={{flex:'1 1 200px'}}>
         <div className="muted">Planet: <b>{GLYPH[planet]} {planet}</b> · {n}×{n} kamea · double <span className="he" style={{fontSize:'1.2rem'}}>{pdbl}</span> · constant <b style={{color:'var(--gold)'}}>{n*(n*n+1)/2}</b>.</div>
-        <div className="note">How the trace is built: letters of the word → gematria value (Hebrew, finals included; or A=1…Z=26 for Latin) → reduce each value into the square's range (1…n²) by ((value−1) mod n²)+1 → mark those cells in order → join them. For <b>Saturn</b> (n²=9) this reduces to the digital root — exactly the Aiq Bekar → Lo Shu method verified in §15b.3 and used in the Sigil Forge tab.</div>
+        <div className="note">How the trace is built: letters of the word → gematria value (Hebrew, 22 letters — finals = base letter, no 500–900; or A=1…Z=26 for Latin) → reduce each value into the square's range (1…n²) by ((value−1) mod n²)+1 → mark those cells in order → join them. For <b>Saturn</b> (n²=9) this reduces to the digital root — exactly the Aiq Bekar → Lo Shu method verified in §15b.3 and used in the Sigil Forge tab.</div>
         <div className="note">Try: <span className="key click" onClick={()=>setWord('יהוה')}>יהוה</span> <span className="key click" onClick={()=>setWord('משיח')}>משיח</span> <span className="key click" onClick={()=>setWord('אדם')}>אדם</span> <span className="key click" onClick={()=>setWord('MICHAEL')}>MICHAEL</span> <span className="key click" onClick={()=>setWord('RAPHAEL')}>RAPHAEL</span> — then switch planet.</div>
         <div className="note"><em>Caveat (§6.3 / §15b.3):</em> the sigil-over-kamea method is Renaissance (Agrippa, 1531), not medieval Jewish. The English A=1…Z=26 mapping is a modern Latin gematria, not traditional.</div>
       </div>
     </div>
-    <h3>All 7 kameot (reference)</h3>
-    <div className="grid2">
+    <h3>All 7 kameot — <span className="he" style={{fontSize:'1.1rem'}}>{word?displayHe(norm(word)):''}</span> traced on each square</h3>
+    <div className="tcards" style={{gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))'}}>
       {KAMEOT.map(([planet,n,dbl])=>{
-        const M=n*(n*n+1)/2, total=n*n*M;
+        const M=n*(n*n+1)/2;
         const sq=buildMagic(n); const ok=isMagic(sq);
-        return <div key={planet} className="kbox">
+        return <div key={planet} className="kbox" style={{textAlign:'center'}}>
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:6}}>
             <b>{GLYPH[planet]} {planet}</b>
-            <span className="muted">{n}×{n} · double <span className="he" style={{fontSize:'1.1rem'}}>{dbl}</span></span>
+            <span className="muted">{n}×{n} · M={M}</span>
           </div>
-          <KameaGrid n={n}/>
-          <div className="muted" style={{marginTop:6}}>constant <b style={{color:'var(--gold)'}}>{M}</b> · sum <b>{total}</b> · magic {ok?'✓':'✗'}</div>
+          <div style={{display:'flex',justifyContent:'center'}}><KameaSigil n={n} word={word} compact/></div>
+          <div className="muted" style={{marginTop:6}}>double <span className="he" style={{fontSize:'1rem'}}>{dbl}</span> · constant <b style={{color:'var(--gold)'}}>{M}</b> · magic {ok?'✓':'✗'}</div>
         </div>;
       })}
     </div>
@@ -711,6 +1111,40 @@ function KameotTab(){
     </ul>
     <Fig n={6} doc="From the article (§15b.1): the 7 planetary kameot, orders 3–9 in Chaldean order, with constants M(n)=n(n²+1)/2. Saturn 3×3 = the Lo Shu (M=15, basis of the sigils); Mercury 8×8 (M=260) = the Maya Tzolkin; the Sun 6×6 sums 1+…+36 = 666 = 6×111."/>
   </>;
+}
+
+// 72 Shem HaMephorash angels placed around a circle of 72 divisions (5° each).
+// The 72-fold division is the precessional clock: precession ≈ 71.6 yr/° ≈ 72 yr per
+// degree, so 72 = years-per-degree, and 72 × 360 yr ≈ 25 920 yr = the Platonic great
+// year (modern 25 772). Each angel = 5° = ~360 yr of precession.
+function AngelsCircle({triplets}){
+  const C=240;
+  const ang=(i)=>(-90 + i*5)*Math.PI/180;
+  const pt=(r,a)=>[C+r*Math.cos(a), C+r*Math.sin(a)];
+  const Rout=212, RtickIn=200, Rnum=224, RlabOut=188, RlabIn=168;
+  return <svg viewBox="0 0 480 482" width="100%" height="auto" style={{maxWidth:470,margin:'0 auto'}} role="img" aria-label="72 angels around the precessional circle">
+    <rect x="0" y="0" width="480" height="482" fill="#0e1320" rx="10"/>
+    <circle cx={C} cy={C} r={Rout} fill="none" stroke="#283145" strokeWidth="1.4"/>
+    <circle cx={C} cy={C} r={RlabOut+10} fill="none" stroke="#1c2333" strokeWidth="0.7"/>
+    {triplets.map((t,i)=>{
+      const a=ang(i); const [x0,y0]=pt(Rout,a); const [x1,y1]=pt(RtickIn,a);
+      const major=i%6===0;
+      return <line key={'t'+i} x1={x0} y1={y0} x2={x1} y2={y1} stroke={major?'#7fb0ff':'#33405a'} strokeWidth={major?1.3:0.6}/>;
+    })}
+    {triplets.map((t,i)=>{
+      const a=ang(i); const outer=i%2===0; const rl=outer?RlabOut:RlabIn;
+      const [lx,ly]=pt(rl,a); const [nx,ny]=pt(Rnum,a);
+      return <g key={'a'+i}>
+        <text x={lx} y={ly} textAnchor="middle" dominantBaseline="middle" fontSize="8.6" fill={outer?'#e8c87a':'#c9a558'} fontFamily="serif">{t}</text>
+        <text x={nx} y={ny} textAnchor="middle" dominantBaseline="middle" fontSize="5" fill="#5d6883">{i+1}</text>
+      </g>;
+    })}
+    <circle cx={C} cy={C} r="58" fill="#0e1320" stroke="#2a3346" strokeWidth="0.8"/>
+    <text x={C} y={C-18} textAnchor="middle" fontSize="24" fill="#e8c87a" fontFamily="serif">72</text>
+    <text x={C} y={C-2} textAnchor="middle" fontSize="8" fill="#8aa0c0">5° per angel · 360°/72</text>
+    <text x={C} y={C+13} textAnchor="middle" fontSize="7.6" fill="#7fb0ff">1° / 72 yr precession</text>
+    <text x={C} y={C+25} textAnchor="middle" fontSize="6.8" fill="#5d6883">72 × 360 = 25 920 yr</text>
+  </svg>;
 }
 
 function AngelsTab(){
@@ -726,6 +1160,9 @@ function AngelsTab(){
   return <>
     <h2>The 72 angels — Shem HaMephorash from Exodus 14:19-21 (§15b.4)</h2>
     <div className="muted" style={{marginBottom:10}}>72 consonants × 3 verses. The 72 triplets are read by <b>columns</b>: tríos[i] = v19[i] + v20[71−i] + v21[i] (v20 read backwards, as tradition requires). 72×3 = 216 = 6³. Triplet 0 = <span className="he">והו</span> = Vehuiah (canonical ✓). Each triplet + suffix <span className="he">אל</span> (Hod) or <span className="he">יה</span> (Malkhut) gives the angelic name.</div>
+    <h3>The 72 around the precessional circle</h3>
+    <div className="muted" style={{marginBottom:8}}>The 72 angels placed one every 5° (360°/72). This is the precessional clock: precession carries the equinox ≈ 1° every 71.6 ≈ <b>72 years</b>, so <b>72 = the years per degree of precession</b>, and each 5° angel = ~360 yr of precession; the full 72-division circuit = 72 × 360 ≈ <b>25 920 yr</b> — the traditional Platonic great year (modern value 25 772 yr). Major ticks every 6th (the 12 decans). The decanatal attribution (each Shem angel → 5°) is traditional; the precessional reading is a mnemonic, not a physical model.</div>
+    <div style={{marginBottom:14}}><AngelsCircle triplets={data.triplets}/></div>
     <div className="controls" style={{marginBottom:10}}>
       <input type="text" value={q} onChange={e=>setQ(e.target.value)} placeholder="filter by # or triplet…" style={{flex:'1 1 220px'}}/>
       <span className="pill">{filtered.length} of 72</span>
@@ -745,7 +1182,6 @@ function AngelsTab(){
       </tbody>
     </table>
     <div className="note"><em>Caveat (§6.3):</em> the mechanical extraction 72×3 from Exodus is demonstrated (p≈5×10⁻⁷); the method is medieval (Rashi, 11th c.); the decanatal attribution (each angel → 5°) is a hypothesis, not demonstrated here. The sigil of each triplet is computed on the Sigil Forge tab.</div>
-    <Fig n={8} doc="From the article (§15b.4): the three columns of Exodus 14:19-21 read in parallel — v19 downward, v20 upward (inverted, as tradition requires), v21 downward — so row i yields trio[i]. 72 × 3 = 216 = 6³ consonants → 72 triplets (Shem HaMephorash). The first trios והו (Vehuiah), ילי (Jeliel), סיט (Sitael)… are verified against the canonical list."/>
   </>;
 }
 
@@ -756,12 +1192,12 @@ function SarosTab(){
   function scan(y){
     setBusy(true);
     setTimeout(()=>{
-      const out=[]; let cur=new Date(Date.UTC(y,0,1,12));
-      const endMs=Date.UTC(y+1,0,1,12); let guard=0;
+      const out=[]; let cur=makeDate(y,1,1);
+      const endMs=makeDate(y+1,1,1).getTime(); let guard=0;
       while(cur.getTime()<endMs && guard++<40){
         const t=Astronomy.SearchMoonPhase(0, cur, 40);
         if(!t) break;
-        const lat=Astronomy.EclipticGeoMoon(t).lat; const ds=t.date.toISOString().slice(0,10);
+        const lat=Astronomy.EclipticGeoMoon(t).lat; const ds=fmtDate(t.date);
         if(Math.abs(lat)<1.6) out.push({ds, beta:lat, kind:Math.abs(lat)<0.6?'central':'partial'});
         cur=new Date(t.date.getTime()+2*86400000);
       }
@@ -770,12 +1206,14 @@ function SarosTab(){
   }
   useEffect(()=>{ scan(yr); },[yr]);
   return <>
-    <h2>Saros — solar eclipses &amp; the 73 statistic (§15b.6, §9)</h2>
+    <h2>Saros — solar eclipses &amp; the saros series (§15b.6, §9)</h2>
     <div className="muted" style={{marginBottom:10}}>A live scan: every new moon in the chosen year, a solar eclipse if the Moon's ecliptic latitude |β| &lt; 1.6° (the same threshold calibrated in <code>calc_saros_series.mjs</code>). One year is fast; the full 5000-year enumeration that counts saros series members runs offline.</div>
+    <div className="fig"><SarosDiagram/><div className="cap">Why eclipses cluster at nodes: the Moon's path is inclined 5.1° to the ecliptic and crosses it only twice per month. A new moon within the |β|&lt;1.6° window (green band) = solar eclipse; elsewhere = a normal new moon. The scan tests exactly this.</div></div>
     <div className="controls" style={{marginBottom:10}}>
       <button onClick={()=>setYr(yr-1)}>◀ {yr-1}</button>
-      <span className="pill">{yr}</span>
+      <YearInput value={yr} onCommit={setYr}/>
       <button onClick={()=>setYr(yr+1)}>{yr+1} ▶</button>
+      {yr<0 && <span className="muted" style={{fontSize:'.78rem'}}>{Math.abs(yr)} BCE</span>}
       {busy && <span className="pill">scanning…</span>}
     </div>
     {list && <>
@@ -790,10 +1228,23 @@ function SarosTab(){
     </>}
     <h3>The saros-series count (§15b.6 — verified by calculation)</h3>
     <ul className="muted">
-      <li>The saros = 223 synodic months = 6585.32 d. Eclipses of one series are separated by ~6585.32 d; a chain = a saros series.</li>
-      <li>Full enumeration (5000 years, all new moons, |β| &lt; 1.6°): <b>152 complete series, lengths 54–87, median 72</b>. The “73” is a <b>statistical count</b> (mean/median members per series) — not a period and not an eclipse factor.</li>
-      <li><b style={{color:'var(--red)'}}>Negative result (§9):</b> 37/73 do <b>not</b> structure eclipses (factorisation, period, nodal-cycle stations ~40/~87 — all negative). 73 appears <i>only</i> as the saros-series member count.</li>
+      <li>The saros = 223 synodic months = <b>{(223*SYN).toFixed(2)} d</b>. Eclipses of one series are separated by ~{(223*SYN).toFixed(2)} d; a chain = a saros series.</li>
+      <li>Full enumeration (5000 years, all new moons, |β| &lt; 1.6°): <b>152 complete series, lengths 54–87, median 72</b> — the empirical member count of a saros series.</li>
     </ul>
+    <h3>Hebrew stellar-alphabet mnemonics for eclipse seasons</h3>
+    <div className="muted" style={{marginBottom:8}}>The <i>Sefer Yetzirah</i> does not predict eclipses, and the <i>Sefer Raziel</i> (p.144: “combina los signos y la rueda… calcula los períodos… calcula para ver las generaciones”) gives the letter-astronomy scaffold but no eclipse algorithm. The real engine is the Hebrew calendar, and its constants are the SY's constants:</div>
+    <table>
+      <thead><tr><th>Astronomy</th><th>Stellar alphabet (SY)</th></tr></thead>
+      <tbody>
+      <tr><td>Molad = 29d 12h 793p = <b>{MOLAD.toFixed(6)} d</b></td><td>≈ synodic month <b>{SYN.toFixed(6)} d</b> ⇒ a conjunction engine (eclipse = conjunction/opposition near a node)</td></tr>
+      <tr><td>Metonic cycle = <b>19 yr</b> (12 common + 7 leap)</td><td><b>19 = 7 doubles + 12 simples</b> (the SY's own partition)</td></tr>
+      <tr><td>7 leap years of the 19-yr cycle</td><td>= the <b>7 doubles</b> (mnemonic)</td></tr>
+      <tr><td>28 lunar mansions (node / Moon path)</td><td><b>28 = T₇</b> — triangular number of the 7 doubles</td></tr>
+      <tr><td>Saros ≈ 19 eclipse years (Δ {(19*ECLY-223*SYN).toFixed(2)} d)</td><td>the SY's <b>19</b> structures the saros</td></tr>
+      <tr><td>Saros = 223 synodic = 242 draconic months</td><td><b>242 − 223 = 19</b> — the SY number embedded in the saros</td></tr>
+      </tbody>
+    </table>
+    <div className="note">Sources the Hebrew calendar actually uses (absent from the rest of this app): molad + tekufot (Shmuel/Ada), <i>Baraita of Samuel</i> (the one Jewish source with a nodal cycle), Maimonides <i>Kiddush HaChodesh</i> (mean lunar motion), Ibn Ezra <i>Sefer ha-Olam</i> (28 mansions, precession). <b>Caveat:</b> these mnemonics predict <i>eclipse seasons</i> (a window near a node), not individual eclipses or paths; the molad + 19-yr cycle is a real calculation engine, the stellar-alphabet constants are a mnemonic, not a physical model.</div>
   </>;
 }
 
@@ -805,6 +1256,7 @@ function AyanamsaTab(){
   return <>
     <h2>Ayanamsa — sensitivity of the precessional ages (§15b.7)</h2>
     <div className="muted" style={{marginBottom:10}}>The Ages tab dates the eras with Lahiri (24.18°). Other ayanamsas shift every era boundary by Δayanamsa / precession — up to ~190 years between extremes. The “Age of Aquarius” is not a clean astronomical prediction; it depends on the chosen sidereal zero. Caeli Reader does <b>not</b> date ages by ayanamsa but by <b>tropical</b> sign occupation (the 10 bodies) — independent of the ayanamsa, so its discard is robust.</div>
+    <div className="fig"><PrecessionDiagram/><div className="cap">Tropical Aries 0° (gold) is fixed to the vernal equinox — it does <b>not</b> precess, so the Reader's 12 letter↔sign sectors never rotate. Sidereal Aries 0° (violet) is fixed to the stars and precesses away from it; the gap is the ayanamsa (24.18° today). This is why the zodiacs here don't move with precession — by design.</div></div>
     <table>
       <thead><tr><th>Ayanamsa</th><th>value (°, ~2024)</th><th>Aquarius entry</th></tr></thead>
       <tbody>
@@ -816,13 +1268,13 @@ function AyanamsaTab(){
 }
 
 function LunarSolarTab(){
-  const SYN=29.530589, TROP=365.24219, DRAC=27.212221, ANOM=27.554550;
   const meton19=19*TROP, meton235=235*SYN;
   const oct8=8*TROP, oct99=99*SYN;
   const isl33lunar=33*12*SYN, isl33solar=33*TROP;
   return <>
     <h2>Lunar–Solar synchronisation — Meton, octaeteris, Islamic (§7–§8)</h2>
     <div className="muted" style={{marginBottom:10}}>The 19-year lunisolar cycle (Meton) and its cross-cultural echoes. All numbers computed live from SYN = {SYN} and TROP = {TROP}.</div>
+    <div className="fig"><MetonDiagram/><div className="cap">The Metonic 19-year cycle: 7 leap years (13 months, gold = the 7 doubles) + 12 common years (12 months) = 235 lunations ≈ 19 tropical years. 19 = 7 doubles + 12 simples — the SY's own partition is the lunisolar cycle.</div></div>
     <table>
       <thead><tr><th>Cycle</th><th>Relation</th><th>Days (lunar)</th><th>Days (solar)</th><th>Δ</th></tr></thead>
       <tbody>
@@ -836,7 +1288,7 @@ function LunarSolarTab(){
       <li><b>Octaeteris</b>: 8 years ≈ 99 months (the older, rougher cycle; Δ ≈ {(oct99-oct8).toFixed(2)} d).</li>
       <li><b>Islamic</b>: a 33-year cycle brings the lunar calendar back near the solar year (drift ≈ {(isl33lunar-isl33solar).toFixed(0)} d over 33 y ≈ 11 d/y).</li>
       <li><b>China</b>: the 章 (zhāng) = 19 years = 235 months = Meton, discovered independently.</li>
-      <li>Draconic month {DRAC} d · anomalistic {ANOM} d · eclipse year {346.62} d → saros 223×SYN = 6585.32 d (see the Saros tab).</li>
+      <li>Draconic month {DRAC} d · anomalistic {ANOM} d · eclipse year {ECLY.toFixed(2)} d → saros 223×SYN = {(223*SYN).toFixed(2)} d (see the Saros tab).</li>
     </ul>
   </>;
 }
@@ -860,7 +1312,7 @@ const PHRASES = [
   ['Write what you see in a book','Rev 1:11, 19','The explicit command to <b>read the sky as letters and write it down</b> — the hermeneutic of the whole book.'],
 ];
 
-function RevelationTab({date, rows, occ, words, genData, genYear}){
+function RevelationHebrewTab({date, rows, occ, words, genData, genYear}){
   const [inp,setInp]=useState('Ἀπολλύων');
   const verified=[
     ['Ἰησοῦς','Jesus',888,'8×111'],
@@ -965,27 +1417,361 @@ function RevelationTab({date, rows, occ, words, genData, genYear}){
   </>;
 }
 
-function CrossCulturalTab(){
-  const rows=[
-    ['Maya','Tzolkin = 260; Haab = 365 = 73×5','73 appears twice: 73 pentads = solar year (Haab) and 73 tzolkin = 1 Calendar Round (52×365). Independent of Hebrew.'],
-    ['Maya','Baktun = 144,000 d = 400 tun','144,000 = 144×1000; 144 = 12². The Long Count uses 144,000 as its major unit (cf. Rev 7 sealed).'],
-    ['Greek','27 letters (9+9+9), values 1–9, 10–90, 100–900','Same decimal-positional assignment as Hebrew (§2). Convergence, not borrowing.'],
-    ['Arabic','28-letter abjad, 1–9, 10–90, 100–900 + 1000','Same decimal-positional sequence (§2).'],
-    ['Chinese','章 (zhāng) = 19 years = 235 months','The Metonic cycle discovered independently in China (§7–8).'],
-    ['Vedic','27 nakshatras × 13°20 = 360°; kali-yuga = 432,000 y','27 = 22+5 Hebrew; 432,000 = 72×6000 (72 = precessional degree, §3).'],
-    ['Babylonia','sar = 3600 = 60²; 60×6 = 360° → 12×30°','Sexagesimal base → the 12 signs × 30° grid.'],
-    ['Hebrew/Egyptian','72 = precessional degree / Shem HaMephorash','72 years/degree (§3); 72 conspirators of Set; 72 languages; 72×6 = 432 (yuga base).'],
-  ];
+// ====== Revelations — cross-cultural (subtabs by culture) ======
+// Class tags: (a) verifiable astronomy/cycle · (b) eschatological/prophecy · (c) cosmological-doctrine · (u) unverified
+const REV_CLS = {'(a)':'var(--green)','(b)':'var(--warn)','(c)':'var(--blue)','(u)':'var(--red)'};
+function ClassTag({c}){ const col=REV_CLS[c]||'var(--dim)'; return <span className="pill" style={{color:col,borderColor:col,fontSize:'.68rem',padding:'1px 7px'}}>{c}</span>; }
+function SrcList({items}){ return <details style={{marginTop:8}}><summary className="muted" style={{cursor:'pointer'}}>sources ({items.length})</summary><ul className="muted" style={{marginTop:6}}>{items.map((s,i)=><li key={i}><a href={s[1]} target="_blank" rel="noreferrer">{s[0]}</a></li>)}</ul></details>; }
+function Section({name, rows}){
   return <>
-    <h2>Cross-cultural convergence (§9.6)</h2>
-    <div className="muted" style={{marginBottom:10}}>Real arithmetic convergences, verified. No cultural borrowing is claimed — only independent corroboration of the system's constants.</div>
+    <h3>{name}</h3>
     <table>
-      <thead><tr><th>Tradition</th><th>Constant</th><th>What it shares</th></tr></thead>
+      <thead><tr><th>Claim</th><th>Number</th><th></th><th>Note</th></tr></thead>
       <tbody>
-      {rows.map((r,i)=> <tr key={i}><td>{r[0]}</td><td>{r[1]}</td><td className="muted">{r[2]}</td></tr>)}
+      {rows.map((r,i)=><tr key={i}>
+        <td>{r[0]}</td>
+        <td className="big" style={{color:'var(--gold)',whiteSpace:'nowrap'}}>{r[1]}</td>
+        <td><ClassTag c={r[2]}/></td>
+        <td className="muted">{r[3]}</td>
+      </tr>)}
       </tbody>
     </table>
-    <div className="note"><b>What the system shares, verifiably:</b> decimal-positional gematria 27/28 (Hebrew/Greek/Arabic); Meton 19a/235 (Greco-Babylonian, Chinese); 73×5=365 and 73-tzolkin Calendar Round (Hebrew civil, Maya); 144,000 as major unit (Revelation, Maya Long Count); 72 as precessional degree / completeness (Hebrew, Vedic, Egyptian). None proves the system; they independently corroborate it.</div>
+  </>;
+}
+const REV_SUMMARY = [
+  ['7','7 planets / powers / heavens','Hebrew · Gnostic · Sufi · Vedic · Egyptian','(a)'],
+  ['12','12 signs / authorities / ages','Hebrew · Gnostic · Sufi · Vedic','(a)'],
+  ['28','28 lunar mansions / letters / vertebrae','Sufi · Vedic · Chinese','(a)'],
+  ['72','72 nations / languages / Yasna ch. / precessional °','Hebrew · Gnostic · Egyptian · Avestan','(a)/(c)'],
+  ['360','360° / 360 powers / 360 veins / spokes / days','Hebrew · Gnostic · Sufi · Egyptian · Vedic','(a)'],
+  ['720','720 = 360×2 (year-wheel sons, days + nights)','Vedic (RV 1.164.11)','(a)'],
+  ['365','365 days / angels','Hebrew · Gnostic · Egyptian','(a)'],
+  ['14','14 luminous/dark · 13+1 voices','Gnostic · Sufi','(c)'],
+  ['19','Metonic 19 yr · 19 keepers of Hell','Hebrew · Chinese · Greco-Babylonian · Quran','(a)/(b)'],
+  ['22','22 Hebrew letters (Sefer Yetzirah)','Hebrew only — NOT cross-cultural','(c)'],
+  ['37 / 73','Gen 1:1 · 73×5=365 civil','Hebrew only — NOT cross-cultural','(c)'],
+  ['144 / 144000','(zodiac)² / sealed / Long-Count unit','Hebrew-Christian · Maya','(c)'],
+  ['1260 / 42 mo','half-heptad · beast domain','Hebrew-Christian only','(c)'],
+];
+
+function RevelationMayaTab(){ return <>
+  <h2>Maya — independent 73, 144000, 260</h2>
+  <div className="muted" style={{marginBottom:10}}>The Maya calendar corroborates 73, 144, 260 and 365 with no contact with Hebrew or Revelation — the strongest independent witnesses to the system's constants.</div>
+  <Section name="Maya astronomy" rows={[
+    ['Tzolkin 260-day sacred round','260','(a)','= the Mercury 8×8 kamea constant (§15b.1). 260 = 4×5×13.'],
+    ['Haab 365 = 73 × 5','365','(a)','73 pentads of 5 days = the civil solar year (cf. Hebrew 73×5=365, §9.4).'],
+    ['Calendar Round = 73 × 260 = 52 × 365','18,980','(a)','73 tzolkin cycles = 52 Haab years. 73 appears twice — pentads and tzolkin-rounds.'],
+    ['Baktun = 144,000 days = 400 × 360','144,000','(a)/(c)','144,000 = 144×1000 = 12²×10³ — the Long Count major unit (cf. Rev 7:4 sealed). Independent of Revelation.'],
+    ['144 = 12²','144','(c)','the square of the zodiac — Maya and Revelation agree without contact.'],
+  ]}/>
+  <SrcList items={[['Maya Long Count (Wikipedia)','https://en.wikipedia.org/wiki/Mesoamerican_Long_Count'],['Tzolkin (Wikipedia)','https://en.wikipedia.org/wiki/Tzolk%27in']]}/>
+</>; }
+
+function RevelationChineseTab(){ return <>
+  <h2>Chinese — independent Meton & 28 mansions</h2>
+  <div className="muted" style={{marginBottom:10}}>Chinese astronomy independently recovered the Metonic 19-year cycle and runs a 28-lunar-mansion scheme — convergences with no borrowing.</div>
+  <Section name="Chinese astronomy" rows={[
+    ['章 zhāng = 19 years = 235 months','19 / 235','(a)','the Metonic cycle, discovered independently in China (§7–8). 19 = 7 doubles + 12 simples in the SY.'],
+    ['28 lunar mansions (xiu 宿)','28','(a)','28 stations along the equator — same 28 = T₇ = abjad / Sufi letters.'],
+    ['24 solar terms (12 × 2)','24','(a)','12 major + 12 minor solar terms = 12 signs × 2.'],
+    ['sexagenary cycle = 12 × 5','60','(a)','12 Earthly Branches × 5 Elements; 60 = 12×5.'],
+  ]}/>
+  <SrcList items={[['Metonic cycle (Wikipedia)','https://en.wikipedia.org/wiki/Metonic_cycle'],['Chinese lunar mansions (Wikipedia)','https://en.wikipedia.org/wiki/Twenty-Eight_Mansions']]}/>
+</>; }
+
+function RevelationVedicTab(){ return <>
+  <h2>Indian / Vedic — the year-wheel, 7 metres, 27 nakshatras</h2>
+  <div className="muted" style={{marginBottom:10}}>The Ṛg Veda Samhita (c. 1500–1000 BCE) is the oldest text here and carries the system's constants in its own idiom: a <b>12-spoked / 360-spoke year-wheel</b>, <b>720 sons</b>, <b>7 metres</b>, the <b>7 horses of Sūrya</b>, and the <b>27/28 nakshatras</b>. Mined from the Griffith translation (source copies in <code>library/rig-veda/</code>).</div>
+  <Section name="Ṛg Veda 1.164 — the riddle of the year-wheel (strongest Vedic overlap)" rows={[
+    ['"Twelve are the fellies, and the wheel is single; three are the naves"','12 / 3','(a)','RV 1.164.48 — a wheel of 12 (the months/signs) on 3 (the mothers?), undivided.'],
+    ['"therein are set together spokes three hundred and sixty"','360','(a)','RV 1.164.48 — 360 spokes = the degrees/days of the year. The explicit 12×30.'],
+    ['"seven hundred Sons and twenty stand, O Agni"','720','(a)','RV 1.164.11 — 720 = 360×2 = days + nights = the full year of the wheel.'],
+    ['"with the syllable they form seven metres"','7','(a)','RV 1.164.24 — the 7 chandas (metres) of Vedic verse.'],
+    ['"the six twin pairs are called Ṛṣis… the seventh single-born"','6+1','(c)','RV 1.164.15 — 6 paired + 1 alone = the 7, structurally like the 7 doubles (2 tongues / 1 single).'],
+    ['"Speech hath been measured out in four divisions"','4','(c)','RV 1.164.45 — 3 hidden + 1 spoken = the 3 mothers + the manifest (cf. the 3 soft + 4 hard of the SY).'],
+    ['"Two Birds with fair wings… in the same tree"','2','(c)','RV 1.164.20 — the Self and the soul on the cosmic tree (a pan-Indo-Iranian image).'],
+  ]}/>
+  <Section name="The 7 chandas (Vedic metres) — the 7 as poetic measure" rows={[
+    ['Gāyatrī = 24 syllables','24','(a)','3×8. The simplest metre.'],
+    ['Uṣṇih = 28','28','(a)','= the lunar mansions — 28 appears as a metre.'],
+    ['Anuṣṭubh = 32','32','(a)','4×8; later the śloka of epic verse.'],
+    ['Bṛhatī = 36','36','(a)','4×9.'],
+    ['Pankti = 40','40','(a)','5×8.'],
+    ['Triṣṭubh = 44','44','(a)','4×11; the dominant metre of the Ṛg Veda.'],
+    ['Jagatī = 48','48','(a)','6×8.'],
+  ]}/>
+  <Section name="Sūrya, the Adityas, the Nasadiya" rows={[
+    ['"Seven Bay Steeds harnessed to thy car" — Sūrya','7','(a)','RV 1.50.8 — the 7 horses of the Sun = the 7 days / 7 colours of the spectrum (traditional).'],
+    ['"Eight are the Sons of Aditi… with seven she went to meet the Gods; she cast Martanda far away"','8 → 7+1','(a)/(c)','RV 10.72.8–9 — 8 Adityas, 7 + the mortal Martanda (the throwaway = the material), structurally like 8 vs 7.'],
+    ['"Darkness was hidden by darkness… that One, breathing without wind, by its own impulse"','1','(c)','RV 10.129 (Nasadiya) — the uncreated One before being/non-being (the cosmogonic seed).'],
+  ]}/>
+  <Section name="Cosmology — nakshatras, rasis, yugas" rows={[
+    ['27 nakshatras × 13°20′ = 360°','27 / 360','(a)','27 lunar mansions (or 28 with Abhijit); 27 = 22 Hebrew + 5 finals, structurally.'],
+    ['12 rasis × 30° = 360°','12 / 360','(a)','the 12-sign zodiac, India receiving it from Babylonia/Greece.'],
+    ['Kali-yuga = 432,000 years','432,000','(c)','= 72 × 6000; 432 = 72×6 — the yuga base (cf. Berossos’s Chaldean 432,000).'],
+  ]}/>
+  <div className="note"><b>Not Rig Vedic (flagged):</b> the 12 Adityas and 108 are <i>later</i> Vedic / Puranic, not Ṛg Veda Samhita. 108 = 27 nakshatras × 4 pādas (or 12 × 9) — a later sacred number, not an Ṛg Vedic constant. The Ṛg Vedic set is 7 (metres/horses), 12, 27/28, 360, 720.</div>
+  <SrcList items={[
+    ['Ṛg Veda 1.164 (Griffith, sacred-texts)','https://www.sacred-texts.com/hin/rigveda/rv01164.htm'],
+    ['Ṛg Veda 10.72 Aditi (Griffith)','https://www.sacred-texts.com/hin/rigveda/rv10072.htm'],
+    ['Ṛg Veda 1.50 Sūrya (Griffith)','https://www.sacred-texts.com/hin/rigveda/rv01050.htm'],
+    ['Nakshatra (Wikipedia)','https://en.wikipedia.org/wiki/Nakshatra'],
+    ['Yuga Cycle (Wikipedia)','https://en.wikipedia.org/wiki/Yuga_Cycle'],
+  ]}/>
+</>; }
+
+function RevelationEgyptianTab(){ return <>
+  <h2>Egyptian — 365, 36 decans, Sothis 1461, 72</h2>
+  <div className="muted" style={{marginBottom:10}}>Egypt gives the 365-day civil year, the 36 decans (→ the zodiac), the Sothic 1461-year Sirius cycle, and 72 conspirators of Set.</div>
+  <Section name="Egyptian astronomy & myth" rows={[
+    ['365-day civil year','365','(a)','the Egyptian civil calendar (12×30 + 5 epagomenal); = the 365 angels of the Apocryphon of John.'],
+    ['36 decans × 10 = 360 (+5)','36 / 360','(a)','36 ten-day asterisms → the 36 decans that seed the 12-sign zodiac (3 decans/sign).'],
+    ['Sothic cycle = 1461 years','1,461','(a)','1461 vague civil years (= 1460 Julian): the heliacal rising of Sirius resets the calendar (cf. Apollyon 1461, §15c).'],
+    ['72 conspirators of Set','72','(c)','the 72 accomplices in the murder of Osiris → 72 nations/languages (cf. Shem HaMephorash 72, §15b.5).'],
+  ]}/>
+  <SrcList items={[['Egyptian calendar (Wikipedia)','https://en.wikipedia.org/wiki/Egyptian_calendar'],['Sothic cycle (Wikipedia)','https://en.wikipedia.org/wiki/Sothic_cycle'],['Decan (Wikipedia)','https://en.wikipedia.org/wiki/Decan']]}/>
+</>; }
+
+function RevelationPersianTab(){
+  const asrc=[
+    ['Yasna 28–34 Ahunavaiti Gatha (avesta.org SBE)','https://www.avesta.org/yasna/y28to34.htm'],
+    ['Vendidad (Vendidad) fargard 1 — 16 lands (SBE)','https://www.avesta.org/vendidad/vd1sbe.htm'],
+    ['Vendidad fargard 2 — Yima / Vara (SBE)','https://www.avesta.org/vendidad/vd2sbe.htm'],
+    ['Vendidad fargard 22 — 99,999 diseases (SBE)','https://www.avesta.org/vendidad/vd22sbe.htm'],
+    ['Yasht 13 Farvardin (SBE)','https://www.avesta.org/ka/yt13sbe.htm'],
+    ['Zoroastrianism (Encyclopaedia Iranica)','https://www.iranicaonline.org/articles/zoroastrianism'],
+  ];
+  return <>
+    <h2>Persian / Avestan — 7 Amesha Spentas, 16 lands, 72 Yasna chapters</h2>
+    <div className="muted" style={{marginBottom:10}}>The <i>Avesta</i> (the Zoroastrian scripture, Gathas c. 1000 BCE; Young Avestan and Vendidad later) is the Indo-Iranian sibling of the Ṛg Veda and carries the constants in its own frame: the <b>7 Amesha Spentas</b>, <b>16 sacred lands</b>, <b>21 Yashts</b>, <b>72 Yasna chapters</b>, and the striking <b>99,999 diseases</b>. Mined from the SBE translation (source copies in <code>library/avesta/</code>).</div>
+    <Section name="The 7 Amesha Spentas — the Bountiful Immortals" rows={[
+      ['7 Amesha Spentas (Vohu Manah, Asha Vahishta, Khshathra Vairya, Spenta Armaiti, Haurvatat, Ameterat, + Ahura Mazda)','7','(c)','Yasna 28–34 (Ahunavaiti Gatha): 6 emanations + the Lord = 7; the 7 correspond to the 7 creations (sky, water, earth, plants, animals, metals, fire). The closest Avestan parallel to the 7 doubles.'],
+      ['"the seven, who are the lords" / "the seven that have the best rule"','7','(a)','Yasna 39.3 — the 7 named lords of creation.'],
+    ]}/>
+    <Section name="Vendidad — 16 lands, Yima, 99,999 diseases" rows={[
+      ['16 sacred lands created by Ahura Mazda (Vendidad 1)','16','(a)','vd1: 16 ideal lands, each with a paired evil-counterpart. 16 = 4² (cf. the 4 mothers×4, or the doubled 8).'],
+      ['Yima\'s Vara — a three-storied enclosure for the seed','3 / 9','(c)','vd2: Yima/Khshaeta builds a refuge against the winter. The three rows (three, six, ninefold) echo 3×3.'],
+      ['99,999 diseases (Vendidad 22)','99,999','(c)','vd22: 99,999 diseases and 99,999 cures — the most striking Avestan large number; cf. the limitless legions of Revelation.'],
+    ]}/>
+    <Section name="Structure — Yasna, Yashts" rows={[
+      ['Yasna = 72 chapters','72','(a)','the Yasna liturgy (including the Gathas) runs to 72 chapters = the same 72 as the nations/languages/angels.'],
+      ['21 Yashts (hymns to the yazatas)','21','(a)','21 = C(7,2) = the seals/trumpets/bowls (§15c.3); the Yashts honor the 21 divine entities.'],
+      ['72+5 = 77 "good names" of Ahura Mazda (tradition)','77','(c)','later tradition: 72 + 5 = 77 names; 72 recurs.'],
+    ]}/>
+    <Section name="Cosmology" rows={[
+      ['12 × 30 = 360° zodiac (received from Babylonia)','12 / 360','(a)','the 12-sign frame shared across Persia, India, Greece, and the Hebrew SY.'],
+      ['Haoma = the plant of immortality','—','(c)','the Indo-Iranian soma/haoma — the Vedic Soma (RV 9) and the Avestan Haoma are the same rite.'],
+    ]}/>
+    <div className="note"><b>Boundary respected:</b> the Gathas (Yasna 28–54, the oldest stratum, attributed to Zarathushtra) are kept distinct from the later Young Avestan / Vendidad material. The 7 Amesha Spentas are Gathic; the 99,999 and the 16 lands are Vendidad (later).</div>
+    <SrcList items={asrc}/>
+  </>;
+}
+
+function RevelationSufiTab(){
+  const sufiSrc=[
+    ['Ramlan & Ludovico (2023), Religions','https://doi.org/10.3390/rel14060692'],
+    ['Rašić (2023), J. Sufi Studies','https://doi.org/10.1163/22105956-bja10029'],
+    ['Chodkiewicz, Futuhat & its Commentators','https://ibnarabisociety.org/the-futuhat-makkiyya-and-its-commentators-michel-chodkiewicz/'],
+    ['Morris, Ibn Arabi on the Barzakh','https://ibnarabisociety.org/wp-content/uploads/PDFs/Morris_Ibn-Arabi-on-the-barzakh.pdf'],
+    ['SEP — Ikhwan al-Safa','https://plato.stanford.edu/entries/ikhwan-al-safa/'],
+    ['De Callataÿ, Ikhwan on Animals (2022)','https://doi.org/10.5617/jais.9879'],
+    ['Varisco, al-Buni Lunar Stations (Arabica 2017)','https://brill.com/view/journals/arab/64/3-4/article-p487_487.xml'],
+    ['Gardiner, Forbidden Knowledge? al-Buni (JAIS 2012)','https://journals.uio.no/JAIS/article/view/4618'],
+    ['Usluer, Hurufi Cosmology (2024)','https://dergipark.org.tr/en/download/article-file/3630967'],
+    ['Iranica — Hurufism','https://www.iranicaonline.org/articles/horufism/'],
+    ['Hadith 73 sects (Abu Dawud 4596)','https://en.tohed.com/hadith/abu-dawud/4596/'],
+    ['Hadith 72 branches (Bukhari 9)','https://sunnah.com/bukhari:9'],
+    ['Hadith 70,000 tawakkul (Bukhari 6233)','https://livingnoor.com/quran/hadiths/sahih-al-bukhari/6233'],
+  ];
+  return <>
+    <h2>Islamic / Sufi — 28 letters = 28 mansions, Hurufi 360 = 6×(28+32)</h2>
+    <div className="muted" style={{marginBottom:10}}>The Arabic letter-science ('ilm al-huruf) is the closest non-Hebrew sibling of the Sefer Yetzirah: <b>28 letters = 28 lunar mansions</b> recurs in Ibn al-Arabi, the Ikhwan al-Safa, the received <i>Shams al-ma'arif</i>, and the Hurufiyya. The Hurufi equation <b>360° = 6 × (28 + 32)</b> directly welds the astronomical circle to the Arabic/Persian letter-counts. The Quran itself carries the constants in its own text (Pickthall translation, source copies in <code>library/quran/</code>).</div>
+    <Section name="The Quran — in the text (Pickthall)" rows={[
+      ['"seven heavens, and of the earth the like thereof"','7 + 7','(c)','65:12 — 7 heavens + 7 earths; cf. 67:3 "seven heavens in harmony (tibāqan)", 71:15.'],
+      ['"the number of the months with Allah is twelve months"','12','(c)','9:36 — 12 lunar months, 4 sacred; 9:37 condemns nasīʾ (intercalation) → the strict lunar calendar.'],
+      ['"for the moon We have appointed mansions (manāzil)"','28','(a)/(c)','36:39 — the WORD manāzil is in the text; the COUNT 28 is from Arabic astronomy, not the verse. (53:1 "an-najm" = Pleiades/Venus in tafsir, NOT the 28 mansions.)'],
+      ['"Above it are nineteen"','19','(b)','74:30 — 19 keepers over Hell; the only explicit 19 in the Quran (Islamic-distinctive, cf. Metonic 19 elsewhere).'],
+      ['"seven of the oft-repeated (al-mathānī) and the great Quran"','7','(c)','15:87 — "seven oft-repeated"; identification with al-Fātiha\'s 7 verses is traditional tafsir, not the text.'],
+      ['"the sun and the moon [move] by calculation (ḥisbān)"','—','(a)','55:5; cf. 6:96, 10:5 — reckoning; 36:40 "each floats in an orbit."'],
+    ]}/>
+    <Section name="Not in the Quran text (flagged)" rows={[
+      ['360 — NOT a Quran verse','—','(u)','360 appears only in tafsir (al-Tabari: 360 sunrises) and hadith (360 joints/idols); the lunar year is 354. A Late-Antique symbolic number absorbed into cosmology.'],
+      ['99 Names — hadith, not text','99','(b)/(u)','Sahih Muslim 2675 states only the NUMBER 99; the LISTS (Tirmidhi 3507 etc.) are graded gharib/mudraj and differ between collections.'],
+      ['73 sects — hadith','73','(b)','Abu Dawud 4596 (Hasan Sahih) = "73 sects"; the "72 in Hell, 1 saved" addition (4597) is weak/fabricated (al-Shawkani: fabrication). 72≠73 — do not conflate.'],
+      ['Bismillah abjad = 786','786','(c)','بسم الله الرحمن الرحيم = 2+60+40+66+329+289 = 786 (19 letters). Verifiable arithmetic; the use of "786" for Bismillah is tradition, not Quran text.'],
+      ['114 suras / 6236 verses','114 / 6236','(c)','structural only, NOT cosmic.'],
+    ]}/>
+    <Section name="Ibn al-Arabi (1165–1240) — Futuhat al-Makkiyya" rows={[
+      ['28 Arabic letters = 28 lunar mansions','28','(c)','each letter ↔ a mansion ↔ a lunar phase (Futuhat ch. 198, Vol II 390–478; not "ch. 2" — the locus is ch. 198).'],
+      ['29th letter (lam-alif) = the qutb','29','(c)','"If not for that twenty-ninth, the 28 would not be stabilized" — the cosmic pole.'],
+      ['14 luminous (undotted) ↔ 14 waxing; 14 dark ↔ 14 waning','14+14','(c)','14th letter ra (= full moon / badr); 28th (waw) = darkest phase.'],
+      ['7 heavens; Sun at the heart of the 7','7','(a)/(c)','Futuhat Ch. 371; earth spherical and rotating.'],
+      ['114 abode-chapters ↔ 114 Quran suras','114','(c)','114 = 6×19; the Futuhat mirrors the Quran in reverse.'],
+    ]}/>
+    <Section name="Ikhwan al-Safa (Brethren of Purity, 10th c. Basra)" rows={[
+      ['7 planets; 12 signs = 12 world-ages','7 / 12','(a)','12 ages of decreasing length; Adam created in the 7th age (Virgo).'],
+      ['28 lunar mansions = 28 vertebrae of the spine','28','(a)/(c)','Epistle 22: "every organ agrees in number with some category of existent beings."'],
+      ['360 veins in the body ↔ 360° of the zodiac','360','(c)','alongside 12 orifices and 28 vertebrae (Epistle 22).'],
+      ['36,000-year precession; 360,000-year great cycle','36k / 360k','(b)','Epistle 36: equinoctial precession → geological interchange; "Annus Platonicus."'],
+    ]}/>
+    <Section name="al-Buni (d. ca. 1225) — received Shams al-ma'arif al-kubra" rows={[
+      ['28 mansions ↔ 28 letters (14 undotted / 14 dotted)','28','(c)','14 luminous → 14 visible mansions (benefic); 14 dark → 14 hidden (malefic).'],
+      ['abjad 1…1000 builds magic squares (awfaq)','—','(c)','squares tied to divine names, planets, intentions.'],
+      ['12 signs ↔ 12 letters of "La ilaha illa Allah"','12','(c)','integrating mansions, 7 planets, and divine unity.'],
+      ['AUTHORSHIP CAVEAT','—','(u)','the famous Shams al-kubra is a pseudepigraphic Ottoman compilation (Gardiner/Coulon), not by al-Buni himself. Cite as "received Shams al-kubra."'],
+    ]}/>
+    <Section name="Hurufiyya — Fazlallah Astarabadi (d. 1394)" rows={[
+      ['28 letters = 28 mansions = 28 lines on the face','28','(c)','the lettrist incarnation: letters/mansions substantively present in the human form.'],
+      ['360° = 6 × (28 + 32)','360','(c)','six directions × (28 Arabic + 32 Persian letters) — fuses the astronomical circle to the letter-counts (Usluer 2024).'],
+      ['32 Persian letters = 32 pre-eternal words taught to Adam','32','(c)','28 Arabic (to Muhammad) vs 32 Persian (to Adam); 32 human teeth confirm physiologically.'],
+      ['khatt al-istiwā divides the zodiac into 14 + 14','14+14','(c)','14 maternal/visible + 14 paternal/hidden.'],
+    ]}/>
+    <Section name="The 72 / 73 / 70,000 hadiths (do not conflate)" rows={[
+      ['73 sects (al-iftiraq)','73','(b)','core = Hasan/Sahih; the "72 in Hell, 1 saved" addition is only in weaker chains.'],
+      ['72 branches of faith','72','(c)','scholastic derivation from the sahih "over seventy branches" hadith — the exact 72 is later, not in the sahih text.'],
+      ['70,000 enter Paradise without account','70,000','(b)','a separate tawakkul hadith (Bukhari); not the sects, not the branches.'],
+    ]}/>
+    <div className="note"><b>Not found in pre-1500 Sufi sources:</b> 19, 22, 37, 144, 144000, 1260, 42 months, and a direct 365 — these are Hebrew/Sefer Yetzirah or Revelation constants, absent from the Arabic-Islamic corpus. Their absence is itself a finding.</div>
+    <SrcList items={sufiSrc}/>
+  </>;
+}
+
+function RevelationGnosticTab(){
+  const gsrc=[
+    ['Apocalypse of Adam (text)','https://earlychristianwritings.com/text/adam.html'],
+    ['Apocryphon of John (Wisse)','https://pseudepigrapha.com/apocrypha_nt/apocjn.html'],
+    ['On the Origin of the World (text)','https://earlychristianwritings.com/text/originworld.html'],
+    ['Eugnostos the Blessed (text)','https://earlychristianwritings.com/text/eugnostos.html'],
+    ['Concept of Our Great Power (text)','http://earlychristianwritings.com/text/greatpower.html'],
+    ['Pleše, Fate/Astrology in Gnosticism (2007)','https://www.scribd.com/document/382360129/Fate-Providence-and-Astrology-in-Gnosticism-1-The-Apocryphon-of-John-Zlatko-Plese-pdf'],
+  ];
+  return <>
+    <h2>Gnostic / Nag Hammadi — 365 angels, 72 languages, the 12→72→360 cascade</h2>
+    <div className="muted" style={{marginBottom:10}}>The Nag Hammadi library (Coptic Gnostic codices, copies of 1st–3rd-c. originals) carries the cleanest astronomical overlaps: <b>365 angels</b> (Apocryphon of John) = the solar year; <b>72 gods = 72 languages</b> (Origin of the World); the <b>12 → 72 → 360</b> cascade (Eugnostos) mirroring 12 months / 360 days. The Apocalypse of Adam supplies the eschatological register (12 / 13 / 14 kingdoms).</div>
+    <Section name="Apocalypse of Adam (NHC V,5) — eschatological register" rows={[
+      ['Adam reveals to Seth "in the 700th year"','700','(c)','testamentary frame echoing Genesis 5; no explicit star/planet references.'],
+      ['seed of Ham & Japheth establish 12 kingdoms','12','(b)','12 false mythic origins.'],
+      ['13 kingdoms each give a false oracle of the Illuminator\'s birth','13','(c)','explicitly numbered 1st–13th; each gives a false cosmogony (a spirit, a prophet, a virgin womb, a drop from heaven, a cloud, the nine Muses, two illuminators…).'],
+      ['13th kingdom: "every birth of their ruler is a word"','13 / word','(b)/(c)','the 13th oracle — the messiah\'s birth <b>is</b> a word, and "this word received a mandate… glory and power." <b>Not</b> "born of a word alone" (a common misreading) — the text says the ruler\'s every birth <i>is</i> a word. The closest the NH comes to the creator-word / Sefer Yetzirah letter-theology.'],
+      ['14th voice — "the generation without a king"','14','(c)','the kingless generation alone says the truth: "God chose him from all the aeons." 13 false + 1 true = 14 voices (structural 14, not Matthew 1:17).'],
+      ['Illuminator "will for a third time pass by"','3','(b)','eschatological prophecy of the Phōtēr.'],
+      ['400,000 join the seed of Seth','400,000','(b)','eschatological number.'],
+    ]}/>
+    <Section name="Apocryphon of John (NHC II,1)" rows={[
+      ['365 angels fashion Adam\'s body','365','(a)','= days of the solar year — the single strongest astronomical overlap in NH.'],
+      ['7 powers = "the sevenness of the week"','7','(a)','7 planets / 7 weekdays.'],
+      ['12 authorities; 7 kings + 5 = 12','12','(a)','12 zodiac / months.'],
+      ['4 lights preside over 12 aeons','4 / 12','(c)','4 lights × 3 aeons each.'],
+      ['72 pentads underlying the melothesia','72','(u)','Pleše reconstruction of the Egyptian 72×5-day periods; NOT explicit in the text.'],
+    ]}/>
+    <Section name="On the Origin of the World (NHC II,5)" rows={[
+      ['7 heavens of chaos','7','(a)','7 planets.'],
+      ['12 gods of chaos (the zodiac)','12','(a)','"above the twelve gods of chaos."'],
+      ['64 forms (8 shapes × 4 corners) + 7 archangels + Sabaoth = 72','64 / 72','(c)','the strongest 72 overlap: 72 gods rule the 72 languages of the peoples (cf. Deut 32:8 LXX).'],
+      ['49 demons (7 offspring × 7)','49','(c)','7×7.'],
+      ['930 years of Adam; luminaries for "signs, seasons, years, months, days"','930','(c)','echoes Genesis 5:5; the luminaries mark time.'],
+    ]}/>
+    <Section name="Eugnostos the Blessed (NHC III,3 / V,1)" rows={[
+      ['12 → 72 → 360 cascade','12/72/360','(c)','12 powers → 72 powers (12 pairs) → 360 powers (72 × 5); mirrored by 12 months / 360 days.'],
+      ['12 aeons · 72 heavens (12×6) · 360 firmaments (72×5)','12/72/360','(c)','the cleanest numerical cascade in the corpus — maps directly onto the project.'],
+      ['360 days of the year = type of the 360 powers','360','(a)','Egyptian 360-day civil calendar (NOT 365).'],
+      ['8 = the Ogdoad','8','(c)','the Assembly of the Eighth.'],
+    ]}/>
+    <Section name="Concept of Our Great Power (NHC VI,4)" rows={[
+      ['120 appears 3× (age-limit, Noah\'s preaching, "the perfect number")','120','(c)'],
+      ['final conflagration after 1,460 years','1,460','(b)','Wisse translation (some cite 1,468 — UNVERIFIED discrepancy).'],
+      ['72 tongues','72','(c)'],
+    ]}/>
+    <div className="note"><b>Not found in Nag Hammadi:</b> 144, 144000, 1260, 42 months, 19, 22, 28, 37, 73 — these belong to Revelation / Hebrew / Sufi, not the Gnostic corpus.</div>
+    <SrcList items={gsrc}/>
+  </>;
+}
+
+function RevelationRazielTab(){
+  const rsrc=[
+    ['Sefer Raziel HaMalakh — Spanish ed. (322pp, source PDF)','pdf/razielbook.pdf'],
+    ['Sefer Raziel HaMalakh — Hebrew ed. (90pp, source PDF)','pdf/raziel-hebrew.pdf'],
+  ];
+  return <>
+    <h2>Sefer Raziel HaMalakh — the indisputable findings (§9.6)</h2>
+    <div className="muted" style={{marginBottom:10}}>The <i>Sefer Raziel HaMalakh</i> (Book of the Angel Raziel) is the older sibling of the <i>Sefer Yetzirah</i> in this register: a late-antique / early-medieval manual of letter-astronomy that tells the reader to <b>compute the planets and the fixed zodiacal signs to read the generations</b>. Mined 2026-08-10 from the two source PDFs in <code>pdf/</code> — the Spanish <i>Sepher Raziel Hamelach</i> (322pp, clean text) and the Hebrew edition (90pp, OCR-garbled but cross-confirming). Page refs = Spanish PDF. Only findings verified against the text are listed; loose coincidences are flagged at the end.</div>
+
+    <Section name="1 · Alphabet ↔ astronomy (the core thesis — strongest validation)" rows={[
+      ['22-letter gematria explicit, א=1 … ת=400, NO 500–900 finals','22','(a)','p.95: "Aleph es 1, Beth es 2 … Qoph 100, Resh 200, Shin 300, Tau 400." = the SAME ancient system this app uses (not Mispar Gadol).'],
+      ['Triangular numbers T(2..9) by letter','T(n)','(a)','p.95: אב→3, ג→6, ד→10, ה→15, ו→21, ז(Zayin,7)→28, ח(8)→36, ט(9)→45. Confirms T(7)=28 = lunar mansions and gives the full series.'],
+      ['12 simples ↔ 12 hours day + 12 night, 12 months, 12 signs, 12 tribes','12','(a)','p.106 — the explicit 12-simples↔12-signs mapping this app reads.'],
+      ['22 letters in 3 palaces, engraved with each sign','22 / 3','(c)','p.226 — 22↔signs via 3 palaces (= the 3 mothers).'],
+      ['3 letters (the mothers) ↔ 12 signs','3 / 12','(c)','p.81.'],
+      ['Raziel cites the Sefer Yetzirah directly','—','(a)','Heb p.24: "as written in Sefer Yetzirah: ten sefirot…" — Raziel is built on the SY.'],
+    ]}/>
+    <h3>1b · The triangular series T(2..9) — the lunar-mansion key</h3>
+    <table style={{marginBottom:6}}>
+      <thead><tr><th>Letter</th><th>n</th><th>T(n) = n(n+1)/2</th><th>astronomy</th></tr></thead>
+      <tbody>
+        {[['א',1,1,'unity'],['ב',2,3,'—'],['ג',3,6,'—'],['ד',4,10,'—'],['ה',5,15,'—'],['ו',6,21,'—'],['ז',7,28,'28 lunar mansions'],['ח',8,36,'—'],['ט',9,45,'—']].map(r=>(
+          <tr key={r[0]}><td className="he" style={{fontSize:'1.2rem',color:'var(--gold)'}}>{r[0]}</td><td className="deg">{r[1]}</td><td className="deg" style={{color:'var(--gold)'}}>{r[2]}</td><td className="muted">{r[3]}</td></tr>
+        ))}
+      </tbody>
+    </table>
+    <div className="note" style={{marginBottom:12}}>Zayin (ז=7) → T(7)=28 = the 28 lunar mansions (Manzil), tying the 7 doubles to the Moon's path — the same 28 the Saros mnemonic panel uses.</div>
+
+    <Section name="2 · The 72 / 73 / 28 / 248+365" rows={[
+      ['72 names derived from Genesis 1:1 (Bereshit → Bohu)','72','(a)','= the Shem HaMephorash triplets (והו/ילי/סיט…). Variant of the Exodus-14:19-21 extraction this app uses; Raziel is Genesis-centric like the project.'],
+      ['72 letters from patriarchs + 12 tribes + Sabbatai + Yesheron','72','(c)','Abraham…Benjamin.'],
+      ['73 names of God inscribed on the right','73','(c)','p.72; Heb p.24 "ע״ג שמות" = 73 names — attests 73 (= 2701 = 37×73).'],
+      ['28 Malachim per lunar month (Tammuz & Adar = 28)','28','(a)','p.148 — 28 = lunar mansions tied to the Hebrew months.'],
+      ['248 mighty [limbs] + 365 degrees = 613','248+365','(a)','the 613 structure (248 positive + 365 negative commandments); 365 = degrees/days.'],
+    ]}/>
+
+    <Section name="3 · Astronomy scaffold" rows={[
+      ['360° → 12 signs (Aries…Pisces), each 30°','360 / 12','(a)','p.146-147 — base-60 sexagesimal subdivision chain (60×60×60…).'],
+      ['"Los signos del zodíaco están fijos" — the signs are FIXED','fixed','(a)','p.115 — tropical (equinox-anchored), non-precessing grid. Directly supports this app\'s tropical-vs-sidereal split: the Reader\'s 12 sectors do NOT rotate with precession (see Sky tab note).'],
+      ['4 tekufot (Nisán/Tammuz/Tishri/Tevet), each 3 months = 12','4 / 12','(a)','p.114; Heb p.10 lists all 12 signs across 4 tekufot with month-angels. Sun qualities: warm / hot-dry / cold-moist / cold-dry.'],
+      ['7 planets in Chaldean order','7','(a)','p.114-115 — שבתאי/צדק/מאדים/שמש/נוגה/כוכב/לבנה.'],
+      ['Planet periods: Saturn 30y, Jupiter 12y','30 / 12','(a)','Both match real sidereal periods (29.46 / 11.86 yr). 28-year & 36-year cycles also present (see caveat).'],
+      ['Draqon Dinor (the dragon) surrounding the 7 planets','Draco','(a)','p.146 — the Draco axis = this app\'s 3rd mother (Shin · Cassiopea axis / circumpolar).'],
+      ['Planet-angel assignments','7','(c)','Saturn=Gabriel, Jupiter=Tzedeqial, Mars=Samael, Sun=Raphael, Venus=Anael, Mercury=Beraqial, Moon=Chesedial; Michael = force in the Sun.'],
+    ]}/>
+
+    <h3>4 · Loose — do not force</h3>
+    <ul className="muted">
+      <li><b>7×70 = 490</b> (p.71) ≈ the 491-year Neptune–Pluto Genesis window. An arithmetic-mnemonic coincidence, <b>not</b> a real link — flagged, not claimed.</li>
+      <li><b>"23 princes of the signs"</b> (p.147) — unclear; does not map to any app constant. Left unmapped.</li>
+      <li><b>The 28-year cycle</b> the Spanish PDF attributes to Venus is likely a garbled tekufat-chamah (the 28-year solar cycle), since real Venus sidereal = 225 days. Needs clean Hebrew verification before any claim.</li>
+    </ul>
+    <div className="note"><b>Why this matters:</b> Raziel independently attests the apparatus this app is built on — the 22-letter gematria, the triangular-to-28 lunar key, the 12↔signs mapping, the fixed tropical zodiac, the 72-from-Genesis, the 7 Chaldean planets, and the Draco axis — in a text that explicitly instructs the reader to <i>calculate</i> them. That is corroboration of the <i>method</i>, not a prediction.</div>
+    <SrcList items={rsrc}/>
+  </>;
+}
+
+function RevelationsTab({sub, setSubTab, date, rows, occ, words, genData, genYear}){
+  const subtabs=[['hebrew','Hebrew · Christian'],['raziel','Raziel'],['gnostic','Gnostic / Nag Hammadi'],['vedic','Indian / Vedic'],['persian','Persian / Avestan'],['sufi','Islamic / Sufi'],['egyptian','Egyptian'],['maya','Maya'],['chinese','Chinese']];
+  return <>
+    <h2>Revelations — the constants across all cultures (§15c, §9.6)</h2>
+    <div className="muted" style={{marginBottom:10}}>Revelation = the cross-cultural register: every tradition that independently carries the system's constants (gematria, prophecies, cosmology). No cultural borrowing is claimed — only independent corroboration. Class tags: <ClassTag c="(a)"/> verifiable astronomy · <ClassTag c="(b)"/> eschatological/prophecy · <ClassTag c="(c)"/> cosmological-doctrine · <ClassTag c="(u)"/> unverified.</div>
+    <h3>Cross-cultural numeric summary — project constants vs. the corpora</h3>
+    <table style={{marginBottom:6}}>
+      <thead><tr><th>Constant</th><th>Meaning</th><th>Where attested</th><th></th></tr></thead>
+      <tbody>
+      {REV_SUMMARY.map((r,i)=><tr key={i}>
+        <td className="big" style={{color:'var(--gold)',whiteSpace:'nowrap'}}>{r[0]}</td>
+        <td>{r[1]}</td>
+        <td className="muted">{r[2]}</td>
+        <td><ClassTag c={r[3]}/></td>
+      </tr>)}
+      </tbody>
+    </table>
+    <div className="note" style={{marginBottom:12}}><b>Load-bearing for accuracy:</b> 22, 37, 73, 144, 1260, 42 months are NOT securely attested in either Nag Hammadi or pre-1500 Sufi sources — they are Hebrew/Sefer Yetzirah (22) or Revelation (144, 1260, 42) constants. The citable cross-cultural overlaps concentrate on <b>7, 12, 28, 72, 360, 365, 14</b>.</div>
+    <SubTabs items={subtabs} active={sub} onChange={setSubTab}/>
+    {sub==='hebrew' && <RevelationHebrewTab date={date} rows={rows} occ={occ} words={words} genData={genData} genYear={genYear}/>}
+    {sub==='raziel' && <RevelationRazielTab/>}
+    {sub==='maya' && <RevelationMayaTab/>}
+    {sub==='chinese' && <RevelationChineseTab/>}
+    {sub==='vedic' && <RevelationVedicTab/>}
+    {sub==='sufi' && <RevelationSufiTab/>}
+    {sub==='egyptian' && <RevelationEgyptianTab/>}
+    {sub==='gnostic' && <RevelationGnosticTab/>}
+    {sub==='persian' && <RevelationPersianTab/>}
   </>;
 }
 
@@ -998,7 +1784,7 @@ function MethodTab({esGlossCount}){
       <li><b>Astronomy:</b> astronomy-engine v2.1.19, geocentric apparent ecliptic longitude (<code>GeoVector→Ecliptic.elon</code>), noon UT.</li>
       <li><b>Lexicon:</b> Strong (OpenScriptures), 6045 consonantal roots.</li>
       <li><b>Pluto ephemeris:</b> precision degrades outside 1700–2200; ancient windows rely on sign-level (30°) determination, validated by smooth continuity, not arcminute precision.</li>
-      <li><b>Negative results (tested):</b> the mirror-palindrome 2701→3773 does not discriminate at corpus level (Genesis 39.0% ≈ Markov 39.7% ≈ uniform 41.4%); 37/73 do not structure eclipses; Genesis-days do not correlate with eclipses (7.5% observed vs 28% expected — they avoid them).</li>
+      <li><b>Negative results (tested):</b> the mirror-palindrome 2701→3773 does not discriminate at corpus level (Genesis 39.3% ≈ Markov 39.7% ≈ uniform 41.1%); Genesis-days do not correlate with eclipses (7.5% observed vs 28% expected — they avoid them).</li>
       <li><b>Positive results:</b> 37/73 fit the civil solar year (365=73×5; 2701 pentads = 37 years), corroborated by the Maya Haab and Calendar Round; Genesis 1 core palindromes 61.3% vs 38.3% paired null (p≈8×10⁻³, hypothesis).</li>
       <li><b>Positive results v3.1 (§15b):</b> 37×73 structure of the 7 Genesis words demonstrated (23/127 subsets, p≈3.1×10⁻⁴); saros-series count by calculation (152 series, 54–87, median 72); 7 kameot = 7 doubles (Mercury 260 = Tzolkin); Aiq Bekar = decimal-positional gematria of §2 (bridge to sigils); 72 Shem HaMephorash angels from Exodus (216=6³); the 7-doubles=7-days heptagram (Chaldean order + mod 7 + Romance etymology); ayanamsa: 190-year spread (tropical discard robust); 6 windows 491-year cadence (p&lt;5×10⁻⁶, hypothesis not cause).</li>
       <li><b>Validation:</b> 86 assertions in <code>scripts/tests.mjs</code> — all green. Scripts in <code>scripts/</code>; article in <code>article/lector-del-cielo-articulo.md</code>.</li>
@@ -1009,13 +1795,14 @@ function MethodTab({esGlossCount}){
 // ====== App / Tabs ======
 const TABS = [
   ['sky','Sky Map'],['translator','Reader'],['reading','Reading'],['time','Time'],
-  ['sigils','Sigils'],['cycles','Cycles'],['revelation','Revelation'],['crosscultural','Cross-Cultural'],['method','Methodology'],
+  ['sigils','Sigils'],['cycles','Cycles'],['revelation','Revelations'],['method','Methodology'],
 ];
 const SUB = {
   reading:[['rule','Reading Rule'],['yhvh','YHVH'],['genesis','Genesis 1:1']],
   time:[['predictor','Predictor'],['ages','Ages']],
   sigils:[['gematria','Gematria'],['sigil','Sigil Forge'],['kameot','Kameot'],['angels','72 Angels']],
   cycles:[['saros','Saros'],['ayanamsa','Ayanamsa'],['lunarsolar','Lunar-Solar'],['week','Week']],
+  revelation:[['hebrew','Hebrew · Christian'],['raziel','Raziel'],['gnostic','Gnostic / Nag Hammadi'],['vedic','Indian / Vedic'],['persian','Persian / Avestan'],['sufi','Islamic / Sufi'],['egyptian','Egyptian'],['maya','Maya'],['chinese','Chinese']],
 };
 
 function SubTabs({items, active, onChange}){
@@ -1027,7 +1814,7 @@ function SubTabs({items, active, onChange}){
 function App(){
   const today='2026-08-08';
   const [active,setActive]=useState('sky');
-  const [sub,setSub]=useState({reading:'rule',time:'predictor',sigils:'gematria',cycles:'saros'});
+  const [sub,setSub]=useState({reading:'rule',time:'predictor',sigils:'gematria',cycles:'saros',revelation:'hebrew'});
   const [lex,setLex]=useState(null);
   const [lexErr,setLexErr]=useState(null);
   const [angels,setAngels]=useState(null);
@@ -1040,7 +1827,11 @@ function App(){
   useEffect(()=>{ fetch('lexicon.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setLex).catch(e=>setLexErr(e.message)); },[]);
   useEffect(()=>{ fetch('angels72.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setAngels).catch(()=>{}); },[]);
 
-  const rows=useMemo(()=>skyAt(date),[date]);
+  // effDate: when the date input is cleared (or invalid), keep computing against the
+  // reference date so the page never goes blank. The raw `date` still drives the input
+  // so the user's clear action is respected visually.
+  const effDate = useMemo(()=>{ if(!date) return today; return parseDate(date) ? date : today; },[date]);
+  const rows=useMemo(()=>skyAt(effDate),[effDate]);
   const occ=useMemo(()=>occupiedLetters(rows),[rows]);
   const occSigns=useMemo(()=>new Set(rows.map(r=>r.sign)),[rows]);
   const bs=useMemo(()=>bySign(rows),[rows]);
@@ -1049,21 +1840,24 @@ function App(){
   const ANGEL72=useMemo(()=>{ const m=new Map(); if(angels) angels.triplets.forEach((t,i)=>{ m.set(norm(t), {el:angels.angelsEL[i], yh:angels.angelsYH[i]}); }); return m; },[angels]);
   const words=useMemo(()=> lex?readableWords(occ,lex.lexicon,ANGEL72):[],[occ,lex,ANGEL72]);
   const sentence=rows.map(r=>SIMPLE[r.sign][0]).join(' ');
-  const year=parseInt(date.slice(0,4),10);
+  const year = (()=>{ const d=parseDate(effDate); return d ? d.getUTCFullYear() : 2026; })();
 
   function scanYear(y){
     setLoading(true);
     setTimeout(()=>{
-      const days=[];
-      for(let i=0;i<365;i++){
-        const ds=new Date(Date.UTC(y,0,1+i,12,0,0)).toISOString().slice(0,10);
-        if(genesisReadable(occupiedLetters(skyAt(ds)))) days.push(ds);
+      const days=[], dayOccs=[];
+      const nDays=(y%4===0&&(y%100!==0||y%400===0))?366:365;
+      for(let i=0;i<nDays;i++){
+        const ds=fmtDate(makeDate(y,1,1+i));
+        const o=occupiedLetters(skyAt(ds));
+        dayOccs.push(o);
+        if(genesisReadable(o)) days.push(ds);
       }
-      setGenData({year:y,days:new Set(days),list:days}); setLoading(false);
+      setGenData({year:y,days:new Set(days),list:days,dayOccs}); setLoading(false);
     },20);
   }
   useEffect(()=>{ if(lex) scanYear(genYear); },[genYear,lex]);
-  function step(n){ const d=new Date(date+'T12:00:00Z'); d.setUTCDate(d.getUTCDate()+n); setDate(d.toISOString().slice(0,10)); }
+  function step(n){ const d=parseDate(effDate); if(!d) return; d.setUTCDate(d.getUTCDate()+n); setDate(fmtDate(d)); }
   function stepYear(n){ setGenYear(genYear+n); }
 
   if(lexErr) return <div className="panel"><h2>Error</h2><p>Could not load lexicon.json ({lexErr}). Serve the <code>web/</code> folder over HTTP (<code>python3 -m http.server 8008</code>) and open <code>http://127.0.0.1:8008/</code>.</p></div>;
@@ -1078,20 +1872,20 @@ function App(){
       </div>
 
       <section className="panel">
-        {active==='sky' && <SkyTab date={date} setDate={setDate} rows={rows} occ={occ} occSigns={occSigns} yhvhOk={yhvhOk} genesisOk={genesisOk} bs={bs} sentence={sentence} step={step}/>}
-        {active==='translator' && <TranslatorTab date={date} occ={occ} words={words} q={q} setQ={setQ}/>}
+        {active==='sky' && <SkyTab date={effDate} rawDate={date} setDate={setDate} rows={rows} occ={occ} occSigns={occSigns} yhvhOk={yhvhOk} genesisOk={genesisOk} bs={bs} sentence={sentence} step={step}/>}
+        {active==='translator' && <TranslatorTab date={effDate} occ={occ} words={words} q={q} setQ={setQ} genData={genData}/>}
 
         {active==='reading' && <>
           <SubTabs items={SUB.reading} active={sub.reading} onChange={setSubTab('reading')}/>
           {sub.reading==='rule' && <RuleTab occ={occ}/>}
-          {sub.reading==='yhvh' && <YhvhTab date={date} occ={occ} yhvhOk={yhvhOk} bs={bs}/>}
-          {sub.reading==='genesis' && <GenesisTab date={date} occ={occ} genesisOk={genesisOk}/>}
+          {sub.reading==='yhvh' && <YhvhTab date={effDate} occ={occ} yhvhOk={yhvhOk} bs={bs}/>}
+          {sub.reading==='genesis' && <GenesisTab date={effDate} occ={occ} genesisOk={genesisOk}/>}
         </>}
 
         {active==='time' && <>
           <SubTabs items={SUB.time} active={sub.time} onChange={setSubTab('time')}/>
-          {sub.time==='predictor' && <PredictorTab date={date} setDate={setDate} genYear={genYear} setGenYear={setGenYear} genData={genData} loading={loading} scanYear={scanYear} year={year} stepYear={stepYear}/>}
-          {sub.time==='ages' && <AgesTab date={date} rows={rows}/>}
+          {sub.time==='predictor' && <PredictorTab date={effDate} setDate={setDate} genYear={genYear} setGenYear={setGenYear} genData={genData} loading={loading} scanYear={scanYear} year={year} stepYear={stepYear}/>}
+          {sub.time==='ages' && <AgesTab date={effDate} rows={rows}/>}
         </>}
 
         {active==='sigils' && <>
@@ -1107,11 +1901,10 @@ function App(){
           {sub.cycles==='saros' && <SarosTab/>}
           {sub.cycles==='ayanamsa' && <AyanamsaTab/>}
           {sub.cycles==='lunarsolar' && <LunarSolarTab/>}
-          {sub.cycles==='week' && <WeekTab date={date} rows={rows}/>}
+          {sub.cycles==='week' && <WeekTab date={effDate} rows={rows}/>}
         </>}
 
-        {active==='revelation' && <RevelationTab date={date} rows={rows} occ={occ} words={words} genData={genData} genYear={genYear}/>}
-        {active==='crosscultural' && <CrossCulturalTab/>}
+        {active==='revelation' && <RevelationsTab sub={sub.revelation} setSubTab={setSubTab('revelation')} date={effDate} rows={rows} occ={occ} words={words} genData={genData} genYear={genYear}/>}
         {active==='method' && <MethodTab esGlossCount={Object.keys(lex.esGloss||{}).length}/>}
       </section>
 
@@ -1122,5 +1915,8 @@ function App(){
   );
 }
 
-const root=document.getElementById('root');
-createRoot(root).render(<App/>);
+if(typeof document!=='undefined'){
+  const root=document.getElementById('root');
+  createRoot(root).render(<App/>);
+}
+export { App, Heptagram, SarosDiagram, PrecessionDiagram, MetonDiagram, DateEntry, YearInput, parseDate, fmtDate, makeDate, GematriaTab, RevelationHebrewTab, RevelationVedicTab, RevelationPersianTab, RevelationSufiTab, RevelationGnosticTab, RevelationRazielTab, isopsephy, abjad, katapayadi };

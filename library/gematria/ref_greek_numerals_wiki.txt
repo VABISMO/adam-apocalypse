@@ -1,0 +1,1282 @@
+Greek numerals - Wikipedia 
+
+ Jump to content 
+
+ From Wikipedia, the free encyclopedia 
+
+ System of writing numbers using Greek letters 
+ The numerical signs 𐆊 and ͵ redirect here. For the accent mark ´, see Acute accent . 
+ This article's lead section may be too short to adequately summarize the key points . Please consider expanding the lead to provide an accessible overview of all important aspects of the article. ( March 2024 ) ( Learn how and when to remove this message ) 
+ Part of a series on Numeral systems 
+ Place-value notation 
+ Hindu–Arabic numerals 
+ Western Arabic 
+ Eastern Arabic 
+
+ Bengali 
+ Devanagari 
+ Gujarati 
+ Gurmukhi 
+ Odia 
+ Sinhala 
+ Tamil 
+ Malayalam 
+ Telugu 
+ Kannada 
+ Dzongkha 
+
+ Tibetan 
+ Balinese 
+ Burmese 
+ Javanese 
+ Khmer 
+ Lao 
+ Mongolian 
+ Sundanese 
+ Thai 
+
+ Other systems 
+ History 
+
+ Ancient 
+
+ Babylonian 
+
+ Post-classical 
+
+ Cistercian 
+ Mayan 
+ Muisca 
+ Pentadic 
+ Quipu 
+ Rumi 
+
+ Contemporary 
+
+ Cherokee 
+ Kaktovik (Iñupiaq) 
+
+ By radix/base 
+ Common radices/bases 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 8 
+ 10 
+ 11 
+ 12 
+ 16 
+ 20 
+ 60 
+
+ Non-standard radices/bases 
+
+ Bijective   ( 1 ) 
+ Signed-digit   ( balanced ternary ) 
+ Mixed   ( factorial ) 
+ Negative 
+ Complex   ( 2 i ) 
+ Non-integer   ( φ ) 
+ Asymmetric 
+
+ Sign-value notation 
+ Non-alphabetic 
+ Contemporary East Asian 
+
+ Chinese 
+ Hokkien 
+ Suzhou 
+ Japanese 
+ Korean 
+ Vietnamese 
+
+ Historic East Asian 
+
+ Counting rods 
+ Tangut 
+
+ Other non-alphabetic 
+
+ Aegean 
+ Attic 
+ Aztec 
+ Brahmi 
+ Chuvash 
+ Egyptian 
+ Etruscan 
+ Kharosthi 
+ Prehistoric counting 
+ Proto-cuneiform 
+ Roman 
+ Tally marks 
+
+ Alphabetic 
+ Abjad 
+ Armenian 
+ Alphasyllabic 
+ Akṣarapallī 
+ Āryabhaṭa 
+ Kaṭapayādi 
+ Coptic 
+ Cyrillic 
+ Geʽez 
+ Georgian 
+ Glagolitic 
+ Greek 
+ Hebrew 
+
+ List of numeral systems v t e 
+
+ This article contains special characters . Without proper rendering support , you may see question marks, boxes, or other symbols . 
+
+ Greek numerals , also known as Ionic , Ionian , Milesian , or Alexandrian numerals , is a system of writing numbers using the letters of the Greek alphabet [ 1 ] :   30   . In modern Greece , they are still used for ordinal numbers and in contexts similar to those in which Roman numerals are still used in the Western world . For ordinary cardinal numbers , however, modern Greece uses Arabic numerals . 
+
+ History [ edit ] 
+ The Minoan and Mycenaean civilizations ' Linear A and Linear B alphabets used a different system, called Aegean numerals , which included number-only symbols for powers of ten: 𐄇   =   1, 𐄐   =   10, 𐄙   =   100, 𐄢   =   1,000, and 𐄫   =   10,000. [ 2 ] 
+
+ Tribute list using attic numerals, 430s BC. 
+
+ In the classical times two different systems of notation were used side by side: Firstly, an acrophonic system called Attic numerals [ 3 ] :   278   -- also known as Herodianic signs -- and, secondly, alphabetic numerals [ 4 ] :   14   .
+The Attic numerals ran from = 1, = 5, = 10, = 100, = 1,000, and = 10,000 [ 3 ] :   278   [ 4 ] :   14   .
+These were repeated at most four times; so, 50, 500, 5,000 and 50,000 were represented by the letter with minuscule powers of ten written in the top-right corner: , , , and [ 3 ] :   278   [ 2 ] .
+The Attic numerals were probably in use by the time of Solon [ 3 ] :   278   [ 1 ] :   31   in the 7th century BC, and instances of it are found from 454 BC to 95 BC [ 4 ] :   15   . 
+
+ The alphabetic numerals used (all 24) letters of the Greek alphabet together with three Phoenician and Ionic ones that had been dropped from the Athenian alphabet (although kept for numbers): digamma , koppa , and sampi . in three sets of nine letters representing ones, tens, and hundreds: From = 1 to = 9, from = 10 to = 90, and from = 100 to or = 900 [ 4 ] :   16   .
+However, some signs vary from location to location due to different local alphabets being in use.
+This system probably developed around Miletus in Ionia [ citation needed ] , and 19th   century classicists placed its development in the 3rd   century   BC, the occasion of its first widespread use. [ 5 ] 
+This system was in limited use from at least 350 BC [ 4 ] :   16   , but the first official use of the alphabetic system in Greece proper is from c.a. 200 BC [ 4 ] :   16   . 
+
+ More thorough modern archaeology has caused the date to be pushed back at least to the 5th   century   BC [ citation needed ] [ 6 ] [ 7 ] , a little before Athens abandoned its pre-Eucleidean alphabet in favour of Miletus 's in 402   BC, and it may predate that by a century or two. [ 8 ] The position of those characters within the numbering system imply that the first two were still in use (or at least remembered as letters) while the third was not. The exact dating, particularly for sampi , is problematic since its uncommon value means the first attested representative near Miletus does not appear until the 2nd   century   BC [ citation needed ] , [ 9 ] and its use is unattested in Athens until the 2nd   century   CE [ citation needed ] . [ 10 ] (In general, Athenians resisted using the new numerals for the longest of any Greek state, but had fully adopted them by c.   50   CE . [ 4 ] ) 
+
+ Description [ edit ] 
+ Greek numerals in a c.   1100 Byzantine manuscript of Hero of Alexandria 's Metrika . The first line contains the number " ͵ θϡϟϛ δ ʹ ϛ ʹ ", i.e. " 9,996 + 1 ⁄ 4 + 1 ⁄ 6 ". It features each of the special numeral symbols sampi (ϡ), koppa (ϟ), and stigma (ϛ) in their minuscule forms. 
+
+ Greek numerals form a sign-value notation system in decimal . The units from 1 to 9 are assigned to the first nine letters of the old Ionic alphabet from alpha to theta . Instead of reusing these numbers to form multiples of the higher powers of ten, however, each multiple of ten from 10 to 90 was assigned its own separate letter from the next nine letters of the Ionic alphabet from iota to koppa . Each multiple of one hundred from 100 to 900 was then assigned its own separate letter as well, from rho to sampi . [ 11 ] Because the Phoenician precursor of sampi fell between what came to represent pi and koppa in Greek [ 12 ] :   3   , its use to represent 900 is taken as a proof that the sampi had fallen into disuse as a letter by the time the system was created [ 12 ] :   3   . 
+
+ This alphabetic system operates on the additive principle in which the numeric values of the letters are added together to obtain the total. For example, 241 was represented as   (200   +   40   +   1). (It was not always the case that the numbers ran from highest to lowest: a 4th-century BC inscription at Athens placed the units to the left of the tens. This practice continued in Asia Minor well into the Roman period . [ 13 ] ) In ancient and medieval manuscripts, these numerals were eventually distinguished from letters using overbars : α , β , γ , etc. In medieval manuscripts of the Book of Revelation , the number of the Beast 666 is written as χξϛ   (600   +   60   +   6). (Numbers larger than 1,000 reused the same letters but included various marks to note the change.) Fractions were indicated as the denominator followed by a keraia ( ʹ ); γ ʹ indicated one third, δ ʹ one fourth and so on. As an exception, special symbol ∠ ʹ indicated one half, and γ° ʹ or γo ʹ was two-thirds. These fractions were additive (also known as Egyptian fractions ); for example δ ʹ ϛ ʹ indicated 1 ⁄ 4 + 1 ⁄ 6 = 5 ⁄ 12 . 
+
+ A 14th-century Byzantine map of the British Isles from a manuscript of Ptolemy 's Geography , using Greek numerals for its graticule : 52–63°N of the equator and 6–33°E from Ptolemy's Prime Meridian at the Fortunate Isles . 
+ Although the Greek alphabet began with only majuscule forms, surviving papyrus manuscripts from Egypt show that uncial and cursive minuscule forms began early. [ clarification needed ] These new letter forms sometimes replaced the former ones, especially in the case of the obscure numerals. The old Q-shaped koppa (Ϙ) began to be broken up ( and ) and simplified ( and ). The numeral for 6 changed several times. During antiquity, the original letter form of digamma (Ϝ) came to be avoided in favour of a special numerical one ( ). By the Byzantine era , the letter was known as episemon and written as or . This eventually merged with the sigma - tau ligature stigma ϛ ( or ). 
+
+ In modern Greek , a number of other changes have been made. Instead of extending an over bar over an entire number, the keraia ( κεραία , lit.   "hornlike projection") is marked to its upper right, a development of the short marks formerly used for single numbers and fractions. The modern keraia ( ʹ ) is a symbol similar to the acute accent (´), the tonos (U+0384,΄) and the prime symbol (U+02B9, ʹ), but has its own Unicode character as U+0374. Alexander the Great 's father Philip II of Macedon is thus known as Φίλιππος Β ʹ in modern Greek. A lower left keraia (Unicode: U+0375, "Greek Lower Numeral Sign") is now standard for distinguishing thousands: 2019 is represented as ͵ ΒΙΘ ʹ ( 2,000 + 10 + 9 ). 
+
+ The declining use of ligatures in the 20th century also means that stigma is frequently written as the separate letters ΣΤ ʹ , although a single keraia is used for the group. [ 14 ] 
+
+ Isopsephy [ edit ] 
+ Main article: Isopsephy 
+ The practice of adding up the number values of Greek letters of words, names and phrases, thus connecting the meaning of words, names and phrases with others with equivalent numeric sums, is called isopsephy . Similar practices for the Hebrew and English are called gematria and English Qaballa , respectively. 
+
+ Table [ edit ] 
+
+ Historical number forms using Greek letters 
+
+ Ancient Byzantine Modern Value 
+
+ α̅ Α ʹ 1 
+
+ β̅ Β ʹ 2 
+
+ γ̅ Γ ʹ 3 
+
+ δ̅ Δ ʹ 4 
+
+ ε̅ Ε ʹ 5 
+
+   and     and   Ϛ ʹ ΣΤ ʹ 6 
+
+ ζ̅ Ζ ʹ 7 
+
+ η̅ Η ʹ 8 
+
+ θ̅ Θ ʹ 9 
+
+ ι̅ Ι ʹ 10 
+
+ κ̅ Κ ʹ 20 
+
+ λ̅ Λ ʹ 30 
+
+ μ̅ Μ ʹ 40 
+
+ ν̅ Ν ʹ 50 
+
+ ξ̅ Ξ ʹ 60 
+
+ ο̅ Ο ʹ 70 
+
+ π̅ Π ʹ 80 
+
+   and     and   Ϟ ʹ 90 
+
+ ρ̅ Ρ ʹ 100 
+
+ σ̅ Σ ʹ 200 
+
+ τ̅ Τ ʹ 300 
+
+ υ̅ Υ ʹ 400 
+
+ φ̅ Φ ʹ 500 
+
+ χ̅ Χ ʹ 600 
+
+ ψ̅ Ψ ʹ 700 
+
+ ω̅ Ω ʹ 800 
+
+   and     and     and     and     and   Ϡ ʹ 900 
+
+   and   ͵ α ͵ Α 1000 
+
+ ͵ β ͵ Β 2000 
+
+ ͵ ͵ Γ 3000 
+
+ ͵ ͵ Δ 4000 
+
+ ͵ ε ͵ Ε 5000 
+
+ ͵   and   ͵ ͵   and   ͵ ͵ Ϛ ͵ ΣΤ 6000 
+
+ ͵ ζ ͵ Ζ 7000 
+
+ ͵ η ͵ Η 8000 
+
+ ͵ θ ͵ Θ 9000 
+
+ Sub-sections of Greek manuscripts are sometimes numbered by lowercase characters (α ʹ . β ʹ . γ ʹ . δ ʹ . ε ʹ . ϛ ʹ . ζ ʹ . η ʹ . θ ʹ .). 
+ In Ancient Greek, myriad notation is used for multiples of 10,000, for example β Μ for 20,000 or ρκγ Μ ͵ δφξζ for 1,234,567 (also written on the line as ρκγ Μ   ͵ δφξζ ). [ 15 ] 
+
+ Higher numbers [ edit ] 
+ In his text The Sand Reckoner , Archimedes gives an upper bound of the number of grains of sand required to fill the entire universe, using an estimate of its size current in his time. His essay demonstrated an easily visualized contradiction of the then-held adage that it was impossible to name a quantity "greater than the number of grains of sand on a beach", or in the entire world. In order to do that, he devised a new enumeration scheme with much greater range than any of those shown above. 
+
+ Pappus of Alexandria reports that Apollonius of Perga developed a simpler system based on powers of the myriad: 
+ α Μ   was   10,000 = 10 4 
+ β Μ   was   (10,000) 2 = 100,000,000 = 10 8 
+ γ Μ   was   (10,000) 3 = 10 12 
+ and so on. [ 15 ] 
+
+ Zero [ edit ] 
+ Example of the early Greek symbol for zero (lower right corner) from a 2nd-century papyrus 
+
+As a non-positional system, Greek numerals don't have an official representation of the number zero. 
+
+ Hellenistic astronomers extended alphabetic Greek numerals into a sexagesimal positional numbering system by limiting each position to a maximum value of 50 + 9 which uses only the letters up through nu ( ν ) and included otherwise unused omicron ( ο ) as a special symbol for zero . Omicron as zero was only used alone for a whole table cell, rather than combined with other digits, like today's modern zero, which is a placeholder in positional numeric notation. This system was probably adapted from Babylonian numerals by Hipparchus c.   140 BCE . It was then used by Ptolemy ( c.   140 BCE ), Theon ( c.   380 CE ) and Theon's daughter Hypatia ( died</span>"}]]}'>d.   415 CE ). The symbol omicron or ' ο ' as used for zero in astronomical and mathematical data tables is clearly different from its conventional use as the value for 70. In the 2nd   century papyrus shown here, one can see the symbol for zero in the lower right, and a number of larger omicrons elsewhere in the same papyrus. 
+
+ In Ptolemy's table of chords , the first fairly extensive trigonometric table , there were 360   rows, portions of which looked as follows: 
+
+ π 
+ ε 
+ ϱ 
+ ι 
+ φ 
+ ε 
+ ϱ 
+ ε 
+ ι 
+
+ ω 
+ ~ 
+
+ ν 
+
+ ε 
+
+ υ 
+ ' 
+
+ ϑ 
+ ε 
+ ι 
+
+ ω 
+ ~ 
+
+ ν 
+
+ ε 
+ ‘ 
+
+ ξ 
+ η 
+ κ 
+ o 
+ σ 
+ τ 
+
+ ω 
+ ~ 
+
+ ν 
+
+ π 
+ δ 
+
+ ∠ 
+ ′ 
+
+ π 
+ ε 
+
+ π 
+ ε 
+
+ ∠ 
+ ′ 
+
+ π 
+
+ ϛ 
+
+ π 
+
+ ϛ 
+
+ ∠ 
+ ′ 
+
+ π 
+ ζ 
+
+ π 
+
+ μ 
+ α 
+
+ γ 
+
+ π 
+ α 
+
+ δ 
+
+ ι 
+ ε 
+
+ π 
+ α 
+
+ κ 
+ ζ 
+
+ κ 
+ β 
+
+ π 
+ α 
+
+ ν 
+
+ κ 
+ δ 
+
+ π 
+ β 
+
+ ι 
+ γ 
+
+ ι 
+ ϑ 
+
+ π 
+ β 
+
+ λ 
+
+ ϛ 
+
+ ϑ 
+
+ ∘ 
+
+ ∘ 
+
+ μ 
+
+ ϛ 
+
+ κ 
+ ε 
+
+ ∘ 
+
+ ∘ 
+
+ μ 
+
+ ϛ 
+
+ ι 
+ δ 
+
+ ∘ 
+
+ ∘ 
+
+ μ 
+
+ ϛ 
+
+ γ 
+
+ ∘ 
+
+ ∘ 
+
+ μ 
+ ε 
+
+ ν 
+ β 
+
+ ∘ 
+
+ ∘ 
+
+ μ 
+ ε 
+
+ μ 
+
+ ∘ 
+
+ ∘ 
+
+ μ 
+ ε 
+
+ κ 
+ ϑ 
+
+ {\displaystyle {\begin{array}{ccc}\pi \varepsilon \varrho \iota \varphi \varepsilon \varrho \varepsilon \iota {\tilde {\omega }}\nu &\varepsilon {\overset {\text{'}}{\upsilon }}\vartheta \varepsilon \iota {\tilde {\omega }}\nu &{\overset {\text{‘}}{\varepsilon }}\xi \eta \kappa o\sigma \tau {\tilde {\omega }}\nu \\{\begin{array}{|l|}\hline \pi \delta \angle '\\\pi \varepsilon \\\pi \varepsilon \angle '\\\hline \pi \mathrm {\stigma} \\\pi \mathrm {\stigma} \angle '\\\pi \zeta \\\hline \end{array}}&{\begin{array}{|r|r|r|}\hline \pi &\mu \alpha &\gamma \\\pi \alpha &\delta &\iota \varepsilon \\\pi \alpha &\kappa \zeta &\kappa \beta \\\hline \pi \alpha &\nu &\kappa \delta \\\pi \beta &\iota \gamma &\iota \vartheta \\\pi \beta &\lambda \mathrm {\stigma} &\vartheta \\\hline \end{array}}&{\begin{array}{|r|r|r|r|}\hline \circ &\circ &\mu \mathrm {\stigma} &\kappa \varepsilon \\\circ &\circ &\mu \mathrm {\stigma} &\iota \delta \\\circ &\circ &\mu \mathrm {\stigma} &\gamma \\\hline \circ &\circ &\mu \varepsilon &\nu \beta \\\circ &\circ &\mu \varepsilon &\mu \\\circ &\circ &\mu \varepsilon &\kappa \vartheta \\\hline \end{array}}\end{array}}} 
+
+ Each number in the first column, labeled περιφερειῶν , ("regions") is the number of degrees of arc on a circle. Each number in the second column, labeled εὐθειῶν , ("straight lines" or "segments") is the length of the corresponding chord of the circle, when the diameter is 120   units. Thus πδ represents an 84° arc, and the ∠′ after it means one-half, so that πδ∠′ means ⁠ 84 + 1 / 2 ⁠ °. In the next column we see |   π | μα |   γ | , meaning   80 + ⁠ 41 / 60 ⁠ + ⁠ 3 / 60² ⁠ . That is the length of the chord corresponding to an arc of ⁠ 84 + 1 / 2 ⁠ ° when the diameter of the circle is 120   units. The next column, labeled ἑξηκοστῶν , for "sixtieths", is the number to be added to the chord length for each 1′ increase in the arc, over the span of the next 1°. Thus that last column was used for linear interpolation . 
+
+ The Greek sexagesimal placeholder or zero symbol changed over time: The symbol used on papyri during the second century was a very small circle with an overbar several diameters long (   ο   ), terminated or not at both ends in various ways. Later, the overbar shortened to only one letter-diameter, similar to the modern 'o'+macron (ō). It was still being used in late medieval Arabic manuscripts whenever alphabetic numerals were used. In later Byzantine manuscripts even the minimal overbar was omitted, leaving a bare 'ο' (omicron). [ 16 ] [ 17 ] This gradual change from an invented symbol   ο   to 'ο' does not support the hypothesis that the omicron was the initial of οὐδέν meaning "nothing". Note that the letter 'ο' was still used with its original numerical value of 70; however, there was no ambiguity, as 70 could not appear in the fractional part of a sexagesimal number, and zero was usually omitted when it was the integer. 
+
+ Some of Ptolemy's true zeros appeared in the first line of each of his eclipse tables, where they were a measure of the angular separation between the center of the Moon and either the center of the Sun (for solar eclipses ) or the center of Earth 's shadow (for lunar eclipses ). All of these zeros took the form ο | ο ο , where Ptolemy actually used three of the symbols described in the previous paragraph. The vertical bar (|) indicates that the integral part on the left was in a separate column labeled in the headings of his tables as digits (of five arc-minutes each), whereas the fractional part was in the next column labeled minute of immersion , meaning sixtieths (and thirty-six-hundredths) of a digit. [ 18 ] 
+
+ The Greek zero was added to Unicode in Version   4.1.0 at U+1018A 𐆊 GREEK ZERO SIGN . [ 19 ] 
+
+ See also [ edit ] 
+
+ Alphabetic numeral system   – Type of numeral system 
+ Attic numerals   – Symbolic number notation used by the ancient Greeks 
+ Cyrillic numerals   – Numeral system derived from the Cyrillic script 
+ Greek mathematics   – Mathematics of Ancient Greece and the Mediterranean, 5th BC to 6th AD Pages displaying short descriptions of redirect targets 
+ Greek numerals in Unicode   – Graphemes for various number systems Pages displaying short descriptions of redirect targets (acrophonic, not alphabetic, numerals) 
+ Hebrew numerals   – Numeral system using letters of the Hebrew alphabet , based on the Greek system 
+ History of ancient numeral systems 
+ History of arithmetic   – Branch of elementary mathematics Pages displaying short descriptions of redirect targets 
+ History of communication 
+ Isopsephy   – Numerological connection between words whose letters' number values have equal sums 
+ List of numeral system topics 
+ List of numeral systems 
+ Number of the beast   – Number associated with the Beast of Revelation 
+ Roman numerals   – Numbers in the Roman numeral system 
+
+ References [ edit ] 
+ \n {{cite web\n | access-date = 27 May 2026\n | publisher = The Packard Humanities Institute, [[Cornell University]] & [[Ohio State University]]\n | title = Searchable Greek Inscriptions: IG I³ 1387\n | url = https://epigraphy.packhum.org/text/1592 }}\n </ref>\n <ref name=\"ig_i3_1387_b\">\n {{cite web\n | access-date = 27 May 2026\n | publisher = Die Berlin-Brandenburgische Akademie der Wissenschaften \n | title = IG I³ 1387\n | url = https://xmlpublic.bbaw.de/legacy/apps/ig/IG%20I%C2%B3%201387\n }}\n </ref>\n <ref name=\"gow1883\">\n {{cite book\n | author = Gow J.\n | editor1 = Wright, W.A.\n | editor2 = Bywater, I.\n | editor3 = Jackson, H.\n | doi = 10.1017/CBO9781139523653.027\n | publisher = Cambridge University Press\n | title = The Greek Numerical Alphabet.\n | series = The Journal of Philology. Cambridge Library Collection - Classics\n | year = 1888\n }}\n </ref>\n <ref name=\"heath1921\">\n {{cite book\n | author = Heath, T. L.\n | publisher = Cambridge University Press\n | title = A History of Greek Mathematics\n | volume = 1\n | year = 1921\n }}\n </ref>\n <ref name=\"heath1931\">\n {{cite book\n | author = Heath, T. L.\n | location = New York\n | publisher = Dover Publications\n | title = A Manual of Greek Mathematics\n | year = 1963\n }}\n </ref>\n <ref name=\"thompson1912\">\n {{cite book\n | author = Thompson, Edwards Maunde\n | publisher = Clarendon Press\n | title = An introduction to Greek and Latin Palaeography\n | url = https://archive.org/details/greeklatin00thomuoft\n | year = 1912\n }}\n </ref>"}},"i":0}}]}'> 
+ 1 2 
+ Heath, T. L. (1921). A History of Greek Mathematics . Vol.   1. Cambridge University Press. 
+
+ 1 2 Verdan, Samuel (20 March 2007). "Systèmes numéraux en Grèce ancienne: Description et mise en perspective historique" (in French). Archived from the original on 2 February 2010 . Retrieved 2 March 2011 . 
+ 1 2 3 4 
+ Gow J. (1888). Wright, W.A.; Bywater, I.; Jackson, H. (eds.). The Greek Numerical Alphabet . The Journal of Philology. Cambridge Library Collection - Classics. Cambridge University Press. doi : 10.1017/CBO9781139523653.027 . 
+
+ 1 2 3 4 5 6 7 
+ Heath, T. L. (1963). A Manual of Greek Mathematics . New York: Dover Publications. 
+
+ ↑ Thompson, Edward M. (1893). Handbook of Greek and Latin Palaeography . New York, NY: D. Appleton. p.   114. 
+ ↑ 
+ "Searchable Greek Inscriptions: IG I³ 1387" . The Packard Humanities Institute, Cornell University & Ohio State University . Retrieved 27 May 2026 . 
+
+ ↑ 
+ "IG I³ 1387" . Die Berlin-Brandenburgische Akademie der Wissenschaften . Retrieved 27 May 2026 . 
+
+ ↑ Jeffery, Lilian H. (1961). The Local Scripts of Archaic Greece . Oxford, UK: Clarendon Press. pp.   38 ff. 
+ ↑ "Magnesia   4" . Searchable Greek Inscriptions . The Packard Humanities Institute. Cornell University & Ohio State University . Magnesia   4   also known as   Syll³ 695.b . Retrieved 1 November 2013 . 
+ ↑ "IG II² 2776" . Searchable Greek Inscriptions . The Packard Humanities Institute. Cornell University & Ohio State University . Retrieved 1 November 2013 . 
+ ↑ Edkins, Jo (2006). "Classical Greek Numbers" . Archived from the original on 10 May 2013 . Retrieved 29 April 2013 . 
+ 1 2 
+ Thompson, Edwards Maunde (1912). An introduction to Greek and Latin Palaeography . Clarendon Press. 
+
+ ↑ Heath, Thomas L. A Manual of Greek Mathematics , pp. 14 ff. Oxford Univ. Press (Oxford), 1931. Reprinted Dover ( Mineola ), 2003. Accessed 1 November 2013. 
+ ↑ Nick Nicholas (9 April 2005). "Numerals: Stigma, Koppa, Sampi" . Retrieved 2 March 2011 . {{ cite web }} : CS1 maint: deprecated archival service ( link ) 
+ 1 2 "Greek number systems" . mcs.st-andrews.ac.uk . MacTutor. 
+ ↑ 
+ Neugebauer, O.E. (1969) [1957]. The Exact Sciences in Antiquity (2, reprint   ed.). Dover Publications . pp.   13– 14, plate 2. ISBN   978-0-486-22332-2 . 
+
+ ↑ 
+ Mercier, Raymond. "Consideration of the Greek symbol 'zero' " (PDF) . — gives numerous examples
+
+ ↑ 
+ Ptolemy, Claudius (1998) [100–170   CE]. "Book   VI". Ptolemy's Almagest . Translated by Toomer, G.J. Princeton, NJ: Princeton University Press. pp.   306– 307. Originally published under the (translated) title Mathematical Syntaxis .
+
+ ↑ The Unicode Standard, Version 4.1.0 , Mountain View, California: The Unicode Consortium, March 2004, ISBN   0-321-18578-1 
+
+ External links [ edit ] 
+
+ Wikimedia Commons has media related to Greek numerals . 
+
+ The Greek Number Converter 
+
+ v t e Ancient Greek mathematics Mathematicians (timeline) 
+ Anaxagoras 
+ Anthemius 
+ Apollonius 
+ Archimedes 
+ Archytas 
+ Aristaeus the Elder 
+ Aristarchus 
+ Autolycus 
+ Bion 
+ Bryson 
+ Callippus 
+ Carpus 
+ Chrysippus 
+ Cleomedes 
+ Conon 
+ Ctesibius 
+ Democritus 
+ Dicaearchus 
+ Dinostratus 
+ Diocles 
+ Dionysodorus of Caunus 
+ Dionysodorus of Amisene 
+ Diophantus 
+ Domninus 
+ Eratosthenes 
+ Euclid 
+ Eudemus 
+ Eudoxus 
+ Eutocius 
+ Geminus 
+ Heliodorus 
+ Heron 
+ Hipparchus 
+ Hippasus 
+ Hippias 
+ Hippocrates 
+ Hypatia 
+ Hypsicles 
+ Isidore of Miletus 
+ Leon 
+ Marinus 
+ Menaechmus 
+ Menelaus 
+ Metrodorus 
+ Nicomachus 
+ Nicomedes 
+ Nicoteles 
+ Oenopides 
+ Pandrosion 
+ Pappus 
+ Perseus 
+ Philolaus 
+ Philon 
+ Philonides 
+ Porphyry of Tyre 
+ Posidonius 
+ Proclus 
+ Ptolemy 
+ Pythagoras 
+ Serenus 
+ Sosigenes 
+ Sporus 
+ Thales 
+ Theaetetus 
+ Theodorus 
+ Theodosius 
+ Theon of Alexandria 
+ Theon of Smyrna 
+ Thymaridas 
+ Xenocrates 
+ Zeno of Elea 
+ Zeno of Sidon 
+ Zenodorus 
+ Treatises 
+ Almagest 
+ Arithmetica 
+ Conics (Apollonius) 
+ Catoptrics 
+ Data (Euclid) 
+ Elements (Euclid) 
+ Little Astronomy 
+ Measurement of a Circle 
+ On Conoids and Spheroids 
+ On the Sizes and Distances (Aristarchus) 
+ On Sizes and Distances (Hipparchus) 
+ On the Moving Sphere (Autolycus) 
+ Optics (Euclid) 
+ On Spirals 
+ On the Sphere and Cylinder 
+ Ostomachion 
+ Phaenomena (Euclid) 
+ Planisphaerium 
+ Spherics (Theodosius) 
+ Spherics (Menelaus) 
+ The Quadrature of the Parabola 
+ The Sand Reckoner 
+ Concepts and definitions 
+ Chord 
+ Circles of Apollonius 
+ Apollonian circles 
+ Apollonian gasket 
+ Problem of Apollonius 
+ Commensurability 
+ Diophantine equation 
+ Euclidean geometry 
+ Golden ratio 
+ Lune of Hippocrates 
+ Method of exhaustion 
+ Parallel postulate 
+ Platonic solid 
+ Regular polygon 
+ Straightedge and compass construction 
+ Angle trisection 
+ Doubling the cube 
+ Squaring the circle 
+ Quadratrix of Hippias 
+ Neusis construction 
+ Results In Elements 
+ Angle bisector theorem 
+ Exterior angle theorem 
+ Euclidean algorithm 
+ Euclid's theorem 
+ Geometric mean theorem 
+ Hinge theorem 
+ Inscribed angle theorem 
+ Intercept theorem 
+ Intersecting chords theorem 
+ Intersecting secants theorem 
+ Law of cosines 
+ Pons asinorum 
+ Pythagorean theorem 
+ Tangent-secant theorem 
+ Thales's theorem 
+ Theorem of the gnomon 
+
+ Apollonius's theorem 
+ Aristarchus's inequality 
+ Heron's formula 
+ Law of sines 
+ Menelaus's theorem 
+ Pappus's area theorem 
+ Problem II.8 of Arithmetica 
+ Ptolemy's inequality 
+ Ptolemy's table of chords 
+ Ptolemy's theorem 
+ Spiral of Theodorus Centers/Schools 
+ Cyrene 
+ Platonic Academy 
+ Pythagoreanism 
+ School of Chios 
+ Related 
+ Ancient Greek astronomy 
+ Attic numerals 
+ Greek numerals 
+ History of 
+ A History of Greek Mathematics 
+ by Thomas Heath 
+ Archimedes Palimpsest 
+ algebra 
+ timeline 
+ arithmetic 
+ timeline 
+ calculus 
+ timeline 
+ geometry 
+ timeline 
+ logic 
+ timeline 
+ mathematics 
+ timeline 
+ numbers 
+ prehistoric counting 
+ numeral systems 
+ list 
+ Other cultures 
+ Arabian/Islamic 
+ Babylonian 
+ Chinese 
+ Egyptian 
+ Inca 
+ Indian 
+ Japanese 
+ Ancient Greece portal   • Mathematics portal 
+
+ v t e Greek language Origin and genealogy 
+ Graeco-Aryan 
+ Graeco-Armenian 
+ Pre-Greek substrate 
+ Graeco-Phrygian 
+ Hellenic languages 
+ Periods 
+ Proto-Greek ( c.   2900 –1600 BC) 
+ Mycenaean Greek ( c.   1600 –1100 BC) 
+ Ancient Greek ( c.   800 –300 BC) 
+ Koine Greek ( c.   300 BC –AD 330) 
+ Medieval Greek ( c.   330 –1453) 
+ Modern Greek (since 1453) 
+ Varieties Ancient 
+ Central
+ Aeolic 
+ Mycenaean 
+ Arcadocypriot 
+ East
+ Attic 
+ Ionic 
+ Homeric 
+ West
+ Doric 
+ Northwest
+ Achaean 
+ Epirote 
+ Locrian 
+ Macedonian 
+ Pamphylian 
+ Koine 
+ Hellenistic Koine 
+ Jewish Koine Greek 
+ Modern 
+ Demotic 
+ Katharevousa 
+ Cappadocian 
+ Misthiotika 
+ Cretan 
+ Cypriot 
+ Himariote 
+ Constantinople 
+ Italiot 
+ Greco/Calabrian 
+ Griko/Apulian 
+ Maniot 
+ Mariupolitan 
+ Pontic 
+ Romano-Greek 
+ Tsakonian 
+ Yevanic 
+ Greco-Australian 
+ Phonology 
+ Ancient ( accent / teaching ) 
+ Koine 
+ Standard Modern 
+ Grammar 
+ Ancient 
+ Koine 
+ Standard Modern 
+ Writing systems 
+ Cypriot syllabary 
+ Linear B 
+ Greek alphabet 
+ History 
+ Archaic forms 
+ Attic numerals 
+ Greek numerals 
+ Orthography 
+ Diacritics 
+ Braille 
+ Cyrillization and Romanization 
+ Greeklish 
+ Literature 
+ Ancient 
+ Byzantine 
+ Modern 
+ Promotion and study 
+ Hellenic Foundation for Culture 
+ Center for the Greek Language 
+ Institute for Language and Speech Processing 
+ Other 
+ Eteocretan language 
+ Eteocypriot language 
+ Greek language question 
+ Morphemes in English 
+ Terms of endearment 
+ Place names 
+ Proverbs 
+ Minoan language 
+ Greek Language Day 
+ Trojan language 
+ Comparison of Ancient Greek dictionaries 
+
+ v t e Ancient Greece 
+ Timeline 
+ History Geography Periods 
+ Cycladic civilization 
+ Minoan civilization 
+ Mycenaean Greece 
+ Greek Dark Ages 
+ Archaic Greece 
+ Classical Greece 
+ Hellenistic Greece 
+ Roman Greece 
+ Geography 
+ Aegean Sea 
+ Aeolis 
+ Crete 
+ Cyrenaica 
+ Cyprus 
+ Doris 
+ Epirus 
+ Hellespont 
+ Ionia 
+ Ionian Sea 
+ Macedonia 
+ Magna Graecia 
+ Peloponnesus 
+ Pontus 
+ Taurica 
+ Ancient Greek colonies 
+ City states Politics Military City states 
+ Argos 
+ Athens 
+ Byzantion 
+ Chalcis 
+ Corinth 
+ Ephesus 
+ Miletus 
+ Pergamon 
+ Eretria 
+ Kerkyra 
+ Larissa 
+ Megalopolis 
+ Thebes 
+ Megara 
+ Rhodes 
+ Samos 
+ Sparta 
+ Lissus (Crete) 
+ Kingdoms 
+ Bithynia 
+ Cappadocia 
+ Epirus 
+ Greco-Bactrian Kingdom 
+ Indo-Greek Kingdom 
+ Macedonia 
+ Pergamon 
+ Pontus 
+ Ptolemaic Kingdom 
+ Seleucid Empire 
+ Federations / Confederations 
+ Doric Hexapolis ( c.   1100   – c.   560 BC ) 
+ Italiote League ( c.   800 –389 BC) 
+ Ionian League (c. 650–404 BC) 
+ Peloponnesian League ( c.   550 –366 BC) 
+ Amphictyonic League ( c.   595 –279 BC) 
+ Acarnanian League (c. 500–31 BC) 
+ Hellenic League (499–449 BC) 
+ Delian League (478–404 BC) 
+ Chalcidian League (430–348 BC) 
+ Boeotian League (c. 424–c. 395 BC) 
+ Aetolian League (c. 400–188 BC) 
+ Second Athenian League (378–355 BC) 
+ Thessalian League (374–196 BC) 
+ Arcadian League (370–c. 230 BC) 
+ Epirote League (370–168 BC) 
+ League of Corinth (338–322 BC) 
+ Euboean League (c. 300 BC–c. 300 AD) 
+ Achaean League (280–146 BC) 
+ Politics 
+ Boule 
+ Free city 
+ Koinon 
+ Proxeny 
+ Stasis 
+ Symmachia 
+ Tagus 
+ Tyrant 
+ Athenian 
+ Agora 
+ Areopagus 
+ Dikasterion 
+ Ecclesia 
+ Graphe paranomon 
+ Heliaia 
+ Ostracism 
+ Spartan 
+ Ecclesia 
+ Ephor 
+ Gerousia 
+ Macedon 
+ Synedrion 
+ Koinon 
+ Military 
+ Wars 
+ Athenian military 
+ Scythian archers 
+ Antigonid Macedonian army 
+ Army of Macedon 
+ Ballista 
+ Cretan archers 
+ Hellenistic armies 
+ Hippeis 
+ Hoplite 
+ Hetairoi 
+ Macedonian phalanx 
+ Military of Mycenaean Greece 
+ Phalanx 
+ Peltast 
+ Pezhetairos 
+ Sarissa 
+ Sacred Band of Thebes 
+ Sciritae 
+ Seleucid army 
+ Spartan army 
+ Strategos 
+ Toxotai 
+ Xiphos 
+ Xyston 
+ People List of ancient Greeks Rulers 
+ Kings of Argos 
+ Archons of Athens 
+ Kings of Athens 
+ Kings of Commagene 
+ Diadochi 
+ Kings of Macedonia 
+ Kings of Paionia 
+ Attalid kings of Pergamon 
+ Kings of Pontus 
+ Ptolemaic dynasty 
+ Seleucid dynasty 
+ Kings of Sparta 
+ Tyrants of Syracuse 
+ Artists & scholars 
+ Astronomers 
+ Geographers 
+ Historians 
+ Mathematicians 
+ Philosophers 
+ Playwrights 
+ Poets 
+ Seven Sages 
+ Writers 
+ Philosophers 
+ Anaxagoras 
+ Anaximander 
+ Anaximenes 
+ Antisthenes 
+ Aristippus 
+ Aristotle 
+ Democritus 
+ Diogenes of Sinope 
+ Empedocles 
+ Epicurus 
+ Gorgias 
+ Heraclitus 
+ Hypatia 
+ Leucippus 
+ Parmenides 
+ Plato 
+ Protagoras 
+ Pythagoras 
+ Socrates 
+ Thales 
+ Zeno 
+ Authors 
+ Aeschylus 
+ Aesop 
+ Alcaeus 
+ Archilochus 
+ Aristophanes 
+ Bacchylides 
+ Diodorus Siculus 
+ Euripides 
+ Herodotus 
+ Hesiod 
+ Hipponax 
+ Homer 
+ Ibycus 
+ Lucian 
+ Menander 
+ Mimnermus 
+ Panyassis 
+ Philocles 
+ Pindar 
+ Plutarch 
+ Polybius 
+ Sappho 
+ Simonides 
+ Sophocles 
+ Stesichorus 
+ Theognis 
+ Thucydides 
+ Timocreon 
+ Tyrtaeus 
+ Xenophon 
+ Others 
+ Athenian statesmen 
+ Lawgivers 
+ Olympic victors 
+ Tyrants 
+ By culture 
+ Ancient Greek tribes 
+ Thracian Greeks 
+ Ancient Macedonians 
+ Society Culture Society 
+ Agriculture 
+ Animals 
+ Calendar 
+ Clothing 
+ Coinage 
+ Cuisine 
+ Economy 
+ Education 
+ Emporium 
+ Euergetism 
+ Festivals 
+ Folklore 
+ Homosexuality 
+ Law 
+ Olympic Games 
+ Pederasty 
+ Philosophy 
+ Prostitution 
+ Religion 
+ Slavery 
+ Warfare 
+ Wedding customs 
+ Wine 
+ Arts and science 
+ Architecture 
+ Greek Revival architecture 
+ Astronomy 
+ Literature 
+ Mathematics 
+ Medicine 
+ Music 
+ Musical system 
+ Pottery 
+ Sculpture 
+ Technology 
+ Theatre 
+ Religion 
+ Funeral and burial practices 
+ Mythology 
+ Deities 
+ Temple 
+ Twelve Olympians 
+ Underworld 
+ Sacred places 
+ Eleusis 
+ Delphi 
+ Delos 
+ Dion 
+ Dodona 
+ Mount Olympus 
+ Olympia 
+ Structures 
+ Athenian Treasury 
+ Lion Gate 
+ Long Walls 
+ Philippeion 
+ Theatre of Dionysus 
+ Tunnel of Eupalinos 
+ Temples 
+ Aphaea 
+ Artemis 
+ Athena Nike 
+ Erechtheion 
+ Hephaestus 
+ Hera, Olympia 
+ Parthenon 
+ Samothrace 
+ Zeus, Olympia 
+ Language 
+ Proto-Greek 
+ Mycenaean 
+ Homeric 
+ Dialects 
+ Aeolic 
+ Arcadocypriot 
+ Attic 
+ Doric 
+ Epirote 
+ Ionic 
+ Locrian 
+ Macedonian 
+ Pamphylian 
+ Koine 
+ Writing 
+ Linear A 
+ Linear B 
+ Cypriot syllabary 
+ Greek alphabet 
+ Greek numerals 
+ Attic numerals 
+ Greek colonisation Magna Graecia Mainland Italy 
+ Alision 
+ Ankṓn 
+ Brentesion 
+ Caulonia 
+ Chone 
+ Croton 
+ Cumae 
+ Elea 
+ Heraclea Lucania 
+ Hipponion 
+ Hydrus 
+ Krimisa 
+ Laüs 
+ Locri 
+ Medma 
+ Metauros 
+ Metapontion 
+ Neápolis 
+ Pandosia (Lucania) 
+ Poseidonia 
+ Pixous 
+ Rhegion 
+ Scylletium 
+ Siris 
+ Sybaris 
+ Sybaris on the Traeis 
+ Taras 
+ Terina 
+ Thurii 
+ Sicily 
+ Akragas 
+ Akrai 
+ Akrillai 
+ Apollonia 
+ Calacte 
+ Casmenae 
+ Catana 
+ Gela 
+ Helorus 
+ Henna 
+ Heraclea Minoa 
+ Himera 
+ Hybla Gereatis 
+ Hybla Heraea 
+ Kamarina 
+ Leontinoi 
+ Megara Hyblaea 
+ Messana 
+ Naxos 
+ Segesta 
+ Selinous 
+ Syracuse 
+ Tauromenion 
+ Thermae 
+ Tyndaris 
+ Aeolian Islands 
+ Didyme 
+ Euonymos 
+ Ereikousa 
+ Hycesia 
+ Lipara/Meligounis 
+ Phoenicusa 
+ Strongyle 
+ Therassía 
+ Cyrenaica 
+ Balagrae 
+ Barca 
+ Berenice 
+ Cyrene ( Apollonia ) 
+ Ptolemais 
+ Iberian Peninsula 
+ Akra Leuke 
+ Alonis 
+ Emporion 
+ Helike 
+ Hemeroscopion 
+ Kalathousa 
+ Kypsela 
+ Mainake 
+ Menestheus's Limin 
+ Illicitanus Limin/Portus Illicitanus 
+ Rhode 
+ Salauris 
+ Zacynthos 
+ Illyria 
+ Aspalathos 
+ Apollonia 
+ Aulon 
+ Epidamnos 
+ Epidauros 
+ Issa 
+ Melaina Korkyra 
+ Nymphaion 
+ Orikon 
+ Pharos 
+ Tragurion 
+ Thronion 
+ Black Sea basin North coast 
+ Akra 
+ Borysthenes 
+ Charax 
+ Chersonesus 
+ Dioscurias 
+ Gorgippia 
+ Hermonassa 
+ Kalos Limen 
+ Kepoi 
+ Kerkinitis 
+ Kimmerikon 
+ Myrmekion 
+ Nikonion 
+ Nymphaion 
+ Olbia 
+ Pantikapaion 
+ Phanagoria 
+ Pityus 
+ Tanais 
+ Theodosia 
+ Tyras 
+ Tyritake 
+ South coast 
+ Abonoteichos 
+ Amisos 
+ Anchialos 
+ Apollonia 
+ Athina 
+ Bathus 
+ Dionysopolis 
+ Cotyora 
+ Cytorus 
+ Eupatoria 
+ Heraclea 
+ Kerasous 
+ Mesambria 
+ Odessos 
+ Oinòe 
+ Phasis 
+ Polemonion 
+ Rhizos 
+ Salmydessus 
+ Sesamus 
+ Sinope 
+ Thèrmae 
+ Tium 
+ Trapezous 
+ Tripolis 
+ Zaliche 
+ Lists 
+ Cities 
+ in Epirus 
+ People 
+ Place names 
+ Stoae 
+ Temples 
+ Theatres 
+
+ Category 
+ Portal 
+ Outline 
+
+ Retrieved from " https://en.wikipedia.org/w/index.php?title=Greek_numerals&oldid=1368171638 " 
+ Categories : Alphabetic numeral systems Numerals Ancient Greek mathematics Hidden categories: Articles with short description Short description is different from Wikidata Wikipedia introduction cleanup from March 2024 All pages needing cleanup Articles covered by WikiProject Wikify from March 2024 All articles covered by WikiProject Wikify Pages using sidebar with the child parameter Articles containing Mycenaean Greek-language text CS1 French-language sources (fr) All articles with unsourced statements Articles with unsourced statements from May 2026 Articles containing Ancient Greek (to 1453)-language text Wikipedia articles needing clarification from August 2017 Articles containing Greek-language text CS1 maint: deprecated archival service Pages displaying short descriptions of redirect targets via Module:Annotated link Commons category link is defined as the pagename Use dmy dates from June 2019 
+
+ Search 
+
+ Search 
+
+ Greek numerals 
+
+ 49 languages 
+
+ Add topic

@@ -1,0 +1,1243 @@
+Abjad numerals - Wikipedia 
+
+ Jump to content 
+
+ From Wikipedia, the free encyclopedia 
+
+ Numeral system of the Arabic alphabet 
+ This article has multiple issues. Please help improve it or discuss these issues on the talk page . ( Learn how and when to remove these messages ) 
+
+ This article needs more citations . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . Find sources:   "Abjad numerals"   –   news   · newspapers   · books   · scholar   · JSTOR ( March 2019 ) ( Learn how and when to remove this message ) This article may contain original research . Please improve it by verifying the claims made and adding inline citations . Statements consisting only of original research should be removed. ( March 2019 ) ( Learn how and when to remove this message ) 
+
+ ( Learn how and when to remove this message ) 
+ Part of a series on Numeral systems 
+ Place-value notation 
+ Hindu–Arabic numerals 
+ Western Arabic 
+ Eastern Arabic 
+
+ Bengali 
+ Devanagari 
+ Gujarati 
+ Gurmukhi 
+ Odia 
+ Sinhala 
+ Tamil 
+ Malayalam 
+ Telugu 
+ Kannada 
+ Dzongkha 
+
+ Tibetan 
+ Balinese 
+ Burmese 
+ Javanese 
+ Khmer 
+ Lao 
+ Mongolian 
+ Sundanese 
+ Thai 
+
+ Other systems 
+ History 
+
+ Ancient 
+
+ Babylonian 
+
+ Post-classical 
+
+ Cistercian 
+ Mayan 
+ Muisca 
+ Pentadic 
+ Quipu 
+ Rumi 
+
+ Contemporary 
+
+ Cherokee 
+ Kaktovik (Iñupiaq) 
+
+ By radix/base 
+ Common radices/bases 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 8 
+ 10 
+ 11 
+ 12 
+ 16 
+ 20 
+ 60 
+
+ Non-standard radices/bases 
+
+ Bijective   ( 1 ) 
+ Signed-digit   ( balanced ternary ) 
+ Mixed   ( factorial ) 
+ Negative 
+ Complex   ( 2 i ) 
+ Non-integer   ( φ ) 
+ Asymmetric 
+
+ Sign-value notation 
+ Non-alphabetic 
+ Contemporary East Asian 
+
+ Chinese 
+ Hokkien 
+ Suzhou 
+ Japanese 
+ Korean 
+ Vietnamese 
+
+ Historic East Asian 
+
+ Counting rods 
+ Tangut 
+
+ Other non-alphabetic 
+
+ Aegean 
+ Attic 
+ Aztec 
+ Brahmi 
+ Chuvash 
+ Egyptian 
+ Etruscan 
+ Kharosthi 
+ Prehistoric counting 
+ Proto-cuneiform 
+ Roman 
+ Tally marks 
+
+ Alphabetic 
+ Abjad 
+ Armenian 
+ Alphasyllabic 
+ Akṣarapallī 
+ Āryabhaṭa 
+ Kaṭapayādi 
+ Coptic 
+ Cyrillic 
+ Geʽez 
+ Georgian 
+ Glagolitic 
+ Greek 
+ Hebrew 
+
+ List of numeral systems v t e 
+ Arabic alphabet 
+ ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي 
+
+ Arabic script 
+ History 
+ Transliteration 
+ Diacritics 
+ Hamza 
+ Numerals 
+ Numeration 
+ v t e 
+ The Abjad numerals , also called Hisab al-Jummal ( Arabic : حِسَاب ٱلْجُمَّل , ḥisāb al-jummal ), are a decimal alphabetic numeral system / alphanumeric code , in which the 28 letters of the Arabic alphabet are assigned numerical values. They have been used in the Arabic-speaking world since before the eighth century when positional Arabic numerals were adopted. [ 1 ] In modern Arabic, the word ʾabjadīyah ( أَبْجَدِيَّة ) means ' alphabet ' in general. 
+
+ In the Abjad system, the first letter of the Arabic alphabet, ʾalif , is used to represent 1; the second letter, bāʾ , 2, up to 9. Letters then represent the first nine intervals of 10s and those of the 100s: yāʾ for 10, kāf for 20, qāf for 100, ending with 1000. 
+
+ The word ʾabjad ( أبجد ) itself derives from the first four letters (A-B-G-D) of the Semitic alphabet, including the Aramaic alphabet , Hebrew alphabet , Phoenician alphabet , and other scripts for Semitic languages . These alphabets contained only 22 letters, stopping at taw , numerically equivalent to 400. The Arabic Abjad system continues at this point with letters not found in other alphabets: thāʾ = 500, khāʾ = 600, dhāl = 700, etc. Abjad numerals in Arabic are similar to the alphanumeric codes of Hebrew gematria and Greek isopsephy . 
+
+ Abjad order [ edit ] 
+ The Abjad order of the Arabic alphabet has two slightly different variants. The Arabic abjad order is not a simple historical continuation of the earlier north Semitic alphabetic order, since it has a position corresponding to the Aramaic letter samekh / semkat ס , yet no letter of the Arabic alphabet historically derives from that letter. 
+
+ In the most common Mashriqi abjad sequence, loss of samekh was compensated for by the split of shin ש into two independent Arabic letters, ش ( shīn ) and ﺱ ( sīn ), which moved up to take the place of samekh . 
+
+ The Mashriqi (common) abjad sequence, read from right to left, is: 
+
+ غ ظ ض ذ خ ث ت ش ر ق ص ف ع س ن م ل ك ي ط ح ز و ه د ج ب ا 
+
+ gh ẓ ḍ dh kh th t sh r q ṣ f ʿ s n m l k y ṭ ḥ z w / u h d j b ʾ 
+
+ This is commonly vocalized as follows: 
+ ʾabjad hawwaz ḥuṭṭī kalaman saʿfaṣ qarashat thakhadh ḍaẓagh . 
+ Another vocalization is: 
+ ʾabujadin hawazin ḥuṭiya kalman saʿfaṣ qurishat thakhudh ḍaẓugh 
+
+ In the Maghrebian abjad sequence (quoted in apparently earliest authorities and considered older [ 2 ] ), loss of samekh was compensated for by the split of tsade צ into two independent Arabic letters, ض ( ḍad ) and ص ( ṣad ), which moved up to take the place of samekh . 
+
+ The Maghrebian abjad sequence, read from right to left, is: [ 2 ] [ 3 ] [ unreliable source? ] 
+
+ ش غ ظ ذ خ ث ت س ر ق ض ف ع ص ن م ل ك ي ط ح ز و ه د ج ب ا 
+
+ sh gh ẓ dh kh th t s r q ḍ f ʿ ṣ n m l k y ṭ ḥ z w / u h d j b ʾ 
+
+ which can be vocalized as: 
+ ʾabujadin hawazin ḥuṭiya kalman ṣaʿfaḍ qurisat thakhudh ẓaghush 
+
+ Another vocalization is: 
+ ʾabajd hawazin ḥuṭīyin kalamnin ṣaʿfaḍin qurisat thakhudh ẓughshin 
+
+ Competing order 
+ Modern dictionaries and other reference books use the newer hijāʾī ( هجائي ) / alifbāʾī ( أَلِفْبَائِي ) and more common order, which partially groups letters together by similarity of shape, and is never used as numerals. 
+
+ The common hijāʾī sequence, read from right to left, is: 
+
+ ي و ه ن م ل ك ق ف غ ع ظ ط ض ص ش س ز ر ذ د خ ح ج ث ت ب ا 
+
+ y w / u h n m l k q f gh ʿ ẓ ṭ ḍ ṣ sh s z r dh d kh ḥ j th t b ʾ 
+
+ Persian uses a slightly different order , in which و comes before ه instead of after it. 
+
+ In the Maghrebian hijāʾī / alifbāʾī order (replaced by the Mashriqi order [ 3 ] [ unreliable source? ] ), the sequence is: [ 2 ] 
+
+ ي و ه ش س ق ف غ ع ض ص ن م ل ك ظ ط ز ر ذ د خ ح ج ث ت ب ا 
+
+ y w / u h sh s q f gh ʿ ḍ ṣ n m l k ẓ ṭ z r dh d kh ḥ j th t b ʾ 
+
+ In Abu Muhammad al-Hasan al-Hamdani 's encyclopædia Kitāb al-Iklīl min akhbār al-Yaman wa-ansāb Ḥimyar ( کتاب الإكليل من أخبار اليمن وأنساب حمير ), the letter sequence (from right to left) is: [ 4 ] 
+
+ ي ش س ه ز ر ق ف ظ ط غ ع ض ص ن و م ل ك ذ د خ ح ج ث ت ب ا 
+
+ y sh s h z r q f ẓ ṭ gh ʿ ḍ ṣ n w / u m l k dh d kh ḥ j th t b ʾ 
+
+ Uses of the Abjad system [ edit ] 
+ Before the Hindu–Arabic numeral system , the abjad as numbers were used for all mathematical purposes. In modern Arabic, they are primarily used for numbering outlines , items in lists, and points of information. Equivalent to English, "A.", "B.", and "C." (or, rarer, Roman numerals: I, II, III, IV), in Arabic, thus " أ ", then " ب ", then " ج ", not the first three letters of the modern hijāʼī order. 
+
+ Like Roman numerals, there is no representation of zero and there are no fractions. By convention, the numbers are written largest first (larger to smaller, going right to left). Reversing the order indicates multiplication, so for example بغ is 2000 while غب is 1002. (Contrast this with Roman numerals, where reversing the order indicates subtraction, e.g. IV = 5 - 1 = 4.) 
+
+ The abjad numbers are also used to assign numerical values to Arabic words for purposes of numerology . The common Islamic phrase بسم الله الرحمن الرحيم bismillāh al-Raḥmān al-Raḥīm ('In the name of Allah, the most merciful, the most compassionate'   – see Basmala ) has a numeric value of 786 (from a letter-by-letter cumulative value of 2+60+40+1+30+30+5+1+30+200+8+40+50+1+30+200+8+10+40). The name Allāh الله by itself has the value 66 (1+30+30+5). 
+
+ Letter values [ edit ] 
+ In common abjad order: [ 2 ] 
+
+ Notice that some letters appear in their initial form and others in a riqaa -like form, with the alif having a different shape. 
+
+ Value Letter Name Trans- literation 
+
+ 1 ʾalif ʾ / ā 
+
+ 2 ب bāʾ b 
+
+ 3 جـ jīm j 
+
+ 4 د dāl d 
+
+ 5 هـ hāʾ h 
+
+ 6 و wāw w / ū 
+
+ 7 ز zāy / zayn z 
+
+ 8 حـ ḥāʾ ḥ 
+
+ 9 ط ṭāʾ ṭ 
+
+ Value Letter Name Trans- literation 
+
+ 10 ى yāʾ y / ī 
+
+ 20 [[ك]]</span>"}},"i":0}}]}'> ك kāf k 
+
+ 30 ل lām l 
+
+ 40 مـ mīm m 
+
+ 50 [[ن]]</span>"}},"i":0}}]}'> ن nūn n 
+
+ 60 [[س]]</span>"}},"i":0}}]}'> س sīn s 
+
+ 70 ع ʿayn ʿ 
+
+ 80 [[ف]]</span>"}},"i":0}}]}'> ف fāʾ f 
+
+ 90 ص ṣād ṣ 
+
+ Value Letter Name Trans- literation 
+
+ 100 [[ق]]</span>"}},"i":0}}]}'> ق qāf q 
+
+ 200 ر rāʾ r 
+
+ 300 [[ش]]</span>"}},"i":0}}]}'> ش shīn sh 
+
+ 400 [[ت]]</span>"}},"i":0}}]}'> ت tāʾ t 
+
+ 500 [[ث]]</span>"}},"i":0}}]}'> ث thāʾ th 
+
+ 600 خـ khāʾ kh 
+
+ 700 ذ dhāl dh 
+
+ 800 [[ض]]</span>"}},"i":0}}]}'> ض ḍād ḍ 
+
+ 900 ظ ẓāʾ ẓ 
+
+ 1000 غ ghayn gh 
+
+ In Maghrebian Abjad order: [ 2 ] 
+
+ Value Letter Name Trans- literation 
+
+ 1 ʾalif ʾ / ā 
+
+ 2 ب bāʾ b 
+
+ 3 جـ jīm j 
+
+ 4 د dāl d 
+
+ 5 هـ hāʾ h 
+
+ 6 و wāw w / ū 
+
+ 7 ز zāy / zayn z 
+
+ 8 حـ ḥāʾ ḥ 
+
+ 9 ط ṭāʾ ṭ 
+
+ Value Letter Name Trans- literation 
+
+ 10 ى yāʾ y / ī 
+
+ 20 ک kāf k 
+
+ 30 ل lām l 
+
+ 40 مـ mīm m 
+
+ 50 [[ن]]</span>"}},"i":0}}]}'> ن nūn n 
+
+ 60 ص ṣād ṣ 
+
+ 70 ع ʿayn ʿ 
+
+ 80 [[ف]]</span>"}},"i":0}}]}'> ف fāʾ f 
+
+ 90 [[ض]]</span>"}},"i":0}}]}'> ض ḍād ḍ 
+
+ Value Letter Name Trans- literation 
+
+ 100 [[ق]]</span>"}},"i":0}}]}'> ق qāf q 
+
+ 200 ر rāʾ r 
+
+ 300 [[س]]</span>"}},"i":0}}]}'> س sīn s 
+
+ 400 [[ت]]</span>"}},"i":0}}]}'> ت tāʾ t 
+
+ 500 [[ث]]</span>"}},"i":0}}]}'> ث thāʾ th 
+
+ 600 خـ khāʾ kh 
+
+ 700 ذ dhāl dh 
+
+ 800 ظ ẓāʾ ẓ 
+
+ 900 غ ghayn gh 
+
+ 1000 [[ش]]</span>"}},"i":0}}]}'> ش shīn sh 
+
+ For four Persian letters these values are used: 
+
+ Value Letter Name Trans- literation Has numerical value of 
+
+ 2 [[پ]]</span>"}},"i":0}}]}'> پ pe p ب 
+
+ 3 [[چ|چـ]]</span>"}},"i":0}}]}'> چـ che ch or č جـ 
+
+ 7 [[ژ]]"}},"i":0}},"</span>"]}'> ژ zhe zh or ž ز 
+
+ 20 گ gâf g ک 
+
+ Similar systems [ edit ] 
+
+ The Abjad numerals are equivalent to the earlier Hebrew numerals up to 400. The Hebrew numeral system is known as Gematria and is used in Kabbalistic texts and numerology. Like the Abjad order, it is used in modern times for numbering outlines and points of information, including the first six days of the week. The Greek numerals differ in a number of ways from the Abjad ones (for instance in the Greek alphabet there is no equivalent for ص , ṣād ). The Greek language system of letters-as-numbers is called isopsephy . In modern times the old 27-letter alphabet of this system also continues to be used for numbering lists. 
+
+ See also [ edit ] 
+
+ Eastern Arabic numerals 
+ Western Arabic numerals 
+ Hurufism 
+ 'Ilm al-Huruf (science of letters) 
+ Gematria 
+ Unicode subscripts and superscripts 
+ Isopsephy 
+ Katapayadi system 
+
+ References [ edit ] 
+
+ ↑ Stephen Chrisomalis (2010). Numerical Notation: A Comparative History . Cambridge University Press. p.   162. ISBN   9780521878180 . Retrieved 2019-04-05 . 
+ 1 2 3 4 5 Macdonald 1986 , p.   117, 130, 149. 
+ 1 2 "ترتيب المداخل والبطاقات في القوائم والفهارس الموضوعية" [ Ordering entries and cards in subject indexes ] . Alyaseer.net (in Arabic). Archived from the original on 2007-12-23 . Retrieved Oct 6, 2009 . 
+ ↑ Macdonald 1986 , p.   130. 
+
+ Sources [ edit ] 
+ Macdonald, Michael C. A. (1986). "ABCs and letter order in Ancient North Arabian". Proceedings of the Seminar for Arabian Studies (16): 101– 168. 
+
+ External links [ edit ] 
+
+ Look up abjad in Wiktionary, the free dictionary. 
+
+ Overview of the abjad numerological system 
+ Sufi numerology site Archived 2012-04-21 at the Wayback Machine 
+ Numerical Value of an Arabic Text as per "Abjad" Calculation - www.alavibohra.org Archived 2011-07-05 at the Wayback Machine 
+
+ Abjad Calculator 
+
+ v t e Arabic language Overviews 
+ Language 
+ Alphabet 
+ History 
+ Romanization 
+ Numerals 
+ Influence on other languages 
+ Scripts 
+ Nabataean script 
+ Arabic script 
+ Ancient North Arabian 
+ Ancient South Arabian script 
+ Arabic numerals 
+ Eastern numerals 
+ Arabic Braille 
+ Algerian Braille 
+ Maltese Braille 
+ Diacritics 
+ i‘jām 
+ Tashkil 
+ Harakat 
+ Nunation (tanwin) 
+ Shaddah 
+ Hamza 
+ Dagger alif 
+ Maltese alphabet 
+ Letters 
+ ʾAlif 
+ Bāʾ 
+ Tāʾ 
+ Ṯāʾ 
+ Ǧīm 
+ Ḥāʾ 
+ Ḫāʾ 
+ Dāl 
+ Ḏāl 
+ Rāʾ 
+ Zāy 
+ Sīn 
+ Šīn 
+ Ṣād 
+ Ḍād 
+ Ṭāʾ 
+ Ẓāʾ 
+ ʿAyn 
+ Ġayn 
+ Fāʾ 
+ Qāf 
+ Kāf 
+ Lām 
+ Mīm 
+ Nūn 
+ Hāʾ 
+ Wāw 
+ Yāʾ 
+ Varieties Pre-Islamic 
+ Proto-Arabic 
+ Nabataean Arabic 
+ Old Arabic 
+ Old Hijazi Arabic 
+ Pre-classical Arabic 
+ Literary 
+ Classical 
+ Modern Standard 
+ Modern spoken Maghrebi Pre-Hilalian 
+ Andalusi 
+ Sicilian 
+ Maltese 
+ Australian 
+ Cottenera 
+ Gozitan 
+ Qormi 
+ Żejtun 
+ Żurrieqi 
+ Urban 
+ Ceuta 
+ Tunis (North-Eastern Tunisian) 
+ Fessi 
+ Village
+ Eastern
+ Sahili (Sahel) 
+ Sfaxian 
+ Jijel (Lesser Kabylia) 
+ Western
+ Traras-Msirda 
+ Jebli (Mountain) 
+ Judeo-Maghrebi
+ Judeo-Moroccan 
+ Judeo-Tripolitanian 
+ Judeo-Tunisian 
+ Hilalian 
+ Central Hilal
+ Algerian koiné 
+ Judeo-Algerian 
+ Algerian Saharan 
+ Eastern Algerian 
+ Eastern Hilal
+ Tunisian koiné 
+ Maqil
+ Hassaniya 
+ Nemadi 
+ Moroccan koiné 
+ Eastern 
+ Western 
+ Western Algerian 
+ Sulaym
+ Libyan koiné 
+ Western Egyptian Bedawi 
+ Nile Valley 
+ Egyptian 
+ Saʽidi 
+ Sudanese 
+ Levantine North 
+ Cilician 
+ Lebanese 
+ Syrian 
+ Aleppine 
+ Damascene 
+ South 
+ Jordanian 
+ Palestinian 
+ Mesopotamian Gilit 
+ Baghdadi 
+ Khuzestani 
+ Shawi 
+ South 
+ North (Qeltu) 
+ Anatolian 
+ Cypriot 
+ Judeo-Iraqi 
+ Baghdadi 
+ Peninsular 
+ Bahrani 
+ Bareqi 
+ Bedawi 
+ Dhofari 
+ Gulf 
+ Bahraini 
+ Emirati 
+ Kuwaiti 
+ Khamseh 
+ Hejazi 
+ /-k/ group
+ Yāfiʿī 
+ Najdi 
+ Omani 
+ Shihhi 
+ Yemeni 
+ Hadhrami 
+ Indonesian 
+ Sanʽani 
+ Taʽizzi-Adeni 
+ Tihami 
+ Judeo-Yemeni 
+ Others 
+ Central Asian 
+ Bactrian 
+ Bukhara 
+ Kashkadarya 
+ Khorasani 
+ Shirvani 
+ Chadian 
+ Nigerian 
+ Sociological 
+ Bedouin Arabic 
+ Judeo-Arabic 
+ Judeo-Algerian 
+ Judeo-Egyptian 
+ Judeo-Iraqi 
+ Baghdadi 
+ Judeo-Moroccan 
+ Kjal 
+ Wqal 
+ Judeo-Palestinian 
+ Judeo-Syrian 
+ Judeo-Tripolitanian 
+ Judeo-Tunisian 
+ Tunisene 
+ Judeo-Yemeni 
+ Adeni 
+ Beda 
+ Habban 
+ Sanʽani 
+ Creoles and pidgins 
+ Bimbashi 
+ Bongor 
+ Gulf Pidgin 
+ Jordanian Bengali Pidgin 
+ Juba 
+ Maridi 
+ Nubi 
+ Pidgin Madam 
+ Turku 
+ Academic 
+ Literature 
+ Names 
+ Linguistics 
+ Standard Arabic phonology 
+ Sun and moon letters 
+ Tajwid 
+ Imāla 
+ ʾIʿrāb (case) 
+ Grammar 
+ Triliteral root 
+ Mater lectionis 
+ IPA 
+ Quranic Arabic Corpus 
+ Calligraphy · Script 
+ Ajami script 
+ Diwani 
+ Hijazi script 
+ Jawi script 
+ Jeli Thuluth 
+ Kairouani 
+ Kufic 
+ Maghrebi 
+ Mashq 
+ Muhaqqaq 
+ Naskh (script) 
+ Nastaliq 
+ Rasm 
+ Ruqʿah script 
+ Shahmukhi 
+ Sini (script) 
+ Taliq script 
+ Tawqi 
+ Thuluth 
+ Technical 
+ Arabic keyboard 
+ Arabic script in Unicode 
+ ISO/IEC 8859-6 
+ Windows-1256 
+ MS-DOS codepages
+ 708 
+ 709 
+ 710 
+ 711 
+ 720 
+ 864 
+ MacArabic encoding 
+ Other 
+ Islam and Arabic language 
+
+ Italics indicate extinct languages 
+ Languages between parentheses are varieties of the language on their left. 
+ Category 
+
+ v t e Types of writing systems Overview 
+ History of writing 
+ Grapheme 
+ Lists 
+ Writing systems 
+ undeciphered 
+ inventors 
+ constructed 
+ Languages by writing system / by first written accounts 
+ Types Abjads 
+ Numerals 
+
+ Aramaic 
+ Hatran 
+ Arabic 
+ Elifba 
+ Egyptian hieroglyphs 
+ Elymaic 
+ Hebrew 
+ Ashuri 
+ Cursive 
+ Rashi 
+ Solitreo 
+ Tifinagh 
+ Mandaic 
+ Manichaean 
+ Nabataean 
+ Ancient North Arabian 
+ Paleo-Hebrew 
+ Pahlavi 
+ Book 
+ Inscriptional 
+ Inscriptional Parthian 
+ Psalter 
+ Pegon 
+ Phoenician 
+ Pitman shorthand 
+ Proto-Sinaitic 
+ Punic 
+ Samaritan 
+ South Arabian 
+ Zabur 
+ Musnad 
+ Sogdian 
+ Syriac 
+ ʾEsṭrangēlā 
+ Serṭā 
+ Maḏnḥāyā 
+ Teeline Shorthand 
+ Ugaritic 
+ Abugidas Brahmic Northern 
+ Bengali–Assamese 
+ Bhaiksuki 
+ Brahmi script 
+ Devanagari 
+ Dogri 
+ Gujarati 
+ Gupta 
+ Gurmukhi 
+ Kaithi 
+ Kalinga 
+ Khema 
+ Khojki 
+ Khudabadi 
+ Laṇḍā 
+ Lepcha 
+ Mahajani 
+ Marchen 
+ Meitei 
+ Modi 
+ Multani 
+ Nagari 
+ Nandinagari 
+ Nepalese scripts 
+ Bhujimol 
+ Golmol 
+ Himmol 
+ Kummol 
+ Kvemmol 
+ Kurukh 
+ Pachumol 
+ Newar 
+ Ranjana 
+ Tamyig 
+ Tirhuta 
+ Limbu 
+ Litumol 
+ Odia 
+ Karani 
+ ʼPhags-pa 
+ Sharada 
+ Siddhaṃ 
+ Soyombo 
+ Sylheti Nagri 
+ Takri 
+ Tibetan 
+ Uchen 
+ Umê 
+ Tocharian 
+ Zanabazar square 
+ Southern 
+ Ahom 
+ Balinese 
+ Batak 
+ Baybayin 
+ Bhattiprolu 
+ Buda 
+ Buhid 
+ Chakma 
+ Cham 
+ Fakkham 
+ Grantha 
+ Goykanadi 
+ Hanunoo 
+ Javanese 
+ Kadamba 
+ Kannada 
+ Karen 
+ Kawi 
+ Khmer 
+ Khom Thai 
+ Kulitan 
+ Lanna 
+ Langdi 
+ Lao 
+ Leke 
+ Lontara 
+ Bilang-bilang 
+ Makasar 
+ Malayalam 
+ Old Maldivian 
+ Dhives Akuru 
+ Eveyla Akuru 
+ Mon–Burmese 
+ Pallava 
+ Pyu 
+ Saurashtra 
+ Shan 
+ Sinhala 
+ Sukhothai 
+ Sundanese 
+ Old Sundanese 
+ Tagbanwa 
+ Tai Le 
+ New Tai Lue 
+ Tai Noi 
+ Tai Tham 
+ Tai Viet 
+ Lai Tay 
+ Tamil 
+ Tamil-Brahmi 
+ Tanchangya 
+ Telugu 
+ Thai 
+ Tigalari 
+ Ulu scripts 
+ Incung 
+ Lampung 
+ Lembak 
+ Ogan 
+ Pasemah 
+ Rejang 
+ Serawai 
+ Vatteluttu 
+ Kolezhuthu 
+ Malayanma 
+ Others 
+ Bharati 
+ Boyd's syllabic shorthand 
+ Canadian syllabics 
+ Blackfoot 
+ Déné syllabics 
+ Dham 
+ Fox I 
+ Geʽez 
+ Gunjala Gondi 
+ Japanese Braille 
+ Sarati 
+ Jenticha 
+ Kharosthi 
+ Mandombe 
+ Masaram Gondi 
+ Meroitic 
+ Miao 
+ Mwangwego 
+ Pahawh Hmong 
+ Sorang Sompeng 
+ Tengwar 
+ Thaana 
+ Thomas Natural Shorthand 
+ Warang Citi 
+ Rma 
+ Alphabets Linear 
+ Adlam 
+ Ariyaka 
+ Armenian 
+ Avestan 
+ Pazend 
+ Avoiuli 
+ Bassa Vah 
+ Carian 
+ Caucasian Albanian 
+ Cirth 
+ Coelbren 
+ Coorgi–Cox alphabet 
+ Coptic 
+ Cyrillic 
+ Serbian 
+ Early 
+ Deseret 
+ Duployan shorthand 
+ Chinook 
+ Eclectic shorthand 
+ Elbasan 
+ Enochian 
+ Etruscan 
+ Formosan 
+ Fox II 
+ Franklin's phonetic 
+ Fraser 
+ Gabelsberger shorthand 
+ Gadabuursi 
+ Garay alphabet 
+ Georgian 
+ Asomtavruli 
+ Nuskhuri 
+ Mkhedruli 
+ Veso Bey 
+ Glagolitic 
+ Gothic 
+ Gregg shorthand 
+ Greek ( Archaic ) 
+ Greco-Iberian alphabet 
+ Hangul 
+ Hanifi 
+ Hurûf-ı munfasıla 
+ Sunuwar 
+ Kaddare 
+ Kayah Li 
+ Klingon 
+ Latin 
+ Beneventan 
+ Blackletter 
+ Carolingian minuscule 
+ Fraktur 
+ Gaelic 
+ Insular 
+ IPA 
+ Kurrent 
+ Merovingian 
+ Sigla 
+ Sütterlin 
+ Tironian notes 
+ Visigothic 
+ Luo 
+ Lycian 
+ Lydian 
+ Manchu 
+ Medefaidrin 
+ Mru 
+ Mundari Bani 
+ N'Ko 
+ Ogham 
+ Ol Chiki 
+ Old Italic 
+ Old Permic 
+ Orkhon-Yenisei ( Old Hungarian ) 
+ Old Uyghur 
+ Mongolian 
+ Evenki 
+ Galik alphabet 
+ Manchu 
+ Oirat 
+ Vagindra 
+ Ol Onal 
+ Osage 
+ Osmanya 
+ Pau Cin Hau 
+ Phrygian 
+ Pisidian 
+ Runic 
+ Anglo-Saxon 
+ Cipher 
+ Dalecarlian 
+ Elder Futhark 
+ Younger Futhark 
+ Gothic 
+ Marcomannic 
+ Medieval 
+ Staveless 
+ Shavian 
+ Sidetic 
+ Sorang Sompeng 
+ Sunuwar 
+ Tifinagh 
+ Todhri 
+ Tolong Siki 
+ Vellara 
+ Visible Speech 
+ Vithkuqi 
+ Wancho 
+ Warang Citi 
+ Yezidi 
+ Zaghawa 
+ Non-linear 
+ Braille 
+ Flag semaphore 
+ Maritime flags 
+ Moon type 
+ New York Point 
+ Fingerspelling 
+ Telegraph code 
+ Ideograms 
+ Adinkra 
+ Aztec 
+ Blissymbols 
+ Dongba 
+ Ersu Shaba 
+ Emoji 
+ Isotype 
+ Kaidā 
+ Miꞌkmaw 
+ Mixtec 
+ New Epoch Notation Painting 
+ Nsibidi 
+ Anishinaabewibii'iganan 
+ Olmec 
+ Siglas poveiras 
+ Testerian 
+ Yerkish 
+ Zapotec 
+ Logograms Chinese family of scripts Chinese characters 
+ Simplified 
+ Traditional 
+ Oracle bone script 
+ Bronze scripts 
+ Seal script 
+ large 
+ small 
+ bird-worm 
+ Hanja 
+ Kanji 
+ Chữ Nôm 
+ Sawndip 
+ Bowen 
+ Chinese-influenced 
+ Jurchen 
+ Khitan large script 
+ Sui 
+ Tangut 
+ Cuneiform 
+ Akkadian 
+ Assyrian 
+ Elamite 
+ Hittite 
+ Luwian 
+ Sumerian 
+ Other logosyllabic 
+ Anatolian 
+ Bagam 
+ Cretan 
+ Isthmian 
+ Maya 
+ Proto-Elamite 
+ Tenevil 
+ Wiigwaasabak 
+ Yi (Classical) 
+ Logoconsonantal 
+ Demotic 
+ Hieratic 
+ Hieroglyphs 
+ Numerals 
+ Hindu-Arabic 
+ Abjad 
+ Attic (Greek) 
+ Muisca 
+ Roman 
+ Other 
+ Sitelen Pona 
+ Semi-syllabaries Full 
+ Linear Elamite 
+ Celtiberian 
+ Iberian 
+ Northeastern 
+ Southeastern 
+ Khom 
+ Dunging 
+ Redundant 
+ Espanca script 
+ Pahawh Hmong 
+ Khitan small script 
+ Southwest Paleohispanic 
+ Bopomofo 
+ Quốc Âm Tân Tự 
+ Sign languages 
+ ASLwrite 
+ SignWriting 
+ si5s 
+ Stokoe notation 
+ Syllabaries 
+ Afaka 
+ Bamum 
+ Bété 
+ Byblos 
+ Canadian Aboriginal 
+ Cherokee 
+ Cypriot 
+ Cypro-Minoan 
+ Ditema tsa Dinoko 
+ Eskayan 
+ Geba 
+ Great Lakes Algonquian 
+ Iban 
+ Idu 
+ Kana 
+ Hiragana 
+ Katakana 
+ Man'yōgana 
+ Hentaigana 
+ Sōgana 
+ Jindai moji 
+ Kikakui 
+ Kpelle 
+ Linear B 
+ Linear Elamite 
+ Lisu 
+ Loma 
+ Nüshu 
+ Nwagu Aneke script 
+ Old Persian cuneiform 
+ Sumerian 
+ Vai 
+ Woleai 
+ Yi 
+ Yugtun 
+ v t e Braille   ⠃⠗⠁⠊⠇⠇⠑ Braille cell 
+ 1829 braille 
+ International uniformity 
+ ASCII braille 
+ Unicode braille patterns 
+ Braille scripts French-ordered 
+ Albanian 
+ Cantonese 
+ Catalan 
+ Chinese (mainland Mandarin) (largely reassigned) 
+ Czech 
+ Dutch 
+ 6-dot 
+ 8-dot 
+ English ( Unified English ) 
+ Esperanto 
+ French 
+ German 
+ Ghanaian 
+ Guarani 
+ Hawaiian 
+ Hungarian 
+ Iñupiaq 
+ IPA 
+ Irish 
+ Italian 
+ Latvian 
+ Lithuanian 
+ Luxembourgish (extended to 8-dot) 
+ Maltese 
+ Māori 
+ Navajo 
+ Nigerian 
+ Philippine 
+ Polish 
+ Portuguese 
+ Romanian 
+ Samoan 
+ Slovak 
+ South African 
+ Spanish 
+ Taiwanese Mandarin (largely reassigned) 
+ Turkish ( Azerbaijani ) 
+ Vietnamese 
+ Welsh 
+ Yugoslav 
+ Zambian 
+ Nordic family 
+ Estonian 
+ Faroese 
+ Icelandic 
+ Scandinavian 
+ Danish 
+ Finnish 
+ Greenlandic 
+ Northern Sámi 
+ Norwegian 
+ Swedish 
+ Russian lineage family i.e. Cyrillic -mediated scripts 
+ Belarusian 
+ Bulgarian 
+ Kazakh 
+ Kyrgyz 
+ Mongolian 
+ Russian 
+ Tatar 
+ Ukrainian 
+ Egyptian lineage family i.e. Arabic -mediated scripts 
+ Arabic 
+ Persian 
+ Urdu (Pakistan) 
+ Indian lineage family i.e. Bharati Braille 
+ Devanagari (Hindi / Marathi / Nepali) 
+ Bengali (Bangla / Assamese) 
+ Gujarati 
+ Kannada 
+ Malayalam 
+ Odia 
+ Punjabi 
+ Sinhala 
+ Tamil 
+ Telugu 
+ Urdu (India) 
+ Other scripts 
+ Amharic 
+ Armenian 
+ Burmese 
+ Dzongkha (Bhutanese) 
+ Georgian 
+ Greek 
+ Hebrew 
+ Inuktitut (reassigned vowels) 
+ Khmer 
+ Thai and Lao (Japanese vowels) 
+ Tibetan 
+
+ Reordered 
+ Algerian Braille (obsolete) 
+ Frequency-based 
+ American Braille (obsolete) 
+ Independent 
+ Chinese semi-syllabaries 
+ Cantonese 
+ Mainland Chinese Mandarin 
+ Taiwanese Mandarin 
+ Two-cell Chinese (Shuangpin) 
+ Japanese 
+ Korean 
+ Eight-dot 
+ Dutch 
+ Luxembourgish 
+ Kanji 
+ Gardner–Salinas braille codes (GS8) 
+ Symbols in braille 
+ Braille music 
+ Canadian currency marks 
+ Computer Braille Code 
+ Gardner–Salinas braille codes (science; GS8/GS6) 
+ International Phonetic Alphabet (IPA) 
+ Nemeth braille code 
+ Braille technology 
+ Braille e-book 
+ Braille embosser 
+ Braille translator 
+ Braille watch 
+ Mountbatten Brailler 
+ Optical braille recognition 
+ Perforation 
+ Perkins Brailler 
+ Refreshable braille display 
+ Slate and stylus 
+ Braigo 
+ People 
+ Louis Braille 
+ Charles Barbier 
+ Róża Czacka 
+ Valentin Haüy 
+ Harris Mowbray 
+ Thakur Vishva Narain Singh 
+ María del Carmen Ortiz de Arce 
+ Sabriye Tenberken 
+ William Bell Wait 
+ Organisations 
+ Braille Institute of America 
+ Braille Without Borders 
+ Japan Braille Library 
+ National Braille Association 
+ Blindness organizations 
+ Schools for the blind 
+ American Printing House for the Blind 
+ Other tactile alphabets 
+ Decapoint 
+ Moon type 
+ New York Point 
+ Night writing 
+ Vibratese 
+ Related topics 
+ Accessible publishing 
+ Braille literacy 
+ RoboBraille 
+
+ Retrieved from " https://en.wikipedia.org/w/index.php?title=Abjad_numerals&oldid=1356279642 " 
+ Categories : Alphabetic numeral systems Numerals Collation Hidden categories: Articles with short description Short description matches Wikidata Articles needing additional references from March 2019 All articles needing additional references Articles that may contain original research from March 2019 All articles that may contain original research Articles with multiple maintenance issues Pages using sidebar with the child parameter Articles containing Arabic-language text Articles containing Hebrew-language text All articles lacking reliable references Articles lacking reliable references from April 2020 CS1 Arabic-language sources (ar) Articles containing Persian-language text Webarchive template wayback links 
+
+ Search 
+
+ Search 
+
+ Abjad numerals 
+
+ 28 languages 
+
+ Add topic

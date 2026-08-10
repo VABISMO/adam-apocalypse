@@ -33,6 +33,7 @@
   button{background:var(--panel2);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:.9rem;cursor:pointer}
   button:hover{border-color:var(--blue)}
   button.on{border-color:var(--green);color:var(--green)}
+  button.ex{border-color:var(--red);color:var(--red)}
   input[type=date],input[type=text],input[type=number]{background:var(--panel2);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:8px;font-size:.9rem;font-family:inherit}
   .sentence{font-size:1.5rem;letter-spacing:6px;direction:rtl;text-align:right;color:var(--gold);padding:8px 0 0}
   .tcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:12px}
@@ -116,6 +117,10 @@
   .big{font-size:1.15rem;color:var(--gold)}
   ul.muted{margin:4px 0 0;padding-left:20px}
   .iv{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px}
+  .prob{display:inline-block;font-size:.66rem;padding:1px 6px;border-radius:8px;border:1px solid var(--line);color:var(--dim);margin-top:4px;font-variant-numeric:tabular-nums}
+  .prob.ok{color:var(--green);border-color:var(--green)}
+  .prob.mid{color:var(--warn);border-color:var(--warn)}
+  .prob.spec{color:var(--red);border-color:var(--red)}
 </style>
 </head>
 <body>

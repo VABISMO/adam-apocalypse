@@ -1,0 +1,11 @@
+gathas-ahunavaiti|https://www.avesta.org/yasna/y28to32sbe.htm
+gathas-ustavaiti|https://www.avesta.org/yasna/y33to34sbe.htm
+gathas-spentamainyu|https://www.avesta.org/yasna/y43to46sbe.htm
+gathas-vohuxshathra|https://www.avesta.org/yasna/y47to50sbe.htm
+gathas-vahishtoishti|https://www.avesta.org/yasna/y51to53sbe.htm
+vendidad1-lands|https://www.avesta.org/vendidad/vd1sbe.htm
+vendidad2-yima|https://www.avesta.org/vendidad/vd2sbe.htm
+vendidad22-diseases|https://www.avesta.org/vendidad/vd22sbe.htm
+yashts-index|https://www.avesta.org/avesta_index.htm
+yasna-haptanghaiti|https://www.avesta.org/yasna/y35to41sbe.htm
+khorda-avesta|https://www.avesta.org/ka/ka.htm
