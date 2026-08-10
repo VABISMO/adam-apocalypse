@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 import * as Astronomy from 'astronomy-engine';
 import { FIGS } from './figures.js';
@@ -1307,7 +1307,10 @@ function AlignmentsTab(){
   const [data,setData]=useState(null);
   const [err,setErr]=useState(null);
   const [sel,setSel]=useState('1962-02-04');   // default: the famous grand conjunction
+  const mapRef=useRef(null);
   useEffect(()=>{ fetch('alignments.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setData).catch(e=>setErr(e.message)); },[]);
+  // pick a date: update selection and scroll the sky-map section into view
+  const pick=(d)=>{ setSel(d); requestAnimationFrame(()=>{ if(mapRef.current) mapRef.current.scrollIntoView({behavior:'smooth', block:'start'}); }); };
   if(err) return <div className="panel"><h2>Alignments</h2><p>Could not load alignments.json ({err}). Run <code>node calc_alignments.mjs</code> in <code>scripts/</code> and serve <code>web/</code> over HTTP.</p></div>;
   if(!data) return <div className="panel"><h2>Alignments</h2><p>Loading alignments.json…</p></div>;
 
@@ -1332,7 +1335,7 @@ function AlignmentsTab(){
       <table>
         <thead><tr><th>Date</th><th>Bodies</th><th>Sign</th><th>Span</th><th>Era</th></tr></thead>
         <tbody>{tight.slice(0,4).map(e=> <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
-          <td><button className="linkish" onClick={()=>setSel(e.date)}>{displayDate(e.date)}</button></td>
+          <td><button className="linkish" onClick={()=>pick(e.date)}>{displayDate(e.date)}</button></td>
           <td>7 classical</td><td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
         </tr>)}</tbody>
       </table>
@@ -1346,26 +1349,24 @@ function AlignmentsTab(){
     </div>
 
     {ev && <>
-      <h3>Sky map — {displayDate(sel)}</h3>
-      <div className="row">
-        <div style={{flex:'1 1 320px',maxWidth:440}}><SkyMap rows={rows} occ={occ}/></div>
-        <div style={{flex:'2 1 320px'}}>
-          <div className="muted">maxInSign <b>{ev.maxInSign}</b> in {ev.sign} · span <b>{ev.span}°</b> · era <b>{ev.era}</b></div>
-          {r && <>
-            <div className="muted" style={{marginTop:8}}>Genesis 1:1 legible: <b style={{color:r.genesisLegible?'var(--gold)':'var(--warn)'}}>{r.genesisLegible?'YES':'no'}</b> · readable names: <b>{r.readableCount}</b> · proper names: <b>{r.properNames}</b></div>
-            <div className="muted" style={{marginTop:6}}>occupied simples: <span className="he" style={{fontSize:'1.1rem',color:'var(--gold)'}}>{r.occupied||'—'}</span></div>
-            {r.angels && r.angels.length>0 && <div className="muted" style={{marginTop:6}}>Shem HaMephorash angel-roots readable: <span className="he">{r.angels.join(' ')}</span></div>}
-            {r.topNames && r.topNames.length>0 && <details style={{marginTop:8}}><summary className="muted" style={{cursor:'pointer'}}>top readable names ({r.topNames.length})</summary><ul className="muted" style={{marginTop:6}}>{r.topNames.map((n,i)=><li key={i}><span className="he">{n.split('=')[0]}</span> = {n.split('=').slice(1).join('=')}</li>)}</ul></details>}
-          </>}
-        </div>
-      </div>
+      <h3 ref={mapRef}>Sky map — {displayDate(sel)}</h3>
+      <div className="fig" style={{maxWidth:700, margin:'14px auto'}}><SkyMap rows={rows} occ={occ}/></div>
+      <div className="muted" style={{marginBottom:8}}>maxInSign <b>{ev.maxInSign}</b> in {ev.sign} · span <b>{ev.span}°</b> · era <b>{ev.era}</b></div>
+      {r && <>
+        <div className="muted" style={{marginBottom:8}}>Genesis 1:1 legible: <b style={{color:r.genesisLegible?'var(--gold)':'var(--warn)'}}>{r.genesisLegible?'YES':'no'}</b> · readable names: <b>{r.readableCount}</b> · proper names: <b>{r.properNames}</b> · occupied simples: <span className="he" style={{fontSize:'1.15rem',color:'var(--gold)'}}>{r.occupied||'—'}</span></div>
+        {r.angels && r.angels.length>0 && <div className="muted" style={{marginBottom:10}}>Shem HaMephorash angel-roots readable: <span className="he">{r.angels.join(' ')}</span></div>}
+        {r.topNames && r.topNames.length>0 && <>
+          <h3>Top readable names ({r.topNames.length})</h3>
+          <div className="tcards">{r.topNames.map((n,i)=>{ const p=n.split('='); return <div className="tcard" key={i}><div className="the">{p[0]}</div><div className="trans">{p.slice(1).join('=')}</div></div>; })}</div>
+        </>}
+      </>}
     </>}
 
     <h3>SCAN B — 7 classical bodies, −1000 to 2200 CE (rarest 20)</h3>
     <table>
       <thead><tr><th>Date</th><th>maxInSign</th><th>Sign</th><th>Span</th><th>Era</th><th>Gen1:1</th><th>Names</th></tr></thead>
       <tbody>{B.slice(0,20).map(e=>{ const rr=e.reading||{}; return <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
-        <td><button className="linkish" onClick={()=>setSel(e.date)}>{displayDate(e.date)}</button></td>
+        <td><button className="linkish" onClick={()=>pick(e.date)}>{displayDate(e.date)}</button></td>
         <td className="deg">{e.maxInSign}</td><td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
         <td>{rr.genesisLegible?<b style={{color:'var(--gold)'}}>YES</b>:'no'}</td><td className="deg">{rr.readableCount!=null?rr.readableCount:'—'}</td>
       </tr>; })}</tbody>
@@ -1376,7 +1377,7 @@ function AlignmentsTab(){
     <table>
       <thead><tr><th>Date</th><th>Sign</th><th>Span</th><th>Era</th></tr></thead>
       <tbody>{all7.map(e=> <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
-        <td><button className="linkish" onClick={()=>setSel(e.date)}>{displayDate(e.date)}</button></td>
+        <td><button className="linkish" onClick={()=>pick(e.date)}>{displayDate(e.date)}</button></td>
         <td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
       </tr>)}</tbody>
     </table>
@@ -1385,7 +1386,7 @@ function AlignmentsTab(){
     <table>
       <thead><tr><th>Date</th><th>maxInSign</th><th>Sign</th><th>Span</th><th>Era</th><th>Gen1:1</th><th>Names</th></tr></thead>
       <tbody>{A.slice(0,20).map(e=>{ const rr=e.reading||{}; return <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
-        <td><button className="linkish" onClick={()=>setSel(e.date)}>{displayDate(e.date)}</button></td>
+        <td><button className="linkish" onClick={()=>pick(e.date)}>{displayDate(e.date)}</button></td>
         <td className="deg">{e.maxInSign}</td><td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
         <td>{rr.genesisLegible?<b style={{color:'var(--gold)'}}>YES</b>:'no'}</td><td className="deg">{rr.readableCount!=null?rr.readableCount:'—'}</td>
       </tr>; })}</tbody>
