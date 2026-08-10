@@ -1293,6 +1293,107 @@ function LunarSolarTab(){
   </>;
 }
 
+// ====== Alignments tab — rare century/millennium stellar alignments ======
+// alignments.json is produced offline by scripts/calc_alignments.mjs (two scans:
+// SCAN_A 10 bodies 1700–2200 daily; SCAN_B 7 classical -1000..2200 3-day step).
+// Each rare event carries maxInSign (most planets in one sign), span (smallest arc
+// containing all bodies), precessional era, and the stellar reading for that day.
+function displayDate(ds){
+  const d=parseDate(ds); if(!d) return ds;
+  const y=d.getUTCFullYear(), mo=MON[d.getUTCMonth()], da=d.getUTCDate();
+  return `${da} ${mo} ${y<0?Math.abs(y)+' BCE':y}`;
+}
+function AlignmentsTab(){
+  const [data,setData]=useState(null);
+  const [err,setErr]=useState(null);
+  const [sel,setSel]=useState('1962-02-04');   // default: the famous grand conjunction
+  useEffect(()=>{ fetch('alignments.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setData).catch(e=>setErr(e.message)); },[]);
+  if(err) return <div className="panel"><h2>Alignments</h2><p>Could not load alignments.json ({err}). Run <code>node calc_alignments.mjs</code> in <code>scripts/</code> and serve <code>web/</code> over HTTP.</p></div>;
+  if(!data) return <div className="panel"><h2>Alignments</h2><p>Loading alignments.json…</p></div>;
+
+  const A=[...data.scanA].sort((a,b)=>b.maxInSign-a.maxInSign||a.span-b.span);
+  const B=[...data.scanB].sort((a,b)=>b.maxInSign-a.maxInSign||a.span-b.span);
+  const all7=data.scanB.filter(e=>e.maxInSign>=7).sort((a,b)=>parseDate(a.date)-parseDate(b.date));
+  const tight=all7.slice().sort((a,b)=>a.span-b.span);
+  const tightGap=tight.length>=2 ? Math.abs((parseDate(tight[0].date)-parseDate(tight[1].date))/86400000/365.25) : null;
+  const cc=data.crossCheck||{};
+  const ev = data.scanA.find(e=>e.date===sel) || data.scanB.find(e=>e.date===sel);
+  const rows = ev ? skyAt(sel) : [];
+  const occ = occupiedLetters(rows);
+  const r = ev && ev.reading ? ev.reading : null;
+
+  return <>
+    <h2>Alignments — rare century/millennium stellar conjunctions</h2>
+    <div className="muted" style={{marginBottom:10}}>An offline scan (<code>calc_alignments.mjs</code>) of two body-sets: <b>SCAN A</b> = the app's 10 bodies, 1700–2200 CE daily (Pluto-valid range); <b>SCAN B</b> = the 7 classical bodies, accurate over millennia, −1000 to 2200 CE. For each day <b>maxInSign</b> = the most planets in a single zodiacal sign, <b>span</b> = the smallest arc (°) containing every body, <b>era</b> = the precessional era (~{AGE.toFixed(0)} y each). Click a row to render that day's sky-map and stellar reading. Generated {data.generated}.</div>
+
+    <div className="fig" style={{maxWidth:760}}>
+      <div style={{fontWeight:600,color:'var(--gold)',marginBottom:4}}>The millennia signal — tightest classical grand conjunctions</div>
+      <div className="muted" style={{marginBottom:8}}>All 7 classical planets in one zodiacal sign, within the smallest arc found in 3200 years:</div>
+      <table>
+        <thead><tr><th>Date</th><th>Bodies</th><th>Sign</th><th>Span</th><th>Era</th></tr></thead>
+        <tbody>{tight.slice(0,4).map(e=> <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
+          <td><button className="linkish" onClick={()=>setSel(e.date)}>{displayDate(e.date)}</button></td>
+          <td>7 classical</td><td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
+        </tr>)}</tbody>
+      </table>
+      {tightGap!=null && <div className="note">Tightest pair gap: <b style={{color:'var(--gold)'}}>{tightGap.toFixed(0)} y</b> ≈ <b>{(tightGap/AGE).toFixed(2)}</b> precessional era(s). The two tightest grand conjunctions of the 3200-y scan — {displayDate(tight[0].date)} ({tight[0].span}°) and {displayDate(tight[1].date)} ({tight[1].span}°) — fall in <b>adjacent</b> precessional eras ({tight[0].era} → {tight[1].era}), ~{tightGap.toFixed(0)} y apart ≈ one age ({AGE.toFixed(0)} y). The tightest classical alignment marks the precessional-era boundary.</div>}
+    </div>
+
+    <h3>Cross-check — does a rare alignment produce a stellar reading NOT seen on ordinary days?</h3>
+    <div className="note">
+      <b>Question:</b> does any stellar reading arise <i>only</i> on these special century/millennium alignments, and not on ordinary days?
+      <br/><b>Result: NO.</b> Across {cc.rareDays} rare-alignment days, Genesis 1:1 is legible <b>{cc.rareGenRate}%</b> ({cc.rareGenLegible}/{cc.rareDays}) vs <b>{cc.baselineGenRate}%</b> on {cc.baselineDays} ordinary 2024–2030 days; avg readable names <b>{cc.rareAvgReadable}</b> vs <b>{cc.baselineAvgReadable}</b>; and the <b>same {cc.rareDistinctAngelRoots}</b> Shem HaMephorash angel-roots are readable as on ordinary days — <b>{(cc.angelRootsOnlyOnRare||[]).length} new</b>. Concentrating planets in one sign <i>reduces</i> letter diversity, so rare alignments are <i>poorer</i> readings, not richer ones.
+    </div>
+
+    {ev && <>
+      <h3>Sky map — {displayDate(sel)}</h3>
+      <div className="row">
+        <div style={{flex:'1 1 320px',maxWidth:440}}><SkyMap rows={rows} occ={occ}/></div>
+        <div style={{flex:'2 1 320px'}}>
+          <div className="muted">maxInSign <b>{ev.maxInSign}</b> in {ev.sign} · span <b>{ev.span}°</b> · era <b>{ev.era}</b></div>
+          {r && <>
+            <div className="muted" style={{marginTop:8}}>Genesis 1:1 legible: <b style={{color:r.genesisLegible?'var(--gold)':'var(--warn)'}}>{r.genesisLegible?'YES':'no'}</b> · readable names: <b>{r.readableCount}</b> · proper names: <b>{r.properNames}</b></div>
+            <div className="muted" style={{marginTop:6}}>occupied simples: <span className="he" style={{fontSize:'1.1rem',color:'var(--gold)'}}>{r.occupied||'—'}</span></div>
+            {r.angels && r.angels.length>0 && <div className="muted" style={{marginTop:6}}>Shem HaMephorash angel-roots readable: <span className="he">{r.angels.join(' ')}</span></div>}
+            {r.topNames && r.topNames.length>0 && <details style={{marginTop:8}}><summary className="muted" style={{cursor:'pointer'}}>top readable names ({r.topNames.length})</summary><ul className="muted" style={{marginTop:6}}>{r.topNames.map((n,i)=><li key={i}><span className="he">{n.split('=')[0]}</span> = {n.split('=').slice(1).join('=')}</li>)}</ul></details>}
+          </>}
+        </div>
+      </div>
+    </>}
+
+    <h3>SCAN B — 7 classical bodies, −1000 to 2200 CE (rarest 20)</h3>
+    <table>
+      <thead><tr><th>Date</th><th>maxInSign</th><th>Sign</th><th>Span</th><th>Era</th><th>Gen1:1</th><th>Names</th></tr></thead>
+      <tbody>{B.slice(0,20).map(e=>{ const rr=e.reading||{}; return <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
+        <td><button className="linkish" onClick={()=>setSel(e.date)}>{displayDate(e.date)}</button></td>
+        <td className="deg">{e.maxInSign}</td><td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
+        <td>{rr.genesisLegible?<b style={{color:'var(--gold)'}}>YES</b>:'no'}</td><td className="deg">{rr.readableCount!=null?rr.readableCount:'—'}</td>
+      </tr>; })}</tbody>
+    </table>
+
+    <h3>SCAN B — all-7-in-one-sign timeline (the centuries recurrence)</h3>
+    <div className="muted" style={{marginBottom:6}}>{all7.length} occurrences in 3200 years — gaps (y): {all7.map((e,i)=>i<all7.length-1?((parseDate(all7[i+1].date)-parseDate(e.date))/86400000/365.25).toFixed(0):'').filter(Boolean).join(', ')}</div>
+    <table>
+      <thead><tr><th>Date</th><th>Sign</th><th>Span</th><th>Era</th></tr></thead>
+      <tbody>{all7.map(e=> <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
+        <td><button className="linkish" onClick={()=>setSel(e.date)}>{displayDate(e.date)}</button></td>
+        <td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
+      </tr>)}</tbody>
+    </table>
+
+    <h3>SCAN A — 10 bodies (app set), 1700–2200 CE (rarest 20)</h3>
+    <table>
+      <thead><tr><th>Date</th><th>maxInSign</th><th>Sign</th><th>Span</th><th>Era</th><th>Gen1:1</th><th>Names</th></tr></thead>
+      <tbody>{A.slice(0,20).map(e=>{ const rr=e.reading||{}; return <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
+        <td><button className="linkish" onClick={()=>setSel(e.date)}>{displayDate(e.date)}</button></td>
+        <td className="deg">{e.maxInSign}</td><td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
+        <td>{rr.genesisLegible?<b style={{color:'var(--gold)'}}>YES</b>:'no'}</td><td className="deg">{rr.readableCount!=null?rr.readableCount:'—'}</td>
+      </tr>; })}</tbody>
+    </table>
+    <div className="note">SCAN_A reaches only 7-in-one-sign in 500 y (8-in-sign never occurs) — the 10-body set clusters on a ~decades scale, not centuries. The <i>centuries</i> scale belongs to the 7 classical bodies (all-7-in-one-sign ≈ every few centuries, irregular), and the <i>millennia</i> scale to the tightest classical conjunctions (≈ one precessional era, above). astronomy-engine v2.1.19, GeoVector→Ecliptic.elon, noon UT.</div>
+  </>;
+}
+
 const PHRASES = [
   ['The sky vanished like a scroll that is rolled up, and every mountain and island was removed','Rev 6:14','The zodiac <b>is the scroll</b>: 12 signs inscribed, rolled along the ecliptic. Echoes Isa 34:4.'],
   ['I am the Alpha and the Omega, the first and the last','Rev 1:8; 22:13','Α and Ω <b>bracket the alphabet</b> — the letters are the frame of creation. Christ names himself as the whole alphabet.'],
@@ -1540,6 +1641,9 @@ function RevelationPersianTab(){
     ['Vendidad fargard 22 — 99,999 diseases (SBE)','https://www.avesta.org/vendidad/vd22sbe.htm'],
     ['Yasht 13 Farvardin (SBE)','https://www.avesta.org/ka/yt13sbe.htm'],
     ['Zoroastrianism (Encyclopaedia Iranica)','https://www.iranicaonline.org/articles/zoroastrianism'],
+    ['Gaffarel, Unheard-of Curiosities (1650 EN, Chilmead) — archive.org','https://archive.org/details/b30333817'],
+    ['Gaffarel — EEBO-TCP transcription (Univ. Michigan, CC0)','https://quod.lib.umich.edu/e/eebo2/A85346.0001.001'],
+    ['Gaffarel — folding plates (Science History Institute)','https://digital.sciencehistory.org/works/fpj6eec'],
   ];
   return <>
     <h2>Persian / Avestan — 7 Amesha Spentas, 16 lands, 72 Yasna chapters</h2>
@@ -1561,6 +1665,13 @@ function RevelationPersianTab(){
     <Section name="Cosmology" rows={[
       ['12 × 30 = 360° zodiac (received from Babylonia)','12 / 360','(a)','the 12-sign frame shared across Persia, India, Greece, and the Hebrew SY.'],
       ['Haoma = the plant of immortality','—','(c)','the Indo-Iranian soma/haoma — the Vedic Soma (RV 9) and the Avestan Haoma are the same rite.'],
+    ]}/>
+    <Section name="Gaffarel (1629/1650) — the Persian talismanic reading of the stars" rows={[
+      ['Stars ranged in the heavens in the form of Hebrew letters','22','(b)','Part IV ch. XIII: the "celestiall writing" is in Hebrew characters (not Arabick/Samaritan); the heavens are a book (Isa 34:4, "rolled together… Because they are a Booke") = the same sky-as-βιβλίον as Rev 6:14. Source text in library/gaffarel/.'],
+      ['Reading instrument = the 3 Cabala: Gematria / Notaricon / Temurah','3','(c)','to read the celestial word: Gematria (number↔event), Notaricon (letter=initial of a word), Temurah (anagram). The same operations the Reader uses to turn a sky-config into a name+number (§6, §15b).'],
+      ['Rabbi Chomer — nations read in the stars by Gematria','—','(u)','חרב/Charab "desolate" over Greece = יון/Javan (Gen 10); נתק/Nataq=505 = the years of the Jewish kingdom (Saul→Zedekiah); כעה/Caah=1025 over Turkey. The celestial word names the nation and its fate by number — attested tradition, not reproduced here.'],
+      ['A new star rewrites the word (AKE→LAKE→ARKE)','—','(c)','a new star/comet adds a letter and changes the reading — the dynamical core the Lector Caeli replaces with celestial mechanics: a planet entering a sign rewrites the sky-sentence.'],
+      ['Persian talismanic sculpture (Part II) — images under constellations','—','(c)','figures cast "under certain Constellations" = the operative counterpart; Part IV reads the configuration itself as the Hebrew letter-word. Persian (Part II) + Hebrew (Part IV) converge with Rev\'s sealed-book sky (§15c.1, §15c.10).'],
     ]}/>
     <div className="note"><b>Boundary respected:</b> the Gathas (Yasna 28–54, the oldest stratum, attributed to Zarathushtra) are kept distinct from the later Young Avestan / Vendidad material. The 7 Amesha Spentas are Gathic; the 99,999 and the 16 lands are Vendidad (later).</div>
     <SrcList items={asrc}/>
@@ -1784,10 +1895,10 @@ function MethodTab({esGlossCount}){
       <li><b>Astronomy:</b> astronomy-engine v2.1.19, geocentric apparent ecliptic longitude (<code>GeoVector→Ecliptic.elon</code>), noon UT.</li>
       <li><b>Lexicon:</b> Strong (OpenScriptures), 6045 consonantal roots.</li>
       <li><b>Pluto ephemeris:</b> precision degrades outside 1700–2200; ancient windows rely on sign-level (30°) determination, validated by smooth continuity, not arcminute precision.</li>
-      <li><b>Negative results (tested):</b> the mirror-palindrome 2701→3773 does not discriminate at corpus level (Genesis 39.3% ≈ Markov 39.7% ≈ uniform 41.1%); Genesis-days do not correlate with eclipses (7.5% observed vs 28% expected — they avoid them).</li>
-      <li><b>Positive results:</b> 37/73 fit the civil solar year (365=73×5; 2701 pentads = 37 years), corroborated by the Maya Haab and Calendar Round; Genesis 1 core palindromes 61.3% vs 38.3% paired null (p≈8×10⁻³, hypothesis).</li>
+      <li><b>Negative results (tested):</b> the mirror-palindrome 2701→3773 does not discriminate at corpus level (Genesis 39.3% ≈ Markov 39.2% ≈ uniform 38.4%); Genesis-days do not correlate with eclipses (7.5% observed vs 28% expected — they avoid them).</li>
+      <li><b>Positive results:</b> 37/73 fit the civil solar year (365=73×5; 2701 pentads = 37 years), corroborated by the Maya Haab and Calendar Round; Genesis 1 core palindromes 51.6% vs 37.4% paired null (p≈0.076, borderline — not significant, but very close; hypothesis).</li>
       <li><b>Positive results v3.1 (§15b):</b> 37×73 structure of the 7 Genesis words demonstrated (23/127 subsets, p≈3.1×10⁻⁴); saros-series count by calculation (152 series, 54–87, median 72); 7 kameot = 7 doubles (Mercury 260 = Tzolkin); Aiq Bekar = decimal-positional gematria of §2 (bridge to sigils); 72 Shem HaMephorash angels from Exodus (216=6³); the 7-doubles=7-days heptagram (Chaldean order + mod 7 + Romance etymology); ayanamsa: 190-year spread (tropical discard robust); 6 windows 491-year cadence (p&lt;5×10⁻⁶, hypothesis not cause).</li>
-      <li><b>Validation:</b> 86 assertions in <code>scripts/tests.mjs</code> — all green. Scripts in <code>scripts/</code>; article in <code>article/lector-del-cielo-articulo.md</code>.</li>
+      <li><b>Validation:</b> 88 assertions in <code>scripts/tests.mjs</code> — all green. Scripts in <code>scripts/</code>; paper in <code>paper/index.html</code>.</li>
     </ul>
   </>;
 }
@@ -1795,13 +1906,13 @@ function MethodTab({esGlossCount}){
 // ====== App / Tabs ======
 const TABS = [
   ['sky','Sky Map'],['translator','Reader'],['reading','Reading'],['time','Time'],
-  ['sigils','Sigils'],['cycles','Cycles'],['revelation','Revelations'],['method','Methodology'],
+  ['gematria','Gematria'],['sigils','Sigils'],['cycles','Cycles'],['revelation','Revelations'],['method','Methodology'],
 ];
 const SUB = {
   reading:[['rule','Reading Rule'],['yhvh','YHVH'],['genesis','Genesis 1:1']],
   time:[['predictor','Predictor'],['ages','Ages']],
-  sigils:[['gematria','Gematria'],['sigil','Sigil Forge'],['kameot','Kameot'],['angels','72 Angels']],
-  cycles:[['saros','Saros'],['ayanamsa','Ayanamsa'],['lunarsolar','Lunar-Solar'],['week','Week']],
+  sigils:[['sigil','Sigil Forge'],['kameot','Kameot'],['angels','72 Angels']],
+  cycles:[['saros','Saros'],['ayanamsa','Ayanamsa'],['lunarsolar','Lunar-Solar'],['alignments','Alignments'],['week','Week']],
   revelation:[['hebrew','Hebrew · Christian'],['raziel','Raziel'],['gnostic','Gnostic / Nag Hammadi'],['vedic','Indian / Vedic'],['persian','Persian / Avestan'],['sufi','Islamic / Sufi'],['egyptian','Egyptian'],['maya','Maya'],['chinese','Chinese']],
 };
 
@@ -1814,7 +1925,7 @@ function SubTabs({items, active, onChange}){
 function App(){
   const today='2026-08-08';
   const [active,setActive]=useState('sky');
-  const [sub,setSub]=useState({reading:'rule',time:'predictor',sigils:'gematria',cycles:'saros',revelation:'hebrew'});
+  const [sub,setSub]=useState({reading:'rule',time:'predictor',sigils:'sigil',cycles:'saros',revelation:'hebrew'});
   const [lex,setLex]=useState(null);
   const [lexErr,setLexErr]=useState(null);
   const [angels,setAngels]=useState(null);
@@ -1888,9 +1999,10 @@ function App(){
           {sub.time==='ages' && <AgesTab date={effDate} rows={rows}/>}
         </>}
 
+        {active==='gematria' && <GematriaTab/>}
+
         {active==='sigils' && <>
           <SubTabs items={SUB.sigils} active={sub.sigils} onChange={setSubTab('sigils')}/>
-          {sub.sigils==='gematria' && <GematriaTab/>}
           {sub.sigils==='sigil' && <SigilTab/>}
           {sub.sigils==='kameot' && <KameotTab/>}
           {sub.sigils==='angels' && <AngelsTab/>}
@@ -1901,6 +2013,7 @@ function App(){
           {sub.cycles==='saros' && <SarosTab/>}
           {sub.cycles==='ayanamsa' && <AyanamsaTab/>}
           {sub.cycles==='lunarsolar' && <LunarSolarTab/>}
+          {sub.cycles==='alignments' && <AlignmentsTab/>}
           {sub.cycles==='week' && <WeekTab date={effDate} rows={rows}/>}
         </>}
 

@@ -1,0 +1,57 @@
+Gaffarel — Unheard-of Curiosities (1650, Chilmead EN) — STRUCTURE
+Source: archive.org b30333817 + Wikisource TOC stub + EEBO-TCP A85346.
+
+Full title (1650):
+  "Vnheard-of curiosities concerning the talismanical sculpture of the
+   Persians; the horoscope of the patriarkes; and the reading of the
+   stars. Written in French, by James Gaffarel. And Englished by
+   Edmund Chilmead, Mr. of Arts, and chaplaine of Christ-Church Oxon."
+  London: Printed by G.D. for Humphrey Moseley, 1650.
+  (Original French: Curiositez inouyes sur la sculpture talismanique
+   des Persans, Paris 1629.)
+
+FRONT MATTER
+  - Translator's dedication (Chilmead)
+  - Author's dedication
+  - Additions, and Advertisement (Preface)
+  - Table of contents
+  - Errata
+  - Tables of the Celestiall Constellations, expressed by Hebrew
+    Characters (2 folding plates)
+
+PART I — Wherein the Jewes, and other Eastern men are defended.
+  Defense of Hebrew/Eastern astronomy and letters against the charge of
+  idolatry; their star-lore and alphabet rehabilitated as legitimate.
+
+PART II — Of the Talismanical Sculpture of the Persians; or the manner
+  of making Figures, and Images, under certain Constellations.
+  The Persian talismanic science: figures/images cast under specific
+  celestial configurations. This is the "operative" counterpart to the
+  Reader: a constellation-configuration is read and materialized. (Gaffarel
+  is the source Richelieu is reputed to have used; Mazarin had his MS.)
+
+PART III — Of the Horoscope of the Patriarchs: or the Astrology of the
+  Ancient Hebrews.
+  Hebrew patriarchal astrology: the stars/constellations at the births and
+  deeds of the patriarchs read through Hebrew letters. (Links to the
+  Sefer Yetzirah / Raziel tradition of "calculating the planets and the
+  signs to see the generations.")
+
+PART IV — Of the Reading of the Stars, and what ever else is seen in the
+  Aire.
+  Ch. XII  — Whether it be possible to read any thing in the Clouds, and
+             in all other Meteors. (Comets / new stars / meteors as
+             celestial letters that rewrite the sky's word.)
+  Ch. XIII — That the Starres, according to the Opinion of the Hebrew
+             Writers, are ranged in the Heavens, in the forme of Letters:
+             and that it is Possible to reade there, whatsoever of
+             Importance is to happen, throughout the Universe.
+             (→ the core chapter; see
+             gaffarel_1650_part4_reading_of_stars.txt for the cleaned
+             verbatim extraction: heavens = book in Hebrew letters; the
+             three Cabala readings Gematria/Notaricon/Temurah; Rabbi
+             Chomer's worked examples over Greece/Jerusalem/the Jewish
+             kingdom/Turkey; new stars change the word; reading direction
+             West→East good / North ill, Jer. 1:14.)
+
+Built 2026-08-10.

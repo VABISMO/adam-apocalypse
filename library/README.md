@@ -5,7 +5,7 @@ Local copies of the primary source texts mined for the **Revelations** and
 extractions (`.txt`). These are reference copies only — page refs / URLs in the
 app cite the original sources.
 
-## Folders (273 plain-text files total)
+## Folders (273 plain-text files total + Gaffarel)
 
 - `nag-hammadi/` — Nag Hammadi Library (gnosis.org, 70 texts). Key:
   `adam.txt` (Apocalypse of Adam — 13 kingdoms + kingless generation = 14
@@ -43,6 +43,18 @@ app cite the original sources.
   (Mashriqi + Maghrebi), Indian katapayadi (right-to-left), Āryabhaṭa
   numeration (positional), Cyrillic, Coptic (= Greek + Fai=90), Roman,
   Number of the Beast (666 = Neron Kesar Hebrew; 616 variant).
+- `gaffarel/` — Jacques Gaffarel, *Unheard-of Curiosities* (1629 FR /
+  1650 EN, Chilmead), the Persian-talismanic + Hebrew-astrology source.
+  archive.org b30333817 OCR (`_dl_ocr.txt`) + cleaned extraction of Part
+  IV ch. XIII (`gaffarel_1650_part4_reading_of_stars.txt`): stars ranged
+  in the heavens in the form of Hebrew letters; heavens = a book (Isa
+  34:4); the three Cabala readings Gematria/Notaricon/Temurah; Rabbi
+  Chomer's celestial words over Greece (חרב/Charab), Jerusalem
+  (Hikschich), the Jewish kingdom (נתק/Nataq=505 = its years), Turkey
+  (כעה/Caah=1025); new stars rewrite the word (AKE→LAKE→ARKE); reading
+  direction West→East good / North ill (Jer 1:14). Two folding plates:
+  constellations expressed in Hebrew characters. Directly attests the
+  thesis (stars = Hebrew letters = celestial writing).
 
 ## Extraction notes
 - All HTML stripped to UTF-8 plain text (tags removed, entities decoded,

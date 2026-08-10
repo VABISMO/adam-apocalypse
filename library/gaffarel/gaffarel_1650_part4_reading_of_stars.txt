@@ -1,0 +1,147 @@
+Gaffarel — Unheard-of Curiosities (1650, Chilmead EN)
+Part IV, Chapter XIII — OF THE READING OF THE STARS
+(cleaned from archive.org b30333817 OCR; long-s normalized, spelling kept
+close to the 1650 edition; source: EEBO-TCP A85346.0001.001, CC0; Wikisource
+stub cross-checked. Hebrew reconstructed from context where OCR dropped it.)
+
+------------------------------------------------------------------------
+CHAPTER XIII TITLE (1650):
+
+  "That the Starres, according to the Opinion of the Hebrew Writers,
+   are ranged in the Heavens, in the forme of Letters: and that it is
+   Possible to reade there, whatsoever of Importance is to happen,
+   throughout the Universe."
+
+Chapter XIII contents (as listed in the 1650 edition):
+  1.  That the Celestiall Constellations were anciently marked with
+      Hebrew Characters.
+  2.  How the Celestiall Signes are figured in Hebrew Characters.
+  3.  That the Hebrew was the first Language; and that the Heavens were
+      written in Hebrew Characters, before the Greek, or any other.
+  4.  That the Stars are ranged, not in the forme of Arabick, nor
+      Samaritan, but of Hebrew Characters.
+  5.  That the Heavens are a Booke. (Isa. 34:4 — "the heavens shall be
+      rolled together as a scroll"; because they are a Book.)
+  6.  The three manners of reading the Heavens: Gematria, Notaricon,
+      Temurah (the three parts of the Cabala).
+  7.  New Stars appear, and change the words formed (Rabbi Chomer).
+  8.  What things are to be observed, that one may be able to read the
+      Heavens; why New Stars often appear, according to the Rabbins.
+  9.  On which side we are to begin this Reading.
+ 10.  Of the interpretation of the words found in the Heavens.
+ 11.  Of those Celestiall Letters that have foreshowne all the great
+      Mutations in States.
+
+------------------------------------------------------------------------
+1. OPENING CLAIM — THE HEAVENS ARE A BOOK WRITTEN IN HEBREW LETTERS
+
+  "Celestiall Constellations were anciently marked with Hebrew
+   Characters." The argument: Hebrew was the first language; therefore
+   the "celestiall writing" (the form the stars make) is in Hebrew
+   letters, not Arabick, Samaritan, or Egyptian. Isaiah 34:4 — "the
+   Heavens shall be rolled together" — is read as "rolled together as a
+   SCROLL/LIBER," and the reason given is: "Because they are a Booke."
+   (The Vulgate "Sicut liber" / Hebrew כמגלה; Gaffarel leans on the
+   reading that the heavens are a rolled scroll = a book written in
+   letters.) Psalm 19 — "their line is gone out through all the earth"
+   (Hebrew קום) — is adduced: the heavens declare, i.e. they spell.
+
+------------------------------------------------------------------------
+2. THE THREE MANNERS OF READING THE HEAVENS (= the three parts of the
+   Cabala), needed to interpret the celestial writing:
+
+  • GEMATRIA — "considereth of the Numbers that are contained in the
+    Letters; and, by comparing them with others the like, gives an
+    Exposition." (The numerical value of the celestial word is matched
+    to a Hebrew word/event of equal value.)
+  • NOTARICON — each letter of the celestial word stands for (is the
+    initial of) a whole word, making an acronym/sentence.
+  • TEMURAH — transposition / anagram of the letters, giving the
+    hidden word by permutation.
+
+------------------------------------------------------------------------
+3. RABBI CHOMER — WORKED EXAMPLES (celestial words read over nations,
+   foretelling their fate; values matched by Gematria)
+
+  a) GREECE. "Five [vertical] Stars did for a good while together make
+     up this word: CHARAB (חרב), which, in the [Hiphil] conjugation,
+     signifies To be Desolate — understanding this particularly of
+     Greece, over which these Stars shone; because that the number of
+     its letters, which are [He, Resh, Bet = 5+200+2 = 207? — Gaffarel
+     gives the sum], make up the same as JAVAN (יון = 10+6+50 = 66?
+     — the 1650 text prints 'Summ, 12' for the comparison as it stands
+     in his source)." The point: the celestial word over Greece and the
+     name of Greece (Javan) share their number → by Gematria Greece is
+     read as "to be made desolate."
+       [OCR note: the printed table reads "Charab / Destitued Desolate /
+        Summ, 12". The Hebrew is חרב HhRB; the Javan comparison is יון.]
+
+  b) JERUSALEM. Stars over Jerusalem composed a word signifying "to
+     reject / forsake" (Hikschich / הכשיח), foretelling the Temple's
+     destruction.
+
+  c) THE JEWISH KINGDOM. "Five Stars were, for a long time together,
+     observed to compose these Three Mysticall Letters, NATAQ (נתק),
+     a word which signifieth, to Break, Cast Down, and to Drive out.
+     And the Number of these Letters, which is 505, was the Exact Number
+     of years that the Jewish Kingdome had lasted, from Saul, to the
+     Deplorable King Zedechiah."  נתק = 50+400+5? (Nun 50 + Tav 400 +
+     Qof 100 = 550, or per Gaffarel's reckoning 505) = the kingdom's
+     span → read by Gematria as its fall.
+
+  d) TURKEY / the Ottoman Empire. Stars formed "CAAH (כעה), battered /
+     languishing," value 1025, predicting the empire's fall ~1655.
+
+------------------------------------------------------------------------
+4. NEW STARS CHANGE THE WORD
+
+  A new star appearing adds a letter to the celestial word and so
+  changes its reading, "as adding a letter changes a word": his analogy
+  AKE → LAKE → ARKE — one new star can turn a benign reading into a
+  fatal one, or vice versa. (This is the mechanism by which comets and
+  new stars — Part IV ch. XII — are read as celestial letters that
+  rewrite the sky's sentence.)
+
+------------------------------------------------------------------------
+5. READING DIRECTION
+
+  "The Good Fortunes of a Place should be read, from the West, toward
+   the East [the natural motion of the stars]; and the Ill Fortune is
+   likewise to be read, from the North, toward the West." Authority:
+   Jeremiah 1:14 — "A Septentrione pandetur malum. An Evill commeth from
+   the North" (והרעה מצפון תפתח). Hence the side from which one begins
+   to read the celestial letters determines good vs. ill fortune.
+
+------------------------------------------------------------------------
+6. THE PLATES
+
+  Two folding plates precede the body: "Tables of the Celestiall
+   Constellations, expressed by Hebrew Characters" — the 48 Ptolemaic
+   constellations drawn with the Hebrew letters their stars compose.
+   (Science History Institute digital copy, fpj6eec, preserves these.)
+
+------------------------------------------------------------------------
+RELEVANCE TO THE CAELI READER THESIS
+
+  Gaffarel (1629/1650) attests, from Hebrew sources (Rabbi Chomer et al.),
+   the precise thesis the present work operationalizes: the stars are not
+   merely lights but LETTERS ranged in the sky, the heavens are a book
+   written in Hebrew characters, and the three kabbalistic instruments
+   (Gematria, Notaricon, Temurah) are exactly the tools to read it. The
+   Caeli Reader replaces Gaffarel's stationary "celestial word over a
+   nation" with a DYNAMICAL reading: the 22 letters (= the 3+7+12 of the
+   Sefer Yetzirah) are assigned to the 12 zodiacal signs + 7 planets + 3
+   mothers, so that the moving sky continuously spells, and the
+   positional rule S⊆O selects which spellings are legible on a given day.
+   Gaffarel's "new star rewrites the word" ↔ the Reader's "a planet
+   entering a sign rewrites the sky-sentence." The Persian talismanic
+   sculpture (Part II) is the operative counterpart: images cast "under
+   certain Constellations" = configurations; the Reader reads the
+   configuration itself as the celestial letter-word.
+
+Sources:
+  - archive.org/details/b30333817 (OCR → _dl_ocr.txt)
+  - quod.lib.umich.edu/e/eebo2/A85346.0001.001 (EEBO-TCP, CC0)
+  - en.wikisource.org/wiki/Unheard-of_Curiosities (structure stub)
+  - digital.sciencehistory.org/works/fpj6eec (folding plates)
+  - wellcomecollection.org/works/yju6kfxw (488 page images)
