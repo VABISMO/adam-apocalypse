@@ -34,7 +34,8 @@
   button:hover{border-color:var(--blue)}
   button.on{border-color:var(--green);color:var(--green)}
   button.ex{border-color:var(--red);color:var(--red)}
-  input[type=date],input[type=text],input[type=number]{background:var(--panel2);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:8px;font-size:.9rem;font-family:inherit}
+  input[type=date],input[type=text],input[type=number],select{background:var(--panel2);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:8px;font-size:.9rem;font-family:inherit}
+  select{cursor:pointer;appearance:none;-webkit-appearance:none;-moz-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--dim) 50%),linear-gradient(135deg,var(--dim) 50%,transparent 50%);background-position:calc(100% - 14px) 52%,calc(100% - 9px) 52%;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:26px}
   .sentence{font-size:1.5rem;letter-spacing:6px;direction:rtl;text-align:right;color:var(--gold);padding:8px 0 0}
   .tcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:12px}
   .tcard{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px}
