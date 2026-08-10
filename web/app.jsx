@@ -1314,10 +1314,14 @@ function AlignmentsTab(){
   if(err) return <div className="panel"><h2>Alignments</h2><p>Could not load alignments.json ({err}). Run <code>node calc_alignments.mjs</code> in <code>scripts/</code> and serve <code>web/</code> over HTTP.</p></div>;
   if(!data) return <div className="panel"><h2>Alignments</h2><p>Loading alignments.json…</p></div>;
 
-  const A=[...data.scanA].sort((a,b)=>b.maxInSign-a.maxInSign||a.span-b.span);
-  const B=[...data.scanB].sort((a,b)=>b.maxInSign-a.maxInSign||a.span-b.span);
-  const all7=data.scanB.filter(e=>e.maxInSign>=7).sort((a,b)=>parseDate(a.date)-parseDate(b.date));
-  const tight=all7.slice().sort((a,b)=>a.span-b.span);
+  const byDateDesc=(a,b)=>parseDate(b.date)-parseDate(a.date);   // chronological: newest first, past last
+  const A=[...data.scanA].sort((a,b)=>b.maxInSign-a.maxInSign||a.span-b.span);   // rarest first (selection)
+  const B=[...data.scanB].sort((a,b)=>b.maxInSign-a.maxInSign||a.span-b.span);   // rarest first (selection)
+  const all7=data.scanB.filter(e=>e.maxInSign>=7).sort(byDateDesc);              // all 7-in-sign, current→past
+  const tight=all7.slice().sort((a,b)=>a.span-b.span);                            // tightest first (for the gap note)
+  const tight4=[...tight.slice(0,4)].sort(byDateDesc);                            // 4 tightest, shown current→past
+  const B20=[...B.slice(0,20)].sort(byDateDesc);                                  // 20 rarest SCAN B, shown current→past
+  const A20=[...A.slice(0,20)].sort(byDateDesc);                                  // 20 rarest SCAN A, shown current→past
   const tightGap=tight.length>=2 ? Math.abs((parseDate(tight[0].date)-parseDate(tight[1].date))/86400000/365.25) : null;
   const cc=data.crossCheck||{};
   const ev = data.scanA.find(e=>e.date===sel) || data.scanB.find(e=>e.date===sel);
@@ -1331,10 +1335,10 @@ function AlignmentsTab(){
 
     <div className="fig" style={{maxWidth:760}}>
       <div style={{fontWeight:600,color:'var(--gold)',marginBottom:4}}>The millennia signal — tightest classical grand conjunctions</div>
-      <div className="muted" style={{marginBottom:8}}>All 7 classical planets in one zodiacal sign, within the smallest arc found in 3200 years:</div>
+      <div className="muted" style={{marginBottom:8}}>All 7 classical planets in one zodiacal sign, within the smallest arc found in 3200 years (the 4 tightest, current→past):</div>
       <table>
         <thead><tr><th>Date</th><th>Bodies</th><th>Sign</th><th>Span</th><th>Era</th></tr></thead>
-        <tbody>{tight.slice(0,4).map(e=> <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
+        <tbody>{tight4.map(e=> <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
           <td><button className="linkish" onClick={()=>pick(e.date)}>{displayDate(e.date)}</button></td>
           <td>7 classical</td><td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
         </tr>)}</tbody>
@@ -1362,18 +1366,18 @@ function AlignmentsTab(){
       </>}
     </>}
 
-    <h3>SCAN B — 7 classical bodies, −1000 to 2200 CE (rarest 20)</h3>
+    <h3>SCAN B — 7 classical bodies, −1000 to 2200 CE (20 rarest, current→past)</h3>
     <table>
       <thead><tr><th>Date</th><th>maxInSign</th><th>Sign</th><th>Span</th><th>Era</th><th>Gen1:1</th><th>Names</th></tr></thead>
-      <tbody>{B.slice(0,20).map(e=>{ const rr=e.reading||{}; return <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
+      <tbody>{B20.map(e=>{ const rr=e.reading||{}; return <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
         <td><button className="linkish" onClick={()=>pick(e.date)}>{displayDate(e.date)}</button></td>
         <td className="deg">{e.maxInSign}</td><td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
         <td>{rr.genesisLegible?<b style={{color:'var(--gold)'}}>YES</b>:'no'}</td><td className="deg">{rr.readableCount!=null?rr.readableCount:'—'}</td>
       </tr>; })}</tbody>
     </table>
 
-    <h3>SCAN B — all-7-in-one-sign timeline (the centuries recurrence)</h3>
-    <div className="muted" style={{marginBottom:6}}>{all7.length} occurrences in 3200 years — gaps (y): {all7.map((e,i)=>i<all7.length-1?((parseDate(all7[i+1].date)-parseDate(e.date))/86400000/365.25).toFixed(0):'').filter(Boolean).join(', ')}</div>
+    <h3>SCAN B — all-7-in-one-sign timeline (the centuries recurrence, current→past)</h3>
+    <div className="muted" style={{marginBottom:6}}>{all7.length} occurrences in 3200 years — gaps (y), current→past: {all7.map((e,i)=>i<all7.length-1?Math.abs(parseDate(all7[i+1].date)-parseDate(e.date)).toFixed(0):'').filter(Boolean).join(', ')}</div>
     <table>
       <thead><tr><th>Date</th><th>Sign</th><th>Span</th><th>Era</th></tr></thead>
       <tbody>{all7.map(e=> <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
@@ -1382,10 +1386,10 @@ function AlignmentsTab(){
       </tr>)}</tbody>
     </table>
 
-    <h3>SCAN A — 10 bodies (app set), 1700–2200 CE (rarest 20)</h3>
+    <h3>SCAN A — 10 bodies (app set), 1700–2200 CE (20 rarest, current→past)</h3>
     <table>
       <thead><tr><th>Date</th><th>maxInSign</th><th>Sign</th><th>Span</th><th>Era</th><th>Gen1:1</th><th>Names</th></tr></thead>
-      <tbody>{A.slice(0,20).map(e=>{ const rr=e.reading||{}; return <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
+      <tbody>{A20.map(e=>{ const rr=e.reading||{}; return <tr key={e.date} style={e.date===sel?{background:'rgba(127,176,255,0.10)'}:undefined}>
         <td><button className="linkish" onClick={()=>pick(e.date)}>{displayDate(e.date)}</button></td>
         <td className="deg">{e.maxInSign}</td><td>{e.sign}</td><td className="deg">{e.span}°</td><td>{e.era}</td>
         <td>{rr.genesisLegible?<b style={{color:'var(--gold)'}}>YES</b>:'no'}</td><td className="deg">{rr.readableCount!=null?rr.readableCount:'—'}</td>
