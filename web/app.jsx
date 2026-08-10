@@ -1303,14 +1303,15 @@ function displayDate(ds){
   const y=d.getUTCFullYear(), mo=MON[d.getUTCMonth()], da=d.getUTCDate();
   return `${da} ${mo} ${y<0?Math.abs(y)+' BCE':y}`;
 }
-function AlignmentsTab(){
+function AlignmentsTab({setDate}){
   const [data,setData]=useState(null);
   const [err,setErr]=useState(null);
   const [sel,setSel]=useState('1962-02-04');   // default: the famous grand conjunction
   const mapRef=useRef(null);
   useEffect(()=>{ fetch('alignments.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setData).catch(e=>setErr(e.message)); },[]);
-  // pick a date: update selection and scroll the sky-map section into view
-  const pick=(d)=>{ setSel(d); requestAnimationFrame(()=>{ if(mapRef.current) mapRef.current.scrollIntoView({behavior:'smooth', block:'start'}); }); };
+  // pick a date: update this tab's selection, propagate to the global date (so Sky Map
+  // and Reader reflect it), and scroll the sky-map section into view.
+  const pick=(d)=>{ setSel(d); if(setDate) setDate(d); requestAnimationFrame(()=>{ if(mapRef.current) mapRef.current.scrollIntoView({behavior:'smooth', block:'start'}); }); };
   if(err) return <div className="panel"><h2>Alignments</h2><p>Could not load alignments.json ({err}). Run <code>node calc_alignments.mjs</code> in <code>scripts/</code> and serve <code>web/</code> over HTTP.</p></div>;
   if(!data) return <div className="panel"><h2>Alignments</h2><p>Loading alignments.json…</p></div>;
 
@@ -2358,7 +2359,7 @@ function App(){
           {sub.cycles==='saros' && <SarosTab/>}
           {sub.cycles==='ayanamsa' && <AyanamsaTab/>}
           {sub.cycles==='lunarsolar' && <LunarSolarTab/>}
-          {sub.cycles==='alignments' && <AlignmentsTab/>}
+          {sub.cycles==='alignments' && <AlignmentsTab setDate={setDate}/>}
           {sub.cycles==='week' && <WeekTab date={effDate} rows={rows}/>}
         </>}
 
