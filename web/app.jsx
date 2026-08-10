@@ -1509,7 +1509,7 @@ function AlignmentsTab({setDate, lex, angelMap}){
       readableCount: names.length,
       properNames: names.filter(n=>n.name).length,
       angels: names.filter(n=>n.angel).map(n=>n.he),
-      topNames: names.slice(0,8).map(n=>`${n.he}=${n.gloss}`),
+      topNames: names.slice(0,8),
     };
   })() : null;
 
@@ -1545,7 +1545,17 @@ function AlignmentsTab({setDate, lex, angelMap}){
         {r.angels && r.angels.length>0 && <div className="muted" style={{marginBottom:10}}>Shem HaMephorash angel-roots readable: <span className="he">{r.angels.join(' ')}</span></div>}
         {r.topNames && r.topNames.length>0 && <>
           <h3>Top readable names ({r.topNames.length})</h3>
-          <div className="tcards">{r.topNames.map((n,i)=>{ const p=n.split('='); return <div className="tcard" key={i}><div className="the">{p[0]}</div><div className="trans">{p.slice(1).join('=')}</div></div>; })}</div>
+          <div className="tcards" style={{gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))'}}>{r.topNames.map((n,i)=>(
+            <div key={i} className={'tcard'+(n.simp?'':' always')}>
+              <div className="the">{n.disp||n.he}</div>
+              <div className="read">{n.translit}</div>
+              <div className="trans">{n.gloss}</div>
+              <div className="g">{n.len} letters · gematria {n.gem}{n.pal && <span style={{color:'var(--gold)'}}> · palindrome</span>}{n.m37 && <span style={{color:'var(--green)'}}> · ×37</span>}{n.angelName && <span style={{color:'var(--violet)'}}> · angel</span>}{n.name && <span style={{color:'var(--blue)'}}> · name</span>}</div>
+              {n.angelName && <div className="simp" style={{color:'var(--violet)'}}>angel: {n.angelName.en} <span style={{color:'var(--dim)'}}>· {n.angelName.src}</span></div>}
+              {n.angel && <div className="simp" style={{color:'var(--violet)'}}>Shem triplet +אל → <span className="he" style={{fontSize:'.95rem'}}>{n.angel.el}</span> · +יה → <span className="he" style={{fontSize:'.95rem'}}>{n.angel.yh}</span></div>}
+              <div className="simp">{n.simp ? ('simples: '+[...n.simp].join(' ')) : 'no simples (always)'}</div>
+            </div>
+          ))}</div>
         </>}
       </>}
     </>}
