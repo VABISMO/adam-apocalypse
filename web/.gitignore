@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# test build artifacts (rebuilt locally; sources test_jsdom.mjs + test-entry.jsx are kept)
+app.bundle.mjs
+test-entry.bundle.mjs
+
+# SSG output — generated at build/deploy time by:
+#   node scripts/prerender.bundle.mjs
+# (the script + its bundle are committed; the HTML output below is not)
+align/
+reader/
+prophets/
+mages/
+alignments/index.html
+readings/index.html
+sitemap.xml
+sitemap_alignments.xml
+sitemap_readings.xml
+sitemap_hub.xml
+robots.txt

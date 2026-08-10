@@ -1,0 +1,86 @@
+// pages/AlignmentFicha.jsx — single stellar-alignment detail page for /align/<date>.
+// Computes the sky for that date from astronomy-engine, the alignment metrics
+// (maxInSign / span / era), and the top readable names. Self-contained: only needs
+// {date, lex, angelMap}. Presentational (renders identically server & client).
+import React, { useMemo } from 'react';
+import { SkyMap } from '../ui.jsx';
+import { SIMPLE, BODIES, GLYPH, skyAt, occupiedLetters, bySign, readableWords, displayDate, makeDate, fmtDate, eraForYear } from '../core.jsx';
+
+const SIGN_EN = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'];
+
+function smallestArc(lons){
+  // smallest arc (degrees) on the circle containing all longitudes
+  const s=[...lons].sort((a,b)=>a-b);
+  if(s.length<2) return 0;
+  let maxGap=0;
+  for(let i=1;i<s.length;i++) maxGap=Math.max(maxGap, s[i]-s[i-1]);
+  maxGap=Math.max(maxGap, (s[0]+360)-s[s.length-1]); // wrap gap
+  return 360-maxGap;
+}
+
+function AlignmentFicha({date, lex, angelMap, onBack}){
+  const rows = useMemo(()=>skyAt(date),[date]);
+  const occ = useMemo(()=>occupiedLetters(rows),[rows]);
+  const occSigns = useMemo(()=>new Set(rows.map(r=>r.sign)),[rows]);
+  const bs = useMemo(()=>bySign(rows),[rows]);
+  const words = useMemo(()=> lex?readableWords(occ,lex.lexicon,angelMap):[],[occ,lex,angelMap]);
+  const meta = useMemo(()=>{
+    let best=null;
+    for(const [sign,list] of Object.entries(bs)){ if(!best || list.length>best.list.length) best={sign,list}; }
+    const lons=rows.map(r=>r.lon);
+    const year=(()=>{ const d=makeDate? makeDate(date.slice(0,4)|0,1,1):null; return parseInt(date.slice(0,4),10)||2026; })();
+    return { maxInSign: best?best.list.length:0, sign: best?best.sign:'—', span: smallestArc(lons), era: eraForYear(year) };
+  },[rows,bs,date]);
+
+  const dateWords = words.filter(w=>w.simp).sort((a,b)=> (b.name?1:0)-(a.name?1:0) || b.len-a.len);
+  const top = dateWords.slice(0,12);
+  const year = parseInt(date.slice(0,4),10)||2026;
+
+  return <div>
+    {onBack && <div className="controls" style={{marginBottom:14}}>
+      <button onClick={onBack} title="Back">◀ back to Alignments</button>
+      <span className="pill">stellar alignment</span>
+    </div>}
+
+    <h1>Stellar alignment — {displayDate(date)}</h1>
+    <div className="sub" style={{marginBottom:14}}>
+      <b style={{color:'var(--gold)'}}>{meta.maxInSign}</b> of {rows.length} bodies in <b>{meta.sign}</b> · span <b className="deg">{meta.span.toFixed(1)}°</b> · era <b>{meta.era}</b>
+    </div>
+
+    <div className="grid2" style={{alignItems:'start'}}>
+      <div className="panel" style={{padding:14}}>
+        <SkyMap rows={rows} occ={occ}/>
+        <div className="legend">{occSigns.size} of 12 zodiac signs occupied on {displayDate(date)}. Readable simples: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>.</div>
+      </div>
+      <div className="panel" style={{padding:16}}>
+        <h3 style={{marginTop:0}}>Alignment metrics</h3>
+        <table><tbody>
+          <tr><th>Date</th><td>{displayDate(date)}</td></tr>
+          <tr><th>Bodies</th><td>{rows.length} ({rows.map(r=>GLYPH[r.body]).join(' ')})</td></tr>
+          <tr><th>Max in one sign</th><td><b style={{color:'var(--gold)'}}>{meta.maxInSign}</b> in {meta.sign}</td></tr>
+          <tr><th>Span (tightest arc)</th><td className="deg">{meta.span.toFixed(2)}°</td></tr>
+          <tr><th>Precessional era</th><td>{meta.era}</td></tr>
+          <tr><th>Occupied signs</th><td>{occSigns.size}/12</td></tr>
+          <tr><th>Readable simples</th><td><span className="he" style={{fontSize:'1.1rem'}}>{[...occ].sort().join(' ')||'none'}</span></td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div className="panel" style={{marginTop:14,padding:16}}>
+      <h3 style={{marginTop:0}}>Top readable names on {displayDate(date)} — {dateWords.length} date-specific</h3>
+      <div className="muted" style={{marginBottom:8,fontSize:'.82rem'}}>Names whose zodiac simples are among this alignment's occupied signs (proper names first, then longest). A particular sky configuration recurs over years → centuries → millennia; this is the readable layer of that day.</div>
+      {top.length ? <div className="tcards">
+        {top.map((w,i)=>(
+          <div key={i} className="tcard">
+            <div className="the">{w.disp}</div>
+            <div className="read">{w.translit}</div>
+            <div className="trans">{w.gloss}</div>
+            <div className="g">{w.len} letters · gematria {w.gem}{w.name && <span style={{color:'var(--blue)'}}> · name</span>}{w.angelName && <span style={{color:'var(--violet)'}}> · angel</span>}</div>
+          </div>
+        ))}
+      </div> : <div className="muted">No date-specific readable names on this day.</div>}
+    </div>
+  </div>;
+}
+
+export { AlignmentFicha };
