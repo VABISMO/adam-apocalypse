@@ -463,18 +463,36 @@ function TranslatorTab({date, occ, words, q, setQ, genData}){
   const [minLen,setMinLen] = useState(1);
   const qn = q.trim().toLowerCase();
   const PROPS = {date:'simp', pal:'pal', g37:'m37', angel:'angelName', name:'name', comp:'compound'};
+  const CATS = ['special','frequent','common'];   // legibility-category filters (from probsAll)
   const toggle=(id)=>setSel(prev=>{const n=new Set(prev); n.has(id)?n.delete(id):n.add(id); return n;});
+  // Per-word legibility over the scanned Predictor year, for ALL readable words (not just
+  // the page) so the special/frequent/common filters can select on it. Empirical S⊆O count,
+  // no independence assumption, no fixed q. Low % = special/rare (green); high % = common (red).
+  const probsAll = useMemo(()=>{
+    const m=new Map();
+    if(!genData?.dayOccs) return m;
+    const n=genData.dayOccs.length || 1;
+    for(const w of words){
+      const req = w.simp ? [...w.simp] : [];
+      if(!req.length){ m.set(w.he,1); continue; }
+      let c=0; for(const o of genData.dayOccs) if(req.every(x=>o.has(x))) c++;
+      m.set(w.he, c/n);
+    }
+    return m;
+  },[words,genData]);
+  const wordCat=(w)=>{ const p=probsAll.get(w.he); if(p==null) return null; return p>=0.5?'common':p>=0.2?'frequent':'special'; };
+  const matchFilter=(w,id)=> CATS.includes(id) ? wordCat(w)===id : !!w[PROPS[id]];
   const filtered = useMemo(()=>{
     let r = words;
     if(qn) r = r.filter(w => (w.gloss||'').toLowerCase().includes(qn) || w.translit.toLowerCase().includes(qn) || w.disp.includes(q.trim()));
     if(sel.size){
       const ids=[...sel];
-      if(mode==='include') r = r.filter(w => ids.every(id => w[PROPS[id]]));      // AND: must match all selected
-      else                  r = r.filter(w => !ids.some(id => w[PROPS[id]]));     // drop if matches any selected
+      if(mode==='include') r = r.filter(w => ids.every(id => matchFilter(w,id)));      // AND: must match all selected
+      else                  r = r.filter(w => !ids.some(id => matchFilter(w,id)));     // drop if matches any selected
     }
     if(minLen>1) r = r.filter(w=>w.len>=minLen);
     return r;
-  }, [words, qn, sel, mode, minLen]);
+  }, [words, qn, sel, mode, minLen, probsAll]);
   useEffect(()=>{ setPage(0); }, [qn, date, sel, mode, minLen]);
   const dateCount = useMemo(()=>words.filter(w=>w.simp).length,[words]);
   const alwaysCount = useMemo(()=>words.filter(w=>!w.simp).length,[words]);
@@ -483,25 +501,12 @@ function TranslatorTab({date, occ, words, q, setQ, genData}){
   const angelCount = useMemo(()=>words.filter(w=>w.angelName).length,[words]);
   const nameCount = useMemo(()=>words.filter(w=>w.name).length,[words]);
   const compCount = useMemo(()=>words.filter(w=>w.compound).length,[words]);
+  const specialCount = useMemo(()=>words.filter(w=>wordCat(w)==='special').length,[words,probsAll]);
+  const frequentCount = useMemo(()=>words.filter(w=>wordCat(w)==='frequent').length,[words,probsAll]);
+  const commonCount = useMemo(()=>words.filter(w=>wordCat(w)==='common').length,[words,probsAll]);
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const cur = Math.min(page, pages-1);
   const slice = filtered.slice(cur*PAGE_SIZE, cur*PAGE_SIZE + PAGE_SIZE);
-  // Per-gloss legibility probability — computed, not hardcoded. For each displayed word,
-  // count the exact fraction of days in the scanned Predictor year whose occupied simple
-  // set covers the word's required simples (the S⊆O rule, empirical — no independence
-  // assumption, no fixed q). Low % = special/rare (green); high % = common (red).
-  const probs = useMemo(()=>{
-    const m=new Map();
-    if(!genData?.dayOccs) return m;
-    const n=genData.dayOccs.length || 1;
-    for(const w of slice){
-      const req = w.simp ? [...w.simp] : [];
-      if(!req.length){ m.set(w.he,1); continue; }
-      let c=0; for(const o of genData.dayOccs) if(req.every(x=>o.has(x))) c++;
-      m.set(w.he, c/n);
-    }
-    return m;
-  },[slice,genData]);
   return <>
     <h2>Reader — everything readable on {date} <span className="pill">{words.length} words</span></h2>
     <div className="controls" style={{marginBottom:8}}>
@@ -516,6 +521,10 @@ function TranslatorTab({date, occ, words, q, setQ, genData}){
       <FilterChip active={sel.has('angel')} count={angelCount} label="angel name" title="A known angel name in Hebrew — Bible, Apocrypha, 1 Enoch watchers, Kabbalah, Islamic/Judeo-Arabic (Michael, Gabriel, Raphael, Uriel, Metatron, Sandalphon, Raziel, Azrael, the Watchers…). Matched by consonants, not suffix." onToggle={()=>toggle('angel')}/>
       <FilterChip active={sel.has('name')} count={nameCount} label="name (proper)" title="The word is a proper noun (name) in Strong — incl. theophoric names bearing אל / יה" onToggle={()=>toggle('name')}/>
       <FilterChip active={sel.has('comp')} count={compCount} label="compound" title="Concatenated multi-root entry whose gloss is truncated (e.g. 'dove of')" onToggle={()=>toggle('comp')}/>
+      <span className="muted" style={{fontSize:'.8rem',marginLeft:4}}>·</span>
+      <FilterChip active={sel.has('special')} count={specialCount} label="special" title="Empirically rare this year: required simples co-occupied < 20% of days (green). Include = only rare/special words" onToggle={()=>toggle('special')}/>
+      <FilterChip active={sel.has('frequent')} count={frequentCount} label="frequent" title="Empirically moderate this year: required simples co-occupied 20–50% of days (amber)" onToggle={()=>toggle('frequent')}/>
+      <FilterChip active={sel.has('common')} count={commonCount} label="common" title="Empirically common this year: required simples co-occupied ≥ 50% of days (red) — incl. always-readable words (no simples)" onToggle={()=>toggle('common')}/>
       <span className="muted" style={{fontSize:'.8rem', marginLeft:6}}>mode:</span>
       <button className={mode==='include'?'on':''} onClick={()=>setMode('include')} title="Keep only words matching ALL selected filters" aria-pressed={mode==='include'}>✓ include</button>
       <button className={mode==='exclude'?'ex':''} onClick={()=>setMode('exclude')} title="Drop words matching ANY selected filter" aria-pressed={mode==='exclude'}>✗ exclude</button>
@@ -536,7 +545,7 @@ function TranslatorTab({date, occ, words, q, setQ, genData}){
           <div className="read">{w.translit}</div>
           <div className="trans">{w.gloss}</div>
           <div className="g">{w.len} letters · gematria {w.gem}{w.pal && <span style={{color:'var(--gold)'}}> · palindrome</span>}{w.m37 && <span style={{color:'var(--green)'}}> · ×37</span>}{w.angelName && <span style={{color:'var(--violet)'}}> · angel</span>}{w.name && <span style={{color:'var(--blue)'}}> · name{w.theo?' (theophoric)':''}</span>}{w.compound && <span style={{color:'var(--warn)'}}> · compound (gloss truncated)</span>}</div>
-          {probs.has(w.he) && (()=>{ const p=probs.get(w.he); const n=genData.dayOccs.length; const pct = p<0.001 ? '<0.1' : (p*100).toFixed(p<0.1?1:0); const cls = p>=0.5 ? 'spec' : p>=0.2 ? 'mid' : 'ok'; const tag = p>=0.5 ? 'common' : p>=0.2 ? 'frequent' : 'special'; return <span className={'prob '+cls} title={`Empirical legibility over ${n} days of ${genData.year}: ${pct}% of days this word's required simples are all occupied (S⊆O, computed from astronomy-engine — not hardcoded). This is a within-year rate, NOT the recurrence of a specific stellar alignment: a particular sky configuration recurs over years→centuries→millennia (rare grand conjunctions, §15c.11). Low % = special/rare (green); high % = common (red).`}>{pct}% · {tag}</span>; })()}
+          {probsAll.has(w.he) && (()=>{ const p=probsAll.get(w.he); const n=genData.dayOccs.length; const pct = p<0.001 ? '<0.1' : (p*100).toFixed(p<0.1?1:0); const cls = p>=0.5 ? 'spec' : p>=0.2 ? 'mid' : 'ok'; const tag = p>=0.5 ? 'common' : p>=0.2 ? 'frequent' : 'special'; return <span className={'prob '+cls} title={`Empirical legibility over ${n} days of ${genData.year}: ${pct}% of days this word's required simples are all occupied (S⊆O, computed from astronomy-engine — not hardcoded). This is a within-year rate, NOT the recurrence of a specific stellar alignment: a particular sky configuration recurs over years→centuries→millennia (rare grand conjunctions, §15c.11). Low % = special/rare (green); high % = common (red).`}>{pct}% · {tag}</span>; })()}
           {w.angelName && <div className="simp" style={{color:'var(--violet)'}}>angel: {w.angelName.en} <span style={{color:'var(--dim)'}}>· {w.angelName.src}</span></div>}
           {w.angel && <div className="simp" style={{color:'var(--violet)'}}>Shem triplet +אל → <span className="he" style={{fontSize:'.95rem'}}>{w.angel.el}</span> · +יה → <span className="he" style={{fontSize:'.95rem'}}>{w.angel.yh}</span></div>}
           <div className="simp">{w.simp ? ('simples: '+[...w.simp].join(' ')) : 'no simples (always)'}</div>
