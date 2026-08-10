@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230b0e14'/%3E%3Cpath d='M12 2 L14.6 8.6 L22 9.3 L16.3 14.1 L18.2 21.3 L12 17.3 L5.8 21.3 L7.7 14.1 L2 9.3 L9.4 8.6 Z' fill='%23e8c87a'/%3E%3C/svg%3E" />
-<title>Caeli Reader · the stellar alphabet of the Sefer Yetzirah</title>
+<title>El Apocalypsys de Adam · La palabra de las estrellas</title>
 <style>
   :root{
     --bg:#0b0e14; --panel:#131826; --panel2:#1a2030; --line:#283145;
@@ -82,6 +82,10 @@
   .key.off{opacity:.4;text-decoration:line-through}
   .key.click{cursor:pointer}
   .key.click:hover{border-color:var(--blue)}
+  .btn-cta{background:var(--gold);color:#0b0e14;border:1px solid var(--gold);border-radius:9px;padding:11px 26px;font-size:1.02rem;font-weight:700;cursor:pointer;letter-spacing:.3px;transition:filter .12s,transform .12s;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+  .btn-cta:hover:not(:disabled){filter:brightness(1.08);transform:translateY(-1px)}
+  .btn-cta:active:not(:disabled){transform:translateY(0)}
+  .btn-cta:disabled{opacity:.5;cursor:default;transform:none}
   .gw{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:6px 8px;border:1px solid var(--line);border-radius:8px;margin-bottom:6px;background:var(--panel2)}
   .gw.ok{border-color:var(--green)}
   .gw.no{border-color:#5a3030}
@@ -127,7 +131,7 @@
 </head>
 <body>
 <div class="wrap">
-  <h1>Caeli Reader <span class="he">קורא השמים</span></h1>
+  <h1>El Apocalypsys de Adam <span class="en">: La palabra de las estrellas</span></h1>
   <div class="sub">The stellar alphabet of the <b>Sefer Yetzirah</b>: Hebrew letters read in the sky. Real planet positions (astronomy-engine), the full Strong lexicon, the reuse rule, Genesis 1:1 and zodiacal ages by precession — plus every calculator from the article (gematria, sigils, kameot, 72 angels, saros, ayanamsa, Revelation isopsephy…).</div>
   <div id="root"></div>
 </div>

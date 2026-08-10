@@ -2194,7 +2194,7 @@ function PsalmsTab(){
     <div className="controls" style={{marginBottom:12}}>
       <label style={{display:'inline-flex',gap:6,alignItems:'center',cursor:'pointer'}}><input type="checkbox" checked={adjusted} onChange={e=>setAdjusted(e.target.checked)}/> 137.036 adjustment</label>
       <label style={{display:'inline-flex',gap:6,alignItems:'center',cursor:'pointer'}}><input type="checkbox" checked={subharmonic} onChange={e=>setSubharmonic(e.target.checked)}/> subharmonic fallback (÷2…÷128)</label>
-      <button onClick={run} disabled={!ready||loading} className="key">{loading?'Computing…':(ready?'Reveal Psalm':'Loading data…')}</button>
+      <button onClick={run} disabled={!ready||loading} className="btn-cta">{loading?'Computing…':(ready?'Reveal Psalm →':'Loading data…')}</button>
       <span className="muted" style={{marginLeft:'auto'}}>{ready?'phrase index ready':'building phrase index…'}</span>
     </div>
 
@@ -2245,14 +2245,14 @@ function PsalmsTab(){
 
 // ====== App / Tabs ======
 const TABS = [
-  ['sky','Sky Map'],['translator','Reader'],['reading','Reading'],['time','Time'],
-  ['gematria','Gematria'],['sigils','Sigils'],['cycles','Cycles'],['revelation','Revelations'],['psalms','Psalms'],['method','Methodology'],
+  ['cycles','Cycles'],['sky','Sky Map'],['translator','Reader'],['reading','Reading'],['time','Time'],
+  ['gematria','Gematria'],['sigils','Sigils'],['revelation','Revelations'],['psalms','Psalms'],['method','Methodology'],
 ];
 const SUB = {
   reading:[['rule','Reading Rule'],['yhvh','YHVH'],['genesis','Genesis 1:1']],
   time:[['predictor','Predictor'],['ages','Ages']],
   sigils:[['sigil','Sigil Forge'],['kameot','Kameot'],['angels','72 Angels']],
-  cycles:[['saros','Saros'],['ayanamsa','Ayanamsa'],['lunarsolar','Lunar-Solar'],['alignments','Alignments'],['week','Week']],
+  cycles:[['alignments','Alignments'],['saros','Saros'],['ayanamsa','Ayanamsa'],['lunarsolar','Lunar-Solar'],['week','Week']],
   revelation:[['hebrew','Hebrew · Christian'],['raziel','Raziel'],['gnostic','Gnostic / Nag Hammadi'],['vedic','Indian / Vedic'],['persian','Persian / Avestan'],['sufi','Islamic / Sufi'],['egyptian','Egyptian'],['maya','Maya'],['chinese','Chinese']],
 };
 
@@ -2264,8 +2264,8 @@ function SubTabs({items, active, onChange}){
 
 function App(){
   const today='2026-08-08';
-  const [active,setActive]=useState('sky');
-  const [sub,setSub]=useState({reading:'rule',time:'predictor',sigils:'sigil',cycles:'saros',revelation:'hebrew'});
+  const [active,setActive]=useState('cycles');
+  const [sub,setSub]=useState({reading:'rule',time:'predictor',sigils:'sigil',cycles:'alignments',revelation:'hebrew'});
   const [lex,setLex]=useState(null);
   const [lexErr,setLexErr]=useState(null);
   const [angels,setAngels]=useState(null);
