@@ -9,7 +9,7 @@ function fmtYear(y){
   return y+' CE';
 }
 
-function Timeline({items, title, accent='#7fb0ff'}){
+function Timeline({items, title, accent='#8a05ff'}){
   if(!items || !items.length) return null;
   const W=1000, H=180, PADX=40;
   const min=Math.min(...items.map(i=>i.y0));
@@ -30,11 +30,11 @@ function Timeline({items, title, accent='#7fb0ff'}){
 
   return <div className="timeline-wrap" role="img" aria-label={title}>
     <svg viewBox={`0 0 ${W} ${H}`} width="100%" height="auto" style={{maxWidth:'100%'}}>
-      <line x1={PADX} y1={midY} x2={W-PADX} y2={midY} stroke="#33405a" strokeWidth="2"/>
+      <line x1={PADX} y1={midY} x2={W-PADX} y2={midY} stroke="#33343f" strokeWidth="2"/>
       {ticks.map(t=>(
         <g key={t}>
-          <line x1={xOf(t)} y1={midY-6} x2={xOf(t)} y2={midY+6} stroke="#3a4762" strokeWidth="1"/>
-          <text x={xOf(t)} y={midY+20} textAnchor="middle" fontSize="11" fill="#6a7588">{fmtYear(t)}</text>
+          <line x1={xOf(t)} y1={midY-6} x2={xOf(t)} y2={midY+6} stroke="#3a3347" strokeWidth="1"/>
+          <text x={xOf(t)} y={midY+20} textAnchor="middle" fontSize="11" fill="#6a6a7a">{fmtYear(t)}</text>
         </g>
       ))}
       {items.map((it,i)=>{
@@ -42,23 +42,23 @@ function Timeline({items, title, accent='#7fb0ff'}){
         const x = xOf(ym);
         const end = !!it.endpoint;
         const r = end?8:5;
-        const fill = end? '#e8c87a' : (it.isRoyal? '#c792ea' : accent);
+        const fill = end? '#e8c87a' : (it.isRoyal? '#c29eff' : accent);
         const above = i%2===0;
         const ly = above? midY-18 : midY+34;
         return <g key={i}>
           <line x1={x} y1={midY} x2={x} y2={above? midY-12 : midY+12} stroke={fill} strokeWidth="1" opacity="0.5"/>
           {end
             ? <g><circle cx={x} cy={midY} r={r+3} fill="none" stroke="#e8c87a" strokeWidth="1.2" opacity="0.7"/>
-               <circle cx={x} cy={midY} r={r} fill="#e8c87a" stroke="#fff5d0" strokeWidth="1"/></g>
-            : <circle cx={x} cy={midY} r={r} fill={fill} stroke="#0e1320" strokeWidth="1.2"/>}
+               <circle cx={x} cy={midY} r={r} fill="#e8c87a" stroke="#fbcfff" strokeWidth="1"/></g>
+            : <circle cx={x} cy={midY} r={r} fill={fill} stroke="#16161f" strokeWidth="1.2"/>}
           {labelIdx.has(i) &&
-            <text x={x} y={ly} textAnchor="middle" fontSize="12" fontWeight={end?700:400} fill={end?'#e8c87a':'#9aa6bd'}>{it.name}</text>}
+            <text x={x} y={ly} textAnchor="middle" fontSize="12" fontWeight={end?700:400} fill={end?'#e8c87a':'#9ca3af'}>{it.name}</text>}
           <title>{`${it.name} (${it.years||fmtYear(it.y0)}) — ${it.role||''}`}</title>
         </g>;
       })}
     </svg>
     <div className="muted" style={{textAlign:'center',fontSize:'.78rem',marginTop:2}}>
-      <span style={{color:'#e8c87a'}}>●</span> endpoint · <span style={{color:'#c792ea'}}>●</span> royal · <span style={{color:accent}}>●</span> mage/prophet · hover a dot for the figure
+      <span style={{color:'#e8c87a'}}>●</span> lineage end · <span style={{color:'#c29eff'}}>●</span> royal · <span style={{color:accent}}>●</span> mage/prophet · hover a dot for the figure
     </div>
   </div>;
 }

@@ -22,7 +22,7 @@ globalThis.navigator = window.navigator;
 globalThis.requestAnimationFrame = window.requestAnimationFrame;
 globalThis.cancelAnimationFrame = window.cancelAnimationFrame;
 
-const FILES = { 'lexicon.json': 'lexicon.json', 'alignments.json': 'alignments.json', 'angels72.json': 'angels72.json', 'genesis_els.json': 'data/genesis_els.json', 'psalms_he.json': 'data/psalms_he.json' };
+const FILES = { 'lexicon.json': 'lexicon.json', 'alignments.json': 'alignments.json', 'angels72.json': 'angels72.json', 'name_refs.json': 'name_refs.json', 'genesis_els.json': 'data/genesis_els.json', 'psalms_he.json': 'data/psalms_he.json' };
 globalThis.fetch = (url) => {
   const name = String(url).replace(/^.*\//, '');
   if (FILES[name]) {
@@ -36,7 +36,7 @@ window.fetch = globalThis.fetch;
 const results = [];
 const check = (name, cond, extra) => results.push({ name, ok: !!cond, extra: extra || '' });
 
-const { App, ProphetsPage, MagesPage, AlignmentFicha } = await import('./test-entry.bundle.mjs');
+const { App, ProphetsPage, MagesPage, AlignmentFicha, ProphetFicha, MageFicha, Landing, About, WarningModal } = await import('./test-entry.bundle.mjs');
 
 // --- mount App ---
 const root = window.document.getElementById('root');
@@ -55,18 +55,19 @@ if (mountErr) {
   check('App mounts without throwing', false, String(mountErr && mountErr.message));
 } else {
   check('App mounts without throwing', root.childNodes.length > 0);
-  check('home: tab bar renders', !!doc.querySelector('.tabs'));
-  const tabCount = doc.querySelectorAll('.tab').length;
-  check('home: 11 tabs present', tabCount === 11, `found ${tabCount}`);
-  check('home: panel content renders', !!doc.querySelector('.panel'));
+  // '/' is now the Landing page (the app moved to /app).
+  check('home: landing hero renders', !!doc.querySelector('.hero'));
+  check('home: hero title (Apocalypse of Adam)', /Apocalypse/.test(doc.querySelector('.hero-title')?.textContent || ''));
+  check('home: slider renders', !!doc.querySelector('.slider'));
+  check('home: feature grid renders', !!doc.querySelector('.feat-grid'));
+  const featCount = doc.querySelectorAll('.feat-card').length;
+  check('home: 8 feature cards', featCount === 8, `found ${featCount}`);
+  check('home: entry CTA renders', !!doc.querySelector('.entry-cta'));
   check('footer renders', !!doc.querySelector('.site-footer'));
   check('footer: column grid renders', !!doc.querySelector('.ft-grid'));
   const ftH = doc.querySelectorAll('.ft-h').length;
   check('footer: 4 column headers', ftH === 4, `found ${ftH}`);
   check('footer: machine-readable section (llms.txt/sitemap)', /llms\.txt|sitemap/i.test(doc.body.textContent||''));
-  // Cycles → Alignments is default; the alignments list or sky map should be present
-  const bodyText = doc.body.textContent || '';
-  check('home: Cycles/Alignments default content', /alignment|sky|zodiac|cycle/i.test(bodyText));
 }
 
 // --- dedicated path pages via SSR (presentational) ---
@@ -82,10 +83,28 @@ try {
   check('route /mages: h1 renders', /Magi — from Daniel to Felipe II/.test(html));
   check('route /mages: timeline svg', /timeline-wrap/.test(html));
   check('route /mages: Felipe II marked', /Felipe II/.test(html));
-  check('route /mages: Llull bio renders (Ars Magna)', /Ars generalis ultima|Ars Magna|Ramon Llull/.test(html));
-  check('route /mages: works table renders', /Work \/ contribution|Significance/.test(html));
-  check('route /mages: Wikipedia links render', /en\.wikipedia\.org/.test(html));
+  check('route /mages: Llull card renders', /Ramon Llull/.test(html));
+  check('route /mages: cards link to fichas', /href="\/mage\//.test(html));
 } catch (e) { check('route /mages renders', false, String(e.message)); }
+
+// --- mage ficha: /mage/<slug> has the works table + Wikipedia link (the hub no longer has them) ---
+try {
+  const slug = 'ramon-llull';
+  const html = renderToStaticMarkup(React.createElement(MageFicha, { slug }));
+  check('route /mage/ramon-llull: name renders', /Ramon Llull/.test(html));
+  check('route /mage/ramon-llull: Description panel', /Description/.test(html));
+  check('route /mage/ramon-llull: works table renders', /Work \/ contribution|Significance/.test(html));
+  check('route /mage/ramon-llull: Wikipedia link', /en\.wikipedia\.org/.test(html));
+} catch (e) { check('route /mage/ramon-llull renders', false, String(e.message)); }
+
+// --- prophet ficha: /prophet/jacob-frank carries the Antichrist designation ---
+try {
+  const html = renderToStaticMarkup(React.createElement(ProphetFicha, { slug: 'jacob-frank' }));
+  check('route /prophet/jacob-frank: name renders', /Jacob Frank/.test(html));
+  check('route /prophet/jacob-frank: Antichrist designation', /Antichrist/.test(html));
+  check('route /prophet/jacob-frank: works table renders', /Life & work in brief|Life &amp; work in brief/.test(html));
+  check('route /prophet/jacob-frank: Wikipedia link', /en\.wikipedia\.org/.test(html));
+} catch (e) { check('route /prophet/jacob-frank renders', false, String(e.message)); }
 
 try {
   const lex = JSON.parse(readFileSync(new URL('lexicon.json', import.meta.url), 'utf8'));
@@ -98,8 +117,45 @@ try {
   check('route /align/<date>: produces markup', html.length > 500, `${html.length} chars`);
 } catch (e) { check('route /align/<date> renders', false, String(e.message)); }
 
+// --- Landing page (SSR) ---
+try {
+  const html = renderToStaticMarkup(React.createElement(Landing, { goApp: () => {} }));
+  check('Landing: hero title renders', /Apocalypse/.test(html) && /of Adam/.test(html));
+  check('Landing: slider + slides render', /slider/.test(html) && /stellar alphabet/i.test(html));
+  check('Landing: feature cards render', /feat-card/.test(html) && /Gematria/.test(html));
+  check('Landing: Adam quote (13th kingdom) in hero', /thirteenth kingdom/i.test(html) && /every birth of their ruler is a word/i.test(html));
+  check('Landing: pseudo-philosophy section removed', !/archive no power can erase/i.test(html) && !/copies of copies/i.test(html));
+  check('Landing: entry CTA + notice render', /Initiate/.test(html) && /schizophrenia/i.test(html));
+} catch (e) { check('Landing renders', false, String(e.message)); }
+
+// --- About page (SSR) ---
+try {
+  const html = renderToStaticMarkup(React.createElement(About));
+  check('About: title renders', /About/.test(html) && /Apocalypse of Adam/.test(html));
+  check('About: what-this-is section', /What this is/.test(html));
+  check('About: open-the-app CTA links to /app', /href="\/app"/.test(html));
+} catch (e) { check('About renders', false, String(e.message)); }
+
+// --- WarningModal (SSR, open) ---
+try {
+  const html = renderToStaticMarkup(React.createElement(WarningModal, { open: true, onClose: () => {}, onProceed: () => {} }));
+  check('WarningModal: title renders', /Before you enter/.test(html));
+  check('WarningModal: self-check questions', /self-check/.test(html) && /Yes/.test(html));
+  check('WarningModal: crisis resource', /988|crisis/i.test(html));
+} catch (e) { check('WarningModal renders', false, String(e.message)); }
+
+// --- /app route maps to the app shell (SSR: lex null → "Loading lexicon…") ---
+try {
+  globalThis.__ROUTE_PATH__ = '/app';
+  const html = renderToStaticMarkup(React.createElement(App));
+  check('route /app: renders app shell (not landing)', /Loading lexicon/.test(html) && !/hero-title/.test(html));
+  delete globalThis.__ROUTE_PATH__;
+} catch (e) { check('route /app renders', false, String(e.message)); delete globalThis.__ROUTE_PATH__; }
+
 const passed = results.filter((r) => r.ok).length;
 const failed = results.filter((r) => !r.ok);
 console.log(`\n=== jsdom mount test: ${passed}/${results.length} passed ===`);
 for (const r of results) console.log(`${r.ok ? 'PASS' : 'FAIL'}  ${r.name}${r.extra ? '  — ' + r.extra : ''}`);
-if (failed.length) process.exit(1);
+// Force exit — the mounted Landing's auto-advancing Slider holds a setInterval that
+// would otherwise keep the event loop alive and hang the test runner on success.
+process.exit(failed.length ? 1 : 0);

@@ -30,7 +30,7 @@ function SigilTab(){
         <div className="note">Try: <span className="key click" onClick={()=>setInp('אדם')}>אדם</span> <span className="key click" onClick={()=>setInp('משה')}>משה</span> <span className="key click" onClick={()=>setInp('ישראל')}>ישראל</span> <span className="key click" onClick={()=>setInp('והו')}>והו</span> (1st Shem angel) · <span className="key click" onClick={()=>setInp('MICHAEL')}>MICHAEL</span></div>
       </div>
     </div>
-    <Fig n={7} doc="From the article (§15b.3): the Lo Shu (Saturn 3×3, M=15) with the 9 Aiq Bekar groups overlaid — each cell gathers the letters whose gematria digit-sums to it. The golden trace is the sigil of משיח (Messiah): Aiq Bekar 4·3·1·8, the reduced cells joined in order. Aiq Bekar = the digit-sum of the 22-letter gematria of §2 — the bridge from alphabet to sigil."/>
+    <Fig n={7} doc="From the article (§15b.3): the Lo Shu (Saturn 3×3, M=15) with the 9 Aiq Bekar groups overlaid — each cell gathers the letters whose gematria digit-sums to it. The gold trace is the sigil of משיח (Messiah): Aiq Bekar 4·3·1·8, the reduced cells joined in order. Aiq Bekar = the digit-sum of the 22-letter gematria of §2 — the bridge from alphabet to sigil."/>
   </>;
 }
 
@@ -54,15 +54,15 @@ function KameaSigil({ n, word, compact }){
   const d=path.map((v,k)=>{const [x,y]=center(v); return (k?'L':'M')+x.toFixed(1)+' '+y.toFixed(1);}).join(' ');
   return <>
     <svg viewBox={`0 0 ${S} ${S}`} width={S} height={S} style={{maxWidth:'100%'}} role="img" aria-label={`Sigil of ${word} on ${n}×${n} kamea`}>
-      <rect x="0" y="0" width={S} height={S} fill="#0e1320" rx="8"/>
+      <rect x="0" y="0" width={S} height={S} fill="#0f0f15" rx="8"/>
       {sq.flat().map((v,idx)=>{const [i,j]=pos[v]; const x=pad+cellPx*j, y=pad+cellPx*i; const on=used.has(v);
         return <g key={idx}>
-          <rect x={x+1.5} y={y+1.5} width={cellPx-3} height={cellPx-3} rx="3" fill={on?'#243657':'#131826'} stroke="#283145" strokeWidth="1"/>
-          <text x={x+cellPx/2} y={y+cellPx/2-1} textAnchor="middle" dominantBaseline="middle" fontSize={n<=6?11:9} fill={on?'#e8c87a':'#5d6883'}>{v}</text>
-          {on && <text x={x+cellPx/2} y={y+cellPx/2+9} textAnchor="middle" dominantBaseline="middle" fontSize={6.5} fill="#8aa0c0">#{order[v]}</text>}
+          <rect x={x+1.5} y={y+1.5} width={cellPx-3} height={cellPx-3} rx="3" fill={on?'#332b1a':'#16161f'} stroke="#2a2a38" strokeWidth="1"/>
+          <text x={x+cellPx/2} y={y+cellPx/2-1} textAnchor="middle" dominantBaseline="middle" fontSize={n<=6?11:9} fill={on?'#e8c87a':'#5a5a6e'}>{v}</text>
+          {on && <text x={x+cellPx/2} y={y+cellPx/2+9} textAnchor="middle" dominantBaseline="middle" fontSize={6.5} fill="#9ca3af">#{order[v]}</text>}
         </g>;})}
       {path.length>=2 && <path d={d} fill="none" stroke="#e8c87a" strokeWidth="2.2" opacity="0.9" strokeLinejoin="round" strokeLinecap="round"/>}
-      {path.map((v,k)=>{const [x,y]=center(v); const r=k===0||k===path.length-1?4.5:2.8; const fill=k===0?'#6fe0a0':k===path.length-1?'#ff8a8a':'#e8c87a'; return <circle key={k} cx={x} cy={y} r={r} fill={fill} stroke="#0b0e14" strokeWidth="0.6"/>;})}
+      {path.map((v,k)=>{const [x,y]=center(v); const r=k===0||k===path.length-1?4.5:2.8; const fill=k===0?'#6fe0a0':k===path.length-1?'#ff8a8a':'#e8c87a'; return <circle key={k} cx={x} cy={y} r={r} fill={fill} stroke="#08080b" strokeWidth="0.6"/>;})}
     </svg>
     {!compact && <div style={{marginTop:8, minWidth:200}}>
       <div className="muted">{isHeb?'Hebrew gematria (22 letters; finals = base letter)':'Latin A=1…Z=26'} → reduced into the square (n²={N}){n===3?' — for Saturn n²=9 this is the digital root = the Aiq Bekar method of §15b.3':''}.</div>
@@ -128,34 +128,34 @@ function KameotTab(){
 // 72 Shem HaMephorash angels placed around a circle of 72 divisions (5° each).
 // The 72-fold division is the precessional clock: precession ≈ 71.6 yr/° ≈ 72 yr per
 // degree, so 72 = years-per-degree, and 72 × 360 yr ≈ 25 920 yr = the Platonic great
-// year (modern 25 772). Each angel = 5° = ~360 yr of precession.
+// year (modern 25 771). Each angel = 5° = ~360 yr of precession.
 function AngelsCircle({triplets}){
   const C=240;
   const ang=(i)=>(-90 + i*5)*Math.PI/180;
   const pt=(r,a)=>[C+r*Math.cos(a), C+r*Math.sin(a)];
   const Rout=212, RtickIn=200, Rnum=224, RlabOut=188, RlabIn=168;
   return <svg viewBox="0 0 480 482" width="100%" height="auto" style={{maxWidth:470,margin:'0 auto'}} role="img" aria-label="72 angels around the precessional circle">
-    <rect x="0" y="0" width="480" height="482" fill="#0e1320" rx="10"/>
-    <circle cx={C} cy={C} r={Rout} fill="none" stroke="#283145" strokeWidth="1.4"/>
-    <circle cx={C} cy={C} r={RlabOut+10} fill="none" stroke="#1c2333" strokeWidth="0.7"/>
+    <rect x="0" y="0" width="480" height="482" fill="#0f0f15" rx="10"/>
+    <circle cx={C} cy={C} r={Rout} fill="none" stroke="#2a2a38" strokeWidth="1.4"/>
+    <circle cx={C} cy={C} r={RlabOut+10} fill="none" stroke="#202028" strokeWidth="0.7"/>
     {triplets.map((t,i)=>{
       const a=ang(i); const [x0,y0]=pt(Rout,a); const [x1,y1]=pt(RtickIn,a);
       const major=i%6===0;
-      return <line key={'t'+i} x1={x0} y1={y0} x2={x1} y2={y1} stroke={major?'#7fb0ff':'#33405a'} strokeWidth={major?1.3:0.6}/>;
+      return <line key={'t'+i} x1={x0} y1={y0} x2={x1} y2={y1} stroke={major?'#c29eff':'#33343f'} strokeWidth={major?1.3:0.6}/>;
     })}
     {triplets.map((t,i)=>{
       const a=ang(i); const outer=i%2===0; const rl=outer?RlabOut:RlabIn;
       const [lx,ly]=pt(rl,a); const [nx,ny]=pt(Rnum,a);
       return <g key={'a'+i}>
-        <text x={lx} y={ly} textAnchor="middle" dominantBaseline="middle" fontSize="8.6" fill={outer?'#e8c87a':'#c9a558'} fontFamily="serif">{t}</text>
-        <text x={nx} y={ny} textAnchor="middle" dominantBaseline="middle" fontSize="5" fill="#5d6883">{i+1}</text>
+        <text x={lx} y={ly} textAnchor="middle" dominantBaseline="middle" fontSize="8.6" fill={outer?'#e8c87a':'#c29eff'} fontFamily="serif">{t}</text>
+        <text x={nx} y={ny} textAnchor="middle" dominantBaseline="middle" fontSize="5" fill="#5a5a6e">{i+1}</text>
       </g>;
     })}
-    <circle cx={C} cy={C} r="58" fill="#0e1320" stroke="#2a3346" strokeWidth="0.8"/>
+    <circle cx={C} cy={C} r="58" fill="#0f0f15" stroke="#2a2a38" strokeWidth="0.8"/>
     <text x={C} y={C-18} textAnchor="middle" fontSize="24" fill="#e8c87a" fontFamily="serif">72</text>
-    <text x={C} y={C-2} textAnchor="middle" fontSize="8" fill="#8aa0c0">5° per angel · 360°/72</text>
-    <text x={C} y={C+13} textAnchor="middle" fontSize="7.6" fill="#7fb0ff">1° / 72 yr precession</text>
-    <text x={C} y={C+25} textAnchor="middle" fontSize="6.8" fill="#5d6883">72 × 360 = 25 920 yr</text>
+    <text x={C} y={C-2} textAnchor="middle" fontSize="8" fill="#9ca3af">5° per angel · 360°/72</text>
+    <text x={C} y={C+13} textAnchor="middle" fontSize="7.6" fill="#c29eff">1° / 72 yr precession</text>
+    <text x={C} y={C+25} textAnchor="middle" fontSize="6.8" fill="#5a5a6e">72 × 360 = 25 920 yr</text>
   </svg>;
 }
 
@@ -164,7 +164,7 @@ function AngelsTab(){
   const [err,setErr]=useState(null);
   const [q,setQ]=useState('');
   useEffect(()=>{ fetch('/angels72.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setData).catch(e=>setErr(e.message)); },[]);
-  if(err) return <div className="panel"><h2>72 Angels</h2><p>Could not load angels72.json ({err}). Serve the web/ folder over HTTP (python3 -m http.server 8008).</p></div>;
+  if(err) return <div className="panel app-panel"><h2>72 Angels</h2><p>Could not load the 72-angel data. Please refresh the page; if the problem persists, the data may be unavailable right now.</p></div>;
   if(!data) return <div className="muted">Loading the 72 Shem HaMephorash triplets…</div>;
   const qn=q.trim().toLowerCase();
   const rows=data.triplets.map((t,i)=>({i:i+1, trio:t, el:t+'אל', yh:t+'יה', gemEL:data.gemEL?data.gemEL[i]:gematria(norm(t+'אל')), gemYH:data.gemYH?data.gemYH[i]:gematria(norm(t+'יה'))}));
@@ -173,7 +173,7 @@ function AngelsTab(){
     <h2>The 72 angels — Shem HaMephorash from Exodus 14:19-21 (§15b.4)</h2>
     <div className="muted" style={{marginBottom:10}}>72 consonants × 3 verses. The 72 triplets are read by <b>columns</b>: tríos[i] = v19[i] + v20[71−i] + v21[i] (v20 read backwards, as tradition requires). 72×3 = 216 = 6³. Triplet 0 = <span className="he">והו</span> = Vehuiah (canonical ✓). Each triplet + suffix <span className="he">אל</span> (Hod) or <span className="he">יה</span> (Malkhut) gives the angelic name.</div>
     <h3>The 72 around the precessional circle</h3>
-    <div className="muted" style={{marginBottom:8}}>The 72 angels placed one every 5° (360°/72). This is the precessional clock: precession carries the equinox ≈ 1° every 71.6 ≈ <b>72 years</b>, so <b>72 = the years per degree of precession</b>, and each 5° angel = ~360 yr of precession; the full 72-division circuit = 72 × 360 ≈ <b>25 920 yr</b> — the traditional Platonic great year (modern value 25 772 yr). Major ticks every 6th (the 12 decans). The decanatal attribution (each Shem angel → 5°) is traditional; the precessional reading is a mnemonic, not a physical model.</div>
+    <div className="muted" style={{marginBottom:8}}>The 72 angels placed one every 5° (360°/72). This is the precessional clock: precession carries the equinox ≈ 1° every 71.6 ≈ <b>72 years</b>, so <b>72 = the years per degree of precession</b>, and each 5° angel = ~360 yr of precession; the full 72-division circuit = 72 × 360 ≈ <b>25 920 yr</b> — the traditional Platonic great year (modern value 25 771 yr). Major ticks every 6th (the 12 decans). The decanatal attribution (each Shem angel → 5°) is traditional; the precessional reading is a mnemonic, not a physical model.</div>
     <div style={{marginBottom:14}}><AngelsCircle triplets={data.triplets}/></div>
     <div className="controls" style={{marginBottom:10}}>
       <input type="text" value={q} onChange={e=>setQ(e.target.value)} placeholder="filter by # or triplet…" style={{flex:'1 1 220px'}}/>

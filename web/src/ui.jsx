@@ -4,9 +4,15 @@ import { FIGS } from '../figures.js';
 import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate } from './core.jsx';
 
 // ====== SkyMap ======
-// `hl` = optional Set of simple letters to highlight in GOLD (the word being read).
-// A highlighted sector glows gold regardless of whether it is occupied today, so a
-// deep link to a word not readable on the current date still shows which signs it needs.
+// Each celestial element gets its own coordinating color (no monocolor):
+//   gold    #e8c87a  the word being read (highlighted sectors)
+//   teal    #5eead4  the 7 planets (moving bodies, the "doubles")
+//   indigo  #9b8ec4  the 3 mothers / fixed circumpolar constellations
+//   lavender#cfd0e8  occupied zodiac letters (the available alphabet today)
+//   rose    #f4a8c0  a body sitting on a sign boundary
+// `hl` = optional Set of simple letters to highlight in gold; a highlighted sector
+// glows whether or not it is occupied today, so a deep link to a word not readable on
+// the current date still shows which signs it needs.
 function SkyMap({rows, occ, hl}){
   const C=220, R=196, Rp=120;
   const pt=(lon,r)=>{const a=lon*Math.PI/180;return [C+r*Math.sin(a), C-r*Math.cos(a)];};
@@ -16,22 +22,22 @@ function SkyMap({rows, occ, hl}){
   const occupied = occ.size;
   return (
     <svg viewBox="0 0 440 440" width="100%" height="auto" style={{maxWidth:'100%'}} role="img" aria-label={HLS?`Sky map: word requires ${[...HLS].join(' ')} (${occupied} signs occupied)`:`Sky map: ${occupied} of 12 signs occupied`}>
-      <circle cx={C} cy={C} r={R} fill="#0e1320" stroke="#283145" strokeWidth="2"/>
-      <circle cx={C} cy={C} r={Rp+22} fill="none" stroke="#1c2333" strokeWidth="1"/>
+      <circle cx={C} cy={C} r={R} fill="#0f0f15" stroke="#2a2a38" strokeWidth="2"/>
+      <circle cx={C} cy={C} r={Rp+22} fill="none" stroke="#202028" strokeWidth="1"/>
       {SIGNS.map((s,i)=>{
         const [x0,y0]=pt(i*30,R), [x1,y1]=pt((i+1)*30,R);
         const on=occ.has(SIMPLE[s][0]);
         const isHl = HLS && HLS.has(SIMPLE[s][0]);
-        const fill = isHl ? 'rgba(232,200,122,0.16)' : (on?'rgba(127,176,255,0.10)':'transparent');
-        const stroke = isHl ? '#e8c87a' : (on?'#3a4762':'#283145');
+        const fill = isHl ? 'rgba(232,200,122,0.18)' : (on?'rgba(207,208,232,0.10)':'transparent');
+        const stroke = isHl ? '#e8c87a' : (on?'#3a3a4a':'#2a2a38');
         return <path key={s} d={`M ${C} ${C} L ${x0} ${y0} A ${R} ${R} 0 0 0 ${x1} ${y1} Z`} fill={fill} stroke={stroke} strokeWidth={isHl?1.4:0.7}/>;
       })}
       {SIGNS.map((s,i)=>{
         const [lx,ly]=pt(i*30+15, R-20); const [nx,ny]=pt(i*30+15, R-3);
         const on=occ.has(SIMPLE[s][0]), n=signCount[s]||0;
         const isHl = HLS && HLS.has(SIMPLE[s][0]);
-        const letterFill = isHl ? '#e8c87a' : (on?'#cfe0ff':'#5a647a');
-        const nameFill = isHl ? '#e8c87a' : (on?'#8aa0c0':'#424b5e');
+        const letterFill = isHl ? '#e8c87a' : (on?'#cfd0e8':'#5a5a6e');
+        const nameFill = isHl ? '#e8c87a' : (on?'#9ca3af':'#4a4a55');
         return <g key={s}>
           <text x={lx} y={ly} textAnchor="middle" dominantBaseline="middle" fontSize="21" fontWeight={isHl?700:400} fill={letterFill}>{SIMPLE[s][0]}</text>
           <text x={nx} y={ny} textAnchor="middle" dominantBaseline="middle" fontSize="8.5" fill={nameFill}>{s}{n>1?(' ·×'+n):''}</text>
@@ -40,22 +46,22 @@ function SkyMap({rows, occ, hl}){
       {rows.map(r=>{
         const [px,py]=pt(r.lon,Rp);
         return <g key={r.body}>
-          <circle cx={px} cy={py} r="8.5" fill="#131826" stroke="#7fb0ff" strokeWidth="1.2"/>
-          <text x={px} y={py} textAnchor="middle" dominantBaseline="middle" fontSize="12" fill="#7fb0ff">{GLYPH[r.body]}</text>
-          {r.boundary && <circle cx={px} cy={py} r="11.5" fill="none" stroke="#ffcf6a" strokeWidth="1" strokeDasharray="2 2" opacity="0.8"/>}
+          <circle cx={px} cy={py} r="8.5" fill="#0f1518" stroke="#5eead4" strokeWidth="1.2"/>
+          <text x={px} y={py} textAnchor="middle" dominantBaseline="middle" fontSize="12" fill="#5eead4">{GLYPH[r.body]}</text>
+          {r.boundary && <circle cx={px} cy={py} r="11.5" fill="none" stroke="#f4a8c0" strokeWidth="1" strokeDasharray="2 2" opacity="0.8"/>}
         </g>;
       })}
-      <circle cx={C} cy={C} r="32" fill="#0e1320" stroke="#2a3346" strokeWidth="1" strokeDasharray="3 3"/>
+      <circle cx={C} cy={C} r="32" fill="#0f0f15" stroke="#2a2a38" strokeWidth="1" strokeDasharray="3 3"/>
       {MOTHER_LON.map(([h,con,lon])=>{
         const [lx,ly]=pt(lon,18); const [nx,ny]=pt(lon,38); const [ox,oy]=pt(lon,R-24); const [sx,sy]=pt(lon,44);
 
         return <g key={h}>
-          <line x1={sx} y1={sy} x2={ox} y2={oy} stroke="#33405a" strokeWidth="0.6" strokeDasharray="2 3" opacity="0.55"/>
-          <text x={lx} y={ly} textAnchor="middle" dominantBaseline="middle" fontSize="19" fill="#9aa6bd">{h}</text>
-          <text x={nx} y={ny} textAnchor="middle" dominantBaseline="middle" fontSize="5.6" fill="#5d6883">{con}</text>
+          <line x1={sx} y1={sy} x2={ox} y2={oy} stroke="#3a3a4a" strokeWidth="0.6" strokeDasharray="2 3" opacity="0.55"/>
+          <text x={lx} y={ly} textAnchor="middle" dominantBaseline="middle" fontSize="19" fill="#9b8ec4">{h}</text>
+          <text x={nx} y={ny} textAnchor="middle" dominantBaseline="middle" fontSize="5.6" fill="#6a6a86">{con}</text>
         </g>;
       })}
-      <text x={C} y={C+34} textAnchor="middle" fontSize="6.5" fill="#525d72">3 mothers · fixed circumpolar axis</text>
+      <text x={C} y={C+34} textAnchor="middle" fontSize="6.5" fill="#6a6a86">3 mothers · fixed circumpolar axis</text>
     </svg>
   );
 }

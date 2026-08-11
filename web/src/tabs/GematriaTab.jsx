@@ -22,8 +22,12 @@ function GematriaHebrew(){
   const [inp,setInp]=useState('משיח');
   const [big,setBig]=useState(false); // Mispar Gadol toggle
   const c=norm(inp);
-  const letters=[...c].filter(ch=>GV[ch]);
-  const total=letters.reduce((a,ch)=>a+letterVal(ch),0);
+  // Mispar Gadol: final letters (ך ם ן ף ץ) count 500–900; Hechrachi (default): they count as their base letter.
+  const BIG_GV={'ך':500,'ם':600,'ן':700,'ף':800,'ץ':900};
+  const isLetter=(ch)=>!!GV[FIN2REG[ch]||ch];
+  const letters=[...inp].filter(isLetter);
+  const val=(ch)=> big && BIG_GV[ch]!==undefined ? BIG_GV[ch] : letterVal(ch);
+  const total=letters.reduce((a,ch)=>a+val(ch),0);
   const groups=aiqGroups();
   return <>
     <div className="controls" style={{marginBottom:10}}>
@@ -39,8 +43,8 @@ function GematriaHebrew(){
         {letters.map((ch,i)=>{
           return <tr key={i}><td className="letter-cell"><span className="he">{displayHe(c).includes(ch)?ch:ch}</span></td>
             <td className="muted">{ch}</td>
-            <td className="big">{letterVal(ch)}</td>
-            <td className="big" style={{color:'var(--blue)'}}>{reduce9(letterVal(ch))}</td></tr>;
+            <td className="big">{val(ch)}</td>
+            <td className="big" style={{color:'var(--blue)'}}>{reduce9(val(ch))}</td></tr>;
         })}
         </tbody>
       </table>

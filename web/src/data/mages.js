@@ -24,6 +24,6 @@ const MAGES = [
   {name:"Paracelsus",years:"1493–1541",y0:1493,y1:1541,region:"Switzerland",role:"Physician-magus; astral-magic cosmology of signatures linking stars, metals and letters.",isIberian:false,isRoyal:false,endpoint:false},
   {name:"Nostradamus",years:"1503–1566",y0:1503,y1:1566,region:"France",role:"Court astrologer-prophet; consulted by Catherine de Médicis in the royal-magus mode.",isIberian:false,isRoyal:false,endpoint:false},
   {name:"John Dee",years:"1527–1609",y0:1527,y1:1609,region:"England",role:"Royal astrologer to Elizabeth I; philosopher of Enochian stellar-angelic letters.",isIberian:false,isRoyal:false,endpoint:false},
-  {name:"Felipe II of Spain",years:"1527–1598",y0:1527,y1:1598,region:"Iberia (Spain)",role:"Habsburg royal-sage king; patron of astrologers and esoterica — closes the era of kings.",isIberian:true,isRoyal:true,endpoint:true}
+  {name:"Felipe II of Spain",years:"1527–1598",y0:1527,y1:1598,region:"Iberia (Spain)",role:"Habsburg royal-sage king; patron of astrologers and esoterica — closes the era of kings.",isIberian:true,isRoyal:true,endpoint:true,designation:"end of the era of kings"}
 ];
 export { MAGES };

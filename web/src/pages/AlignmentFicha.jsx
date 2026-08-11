@@ -4,7 +4,7 @@
 // {date, lex, angelMap}. Presentational (renders identically server & client).
 import React, { useMemo } from 'react';
 import { SkyMap } from '../ui.jsx';
-import { SIMPLE, BODIES, GLYPH, skyAt, occupiedLetters, bySign, readableWords, displayDate, makeDate, fmtDate, eraForYear } from '../core.jsx';
+import { SIMPLE, BODIES, GLYPH, skyAt, occupiedLetters, bySign, readableWords, displayDate, makeDate, fmtDate, eraForYear, refUrl } from '../core.jsx';
 
 const SIGN_EN = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'];
 
@@ -18,7 +18,7 @@ function smallestArc(lons){
   return 360-maxGap;
 }
 
-function AlignmentFicha({date, lex, angelMap, onBack}){
+function AlignmentFicha({date, lex, angelMap, onBack, nameRefs}){
   const rows = useMemo(()=>skyAt(date),[date]);
   const occ = useMemo(()=>occupiedLetters(rows),[rows]);
   const occSigns = useMemo(()=>new Set(rows.map(r=>r.sign)),[rows]);
@@ -75,7 +75,15 @@ function AlignmentFicha({date, lex, angelMap, onBack}){
             <div className="the">{w.disp}</div>
             <div className="read">{w.translit}</div>
             <div className="trans">{w.gloss}</div>
-            <div className="g">{w.len} letters · gematria {w.gem}{w.name && <span style={{color:'var(--blue)'}}> · name</span>}{w.angelName && <span style={{color:'var(--violet)'}}> · angel</span>}</div>
+            <div className="g">{w.len} letters · gematria {w.gem}{w.angelName && <span style={{color:'var(--violet)'}}> · angel</span>}</div>
+            {(w.person||w.place||w.compound||(nameRefs&&nameRefs[w.he]&&nameRefs[w.he].n>0)) && (
+              <div style={{marginTop:4,display:'flex',flexWrap:'wrap',gap:4}}>
+                {w.person && <span className="pill" style={{color:'var(--blue)',borderColor:'var(--blue)'}}>name{w.theo?' (theophoric)':''}</span>}
+                {w.place && <span className="pill" style={{color:'var(--green)',borderColor:'var(--green)'}} title="A biblical PLACE — proper locative noun in Strong (city, mountain, region…)">place</span>}
+                {w.compound && <span className="pill" style={{color:'var(--warn)',borderColor:'var(--warn)'}} title="Concatenated multi-root entry whose gloss is truncated">compound</span>}
+                {nameRefs && nameRefs[w.he] && nameRefs[w.he].n>0 && (()=>{ const r=nameRefs[w.he]; return <span className="pill" style={{color:'var(--violet)',borderColor:'var(--violet)'}} title={'Where this name appears in the Hebrew Bible (Sefaria): '+r.refs.join(', ')}>📖 {r.refs[0]}{r.n>1?' · +'+(r.n-1):''}</span>; })()}
+              </div>
+            )}
           </div>
         ))}
       </div> : <div className="muted">No date-specific readable names on this day.</div>}

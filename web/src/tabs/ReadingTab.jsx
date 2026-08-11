@@ -73,7 +73,6 @@ function YhvhTab({date, occ, yhvhOk, bs}){
 
 function GenesisTab({date, occ, genesisOk}){
   const lengths=[6,3,5,2,5,3,4];
-  const letters=GEN_VALUES.reduce((a,v)=>a+ (''+v).split('').reduce((x,d)=>x+ +d,0),0); // not used; keep for note
   const words37=GEN_VALUES.filter(v=>v%37===0).length;
   const sub37=countSubset(GEN_VALUES,37);
   const totalLetters=lengths.reduce((a,b)=>a+b,0);
@@ -96,7 +95,7 @@ function GenesisTab({date, occ, genesisOk}){
     </div>
     <h3>37×73 structure of the 7 words (§15b.5 — verified)</h3>
     <ul className="muted">
-      <li>Total = 2701 = 37×73 = T₇₃. Letter count = {totalLetters} = T₇ (7+8/2×… = 28). 7 words × {totalLetters} letters = {7*totalLetters} = 14².</li>
+      <li>Total = 2701 = 37×73 = T₇₃. Letter count = {totalLetters} = T₇ (7×8/2 = 28). 7 words × {totalLetters} letters = {7*totalLetters} = 14².</li>
       <li>Word-sums that are multiples of 37: <b>{words37}/7</b> (407 = 11×37, 296 = 8×37 — the last two).</li>
       <li>Subsets (of 2⁷−1 = 127) whose sum is a multiple of 37: <b>{sub37}/127</b> (uniform chance ≈ {127/37}≈3.4).</li>
       <li><b style={{color:'var(--green)'}}>Null</b>: 100,000 permutations of the 28-letter multiset regrouped into the fixed lengths (6,3,5,2,5,3,4), mulberry32 seed 20260807 → subsets p ≈ <b>3.1×10⁻⁴</b>; words p ≈ 8.2×10⁻³. The partition is genuinely biased toward 37, beyond the trivial total=2701=37×73.</li>

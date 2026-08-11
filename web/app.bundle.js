@@ -5,11 +5,7 @@ var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __commonJS = (cb, mod) => function __require() {
-  try {
-    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
-  } catch (e) {
-    throw mod = 0, e;
-  }
+  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 var __copyProps = (to, from, except, desc) => {
   if (from && typeof from === "object" || typeof from === "function") {
@@ -39,19 +35,19 @@ var require_react_development = __commonJS({
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
         }
         var ReactVersion = "18.3.1";
-        var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
-        var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
-        var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
-        var REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode");
-        var REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler");
-        var REACT_PROVIDER_TYPE = /* @__PURE__ */ Symbol.for("react.provider");
-        var REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context");
-        var REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref");
-        var REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense");
-        var REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list");
-        var REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo");
-        var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
-        var REACT_OFFSCREEN_TYPE = /* @__PURE__ */ Symbol.for("react.offscreen");
+        var REACT_ELEMENT_TYPE = Symbol.for("react.element");
+        var REACT_PORTAL_TYPE = Symbol.for("react.portal");
+        var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
+        var REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode");
+        var REACT_PROFILER_TYPE = Symbol.for("react.profiler");
+        var REACT_PROVIDER_TYPE = Symbol.for("react.provider");
+        var REACT_CONTEXT_TYPE = Symbol.for("react.context");
+        var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref");
+        var REACT_SUSPENSE_TYPE = Symbol.for("react.suspense");
+        var REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list");
+        var REACT_MEMO_TYPE = Symbol.for("react.memo");
+        var REACT_LAZY_TYPE = Symbol.for("react.lazy");
+        var REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen");
         var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
         var FAUX_ITERATOR_SYMBOL = "@@iterator";
         function getIteratorFn(maybeIterable) {
@@ -1015,7 +1011,7 @@ var require_react_development = __commonJS({
         }
         var REACT_MODULE_REFERENCE;
         {
-          REACT_MODULE_REFERENCE = /* @__PURE__ */ Symbol.for("react.module.reference");
+          REACT_MODULE_REFERENCE = Symbol.for("react.module.reference");
         }
         function isValidElementType(type) {
           if (typeof type === "string" || typeof type === "function") {
@@ -1087,7 +1083,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher.useContext(Context);
         }
-        function useState14(initialState) {
+        function useState16(initialState) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState);
         }
@@ -1099,7 +1095,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
-        function useEffect14(create, deps) {
+        function useEffect15(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useEffect(create, deps);
         }
@@ -1111,11 +1107,11 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useLayoutEffect(create, deps);
         }
-        function useCallback(callback, deps) {
+        function useCallback2(callback, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useCallback(callback, deps);
         }
-        function useMemo14(create, deps) {
+        function useMemo15(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useMemo(create, deps);
         }
@@ -1878,19 +1874,19 @@ var require_react_development = __commonJS({
         exports.memo = memo;
         exports.startTransition = startTransition;
         exports.unstable_act = act;
-        exports.useCallback = useCallback;
+        exports.useCallback = useCallback2;
         exports.useContext = useContext;
         exports.useDebugValue = useDebugValue;
         exports.useDeferredValue = useDeferredValue;
-        exports.useEffect = useEffect14;
+        exports.useEffect = useEffect15;
         exports.useId = useId;
         exports.useImperativeHandle = useImperativeHandle;
         exports.useInsertionEffect = useInsertionEffect;
         exports.useLayoutEffect = useLayoutEffect;
-        exports.useMemo = useMemo14;
+        exports.useMemo = useMemo15;
         exports.useReducer = useReducer;
         exports.useRef = useRef13;
-        exports.useState = useState14;
+        exports.useState = useState16;
         exports.useSyncExternalStore = useSyncExternalStore;
         exports.useTransition = useTransition;
         exports.version = ReactVersion;
@@ -2386,9 +2382,9 @@ var require_react_dom_development = __commonJS({
         if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
         }
-        var React20 = require_react();
+        var React26 = require_react();
         var Scheduler = require_scheduler();
-        var ReactSharedInternals = React20.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React26.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         var suppressWarning = false;
         function setSuppressWarning(newSuppressWarning) {
           {
@@ -2608,7 +2604,6 @@ var require_react_dom_development = __commonJS({
           }
           switch (typeof value) {
             case "function":
-            // $FlowIssue symbol is perfectly valid here
             case "symbol":
               return true;
             case "boolean": {
@@ -3181,24 +3176,24 @@ var require_react_dom_development = __commonJS({
             }
           }
         }
-        var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
-        var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
-        var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
-        var REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode");
-        var REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler");
-        var REACT_PROVIDER_TYPE = /* @__PURE__ */ Symbol.for("react.provider");
-        var REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context");
-        var REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref");
-        var REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense");
-        var REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list");
-        var REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo");
-        var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
-        var REACT_SCOPE_TYPE = /* @__PURE__ */ Symbol.for("react.scope");
-        var REACT_DEBUG_TRACING_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.debug_trace_mode");
-        var REACT_OFFSCREEN_TYPE = /* @__PURE__ */ Symbol.for("react.offscreen");
-        var REACT_LEGACY_HIDDEN_TYPE = /* @__PURE__ */ Symbol.for("react.legacy_hidden");
-        var REACT_CACHE_TYPE = /* @__PURE__ */ Symbol.for("react.cache");
-        var REACT_TRACING_MARKER_TYPE = /* @__PURE__ */ Symbol.for("react.tracing_marker");
+        var REACT_ELEMENT_TYPE = Symbol.for("react.element");
+        var REACT_PORTAL_TYPE = Symbol.for("react.portal");
+        var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
+        var REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode");
+        var REACT_PROFILER_TYPE = Symbol.for("react.profiler");
+        var REACT_PROVIDER_TYPE = Symbol.for("react.provider");
+        var REACT_CONTEXT_TYPE = Symbol.for("react.context");
+        var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref");
+        var REACT_SUSPENSE_TYPE = Symbol.for("react.suspense");
+        var REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list");
+        var REACT_MEMO_TYPE = Symbol.for("react.memo");
+        var REACT_LAZY_TYPE = Symbol.for("react.lazy");
+        var REACT_SCOPE_TYPE = Symbol.for("react.scope");
+        var REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode");
+        var REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen");
+        var REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden");
+        var REACT_CACHE_TYPE = Symbol.for("react.cache");
+        var REACT_TRACING_MARKER_TYPE = Symbol.for("react.tracing_marker");
         var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
         var FAUX_ITERATOR_SYMBOL = "@@iterator";
         function getIteratorFn(maybeIterable) {
@@ -3623,7 +3618,6 @@ var require_react_dom_development = __commonJS({
               return "SuspenseList";
             case TracingMarkerComponent:
               return "TracingMarker";
-            // The display name for this tags come from the user-provided type:
             case ClassComponent:
             case FunctionComponent:
             case IncompleteClassComponent:
@@ -3995,7 +3989,7 @@ var require_react_dom_development = __commonJS({
           {
             if (props.value == null) {
               if (typeof props.children === "object" && props.children !== null) {
-                React20.Children.forEach(props.children, function(child) {
+                React26.Children.forEach(props.children, function(child) {
                   if (child == null) {
                     return;
                   }
@@ -4621,10 +4615,6 @@ var require_react_dom_development = __commonJS({
             return typeof props.is === "string";
           }
           switch (tagName) {
-            // These are reserved SVG and MathML elements.
-            // We don't mind this list too much because we expect it to never grow.
-            // The alternative is to track the namespace in a few places which is convoluted.
-            // https://w3c.github.io/webcomponents/spec/custom/#custom-elements-core-concepts
             case "annotation-xml":
             case "color-profile":
             case "font-face":
@@ -7454,7 +7444,6 @@ var require_react_dom_development = __commonJS({
         }
         function getEventPriority(domEventName) {
           switch (domEventName) {
-            // Used by SimpleEventPlugin:
             case "cancel":
             case "click":
             case "close":
@@ -7490,20 +7479,14 @@ var require_react_dom_development = __commonJS({
             case "touchend":
             case "touchstart":
             case "volumechange":
-            // Used by polyfills:
-            // eslint-disable-next-line no-fallthrough
             case "change":
             case "selectionchange":
             case "textInput":
             case "compositionstart":
             case "compositionend":
             case "compositionupdate":
-            // Only enableCreateEventHandleAPI:
-            // eslint-disable-next-line no-fallthrough
             case "beforeblur":
             case "afterblur":
-            // Not used by React but could be by user code:
-            // eslint-disable-next-line no-fallthrough
             case "beforeinput":
             case "blur":
             case "fullscreenchange":
@@ -7528,8 +7511,6 @@ var require_react_dom_development = __commonJS({
             case "toggle":
             case "touchmove":
             case "wheel":
-            // Not used by React but could be by user code:
-            // eslint-disable-next-line no-fallthrough
             case "mouseenter":
             case "mouseleave":
             case "pointerenter":
@@ -8715,7 +8696,6 @@ var require_react_dom_development = __commonJS({
         function extractEvents$3(dispatchQueue, domEventName, targetInst, nativeEvent, nativeEventTarget, eventSystemFlags, targetContainer) {
           var targetNode = targetInst ? getNodeFromInstance(targetInst) : window;
           switch (domEventName) {
-            // Track the input node that has focus.
             case "focusin":
               if (isTextInputElement(targetNode) || targetNode.contentEditable === "true") {
                 activeElement$1 = targetNode;
@@ -8728,8 +8708,6 @@ var require_react_dom_development = __commonJS({
               activeElementInst$1 = null;
               lastSelection = null;
               break;
-            // Don't fire the event while the user is dragging. This matches the
-            // semantics of the native select event.
             case "mousedown":
               mouseDown = true;
               break;
@@ -8739,20 +8717,10 @@ var require_react_dom_development = __commonJS({
               mouseDown = false;
               constructSelectEvent(dispatchQueue, nativeEvent, nativeEventTarget);
               break;
-            // Chrome and IE fire non-standard event when selection is changed (and
-            // sometimes when it hasn't). IE's event fires out of order with respect
-            // to key and input events on deletion, so we discard it.
-            //
-            // Firefox doesn't support selectionchange, so check selection status
-            // after each key entry. The selection changes after keydown and before
-            // keyup, but we check on keydown as well in the case of holding down a
-            // key, when multiple keydown events are fired but only one keyup is.
-            // This is also our approach for IE handling, for the reason above.
             case "selectionchange":
               if (skipSelectionChangeEvent) {
                 break;
               }
-            // falls through
             case "keydown":
             case "keyup":
               constructSelectEvent(dispatchQueue, nativeEvent, nativeEventTarget);
@@ -8835,7 +8803,6 @@ var require_react_dom_development = __commonJS({
               if (getEventCharCode(nativeEvent) === 0) {
                 return;
               }
-            /* falls through */
             case "keydown":
             case "keyup":
               SyntheticEventCtor = SyntheticKeyboardEvent;
@@ -8856,14 +8823,11 @@ var require_react_dom_development = __commonJS({
               if (nativeEvent.button === 2) {
                 return;
               }
-            /* falls through */
             case "auxclick":
             case "dblclick":
             case "mousedown":
             case "mousemove":
             case "mouseup":
-            // TODO: Disabled elements should not respond to mouse events
-            /* falls through */
             case "mouseout":
             case "mouseover":
             case "contextmenu":
@@ -9777,8 +9741,6 @@ var require_react_dom_development = __commonJS({
             for (var _i = 0; _i < attributes.length; _i++) {
               var name = attributes[_i].name.toLowerCase();
               switch (name) {
-                // Controlled attributes are not validated
-                // TODO: Only ignore them on controlled tags.
                 case "value":
                   break;
                 case "checked":
@@ -10046,37 +10008,24 @@ var require_react_dom_development = __commonJS({
           };
           var isTagValidWithParent = function(tag, parentTag) {
             switch (parentTag) {
-              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-inselect
               case "select":
                 return tag === "option" || tag === "optgroup" || tag === "#text";
               case "optgroup":
                 return tag === "option" || tag === "#text";
-              // Strictly speaking, seeing an <option> doesn't mean we're in a <select>
-              // but
               case "option":
                 return tag === "#text";
-              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-intd
-              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-incaption
-              // No special behavior since these rules fall back to "in body" mode for
-              // all except special table nodes which cause bad parsing behavior anyway.
-              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-intr
               case "tr":
                 return tag === "th" || tag === "td" || tag === "style" || tag === "script" || tag === "template";
-              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-intbody
               case "tbody":
               case "thead":
               case "tfoot":
                 return tag === "tr" || tag === "style" || tag === "script" || tag === "template";
-              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-incolgroup
               case "colgroup":
                 return tag === "col" || tag === "template";
-              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-intable
               case "table":
                 return tag === "caption" || tag === "colgroup" || tag === "tbody" || tag === "tfoot" || tag === "thead" || tag === "style" || tag === "script" || tag === "template";
-              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-inhead
               case "head":
                 return tag === "base" || tag === "basefont" || tag === "bgsound" || tag === "link" || tag === "meta" || tag === "title" || tag === "noscript" || tag === "noframes" || tag === "style" || tag === "script" || tag === "template";
-              // https://html.spec.whatwg.org/multipage/semantics.html#the-html-element
               case "html":
                 return tag === "head" || tag === "body" || tag === "frameset";
               case "frameset":
@@ -13035,7 +12984,6 @@ var require_react_dom_development = __commonJS({
             case CaptureUpdate: {
               workInProgress2.flags = workInProgress2.flags & ~ShouldCapture | DidCapture;
             }
-            // Intentional fallthrough
             case UpdateState: {
               var _payload = update.payload;
               var partialState;
@@ -19353,7 +19301,6 @@ var require_react_dom_development = __commonJS({
               insertOrAppendPlacementNodeIntoContainer(finishedWork, _before, _parent);
               break;
             }
-            // eslint-disable-next-line-no-fallthrough
             default:
               throw new Error("Invalid host parent fiber. This error is likely caused by a bug in React. Please file an issue.");
           }
@@ -19453,7 +19400,6 @@ var require_react_dom_development = __commonJS({
                 safelyDetachRef(deletedFiber, nearestMountedAncestor);
               }
             }
-            // eslint-disable-next-line-no-fallthrough
             case HostText: {
               {
                 var prevHostParent = hostParent;
@@ -20715,9 +20661,6 @@ var require_react_dom_development = __commonJS({
             case RootFatalErrored: {
               throw new Error("Root did not complete. This is a bug in React.");
             }
-            // Flow knows about invariant, so it complains if I add a break
-            // statement, but eslint doesn't know about invariant, so it complains
-            // if I do. eslint-disable-next-line no-fallthrough
             case RootErrored: {
               commitRoot(root2, workInProgressRootRecoverableErrors, workInProgressTransitions);
               break;
@@ -22363,15 +22306,10 @@ var require_react_dom_development = __commonJS({
               case REACT_OFFSCREEN_TYPE:
                 return createFiberFromOffscreen(pendingProps, mode, lanes, key);
               case REACT_LEGACY_HIDDEN_TYPE:
-              // eslint-disable-next-line no-fallthrough
               case REACT_SCOPE_TYPE:
-              // eslint-disable-next-line no-fallthrough
               case REACT_CACHE_TYPE:
-              // eslint-disable-next-line no-fallthrough
               case REACT_TRACING_MARKER_TYPE:
-              // eslint-disable-next-line no-fallthrough
               case REACT_DEBUG_TRACING_MODE_TYPE:
-              // eslint-disable-next-line no-fallthrough
               default: {
                 if (typeof type === "object" && type !== null) {
                   switch (type.$$typeof) {
@@ -23585,13 +23523,13 @@ var require_client = __commonJS({
 });
 
 // app.jsx
-var import_react19 = __toESM(require_react());
+var import_react25 = __toESM(require_react());
 var import_client = __toESM(require_client());
 
 // src/App.jsx
-var import_react18 = __toESM(require_react());
+var import_react24 = __toESM(require_react());
 
-// ../data/astronomy-engine.mjs
+// ../../../../../tmp/ae.mjs
 var C_AUDAY = 173.1446326846693;
 var KM_PER_AU = 14959787069098932e-8;
 var DEG2RAD = 0.017453292519943295;
@@ -25881,6 +25819,53 @@ var ANGEL_LEXICON = [
   ["\u05D9\u05E9\u05E8\u05E4\u05D9\u05D0\u05DC", "Israfil (Jewish form)", "Jewish lists \xB7 trumpet"]
 ];
 var ANGEL_NAME_MAP = new Map(ANGEL_LEXICON.map(([he, en, src]) => [norm(he), { en, src }]));
+var SEFARIA_TITLE = {
+  "Gen": "Genesis",
+  "Ex": "Exodus",
+  "Lev": "Leviticus",
+  "Num": "Numbers",
+  "Deut": "Deuteronomy",
+  "Josh": "Joshua",
+  "Judg": "Judges",
+  "1 Sam": "I_Samuel",
+  "2 Sam": "II_Samuel",
+  "1 Ki": "I_Kings",
+  "2 Ki": "II_Kings",
+  "Isa": "Isaiah",
+  "Jer": "Jeremiah",
+  "Ezek": "Ezekiel",
+  "Hos": "Hosea",
+  "Joel": "Joel",
+  "Amos": "Amos",
+  "Obad": "Obadiah",
+  "Jon": "Jonah",
+  "Mic": "Micah",
+  "Nah": "Nahum",
+  "Hab": "Habakkuk",
+  "Zeph": "Zephaniah",
+  "Hag": "Haggai",
+  "Zech": "Zechariah",
+  "Mal": "Malachi",
+  "Ps": "Psalms",
+  "Prov": "Proverbs",
+  "Job": "Job",
+  "Song": "Song_of_Songs",
+  "Ruth": "Ruth",
+  "Lam": "Lamentations",
+  "Eccl": "Ecclesiastes",
+  "Esth": "Esther",
+  "Dan": "Daniel",
+  "Ezra": "Ezra",
+  "Neh": "Nehemiah",
+  "1 Chr": "I_Chronicles",
+  "2 Chr": "II_Chronicles"
+};
+function refUrl(ref) {
+  const li = String(ref).lastIndexOf(" ");
+  const book = ref.slice(0, li), cv = ref.slice(li + 1);
+  const t = SEFARIA_TITLE[book];
+  return t ? `https://www.sefaria.org/${t}.${cv}` : null;
+}
 function readableWords(occ, LEX, angelMap) {
   const res = [], seen = /* @__PURE__ */ new Set();
   for (const [cons, trans, gloss, pos] of LEX) {
@@ -25902,6 +25887,8 @@ function readableWords(occ, LEX, angelMap) {
         pal: isPalindrome(cons),
         m37: gematria(cons) % 37 === 0,
         name: (pos || "").startsWith("n-pr"),
+        person: /n-pr-m|n-pr-f/.test(pos || "") || (pos || "").startsWith("n-pr") && !/loc/.test(pos || ""),
+        place: /loc/.test(pos || ""),
         theo: /אל|יהו|יאל|יה/.test(cons),
         compound: /\s/.test(trans),
         angel: am ? { el: am.el, yh: am.yh } : null,
@@ -25911,9 +25898,11 @@ function readableWords(occ, LEX, angelMap) {
   }
   for (const [he, en, src] of ANGEL_LEXICON) {
     if (seen.has(he)) continue;
-    if (formable(he, occ)) {
+    const n = norm(he);
+    if (formable(n, occ)) {
       seen.add(he);
-      const simp = [...simpleSet(he)].sort().join("");
+      const gem = gematria(n);
+      const simp = [...simpleSet(n)].sort().join("");
       res.push({
         he,
         disp: displayHe(he),
@@ -25921,14 +25910,16 @@ function readableWords(occ, LEX, angelMap) {
         gloss: "angel \u2014 " + en,
         pos: "n-pr",
         len: he.length,
-        gem: gematria(he),
+        gem,
         simp,
         pal: isPalindrome(he),
-        m37: gematria(he) % 37 === 0,
+        m37: gem % 37 === 0,
         name: true,
+        person: true,
+        place: false,
         theo: /אל|יה/.test(he),
         compound: false,
-        angel: angelMap ? angelMap.get(norm(he)) : null,
+        angel: angelMap ? angelMap.get(n) : null,
         angelName: { en, src }
       });
     }
@@ -26231,31 +26222,31 @@ function SkyMap({ rows, occ, hl }) {
   });
   const HLS = hl ? new Set(hl) : null;
   const occupied = occ.size;
-  return /* @__PURE__ */ import_react.default.createElement("svg", { viewBox: "0 0 440 440", width: "100%", height: "auto", style: { maxWidth: "100%" }, role: "img", "aria-label": HLS ? `Sky map: word requires ${[...HLS].join(" ")} (${occupied} signs occupied)` : `Sky map: ${occupied} of 12 signs occupied` }, /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: R, fill: "#0e1320", stroke: "#283145", strokeWidth: "2" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: Rp + 22, fill: "none", stroke: "#1c2333", strokeWidth: "1" }), SIGNS.map((s, i) => {
+  return /* @__PURE__ */ import_react.default.createElement("svg", { viewBox: "0 0 440 440", width: "100%", height: "auto", style: { maxWidth: "100%" }, role: "img", "aria-label": HLS ? `Sky map: word requires ${[...HLS].join(" ")} (${occupied} signs occupied)` : `Sky map: ${occupied} of 12 signs occupied` }, /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: R, fill: "#0f0f15", stroke: "#2a2a38", strokeWidth: "2" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: Rp + 22, fill: "none", stroke: "#202028", strokeWidth: "1" }), SIGNS.map((s, i) => {
     const [x0, y0] = pt(i * 30, R), [x1, y1] = pt((i + 1) * 30, R);
     const on = occ.has(SIMPLE[s][0]);
     const isHl = HLS && HLS.has(SIMPLE[s][0]);
-    const fill = isHl ? "rgba(232,200,122,0.16)" : on ? "rgba(127,176,255,0.10)" : "transparent";
-    const stroke = isHl ? "#e8c87a" : on ? "#3a4762" : "#283145";
+    const fill = isHl ? "rgba(232,200,122,0.18)" : on ? "rgba(207,208,232,0.10)" : "transparent";
+    const stroke = isHl ? "#e8c87a" : on ? "#3a3a4a" : "#2a2a38";
     return /* @__PURE__ */ import_react.default.createElement("path", { key: s, d: `M ${C} ${C} L ${x0} ${y0} A ${R} ${R} 0 0 0 ${x1} ${y1} Z`, fill, stroke, strokeWidth: isHl ? 1.4 : 0.7 });
   }), SIGNS.map((s, i) => {
     const [lx, ly] = pt(i * 30 + 15, R - 20);
     const [nx, ny] = pt(i * 30 + 15, R - 3);
     const on = occ.has(SIMPLE[s][0]), n = signCount[s] || 0;
     const isHl = HLS && HLS.has(SIMPLE[s][0]);
-    const letterFill = isHl ? "#e8c87a" : on ? "#cfe0ff" : "#5a647a";
-    const nameFill = isHl ? "#e8c87a" : on ? "#8aa0c0" : "#424b5e";
+    const letterFill = isHl ? "#e8c87a" : on ? "#cfd0e8" : "#5a5a6e";
+    const nameFill = isHl ? "#e8c87a" : on ? "#9ca3af" : "#4a4a55";
     return /* @__PURE__ */ import_react.default.createElement("g", { key: s }, /* @__PURE__ */ import_react.default.createElement("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "21", fontWeight: isHl ? 700 : 400, fill: letterFill }, SIMPLE[s][0]), /* @__PURE__ */ import_react.default.createElement("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "8.5", fill: nameFill }, s, n > 1 ? " \xB7\xD7" + n : ""));
   }), rows.map((r) => {
     const [px, py] = pt(r.lon, Rp);
-    return /* @__PURE__ */ import_react.default.createElement("g", { key: r.body }, /* @__PURE__ */ import_react.default.createElement("circle", { cx: px, cy: py, r: "8.5", fill: "#131826", stroke: "#7fb0ff", strokeWidth: "1.2" }), /* @__PURE__ */ import_react.default.createElement("text", { x: px, y: py, textAnchor: "middle", dominantBaseline: "middle", fontSize: "12", fill: "#7fb0ff" }, GLYPH[r.body]), r.boundary && /* @__PURE__ */ import_react.default.createElement("circle", { cx: px, cy: py, r: "11.5", fill: "none", stroke: "#ffcf6a", strokeWidth: "1", strokeDasharray: "2 2", opacity: "0.8" }));
-  }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: "32", fill: "#0e1320", stroke: "#2a3346", strokeWidth: "1", strokeDasharray: "3 3" }), MOTHER_LON.map(([h, con, lon]) => {
+    return /* @__PURE__ */ import_react.default.createElement("g", { key: r.body }, /* @__PURE__ */ import_react.default.createElement("circle", { cx: px, cy: py, r: "8.5", fill: "#0f1518", stroke: "#5eead4", strokeWidth: "1.2" }), /* @__PURE__ */ import_react.default.createElement("text", { x: px, y: py, textAnchor: "middle", dominantBaseline: "middle", fontSize: "12", fill: "#5eead4" }, GLYPH[r.body]), r.boundary && /* @__PURE__ */ import_react.default.createElement("circle", { cx: px, cy: py, r: "11.5", fill: "none", stroke: "#f4a8c0", strokeWidth: "1", strokeDasharray: "2 2", opacity: "0.8" }));
+  }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: "32", fill: "#0f0f15", stroke: "#2a2a38", strokeWidth: "1", strokeDasharray: "3 3" }), MOTHER_LON.map(([h, con, lon]) => {
     const [lx, ly] = pt(lon, 18);
     const [nx, ny] = pt(lon, 38);
     const [ox, oy] = pt(lon, R - 24);
     const [sx, sy] = pt(lon, 44);
-    return /* @__PURE__ */ import_react.default.createElement("g", { key: h }, /* @__PURE__ */ import_react.default.createElement("line", { x1: sx, y1: sy, x2: ox, y2: oy, stroke: "#33405a", strokeWidth: "0.6", strokeDasharray: "2 3", opacity: "0.55" }), /* @__PURE__ */ import_react.default.createElement("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "19", fill: "#9aa6bd" }, h), /* @__PURE__ */ import_react.default.createElement("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "5.6", fill: "#5d6883" }, con));
-  }), /* @__PURE__ */ import_react.default.createElement("text", { x: C, y: C + 34, textAnchor: "middle", fontSize: "6.5", fill: "#525d72" }, "3 mothers \xB7 fixed circumpolar axis"));
+    return /* @__PURE__ */ import_react.default.createElement("g", { key: h }, /* @__PURE__ */ import_react.default.createElement("line", { x1: sx, y1: sy, x2: ox, y2: oy, stroke: "#3a3a4a", strokeWidth: "0.6", strokeDasharray: "2 3", opacity: "0.55" }), /* @__PURE__ */ import_react.default.createElement("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "19", fill: "#9b8ec4" }, h), /* @__PURE__ */ import_react.default.createElement("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "5.6", fill: "#6a6a86" }, con));
+  }), /* @__PURE__ */ import_react.default.createElement("text", { x: C, y: C + 34, textAnchor: "middle", fontSize: "6.5", fill: "#6a6a86" }, "3 mothers \xB7 fixed circumpolar axis"));
 }
 function Fig({ n, doc }) {
   const f = FIGS[n];
@@ -26322,7 +26313,7 @@ function SubTabs({ items, active, onChange }) {
 
 // src/seo.jsx
 var BASE_TITLE = "Hebrew Letters in the Stars \xB7 Sefer Yetzirah Stellar Alphabet & Sky Reader";
-var BASE_DESC = "Read Hebrew words written in the sky: real planet positions (astronomy-engine) map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names. Stellar alphabet, gematria, 72 angels, ELS / Torah codes, Temurah, Ziruph, rare planetary alignments, Psalms-by-date \u2014 the live calculators behind The Apocalypse of Adam.";
+var BASE_DESC = "Read Hebrew words written in the sky: real planet positions (astronomy-engine) map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names. Sky map, alignments, reader, time, gematria, sigils, codes, psalms \u2014 the live calculators of The Apocalypse of Adam.";
 function setMeta(name, content) {
   if (typeof document === "undefined") return;
   const m = document.querySelector(`meta[name="${name}"]`);
@@ -26346,7 +26337,7 @@ function L({ href, children, ext = false }) {
 }
 function Footer() {
   const year = 2026;
-  return /* @__PURE__ */ import_react2.default.createElement("footer", { className: "site-footer" }, /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react2.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react2.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions (astronomy-engine) map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react2.default.createElement(L, { href: PAPER, ext: true }, "The paper \u2014 The Reader of the Sky \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Felipe II"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/alignments" }, "Stellar alignments (171 fiches)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/" }, "Sky reader app")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react2.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react2.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react2.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react2.default.createElement("span", null, "\xA9 ", year, " V. Nos & Julian S. \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react2.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react2.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
+  return /* @__PURE__ */ import_react2.default.createElement("footer", { className: "site-footer" }, /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react2.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react2.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react2.default.createElement(L, { href: PAPER, ext: true }, "The paper \u2014 The Reader of the Sky \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Felipe II"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/alignments" }, "Stellar alignments (171 fiches)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/" }, "Sky reader app")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react2.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react2.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react2.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react2.default.createElement("span", null, "\xA9 ", year, " V. Nos & Julian S. \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react2.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react2.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
 }
 
 // src/data/prophets.js
@@ -26384,7 +26375,7 @@ var RAW = [
   { name: "Abraham Abulafia", he: "", era: "CE", y0: 1240, y1: 1291, region: "Spain/Italy", role: "Medieval prophetic Kabbalist; ecstatic practices and messianic self-claims (13th c.).", thread: "mystical" },
   { name: "Sabbatai Tsevi", he: "", era: "CE", y0: 1626, y1: 1676, region: "Smyrna/Ottoman lands", role: "Smyrna-born messianic claimant; center of the 1665\u201366 Sabbatean movement.", thread: "sabbatean-frankist" },
   { name: "Nathan of Gaza", he: "", era: "CE", y0: 1644, y1: 1680, region: "Ottoman Gaza", role: "Sabbatai Tsevi's prophet; theological architect of Sabbatean messianism.", thread: "sabbatean-frankist" },
-  { name: "Jacob Frank", he: "", era: "CE", y0: 1726, y1: 1791, region: "Poland/Ottoman", role: "Polish Sabbatean successor; founder of the Frankist movement \u2014 final endpoint of this lineage.", thread: "sabbatean-frankist", endpoint: true }
+  { name: "Jacob Frank", he: "", era: "CE", y0: 1726, y1: 1791, region: "Poland/Ottoman", role: "Polish Sabbatean successor; founder of the Frankist movement, cast by his own doctrine as the Antichrist \u2014 the antinomian messianic counterpart who abolishes the old law.", thread: "sabbatean-frankist", endpoint: true, designation: "Antichrist" }
 ];
 var PROPHETS = RAW.map((p) => ({ ...p, he: (p.he || "").replace(POINTED, "") }));
 
@@ -26413,7 +26404,7 @@ var MAGES = [
   { name: "Paracelsus", years: "1493\u20131541", y0: 1493, y1: 1541, region: "Switzerland", role: "Physician-magus; astral-magic cosmology of signatures linking stars, metals and letters.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "Nostradamus", years: "1503\u20131566", y0: 1503, y1: 1566, region: "France", role: "Court astrologer-prophet; consulted by Catherine de M\xE9dicis in the royal-magus mode.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "John Dee", years: "1527\u20131609", y0: 1527, y1: 1609, region: "England", role: "Royal astrologer to Elizabeth I; philosopher of Enochian stellar-angelic letters.", isIberian: false, isRoyal: false, endpoint: false },
-  { name: "Felipe II of Spain", years: "1527\u20131598", y0: 1527, y1: 1598, region: "Iberia (Spain)", role: "Habsburg royal-sage king; patron of astrologers and esoterica \u2014 closes the era of kings.", isIberian: true, isRoyal: true, endpoint: true }
+  { name: "Felipe II of Spain", years: "1527\u20131598", y0: 1527, y1: 1598, region: "Iberia (Spain)", role: "Habsburg royal-sage king; patron of astrologers and esoterica \u2014 closes the era of kings.", isIberian: true, isRoyal: true, endpoint: true, designation: "end of the era of kings" }
 ];
 
 // src/data/mages-content.js
@@ -26688,13 +26679,13 @@ var PAGE_SIZE = 48;
 function FilterChip({ active, count, label, title, onToggle }) {
   return /* @__PURE__ */ import_react4.default.createElement("button", { className: active ? "on" : "", onClick: onToggle, title, "aria-pressed": active }, label, " (", count, ")");
 }
-function TranslatorTab({ date, occ, words, q, setQ, genData, onOpen }) {
+function TranslatorTab({ date, occ, words, q, setQ, genData, onOpen, nameRefs }) {
   const [page, setPage] = (0, import_react4.useState)(0);
   const [sel, setSel] = (0, import_react4.useState)(/* @__PURE__ */ new Set(["date"]));
   const [mode, setMode] = (0, import_react4.useState)("include");
   const [minLen, setMinLen] = (0, import_react4.useState)(1);
   const qn = q.trim().toLowerCase();
-  const PROPS = { date: "simp", pal: "pal", g37: "m37", angel: "angelName", name: "name", comp: "compound" };
+  const PROPS = { date: "simp", pal: "pal", g37: "m37", angel: "angelName", name: "name", place: "place", comp: "compound" };
   const CATS = ["special", "frequent", "common"];
   const toggle = (id) => setSel((prev) => {
     const n = new Set(prev);
@@ -26743,6 +26734,7 @@ function TranslatorTab({ date, occ, words, q, setQ, genData, onOpen }) {
   const g37Count = (0, import_react4.useMemo)(() => words.filter((w) => w.m37).length, [words]);
   const angelCount = (0, import_react4.useMemo)(() => words.filter((w) => w.angelName).length, [words]);
   const nameCount = (0, import_react4.useMemo)(() => words.filter((w) => w.name).length, [words]);
+  const placeCount = (0, import_react4.useMemo)(() => words.filter((w) => w.place).length, [words]);
   const compCount = (0, import_react4.useMemo)(() => words.filter((w) => w.compound).length, [words]);
   const specialCount = (0, import_react4.useMemo)(() => words.filter((w) => wordCat(w) === "special").length, [words, probsAll]);
   const frequentCount = (0, import_react4.useMemo)(() => words.filter((w) => wordCat(w) === "frequent").length, [words, probsAll]);
@@ -26750,16 +26742,19 @@ function TranslatorTab({ date, occ, words, q, setQ, genData, onOpen }) {
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const cur = Math.min(page, pages - 1);
   const slice = filtered.slice(cur * PAGE_SIZE, cur * PAGE_SIZE + PAGE_SIZE);
-  return /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("h2", null, "Reader \u2014 everything readable on ", date, " ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill" }, words.length, " words"), " ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, "\xB7 click a gloss for its single-reading page (sky map \xB7 year timeline \xB7 Wikipedia)")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "controls", style: { marginBottom: 8 } }, /* @__PURE__ */ import_react4.default.createElement("input", { type: "text", placeholder: "search by gloss or transliteration\u2026", value: q, onChange: (e) => setQ(e.target.value), style: { flex: "1 1 240px" }, autoFocus: true, "aria-label": "Search readable words" })), /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 6, fontSize: ".8rem" } }, "Select filters, then choose a mode. ", /* @__PURE__ */ import_react4.default.createElement("b", null, "Include \u2713"), " keeps only words matching ", /* @__PURE__ */ import_react4.default.createElement("b", null, "all"), " selected filters; ", /* @__PURE__ */ import_react4.default.createElement("b", null, "Exclude \u2717"), " drops words matching ", /* @__PURE__ */ import_react4.default.createElement("b", null, "any"), " selected filter. With no filter selected, all words show. Glosses are Strong's English."), /* @__PURE__ */ import_react4.default.createElement("div", { className: "controls", style: { marginBottom: 8, flexWrap: "wrap", alignItems: "center" } }, /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".8rem" } }, "filters:"), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("date"), count: dateCount, label: "date-specific", title: "Words with zodiac simples (date signal). Include = only date-specific; exclude = only always-readable", onToggle: () => toggle("date") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("pal"), count: palCount, label: "palindrome", title: "Consonant palindrome (reads the same backwards)", onToggle: () => toggle("pal") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("g37"), count: g37Count, label: "gematria \xD737", title: "Gematria is a multiple of 37", onToggle: () => toggle("g37") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("angel"), count: angelCount, label: "angel name", title: "A known angel name in Hebrew \u2014 Bible, Apocrypha, 1 Enoch watchers, Kabbalah, Islamic/Judeo-Arabic (Michael, Gabriel, Raphael, Uriel, Metatron, Sandalphon, Raziel, Azrael, the Watchers\u2026). Matched by consonants, not suffix.", onToggle: () => toggle("angel") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("name"), count: nameCount, label: "name (proper)", title: "The word is a proper noun (name) in Strong \u2014 incl. theophoric names bearing \u05D0\u05DC / \u05D9\u05D4", onToggle: () => toggle("name") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("comp"), count: compCount, label: "compound", title: "Concatenated multi-root entry whose gloss is truncated (e.g. 'dove of')", onToggle: () => toggle("comp") }), /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".8rem", marginLeft: 4 } }, "\xB7"), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("special"), count: specialCount, label: "special", title: "Empirically rare this year: required simples co-occupied < 20% of days (green). Include = only rare/special words", onToggle: () => toggle("special") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("frequent"), count: frequentCount, label: "frequent", title: "Empirically moderate this year: required simples co-occupied 20\u201350% of days (amber)", onToggle: () => toggle("frequent") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("common"), count: commonCount, label: "common", title: "Empirically common this year: required simples co-occupied \u2265 50% of days (red) \u2014 incl. always-readable words (no simples)", onToggle: () => toggle("common") }), /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".8rem", marginLeft: 6 } }, "mode:"), /* @__PURE__ */ import_react4.default.createElement("button", { className: mode === "include" ? "on" : "", onClick: () => setMode("include"), title: "Keep only words matching ALL selected filters", "aria-pressed": mode === "include" }, "\u2713 include"), /* @__PURE__ */ import_react4.default.createElement("button", { className: mode === "exclude" ? "ex" : "", onClick: () => setMode("exclude"), title: "Drop words matching ANY selected filter", "aria-pressed": mode === "exclude" }, "\u2717 exclude"), sel.size > 0 && /* @__PURE__ */ import_react4.default.createElement("button", { onClick: () => setSel(/* @__PURE__ */ new Set()), title: "Clear all selected filters", style: { fontSize: ".78rem" } }, "clear (", sel.size, ")")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "controls", style: { marginBottom: 8, flexWrap: "wrap", alignItems: "center" } }, /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted" }, "min length"), /* @__PURE__ */ import_react4.default.createElement("input", { type: "number", min: "1", max: "12", value: minLen, onChange: (e) => {
+  return /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("h2", null, "Reader \u2014 everything readable on ", date, " ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill" }, words.length, " words"), " ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, "\xB7 click a gloss for its single-reading page (sky map \xB7 year timeline \xB7 Wikipedia)")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "controls", style: { marginBottom: 8 } }, /* @__PURE__ */ import_react4.default.createElement("input", { type: "text", placeholder: "search by gloss or transliteration\u2026", value: q, onChange: (e) => setQ(e.target.value), style: { flex: "1 1 240px" }, autoFocus: true, "aria-label": "Search readable words" })), /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 6, fontSize: ".8rem" } }, "Select filters, then choose a mode. ", /* @__PURE__ */ import_react4.default.createElement("b", null, "Include \u2713"), " keeps only words matching ", /* @__PURE__ */ import_react4.default.createElement("b", null, "all"), " selected filters; ", /* @__PURE__ */ import_react4.default.createElement("b", null, "Exclude \u2717"), " drops words matching ", /* @__PURE__ */ import_react4.default.createElement("b", null, "any"), " selected filter. With no filter selected, all words show. Glosses are Strong's English."), /* @__PURE__ */ import_react4.default.createElement("div", { className: "controls", style: { marginBottom: 8, flexWrap: "wrap", alignItems: "center" } }, /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".8rem" } }, "filters:"), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("date"), count: dateCount, label: "date-specific", title: "Words with zodiac simples (date signal). Include = only date-specific; exclude = only always-readable", onToggle: () => toggle("date") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("pal"), count: palCount, label: "palindrome", title: "Consonant palindrome (reads the same backwards)", onToggle: () => toggle("pal") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("g37"), count: g37Count, label: "gematria \xD737", title: "Gematria is a multiple of 37", onToggle: () => toggle("g37") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("angel"), count: angelCount, label: "angel name", title: "A known angel name in Hebrew \u2014 Bible, Apocrypha, 1 Enoch watchers, Kabbalah, Islamic/Judeo-Arabic (Michael, Gabriel, Raphael, Uriel, Metatron, Sandalphon, Raziel, Azrael, the Watchers\u2026). Matched by consonants, not suffix.", onToggle: () => toggle("angel") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("name"), count: nameCount, label: "name (proper)", title: "The word is a proper noun (name) in Strong \u2014 incl. theophoric names bearing \u05D0\u05DC / \u05D9\u05D4", onToggle: () => toggle("name") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("place"), count: placeCount, label: "place (LUGAR)", title: "The word is a biblical PLACE \u2014 a proper locative noun in Strong (n-pr-loc): city, mountain, region, etc.", onToggle: () => toggle("place") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("comp"), count: compCount, label: "compound", title: "Concatenated multi-root entry whose gloss is truncated (e.g. 'dove of')", onToggle: () => toggle("comp") }), /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".8rem", marginLeft: 4 } }, "\xB7"), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("special"), count: specialCount, label: "special", title: "Empirically rare this year: required simples co-occupied < 20% of days (green). Include = only rare/special words", onToggle: () => toggle("special") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("frequent"), count: frequentCount, label: "frequent", title: "Empirically moderate this year: required simples co-occupied 20\u201350% of days (rose)", onToggle: () => toggle("frequent") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("common"), count: commonCount, label: "common", title: "Empirically common this year: required simples co-occupied \u2265 50% of days (red) \u2014 incl. always-readable words (no simples)", onToggle: () => toggle("common") }), /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".8rem", marginLeft: 6 } }, "mode:"), /* @__PURE__ */ import_react4.default.createElement("button", { className: mode === "include" ? "on" : "", onClick: () => setMode("include"), title: "Keep only words matching ALL selected filters", "aria-pressed": mode === "include" }, "\u2713 include"), /* @__PURE__ */ import_react4.default.createElement("button", { className: mode === "exclude" ? "ex" : "", onClick: () => setMode("exclude"), title: "Drop words matching ANY selected filter", "aria-pressed": mode === "exclude" }, "\u2717 exclude"), sel.size > 0 && /* @__PURE__ */ import_react4.default.createElement("button", { onClick: () => setSel(/* @__PURE__ */ new Set()), title: "Clear all selected filters", style: { fontSize: ".78rem" } }, "clear (", sel.size, ")")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "controls", style: { marginBottom: 8, flexWrap: "wrap", alignItems: "center" } }, /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted" }, "min length"), /* @__PURE__ */ import_react4.default.createElement("input", { type: "number", min: "1", max: "12", value: minLen, onChange: (e) => {
     const n = parseInt(e.target.value, 10);
     setMinLen(isNaN(n) || n < 1 ? 1 : n);
-  }, style: { width: 56 }, "aria-label": "Minimum word length" }), /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted" }, filtered.length, " shown \xB7 ", alwaysCount, " always-readable")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Reading rule applied: every ", /* @__PURE__ */ import_react4.default.createElement("b", null, "simple (zodiac) letter"), " in a word must sit in an ", /* @__PURE__ */ import_react4.default.createElement("b", null, "occupied sign"), " today. Mothers + doubles are always available. Available today: ", /* @__PURE__ */ import_react4.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ].sort().join(" ") || "none"), ". ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--violet)" } }, "violet"), " = always readable (no simples). Badges: ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--gold)" } }, "palindrome"), " \xB7 ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, "\xD737"), " \xB7 ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--violet)" } }, "angel name"), " \xB7 ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--blue)" } }, "name"), " \xB7 ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--warn)" } }, "compound"), ". ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "prob ok" }, "%"), " = empirical legibility over the scanned year (computed from astronomy-engine, not hardcoded): ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "prob ok" }, "green"), " special (rare), ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "prob mid" }, "amber"), " frequent, ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "prob spec" }, "red"), " common. ", /* @__PURE__ */ import_react4.default.createElement("b", null, "This within-year % measures only how often a word's required simples are co-occupied as the planets drift this year \u2014 it is NOT the recurrence of a specific stellar alignment."), " A particular sky configuration recurs over years \u2192 centuries \u2192 millennia (the precalculated rare grand conjunctions in the ", /* @__PURE__ */ import_react4.default.createElement("b", null, "Alignments"), " subtab, \xA715c.11); a reading during such a rare alignment is the significant one, while ordinary readability is the common noise floor (~1 day in 9, ~2031 names/day). Sorted: longest first."), /* @__PURE__ */ import_react4.default.createElement("div", { className: "tcards" }, slice.map((w, i) => /* @__PURE__ */ import_react4.default.createElement("div", { key: w.he + w.translit + i, className: "tcard" + (w.simp ? "" : " always"), style: { cursor: "pointer", transition: "border-color .12s,transform .12s" }, title: `Open the single-reading page for ${w.translit} (${w.gloss})`, onClick: () => onOpen && onOpen(w), onMouseEnter: (e) => {
-    e.currentTarget.style.borderColor = "var(--blue)";
+  }, style: { width: 56 }, "aria-label": "Minimum word length" }), /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted" }, filtered.length, " shown \xB7 ", alwaysCount, " always-readable")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Reading rule applied: every ", /* @__PURE__ */ import_react4.default.createElement("b", null, "simple (zodiac) letter"), " in a word must sit in an ", /* @__PURE__ */ import_react4.default.createElement("b", null, "occupied sign"), " today. Mothers + doubles are always available. Available today: ", /* @__PURE__ */ import_react4.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ].sort().join(" ") || "none"), ". ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--violet)" } }, "violet"), " = always readable (no simples). Badges: ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--gold)" } }, "palindrome"), " \xB7 ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, "\xD737"), " \xB7 ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--violet)" } }, "angel name"), " \xB7 ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--brand-hi)" } }, "name"), " \xB7 ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--warn)" } }, "compound"), ". ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "prob ok" }, "%"), " = empirical legibility over the scanned year (computed from astronomy-engine, not hardcoded): ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "prob ok" }, "green"), " special (rare), ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "prob mid" }, "rose"), " frequent, ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "prob spec" }, "red"), " common. ", /* @__PURE__ */ import_react4.default.createElement("b", null, "This within-year % measures only how often a word's required simples are co-occupied as the planets drift this year \u2014 it is NOT the recurrence of a specific stellar alignment."), " A particular sky configuration recurs over years \u2192 centuries \u2192 millennia (the precalculated rare grand conjunctions in the ", /* @__PURE__ */ import_react4.default.createElement("b", null, "Alignments"), " subtab, \xA715c.11); a reading during such a rare alignment is the significant one, while ordinary readability is the common noise floor (~1 day in 9, ~2031 names/day). Sorted: longest first."), /* @__PURE__ */ import_react4.default.createElement("div", { className: "tcards" }, slice.map((w, i) => /* @__PURE__ */ import_react4.default.createElement("div", { key: w.he + w.translit + i, className: "tcard" + (w.simp ? "" : " always"), style: { cursor: "pointer", transition: "border-color .12s,transform .12s" }, title: `Open the single-reading page for ${w.translit} (${w.gloss})`, onClick: () => onOpen && onOpen(w), onMouseEnter: (e) => {
+    e.currentTarget.style.borderColor = "var(--brand)";
     e.currentTarget.style.transform = "translateY(-1px)";
   }, onMouseLeave: (e) => {
     e.currentTarget.style.borderColor = "";
     e.currentTarget.style.transform = "";
-  } }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "the" }, w.disp, " ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--dim)", fontSize: ".6em", verticalAlign: "super" } }, "\u25B8")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "read" }, w.translit), /* @__PURE__ */ import_react4.default.createElement("div", { className: "trans" }, w.gloss), /* @__PURE__ */ import_react4.default.createElement("div", { className: "g" }, w.len, " letters \xB7 gematria ", w.gem, w.pal && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--gold)" } }, " \xB7 palindrome"), w.m37 && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, " \xB7 \xD737"), w.angelName && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--violet)" } }, " \xB7 angel"), w.name && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--blue)" } }, " \xB7 name", w.theo ? " (theophoric)" : ""), w.compound && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--warn)" } }, " \xB7 compound (gloss truncated)")), probsAll.has(w.he) && (() => {
+  } }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "the" }, w.disp, " ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--dim)", fontSize: ".6em", verticalAlign: "super" } }, "\u25B8")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "read" }, w.translit), /* @__PURE__ */ import_react4.default.createElement("div", { className: "trans" }, w.gloss), /* @__PURE__ */ import_react4.default.createElement("div", { className: "g" }, w.len, " letters \xB7 gematria ", w.gem, w.pal && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--gold)" } }, " \xB7 palindrome"), w.m37 && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, " \xB7 \xD737"), w.angelName && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--violet)" } }, " \xB7 angel")), (w.person || w.place || w.compound || nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0) && /* @__PURE__ */ import_react4.default.createElement("div", { style: { marginTop: 4, display: "flex", flexWrap: "wrap", gap: 4 } }, w.person && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--blue)", borderColor: "var(--blue)" } }, "name", w.theo ? " (theophoric)" : ""), w.place && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--green)", borderColor: "var(--green)" }, title: "A biblical PLACE \u2014 proper locative noun in Strong (city, mountain, region\u2026)" }, "place"), w.compound && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--warn)", borderColor: "var(--warn)" }, title: "Concatenated multi-root entry whose gloss is truncated (e.g. \u2018dove of\u2019)" }, "compound"), nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0 && (() => {
+    const r = nameRefs[w.he];
+    return /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" }, title: "Where this name appears in the Hebrew Bible (Sefaria): " + r.refs.join(", ") }, "\u{1F4D6} ", r.refs[0], r.n > 1 ? " \xB7 +" + (r.n - 1) : "");
+  })()), probsAll.has(w.he) && (() => {
     const p = probsAll.get(w.he);
     const n = genData.dayOccs.length;
     const pct = p < 1e-3 ? "<0.1" : (p * 100).toFixed(p < 0.1 ? 1 : 0);
@@ -26790,6 +26785,8 @@ function findWord(he, LEX, angelMap) {
         pal: isPalindrome(cons),
         m37: gematria(cons) % 37 === 0,
         name: (pos || "").startsWith("n-pr"),
+        person: /n-pr-m|n-pr-f/.test(pos || "") || (pos || "").startsWith("n-pr") && !/loc/.test(pos || ""),
+        place: /loc/.test(pos || ""),
         theo: /אל|יהו|יאל|יה/.test(cons),
         compound: /\s/.test(trans),
         angel: am ? { el: am.el, yh: am.yh } : null,
@@ -26812,6 +26809,8 @@ function findWord(he, LEX, angelMap) {
         pal: isPalindrome(ahe),
         m37: gematria(ahe) % 37 === 0,
         name: true,
+        person: true,
+        place: false,
         theo: /אל|יה/.test(ahe),
         compound: false,
         angel: angelMap ? angelMap.get(norm(ahe)) : null,
@@ -26824,7 +26823,7 @@ function findWord(he, LEX, angelMap) {
 function wikiCleanTitle(s) {
   return (s || "").replace(/\s*\([^)]*\)\s*/g, " ").split(",")[0].trim();
 }
-function GlossPage({ word, date, rows, occ, genData, onBack }) {
+function GlossPage({ word, date, rows, occ, genData, onBack, nameRefs }) {
   const w = word;
   const req = w.simp ? [...w.simp] : [];
   const tl = (0, import_react4.useMemo)(() => {
@@ -26849,7 +26848,7 @@ function GlossPage({ word, date, rows, occ, genData, onBack }) {
     return { n, onDays, daySet: new Set(onDays), curDoy };
   }, [genData, date, w]);
   const wikiTitle = w.name || w.angelName ? wikiCleanTitle(w.angelName ? w.angelName.en : w.translit) : null;
-  const [wiki3, setWiki] = (0, import_react4.useState)(null);
+  const [wiki, setWiki] = (0, import_react4.useState)(null);
   (0, import_react4.useEffect)(() => {
     if (!wikiTitle) {
       setWiki(null);
@@ -26877,10 +26876,20 @@ function GlossPage({ word, date, rows, occ, genData, onBack }) {
     const pct = tl.onDays.length / tl.n * 100;
     return pct;
   })();
-  return /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react4.default.createElement("button", { onClick: onBack, title: "Back to the Reader list" }, "\u25C0 back to Reader"), /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill" }, "single reading"), /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".82rem" } }, "sky on ", displayDate(date))), /* @__PURE__ */ import_react4.default.createElement("h1", { style: { margin: "0 0 2px" } }, /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: "1.9rem" } }, w.disp), " ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--dim)", fontSize: ".95rem" } }, "\xB7 ", w.translit)), /* @__PURE__ */ import_react4.default.createElement("div", { className: "sub", style: { marginBottom: 14 } }, w.gloss), /* @__PURE__ */ import_react4.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "panel", style: { padding: 14 } }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 8, fontSize: ".8rem" } }, readableNow ? /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, "\u25CF readable on ", displayDate(date), " \u2014 all required simples occupied") : /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--red)" } }, "\u25CB not readable on ", displayDate(date), " \u2014 missing: ", /* @__PURE__ */ import_react4.default.createElement("b", { style: { color: "var(--gold)" } }, missing.join(" ")))), /* @__PURE__ */ import_react4.default.createElement(SkyMap, { rows, occ, hl: req.length ? new Set(req) : null }), /* @__PURE__ */ import_react4.default.createElement("div", { className: "legend" }, "Gold sectors = the simple (zodiac) letters this word needs. Blue = occupied today but not required by this word.")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react4.default.createElement("h3", { style: { marginTop: 0 } }, "Gloss"), /* @__PURE__ */ import_react4.default.createElement("table", null, /* @__PURE__ */ import_react4.default.createElement("tbody", null, /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Hebrew"), /* @__PURE__ */ import_react4.default.createElement("td", null, /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: "1.8rem" } }, w.disp))), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Transliteration"), /* @__PURE__ */ import_react4.default.createElement("td", null, /* @__PURE__ */ import_react4.default.createElement("b", null, w.translit))), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Gloss"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.gloss)), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Part of speech"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.pos || "\u2014")), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Length"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.len, " consonants")), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Gematria"), /* @__PURE__ */ import_react4.default.createElement("td", null, /* @__PURE__ */ import_react4.default.createElement("b", { style: { color: "var(--gold)" } }, w.gem), w.m37 && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, " \xB7 multiple of 37"))), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Simple letters"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.simp ? /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--blue)" } }, [...w.simp].join(" ")) : /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--violet)" } }, "none (always readable)"))), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Badges"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.pal && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--gold)", borderColor: "var(--gold)" } }, "palindrome"), w.m37 && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill ok" }, "\xD737"), w.angelName && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" } }, "angel name"), w.name && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--blue)", borderColor: "var(--blue)" } }, "proper name", w.theo ? " (theophoric)" : ""), w.compound && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--warn)", borderColor: "var(--warn)" } }, "compound"), !w.pal && !w.m37 && !w.angelName && !w.name && !w.compound && /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted" }, "\u2014"))), w.angelName && /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Angel"), /* @__PURE__ */ import_react4.default.createElement("td", { style: { color: "var(--violet)" } }, w.angelName.en, " ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--dim)" } }, "\xB7 ", w.angelName.src))), w.angel && /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Shem triplet"), /* @__PURE__ */ import_react4.default.createElement("td", null, "+", /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, w.angel.el), " \xB7 +", /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, w.angel.yh))))))), /* @__PURE__ */ import_react4.default.createElement("div", { className: "panel", style: { marginTop: 14, padding: 16 } }, /* @__PURE__ */ import_react4.default.createElement("h3", { style: { marginTop: 0 } }, "Year legibility \u2014 when ", w.disp, " is readable in ", genData ? genData.year : "the scanned year"), /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".82rem" } }, "Each cell = one day of the scanned Predictor year (computed from astronomy-engine, not hardcoded). ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--gold)" } }, "gold"), " = the required simples are all occupied that day (S\u2286O); ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, "green outline"), " = ", displayDate(date), ".", req.length === 0 && " This word has no simple letters, so it is always readable \u2014 every day is gold."), tl ? /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("div", { className: "tl", role: "img", "aria-label": `${w.translit}: ${tl.onDays.length} readable days in ${genData.year}` }, Array.from({ length: tl.n }, (_, i) => {
+  const prob = tl && req.length ? tl.onDays.length / tl.n : 1;
+  const pctStr = req.length ? prob < 1e-3 ? "<0.1" : (prob * 100).toFixed(prob < 0.1 ? 1 : 0) : "100";
+  const cat = req.length ? prob >= 0.5 ? "common" : prob >= 0.2 ? "frequent" : "special" : "always";
+  const catCls = req.length ? prob >= 0.5 ? "spec" : prob >= 0.2 ? "mid" : "ok" : "ok";
+  return /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react4.default.createElement("button", { onClick: onBack, title: "Back to the Reader list" }, "\u25C0 back to Reader"), /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill" }, "single reading"), /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".82rem" } }, "sky on ", displayDate(date))), /* @__PURE__ */ import_react4.default.createElement("h1", { style: { margin: "0 0 2px" } }, /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: "1.9rem" } }, w.disp), " ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--dim)", fontSize: ".95rem" } }, "\xB7 ", w.translit)), /* @__PURE__ */ import_react4.default.createElement("div", { className: "sub", style: { marginBottom: 14 } }, w.gloss), /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi-row" }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi " + (readableNow ? "ok" : "no") }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "v" }, readableNow ? "\u25CF" : "\u25CB"), /* @__PURE__ */ import_react4.default.createElement("div", { className: "l" }, "today \xB7 ", displayDate(date)), /* @__PURE__ */ import_react4.default.createElement("div", { className: "sub" }, readableNow ? "readable \u2014 all simples occupied" : "missing " + missing.join(" "))), /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi" }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "v" }, w.len), /* @__PURE__ */ import_react4.default.createElement("div", { className: "l" }, "consonants")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi" }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "v", style: { color: "var(--gold)" } }, w.gem), /* @__PURE__ */ import_react4.default.createElement("div", { className: "l" }, "gematria", w.m37 ? " \xB7 \xD737" : "")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi " + catCls }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "v" }, pctStr, req.length ? "%" : ""), /* @__PURE__ */ import_react4.default.createElement("div", { className: "l" }, "year legibility"), /* @__PURE__ */ import_react4.default.createElement("div", { className: "sub" }, cat)), /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi" }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "v" }, tl ? `${tl.onDays.length}/${tl.n}` : "\u2014"), /* @__PURE__ */ import_react4.default.createElement("div", { className: "l" }, "readable days")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi" }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "v", style: { color: req.length ? "var(--violet)" : "var(--green)" } }, req.length ? req.length : "0"), /* @__PURE__ */ import_react4.default.createElement("div", { className: "l" }, "simple letters"), /* @__PURE__ */ import_react4.default.createElement("div", { className: "sub" }, req.length ? [...w.simp].join(" ") : "none \xB7 always"))), /* @__PURE__ */ import_react4.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "panel", style: { padding: 14 } }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 8, fontSize: ".8rem" } }, readableNow ? /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, "\u25CF readable on ", displayDate(date), " \u2014 all required simples occupied") : /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--red)" } }, "\u25CB not readable on ", displayDate(date), " \u2014 missing: ", /* @__PURE__ */ import_react4.default.createElement("b", { style: { color: "var(--gold)" } }, missing.join(" ")))), /* @__PURE__ */ import_react4.default.createElement(SkyMap, { rows, occ, hl: req.length ? new Set(req) : null }), /* @__PURE__ */ import_react4.default.createElement("div", { className: "legend" }, "Gold sectors = the simple (zodiac) letters this word needs. Lavender = occupied today but not required by this word.")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react4.default.createElement("h3", { style: { marginTop: 0 } }, "Gloss"), /* @__PURE__ */ import_react4.default.createElement("table", null, /* @__PURE__ */ import_react4.default.createElement("tbody", null, /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Hebrew"), /* @__PURE__ */ import_react4.default.createElement("td", null, /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: "1.8rem" } }, w.disp))), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Transliteration"), /* @__PURE__ */ import_react4.default.createElement("td", null, /* @__PURE__ */ import_react4.default.createElement("b", null, w.translit))), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Gloss"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.gloss)), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Part of speech"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.pos || "\u2014")), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Length"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.len, " consonants")), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Gematria"), /* @__PURE__ */ import_react4.default.createElement("td", null, /* @__PURE__ */ import_react4.default.createElement("b", { style: { color: "var(--gold)" } }, w.gem), w.m37 && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, " \xB7 multiple of 37"))), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Simple letters"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.simp ? /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--blue)" } }, [...w.simp].join(" ")) : /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--violet)" } }, "none (always readable)"))), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Badges"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.pal && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--gold)", borderColor: "var(--gold)" } }, "palindrome"), w.m37 && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill ok" }, "\xD737"), w.angelName && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" } }, "angel name"), w.person && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--blue)", borderColor: "var(--blue)" } }, "name", w.theo ? " (theophoric)" : ""), w.place && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--green)", borderColor: "var(--green)" }, title: "A biblical PLACE \u2014 proper locative noun in Strong (city, mountain, region\u2026)" }, "place"), w.compound && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--warn)", borderColor: "var(--warn)" } }, "compound"), !w.pal && !w.m37 && !w.angelName && !w.person && !w.place && !w.compound && /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted" }, "\u2014"))), nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0 && (() => {
+    const r = nameRefs[w.he];
+    return /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Bible refs"), /* @__PURE__ */ import_react4.default.createElement("td", { style: { display: "flex", flexWrap: "wrap", gap: 4 } }, r.refs.map((ref, idx) => {
+      const u = refUrl(ref);
+      return u ? /* @__PURE__ */ import_react4.default.createElement("a", { key: ref + idx, className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)", textDecoration: "none" }, href: u, target: "_blank", rel: "noopener noreferrer", title: `Open ${ref} on Sefaria (Hebrew + translation)` }, "\u{1F4D6} ", ref) : /* @__PURE__ */ import_react4.default.createElement("span", { key: ref + idx, className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" } }, "\u{1F4D6} ", ref);
+    })));
+  })(), w.angelName && /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Angel"), /* @__PURE__ */ import_react4.default.createElement("td", { style: { color: "var(--violet)" } }, w.angelName.en, " ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--dim)" } }, "\xB7 ", w.angelName.src))), w.angel && /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Shem triplet"), /* @__PURE__ */ import_react4.default.createElement("td", null, "+", /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, w.angel.el), " \xB7 +", /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, w.angel.yh))))))), /* @__PURE__ */ import_react4.default.createElement("div", { className: "panel", style: { marginTop: 14, padding: 16 } }, /* @__PURE__ */ import_react4.default.createElement("h3", { style: { marginTop: 0 } }, "Year legibility \u2014 when ", w.disp, " is readable in ", genData ? genData.year : "the scanned year"), /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".82rem" } }, "Each cell = one day of the scanned Predictor year (computed from astronomy-engine, not hardcoded). ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--gold)" } }, "gold"), " = the required simples are all occupied that day (S\u2286O); ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, "green outline"), " = ", displayDate(date), ".", req.length === 0 && " This word has no simple letters, so it is always readable \u2014 every day is gold."), tl ? /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("div", { className: "tl", role: "img", "aria-label": `${w.translit}: ${tl.onDays.length} readable days in ${genData.year}` }, Array.from({ length: tl.n }, (_, i) => {
     const on = tl.daySet.has(i);
     return /* @__PURE__ */ import_react4.default.createElement("div", { key: i, className: "d" + (on ? " on" : "") + (i === tl.curDoy ? " cur" : ""), title: `${genData.year}-${String(i + 1).padStart(3, "0")} (day ${i + 1})${on ? " \xB7 readable" : ""}${i === tl.curDoy ? " \xB7 current" : ""}` });
-  })), /* @__PURE__ */ import_react4.default.createElement("div", { className: "legend" }, req.length === 0 ? /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, "every day \xB7 ", tl.n, " days") : /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, tl.onDays.length, " of ", tl.n, " days (", probsAll != null ? probsAll.toFixed(probsAll < 1 ? 1 : 0) : "?", "%) \xB7 first ", tl.onDays.length ? displayDate(fmtDate(makeDate(genData.year, 1, 1 + tl.onDays[0]))) : "\u2014", " \xB7 last ", tl.onDays.length ? displayDate(fmtDate(makeDate(genData.year, 1, 1 + tl.onDays[tl.onDays.length - 1]))) : "\u2014"))) : /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted" }, "Run the Predictor scan for this year to see the day-by-day timeline.")), wikiTitle && /* @__PURE__ */ import_react4.default.createElement("div", { className: "panel", style: { marginTop: 14, padding: 16 } }, /* @__PURE__ */ import_react4.default.createElement("h3", { style: { marginTop: 0 } }, "Wikipedia \u2014 ", wikiTitle), wiki3 && wiki3.loading && /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted" }, "Looking up ", wikiTitle, " on Wikipedia\u2026"), wiki3 && wiki3.error && /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { color: "var(--red)" } }, "No Wikipedia article found for \u201C", wikiTitle, "\u201D (", wiki3.error, ")."), wiki3 && wiki3.j && /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, wiki3.j.type === "disambiguation" ? /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted" }, "\u201C", wiki3.j.title, "\u201D is a disambiguation page \u2014 see ", /* @__PURE__ */ import_react4.default.createElement("a", { href: wiki3.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer" }, "Wikipedia"), " for the list of meanings.") : /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("div", { style: { display: "flex", gap: 14, flexWrap: "wrap", alignItems: "flex-start" } }, wiki3.j.thumbnail && /* @__PURE__ */ import_react4.default.createElement("img", { src: wiki3.j.thumbnail.source, alt: wiki3.j.title, style: { maxWidth: 160, maxHeight: 200, borderRadius: 8, border: "1px solid var(--line)" } }), /* @__PURE__ */ import_react4.default.createElement("div", { style: { flex: "1 1 320px" } }, wiki3.j.description && /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 6 } }, wiki3.j.description), /* @__PURE__ */ import_react4.default.createElement("div", null, wiki3.j.extract), /* @__PURE__ */ import_react4.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react4.default.createElement("a", { href: wiki3.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer" }, "Read more on Wikipedia \u2192")))))), !wiki3 && /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted" }, "Preparing Wikipedia lookup\u2026")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "note", style: { marginTop: 14 } }, "This single-reading page is a shareable deep link: ", /* @__PURE__ */ import_react4.default.createElement("code", null, typeof window !== "undefined" ? window.location.href : ""), ". The sky map, gloss and year timeline are computed live from astronomy-engine planet positions; the Wikipedia panel (shown for proper and angel names) is the free Wikipedia REST summary API."));
+  })), /* @__PURE__ */ import_react4.default.createElement("div", { className: "legend" }, req.length === 0 ? /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, "every day \xB7 ", tl.n, " days") : /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, tl.onDays.length, " of ", tl.n, " days (", probsAll != null ? probsAll.toFixed(probsAll < 1 ? 1 : 0) : "?", "%) \xB7 first ", tl.onDays.length ? displayDate(fmtDate(makeDate(genData.year, 1, 1 + tl.onDays[0]))) : "\u2014", " \xB7 last ", tl.onDays.length ? displayDate(fmtDate(makeDate(genData.year, 1, 1 + tl.onDays[tl.onDays.length - 1]))) : "\u2014"))) : /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted" }, "Run the Predictor scan for this year to see the day-by-day timeline.")), wikiTitle && /* @__PURE__ */ import_react4.default.createElement("div", { className: "panel", style: { marginTop: 14, padding: 16 } }, /* @__PURE__ */ import_react4.default.createElement("h3", { style: { marginTop: 0 } }, "Wikipedia \u2014 ", wikiTitle), wiki && wiki.loading && /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted" }, "Looking up ", wikiTitle, " on Wikipedia\u2026"), wiki && wiki.error && /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { color: "var(--red)" } }, "No Wikipedia article found for \u201C", wikiTitle, "\u201D (", wiki.error, ")."), wiki && wiki.j && /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, wiki.j.type === "disambiguation" ? /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted" }, "\u201C", wiki.j.title, "\u201D is a disambiguation page \u2014 see ", /* @__PURE__ */ import_react4.default.createElement("a", { href: wiki.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer" }, "Wikipedia"), " for the list of meanings.") : /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("div", { style: { display: "flex", gap: 14, flexWrap: "wrap", alignItems: "flex-start" } }, wiki.j.thumbnail && /* @__PURE__ */ import_react4.default.createElement("img", { src: wiki.j.thumbnail.source, alt: wiki.j.title, style: { maxWidth: 160, maxHeight: 200, borderRadius: 8, border: "1px solid var(--line)" } }), /* @__PURE__ */ import_react4.default.createElement("div", { style: { flex: "1 1 320px" } }, wiki.j.description && /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 6 } }, wiki.j.description), /* @__PURE__ */ import_react4.default.createElement("div", null, wiki.j.extract), /* @__PURE__ */ import_react4.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react4.default.createElement("a", { href: wiki.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer" }, "Read more on Wikipedia \u2192")))))), !wiki && /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted" }, "Preparing Wikipedia lookup\u2026")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "note", style: { marginTop: 14 } }, "This single-reading page is a shareable deep link: ", /* @__PURE__ */ import_react4.default.createElement("code", null, typeof window !== "undefined" ? window.location.href : ""), ". The sky map, gloss and year timeline are computed live from astronomy-engine planet positions; the Wikipedia panel (shown for proper and angel names) is the free Wikipedia REST summary API."));
 }
 
 // src/tabs/ReadingTab.jsx
@@ -26899,7 +26908,6 @@ function YhvhTab({ date, occ, yhvhOk, bs }) {
 }
 function GenesisTab({ date, occ, genesisOk }) {
   const lengths = [6, 3, 5, 2, 5, 3, 4];
-  const letters = GEN_VALUES.reduce((a, v) => a + ("" + v).split("").reduce((x, d) => x + +d, 0), 0);
   const words37 = GEN_VALUES.filter((v) => v % 37 === 0).length;
   const sub37 = countSubset(GEN_VALUES, 37);
   const totalLetters = lengths.reduce((a, b) => a + b, 0);
@@ -26909,7 +26917,7 @@ function GenesisTab({ date, occ, genesisOk }) {
     const ok = formable(c, occ);
     const m37 = GEN_VALUES[i] % 37 === 0;
     return /* @__PURE__ */ import_react5.default.createElement("div", { key: i, className: "gw " + (ok ? "ok" : "no") }, /* @__PURE__ */ import_react5.default.createElement("span", { className: "w" }, displayHe(c)), /* @__PURE__ */ import_react5.default.createElement("span", { className: "es", style: { color: ok ? "var(--green)" : "var(--red)" } }, en), /* @__PURE__ */ import_react5.default.createElement("span", { className: "muted" }, "\xB7 gematria ", GEN_VALUES[i], m37 ? ` = ${GEN_VALUES[i] / 37}\xD737` : ""), /* @__PURE__ */ import_react5.default.createElement("span", { style: { marginLeft: "auto" } }, ss.length === 0 ? /* @__PURE__ */ import_react5.default.createElement("span", { style: { color: "var(--violet)" } }, "no simples \u2192 always") : ss.map((l) => /* @__PURE__ */ import_react5.default.createElement("span", { key: l, className: "key " + (occ.has(l) ? "on" : "off"), style: { marginLeft: 2 } }, l, " ", LETTER_TO_SIGN[l]))));
-  }), /* @__PURE__ */ import_react5.default.createElement("div", { style: { marginTop: 10, padding: "10px 14px", background: "var(--panel2)", borderRadius: 8 } }, /* @__PURE__ */ import_react5.default.createElement("span", { className: "muted" }, "Standard gematria total: "), /* @__PURE__ */ import_react5.default.createElement("b", { style: { color: "var(--gold)", fontSize: "1.15rem" } }, GEN_TOTAL), /* @__PURE__ */ import_react5.default.createElement("span", { className: "muted" }, " = 913 + 203 + 86 + 401 + 395 + 407 + 296 \xB7 2701 = 37\xD773 \xB7 triangular T\u2087\u2083 \xB7 2701+1072 = 3773 (mirror-palindrome, but non-selective: ~38% of a random text does the same).")), /* @__PURE__ */ import_react5.default.createElement("h3", null, "37\xD773 structure of the 7 words (\xA715b.5 \u2014 verified)"), /* @__PURE__ */ import_react5.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react5.default.createElement("li", null, "Total = 2701 = 37\xD773 = T\u2087\u2083. Letter count = ", totalLetters, " = T\u2087 (7+8/2\xD7\u2026 = 28). 7 words \xD7 ", totalLetters, " letters = ", 7 * totalLetters, " = 14\xB2."), /* @__PURE__ */ import_react5.default.createElement("li", null, "Word-sums that are multiples of 37: ", /* @__PURE__ */ import_react5.default.createElement("b", null, words37, "/7"), " (407 = 11\xD737, 296 = 8\xD737 \u2014 the last two)."), /* @__PURE__ */ import_react5.default.createElement("li", null, "Subsets (of 2\u2077\u22121 = 127) whose sum is a multiple of 37: ", /* @__PURE__ */ import_react5.default.createElement("b", null, sub37, "/127"), " (uniform chance \u2248 ", 127 / 37, "\u22483.4)."), /* @__PURE__ */ import_react5.default.createElement("li", null, /* @__PURE__ */ import_react5.default.createElement("b", { style: { color: "var(--green)" } }, "Null"), ": 100,000 permutations of the 28-letter multiset regrouped into the fixed lengths (6,3,5,2,5,3,4), mulberry32 seed 20260807 \u2192 subsets p \u2248 ", /* @__PURE__ */ import_react5.default.createElement("b", null, "3.1\xD710\u207B\u2074"), "; words p \u2248 8.2\xD710\u207B\xB3. The partition is genuinely biased toward 37, beyond the trivial total=2701=37\xD773.")), /* @__PURE__ */ import_react5.default.createElement("div", { className: "note" }, "Genesis opens in ~13-year windows recurring every ~491 years (the Neptune\u2013Pluto synodic cycle). Previous: 427 BCE (Axial Age), 61 CE (Temple), 552, 1043 (Schism), 1535 (Reformation/Copernicus). Current: 2025\u20132038."), /* @__PURE__ */ import_react5.default.createElement(Fig, { n: 10, doc: "From the article (\xA715b.5): the 7 words and their gematrias. The two gold bars are the words that are multiples of 37 (\u05D5\u05D0\u05EA 407=11\xD737, \u05D4\u05D0\u05E8\u05E5 296=8\xD737). The permutation null shows the bias toward 37 is real (p\u22483.1\xD710\u207B\u2074), beyond the trivial total 2701=37\xD773." }));
+  }), /* @__PURE__ */ import_react5.default.createElement("div", { style: { marginTop: 10, padding: "10px 14px", background: "var(--panel2)", borderRadius: 8 } }, /* @__PURE__ */ import_react5.default.createElement("span", { className: "muted" }, "Standard gematria total: "), /* @__PURE__ */ import_react5.default.createElement("b", { style: { color: "var(--gold)", fontSize: "1.15rem" } }, GEN_TOTAL), /* @__PURE__ */ import_react5.default.createElement("span", { className: "muted" }, " = 913 + 203 + 86 + 401 + 395 + 407 + 296 \xB7 2701 = 37\xD773 \xB7 triangular T\u2087\u2083 \xB7 2701+1072 = 3773 (mirror-palindrome, but non-selective: ~38% of a random text does the same).")), /* @__PURE__ */ import_react5.default.createElement("h3", null, "37\xD773 structure of the 7 words (\xA715b.5 \u2014 verified)"), /* @__PURE__ */ import_react5.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react5.default.createElement("li", null, "Total = 2701 = 37\xD773 = T\u2087\u2083. Letter count = ", totalLetters, " = T\u2087 (7\xD78/2 = 28). 7 words \xD7 ", totalLetters, " letters = ", 7 * totalLetters, " = 14\xB2."), /* @__PURE__ */ import_react5.default.createElement("li", null, "Word-sums that are multiples of 37: ", /* @__PURE__ */ import_react5.default.createElement("b", null, words37, "/7"), " (407 = 11\xD737, 296 = 8\xD737 \u2014 the last two)."), /* @__PURE__ */ import_react5.default.createElement("li", null, "Subsets (of 2\u2077\u22121 = 127) whose sum is a multiple of 37: ", /* @__PURE__ */ import_react5.default.createElement("b", null, sub37, "/127"), " (uniform chance \u2248 ", 127 / 37, "\u22483.4)."), /* @__PURE__ */ import_react5.default.createElement("li", null, /* @__PURE__ */ import_react5.default.createElement("b", { style: { color: "var(--green)" } }, "Null"), ": 100,000 permutations of the 28-letter multiset regrouped into the fixed lengths (6,3,5,2,5,3,4), mulberry32 seed 20260807 \u2192 subsets p \u2248 ", /* @__PURE__ */ import_react5.default.createElement("b", null, "3.1\xD710\u207B\u2074"), "; words p \u2248 8.2\xD710\u207B\xB3. The partition is genuinely biased toward 37, beyond the trivial total=2701=37\xD773.")), /* @__PURE__ */ import_react5.default.createElement("div", { className: "note" }, "Genesis opens in ~13-year windows recurring every ~491 years (the Neptune\u2013Pluto synodic cycle). Previous: 427 BCE (Axial Age), 61 CE (Temple), 552, 1043 (Schism), 1535 (Reformation/Copernicus). Current: 2025\u20132038."), /* @__PURE__ */ import_react5.default.createElement(Fig, { n: 10, doc: "From the article (\xA715b.5): the 7 words and their gematrias. The two gold bars are the words that are multiples of 37 (\u05D5\u05D0\u05EA 407=11\xD737, \u05D4\u05D0\u05E8\u05E5 296=8\xD737). The permutation null shows the bias toward 37 is real (p\u22483.1\xD710\u207B\u2074), beyond the trivial total 2701=37\xD773." }));
 }
 
 // src/tabs/TimeTab.jsx
@@ -27004,11 +27012,14 @@ function GematriaHebrew() {
   const [inp, setInp] = (0, import_react7.useState)("\u05DE\u05E9\u05D9\u05D7");
   const [big, setBig] = (0, import_react7.useState)(false);
   const c = norm(inp);
-  const letters = [...c].filter((ch) => GV[ch]);
-  const total = letters.reduce((a, ch) => a + letterVal(ch), 0);
+  const BIG_GV = { "\u05DA": 500, "\u05DD": 600, "\u05DF": 700, "\u05E3": 800, "\u05E5": 900 };
+  const isLetter = (ch) => !!GV[FIN2REG[ch] || ch];
+  const letters = [...inp].filter(isLetter);
+  const val = (ch) => big && BIG_GV[ch] !== void 0 ? BIG_GV[ch] : letterVal(ch);
+  const total = letters.reduce((a, ch) => a + val(ch), 0);
   const groups = aiqGroups();
   return /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react7.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Hebrew name, e.g. \u05DE\u05E9\u05D9\u05D7 / \u05D0\u05D1\u05E8\u05D4\u05DD", style: { flex: "1 1 260px" } }), /* @__PURE__ */ import_react7.default.createElement("span", { className: "pill" }, "letters: ", letters.length), /* @__PURE__ */ import_react7.default.createElement("button", { className: "subtab" + (big ? " active" : ""), onClick: () => setBig((b) => !b), title: "Mispar Gadol: finals = 500\u2013900 (off = Mispar Hechrachi, finals = regular). Genesis 1:1 = 2701 needs Hechrachi." }, "Mispar Gadol ", big ? "ON" : "off")), /* @__PURE__ */ import_react7.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "22-letter gematria, \u05D0=1 \u2026 \u05EA=400. ", /* @__PURE__ */ import_react7.default.createElement("b", null, "Mispar Hechrachi"), " (default): final letters count as their regular value \u2014 required for Gen 1:1 = 2701 = 37\xD773. ", /* @__PURE__ */ import_react7.default.createElement("b", null, "Mispar Gadol"), ": finals = 500\u2013900. ", /* @__PURE__ */ import_react7.default.createElement("b", null, "Mispar Katan Mispari"), ' = the digital-root reduction (below, "Aiq Bekar").'), letters.length > 0 && /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement("table", null, /* @__PURE__ */ import_react7.default.createElement("thead", null, /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("th", null, "Letter"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Name"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Reduction (1\u20139)"))), /* @__PURE__ */ import_react7.default.createElement("tbody", null, letters.map((ch, i) => {
-    return /* @__PURE__ */ import_react7.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react7.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react7.default.createElement("span", { className: "he" }, displayHe(c).includes(ch) ? ch : ch)), /* @__PURE__ */ import_react7.default.createElement("td", { className: "muted" }, ch), /* @__PURE__ */ import_react7.default.createElement("td", { className: "big" }, letterVal(ch)), /* @__PURE__ */ import_react7.default.createElement("td", { className: "big", style: { color: "var(--blue)" } }, reduce9(letterVal(ch))));
+    return /* @__PURE__ */ import_react7.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react7.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react7.default.createElement("span", { className: "he" }, displayHe(c).includes(ch) ? ch : ch)), /* @__PURE__ */ import_react7.default.createElement("td", { className: "muted" }, ch), /* @__PURE__ */ import_react7.default.createElement("td", { className: "big" }, val(ch)), /* @__PURE__ */ import_react7.default.createElement("td", { className: "big", style: { color: "var(--blue)" } }, reduce9(val(ch))));
   }))), /* @__PURE__ */ import_react7.default.createElement("div", { style: { marginTop: 10, padding: "12px 14px", background: "var(--panel2)", borderRadius: 8 } }, /* @__PURE__ */ import_react7.default.createElement("span", { className: "muted" }, "Standard gematria: "), /* @__PURE__ */ import_react7.default.createElement("b", { className: "big" }, total), /* @__PURE__ */ import_react7.default.createElement("span", { className: "muted" }, " \xB7 Mispar Katan (digital root): "), /* @__PURE__ */ import_react7.default.createElement("b", { className: "big", style: { color: "var(--blue)" } }, reduce9(total) === 0 ? 9 : reduce9(total)))), /* @__PURE__ */ import_react7.default.createElement("h3", null, "The 22 letters \u2192 digital-root groups (Mispar Katan Mispari)"), /* @__PURE__ */ import_react7.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Each of the 22 letters reduces (sum of digits) to 1\u20139. Groups 1\u20134 gather three letters each (units / tens / hundreds 100\u2013400); groups 5\u20139 gather two (the hundreds stop at 400 \u2014 ancient Hebrew has only 22 letters, no medieval 500\u2013900 finals). This digital root is the bridge to the kamea: without it there is no sigil (\xA715b.3). ", /* @__PURE__ */ import_react7.default.createElement("b", null, "Terminology note:"), " this reduction is ", /* @__PURE__ */ import_react7.default.createElement("i", null, "Mispar Katan Mispari"), '; "Aiq Bekar" properly names a 10\xD7 letter-substitution cipher, not this reduction.'), /* @__PURE__ */ import_react7.default.createElement("div", { className: "grid2" }, [1, 2, 3, 4, 5, 6, 7, 8, 9].map((g) => /* @__PURE__ */ import_react7.default.createElement("div", { key: g, className: "kbox" }, /* @__PURE__ */ import_react7.default.createElement("b", { style: { color: "var(--gold)" } }, g), " \xB7 ", groups[g].join(", ")))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05E8\u05D4\u05DD") }, "\u05D0\u05D1\u05E8\u05D4\u05DD"), " ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05E9\u05DC\u05DE\u05D4") }, "\u05E9\u05DC\u05DE\u05D4"), " ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05DC\u05D4\u05D9\u05DD") }, "\u05D0\u05DC\u05D4\u05D9\u05DD"), " ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05D3\u05D5\u05DF") }, "\u05D0\u05D1\u05D3\u05D5\u05DF"), " (Abaddon = 63 = 7\xD79). Gen 1:1 = ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D1\u05E8\u05D0\u05E9\u05D9\u05EA") }, "\u05D1\u05E8\u05D0\u05E9\u05D9\u05EA"), " ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05DC\u05D4\u05D9\u05DD") }, "\u05D0\u05DC\u05D4\u05D9\u05DD"), " ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D4\u05E9\u05DE\u05D9\u05DD") }, "\u05D4\u05E9\u05DE\u05D9\u05DD"), " ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D4\u05D0\u05E8\u05E5") }, "\u05D4\u05D0\u05E8\u05E5"), " \u2192 913+86+395+401+407+296+203 = 2701 = 37\xD773."));
 }
 function GematriaGreek() {
@@ -27040,7 +27051,7 @@ function SigilTab() {
   const sp = sigilPath(inp);
   const isHeb = /[א-ת]/.test(inp);
   const entries = isHeb ? [...norm(inp)].filter((ch) => GV[ch]).map((ch) => ({ l: displayHe(ch), v: letterVal(ch) })) : [...inp.toUpperCase().replace(/[^A-Z]/g, "")].map((ch) => ({ l: ch, v: ch.charCodeAt(0) - 64 }));
-  return /* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement("h2", null, "Sigil Forge \u2014 the Aiq Bekar / Lo Shu sigil (Saturn 3\xD73, \xA715b.3)"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The kamea-sigil method: (1) take the name (consonants); (2) reduce each letter's gematria to its digital root 1\u20139 (Aiq Bekar); (3) mark those cells on the Lo Shu (Saturn 3\xD73) in order and join them \u2014 the trace ", /* @__PURE__ */ import_react8.default.createElement("b", null, "is"), " the sigil; (4) consecutive repeats collapse (the pen does not lift). Aiq Bekar = the digit-sum of the 22-letter gematria of \xA72, the bridge from alphabet to sigil. ", /* @__PURE__ */ import_react8.default.createElement("span", { style: { color: "var(--green)" } }, "Green"), " = first cell, ", /* @__PURE__ */ import_react8.default.createElement("span", { style: { color: "var(--red)" } }, "red"), " = last. The ", /* @__PURE__ */ import_react8.default.createElement("b", null, "Kameot"), " tab traces the same name on all 7 planetary squares (Saturn \u2192 Moon)."), /* @__PURE__ */ import_react8.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react8.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Hebrew name, e.g. \u05DE\u05E9\u05D9\u05D7", style: { flex: "1 1 260px" }, autoFocus: true }), /* @__PURE__ */ import_react8.default.createElement("span", { className: "pill" }, "Aiq Bekar cells used: ", sp.cellsUsed.length, "/9")), /* @__PURE__ */ import_react8.default.createElement("div", { className: "row", style: { alignItems: "flex-start" } }, /* @__PURE__ */ import_react8.default.createElement("div", { style: { flex: "0 0 auto" } }, /* @__PURE__ */ import_react8.default.createElement(KameaSigil, { n: 3, word: inp, compact: true })), /* @__PURE__ */ import_react8.default.createElement("div", { style: { flex: "1 1 200px" } }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Letters: ", /* @__PURE__ */ import_react8.default.createElement("b", { style: { color: "var(--gold)" } }, entries.map((e) => e.l).join(" ") || "\u2014")), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Values: ", entries.map((e) => e.v).join(", ") || "\u2014"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Aiq Bekar (1\u20139): ", /* @__PURE__ */ import_react8.default.createElement("b", { style: { color: "var(--blue)" } }, sp.reduced.join("  ") || "\u2014")), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Saturn trace (repeats collapsed):"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "big", style: { color: "var(--gold)" } }, sp.cells.map((c) => c.v).join(" \u2192 ") || "\u2014"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, "The sigil is the geometric footprint of the name on the Lo Shu \u2014 deterministic from the name alone. The ", /* @__PURE__ */ import_react8.default.createElement("b", null, "Kameot"), " tab traces the same name on all 7 planetary squares (Saturn \u2192 Moon): each square's different modulus n\xB2 = 9,16,25,36,49,64,81 yields a distinct sigil per planet. ", /* @__PURE__ */ import_react8.default.createElement("em", null, "Caveat (\xA76.3 / \xA715b.3):"), " the sigil-over-kamea method is Renaissance (Agrippa, 1531), not medieval Jewish."), /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D3\u05DD") }, "\u05D0\u05D3\u05DD"), " ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("\u05DE\u05E9\u05D4") }, "\u05DE\u05E9\u05D4"), " ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D9\u05E9\u05E8\u05D0\u05DC") }, "\u05D9\u05E9\u05E8\u05D0\u05DC"), " ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D5\u05D4\u05D5") }, "\u05D5\u05D4\u05D5"), " (1st Shem angel) \xB7 ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("MICHAEL") }, "MICHAEL")))), /* @__PURE__ */ import_react8.default.createElement(Fig, { n: 7, doc: "From the article (\xA715b.3): the Lo Shu (Saturn 3\xD73, M=15) with the 9 Aiq Bekar groups overlaid \u2014 each cell gathers the letters whose gematria digit-sums to it. The golden trace is the sigil of \u05DE\u05E9\u05D9\u05D7 (Messiah): Aiq Bekar 4\xB73\xB71\xB78, the reduced cells joined in order. Aiq Bekar = the digit-sum of the 22-letter gematria of \xA72 \u2014 the bridge from alphabet to sigil." }));
+  return /* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement("h2", null, "Sigil Forge \u2014 the Aiq Bekar / Lo Shu sigil (Saturn 3\xD73, \xA715b.3)"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The kamea-sigil method: (1) take the name (consonants); (2) reduce each letter's gematria to its digital root 1\u20139 (Aiq Bekar); (3) mark those cells on the Lo Shu (Saturn 3\xD73) in order and join them \u2014 the trace ", /* @__PURE__ */ import_react8.default.createElement("b", null, "is"), " the sigil; (4) consecutive repeats collapse (the pen does not lift). Aiq Bekar = the digit-sum of the 22-letter gematria of \xA72, the bridge from alphabet to sigil. ", /* @__PURE__ */ import_react8.default.createElement("span", { style: { color: "var(--green)" } }, "Green"), " = first cell, ", /* @__PURE__ */ import_react8.default.createElement("span", { style: { color: "var(--red)" } }, "red"), " = last. The ", /* @__PURE__ */ import_react8.default.createElement("b", null, "Kameot"), " tab traces the same name on all 7 planetary squares (Saturn \u2192 Moon)."), /* @__PURE__ */ import_react8.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react8.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Hebrew name, e.g. \u05DE\u05E9\u05D9\u05D7", style: { flex: "1 1 260px" }, autoFocus: true }), /* @__PURE__ */ import_react8.default.createElement("span", { className: "pill" }, "Aiq Bekar cells used: ", sp.cellsUsed.length, "/9")), /* @__PURE__ */ import_react8.default.createElement("div", { className: "row", style: { alignItems: "flex-start" } }, /* @__PURE__ */ import_react8.default.createElement("div", { style: { flex: "0 0 auto" } }, /* @__PURE__ */ import_react8.default.createElement(KameaSigil, { n: 3, word: inp, compact: true })), /* @__PURE__ */ import_react8.default.createElement("div", { style: { flex: "1 1 200px" } }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Letters: ", /* @__PURE__ */ import_react8.default.createElement("b", { style: { color: "var(--gold)" } }, entries.map((e) => e.l).join(" ") || "\u2014")), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Values: ", entries.map((e) => e.v).join(", ") || "\u2014"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Aiq Bekar (1\u20139): ", /* @__PURE__ */ import_react8.default.createElement("b", { style: { color: "var(--blue)" } }, sp.reduced.join("  ") || "\u2014")), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Saturn trace (repeats collapsed):"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "big", style: { color: "var(--gold)" } }, sp.cells.map((c) => c.v).join(" \u2192 ") || "\u2014"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, "The sigil is the geometric footprint of the name on the Lo Shu \u2014 deterministic from the name alone. The ", /* @__PURE__ */ import_react8.default.createElement("b", null, "Kameot"), " tab traces the same name on all 7 planetary squares (Saturn \u2192 Moon): each square's different modulus n\xB2 = 9,16,25,36,49,64,81 yields a distinct sigil per planet. ", /* @__PURE__ */ import_react8.default.createElement("em", null, "Caveat (\xA76.3 / \xA715b.3):"), " the sigil-over-kamea method is Renaissance (Agrippa, 1531), not medieval Jewish."), /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D3\u05DD") }, "\u05D0\u05D3\u05DD"), " ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("\u05DE\u05E9\u05D4") }, "\u05DE\u05E9\u05D4"), " ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D9\u05E9\u05E8\u05D0\u05DC") }, "\u05D9\u05E9\u05E8\u05D0\u05DC"), " ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D5\u05D4\u05D5") }, "\u05D5\u05D4\u05D5"), " (1st Shem angel) \xB7 ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("MICHAEL") }, "MICHAEL")))), /* @__PURE__ */ import_react8.default.createElement(Fig, { n: 7, doc: "From the article (\xA715b.3): the Lo Shu (Saturn 3\xD73, M=15) with the 9 Aiq Bekar groups overlaid \u2014 each cell gathers the letters whose gematria digit-sums to it. The gold trace is the sigil of \u05DE\u05E9\u05D9\u05D7 (Messiah): Aiq Bekar 4\xB73\xB71\xB78, the reduced cells joined in order. Aiq Bekar = the digit-sum of the 22-letter gematria of \xA72 \u2014 the bridge from alphabet to sigil." }));
 }
 function KameaSigil({ n, word, compact }) {
   const sq = buildMagic(n);
@@ -27075,16 +27086,16 @@ function KameaSigil({ n, word, compact }) {
     const [x, y] = center(v);
     return (k ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
   }).join(" ");
-  return /* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement("svg", { viewBox: `0 0 ${S} ${S}`, width: S, height: S, style: { maxWidth: "100%" }, role: "img", "aria-label": `Sigil of ${word} on ${n}\xD7${n} kamea` }, /* @__PURE__ */ import_react8.default.createElement("rect", { x: "0", y: "0", width: S, height: S, fill: "#0e1320", rx: "8" }), sq.flat().map((v, idx) => {
+  return /* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement("svg", { viewBox: `0 0 ${S} ${S}`, width: S, height: S, style: { maxWidth: "100%" }, role: "img", "aria-label": `Sigil of ${word} on ${n}\xD7${n} kamea` }, /* @__PURE__ */ import_react8.default.createElement("rect", { x: "0", y: "0", width: S, height: S, fill: "#0f0f15", rx: "8" }), sq.flat().map((v, idx) => {
     const [i, j2] = pos[v];
     const x = pad + cellPx * j2, y = pad + cellPx * i;
     const on = used.has(v);
-    return /* @__PURE__ */ import_react8.default.createElement("g", { key: idx }, /* @__PURE__ */ import_react8.default.createElement("rect", { x: x + 1.5, y: y + 1.5, width: cellPx - 3, height: cellPx - 3, rx: "3", fill: on ? "#243657" : "#131826", stroke: "#283145", strokeWidth: "1" }), /* @__PURE__ */ import_react8.default.createElement("text", { x: x + cellPx / 2, y: y + cellPx / 2 - 1, textAnchor: "middle", dominantBaseline: "middle", fontSize: n <= 6 ? 11 : 9, fill: on ? "#e8c87a" : "#5d6883" }, v), on && /* @__PURE__ */ import_react8.default.createElement("text", { x: x + cellPx / 2, y: y + cellPx / 2 + 9, textAnchor: "middle", dominantBaseline: "middle", fontSize: 6.5, fill: "#8aa0c0" }, "#", order[v]));
+    return /* @__PURE__ */ import_react8.default.createElement("g", { key: idx }, /* @__PURE__ */ import_react8.default.createElement("rect", { x: x + 1.5, y: y + 1.5, width: cellPx - 3, height: cellPx - 3, rx: "3", fill: on ? "#332b1a" : "#16161f", stroke: "#2a2a38", strokeWidth: "1" }), /* @__PURE__ */ import_react8.default.createElement("text", { x: x + cellPx / 2, y: y + cellPx / 2 - 1, textAnchor: "middle", dominantBaseline: "middle", fontSize: n <= 6 ? 11 : 9, fill: on ? "#e8c87a" : "#5a5a6e" }, v), on && /* @__PURE__ */ import_react8.default.createElement("text", { x: x + cellPx / 2, y: y + cellPx / 2 + 9, textAnchor: "middle", dominantBaseline: "middle", fontSize: 6.5, fill: "#9ca3af" }, "#", order[v]));
   }), path.length >= 2 && /* @__PURE__ */ import_react8.default.createElement("path", { d, fill: "none", stroke: "#e8c87a", strokeWidth: "2.2", opacity: "0.9", strokeLinejoin: "round", strokeLinecap: "round" }), path.map((v, k) => {
     const [x, y] = center(v);
     const r = k === 0 || k === path.length - 1 ? 4.5 : 2.8;
     const fill = k === 0 ? "#6fe0a0" : k === path.length - 1 ? "#ff8a8a" : "#e8c87a";
-    return /* @__PURE__ */ import_react8.default.createElement("circle", { key: k, cx: x, cy: y, r, fill, stroke: "#0b0e14", strokeWidth: "0.6" });
+    return /* @__PURE__ */ import_react8.default.createElement("circle", { key: k, cx: x, cy: y, r, fill, stroke: "#08080b", strokeWidth: "0.6" });
   })), !compact && /* @__PURE__ */ import_react8.default.createElement("div", { style: { marginTop: 8, minWidth: 200 } }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, isHeb ? "Hebrew gematria (22 letters; finals = base letter)" : "Latin A=1\u2026Z=26", " \u2192 reduced into the square (n\xB2=", N, ")", n === 3 ? " \u2014 for Saturn n\xB2=9 this is the digital root = the Aiq Bekar method of \xA715b.3" : "", "."), entries.length === 0 ? /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, "Type a word to trace its sigil on this kamea.") : /* @__PURE__ */ import_react8.default.createElement("table", { style: { marginTop: 6 } }, /* @__PURE__ */ import_react8.default.createElement("thead", null, /* @__PURE__ */ import_react8.default.createElement("tr", null, /* @__PURE__ */ import_react8.default.createElement("th", null, "Letter"), /* @__PURE__ */ import_react8.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react8.default.createElement("th", null, "Cell"))), /* @__PURE__ */ import_react8.default.createElement("tbody", null, entries.map((e, i) => /* @__PURE__ */ import_react8.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react8.default.createElement("td", null, /* @__PURE__ */ import_react8.default.createElement("span", { className: isHeb ? "he" : "gk", style: { fontSize: "1.2rem" } }, e.l)), /* @__PURE__ */ import_react8.default.createElement("td", { className: "deg" }, e.v), /* @__PURE__ */ import_react8.default.createElement("td", { className: "deg" }, targets[i]))))), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted", style: { marginTop: 6 } }, "Trace (", path.length, " pts, repeats collapsed): ", /* @__PURE__ */ import_react8.default.createElement("b", { style: { color: "var(--gold)" } }, path.join(" \u2192 ") || "\u2014"), " \xB7 cells ", used.size, "/", N)));
 }
 function KameotTab() {
@@ -27103,20 +27114,20 @@ function AngelsCircle({ triplets }) {
   const ang = (i) => (-90 + i * 5) * Math.PI / 180;
   const pt = (r, a) => [C + r * Math.cos(a), C + r * Math.sin(a)];
   const Rout = 212, RtickIn = 200, Rnum = 224, RlabOut = 188, RlabIn = 168;
-  return /* @__PURE__ */ import_react8.default.createElement("svg", { viewBox: "0 0 480 482", width: "100%", height: "auto", style: { maxWidth: 470, margin: "0 auto" }, role: "img", "aria-label": "72 angels around the precessional circle" }, /* @__PURE__ */ import_react8.default.createElement("rect", { x: "0", y: "0", width: "480", height: "482", fill: "#0e1320", rx: "10" }), /* @__PURE__ */ import_react8.default.createElement("circle", { cx: C, cy: C, r: Rout, fill: "none", stroke: "#283145", strokeWidth: "1.4" }), /* @__PURE__ */ import_react8.default.createElement("circle", { cx: C, cy: C, r: RlabOut + 10, fill: "none", stroke: "#1c2333", strokeWidth: "0.7" }), triplets.map((t, i) => {
+  return /* @__PURE__ */ import_react8.default.createElement("svg", { viewBox: "0 0 480 482", width: "100%", height: "auto", style: { maxWidth: 470, margin: "0 auto" }, role: "img", "aria-label": "72 angels around the precessional circle" }, /* @__PURE__ */ import_react8.default.createElement("rect", { x: "0", y: "0", width: "480", height: "482", fill: "#0f0f15", rx: "10" }), /* @__PURE__ */ import_react8.default.createElement("circle", { cx: C, cy: C, r: Rout, fill: "none", stroke: "#2a2a38", strokeWidth: "1.4" }), /* @__PURE__ */ import_react8.default.createElement("circle", { cx: C, cy: C, r: RlabOut + 10, fill: "none", stroke: "#202028", strokeWidth: "0.7" }), triplets.map((t, i) => {
     const a = ang(i);
     const [x0, y0] = pt(Rout, a);
     const [x1, y1] = pt(RtickIn, a);
     const major = i % 6 === 0;
-    return /* @__PURE__ */ import_react8.default.createElement("line", { key: "t" + i, x1: x0, y1: y0, x2: x1, y2: y1, stroke: major ? "#7fb0ff" : "#33405a", strokeWidth: major ? 1.3 : 0.6 });
+    return /* @__PURE__ */ import_react8.default.createElement("line", { key: "t" + i, x1: x0, y1: y0, x2: x1, y2: y1, stroke: major ? "#c29eff" : "#33343f", strokeWidth: major ? 1.3 : 0.6 });
   }), triplets.map((t, i) => {
     const a = ang(i);
     const outer = i % 2 === 0;
     const rl = outer ? RlabOut : RlabIn;
     const [lx, ly] = pt(rl, a);
     const [nx, ny] = pt(Rnum, a);
-    return /* @__PURE__ */ import_react8.default.createElement("g", { key: "a" + i }, /* @__PURE__ */ import_react8.default.createElement("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "8.6", fill: outer ? "#e8c87a" : "#c9a558", fontFamily: "serif" }, t), /* @__PURE__ */ import_react8.default.createElement("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "5", fill: "#5d6883" }, i + 1));
-  }), /* @__PURE__ */ import_react8.default.createElement("circle", { cx: C, cy: C, r: "58", fill: "#0e1320", stroke: "#2a3346", strokeWidth: "0.8" }), /* @__PURE__ */ import_react8.default.createElement("text", { x: C, y: C - 18, textAnchor: "middle", fontSize: "24", fill: "#e8c87a", fontFamily: "serif" }, "72"), /* @__PURE__ */ import_react8.default.createElement("text", { x: C, y: C - 2, textAnchor: "middle", fontSize: "8", fill: "#8aa0c0" }, "5\xB0 per angel \xB7 360\xB0/72"), /* @__PURE__ */ import_react8.default.createElement("text", { x: C, y: C + 13, textAnchor: "middle", fontSize: "7.6", fill: "#7fb0ff" }, "1\xB0 / 72 yr precession"), /* @__PURE__ */ import_react8.default.createElement("text", { x: C, y: C + 25, textAnchor: "middle", fontSize: "6.8", fill: "#5d6883" }, "72 \xD7 360 = 25 920 yr"));
+    return /* @__PURE__ */ import_react8.default.createElement("g", { key: "a" + i }, /* @__PURE__ */ import_react8.default.createElement("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "8.6", fill: outer ? "#e8c87a" : "#c29eff", fontFamily: "serif" }, t), /* @__PURE__ */ import_react8.default.createElement("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "5", fill: "#5a5a6e" }, i + 1));
+  }), /* @__PURE__ */ import_react8.default.createElement("circle", { cx: C, cy: C, r: "58", fill: "#0f0f15", stroke: "#2a2a38", strokeWidth: "0.8" }), /* @__PURE__ */ import_react8.default.createElement("text", { x: C, y: C - 18, textAnchor: "middle", fontSize: "24", fill: "#e8c87a", fontFamily: "serif" }, "72"), /* @__PURE__ */ import_react8.default.createElement("text", { x: C, y: C - 2, textAnchor: "middle", fontSize: "8", fill: "#9ca3af" }, "5\xB0 per angel \xB7 360\xB0/72"), /* @__PURE__ */ import_react8.default.createElement("text", { x: C, y: C + 13, textAnchor: "middle", fontSize: "7.6", fill: "#c29eff" }, "1\xB0 / 72 yr precession"), /* @__PURE__ */ import_react8.default.createElement("text", { x: C, y: C + 25, textAnchor: "middle", fontSize: "6.8", fill: "#5a5a6e" }, "72 \xD7 360 = 25 920 yr"));
 }
 function AngelsTab() {
   const [data, setData] = (0, import_react8.useState)(null);
@@ -27128,12 +27139,12 @@ function AngelsTab() {
       return r.json();
     }).then(setData).catch((e) => setErr(e.message));
   }, []);
-  if (err) return /* @__PURE__ */ import_react8.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react8.default.createElement("h2", null, "72 Angels"), /* @__PURE__ */ import_react8.default.createElement("p", null, "Could not load angels72.json (", err, "). Serve the web/ folder over HTTP (python3 -m http.server 8008)."));
+  if (err) return /* @__PURE__ */ import_react8.default.createElement("div", { className: "panel app-panel" }, /* @__PURE__ */ import_react8.default.createElement("h2", null, "72 Angels"), /* @__PURE__ */ import_react8.default.createElement("p", null, "Could not load the 72-angel data. Please refresh the page; if the problem persists, the data may be unavailable right now."));
   if (!data) return /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Loading the 72 Shem HaMephorash triplets\u2026");
   const qn = q.trim().toLowerCase();
   const rows = data.triplets.map((t, i) => ({ i: i + 1, trio: t, el: t + "\u05D0\u05DC", yh: t + "\u05D9\u05D4", gemEL: data.gemEL ? data.gemEL[i] : gematria(norm(t + "\u05D0\u05DC")), gemYH: data.gemYH ? data.gemYH[i] : gematria(norm(t + "\u05D9\u05D4")) }));
   const filtered = qn ? rows.filter((r) => r.trio.includes(qn) || "" + r.i === qn || r.el.includes(qn) || r.yh.includes(qn)) : rows;
-  return /* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement("h2", null, "The 72 angels \u2014 Shem HaMephorash from Exodus 14:19-21 (\xA715b.4)"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "72 consonants \xD7 3 verses. The 72 triplets are read by ", /* @__PURE__ */ import_react8.default.createElement("b", null, "columns"), ": tr\xEDos[i] = v19[i] + v20[71\u2212i] + v21[i] (v20 read backwards, as tradition requires). 72\xD73 = 216 = 6\xB3. Triplet 0 = ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "he" }, "\u05D5\u05D4\u05D5"), " = Vehuiah (canonical \u2713). Each triplet + suffix ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "he" }, "\u05D0\u05DC"), " (Hod) or ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "he" }, "\u05D9\u05D4"), " (Malkhut) gives the angelic name."), /* @__PURE__ */ import_react8.default.createElement("h3", null, "The 72 around the precessional circle"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "The 72 angels placed one every 5\xB0 (360\xB0/72). This is the precessional clock: precession carries the equinox \u2248 1\xB0 every 71.6 \u2248 ", /* @__PURE__ */ import_react8.default.createElement("b", null, "72 years"), ", so ", /* @__PURE__ */ import_react8.default.createElement("b", null, "72 = the years per degree of precession"), ", and each 5\xB0 angel = ~360 yr of precession; the full 72-division circuit = 72 \xD7 360 \u2248 ", /* @__PURE__ */ import_react8.default.createElement("b", null, "25 920 yr"), " \u2014 the traditional Platonic great year (modern value 25 772 yr). Major ticks every 6th (the 12 decans). The decanatal attribution (each Shem angel \u2192 5\xB0) is traditional; the precessional reading is a mnemonic, not a physical model."), /* @__PURE__ */ import_react8.default.createElement("div", { style: { marginBottom: 14 } }, /* @__PURE__ */ import_react8.default.createElement(AngelsCircle, { triplets: data.triplets })), /* @__PURE__ */ import_react8.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react8.default.createElement("input", { type: "text", value: q, onChange: (e) => setQ(e.target.value), placeholder: "filter by # or triplet\u2026", style: { flex: "1 1 220px" } }), /* @__PURE__ */ import_react8.default.createElement("span", { className: "pill" }, filtered.length, " of 72")), /* @__PURE__ */ import_react8.default.createElement("table", null, /* @__PURE__ */ import_react8.default.createElement("thead", null, /* @__PURE__ */ import_react8.default.createElement("tr", null, /* @__PURE__ */ import_react8.default.createElement("th", null, "#"), /* @__PURE__ */ import_react8.default.createElement("th", null, "Triplet"), /* @__PURE__ */ import_react8.default.createElement("th", null, "+\u05D0\u05DC (Hod)"), /* @__PURE__ */ import_react8.default.createElement("th", null, "gem"), /* @__PURE__ */ import_react8.default.createElement("th", null, "+\u05D9\u05D4 (Malkhut)"), /* @__PURE__ */ import_react8.default.createElement("th", null, "gem"))), /* @__PURE__ */ import_react8.default.createElement("tbody", null, filtered.map((r) => /* @__PURE__ */ import_react8.default.createElement("tr", { key: r.i }, /* @__PURE__ */ import_react8.default.createElement("td", null, r.i), /* @__PURE__ */ import_react8.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react8.default.createElement("span", { className: "he" }, r.trio)), /* @__PURE__ */ import_react8.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react8.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, r.el)), /* @__PURE__ */ import_react8.default.createElement("td", { className: "deg" }, r.gemEL), /* @__PURE__ */ import_react8.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react8.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, r.yh)), /* @__PURE__ */ import_react8.default.createElement("td", { className: "deg" }, r.gemYH))))), /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react8.default.createElement("em", null, "Caveat (\xA76.3):"), " the mechanical extraction 72\xD73 from Exodus is demonstrated (p\u22485\xD710\u207B\u2077); the method is medieval (Rashi, 11th c.); the decanatal attribution (each angel \u2192 5\xB0) is a hypothesis, not demonstrated here. The sigil of each triplet is computed on the Sigil Forge tab."));
+  return /* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement("h2", null, "The 72 angels \u2014 Shem HaMephorash from Exodus 14:19-21 (\xA715b.4)"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "72 consonants \xD7 3 verses. The 72 triplets are read by ", /* @__PURE__ */ import_react8.default.createElement("b", null, "columns"), ": tr\xEDos[i] = v19[i] + v20[71\u2212i] + v21[i] (v20 read backwards, as tradition requires). 72\xD73 = 216 = 6\xB3. Triplet 0 = ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "he" }, "\u05D5\u05D4\u05D5"), " = Vehuiah (canonical \u2713). Each triplet + suffix ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "he" }, "\u05D0\u05DC"), " (Hod) or ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "he" }, "\u05D9\u05D4"), " (Malkhut) gives the angelic name."), /* @__PURE__ */ import_react8.default.createElement("h3", null, "The 72 around the precessional circle"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "The 72 angels placed one every 5\xB0 (360\xB0/72). This is the precessional clock: precession carries the equinox \u2248 1\xB0 every 71.6 \u2248 ", /* @__PURE__ */ import_react8.default.createElement("b", null, "72 years"), ", so ", /* @__PURE__ */ import_react8.default.createElement("b", null, "72 = the years per degree of precession"), ", and each 5\xB0 angel = ~360 yr of precession; the full 72-division circuit = 72 \xD7 360 \u2248 ", /* @__PURE__ */ import_react8.default.createElement("b", null, "25 920 yr"), " \u2014 the traditional Platonic great year (modern value 25 771 yr). Major ticks every 6th (the 12 decans). The decanatal attribution (each Shem angel \u2192 5\xB0) is traditional; the precessional reading is a mnemonic, not a physical model."), /* @__PURE__ */ import_react8.default.createElement("div", { style: { marginBottom: 14 } }, /* @__PURE__ */ import_react8.default.createElement(AngelsCircle, { triplets: data.triplets })), /* @__PURE__ */ import_react8.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react8.default.createElement("input", { type: "text", value: q, onChange: (e) => setQ(e.target.value), placeholder: "filter by # or triplet\u2026", style: { flex: "1 1 220px" } }), /* @__PURE__ */ import_react8.default.createElement("span", { className: "pill" }, filtered.length, " of 72")), /* @__PURE__ */ import_react8.default.createElement("table", null, /* @__PURE__ */ import_react8.default.createElement("thead", null, /* @__PURE__ */ import_react8.default.createElement("tr", null, /* @__PURE__ */ import_react8.default.createElement("th", null, "#"), /* @__PURE__ */ import_react8.default.createElement("th", null, "Triplet"), /* @__PURE__ */ import_react8.default.createElement("th", null, "+\u05D0\u05DC (Hod)"), /* @__PURE__ */ import_react8.default.createElement("th", null, "gem"), /* @__PURE__ */ import_react8.default.createElement("th", null, "+\u05D9\u05D4 (Malkhut)"), /* @__PURE__ */ import_react8.default.createElement("th", null, "gem"))), /* @__PURE__ */ import_react8.default.createElement("tbody", null, filtered.map((r) => /* @__PURE__ */ import_react8.default.createElement("tr", { key: r.i }, /* @__PURE__ */ import_react8.default.createElement("td", null, r.i), /* @__PURE__ */ import_react8.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react8.default.createElement("span", { className: "he" }, r.trio)), /* @__PURE__ */ import_react8.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react8.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, r.el)), /* @__PURE__ */ import_react8.default.createElement("td", { className: "deg" }, r.gemEL), /* @__PURE__ */ import_react8.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react8.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, r.yh)), /* @__PURE__ */ import_react8.default.createElement("td", { className: "deg" }, r.gemYH))))), /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react8.default.createElement("em", null, "Caveat (\xA76.3):"), " the mechanical extraction 72\xD73 from Exodus is demonstrated (p\u22485\xD710\u207B\u2077); the method is medieval (Rashi, 11th c.); the decanatal attribution (each angel \u2192 5\xB0) is a hypothesis, not demonstrated here. The sigil of each triplet is computed on the Sigil Forge tab."));
 }
 
 // src/tabs/CyclesTab.jsx
@@ -27152,13 +27163,13 @@ function Heptagram() {
     const [x, y] = pt(k);
     return (j2 === 0 ? "M" : "L") + x.toFixed(1) + " " + y.toFixed(1);
   }).join(" ") + " Z";
-  return /* @__PURE__ */ import_react9.default.createElement("svg", { viewBox: "0 0 340 300", width: "100%", style: { maxWidth: 340 }, role: "img", "aria-label": "Chaldean heptagram" }, /* @__PURE__ */ import_react9.default.createElement("path", { d: starD, fill: "none", stroke: "#e8c87a", strokeWidth: "1.4", opacity: "0.85" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx, cy, r: R, fill: "none", stroke: "#283145", strokeWidth: "1" }), planets.map((p, i) => {
+  return /* @__PURE__ */ import_react9.default.createElement("svg", { viewBox: "0 0 340 300", width: "100%", style: { maxWidth: 340 }, role: "img", "aria-label": "Chaldean heptagram" }, /* @__PURE__ */ import_react9.default.createElement("path", { d: starD, fill: "none", stroke: "#e8c87a", strokeWidth: "1.4", opacity: "0.85" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx, cy, r: R, fill: "none", stroke: "#2a2a38", strokeWidth: "1" }), planets.map((p, i) => {
     const [x, y] = pt(i);
-    return /* @__PURE__ */ import_react9.default.createElement("g", { key: p }, /* @__PURE__ */ import_react9.default.createElement("circle", { cx: x, cy: y, r: "18", fill: "#1a2030", stroke: "#7fb0ff", strokeWidth: "1.4" }), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: y - 1, textAnchor: "middle", fontSize: "15", fill: "#e8c87a" }, GLYPH[p]), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: y + 11, textAnchor: "middle", fontSize: "13", fill: "#7fb0ff", fontFamily: "serif" }, he[i]), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: y - 26, textAnchor: "middle", fontSize: "10", fill: "#8a96ad" }, p, " \xB7 ", dayOf[p]));
+    return /* @__PURE__ */ import_react9.default.createElement("g", { key: p }, /* @__PURE__ */ import_react9.default.createElement("circle", { cx: x, cy: y, r: "18", fill: "#0f1518", stroke: "#5eead4", strokeWidth: "1.4" }), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: y - 1, textAnchor: "middle", fontSize: "15", fill: "#5eead4" }, GLYPH[p]), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: y + 11, textAnchor: "middle", fontSize: "13", fill: "#e8c87a", fontFamily: "serif" }, he[i]), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: y - 26, textAnchor: "middle", fontSize: "10", fill: "#8a96ad" }, p, " \xB7 ", dayOf[p]));
   }), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy - 6, textAnchor: "middle", fontSize: "11", fill: "#8a96ad" }, "Chaldean order"), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy + 10, textAnchor: "middle", fontSize: "11", fill: "#e8c87a" }, "7 = 7 = 7"), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy + 26, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "sidereal \xB7 mod 7 \xB7 days"));
 }
 function SarosDiagram() {
-  return /* @__PURE__ */ import_react9.default.createElement("svg", { viewBox: "0 0 460 220", width: "100%", style: { maxWidth: 460 }, role: "img", "aria-label": "Eclipse node geometry" }, /* @__PURE__ */ import_react9.default.createElement("rect", { x: "40", y: "98", width: "380", height: "24", fill: "#6fe0a0", opacity: "0.07" }), /* @__PURE__ */ import_react9.default.createElement("line", { x1: "40", y1: "110", x2: "420", y2: "110", stroke: "#7fb0ff", strokeWidth: "1.5" }), /* @__PURE__ */ import_react9.default.createElement("line", { x1: "60", y1: "95", x2: "400", y2: "125", stroke: "#c79bff", strokeWidth: "1.3", strokeDasharray: "5 4" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: "230", cy: "110", r: "16", fill: "#e8c87a" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: "230", cy: "110", r: "16", fill: "none", stroke: "#ffcf6a", strokeWidth: "1" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: "262", cy: "110", r: "6", fill: "#1a2030", stroke: "#6fe0a0", strokeWidth: "1.4" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: "120", cy: "92", r: "6", fill: "#1a2030", stroke: "#ff8a8a", strokeWidth: "1.4" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: "230", y: "74", textAnchor: "middle", fontSize: "10", fill: "#ffcf6a" }, "node \xB7 eclipse season"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "262", y: "135", textAnchor: "middle", fontSize: "9", fill: "#6fe0a0" }, "Moon at node \u2192 eclipse"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "120", y: "80", textAnchor: "middle", fontSize: "9", fill: "#ff8a8a" }, "Moon far from node \u2192 none"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "40", y: "92", fontSize: "9", fill: "#7fb0ff" }, "ecliptic (Sun's path)"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "300", y: "140", fontSize: "9", fill: "#c79bff" }, "Moon's path \xB7 5.1\xB0 incline"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "40", y: "158", fontSize: "9", fill: "#6fe0a0" }, "|\u03B2| < 1.6\xB0 window (scan threshold)"));
+  return /* @__PURE__ */ import_react9.default.createElement("svg", { viewBox: "0 0 460 220", width: "100%", style: { maxWidth: 460 }, role: "img", "aria-label": "Eclipse node geometry" }, /* @__PURE__ */ import_react9.default.createElement("rect", { x: "40", y: "98", width: "380", height: "24", fill: "#00db7c", opacity: "0.07" }), /* @__PURE__ */ import_react9.default.createElement("line", { x1: "40", y1: "110", x2: "420", y2: "110", stroke: "#5eead4", strokeWidth: "1.5" }), /* @__PURE__ */ import_react9.default.createElement("line", { x1: "60", y1: "95", x2: "400", y2: "125", stroke: "#9b8ec4", strokeWidth: "1.3", strokeDasharray: "5 4" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: "230", cy: "110", r: "16", fill: "#e8c87a" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: "230", cy: "110", r: "16", fill: "none", stroke: "#f4a8c0", strokeWidth: "1" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: "262", cy: "110", r: "6", fill: "#16161f", stroke: "#00db7c", strokeWidth: "1.4" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: "120", cy: "92", r: "6", fill: "#16161f", stroke: "#e96770", strokeWidth: "1.4" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: "230", y: "74", textAnchor: "middle", fontSize: "10", fill: "#f4a8c0" }, "node \xB7 eclipse season"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "262", y: "135", textAnchor: "middle", fontSize: "9", fill: "#00db7c" }, "Moon at node \u2192 eclipse"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "120", y: "80", textAnchor: "middle", fontSize: "9", fill: "#e96770" }, "Moon far from node \u2192 none"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "40", y: "92", fontSize: "9", fill: "#5eead4" }, "ecliptic (Sun's path)"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "300", y: "140", fontSize: "9", fill: "#9b8ec4" }, "Moon's path \xB7 5.1\xB0 incline"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "40", y: "158", fontSize: "9", fill: "#00db7c" }, "|\u03B2| < 1.6\xB0 window (scan threshold)"));
 }
 function PrecessionDiagram() {
   const cx = 230, cy = 130, R = 120, r = 70;
@@ -27166,12 +27177,12 @@ function PrecessionDiagram() {
     const a1 = (-90 + i * 30) * Math.PI / 180, a2 = (-90 + (i + 1) * 30) * Math.PI / 180;
     const x1 = cx + R * Math.cos(a1), y1 = cy + R * Math.sin(a1), x2 = cx + R * Math.cos(a2), y2 = cy + R * Math.sin(a2);
     const mx = cx + (R - 22) * Math.cos((a1 + a2) / 2), my = cy + (R - 22) * Math.sin((a1 + a2) / 2);
-    return /* @__PURE__ */ import_react9.default.createElement("g", { key: i }, /* @__PURE__ */ import_react9.default.createElement("path", { d: `M ${cx} ${cy} L ${x1} ${y1} A ${R} ${R} 0 0 1 ${x2} ${y2} Z`, fill: cls, stroke: "#283145", strokeWidth: "0.8" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: mx, y: my, textAnchor: "middle", dominantBaseline: "middle", fontSize: "9", fill: "#8a96ad" }, lab));
+    return /* @__PURE__ */ import_react9.default.createElement("g", { key: i }, /* @__PURE__ */ import_react9.default.createElement("path", { d: `M ${cx} ${cy} L ${x1} ${y1} A ${R} ${R} 0 0 1 ${x2} ${y2} Z`, fill: cls, stroke: "#2a2a38", strokeWidth: "0.8" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: mx, y: my, textAnchor: "middle", dominantBaseline: "middle", fontSize: "9", fill: "#8a96ad" }, lab));
   };
   const ayAng = (-90 + 24.18) * Math.PI / 180;
   const tx = cx + R * Math.cos(-90 * Math.PI / 180), ty = cy + R * Math.sin(-90 * Math.PI / 180);
   const sx = cx + R * Math.cos(ayAng), sy = cy + R * Math.sin(ayAng);
-  return /* @__PURE__ */ import_react9.default.createElement("svg", { viewBox: "0 0 460 280", width: "100%", style: { maxWidth: 460 }, role: "img", "aria-label": "Precession: tropical vs sidereal zodiac" }, /* @__PURE__ */ import_react9.default.createElement("circle", { cx, cy, r: R, fill: "#1a2030", stroke: "#283145" }), SIGNS.map((s, i) => seg(i, i % 2 ? "#131826" : "#1a2030", s.slice(0, 3))), /* @__PURE__ */ import_react9.default.createElement("line", { x1: cx, y1: cy, x2: tx, y2: ty, stroke: "#e8c87a", strokeWidth: "2" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: tx, cy: ty, r: "5", fill: "#e8c87a" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: tx, y: ty - 10, textAnchor: "middle", fontSize: "9", fill: "#e8c87a" }, "\u2648 tropical 0\xB0 (fixed to equinox \u2014 does NOT precess)"), /* @__PURE__ */ import_react9.default.createElement("line", { x1: cx, y1: cy, x2: sx, y2: sy, stroke: "#c79bff", strokeWidth: "2", strokeDasharray: "4 3" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: sx, cy: sy, r: "5", fill: "#c79bff" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: sx + 10, y: sy + 4, fontSize: "9", fill: "#c79bff" }, "sidereal 0\xB0 (fixed to stars \u2014 precesses)"), /* @__PURE__ */ import_react9.default.createElement("path", { d: `M ${cx + (R - 34) * Math.cos(-90 * Math.PI / 180)} ${cy + (R - 34) * Math.sin(-90 * Math.PI / 180)} A ${R - 34} ${R - 34} 0 0 1 ${cx + (R - 34) * Math.cos(ayAng)} ${cy + (R - 34) * Math.sin(ayAng)}`, fill: "none", stroke: "#ffcf6a", strokeWidth: "1.4" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx + (R - 50) * Math.cos((-90 + 12) * Math.PI / 180), y: cy + (R - 50) * Math.sin((-90 + 12) * Math.PI / 180) + 3, textAnchor: "middle", fontSize: "9", fill: "#ffcf6a" }, "ayanamsa 24.18\xB0"), /* @__PURE__ */ import_react9.default.createElement("path", { d: `M ${cx} ${cy + 44} A 44 44 0 0 0 ${cx - 31} ${cy + 31}`, fill: "none", stroke: "#8a96ad", strokeWidth: "1.2", markerEnd: "url(#ar)" }), /* @__PURE__ */ import_react9.default.createElement("defs", null, /* @__PURE__ */ import_react9.default.createElement("marker", { id: "ar", markerWidth: "6", markerHeight: "6", refX: "3", refY: "3", orient: "auto" }, /* @__PURE__ */ import_react9.default.createElement("path", { d: "M0 0 L6 3 L0 6 Z", fill: "#8a96ad" }))), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "precession \u2192"));
+  return /* @__PURE__ */ import_react9.default.createElement("svg", { viewBox: "0 0 460 280", width: "100%", style: { maxWidth: 460 }, role: "img", "aria-label": "Precession: tropical vs sidereal zodiac" }, /* @__PURE__ */ import_react9.default.createElement("circle", { cx, cy, r: R, fill: "#16161f", stroke: "#2a2a38" }), SIGNS.map((s, i) => seg(i, i % 2 ? "#16161f" : "#16161f", s.slice(0, 3))), /* @__PURE__ */ import_react9.default.createElement("line", { x1: cx, y1: cy, x2: tx, y2: ty, stroke: "#e8c87a", strokeWidth: "2" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: tx, cy: ty, r: "5", fill: "#e8c87a" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: tx, y: ty - 10, textAnchor: "middle", fontSize: "9", fill: "#e8c87a" }, "\u2648 tropical 0\xB0 (fixed to equinox \u2014 does NOT precess)"), /* @__PURE__ */ import_react9.default.createElement("line", { x1: cx, y1: cy, x2: sx, y2: sy, stroke: "#9b8ec4", strokeWidth: "2", strokeDasharray: "4 3" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: sx, cy: sy, r: "5", fill: "#9b8ec4" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: sx + 10, y: sy + 4, fontSize: "9", fill: "#9b8ec4" }, "sidereal 0\xB0 (fixed to stars \u2014 precesses)"), /* @__PURE__ */ import_react9.default.createElement("path", { d: `M ${cx + (R - 34) * Math.cos(-90 * Math.PI / 180)} ${cy + (R - 34) * Math.sin(-90 * Math.PI / 180)} A ${R - 34} ${R - 34} 0 0 1 ${cx + (R - 34) * Math.cos(ayAng)} ${cy + (R - 34) * Math.sin(ayAng)}`, fill: "none", stroke: "#f4a8c0", strokeWidth: "1.4" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx + (R - 50) * Math.cos((-90 + 12) * Math.PI / 180), y: cy + (R - 50) * Math.sin((-90 + 12) * Math.PI / 180) + 3, textAnchor: "middle", fontSize: "9", fill: "#f4a8c0" }, "ayanamsa 24.18\xB0"), /* @__PURE__ */ import_react9.default.createElement("path", { d: `M ${cx} ${cy + 44} A 44 44 0 0 0 ${cx - 31} ${cy + 31}`, fill: "none", stroke: "#8a96ad", strokeWidth: "1.2", markerEnd: "url(#ar)" }), /* @__PURE__ */ import_react9.default.createElement("defs", null, /* @__PURE__ */ import_react9.default.createElement("marker", { id: "ar", markerWidth: "6", markerHeight: "6", refX: "3", refY: "3", orient: "auto" }, /* @__PURE__ */ import_react9.default.createElement("path", { d: "M0 0 L6 3 L0 6 Z", fill: "#8a96ad" }))), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "precession \u2192"));
 }
 function MetonDiagram() {
   const cx = 160, cy = 110, R = 95;
@@ -27180,10 +27191,10 @@ function MetonDiagram() {
     const a = (-90 + (y - 1) * 360 / 19) * Math.PI / 180;
     return [cx + R * Math.cos(a), cy + R * Math.sin(a)];
   };
-  return /* @__PURE__ */ import_react9.default.createElement("svg", { viewBox: "0 0 360 220", width: "100%", style: { maxWidth: 360 }, role: "img", "aria-label": "Metonic 19-year cycle" }, /* @__PURE__ */ import_react9.default.createElement("circle", { cx, cy, r: R + 14, fill: "none", stroke: "#283145" }), Array.from({ length: 19 }, (_, i) => i + 1).map((y) => {
+  return /* @__PURE__ */ import_react9.default.createElement("svg", { viewBox: "0 0 360 220", width: "100%", style: { maxWidth: 360 }, role: "img", "aria-label": "Metonic 19-year cycle" }, /* @__PURE__ */ import_react9.default.createElement("circle", { cx, cy, r: R + 14, fill: "none", stroke: "#2a2a38" }), Array.from({ length: 19 }, (_, i) => i + 1).map((y) => {
     const [x, yp] = pt(y);
     const L2 = leap.has(y);
-    return /* @__PURE__ */ import_react9.default.createElement("g", { key: y }, /* @__PURE__ */ import_react9.default.createElement("circle", { cx: x, cy: yp, r: L2 ? 13 : 10, fill: L2 ? "#e8c87a" : "#1a2030", stroke: L2 ? "#e8c87a" : "#283145", strokeWidth: "1.2" }), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: yp + 3, textAnchor: "middle", fontSize: "9", fill: L2 ? "#0b0e14" : "#8a96ad", fontWeight: L2 ? 700 : 400 }, L2 ? "13" : "12"), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: L2 ? yp - 19 : yp - 16, textAnchor: "middle", fontSize: "8", fill: "#8a96ad" }, y));
+    return /* @__PURE__ */ import_react9.default.createElement("g", { key: y }, /* @__PURE__ */ import_react9.default.createElement("circle", { cx: x, cy: yp, r: L2 ? 13 : 10, fill: L2 ? "#e8c87a" : "#16161f", stroke: L2 ? "#e8c87a" : "#2a2a38", strokeWidth: "1.2" }), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: yp + 3, textAnchor: "middle", fontSize: "9", fill: L2 ? "#0b0e14" : "#8a96ad", fontWeight: L2 ? 700 : 400 }, L2 ? "13" : "12"), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: L2 ? yp - 19 : yp - 16, textAnchor: "middle", fontSize: "8", fill: "#8a96ad" }, y));
   }), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy - 8, textAnchor: "middle", fontSize: "11", fill: "#e8c87a" }, "19 yr"), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy + 6, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "= 235 months"), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy + 20, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "7 leap + 12 common"));
 }
 function WeekTab({ date, rows }) {
@@ -27222,7 +27233,7 @@ function SarosTab() {
   (0, import_react9.useEffect)(() => {
     scan(yr);
   }, [yr]);
-  return /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Saros \u2014 solar eclipses & the saros series (\xA715b.6, \xA79)"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A live scan: every new moon in the chosen year, a solar eclipse if the Moon's ecliptic latitude |\u03B2| < 1.6\xB0 (the same threshold calibrated in ", /* @__PURE__ */ import_react9.default.createElement("code", null, "calc_saros_series.mjs"), "). One year is fast; the full 5000-year enumeration that counts saros series members runs offline."), /* @__PURE__ */ import_react9.default.createElement("div", { className: "fig" }, /* @__PURE__ */ import_react9.default.createElement(SarosDiagram, null), /* @__PURE__ */ import_react9.default.createElement("div", { className: "cap" }, "Why eclipses cluster at nodes: the Moon's path is inclined 5.1\xB0 to the ecliptic and crosses it only twice per month. A new moon within the |\u03B2|<1.6\xB0 window (green band) = solar eclipse; elsewhere = a normal new moon. The scan tests exactly this.")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react9.default.createElement("button", { onClick: () => setYr(yr - 1) }, "\u25C0 ", yr - 1), /* @__PURE__ */ import_react9.default.createElement(YearInput, { value: yr, onCommit: setYr }), /* @__PURE__ */ import_react9.default.createElement("button", { onClick: () => setYr(yr + 1) }, yr + 1, " \u25B6"), yr < 0 && /* @__PURE__ */ import_react9.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, Math.abs(yr), " BCE"), busy && /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill" }, "scanning\u2026")), list && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted" }, "Solar eclipses in ", list.y, ": ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: "var(--gold)" } }, list.out.length)), /* @__PURE__ */ import_react9.default.createElement("table", null, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", null, "Date"), /* @__PURE__ */ import_react9.default.createElement("th", null, "\u03B2 (Moon lat)"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Type"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, list.out.length === 0 && /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { className: "muted" }, "none"), /* @__PURE__ */ import_react9.default.createElement("td", null), /* @__PURE__ */ import_react9.default.createElement("td", null)), list.out.map((e) => /* @__PURE__ */ import_react9.default.createElement("tr", { key: e.ds }, /* @__PURE__ */ import_react9.default.createElement("td", null, e.ds), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, e.beta.toFixed(3), "\xB0"), /* @__PURE__ */ import_react9.default.createElement("td", null, e.kind === "central" ? '<b style="color:var(--gold)">central</b>' : "partial")))))), /* @__PURE__ */ import_react9.default.createElement("h3", null, "The saros-series count (\xA715b.6 \u2014 verified by calculation)"), /* @__PURE__ */ import_react9.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react9.default.createElement("li", null, "The saros = 223 synodic months = ", /* @__PURE__ */ import_react9.default.createElement("b", null, (223 * SYN).toFixed(2), " d"), ". Eclipses of one series are separated by ~", (223 * SYN).toFixed(2), " d; a chain = a saros series."), /* @__PURE__ */ import_react9.default.createElement("li", null, "Full enumeration (5000 years, all new moons, |\u03B2| < 1.6\xB0): ", /* @__PURE__ */ import_react9.default.createElement("b", null, "152 complete series, lengths 54\u201387, median 72"), " \u2014 the empirical member count of a saros series.")), /* @__PURE__ */ import_react9.default.createElement("h3", null, "Hebrew stellar-alphabet mnemonics for eclipse seasons"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "The ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Sefer Yetzirah"), " does not predict eclipses, and the ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Sefer Raziel"), " (p.144: \u201Ccombina los signos y la rueda\u2026 calcula los per\xEDodos\u2026 calcula para ver las generaciones\u201D) gives the letter-astronomy scaffold but no eclipse algorithm. The real engine is the Hebrew calendar, and its constants are the SY's constants:"), /* @__PURE__ */ import_react9.default.createElement("table", null, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", null, "Astronomy"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Stellar alphabet (SY)"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "Molad = 29d 12h 793p = ", /* @__PURE__ */ import_react9.default.createElement("b", null, MOLAD.toFixed(6), " d")), /* @__PURE__ */ import_react9.default.createElement("td", null, "\u2248 synodic month ", /* @__PURE__ */ import_react9.default.createElement("b", null, SYN.toFixed(6), " d"), " \u21D2 a conjunction engine (eclipse = conjunction/opposition near a node)")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "Metonic cycle = ", /* @__PURE__ */ import_react9.default.createElement("b", null, "19 yr"), " (12 common + 7 leap)"), /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "19 = 7 doubles + 12 simples"), " (the SY's own partition)")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "7 leap years of the 19-yr cycle"), /* @__PURE__ */ import_react9.default.createElement("td", null, "= the ", /* @__PURE__ */ import_react9.default.createElement("b", null, "7 doubles"), " (mnemonic)")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "28 lunar mansions (node / Moon path)"), /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "28 = T\u2087"), " \u2014 triangular number of the 7 doubles")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "Saros \u2248 19 eclipse years (\u0394 ", (19 * ECLY - 223 * SYN).toFixed(2), " d)"), /* @__PURE__ */ import_react9.default.createElement("td", null, "the SY's ", /* @__PURE__ */ import_react9.default.createElement("b", null, "19"), " structures the saros")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "Saros = 223 synodic = 242 draconic months"), /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "242 \u2212 223 = 19"), " \u2014 the SY number embedded in the saros")))), /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, "Sources the Hebrew calendar actually uses (absent from the rest of this app): molad + tekufot (Shmuel/Ada), ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Baraita of Samuel"), " (the one Jewish source with a nodal cycle), Maimonides ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Kiddush HaChodesh"), " (mean lunar motion), Ibn Ezra ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Sefer ha-Olam"), " (28 mansions, precession). ", /* @__PURE__ */ import_react9.default.createElement("b", null, "Caveat:"), " these mnemonics predict ", /* @__PURE__ */ import_react9.default.createElement("i", null, "eclipse seasons"), " (a window near a node), not individual eclipses or paths; the molad + 19-yr cycle is a real calculation engine, the stellar-alphabet constants are a mnemonic, not a physical model."));
+  return /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Saros \u2014 solar eclipses & the saros series (\xA715b.6, \xA79)"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A live scan: every new moon in the chosen year, a solar eclipse if the Moon's ecliptic latitude |\u03B2| < 1.6\xB0 (the calibrated eclipse threshold). One year is fast; the full 5000-year enumeration that counts saros series members runs offline."), /* @__PURE__ */ import_react9.default.createElement("div", { className: "fig" }, /* @__PURE__ */ import_react9.default.createElement(SarosDiagram, null), /* @__PURE__ */ import_react9.default.createElement("div", { className: "cap" }, "Why eclipses cluster at nodes: the Moon's path is inclined 5.1\xB0 to the ecliptic and crosses it only twice per month. A new moon within the |\u03B2|<1.6\xB0 window (green band) = solar eclipse; elsewhere = a normal new moon. The scan tests exactly this.")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react9.default.createElement("button", { onClick: () => setYr(yr - 1) }, "\u25C0 ", yr - 1), /* @__PURE__ */ import_react9.default.createElement(YearInput, { value: yr, onCommit: setYr }), /* @__PURE__ */ import_react9.default.createElement("button", { onClick: () => setYr(yr + 1) }, yr + 1, " \u25B6"), yr < 0 && /* @__PURE__ */ import_react9.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, Math.abs(yr), " BCE"), busy && /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill" }, "scanning\u2026")), list && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted" }, "Solar eclipses in ", list.y, ": ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: "var(--gold)" } }, list.out.length)), /* @__PURE__ */ import_react9.default.createElement("table", null, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", null, "Date"), /* @__PURE__ */ import_react9.default.createElement("th", null, "\u03B2 (Moon lat)"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Type"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, list.out.length === 0 && /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { className: "muted" }, "none"), /* @__PURE__ */ import_react9.default.createElement("td", null), /* @__PURE__ */ import_react9.default.createElement("td", null)), list.out.map((e) => /* @__PURE__ */ import_react9.default.createElement("tr", { key: e.ds }, /* @__PURE__ */ import_react9.default.createElement("td", null, e.ds), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, e.beta.toFixed(3), "\xB0"), /* @__PURE__ */ import_react9.default.createElement("td", null, e.kind === "central" ? '<b style="color:var(--gold)">central</b>' : "partial")))))), /* @__PURE__ */ import_react9.default.createElement("h3", null, "The saros-series count (\xA715b.6 \u2014 verified by calculation)"), /* @__PURE__ */ import_react9.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react9.default.createElement("li", null, "The saros = 223 synodic months = ", /* @__PURE__ */ import_react9.default.createElement("b", null, (223 * SYN).toFixed(2), " d"), ". Eclipses of one series are separated by ~", (223 * SYN).toFixed(2), " d; a chain = a saros series."), /* @__PURE__ */ import_react9.default.createElement("li", null, "Full enumeration (5000 years, all new moons, |\u03B2| < 1.6\xB0): ", /* @__PURE__ */ import_react9.default.createElement("b", null, "152 complete series, lengths 54\u201387, median 72"), " \u2014 the empirical member count of a saros series.")), /* @__PURE__ */ import_react9.default.createElement("h3", null, "Hebrew stellar-alphabet mnemonics for eclipse seasons"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "The ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Sefer Yetzirah"), " does not predict eclipses, and the ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Sefer Raziel"), " (p.144: \u201Ccombina los signos y la rueda\u2026 calcula los per\xEDodos\u2026 calcula para ver las generaciones\u201D) gives the letter-astronomy scaffold but no eclipse algorithm. The real engine is the Hebrew calendar, and its constants are the SY's constants:"), /* @__PURE__ */ import_react9.default.createElement("table", null, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", null, "Astronomy"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Stellar alphabet (SY)"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "Molad = 29d 12h 793p = ", /* @__PURE__ */ import_react9.default.createElement("b", null, MOLAD.toFixed(6), " d")), /* @__PURE__ */ import_react9.default.createElement("td", null, "\u2248 synodic month ", /* @__PURE__ */ import_react9.default.createElement("b", null, SYN.toFixed(6), " d"), " \u21D2 a conjunction engine (eclipse = conjunction/opposition near a node)")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "Metonic cycle = ", /* @__PURE__ */ import_react9.default.createElement("b", null, "19 yr"), " (12 common + 7 leap)"), /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "19 = 7 doubles + 12 simples"), " (the SY's own partition)")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "7 leap years of the 19-yr cycle"), /* @__PURE__ */ import_react9.default.createElement("td", null, "= the ", /* @__PURE__ */ import_react9.default.createElement("b", null, "7 doubles"), " (mnemonic)")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "28 lunar mansions (node / Moon path)"), /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "28 = T\u2087"), " \u2014 triangular number of the 7 doubles")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "Saros \u2248 19 eclipse years (\u0394 ", (19 * ECLY - 223 * SYN).toFixed(2), " d)"), /* @__PURE__ */ import_react9.default.createElement("td", null, "the SY's ", /* @__PURE__ */ import_react9.default.createElement("b", null, "19"), " structures the saros")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "Saros = 223 synodic = 242 draconic months"), /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "242 \u2212 223 = 19"), " \u2014 the SY number embedded in the saros")))), /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, "Sources the Hebrew calendar actually uses (absent from the rest of this app): molad + tekufot (Shmuel/Ada), ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Baraita of Samuel"), " (the one Jewish source with a nodal cycle), Maimonides ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Kiddush HaChodesh"), " (mean lunar motion), Ibn Ezra ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Sefer ha-Olam"), " (28 mansions, precession). ", /* @__PURE__ */ import_react9.default.createElement("b", null, "Caveat:"), " these mnemonics predict ", /* @__PURE__ */ import_react9.default.createElement("i", null, "eclipse seasons"), " (a window near a node), not individual eclipses or paths; the molad + 19-yr cycle is a real calculation engine, the stellar-alphabet constants are a mnemonic, not a physical model."));
 }
 function AyanamsaTab() {
   const AYA = { "Lahiri (Chitrapaksha)": 24.18, "Krishnamurti (KP)": 23.93, "Fagan-Bradley": 25.06, "Raman": 22.4 };
@@ -27311,7 +27322,7 @@ function EphemeridesModal({ eph, onClose }) {
   const CAP = 40, shown = hist && hist.events ? hist.events.slice(0, CAP) : [];
   return /* @__PURE__ */ import_react9.default.createElement("div", { className: "eph-modal", onClick: onClose }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel eph-panel", onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react9.default.createElement("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 } }, /* @__PURE__ */ import_react9.default.createElement("h3", { style: { margin: 0 } }, "What happened \u2014 ", disp), /* @__PURE__ */ import_react9.default.createElement("button", { className: "linkish", onClick: onClose, style: { fontSize: "1.1rem" }, title: "Close" }, "close \u2715")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Historical events on this date \u2014 from Wikipedia's ", /* @__PURE__ */ import_react9.default.createElement("b", null, "On This Day"), ", the largest free day-by-day historical corpus (recorded history back to antiquity). Sorted current \u2192 past. This is ", /* @__PURE__ */ import_react9.default.createElement("b", null, "human history"), ", not the astronomical alignment."), hist && hist.loading && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted" }, "Loading historical events\u2026"), hist && hist.error && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { color: "var(--red)" } }, "Could not load events (", hist.error, "). Use the AI search below."), hist && !hist.loading && hist.events && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, hist.exact.length > 0 && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("div", { style: { color: "var(--gold)", fontWeight: 700, margin: "6px 0 4px" } }, "On this date \u2014 ", disp), hist.exact.map((e, i) => /* @__PURE__ */ import_react9.default.createElement(HistEvent, { key: "x" + i, e }))), /* @__PURE__ */ import_react9.default.createElement("div", { style: { color: "var(--blue)", fontWeight: 600, margin: "10px 0 4px" } }, hist.exact.length > 0 ? `Also on ${mmName} ${di} in history (current \u2192 past)` : `On ${mmName} ${di} in history (current \u2192 past)`), hist.exact.length === 0 && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 6, fontSize: ".84rem" } }, "No event recorded for the exact year ", hist.year < 0 ? Math.abs(hist.year) + " BCE" : hist.year, ".", hist.year < 0 ? " This date is before recorded history;" : "", " ask the AI (below) for more."), shown.map((e, i) => /* @__PURE__ */ import_react9.default.createElement(HistEvent, { key: i, e })), hist.events.length > CAP && /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react9.default.createElement("a", { href: wikiDay, target: "_blank", rel: "noopener" }, "See all ", hist.events.length, " events on Wikipedia \u2192"))), /* @__PURE__ */ import_react9.default.createElement("div", { style: { marginTop: 10, padding: "8px 10px", background: "var(--panel2)", border: "1px solid var(--line)", borderRadius: 8 } }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 4, fontSize: ".82rem" } }, "Ask an AI what happened on this date:"), /* @__PURE__ */ import_react9.default.createElement("a", { href: `https://www.google.com/search?q=${googleQ}`, target: "_blank", rel: "noopener", style: { fontWeight: 600 } }, "\u{1F50D} what happened on ", disp, " \u2192")), ev && /* @__PURE__ */ import_react9.default.createElement("div", { className: "note", style: { marginTop: 8 } }, "Astronomical alignment on this date: ", ev.maxInSign, " bodies in ", ev.sign, ", span ", ev.span, "\xB0, era ", ev.era, ".")));
 }
-function AlignmentsTab({ setDate, goReader, lex, angelMap, genData }) {
+function AlignmentsTab({ setDate, goReader, lex, angelMap, genData, nameRefs }) {
   const [data, setData] = (0, import_react9.useState)(null);
   const [err, setErr] = (0, import_react9.useState)(null);
   const [sel, setSel] = (0, import_react9.useState)(null);
@@ -27383,16 +27394,14 @@ function AlignmentsTab({ setDate, goReader, lex, angelMap, genData }) {
     }, 60);
   };
   const openEph = (e, set) => setEph({ date: e.date, set, ev: e });
-  if (err) return /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Alignments"), /* @__PURE__ */ import_react9.default.createElement("p", null, "Could not load alignments.json (", err, "). Run ", /* @__PURE__ */ import_react9.default.createElement("code", null, "node calc_alignments.mjs"), " in ", /* @__PURE__ */ import_react9.default.createElement("code", null, "scripts/"), " and serve ", /* @__PURE__ */ import_react9.default.createElement("code", null, "web/"), " over HTTP."));
+  if (err) return /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel app-panel" }, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Alignments"), /* @__PURE__ */ import_react9.default.createElement("p", null, "Could not load the alignment data. Please refresh the page; if the problem persists, the data may be unavailable right now."));
   if (!data) return /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Alignments"), /* @__PURE__ */ import_react9.default.createElement("p", null, "Loading alignments.json\u2026"));
   const byDateDesc = (a, b) => parseDate(b.date) - parseDate(a.date);
   const deep = [...data.scanB].sort(byDateDesc);
-  const modern = [...data.scanA].sort(byDateDesc);
   const all7 = deep.filter((e) => e.maxInSign >= 7);
   const tight = all7.slice().sort((a, b) => a.span - b.span);
   const tight4 = [...tight.slice(0, 4)].sort(byDateDesc);
   const tightGap = tight.length >= 2 ? Math.abs((parseDate(tight[0].date) - parseDate(tight[1].date)) / 864e5 / 365.25) : null;
-  const cc = data.crossCheck || {};
   const ev = (selSet === "A" ? data.scanA : data.scanB).find((e) => e.date === sel);
   const rows = sel ? selSet === "A" ? skyAt(sel) : skyAt7(sel) : [];
   const occ = occupiedLetters(rows);
@@ -27411,13 +27420,16 @@ function AlignmentsTab({ setDate, goReader, lex, angelMap, genData }) {
       topAlways: names.filter((n) => !n.simp).sort(byImp).slice(0, 8)
     };
   })() : null;
-  return /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Alignments \u2014 rare century/millennium stellar conjunctions"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "An offline scan (", /* @__PURE__ */ import_react9.default.createElement("code", null, "calc_alignments.mjs"), ") of two body-sets. ", /* @__PURE__ */ import_react9.default.createElement("b", null, "Deep chronology"), " = the 7 classical bodies (Sun, Moon, Mercury..Saturn), 20000 BCE \u2192 2200 CE \u2014 fast at every date and its mean motion is secularly stable, so great-conjunction ", /* @__PURE__ */ import_react9.default.createElement("i", null, "dates"), " stay trustworthy across the whole range (beyond ~\xB14000 y from J2000 the VSOP87 perturbation terms diverge, so exact ", /* @__PURE__ */ import_react9.default.createElement("i", null, "degrees"), " in the deep past are an extrapolation). ", /* @__PURE__ */ import_react9.default.createElement("b", null, "Modern era"), " = the app's 10 bodies (adds Uranus/Neptune/Pluto), 1700\u20132200 CE daily (the Pluto-valid range). For each day ", /* @__PURE__ */ import_react9.default.createElement("b", null, "maxInSign"), " = the most planets in a single zodiacal sign, ", /* @__PURE__ */ import_react9.default.createElement("b", null, "span"), " = the smallest arc (\xB0) containing every body, ", /* @__PURE__ */ import_react9.default.createElement("b", null, "era"), " = the precessional era (~", AGE.toFixed(0), " y each, cyclic). Click a row for that day's sky-map + reading (your place in the list is kept); filter by year or search; ", /* @__PURE__ */ import_react9.default.createElement("span", { style: { opacity: 0.6 } }, "\u{1F4DC} what happened"), " opens what historically happened on that date (Wikipedia On This Day + an AI search link); ", /* @__PURE__ */ import_react9.default.createElement("span", { style: { opacity: 0.6 } }, "\u{1F4D6} Reader"), " opens that day in the Reader tab (its readable names). Generated ", data.generated, "."), /* @__PURE__ */ import_react9.default.createElement("div", { className: "fig", style: { maxWidth: 760 } }, /* @__PURE__ */ import_react9.default.createElement("div", { style: { fontWeight: 600, color: "var(--gold)", marginBottom: 4 } }, "The millennia signal \u2014 tightest classical grand conjunctions"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "All 7 classical planets in one zodiacal sign, within the smallest arc found (the 4 tightest, current\u2192past):"), /* @__PURE__ */ import_react9.default.createElement("table", null, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", null, "Date"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Bodies"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Sign"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Span"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Era"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, tight4.map((e) => /* @__PURE__ */ import_react9.default.createElement("tr", { key: e.date, style: e.date === sel ? { background: "rgba(127,176,255,0.10)" } : void 0 }, /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("button", { className: "linkish", onClick: () => pick(e.date, "B") }, displayDate(e.date))), /* @__PURE__ */ import_react9.default.createElement("td", null, "7 classical"), /* @__PURE__ */ import_react9.default.createElement("td", null, e.sign), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, e.span, "\xB0"), /* @__PURE__ */ import_react9.default.createElement("td", null, e.era))))), tightGap != null && /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, "Tightest pair gap: ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: "var(--gold)" } }, tightGap.toFixed(0), " y"), " \u2248 ", /* @__PURE__ */ import_react9.default.createElement("b", null, (tightGap / AGE).toFixed(2)), " precessional era(s). The two tightest grand conjunctions \u2014 ", displayDate(tight[0].date), " (", tight[0].span, "\xB0, era ", tight[0].era, ") and ", displayDate(tight[1].date), " (", tight[1].span, "\xB0, era ", tight[1].era, ") \u2014 are ~", tightGap.toFixed(0), " y apart. The tightest classical alignments (all 7 within a small arc) are the rarest class and recur on a multi-millennium scale; the all-7-in-one-sign events below recur on a centuries scale (avg ~429 y, 51 events in 22000 y).")), /* @__PURE__ */ import_react9.default.createElement("h3", null, "Cross-check \u2014 does a rare alignment produce a stellar reading NOT seen on ordinary days?"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react9.default.createElement("b", null, "Question:"), " does any 7-classical stellar reading arise ", /* @__PURE__ */ import_react9.default.createElement("i", null, "only"), " on these rare century/millennium alignments, and not on ordinary days (same 7-body set, apples-to-apples)?", /* @__PURE__ */ import_react9.default.createElement("br", null), /* @__PURE__ */ import_react9.default.createElement("b", null, "Result: NO."), " Across ", cc.rareDays, " rare-alignment days, Genesis 1:1 is legible ", /* @__PURE__ */ import_react9.default.createElement("b", null, cc.rareGenRate, "%"), " (", cc.rareGenLegible, "/", cc.rareDays, ") vs ", /* @__PURE__ */ import_react9.default.createElement("b", null, cc.baselineGenRate, "%"), " on ", cc.baselineDays, " ordinary 2024\u20132030 days; avg readable names ", /* @__PURE__ */ import_react9.default.createElement("b", null, cc.rareAvgReadable), " vs ", /* @__PURE__ */ import_react9.default.createElement("b", null, cc.baselineAvgReadable), "; and the ", /* @__PURE__ */ import_react9.default.createElement("b", null, "same ", cc.rareDistinctAngelRoots), " Shem HaMephorash angel-roots are readable as on ordinary days \u2014 ", /* @__PURE__ */ import_react9.default.createElement("b", null, (cc.angelRootsOnlyOnRare || []).length, " new"), ". Concentrating planets in one sign ", /* @__PURE__ */ import_react9.default.createElement("i", null, "reduces"), " letter diversity, so rare alignments are ", /* @__PURE__ */ import_react9.default.createElement("i", null, "poorer"), " readings, not richer ones \u2014 they are a rarity filter, not a richness source."), ev && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("h3", { ref: mapRef }, "Sky map \u2014 ", displayDate(sel), " ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { fontSize: ".72rem" } }, selSet === "A" ? "10 bodies" : "7 classical")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "fig", style: { maxWidth: 700, margin: "14px auto" } }, /* @__PURE__ */ import_react9.default.createElement(SkyMap, { rows, occ })), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "maxInSign ", /* @__PURE__ */ import_react9.default.createElement("b", null, ev.maxInSign), " in ", ev.sign, " \xB7 span ", /* @__PURE__ */ import_react9.default.createElement("b", null, ev.span, "\xB0"), " \xB7 era ", /* @__PURE__ */ import_react9.default.createElement("b", null, ev.era)), r && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Genesis 1:1 legible: ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: r.genesisLegible ? "var(--gold)" : "var(--warn)" } }, r.genesisLegible ? "YES" : "no"), " \xB7 readable names: ", /* @__PURE__ */ import_react9.default.createElement("b", null, r.readableCount), " \xB7 proper names: ", /* @__PURE__ */ import_react9.default.createElement("b", null, r.properNames), " \xB7 occupied simples: ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { fontSize: "1.15rem", color: "var(--gold)" } }, r.occupied || "\u2014")), r.angels && r.angels.length > 0 && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "Shem HaMephorash angel-roots readable: ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, r.angels.join(" "))), r && (r.topDate.length > 0 || r.topAlways.length > 0) && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("div", { className: "controls", style: { marginTop: 6, marginBottom: 4 } }, /* @__PURE__ */ import_react9.default.createElement("span", { className: "muted", style: { fontSize: ".82rem" } }, "top readable names:"), /* @__PURE__ */ import_react9.default.createElement("button", { className: topView === "date" ? "on" : "", onClick: () => setTopView("date"), "aria-pressed": topView === "date" }, "this sky (", r.topDate.length, ")"), /* @__PURE__ */ import_react9.default.createElement("button", { className: topView === "always" ? "on" : "", onClick: () => setTopView("always"), "aria-pressed": topView === "always" }, "always-readable (", r.topAlways.length, ")"), !probs && /* @__PURE__ */ import_react9.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, "\xB7 computing legibility %\u2026"), probs && /* @__PURE__ */ import_react9.default.createElement("span", { className: "muted", style: { fontSize: ".76rem" } }, "\xB7 % = empirical legibility over ", probs.n, " days of ", probs.year, " (", probs.bodies, "): ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "prob ok" }, "green"), "=special/rare \xB7 ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "prob mid" }, "amber"), "=frequent \xB7 ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "prob spec" }, "red"), "=common")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 6, fontSize: ".82rem" } }, topView === "date" ? /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, "Date-specific \u2014 the most important names whose zodiac letters are among ", /* @__PURE__ */ import_react9.default.createElement("b", null, "this alignment's"), " occupied signs, so the list changes with the alignment. Proper names first, then longest.") : /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, "Always-readable \u2014 words with no zodiac letters (mothers + doubles only), readable on ", /* @__PURE__ */ import_react9.default.createElement("b", null, "every"), " day, so this list never changes (e.g. ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, "\u05D0\u05E8\u05E4\u05DB\u05E9\u05D3"), " Arphaxad, ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, "\u05E4\u05E8\u05DE\u05E9\u05EA\u05D0"), " Parmashta, ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, "\u05E9\u05DE\u05D0\u05D1\u05E8"), " Shem-eber). Proper names first, then longest.")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "tcards", style: { gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))" } }, (topView === "date" ? r.topDate : r.topAlways).map((n, i) => /* @__PURE__ */ import_react9.default.createElement("div", { key: i, className: "tcard" + (n.simp ? "" : " always") }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "the" }, n.disp || n.he), /* @__PURE__ */ import_react9.default.createElement("div", { className: "read" }, n.translit), /* @__PURE__ */ import_react9.default.createElement("div", { className: "trans" }, n.gloss), /* @__PURE__ */ import_react9.default.createElement("div", { className: "g" }, n.len, " letters \xB7 gematria ", n.gem, n.pal && /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--gold)" } }, " \xB7 palindrome"), n.m37 && /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--green)" } }, " \xB7 \xD737"), n.angelName && /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--violet)" } }, " \xB7 angel"), n.name && /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--blue)" } }, " \xB7 name")), probs && probs.map.has(n.he) && (() => {
+  return /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Alignments \u2014 rare century/millennium stellar conjunctions"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14, padding: 16, lineHeight: 1.6 } }, /* @__PURE__ */ import_react9.default.createElement("p", { className: "muted", style: { marginTop: 0, marginBottom: 12 } }, "An offline scan of the 7 classical bodies \u2014 Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn \u2014 the set the ancients observed and the one this project reads."), /* @__PURE__ */ import_react9.default.createElement("div", { style: { marginBottom: 12 } }, /* @__PURE__ */ import_react9.default.createElement("div", { style: { fontWeight: 600, color: "var(--gold)", marginBottom: 4 } }, "Deep chronology \xB7 7 classical bodies"), /* @__PURE__ */ import_react9.default.createElement("p", { className: "muted", style: { margin: 0, fontSize: ".9rem" } }, "20000 BCE \u2192 2200 CE. Fast at every date and its mean motion is secularly stable, so great-conjunction ", /* @__PURE__ */ import_react9.default.createElement("i", null, "dates"), " stay trustworthy across the whole range. Beyond ~\xB14000 y from J2000 the VSOP87 perturbation terms diverge, so exact ", /* @__PURE__ */ import_react9.default.createElement("i", null, "degrees"), " in the deep past are an extrapolation.")), /* @__PURE__ */ import_react9.default.createElement("div", { style: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 10, marginBottom: 12 } }, /* @__PURE__ */ import_react9.default.createElement("div", { style: { border: "1px solid var(--line)", borderRadius: 8, padding: "8px 10px" } }, /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--violet)", fontWeight: 700 } }, "maxInSign"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { fontSize: ".82rem", marginTop: 2 } }, "the most planets in a single zodiacal sign that day")), /* @__PURE__ */ import_react9.default.createElement("div", { style: { border: "1px solid var(--line)", borderRadius: 8, padding: "8px 10px" } }, /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--violet)", fontWeight: 700 } }, "span"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { fontSize: ".82rem", marginTop: 2 } }, "the smallest arc (\xB0) containing every body")), /* @__PURE__ */ import_react9.default.createElement("div", { style: { border: "1px solid var(--line)", borderRadius: 8, padding: "8px 10px" } }, /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--violet)", fontWeight: 700 } }, "era"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { fontSize: ".82rem", marginTop: 2 } }, "the precessional era (~", AGE.toFixed(0), " y each, cyclic)")))), /* @__PURE__ */ import_react9.default.createElement("div", { className: "fig", style: { maxWidth: 760 } }, /* @__PURE__ */ import_react9.default.createElement("div", { style: { fontWeight: 600, color: "var(--gold)", marginBottom: 4 } }, "The millennia signal \u2014 tightest classical grand conjunctions"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "All 7 classical planets in one zodiacal sign, within the smallest arc found (the 4 tightest, current\u2192past):"), /* @__PURE__ */ import_react9.default.createElement("table", null, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", null, "Date"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Bodies"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Sign"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Span"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Era"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, tight4.map((e) => /* @__PURE__ */ import_react9.default.createElement("tr", { key: e.date, style: e.date === sel ? { background: "rgba(127,176,255,0.10)" } : void 0 }, /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("button", { className: "linkish", onClick: () => pick(e.date, "B") }, displayDate(e.date))), /* @__PURE__ */ import_react9.default.createElement("td", null, "7 classical"), /* @__PURE__ */ import_react9.default.createElement("td", null, e.sign), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, e.span, "\xB0"), /* @__PURE__ */ import_react9.default.createElement("td", null, e.era))))), tightGap != null && /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, "Tightest pair gap: ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: "var(--gold)" } }, tightGap.toFixed(0), " y"), " \u2248 ", /* @__PURE__ */ import_react9.default.createElement("b", null, (tightGap / AGE).toFixed(2)), " precessional era(s). The two tightest grand conjunctions \u2014 ", displayDate(tight[0].date), " (", tight[0].span, "\xB0, era ", tight[0].era, ") and ", displayDate(tight[1].date), " (", tight[1].span, "\xB0, era ", tight[1].era, ") \u2014 are ~", tightGap.toFixed(0), " y apart. The tightest classical alignments (all 7 within a small arc) are the rarest class and recur on a multi-millennium scale; the all-7-in-one-sign events below recur on a centuries scale (avg ~429 y, 51 events in 22000 y).")), ev && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("h3", { ref: mapRef }, "Sky map \u2014 ", displayDate(sel), " ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { fontSize: ".72rem" } }, "7 classical")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "fig", style: { maxWidth: 700, margin: "14px auto" } }, /* @__PURE__ */ import_react9.default.createElement(SkyMap, { rows, occ })), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "maxInSign ", /* @__PURE__ */ import_react9.default.createElement("b", null, ev.maxInSign), " in ", ev.sign, " \xB7 span ", /* @__PURE__ */ import_react9.default.createElement("b", null, ev.span, "\xB0"), " \xB7 era ", /* @__PURE__ */ import_react9.default.createElement("b", null, ev.era)), r && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Genesis 1:1 legible: ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: r.genesisLegible ? "var(--gold)" : "var(--warn)" } }, r.genesisLegible ? "YES" : "no"), " \xB7 readable names: ", /* @__PURE__ */ import_react9.default.createElement("b", null, r.readableCount), " \xB7 proper names: ", /* @__PURE__ */ import_react9.default.createElement("b", null, r.properNames), " \xB7 occupied simples: ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { fontSize: "1.15rem", color: "var(--gold)" } }, r.occupied || "\u2014")), r.angels && r.angels.length > 0 && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "Shem HaMephorash angel-roots readable: ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, r.angels.join(" "))), r && (r.topDate.length > 0 || r.topAlways.length > 0) && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("div", { className: "controls", style: { marginTop: 6, marginBottom: 4 } }, /* @__PURE__ */ import_react9.default.createElement("span", { className: "muted", style: { fontSize: ".82rem" } }, "top readable names:"), /* @__PURE__ */ import_react9.default.createElement("button", { className: topView === "date" ? "on" : "", onClick: () => setTopView("date"), "aria-pressed": topView === "date" }, "this sky (", r.topDate.length, ")"), /* @__PURE__ */ import_react9.default.createElement("button", { className: topView === "always" ? "on" : "", onClick: () => setTopView("always"), "aria-pressed": topView === "always" }, "always-readable (", r.topAlways.length, ")"), !probs && /* @__PURE__ */ import_react9.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, "\xB7 computing legibility %\u2026"), probs && /* @__PURE__ */ import_react9.default.createElement("span", { className: "muted", style: { fontSize: ".76rem" } }, "\xB7 % = empirical legibility over ", probs.n, " days of ", probs.year, " (", probs.bodies, "): ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "prob ok" }, "green"), "=special/rare \xB7 ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "prob mid" }, "rose"), "=frequent \xB7 ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "prob spec" }, "red"), "=common")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 6, fontSize: ".82rem" } }, topView === "date" ? /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, "Date-specific \u2014 the most important names whose zodiac letters are among ", /* @__PURE__ */ import_react9.default.createElement("b", null, "this alignment's"), " occupied signs, so the list changes with the alignment. Proper names first, then longest.") : /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, "Always-readable \u2014 words with no zodiac letters (mothers + doubles only), readable on ", /* @__PURE__ */ import_react9.default.createElement("b", null, "every"), " day, so this list never changes (e.g. ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, "\u05D0\u05E8\u05E4\u05DB\u05E9\u05D3"), " Arphaxad, ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, "\u05E4\u05E8\u05DE\u05E9\u05EA\u05D0"), " Parmashta, ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, "\u05E9\u05DE\u05D0\u05D1\u05E8"), " Shem-eber). Proper names first, then longest.")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "tcards", style: { gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))" } }, (topView === "date" ? r.topDate : r.topAlways).map((n, i) => /* @__PURE__ */ import_react9.default.createElement("div", { key: i, className: "tcard" + (n.simp ? "" : " always") }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "the" }, n.disp || n.he), /* @__PURE__ */ import_react9.default.createElement("div", { className: "read" }, n.translit), /* @__PURE__ */ import_react9.default.createElement("div", { className: "trans" }, n.gloss), /* @__PURE__ */ import_react9.default.createElement("div", { className: "g" }, n.len, " letters \xB7 gematria ", n.gem, n.pal && /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--gold)" } }, " \xB7 palindrome"), n.m37 && /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--green)" } }, " \xB7 \xD737"), n.angelName && /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--violet)" } }, " \xB7 angel")), (n.person || n.place || n.compound || nameRefs && nameRefs[n.he] && nameRefs[n.he].n > 0) && /* @__PURE__ */ import_react9.default.createElement("div", { style: { marginTop: 4, display: "flex", flexWrap: "wrap", gap: 4 } }, n.person && /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { color: "var(--blue)", borderColor: "var(--blue)" } }, "name", n.theo ? " (theophoric)" : ""), n.place && /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { color: "var(--green)", borderColor: "var(--green)" }, title: "A biblical PLACE \u2014 proper locative noun in Strong (city, mountain, region\u2026)" }, "place"), n.compound && /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { color: "var(--warn)", borderColor: "var(--warn)" }, title: "Concatenated multi-root entry whose gloss is truncated" }, "compound"), nameRefs && nameRefs[n.he] && nameRefs[n.he].n > 0 && (() => {
+    const r2 = nameRefs[n.he];
+    return /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" }, title: "Where this name appears in the Hebrew Bible (Sefaria): " + r2.refs.join(", ") }, "\u{1F4D6} ", r2.refs[0], r2.n > 1 ? " \xB7 +" + (r2.n - 1) : "");
+  })()), probs && probs.map.has(n.he) && (() => {
     const p = probs.map.get(n.he);
     const pct = p < 1e-3 ? "<0.1" : (p * 100).toFixed(p < 0.1 ? 1 : 0);
     const cls = p >= 0.5 ? "spec" : p >= 0.2 ? "mid" : "ok";
     const tag = p >= 0.5 ? "common" : p >= 0.2 ? "frequent" : "special";
     return /* @__PURE__ */ import_react9.default.createElement("span", { className: "prob " + cls, title: `Empirical legibility over ${probs.n} days of ${probs.year} (${probs.bodies}): ${pct}% of days this word's required simples are all occupied (S\u2286O, computed from astronomy-engine \u2014 not hardcoded). A within-year rate, NOT the recurrence of a specific stellar alignment (which recurs over centuries\u2192millennia, \xA715c.11). Low % = special/rare (green); high % = common (red).` }, pct, "% \xB7 ", tag);
-  })(), n.angelName && /* @__PURE__ */ import_react9.default.createElement("div", { className: "simp", style: { color: "var(--violet)" } }, "angel: ", n.angelName.en, " ", /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--dim)" } }, "\xB7 ", n.angelName.src)), n.angel && /* @__PURE__ */ import_react9.default.createElement("div", { className: "simp", style: { color: "var(--violet)" } }, "Shem triplet +\u05D0\u05DC \u2192 ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, n.angel.el), " \xB7 +\u05D9\u05D4 \u2192 ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, n.angel.yh)), /* @__PURE__ */ import_react9.default.createElement("div", { className: "simp" }, n.simp ? "simples: " + [...n.simp].join(" ") : "no simples (always)"))))))), /* @__PURE__ */ import_react9.default.createElement(AlignTable, { title: "Deep chronology \u2014 7 classical bodies, 20000 BCE \u2192 2200 CE (all rare alignments, current\u2192past)", sub: `${deep.length} rare alignments (maxInSign \u2265 5 or span \u2264 60\xB0), sorted newest first. The 7-classical set makes the centuries/millennia scale visible: great conjunctions recur every ~20 y and drift through the signs over the precessional era (~${AGE.toFixed(0)} y).`, items: deep, set: "B", sel, pick, openEph, goReader }), /* @__PURE__ */ import_react9.default.createElement(AlignTable, { title: "All-7-in-one-sign timeline \u2014 every classical grand conjunction (current\u2192past)", sub: `${all7.length} occurrences where all 7 classical bodies share one zodiacal sign \u2014 the rarest class, recurring every few centuries (irregular). Click to render that conjunction.`, items: all7, set: "B", sel, pick, openEph, goReader, showMax: false }), /* @__PURE__ */ import_react9.default.createElement(AlignTable, { title: "Modern era \u2014 10 bodies (app set), 1700\u20132200 CE (all rare alignments, current\u2192past)", sub: `${modern.length} rare 10-body alignments (maxInSign \u2265 6 or span \u2264 90\xB0). The 10-body set clusters on a ~decades scale (8-in-one-sign never occurs in 500 y); the centuries scale belongs to the 7 classical bodies above.`, items: modern, set: "A", sel, pick, openEph, goReader }), /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, "Method: astronomy-engine v2.1.19, GeoVector \u2192 Ecliptic.elon, noon UT. Deep scan 3-day step (daily-refined around peaks); modern scan daily. Beyond ~\xB14000 y from J2000 the planetary series are an extrapolation \u2014 alignment ", /* @__PURE__ */ import_react9.default.createElement("i", null, "dates"), " (mean motion, secularly stable) are reliable, exact ", /* @__PURE__ */ import_react9.default.createElement("i", null, "degrees"), " in the deep past are approximate. Per-event stellar readings are computed in the browser for the selected alignment (skyAt is fast); the cross-check summary is precomputed."), /* @__PURE__ */ import_react9.default.createElement(EphemeridesModal, { eph, onClose: () => setEph(null) }));
+  })(), n.angelName && /* @__PURE__ */ import_react9.default.createElement("div", { className: "simp", style: { color: "var(--violet)" } }, "angel: ", n.angelName.en, " ", /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--dim)" } }, "\xB7 ", n.angelName.src)), n.angel && /* @__PURE__ */ import_react9.default.createElement("div", { className: "simp", style: { color: "var(--violet)" } }, "Shem triplet +\u05D0\u05DC \u2192 ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, n.angel.el), " \xB7 +\u05D9\u05D4 \u2192 ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, n.angel.yh)), /* @__PURE__ */ import_react9.default.createElement("div", { className: "simp" }, n.simp ? "simples: " + [...n.simp].join(" ") : "no simples (always)"))))))), /* @__PURE__ */ import_react9.default.createElement(AlignTable, { title: "Deep chronology \u2014 7 classical bodies, 20000 BCE \u2192 2200 CE (all rare alignments, current\u2192past)", sub: `${deep.length} rare alignments (maxInSign \u2265 5 or span \u2264 60\xB0), sorted newest first. The 7-classical set makes the centuries/millennia scale visible: great conjunctions recur every ~20 y and drift through the signs over the precessional era (~${AGE.toFixed(0)} y).`, items: deep, set: "B", sel, pick, openEph, goReader }), /* @__PURE__ */ import_react9.default.createElement(AlignTable, { title: "All-7-in-one-sign timeline \u2014 every classical grand conjunction (current\u2192past)", sub: `${all7.length} occurrences where all 7 classical bodies share one zodiacal sign \u2014 the rarest class, recurring every few centuries (irregular). Click to render that conjunction.`, items: all7, set: "B", sel, pick, openEph, goReader, showMax: false }), /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, "Method: astronomy-engine v2.1.19, GeoVector \u2192 Ecliptic.elon, noon UT. Deep scan 3-day step (daily-refined around peaks). Beyond ~\xB14000 y from J2000 the planetary series are an extrapolation \u2014 alignment ", /* @__PURE__ */ import_react9.default.createElement("i", null, "dates"), " (mean motion, secularly stable) are reliable, exact ", /* @__PURE__ */ import_react9.default.createElement("i", null, "degrees"), " in the deep past are approximate. Per-event stellar readings are computed in the browser for the selected alignment (skyAt7 is fast)."), /* @__PURE__ */ import_react9.default.createElement(EphemeridesModal, { eph, onClose: () => setEph(null) }));
 }
 
 // src/tabs/RevelationsTab.jsx
@@ -28420,11 +28432,5054 @@ function CodesTab({ sub, setSubTab }) {
 // src/tabs/MethodTab.jsx
 var import_react13 = __toESM(require_react());
 function MethodTab({ esGlossCount }) {
-  return /* @__PURE__ */ import_react13.default.createElement(import_react13.default.Fragment, null, /* @__PURE__ */ import_react13.default.createElement("h2", null, "Methodology & scope"), /* @__PURE__ */ import_react13.default.createElement("ul", { className: "muted", style: { marginTop: 4, lineHeight: 1.7 } }, /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Frame:"), " a modern hermetic-astronomical synthesis. The classical ", /* @__PURE__ */ import_react13.default.createElement("i", null, "Sefer Yetzirah"), " is cosmogonic linguistics, not an oracle; this operationalisation is a contemporary reading, not traditional kabbalistic practice."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Simple\u2194sign mapping:"), " equal 30\xB0 tropical sectors (not IAU constellations, which are unequal and 13). A symbolic convention necessary for the one-to-one letter\u2194sign grid. The mothers are placed opposite their real circumpolar constellations (Draco, Ursa Minor, Cassiopea)."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Astronomy:"), " astronomy-engine v2.1.19, geocentric apparent ecliptic longitude (", /* @__PURE__ */ import_react13.default.createElement("code", null, "GeoVector\u2192Ecliptic.elon"), "), noon UT."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Lexicon:"), " Strong (OpenScriptures), 6045 consonantal roots."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Pluto ephemeris:"), " precision degrades outside 1700\u20132200; ancient windows rely on sign-level (30\xB0) determination, validated by smooth continuity, not arcminute precision."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Negative results (tested):"), " the mirror-palindrome 2701\u21923773 does not discriminate at corpus level (Genesis 39.3% \u2248 Markov 39.2% \u2248 uniform 38.4%); Genesis-days do not correlate with eclipses (7.5% observed vs 28% expected \u2014 they avoid them)."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Positive results:"), " 37/73 fit the civil solar year (365=73\xD75; 2701 pentads = 37 years), corroborated by the Maya Haab and Calendar Round; Genesis 1 core palindromes 51.6% vs 37.4% paired null (p\u22480.076, borderline \u2014 not significant, but very close; hypothesis)."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Positive results v3.1 (\xA715b):"), " 37\xD773 structure of the 7 Genesis words demonstrated (23/127 subsets, p\u22483.1\xD710\u207B\u2074); saros-series count by calculation (152 series, 54\u201387, median 72); 7 kameot = 7 doubles (Mercury 260 = Tzolkin); Aiq Bekar = decimal-positional gematria of \xA72 (bridge to sigils); 72 Shem HaMephorash angels from Exodus (216=6\xB3); the 7-doubles=7-days heptagram (Chaldean order + mod 7 + Romance etymology); ayanamsa: 190-year spread (tropical discard robust); 6 windows 491-year cadence (p<5\xD710\u207B\u2076, hypothesis not cause)."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Validation:"), " 88 assertions in ", /* @__PURE__ */ import_react13.default.createElement("code", null, "scripts/tests.mjs"), " \u2014 all green. Scripts in ", /* @__PURE__ */ import_react13.default.createElement("code", null, "scripts/"), "; paper in ", /* @__PURE__ */ import_react13.default.createElement("code", null, "paper/index.html"), ".")));
+  return /* @__PURE__ */ import_react13.default.createElement(import_react13.default.Fragment, null, /* @__PURE__ */ import_react13.default.createElement("h2", null, "Methodology & scope"), /* @__PURE__ */ import_react13.default.createElement("ul", { className: "muted", style: { marginTop: 4, lineHeight: 1.7 } }, /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Frame:"), " a formal synthesis of the Sefer Yetzirah's letter\u2192luminary mapping with astronomical ephemerides. The classical ", /* @__PURE__ */ import_react13.default.createElement("i", null, "Sefer Yetzirah"), " is cosmogonic linguistics \u2014 it binds the 22 letters to sky and speech; this operationalisation takes that mapping as a verifiable protocol and tests the regularities it produces against a null model, posing the design question directly. The stellar-letter reading was historically a divinatory technique, attested in the Sefer Yetzirah, Sefer Raziel, and Gaffarel's Persian\u2013Hebrew star-reading (\xA715c.8/\xA715c.10) and replicated here from those instructions; this work documents that use and the intentional design behind it, without claiming the technique predicts the future."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Simple\u2194sign mapping:"), " equal 30\xB0 tropical sectors (not IAU constellations, which are unequal and 13). A symbolic convention necessary for the one-to-one letter\u2194sign grid. The mothers are placed opposite their real circumpolar constellations (Draco, Ursa Minor, Cassiopea)."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Astronomy:"), " astronomy-engine v2.1.19, geocentric apparent ecliptic longitude, noon UT."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Lexicon:"), " Strong (OpenScriptures), 6045 consonantal roots."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Pluto ephemeris:"), " precision degrades outside 1700\u20132200; ancient windows rely on sign-level (30\xB0) determination, validated by smooth continuity, not arcminute precision."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Negative results (tested):"), " the mirror-palindrome 2701\u21923773 does not discriminate at corpus level (Genesis 39.3% \u2248 Markov 39.2% \u2248 uniform 38.4%); Genesis-days do not correlate with eclipses (7.5% observed vs 28% expected \u2014 they avoid them)."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Positive results:"), " 37/73 fit the civil solar year (365=73\xD75; 2701 pentads = 37 years), corroborated by the Maya Haab and Calendar Round; Genesis 1 core palindromes 51.6% vs 37.4% paired null (p\u22480.076, borderline \u2014 not significant, but very close; hypothesis)."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Positive results v3.1 (\xA715b):"), " 37\xD773 structure of the 7 Genesis words demonstrated (23/127 subsets, p\u22483.1\xD710\u207B\u2074); saros-series count by calculation (152 series, 54\u201387, median 72); 7 kameot = 7 doubles (Mercury 260 = Tzolkin); Aiq Bekar = decimal-positional gematria of \xA72 (bridge to sigils); 72 Shem HaMephorash angels from Exodus (216=6\xB3); the 7-doubles=7-days heptagram (Chaldean order + mod 7 + Romance etymology); ayanamsa: 190-year spread (tropical discard robust); 6 windows 491-year cadence (p<5\xD710\u207B\u2076, hypothesis not cause)."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Validation:"), " 88 assertions \u2014 all green. Full source and the paper are available in the repository.")));
 }
 
 // src/pages/ProphetsPage.jsx
 var import_react15 = __toESM(require_react());
+
+// src/data/wiki_content.json
+var wiki_content_default = {
+  Adam: {
+    title: "Adam",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Adam",
+    description: "Adam is the name given in Genesis 1\u20135 to the first human. Adam is the first human being aware of God, and features as such in various belief systems.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Michelangelo%2C_Creation_of_Adam_03.jpg/330px-Michelangelo%2C_Creation_of_Adam_03.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Era",
+        value: "Edenic and Antediluvian"
+      },
+      {
+        label: "Spouse",
+        value: "Eve"
+      },
+      {
+        label: "Children",
+        value: "Cain, Abel and Seth"
+      },
+      {
+        label: "Parent",
+        value: "God (Father/Creator)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Narrative",
+        summary: `In Genesis, the name "Adam" is given to the first human. Beyond its use as the name of the first man, the Hebrew word adam is also used in the Bible as a pronoun, individually as "a human" and in a collective sense as "humankind". Genesis 1 tells of God's creation of the world and its creatures, including the Hebrew word adam, meaning humankind. In Genesis 2 God forms "Adam", this time meaning a single male human, out of "the dust of the ground", places him in the Garden of Eden, and forms a woman, Eve, as his companion. In Genesis 3 Adam and Eve eat the fruit of the tree of knowledge and God condemns Adam to labour on the earth for his food and to return to it on his death. Genesis 4 deals with the birth of Adam's sons, and Genesis 5 lists his descendants from Seth to Noah.`,
+        items: []
+      },
+      {
+        heading: "In the Hebrew bible",
+        summary: `Genesis 1 tells of God's creation of the world and its creatures, with humankind as the last of his creatures: "Male and female created He them, and blessed them, and called their name Adam...". God blesses mankind, commands them to "be fruitful and multiply", and gives them "dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth".`,
+        items: []
+      },
+      {
+        heading: "Historicity",
+        summary: "While a traditional view was that the Book of Genesis was authored by Moses and has been considered historical and metaphorical, modern scholars consider the Genesis creation narrative as one of various ancient origin myths.",
+        items: []
+      },
+      {
+        heading: "Religious traditions",
+        summary: 'Louis Ginzberg retells a midrash that God himself took dust from all four corners of the earth, and with each color (red for the blood, black for the bowels, white for the bones and veins, and green for the pale skin), created Adam. The soul of Adam is the image of God, and as God fills the world, so the soul fills the human body: "as God sees all things, and is seen by none, so the soul sees, but cannot be seen; as God guides the world, so the soul guides the body; as God in His holiness is pure, so is the soul; and as God dwells in secret, so doth the soul." According to Jewish literature, Adam possessed a body of light, identical to the light created by God on the first day, and the original glory of Adam can be regained through mystical contemplation of God.',
+        items: []
+      },
+      {
+        heading: "Cultural traditions",
+        summary: "Some Mongolian Christians and Muslims thought Adam was the same person as Gautama Buddha.",
+        items: []
+      },
+      {
+        heading: "Usage of the name",
+        summary: `The Bible uses the word \u05D0\u05B8\u05D3\u05B8\u05DD ( 'adam ) in all of its senses: collectively ("mankind", Genesis 1:27), individually (a "man", Genesis 2:7), gender nonspecific ("man and woman", Genesis 5:1\u20132), and male (Genesis 2:23\u201324). In Genesis 1:27 "adam" is used in the collective sense, and the interplay between the individual "Adam" and the collective "humankind" is a main literary component to the events that occur in the Garden of Eden, the ambiguous meanings embedded throughout the moral, sexual, and spiritual terms of the narrative reflecting the complexity of the human condition. Genesis 2:7 is the first verse where "Adam" takes on the sense of an individual man (the first man), and the context of sex is absent; the gender distinction of "adam" is then reiterated in Genesis 5:1\u20132 by defining "male and female".`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Narrative",
+        note: 'In Genesis, the name "Adam" is given to the first human.'
+      },
+      {
+        title: "In the Hebrew bible",
+        note: `Genesis 1 tells of God's creation of the world and its creatures, with humankind as the last of his creatures: "Male and female created He them, and blessed them, and called their name Adam...".`
+      },
+      {
+        title: "Historicity",
+        note: "While a traditional view was that the Book of Genesis was authored by Moses and has been considered historical and metaphorical, modern scholars consider the Genesis creation narrative as one of various ancient origin myths."
+      },
+      {
+        title: "Religious traditions",
+        note: "Louis Ginzberg retells a midrash that God himself took dust from all four corners of the earth, and with each color (red for the blood, black for the bowels, white for the bones and veins, and green for the pale skin), created Adam."
+      },
+      {
+        title: "Cultural traditions",
+        note: "Some Mongolian Christians and Muslims thought Adam was the same person as Gautama Buddha."
+      },
+      {
+        title: "Usage of the name",
+        note: `The Bible uses the word \u05D0\u05B8\u05D3\u05B8\u05DD ( 'adam ) in all of its senses: collectively ("mankind", Genesis 1:27), individually (a "man", Genesis 2:7), gender nonspecific ("man and woman", Genesis 5:1\u20132), and male (Genesis 2:23\u201324).`
+      }
+    ]
+  },
+  Enoch: {
+    title: "Enoch (ancestor of Noah)",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Enoch",
+    description: "Enoch is a biblical figure and patriarch prior to Noah's flood. He is the son of Jared and father of Methuselah.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figures_God_took_Enoch.jpg/330px-Figures_God_took_Enoch.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Venerated\xA0in",
+        value: "Christianity, Islam, Judaism, Druze faith, Samaritanism, New religious movements"
+      },
+      {
+        label: "Feast",
+        value: "30 July (Eastern Orthodox), Sunday of the Holy Forefathers (Eastern Orthodox), 22 January Coptic Church, 19 July (his assumption in the Coptic Church)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Etymology",
+        summary: 'Several etymologies have been proposed for the name Enoch (\u05D7\u05B2\u05E0\u05D5\u05B9\u05DA\u05B0 \u1E24\u0103n\u014D\u1E35). Philo of Alexandria proposed it meant "your grace" (from Hebrew \u1E25\u0113n), while Jerome derived it from the verb (\u1E25-n-\u1E35), meaning to train, initiate, dedicate, inaugurate, giving a meaning "dedicated". Modern scholars have proposed meanings including "follower", "inaugurated", and "wise" or "clever".',
+        items: []
+      },
+      {
+        heading: "Book of Genesis",
+        summary: `Enoch appears in the Book of Genesis of the Pentateuch as the seventh of the ten pre-Deluge Patriarchs. Genesis states that each of the pre-Flood Patriarchs lived for several centuries. Genesis 5 provides a genealogy of these ten figures (from Adam to Noah), providing the age at which each fathered the next, and the age of each figure at death. Enoch is considered by many to be the exception, who is said to "not see death" (Hebrews 11:5). Two places in Genesis 5 denote Enoch as a person who "walked with God" (Genesis 5:22 and Genesis 5:24), Noah is the only other pre-Deluge Patriarch Genesis gave this designation to (Genesis 6:9). Furthermore, Genesis 5:22\u201324 states that Enoch lived for 365 years, which is shorter than other pre-Flood Patriarchs, who are all recorded as dying at over 700 years of age. The brief account of Enoch in Genesis 5 ends with the cryptic note that "he was not; for God took him." This happens 57 years after Adam's death and 69 years before Noah's birth.`,
+        items: []
+      },
+      {
+        heading: "Books of Enoch (Apocryphal)",
+        summary: "Three extensive Apocrypha are attributed to Enoch:",
+        items: [
+          "The Book of Enoch (aka 1 Enoch), composed in Hebrew or Aramaic and preserved in Ge'ez, first brought to Europe by James Bruce from Ethiopia and translated into English by August Dillmann and Reverent Schoode \u2013 recognized by the Orthodox Tewahedo churches and usually dated between the third century BC and the first century AD.",
+          "2 Enoch (aka Book of the Secrets of Enoch), preserved in Old Church Slavonic, and first translated in English by William Morfill \u2013 usually dated to the first century AD.",
+          "3 Enoch, a Rabbinic text in Hebrew usually dated to the fifth century AD."
+        ]
+      },
+      {
+        heading: "In Christianity",
+        summary: "The New Testament contains three references to Enoch.",
+        items: [
+          "The first is a brief mention in one of the genealogies of the ancestors of Jesus in the Gospel of Luke. (Luke 3:37).",
+          `The second mention is in the Epistle to the Hebrews which says, "By faith Enoch was translated that he should not see death; and was not found, because God had translated him: for before his translation he had this testimony, that he pleased God." (Hebrews 11:5 KJV). This suggests he did not experience the mortal death ascribed to Adam's other descendants, which is consistent with Genesis 5:24 KJV, which says, "And Enoch walked with God: and he [was] not; for God took him."`,
+          `The third mention is in the Epistle of Jude (1:14\u201315) where the author attributes to "Enoch, the Seventh from Adam" a passage not found in Catholic and Protestant canons of the Old Testament. The quotation is believed by most modern scholars to be taken from 1 Enoch 1:9 which exists in Greek, in Ge'ez (as part of the Ethiopian Orthodox canon), and also in Aramaic among the Dead Sea Scrolls. The same scholars recognise that 1 Enoch 1:9 itself is a midrash of Deuteronomy 33:2.`
+        ]
+      },
+      {
+        heading: "In Islam",
+        summary: "Most Muslims identify Enoch as the Qur'anic prophet Idris. However, some etymological research suggests that the Greek version of the name Ezra (Esdras) is a more plausible origin for the name Idris.",
+        items: []
+      },
+      {
+        heading: "In Theosophy",
+        summary: 'According to the theosophist Helena Blavatsky, the Jewish Enoch (or the Greek demigod Hermes) was "the first Grand Master and Founder of Freemasonry."',
+        items: []
+      },
+      {
+        heading: "In Samaritanism",
+        summary: "According to the Asatir, Enoch was buried in Mount Ebal.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Etymology",
+        note: "Several etymologies have been proposed for the name Enoch (\u05D7\u05B2\u05E0\u05D5\u05B9\u05DA\u05B0 \u1E24\u0103n\u014D\u1E35)."
+      },
+      {
+        title: "Book of Genesis",
+        note: "Enoch appears in the Book of Genesis of the Pentateuch as the seventh of the ten pre-Deluge Patriarchs."
+      },
+      {
+        title: "Books of Enoch (Apocryphal)",
+        note: "Three extensive Apocrypha are attributed to Enoch:"
+      },
+      {
+        title: "In Christianity",
+        note: "The New Testament contains three references to Enoch."
+      },
+      {
+        title: "In Islam",
+        note: "Most Muslims identify Enoch as the Qur'anic prophet Idris."
+      },
+      {
+        title: "In Theosophy",
+        note: 'According to the theosophist Helena Blavatsky, the Jewish Enoch (or the Greek demigod Hermes) was "the first Grand Master and Founder of Freemasonry."'
+      },
+      {
+        title: "In Samaritanism",
+        note: "According to the Asatir, Enoch was buried in Mount Ebal."
+      }
+    ]
+  },
+  Noah: {
+    title: "Noah",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Noah",
+    description: "Noah appears as the last of the Antediluvian patriarchs in the traditions of Abrahamic religions. His story appears in the Hebrew Bible, the Quran and Baha'i writings, and extracanonically.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Giovanni_Benedetto_Castiglione_gen._Il_Grecchetto_-_Noah_mit_den_Tieren_vor_der_Arche_-_GG_1645_-_Kunsthistorisches_Museum_%28cropped%29.jpg/330px-Giovanni_Benedetto_Castiglione_gen._Il_Grecchetto_-_Noah_mit_den_Tieren_vor_der_Arche_-_GG_1645_-_Kunsthistorisches_Museum_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Spouse",
+        value: "Noah's wife (name unspecified in some traditions)"
+      },
+      {
+        label: "Children",
+        value: "Japheth\nShem\nHam"
+      },
+      {
+        label: "Parent",
+        value: "Lamech (father)"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Genesis flood narrative"
+      },
+      {
+        label: "Religion",
+        value: "Judaism, Mandaeism, Christianity, Druze faith, Yazidism, Islam, Bah\xE1\u02BC\xED Faith"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biblical narrative",
+        summary: 'According to the genealogical account in Genesis 5, Noah was the tenth and final antediluvian (pre-flood) patriarch, the son of Lamech and a mother whose name is unmentioned, Lamech was 182 years old when Noah was born, and Noah was 500 years old when his sons Shem, Ham and Japheth were born. Lamech anticipated that Noah would "bring relief from our work and from the painful toil of our hands".',
+        items: []
+      },
+      {
+        heading: "Other accounts",
+        summary: "In addition to the main story in Genesis, the Hebrew Bible (Christian Old Testament) also refers to Noah in the First Book of Chronicles, Isaiah and Ezekiel. References in the deuterocanonical books include the books of Tobit, Wisdom, Sirach, 2 Esdras and 4 Maccabees. New Testament references include the gospels of Matthew and Luke, and some of the epistles (Epistle to the Hebrews, 1 Peter and 2 Peter).",
+        items: []
+      },
+      {
+        heading: "Religious views",
+        summary: `The righteousness of Noah is the subject of much discussion among rabbis. The description of Noah as "righteous in his generation" implied to some that his perfection was only relative: In his generation of wicked people, he could be considered righteous, but in the generation of a tzadik like Abraham, he would not be considered so righteous. They point out that Noah did not pray to God on behalf of those about to be destroyed, as Abraham prayed for the wicked of Sodom and Gomorrah. In fact, Noah is never seen to speak; he simply listens to God and acts on his orders. This led some commentators to offer the figure of Noah as "the righteous man in a fur coat," who ensured his own comfort while ignoring his neighbour. Others, such as the medieval commentator Rashi, held on the contrary that the building of the Ark was stretched over 120 years, deliberately in order to give sinners time to repent. Rashi interprets his father's statement of the naming of Noah (in Hebrew \u2013 Noa\u0127 \u05E0\u05B9\u05D7\u05B7). "This one will comfort us (in Hebrew\u2013 yeNa\u0126amenu \u05D9\u05B0\u05E0\u05B7\u05D7\u05B2\u05DE\u05B5\u05E0\u05D5) in our work and in the toil of our hands, which come from the ground that the Lord had cursed" Some interpret this as meaning Noah heralded a new era of prosperity, when there was an easing (in Hebrew, na\u0127ah \u05E0\u05D7\u05D4) of the curse from Adam's time, when the Earth produced thorns and thistles even where men sowed wheat. It is said that Noah introduced the plow, symbolizing this relief.`,
+        items: []
+      },
+      {
+        heading: "Comparative mythology",
+        summary: "Indian and Greek flood-myths also exist, although there is little evidence that they were derived from the Mesopotamian flood-myth that underlies the biblical account.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biblical narrative",
+        note: "According to the genealogical account in Genesis 5, Noah was the tenth and final antediluvian (pre-flood) patriarch, the son of Lamech and a mother whose name is unmentioned, Lamech was 182 years old when Noah was born, and Noah was 500 years old when his sons Shem, Ham and Japheth were born."
+      },
+      {
+        title: "Other accounts",
+        note: "In addition to the main story in Genesis, the Hebrew Bible (Christian Old Testament) also refers to Noah in the First Book of Chronicles, Isaiah and Ezekiel."
+      },
+      {
+        title: "Religious views",
+        note: "The righteousness of Noah is the subject of much discussion among rabbis."
+      },
+      {
+        title: "Comparative mythology",
+        note: "Indian and Greek flood-myths also exist, although there is little evidence that they were derived from the Mesopotamian flood-myth that underlies the biblical account."
+      }
+    ]
+  },
+  Abraham: {
+    title: "Abraham",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Abraham",
+    description: "Abraham is widely revered as a foundational legendary figure among adherents of the eponymous Abrahamic religions. In Judaism, he is the ethnic ancestor and first Hebrew patriarch who began the covenantal relationship between the Jewish people and God; in Christianity, he is regarded as the forebear of Jesus and the spiritual ancestor of all Christians; and in Islam, he is a link in the chain of Islamic prophets that begins with Adam and culminates in Muhammad. Abraham is revered in all other Abrahamic religions, such as the Bah\xE1\u02BC\xED Faith and the Druze faith. He is regarded as the common forefather of both the Arab people through his son Ishmael and the Jewish people through his son Isaac.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Guercino_Abramo_ripudia_Agar_%28cropped_2%29.jpg/330px-Guercino_Abramo_ripudia_Agar_%28cropped_2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "\u05D0\u05B7\u05D1\u05B0\u05E8\u05B8\u05DD Avr\xE1m, 1948 AM, Ur of the Chaldees, Mesopotamia"
+      },
+      {
+        label: "Died",
+        value: "2123 AM, Cave of Machpelah, Hebron, Canaan"
+      },
+      {
+        label: "Spouse",
+        value: "Sarah\nHagar (concubine)\nKeturah"
+      },
+      {
+        label: "Children",
+        value: "Oldest to youngest: Ishmael (son, with Hagar) Isaac (son, with Sarah) Zimran (son, with Keturah) Jokshan (son, with Keturah) Medan (son, with Keturah) Midian (son, with Keturah) Ishbak (son, with Keturah) Shuah (son, with Keturah)"
+      },
+      {
+        label: "Parents",
+        value: "Terah (father)Amathlai (mother)"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Namesake of the Abrahamic religions: traditional founder of the Jewish nation, spiritual ancestor of Christians, major Islamic prophet, Manifestation of God and originator of monotheistic faith in Bah\xE1\u02BC\xED Faith, third spokesman (natiq) prophet of Druzes"
+      },
+      {
+        label: "Relatives",
+        value: "Closest to furthest: Haran (brother) Nahor (brother) Jacob (grandson) Esau (grandson) Lot (nephew) Twelve Tribes of Israel (great-grandsons) Dinah (great-granddaughter) see: Abraham's family tree"
+      },
+      {
+        label: "Religion",
+        value: "monotheism"
+      }
+    ],
+    sections: [
+      {
+        heading: "The Abraham cycle",
+        summary: `The Abraham cycle (Genesis 11:27\u2013Genesis 25:11) unfolds as a narrative of mounting tension, centered on the conflict between God's promise that Abram (Abraham's birth name) would father a lineage and become the ancestor of numerous nations, and a succession of crises that jeopardize this divine commitment. The storytelling method used here is the "obstacle story," a literary device renowned for its enduring and universal popularity across cultures and eras.`,
+        items: []
+      },
+      {
+        heading: "Historical context",
+        summary: `In the early and middle 20th century, leading archaeologists such as William F. Albright and G. Ernest Wright and biblical scholars such as Albrecht Alt and John Bright believed that the patriarchs and matriarchs were either real individuals or believable composites of people who lived in the "patriarchal age", the 2nd millennium BCE. However, in the 1970s, new arguments concerning Israel's past and the biblical texts challenged these views; these arguments can be found in Thomas L. Thompson's The Historicity of the Patriarchal Narratives (1974), and John Van Seters' Abraham in History and Tradition (1975). Thompson, a literary scholar, based his argument on archaeology and ancient texts. His thesis centered on the lack of compelling evidence that the patriarchs lived in the 2nd millennium BCE, and noted how certain biblical texts reflected first millennium conditions and concerns. Van Seters examined the patriarchal stories and argued that their names, social milieu, and messages strongly suggested that they were Iron Age creations. Van Seters' and Thompson's works were a paradigm shift in biblical scholarship and archaeology, which gradually led scholars to no longer consider the patriarchal narratives as historical. Some conservative scholars attempted to defend the Patriarchal narratives in the following years, but this has not found acceptance among scholars. By the beginning of the 21st century, archaeologists had stopped trying to recover any context that would make Abraham, Isaac or Jacob credible historical figures.`,
+        items: []
+      },
+      {
+        heading: "Religious traditions",
+        summary: "Abraham is given a high position of respect in three major world faiths, Judaism, Christianity, and Islam. In Judaism, he is the founding father of the covenant, the special relationship between the Jewish people and God\u2014leading to the belief that the Jews are the chosen people of God. In Christianity, Paul the Apostle taught that Abraham's faith in God, preceding receipt of the Mosaic law, made him the prototype of all believers, Jewish or gentile; and in Islam, he is seen as a link in the chain of prophets that begins with Adam and culminates in Muhammad.",
+        items: []
+      },
+      {
+        heading: "Artistic depictions",
+        summary: `Paintings on the life of Abraham tend to focus on only a few incidents: the sacrifice of Isaac; meeting Melchizedek; entertaining the three angels; Hagar in the desert; and a few others. Additionally, Martin O'Kane, a professor of Biblical Studies, writes that the parable of Lazarus resting in the "Bosom of Abraham", as described in the Gospel of Luke, became an iconic image in Christian works. According to O'Kane, artists often chose to divert from the common literary portrayal of Lazarus sitting next to Abraham at a banquet in Heaven and instead focus on the "somewhat incongruous notion of Abraham, the most venerated of patriarchs, holding a naked and vulnerable child in his bosom". Several artists have been inspired by the life of Abraham, including Albrecht D\xFCrer (1471\u20131528), Caravaggio (1573\u20131610), Donatello, Raphael, Philip van Dyck (Dutch painter, 1680\u20131753), and Claude Lorrain (French painter, 1600\u20131682). Rembrandt (Dutch, 1606\u20131669) created at least seven works on Abraham, Peter Paul Rubens (1577\u20131640) did several, Marc Chagall did at least five on Abraham, Gustave Dor\xE9 (French illustrator, 1832\u20131883) did six, and James Tissot (French painter and illustrator, 1836\u20131902) did over twenty works on the subject.`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "The Abraham cycle",
+        note: "The Abraham cycle (Genesis 11:27\u2013Genesis 25:11) unfolds as a narrative of mounting tension, centered on the conflict between God's promise that Abram (Abraham's birth name) would father a lineage and become the ancestor of numerous nations, and a succession of crises that jeopardize this divine commitment."
+      },
+      {
+        title: "Historical context",
+        note: "In the early and middle 20th century, leading archaeologists such as William F."
+      },
+      {
+        title: "Religious traditions",
+        note: "Abraham is given a high position of respect in three major world faiths, Judaism, Christianity, and Islam."
+      },
+      {
+        title: "Artistic depictions",
+        note: "Paintings on the life of Abraham tend to focus on only a few incidents: the sacrifice of Isaac; meeting Melchizedek; entertaining the three angels; Hagar in the desert; and a few others."
+      }
+    ]
+  },
+  Moses: {
+    title: "Moses",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Moses",
+    description: "In Abrahamic religions, Moses was the Hebrew prophet who led the Israelites out of slavery in the Exodus from Egypt. He is considered the most important prophet in Judaism and Samaritanism, and one of the most important prophets in Christianity, Islam, the Bah\xE1\u02BC\xED Faith, and other Abrahamic religions. According to the Abrahamic scriptures, God dictated the Mosaic Law to Moses, which he wrote down and which formed part of the Torah.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Rembrandt_Harmensz._van_Rijn_079.jpg/330px-Rembrandt_Harmensz._van_Rijn_079.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "Goshen, Lower Egypt, Ancient Egypt"
+      },
+      {
+        label: "Died",
+        value: "Mount Nebo, Moab, Transjordan (aged 120 in Jewish traditions)"
+      },
+      {
+        label: "Spouse",
+        value: "Zipporah, unnamed Kushite woman"
+      },
+      {
+        label: "Children",
+        value: "Gershom\nEliezer"
+      },
+      {
+        label: "Parents",
+        value: "Amram (father)\nJochebed (mother)\nPharaoh's daughter (adoptive mother)"
+      },
+      {
+        label: "Known\xA0for",
+        value: "The Mosaic covenant and law under the Torah for Judaism\nMajor prophet in Christianity, Islam, Druze Faith, Rastafari, and Samaritanism\nManifestation of God in Bah\xE1'\xED Faith"
+      },
+      {
+        label: "Relatives",
+        value: "Levi (great-grandfather)\nMiriam (sister)\nAaron (brother)\nElisheba (sister-in-law)\nNadab (nephew)\nAbihu (nephew)\nEleazer (nephew)\nIthamar (nephew)\nJethro (father-in-law)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Etymology of name",
+        summary: `The Egyptian root msy ('child of') or mose has been considered as a possible etymology, arguably an abbreviation of a theophoric name with the god's name omitted. The suffix mose appears in Egyptian pharaohs' names like Thutmose ('born of Thoth') and Ramose ('born of Ra'). One of the Egyptian names of Ramesses was Ra-mesesu mari-Amon, meaning 'born of Ra, beloved of Amon'. Ms by itself also has multiple attestations as an Egyptian personal name in the New Kingdom. Linguist Abraham Yahuda, based on the spelling given in the Tanakh, argues that it combines "water" or "seed" and "pond, expanse of water," thus yielding the sense of "child of the Nile" (mw-\u0161).`,
+        items: []
+      },
+      {
+        heading: "Biblical narrative",
+        summary: "The Israelites had settled in the Land of Goshen in the time of Joseph and Jacob, but a new Pharaoh arose who oppressed the children of Israel. At this time, Moses was born to his father Amram, son (or descendant) of Kehath the Levite, who entered Egypt with Jacob's household; his mother was Jochebed (also Yocheved), who was kin to Kehath. Moses had one older (by seven years) sister, Miriam, and one older (by three years) brother, Aaron. Pharaoh had commanded that all male Hebrew children born would be drowned in the river Nile, but Moses's mother placed him in an ark and concealed the ark in the bulrushes by the riverbank. He was discovered and adopted by Pharaoh's daughter and raised as an Egyptian. One day, after Moses had reached adulthood, he killed an Egyptian who was beating a Hebrew. To escape Pharaoh's death penalty, Moses fled to Midian (a desert country south of Judah), where he married Zipporah.",
+        items: []
+      },
+      {
+        heading: "Historicity",
+        summary: 'Scholars hold different opinions on the historicity of Moses. For instance, according to William G. Dever, the modern scholarly consensus is that the biblical person of Moses is largely mythical while also holding that "a Moses-like figure may have existed somewhere in the southern Transjordan" in the mid-to-late thirteenth century BCE, and that "archeology can do nothing" to prove or disprove either way. According to Solomon Nigosian, there are three prevailing views among biblical scholars: one is that Moses is not a historical figure, another view strives to anchor the decisive role he played in Israelite religion, and a third that argues there are elements of both history and legend from which "these issues are hotly debated unresolved matters among scholars". According to Brian Britt, there is divide among scholars when discussing matters on Moses that threatens gridlock. According to the official Torah commentary for Conservative Judaism, it is irrelevant if the historical Moses existed, calling him "the folkloristic, national hero".',
+        items: []
+      },
+      {
+        heading: "Hellenistic literature",
+        summary: 'Non-biblical writings about Jews, with references to the role of Moses, first appear at the beginning of the Hellenistic period, from 323\xA0BCE to about 146\xA0BCE. Shmuel notes that "a characteristic of this literature is the high honour in which it holds the peoples of the East in general and some specific groups among these peoples".',
+        items: []
+      },
+      {
+        heading: "Abrahamic religions",
+        summary: "Most of what is known about Moses from the Bible comes from the books of Exodus, Leviticus, Numbers, and Deuteronomy. The majority of scholars consider the compilation of these books to go back to the Persian period, 538\u2013332\xA0BCE, but based on earlier written and oral traditions. There is a wealth of stories and additional information about Moses in the Jewish apocrypha and in the genre of rabbinical exegesis known as Midrash, as well as in the primary works of the Jewish oral law, the Mishnah and the Talmud. Moses is also given a number of bynames in Jewish tradition. The Midrash identifies Moses as one of seven biblical personalities who were called by various names. Moses' other names were Jekuthiel (by his mother), Heber (by his father), Jered (by Miriam), Avi Zanoah (by Aaron), Avi Gedor (by Kohath), Avi Soco (by his wet-nurse), Shemaiah ben Nethanel (by people of Israel). Moses is also attributed the names Toviah (as a first name), and Levi (as a family name) (Vayikra Rabbah 1:3), Heman, Mechoqeiq (lawgiver), and Ehl Gav Ish (Numbers 12:3). In another exegesis, Moses had ascended to the first heaven until the seventh, even visited Paradise and Hell alive, after he saw the divine vision in Mount Horeb.",
+        items: []
+      },
+      {
+        heading: "Legacy in politics and law",
+        summary: 'In a metaphorical sense in the Christian tradition, a "Moses" has been referred to as the leader who delivers the people from a terrible situation. Among the Presidents of the United States known to have used the symbolism of Moses were Harry S. Truman, Jimmy Carter, Ronald Reagan, Bill Clinton, George W. Bush and Barack Obama, who referred to his supporters as "the Moses generation".',
+        items: []
+      },
+      {
+        heading: "Cultural portrayals and references",
+        summary: "Moses often appears in Christian art, and the Pope's private chapel, the Sistine Chapel, has a large sequence of six frescos of the life of Moses on the southern wall, opposite a set with the Life of Christ. They were painted in 1481\u201382 by a group of mostly Florentine artists including Sandro Botticelli and Pietro Perugino.",
+        items: [
+          `Sigmund Freud, in his last book, Moses and Monotheism in 1939, postulated that Moses was an Egyptian nobleman who adhered to the monotheism of Akhenaten. Following a theory proposed by a contemporary biblical critic, Freud believed that Moses was murdered in the wilderness, producing a collective sense of patricidal guilt that has been at the heart of Judaism ever since. "Judaism had been a religion of the father, Christianity became a religion of the son", he wrote. The possible Egyptian origin of Moses and of his message has received significant scholarly attention. Opponents of this view observe that the religion of the Torah seems different from Atenism in everything except the central feature of devotion to a single god, although this has been countered by a variety of arguments, e.g. pointing out the similarities between the Hymn to Aten and Psalm 104. Freud's interpretation of the historical Moses is not well accepted among historians, and is considered pseudohistory by many.`,
+          "Thomas Mann's novella The Tables of the Law (1944) is a retelling of the story of the Exodus from Egypt, with Moses as its main character.",
+          "W. G. Hardy's novel All the Trumpets Sounded (1942) tells a fictionalized life of Moses.",
+          "Orson Scott Card's novel Stone Tables (1997) is a novelization of the life of Moses.",
+          "Moses was portrayed by Theodore Roberts in Cecil B. DeMille's 1923 silent film The Ten Commandments. Moses also appeared as the central character in the 1956 remake, also directed by DeMille and called The Ten Commandments, in which he was portrayed by Charlton Heston, who had a noted resemblance to Michelangelo's statue. A television remake was produced in 2006.",
+          "Burt Lancaster played Moses in the 1975 television miniseries Moses the Lawgiver.",
+          "In the 1981 comedy film History of the World, Part I, Moses was portrayed by Mel Brooks.",
+          "In 1995, Sir Ben Kingsley portrayed Moses in the 1995 TV film Moses, produced by British and Italian production companies.",
+          "Moses appeared as the central character in the 1998 DreamWorks Pictures animated film The Prince of Egypt. His speaking voice was provided by Val Kilmer, with American gospel singer and tenor Amick Byram providing his singing voice.",
+          "Ben Kingsley was the narrator of the 2007 animated film The Ten Commandments.",
+          "In the 2009 miniseries Battles BC, Moses was portrayed by Cazzey Louis Cereghino.",
+          "In the 2013 television miniseries The Bible, Moses was portrayed by William Houston.",
+          "Christian Bale portrayed Moses in Ridley Scott's 2014 film Exodus: Gods and Kings which portrayed Moses and Rameses II as being raised by Seti I as cousins.",
+          "The 2016 Brazilian Biblical telenovela Os Dez Mandamentos features Brazilian actor Guilherme Winter portraying Moses."
+        ]
+      },
+      {
+        heading: "Criticism of Moses",
+        summary: `In the late eighteenth century, the deist Thomas Paine commented at length on Moses' Laws in The Age of Reason (1794, 1795, and 1807). Paine considered Moses to be a "detestable villain", and cited Numbers 31 as an example of his "unexampled atrocities". In the passage, after the Israelite army returned from conquering Midian, Moses orders the killing of the Midianites with the exception of the virgin girls who were to be kept for the Israelites.`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Etymology of name",
+        note: "The Egyptian root msy ('child of') or mose has been considered as a possible etymology, arguably an abbreviation of a theophoric name with the god's name omitted."
+      },
+      {
+        title: "Biblical narrative",
+        note: "The Israelites had settled in the Land of Goshen in the time of Joseph and Jacob, but a new Pharaoh arose who oppressed the children of Israel."
+      },
+      {
+        title: "Historicity",
+        note: "Scholars hold different opinions on the historicity of Moses."
+      },
+      {
+        title: "Hellenistic literature",
+        note: "Non-biblical writings about Jews, with references to the role of Moses, first appear at the beginning of the Hellenistic period, from 323\xA0BCE to about 146\xA0BCE."
+      },
+      {
+        title: "Abrahamic religions",
+        note: "Most of what is known about Moses from the Bible comes from the books of Exodus, Leviticus, Numbers, and Deuteronomy."
+      },
+      {
+        title: "Legacy in politics and law",
+        note: 'In a metaphorical sense in the Christian tradition, a "Moses" has been referred to as the leader who delivers the people from a terrible situation.'
+      },
+      {
+        title: "Cultural portrayals and references",
+        note: "Moses often appears in Christian art, and the Pope's private chapel, the Sistine Chapel, has a large sequence of six frescos of the life of Moses on the southern wall, opposite a set with the Life of Christ."
+      },
+      {
+        title: "Criticism of Moses",
+        note: "In the late eighteenth century, the deist Thomas Paine commented at length on Moses' Laws in The Age of Reason (1794, 1795, and 1807)."
+      }
+    ]
+  },
+  Elijah: {
+    title: "Elijah",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Elijah",
+    description: "Elijah was a prophet and miracle worker who lived in the northern kingdom of Israel during the reign of King Ahab, according to the Books of Kings in the Hebrew Bible.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Giovanni_Girolamo_Savoldo%2C_Elijah_Fed_by_the_Raven%2C_c._1510%2C_NGA_46134.jpg/330px-Giovanni_Girolamo_Savoldo%2C_Elijah_Fed_by_the_Raven%2C_c._1510%2C_NGA_46134.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c.\u2009900 BC, possibly Tishbe"
+      },
+      {
+        label: "Died",
+        value: "c.\u2009850 BC, near Jericho"
+      },
+      {
+        label: "Venerated\xA0in",
+        value: "JudaismChristianityIslamDruze faith"
+      },
+      {
+        label: "Feast",
+        value: "20 July (Catholic Church, Eastern Orthodox Church, and the Lutheran Church\u2013Missouri Synod)"
+      },
+      {
+        label: "Patronage",
+        value: "Carmelite Order11th Guards Air Assault BrigadeBosnia and HerzegovinaDruze peopleHaifaMount CarmelMelkite Greek Catholic Archeparchy of Akka"
+      },
+      {
+        label: "Influenced",
+        value: "Elisha"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biblical accounts",
+        summary: "According to the Bible, by the 9th\xA0century BC, the Kingdom of Israel, once united under Solomon, had been divided into the northern Kingdom of Israel and the southern Kingdom of Judah (which retained the historical capital of Jerusalem along with its Temple). Omri, King of Israel, continued policies dating from the reign of Jeroboam, contrary to religious law, that were intended to reorient religious focus away from Jerusalem: encouraging the building of local temple altars for sacrifices, appointing priests from outside the family of the Levites, and allowing or encouraging temples dedicated to Baal, an important deity in ancient Canaanite religion. Omri achieved domestic security with a marriage alliance between his son Ahab and princess Jezebel, a worshipper of Baal and the daughter of the king of Sidon in Phoenicia. These solutions brought security and economic prosperity to Israel for a time, but did not bring peace with the Israelite prophets, who advocated a strict deuteronomic interpretation of the religious law.",
+        items: [
+          "A statue of Elijah in the Cave of Elijah, Mount Carmel, Israel",
+          "The Cave of Elijah, Mount Carmel, Israel"
+        ]
+      },
+      {
+        heading: "Historicity",
+        summary: "Scholars generally agree that a prophet named Elijah existed in the Kingdom of Israel during the reigns of Kings Ahab and Ahaziah, that he was a religious figure of great personal dynamism and conservative zeal and the leader of resistance to the rise of Baal worship in Israel in the ninth century BC.",
+        items: []
+      },
+      {
+        heading: "In the Aggadah, Talmud, and extra-canonical books",
+        summary: 'Jewish legends about Elijah abound in the Aggadah, which is found throughout various collections of rabbinic literature, including the Babylonian Talmud. This varied literature does not merely discuss his life, but has created a new history of him, which, beginning with his death\u2014or "translation"\u2014ends only with the close of the history of the human race. The volume of references to Elijah in Jewish Tradition stands in marked contrast to that in the Canon. As in the case of most figures of Jewish legend, so in the case of Elijah, the biblical account became the basis of later legend. Elijah the precursor of the Messiah, Elijah zealous in the cause of God, Elijah the helper in distress: these are the three leading notes struck by the Aggadah, endeavoring to complete the biblical picture with the Elijah legends. His career is extensive, colorful, and varied. He has appeared the world over in the guise of a beggar and scholar.',
+        items: [
+          "calming God's fury,",
+          "restoring familial peace, and",
+          "restoring the Twelve Tribes of Israel."
+        ]
+      },
+      {
+        heading: "In Judaism",
+        summary: `At Jewish circumcision ceremonies, a chair is set aside for the use of the prophet Elijah. Elijah is said to be a witness at all circumcisions when the sign of the covenant is placed upon the body of the child. This custom stems from the incident at Mount Horeb: Elijah had arrived at Mount Horeb after the demonstration of God's presence and power on Mount Carmel. God asks Elijah to explain his arrival, and Elijah replies: "I have been very zealous for the Lord, the God of hosts; for the people of Israel have forsaken thy covenant, thrown down thy altars, and slain thy prophets with the sword; and I, even I only, am left; and they seek my life, to take it away". According to Rabbinic tradition, Elijah's words were patently untrue, and since Elijah accused Israel of failing to uphold the covenant, God would require Elijah to be present at every covenant of circumcision.`,
+        items: []
+      },
+      {
+        heading: "In Jewish folklore",
+        summary: `The volume of references to Elijah in folklore stands in marked contrast to that in the canon. Elijah's miraculous transferral to heaven led to speculation about his true identity. Louis Ginzberg equates him with Phinehas, Aaron's grandson. Because of Phinehas's zealousness for God, he and his descendants were promised "a covenant of lasting priesthood". Therefore, Elijah is a priest as well as a prophet. Elijah is also equated with the archangel Sandalphon, whose four wings will carry him to any part of the earth. When forced to choose between death and dishonor, Rav Kahana II decided to leap to his death. Before he could strike the ground, Elijah (i.e., Sandalphon) appeared to catch him. Elijah is also sometimes called the "Angel of the Covenant".`,
+        items: []
+      },
+      {
+        heading: "In Christianity",
+        summary: 'In the New Testament, Jesus would say for those who believed, John the Baptist was Elijah, who would come before the "great and terrible day" as predicted by Malachi.',
+        items: []
+      },
+      {
+        heading: "Pagan associations and mountaintops",
+        summary: "Starting in the fifth century, Elias is often connected with Helios, the Sun. The two words have very similar pronunciations in Postclassical Greek; Elijah rode in his chariot of fire to heaven just as Helios drove the chariot of the sun across the sky; and the holocaust sacrifice offered by Elijah and burned by fire from heaven corresponds to the sun warming the earth.",
+        items: []
+      },
+      {
+        heading: "In Islam",
+        summary: "Elijah (Arabic: \u0625\u0644\u064A\u0627\u0633, romanized:\xA0Ily\u0101s) is mentioned as a prophet in Quran 6:85. Elijah's narrative in Muslim tradition and Tafsir resembles closely that in the Hebrew Bible and Muslim literature records Elijah's primary prophesying as taking place during the reign of Ahab and Jezebel as well as Ahaziah. He is seen by Muslims to be the prophetic predecessor to Elisha. While neither the Bible nor the Quran mentions the genealogy of Elijah, some scholars of Islam believe he may have come from the priestly family of the prophet Aaron. While Elijah is associated with Islamic eschatology, Islam views Jesus as the Messiah. Elijah's figure has been identified with a number of other prophets and saints, including Idris, which is believed by some scholars to have been another name for Elijah, and the figure Khidr. Islamic legend later developed the figure of Elijah, greatly embellishing upon his attributes, and some late apocryphal literature gave Elijah the status of a half-human, half-angel. Elijah also appears in later works of literature, including the Hamzanama.",
+        items: []
+      },
+      {
+        heading: "In Druze religion",
+        summary: `Druze tradition honors several "mentors" and "prophets", and Elijah is honored as a prophet. Elijah is considered a central figure in Druze. And due to his importance in the religion, the settlement of Druzes on Mount Carmel had partly to do with Elijah's story and devotion. There are two large Druze towns on the eastern slopes of Mount Carmel: Daliyat al-Karmel and Isfiya. The Druze regard the Cave of Elijah as holy, and they identify Elijah as "al-Khidr", the green prophet who symbolizes water and life, a miracle who cures the sick. He and Jethro (Shuaib) are considered patron saints of the Druze people.`,
+        items: []
+      },
+      {
+        heading: "In the Bah\xE1\u02BC\xED Faith",
+        summary: "In the Bah\xE1\u02BC\xED Faith, the B\xE1b, founder of the B\xE1b\xED faith, is believed to be the return of Elijah and John the Baptist. Both Elijah and John the Baptist are considered to be Lesser Prophets, whose stations are below that of a Manifestation of God like Jesus Christ, Buddha, the B\xE1b or Bah\xE1'u'll\xE1h. The B\xE1b is buried in his shrine on the slope of Mount Carmel, where Elijah had his confrontation with the prophets of Baal.",
+        items: []
+      },
+      {
+        heading: "Controversies",
+        summary: "That ravens fed Elijah by the brook Chorath has been questioned. The Hebrew text at 1 Kings 17:4\u20136 uses the word \u05E2\u05B9\u05E8\u05B0\u05D1\u05B4\u05D9\u05DD `\u014Drv\u012Bm, which means ravens, but with a different vocalization might equally mean Arabs. The Septuagint has \u03BA\u03BF\u03C1\u03B1\u03BA\u03B5\u03C2, ravens, and other traditional translations followed.",
+        items: []
+      },
+      {
+        heading: "In arts and literature",
+        summary: "",
+        items: [
+          `Perhaps the best-known representation of the story of Elijah is Felix Mendelssohn's oratorio "Elijah". The oratorio chronicles many episodes of Elijah's life, including his challenge to Ahab and the contest of the gods, the miracle of raising the dead, and his ascension into heaven. Composed and premiered in 1846, the oratorio was criticized by members of the New German School but nonetheless remains one of the most popular Romantic choral-orchestral works in the repertoire.`,
+          `In his ethnography Waiting for Elijah: Time and Encounter in a Bosnian Landscape, anthropologist Safet Had\u017EiMuhamedovi\u0107 discusses the syncretic harvest feast of Elijah's Day (Ilindan/Ali\u0111un), shared by Christians and Muslims throughout Bosnia. He focuses on the Field of Gacko in the southeastern Bosnian highlands. Starting with a well-known Bosnian proverb about Elijah's two names "Ilija until noon \u2013 Alija after noon" (Do podne Ilija, od podne Alija), Had\u017EiMuhamedovi\u0107 discusses the traditional and postwar waiting for Elijah, as well as the plethora of other characters he merges with (e.g. Slavic deity Perun and prophet Khidr). As the central trope in the book, the waiting for Elijah becomes the waiting for the restoration of home and cosmology after nationalist violence. The absence of Elijah is reminiscent of the one in Jewish rituals and Had\u017EiMuhamedovi\u0107 discovers an imaginative form of political resistance in the waiting for Elijah's return.`,
+          "In Orlando Furioso, the English knight Astolfo flies up to the moon in Elijah's flaming chariot.",
+          "Elijah Rock is a traditional Christian spiritual about Elijah, also sometimes used by Jewish youth groups.",
+          '"Go Like Elijah" is a song by the American rock-pop-jazz songwriter Chi Coltrane.',
+          "Lorenzetto created a statue of Elijah with assistance of the young sculptor Raffaello da Montelupo, using designs by Raphael.",
+          "The Fifth Mountain by Paulo Coelho is based on the story of Elijah.",
+          'Christian metal band Disciple released the song "God of Elijah" on their 2001 album By God. The theme of the song is the challenge Elijah placed against Ahab between Baal and the god of Israel.',
+          `The roots-fusion band Seatrain records, on the albums of the same name (1970), band member Peter Rowans song "Waiting for Elijah", alluding to Elijah's second coming.`,
+          "From 1974 to 1976 Philip K. Dick believed himself to be possessed by the spirit of Elijah. He later included Elijah (as Elias Tate) in his novel The Divine Invasion.",
+          `On Ryan Adams' 2005 album 29, the song "Voices" speaks of Elijah, alluding to Elijah being the prophet of destruction.`,
+          "Journeys With Elijah: Eight Tales of the Prophet, book by Barbara Goldin and illustrated by Jerry Pinkney",
+          'In 1996, Robin Mark created a praise song entitled "Days of Elijah".',
+          "Cormac McCarthy's post-apocalyptic novel The Road (2006) features an old man who ambiguously refers to himself as Ely.",
+          `Elijah ("Lije") is the name of the protagonist in three novels of Isaac Asimov's Robot series. He is familiar with biblical stories and sometimes relates them in the narrative or in discussion with his robot partner who was built in a world devoid of religion. His wife is ironically named Jezebel.`,
+          "The popular movie Chariots of Fire alludes to the William Blake poem And did those feet in ancient time, which in turn alludes to the Elijah story.",
+          "Elijah was played by John Hoyt in the 1953 film Sins of Jezebel.",
+          "A series of paintings by Clive Hicks-Jenkins c.\u20092003\u20132007 depicted Elijah being fed by a raven, inspired by fragments of a Tuscan altarpiece in Christ Church Picture Gallery in Oxford.",
+          'Referenced in the song "It Was Written", by Damian Marley, featuring Capleton and Drag-On.',
+          "Referenced in the movie The Book of Eli, starring Denzel Washington in the title role as the man on a mission in a post-apocalyptic world to deliver the Bible for safe-keeping.",
+          "I. L. Peretz wrote The Magician, which was illustrated by Marc Chagall in 1917, about Elijah.",
+          "Early in Moby-Dick, Ishmael and Queequeg run into a scarred and deformed man named Elijah, a prophet (or perhaps merely a frightening stranger) who hints to them the perils of signing aboard Ahab's ship, the Pequod.",
+          `Elijah appears in psychologist Carl Jung's "Red Book" as one of central book heroes.`
+        ]
+      },
+      {
+        heading: "Bibliography",
+        summary: "",
+        items: [
+          "Elijah: Prophet of Carmel, by Jane Ackerman, ICS Publications, 2003. ISBN\xA00-935216-30-8",
+          "Landesmann, Peter (2004). Die Himmelfahrt des Elija. Entstehen und Weiterleben einer Legende sowie ihre Darstellung in der fr\xFChchristlichen Kunst [The Ascension of Elijah. The emergence and survival of a legend and its depiction in early Christian art]. Wien: B\xF6hlau, ISBN\xA03-205-77184-2.",
+          "Had\u017EiMuhamedovi\u0107, S. Waiting for Elijah: Time and Encounter in a Bosnian Landscape. New York and Oxford: Berghahn Books. ISBN\xA0978-1-78533-856-4",
+          "Miller, J. M. and J. H. Hayes. A History of Ancient Israel and Judah. Louisville, KY: Westminster John Knox Press, 2004. ISBN\xA00-664-22358-3",
+          "Bialik, H. N. and Y. H Ravnitzky. eds. The Book of Legends: Sefer Ha-Aggadah. New York: Schocken Books, 1992. ISBN\xA00-8052-4113-2",
+          "Ginzberg, Lewis. Legends of the Bible. Philadelphia: Jewish Publication Society of America, 1956.",
+          "Schwartz, Howard. Tree of Souls: The Mythology of Judaism. Oxford: Oxford University Press, 2004. ISBN\xA00-19-508679-1",
+          "Wolfson, Ron and Joel L. Grishaver. Passover: The Family Guide to Spiritual Celebration. Woodstock, VT: Jewish Lights Publishing, 2003. ISBN\xA01-58023-174-8",
+          "N\xE9grier, Patrick. Elie & Elis\xE9e, KDP Editions 2024, Amazon.fr",
+          "Aronin, Ben and Shay Rieger. The Secret of the Sabbath Fish. Philadelphia: Jewish Publication Society of America, 1978. ISBN\xA00-8276-0110-7",
+          "Goldin, Barbara. Journeys with Elijah: Eight Tales of the Prophet. New York: Harcourt Brace, 1999. ISBN\xA00-15-200445-9",
+          "Jaffe, Nina. The Mysterious Visitor: Stories of the Prophet Elijah. New York: Scholastic Press, 1997. ISBN\xA00-590-48422-2",
+          "Jaffe, Nina. The Way Meat Loves Salt: A Cinderella Tale from the Jewish Tradition. New York: Holt Publishing, 1998. ISBN\xA00-8050-4384-5",
+          "Silverman, Erica. Gittel's Hands. Mahwah, NJ: BridgeWater Books, 1996. ISBN\xA00-8167-3798-3",
+          "Sydelle, Pearl. Elijah's Tears: Stories for the Jewish Holidays. New York: Holt Publishing, 1996. ISBN\xA00-8050-4627-5",
+          "Thaler, Mike. Elijah, Prophet Sharing: and Other Bible Stories to Tickle Your Soul. Colorado Springs, CO: Faith Kids Publishing, 2000. ISBN\xA00-7814-3512-9",
+          "Scheck, Joann. The Water That Caught On Fire. St. Louis, Missouri: Concordia Publishing House: ARCH Books, 1969. (59\u20131159)",
+          "Mission of Elijah: 37:123\u2013126, 37:127\u2013129",
+          "Praise for Elijah: 6:85, 37:130\u2013132"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Biblical accounts",
+        note: "According to the Bible, by the 9th\xA0century BC, the Kingdom of Israel, once united under Solomon, had been divided into the northern Kingdom of Israel and the southern Kingdom of Judah (which retained the historical capital of Jerusalem along with its Temple)."
+      },
+      {
+        title: "Historicity",
+        note: "Scholars generally agree that a prophet named Elijah existed in the Kingdom of Israel during the reigns of Kings Ahab and Ahaziah, that he was a religious figure of great personal dynamism and conservative zeal and the leader of resistance to the rise of Baal worship in Israel in the ninth century BC."
+      },
+      {
+        title: "In the Aggadah, Talmud, and extra-canonical books",
+        note: "Jewish legends about Elijah abound in the Aggadah, which is found throughout various collections of rabbinic literature, including the Babylonian Talmud."
+      },
+      {
+        title: "In Judaism",
+        note: "At Jewish circumcision ceremonies, a chair is set aside for the use of the prophet Elijah."
+      },
+      {
+        title: "In Jewish folklore",
+        note: "The volume of references to Elijah in folklore stands in marked contrast to that in the canon."
+      },
+      {
+        title: "In Christianity",
+        note: 'In the New Testament, Jesus would say for those who believed, John the Baptist was Elijah, who would come before the "great and terrible day" as predicted by Malachi.'
+      },
+      {
+        title: "Pagan associations and mountaintops",
+        note: "Starting in the fifth century, Elias is often connected with Helios, the Sun."
+      },
+      {
+        title: "In Islam",
+        note: "Elijah (Arabic: \u0625\u0644\u064A\u0627\u0633, romanized:\xA0Ily\u0101s) is mentioned as a prophet in Quran 6:85."
+      },
+      {
+        title: "In Druze religion",
+        note: 'Druze tradition honors several "mentors" and "prophets", and Elijah is honored as a prophet.'
+      },
+      {
+        title: "In the Bah\xE1\u02BC\xED Faith",
+        note: "In the Bah\xE1\u02BC\xED Faith, the B\xE1b, founder of the B\xE1b\xED faith, is believed to be the return of Elijah and John the Baptist."
+      },
+      {
+        title: "Controversies",
+        note: "That ravens fed Elijah by the brook Chorath has been questioned."
+      }
+    ]
+  },
+  Elisha: {
+    title: "Elisha",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Elisha",
+    description: "Elisha was, according to the Hebrew Bible, an Israelite prophet and a wonder-worker. His name is commonly transliterated into English as Elisha via Hebrew, Eliseus via Greek and Latin, E\u0142ishe (Yeghishe/Elisha) via Armenian or Alyasa via Arabic, and Elyasa or Elyesa via Turkish. Also mentioned in the New Testament and the Quran,[6:86][38:48] Elisha is venerated as a prophet in Judaism, Christianity and Islam and writings of the Bah\xE1'\xED Faith refer to him by name.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Chapelle_des_Carm%C3%A9lites_-_Interieur_-_%C3%89lis%C3%A9e_ressuscitant_le_fils_de_la_Sunamite_par_Despax_%28cropped%29.jpg/330px-Chapelle_des_Carm%C3%A9lites_-_Interieur_-_%C3%89lis%C3%A9e_ressuscitant_le_fils_de_la_Sunamite_par_Despax_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "Approximately c.\u2009910 BCE"
+      },
+      {
+        label: "Died",
+        value: "Approximately c.\u2009800 BCE, Samaria"
+      },
+      {
+        label: "Venerated\xA0in",
+        value: "JudaismChristianityIslamBah\xE1'\xED FaithDruze faithRastafari"
+      },
+      {
+        label: "Feast",
+        value: "June 14 (liturgical calendars of the Eastern Orthodox and Eastern Catholic Churches)"
+      },
+      {
+        label: "Influences",
+        value: "Elijah"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biblical narratives",
+        summary: "The story of Elisha is told in the Hebrew Bible/Old Testament in 1 Kings 19 and 2 Kings 2 through 2 Kings 9, ending in 2 Kings 13. He is mentioned again in the New Testament in Luke 4 (Luke 4:27).",
+        items: []
+      },
+      {
+        heading: "Veneration",
+        summary: "Elisha is venerated as a saint in a number of Christian churches. His feast day is on June 14, on the Eastern Orthodox, and Eastern Catholic liturgical calendars (for those churches which use the traditional Julian calendar, June 14 falls on June 27 of the modern Gregorian calendar). The Armenian Apostolic Church commemorates his feast day on the Thursday following the fifth Sunday after Pentecost (July 1 in 2021). John of Damascus composed a canon in honor of Elisha, and a church was built at Constantinople in his honor.",
+        items: []
+      },
+      {
+        heading: "In Islam",
+        summary: 'Elisha (Arabic: \u0627\u0644\u064A\u0633\u0639, romanized:\xA0al-yasa\u02BF) is venerated as a prophet in all of Islam, and is prophetic successor to Elijah (Arabic: Ily\u0101s). Elisha is mentioned twice in the Quran as a prophet, alongside fellow prophets. According to the Quran, Elisha is exalted "above the worlds (or to their people)" (Arabic: \u0641\u064E\u0636\u064E\u0651\u0644\u0652\u0646\u064E\u0627 \u0639\u064E\u0644\u064E\u0649 \u0671\u0644\u0652\u0639\u064E\u0627\u0644\u064E\u0645\u0650\u064A\u0646, romanized:\xA0fa\u1E0D\u1E0Daln\u0101 \u02BFala l-\u02BF\u0101lam\u012Bn(a)) and is "among the excellent" (Arabic: \u0645\u0650\u0646\u064E \u0671\u0644\u0652\u0623\u064E\u062E\u0652\u064A\u064E\u0627\u0631, romanized:\xA0mina l-akhy\u0101r(i)). Islamic sources that identify Elisha with Khidr cite the strong relationship between al-Khidr and Elijah in Islamic tradition. Around four thousand prophets were sent between Moses and Jesus, including figures such as Joshua, Elijah, Elisha, David, Solomon, Isaiah, Jeremiah, Jonah, and John the Baptist, who upheld the Torah and corrected deviations among the Israelites, with the finality of prophethood in Muhammad.',
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biblical narratives",
+        note: "The story of Elisha is told in the Hebrew Bible/Old Testament in 1 Kings 19 and 2 Kings 2 through 2 Kings 9, ending in 2 Kings 13."
+      },
+      {
+        title: "Veneration",
+        note: "Elisha is venerated as a saint in a number of Christian churches."
+      },
+      {
+        title: "In Islam",
+        note: "Elisha (Arabic: \u0627\u0644\u064A\u0633\u0639, romanized:\xA0al-yasa\u02BF) is venerated as a prophet in all of Islam, and is prophetic successor to Elijah (Arabic: Ily\u0101s)."
+      }
+    ]
+  },
+  Joel: {
+    title: "Joel (prophet)",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Joel_(prophet)",
+    description: "Joel is a Biblical prophet, the second of the Twelve Minor Prophets, and, according to itself, the author of the Book of Joel, which is set in the early Assyrian period. Scholars meanwhile view the Book of Joel as having been completed in the Ptolemaic period due to its use of earlier texts and perspective on Yahweh and the nations.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Joel_%28Michelangelo%29.jpg/330px-Joel_%28Michelangelo%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Venerated\xA0in",
+        value: "Judaism\nChristianity\nIslam\nBah\xE1\u02BC\xED Faith\nRastafari"
+      },
+      {
+        label: "Major shrine",
+        value: "Gush Halav, Israel"
+      },
+      {
+        label: "Feast",
+        value: "October 19 (Orthodox)"
+      },
+      {
+        label: "Attributes",
+        value: "Prophet"
+      },
+      {
+        label: "Major works",
+        value: "Book of Joel"
+      }
+    ],
+    sections: [
+      {
+        heading: "Name",
+        summary: 'Joel is mentioned by name only once in the Hebrew Bible, in the introduction to that book, as the son of Pethuel (Joel 1:1). The name combines the covenant name of God, YHWH (or Yahweh), and El (god), and has been translated as "YHWH is God" or "one to whom YHWH is God," that is, a worshiper of YHWH.',
+        items: []
+      },
+      {
+        heading: "Life",
+        summary: "Some commentators suggest that Joel lived in the 9th century BC, whereas others assign him to the 5th or 4th century BC. The dating of his book is similarly debated; there are no mentions of kings that might help locate it in time. The book's mention of Greeks has not given scholars any help in dating the text since the Greeks were known to have had access to Judah from Mycenaean times (c. 1600\u20131100 BC). However, the book's mention of Judah's suffering and to the standing temple have led some scholars to place the date of the book in the post-exilic period, after the construction of the Second Temple. Joel was originally from Judah/Judea, and, judging from its prominence in his prophecy, was quite possibly a prophet associated with the ritual of either Solomon's or the Second temple, depending on the date when he lived.",
+        items: []
+      },
+      {
+        heading: "In Christianity",
+        summary: "On the Eastern Orthodox liturgical calendar, his feast day is 19 October.",
+        items: []
+      },
+      {
+        heading: "In the Bah\xE1\u02BC\xED Faith",
+        summary: "Joel is considered a minor prophet in the Bah\xE1\u02BC\xED Faith. In the Kitab-i-Iqan, Baha'ullah states that previous prophecies by minor prophets such as Joel have symbolic meanings and significance and therefore should not be understood literally.",
+        items: []
+      },
+      {
+        heading: "In Islam",
+        summary: "In Islam, Yu'il ibn Fatu'il (Arabic: \u064A\u064F\u0626\u064A\u0644 \u0628\u0646 \u0641\u064E\u062A\u064F\u0626\u064A\u0644) isn't mentioned in the Quran nor the Hadith.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Name",
+        note: "Joel is mentioned by name only once in the Hebrew Bible, in the introduction to that book, as the son of Pethuel (Joel 1:1)."
+      },
+      {
+        title: "Life",
+        note: "Some commentators suggest that Joel lived in the 9th century BC, whereas others assign him to the 5th or 4th century BC."
+      },
+      {
+        title: "In Christianity",
+        note: "On the Eastern Orthodox liturgical calendar, his feast day is 19 October."
+      },
+      {
+        title: "In the Bah\xE1\u02BC\xED Faith",
+        note: "Joel is considered a minor prophet in the Bah\xE1\u02BC\xED Faith."
+      },
+      {
+        title: "In Islam",
+        note: "In Islam, Yu'il ibn Fatu'il (Arabic: \u064A\u064F\u0626\u064A\u0644 \u0628\u0646 \u0641\u064E\u062A\u064F\u0626\u064A\u0644) isn't mentioned in the Quran nor the Hadith."
+      }
+    ]
+  },
+  Jonah: {
+    title: "Jonah",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Jonah",
+    description: "Jonah or Jonas was a Jewish prophet from Gath-hepher in the Northern Kingdom of Israel around the 8th century BCE according to the Hebrew Bible. He is the central figure of the Book of Jonah, one of the minor prophets, which details his reluctance in delivering the judgment of God to the city of Nineveh in the Neo-Assyrian Empire. After he is swallowed by a large sea creature and then released, he returns to the divine mission.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Dore_jonah.jpg/330px-Dore_jonah.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "9th century BCE, Gath-hepher, Kingdom of Israel"
+      },
+      {
+        label: "Died",
+        value: "8th century BCE"
+      },
+      {
+        label: "Venerated\xA0in",
+        value: "Judaism, Christianity, Islam, Bah\xE1\u02BC\xED Faith, Rastafari"
+      },
+      {
+        label: "Major shrine",
+        value: "Tomb of Jonah (destroyed), Mosul, Iraq"
+      },
+      {
+        label: "Father",
+        value: "Amittai"
+      },
+      {
+        label: "Feast",
+        value: "21 September (Catholicism)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Book of Jonah",
+        summary: 'Jonah is the central character in the Book of Jonah, in which God commands him to go to the city of Nineveh to prophesy against it "for their great wickedness is come up before me", but Jonah instead attempts to flee from "the presence of the Lord" by going to Jaffa (sometimes transliterated as Joppa or Joppe). He sets sail for Tarshish. A huge storm arises and the sailors, realizing that it is no ordinary storm, cast lots and discover that Jonah is to blame. Jonah admits this and says that if he is thrown overboard, the storm will cease. The sailors refuse to do this and continue rowing, but all their efforts fail, and they eventually throw Jonah overboard. As a result, the storm calms and the sailors offer sacrifices to God.',
+        items: []
+      },
+      {
+        heading: "Religious views",
+        summary: `The Book of Jonah (Hebrew: \u05D9\u05D5\u05E0\u05D4, Yonah) is one of the twelve minor prophets included in the Hebrew Bible. According to one tradition, Jonah was the boy brought back to life by Elijah the prophet in 1 Kings. Another tradition holds that he was the son of the woman of Shunem brought back to life by Elisha in 2 Kings and that he is called the "son of Amittai" ('Truth') due to his mother's recognition of Elijah's identity as a prophet in 1 Kings. The Book of Jonah is read every year, in its original Hebrew and in its entirety, on Yom Kippur \u2013 the Day of Atonement \u2013 as the Haftarah at the afternoon mincha prayer. According to Rabbi Eliezer, the fish that swallowed Jonah was created in the primordial era and the inside of its mouth was like a synagogue; the fish's eyes were like windows and a pearl inside its mouth provided further illumination.`,
+        items: [
+          "the Arab village of Mashhad, located on the ancient site of Gath-hepher in Israel;",
+          "the Nabi Yunis mosque of the Palestinian town of Halhul, in the West Bank, 5\xA0km (3.1\xA0mi) north of Hebron, was purportedly built over Jonah's tomb;",
+          "a sanctuary near the city of Sarafand (Sarepta) in Lebanon;",
+          `a hill now called Giv'at Yonah, "Jonah's Hill", at the northern edge of the Israeli town of Ashdod, at a site covered by a modern lighthouse;`,
+          'a "tomb of Jonah" in the city of Diyarbakir, Turkey, located behind the mihrab at Fatih Pasha Mosque \u2013 Evliya \xC7elebi states in his Seyahatname that he visited the tombs of prophet Jonah and prophet George in the city.'
+        ]
+      },
+      {
+        heading: "Scholarly interpretations",
+        summary: "The story of a man surviving after being swallowed by a whale or giant fish is classified in the catalogue of folktale types as ATU 1889G.",
+        items: []
+      },
+      {
+        heading: "The fish",
+        summary: `Though art and culture often depicts Jonah's fish as a whale, the Hebrew text, as throughout scripture, refers to no marine species in particular, simply saying "great fish" or "big fish". While some biblical scholars suggest the size and habits of the great white shark correspond better to the representations of Jonah's experiences, normally an adult human is too large to be swallowed whole. The development of whaling from the 18th century onwards made it clear that most, if not all, species of whale are incapable of swallowing a human, leading to much controversy about the veracity of the biblical story of Jonah.`,
+        items: []
+      },
+      {
+        heading: "Cultural influence",
+        summary: `In Turkish, "Jonah's fish" (yunus bal\u0131\u011F\u0131) is the term used for dolphins. A long-established expression among sailors uses the term "a Jonah" to mean a sailor/passenger whose presence on board brings bad luck and endangers the ship. Later, this meaning was extended to "a person who carries a jinx, one who will bring bad luck to any enterprise."`,
+        items: []
+      },
+      {
+        heading: "Suggested connections to legends",
+        summary: `Joseph Campbell suggests that the story of Jonah parallels a scene from the Epic of Gilgamesh, in which Gilgamesh obtains a plant from the bottom of the sea. In the Book of Jonah, a worm (in Hebrew tola'ath, "maggot") bites the shade-giving plant's root causing it to wither; whereas in the Epic of Gilgamesh, Gilgamesh ties stones to his feet and plucks his plant from the floor of the sea. Once he returns to the shore, the rejuvenating plant is eaten by a serpent.`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Book of Jonah",
+        note: 'Jonah is the central character in the Book of Jonah, in which God commands him to go to the city of Nineveh to prophesy against it "for their great wickedness is come up before me", but Jonah instead attempts to flee from "the presence of the Lord" by going to Jaffa (sometimes transliterated as Joppa or Joppe).'
+      },
+      {
+        title: "Religious views",
+        note: "The Book of Jonah (Hebrew: \u05D9\u05D5\u05E0\u05D4, Yonah) is one of the twelve minor prophets included in the Hebrew Bible."
+      },
+      {
+        title: "Scholarly interpretations",
+        note: "The story of a man surviving after being swallowed by a whale or giant fish is classified in the catalogue of folktale types as ATU 1889G."
+      },
+      {
+        title: "The fish",
+        note: `Though art and culture often depicts Jonah's fish as a whale, the Hebrew text, as throughout scripture, refers to no marine species in particular, simply saying "great fish" or "big fish".`
+      },
+      {
+        title: "Cultural influence",
+        note: `In Turkish, "Jonah's fish" (yunus bal\u0131\u011F\u0131) is the term used for dolphins.`
+      },
+      {
+        title: "Suggested connections to legends",
+        note: "Joseph Campbell suggests that the story of Jonah parallels a scene from the Epic of Gilgamesh, in which Gilgamesh obtains a plant from the bottom of the sea."
+      }
+    ]
+  },
+  Amos: {
+    title: "Amos (prophet)",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Amos_(prophet)",
+    description: "Amos was one of the Twelve Minor Prophets of the Hebrew Bible and Christian Old Testament. According to the Bible, Amos was the older contemporary of Hosea and Isaiah and was active c. 760\u2013755 BC during the rule of kings Jeroboam II of Israel and Uzziah of the Kingdom of Judah and is portrayed as being from the southern Kingdom of Judah yet preaching in the northern Kingdom of Israel (Samaria). The prophet is characterized as speaking against an increased disparity between the wealthy and the poor with themes of justice, God's omnipotence, and divine judgment. The Book of Amos is attributed to him. In recent years, scholars have grown more skeptical of the Book of Amos's presentation of Amos's biography and background.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Amos-prophet.jpg/330px-Amos-prophet.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "Tekoa"
+      },
+      {
+        label: "Died",
+        value: "745\xA0BCE"
+      },
+      {
+        label: "Venerated\xA0in",
+        value: "Judaism, Christianity, Islam"
+      },
+      {
+        label: "Feast",
+        value: "June 15 (Eastern Orthodox)"
+      },
+      {
+        label: "Major works",
+        value: "Book of Amos"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: "Before becoming a prophet, Amos was a shepherd and a sycamore fig farmer from Teqoa\u02BF. Amos aimed his prophetic message at the northern kingdom of Israel, particularly the cities of Samaria and Bethel. Teqoa\u02BF is often identified with Teqoa\u02BF south of Jerusalem, but Gary Rendsburg notes that the Teqoa\u02BF in question was in Galilee in the Kingdom of Samaria.",
+        items: []
+      },
+      {
+        heading: "Themes",
+        summary: "",
+        items: [
+          'No modern interpreter has denied that he taught that God is ethical to the extent that he cannot be affected by ceremonies as such. "For Amos... religion consists not in ritual but in righteousness. YHWH, God of justice, demands right living not oblations."',
+          `"Amos thus proclaimed an ethical God so clearly that only ethical relations between men could assure divine favor; and nothing in his words indicates that he recognized any other approach to God. Such an approach naturally involves worship \u2013 a term that includes the whole process of man's communion with his God; even in ancient Israel worship was never confined to sacrifices and offerings, as witness Jacob at Bethel, Moses before the burning bush, Elijah on Mt. Horeb. Man also has never failed to devise new forms of approach to God to accord with his changed conceptions of Deity."`
+        ]
+      },
+      {
+        heading: "Teachings",
+        summary: "",
+        items: [
+          'Prayers and sacrifices do not make up for bad deeds. "Practice of religious acts is no insurance against the judgment of God" and that "privilege involves opportunity, or escap-ism... Immunity cannot be claimed simply because of past favor of God, irrespective of deeds and the measure of faithful service."',
+          'Behaving justly is much more important than ritual (Amos 5:21\u201324). "Ceremonial worship has no intrinsic value...the only genuine service of God consists in justice and righteousness (5:24)".',
+          'Amos believed in economic justice, "the conviction of Amos that economic justice was necessary to preserve the nation (whereas his opponents asserted that sacrifices and offerings were preserving it) forced him to conclude that a God who wanted the nation preserved must want justice and want it always, and could never therefore want sacrifices, which abetted and condoned injustice."',
+          '"Amos was an uncompromising monotheist. There is not a verse in his writing that admits the existence of other deities."',
+          "The relationship between the people of Israel is articulated as a moral contract. If the people of Israel fall below God's moral requirements, then their relationship will certainly be dissolved.",
+          "Dependence on God is a requisite for fulfillment. One will live if he seeks the Lord (Amos 5:4)."
+        ]
+      },
+      {
+        heading: "Justice",
+        summary: "The ancient appeal towards justice is expressed by the voice of God in Amos's teachings. God tells Amos that the Israelites are going to face divine intervention as oppression is running rampant in Israel. God expressed this oppression by saying that the Israelites were practicing religiosity without righteousness. By oppressing the poor and failing to practice justice the Israelites were behaving unrighteously; justice was to be enacted as a core of God's message in Amos's prophetic teachings.",
+        items: []
+      },
+      {
+        heading: "Feast days/religious veneration",
+        summary: "Within Roman, Byzantine, and other high liturgical churches saints are regularly celebrated and venerated on Feast days throughout the calendar year. This practice honors Christian martyrs on the traditional day of their death with facts about their life and insights attributed to them meant to edify the faithful.",
+        items: []
+      },
+      {
+        heading: "In Islam",
+        summary: "In Islamic tradition, \u0100m\u016Bs ibn \u012Ashiy\u0101 (Arabic: \u0639\u0627\u0645\u0648\u0635 \u0627\u0628\u0646 \u0625\u0634\u0639\u064A\u0627 ) is acknowledged as one of the prophets sent to Bani Israil after al Yasa (Elisha). He is not mentioned in the Quran or the Hadith. He is purely known from Isra\u02BCiliyyat sources.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "Before becoming a prophet, Amos was a shepherd and a sycamore fig farmer from Teqoa\u02BF."
+      },
+      {
+        title: "Justice",
+        note: "The ancient appeal towards justice is expressed by the voice of God in Amos's teachings."
+      },
+      {
+        title: "Feast days/religious veneration",
+        note: "Within Roman, Byzantine, and other high liturgical churches saints are regularly celebrated and venerated on Feast days throughout the calendar year."
+      },
+      {
+        title: "In Islam",
+        note: "In Islamic tradition, \u0100m\u016Bs ibn \u012Ashiy\u0101 (Arabic: \u0639\u0627\u0645\u0648\u0635 \u0627\u0628\u0646 \u0625\u0634\u0639\u064A\u0627 ) is acknowledged as one of the prophets sent to Bani Israil after al Yasa (Elisha)."
+      }
+    ]
+  },
+  Hosea: {
+    title: "Hosea (prophet)",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Hosea",
+    description: `In the Hebrew Bible, Hosea, also known as Osee, son of Beeri, was an 8th-century BC prophet in Israel and the nominal primary author of the Book of Hosea. He is the first of the Twelve Minor Prophets, whose collective writings were aggregated and organized into a single book in the Jewish Tanakh by the Second Temple period but which are distinguished as individual books in Christianity. Hosea is often seen as a "prophet of doom", but underneath his message of destruction is a promise of restoration. The Talmud claims that he was the greatest prophet of his generation. The period of Hosea's ministry extended to some sixty years, and he was the only prophet of Israel of his time who left any written prophecy.`,
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Hosea_by_James_Tissot_%28cropped%29.jpg/330px-Hosea_by_James_Tissot_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Venerated\xA0in",
+        value: "Judaism, Christianity, Islam, Rastafari"
+      },
+      {
+        label: "Major shrine",
+        value: "Safed, Israel"
+      },
+      {
+        label: "Feast",
+        value: "October 17 (Orthodox Christianity)"
+      },
+      {
+        label: "Attributes",
+        value: "raising his hand in benediction, holding a scroll with the words Ex Aegypto vocavi filium meum"
+      },
+      {
+        label: "Major works",
+        value: "Book of Hosea"
+      }
+    ],
+    sections: [
+      {
+        heading: "Name meaning",
+        summary: `The name Hosea seems to have been common, and is derived from a related verb meaning 'salvation'. Numbers 13:16 states that Hosea was the original name of Joshua, son of Nun until Moses gave him the longer, theophoric name Yehoshua (Hebrew: \u05D9\u05B0\u05D4\u05D5\u05B9\u05E9\u05BB\u05BD\u05C1\u05E2\u05B7, romanized:\xA0Y\u0113h\u014D\u0161\u016Ba\u02BF) incorporating an abbreviated form of the Tetragrammaton. Rashi explains in Sotah 34b that Joshua is a compound name of \u05D9\u05D4 (Yah) and \u05D4\u05D5\u05E9\u05E2 (h\u014D\u0161\u0113a\u02BF), "God may save".`,
+        items: []
+      },
+      {
+        heading: "Location",
+        summary: "Although it is not expressly stated in the Book of Hosea, it is apparent from the level of detail and familiarity focused on north-east geography, that Hosea conducted his prophetic ministries in the northern Kingdom of Israel, of which he was a native. In Hosea 5:8 ff., there seems to be a reference to the Syro-Ephraimite War which led to the capture of the kingdom by the Assyrians (c. 734\u2013732\xA0BCE). Hosea's long ministry, from the reign of Jeroboam II (787\u2013747) to the reign of Hoshea (731\u2013722), seems to have ended before the fall of Samaria in 722/721.",
+        items: []
+      },
+      {
+        heading: "Family",
+        summary: `Little is known about the life or social status of Hosea. According to the Book of Hosea, he married Gomer, the daughter of Diblaim, but she proved to be unfaithful. Hosea knew she would be unfaithful, as God says this to him immediately in the opening statements of the book. This marriage was arranged in order to serve to the prophet as a symbol of Israel's unfaithfulness to the Lord. His marriage will dramatize the breakdown in the relationship between God and his people Israel. Hosea's family life reflected the "adulterous" relationship which Israel had built with other gods.`,
+        items: []
+      },
+      {
+        heading: "Rabbinic literature",
+        summary: `The reign of Uzziah, who for a while occupied the throne during his father Amaziah's lifetime, is notable particularly because it marks the beginning of the activity of three of the prophets Hosea, Amos, and Isaiah. The oldest of the three was Hosea, the son of the prophet and prince Beeri, the Beeri who was later carried away captive by Tiglath-pileser, the King of Assyria. Of Beeri's prophecies there are two verses preserved by Isaiah. The peculiar marriage contracted by Hosea at the command of God was not without a good reason. When God spoke to the prophet about the sins of Israel, expecting him to defend or excuse his people, Hosea said severely: "O Lord of the world! Thine is the universe. In place of Israel choose another as Thy particular people from among the nations of the earth." To make the true relation between God and Israel known to the prophet, he was commanded to take to wife a woman with a dubious past. After she had several children born, God suddenly put the question to him: "Why followest thou not the example of thy teacher Moses, who denied himself the joys of family life after his call to prophecy?" Hosea replied: "I can neither send my wife away nor divorce her, for she has borne me children." "If, now," said God to him, "thou who hast a wife of whose honesty thou art so uncertain that thou canst not even be sure that her children are thine, and yet thou canst not separate from her, how, then can I separate Myself from Israel, from My children, the children of My elect, Abraham, Isaac, and Jacob!" Hosea entreated God to pardon him. But God said: "Better were it that thou shouldst pray for the welfare of Israel, for thou art the cause that I issued three fateful decrees against them." Hosea prayed as he was bidden, and his prayer averted the impending threefold doom. Hosea died at Babylon at a time in which a journey thence to Palestine was beset with many perils. Desirous of having his earthly remains rest in sacred ground, he requested before his death that his bier be loaded upon a camel, and the animal permitted to make its way as it would. Wherever it stopped, there his body was to be buried. As it commanded, so it was done. Without a single mishap the camel arrived at Safed. In the Jewish cemetery of the town it stood still, and there Hosea was buried in the presence of a large concourse."`,
+        items: []
+      },
+      {
+        heading: "Christian thought",
+        summary: "One of the early writing prophets, Hosea used his own experience as a symbolic representation of God and Israel. The relationship between Hosea and Gomer parallels the relationship between God and Israel. Even though Gomer runs away from Hosea and sleeps with another man, he loves her anyway and forgives her. Likewise, even though the people of Israel worshipped false gods, God continued to love them and did not abandon his covenant with them.",
+        items: []
+      },
+      {
+        heading: "In Islam",
+        summary: "In Islam, \u1E24ushay\u0101 ibn B\u012Br\u012B (Arabic: \u062D\u0634\u0627\u064A\u0627 \u0628\u0646 \u0628\u064A\u0631\u064A) is considered to be an Isra\u02BCiliyyat prophet sent to guide Bani-Israel after they turned away from God. The Qur'an mentions only some prophets by name but makes it clear that many were sent who are not mentioned. Therefore, many Muslim scholars, such as Ibn Ishaq, speak of Hosea as one of the true Hebrew prophets of Israel. The Book of Hosea has also been used in Qur'anic exegesis by Abdullah Yusuf Ali, especially in reference to Qur'anic verses which speak of the backsliding of Israel.",
+        items: []
+      },
+      {
+        heading: "Observances",
+        summary: "He is commemorated with the other Minor prophets in the Calendar of saints of the Armenian Apostolic Church on July 31. He is commemorated on the Eastern Orthodox liturgical calendar, with a feast day on October 17 (for those churches which follow the Julian Calendar, October 17 currently falls on October 30 of the modern Gregorian Calendar). He is also commemorated on the Sunday of the Holy Fathers (the Sunday before the Nativity of the Lord).",
+        items: []
+      },
+      {
+        heading: "Tomb",
+        summary: 'Jewish tradition holds that the tomb of Hosea is a structure located in the Jewish cemetery of Safed; however, Emil G. Hirsch and Victor Ryssel, writing in The Jewish Encyclopedia, say that this tradition is "historically worthless".',
+        items: []
+      },
+      {
+        heading: "In popular culture",
+        summary: "The character Hosea Matthews in the video game Red Dead Redemption 2 is named after the prophet.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Name meaning",
+        note: "The name Hosea seems to have been common, and is derived from a related verb meaning 'salvation'."
+      },
+      {
+        title: "Location",
+        note: "Although it is not expressly stated in the Book of Hosea, it is apparent from the level of detail and familiarity focused on north-east geography, that Hosea conducted his prophetic ministries in the northern Kingdom of Israel, of which he was a native."
+      },
+      {
+        title: "Family",
+        note: "Little is known about the life or social status of Hosea."
+      },
+      {
+        title: "Rabbinic literature",
+        note: "The reign of Uzziah, who for a while occupied the throne during his father Amaziah's lifetime, is notable particularly because it marks the beginning of the activity of three of the prophets Hosea, Amos, and Isaiah."
+      },
+      {
+        title: "Christian thought",
+        note: "One of the early writing prophets, Hosea used his own experience as a symbolic representation of God and Israel."
+      },
+      {
+        title: "In Islam",
+        note: "In Islam, \u1E24ushay\u0101 ibn B\u012Br\u012B (Arabic: \u062D\u0634\u0627\u064A\u0627 \u0628\u0646 \u0628\u064A\u0631\u064A) is considered to be an Isra\u02BCiliyyat prophet sent to guide Bani-Israel after they turned away from God."
+      },
+      {
+        title: "Observances",
+        note: "He is commemorated with the other Minor prophets in the Calendar of saints of the Armenian Apostolic Church on July 31."
+      },
+      {
+        title: "Tomb",
+        note: "Jewish tradition holds that the tomb of Hosea is a structure located in the Jewish cemetery of Safed; however, Emil G."
+      },
+      {
+        title: "In popular culture",
+        note: "The character Hosea Matthews in the video game Red Dead Redemption 2 is named after the prophet."
+      }
+    ]
+  },
+  Isaiah: {
+    title: "Isaiah",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Isaiah",
+    description: "Isaiah was the 8th-century BC Israelite prophet after whom the Book of Isaiah is named.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Jesaja_%28Michelangelo%29.jpg/330px-Jesaja_%28Michelangelo%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "8th century BC"
+      },
+      {
+        label: "Died",
+        value: "7th century BC"
+      },
+      {
+        label: "Venerated\xA0in",
+        value: "Judaism, Christianity, Islam, Bah\xE1\u02BC\xED Faith, Rastafari"
+      },
+      {
+        label: "Feast",
+        value: "May 9, Thursday after the Feast of the Transfiguration (Armenian Apostolic Church)"
+      },
+      {
+        label: "Major works",
+        value: "Book of Isaiah"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: "The first verse of the Book of Isaiah states that Isaiah prophesied during the reigns of Uzziah (or Azariah), Jotham, Ahaz, and Hezekiah, the kings of Judah. Uzziah's reign was 52 years in the middle of the 8th century BC, and Isaiah must have begun his ministry a few years before Uzziah's death, probably in the 740s BC. He may have been contemporary with Manasseh for some years. Thus, Isaiah may have prophesied for as long as 64 years.",
+        items: []
+      },
+      {
+        heading: "In Judaism",
+        summary: "In addition to Isaiah\u2019s origination in Judaism\u2019s Hebrew Bible Book of Isaiah, references to the Israelite prophet in Jewish rabbinic literature contain various expansions, elaborations, and inferences.",
+        items: []
+      },
+      {
+        heading: "In Christianity",
+        summary: "The Ascension of Isaiah, a pseudepigraphical Christian text dated to sometime between the end of the 1st century and the beginning of the 3rd, gives a detailed story of Isaiah confronting an evil false prophet and ending with Isaiah being martyred \u2013 none of which is attested in the original Biblical account.",
+        items: []
+      },
+      {
+        heading: "In Islam",
+        summary: "Isaiah (Arabic: \u0625\u0650\u0634\u064E\u0639\u0652\u064A\u064E\u0627\u0621, romanized:\xA0Isha\u02BFy\u0101\u02BE) is not mentioned by name in the Quran or the Hadith, but appears frequently as a prophet in Muslim sources such as the qi\u1E63a\u1E63 al-anbiy\u0101\u02BE and various tafsirs. Al-Tabari (310/923) provides the typical accounts for Islamic traditions regarding Isaiah. He is listed among the prophets in the book of salawat Dalail al-Khayrat. He is further mentioned and accepted as a prophet by other Islamic scholars such as ibn Kathir, Abu Ishaq al-Tha'labi and al-Kisa'i and also modern scholars such as Muhammad Asad and Abdullah Yusuf Ali.",
+        items: []
+      },
+      {
+        heading: "Archaeology",
+        summary: 'In February 2018, archaeologist Eilat Mazar announced that she and her team had discovered a small seal impression which reads "[belonging] to Isaiah nvy" (could be reconstructed and read as "[belonging] to Isaiah the prophet") during the Ophel excavations, just south of the Temple Mount in Jerusalem. The tiny bulla was found "only 10 feet away" from where an intact bulla bearing the inscription "[belonging] to King Hezekiah of Judah" was discovered in 2015 by the same team. Although the name "Isaiah" in the Paleo-Hebrew alphabet is unmistakable, the damage on the bottom left part of the seal causes difficulties in confirming the word "prophet" or a name "Navi", casting some doubts whether this seal really belongs to the prophet Isaiah.',
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "The first verse of the Book of Isaiah states that Isaiah prophesied during the reigns of Uzziah (or Azariah), Jotham, Ahaz, and Hezekiah, the kings of Judah."
+      },
+      {
+        title: "In Judaism",
+        note: "In addition to Isaiah\u2019s origination in Judaism\u2019s Hebrew Bible Book of Isaiah, references to the Israelite prophet in Jewish rabbinic literature contain various expansions, elaborations, and inferences."
+      },
+      {
+        title: "In Christianity",
+        note: "The Ascension of Isaiah, a pseudepigraphical Christian text dated to sometime between the end of the 1st century and the beginning of the 3rd, gives a detailed story of Isaiah confronting an evil false prophet and ending with Isaiah being martyred \u2013 none of which is attested in the original Biblical account."
+      },
+      {
+        title: "In Islam",
+        note: "Isaiah (Arabic: \u0625\u0650\u0634\u064E\u0639\u0652\u064A\u064E\u0627\u0621, romanized:\xA0Isha\u02BFy\u0101\u02BE) is not mentioned by name in the Quran or the Hadith, but appears frequently as a prophet in Muslim sources such as the qi\u1E63a\u1E63 al-anbiy\u0101\u02BE and various tafsirs."
+      },
+      {
+        title: "Archaeology",
+        note: 'In February 2018, archaeologist Eilat Mazar announced that she and her team had discovered a small seal impression which reads "[belonging] to Isaiah nvy" (could be reconstructed and read as "[belonging] to Isaiah the prophet") during the Ophel excavations, just south of the Temple Mount in Jerusalem.'
+      }
+    ]
+  },
+  Micah: {
+    title: "Micah (prophet)",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Micah_(prophet)",
+    description: "According to the Hebrew Bible, Micah was a prophet of Yahweh and is traditionally regarded as the author of the Book of Micah. He is considered one of the Twelve Minor Prophets of the Hebrew Bible and is depicted as a contemporary of the prophets Isaiah, Amos and Hosea. Micah is described as having been from Moresheth-Gath, in southwest Judah and prophesying during the reigns of kings Jotham, Ahaz, and Hezekiah of the southern Kingdom of Judah in the 8th century BC.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Micah_prophet.jpg/330px-Micah_prophet.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "Moresheth-Gath, 8th century BC"
+      },
+      {
+        label: "Venerated\xA0in",
+        value: "Second Temple Judaism (historically), Rabbinic Judaism, Eastern Orthodox Church, Catholic Church, Oriental Orthodox Churches, Assyrian Church of the East, Ancient Church of the East"
+      },
+      {
+        label: "Feast",
+        value: "August 14, January 5 (Eastern Orthodox), July 31, December 31 (Roman Catholic), July 31 (Armenian Apostolic Church), August 16 (Mesori 10) (Coptic Orthodox), August 16 (N\xE4hase 10) (Ethiopian Orthodox, Eritrean Orthodox)"
+      },
+      {
+        label: "Major works",
+        value: "Book of Micah"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biblical narrative",
+        summary: `Micah was active in the Kingdom of Judah from before the fall of Israel in 722 BC and experienced the devastation brought by Sennacherib's invasion of Judah in 701 BC. He prophesied from approximately 740 to 698 BC. Micah was from Moresheth, also called Moresheth-Gath, a small town in southwest Judah. Micah lived in a rural area, and often rebuked the corruption of city life in Israel and Judah. Unlike prophets such as Isaiah and Hosea, no record of his father's name has been retained by the scribes, but it is likely that he was descended from the common people, as the target of his message was towards the privileged classes. John Taylor comments that "To call a man a rural prophet is not to say that he was ignorant."`,
+        items: []
+      },
+      {
+        heading: "Message",
+        summary: "Micah\u2019s messages were directed mainly towards Jerusalem, and were a mixture of denunciations and prophecies. In his early prophecies, he predicted the destruction of both Samaria and Jerusalem for their respective sins. The people of Samaria were rebuked for worshipping idols, which were bought with the income earned by prostitutes. Micah was the first prophet to predict the downfall of Jerusalem. According to him, the city was doomed because its beautification was financed by dishonest business practices, which impoverished the city's citizens. He also called to account the prophets of his day, whom he accused of accepting money for their oracles.",
+        items: []
+      },
+      {
+        heading: "Christian interpretation",
+        summary: "Micah 5:2 is interpreted as a prophecy that Bethlehem, a small village just south of Jerusalem, would be the birthplace of the Messiah. Christians also interpret the latter portion of the verse to be an indication of the divinity and eternality of the Messiah.",
+        items: []
+      },
+      {
+        heading: "Liturgical commemoration and historical reception",
+        summary: "The prophet Micah is commemorated and venerated as a saint by multiple Christian churches that historically claim Apostolic succession and follow a liturgical calendar.",
+        items: []
+      },
+      {
+        heading: "Bibliography",
+        summary: "",
+        items: [
+          "Delbert R. Hillers, Micah (Minneapolis, Fortress Press, 1984) (Nurse).",
+          "Bruce K. Waltke, A Commentary on Micah (Grand Rapids, Eerdmans, 2007).",
+          "Mignon Jacobs, Conceptual Coherence of the Book of Micah (Sheffield, Sheffield Academic Press, 2009).",
+          'Yair Hoffman Engel, "The Wandering Lament: Micah 1:10\u201316," in Mordechai Cogan and Dan`el Kahn (eds), Treasures on Camels\' Humps: Historical and Literary Studies from the Ancient Near East Presented to Israel Eph`al (Jerusalem, Magnes Press, 2008).'
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Biblical narrative",
+        note: "Micah was active in the Kingdom of Judah from before the fall of Israel in 722 BC and experienced the devastation brought by Sennacherib's invasion of Judah in 701 BC."
+      },
+      {
+        title: "Message",
+        note: "Micah\u2019s messages were directed mainly towards Jerusalem, and were a mixture of denunciations and prophecies."
+      },
+      {
+        title: "Christian interpretation",
+        note: "Micah 5:2 is interpreted as a prophecy that Bethlehem, a small village just south of Jerusalem, would be the birthplace of the Messiah."
+      },
+      {
+        title: "Liturgical commemoration and historical reception",
+        note: "The prophet Micah is commemorated and venerated as a saint by multiple Christian churches that historically claim Apostolic succession and follow a liturgical calendar."
+      }
+    ]
+  },
+  Nahum: {
+    title: "Nahum",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Nahum",
+    description: "Nahum was a minor prophet whose prophecy is recorded in the Tanakh, also called the Hebrew Bible and the Old Testament. His book comes in chronological order between Micah and Habakkuk in the Bible. He wrote about the end of the Assyrian Empire, and its capital city, Nineveh, in a vivid poetic style.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Nahum-prophet.jpg/330px-Nahum-prophet.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Type",
+        value: "Shrine to the biblical prophet Nahum"
+      },
+      {
+        label: "Cultures",
+        value: "Assyrian, Jewish"
+      },
+      {
+        label: "Location",
+        value: "Town of Alqosh, Northern Iraq, 50\xA0km (31\xA0mi) north of Mosul"
+      },
+      {
+        label: "Excavation\xA0dates",
+        value: "None"
+      },
+      {
+        label: "Condition",
+        value: "Partial collapse, stabilized in 2018"
+      },
+      {
+        label: "Public\xA0access",
+        value: "yes"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: `Little is known about Nahum's personal history. His name means 'comfort', and is derived from the same root as the Hebrew verb meaning 'to comfort'. He may have come from the town of Alqosh in northern Mesopotamia (Nahum 1:1), however some scholars also attempted to connect 'Elkoshite' to Capernaum of northern Galilee. He was a very nationalistic Hebrew, however, and lived amongst the Elkoshites in peace. Nahum, called "the Elkoshite", is the seventh in order of the minor prophets. According to St. Jerome, Nahum's Elkosh was a little town in Galilee. This identification could explain how the famous New Testament city of Capernaum got its name.`,
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "Nahum's writings could be taken as prophecy or as history. One account suggests that his writings are a prophecy written in about 615 BCE, just before the downfall of Assyria, while another account suggests that he wrote this passage as liturgy just after its downfall in 612 BCE.",
+        items: []
+      },
+      {
+        heading: "Tomb",
+        summary: 'The tomb of Nahum is supposedly inside the synagogue at Alqosh, although there are other places outside Iraq which also lay claim to being the original "Elkosh" from which Nahum hailed. Alqosh was emptied of its Jewish population in 1948, and the synagogue that houses the tomb is now in a poor structural state, to the extent that the tomb itself is in danger of destruction. The Christian population, Alqoshites, protected the Jewish members by negotiating their expulsion rather than their extermination. As they were being expelled from the land, the Alqoshi Christians helped the Jewish population escape to Israel. The tomb underwent basic repairs in 1796. When all Jews were forced to flee Alqosh in 1948, the iron keys to the tomb were handed to an Assyrian man, Sami Jajouhana. Few Jews visit the historic site, yet Jajouhana continues to keep the promise he made with his Jewish friends, and looks after the tomb.',
+        items: []
+      },
+      {
+        heading: "Liturgical commemoration",
+        summary: "The prophet Nahum is venerated as a saint in Eastern Christianity. On the Eastern Orthodox liturgical calendar, his feast day is December 1 (for those churches which follow the traditional Julian Calendar, December 1 currently falls on December 14 of the modern Gregorian Calendar). He is commemorated with the other minor prophets in the calendar of saints of the Armenian Apostolic Church on July 31.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "Little is known about Nahum's personal history."
+      },
+      {
+        title: "Works",
+        note: "Nahum's writings could be taken as prophecy or as history."
+      },
+      {
+        title: "Tomb",
+        note: 'The tomb of Nahum is supposedly inside the synagogue at Alqosh, although there are other places outside Iraq which also lay claim to being the original "Elkosh" from which Nahum hailed.'
+      },
+      {
+        title: "Liturgical commemoration",
+        note: "The prophet Nahum is venerated as a saint in Eastern Christianity."
+      }
+    ]
+  },
+  Zephaniah: {
+    title: "Zephaniah",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Zephaniah",
+    description: 'Zephaniah is the name of several people in the Hebrew Bible; the most prominent being the prophet who prophesied in the days of Josiah, king of Judah and is attributed a book bearing his name among the Twelve Minor Prophets. His name is commonly transliterated Sophonias in Bibles translated from the Vulgate or Septuagint. The name might mean "Yahweh has hidden/protected," or "Yah lies in wait". The church father Jerome interpreted the name to mean "the watchman of the Lord".',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Icon_of_Zephaniah_%2817th_c.%2C_North_Russia%2C_priv._coll.%29.jpg/330px-Icon_of_Zephaniah_%2817th_c.%2C_North_Russia%2C_priv._coll.%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [],
+    sections: [
+      {
+        heading: "The prophet Zephaniah",
+        summary: "The best known Biblical figure bearing the name Zephaniah is the son of Cushi, and great-great grandson of King Hezekiah, ninth in the literary order of the Twelve Minor Prophets. He prophesied in the days of Josiah, ruler of the Kingdom of Judah (640\u2013609 BCE), but before Josiah's reform in 621 BCE, and was contemporary with Jeremiah, with whom he had much in common. The unique source containing the minimal knowledge of his personality and rhetorical and literary qualities is the short, three chapter book of the Old Testament which bears his name. The scene of his activity was the city of Jerusalem, which he seems to know well. The existence of two Zephaniahs linked to the book is considered purely hypothetical.",
+        items: []
+      },
+      {
+        heading: "In Islam",
+        summary: "In Islam, Safanyah (Arabic: \u0635\u0641\u0646\u064A) is recognized by some scholars as a prophet sent to Bani-Israel, though he is not mentioned in the Quran and there are no authentic Hadiths about him. His story is known mainly through Isra\u02BCiliyyat and historical works like Ibn Kathir's Al-Bidaya wa l-Nihaya. Details about his life, family, and mission remain largely unknown in Islamic sources.",
+        items: []
+      },
+      {
+        heading: "Other Zephaniahs in the Bible",
+        summary: "Other individuals named Zephaniah include:",
+        items: []
+      },
+      {
+        heading: "Attribution",
+        summary: "",
+        items: [
+          "This article incorporates text from a publication now in the public domain:"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "The prophet Zephaniah",
+        note: "The best known Biblical figure bearing the name Zephaniah is the son of Cushi, and great-great grandson of King Hezekiah, ninth in the literary order of the Twelve Minor Prophets."
+      },
+      {
+        title: "In Islam",
+        note: "In Islam, Safanyah (Arabic: \u0635\u0641\u0646\u064A) is recognized by some scholars as a prophet sent to Bani-Israel, though he is not mentioned in the Quran and there are no authentic Hadiths about him."
+      },
+      {
+        title: "Other Zephaniahs in the Bible",
+        note: "Other individuals named Zephaniah include:"
+      }
+    ]
+  },
+  Jeremiah: {
+    title: "Jeremiah",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Jeremiah",
+    description: "Jeremiah, also called Jeremias, and occasionally in older English texts Jeremy, was one of the major prophets of the Hebrew Bible. According to Jewish tradition, Jeremiah authored the book that bears his name, the Books of Kings, and the Book of Lamentations, with the assistance and under the editorship of Baruch ben Neriah, his scribe and disciple.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/SA_160-Jeremia_op_de_puinhopen_van_Jeruzalem.jpg/330px-SA_160-Jeremia_op_de_puinhopen_van_Jeruzalem.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c.\u2009650 BC, Anathoth"
+      },
+      {
+        label: "Died",
+        value: "c.\u2009570 BC, Egypt"
+      },
+      {
+        label: "Occupation",
+        value: "Prophet"
+      },
+      {
+        label: "Parent",
+        value: "Hilkiah"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biblical narratives",
+        summary: "Jeremiah was known as a prophet from the thirteenth year of Josiah, king of Judah (626\xA0BC), until after the fall of Jerusalem and the destruction of Solomon's Temple in 587\xA0BC. This period spanned the reigns of five kings of Judah: Josiah, Jehoahaz, Jehoiakim, Jehoiachin, and Zedekiah. The prophetess Huldah was a relative and contemporary of Jeremiah, while the prophet Zephaniah was his mentor.",
+        items: []
+      },
+      {
+        heading: "Historicity",
+        summary: "The consensus is that there was a historical prophet named Jeremiah and that portions of the book probably were written by Jeremiah or his scribe Baruch. Views range from the belief that the narratives and poetic sections in Jeremiah are contemporary with his life (W. L. Holladay), to the view that the work of the original prophet is beyond identification or recovery (R. P. Carroll).",
+        items: []
+      },
+      {
+        heading: "Religious views",
+        summary: `In Jewish rabbinic literature, especially the aggadah, Jeremiah and Moses are always mentioned together, An ancient midrash, in connection with Deuteronomy 18:18 presented their life and works in parallel, in which "a prophet like Moses" is promised, states Jeremiah's time as prophet was similar to Moses, which is 40 years. Moses also prophesied that his own tribe, Tribe of Levi, will rebel against Judah, while Jeremiah's tribe would in turn rebel against Jeremiah himself. In the year of the prophesied event, Moses also said that he himself will be exiled into watery areas, while Jeremiah will be jailed in a pit. Then Moses will be saved by a slave of Pharaoh's daughter, while subsequently Jeremiah will be rescued by a slave named Ebed-melech; After such, the Deuteronomy closed the chapter with Moses reprimanded the people in discourses; so did Jeremiah. The prophet Ezekiel was a son of Jeremiah according to rabbinic literature. In 2 Maccabees 2:4ff, Jeremiah is credited with hiding the Ark, incense altar, and tabernacle on the mountain of Moses.`,
+        items: [
+          "16 January \u2013 commemoration of overthrowing the Idols by prophet Jeremiah (OO)",
+          "7 April \u2013 Saint Michael delivers Jeremiah from prison (OO)",
+          "30 April \u2013 Martyrdom of Jeremiah the Prophet (OO)",
+          "1 May \u2013 commemoration in Catholic Church and Eastern Orthodox Church",
+          "26 June \u2013 commemoration in LCMS (R)"
+        ]
+      },
+      {
+        heading: "Cultural influence",
+        summary: 'Jeremiah inspired the French noun j\xE9r\xE9miade, and subsequently the English jeremiad, meaning "a lamentation; mournful complaint," or further, "a cautionary or angry harangue."',
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biblical narratives",
+        note: "Jeremiah was known as a prophet from the thirteenth year of Josiah, king of Judah (626\xA0BC), until after the fall of Jerusalem and the destruction of Solomon's Temple in 587\xA0BC."
+      },
+      {
+        title: "Historicity",
+        note: "The consensus is that there was a historical prophet named Jeremiah and that portions of the book probably were written by Jeremiah or his scribe Baruch."
+      },
+      {
+        title: "Religious views",
+        note: `In Jewish rabbinic literature, especially the aggadah, Jeremiah and Moses are always mentioned together, An ancient midrash, in connection with Deuteronomy 18:18 presented their life and works in parallel, in which "a prophet like Moses" is promised, states Jeremiah's time as prophet was similar to Moses, which is 40 years.`
+      },
+      {
+        title: "Cultural influence",
+        note: 'Jeremiah inspired the French noun j\xE9r\xE9miade, and subsequently the English jeremiad, meaning "a lamentation; mournful complaint," or further, "a cautionary or angry harangue."'
+      }
+    ]
+  },
+  Baruch: {
+    title: "Baruch ben Neriah",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Baruch_ben_Neriah",
+    description: "Baruch ben Neriah was the scribe, disciple, secretary, and devoted friend of the Biblical prophet Jeremiah. He is traditionally credited with authoring the Book of Baruch.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Baruch-ben-Neriah.jpg/330px-Baruch-ben-Neriah.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Honored\xA0in",
+        value: "Judaism, Catholic Church, Eastern Orthodox Church, Rastafari"
+      },
+      {
+        label: "Feast",
+        value: "28 September, 15 November"
+      },
+      {
+        label: "Major works",
+        value: "Book of Baruch"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: "According to Josephus, Baruch was a Jewish aristocrat, a son of Neriah and brother of Seraiah ben Neriah, chamberlain of King Zedekiah of Judah.",
+        items: []
+      },
+      {
+        heading: "Historicity",
+        summary: `In 1975, a clay bulla purportedly containing Baruch's seal and name appeared on the antiquities market. Its purchaser, a prominent Israeli collector, permitted Israeli archaeologist Nahman Avigad to publish the bulla. Although its source is not definitively known, it has been identified as coming from the "burnt house" excavated by Yigal Shiloh. The bulla is now in the Israel Museum. It measures 17 by 16 millimetres (0.67 by 0.63\xA0in), and is stamped with an oval seal, 13 by 11 millimetres (0.51 by 0.43\xA0in). The inscription, written in the ancient Hebrew alphabet, reads:`,
+        items: []
+      },
+      {
+        heading: "Religious traditions",
+        summary: `The rabbis described Baruch as a faithful helper and blood-relative of Jeremiah. According to rabbinic literature, both Baruch and Jeremiah, being kohanim and descendants of the proselyte Rahab, served as a humiliating example to their contemporaries, inasmuch as they belong to the few who harkened to the word of God. A Midrash in the Sifre regarded Baruch as identical with the Ethiopian Ebed-melech, who rescued Jeremiah from the dungeon, and states that he received his appellation Baruch ("blessed") because of his piety, which contrasted with the loose life of the court, as the skin of an Ethiopian contrasts with that of a white person. According to a Syriac account, because his piety might have prevented the destruction of the Temple, God commanded him to leave Jerusalem before the catastrophe, so as to remove his protective presence. According to the account, Baruch then saw, from Abraham's oak at Hebron, the Temple set on fire by angels, who previously had hidden the sacred vessels.`,
+        items: []
+      },
+      {
+        heading: "Tomb of Baruch",
+        summary: "The tomb of Baruch is unknown. It is reported to be a mile away from that of Ezekiel, near a town known Mashhad Ali; however there is no record of it existing. Rabbinic sources reported that a strange plant, the leaves of which are sprinkled with gold dust, grows on it.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "According to Josephus, Baruch was a Jewish aristocrat, a son of Neriah and brother of Seraiah ben Neriah, chamberlain of King Zedekiah of Judah."
+      },
+      {
+        title: "Historicity",
+        note: "In 1975, a clay bulla purportedly containing Baruch's seal and name appeared on the antiquities market."
+      },
+      {
+        title: "Religious traditions",
+        note: "The rabbis described Baruch as a faithful helper and blood-relative of Jeremiah."
+      }
+    ]
+  },
+  Habakkuk: {
+    title: "Habakkuk",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Habakkuk",
+    description: "Habakkuk, or Habacuc, who was active around 612 BC, was a prophet whose oracles and prayer are recorded in the Book of Habakkuk, the eighth of the collected twelve minor prophets in the Hebrew Bible. He is revered by Jews, Christians, and Muslims.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Habakkuk.jpg/330px-Habakkuk.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Venerated\xA0in",
+        value: "Judaism, Christianity, Islam, Rastafari"
+      },
+      {
+        label: "Major shrine",
+        value: "Toyserkan, Iran, Kadarim, Israel"
+      },
+      {
+        label: "Feast",
+        value: "January 15 (Roman Catholic), December 2 (Orthodox)"
+      },
+      {
+        label: "Attributes",
+        value: "Prophet"
+      },
+      {
+        label: "Major works",
+        value: "Book of Habakkuk"
+      }
+    ],
+    sections: [
+      {
+        heading: "Name",
+        summary: "The name Habakkuk, or Habacuc, appears in the Hebrew Bible only in Habakkuk 1:1 and 3:1. In the Masoretic Text, it is written in Hebrew: \u05D7\u05B2\u05D1\u05B7\u05E7\u05BC\u05D5\u05BC\u05E7 (Standard \u1E24avaqquq Tiberian \u1E24\u0103\u1E07aqq\xFBq). This name does not occur elsewhere. The Septuagint transcribes his name into Greek as \u1F08\u03BC\u03B2\u03B1\u03BA\u03BF\u1F7A\u03BC (Ambakoum), and the Vulgate transcribes it into Latin as Abacuc.",
+        items: []
+      },
+      {
+        heading: "Life",
+        summary: 'Almost nothing is known about Habakkuk, aside from what is stated within the book of the Bible bearing his name, or those inferences that may be drawn from that book. No biographical details are provided other than his title "the prophet".',
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "The only work attributed to Habakkuk is the short biblical text which bears his name. The Book of Habakkuk consists of the taunting riddle, which are five woes about the Chaldeans (Babylonians) in chapter 2, and a song of praise to God in chapter 3.",
+        items: []
+      },
+      {
+        heading: "Tombs",
+        summary: "The final resting place of Habakkuk has been claimed at multiple locations. The fifth-century Christian historian Sozomen claimed that the relics of Habakkuk were found at Cela near Bayt Jibrin, when God revealed their location to Zebennus, bishop of Eleutheropolis, in a dream. Currently, one location in Israel and one in Iran lay claim to being the burial site of the prophet.",
+        items: []
+      },
+      {
+        heading: "Commemoration",
+        summary: "On the Eastern Orthodox liturgical calendar, his feast day is December 2. In the Roman Catholic Church, the twelve minor prophets are read in the Roman Breviary during the fourth and fifth weeks of November, which are the last two weeks of the liturgical year, and his feast day is January 15. In 2011, he was commemorated with the other Minor Prophets in the calendar of saints of the Armenian Apostolic Church on February 8.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Name",
+        note: "The name Habakkuk, or Habacuc, appears in the Hebrew Bible only in Habakkuk 1:1 and 3:1."
+      },
+      {
+        title: "Life",
+        note: "Almost nothing is known about Habakkuk, aside from what is stated within the book of the Bible bearing his name, or those inferences that may be drawn from that book."
+      },
+      {
+        title: "Works",
+        note: "The only work attributed to Habakkuk is the short biblical text which bears his name."
+      },
+      {
+        title: "Tombs",
+        note: "The final resting place of Habakkuk has been claimed at multiple locations."
+      },
+      {
+        title: "Commemoration",
+        note: "On the Eastern Orthodox liturgical calendar, his feast day is December 2."
+      }
+    ]
+  },
+  Daniel: {
+    title: "Daniel (biblical figure)",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Daniel_(biblical_figure)",
+    description: "Daniel is the main character of the Book of Daniel. According to the Hebrew Bible, Daniel was a noble Jewish youth of Jerusalem taken into captivity by Nebuchadnezzar II of Babylon, serving the king and his successors with loyalty and ability until the time of the Persian conqueror Cyrus, all the while remaining true to the God of Israel. While some conservative scholars hold that Daniel existed and his book was written in the 6th century BCE, most scholars agree that Daniel, as depicted in the Book of Daniel, was not a historical figure, wherein the character was probably based on a similar legendary Daniel from earlier traditions. It follows that much of the book is a cryptic allusion to the reign of the 2nd century BCE Hellenistic king Antiochus IV Epiphanes.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Sir_Peter_Paul_Rubens_-_Daniel_in_the_Lions%27_Den_-_Google_Art_Project.jpg/330px-Sir_Peter_Paul_Rubens_-_Daniel_in_the_Lions%27_Den_-_Google_Art_Project.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Venerated\xA0in",
+        value: "Judaism\nChristianity\nIslam\nBah\xE1\u02BC\xED Faith"
+      },
+      {
+        label: "Major shrine",
+        value: "Tomb of Daniel, Susa, Iran"
+      },
+      {
+        label: "Feast",
+        value: "July 21: Roman Catholicism, December 17: Greek Orthodoxy, Tuesday after fourth Sunday of Pentecost: Armenian Apostolic Church"
+      },
+      {
+        label: "Attributes",
+        value: "Often depicted in the den of the lions"
+      },
+      {
+        label: "Tradition or genre",
+        value: "6th century BCE"
+      }
+    ],
+    sections: [
+      {
+        heading: "Background",
+        summary: `Daniel's name means "God (El) is my judge". While the best known Daniel is the hero of the Book of Daniel who interprets dreams and receives apocalyptic visions, the Bible also briefly mentions three other individuals of this name:`,
+        items: []
+      },
+      {
+        heading: "Tales of Daniel",
+        summary: "The Book of Daniel begins with an introduction telling how Daniel and his companions came to be in Babylon, followed by a set of tales set in the Babylonian and Persian courts in the late 7th and early 6th centuries BCE, followed in turn by a set of visions in which Daniel sees the remote future of the world and of Israel. The tales in chapters 1\u20136 can be dated to the 3rd or early 2nd centuries BCE; it is generally accepted that these were expanded by the addition of the visions in chapters 8\u201312 between 167 and 164 BCE.",
+        items: []
+      },
+      {
+        heading: "Additional tales (Greek text)",
+        summary: "The Greek text of Daniel contains three additional tales, two of which feature Daniel (the third is an expansion of the tale of the fiery furnace).",
+        items: []
+      },
+      {
+        heading: "Death and tomb of Daniel",
+        summary: "The last mention of Daniel in the Book of Daniel is in the third year of Cyrus (Daniel 10:1). Rabbinic sources suppose that he was still alive during the reign of the Persian king Ahasuerus (better known as Artaxerxes \u2013 Babylonian Talmud, Megillah 15a, based on the Book of Esther 4, 5), but he was killed by Haman, the wicked prime minister of Ahasuerus (Targum Sheini on Esther, 4, 11).",
+        items: []
+      },
+      {
+        heading: "Daniel in later tradition",
+        summary: "Daniel is not a prophet in Judaism: prophecy is reckoned to have ended with Haggai, Zechariah, and Malachi. In the Hebrew Bible his book is not included under the Prophets (the Hebrew Bible has three sections, Torah, Prophets and Writings), but nevertheless the eight copies found among the Dead Sea Scrolls and the additional tales of the Greek text are a testament to Daniel's popularity in ancient times.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Background",
+        note: `Daniel's name means "God (El) is my judge".`
+      },
+      {
+        title: "Tales of Daniel",
+        note: "The Book of Daniel begins with an introduction telling how Daniel and his companions came to be in Babylon, followed by a set of tales set in the Babylonian and Persian courts in the late 7th and early 6th centuries BCE, followed in turn by a set of visions in which Daniel sees the remote future of the world and of Israel."
+      },
+      {
+        title: "Additional tales (Greek text)",
+        note: "The Greek text of Daniel contains three additional tales, two of which feature Daniel (the third is an expansion of the tale of the fiery furnace)."
+      },
+      {
+        title: "Death and tomb of Daniel",
+        note: "The last mention of Daniel in the Book of Daniel is in the third year of Cyrus (Daniel 10:1)."
+      },
+      {
+        title: "Daniel in later tradition",
+        note: "Daniel is not a prophet in Judaism: prophecy is reckoned to have ended with Haggai, Zechariah, and Malachi."
+      }
+    ]
+  },
+  Obadiah: {
+    title: "Obadiah",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Obadiah",
+    description: "Obadiah, also known as Abdias, is a biblical prophet. The authorship of the Book of Obadiah is traditionally attributed to the prophet Obadiah.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Obadiah_by_James_Tissot_%28cropped%29.jpg/330px-Obadiah_by_James_Tissot_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "Unknown"
+      },
+      {
+        label: "Died",
+        value: "Unknown"
+      },
+      {
+        label: "Venerated\xA0in",
+        value: "Judaism, Christianity, Islam, Rastafari"
+      },
+      {
+        label: "Feast",
+        value: "19 November (Catholic, Lutheran, and Eastern Orthodox churches), 15 Tobi (Coptic)"
+      },
+      {
+        label: "Attributes",
+        value: "Prophet with his index finger of his right hand pointing upward"
+      },
+      {
+        label: "Major works",
+        value: "Book of Obadiah"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biblical account",
+        summary: "The composition date is disputed and difficult to determine due to the lack of information regarding the prophet Obadiah. However, because Obadiah wrote about Edom, there are two generally accepted dates. The first is 853\u2013841 BC, when Jerusalem was invaded by Philistines and Arabs during the reign of Jehoram of Judah (recorded in 2 Kings 8:20\u201322 and 2 Chronicles 21:8-17). This earlier period would place Obadiah as a contemporary of the prophet Elijah. Jewish traditions favor the earlier date because the Jewish Talmud identifies Obadiah as an Edomite himself, and a descendant of Eliphaz the Temanite, the first of the friends of Job to speak with him about his tribulations.",
+        items: []
+      },
+      {
+        heading: "Rabbinic tradition",
+        summary: "According to the Talmud, Obadiah is said to have been a convert to Judaism from Edom, a descendant of Eliphaz, the friend of Job. He is identified with the Obadiah who was the servant of Ahab, and was chosen to prophesy against Edom because he was himself an Edomite.",
+        items: []
+      },
+      {
+        heading: "Christian tradition",
+        summary: 'In some Christian traditions he is said to have been born in "Sychem" (Shechem), and to have been the third captain sent out by Ahaziah against Elijah. The date of his ministry is unclear due to certain historical ambiguities in the book bearing his name, but is believed to be around 586 B.C.',
+        items: []
+      },
+      {
+        heading: "Islamic tradition",
+        summary: "In Islam, Adbiyya ibn Sh\u0101miyya (Arabic: \u0639\u064E\u0648\u0628\u0650\u062F\u064A\u0627 \u0628\u0646 \u0634\u0627\u0645\u0650\u064A\u064E\u0629) is considered to be an Isra\u02BCiliyyat prophet sent to guide the Bani-Israel possibly in the era of the Prophet Ily\u0101s (Elijah) or shortly after. Some Islamic scholars identify the prophet Dhu al-Kifl with Obadiah.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biblical account",
+        note: "The composition date is disputed and difficult to determine due to the lack of information regarding the prophet Obadiah."
+      },
+      {
+        title: "Rabbinic tradition",
+        note: "According to the Talmud, Obadiah is said to have been a convert to Judaism from Edom, a descendant of Eliphaz, the friend of Job."
+      },
+      {
+        title: "Christian tradition",
+        note: 'In some Christian traditions he is said to have been born in "Sychem" (Shechem), and to have been the third captain sent out by Ahaziah against Elijah.'
+      },
+      {
+        title: "Islamic tradition",
+        note: "In Islam, Adbiyya ibn Sh\u0101miyya (Arabic: \u0639\u064E\u0648\u0628\u0650\u062F\u064A\u0627 \u0628\u0646 \u0634\u0627\u0645\u0650\u064A\u064E\u0629) is considered to be an Isra\u02BCiliyyat prophet sent to guide the Bani-Israel possibly in the era of the Prophet Ily\u0101s (Elijah) or shortly after."
+      }
+    ]
+  },
+  Ezekiel: {
+    title: "Ezekiel",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Ezekiel",
+    description: "Ezekiel, also spelled Ezechiel, was an Israelite priest. The Book of Ezekiel, relating his visions and acts, is named after him.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Ezekiel_by_Michelangelo%2C_restored_-_large.jpg/330px-Ezekiel_by_Michelangelo%2C_restored_-_large.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "Possibly c.\u2009623 BC, Jerusalem, Kingdom of Judah"
+      },
+      {
+        label: "Died",
+        value: "After c.\u2009571 BC, Babylon, Neo-Babylonian Empire"
+      },
+      {
+        label: "Venerated\xA0in",
+        value: "JudaismChristianityIslamBah\xE1\u02BC\xED FaithRastafari"
+      },
+      {
+        label: "Major shrine",
+        value: "Ezekiel's Tomb, Iraq"
+      },
+      {
+        label: "Feast",
+        value: "August 28 \u2013 Armenian Apostolic ChurchJuly 23 \u2013 Orthodoxy and Roman CatholicismJuly 21 \u2013 Lutheranism"
+      },
+      {
+        label: "Controversy",
+        value: "Babylonian captivity"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biblical account",
+        summary: 'The author of the Book of Ezekiel presents himself as Ezekiel, the son of Buzi, born into a priestly (kohen) lineage. The author dates his first divine encounter to "the thirtieth year" according to Ezekiel 1:1\u20132. Ezekiel describes his calling to be a prophet, detailing his encounter with God and four "living creatures" with four wheels beside them.',
+        items: []
+      },
+      {
+        heading: "Extrabiblical accounts",
+        summary: "According to Jewish tradition, Ezekiel did not write the biblical Book of Ezekiel, but rather his prophecies were collected by the Great Assembly.",
+        items: [
+          "Ibn Kutayba, K. al-Ma'arif ed. S. Ukasha, 51",
+          "Tabari, History of the Prophets and Kings, 2, 53\u201354",
+          "Tabari, Tafsir, V, 266 (old ed. ii, 365)",
+          "Masudi, Murudj, i, 103ff.",
+          "K. al-Badwa l-tarikh, iii, 4/5 and 98/100, Ezechiel",
+          "Abdullah Yusuf Ali, Holy Qur'an: Translation and Commentary, Note. 2473 (cf. index: Ezekiel)",
+          `Emil Heller Henning III, "Ezekiel's Temple: A Scriptural Framework Illustrating the Covenant of Grace", 2012.`
+        ]
+      },
+      {
+        heading: "Resting place",
+        summary: "Ezekiel's Tomb is located in al-Kifl, Iraq, near Babylon. Historically an important Jewish site, the Nukhailah Mosque for Shi'a Muslims was constructed over it. Due to the Jewish exodus from Iraq in the 1950s, the presence of the Iraqi Jewish community has diminished, although a disused synagogue remains in place at the location. In 2020, work was reportedly underway to transform the synagogue into a mosque.",
+        items: []
+      },
+      {
+        heading: "In popular culture",
+        summary: "Ezekiel is portrayed by Darrell Dunham in a 1979 episode of the television series Our Jewish Roots (1978\u2013).",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biblical account",
+        note: "The author of the Book of Ezekiel presents himself as Ezekiel, the son of Buzi, born into a priestly (kohen) lineage."
+      },
+      {
+        title: "Extrabiblical accounts",
+        note: "According to Jewish tradition, Ezekiel did not write the biblical Book of Ezekiel, but rather his prophecies were collected by the Great Assembly."
+      },
+      {
+        title: "Resting place",
+        note: "Ezekiel's Tomb is located in al-Kifl, Iraq, near Babylon."
+      },
+      {
+        title: "In popular culture",
+        note: "Ezekiel is portrayed by Darrell Dunham in a 1979 episode of the television series Our Jewish Roots (1978\u2013)."
+      }
+    ]
+  },
+  Haggai: {
+    title: "Haggai",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Haggai",
+    description: 'Haggai or Aggeus was a Hebrew prophet active during the building of the Second Temple in Jerusalem, one of the twelve minor prophets in the Hebrew Bible, and the author or subject of the Book of Haggai. He is known for his prophecy in 520\xA0BCE, commanding the Jews to rebuild the Temple. He was the first of three post-exilic prophets from the Neo-Babylonian Exile of the House of Judah, who belonged to the period of Jewish history which began after the return from captivity in Babylon. His name means "my holidays".',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Haggai-prophet.jpg/330px-Haggai-prophet.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [],
+    sections: [
+      {
+        heading: "Life",
+        summary: "Scarcely anything is known of his personal history, with the book of Haggai offering no biographical details about his ancestry or anything else in his life outside the prophecies of 520\xA0BCE. Haggai is only mentioned in one other book of the Bible, the book of Ezra. He may have been one of the captives taken to Babylon by Nebuchadnezzar. Some commenters suggest he may have been an old man, and seen the previous temple before its destruction due to what he says about the former glory of the Temple in Haggai 2:3. He began God's prophecy about sixteen years after the return of the Jews to Judah (ca. c.\u2009520 BCE). The work of rebuilding the temple had been put to a stop through the intrigues of the Samaritans. After having been suspended for eighteen years, the work was resumed through the efforts of Haggai and Zechariah. They exhorted the people, which roused them from their lethargy, and induced them to take advantage of a change in the policy of the Persian government under Darius I.",
+        items: []
+      },
+      {
+        heading: "Haggai prophecies",
+        summary: "Haggai prophesied in late 520\xA0BCE Jerusalem, about the people needing to complete building the Temple. He has four messages, which begin on August 29 and culminate on December 18. The new Temple was bound to exceed the awesomeness of the previous Temple. He claimed if the Temple was not built there would be poverty, famine and drought affecting the Jewish nation.",
+        items: []
+      },
+      {
+        heading: "Haggai and officials of his time",
+        summary: 'Haggai supported the officials of his time, specifically Zerubbabel, the governor of Judah, and Joshua the High Priest. In the Book of Haggai, God refers to Zerubbabel as "my servant" as King David was, and says he will make him as a "signet ring", as King Jehoiachin was. The signet ring symbolized a ring worn on the hand of Yahweh, showing that a king held divine favour. Thus, Haggai is implicitly, but not explicitly, saying that Zerubbabel would preside over a restored Davidic kingdom.',
+        items: []
+      },
+      {
+        heading: "Jewish Persian diplomacy",
+        summary: "The Persian Empire was growing weak, and Haggai saw time as an opportunity to restore the Davidic Kingdom. He believed that the Kingdom of David was able to rise and take back their part in Jewish issues. Haggai's message was directed to the nobles and Zerubbabel, as he would be the first Davidic monarch restored. He saw this as important because the Kingdom would be an end to Jewish idol worship.",
+        items: []
+      },
+      {
+        heading: "Haggai in Jewish tradition",
+        summary: "Haggai, in rabbinic writing, is often referred to as one of the men of the Great Assembly. The Babylonian Talmud (5th century CE) mentions a tradition concerning the prophet Haggai, saying that he gave instruction concerning three things: (a) that it is not lawful for a man whose brother married his daughter (as a co-wife in a polygamous relationship) to consummate a levirate marriage with one of his deceased brother's co-wives (a teaching accepted by the School of Hillel, but rejected by the School of Shammai); (b) that Jews living in the regions of Ammon and Moab separate from their produce the poor man's tithe during the Sabbatical year; (c) that they accept of proselytes from the peoples of Tadmor (Palmyra) and from the people of \u1E32ardu.",
+        items: []
+      },
+      {
+        heading: "Liturgical commemoration",
+        summary: "On the Eastern Orthodox liturgical calendar, Haggai is commemorated as a saint and prophet. His feast day is 16 December (for those churches which follow the traditional Julian Calendar, 16 December currently falls on 29 December of the modern Gregorian Calendar). He is also commemorated, in common with the other righteous persons of the Old Testament, on the Sunday of the Holy Fathers (the second Sunday before the Nativity of the Lord).",
+        items: []
+      },
+      {
+        heading: "Haggai in Freemasonry",
+        summary: "In the Masonic degree of Holy Royal Arch Haggai is one of the Three Principals of the Chapter. Named after Haggai the prophet and accompanies Zerubbabel, Prince of the People, and Joshua, the son of Josedech, the High Priest.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "Scarcely anything is known of his personal history, with the book of Haggai offering no biographical details about his ancestry or anything else in his life outside the prophecies of 520\xA0BCE."
+      },
+      {
+        title: "Haggai prophecies",
+        note: "Haggai prophesied in late 520\xA0BCE Jerusalem, about the people needing to complete building the Temple."
+      },
+      {
+        title: "Haggai and officials of his time",
+        note: "Haggai supported the officials of his time, specifically Zerubbabel, the governor of Judah, and Joshua the High Priest."
+      },
+      {
+        title: "Jewish Persian diplomacy",
+        note: "The Persian Empire was growing weak, and Haggai saw time as an opportunity to restore the Davidic Kingdom."
+      },
+      {
+        title: "Haggai in Jewish tradition",
+        note: "Haggai, in rabbinic writing, is often referred to as one of the men of the Great Assembly."
+      },
+      {
+        title: "Liturgical commemoration",
+        note: "On the Eastern Orthodox liturgical calendar, Haggai is commemorated as a saint and prophet."
+      },
+      {
+        title: "Haggai in Freemasonry",
+        note: "In the Masonic degree of Holy Royal Arch Haggai is one of the Three Principals of the Chapter."
+      }
+    ]
+  },
+  Zechariah: {
+    title: "Zechariah (Hebrew prophet)",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Zechariah_(Hebrew_prophet)",
+    description: "Zechariah was a person in the Hebrew Bible traditionally considered the author of the Book of Zechariah, the eleventh of the Twelve Minor Prophets.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Zacharias_%28Michelangelo%29.jpg/330px-Zacharias_%28Michelangelo%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Died",
+        value: "c.\u20096th century BCE"
+      },
+      {
+        label: "Occupation",
+        value: "Prophet"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Author of the Book of Zechariah"
+      },
+      {
+        label: "Father",
+        value: "Berechiah (likely)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Prophet",
+        summary: `The Book of Zechariah introduces him as the son of Berechiah, the son of Iddo. The Book of Nehemiah identifies him as a Levitical priest. The Book of Ezra names Zechariah as the son of Iddo, but it is likely that Berechiah was Zechariah's father and Iddo his grandfather, a common use of "son" in biblical texts. Targum Lamentations 2:20 also names this Zechariah "son of Iddo". This Iddo is not the same person as Iddo the Seer, who lived during the reigns of Solomon, Rehoboam, and Abijah, but is the Iddo mentioned in Nehemiah 12:4,16, a priest who returned from the Exile with Zerubbabel and Joshua. Zechariah's name means "Yah remembers".`,
+        items: []
+      },
+      {
+        heading: "Liturgical commemoration",
+        summary: "On the Eastern Orthodox liturgical calendar, his feast day is 8 February. He is commemorated in the calendar of saints of the Armenian Apostolic Church on the Tuesday after the fifth Sunday of Pentecost and, with the other Minor Prophets, on 31 July. The Catholic Church honors him with a feast day assigned to 6 September.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Prophet",
+        note: "The Book of Zechariah introduces him as the son of Berechiah, the son of Iddo."
+      },
+      {
+        title: "Liturgical commemoration",
+        note: "On the Eastern Orthodox liturgical calendar, his feast day is 8 February."
+      }
+    ]
+  },
+  Ezra: {
+    title: "Ezra",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Ezra",
+    description: 'Ezra is the main character of the Book of Ezra. According to the Hebrew Bible, he was an important Jewish scribe and priest in the early Second Temple period. In the Greek Septuagint, the name is rendered as \xC9sdr\u0101s, from which the Latin name Esdras comes. "Ezra" is probably a shortened Aramaic form of the Hebrew name \u05E2\u05B2\u05D6\u05B7\u05E8\u05B0\u05D9\u05B8\u05D4\u05D5\u05BC, meaning "Yah helps".',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/109.Ezra_Reads_the_Law_to_the_People.jpg/330px-109.Ezra_Reads_the_Law_to_the_People.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Honored\xA0in",
+        value: "Catholic Church, Eastern Orthodox Church"
+      },
+      {
+        label: "Feast",
+        value: "13 July (Catholic), Sunday of the Holy Forefathers (Eastern Orthodox)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: "The canonical Book of Ezra and the Book of Nehemiah are the oldest sources for the activity of Ezra. Many of the other books ascribed to Ezra (e.g., First Esdras and 3\u20136 Ezra) are later literary works dependent on the canonical books of Ezra and Nehemiah. The book of Ezra\u2013Nehemiah was always written as one scroll.",
+        items: []
+      },
+      {
+        heading: "In later Second Temple period literature",
+        summary: "1 Esdras, probably from the late 2nd/early 1st centuries BCE, preserves a Greek text of Ezra and a part of Nehemiah distinctly different from that of Ezra\u2013Nehemiah \u2013 in particular it eliminates Nehemiah from the story and gives some of his deeds to Ezra, as well as telling events in a different order. Scholars are divided on whether it is based on Ezra\u2013Nehemiah, or reflects an earlier literary stage before the combination of Ezra and Nehemiah accounts.",
+        items: []
+      },
+      {
+        heading: "In rabbinic literature",
+        summary: "Traditionally Judaism credits Ezra with establishing the Great Assembly of scholars and prophets, the forerunner of the Sanhedrin, as the authority on matters of religious law. The Great Assembly is credited with establishing numerous features of contemporary traditional Judaism in something like their present form, including Torah reading, the Amidah, and celebration of the feast of Purim.",
+        items: []
+      },
+      {
+        heading: "In Christian traditions",
+        summary: "In Christian tradition, Ezra is considered to be the author of the book of Ezra and 1 and 2 Chronicles. Due to the strong similarity between the books of Malachi and Ezra, some Christian traditions adopt the Jewish view that Ezra was Malachi; Jerome was one prominent Christian who held this view.",
+        items: []
+      },
+      {
+        heading: "In Islam",
+        summary: `In Islam, he is known as Uzair (Arabic: \u0639\u0632\u064A\u0631, romanized:\xA0\u02BFUzayr). He was mentioned in the Qur'an. Although he was not mentioned as one of the Prophets of Islam, he is considered one of them by some Muslim scholars, based on Islamic traditions. His tomb at Al-\u02BBUzer on the banks of the Tigris near Basra, Iraq, is a pilgrimage site for the local Marsh Arabs. Many Islamic scholars and modern Western academics do not view Uzer as "Ezra"; for example, Professor Gordon Darnell Newby associates \u2018Uzayr with Enoch and Metatron.`,
+        items: []
+      },
+      {
+        heading: "Academic view",
+        summary: `Scholars debate the dating of Ezra's mission due to textual emendations and lack of extrabiblical evidence, with proposed timelines placing his activity either during the reign of Artaxerxes I or Artaxerxes II, complicating the historical context and relationship with Nehemiah. Ezra came to Jerusalem "in the seventh year of Artaxerxes the King". The text does not specify whether the king in the passage refers to Artaxerxes I (465\u2013424 BCE) or to Artaxerxes II (404\u2013359 BCE). Most scholars hold that Ezra lived during the rule of Artaxerxes I, though some have difficulties with this assumption: Nehemiah and Ezra "seem to have no knowledge of each other; their missions seem to have no overlap". These difficulties have led many scholars to assume that Ezra arrived in the seventh year of the rule of Artaxerxes II, i.e. some 50 years after Nehemiah. This assumption would imply that the biblical account is not chronological. The last group of scholars regard "the seventh year" as a scribal error and hold that the two men were contemporaries.
+However, in Nehemiah 8, Nehemiah has Ezra read the Torah to the people. So, they clearly were contemporaries working together in Jerusalem at the time the wall and the city of Jerusalem were rebuilt in contrast to the previously stated viewpoint. There is a much clearer problem with the timeline in a story from Ezra 4, that tells of a letter that was sent to Artaxerxes asking to stop the rebuilding of the temple (which started during the reign of Cyrus and then restarted in the second year of Darius, in 521 BCE). Clearly no such letter could have been sent to Artaxerxes, as he only became king in 465 BCE, so apparently some events detailing the resistance of leaders of nearby peoples against the works of Nehemiah must have been confused with events during the days of Zerubbabel.`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "The canonical Book of Ezra and the Book of Nehemiah are the oldest sources for the activity of Ezra."
+      },
+      {
+        title: "In later Second Temple period literature",
+        note: "1 Esdras, probably from the late 2nd/early 1st centuries BCE, preserves a Greek text of Ezra and a part of Nehemiah distinctly different from that of Ezra\u2013Nehemiah \u2013 in particular it eliminates Nehemiah from the story and gives some of his deeds to Ezra, as well as telling events in a different order."
+      },
+      {
+        title: "In rabbinic literature",
+        note: "Traditionally Judaism credits Ezra with establishing the Great Assembly of scholars and prophets, the forerunner of the Sanhedrin, as the authority on matters of religious law."
+      },
+      {
+        title: "In Christian traditions",
+        note: "In Christian tradition, Ezra is considered to be the author of the book of Ezra and 1 and 2 Chronicles."
+      },
+      {
+        title: "In Islam",
+        note: "In Islam, he is known as Uzair (Arabic: \u0639\u0632\u064A\u0631, romanized:\xA0\u02BFUzayr)."
+      },
+      {
+        title: "Academic view",
+        note: "Scholars debate the dating of Ezra's mission due to textual emendations and lack of extrabiblical evidence, with proposed timelines placing his activity either during the reign of Artaxerxes I or Artaxerxes II, complicating the historical context and relationship with Nehemiah."
+      }
+    ]
+  },
+  Malachi: {
+    title: "Malachi (prophet)",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Malachi",
+    description: `Malachi or Malachias is the name used by the author of the Book of Malachi, the last book of the Nevi'im (Prophets) section of the Tanakh. It is possible that Malachi is not a proper name, because it means "messenger"; it has been assumed to be a pseudonym. According to Jewish tradition, Malachi's true identity is Ezra the scribe.`,
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Lorenzo_monaco%2C_cappella_bartolini_salimbeni%2C_profeti_nella_volta%2C_1420-24%2C_03_malachia.JPG/330px-Lorenzo_monaco%2C_cappella_bartolini_salimbeni%2C_profeti_nella_volta%2C_1420-24%2C_03_malachia.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Burial place",
+        value: "Tomb of the Prophets Haggai, Zechariah and Malachi, Jerusalem"
+      }
+    ],
+    sections: [
+      {
+        heading: "Identity",
+        summary: 'The editors of the 1906 Jewish Encyclopedia implied that Malachi, also known as Malachias, prophesied after Haggai and Zechariah and speculated that he delivered his prophecies about 420 BC, after the second return of Nehemiah from Persia, or possibly before his return. The Talmud and the Aramaic Targum of Yonathan ben Uzziel identify Ezra as the same person as Malachi. This is the traditional view held by most Jews and some Christians, including Jerome. This identification is plausible, because "Malachi" reprimands the people for the same things Ezra did, such as marrying foreign pagan women. Malachi also focuses extensively on corrupt priests who Ezra, a priest himself who exhorted the people to follow the law, despised. According to Josephus, Ezra died and was buried "in a magnificent manner in Jerusalem". If the tradition that Ezra wrote under the name "Malachi" is correct, then Josephus meant that he was buried in the Tomb of the Prophets, the traditional resting place of Malachi. This would also explain why Ezra does not refer to a prophet named Malachi, while he did refer to other prophets such as Haggai and Zechariah.',
+        items: []
+      },
+      {
+        heading: "Name",
+        summary: `Because the name Malachi does not occur elsewhere in the Hebrew Bible, some scholars doubt whether it is intended to be the personal name of the prophet. The form mal'akhi (literally "my malakh") signifies "my messenger"; it occurs in Malachi 3:1 (compare to Malachi 2:7, but this form would hardly be appropriate as a proper name without some additional syllable such as Yah, whence mal'akhiah, i.e. "messenger of Yah". In the Book of Haggai, Haggai is designated the "messenger of the LORD." The non-canonical superscriptions prefixed to the book, in both the Septuagint and the Vulgate, warrant the supposition that Malachi's full name ended with the syllable -yah. The Septuagint translates the last clause of Malachi 1:1, "by the hand of his messenger", and the Targum reads, "by the hand of my angel, whose name is called Ezra the scribe". G.G. Cameron suggests that the termination of the word "Malachi" is adjectival, and equivalent to the Latin angelicus, signifying "one charged with a message or mission" (a missionary).`,
+        items: []
+      },
+      {
+        heading: "Date",
+        summary: "Opinions vary as to the prophet's exact date, but nearly all scholars agree that Malachi prophesied during the Persian period, and after the reconstruction and dedication of the Second Temple in 516 BC. More specifically, Malachi probably lived and labored during the times of Ezra and Nehemiah. The abuses which Malachi mentions in his writings correspond so exactly with those which Nehemiah found on his second visit to Jerusalem in 432 BC that it seems reasonably certain that he prophesied concurrently with Nehemiah or shortly after. Bergstein suggests that he died in 312 BC.",
+        items: []
+      },
+      {
+        heading: "Message",
+        summary: "According to biblical scholar W. Gunther Plaut:",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Identity",
+        note: "The editors of the 1906 Jewish Encyclopedia implied that Malachi, also known as Malachias, prophesied after Haggai and Zechariah and speculated that he delivered his prophecies about 420 BC, after the second return of Nehemiah from Persia, or possibly before his return."
+      },
+      {
+        title: "Name",
+        note: "Because the name Malachi does not occur elsewhere in the Hebrew Bible, some scholars doubt whether it is intended to be the personal name of the prophet."
+      },
+      {
+        title: "Date",
+        note: "Opinions vary as to the prophet's exact date, but nearly all scholars agree that Malachi prophesied during the Persian period, and after the reconstruction and dedication of the Second Temple in 516 BC."
+      },
+      {
+        title: "Message",
+        note: "According to biblical scholar W."
+      }
+    ]
+  },
+  "John the Baptist": {
+    title: "John the Baptist",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/John_the_Baptist",
+    description: "John the Baptist was a religious preacher active in the area of the Jordan River in the early first century AD. He is also known as Saint John the Forerunner in Eastern Orthodoxy, Eastern Catholicism, and Oriental Orthodoxy, Saint John the Immerser in the Baptist tradition, and as the prophet Yahya ibn Zakariya in Islam. He is sometimes referred to as John the Baptiser.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Accademia_-_St_John_the_Baptist_by_Titian_Cat314.jpg/330px-Accademia_-_St_John_the_Baptist_by_Titian_Cat314.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c.\u20096 BC, Herodian Kingdom of Judea, Roman Empire"
+      },
+      {
+        label: "Died",
+        value: "c.\u2009AD 30, Machaerus, Province of Judaea, Roman Empire"
+      },
+      {
+        label: "Cause\xA0of death",
+        value: "Decapitation"
+      },
+      {
+        label: "Venerated\xA0in",
+        value: "Christianity (all denominations which venerate saints), Islam, Bah\xE1\u02BC\xED Faith, Druze faith, Mandaeism"
+      },
+      {
+        label: "Canonized",
+        value: "Pre-Congregation"
+      },
+      {
+        label: "Major shrine",
+        value: "Church of Saint John the Baptist in Jerusalem\nUmayyad Mosque in Damascus\nNabi Yahya Mosque in Sebastia\nAachen Cathedral in Aachen, Germany"
+      },
+      {
+        label: "Feast",
+        value: "24 June (Nativity)\n29 August (Beheading)\n7 January (Synaxis\u2014Byzantine)\n30 Paoni (Nativity\u2014Coptic)\n2 Thout (Beheading\u2014Coptic)\n1 Hitia (Birthday\u2014Mandaean)"
+      },
+      {
+        label: "Attributes",
+        value: "Camel-skin robe, cross, lamb, scroll with words Ecce Agnus Dei-, platter with own head, pouring water from hands or scallop shell"
+      },
+      {
+        label: "Patronage",
+        value: "See Commemoration"
+      }
+    ],
+    sections: [
+      {
+        heading: "Gospel narratives",
+        summary: "John the Baptist is mentioned in all four canonical Gospels and the non-canonical Gospel of the Nazarenes. The Synoptic Gospels (Mark, Matthew and Luke) describe John baptising Jesus; in the Gospel of John this is inferred by many to be referred to in John 1:32.",
+        items: []
+      },
+      {
+        heading: "In Josephus's Antiquities of the Jews",
+        summary: "An account of John the Baptist is found in all extant manuscripts of the Antiquities of the Jews (book 18, chapter 5, 2) by Flavius Josephus (37\u2013100):",
+        items: []
+      },
+      {
+        heading: "Relics",
+        summary: `Matthew 14:12 records that "his disciples came and took away [John's] body and buried it." Theologian Joseph Benson refers to a belief that they managed to do so because "it seems that the body had been thrown over the prison walls, without burial, probably by order of Herodias."`,
+        items: []
+      },
+      {
+        heading: "Religious views",
+        summary: 'The Gospels describe John the Baptist as having a specific role ordained by God as forerunner or precursor of Jesus, who was the foretold Messiah. The New Testament Gospels speak of this role. In Luke 1:17 the role of John is referred to as being "to turn the hearts of the fathers to the children, and the disobedient to the wisdom of the just; to make ready a people prepared for the Lord." In Luke 1:76 as "thou shalt go before the face of the Lord to prepare his ways" and in Luke 1:77 as being "To give knowledge of salvation unto his people by the remission of their sins."',
+        items: [
+          "24 June \u2013 Nativity of Saint John the Baptist",
+          "29 August \u2013 Beheading of Saint John the Baptist",
+          "23 September \u2013 Conception of the Honorable Glorious Prophet, Forerunner and Baptist John",
+          "12 October \u2013 Translation from Malta to Gatchina: of a Particle of the Life Giving Cross, the Filersk Icon of the Mother of God, and the relic of the Right Hand of John the Baptist",
+          "7 January \u2013 Synaxis of the Holy Glorious Prophet, Forerunner and Baptist John. This is John the Baptist's main feast day, immediately after Theophany on 6 January (7 January also commemorates the transfer of the relic of the right hand of John the Baptist from Antioch to Constantinople in 956)",
+          "24 February \u2013 First and second finding of the Honorable Head of the Holy Glorious Prophet, Forerunner, and Baptist of the Lord, John",
+          "25 May \u2013 Third Finding of the Honorable Head of the Holy Glorious Prophet, Forerunner and Baptist John",
+          "24 June \u2013 Nativity of Saint John the Forerunner",
+          "29 August \u2013 The Beheading of Saint John the Forerunner, a day of strict fast and abstinence from meat and dairy products and foods containing meat or dairy products."
+        ]
+      },
+      {
+        heading: "Scholarship",
+        summary: "Scholars studying John the Baptist's relationship with Jesus of Nazareth have commented on the differences in their respective approaches.",
+        items: []
+      },
+      {
+        heading: "In art",
+        summary: "The earliest depictions of St John are found in the Baptism of Christ, one of the earliest scenes from the Life of Christ to be frequently depicted in Early Christian art, and John's tall, thin, even gaunt, and bearded figure is already established by the fifth century. Only he and Jesus are consistently shown with long hair from Early Christian times, when the apostles generally have trim classical cuts; in fact John is more consistently depicted in this way than Jesus.",
+        items: [
+          "St. John the Baptist (c.\u20091513\u20131516), Leonardo da Vinci",
+          "John the Baptist in the desert (1577\u20131621), Cristofano Allori",
+          "John the Baptist (seventeenth century), Michele Fabris",
+          "The Beheading of St John the Baptist, c.\u20091869, Puvis de Chavannes",
+          "Guido D'Arezzo (991/992 \u2013 after 1033) an Italian Benedictine monk founded the standard music stave based on a hymn to Saint John the Baptist. The hymn that begins with Ut Queant Laxis uses the first syllable for each line \u2013 Ut (later changed to Do), Re, Mi, Fa, Sol, La, Si. The teaching is also known as the solmization syllable.",
+          "This is the Record of John, by English Tudor composer Orlando Gibbons is a well-known part-setting of the Gospel of John for solo voice, choir and organ or viol accompaniment.",
+          'The reformer Martin Luther wrote a hymn based on biblical accounts about the Baptist, "Christ unser Herr zum Jordan kam" (1541), based for a cantata by Johann Sebastian Bach for the feast day on 24 June, Christ unser Herr zum Jordan kam, BWV 7 (1724).',
+          "S. Giovanni Battista (St. John the Baptist) is a 1676 oratorio by Alessandro Stradella.",
+          "The well-known Advent hymn On Jordan's Bank the Baptist's cry was written by Charles Coffin.",
+          "John the Baptist (Jokanaan), Baritone, is a character in the opera Salome by Richard Strauss, premiered 1905 in Dresden. The text is from Oscar Wilde's French play, translated into German by Hedwig Lachmann.",
+          'In popular music, Bob Dylan dedicates four lines to John the Baptist in "Tombstone Blues", the second track of his 1965 album Highway 61 Revisited. He sings: "John the Baptist after torturing a thief/Looks up at his hero the Commander-in-Chief/Saying, "Tell me great hero, but please make it brief/Is there a hole for me to get sick in?".',
+          `The song "John the Baptist (Holy John)" by Al Kooper on his 1971 album New York City (You're a Woman) is about John the Baptist. In the same year the song was also recorded by Blood, Sweat & Tears for their album Blood, Sweat & Tears 4.`,
+          'In his song "Everyman Needs a Companion", the closing track to his 2012 album Fear Fun, Father John Misty sings about the friendship between John the Baptist and Jesus of Nazareth: "John the Baptist took Jesus Christ/Down to the river on a Friday night/They talked about Mary like a couple of boys/With nothing to lose/Too scared to try."',
+          `John the Baptist is referenced in the music of American heavy metal band Om in their 2009 song "Meditation Is the Practice of Death". As well as this, John the Baptist is depicted on the cover art of Om's 2012 album, Advaitic Songs.`
+        ]
+      },
+      {
+        heading: "Commemoration",
+        summary: "Christian festivals associated with Saint John the Baptist and Forerunner are celebrated at various days by different denominations and are dedicated to his conception, birth, and death, as well as in correlation to the baptism of Jesus. The Eastern Church has feast days for the finding of his head (first, second, and third finding), as well as for his parents, Elizabeth and Zechariah. In the Russian Orthodox Church there is a feast day of the Transfer of the Right Hand of the Forerunner from Malta to Gatchina.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Gospel narratives",
+        note: "John the Baptist is mentioned in all four canonical Gospels and the non-canonical Gospel of the Nazarenes."
+      },
+      {
+        title: "In Josephus's Antiquities of the Jews",
+        note: "An account of John the Baptist is found in all extant manuscripts of the Antiquities of the Jews (book 18, chapter 5, 2) by Flavius Josephus (37\u2013100):"
+      },
+      {
+        title: "Relics",
+        note: `Matthew 14:12 records that "his disciples came and took away [John's] body and buried it." Theologian Joseph Benson refers to a belief that they managed to do so because "it seems that the body had been thrown over the prison walls, without burial, probably by order of Herodias."`
+      },
+      {
+        title: "Religious views",
+        note: "The Gospels describe John the Baptist as having a specific role ordained by God as forerunner or precursor of Jesus, who was the foretold Messiah."
+      },
+      {
+        title: "Scholarship",
+        note: "Scholars studying John the Baptist's relationship with Jesus of Nazareth have commented on the differences in their respective approaches."
+      },
+      {
+        title: "In art",
+        note: "The earliest depictions of St John are found in the Baptism of Christ, one of the earliest scenes from the Life of Christ to be frequently depicted in Early Christian art, and John's tall, thin, even gaunt, and bearded figure is already established by the fifth century."
+      },
+      {
+        title: "Commemoration",
+        note: "Christian festivals associated with Saint John the Baptist and Forerunner are celebrated at various days by different denominations and are dedicated to his conception, birth, and death, as well as in correlation to the baptism of Jesus."
+      }
+    ]
+  },
+  "Jesus of Nazareth": {
+    title: "Jesus",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Jesus",
+    description: "Jesus, also referred to as Jesus Christ, Jesus of Nazareth, and by various other names and titles, was a 1st-century Jewish preacher and religious leader in the Roman province of Judaea. He is the central figure of Christianity, the world's largest religion. Most branches of Christianity consider Jesus the incarnation of God the Son and the awaited Messiah or Christ. Accounts of Jesus's life are contained in the Gospels, especially the four canonical Gospels of the New Testament. Since the Enlightenment, academic research has produced various views on the historical reliability of the Gospels and the extent to which they reflect the historical Jesus, but virtually all modern scholars of antiquity agree that Jesus existed historically.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Spas_vsederzhitel_sinay_%28cropped1%29.jpg/330px-Spas_vsederzhitel_sinay_%28cropped1%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c.\u20096 to 4 BC, Herodian kingdom, Roman Empire"
+      },
+      {
+        label: "Died",
+        value: "AD 30 or 33 (aged 33\u201339), Jerusalem, then in Judaea, Roman Empire"
+      },
+      {
+        label: "Cause\xA0of death",
+        value: "Crucifixion"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Central figure of Christianity\nMajor messenger and prophet in Islam\nMajor prophet in Druze faith\nManifestation of God in Bah\xE1\u02BC\xED Faith"
+      },
+      {
+        label: "Parent(s)",
+        value: "Mary, Joseph"
+      }
+    ],
+    sections: [
+      {
+        heading: "Name",
+        summary: `A Jewish person in Jesus's time usually had only one name, sometimes followed by a patronymic phrase of the form "son of [father's name]", or by the person's home town. Thus, in the New Testament, Jesus is commonly referred to as "Jesus of Nazareth". Jesus's neighbours in Nazareth referred to him as "the carpenter, the son of Mary and brother of James and Joses and Judas and Simon", "the carpenter's son", or "Joseph's son"; in the Gospel of John, the disciple Philip refers to him as "Jesus son of Joseph from Nazareth".`,
+        items: []
+      },
+      {
+        heading: "Life and teachings in the New Testament",
+        summary: "The four canonical gospels (Matthew, Mark, Luke, and John) are the foremost sources for the life and message of Jesus. Other parts of the New Testament also include references to key episodes in his life, such as the Last Supper in 1 Corinthians 11:23\u201326. Acts of the Apostles refers to Jesus's early ministry and its anticipation by John the Baptist. Acts 1:1\u201311 provides more detail about the Ascension of Jesus than the canonical gospels do. In the undisputed Pauline letters, which were written earlier than the gospels, Jesus's words or instructions are cited several times.",
+        items: []
+      },
+      {
+        heading: "Early Christianity",
+        summary: `After Jesus's life, his followers, as described in the first chapters of the Acts of the Apostles, were all Jews either by birth or conversion, for which the biblical term "proselyte" is used, and referred to by historians as Jewish Christians. The early Gospel message was spread orally, probably in Aramaic, but almost immediately also in Greek. The New Testament's Acts of the Apostles and Epistle to the Galatians record that the first Christian community was centred in Jerusalem and its leaders included Peter, James, the brother of Jesus, and John the Apostle.`,
+        items: []
+      },
+      {
+        heading: "Historical views",
+        summary: "Prior to the Enlightenment, the Gospels were usually regarded as accurate historical accounts, but since then scholars have emerged who question the reliability of the Gospels and draw a distinction between the Jesus described in the Gospels and the Jesus of history. Since the 18th century, three separate scholarly quests for the historical Jesus have taken place, each with distinct characteristics and based on different research criteria, which were often developed during the quest that applied them. While there is widespread scholarly agreement on the existence of Jesus, and a basic consensus on the general outline of his life, the portraits of Jesus constructed by various scholars often differ from each other, and from the image portrayed in the gospel accounts.",
+        items: []
+      },
+      {
+        heading: "Religious perspectives",
+        summary: "Jesus's teachings and the retelling of his life story have significantly influenced the course of human history, and have directly or indirectly affected the lives of billions of people, even non-Christians, worldwide. He is considered by many people to be the most influential figure to have ever lived, finding a significant place in numerous cultural contexts.",
+        items: []
+      },
+      {
+        heading: "Artistic depictions",
+        summary: "As in other Early Christian art, the earliest depictions date to the late 2nd or early 3rd century, and surviving images are found in the Catacombs of Rome. Some of the earliest depictions of Jesus at the Dura-Europos church date to before 256. A wide range of depictions of Jesus appeared during the next two millennia, influenced by cultural settings, political circumstances and theological contexts.",
+        items: []
+      },
+      {
+        heading: "Associated relics",
+        summary: 'The total destruction that ensued with the siege of Jerusalem by the Romans in AD\xA070 made the survival of items from 1st-century Judea very rare, and almost no direct records survive about the history of Judaism from the last part of the 1st century to the 2nd century. Biblical scholar Margaret M. Mitchell writes that, although Eusebius (4th century) reports (Ecclesiastical History III 5.3) that the early Christians left Jerusalem for Pella just before Jerusalem was subjected to the final lockdown, we must accept that no items from the early Jerusalem Church have survived. Paranormal investigator Joe Nickell writes, "as investigation after investigation has shown, not a single, reliably authenticated relic of Jesus exists."',
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Name",
+        note: `A Jewish person in Jesus's time usually had only one name, sometimes followed by a patronymic phrase of the form "son of [father's name]", or by the person's home town.`
+      },
+      {
+        title: "Life and teachings in the New Testament",
+        note: "The four canonical gospels (Matthew, Mark, Luke, and John) are the foremost sources for the life and message of Jesus."
+      },
+      {
+        title: "Early Christianity",
+        note: `After Jesus's life, his followers, as described in the first chapters of the Acts of the Apostles, were all Jews either by birth or conversion, for which the biblical term "proselyte" is used, and referred to by historians as Jewish Christians.`
+      },
+      {
+        title: "Historical views",
+        note: "Prior to the Enlightenment, the Gospels were usually regarded as accurate historical accounts, but since then scholars have emerged who question the reliability of the Gospels and draw a distinction between the Jesus described in the Gospels and the Jesus of history."
+      },
+      {
+        title: "Religious perspectives",
+        note: "Jesus's teachings and the retelling of his life story have significantly influenced the course of human history, and have directly or indirectly affected the lives of billions of people, even non-Christians, worldwide."
+      },
+      {
+        title: "Artistic depictions",
+        note: "As in other Early Christian art, the earliest depictions date to the late 2nd or early 3rd century, and surviving images are found in the Catacombs of Rome."
+      },
+      {
+        title: "Associated relics",
+        note: "The total destruction that ensued with the siege of Jerusalem by the Romans in AD\xA070 made the survival of items from 1st-century Judea very rare, and almost no direct records survive about the history of Judaism from the last part of the 1st century to the 2nd century."
+      }
+    ]
+  },
+  "John of Patmos": {
+    title: "John of Patmos",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/John_of_Patmos",
+    description: "John of Patmos is the name traditionally given to the author of the Book of Revelation. Revelation 1:9 states that John was on Patmos, an Aegean island off the coast of Roman Asia, where according to some biblical historians, he was exiled as a result of anti-Christian persecution under the Roman emperor Domitian.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Johannes_op_Patmos_Saint_John_on_Patmos_Berlin%2C_Staatlichen_Museen_zu_Berlin%2C_Gemaldegalerie_HR.jpg/330px-Johannes_op_Patmos_Saint_John_on_Patmos_Berlin%2C_Staatlichen_Museen_zu_Berlin%2C_Gemaldegalerie_HR.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Venerated\xA0in",
+        value: "Catholic ChurchEastern Orthodox Church"
+      },
+      {
+        label: "Major works",
+        value: "Book of Revelation"
+      }
+    ],
+    sections: [
+      {
+        heading: "Island of Patmos",
+        summary: 'John is considered to have been exiled to Patmos during a time of persecution under the Roman rule of Domitian in the late 1st century. Revelation 1:9 states: "I, John, both your brother and companion in tribulation...was on the island that is called Patmos for the word of God and for the testimony of Jesus Christ."',
+        items: []
+      },
+      {
+        heading: "Book of Revelation",
+        summary: 'The author of the Book of Revelation identifies himself only as "John". Traditionally, this was often believed to be the same person as John the Apostle (John, son of Zebedee), one of the apostles of Jesus, to whom the Gospel of John was also attributed. The early-2nd-century writer Justin Martyr was the first to equate the author of Revelation with John the Evangelist.',
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Island of Patmos",
+        note: "John is considered to have been exiled to Patmos during a time of persecution under the Roman rule of Domitian in the late 1st century."
+      },
+      {
+        title: "Book of Revelation",
+        note: 'The author of the Book of Revelation identifies himself only as "John".'
+      }
+    ]
+  },
+  "Shimon bar Yochai": {
+    title: "Simeon bar Yochai",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Shimon_bar_Yochai",
+    description: "Shimon bar Yochai or Shimon ben Yochai, also known by the acronym Rashbi, was a 2nd-century tanna or sage of the land of Israel. He was one of the most eminent disciples of Rabbi Akiva. The Zohar, a 13th-century foundational work of Kabbalah, is ascribed to him by Kabbalistic tradition, but this claim is universally rejected by modern scholars.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/%D7%A7%D7%91%D7%A8_%D7%A8%D7%A9%D7%91%22%D7%99.jpg/330px-%D7%A7%D7%91%D7%A8_%D7%A8%D7%A9%D7%91%22%D7%99.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "90, Galilee"
+      },
+      {
+        label: "Died",
+        value: "160 (aged 70)"
+      },
+      {
+        label: "Buried",
+        value: "Kever Rashbi, Meron, Israel"
+      },
+      {
+        label: "Children",
+        value: "Eleazar ben Simeon"
+      },
+      {
+        label: "Religion",
+        value: "Judaism"
+      },
+      {
+        label: "Yahrtzeit",
+        value: "Lag BaOmer (Hillula of Rabbi Shimon bar Yochai)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: "Shimon was born in the Galilee. He was one of the principal pupils of Rabbi Akiva, under whom he studied 13 years at Bnei Brak.",
+        items: []
+      },
+      {
+        heading: "Teachings",
+        summary: "The fullest account of Shimon's teachings is to be found in W. Bacher's Agada der Tannaiten. When the Talmud attributes a teaching to Shimon without specifying which Shimon is meant, it means Shimon bar Yochai.",
+        items: []
+      },
+      {
+        heading: "Commemoration",
+        summary: `Some believe that bar Yochai died on the 33rd day of the Omer, known as Lag BaOmer, due to a printing error in Hayyim Vital's Pri Etz Chadash. Some believe that on the day of his death, he revealed deep kabbalistic secrets which formed the basis of the Zohar. According to the Bnei Yissaschar, on the day of his death, bar Yochai said, "Now it is my desire to reveal secrets... The day will not go to its place like any other, for this entire day stands within my domain..." Daylight was miraculously extended until he had completed his final teaching and died.`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "Shimon was born in the Galilee."
+      },
+      {
+        title: "Teachings",
+        note: "The fullest account of Shimon's teachings is to be found in W."
+      },
+      {
+        title: "Commemoration",
+        note: "Some believe that bar Yochai died on the 33rd day of the Omer, known as Lag BaOmer, due to a printing error in Hayyim Vital's Pri Etz Chadash."
+      }
+    ]
+  },
+  "Abraham Abulafia": {
+    title: "Abraham Abulafia",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Abraham_Abulafia",
+    description: 'Abraham ben Samuel Abulafia was the founder of the school of "Prophetic Kabbalah". He was born in Zaragoza, Kingdom of Aragon, in 1240, and is assumed to have died sometime after 1291 following a stay on the island of Comino in the Maltese archipelago.',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Abraham_abulafia.jpg/330px-Abraham_abulafia.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "1240"
+      },
+      {
+        label: "Died",
+        value: "sometime after 1291"
+      },
+      {
+        label: "Occupation",
+        value: "Philosopher and writer"
+      },
+      {
+        label: "Period",
+        value: "1271\u20131291"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: "Very early in life he was taken by his parents to Tudela, Kingdom of Navarre, where his aged father, Samuel Abulafia, instructed him in the Hebrew Bible and Talmud. In 1258, when Abulafia was eighteen years old, his father died, and Abulafia began a life of ceaseless wandering shortly thereafter. His first journey, in 1260, was to the Land of Israel, where he intended to begin a search for the legendary Sambation and the Ten Lost Tribes. He got no further than port city Akko, however, because of the desolation and lawlessness in the Holy Land stemming from the chaos following the recent Crusade. The battle that year between the Mongol Empire and Mamluk Sultanate forced his return to Europe via Greece. He had determined to go to Rome but stopped short in Capua, where during the early 1260s, he devoted himself with passionate zeal to the study of philosophy and The Guide for the Perplexed of Maimonides under the tutelage of a philosopher and physician named Hillel\u2014probably the well-known Hillel ben Samuel of Verona.",
+        items: []
+      },
+      {
+        heading: "Teachings",
+        summary: "Abulafia\u2019s literary activity spans the years 1271\u20131291 and consists of several books, treatises on grammar, and poems, but amongst which only thirty survive. He wrote many commentaries: three on the Guide of the Perplexed \u2013 Sefer ha-Ge\u2019ulah (1273), Sefer Chayei ha-Nefesh, and Sefer Sitrei Torah (1280); on Sefer Yetzirah: \u2013 Otzar Eden Ganuz (1285/6), Gan Na'ul, and a third untitled; and a commentary on the Pentateuch \u2013 Sefer-Maftechot ha-Torah (1289).",
+        items: [
+          "Sefer ha-Geulah (1273), a commentary on The Guide for the Perplexed",
+          "Sefer Chayei ha-Nefesh, a commentary on The Guide for the Perplexed",
+          'Sefer ha-Yashar ("Book of the Upright/Righteous") (1279)',
+          "Sefer Sitrei Torah (1280), a commentary on The Guide for the Perplexed",
+          'Chayei ha-Olam ha-Ba ("Life of the World to Come") (1280)',
+          'Or ha-Sekhel ("Light of the Intellect")',
+          "Get ha-Shemot",
+          "Maftei\u2019ach ha-Re'ayon",
+          "Gan Na'ul, a commentary on Sefer Yetzirah",
+          "Otzar Eden Ganuz, another commentary on Sefer Yetzirah",
+          "Sefer ha-Cheshek",
+          'Sefer ha-Ot ("Book of the Sign") (1285 x 1288)',
+          'Imrei Shefer ("Words of Beauty") (1291)',
+          'Ve-Zot Li-Yehuda ("And this is for Yehuda")',
+          "The first step, preparation: the initiate purifies himself through fasting, the wearing of tefillin, and donning pure white garments.",
+          "The second step: the mystic writes out specific letter groups and their permutations.",
+          "The third step, physiological maneuvers: the mystic chants the letters in conjunction with specific respiratory patterns, as well as head positioning.",
+          'The fourth step, mental imagery of letters and human forms: the mystic imagines a human form, and himself without a body. Then the mystic \u2018draws\u2019 the letters mentally, projects them onto the \u2018screen\u2019 of the \u2018imaginative faculty\u2019, i.e. he mentally imagines the patterns of letters. He then rotates the letters and turns them, as Abulafia describes in Imrei Shefer: "And they [the letters], with their forms, are called the Clear Mirror, for all the forms having brightness and strong radiance are included in them. And one who gazes at them in their forms will discover their secrets and speak to them, and they will speak to him. And they are like an image in which a man sees all his forms standing in front of him, and then he will be able to see all the general and specific things (Ms. Paris BN 777, fol. 49)."'
+        ]
+      },
+      {
+        heading: "Influence",
+        summary: "Abulafia's subterranean influence is evident in the large number of manuscripts of his major meditation manuals that flourished down to the present day until all his works were finally published in Mea Shearim in Jerusalem during the 1990s.",
+        items: []
+      },
+      {
+        heading: "Publications",
+        summary: "",
+        items: [
+          ".",
+          "."
+        ]
+      },
+      {
+        heading: "Bibliography",
+        summary: "",
+        items: [
+          'Idel, Moshe "The Renascence of Abraham Abulafia in the Last Generation"',
+          'Idel, Moshe "Abraham Abulafia and the Prophetic Kabbalah"',
+          'Idel, Moshe "The Mystical Experience in Abraham Abulafia"',
+          'Scholem, Gershom "Abraham Abulafia and the Doctrine of Prophetic Kabbalism, ch. 4, Major Trends in Jewish Mysticism"'
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "Very early in life he was taken by his parents to Tudela, Kingdom of Navarre, where his aged father, Samuel Abulafia, instructed him in the Hebrew Bible and Talmud."
+      },
+      {
+        title: "Teachings",
+        note: "Abulafia\u2019s literary activity spans the years 1271\u20131291 and consists of several books, treatises on grammar, and poems, but amongst which only thirty survive."
+      },
+      {
+        title: "Influence",
+        note: "Abulafia's subterranean influence is evident in the large number of manuscripts of his major meditation manuals that flourished down to the present day until all his works were finally published in Mea Shearim in Jerusalem during the 1990s."
+      }
+    ]
+  },
+  "Sabbatai Tsevi": {
+    title: "Sabbatai Zevi",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Sabbatai_Zevi",
+    description: "Sabbatai Zevi or Shabtai Tzvi was a former Jewish mystic and rabbi from Smyrna who converted to Islam. His family were Romaniote Jews from Patras.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/%C5%A0abb%C9%99%E1%B9%AFay_%E1%B9%A2%C9%99%E1%B8%87%C4%AB_1669_V01-1.1_cropped.jpg/330px-%C5%A0abb%C9%99%E1%B9%AFay_%E1%B9%A2%C9%99%E1%B8%87%C4%AB_1669_V01-1.1_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "(1626-08-01)August 1, 1626, Smyrna, Ottoman Empire (modern \u0130zmir, Turkey)"
+      },
+      {
+        label: "Died",
+        value: "c. September 17, 1676(1676-09-17) (aged\xA050), Ulcinj, Ottoman Empire (modern Montenegro)"
+      },
+      {
+        label: "Religion",
+        value: "Judaism, later Islam"
+      },
+      {
+        label: "Founder\xA0of",
+        value: "Sabbateanism"
+      }
+    ],
+    sections: [
+      {
+        heading: "Early life and education",
+        summary: `Sabbatai Zevi was born in the Ottoman city of Smyrna, allegedly on Tisha B'Av, one of Judaism's fast days, during The Three Weeks in 1626. In Hebrew, Sabbatai means Saturn; in Jewish tradition, "the reign of Sabbatai", the highest planet, was often linked to the advent of the Messiah.`,
+        items: []
+      },
+      {
+        heading: "Personal history",
+        summary: 'During the first half of the 17th century, millenarian ideas about the approach of the Messianic Age were popular. They included ideas about the redemption of the Jews and their return to the land of Israel with independent sovereignty. Christian authors identified the apocalyptic year as 1666, and millenarianism was widespread in England. This belief was so prevalent that Menasseh Ben Israel, in his letter to Oliver Cromwell and the Rump Parliament, appealed to it as a reason to readmit Jews into England, saying, "the opinions of many Christians and mine do concur herein, that we both believe that the restoring time of our Nation into their native country is very near at hand."',
+        items: []
+      },
+      {
+        heading: "Legacy",
+        summary: "By the 19th century, the D\xF6nme had become prominent in the tobacco and textile trades. They established progressive schools, and some members became politically active. Many joined the Committee of Union and Progress (CUP), the revolutionary party known as the Young Turks. With the major D\xF6nmeh city of Selanik (now Thessaloniki) becoming part of Greece in 1912, Greece expelled the Muslims, including the D\xF6nme, from its territory, with most migrating to Turkey. This was finalized with the 1923 population exchange between Greece and Turkey. By the mid-20th century, they had become highly assimilated.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Early life and education",
+        note: "Sabbatai Zevi was born in the Ottoman city of Smyrna, allegedly on Tisha B'Av, one of Judaism's fast days, during The Three Weeks in 1626."
+      },
+      {
+        title: "Personal history",
+        note: "During the first half of the 17th century, millenarian ideas about the approach of the Messianic Age were popular."
+      },
+      {
+        title: "Legacy",
+        note: "By the 19th century, the D\xF6nme had become prominent in the tobacco and textile trades."
+      }
+    ]
+  },
+  "Nathan of Gaza": {
+    title: "Nathan of Gaza",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Nathan_of_Gaza",
+    description: "Nathan Benjamin ben Elisha Hayyim haLevi Ashkenazi, more famously known as Nathan of Gaza, or Ghazzati, was a theologian and author born in Jerusalem. After his marriage in 1663 he moved to Gaza, where he became famous as a prophet for the Jewish messiah claimant Sabbatai Zevi.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Nathan_of_Gaza.jpg/330px-Nathan_of_Gaza.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "1643 (1643), Jerusalem, Ottoman Syria, Ottoman Empire"
+      },
+      {
+        label: "Died",
+        value: "1680 (aged\xA036\u201337), Sofia, Ottoman Empire"
+      },
+      {
+        label: "Religion",
+        value: "Sabbateanism"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: "Nathan of Gaza was born in Jerusalem around 1643\u20131644; he died on Friday, January 11, 1680, in Sofia. He grew up in Jerusalem.",
+        items: []
+      },
+      {
+        heading: "Travels through Europe",
+        summary: "Again excommunicated at Adrianople, he went with a few followers to Thessaloniki. There he met with scant welcome, but had more success in the communities of Chios and Corfu. From Corfu he went to Venice (March, 1668), where the rabbinate and the council of the city compelled him to give them a written confession that all his prophecies were the production of his imagination. The confession was published, whereupon Abraham ha-Yakini, the originator of the Sabbatean movement, wrote Nathan a letter in which he sympathized with him over his persecution and expressed his indignation at the acts of the Venetian rabbinate.",
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: 'Nathan of Gaza persuaded the Jewish community through his writings about Sabbatai Zevi and Sabbateanism. He composed various letters and other written documents that promoted an entirely new kind of theology, one that merged the current notions of Kabbalah (of the time) with elements of Lurianic mysticism, a subject that he studied when he was younger. In addition to creating a "new type" of mysticism, he also composed a document entitled Derush ha-Tanninim "Discourse on the Dragons" (published by Scholem in be-Iqvot Mashiah, Jerusalem, 1944). This article stressed the notion of a "New Law" in which the old positive and negative commandments of the Torah were eliminated. This became the basis for what Gershom Scholem called "Sabbatean antinomianism".',
+        items: []
+      },
+      {
+        heading: "Death",
+        summary: "There is some consensus among sources that on Friday, January 11, 1680, in \xDCsk\xFCp, Ottoman Empire (now Skopje, North Macedonia), Nathan of Gaza died. However, according to other sources, he died in Sofia (now in Bulgaria), but his body was transferred to \xDCsk\xFCp and buried there. According to the Jewish physician, Jacques Konfino, who visited Skopje in the 1930s, Nathan of Gaza was buried in a marble tomb along with a disciple. According to Konfino the tomb was engraved in Hebrew with this inscription:",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "Nathan of Gaza was born in Jerusalem around 1643\u20131644; he died on Friday, January 11, 1680, in Sofia."
+      },
+      {
+        title: "Travels through Europe",
+        note: "Again excommunicated at Adrianople, he went with a few followers to Thessaloniki."
+      },
+      {
+        title: "Works",
+        note: "Nathan of Gaza persuaded the Jewish community through his writings about Sabbatai Zevi and Sabbateanism."
+      },
+      {
+        title: "Death",
+        note: "There is some consensus among sources that on Friday, January 11, 1680, in \xDCsk\xFCp, Ottoman Empire (now Skopje, North Macedonia), Nathan of Gaza died."
+      }
+    ]
+  },
+  "Jacob Frank": {
+    title: "Jacob Frank",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Jacob_Frank",
+    description: 'Jacob Joseph Frank was a Polish-Jewish religious leader who claimed to be the reincarnation of the self-proclaimed messiah Sabbatai Zevi (1626\u20131676) and also of the biblical patriarch Jacob. The religious authorities of the Jewish community excommunicated Frank and his followers due to his heretical doctrines that included deification of himself as a part of a trinity and other controversial concepts such as neo-Carpocratian "purification through transgression". Frank\u2019s teachings led his sect into scandalous practices, including ritualized orgies, incestuous acts\u2014most notably between fathers and daughters\u2014and the deliberate violation of Jewish moral laws, which he preached were necessary to hasten a messianic redemption through embracing the "abyss" of sin.',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Jakub_Frank.jpg/330px-Jakub_Frank.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "Jakub Lejbowicz, 1726, Korol\xF3wka, Polish-Lithuanian Commonwealth"
+      },
+      {
+        label: "Died",
+        value: "December 10, 1791(1791-12-10) (aged\xA064\u201365), Offenbach am Main, Principality of Isenburg-Birstein, Holy Roman Empire"
+      },
+      {
+        label: "Children",
+        value: "Eve Frank"
+      },
+      {
+        label: "Religion",
+        value: "Judaism"
+      },
+      {
+        label: "Organisation",
+        value: "Frankism"
+      }
+    ],
+    sections: [
+      {
+        heading: "Historical background",
+        summary: "There were numerous outbreaks of followers of Sabbatai Zevi in Eastern Poland (now Ukraine), particularly in Podolia and Galicia, between the late 17th and the early 18th century.",
+        items: []
+      },
+      {
+        heading: "Early life",
+        summary: "Jacob Frank is believed to have been born as Jakub Lejbowicz (Yankev Leybovitsh) to a Jewish family in Koro\u0142\xF3wka, in Podolia of Eastern Poland (now in Ukraine), in about 1726. Though Polish historian Gaudenty Pikulski states that Frank was born in Buchach and Shmuel Yosef Agnon claimed to even show the house where he was born on Koro\u0142\xF3wka street in Buchach. His father was a Sabbatean, and moved to Czernowitz, in the Carpathian region of Bukovina, in 1730, where the Sabbatean influence at the time was strong.",
+        items: []
+      },
+      {
+        heading: "Declaration of being a successor to Sabbatai Zevi",
+        summary: 'At this critical moment Jacob Frank came to Iwania, proclaimed himself as a direct successor to Sabbatai Zevi and Otman Baba, and assured his adherents that he had received revelations from Heaven. These revelations called for the conversion of Frank and his followers to the Christian religion, which was to be a visible transition stage to the future "das" or religion to be revealed by Frank. In 1759 negotiations looking toward the conversion of the Frankists to Roman Catholicism were being actively carried on with the higher representatives of the Polish Church; at the same time the Frankists tried to secure another discussion with the rabbis. The Polish primate \u0141ubie\u0144ski and the papal nuncio Nicholas Serra were suspicious of the aspirations of the Frankists, but at the insistence of the administrator of the bishopric of Lw\xF3w, the canon Mikulski, the discussion was arranged. It was held in Lw\xF3w and was presided over by Mikulski. Protestant missionaries also tried to detour the Frankists to Protestantism, and a handful did join the Moravian Church.',
+        items: []
+      },
+      {
+        heading: "Baptism of the Frankists",
+        summary: `At the discussion in 1759, the rabbis energetically repulsed their opponents. After the discussion the Frankists were requested to demonstrate in practice their adherence to Christianity; Jacob Frank, who had then arrived in Lw\xF3w, encouraged his followers to take the decisive step. The baptism of the Frankists was celebrated with great solemnity in the churches of Lw\xF3w, with members of the Polish szlachta (nobility) acting as god-parents. The neophytes adopted the names of their godfathers and godmothers, and ultimately joined their ranks. Frank himself was baptized in Lw\xF3w (17 September 1759) and again in Warsaw the next day, with King Augustus III as his godfather. Frank's baptismal name was "Joseph" (J\xF3zef). In the course of one year more than 500 individuals were converted to Christianity at Lw\xF3w, and nearly a thousand in the following year. By 1790, 26,000 Jews were recorded baptised in Poland.`,
+        items: []
+      },
+      {
+        heading: "Prison and later days",
+        summary: `Frank's imprisonment lasted thirteen years, yet it only increased his influence with the sect by surrounding him with the aura of martyrdom. Many Frankists established themselves near Cz\u0119stochowa, and kept up constant communication with their "holy master". Frank inspired his followers through mystical speeches and epistles, in which he stated that salvation could be gained only by first adopting the "religion of Edom" and later adopting a future religion which Frank called daas (daat, or Knowledge in Hebrew). After the first partition of Poland, Frank was released by the Russian general Bibikov, who had occupied Cz\u0119stochowa, in August 1772.`,
+        items: []
+      },
+      {
+        heading: "Notable Sabbatian teachers of Jakob Frank",
+        summary: "",
+        items: [
+          "Rabbi Issohar, one of Frank's principal teachers. A disciple of Hayim Malakh, Frank studied with him in \u0130zmir in 1750\u20131752.",
+          "Rabbi Mordechai ben Elias Margalit of Prague (Mardocheusz in Polish), another of Frank's principal teachers. He helped introduce Frank to the practices of the Karakashi sect of the D\xF6nmeh in the Turkish empire, which worshipped Beruchiah Russo (also known as Otman Baba). Frank traveled with him to Salonika in November 1753. He left Bohemia and moved to the Ottoman Empire after Jakob Frank's uncle Moses Meir Kamenker was caught smuggling Sabbatian literature into Germany in 1725. Mordechai allegedly engaged in adultery and other antinomian conduct.",
+          "Leib, a Jewish Sabbatian teacher of Frank's during the latter's childhood in Wallachia and Moldavia. He was also a wonderworker who attempted to dispel demons."
+        ]
+      },
+      {
+        heading: "Jacob Frank's writings",
+        summary: "",
+        items: [
+          "The Collection of the Words of the Lord, available online in English. Translated, edited and annotated by Harris Lenowitz, with an introduction by Lenowitz."
+        ]
+      },
+      {
+        heading: "Cultural references",
+        summary: "",
+        items: [
+          "Jacob Frank is the subject of Andrzej \u017Bu\u0142awski's book Moliwda (1994).",
+          "The personality of Frank has inspired the Polish historical movie Daas of 2011 directed by Adrian Panek. Frank is played by Olgierd \u0141ukaszewicz.",
+          "Jacob Frank is the central character in the novel by Polish Nobel laureate writer Olga Tokarczuk The Books of Jacob (Polish: Ksi\u0119gi Jakubowe) published in October 2014 by Wydawnictwo Literackie.",
+          `Jacob Frank's story receives a new interpretation in the book "Shining Darkness", an historical novel by Pele Ohad Ezrahi (2022).`
+        ]
+      },
+      {
+        heading: "Bibliography",
+        summary: "",
+        items: [
+          'Lenowitz, Harris, "The Charlatan at the Gottes Haus in Offenbach," in Goldish, Matt, and Richard H. Popkin, eds., Jewish Messianism in the Early Modern World, Dordrecth, Kluwer Academic, 2001, pp.\xA0189\u2013202.',
+          `Maciejko, Pawel (2005). "'Baruch Yavan and the Frankist movement: intercession in an age of upheaval", Jahrbuch des Simon-Dubnow-Instituts 4 (2005) pp.\xA0333\u2013354.`,
+          `Maciejko, Pawel (2006). "'Christian elements in early Frankist doctrine", Gal-Ed 20 (2006) pp.\xA013\u201341.`
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Historical background",
+        note: "There were numerous outbreaks of followers of Sabbatai Zevi in Eastern Poland (now Ukraine), particularly in Podolia and Galicia, between the late 17th and the early 18th century."
+      },
+      {
+        title: "Early life",
+        note: "Jacob Frank is believed to have been born as Jakub Lejbowicz (Yankev Leybovitsh) to a Jewish family in Koro\u0142\xF3wka, in Podolia of Eastern Poland (now in Ukraine), in about 1726."
+      },
+      {
+        title: "Declaration of being a successor to Sabbatai Zevi",
+        note: "At this critical moment Jacob Frank came to Iwania, proclaimed himself as a direct successor to Sabbatai Zevi and Otman Baba, and assured his adherents that he had received revelations from Heaven."
+      },
+      {
+        title: "Baptism of the Frankists",
+        note: "At the discussion in 1759, the rabbis energetically repulsed their opponents."
+      },
+      {
+        title: "Prison and later days",
+        note: "Frank's imprisonment lasted thirteen years, yet it only increased his influence with the sect by surrounding him with the aura of martyrdom."
+      }
+    ]
+  },
+  "Hermes Trismegistus": {
+    title: "Hermes Trismegistus",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Hermes_Trismegistus",
+    description: "Hermes Trismegistus is a legendary Hellenistic period figure that originated as a syncretic combination of the Greek god Hermes and the Egyptian god Thoth. He is the purported author of the Hermetica, a widely diverse series of ancient and medieval pseudepigraphica that laid the basis of various philosophical systems known as Hermeticism.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Hermes_Trismegistus_Sienna_Cathedral_Mosaic.jpg/330px-Hermes_Trismegistus_Sienna_Cathedral_Mosaic.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [],
+    sections: [
+      {
+        heading: "Origin and identity",
+        summary: "Hermes Trismegistus may be associated with the Greek god Hermes and the Egyptian god Thoth. Greeks in the Ptolemaic Kingdom of Egypt identified Thoth with Hermes through the interpretatio graeca. Consequently, the two gods were worshiped as one, in what had been the Temple of Thoth in Khemenu, which was known in the Hellenistic period as Hermopolis.",
+        items: [
+          '"fourth Mercury (Hermes) was the son of the Nile, whose name may not be spoken by the Egyptians"',
+          '"the fifth, who is worshiped by the people of Pheneus [in Arcadia], is said to have killed Argus Panoptes, and for this reason to have fled to Egypt, and to have given the Egyptians their laws and alphabet: It is him whom the Egyptians call Theyt"'
+        ]
+      },
+      {
+        heading: 'The epithet "thrice great"',
+        summary: 'Fowden asserts that the first datable occurrences of the epithet "thrice great" are in the Legatio of Athenagoras of Athens and in a fragment from Philo of Byblos, c.\u200964\u2013141 ce. However, in a later work, Copenhaver reports that this epithet is first found in the minutes of a meeting of the council of the Ibis cult, held in 172 BCE near Memphis in Egypt. Hart explains that the epithet is derived from an epithet of Thoth found at the Temple of Esna, "Thoth the great, the great, the great."',
+        items: []
+      },
+      {
+        heading: "Hermetic writings",
+        summary: `During the Middle Ages and the Renaissance, the Hermetica enjoyed great prestige and were popular among alchemists. Hermes was also strongly associated with astrology, for example by the influential Islamic astrologer Abu Ma'shar al-Balkhi (787\u2013886). The "Hermetic tradition" consequently refers to alchemy, magic, astrology, and related subjects. By modern convention the texts are usually subdivided into two categories:`,
+        items: []
+      },
+      {
+        heading: "Islamic tradition",
+        summary: `Faivre (1995) has pointed out that Hermes Trismegistus has a place in the Islamic tradition, although the name Hermes does not appear in the Qur'an. Hagiographers and chroniclers of the first centuries of the Islamic Hijrah quickly identified Hermes Trismegistus with Idris, the Islamic prophet of surahs 19.57 and 21.85, whom Muslims also identified with Enoch (cf. Genesis 5:18\u201324). According to the account of the Persian astrologer Abu Ma'shar al-Balkhi (787\u2013886), Idris / Hermes was termed "Thrice-Wise" Hermes Trismegistus because he had a threefold origin. The first Hermes, comparable to Thoth, was a "civilizing hero", an initiator into the mysteries of the divine science and wisdom that animate the world; he carved the principles of this sacred science in hieroglyphs. The second Hermes, in Babylon, was the initiator of Pythagoras. The third Hermes was the first teacher of alchemy. Islamicist Pierre Lory writes:`,
+        items: []
+      },
+      {
+        heading: "Bah\xE1\u02BC\xED writings",
+        summary: "Bah\xE1'u'll\xE1h, founder of the Bah\xE1\u02BC\xED Faith, identifies Idris with Hermes in his Tablet on the Uncompounded Reality.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Origin and identity",
+        note: "Hermes Trismegistus may be associated with the Greek god Hermes and the Egyptian god Thoth."
+      },
+      {
+        title: 'The epithet "thrice great"',
+        note: 'Fowden asserts that the first datable occurrences of the epithet "thrice great" are in the Legatio of Athenagoras of Athens and in a fragment from Philo of Byblos, c.'
+      },
+      {
+        title: "Hermetic writings",
+        note: "During the Middle Ages and the Renaissance, the Hermetica enjoyed great prestige and were popular among alchemists."
+      },
+      {
+        title: "Islamic tradition",
+        note: "Faivre (1995) has pointed out that Hermes Trismegistus has a place in the Islamic tradition, although the name Hermes does not appear in the Qur'an."
+      },
+      {
+        title: "Bah\xE1\u02BC\xED writings",
+        note: "Bah\xE1'u'll\xE1h, founder of the Bah\xE1\u02BC\xED Faith, identifies Idris with Hermes in his Tablet on the Uncompounded Reality."
+      }
+    ]
+  },
+  Solomon: {
+    title: "Solomon",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Solomon",
+    description: "Solomon, also called Jedidiah, was a king of ancient Israel. The successor of his father David, he is described as the penultimate ruler of all Twelve Tribes of Israel under a united Israel and Judah. His reign is hypothesized to have lasted from c.\u2009970\u2013931 BCE. According to the biblical narrative, his reign brought commercial prosperity through alliances and trade, but his accumulation of wealth, horses, and foreign wives, many of whom introduced idolatry, led to divine punishment. After Solomon's death, his son Rehoboam\u2019s harsh policies led the northern Israelites to reject the Davidic line and follow Jeroboam, splitting the kingdom into Israel in the north and Judah in the south, according to the Hebrew Bible.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg/330px-Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Reign",
+        value: "c.\u2009970\u2013931 BCE (hypothesised)"
+      },
+      {
+        label: "Predecessor",
+        value: "David"
+      },
+      {
+        label: "Successor",
+        value: "Rehoboam"
+      },
+      {
+        label: "Born",
+        value: "11th\u201310th century BCE, Jerusalem, Kingdom of Israel and Judah"
+      },
+      {
+        label: "Spouse",
+        value: "700 wives of royal birth and 300 concubines, including: Naamah Pharaoh's daughter"
+      },
+      {
+        label: "Issue",
+        value: "3 (recorded):\nRehoboam Taphath Basemath"
+      },
+      {
+        label: "Dynasty",
+        value: "House of David"
+      },
+      {
+        label: "Father",
+        value: "David"
+      },
+      {
+        label: "Mother",
+        value: "Bathsheba"
+      },
+      {
+        label: "Religion",
+        value: "Yahwism"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biblical account",
+        summary: 'The life of Solomon is primarily described in 2\xA0Samuel, 1\xA0Kings and 2\xA0Chronicles. His two names are traditionally taken to mean "peaceful" and "friend of God", both considered "predictive of the character of his reign". A 2023 textbook described three possibilities for the etymology of Solomon\u2019s name: \u201Ccompensation or a substitute,\u201D \u201Cthe ruler of peace,\u201D or based on the deified evening star Shalim.',
+        items: [
+          "Mishlei (Book of Proverbs), a collection of fables and wisdom of life.",
+          "Kohelet (Ecclesiastes), a book of contemplation and self-reflection.",
+          "Shir ha-Shirim (Song of Songs), a collection of erotic verse. The verse has been interpreted both literally (as describing a romantic and sexual relationship between a man and a woman) and metaphorically (as describing a relationship between God and his people)."
+        ]
+      },
+      {
+        heading: "Apocryphal or deuterocanonical texts",
+        summary: "Rabbinical tradition attributes the Book of Wisdom (included within the Septuagint and recognized as part of a biblical canon by the Catholic Church, Eastern Orthodox Church, Oriental Orthodox Churches, and Church of the East) to Solomon, although this book was probably written in the 2nd century BCE. In this work, Solomon is portrayed as an astronomer. Other books of wisdom poetry such as the Odes of Solomon and the Psalms of Solomon also bear his name. The Jewish historian Eupolemus, who wrote about 157 BCE, included copies of apocryphal letters exchanged between Solomon and the kings of Egypt and Tyre.",
+        items: []
+      },
+      {
+        heading: "Historicity",
+        summary: "As with most biblical personages in the middle era of Israelite society, the historicity of Solomon is hotly debated. Current consensus states that regardless of whether or not a man named Solomon truly reigned as king over the Judean hills in the tenth century BCE, the biblical description of his apparent empire's lavishness is almost surely an anachronistic exaggeration.",
+        items: []
+      },
+      {
+        heading: "Religious views",
+        summary: `King Solomon sinned by acquiring many foreign wives and horses because he thought he knew the reason for the biblical prohibition and thought it did not apply to him. When King Solomon married Pharaoh's daughter, a sandbank formed which eventually formed the "great nation of Rome"\u2014the nation that destroyed Herod's Temple. Solomon gradually lost more and more prestige until he became like a commoner. Some say he regained his status while others say he did not. In the end, however, he is regarded as a righteous king and is especially praised for his diligence in building the Temple.`,
+        items: []
+      },
+      {
+        heading: "Legends",
+        summary: "A well-known story in the collection One Thousand and One Nights describes a genie who had displeased King Solomon and was punished by being locked in a bottle and thrown into the sea. Since the bottle was sealed with Solomon's seal, the genie was helpless to free himself, until he was freed many centuries later by a fisherman who discovered the bottle. In other stories from the One Thousand and One Nights, protagonists who had to leave their homeland and travel to the unknown places of the world saw signs which proved that Solomon had already been there. Sometimes, protagonists discovered words of Solomon that were intended to help those who were lost and had unluckily reached those forbidden and deserted places.",
+        items: []
+      },
+      {
+        heading: "Freemasonry",
+        summary: "Masonic rituals refer to King Solomon and the building of his Temple. Masonic Temples, where a Masonic Lodge meets, are an allegorical reference to King Solomon's Temple.",
+        items: []
+      },
+      {
+        heading: "Places",
+        summary: "The Solomon Islands, a country and archipelago in Melanesia, were named for King Solomon by the Spanish navigator \xC1lvaro de Menda\xF1a, who became the first European to see the islands in 1568.",
+        items: []
+      },
+      {
+        heading: "In literature, art, and music",
+        summary: "",
+        items: [
+          "In H. Rider Haggard's King Solomon's Mines (1885) the protagonists discover multiple settings said to have belonged to or to have been built at the request of King Solomon, such as 'Solomon's Great Road' and the mines themselves. Also, the two mountains which form the entrance to Kukuana Land (where the mines are located in the novel) are referred to as 'Sheba's Breasts' which could be an allusion to the Queen of Sheba, with whom King Solomon had a relationship, or Solomon's mother, who was named Bathsheba. When in the mines, the characters also contemplate what must have occurred to prevent King Solomon from returning to retrieve the massive amounts of diamonds, gold and ivory tusks that were found buried in his great 'Treasure Chamber'.",
+          "In the Divine Comedy, the spirit of Solomon appears to Dante Alighieri in the Heaven of the Sun with other exemplars of inspired wisdom.",
+          `In Friedrich D\xFCrrenmatt's The Physicists, the physicist M\xF6bius claims that Solomon appears to him and dictates the "theory of all possible inventions" (based on unified field theory).`,
+          "Solomon appears in Rudyard Kipling's Just So Stories.",
+          `O. Henry's short story The Gift of the Magi (1905) contains the following description to convey the preciousness of character Jim Dillingham Young's pocket watch: "Had King Solomon been the janitor, with all his treasures piled up in the basement, Jim would have pulled out his watch every time he passed, just to see him pluck at his beard from envy."`,
+          `In Neal Stephenson's three-volume The Baroque Cycle, 17th-century alchemists like Isaac Newton believe that Solomon created a kind of "heavier" gold with mystical properties and that it was cached in the Solomon Islands where it was accidentally discovered by the crew of a wayward Spanish galleon. In the third volume of The Baroque Cycle, The System of the World, a mysterious member of the entourage of tsar Peter the Great, named "Solomon Kohan" appears in early 18th-century London. The czar, traveling incognito to purchase English-made ships for his navy, explains that he added him to his court after the Sack of Azov, where Kohan had been a guest of the Pasha. Solomon Kohan is later revealed as one of the extremely long-lived "Wise," such as Enoch Root, and compares a courtyard full of inventors' workstations to "an operation I used to have in Jerusalem a long time ago", denominating either facility as "a temple". Stephenson's sequel to Reamde, 2019's Fall; or, Dodge in Hell was also a surprise sequel to the Baroque Cycle novels and Cryptonomicon. In the mid- to late-21st century span of Fall, Solomon Kohan has joined the faculty of Princeton University, going by Solly Pesador, and is described by a student as "one of those guys who had been around forever and played roles in tech companies going at least as far back as Hewlett-Packard" and as an "old-school tech geek turned neuro-hacker".`,
+          "In The Ring of Solomon, both King Solomon and the Queen of Sheba are featured prominently.",
+          "Solomon, King of Urushalim, is a significant character in The Shadow Prince, the first novel of Philip Armstrong's epic historical fantasy, The Chronicles of Tupiluliuma. His Ring is an Atalanta\xEBn Relic, by which is he able to command daemons. He uses it to summon a daemon army, thereafter called the Cohort of Free Daemons, to oppose the forces of the Chaos God, Sutekh, thus allowing the young Hittite musician, Lisarwa, to repair the Veil that separates the physical world from the dangerous wild energies of the Netherworld, using another of the relics, the Harp of Daud, once owned by his father (King David). Solomon's son, Rehoboam also appears in a minor capacity.",
+          'In the Japanese manga series Magi: The Labyrinth of Magic, Solomon was a powerful magician who united all of the world under his peaceful rule. However, when this world was destroyed by a calamity, he created the world Magi is set in and saved mankind by sending them there. A special power originated from him, the "Wisdom of Solomon", allows the main character Aladdin to talk directly with the soul of a person, alive or dead.',
+          `In the manga Devils and Realist, Solomon is a friend of Lucifer and is the "Elector"\u2014the one who can choose the interim ruler over Hell as its emperor rests to regain his strength and had powers over demons known as his seventy-two pillars. He's also known as the one who can control Hell or Heaven with the power of his ring.`,
+          "Chapter 14 of the Adventures of Huckleberry Finn ends with Huck and Jim debating over how wise Solomon really was.",
+          `In Francis Bacon's Essay 'Of Revenge', Solomon is paraphrased: "And Solomon, I am sure, saith, It is the glory of a man, to pass by an offence."`,
+          "In DC Comics, Solomon is one of the Immortal Elders of the hero Captain Marvel.",
+          "In a subject called in art the Idolatry of Solomon, the foreign wives are depicted as leading Solomon away from Yahweh toward idolatry because they worshiped gods other than Yahweh (1 Kings 11:1\u20133). This forms part of the Power of Women topos in the Middle Ages and Renaissance, showing the dangers women posed to even the most virtuous men.",
+          "Naamah, a princess of Ammon (now in Jordan) who arrives in Jerusalem at age fourteen to marry King Solomon and tells of their life together, is the narrator of Aryeh Lev Stollman's novel Queen of Jerusalem, which was published in 2020 by Aryeh Nir/Modan (Tel Aviv) in Hebrew translation under the title Divrei Y'mai Naamah (\u05D3\u05D1\u05E8\u05D9 \u05D9\u05DE\u05D9 \u05E0\u05E2\u05DE\u05D4).",
+          "Solomon and Sheba (1959)\u2014Epic film directed by King Vidor, starring Yul Brynner and Gina Lollobrigida",
+          "Solomon & Sheba (1995)\u2014Showtime film directed by Robert M. Young starring Halle Berry and Jimmy Smits",
+          "Solomon (1997, TNT)\u2014directed by Roger Young, starring Ben Cross",
+          "Brooklyn Babylon (2001)\u2014 a modern retelling of the story of Solomon and the Queen of Sheba, set during the Crown Heights riot",
+          "The Kingdom of Solomon (2009)\u2014Iranian production directed by Shahriar Bahrani",
+          "The Song (2014)\u2014a modern retelling directed by Richard Ramsey, starring Alan Powell, Ali Faulkner, and Caitlin Nicol-Thomas",
+          "Three Thousand Years of Longing (2022)\u2014King Solomon woos the Queen of Sheba in the first tale told by the Djinn",
+          "Popol Vuh, Das Hohelied Salomos \u2013 1975 album with Solomon texts set to music.",
+          "Giacomo Carissimi, The Judgement of Solomon for three chorus, two violins and organ",
+          "Marc-Antoine Charpentier, Judicium Salomnis, H 422, Oratorio for soloists, chorus, orchestra, and continuo 1702",
+          "S\xE9bastien de Brossard, Solomon's fall, cantata",
+          "Handel composed an oratorio entitled Solomon in 1748. The story follows the basic biblical plot.",
+          "Ernest Bloch composed a Hebraic Rhapsody for cello and orchestra entitled Schelomo, based on King Solomon.",
+          'Kate Bush wrote a song called "Song of Solomon" in 1993 for her album The Red Shoes.',
+          "Toivo Tulev composed a piece for choir, soloists and chamber orchestra entitled Songs in 2005. The text is taken directly from the Song of Songs in its English, Spanish and Latin translations.",
+          "Derrick Harriott has a rocksteady song titled Solomon (later covered by Junior Murvin), in which he warns a woman that he is wiser than Solomon in the ways of women.",
+          `Jamaican dancehall rapper Sean Paul mentions King Solomon in his 2005 hit song "We Be Burnin'". Specifically Sean Paul references the legend that marijuana was found on the grave of King Solomon.`,
+          'The New Pornographers included a song entitled "One Kind of Solomon" on their 2019 album In the Morse Code of Brake Lights.',
+          "Cassandra Wilson performs the self-penned 'Solomon Sang' on her 1995 Blue Note album, New Moon Daughter.",
+          `Grateful Dead have a song called "King Solomon's Marbles" on their 1975 album, Blues for Allah.`,
+          `M. Nasir's "Tanya Sama Itu Hud Hud" revolves around the correspondence of the hoopoe (hudhud) with the figure especially as told through the poem The Conference of the Birds.`,
+          `Momus' debut album Circus Maximus featured a song called "King Solomon's Song And Mine".`,
+          'The British Coronation Anthem "Zadok The Priest" mentions the anointing of King Solomon by Zadok and Nathan the Prophet. The lyrics are derived from 1 Kings 1:34-45.'
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Biblical account",
+        note: "The life of Solomon is primarily described in 2\xA0Samuel, 1\xA0Kings and 2\xA0Chronicles."
+      },
+      {
+        title: "Apocryphal or deuterocanonical texts",
+        note: "Rabbinical tradition attributes the Book of Wisdom (included within the Septuagint and recognized as part of a biblical canon by the Catholic Church, Eastern Orthodox Church, Oriental Orthodox Churches, and Church of the East) to Solomon, although this book was probably written in the 2nd century BCE."
+      },
+      {
+        title: "Historicity",
+        note: "As with most biblical personages in the middle era of Israelite society, the historicity of Solomon is hotly debated."
+      },
+      {
+        title: "Religious views",
+        note: "King Solomon sinned by acquiring many foreign wives and horses because he thought he knew the reason for the biblical prohibition and thought it did not apply to him."
+      },
+      {
+        title: "Legends",
+        note: "A well-known story in the collection One Thousand and One Nights describes a genie who had displeased King Solomon and was punished by being locked in a bottle and thrown into the sea."
+      },
+      {
+        title: "Freemasonry",
+        note: "Masonic rituals refer to King Solomon and the building of his Temple."
+      },
+      {
+        title: "Places",
+        note: "The Solomon Islands, a country and archipelago in Melanesia, were named for King Solomon by the Spanish navigator \xC1lvaro de Menda\xF1a, who became the first European to see the islands in 1568."
+      }
+    ]
+  },
+  Zoroaster: {
+    title: "Zoroaster",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Zoroaster",
+    description: "Zarathushtra Spitama, more commonly known as Zoroaster, was an Iranian religious reformer who challenged the tenets of the contemporary Ancient Iranian religion, becoming the spiritual founder of Zoroastrianism. In the oldest Zoroastrian scriptures, the Gathas, which he is traditionally believed to have authored, he is described as a preacher and a poet-prophet. Some have claimed, with much scholarly controversy, to find his influence in Heraclitus, Plato, Pythagoras, and, perhaps less controversially, in the Abrahamic religions, including Judaism, Christianity, and Islam, particularly through concepts of cosmic dualism and personal morality.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Yazd%2C_Templo_del_Fuego_%282000%29_02_%28cropped%29.jpg/330px-Yazd%2C_Templo_del_Fuego_%282000%29_02_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "Unknown, traditionally c.\u2009624\u2013599 BC, Possibly Bactra (Balkh, modern-day Afghanistan)"
+      },
+      {
+        label: "Died",
+        value: "Unknown, traditionally c.\u2009547\u2013522 BC (age 77)"
+      },
+      {
+        label: "Spouse",
+        value: "Two unnamed wivesHv\u014Dvi"
+      },
+      {
+        label: "Children",
+        value: "Isat V\xE2straUrvatat NaraHvare ChithraFreniThritiPouruchista"
+      },
+      {
+        label: "Parents",
+        value: "PourushaspaDugd\u014Dw"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Spiritual founder and prophet of ZoroastrianismComposer of the GathasProphet in the Bah\xE1'\xED Faith, Ahmadiyya, and the Ahmadi Religion"
+      }
+    ],
+    sections: [
+      {
+        heading: "Name and etymology",
+        summary: `Zoroaster's name in his native language, Avestan, was probably Zara\u03B8u\u0161tra. His translated name, "Zoroaster", derives from a later (5th century BC) Greek adaptation, Z\u014Droastr\u0113s (\u0396\u03C9\u03C1\u03BF\u03AC\u03C3\u03C4\u03C1\u03B7\u03C2), as used in Xanthus's Lydiaca (Fragment 32) and in Plato's First Alcibiades (122a1). This form appears subsequently in the Latin Z\u014Droastr\u0113s, and, in later Greek orthographies, as \u0396\u03C9\u03C1\u03BF\u03AC\u03C3\u03C4\u03C1\u03B9\u03C2, Z\u014Droastris. The Greek form of the name appears to be based on a phonetic adaptation or semantic substitution of Avestan zara\u03B8- with the Greek \u03B6\u03C9\u03C1\u03CC\u03C2, z\u014Dros (literally 'undiluted') and the BMAC substrate -u\u0161tra with \u1F04\u03C3\u03C4\u03C1\u03BF\u03BD, astron, 'star'.`,
+        items: [
+          "'with angry/furious camels': from Avestan *zarant-, 'angry, furious'.",
+          "'who is driving camels' or 'who is fostering/cherishing camels': related to Avestan zar\u0161-, 'to drag'.",
+          "Mayrhofer (1977) proposed an etymology of 'who is desiring camels' or 'longing for camels' and related to Vedic Sanskrit har-, 'to like', and perhaps (though ambiguous) also to Avestan zara-.",
+          "'with yellow camels': parallel to Younger Avestan zairi-."
+        ]
+      },
+      {
+        heading: "Date",
+        summary: "There is no consensus on the dating of Zoroaster. The Avesta gives no direct information about it, while historical sources are conflicting. Some scholars base their date reconstruction on the Proto-Indo-Iranian language and Proto-Indo-Iranian religion, while others use internal evidence. While many scholars today consider a date around 1000 BC to be the most likely, others still consider a range of dates between 1500 and 500 BC to be possible.",
+        items: []
+      },
+      {
+        heading: "Place",
+        summary: "The birthplace of Zoroaster is also unknown, and the language of the Gathas is not similar to the proposed north-western and north-eastern regional dialects of Persia. It is also suggested that he was born in one of the two areas and later lived in the other area.",
+        items: []
+      },
+      {
+        heading: "Life",
+        summary: "Zoroaster is recorded as the son of Pourushaspa of the Spitama family, and Dugd\u014Dw, while his great-grandfather was Ha\u0113\u010Dataspa. All the names appear appropriate to the nomadic tradition. His father's name means 'possessing gray horses' (with the word aspa meaning 'horse'), while his mother's means 'milkmaid'. According to the tradition, he had four brothers, two older and two younger, whose names are given in much later Pahlavi work.",
+        items: []
+      },
+      {
+        heading: "Influences",
+        summary: "Athanasius Kircher identified Zoroaster with Ham. The French figurist Jesuit missionary to China Joachim Bouvet thought that Zoroaster, the Chinese cultural hero Fuxi and Hermes Trismegistus were actually the Biblical patriarch Enoch. Some legends identify Baruch with Zoroaster.",
+        items: []
+      },
+      {
+        heading: "Philosophy",
+        summary: "In the Gathas, Zoroaster sees the human condition as the mental struggle between a\u0161a and druj. The cardinal concept of a\u0161a\u2014which is highly nuanced and difficult to translate\u2014is at the foundation of all Zoroastrian doctrine, including that of Ahura Mazda (who is a\u0161a), creation (that is a\u0161a), existence (that is a\u0161a), and as the condition for free will.",
+        items: []
+      },
+      {
+        heading: "Iconography",
+        summary: "Beginning in the nineteenth century, Zoroaster was visually depicted with physical attributes borrowed from other faith traditions. He is rarely depicted as looking directly at the viewer; instead, he appears to be looking slightly upwards, as if beseeching. He is almost always depicted with a beard along with other factors bearing similarities to 19th-century portraits of Jesus.",
+        items: []
+      },
+      {
+        heading: "Western references to Zoroaster and Zoroastrianism",
+        summary: 'The Greeks\u2014in the Hellenistic sense of the term\u2014had an understanding of Zoroaster as expressed by Plutarch, Diogenes Laertius, and Agathias that saw him, at the core, to be the "prophet and founder of the religion of the Iranian peoples," Beck notes that "the rest was mostly fantasy". Zoroaster was set in the ancient past, six to seven millennia before the Common Era, and was described as a king of Bactria or a Babylonian (or teacher of Babylonians), and with a biography typical of a Neopythagorean sage, i.e. having a mission preceded by ascetic withdrawal and enlightenment. However, at first mentioned in the context of dualism, in Moralia, Plutarch presents Zoroaster as "Zaratras," not realizing the two to be the same, and he is described as a "teacher of Pythagoras".',
+        items: []
+      },
+      {
+        heading: "Notable influence on modern Western culture",
+        summary: "A sculpture of Zoroaster by Edward Clark Potter, representing ancient Persian judicial wisdom and dating to 1896, towers over the Appellate Division Courthouse of New York State at East 25th Street and Madison Avenue in Manhattan. A sculpture of Zoroaster is included among other prominent religious figures in a procession representing major faith traditions on the south side of Rockefeller Memorial Chapel at the University of Chicago. It features figures from Abraham to the Reformation, illustrating a historical continuum of religious thought that includes the likes of Zoroaster, Moses, Plato and others.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Name and etymology",
+        note: "Zoroaster's name in his native language, Avestan, was probably Zara\u03B8u\u0161tra."
+      },
+      {
+        title: "Date",
+        note: "There is no consensus on the dating of Zoroaster."
+      },
+      {
+        title: "Place",
+        note: "The birthplace of Zoroaster is also unknown, and the language of the Gathas is not similar to the proposed north-western and north-eastern regional dialects of Persia."
+      },
+      {
+        title: "Life",
+        note: "Zoroaster is recorded as the son of Pourushaspa of the Spitama family, and Dugd\u014Dw, while his great-grandfather was Ha\u0113\u010Dataspa."
+      },
+      {
+        title: "Influences",
+        note: "Athanasius Kircher identified Zoroaster with Ham."
+      },
+      {
+        title: "Philosophy",
+        note: "In the Gathas, Zoroaster sees the human condition as the mental struggle between a\u0161a and druj."
+      },
+      {
+        title: "Iconography",
+        note: "Beginning in the nineteenth century, Zoroaster was visually depicted with physical attributes borrowed from other faith traditions."
+      },
+      {
+        title: "Western references to Zoroaster and Zoroastrianism",
+        note: 'The Greeks\u2014in the Hellenistic sense of the term\u2014had an understanding of Zoroaster as expressed by Plutarch, Diogenes Laertius, and Agathias that saw him, at the core, to be the "prophet and founder of the religion of the Iranian peoples," Beck notes that "the rest was mostly fantasy".'
+      },
+      {
+        title: "Notable influence on modern Western culture",
+        note: "A sculpture of Zoroaster by Edward Clark Potter, representing ancient Persian judicial wisdom and dating to 1896, towers over the Appellate Division Courthouse of New York State at East 25th Street and Madison Avenue in Manhattan."
+      }
+    ]
+  },
+  "Shadrach (Hananiah)": {
+    title: "Shadrach, Meshach, and Abednego",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Shadrach%2C_Meshach%2C_and_Abednego",
+    description: `Shadrach, Meshach, and Abednego are figures from chapter 3 of the biblical Book of Daniel. In the narrative, the three Jewish men are thrown into a fiery furnace by Nebuchadnezzar II, King of Babylon for refusing to bow to the king's image. The three are preserved from harm and the king sees four men walking in the flames, "the fourth... like a son of God". They are first mentioned in Daniel 1, where alongside Daniel they are brought to Babylon to study Chaldean Aramaic language and literature with a view to serving at the King's court, and their Hebrew names are replaced with Babylonian names.`,
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Roslin5.jpg/330px-Roslin5.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Venerated\xA0in",
+        value: "Judaism, Christianity, Islam"
+      },
+      {
+        label: "Major shrine",
+        value: "Tomb of Daniel, Susa"
+      },
+      {
+        label: "Feast",
+        value: "16 December \u2013 Roman Rite, 17 December \u2013 Byzantine Rite, Tuesday after fourth Sunday of Pentecost \u2013 Armenian Rite, January 24 - Mozarabic Rite"
+      },
+      {
+        label: "Attributes",
+        value: "Three men in the fiery furnace"
+      }
+    ],
+    sections: [
+      {
+        heading: "Summary",
+        summary: 'King Nebuchadnezzar set up a golden image in the plain of Dura and commanded that all his officials bow before it. All who failed to do so would be thrown into a furnace. Certain officials informed the king that the three Jewish youths Hananiah, Mishael, and Azariah, who bore the Babylonian names Shadrach, Meshach, and Abednego, and whom the king had appointed to high office in Babylon, were refusing to worship the golden statue. The three were brought before Nebuchadnezzar, where they informed the king that God would be with them. Nebuchadnezzar commanded that they be thrown into the fiery furnace, heated seven times hotter than normal, but when the king looked, he saw four figures walking unharmed in the flames, the fourth "like a son of God." Seeing this, Nebuchadnezzar brought the youths out of the flames, and the fire had not had any effect on their bodies. The hair of their heads was not singed, their cloaks were not harmed, and no smell of fire was on them. The king then promoted them to high office, decreeing that anyone who spoke against God should be torn limb from limb.',
+        items: []
+      },
+      {
+        heading: "Composition and structure",
+        summary: "It is generally accepted that the Book of Daniel originated as a collection of stories among the Jewish community in Babylon and Mesopotamia in the Persian and early Hellenistic periods (5th to 3rd centuries BCE), expanded by the visions of chapters 7\u201312 in the Maccabean era (mid-2nd century). Some researchers have concluded that Daniel is a legendary figure. It is possible that the name Daniel was chosen for the hero of the book because of his reputation as a wise seer in Hebrew tradition. The tales are in the voice of an anonymous narrator, except for chapter 4, which is in the form of a letter from king Nebuchadnezzar. Chapter 3 is unique in that Daniel does not appear in it.",
+        items: [
+          "A. (2:4b-49) \u2013 A dream of four kingdoms replaced by a fifth\nB. (3:1\u201330) \u2013 Daniel's three friends in the fiery furnace\nC. (4:1\u201337) \u2013 Daniel interprets a dream for Nebuchadnezzar\nC'. (5:1\u201331) \u2013 Daniel interprets the handwriting on the wall for Belshazzar\nB'. (6:1\u201328) \u2013 Daniel in the lions' den",
+          "A'. (7:1\u201328) \u2013 A vision of four world kingdoms replaced by a fifth"
+        ]
+      },
+      {
+        heading: "Genre and themes",
+        summary: `The legendary nature of the story is revealed by the liberal use of hyperbole \u2013 the size of the statue, the use of every kind of music, the destruction of the executioners, and the king's rage followed by his confession of the superiority of the god of Israel. The plot is a type known in folklore as "the disgrace and rehabilitation of a minister," the plot of which involves a man in a state of prosperity who is sentenced to death or prison by the plots of his enemies but vindicated and restored to honor.`,
+        items: []
+      },
+      {
+        heading: "Interpretation",
+        summary: "Daniel's absence from the tale of Shadrach, Meshach and Abednego suggests that it may originally have been an independent story. According to the Talmud (Sanhedrin 93a), Daniel was out of the country at the time of the incident.",
+        items: []
+      },
+      {
+        heading: "Christian liturgy",
+        summary: 'The Greek Septuagint version of Daniel 3 includes the deuterocanonical Prayer of Azariah and Song of the Three Holy Children. The song is alluded to in odes seven and eight of the canon, a hymn sung in the matins service and on other occasions in the Eastern Orthodox Church and Byzantine Catholic Church. The reading of the story of the fiery furnace, including the song, is prescribed for the vesperal Divine Liturgy celebrated by the Orthodox and Byzantine Catholics on Holy Saturday. The Latin canticle Benedicite, opera omnia Domini is based on the "song of the three youths". In the Roman Catholic Church, it is used at Lauds for Sundays and feast days. In the Anglican Book of Common Prayer, it is an alternative to the Te Deum at Morning Prayer, and is often used during Lent and Advent.',
+        items: []
+      },
+      {
+        heading: "Tombs",
+        summary: "In the Kirkuk Citadel in Northern Iraq, there are two tombs that are claimed to house the remains of Hananiah and Azariah (Arabized as Hunayn and 'Uzayr) inside the Mosque of the Prophet Daniel. However, the third tomb is claimed to be not that of Mishael, but rather Daniel. The site used to be a synagogue but was then turned into a church and finally into a mosque.",
+        items: []
+      },
+      {
+        heading: "In modern Western culture",
+        summary: "",
+        items: [
+          `1762: Tristram Shandy by Laurence Sterne contains a fanciful anecdote (Vol 4. Chapter XXI) about Francis I of France deciding to grant a favour to Switzerland by allowing the "republick" to stand as godparent to his next child: the names proposed by the Swiss for the child are "Shadrach, Mesech, and Abed-nego". Judith Hawley's note in the Norton Critical Edition suggests that this is because the three defied the power of a king.`,
+          `1865: In Anthony Trollope's novel Miss Mackenzie, the protagonist John Ball is a director of two ironically named insurance companies, the Shadrach Fire Assurance Office and the Abednego Life Office. Literary scholar A. O. J. Cockshut called this "Another example of Trollope's fondness for jokes about names." The Spectator in its original unsigned review of the novel in 1865 noted "how happy is Mr. Trollope's humor in inventing names!"`,
+          "1954: Flannery O\u2019Connor\u2019s short story \u201CA Circle in the Fire\u201D closes with an allusion that explains the story\u2019s title: \u201C\u2026a few wild high shrieks of joy as if the prophets were dancing in the fiery furnace, in the circle the angel had cleared for them.\u201D",
+          '1963: Martin Luther King Jr. references them in his "Letter from Birmingham Jail".',
+          "1915\u20131974: Bertie Wooster, a central character in many novels and short stories by British comic author P. G. Wodehouse, makes occasional reference to the three figures, having learned about them in school in the course of winning a prize for scripture knowledge.",
+          "1961: R. F. Delderfield wrote a novel called Stop at a Winner about Abednego Pascoe who survives the furnace of World War II; his two older brothers were named Shadrach and Meshach.",
+          "1976: Robert Silverberg wrote a novel based on this story, called Shadrach in the Furnace.",
+          `1989: "Scintillant Orange", a story in William Vollmann's collection The Rainbow Stories, is an elaboration of the S, M, & A tale.`,
+          "1734, revised 1774: Il Cantico de' tre fanciulli, cantata by Johann Adolph Hasse (1699\u20131783)",
+          "1885: The Three Holy Children, oratorio by Charles Villiers Stanford",
+          '1930s: "Shadrack", popular song by Robert MacGimsey, performed by several singers including Louis Armstrong',
+          "1955\u20131956: Gesang der J\xFCnglinge, electronic music by Karlheinz Stockhausen",
+          "1966: The Burning Fiery Furnace, a music drama by Benjamin Britten",
+          '1968: A song, "The Fourth Man in the Fire", by Arthur "Guitar Boogie" Smith, recorded by The Statler Brothers and by Johnny Cash (1969)',
+          "1972: It's Cool in the Furnace, an album of songs written by Buryl Red and Grace Hawthorne followed by a 1973 musical still performed by churches and religious schools",
+          '1974: "Loose Booty", recorded by Sly and the Family Stone',
+          '1976: "Abendigo", recorded by The Abyssinians',
+          '1979: "Survival", recorded by Bob Marley and the Wailers, "...like Shadrach, Mishrach and Abednego, thrown in the fire but they never get burn..."',
+          '1980: "Never Get Burn", recorded by The Twinkle Brothers',
+          '1989: "Shadrach" by Beastie Boys',
+          '1999: "Never Bow Down", recorded by Third Day',
+          `2005: "Abendigo", cover by Sin\xE9ad O'Connor of original by The Abyssinians`,
+          '2007: "Burn Us Up", recorded by Shane and Shane',
+          '2010: "A Good Name" by Shad',
+          '2010: "Onward" by Greydon Square',
+          "2011: Meshach Dreams Back by Jane Siberry",
+          '2012: "Into the Fire" by Foy Vance',
+          '2019: "Another in the Fire", recorded by Hillsong United',
+          '2021: "Fye Fye", recorded by Tobe Nwigwe',
+          '2023: "Khalas", recorded by Swizz Beats feat. Jay Electronica',
+          `2024: "That's Who I Praise" by Brandon Lake`,
+          `1995: "Rack, Shack & Benny", an animated video in the VeggieTales franchise. In this version, to keep it child friendly and simplify the story, the title characters \u2013 whose names are shortened versions of Shadrach, Meshach, and Abednego, respectively \u2013 work in a chocolate factory, and they refuse to worship a giant chocolate bunny or sing "The Bunny Song", which declares that the chocolate bunny is more important than anything else. They are thrown into the factory's furnace but survive, similarly to how the biblical story tells the tale. This video also marks the first appearance of one of series\u2019 main cast, Mr. Nezzer, who appears in the video as the main antagonist. His full name, \u201CNebby K. Nezzer\u201D, is a pun on the name of Nebuchadnezzar II, and it has remained as his official name.`,
+          "1945: Ivan the Terrible, a Soviet film by the director Sergei Eisenstein. On the minute 2:13:08 the Boyars, and clergy who oppose the Czar Ivan IV have staged a theatrical performance of this biblical story inside a cathedral, in order to spite the Czar by implying that he has become a tyrant, just like the biblical king Nebuchadnezzar."
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Summary",
+        note: "King Nebuchadnezzar set up a golden image in the plain of Dura and commanded that all his officials bow before it."
+      },
+      {
+        title: "Composition and structure",
+        note: "It is generally accepted that the Book of Daniel originated as a collection of stories among the Jewish community in Babylon and Mesopotamia in the Persian and early Hellenistic periods (5th to 3rd centuries BCE), expanded by the visions of chapters 7\u201312 in the Maccabean era (mid-2nd century)."
+      },
+      {
+        title: "Genre and themes",
+        note: "The legendary nature of the story is revealed by the liberal use of hyperbole \u2013 the size of the statue, the use of every kind of music, the destruction of the executioners, and the king's rage followed by his confession of the superiority of the god of Israel."
+      },
+      {
+        title: "Interpretation",
+        note: "Daniel's absence from the tale of Shadrach, Meshach and Abednego suggests that it may originally have been an independent story."
+      },
+      {
+        title: "Christian liturgy",
+        note: "The Greek Septuagint version of Daniel 3 includes the deuterocanonical Prayer of Azariah and Song of the Three Holy Children."
+      },
+      {
+        title: "Tombs",
+        note: "In the Kirkuk Citadel in Northern Iraq, there are two tombs that are claimed to house the remains of Hananiah and Azariah (Arabized as Hunayn and 'Uzayr) inside the Mosque of the Prophet Daniel."
+      }
+    ]
+  },
+  "Meshach (Mishael)": {
+    title: "Shadrach, Meshach, and Abednego",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Shadrach%2C_Meshach%2C_and_Abednego",
+    description: `Shadrach, Meshach, and Abednego are figures from chapter 3 of the biblical Book of Daniel. In the narrative, the three Jewish men are thrown into a fiery furnace by Nebuchadnezzar II, King of Babylon for refusing to bow to the king's image. The three are preserved from harm and the king sees four men walking in the flames, "the fourth... like a son of God". They are first mentioned in Daniel 1, where alongside Daniel they are brought to Babylon to study Chaldean Aramaic language and literature with a view to serving at the King's court, and their Hebrew names are replaced with Babylonian names.`,
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Roslin5.jpg/330px-Roslin5.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Venerated\xA0in",
+        value: "Judaism, Christianity, Islam"
+      },
+      {
+        label: "Major shrine",
+        value: "Tomb of Daniel, Susa"
+      },
+      {
+        label: "Feast",
+        value: "16 December \u2013 Roman Rite, 17 December \u2013 Byzantine Rite, Tuesday after fourth Sunday of Pentecost \u2013 Armenian Rite, January 24 - Mozarabic Rite"
+      },
+      {
+        label: "Attributes",
+        value: "Three men in the fiery furnace"
+      }
+    ],
+    sections: [
+      {
+        heading: "Summary",
+        summary: 'King Nebuchadnezzar set up a golden image in the plain of Dura and commanded that all his officials bow before it. All who failed to do so would be thrown into a furnace. Certain officials informed the king that the three Jewish youths Hananiah, Mishael, and Azariah, who bore the Babylonian names Shadrach, Meshach, and Abednego, and whom the king had appointed to high office in Babylon, were refusing to worship the golden statue. The three were brought before Nebuchadnezzar, where they informed the king that God would be with them. Nebuchadnezzar commanded that they be thrown into the fiery furnace, heated seven times hotter than normal, but when the king looked, he saw four figures walking unharmed in the flames, the fourth "like a son of God." Seeing this, Nebuchadnezzar brought the youths out of the flames, and the fire had not had any effect on their bodies. The hair of their heads was not singed, their cloaks were not harmed, and no smell of fire was on them. The king then promoted them to high office, decreeing that anyone who spoke against God should be torn limb from limb.',
+        items: []
+      },
+      {
+        heading: "Composition and structure",
+        summary: "It is generally accepted that the Book of Daniel originated as a collection of stories among the Jewish community in Babylon and Mesopotamia in the Persian and early Hellenistic periods (5th to 3rd centuries BCE), expanded by the visions of chapters 7\u201312 in the Maccabean era (mid-2nd century). Some researchers have concluded that Daniel is a legendary figure. It is possible that the name Daniel was chosen for the hero of the book because of his reputation as a wise seer in Hebrew tradition. The tales are in the voice of an anonymous narrator, except for chapter 4, which is in the form of a letter from king Nebuchadnezzar. Chapter 3 is unique in that Daniel does not appear in it.",
+        items: [
+          "A. (2:4b-49) \u2013 A dream of four kingdoms replaced by a fifth\nB. (3:1\u201330) \u2013 Daniel's three friends in the fiery furnace\nC. (4:1\u201337) \u2013 Daniel interprets a dream for Nebuchadnezzar\nC'. (5:1\u201331) \u2013 Daniel interprets the handwriting on the wall for Belshazzar\nB'. (6:1\u201328) \u2013 Daniel in the lions' den",
+          "A'. (7:1\u201328) \u2013 A vision of four world kingdoms replaced by a fifth"
+        ]
+      },
+      {
+        heading: "Genre and themes",
+        summary: `The legendary nature of the story is revealed by the liberal use of hyperbole \u2013 the size of the statue, the use of every kind of music, the destruction of the executioners, and the king's rage followed by his confession of the superiority of the god of Israel. The plot is a type known in folklore as "the disgrace and rehabilitation of a minister," the plot of which involves a man in a state of prosperity who is sentenced to death or prison by the plots of his enemies but vindicated and restored to honor.`,
+        items: []
+      },
+      {
+        heading: "Interpretation",
+        summary: "Daniel's absence from the tale of Shadrach, Meshach and Abednego suggests that it may originally have been an independent story. According to the Talmud (Sanhedrin 93a), Daniel was out of the country at the time of the incident.",
+        items: []
+      },
+      {
+        heading: "Christian liturgy",
+        summary: 'The Greek Septuagint version of Daniel 3 includes the deuterocanonical Prayer of Azariah and Song of the Three Holy Children. The song is alluded to in odes seven and eight of the canon, a hymn sung in the matins service and on other occasions in the Eastern Orthodox Church and Byzantine Catholic Church. The reading of the story of the fiery furnace, including the song, is prescribed for the vesperal Divine Liturgy celebrated by the Orthodox and Byzantine Catholics on Holy Saturday. The Latin canticle Benedicite, opera omnia Domini is based on the "song of the three youths". In the Roman Catholic Church, it is used at Lauds for Sundays and feast days. In the Anglican Book of Common Prayer, it is an alternative to the Te Deum at Morning Prayer, and is often used during Lent and Advent.',
+        items: []
+      },
+      {
+        heading: "Tombs",
+        summary: "In the Kirkuk Citadel in Northern Iraq, there are two tombs that are claimed to house the remains of Hananiah and Azariah (Arabized as Hunayn and 'Uzayr) inside the Mosque of the Prophet Daniel. However, the third tomb is claimed to be not that of Mishael, but rather Daniel. The site used to be a synagogue but was then turned into a church and finally into a mosque.",
+        items: []
+      },
+      {
+        heading: "In modern Western culture",
+        summary: "",
+        items: [
+          `1762: Tristram Shandy by Laurence Sterne contains a fanciful anecdote (Vol 4. Chapter XXI) about Francis I of France deciding to grant a favour to Switzerland by allowing the "republick" to stand as godparent to his next child: the names proposed by the Swiss for the child are "Shadrach, Mesech, and Abed-nego". Judith Hawley's note in the Norton Critical Edition suggests that this is because the three defied the power of a king.`,
+          `1865: In Anthony Trollope's novel Miss Mackenzie, the protagonist John Ball is a director of two ironically named insurance companies, the Shadrach Fire Assurance Office and the Abednego Life Office. Literary scholar A. O. J. Cockshut called this "Another example of Trollope's fondness for jokes about names." The Spectator in its original unsigned review of the novel in 1865 noted "how happy is Mr. Trollope's humor in inventing names!"`,
+          "1954: Flannery O\u2019Connor\u2019s short story \u201CA Circle in the Fire\u201D closes with an allusion that explains the story\u2019s title: \u201C\u2026a few wild high shrieks of joy as if the prophets were dancing in the fiery furnace, in the circle the angel had cleared for them.\u201D",
+          '1963: Martin Luther King Jr. references them in his "Letter from Birmingham Jail".',
+          "1915\u20131974: Bertie Wooster, a central character in many novels and short stories by British comic author P. G. Wodehouse, makes occasional reference to the three figures, having learned about them in school in the course of winning a prize for scripture knowledge.",
+          "1961: R. F. Delderfield wrote a novel called Stop at a Winner about Abednego Pascoe who survives the furnace of World War II; his two older brothers were named Shadrach and Meshach.",
+          "1976: Robert Silverberg wrote a novel based on this story, called Shadrach in the Furnace.",
+          `1989: "Scintillant Orange", a story in William Vollmann's collection The Rainbow Stories, is an elaboration of the S, M, & A tale.`,
+          "1734, revised 1774: Il Cantico de' tre fanciulli, cantata by Johann Adolph Hasse (1699\u20131783)",
+          "1885: The Three Holy Children, oratorio by Charles Villiers Stanford",
+          '1930s: "Shadrack", popular song by Robert MacGimsey, performed by several singers including Louis Armstrong',
+          "1955\u20131956: Gesang der J\xFCnglinge, electronic music by Karlheinz Stockhausen",
+          "1966: The Burning Fiery Furnace, a music drama by Benjamin Britten",
+          '1968: A song, "The Fourth Man in the Fire", by Arthur "Guitar Boogie" Smith, recorded by The Statler Brothers and by Johnny Cash (1969)',
+          "1972: It's Cool in the Furnace, an album of songs written by Buryl Red and Grace Hawthorne followed by a 1973 musical still performed by churches and religious schools",
+          '1974: "Loose Booty", recorded by Sly and the Family Stone',
+          '1976: "Abendigo", recorded by The Abyssinians',
+          '1979: "Survival", recorded by Bob Marley and the Wailers, "...like Shadrach, Mishrach and Abednego, thrown in the fire but they never get burn..."',
+          '1980: "Never Get Burn", recorded by The Twinkle Brothers',
+          '1989: "Shadrach" by Beastie Boys',
+          '1999: "Never Bow Down", recorded by Third Day',
+          `2005: "Abendigo", cover by Sin\xE9ad O'Connor of original by The Abyssinians`,
+          '2007: "Burn Us Up", recorded by Shane and Shane',
+          '2010: "A Good Name" by Shad',
+          '2010: "Onward" by Greydon Square',
+          "2011: Meshach Dreams Back by Jane Siberry",
+          '2012: "Into the Fire" by Foy Vance',
+          '2019: "Another in the Fire", recorded by Hillsong United',
+          '2021: "Fye Fye", recorded by Tobe Nwigwe',
+          '2023: "Khalas", recorded by Swizz Beats feat. Jay Electronica',
+          `2024: "That's Who I Praise" by Brandon Lake`,
+          `1995: "Rack, Shack & Benny", an animated video in the VeggieTales franchise. In this version, to keep it child friendly and simplify the story, the title characters \u2013 whose names are shortened versions of Shadrach, Meshach, and Abednego, respectively \u2013 work in a chocolate factory, and they refuse to worship a giant chocolate bunny or sing "The Bunny Song", which declares that the chocolate bunny is more important than anything else. They are thrown into the factory's furnace but survive, similarly to how the biblical story tells the tale. This video also marks the first appearance of one of series\u2019 main cast, Mr. Nezzer, who appears in the video as the main antagonist. His full name, \u201CNebby K. Nezzer\u201D, is a pun on the name of Nebuchadnezzar II, and it has remained as his official name.`,
+          "1945: Ivan the Terrible, a Soviet film by the director Sergei Eisenstein. On the minute 2:13:08 the Boyars, and clergy who oppose the Czar Ivan IV have staged a theatrical performance of this biblical story inside a cathedral, in order to spite the Czar by implying that he has become a tyrant, just like the biblical king Nebuchadnezzar."
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Summary",
+        note: "King Nebuchadnezzar set up a golden image in the plain of Dura and commanded that all his officials bow before it."
+      },
+      {
+        title: "Composition and structure",
+        note: "It is generally accepted that the Book of Daniel originated as a collection of stories among the Jewish community in Babylon and Mesopotamia in the Persian and early Hellenistic periods (5th to 3rd centuries BCE), expanded by the visions of chapters 7\u201312 in the Maccabean era (mid-2nd century)."
+      },
+      {
+        title: "Genre and themes",
+        note: "The legendary nature of the story is revealed by the liberal use of hyperbole \u2013 the size of the statue, the use of every kind of music, the destruction of the executioners, and the king's rage followed by his confession of the superiority of the god of Israel."
+      },
+      {
+        title: "Interpretation",
+        note: "Daniel's absence from the tale of Shadrach, Meshach and Abednego suggests that it may originally have been an independent story."
+      },
+      {
+        title: "Christian liturgy",
+        note: "The Greek Septuagint version of Daniel 3 includes the deuterocanonical Prayer of Azariah and Song of the Three Holy Children."
+      },
+      {
+        title: "Tombs",
+        note: "In the Kirkuk Citadel in Northern Iraq, there are two tombs that are claimed to house the remains of Hananiah and Azariah (Arabized as Hunayn and 'Uzayr) inside the Mosque of the Prophet Daniel."
+      }
+    ]
+  },
+  "Abednego (Azariah)": {
+    title: "Shadrach, Meshach, and Abednego",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Shadrach%2C_Meshach%2C_and_Abednego",
+    description: `Shadrach, Meshach, and Abednego are figures from chapter 3 of the biblical Book of Daniel. In the narrative, the three Jewish men are thrown into a fiery furnace by Nebuchadnezzar II, King of Babylon for refusing to bow to the king's image. The three are preserved from harm and the king sees four men walking in the flames, "the fourth... like a son of God". They are first mentioned in Daniel 1, where alongside Daniel they are brought to Babylon to study Chaldean Aramaic language and literature with a view to serving at the King's court, and their Hebrew names are replaced with Babylonian names.`,
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Roslin5.jpg/330px-Roslin5.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Venerated\xA0in",
+        value: "Judaism, Christianity, Islam"
+      },
+      {
+        label: "Major shrine",
+        value: "Tomb of Daniel, Susa"
+      },
+      {
+        label: "Feast",
+        value: "16 December \u2013 Roman Rite, 17 December \u2013 Byzantine Rite, Tuesday after fourth Sunday of Pentecost \u2013 Armenian Rite, January 24 - Mozarabic Rite"
+      },
+      {
+        label: "Attributes",
+        value: "Three men in the fiery furnace"
+      }
+    ],
+    sections: [
+      {
+        heading: "Summary",
+        summary: 'King Nebuchadnezzar set up a golden image in the plain of Dura and commanded that all his officials bow before it. All who failed to do so would be thrown into a furnace. Certain officials informed the king that the three Jewish youths Hananiah, Mishael, and Azariah, who bore the Babylonian names Shadrach, Meshach, and Abednego, and whom the king had appointed to high office in Babylon, were refusing to worship the golden statue. The three were brought before Nebuchadnezzar, where they informed the king that God would be with them. Nebuchadnezzar commanded that they be thrown into the fiery furnace, heated seven times hotter than normal, but when the king looked, he saw four figures walking unharmed in the flames, the fourth "like a son of God." Seeing this, Nebuchadnezzar brought the youths out of the flames, and the fire had not had any effect on their bodies. The hair of their heads was not singed, their cloaks were not harmed, and no smell of fire was on them. The king then promoted them to high office, decreeing that anyone who spoke against God should be torn limb from limb.',
+        items: []
+      },
+      {
+        heading: "Composition and structure",
+        summary: "It is generally accepted that the Book of Daniel originated as a collection of stories among the Jewish community in Babylon and Mesopotamia in the Persian and early Hellenistic periods (5th to 3rd centuries BCE), expanded by the visions of chapters 7\u201312 in the Maccabean era (mid-2nd century). Some researchers have concluded that Daniel is a legendary figure. It is possible that the name Daniel was chosen for the hero of the book because of his reputation as a wise seer in Hebrew tradition. The tales are in the voice of an anonymous narrator, except for chapter 4, which is in the form of a letter from king Nebuchadnezzar. Chapter 3 is unique in that Daniel does not appear in it.",
+        items: [
+          "A. (2:4b-49) \u2013 A dream of four kingdoms replaced by a fifth\nB. (3:1\u201330) \u2013 Daniel's three friends in the fiery furnace\nC. (4:1\u201337) \u2013 Daniel interprets a dream for Nebuchadnezzar\nC'. (5:1\u201331) \u2013 Daniel interprets the handwriting on the wall for Belshazzar\nB'. (6:1\u201328) \u2013 Daniel in the lions' den",
+          "A'. (7:1\u201328) \u2013 A vision of four world kingdoms replaced by a fifth"
+        ]
+      },
+      {
+        heading: "Genre and themes",
+        summary: `The legendary nature of the story is revealed by the liberal use of hyperbole \u2013 the size of the statue, the use of every kind of music, the destruction of the executioners, and the king's rage followed by his confession of the superiority of the god of Israel. The plot is a type known in folklore as "the disgrace and rehabilitation of a minister," the plot of which involves a man in a state of prosperity who is sentenced to death or prison by the plots of his enemies but vindicated and restored to honor.`,
+        items: []
+      },
+      {
+        heading: "Interpretation",
+        summary: "Daniel's absence from the tale of Shadrach, Meshach and Abednego suggests that it may originally have been an independent story. According to the Talmud (Sanhedrin 93a), Daniel was out of the country at the time of the incident.",
+        items: []
+      },
+      {
+        heading: "Christian liturgy",
+        summary: 'The Greek Septuagint version of Daniel 3 includes the deuterocanonical Prayer of Azariah and Song of the Three Holy Children. The song is alluded to in odes seven and eight of the canon, a hymn sung in the matins service and on other occasions in the Eastern Orthodox Church and Byzantine Catholic Church. The reading of the story of the fiery furnace, including the song, is prescribed for the vesperal Divine Liturgy celebrated by the Orthodox and Byzantine Catholics on Holy Saturday. The Latin canticle Benedicite, opera omnia Domini is based on the "song of the three youths". In the Roman Catholic Church, it is used at Lauds for Sundays and feast days. In the Anglican Book of Common Prayer, it is an alternative to the Te Deum at Morning Prayer, and is often used during Lent and Advent.',
+        items: []
+      },
+      {
+        heading: "Tombs",
+        summary: "In the Kirkuk Citadel in Northern Iraq, there are two tombs that are claimed to house the remains of Hananiah and Azariah (Arabized as Hunayn and 'Uzayr) inside the Mosque of the Prophet Daniel. However, the third tomb is claimed to be not that of Mishael, but rather Daniel. The site used to be a synagogue but was then turned into a church and finally into a mosque.",
+        items: []
+      },
+      {
+        heading: "In modern Western culture",
+        summary: "",
+        items: [
+          `1762: Tristram Shandy by Laurence Sterne contains a fanciful anecdote (Vol 4. Chapter XXI) about Francis I of France deciding to grant a favour to Switzerland by allowing the "republick" to stand as godparent to his next child: the names proposed by the Swiss for the child are "Shadrach, Mesech, and Abed-nego". Judith Hawley's note in the Norton Critical Edition suggests that this is because the three defied the power of a king.`,
+          `1865: In Anthony Trollope's novel Miss Mackenzie, the protagonist John Ball is a director of two ironically named insurance companies, the Shadrach Fire Assurance Office and the Abednego Life Office. Literary scholar A. O. J. Cockshut called this "Another example of Trollope's fondness for jokes about names." The Spectator in its original unsigned review of the novel in 1865 noted "how happy is Mr. Trollope's humor in inventing names!"`,
+          "1954: Flannery O\u2019Connor\u2019s short story \u201CA Circle in the Fire\u201D closes with an allusion that explains the story\u2019s title: \u201C\u2026a few wild high shrieks of joy as if the prophets were dancing in the fiery furnace, in the circle the angel had cleared for them.\u201D",
+          '1963: Martin Luther King Jr. references them in his "Letter from Birmingham Jail".',
+          "1915\u20131974: Bertie Wooster, a central character in many novels and short stories by British comic author P. G. Wodehouse, makes occasional reference to the three figures, having learned about them in school in the course of winning a prize for scripture knowledge.",
+          "1961: R. F. Delderfield wrote a novel called Stop at a Winner about Abednego Pascoe who survives the furnace of World War II; his two older brothers were named Shadrach and Meshach.",
+          "1976: Robert Silverberg wrote a novel based on this story, called Shadrach in the Furnace.",
+          `1989: "Scintillant Orange", a story in William Vollmann's collection The Rainbow Stories, is an elaboration of the S, M, & A tale.`,
+          "1734, revised 1774: Il Cantico de' tre fanciulli, cantata by Johann Adolph Hasse (1699\u20131783)",
+          "1885: The Three Holy Children, oratorio by Charles Villiers Stanford",
+          '1930s: "Shadrack", popular song by Robert MacGimsey, performed by several singers including Louis Armstrong',
+          "1955\u20131956: Gesang der J\xFCnglinge, electronic music by Karlheinz Stockhausen",
+          "1966: The Burning Fiery Furnace, a music drama by Benjamin Britten",
+          '1968: A song, "The Fourth Man in the Fire", by Arthur "Guitar Boogie" Smith, recorded by The Statler Brothers and by Johnny Cash (1969)',
+          "1972: It's Cool in the Furnace, an album of songs written by Buryl Red and Grace Hawthorne followed by a 1973 musical still performed by churches and religious schools",
+          '1974: "Loose Booty", recorded by Sly and the Family Stone',
+          '1976: "Abendigo", recorded by The Abyssinians',
+          '1979: "Survival", recorded by Bob Marley and the Wailers, "...like Shadrach, Mishrach and Abednego, thrown in the fire but they never get burn..."',
+          '1980: "Never Get Burn", recorded by The Twinkle Brothers',
+          '1989: "Shadrach" by Beastie Boys',
+          '1999: "Never Bow Down", recorded by Third Day',
+          `2005: "Abendigo", cover by Sin\xE9ad O'Connor of original by The Abyssinians`,
+          '2007: "Burn Us Up", recorded by Shane and Shane',
+          '2010: "A Good Name" by Shad',
+          '2010: "Onward" by Greydon Square',
+          "2011: Meshach Dreams Back by Jane Siberry",
+          '2012: "Into the Fire" by Foy Vance',
+          '2019: "Another in the Fire", recorded by Hillsong United',
+          '2021: "Fye Fye", recorded by Tobe Nwigwe',
+          '2023: "Khalas", recorded by Swizz Beats feat. Jay Electronica',
+          `2024: "That's Who I Praise" by Brandon Lake`,
+          `1995: "Rack, Shack & Benny", an animated video in the VeggieTales franchise. In this version, to keep it child friendly and simplify the story, the title characters \u2013 whose names are shortened versions of Shadrach, Meshach, and Abednego, respectively \u2013 work in a chocolate factory, and they refuse to worship a giant chocolate bunny or sing "The Bunny Song", which declares that the chocolate bunny is more important than anything else. They are thrown into the factory's furnace but survive, similarly to how the biblical story tells the tale. This video also marks the first appearance of one of series\u2019 main cast, Mr. Nezzer, who appears in the video as the main antagonist. His full name, \u201CNebby K. Nezzer\u201D, is a pun on the name of Nebuchadnezzar II, and it has remained as his official name.`,
+          "1945: Ivan the Terrible, a Soviet film by the director Sergei Eisenstein. On the minute 2:13:08 the Boyars, and clergy who oppose the Czar Ivan IV have staged a theatrical performance of this biblical story inside a cathedral, in order to spite the Czar by implying that he has become a tyrant, just like the biblical king Nebuchadnezzar."
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Summary",
+        note: "King Nebuchadnezzar set up a golden image in the plain of Dura and commanded that all his officials bow before it."
+      },
+      {
+        title: "Composition and structure",
+        note: "It is generally accepted that the Book of Daniel originated as a collection of stories among the Jewish community in Babylon and Mesopotamia in the Persian and early Hellenistic periods (5th to 3rd centuries BCE), expanded by the visions of chapters 7\u201312 in the Maccabean era (mid-2nd century)."
+      },
+      {
+        title: "Genre and themes",
+        note: "The legendary nature of the story is revealed by the liberal use of hyperbole \u2013 the size of the statue, the use of every kind of music, the destruction of the executioners, and the king's rage followed by his confession of the superiority of the god of Israel."
+      },
+      {
+        title: "Interpretation",
+        note: "Daniel's absence from the tale of Shadrach, Meshach and Abednego suggests that it may originally have been an independent story."
+      },
+      {
+        title: "Christian liturgy",
+        note: "The Greek Septuagint version of Daniel 3 includes the deuterocanonical Prayer of Azariah and Song of the Three Holy Children."
+      },
+      {
+        title: "Tombs",
+        note: "In the Kirkuk Citadel in Northern Iraq, there are two tombs that are claimed to house the remains of Hananiah and Azariah (Arabized as Hunayn and 'Uzayr) inside the Mosque of the Prophet Daniel."
+      }
+    ]
+  },
+  "The Magi of Matthew 2": {
+    title: "Biblical Magi",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Biblical_Magi",
+    description: 'In Christianity, the Biblical Magi, also known as the Three Wise Men, Three Kings, and Three Magi, are distinguished foreigners who visit the infant Jesus after his birth, bearing gifts of gold, frankincense, and myrrh. In Western Christianity, they are commemorated on the feast day of Epiphany\u2014sometimes called "Three Kings Day"\u2014and commonly appear in the nativity celebrations of Christmas; in Eastern Christianity, they are commemorated on Christmas day.',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magi_%281%29.jpg/330px-Magi_%281%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [],
+    sections: [
+      {
+        heading: "Biblical account",
+        summary: `Traditional nativity scenes depict three "wise men" visiting the infant Jesus on the night of his birth, in a manger accompanied by the shepherds and angels, but this should be understood as an artistic convention allowing the two separate scenes of the Adoration of the Shepherds on the birth night and the later Adoration of the Magi to be combined for convenience. The single biblical account in Matthew 2 simply presents an event at an unspecified point after Jesus's birth in which an unnumbered party of unnamed "wise men" (\u03BC\u03AC\u03B3\u03BF\u03B9, m\xE1goi) visit him in a house (\u03BF\u1F30\u03BA\u03AF\u03B1\u03BD, oikian), not a stable. The New Revised Standard Version of Matthew 2:1\u201312 describes the visit of the Magi in this manner:`,
+        items: []
+      },
+      {
+        heading: "Description",
+        summary: "The Magi are popularly referred to as wise men and kings. The word magi is the plural of Latin magus, borrowed from Greek \u03BC\u03AC\u03B3\u03BF\u03C2 (magos), as used in the original Greek text of the Gospel of Matthew (in the plural: \u03BC\u03AC\u03B3\u03BF\u03B9, magoi). The Greek magos itself is derived from Old Persian magu\u0161\u2060, which in turn originated from the Avestan mag\xE2un\xF4, referring to the Iranian priestly caste of Zoroastrianism. Within this tradition, priests paid particular attention to the stars and gained an international reputation for astrology, which was at that time highly regarded as a science. Their religious practices and astrological abilities caused derivatives of the term Magi to be applied to the occult in general and led to the English term magic.",
+        items: []
+      },
+      {
+        heading: "Identities and background",
+        summary: "The names and origins of the Magi are never given in scripture, but have been provided by various traditions and legends.",
+        items: [
+          "Melchior (/\u02C8m\u025Blki\u0254\u02D0r/; also Melichior).",
+          "Caspar (/\u02C8k\xE6sp\u0259r/ or /\u02C8k\xE6sp\u0251\u02D0r/; also Gaspar, Jaspar, Jaspas, Gathaspa, and other variations).",
+          "Balthazar (/\u02C8b\xE6l\u03B8\u0259z\u0251\u02D0r/ or /b\xE6l\u02C8\u03B8\xE6z\u0259r/; also Balthasar, Balthassar, and Bithisarea).",
+          "Dahdnadur, son of Artaban",
+          "Wa\u0161taph, son of Gudpir",
+          "Ar\u0161ak, son of Mahduq",
+          "Zerwand, son of Warudud",
+          "Ariwah, son of Khosrow",
+          "Ar\u1E6Da\u1E25\u0161i\u0161t, son of \u1E24\u014Dl\u012B\u1E6D",
+          "E\u0161tanbuzan, son of \u0160i\u0161rawan",
+          "Mahduq, son of Hawahm",
+          "A\u1E25\u0161ire\u0161, son of \u1E62a\u1E25ban",
+          "\u1E62ardana\u1E25, son of Baladan",
+          "Marduk, son of B\u012Bl"
+        ]
+      },
+      {
+        heading: "Gifts of the Magi",
+        summary: "Three gifts are explicitly identified in Matthew: gold, frankincense and myrrh; in Koine Greek, these are chrys\xF3s (\u03C7\u03C1\u03C5\u03C3\u03CC\u03C2), l\xEDbanos (\u03BB\u03AF\u03B2\u03B1\u03BD\u03BF\u03C2) and sm\xFDrna (\u03C3\u03BC\u03CD\u03C1\u03BD\u03B1). There are various theories and interpretations of the meaning and symbolism of the gifts, particularly with respect to frankincense and myrrh.",
+        items: []
+      },
+      {
+        heading: "Religious significance and traditions",
+        summary: "Holidays celebrating the arrival of the Magi traditionally recognise a distinction between the date of their arrival and the date of Jesus' birth. The account given in the Gospel of Matthew does not state that they were present on the night of the birth; in the Gospel of Luke, Joseph and Mary remain in Bethlehem until it is time for Jesus' dedication in Jerusalem, after which they return to their home in Nazareth.",
+        items: []
+      },
+      {
+        heading: "Cultural depictions",
+        summary: "Most depictions of the Magi in European art focus on their visit to Jesus. Also depicted, if less often, were the Journey of the Magi, the Magi before Herod, and the Dream of the Magi. In Byzantine art they are depicted as Persians, wearing trousers and phrygian caps. Crowns appear from the 10th century. Despite being saints, they are very often shown without halos, perhaps to avoid distracting attention from either their crowns or the halos of the Holy Family. Sometimes only the lead king, kneeling to Christ, has a halo the two others lack, probably indicating that the two behind had not yet performed the act of worship that would ensure their status as saints. Medieval artists also allegorised the theme to represent the three ages of man. Beginning in the 12th century, and very often by the 15th, the Kings also represent the three parts of the known (pre-Columbian) world in Western art, especially in Northern Europe. Balthasar is thus represented as a young African or Moor, and Caspar may be depicted with distinctly Oriental features.",
+        items: [
+          "Henry van Dyke's 1895 novella The Other Wise Man tells the story of Artaban, a fourth magus whose mission of kindness delays his arrival in Bethlehem by one day, missing Jesus and His parents who by then had fled to Egypt. The rest of the plot revolves around Artaban traveling the world throughout Jesus' 33 years on Earth and of the protagonist's multiple attempts to pay homage to the Son of God.",
+          "The first part of Lewis Wallace's 1880 novel Ben-Hur tells the story of the birth of Christ from Balthasar's point of view. Here Balthasar comes from Egypt and is joined by Melchior, a Hindu, and Gaspar, a Greek. Balthasar remains a recurring character throughout the novel.",
+          "O. Henry's 1905 short story The Gift of the Magi tells of an impoverished couple named Jim and Della Dillingham Young sacrificing their prized possessions to buy each other Christmas gifts. Della sells her long brown hair to buy a platinum fob chain to go with Jim's pocket watch, only to learn that he had sold it to buy ornamental combs for her hair. In addition to the eponymous magi, the text also mentions the Queen of Sheba and King Solomon. The narrator ends the story by claiming that (in comparison between the biblical figures' wealth with the Dillingham Youngs' possessions) those who sacrifice the things they value for the people they love are as wise as the magi themselves.",
+          "T.S. Eliot's 1927 poem Journey of the Magi is told from an aged king's point of view."
+        ]
+      },
+      {
+        heading: "Bibliography",
+        summary: "",
+        items: [
+          "Giffords, Gloria Fraser, Sanctuaries of Earth, Stone, and Light: The Churches of Northern New Spain, 1530\u20131821, 2007, University of Arizona Press, ISBN\xA00816525897, 9780816525898, google books",
+          "Metzger, Bruce, New Testament Studies: Philological, Versional, and Patristic, Volume 10, 1980, BRILL, ISBN\xA09004061630, 9789004061637.",
+          "Penny, Nicholas, National Gallery Catalogues (new series): The Sixteenth Century Italian Paintings, Volume II, Venice 1540\u20131600, 2008, National Gallery Publications Ltd, ISBN\xA01857099133",
+          "Schiller, Gertud, Iconography of Christian Art, Vol. I, 1971 (English trans from German), Lund Humphries, London, ISBN\xA00853312702"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Biblical account",
+        note: 'Traditional nativity scenes depict three "wise men" visiting the infant Jesus on the night of his birth, in a manger accompanied by the shepherds and angels, but this should be understood as an artistic convention allowing the two separate scenes of the Adoration of the Shepherds on the birth night and the later Adoration of the Magi to be combined for convenience.'
+      },
+      {
+        title: "Description",
+        note: "The Magi are popularly referred to as wise men and kings."
+      },
+      {
+        title: "Identities and background",
+        note: "The names and origins of the Magi are never given in scripture, but have been provided by various traditions and legends."
+      },
+      {
+        title: "Gifts of the Magi",
+        note: "Three gifts are explicitly identified in Matthew: gold, frankincense and myrrh; in Koine Greek, these are chrys\xF3s (\u03C7\u03C1\u03C5\u03C3\u03CC\u03C2), l\xEDbanos (\u03BB\u03AF\u03B2\u03B1\u03BD\u03BF\u03C2) and sm\xFDrna (\u03C3\u03BC\u03CD\u03C1\u03BD\u03B1)."
+      },
+      {
+        title: "Religious significance and traditions",
+        note: "Holidays celebrating the arrival of the Magi traditionally recognise a distinction between the date of their arrival and the date of Jesus' birth."
+      },
+      {
+        title: "Cultural depictions",
+        note: "Most depictions of the Magi in European art focus on their visit to Jesus."
+      }
+    ]
+  },
+  "Abraham ibn Ezra": {
+    title: "Abraham ibn Ezra",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Abraham_ibn_Ezra",
+    description: "Abraham ben Meir Ibn Ezra was one of the most distinguished Jewish biblical commentators and philosophers of the Middle Ages. He was born in Tudela, Taifa of Zaragoza. Ibn Ezra is especially well-known to readers outside of the Jewish tradition as a major source of inspiration for Spinoza's early modern source-criticism on the authorship of the Law of Moses, appearing in theTheologico-Political Treatise.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Psalterium-Ibn-Ezra.jpeg/330px-Psalterium-Ibn-Ezra.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c. 1089 - 1092, Tudela, Taifa of Zaragoza"
+      },
+      {
+        label: "Died",
+        value: "c. 1164 - 1167"
+      },
+      {
+        label: "Known\xA0for",
+        value: "writing commentaries, grammarian"
+      },
+      {
+        label: "Children",
+        value: "Isaac ibn Ezra"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: "Abraham Ibn Ezra was born in Tudela, one of the oldest and most important Jewish communities in Navarre. At the time, the town was under the rule of the emirs of the Muslim Taifa of Zaragoza. However, when he later moved to C\xF3rdoba, he claimed it was his birthplace. Ultimately, most scholars agree that his place of birth was Tudela.",
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "In Spain, Ibn Ezra had already gained the reputation of a distinguished poet and thinker. However, apart from his poems, the vast majority of his work was composed after 1140. Written in Hebrew, as opposed to earlier thinkers' use of Judeo-Arabic, these works covering Hebrew grammar, Biblical exegesis, and scientific theory were tinged with the work of Arab scholars he had studied in Spain.",
+        items: []
+      },
+      {
+        heading: "Influence on biblical criticism and philosophy of religion",
+        summary: "In his commentary, Ibn Ezra adhered to the literal sense of the texts, avoiding Rabbinic allegory and Kabbalistic interpretation. He exercised an independent criticism that, according to some writers, exhibits a marked tendency toward rationalism. In addition, he sharply criticized those who blended the simplistic and logical explanation with Midrash, maintaining that such interpretations were never intended to supplant the plain understanding.",
+        items: []
+      },
+      {
+        heading: "Bibliography",
+        summary: "Ibn Ezra composed his first book on astrology in Italy, before his move to France:",
+        items: [
+          'Sefer ha-Yashar ("Book of the Straight"). The complete commentary on the Torah was finished shortly before his death.',
+          'Sefer Moznayim "Book of Scales" (1140), chiefly an explanation of the terms used in Hebrew grammar; as early as 1148, it was incorporated by Judah Hadassi in his Eshkol ha-Kofer, with no mention of Ibn Ezra.',
+          'Sefer ha-Yesod, or Yesod Diqduq "Book of Language Fundamentals" (1143)',
+          "Sefer Haganah 'al R. Sa'adyah Gaon, (1143) a defense of Saadyah Gaon against Dunash ben Labrat's criticisms.",
+          "Tzakhoot (1145), on linguistic correctness, his best grammatical work, which also contains a brief outline of modern Hebrew meter.",
+          'Sefer Safah Berurah "Book of Purified Language" (1146).',
+          "Sefat Yeter, in defense of Saadia Gaon against Dunash ben Labrat, whose criticism of Saadia ibn Ezra had brought with him from Egypt.",
+          'Sefer ha-Shem ("Book of the Name"), a work on the names of God.',
+          "Yesod Mispar, a small monograph on numerals.",
+          "Iggeret Shabbat (1158), a responsum on Shabbat",
+          "Yesod Mora Vesod Hatorah (1158), on the division of and reasons for the Biblical commandments.",
+          "Sefer ha-Ekhad, on the peculiarities of the numbers 1\u20139.",
+          "Sefer ha-Mispar or Yesod Mispar, arithmetic.",
+          "Luchot, astronomical tables.",
+          "Sefer ha-'Ibbur, on the calendar.",
+          "Keli ha-Nechoshet, on the astrolabe.",
+          "Shalosh She'elot, in answer to three chronological questions of David ben Joseph Narboni.",
+          'Mishpetai ha-Mazzelot ("Judgments of the Zodiacal Signs"), on the general principles of astrology',
+          'Reshit Hokhma ("The Beginning of Wisdom"), an introduction to astrology, perhaps a revision of his earlier book',
+          `Sefer ha-Te'amim ("Book of Reasons"), an overview of Arabic astrology, explaining the material in the previous book.`,
+          'Sefer ha-Moladot ("Book of Nativities"), on astrology based on the time and place of birth.',
+          `Sefer ha-Me'orot ("Book of Luminaries" or "Book of Lights"), on medical astrology.`,
+          `Sefer ha-She'elot ("Book of Interrogations"), on questions about particular events.`,
+          'Sefer ha-Mivharim ("Book of Elections", also known as "Critical Days"), on optimum days for particular activities.',
+          'Sefer ha-Olam ("Book of the World"), on the fates of countries and wars, and other larger-scale issues.',
+          `Translation of two works by the astrologer Mashallah ibn Athari: "She'elot" and "Qadrut".`
+        ]
+      },
+      {
+        heading: "Legacy",
+        summary: "The crater Abenezra on the Moon was named in honor of Ibn Ezra.",
+        items: []
+      },
+      {
+        heading: "Burial",
+        summary: "According to Jewish tradition, Abraham ibn Ezra was buried in Cabul in the Lower Galilee alongside Judah Halevi. Others contend that he was buried in Vienna - his last known verifiable reidence.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "Abraham Ibn Ezra was born in Tudela, one of the oldest and most important Jewish communities in Navarre."
+      },
+      {
+        title: "Works",
+        note: "In Spain, Ibn Ezra had already gained the reputation of a distinguished poet and thinker."
+      },
+      {
+        title: "Influence on biblical criticism and philosophy of religion",
+        note: "In his commentary, Ibn Ezra adhered to the literal sense of the texts, avoiding Rabbinic allegory and Kabbalistic interpretation."
+      },
+      {
+        title: "Bibliography",
+        note: "Ibn Ezra composed his first book on astrology in Italy, before his move to France:"
+      },
+      {
+        title: "Legacy",
+        note: "The crater Abenezra on the Moon was named in honor of Ibn Ezra."
+      },
+      {
+        title: "Burial",
+        note: "According to Jewish tradition, Abraham ibn Ezra was buried in Cabul in the Lower Galilee alongside Judah Halevi."
+      }
+    ]
+  },
+  "Michael Scot": {
+    title: "Michael Scot",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Michael_Scot",
+    description: "Michael Scot was a Scottish mathematician and scholar in the Middle Ages. He was educated at Durham, Oxford and Paris, and worked in Bologna and Toledo, where he learned Arabic. His patron was Frederick II of the Holy Roman Empire and Scot served as science adviser and court astrologer to him. Scot translated Averroes and was the greatest public intellectual of his day.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Michael_Scot.png/330px-Michael_Scot.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "Michael Scot, 1175"
+      },
+      {
+        label: "Died",
+        value: "c. 1232"
+      },
+      {
+        label: "Fields",
+        value: "Mathematics, astrology, alchemy"
+      }
+    ],
+    sections: [
+      {
+        heading: "Early life and education",
+        summary: "Scot was born somewhere in the border regions of Scotland. He studied first at the cathedral school of Durham and then at Oxford and Paris, devoting himself to philosophy, mathematics, and astrology. It appears that he had also studied theology and become an ordained priest, as Pope Honorius III wrote to Stephen Langton on 16 January 1223/4, urging him to confer an English benefice on Scot, and nominated Scot as archbishop of Cashel in Ireland. Scot declined this appointment, but he seems to have held benefices in Italy.",
+        items: []
+      },
+      {
+        heading: "Career",
+        summary: "Scot was a typical example of the polyglot wandering scholar of the Middle Ages\u2014a churchman who knew Latin, Greek, Arabic and Hebrew. When he was about 50, Frederick II attracted him to his court in the Kingdom of Sicily. At the instigation of the emperor, Scot supervised (along with Hermannus Alemannus) a fresh translation of Aristotle and the Arabian commentaries from Arabic into Latin. Translations by Scot survive of the Historia animalium, De anima, and De caelo, along with the commentaries of Averroes upon them.",
+        items: [
+          "Super auctorem spherae, printed at Bologna in 1495 and at Venice in 1631.",
+          "De sole et luna, printed at Strassburg (1622), in the Theatrum chimicum, and containing more alchemy than astronomy, the sun and moon appearing as the images of gold and silver.",
+          "De chiromantia, an opuscule concerning chiromancy",
+          'A divination-centered trilogy of books collectively titled the Liber introductorius ("The Introductory Book") which includes: the Liber quatuor distinctionum, the Liber particularis, and the Liber physiognomiae'
+        ]
+      },
+      {
+        heading: "Death",
+        summary: "The date of Scot's death remains uncertain. The efforts of Walter Scott and others to identify him with the Sir Michael Scot of Balwearie, sent in 1290 on a special embassy to Norway, have not convinced historians; though the two may have had family connections.",
+        items: []
+      },
+      {
+        heading: "In legend",
+        summary: "The legendary Michael Scot used to feast his friends with dishes brought by spirits from the royal kitchens of France and Spain and other lands.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Early life and education",
+        note: "Scot was born somewhere in the border regions of Scotland."
+      },
+      {
+        title: "Career",
+        note: "Scot was a typical example of the polyglot wandering scholar of the Middle Ages\u2014a churchman who knew Latin, Greek, Arabic and Hebrew."
+      },
+      {
+        title: "Death",
+        note: "The date of Scot's death remains uncertain."
+      },
+      {
+        title: "In legend",
+        note: "The legendary Michael Scot used to feast his friends with dishes brought by spirits from the royal kitchens of France and Spain and other lands."
+      }
+    ]
+  },
+  "Alfonso X of Castile": {
+    title: "Alfonso X of Castile",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Alfonso_X_of_Castile",
+    description: "Alfonso X was King of Castile, Le\xF3n and Galicia from 1 June 1252 until his death in 1284. During the election of 1257, a dissident faction chose him to be king of Germany on 1 April. He renounced his claim to Germany in 1275, and in creating an alliance with the Kingdom of England in 1254, his claim on the Duchy of Gascony as well.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Alfonso_X_el_Sabio_en_El_libro_de_los_juegos.jpg/330px-Alfonso_X_el_Sabio_en_El_libro_de_los_juegos.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Reign",
+        value: "1 June 1252 \u2013 4 April 1284"
+      },
+      {
+        label: "Predecessor",
+        value: "Ferdinand III"
+      },
+      {
+        label: "Successor",
+        value: "Sancho IV"
+      },
+      {
+        label: "Born",
+        value: "23 November 1221, Toledo, Kingdom of Castile"
+      },
+      {
+        label: "Died",
+        value: "4 April 1284(1284-04-04) (aged\xA062), Seville, Kingdom of Castile"
+      },
+      {
+        label: "Burial",
+        value: "Cathedral of Seville"
+      },
+      {
+        label: "Spouse",
+        value: "Violant of Aragon \u200B(m.\xA01249)\u200B"
+      },
+      {
+        label: "Issueamong others...",
+        value: "Berengaria, Lady of Guadalajara, Beatrice, Marchioness of Monferrat, Ferdinand de la Cerda, Sancho IV, King of Castile, Peter, Lord of Ledesma, John, Lord of Valencia de Campos, Violant, Lady of Biscay, James, Lord of Cameros, Beatrice, Queen of Portugal, Alfonso Fern\xE1ndez"
+      },
+      {
+        label: "House",
+        value: "House of Burgundy"
+      },
+      {
+        label: "Father",
+        value: "Ferdinand III of Castile"
+      },
+      {
+        label: "Mother",
+        value: "Elisabeth of Swabia"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: "Alfonso was born on 23 November 1221 in Toledo, Kingdom of Castile. He was the eldest son of Ferdinand\xA0III and Elizabeth (Beatrice) of Swabia. His mother was the paternal cousin of Holy Roman Emperor Frederick\xA0II, to whom Alfonso is often compared. His maternal grandparents were Philip of Swabia and Irene Angelina. Little is known about his upbringing, but he was most likely raised in Toledo. For the first nine years of his life Alfonso was only heir to Castile until his paternal grandfather king Alfonso\xA0IX of Le\xF3n died and his father united the kingdoms of Castile and Le\xF3n. He began his career as a soldier, under the command of his father, when he was sixteen years old.",
+        items: []
+      },
+      {
+        heading: "Court culture",
+        summary: 'King Alfonso X developed a court culture that encouraged cosmopolitan learning. Alfonso had many works previously written in Arabic and Latin translated into vernacular Castilian in his court. Alfonso "turned to the vernacular for the kind of intellectual commitments that formerly were inconceivable outside Latin." He is credited with encouraging the extensive written use of the Castilian language instead of Latin as the language used in courts, churches, and in books and official documents (although his father, Ferdinand III, had begun to use it for some documents). This translation of Arabic and Classic documents into vernacular encouraged the development of Spanish sciences, literature, and philosophy.',
+        items: []
+      },
+      {
+        heading: "Family",
+        summary: "Violante was twelve or thirteen years old at the time of her marriage to Alfonso; she produced no children for several years and it was feared that she was barren. Alfonso almost had their marriage annulled, but they went on to have eleven children:",
+        items: [
+          "Beatrice, married King Afonso III of Portugal.",
+          'Alfonso Fern\xE1ndez de Castilla (1242\u20131281), also known as el Ni\xF1o, he held the title of "Se\xF1or de Molina y Mesa" through his marriage with Blanca Alfonso de Molina.',
+          "Berenguela Alfonso of Castile, who married Pedro N\xFA\xF1ez de Guzm\xE1n in 1264, but died young leaving behind no descendants."
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "Alfonso was born on 23 November 1221 in Toledo, Kingdom of Castile."
+      },
+      {
+        title: "Court culture",
+        note: "King Alfonso X developed a court culture that encouraged cosmopolitan learning."
+      },
+      {
+        title: "Family",
+        note: "Violante was twelve or thirteen years old at the time of her marriage to Alfonso; she produced no children for several years and it was feared that she was barren."
+      }
+    ]
+  },
+  "Ramon Llull": {
+    title: "Ramon Llull",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Ramon_Llull",
+    description: "Ramon Llull, sometimes anglicized as Raymond Lully, was a Catholic philosopher, theologian, poet, missionary, apologist and former knight, born in Palma de Mallorca. He invented a philosophical system known as the Art, conceived as a type of universal logic to prove the truth of Christian doctrine to interlocutors of all faiths and nationalities. The Art consists of a set of general principles and combinatorial operations. It is illustrated with diagrams.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Francisco_Ribalta_-_Ramon_Llull_-_Google_Art_Project.jpg/330px-Francisco_Ribalta_-_Ramon_Llull_-_Google_Art_Project.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c.\u20091232, Palma de Mallorca, Kingdom of Majorca"
+      },
+      {
+        label: "Died",
+        value: "1316 (aged\xA083\u201384)"
+      },
+      {
+        label: "Venerated\xA0in",
+        value: "Catholic Church"
+      },
+      {
+        label: "Beatified",
+        value: "11 September 1847 by Pope Pius IX"
+      },
+      {
+        label: "Feast",
+        value: "30 June (Third Order of St. Francis)"
+      },
+      {
+        label: "Era",
+        value: "Medieval philosophy"
+      },
+      {
+        label: "Region",
+        value: "Western philosophy"
+      },
+      {
+        label: "School",
+        value: "Lullism"
+      },
+      {
+        label: "Main interests",
+        value: "Christian theologyphilosophylogicmathematics"
+      },
+      {
+        label: "Notable works",
+        value: "Blanquerna\nTree of Science\nArs Magna"
+      },
+      {
+        label: "Notable ideas",
+        value: "Lullist thought\nelection theory\ncomputation theory"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: "Llull was born in Palma into a wealthy family of Barcelona patricians who had come to the Kingdom of Majorca in 1229 with the conquering armies of James I of Aragon. James I had conquered the formerly Almohad-ruled Majorca as part of a larger move to integrate the territories of the Balearic Islands (now part of Spain) into the Crown of Aragon. Llull was born there a few years later, in 1232 or 1233. Muslims still constituted a large part of the population of Majorca and Jews were present in cultural and economic affairs.",
+        items: []
+      },
+      {
+        heading: "Veneration",
+        summary: "Venerated as a saintly figure, Llull was officially considered for canonization after his death. He was beatified on 11 September 1847 by Pope Pius IX.",
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: `Llull's Art (in Latin Ars) is at the center of his thought and undergirds his entire corpus. It is a system of universal logic based on a set of general principles activated in a combinatorial process. Its intent is to prove statements about God and creation (e.g., "God is a Trinity"). Often the Art formulates these statements as questions and answers (e.g., Q: "Is there a Trinity in God?" A: "Yes"). It works cumulatively through an iterative process; statements about God's nature must be proved for each of God's essential attributes in order to prove the statement true for God (i.e., Goodness is threefold, Greatness is threefold, Eternity is threefold, Power is threefold, etc.).`,
+        items: []
+      },
+      {
+        heading: "Reception",
+        summary: "According to Llull's autobiographical Vita, his Art was not received well at the University of Paris when he first presented it there in the 1280s. This experience supposedly is what led him to revise the Art (creating the tertiary version). Llull's Art was never adopted by mainstream academia of the thirteenth and early-fourteenth centuries, but it did accrue quite a bit of interest. A significant number of Lullian manuscripts were collected by the Carthusian monks of Paris at Vauvert and by several theologians who donated their manuscripts to the Sorbonne Library. One disciple, Thomas Le My\xE9sier, went so far as to create elaborate compilations of Llull's works, including a manuscript dedicated to the queen of France.",
+        items: []
+      },
+      {
+        heading: "Translations",
+        summary: "",
+        items: [
+          "Ramon Llull's New Rhetoric, text and translation of Llull's 'Rethorica Nova', edited and translated by Mark D. Johnston, Davis, California: Hermagoras Press, 1994",
+          "Selected Works of Ramon Llull (1232\u20111316), edited and translated by Anthony Bonner, Princeton, N.J.: Princeton University Press 1985, two volumes XXXI + 1330 pp. (Contents: vol. 1: The Book of the Gentile and the Three Wise Men, pp.\xA093\u2013305; Ars Demonstrativa, pp.\xA0317\u2013567; Ars Brevis, pp.\xA0579\u2013646; vol. 2: Felix: or the Book of Wonders, pp.\xA0659\u20131107; Principles of Medicine pp.\xA01119\u20131215; Flowers of Love and Flowers of Intelligence, pp.\xA01223\u20131256)",
+          `Doctor Illuminatus: A Ramon Llull Reader, edited and translated by Anthony Bonner, with a new translation of The Book of the Lover and the Beloved by Eve Bonner, Princeton, N.J.: Princeton University Press 1994. Includes The Book of the Gentile and the Three Wise Men, The Book of the Lover and the Beloved, The Book of the Beasts, and Ars brevis; as well as Bonner's "Historical Background and Life" at 1\u201344, "Llull's Thought" at 45\u201356, "Llull's Influence: The History of Lullism" at 57\u201371.`
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "Llull was born in Palma into a wealthy family of Barcelona patricians who had come to the Kingdom of Majorca in 1229 with the conquering armies of James I of Aragon."
+      },
+      {
+        title: "Veneration",
+        note: "Venerated as a saintly figure, Llull was officially considered for canonization after his death."
+      },
+      {
+        title: "Works",
+        note: "Llull's Art (in Latin Ars) is at the center of his thought and undergirds his entire corpus."
+      },
+      {
+        title: "Reception",
+        note: "According to Llull's autobiographical Vita, his Art was not received well at the University of Paris when he first presented it there in the 1280s."
+      }
+    ]
+  },
+  "Arnaldus de Villanova": {
+    title: "Arnaldus de Villanova",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Arnaldus_de_Villa_Nova",
+    description: "Arnaldus de Villa Nova was a physician and a religious reformer.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Arnaldus_de_Villanova.jpg/330px-Arnaldus_de_Villanova.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c.1240, unknown"
+      },
+      {
+        label: "Died",
+        value: "c.1311, Genoa"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: `Arnaldus' place and date of birth are debated: some historians believe he was born in Villeneuve-l\xE8s-Maguelone, a village near Montpellier; others are doubtful because there are also towns of the same name in Aragon such as Villanueva de Jiloca, in the Kingdom of Valencia, in Catalonia, in Languedoc and in Provence. Regardless, he is known in Catalonia, Valencia and the Balearic Islands by the name "Arnau de Vilanova" and it is certain that he wrote most of his works in Catalan (Confessi\xF3 de Barcelona, Raonament d'Aviny\xF3). Whatever the reality, Arnaldus had a reputation as a doctor, theologian and alchemist.`,
+        items: []
+      },
+      {
+        heading: "Writings",
+        summary: "Arnaldus was also thought to be an alchemist: the door to his house in Montpellier, France, had carved depictions of a roaring lion and dragon biting its own tail (an Ouroboros), both alchemical symbols, and several renowned alchemists recognized him as an adept. He was also known as an astrologer.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "Arnaldus' place and date of birth are debated: some historians believe he was born in Villeneuve-l\xE8s-Maguelone, a village near Montpellier; others are doubtful because there are also towns of the same name in Aragon such as Villanueva de Jiloca, in the Kingdom of Valencia, in Catalonia, in Languedoc and in Provence."
+      },
+      {
+        title: "Writings",
+        note: "Arnaldus was also thought to be an alchemist: the door to his house in Montpellier, France, had carved depictions of a roaring lion and dragon biting its own tail (an Ouroboros), both alchemical symbols, and several renowned alchemists recognized him as an adept."
+      }
+    ]
+  },
+  "Moses de Le\xF3n": {
+    title: "Moses de Leon",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Moses_de_Le%C3%B3n",
+    description: "Moses de Le\xF3n, known in Hebrew as Moshe ben Shem-Tov, was a Spanish rabbi and Kabbalist who first publicized the Zohar. Modern scholars believe the Zohar is his own work, despite his claim to have copied it out of an ancient manuscript by Shimon ben Yochai. His other works include Sefer ha-Rimon, written in Hebrew, and hundreds of pseudepigraphic responsa, commentaries, and Kabbalistic tracts which he falsely attributed to earlier authorities.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Mose_ben_Sem_Tob.jpg/330px-Mose_ben_Sem_Tob.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c. 1240, Le\xF3n, Kingdom of Le\xF3n"
+      },
+      {
+        label: "Died",
+        value: "1305, Ar\xE9valo, Kingdom of Castile"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Kabbalah"
+      },
+      {
+        label: "Religion",
+        value: "Judaism"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: "Moses de Le\xF3n was born in Le\xF3n, Kingdom of Le\xF3n in modern-day Spain, then united with the Crown of Castile. He might have been born in Guadalajara and his surname, then, comes from his father, Shem-Tov de Le\xF3n. He spent 30 years in Guadalajara and Valladolid before moving to \xC1vila, where he spent the rest of his life. Moses de Le\xF3n died at Ar\xE9valo in 1305 while returning to his home.",
+        items: []
+      },
+      {
+        heading: "Pardes",
+        summary: "Moses de Le\xF3n was the first to advance the Kabbalistic theory of Biblical exegesis, as a Jewish adaptation of the fourfold method of Biblical exegesis from medieval Christianity.",
+        items: [
+          'Peshat (\u05E4\u05B0\u05BC\u05E9\u05B8\u05C1\u05D8) \u2013 "surface" ("straight") or the literal (direct) meaning.',
+          `Remez (\u05E8\u05B6\u05DE\u05B6\u05D6) \u2013 "hints" or the deep (allegoric: hidden or symbolic) meaning beyond just the literal sense. In the version of the New Zohar, Re'iah.`,
+          'Derash (\u05D3\u05B0\u05BC\u05E8\u05B7\u05E9\u05C1) \u2013 from Hebrew darash: "inquire" ("seek") \u2013 the comparative (midrashic) meaning, as given through similar occurrences.',
+          'Sod (\u05E1\u05D5\u05B9\u05D3) \u2013 "secret" ("mystery") or the esoteric/mystical meaning, as given through inspiration or revelation.'
+        ]
+      },
+      {
+        heading: "Resources",
+        summary: "",
+        items: [
+          'Kohler, Kaufmann et al., "Leon, Moses (Ben Shem-Tob) de." Jewish Encyclopedia. Funk and Wagnalls, 1901\u20131906, citing:'
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "Moses de Le\xF3n was born in Le\xF3n, Kingdom of Le\xF3n in modern-day Spain, then united with the Crown of Castile."
+      },
+      {
+        title: "Pardes",
+        note: "Moses de Le\xF3n was the first to advance the Kabbalistic theory of Biblical exegesis, as a Jewish adaptation of the fourfold method of Biblical exegesis from medieval Christianity."
+      }
+    ]
+  },
+  "Roger Bacon": {
+    title: "Roger Bacon",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Roger_Bacon",
+    description: "Roger Bacon, also known by the scholastic accolade Doctor Mirabilis, was a medieval English polymath, philosopher, scientist, theologian and Franciscan friar who placed considerable emphasis on the study of nature through empiricism. Intertwining his Catholic faith with scientific thinking, Roger Bacon is considered one of the greatest polymaths of the medieval period.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Roger-bacon-statue.jpg/330px-Roger-bacon-statue.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c.\u20091219/20, near Ilchester, Somerset, England"
+      },
+      {
+        label: "Died",
+        value: "c.\u20091292 (aged about 72/73), near Oxford, Oxfordshire, England"
+      },
+      {
+        label: "Other\xA0name",
+        value: "Doctor Mirabilis"
+      },
+      {
+        label: "Alma mater",
+        value: "University of Oxford"
+      },
+      {
+        label: "Academic advisor",
+        value: "Adam Marsh"
+      },
+      {
+        label: "Era",
+        value: "Medieval philosophy"
+      },
+      {
+        label: "Region",
+        value: "Western philosophy"
+      },
+      {
+        label: "School",
+        value: "Scholasticism"
+      },
+      {
+        label: "Main interests",
+        value: "Theology, Natural philosophy, Natural sciences, Chemistry, Biology, engineering, Mathematics, Astronomy"
+      },
+      {
+        label: "Notable ideas",
+        value: "Experimental science"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: 'Roger Bacon was born in Ilchester in Somerset, England, in the early 13th century. His birth is sometimes narrowed down to 1210, 1213 or 1214, 1215 or 1220. The only source for his birth date is a statement from his 1267 Opus Tertium that "forty years have passed since I first learned the Alphabetum". The latest dates assume this referred to the alphabet itself, but elsewhere in the Opus Tertium it is clear that Bacon uses the term to refer to rudimentary studies, the trivium or quadrivium that formed the medieval curriculum. His family appears to have been well off.',
+        items: []
+      },
+      {
+        heading: "Work",
+        summary: `Medieval European philosophy often relied on appeals to the authority of Church Fathers such as St\xA0Augustine, and on works by Plato and Aristotle only known at second hand or through Latin translations. By the 13th century, new works and better versions \u2013 in Arabic or in new Latin translations from the Arabic \u2013 began to trickle north from Muslim Spain. In Roger Bacon's writings, he upholds Aristotle's calls for the collection of facts before deducing scientific truths, against the practices of his contemporaries, arguing that "thence cometh quiet to the mind".`,
+        items: [
+          "Spine of a 1750 edition of Opus majus",
+          "Title page of 1750 edition of Opus majus",
+          "First page of 1750 edition of Opus majus"
+        ]
+      },
+      {
+        heading: "Legacy",
+        summary: "Bacon was largely ignored by his contemporaries in favour of other scholars such as Albertus Magnus, Bonaventure, and Thomas Aquinas, although his works were studied by Bonaventure, John Pecham, and Peter of Limoges, through whom he may have influenced Raymond Lull. He was also partially responsible for the addition of optics (perspectiva) to the medieval university curriculum.",
+        items: []
+      },
+      {
+        heading: "In popular culture",
+        summary: `To commemorate the 700th anniversary of Bacon's approximate year of birth, Prof. J. Erskine wrote the biographical play A Pageant of the Thirteenth Century, which was performed and published by Columbia University in 1914. A fictionalised account of Bacon's life and times also appears in the second book of James Blish's After Such Knowledge trilogy, the 1964 Doctor Mirabilis. Bacon serves as a mentor to the protagonists of Thomas Costain's 1945 The Black Rose, and Umberto Eco's 1980 The Name of the Rose.
+Greene's play prompted a less successful sequel John of Bordeaux and was recast as a children's story for James Baldwin's 1905 Thirty More Famous Stories Retold. "The Brazen Head of Friar Bacon" also appears in Daniel Defoe's 1722 Journal of the Plague Year, Nathaniel Hawthorne's 1843 "The Birth-Mark" and 1844 "The Artist of the Beautiful", William Douglas O'Connor's 1891 "The Brazen Android" (where Bacon devises it to terrify King Henry into accepting Simon de Montfort's demands for greater democracy), John Cowper Powys's 1956 The Brazen Head, and Robertson Davies's 1970 Fifth Business. Bacon appears in Rudyard Kipling's 1926 story 'The Eye of Allah'.`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "Roger Bacon was born in Ilchester in Somerset, England, in the early 13th century."
+      },
+      {
+        title: "Work",
+        note: "Medieval European philosophy often relied on appeals to the authority of Church Fathers such as St\xA0Augustine, and on works by Plato and Aristotle only known at second hand or through Latin translations."
+      },
+      {
+        title: "Legacy",
+        note: "Bacon was largely ignored by his contemporaries in favour of other scholars such as Albertus Magnus, Bonaventure, and Thomas Aquinas, although his works were studied by Bonaventure, John Pecham, and Peter of Limoges, through whom he may have influenced Raymond Lull."
+      },
+      {
+        title: "In popular culture",
+        note: "To commemorate the 700th anniversary of Bacon's approximate year of birth, Prof."
+      }
+    ]
+  },
+  "Cecco d'Ascoli": {
+    title: "Cecco d'Ascoli",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Cecco_d'Ascoli",
+    description: "Francesco degli Stabili, popularly called Cecco d'Ascoli, was an Italian encyclopaedist, physician and poet. Cecco is the diminutive of Francesco. Ascoli was the place of his birth. The lunar crater Cichus is named after him.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Cecco_Ascoli.jpg/330px-Cecco_Ascoli.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "1257 (1257), Folignano"
+      },
+      {
+        label: "Died",
+        value: "26 September 1327(1327-09-26) (aged\xA069\u201370), Florence"
+      },
+      {
+        label: "Discipline",
+        value: "astrology"
+      },
+      {
+        label: "Institutions",
+        value: "University of Bologna"
+      },
+      {
+        label: "Notable works",
+        value: "Acerba"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: "Born in Folignano, near Fonte a cagn\xE0 in Case di Coccia, he devoted himself to the study of mathematics and astrology. In 1322, he was made professor of astrology at the University of Bologna. It is alleged that he entered the service of Pope John XXII at Avignon, and that he cultivated the acquaintance of Dante only to quarrel with the great poet afterwards; but of this there is no evidence.",
+        items: []
+      },
+      {
+        heading: "Publications",
+        summary: `Cecco d'Ascoli left many works in manuscript, most of which have never been published. The book by which he achieved his renown and which contributed to his execution was the Acerba (from acervus), an encyclopaedic poem, of which in 1546, the date of the last reprint, more than twenty editions had been issued. It is a compendium for the contemporary natural science of the time, including "the order and influences of the heavens, the characteristics and properties of animals and precious stones, the causes of phenomena such as meteors and earthquakes\u2014and of commonplace moral philosophy". The work actually consists of four books in sesta rima (six-line stanzas in a specific rhyming scheme). The first book treats of astronomy and meteorology; the second of astrology, of physiognomy, and of the vices and virtues; the third of minerals and of the love of animals; while the fourth propounds and solves a number of moral and physical problems. Of a fifth book, on theology, the initial chapter alone was completed.`,
+        items: []
+      },
+      {
+        heading: "Bibliography",
+        summary: "",
+        items: [
+          "This article\xA0incorporates text from a publication now in the public domain:"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "Born in Folignano, near Fonte a cagn\xE0 in Case di Coccia, he devoted himself to the study of mathematics and astrology."
+      },
+      {
+        title: "Publications",
+        note: "Cecco d'Ascoli left many works in manuscript, most of which have never been published."
+      }
+    ]
+  },
+  "Marsilio Ficino": {
+    title: "Marsilio Ficino",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Marsilio_Ficino",
+    description: "Marsilio Ficino was an Italian scholar and Catholic priest who was one of the most influential humanist philosophers of the early Italian Renaissance. He was an astrologer, a reviver of Neoplatonism in touch with the major academics of his day, and the first translator of Plato's complete extant works into Latin. His Florentine Academy, an attempt to revive Plato's Academy, influenced the direction and tenor of the Italian Renaissance and the development of European philosophy.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Marsilio_Ficino%2C_by_a_Tuscan_painter._1521-1552.jpg/330px-Marsilio_Ficino%2C_by_a_Tuscan_painter._1521-1552.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "19 October 1433, Figline Valdarno, Republic of Florence"
+      },
+      {
+        label: "Died",
+        value: "1 October 1499(1499-10-01) (aged\xA065), Careggi, Republic of Florence"
+      },
+      {
+        label: "Era",
+        value: "Renaissance philosophy"
+      },
+      {
+        label: "Region",
+        value: "Western philosophy"
+      },
+      {
+        label: "School",
+        value: "Christian humanism, Neohermeticism, Neoplatonism, Augustinianism, Thomism"
+      },
+      {
+        label: "Institutions",
+        value: "Platonic Academy of Florence"
+      },
+      {
+        label: "Main interests",
+        value: "Theology, astrology, metaphysics"
+      },
+      {
+        label: "Notable works",
+        value: "De Christiana religione (1474)\nTheologia Platonica de immortalitate animae (1482)\nDe amore (1484)\nDe vita libri tres (1489)"
+      },
+      {
+        label: "Notable ideas",
+        value: "Platonic love, Prisca theologia"
+      }
+    ],
+    sections: [
+      {
+        heading: "Early life",
+        summary: "Ficino was born at Figline Valdarno. His father, Diotifeci d'Agnolo, was a physician under the patronage of Cosimo de' Medici, who took the young man into his household and became the lifelong patron of Marsilio, who was made tutor to his grandson, Lorenzo de' Medici. Giovanni Pico della Mirandola, the Italian humanist philosopher and scholar, was another of his students.",
+        items: []
+      },
+      {
+        heading: "Career and thought",
+        summary: "During the sessions at Florence of the Council of Ferrara-Florence in 1438\u20131445, when attempts to heal the schism of the Eastern (Orthodox) and Western (Catholic) churches had thus far failed, Cosimo de' Medici and his intellectual circle had made acquaintance with the Neoplatonic philosopher George Gemistos Plethon, whose discourses upon Plato and the Alexandrian mystics so fascinated the humanists of Florence that they named him the second Plato. In 1459 John Argyropoulos was lecturing on Greek language and literature at Florence, and Ficino became his pupil.",
+        items: []
+      },
+      {
+        heading: "Death",
+        summary: "Ficino died on 1 October 1499 at Careggi. In 1521 his memory was honored with a bust sculpted by Andrea Ferrucci, which is located in the south side of the nave in the Cathedral of Santa Maria del Fiore.",
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "",
+        items: [
+          "Theologia Platonica de immortalitate animae (Platonic Theology). Harvard U. P., Latin with English translation.\nvol. 1, 2001, ISBN\xA00-674-00345-4\nvol. 2, 2002, ISBN\xA00-674-00764-6\nvol. 3, 2003, ISBN\xA00-674-01065-5\nvol. 4, 2004, ISBN\xA00-674-01482-0\nvol. 5, 2005, ISBN\xA00-674-01719-6\nvol. 6 with index, 2006, ISBN\xA00-674-01986-5",
+          "The Letters of Marsilio Ficino, transl. by the Language Department of the School of Economic Science (Shepheard-Walwyn, 1975\u20132013). (With extensive endnotes.)",
+          "vol. I, 1975, ISBN\xA0978-0-85683-010-5\nvol. II, 1978, ISBN\xA0978-0-85683-036-5\nvol. III, 1981, ISBN\xA0978-0-85683-045-7\nvol. IV, 1988, ISBN\xA0978-0-85683-070-9\nvol. V, 1994, ISBN\xA0978-0-85683-129-4\nvol. VI, 1999, ISBN\xA0978-0-85683-167-6\nvol. VII, 2003, ISBN\xA0978-0-85683-192-8\nvol. VIII, 2010, ISBN\xA0978-0-85683-242-0\nvol. IX, 2013, ISBN\xA0978-0-85683-289-5",
+          "Gardens of Philosophy: Ficino on Plato, ed. and transl. by Arthur Farndell (Shepheard-Walwyn, 2006). ISBN\xA0978-0-85683-240-6 This, the first volume in a five-volume series, provides the first English translation of the 25 short commentaries on the dialogues and the 12 letters traditionally ascribed to Plato. The volume contains the following:\nFicino's Preface to his Commentaries on Plato [addressed to Lorenzo de' Medici].\nHipparchus: The Desire for Gain\nPhilosophy or The Lover\nTheages: Wisdom\nMeno: Virtue\nAlcibiades I: Nature of Man\nAlcibiades II: Prayer\nMinos: Law\nEuthyphro: Holiness\nHippias: The Beautiful and Noble\nLysis: Friendship\nTheatetus: Knowledge\nIon: Poetic Inspiration\nStatesman: Kingship\nProtagoras: Virtue\nEuthydemus: The Views of the Sophists\nLesser Hippias: Truthfulness\nCharmides: Temperance\nLaches: Courage\nCratylus: Names\nGorgias: Rhetoric\nApology: Socrates' Defense\nCrito: Socrates' Way of Life\nPhaedo: Nature of the Soul\nMenexenus: Love for One's Country\nCritias: Story of Atlantis\nDiscussions of Plato's twelve letters\nTwo of Ficino's other prefaces to the dialogues and their commentaries",
+          "Evermore Shall Be So: Ficino on Plato's Parmenides, ed. and transl. by Arthur Farndell (Shepheard Walwyn, 2008). (Does not include Latin text.) ISBN\xA0978-0-85683-256-7",
+          "When Philosophers Rule: Ficino on Plato's Republic, Laws, and Epinomis, ed. and transl. by Arthur Farndell (Shepheard-Walwyn, 2009). ISBN\xA0978-0-85683-257-4 (Unabridged except for the commentary on Republic, bk. 8; see Nuptial Arithmetic, below.)",
+          "All Things Natural: Ficino on Plato's Timaeus, ed. and transl. by Arthur Farndell (Shepheard-Walwyn, 2010). ISBN\xA0978-0-85683-258-1",
+          "On the Nature of Love: Ficino on Plato's Symposium, ed. and transl. by Arthur Farndell (Shepheard-Walwyn, 2016). ISBN\xA0978-0-85683-509-4",
+          "Commentaries on Plato. I Tatti Renaissance Library. Bilingual, annotated English/Latin editions of Ficino's commentaries on the works of Plato.\nvol. 1, 2008, Phaedrus, and Ion, transl. by Michael J. B. Allen, ISBN\xA00-674-03119-9\nvol. 2, 2012, Parmenides, pt. 1, transl. by Maude Vanhaelen, ISBN\xA00-674-06471-2\nvol. 3, 2012, Parmenides, pt. 2, transl. by Maude Vanhaelen, ISBN\xA00-674-06472-0",
+          "Commentary on Plato's Symposium on Love, transl. with an introduction and notes by Sears Jayne (Woodstock, CT: Spring Publications, 1985), 2nd edn., 2000, ISBN\xA00-88214-601-7",
+          "Nuptial Arithmetic: Marsilio Ficino's Commentary on the Fatal Number in Book VIII of Plato's Republic, ed. and transl. by Michael J. B. Allen (U. of California P., 1994).",
+          "Icastes. Marsilio Ficino's Interpretation of Plato's Sophist, ed. and transl. by Michael J. B. Allen (Berkeley: U. of California P., 1989).",
+          "The Book of Life, transl. with an introduction by Charles Boer, Dallas: Spring Publications, 1980. ISBN\xA00-88214-212-7",
+          "De vita libri tres (Three Books on Life, 1489), transl. by Carol V. Kaske and John R. Clarke, Tempe, Arizona: The Renaissance Society of America, 2002. With notes, commentaries, and Latin text on facing pages. ISBN\xA00-86698-041-5",
+          "De religione Christiana et fidei pietate (1475\u20136), dedicated to Lorenzo de' Medici. (English translation below.)",
+          "On the Christian Religion, ed. and transl. by Dan Attrell, Brett Bartlett, and David Porreca (U. of Toronto P., 2022). (With extensive notes, indexes, etc.)",
+          "In Epistolas Pauli commentaria, Marsilii Ficini Epistolae (Venice, 1491; Florence, 1497).",
+          "Meditations on the Soul: Selected letters of Marsilio Ficino, transl. by the Language Department of the School of Economic Science, London. Rochester, Vermont: Inner Traditions International, 1996. ISBN\xA00-89281-658-9.",
+          "Collected works: Opera (Florence, 1491, Venice, 1516, Basel, 1561)."
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Early life",
+        note: "Ficino was born at Figline Valdarno."
+      },
+      {
+        title: "Career and thought",
+        note: "During the sessions at Florence of the Council of Ferrara-Florence in 1438\u20131445, when attempts to heal the schism of the Eastern (Orthodox) and Western (Catholic) churches had thus far failed, Cosimo de' Medici and his intellectual circle had made acquaintance with the Neoplatonic philosopher George Gemistos Plethon, whose discourses upon Plato and the Alexandrian mystics so fascinated the humanists of Florence that they named him the second Plato."
+      },
+      {
+        title: "Death",
+        note: "Ficino died on 1 October 1499 at Careggi."
+      }
+    ]
+  },
+  "Giovanni Pico della Mirandola": {
+    title: "Giovanni Pico della Mirandola",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Giovanni_Pico_della_Mirandola",
+    description: 'Giovanni Pico della Mirandola was an Italian Renaissance nobleman and philosopher. He is famed for the events of 1486, when, at the age of 23, he proposed to defend 900 theses on religion, philosophy, natural philosophy, and magic against all comers, for which he wrote the Oration on the Dignity of Man, which has been called the "Manifesto of the Renaissance", and a key text of Renaissance humanism and of what has been called the "Hermetic Reformation". He was the founder of the tradition of Christian Kabbalah, a key tenet of early modern Western esotericism. The 900 Theses was the first printed book to be universally banned by the Church. Pico is sometimes seen as a proto-Protestant, because his 900 theses anticipated many Protestant views.',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pico1.jpg/330px-Pico1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "(1463-02-24)24 February 1463, Mirandola, Duchy of Mirandola"
+      },
+      {
+        label: "Died",
+        value: "17 November 1494(1494-11-17) (aged\xA031), Florence, Republic of Florence"
+      },
+      {
+        label: "Education",
+        value: "University of BolognaUniversity of FerraraUniversity of PaduaUniversity of Paris"
+      },
+      {
+        label: "Era",
+        value: "Renaissance philosophy"
+      },
+      {
+        label: "Region",
+        value: "Western philosophy"
+      },
+      {
+        label: "School",
+        value: "Renaissance philosophyChristian humanismNeoplatonism"
+      },
+      {
+        label: "Main interests",
+        value: "Politicshistoryreligionesotericism"
+      },
+      {
+        label: "Notable ideas",
+        value: "Christian Kabbalah"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: "Giovanni was born at Mirandola, near Modena, the youngest son of Gianfrancesco I Pico, Lord of Mirandola and Count of Concordia, by his wife Giulia, daughter of Feltrino Boiardo, Count of Scandiano.",
+        items: []
+      },
+      {
+        heading: "Writings",
+        summary: "In the Oratio de hominis dignitate (Oration on the Dignity of Man, 1486), Pico justified the importance of the human quest for knowledge, masterfully blending Neoplatonism and Aristotelian Scholasticism.",
+        items: []
+      },
+      {
+        heading: "Cultural references",
+        summary: "",
+        items: [
+          "In Walter Pater\u2019s seminal book Studies in the History of the Renaissance (1873), an entire chapter is devoted to Pico della Mirandola.",
+          `In James Joyce's Ulysses, the precocious Stephen Dedalus recalls with disdain his boyhood ambitions, and apparently associates them with the career of Mirandola: "Remember your epiphanies written on green oval leaves, deeply deep...copies to be sent if you died to all the great libraries of the world...Pico della Mirandola like."`,
+          `Of minor interest is a passing reference to Mirandola by H. P. Lovecraft, in the story The Case of Charles Dexter Ward (1927). Mirandola is given as the source of the fearsome incantation used by unknown evil entities as some sort of evocation. However, this "spell" was first depicted (as the key to a rather simple form of divination, not a great and terrible summoning) by, and in all likelihood created by, Heinrich Cornelius Agrippa von Nettesheim in his Three Books of Occult Philosophy. This was written several decades after Mirandola's death and was the first written example of that "spell", so it is almost impossible for Mirandola to have been the source of those "magic words".`,
+          `Psychoanalyst Otto Rank, a rebellious disciple of Sigmund Freud, chose a substantial excerpt from Mirandola's Oration on the Dignity of Man as the motto for his book Art and Artist: Creative Urge and Personality Development, including: "...I created thee as a being neither celestial nor earthly... so that thou shouldst be thy own free moulder and overcomer...".`,
+          `In Umberto Eco's novel Foucault's Pendulum the protagonist Casaubon claims that the idea that the Jews were privy to the enigma of the Templars was "a mistake of Pico Della Mirandola" caused by a spelling mistake he made between "Israelites" and "Ismaelites".`,
+          "In Irving Stone's novel about Michelangelo, The Agony and the Ecstasy, book 3, part 3 contains a paragraph's description of Mirandola as part of the scholarly circle that surrounded Lorenzo di Medici in Florence. Mirandola was described as a man who spoke 22 languages, was deeply read in philosophy, and someone who made no enemies.",
+          `Philosopher of social science Ren\xE9 Girard mentions Mirandola passingly in his book Des choses cach\xE9es depuis la fondation du monde (French for 'Things Hidden Since the Foundation of the World'), Girard writes in a disparaging tone, "People will accuse us of playing at being Pico della Mirandola\xA0\u2013 "the renaissance man\xA0\u2013 certainly a temptation to be resisted today, if we wish to be seen in a favourable light. (p.\xA0141, 1987)`,
+          "In Roberto Bola\xF1o's novel 2666, the philosophy professor Oscar Amalfitano begins his three-columned list of philosophers with Pico della Mirandola. Adjacent to Mirandola, Amalfitano writes Hobbes, while beneath him he writes Husserl (p.\xA0207, 2008).",
+          `In Fr\xE9d\xE9ric Lenoir's novel L'Oracle della Luna (2006), the philosophy of Pico della Mirandola forms one of the major teachings acquired by the protagonist, Giovanni, from his main spiritual Master. The year is 1530. The major mentions are:
+at the end of Chapter 21 the sage \u2013 a fictitious character \u2013 says he has personally met Pico della Mirandola and discusses Mirandola's disagreement with the pope about the 900 Theses (with Lenoir stating that only 7 of them had not been accepted) and the philosopher's later fate. In the words of the sage, the main goal of Ficino and Pico della Mirandola was to acquire universal knowledge, free from prejudice and from linguistic and religious barriers;
+at the end of Chapter 24, having discussed Luther's concept of free will, the sage wants to acquaint Giovanni with Mirandola's ideas on this issue and lets him read "De hominis dignitate"; Giovanni peruses the book with great interest in Chapter 25;
+at the beginning of Chapter 26, with Giovanni having now read the Oration on the Dignity of Man, the sage discusses two issues from the book with him. One is Pico della Mirandola's attempt to form one unified and universal philosophy and the difficulties thereof. The other one is Mirandola's concept of free will. Giovanni has learnt one passage from the book by heart, about God addressing man and telling him, that He has made him neither a heavenly nor an earthly creature and that man is the forger of his own fate. This passage is quoted in the novel.`,
+          `English composer Gavin Bryars made use of the texts of Pico della Mirandola in his musical production; most notably in pieces like "Glorious Hill", for vocal quartet/mixed choir, "Pico's Flight", for soprano and orchestra, and "Incipit Vita Nova" for alto and string trio.`,
+          "Pico della Mirandola appears as the character Ikaros in Jo Walton's novels The Just City and The Philosopher Kings. Also, he is one of the main characters in her novel Lent.",
+          "In the book Dying for Ideas; The Dangerous Lives of the Philosophers (2015) by Romanian philosopher Costica Bradatan, Mirandola's life and work is taken as an early or even first example of taking human life as a project of 'self-fashioning', relating this to Mirandola's heretic idea of man being part of creation with 'an indefinite nature'.",
+          'Pico della Mirandola is the protagonist in the short story by Jack Dann "The Glass Casket", which was published as a part of the Snow White, Blood Red anthology.',
+          "In the graphic novel All-Star Superman by Grant Morrison Giovanni Pico della Mirandola can be seen reciting a part of the Oration on the Dignity of Man."
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "Giovanni was born at Mirandola, near Modena, the youngest son of Gianfrancesco I Pico, Lord of Mirandola and Count of Concordia, by his wife Giulia, daughter of Feltrino Boiardo, Count of Scandiano."
+      },
+      {
+        title: "Writings",
+        note: "In the Oratio de hominis dignitate (Oration on the Dignity of Man, 1486), Pico justified the importance of the human quest for knowledge, masterfully blending Neoplatonism and Aristotelian Scholasticism."
+      }
+    ]
+  },
+  "Johannes Trithemius": {
+    title: "Johannes Trithemius",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Johannes_Trithemius",
+    description: "Johannes Trithemius, born Johann Heidenberg, was a German Benedictine abbot and a polymath who was active in the German Renaissance as a lexicographer, chronicler, cryptographer, and occultist. He is considered the founder of modern cryptography and steganography, as well as the founder of bibliography and literary studies as branches of knowledge. He had considerable influence on the development of early modern and modern occultism. His students included Heinrich Cornelius Agrippa and Paracelsus.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Trithemiusmoredetail.jpg/330px-Trithemiusmoredetail.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "1 February 1462, Trittenheim, Electorate of Trier, Holy Roman Empire (now Rhineland-Palatinate, Germany)"
+      },
+      {
+        label: "Died",
+        value: "13 December 1516(1516-12-13) (aged\xA054), W\xFCrzburg, Prince-Bishopric of W\xFCrzburg, Holy Roman Empire (now Bavaria, Germany)"
+      },
+      {
+        label: "Alma\xA0mater",
+        value: "University of Heidelberg"
+      },
+      {
+        label: "Known\xA0for",
+        value: "SteganographiapolygraphiaeTrithemius cipher"
+      },
+      {
+        label: "Fields",
+        value: "Theologycryptographylexicographyhistoryoccultism"
+      },
+      {
+        label: "Institutions",
+        value: "Benedictine abbey of SponheimSt. Jakob zu den Schotten"
+      },
+      {
+        label: "Notable students",
+        value: "Heinrich Cornelius AgrippaParacelsus"
+      }
+    ],
+    sections: [
+      {
+        heading: "Early life",
+        summary: "The byname Trithemius refers to his native town of Trittenheim on the Moselle River, at the time part of the Electorate of Trier.",
+        items: []
+      },
+      {
+        heading: "Career",
+        summary: "Travelling from the university to his home town in 1482, he was surprised by a snowstorm and took refuge in the Benedictine abbey of Sponheim near Bad Kreuznach. He decided to stay and was elected abbot in 1483 at the age of 21. He often served as featured speaker and chapter secretary at the Bursfelde Congregation's annual chapter from 1492 to 1503, the annual meeting of reform-minded abbots. Trithemius also supervised the visits of the congregation's abbeys.",
+        items: []
+      },
+      {
+        heading: "Death",
+        summary: "Trithemius was buried in St. James's Abbey's church; a tombstone by the famous Tilman Riemenschneider was erected in his honor. In 1825, the tombstone was moved to the Neum\xFCnster church, next to the cathedral. It was damaged in the firebombing of 1945, and subsequently restored by the workshop of Theodor Spiegel.",
+        items: []
+      },
+      {
+        heading: "The Faust legend",
+        summary: "Trithemius had a reputation as a necromancer. The Faust legend is strongly based on a legend involving Maximilian of Austria, his first wife Mary of Burgundy and Trithemius. Through his 1507 account, Trithemius was the first author who mentioned the historical Doctor Faustus, or Johann Faust of Knittlingen. In a letter he wrote to the polymath Heinrich Cornelius Agrippa, another famous occult writer and supposed magician\xA0\u2013 he appeared to criticize the vanity of Faust, who possessed inferior skills and went against the teachings of the church. Literary scholar Andrew McCarthy opines that Trithemius considered himself a true necromancer, who studied in order to gain knowledge of the workings of the universe without attracting publicity.",
+        items: []
+      },
+      {
+        heading: "Steganographia",
+        summary: `Trithemius' most famous work, Steganographia (written c.\xA01499; published Frankfurt, 1606), was placed on the Index Librorum Prohibitorum in 1609 and removed in 1900. This book is in three volumes, and appears to be about magic\u2014specifically, about using spirits to communicate over long distances. Since the publication of the decryption key to the first two volumes in 1606, they have been known to be actually concerned with cryptography and steganography. Until the 1990s, the third volume was widely still believed to be solely about magic, but the "magical" formulae have now been shown to be covertexts for yet more cryptographic content. However, mentions of the magical work within the third book by such figures as Agrippa and John Dee still lend credence to the idea of a mystic-magical foundation concerning the third volume. Additionally, while Trithemius's steganographic methods can be established to be free of the need for angelic\u2013astrological mediation, still left intact is an underlying theological motive for their contrivance. The preface to the Polygraphia equally establishes that the everyday practicability of cryptography was conceived by Trithemius as a "secular consequent of the ability of a soul specially empowered by God to reach, by magical means, from earth to Heaven". Robert Hooke suggested, in the chapter Of Dr. Dee's Book of Spirits, that John Dee made use of Trithemian steganography to conceal his communication with Queen Elizabeth I. Amongst the codes used in this book is the Ave Maria cipher, where each coded letter is replaced by a short sentence about Jesus in Latin.`,
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "",
+        items: [
+          "Exhortationes ad monachos, 1486",
+          "De institutione vitae sacerdotalis, 1486",
+          "De regimine claustralium, 1486",
+          "De visitatione monachorum, about 1490",
+          "Catalogus illustrium virorum Germaniae, 1491\u20131495",
+          "De laude scriptorum manualium, 1492 (printed 1494) Zum Lob der Schreiber; Freunde Mainfr\xE4nkischer Kunst and Geschichte e. V., W\xFCrzburg 1973, (Latin/German)",
+          "De viris illustribus ordinis sancti Benedicti, 1492",
+          "In laudem et commendatione Ruperti quondam abbatis Tuitiensis, 1492",
+          "De origine, progressu et laudibus ordinis fratrum Carmelitarum, 1492",
+          "Liber penthicus seu lugubris de statu et ruina ordinis monastici, 1493",
+          "De proprietate monachorum, before 1494",
+          "De vanitate et miseria humanae vitae, before 1494",
+          "Liber de scriptoribus ecclesiasticis, 1494",
+          "De laudibus sanctissimae matris Annae, 1494",
+          "De scriptoribus ecclesiasticis, 1494",
+          "Chronicon Hirsaugiense, 1495\u20131503",
+          "Chronicon Sponheimense, c.\xA01495-1509 - Chronik des Klosters Sponheim, 1024-1509; Eigenverlag Carl Velten, Bad Kreuznach 1969 (German)",
+          "De cura pastorali, 1496",
+          "De duodecim excidiis oberservantiae regularis, 1496",
+          "De triplici regione claustralium et spirituali exercitio monachorum, 1497",
+          "Steganographia, c.\xA01499",
+          "Chronicon successionis ducum Bavariae et comitum Palatinorum, c.\xA01500-1506",
+          "Nepiachus, 1507",
+          "De septem secundeis id est intelligentiis sive spiritibus orbes post deum moventibus, c.\xA01508 (The Seven Secondary Intelligences, 1508), a history of the world based on astrology;",
+          "Antipalus maleficiorum, 1508",
+          "Polygraphia, written 1508, published 1518",
+          'Annales Hirsaugienses, 1509\u20131514. The full title is Annales hirsaugiensis...complectens historiam Franciae et Germaniae, gesta imperatorum, regum, principum, episcoporum, abbatum, et illustrium virorum, Latin for "The Annals of Hirsau...including the history of France and Germany, the exploits of the emperors, kings, princes, bishops, abbots, and illustrious men". Hirsau was a monastery near W\xFCrttemberg, whose abbot commissioned the work in 1495, but it took Trithemius until 1514 to finish the two-volume, 1,400-page work. It was first printed in 1690. Some consider this work to be one of the first humanist history books.',
+          "Compendium sive breviarium primi voluminis chronicarum sive annalium de origine regum et gentis Francorum, c.\xA01514",
+          "De origine gentis Francorum compendium, 1514 - An abridged history of the Franks / Johannes Trithemius; AQ-Verlag, Dudweiler 1987; ISBN\xA0978-3-922441-52-6 (Latin/English)",
+          "Liber octo quaestionum, 1515",
+          "Marquard Freher, Opera historica, Minerva, Frankfurt/Main, 1966",
+          "Johannes Busaeus, Opera pia et spiritualia (1604 and 1605)",
+          "Johannes Busaeus, Paralipomena opuscolorum (1605 and 1624)"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Early life",
+        note: "The byname Trithemius refers to his native town of Trittenheim on the Moselle River, at the time part of the Electorate of Trier."
+      },
+      {
+        title: "Career",
+        note: "Travelling from the university to his home town in 1482, he was surprised by a snowstorm and took refuge in the Benedictine abbey of Sponheim near Bad Kreuznach."
+      },
+      {
+        title: "The Faust legend",
+        note: "Trithemius had a reputation as a necromancer."
+      },
+      {
+        title: "Steganographia",
+        note: "Trithemius' most famous work, Steganographia (written c."
+      }
+    ]
+  },
+  "Heinrich Cornelius Agrippa": {
+    title: "Heinrich Cornelius Agrippa",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Heinrich_Cornelius_Agrippa",
+    description: "Heinrich Cornelius Agrippa von Nettesheim was a German Renaissance polymath, physician, legal scholar, alchemist, soldier, knight, theologian, and occult writer.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Portrait_of_Agrippa_Wellcome_L0000100.jpg/330px-Portrait_of_Agrippa_Wellcome_L0000100.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "14 September 1486, Nettersheim, Electorate of Cologne, Holy Roman Empire"
+      },
+      {
+        label: "Died",
+        value: "18 February 1535(1535-02-18) (aged\xA048), Grenoble, Kingdom of France"
+      },
+      {
+        label: "Occupations",
+        value: "Occult writer, theologian, physician, legal expert, soldier"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Natural magic"
+      },
+      {
+        label: "Alma mater",
+        value: "University of Cologne"
+      },
+      {
+        label: "Institutions",
+        value: "University of Dole, University of Pavia"
+      }
+    ],
+    sections: [
+      {
+        heading: "Early life and education",
+        summary: "Agrippa was born in Nettesheim, near Cologne, on 14 September 1486, to a family of middle nobility. In letters later in life he wrote that members of his family had been in the service of the House of Habsburg, although such claims may have been motivated by a desire to gain the support of potential patrons. On the record of his matriculation at the University of Cologne in 1499, he is listed simply as a citizen of Cologne, and his father's name is recorded as Henricus de Nettesheym. Agrippa studied at the university from 1499 to 1502, (age 13\u201316) when he received the degree of magister artium. The University of Cologne was one of the centers of Thomism, and the faculty of arts was split between the dominant Thomists and the Albertists. It is likely that Agrippa's interest in the occult came from this Albertist influence. Agrippa himself named Albert\u2019s Speculum as one of his first occult study texts. He later studied at the University of Paris, where he apparently took part in a secret society involved in the occult.",
+        items: []
+      },
+      {
+        heading: "Military career",
+        summary: "In 1508 Agrippa traveled to Spain to work as a mercenary. He continued his travels by way of Valencia, the Baleares, Sardinia, Naples, Avignon, and Lyon. He served as a captain in the army of Maximilian I, Holy Roman Emperor, who awarded him the title of Ritter (knight).",
+        items: []
+      },
+      {
+        heading: "Academic career",
+        summary: `Agrippa's academic career began in 1509, receiving the patronage of Margaret of Austria, governor of Franche-Comt\xE9, and Antoine de Vergy, archbishop of Besan\xE7on and chancellor of the University of Dole. He was given the opportunity to lecture a course at the University on Hebrew scholar Johann Reuchlin's De verbo mirifico. At Dole, Agrippa wrote De nobilitate et praecellentia foeminae sexus (On the Nobility and Excellence of the Feminine Sex), a work that aimed at proving the superiority of women using cabalistic ideas. The book was probably intended to impress Duchess Margaret. Agrippa\u2019s lectures received attention, and he was given a doctorate in theology because of them. He was, however, denounced by the Franciscan prior Jean Catilinet as a "Judaizing heretic", and was forced to leave Dole in 1510.`,
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "Agrippa is perhaps best known for his books.",
+        items: [
+          "Book one only.",
+          "Book one only.",
+          "Purdue, Eric, ed. (2021). Three Books of Occult Philosophy. Translated by Eric Purdue. Inner Traditions. ISBN 978-1644114162."
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Early life and education",
+        note: "Agrippa was born in Nettesheim, near Cologne, on 14 September 1486, to a family of middle nobility."
+      },
+      {
+        title: "Military career",
+        note: "In 1508 Agrippa traveled to Spain to work as a mercenary."
+      },
+      {
+        title: "Academic career",
+        note: "Agrippa's academic career began in 1509, receiving the patronage of Margaret of Austria, governor of Franche-Comt\xE9, and Antoine de Vergy, archbishop of Besan\xE7on and chancellor of the University of Dole."
+      },
+      {
+        title: "Works",
+        note: "Agrippa is perhaps best known for his books."
+      }
+    ]
+  },
+  Paracelsus: {
+    title: "Paracelsus",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Paracelsus",
+    description: "Theophrastus Bombast von Hohenheim, known as Paracelsus, was a Swiss physician, alchemist, lay theologian, and philosopher of the German Renaissance.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Aureolus_Theophrastus_Bombastus_von_Hohenheim_%28Paracelsus%29._Wellcome_V0004455.jpg/330px-Aureolus_Theophrastus_Bombastus_von_Hohenheim_%28Paracelsus%29._Wellcome_V0004455.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "Theophrastus Bombast von Hohenheim, 10 November 1493, Egg, Schwyz, Swiss Confederacy, (now Switzerland)"
+      },
+      {
+        label: "Died",
+        value: "24 September 1541(1541-09-24) (aged\xA047), Salzburg, Salzburg, (now Austria)"
+      },
+      {
+        label: "Education",
+        value: "University of Basel\nUniversity of Ferrara, (M.D., 1515/16)"
+      },
+      {
+        label: "Era",
+        value: "Renaissance philosophy"
+      },
+      {
+        label: "Region",
+        value: "Western philosophy"
+      },
+      {
+        label: "School",
+        value: "Renaissance humanism"
+      },
+      {
+        label: "Institutions",
+        value: "University of Basel"
+      },
+      {
+        label: "Main interests",
+        value: "Medicine, alchemy, astrology, theology"
+      },
+      {
+        label: "Notable ideas",
+        value: 'Toxicology\n"The dose makes the poison"'
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: "Paracelsus was born in Einsiedeln, a village close to the Etzel Pass in the Canton of Schwyz. He was born in a house next to a bridge spanning the Sihl River. His father Wilhelm (d. 1534) was a chemist and physician, an illegitimate descendant of the Swabian noble Georg Bombast von Hohenheim (1453\u20131499), commander of the Order of Saint John in Rohrdorf.",
+        items: []
+      },
+      {
+        heading: "Philosophy",
+        summary: "As a physician of the early 16th century, Paracelsus held a natural affinity with the Hermetic, Neoplatonic, and Pythagorean philosophies central to the Renaissance, a world-view exemplified by Marsilio Ficino and Pico della Mirandola. Astrology was a very important part of Paracelsus's medicine and he was a practising astrologer, as were many of the university-trained physicians working at that time in Europe. Paracelsus devoted several sections in his writings to the construction of astrological talismans for curing disease.",
+        items: []
+      },
+      {
+        heading: "Chemistry and alchemy",
+        summary: "Paracelsus was one of the first medical professors to recognize that physicians required a solid academic knowledge in the natural sciences, especially chemistry. He pioneered the use of chemicals and minerals in medicine, invented chemical therapy, chemical urinalysis, and suggested a biochemical theory of digestion. Paracelsus used chemistry and chemical analogies in his teachings to medical students and to the medical establishment, many of whom found them objectionable.",
+        items: []
+      },
+      {
+        heading: "Contributions to medicine",
+        summary: "His hermetic beliefs were that sickness and health in the body relied upon the harmony of humans (microcosm) and nature (macrocosm). He took a different approach from those before him, using this analogy not in the manner of soul-purification but in the manner that humans must have certain balances of minerals in their bodies, and that certain illnesses of the body had chemical remedies that could cure them. As a result of this hermetical idea of harmony, the universe's macrocosm was represented in every person as a microcosm. An example of this correspondence is the doctrine of signatures used to identify curative powers of plants. If a plant looked like a part of the body, then this signified its ability to cure this given anatomy. For example, the root of the orchid looks like a testicle and can therefore heal any testicle-associated illness. Paracelsus mobilized the microcosm-macrocosm theory to demonstrate the analogy between the aspirations to salvation and health. As humans must ward off the influence of evil spirits with morality, they must also ward off diseases with good health.",
+        items: []
+      },
+      {
+        heading: "Reception and legacy",
+        summary: `The oldest surviving portrait of Paracelsus is a woodcut by Augustin Hirschvogel, published in 1538, still during Paracelsus's lifetime. A still older painting by Quentin Matsys has been lost, but at least three 17th-century copies survive, one by an anonymous Flemish artist, kept in the Louvre, one by Peter Paul Rubens, kept in Brussels, and one by a student of Rubens, now kept in Uppsala. Another portrait by Hirschvogel, dated 1540, claims to show Paracelsus "at the age of 47" (sue aetatis 47), i.e. less than a year before his death. In this portrait, Paracelsus is shown as holding his sword, gripping the spherical pommel with the right hand. Above and below the image are the mottos Alterius non sit qui suus esse potest ("Let no man belong to another who can belong to himself") and Omne donum perfectum a Deo, inperfectum a Diabolo ("All perfect gifts are from God, [all] imperfect [ones] from the Devil"); later portraits give a German rendition in two rhyming couplets (Eines andern Knecht soll Niemand sein / der f\xFCr sich bleiben kann allein /all gute Gaben sint von Got / des Teufels aber sein Spot). Posthumous portraits of Paracelsus, made for publications of his books during the second half of the 16th century, often show him in the same pose, holding his sword by its pommel.`,
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "German Wikisource has original text related to this article: Paracelsus",
+        items: [
+          "De gradibus et compositionibus receptorum naturalium, 1526.",
+          "Vom Holtz Guaico (on guaiacum), 1529.",
+          "Practica, gemacht auff Europen 1529.",
+          "Von der Frantz\xF6sischen kranckheit Drey B\xFCcher (on syphilis), 1530.",
+          "Von den wunderbarlichen zeychen, so in vier jaren einander nach im Hymmelgewelcke und Luft ersehen 1534",
+          "Von der Bergsucht oder Bergkranckheiten (on miners' diseases), 1534.",
+          "Vonn dem Bad Pfeffers in Oberschwytz gelegen (Pf\xE4fers baths), 1535.",
+          "Praktica Teutsch auff das 1535 Jar 1535",
+          'Die gro\xDFe Wundarzney ("Great Book of Surgery"), Ulm 1536 (Hans Varnier); Augsburg 1536 (Haynrich Stayner (=Steyner)), Frankfurt 1536 (Georg Raben/ Weygand Hanen).',
+          "Prognosticatio Ad Vigesimum Quartum annum duratura 1536",
+          "Wundt unnd Leibartznei. Frankfurt: Christian Egenolff, 1549 (reprinted 1555, 1561).",
+          "Das Buch Paramirum, Mulhouse: Peter Schmid, 1562.",
+          "Aureoli Theophrasti Paracelsi schreiben Von Tartarjschen kranckheiten, nach dem alten nammen, Vom grie\xDF sand vnnd [unnd] stein, Basel, c. 1563.",
+          "Das Buch Paragranvm Avreoli Theophrasti Paracelsi: Darinnen die vier Columnae, als da ist, Philosophia, Astronomia, Alchimia, vnnd Virtus, auff welche Theophrasti Medicin fundirt ist, tractirt werden, Frankfurt, 1565.",
+          "Opvs Chyrvrgicvm, Frankfurt, 1565.",
+          "Ex Libro de Nymphis, Sylvanis, Pygmaeis, Salamandris, et Gigantibus etc. Nissae Silesiorum, Excudebat Ioannes Cruciger (1566)",
+          "Von den Krankheiten so die Vernunft Berauben. Basel, 1567.",
+          "Philosophia magna, tractus aliquot, C\xF6ln, 1567.",
+          "Philosophiae et Medicinae utriusque compendium, Basel, 1568.",
+          "Neun B\xFCcher Archidoxis. Translated into Latin by Adam Schr\xF6ter. Krak\xF3w: Maciej Wirzbi\u0119ta, 1569.",
+          "Zw\xF6lff B\xFCcher, darin alle gehaimn\xFC\xDF der natur er\xF6ffnet, 1570",
+          "Astronomia magna: oder Die gantze Philosophia sagax der grossen und kleinen Welt, Frankfurt, 1571.",
+          "De natura rerum libri septem: Opuscula ver\xE8 aurea; Ex Germanica lingua in Latinam translata per M. Georgium Forbergium Mysium philosophiae ac medicinae studiosum, 1573.",
+          "De Peste, Strasbourg: Michael Toxites, Bey Niclauss Wyriot, 1574.",
+          "Volumen Paramirum, Strasbourg: Christian M\xFClller, 1575.",
+          "Metamorphosis Theophrasti Paracelsi: Dessen werck seinen meister loben wirt, Basel, 1574.",
+          "Von der Wundartzney: Ph. Theophrasti von Hohenheim, beyder Artzney Doctoris, 4 B\xFCcher. Basel: Peter Perna, 1577.",
+          "Kleine Wundartzney. Basel: Peter Perna, 1579.",
+          "Opus Chirurgicum, Bodenstein, Basel, 1581.",
+          "Huser quart edition (medicinal and philosophical treatises), ten volmes, Basel, 1589\u20131591; Huser's edition of Paracelsus' surgical works was published posthumously in Strasbourg, 1605.\nvol. 1, In diesem Theil werden begriffen die B\xFCcher, welche von Ursprung und herkommen, aller Kranckheiten handeln in Genere. Basel. 1589 [VD16 P 365] urn:nbn:de:bvb:12-bsb00022502-1\nvol. 2, Dieser Theil begreifft f\xFCrnemlich die Schrifften, inn denen die Fundamenta angezeigt werde[n], auff welchen die Kunst der rechten Artzney stehe, und au\xDF was B\xFCchern dieselbe gelehrnet werde, Basel. 1589 [VD16 P 367] urn:nbn:de:bvb:12-bsb00022503-6\nvol. 3, Inn diesem Theil werden begriffen deren B\xFCcher ettliche, welche von Ursprung, Ursach und Heylung der Kranckheiten handeln in Specie. Basel, 1589 [VD16 P 369] urn:nbn:de:bvb:12-bsb00022504-2\nvol. 4, In diesem Theil werden gleichfals, wie im Dritten, solche B\xFCcher begriffen, welche von Ursprung, Ursach unnd Heilung der Kranckheiten in Specie handlen. Basel, 1589 [VD16 P 371] urn:nbn:de:bvb:12-bsb00022505-7\nvol. 5, B\xFCcher de Medicina Physica Basel, 1589 urn:nbn:de:bvb:12-bsb10164682-7\nvol. 6, In diesem Tomo seind begriffen solche B\xFCcher, in welchen de\xDF mehrer theils von Spagyrischer Bereitung Nat\xFCrlicher dingen, die Artzney betreffend, gehandelt wirt. Item, ettliche Alchimistische B\xFCchlin, so allein von der Transmutation der Metallen tractiren. Basel, 1590 [VD16 P 375] urn:nbn:de:bvb:12-bsb00022506-2\nvol. 7, In diesem Theil sind verfasset die B\xFCcher, in welchen f\xFCrnemlich die Kr\xE4fft, Tugenden und Eigenschafften Nat\xFCrlicher dingen, auch derselben Bereitdungen, betreffent die Artzney, beschriben, werden. Basel, 1590 [VD16 P 376] urn:nbn:de:bvb:12-bsb00022507-8\nvol. 8, In diesem Tomo (welcher der Erste unter den Philosophischen) werden solche B\xFCcher begriffen, darinnen f\xFCrnemlich die Philosophia de Generationibus & Fructibus quatuor Elementorum beschrieben wirdt. Basel, 1590 [VD16 P 377] urn:nbn:de:bvb:12-bsb00022508-3\nvol. 9, Diser Tomus (welcher der Ander unter den Philosophischen) begreifft solcher B\xFCcher, darinnen allerley Nat\xFCrlicher und Ubernat\xFCrlicher Heymligkeiten Ursprung, Ursach, Wesen und Eigenschafft, gr\xFCndtlich und warhafftig beschriben werden. Basel, 1591 [VD16 P 380] urn:nbn:de:bvb:12-bsb00022509-3\nvol. 10, Dieser Theil (welcher der Dritte unter den Philosophischen Schrifften) begreifft f\xFCrnemlich das treffliche Werck Theophrasti, Philosophia Sagax, oder Astronomia Magna genannt: Sampt ettlichen andern Opusculis, und einem Appendice. Basel, 1591 [VD16 P 381] urn:nbn:de:bvb:12-bsb00022510-5, Frankfurt 1603\nKlage Theophrasti Paracelsi, uber seine eigene Discipel, unnd leichtfertige Ertzte, Darbeneben auch unterricht, wie er wil, da\xDF ein rechter Artzt soll geschickt seyn, und seine Chur verrichten, und die Patienten versorgen, etc.; Au\xDF seinen B\xFCchern auff das k\xFCrtzste zusammen gezogen, Wider die Thumk\xFCnen selbwachsende, Rhumrh\xE4tige, apostatische Ertzte, und leichtfertige Alchymistische Landtstreicher, die sich Paracelsisten nennen; \u2026 jetzo zum ersten also zusammen bracht, und in Truck geben. 1594 [VD16 P 383] urn:nbn:de:bvb:12-bsb00015650-2",
+          "Kleine Wund-Artzney. Stra\xDFburg (Ledertz), Benedictus Figulus. 1608.",
+          "Opera omnia medico-chemico-chirurgica, Genevae, Vol. 3, 1658.",
+          "Prognosticon Theophrasti Paracelsi, vol. 4 of VI Prognostica Von Verenderung vnd zufaelligem Glueck vnd Vnglueck der... Potentaten im Roemischen Reich, Auch des Tuercken vnd Pabst ed. Henricus Neotechnus, 1620.",
+          "Paracelsus: S\xE4mtliche Werke: nach der 10 B\xE4ndigen Huserschen Gesamtausgabe (1589\u20131591) zum erstenmal in neuzeitliches deutsch \xFCbersetzt, mit Einleitung, Biographie, Literaturangaben und erkl\xE4renden Anmerkungen. Edited by Bernhard Aschner. 4 volumes. Jena: G. Fisher, 1926\u20131932.",
+          "Paracelsus: S\xE4mtliche Werke. Edited by Karl Sudhoff, Wilhelm Matthiessen, and Kurt Goldammer. Part I (Medical, scientific, and philosophical writings), 14 volumes (Munich and Berlin, 1922\u20131933). Part II (Theological and religious writings), 7 volumes (Munich and Wiesbaden, 1923\u20131986).",
+          "Register zu Sudhoffs Paracelsus-Ausgabe. Allgemeines und Spezialregister: Personen, Orte, Pflanzen, Rezepte, Verweise auf eigene Werke, Bu\xDFler, E., 2018, ISBN\xA0978-90-821760-1-8",
+          "Theophrastus Paracelsus: Werke. Edited by Will-Erich Peuckert, 5 vols. Basel and Stuttgart: Schwabe Verlag, 1965\u20131968.",
+          "The Hermetic and Alchemical Writings of Paracelsus, Two Volumes, translated by Arthur Edward Waite, London, 1894. (in Google books), see also a revised 2002 edition (preview only) Partial contents: Coelum Philosophorum; The Book Concerning The Tincture Of The Philosophers; The Treasure of Treasures for Alchemists; The Aurora of the Philosophers; Alchemical Catechism.",
+          "Paracelsus: Essential Readings. Selected and translated by Nicholas Goodrick-Clarke. Berkeley, CA: North Atlantic Books, 1999.",
+          "Paracelsus: His Life and Doctrines. Franz Hartmann, New York: Theosophical Publishing Co., 1918",
+          "Paracelsus (Theophrastus Bombastus von Hohenheim, 1494\u20131541). Essential Theoretical Writings. Edited and translated with a Commentary and Introduction by Andrew Weeks. Leiden/Boston: Brill, 2008, ISBN\xA0978-90-04-15756-9.",
+          "Paracelsus: Selected Writings ed. with an introduction by Jolande Jacobi, trans. Norbert Guterman, New York: Pantheon, 1951 reprinted Princeton 1988"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "Paracelsus was born in Einsiedeln, a village close to the Etzel Pass in the Canton of Schwyz."
+      },
+      {
+        title: "Philosophy",
+        note: "As a physician of the early 16th century, Paracelsus held a natural affinity with the Hermetic, Neoplatonic, and Pythagorean philosophies central to the Renaissance, a world-view exemplified by Marsilio Ficino and Pico della Mirandola."
+      },
+      {
+        title: "Chemistry and alchemy",
+        note: "Paracelsus was one of the first medical professors to recognize that physicians required a solid academic knowledge in the natural sciences, especially chemistry."
+      },
+      {
+        title: "Contributions to medicine",
+        note: "His hermetic beliefs were that sickness and health in the body relied upon the harmony of humans (microcosm) and nature (macrocosm)."
+      },
+      {
+        title: "Reception and legacy",
+        note: "The oldest surviving portrait of Paracelsus is a woodcut by Augustin Hirschvogel, published in 1538, still during Paracelsus's lifetime."
+      },
+      {
+        title: "Works",
+        note: "German Wikisource has original text related to this article: Paracelsus"
+      }
+    ]
+  },
+  Nostradamus: {
+    title: "Nostradamus",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Nostradamus",
+    description: "Michel de Nostredame, usually Latinised as Nostradamus, was a French astrologer, apothecary, physician, and reputed seer, who is best known for his book Les Proph\xE9ties, a collection of 942 poetic quatrains allegedly predicting future events.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Nostradamus_by_Cesar.jpg/330px-Nostradamus_by_Cesar.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "14 or (1503-12-21)21 December 1503, Saint-R\xE9my-de-Provence, Provence, France"
+      },
+      {
+        label: "Died",
+        value: "1 or 2 July 1566(1566-07-02) (aged\xA062), Salon-de-Provence, Provence, France"
+      },
+      {
+        label: "Occupations",
+        value: "Physician\napothecary\nauthor\ntranslator\nastrological consultant"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Prophecy, treating plague"
+      },
+      {
+        label: "Notable\xA0work",
+        value: "Les Proph\xE9ties"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: `Nostradamus was born on either 14 or 21 December 1503 in Saint-R\xE9my-de-Provence, Provence, France, where his claimed birthplace still exists, and baptized Michel. He was one of at least nine children of notary Jaume (or Jacques) de Nostredame and Reyni\xE8re, granddaughter of Pierre de Saint-R\xE9my, who worked as a physician in Saint-R\xE9my. Jaume's family had originally been Jewish. His father, Cresquas, a grain and money dealer based in Avignon, had converted to Catholicism around 1459\u201360, taking the Christian name "Pierre" and the surname "Nostredame" (Our Lady), the saint on whose day his conversion was solemnised. The earliest ancestor who can be identified on the paternal side is Astruge of Carcassonne, who died about 1420. Michel's known siblings included Delphine, Jean (c. 1507\u20131577), Pierre, Hector, Louis, Bertrand, Jean II (born 1522), and Antoine (born 1523).
+Little else is known about his childhood, although there is a persistent tradition that he was educated by his maternal great-grandfather Jean de St. R\xE9my\u2014a tradition which is somewhat undermined by the fact that the latter disappears from the historical record after 1504 when the child was only one year old.`,
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: 'In The Prophecies Nostradamus compiled his collection of major, long-term predictions. The first installment was published in 1555 and contained 353 quatrains. The third edition, with three hundred new quatrains, was reportedly printed in 1558, but now survives as only part of the omnibus edition that was published after his death in 1568. This version contains one unrhymed and 941 rhymed quatrains, grouped into nine sets of 100 and one of 42, called "Centuries".',
+        items: []
+      },
+      {
+        heading: "Origins of The Prophecies",
+        summary: `Nostradamus claimed to base his published predictions on judicial astrology\u2014the astrological 'judgment', or assessment, of the 'quality' (and thus potential) of events such as births, weddings, coronations etc.\u2014but was heavily criticised by professional astrologers of the day such as Laurens Videl for incompetence and for assuming that "comparative horoscopy" (the comparison of future planetary configurations with those accompanying known past events) could actually predict what would happen in the future.`,
+        items: []
+      },
+      {
+        heading: "Interpretations",
+        summary: "Most of the quatrains deal with disasters, such as plagues, earthquakes, wars, floods, invasions, murders, droughts, and battles\u2014all undated and based on foreshadowings by the Mirabilis Liber. Some quatrains cover these disasters in overall terms; others concern a single person or a small group of people. Some cover a single town, others several towns in several countries. A major, underlying theme is an impending invasion of Europe by Muslim forces from farther east and south headed by the expected Antichrist, directly reflecting the then-current Ottoman invasions and the earlier Saracen equivalents, as well as the prior expectations of the Mirabilis Liber. All of this is presented in the context of the supposedly imminent end of the world\u2014even though this is not in fact mentioned\u2014a conviction that sparked numerous collections of end-time prophecies at the time, including an unpublished collection by Christopher Columbus. Views on Nostradamus have varied widely throughout history. Academic views, such as those of Jacques Halbronn, regard Nostradamus's Prophecies as antedated forgeries written by later authors for political reasons.",
+        items: []
+      },
+      {
+        heading: "In popular culture",
+        summary: "The prophecies retold and expanded by Nostradamus figured largely in popular culture in the 20th and 21st centuries. As well as being the subject of hundreds of books (both fiction and nonfiction), Nostradamus' life has been depicted in several films and videos, and his life and writings continue to be a subject of media interest.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "Nostradamus was born on either 14 or 21 December 1503 in Saint-R\xE9my-de-Provence, Provence, France, where his claimed birthplace still exists, and baptized Michel."
+      },
+      {
+        title: "Works",
+        note: "In The Prophecies Nostradamus compiled his collection of major, long-term predictions."
+      },
+      {
+        title: "Origins of The Prophecies",
+        note: `Nostradamus claimed to base his published predictions on judicial astrology\u2014the astrological 'judgment', or assessment, of the 'quality' (and thus potential) of events such as births, weddings, coronations etc.\u2014but was heavily criticised by professional astrologers of the day such as Laurens Videl for incompetence and for assuming that "comparative horoscopy" (the comparison of future planetary configurations with those accompanying known past events) could actually predict what would happen in the future.`
+      },
+      {
+        title: "Interpretations",
+        note: "Most of the quatrains deal with disasters, such as plagues, earthquakes, wars, floods, invasions, murders, droughts, and battles\u2014all undated and based on foreshadowings by the Mirabilis Liber."
+      },
+      {
+        title: "In popular culture",
+        note: "The prophecies retold and expanded by Nostradamus figured largely in popular culture in the 20th and 21st centuries."
+      }
+    ]
+  },
+  "John Dee": {
+    title: "John Dee",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/John_Dee",
+    description: 'John Dee was an English mathematician, astronomer, teacher, astrologer, occultist, and alchemist. He was the court astronomer for, and advisor to, Elizabeth I, and spent much of his time on alchemy, divination, and Hermetic philosophy. As an antiquarian, he had one of the largest libraries in England at the time. As a political advisor, he advocated the foundation of English colonies in the New World to form a "British Empire", a term he is credited with coining.',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/John_Dee_Ashmolean.jpg/330px-John_Dee_Ashmolean.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "13 July 1527, Tower Ward, London, England"
+      },
+      {
+        label: "Died",
+        value: "December 1608 or March 1609(1609-03-00) (aged\xA081), Mortlake, Surrey, England"
+      },
+      {
+        label: "Education",
+        value: "St John's College, CambridgeLouvain University"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Advisor to Queen Elizabeth I"
+      },
+      {
+        label: "Spouses",
+        value: "Katherine Constable \u200B \u200B(m.\xA01565; died\xA01574)\u200B Unknown \u200B \u200B(m.\xA01575; died\xA01576)\u200B Jane Fromond \u200B \u200B(m.\xA01578; died\xA01604)\u200B"
+      },
+      {
+        label: "Children",
+        value: "7 or 8 (incl. Arthur)"
+      },
+      {
+        label: "Fields",
+        value: "Mathematics, alchemy, astrology, Hermeticism, navigation"
+      },
+      {
+        label: "Institutions",
+        value: "Trinity College, CambridgeChrist's College, Manchester"
+      },
+      {
+        label: "Academic advisors",
+        value: "Gemma Frisius, Gerardus Mercator"
+      },
+      {
+        label: "Notable students",
+        value: "Thomas Digges"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: `Dee was born in Tower Ward, London, to Rowland Dee, of Welsh descent, and Johanna, daughter of William Wild. His surname "Dee" is an anglicisation of Welsh du (black). His grandfather was Bedo Ddu of Nant-y-groes, Pilleth, Radnorshire; John retained his connection with the locality. His father, Roland, was a mercer (cloth merchant) and gentleman courtier to Henry VIII. Dee traced descent from Rhodri the Great, 9th-century ruler of the Kingdom of Gwynedd, and constructed a pedigree accordingly. His family had arrived in London around the time of Henry Tudor's coronation as Henry VII.`,
+        items: []
+      },
+      {
+        heading: "Personal life",
+        summary: 'Dee "promoted English overseas exploration and expansion in terms of a political and spiritual renewal at home".',
+        items: []
+      },
+      {
+        heading: "Achievements",
+        summary: "Dee was a devout Christian, with his religiosity influenced by doctrines from Hermetic, Platonic, and Pythagorean systems, which were pervasive in the Renaissance. He believed that numbers were the basis of all things and key to knowledge. From Hermeticism he drew a belief that man had the potential for divine power that could be exercised through mathematics. His goal was to help bring forth a unified world religion through the healing of the breach of the Roman Catholic and Protestant churches and the recapture of the pure theology of the ancients.",
+        items: []
+      },
+      {
+        heading: "Reputation and significance",
+        summary: "Some ten years after Dee's death, the antiquarian Sir Robert Cotton, 1st Baronet, of Connington bought land around Dee's house and began digging for papers and artifacts. He found several manuscripts, mainly records of Dee's angelic communications. Cotton's son gave these to the scholar M\xE9ric Casaubon, who published them in 1659, with a long introduction critical of their author, as A True & Faithful Relation of What passed for many Yeers between Dr. John Dee (A Mathematician of Great Fame in Q. Eliz. and King James their Reignes) and some spirits. As the first public revelation of Dee's spiritual conferences, the book was popular. Casaubon, who believed in the reality of spirits, argued in his introduction that Dee was acting as the unwitting tool of evil spirits while believing he was communicating with angels. This book is mainly responsible for the image, prevalent for the next two-and-a-half centuries, of Dee as a dupe and deluded fanatic.",
+        items: [
+          `Dee's Speculum or Mirror (an obsidian Aztec cult object in the shape of a hand-mirror, brought to Europe in the late 1520s), which was subsequently owned by Horace Walpole. This was first attributed to Dee by Walpole. Lord Frederick Campbell had brought "a round piece of shining black marble in a leathern case" to Walpole in an attempt to ascertain its provenance. Walpole said he responded, saying, "Oh, Lord, I am the only man in England that can tell you! It is Dr. Dee's black stone." However, there is no explicit reference to the mirror in any of Dee's surviving writings.`,
+          `The small wax seals used to support the legs of Dee's "table of practice" (the table at which the scrying was performed)`,
+          'The large, elaborately decorated wax "Seal of God", used to support the "shew-stone", the crystal ball used for scrying',
+          "A gold amulet engraved with a representation of one of Kelley's visions",
+          "A crystal globe, 6\xA0cm in diameter. This item remained unnoticed for many years in the mineral collection; it is possibly the one owned by Dee, but the provenance is less certain than for the others."
+        ]
+      },
+      {
+        heading: "Literary and cultural references",
+        summary: "Dee was a popular figure in literary works by his contemporaries and he has continued to feature in popular culture, particularly in fiction or fantasy set during his lifetime or dealing with magic or the occult.",
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "",
+        items: [
+          "Monas Hieroglyphica, 1564",
+          "Preface to Billingsley's Euclid (Billingsley's translation of Euclid's Elements), 1570",
+          "On the Mystical Rule of the Seven Planets, 1582\u20131583",
+          "{{cite book}}: ISBN / Date incompatibility (help)",
+          "from the collected works known as Mysteriorum libri quinque",
+          "John Dee, The Mathematicall Praeface to the Elements of Geometrie of Euclid of Megara (1570). (Reprinted New York: Science History Publications (1975) ISBN\xA00-88202-020-X)",
+          "John Dee, John Dee on Astronomy: Propaedeumata Aphoristica (1558 & 1568) edited by Wayne Shumaker, Berkeley: University of California Press ISBN\xA00-520-03376-0",
+          "John Dee, Autobiographical tracts of John Dee, Warden of the College of Manchester, ed. James Crossley. Chetham Society Publications, Vol XXIV. Manchester, 1851",
+          "John Dee, Diary for the years 1595\u20131601, ed. John E. Bailey. Privately printed, 1880"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "Dee was born in Tower Ward, London, to Rowland Dee, of Welsh descent, and Johanna, daughter of William Wild."
+      },
+      {
+        title: "Personal life",
+        note: 'Dee "promoted English overseas exploration and expansion in terms of a political and spiritual renewal at home".'
+      },
+      {
+        title: "Achievements",
+        note: "Dee was a devout Christian, with his religiosity influenced by doctrines from Hermetic, Platonic, and Pythagorean systems, which were pervasive in the Renaissance."
+      },
+      {
+        title: "Reputation and significance",
+        note: "Some ten years after Dee's death, the antiquarian Sir Robert Cotton, 1st Baronet, of Connington bought land around Dee's house and began digging for papers and artifacts."
+      },
+      {
+        title: "Literary and cultural references",
+        note: "Dee was a popular figure in literary works by his contemporaries and he has continued to feature in popular culture, particularly in fiction or fantasy set during his lifetime or dealing with magic or the occult."
+      }
+    ]
+  },
+  "Felipe II of Spain": {
+    title: "Philip II of Spain",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Philip_II_of_Spain",
+    description: "Philip II, sometimes known in Spain as Philip the Prudent, was King of Spain from 1556, King of Portugal from 1580, and King of Naples and Sicily from 1554 until his death in 1598. He was also jure uxoris King of England and Ireland from his marriage to Queen Mary I in 1554 until her death in 1558. Further, he was Duke of Milan from 1540. From 1555, he was Lord of the Seventeen Provinces of the Netherlands.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Portrait_of_Philip_II_of_Spain_by_Sofonisba_Anguissola_-_002b.jpg/330px-Portrait_of_Philip_II_of_Spain_by_Sofonisba_Anguissola_-_002b.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Reign",
+        value: "16 January 1556 \u2013 13 September 1598"
+      },
+      {
+        label: "Predecessor",
+        value: "Charles I"
+      },
+      {
+        label: "Successor",
+        value: "Philip III"
+      },
+      {
+        label: "Reign",
+        value: "12 September 1580 \u2013 13 September 1598"
+      },
+      {
+        label: "Acclamation",
+        value: "16 April 1581, Tomar"
+      },
+      {
+        label: "Predecessor",
+        value: "Henry or Anthony (disputed)"
+      },
+      {
+        label: "Successor",
+        value: "Philip III of Spain (as Philip II)"
+      },
+      {
+        label: "Reign",
+        value: "25 July 1554 \u2013 17 November 1558"
+      },
+      {
+        label: "Predecessor",
+        value: "Mary I"
+      },
+      {
+        label: "Successor",
+        value: "Elizabeth I"
+      },
+      {
+        label: "Co-monarch",
+        value: "Mary I"
+      },
+      {
+        label: "Reign",
+        value: "25 October 1555 \u2013 13 September 1598"
+      },
+      {
+        label: "Predecessor",
+        value: "Charles II"
+      },
+      {
+        label: "Successor",
+        value: "Isabella Clara Eugenia"
+      },
+      {
+        label: "Born",
+        value: "21 May 1527, Palacio de Pimentel, Castile"
+      },
+      {
+        label: "Died",
+        value: "13 September 1598(1598-09-13) (aged\xA071), El Escorial, Castile"
+      },
+      {
+        label: "Burial",
+        value: "El Escorial"
+      },
+      {
+        label: "Spouses",
+        value: "Maria Manuela of Portugal \u200B \u200B(m.\xA01543; died\xA01545)\u200B Mary I of England \u200B \u200B(m.\xA01554; died\xA01558)\u200B Elisabeth of Valois \u200B \u200B(m.\xA01559; died\xA01568)\u200B Anna of Austria \u200B \u200B(m.\xA01570; died\xA01580)\u200B"
+      },
+      {
+        label: "Issuemore...",
+        value: "Carlos, Prince of Asturias\nIsabella Clara Eugenia, Lady of the Netherlands\nCatalina Micaela, Duchess of Savoy\nFerdinand, Prince of Asturias\nDiego, Prince of Asturias\nPhilip III of Spain"
+      },
+      {
+        label: "House",
+        value: "Habsburg"
+      },
+      {
+        label: "Father",
+        value: "Charles V, Holy Roman Emperor"
+      },
+      {
+        label: "Mother",
+        value: "Isabella of Portugal"
+      }
+    ],
+    sections: [
+      {
+        heading: "Early life: 1527\u20131548",
+        summary: "A member of the House of Habsburg, Philip was the son of Emperor Charles V, who was also king of Castile and Aragon, and Isabella of Portugal. He was born in the Castilian capital of Valladolid on 21 May 1527 at Palacio de Pimentel, which was owned by Don Bernardino Pimentel (the first Marqu\xE9s de T\xE1vara). The culture and courtly life of Castile were an important influence in his early life. He was entrusted to the royal governess Leonor de Mascare\xF1as, and tutored by Juan Mart\xEDnez Siliceo, the future archbishop of Toledo. Philip displayed reasonable aptitude in arts and letters alike. Later he would study with more illustrious tutors, including humanists like Juan Mart\xEDnez Sil\xEDceo and Juan Crist\xF3bal Calvete de Estrella. Though Philip had good command over Latin, Spanish, and Portuguese, he never managed to equal his father as a polyglot. While Philip was also an archduke of Austria, he was seen as a foreigner in the Holy Roman Empire. The feeling was mutual. Philip felt himself to be culturally Spanish; he had been born in Castile and raised in the Castilian court, his native language was Spanish, and he preferred to live in the Spanish kingdoms. This ultimately impeded his succession to the imperial throne.",
+        items: []
+      },
+      {
+        heading: "Domestic policy",
+        summary: "After living in the Netherlands in the early years of his reign, Philip II decided to return to Castile. Although sometimes described as an absolute monarch, Philip faced many constitutional constraints on his authority, influenced by the growing strength of the bureaucracy. The Spanish Empire was not a single monarchy with one legal system but a personal union of separate realms, each jealously guarding its own rights against those of the House of Habsburg. In practice, Philip often found his authority overruled by local assemblies and his word less effective than that of local lords.",
+        items: []
+      },
+      {
+        heading: "Economy",
+        summary: "Charles V had left his son Philip with a debt of about 36\xA0million ducats and an annual deficit of 1\xA0million ducats. This debt caused Philip II to default on loans in 1557, 1560, 1575, and 1596 (including debt to Poland, known as Neapolitan sums). Lenders had no power over the King and could not force him to repay his loans. These defaults were just the beginning of Spain's economic troubles as its kings would default six more times in the next 65 years. Aside from reducing state revenues for overseas expeditions, the domestic policies of Philip II further burdened the Spanish kingdoms and would, in the following century, contribute to its decline, as maintained by some historians.",
+        items: []
+      },
+      {
+        heading: "Foreign policy",
+        summary: "Philip's foreign policies were determined by a combination of Catholic fervour and dynastic objectives. He considered himself the chief defender of Catholic Europe, both against the Ottoman Empire and against the forces of the Protestant Reformation. He never relented from his fight against heresy, defending the Catholic faith and limiting freedom of worship within his territories. These territories included his patrimony in the Netherlands, where Protestantism had taken deep root. Following the Revolt of the Netherlands in 1568, Philip waged a campaign against Dutch heresy and secession. It also dragged in the English and the French at times and expanded into the German Rhineland with the Cologne War. This series of conflicts lasted for the rest of his life. Philip's constant involvement and focus in European wars took a significant toll on the treasury and caused economic difficulties for the Crown and even bankruptcies.",
+        items: []
+      },
+      {
+        heading: "King of Portugal",
+        summary: "In 1578 young King Sebastian of Portugal died at the Battle of Alc\xE1cer Quibir without descendants, triggering a succession crisis. His granduncle, the elderly Cardinal Henry, succeeded him as king, but Henry had no descendants either, having taken holy orders. When Henry died two years after Sebastian's disappearance, three grandchildren of Manuel I claimed the throne: Infanta Catarina, Duchess of Braganza; Ant\xF3nio, Prior of Crato; and Philip II of Spain. Ant\xF3nio was acclaimed King of Portugal in many cities and towns throughout the country, but members of the Council of Governors of Portugal who had supported Philip escaped to the Spanish kingdoms and declared him to be the legal successor of Henry.",
+        items: []
+      },
+      {
+        heading: "Relations with England and Ireland",
+        summary: "Philip's father arranged his marriage to 37-year-old Queen Mary I of England, Charles' maternal first cousin. His father ceded the crown of Naples, as well as his claim to the Kingdom of Jerusalem, to him. Their marriage at Winchester Cathedral on 25 July 1554 took place just two days after their first meeting. Philip's view of the affair was entirely political. Lord Chancellor Stephen Gardiner and the House of Commons petitioned Mary to consider marrying an Englishman, preferring Edward Courtenay.",
+        items: []
+      },
+      {
+        heading: "Death",
+        summary: "Philip II died on 13 September 1598 at El Escorial, aged 71, after a prolonged illness, likely cancer. He was surrounded by priests, family, and trusted officials. His personal chamber was divided into a main room, bedroom, study, and oratory, following the layout of his father's monastery. The most notable feature was the monarch's bed, still preserved, which was positioned so he could observe the liturgy at the church's main altar from his bedside. Despite severe pain in his final months, he continued to review state papers and correspondence. The funeral oration honouring the virtues of Philip\xA0II is attributed to Tom\xE1s Fern\xE1ndez de Medrano, Lord of Valdeosera, author of the Rep\xFAblica Mista (1602), and a trusted adviser and crown official under both Philip\xA0II and Philip III.",
+        items: []
+      },
+      {
+        heading: "Legacy",
+        summary: 'Under Philip II, Spain reached the peak of its power. However, in spite of the great and increasing quantities of gold and silver flowing into his coffers from the American mines, the riches of the Portuguese spice trade, and the enthusiastic support of the Habsburg dominions for the Counter-Reformation, he would never succeed in suppressing Protestantism or defeating the Dutch rebellion. Early in his reign, the Dutch might have laid down their weapons if he had desisted in trying to suppress Protestantism, but his devotion to Catholicism would not permit him to do so. He was a devout Catholic and exhibited the typical 16th century antipathy for religious heterodoxy; he said, "Before suffering the slightest damage to religion in the service of God, I would lose all of my estates and a hundred lives, if I had them, because I do not intend nor do I desire to be the ruler of heretics."',
+        items: []
+      },
+      {
+        heading: "Titles, honours and styles",
+        summary: `Philip continued his father's style of "Majesty" (Latin: Maiestas; Spanish: Majestad) in preference to that of "Highness" (Celsitudo; Alteza). In diplomatic texts, he continued the use of the title "Most Catholic" (Rex Catholicissimus; Rey Cat\xF3lico) first bestowed by Pope Alexander VI on Ferdinand and Isabella in 1496.`,
+        items: [
+          "Heir titles\nPrince of Gerona: 21 May 1527 \u2013 16 January 1556\nPrince of Asturias 1528\u20131556",
+          "King of Castile as Philip II: 16 January 1556 \u2013 13 September 1598\nKing of Castile, of Le\xF3n, of Granada, of Toledo, of Galicia, of Seville, of Cordoba, of Murcia, of Jaen, of the Algarves, of Algeciras, of Gibraltar, of the Canary Islands, of the Indias, the Islands and Mainland of the Ocean Sea; Lord of Molina\nLord of Biscay",
+          "King of Aragon as Philip I: 16 January 1556 \u2013 13 September 1598\nKing of Arag\xF3n\nKing of the Two Sicilies\nKing of Naples, of Jerusalem (from 25 July 1554)\nKing of Sicily. Duke of Athens, of Neopatria\nKing of Valencia\nKing of Majorca\nKing of Sardinia and of Corsica, Margrave of Oristano, Count of Goceano\nKing of Navarre\nCount of Barcelona, of Roussillon, of Cerdanya",
+          "King of Portugal as Philip I: 12 September 1580 \u2013 13 September 1598\nKing of Portugal and the Algarves of either side of the sea in Africa, Lord of Guinea and of Conquest, Navigation, and Commerce of Ethiopia, Arabia, Persia, and India, etc.",
+          "King of England de jure uxoris as Philip I: 25 July 1554 \u2013 17 November 1558\nKing of England, France (titular); Defender of the Faith\nKing of Ireland",
+          "Imperial and Habsburg patrimonial titles:\nDuke of Milan: 11 October 1540 (secret donation) / 25 July 1554 (public investiture) \u2013 13 September 1598\nImperial vicar of Siena: since 30 May 1554\nArchduke of Austria\nPrincely Count of Habsburg and of Tyrol\nPrince of Swabia",
+          "Burgundian titles\nLord of the Netherlands: 25 October 1555 \u2013 13 September 1598\nDuke of Lothier, of Brabant, of Limburg, of Luxemburg, of Guelders. Count of Flanders, of Artois, of Hainaut, of Holland, of Zeeland, of Namur, of Zutphen. Margrave of the Holy Roman Empire, Lord of Frisia, Salins, Mechelen, the cities, towns and lands of Utrecht, Overyssel, Groningen\nCount Palatine of Burgundy from 10 June 1556; Count of Charolais from 21 September 1558\nDuke of Burgundy\nDominator in Asia, Africa",
+          "Honours\nKnight of the Golden Fleece: 1531 \u2013 13 September 1598\nGrand Master of the Order of the Golden Fleece: 23 October 1555 \u2013 13 September 1598\nGrand Master of the Order of Calatrava: 16 January 1556 \u2013 13 September 1598\nGrand Master of the Order of Alcantara: 16 January 1556 \u2013 13 September 1598\nGrand Master of the Order of Santiago: 16 January 1556 \u2013 13 September 1598\nGrand Master of the Order of Montesa: 8 December 1587 \u2013 13 September 1598"
+        ]
+      },
+      {
+        heading: "Family",
+        summary: "Philip was married four times and had children with three of his wives. He also had two long-term relationships with Isabel Osorio and Eufrasia de Guzm\xE1n.",
+        items: [
+          "Maria Manuela of Portugal (1527\u20131545)",
+          "Mary I, Queen of England (1516\u20131558), by Antonis Mor",
+          "Elisabeth of Valois (1545\u20131568), by Juan Pantoja de la Cruz",
+          "Anna of Austria (1549\u20131580), by Alonso S\xE1nchez Coello",
+          "Carlos, Prince of Asturias (8 July 1545 \u2013 24 July 1568), died unmarried at the age of 23 and without issue.",
+          "Stillborn son (1560)",
+          "Miscarried twin daughters (August 1564)",
+          "Isabella Clara Eugenia (12 August 1566 \u2013 1 December 1633), married Albert VII, Archduke of Austria",
+          "Catherine Michaela (10 October 1567 \u2013 6 November 1597), married Charles Emmanuel I, Duke of Savoy, and had issue",
+          "Joan (3 October 1568) died shortly after birth.",
+          "Ferdinand, Prince of Asturias (4 December 1571 \u2013 18 October 1578)",
+          "Charles Laurence (12 August 1573 \u2013 30 June 1575)",
+          "Diego F\xE9lix (15 August 1575 \u2013 21 November 1582)",
+          "Philip III of Spain (14 April 1578 \u2013 31 March 1621)",
+          "Maria (14 February 1580 \u2013 5 August 1583).",
+          "Cenotaph of Philip and three of his four wives at El Escorial",
+          "King Philip and Queen Anna banqueting with family and courtiers, by Alonso S\xE1nchez Coello"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Early life: 1527\u20131548",
+        note: "A member of the House of Habsburg, Philip was the son of Emperor Charles V, who was also king of Castile and Aragon, and Isabella of Portugal."
+      },
+      {
+        title: "Domestic policy",
+        note: "After living in the Netherlands in the early years of his reign, Philip II decided to return to Castile."
+      },
+      {
+        title: "Economy",
+        note: "Charles V had left his son Philip with a debt of about 36\xA0million ducats and an annual deficit of 1\xA0million ducats."
+      },
+      {
+        title: "Foreign policy",
+        note: "Philip's foreign policies were determined by a combination of Catholic fervour and dynastic objectives."
+      },
+      {
+        title: "King of Portugal",
+        note: "In 1578 young King Sebastian of Portugal died at the Battle of Alc\xE1cer Quibir without descendants, triggering a succession crisis."
+      },
+      {
+        title: "Relations with England and Ireland",
+        note: "Philip's father arranged his marriage to 37-year-old Queen Mary I of England, Charles' maternal first cousin."
+      },
+      {
+        title: "Death",
+        note: "Philip II died on 13 September 1598 at El Escorial, aged 71, after a prolonged illness, likely cancer."
+      },
+      {
+        title: "Legacy",
+        note: "Under Philip II, Spain reached the peak of its power."
+      },
+      {
+        title: "Titles, honours and styles",
+        note: `Philip continued his father's style of "Majesty" (Latin: Maiestas; Spanish: Majestad) in preference to that of "Highness" (Celsitudo; Alteza).`
+      },
+      {
+        title: "Family",
+        note: "Philip was married four times and had children with three of his wives."
+      }
+    ]
+  }
+};
+
+// src/data/wiki.js
+var WIKI = wiki_content_default;
+function slugify(name) {
+  return String(name).toLowerCase().replace(/[()]/g, " ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
 
 // src/components/Timeline.jsx
 var import_react14 = __toESM(require_react());
@@ -28432,7 +33487,7 @@ function fmtYear(y) {
   if (y < 0) return Math.abs(y) + " BCE";
   return y + " CE";
 }
-function Timeline({ items, title, accent = "#7fb0ff" }) {
+function Timeline({ items, title, accent = "#8a05ff" }) {
   if (!items || !items.length) return null;
   const W = 1e3, H = 180, PADX = 40;
   const min = Math.min(...items.map((i) => i.y0));
@@ -28449,49 +33504,67 @@ function Timeline({ items, title, accent = "#7fb0ff" }) {
     if (it.endpoint) labelIdx.add(i);
   });
   for (const i of [Math.floor(items.length * 0.25), Math.floor(items.length * 0.5), Math.floor(items.length * 0.75)]) labelIdx.add(i);
-  return /* @__PURE__ */ import_react14.default.createElement("div", { className: "timeline-wrap", role: "img", "aria-label": title }, /* @__PURE__ */ import_react14.default.createElement("svg", { viewBox: `0 0 ${W} ${H}`, width: "100%", height: "auto", style: { maxWidth: "100%" } }, /* @__PURE__ */ import_react14.default.createElement("line", { x1: PADX, y1: midY, x2: W - PADX, y2: midY, stroke: "#33405a", strokeWidth: "2" }), ticks.map((t) => /* @__PURE__ */ import_react14.default.createElement("g", { key: t }, /* @__PURE__ */ import_react14.default.createElement("line", { x1: xOf(t), y1: midY - 6, x2: xOf(t), y2: midY + 6, stroke: "#3a4762", strokeWidth: "1" }), /* @__PURE__ */ import_react14.default.createElement("text", { x: xOf(t), y: midY + 20, textAnchor: "middle", fontSize: "11", fill: "#6a7588" }, fmtYear(t)))), items.map((it, i) => {
+  return /* @__PURE__ */ import_react14.default.createElement("div", { className: "timeline-wrap", role: "img", "aria-label": title }, /* @__PURE__ */ import_react14.default.createElement("svg", { viewBox: `0 0 ${W} ${H}`, width: "100%", height: "auto", style: { maxWidth: "100%" } }, /* @__PURE__ */ import_react14.default.createElement("line", { x1: PADX, y1: midY, x2: W - PADX, y2: midY, stroke: "#33343f", strokeWidth: "2" }), ticks.map((t) => /* @__PURE__ */ import_react14.default.createElement("g", { key: t }, /* @__PURE__ */ import_react14.default.createElement("line", { x1: xOf(t), y1: midY - 6, x2: xOf(t), y2: midY + 6, stroke: "#3a3347", strokeWidth: "1" }), /* @__PURE__ */ import_react14.default.createElement("text", { x: xOf(t), y: midY + 20, textAnchor: "middle", fontSize: "11", fill: "#6a6a7a" }, fmtYear(t)))), items.map((it, i) => {
     const ym = it.y1 == null ? it.y0 : Math.round((it.y0 + it.y1) / 2);
     const x = xOf(ym);
     const end = !!it.endpoint;
     const r = end ? 8 : 5;
-    const fill = end ? "#e8c87a" : it.isRoyal ? "#c792ea" : accent;
+    const fill = end ? "#e8c87a" : it.isRoyal ? "#c29eff" : accent;
     const above = i % 2 === 0;
     const ly = above ? midY - 18 : midY + 34;
-    return /* @__PURE__ */ import_react14.default.createElement("g", { key: i }, /* @__PURE__ */ import_react14.default.createElement("line", { x1: x, y1: midY, x2: x, y2: above ? midY - 12 : midY + 12, stroke: fill, strokeWidth: "1", opacity: "0.5" }), end ? /* @__PURE__ */ import_react14.default.createElement("g", null, /* @__PURE__ */ import_react14.default.createElement("circle", { cx: x, cy: midY, r: r + 3, fill: "none", stroke: "#e8c87a", strokeWidth: "1.2", opacity: "0.7" }), /* @__PURE__ */ import_react14.default.createElement("circle", { cx: x, cy: midY, r, fill: "#e8c87a", stroke: "#fff5d0", strokeWidth: "1" })) : /* @__PURE__ */ import_react14.default.createElement("circle", { cx: x, cy: midY, r, fill, stroke: "#0e1320", strokeWidth: "1.2" }), labelIdx.has(i) && /* @__PURE__ */ import_react14.default.createElement("text", { x, y: ly, textAnchor: "middle", fontSize: "12", fontWeight: end ? 700 : 400, fill: end ? "#e8c87a" : "#9aa6bd" }, it.name), /* @__PURE__ */ import_react14.default.createElement("title", null, `${it.name} (${it.years || fmtYear(it.y0)}) \u2014 ${it.role || ""}`));
-  })), /* @__PURE__ */ import_react14.default.createElement("div", { className: "muted", style: { textAlign: "center", fontSize: ".78rem", marginTop: 2 } }, /* @__PURE__ */ import_react14.default.createElement("span", { style: { color: "#e8c87a" } }, "\u25CF"), " endpoint \xB7 ", /* @__PURE__ */ import_react14.default.createElement("span", { style: { color: "#c792ea" } }, "\u25CF"), " royal \xB7 ", /* @__PURE__ */ import_react14.default.createElement("span", { style: { color: accent } }, "\u25CF"), " mage/prophet \xB7 hover a dot for the figure"));
+    return /* @__PURE__ */ import_react14.default.createElement("g", { key: i }, /* @__PURE__ */ import_react14.default.createElement("line", { x1: x, y1: midY, x2: x, y2: above ? midY - 12 : midY + 12, stroke: fill, strokeWidth: "1", opacity: "0.5" }), end ? /* @__PURE__ */ import_react14.default.createElement("g", null, /* @__PURE__ */ import_react14.default.createElement("circle", { cx: x, cy: midY, r: r + 3, fill: "none", stroke: "#e8c87a", strokeWidth: "1.2", opacity: "0.7" }), /* @__PURE__ */ import_react14.default.createElement("circle", { cx: x, cy: midY, r, fill: "#e8c87a", stroke: "#fbcfff", strokeWidth: "1" })) : /* @__PURE__ */ import_react14.default.createElement("circle", { cx: x, cy: midY, r, fill, stroke: "#16161f", strokeWidth: "1.2" }), labelIdx.has(i) && /* @__PURE__ */ import_react14.default.createElement("text", { x, y: ly, textAnchor: "middle", fontSize: "12", fontWeight: end ? 700 : 400, fill: end ? "#e8c87a" : "#9ca3af" }, it.name), /* @__PURE__ */ import_react14.default.createElement("title", null, `${it.name} (${it.years || fmtYear(it.y0)}) \u2014 ${it.role || ""}`));
+  })), /* @__PURE__ */ import_react14.default.createElement("div", { className: "muted", style: { textAlign: "center", fontSize: ".78rem", marginTop: 2 } }, /* @__PURE__ */ import_react14.default.createElement("span", { style: { color: "#e8c87a" } }, "\u25CF"), " lineage end \xB7 ", /* @__PURE__ */ import_react14.default.createElement("span", { style: { color: "#c29eff" } }, "\u25CF"), " royal \xB7 ", /* @__PURE__ */ import_react14.default.createElement("span", { style: { color: accent } }, "\u25CF"), " mage/prophet \xB7 hover a dot for the figure"));
 }
 
 // src/pages/ProphetsPage.jsx
-function wiki(name) {
-  return "https://en.wikipedia.org/wiki/" + encodeURIComponent(name.replace(/ /g, "_"));
-}
 function ProphetCard({ p }) {
   const dates = p.y0 === p.y1 ? fmtYear(p.y0) : `${fmtYear(p.y0)} \u2013 ${fmtYear(p.y1)}`;
   const end = !!p.endpoint;
-  return /* @__PURE__ */ import_react15.default.createElement("div", { className: "tcard" + (end ? " always" : ""), style: end ? { borderColor: "var(--gold)", boxShadow: "0 0 0 1px var(--gold)" } : null }, /* @__PURE__ */ import_react15.default.createElement("div", { className: "the" }, p.he && /* @__PURE__ */ import_react15.default.createElement("span", { className: "he", style: { fontSize: "1.5rem", marginLeft: 6 } }, p.he), " ", end && /* @__PURE__ */ import_react15.default.createElement("span", { className: "pill", style: { color: "var(--gold)", borderColor: "var(--gold)" } }, "endpoint")), /* @__PURE__ */ import_react15.default.createElement("div", { className: "read" }, /* @__PURE__ */ import_react15.default.createElement("a", { href: wiki(p.name), target: "_blank", rel: "noreferrer", style: { color: "inherit", textDecoration: "none" } }, p.name)), /* @__PURE__ */ import_react15.default.createElement("div", { className: "trans" }, dates, " \xB7 ", p.region), /* @__PURE__ */ import_react15.default.createElement("div", { className: "g" }, /* @__PURE__ */ import_react15.default.createElement("span", { className: "pill", style: { fontSize: ".7rem" } }, p.thread)), /* @__PURE__ */ import_react15.default.createElement("div", { className: "simp" }, p.role));
+  const pill = p.designation || (end ? "lineage end" : null);
+  return /* @__PURE__ */ import_react15.default.createElement(
+    "a",
+    {
+      className: "tcard" + (end ? " always" : ""),
+      href: "/prophet/" + slugify(p.name),
+      style: { textDecoration: "none", display: "block", borderColor: end ? "var(--gold)" : void 0, boxShadow: end ? "0 0 0 1px var(--gold)" : void 0 }
+    },
+    /* @__PURE__ */ import_react15.default.createElement("div", { className: "the" }, p.he && /* @__PURE__ */ import_react15.default.createElement("span", { className: "he", style: { fontSize: "1.5rem", marginLeft: 6 } }, p.he)),
+    /* @__PURE__ */ import_react15.default.createElement("div", { className: "read" }, p.name),
+    /* @__PURE__ */ import_react15.default.createElement("div", { className: "trans" }, dates, " \xB7 ", p.region),
+    /* @__PURE__ */ import_react15.default.createElement("div", { className: "g" }, /* @__PURE__ */ import_react15.default.createElement("span", { className: "pill", style: { fontSize: ".7rem" } }, p.thread), pill && /* @__PURE__ */ import_react15.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", marginLeft: 6, color: "var(--gold)", borderColor: "var(--gold)" } }, pill)),
+    /* @__PURE__ */ import_react15.default.createElement("div", { className: "simp" }, p.role)
+  );
 }
 function ProphetsPage() {
   const span = `${fmtYear(PROPHETS[0].y0)} \u2013 ${fmtYear(PROPHETS[PROPHETS.length - 1].y1)}`;
-  return /* @__PURE__ */ import_react15.default.createElement("div", null, /* @__PURE__ */ import_react15.default.createElement("h1", null, "Prophets \u2014 from Adam to Jacob Frank"), /* @__PURE__ */ import_react15.default.createElement("p", { className: "muted" }, "A chronology of prophetic and revelatory figures, from the first human ", /* @__PURE__ */ import_react15.default.createElement("span", { className: "he" }, "\u05D0\u05D3\u05DD"), " through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, down to the Sabbatean\u2013Frankist thread whose endpoint is ", /* @__PURE__ */ import_react15.default.createElement("b", { style: { color: "var(--gold)" } }, "Jacob Frank (1726\u20131791)"), ". ", PROPHETS.length, " figures across ", span, ". Each card links to its Wikipedia page."), /* @__PURE__ */ import_react15.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react15.default.createElement(Timeline, { items: PROPHETS, title: "Prophet timeline \u2014 Adam to Jacob Frank", accent: "#7fb0ff" })), /* @__PURE__ */ import_react15.default.createElement("div", { className: "tcards" }, PROPHETS.map((p, i) => /* @__PURE__ */ import_react15.default.createElement(ProphetCard, { key: i, p }))));
+  const last = PROPHETS[PROPHETS.length - 1];
+  return /* @__PURE__ */ import_react15.default.createElement("div", null, /* @__PURE__ */ import_react15.default.createElement("h1", null, "Prophets \u2014 from Adam to Jacob Frank"), /* @__PURE__ */ import_react15.default.createElement("p", { className: "muted" }, "A chronology of prophetic and revelatory figures, from the first human ", /* @__PURE__ */ import_react15.default.createElement("span", { className: "he" }, "\u05D0\u05D3\u05DD"), " through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, down to the Sabbatean\u2013Frankist thread whose ", /* @__PURE__ */ import_react15.default.createElement("b", { style: { color: "var(--gold)" } }, last.designation || "final", " figure is ", last.name, " (", fmtYear(last.y0), "\u2013", fmtYear(last.y1), ")"), ". ", PROPHETS.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table."), /* @__PURE__ */ import_react15.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react15.default.createElement(Timeline, { items: PROPHETS, title: "Prophet timeline \u2014 Adam to Jacob Frank", accent: "#8a05ff" })), /* @__PURE__ */ import_react15.default.createElement("div", { className: "tcards" }, PROPHETS.map((p, i) => /* @__PURE__ */ import_react15.default.createElement(ProphetCard, { key: i, p }))));
 }
 
 // src/pages/MagesPage.jsx
 var import_react16 = __toESM(require_react());
-function wiki2(name) {
-  return "https://en.wikipedia.org/wiki/" + encodeURIComponent(name.replace(/ /g, "_"));
-}
 function MageCard({ m }) {
-  const c = MAGES_CONTENT[m.name] || {};
   const dates = m.years || `${fmtYear(m.y0)} \u2013 ${fmtYear(m.y1)}`;
   const end = !!m.endpoint;
-  const bio = c.bio || m.role;
-  const works = c.works || [];
-  const url = c.wikipediaUrl || wiki2(m.name);
-  return /* @__PURE__ */ import_react16.default.createElement("div", { className: "panel mage-card" + (end ? " endpoint" : ""), style: { padding: 16, marginBottom: 14, borderColor: end ? "var(--gold)" : void 0, boxShadow: end ? "0 0 0 1px var(--gold)" : void 0 } }, /* @__PURE__ */ import_react16.default.createElement("h3", { style: { marginTop: 0, marginBottom: 4 } }, /* @__PURE__ */ import_react16.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer", style: { color: "inherit", textDecoration: "none" } }, m.name), end && /* @__PURE__ */ import_react16.default.createElement("span", { className: "pill", style: { marginLeft: 8, color: "var(--gold)", borderColor: "var(--gold)" } }, "endpoint \xB7 end of the era of kings")), /* @__PURE__ */ import_react16.default.createElement("div", { className: "muted", style: { marginBottom: 8, fontSize: ".82rem" } }, dates, " \xB7 ", m.region, m.isIberian && /* @__PURE__ */ import_react16.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", marginLeft: 6, color: "var(--green)", borderColor: "var(--green)" } }, "Iberian"), m.isRoyal && /* @__PURE__ */ import_react16.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", marginLeft: 6, color: "var(--violet)", borderColor: "var(--violet)" } }, "royal")), bio && bio.split(/\n\n+/).map((para, i) => /* @__PURE__ */ import_react16.default.createElement("p", { key: i, style: { marginBottom: 8, lineHeight: 1.55 } }, para)), works.length > 0 && /* @__PURE__ */ import_react16.default.createElement(import_react16.default.Fragment, null, /* @__PURE__ */ import_react16.default.createElement("table", { style: { marginTop: 6, width: "100%", fontSize: ".86rem" } }, /* @__PURE__ */ import_react16.default.createElement("thead", null, /* @__PURE__ */ import_react16.default.createElement("tr", null, /* @__PURE__ */ import_react16.default.createElement("th", { style: { textAlign: "left", padding: "4px 8px" } }, "Work / contribution"), /* @__PURE__ */ import_react16.default.createElement("th", { style: { textAlign: "left", padding: "4px 8px" } }, "Significance"))), /* @__PURE__ */ import_react16.default.createElement("tbody", null, works.map((w, i) => /* @__PURE__ */ import_react16.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react16.default.createElement("td", { style: { padding: "4px 8px", fontWeight: 600 } }, w.title), /* @__PURE__ */ import_react16.default.createElement("td", { style: { padding: "4px 8px" }, className: "muted" }, w.note)))))), /* @__PURE__ */ import_react16.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react16.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer" }, "Read more on Wikipedia \u2192")));
+  const pill = m.designation || (end ? "lineage end" : null);
+  const hasWiki = !!(WIKI[m.name] && WIKI[m.name].description);
+  return /* @__PURE__ */ import_react16.default.createElement(
+    "a",
+    {
+      className: "tcard" + (end ? " always" : ""),
+      href: "/mage/" + slugify(m.name),
+      style: { textDecoration: "none", display: "block", borderColor: end ? "var(--gold)" : void 0, boxShadow: end ? "0 0 0 1px var(--gold)" : void 0 }
+    },
+    /* @__PURE__ */ import_react16.default.createElement("div", { className: "the", style: { minHeight: 26 } }, m.name),
+    /* @__PURE__ */ import_react16.default.createElement("div", { className: "read" }, dates, " \xB7 ", m.region),
+    /* @__PURE__ */ import_react16.default.createElement("div", { className: "g", style: { display: "flex", flexWrap: "wrap", gap: 4, alignItems: "center" } }, /* @__PURE__ */ import_react16.default.createElement("span", { className: "pill", style: { fontSize: ".7rem" } }, m.role.split(";")[0]), m.isIberian && /* @__PURE__ */ import_react16.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--green)", borderColor: "var(--green)" } }, "Iberian"), m.isRoyal && /* @__PURE__ */ import_react16.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--violet)", borderColor: "var(--violet)" } }, "royal"), pill && /* @__PURE__ */ import_react16.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--gold)", borderColor: "var(--gold)" } }, pill)),
+    hasWiki && /* @__PURE__ */ import_react16.default.createElement("div", { className: "simp" }, WIKI[m.name].description.slice(0, 120), "\u2026")
+  );
 }
 function MagesPage() {
   const span = `${fmtYear(MAGES[0].y0)} \u2013 ${fmtYear(MAGES[MAGES.length - 1].y1)}`;
-  return /* @__PURE__ */ import_react16.default.createElement("div", null, /* @__PURE__ */ import_react16.default.createElement("h1", null, "Magi \u2014 from Daniel to Felipe II"), /* @__PURE__ */ import_react16.default.createElement("p", { className: "muted" }, "A chronology of ", /* @__PURE__ */ import_react16.default.createElement("b", null, "magi / wise-men / royal-sage occult figures"), ", from the Babylonian court magi (", /* @__PURE__ */ import_react16.default.createElement("b", null, "Daniel, Shadrach, Meshach, Abednego"), ") through the medieval Iberian sages \u2014 ", /* @__PURE__ */ import_react16.default.createElement("b", null, "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n"), " \u2014 to the Renaissance Christian-kabbalists and royal astrologers, ending with ", /* @__PURE__ */ import_react16.default.createElement("b", { style: { color: "var(--gold)" } }, "Felipe II of Spain (1527\u20131598)"), ", who closes the era of kings. ", MAGES.length, " figures across ", span, ". Each mage's card gives a Wikipedia-grounded bio and a ", /* @__PURE__ */ import_react16.default.createElement("i", null, "ficha"), " of their most important works."), /* @__PURE__ */ import_react16.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react16.default.createElement(Timeline, { items: MAGES, title: "Magi timeline \u2014 Daniel to Felipe II", accent: "#7fb0ff" })), MAGES.map((m, i) => /* @__PURE__ */ import_react16.default.createElement(MageCard, { key: i, m })));
+  const last = MAGES[MAGES.length - 1];
+  return /* @__PURE__ */ import_react16.default.createElement("div", null, /* @__PURE__ */ import_react16.default.createElement("h1", null, "Magi \u2014 from Daniel to Felipe II"), /* @__PURE__ */ import_react16.default.createElement("p", { className: "muted" }, "A chronology of ", /* @__PURE__ */ import_react16.default.createElement("b", null, "magi / wise-men / royal-sage occult figures"), ", from the Babylonian court magi (", /* @__PURE__ */ import_react16.default.createElement("b", null, "Daniel, Shadrach, Meshach, Abednego"), ") through the medieval Iberian sages \u2014 ", /* @__PURE__ */ import_react16.default.createElement("b", null, "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n"), " \u2014 to the Renaissance Christian-kabbalists and royal astrologers, ending with ", /* @__PURE__ */ import_react16.default.createElement("b", { style: { color: "var(--gold)" } }, last.name, " (", last.years, ")"), ", who closes the era of kings. ", MAGES.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table."), /* @__PURE__ */ import_react16.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react16.default.createElement(Timeline, { items: MAGES, title: "Magi timeline \u2014 Daniel to Felipe II", accent: "#8a05ff" })), /* @__PURE__ */ import_react16.default.createElement("div", { className: "tcards" }, MAGES.map((m, i) => /* @__PURE__ */ import_react16.default.createElement(MageCard, { key: i, m }))));
 }
 
 // src/pages/AlignmentFicha.jsx
@@ -28504,7 +33577,7 @@ function smallestArc2(lons) {
   maxGap = Math.max(maxGap, s[0] + 360 - s[s.length - 1]);
   return 360 - maxGap;
 }
-function AlignmentFicha({ date, lex, angelMap, onBack }) {
+function AlignmentFicha({ date, lex, angelMap, onBack, nameRefs }) {
   const rows = (0, import_react17.useMemo)(() => skyAt(date), [date]);
   const occ = (0, import_react17.useMemo)(() => occupiedLetters(rows), [rows]);
   const occSigns = (0, import_react17.useMemo)(() => new Set(rows.map((r) => r.sign)), [rows]);
@@ -28525,10 +33598,264 @@ function AlignmentFicha({ date, lex, angelMap, onBack }) {
   const dateWords = words.filter((w) => w.simp).sort((a, b) => (b.name ? 1 : 0) - (a.name ? 1 : 0) || b.len - a.len);
   const top = dateWords.slice(0, 12);
   const year = parseInt(date.slice(0, 4), 10) || 2026;
-  return /* @__PURE__ */ import_react17.default.createElement("div", null, onBack && /* @__PURE__ */ import_react17.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react17.default.createElement("button", { onClick: onBack, title: "Back" }, "\u25C0 back to Alignments"), /* @__PURE__ */ import_react17.default.createElement("span", { className: "pill" }, "stellar alignment")), /* @__PURE__ */ import_react17.default.createElement("h1", null, "Stellar alignment \u2014 ", displayDate(date)), /* @__PURE__ */ import_react17.default.createElement("div", { className: "sub", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react17.default.createElement("b", { style: { color: "var(--gold)" } }, meta.maxInSign), " of ", rows.length, " bodies in ", /* @__PURE__ */ import_react17.default.createElement("b", null, meta.sign), " \xB7 span ", /* @__PURE__ */ import_react17.default.createElement("b", { className: "deg" }, meta.span.toFixed(1), "\xB0"), " \xB7 era ", /* @__PURE__ */ import_react17.default.createElement("b", null, meta.era)), /* @__PURE__ */ import_react17.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react17.default.createElement("div", { className: "panel", style: { padding: 14 } }, /* @__PURE__ */ import_react17.default.createElement(SkyMap, { rows, occ }), /* @__PURE__ */ import_react17.default.createElement("div", { className: "legend" }, occSigns.size, " of 12 zodiac signs occupied on ", displayDate(date), ". Readable simples: ", /* @__PURE__ */ import_react17.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ].sort().join(" ") || "none"), ".")), /* @__PURE__ */ import_react17.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react17.default.createElement("h3", { style: { marginTop: 0 } }, "Alignment metrics"), /* @__PURE__ */ import_react17.default.createElement("table", null, /* @__PURE__ */ import_react17.default.createElement("tbody", null, /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Date"), /* @__PURE__ */ import_react17.default.createElement("td", null, displayDate(date))), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Bodies"), /* @__PURE__ */ import_react17.default.createElement("td", null, rows.length, " (", rows.map((r) => GLYPH[r.body]).join(" "), ")")), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Max in one sign"), /* @__PURE__ */ import_react17.default.createElement("td", null, /* @__PURE__ */ import_react17.default.createElement("b", { style: { color: "var(--gold)" } }, meta.maxInSign), " in ", meta.sign)), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Span (tightest arc)"), /* @__PURE__ */ import_react17.default.createElement("td", { className: "deg" }, meta.span.toFixed(2), "\xB0")), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Precessional era"), /* @__PURE__ */ import_react17.default.createElement("td", null, meta.era)), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Occupied signs"), /* @__PURE__ */ import_react17.default.createElement("td", null, occSigns.size, "/12")), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Readable simples"), /* @__PURE__ */ import_react17.default.createElement("td", null, /* @__PURE__ */ import_react17.default.createElement("span", { className: "he", style: { fontSize: "1.1rem" } }, [...occ].sort().join(" ") || "none"))))))), /* @__PURE__ */ import_react17.default.createElement("div", { className: "panel", style: { marginTop: 14, padding: 16 } }, /* @__PURE__ */ import_react17.default.createElement("h3", { style: { marginTop: 0 } }, "Top readable names on ", displayDate(date), " \u2014 ", dateWords.length, " date-specific"), /* @__PURE__ */ import_react17.default.createElement("div", { className: "muted", style: { marginBottom: 8, fontSize: ".82rem" } }, "Names whose zodiac simples are among this alignment's occupied signs (proper names first, then longest). A particular sky configuration recurs over years \u2192 centuries \u2192 millennia; this is the readable layer of that day."), top.length ? /* @__PURE__ */ import_react17.default.createElement("div", { className: "tcards" }, top.map((w, i) => /* @__PURE__ */ import_react17.default.createElement("div", { key: i, className: "tcard" }, /* @__PURE__ */ import_react17.default.createElement("div", { className: "the" }, w.disp), /* @__PURE__ */ import_react17.default.createElement("div", { className: "read" }, w.translit), /* @__PURE__ */ import_react17.default.createElement("div", { className: "trans" }, w.gloss), /* @__PURE__ */ import_react17.default.createElement("div", { className: "g" }, w.len, " letters \xB7 gematria ", w.gem, w.name && /* @__PURE__ */ import_react17.default.createElement("span", { style: { color: "var(--blue)" } }, " \xB7 name"), w.angelName && /* @__PURE__ */ import_react17.default.createElement("span", { style: { color: "var(--violet)" } }, " \xB7 angel"))))) : /* @__PURE__ */ import_react17.default.createElement("div", { className: "muted" }, "No date-specific readable names on this day.")));
+  return /* @__PURE__ */ import_react17.default.createElement("div", null, onBack && /* @__PURE__ */ import_react17.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react17.default.createElement("button", { onClick: onBack, title: "Back" }, "\u25C0 back to Alignments"), /* @__PURE__ */ import_react17.default.createElement("span", { className: "pill" }, "stellar alignment")), /* @__PURE__ */ import_react17.default.createElement("h1", null, "Stellar alignment \u2014 ", displayDate(date)), /* @__PURE__ */ import_react17.default.createElement("div", { className: "sub", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react17.default.createElement("b", { style: { color: "var(--gold)" } }, meta.maxInSign), " of ", rows.length, " bodies in ", /* @__PURE__ */ import_react17.default.createElement("b", null, meta.sign), " \xB7 span ", /* @__PURE__ */ import_react17.default.createElement("b", { className: "deg" }, meta.span.toFixed(1), "\xB0"), " \xB7 era ", /* @__PURE__ */ import_react17.default.createElement("b", null, meta.era)), /* @__PURE__ */ import_react17.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react17.default.createElement("div", { className: "panel", style: { padding: 14 } }, /* @__PURE__ */ import_react17.default.createElement(SkyMap, { rows, occ }), /* @__PURE__ */ import_react17.default.createElement("div", { className: "legend" }, occSigns.size, " of 12 zodiac signs occupied on ", displayDate(date), ". Readable simples: ", /* @__PURE__ */ import_react17.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ].sort().join(" ") || "none"), ".")), /* @__PURE__ */ import_react17.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react17.default.createElement("h3", { style: { marginTop: 0 } }, "Alignment metrics"), /* @__PURE__ */ import_react17.default.createElement("table", null, /* @__PURE__ */ import_react17.default.createElement("tbody", null, /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Date"), /* @__PURE__ */ import_react17.default.createElement("td", null, displayDate(date))), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Bodies"), /* @__PURE__ */ import_react17.default.createElement("td", null, rows.length, " (", rows.map((r) => GLYPH[r.body]).join(" "), ")")), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Max in one sign"), /* @__PURE__ */ import_react17.default.createElement("td", null, /* @__PURE__ */ import_react17.default.createElement("b", { style: { color: "var(--gold)" } }, meta.maxInSign), " in ", meta.sign)), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Span (tightest arc)"), /* @__PURE__ */ import_react17.default.createElement("td", { className: "deg" }, meta.span.toFixed(2), "\xB0")), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Precessional era"), /* @__PURE__ */ import_react17.default.createElement("td", null, meta.era)), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Occupied signs"), /* @__PURE__ */ import_react17.default.createElement("td", null, occSigns.size, "/12")), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Readable simples"), /* @__PURE__ */ import_react17.default.createElement("td", null, /* @__PURE__ */ import_react17.default.createElement("span", { className: "he", style: { fontSize: "1.1rem" } }, [...occ].sort().join(" ") || "none"))))))), /* @__PURE__ */ import_react17.default.createElement("div", { className: "panel", style: { marginTop: 14, padding: 16 } }, /* @__PURE__ */ import_react17.default.createElement("h3", { style: { marginTop: 0 } }, "Top readable names on ", displayDate(date), " \u2014 ", dateWords.length, " date-specific"), /* @__PURE__ */ import_react17.default.createElement("div", { className: "muted", style: { marginBottom: 8, fontSize: ".82rem" } }, "Names whose zodiac simples are among this alignment's occupied signs (proper names first, then longest). A particular sky configuration recurs over years \u2192 centuries \u2192 millennia; this is the readable layer of that day."), top.length ? /* @__PURE__ */ import_react17.default.createElement("div", { className: "tcards" }, top.map((w, i) => /* @__PURE__ */ import_react17.default.createElement("div", { key: i, className: "tcard" }, /* @__PURE__ */ import_react17.default.createElement("div", { className: "the" }, w.disp), /* @__PURE__ */ import_react17.default.createElement("div", { className: "read" }, w.translit), /* @__PURE__ */ import_react17.default.createElement("div", { className: "trans" }, w.gloss), /* @__PURE__ */ import_react17.default.createElement("div", { className: "g" }, w.len, " letters \xB7 gematria ", w.gem, w.angelName && /* @__PURE__ */ import_react17.default.createElement("span", { style: { color: "var(--violet)" } }, " \xB7 angel")), (w.person || w.place || w.compound || nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0) && /* @__PURE__ */ import_react17.default.createElement("div", { style: { marginTop: 4, display: "flex", flexWrap: "wrap", gap: 4 } }, w.person && /* @__PURE__ */ import_react17.default.createElement("span", { className: "pill", style: { color: "var(--blue)", borderColor: "var(--blue)" } }, "name", w.theo ? " (theophoric)" : ""), w.place && /* @__PURE__ */ import_react17.default.createElement("span", { className: "pill", style: { color: "var(--green)", borderColor: "var(--green)" }, title: "A biblical PLACE \u2014 proper locative noun in Strong (city, mountain, region\u2026)" }, "place"), w.compound && /* @__PURE__ */ import_react17.default.createElement("span", { className: "pill", style: { color: "var(--warn)", borderColor: "var(--warn)" }, title: "Concatenated multi-root entry whose gloss is truncated" }, "compound"), nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0 && (() => {
+    const r = nameRefs[w.he];
+    return /* @__PURE__ */ import_react17.default.createElement("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" }, title: "Where this name appears in the Hebrew Bible (Sefaria): " + r.refs.join(", ") }, "\u{1F4D6} ", r.refs[0], r.n > 1 ? " \xB7 +" + (r.n - 1) : "");
+  })())))) : /* @__PURE__ */ import_react17.default.createElement("div", { className: "muted" }, "No date-specific readable names on this day.")));
+}
+
+// src/pages/ProphetFicha.jsx
+var import_react19 = __toESM(require_react());
+
+// src/components/Ficha.jsx
+var import_react18 = __toESM(require_react());
+function datesOf(figure) {
+  if (figure.years) return figure.years;
+  if (figure.y0 != null && figure.y1 != null) return figure.y0 === figure.y1 ? fmtYear(figure.y0) : `${fmtYear(figure.y0)} \u2013 ${fmtYear(figure.y1)}`;
+  return "";
+}
+function LifeBar({ figure, min, max }) {
+  const y0 = figure.y0, y1 = figure.y1 == null ? figure.y0 : figure.y1;
+  if (y0 == null) return null;
+  const span = Math.max(1, max - min);
+  const x0 = (y0 - min) / span * 100;
+  const x1 = (y1 - min) / span * 100;
+  const W = 100, H = 34;
+  return /* @__PURE__ */ import_react18.default.createElement("div", { className: "lifebar-wrap", role: "img", "aria-label": `Life span ${fmtYear(y0)} to ${fmtYear(y1)}` }, /* @__PURE__ */ import_react18.default.createElement("svg", { viewBox: `0 0 ${W} ${H}`, width: "100%", height: "auto", style: { maxWidth: "100%" } }, /* @__PURE__ */ import_react18.default.createElement("line", { x1: 0, y1: H / 2, x2: W, y2: H / 2, stroke: "#2a2a38", strokeWidth: "2" }), /* @__PURE__ */ import_react18.default.createElement("line", { x1: x0, y1: H / 2 - 9, x2: x0, y2: H / 2 + 9, stroke: "#9ca3af", strokeWidth: "1.5" }), /* @__PURE__ */ import_react18.default.createElement("line", { x1, y1: H / 2 - 9, x2: x1, y2: H / 2 + 9, stroke: "#9ca3af", strokeWidth: "1.5" }), /* @__PURE__ */ import_react18.default.createElement("rect", { x: x0, y: H / 2 - 5, width: Math.max(1.5, x1 - x0), height: 10, rx: 5, fill: "#8a05ff" }), /* @__PURE__ */ import_react18.default.createElement("text", { x: x0, y: 6, textAnchor: "start", fontSize: "7", fill: "#9ca3af" }, fmtYear(y0)), /* @__PURE__ */ import_react18.default.createElement("text", { x: x1, y: H - 1, textAnchor: "end", fontSize: "7", fill: "#9ca3af" }, fmtYear(y1))));
+}
+function Ficha({ figure, kind, axisMin, axisMax, backHref, backLabel, wiki }) {
+  if (!figure) return /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react18.default.createElement("h2", null, "Not found"), /* @__PURE__ */ import_react18.default.createElement("p", null, "No figure matches this path."));
+  const w = wiki || {};
+  const desc = w.description || figure.role;
+  const facts = w.infobox || [];
+  const rows = w.works || [];
+  const url = w.wikipediaUrl || "https://en.wikipedia.org/wiki/" + encodeURIComponent(figure.name.replace(/ /g, "_"));
+  const dates = datesOf(figure);
+  const designation = figure.designation || (figure.endpoint ? kind === "mage" ? "end of the era" : "lineage end" : null);
+  return /* @__PURE__ */ import_react18.default.createElement("div", { className: "ficha" }, /* @__PURE__ */ import_react18.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("button", { onClick: () => {
+    if (typeof window !== "undefined") window.history.back();
+  } }, "\u25C0 ", backLabel), /* @__PURE__ */ import_react18.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer", style: { marginLeft: "auto" } }, "Wikipedia \u2192")), /* @__PURE__ */ import_react18.default.createElement("h1", { style: { marginBottom: 4 } }, figure.name, figure.he && /* @__PURE__ */ import_react18.default.createElement("span", { className: "he", style: { marginLeft: 10, color: "var(--gold)" } }, figure.he)), /* @__PURE__ */ import_react18.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".9rem" } }, dates, dates && " \xB7 ", figure.region, designation && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 8, color: "var(--gold)", borderColor: "var(--gold)" } }, designation), kind === "mage" && figure.isIberian && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--green)", borderColor: "var(--green)" } }, "Iberian"), kind === "mage" && figure.isRoyal && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--violet)", borderColor: "var(--violet)" } }, "royal"), figure.thread && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 6 } }, figure.thread)), axisMin != null && axisMax != null && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { padding: 12, marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement(LifeBar, { figure, min: axisMin, max: axisMax })), /* @__PURE__ */ import_react18.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react18.default.createElement("div", null, w.thumbnail && /* @__PURE__ */ import_react18.default.createElement("div", { className: "fig", style: { marginBottom: 12, padding: 8 } }, /* @__PURE__ */ import_react18.default.createElement("img", { src: w.thumbnail, alt: figure.name, style: { maxHeight: 320, width: "auto", borderRadius: 8, maxWidth: "100%" }, loading: "lazy" })), /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Description"), /* @__PURE__ */ import_react18.default.createElement("p", { style: { lineHeight: 1.6, marginBottom: 0 } }, desc || "No Wikipedia description available."))), /* @__PURE__ */ import_react18.default.createElement("div", null, facts.length > 0 && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Facts"), /* @__PURE__ */ import_react18.default.createElement("table", { style: { fontSize: ".88rem" } }, /* @__PURE__ */ import_react18.default.createElement("tbody", null, facts.map((f, i) => /* @__PURE__ */ import_react18.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)", width: "38%", verticalAlign: "top" } }, f.label), /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "5px 8px" } }, f.value)))))))), rows.length > 0 && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Life & work in brief"), /* @__PURE__ */ import_react18.default.createElement("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 } }, "Summarised by section \u2014 one row per topic, for fast reading."), /* @__PURE__ */ import_react18.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react18.default.createElement("thead", null, /* @__PURE__ */ import_react18.default.createElement("tr", null, /* @__PURE__ */ import_react18.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "32%" } }, kind === "mage" ? "Work / contribution" : "Topic"), /* @__PURE__ */ import_react18.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px" } }, kind === "mage" ? "Significance" : "Summary"))), /* @__PURE__ */ import_react18.default.createElement("tbody", null, rows.map((r, i) => /* @__PURE__ */ import_react18.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "6px 8px", fontWeight: 600, verticalAlign: "top" } }, r.title), /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, r.note)))))), /* @__PURE__ */ import_react18.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react18.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer" }, "Read the full article on Wikipedia \u2192")));
+}
+
+// src/pages/ProphetFicha.jsx
+var BY_SLUG = new Map(PROPHETS.map((p) => [slugify(p.name), p]));
+var AXIS_MIN = Math.min(...PROPHETS.map((p) => p.y0));
+var AXIS_MAX = Math.max(...PROPHETS.map((p) => p.y1 == null ? p.y0 : p.y1));
+function ProphetFicha({ slug }) {
+  const figure = BY_SLUG.get(slug) || null;
+  const wiki = figure ? WIKI[figure.name] : null;
+  return /* @__PURE__ */ import_react19.default.createElement(
+    Ficha,
+    {
+      figure,
+      kind: "prophet",
+      axisMin: AXIS_MIN,
+      axisMax: AXIS_MAX,
+      backHref: "/prophets",
+      backLabel: "back to prophets",
+      wiki
+    }
+  );
+}
+var PROPHET_SLUGS = [...BY_SLUG.keys()];
+
+// src/pages/MageFicha.jsx
+var import_react20 = __toESM(require_react());
+var BY_SLUG2 = new Map(MAGES.map((m) => [slugify(m.name), m]));
+var AXIS_MIN2 = Math.min(...MAGES.map((m) => m.y0));
+var AXIS_MAX2 = Math.max(...MAGES.map((m) => m.y1 == null ? m.y0 : m.y1));
+function MageFicha({ slug }) {
+  const figure = BY_SLUG2.get(slug) || null;
+  const wiki = figure ? WIKI[figure.name] : null;
+  return /* @__PURE__ */ import_react20.default.createElement(
+    Ficha,
+    {
+      figure,
+      kind: "mage",
+      axisMin: AXIS_MIN2,
+      axisMax: AXIS_MAX2,
+      backHref: "/mages",
+      backLabel: "back to magi",
+      wiki
+    }
+  );
+}
+var MAGE_SLUGS = [...BY_SLUG2.keys()];
+
+// src/pages/Landing.jsx
+var import_react22 = __toESM(require_react());
+
+// src/components/WarningModal.jsx
+var import_react21 = __toESM(require_react());
+var QUESTIONS = [
+  "Do you currently feel your thoughts or actions are being controlled by an outside force?",
+  "Are you hearing voices or seeing things that the people around you do not?",
+  "Have you felt racing thoughts, euphoria, or no need for sleep for several days running?",
+  "Do you feel unable to slow down or stop your thinking right now?"
+];
+function WarningModal({ open, onClose, onProceed }) {
+  const [answers, setAnswers] = (0, import_react21.useState)(QUESTIONS.map(() => null));
+  if (!open) return null;
+  const set = (i, v) => setAnswers((a) => a.map((x, j2) => j2 === i ? v : x));
+  const yesCount = answers.filter((a) => a === true).length;
+  const done = answers.every((a) => a !== null);
+  const risk = yesCount >= 1;
+  return /* @__PURE__ */ import_react21.default.createElement("div", { className: "eph-modal", role: "dialog", "aria-modal": "true", "aria-labelledby": "wm-title", onClick: onClose }, /* @__PURE__ */ import_react21.default.createElement("div", { className: "eph-panel panel", style: { maxWidth: 560 }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react21.default.createElement("h2", { id: "wm-title", style: { marginTop: 0 } }, "Before you enter"), /* @__PURE__ */ import_react21.default.createElement("div", { className: "muted", style: { marginBottom: 12, fontSize: ".9rem" } }, "This project explores ", /* @__PURE__ */ import_react21.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation, cosmology and altered-state symbolism"), " \u2014 the meaning of ", /* @__PURE__ */ import_react21.default.createElement("i", null, "apocalypse"), " as the unveiling of knowledge, read through the stars. Some of it can feel intense or destabilizing."), /* @__PURE__ */ import_react21.default.createElement("div", { className: "iv", style: { borderColor: "var(--warn)", marginBottom: 14 } }, /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem", lineHeight: 1.55 } }, /* @__PURE__ */ import_react21.default.createElement("b", { style: { color: "var(--warn)" } }, "Please do not use this tool if you suffer from psychosis, mania, or schizophrenia"), " \u2014 or, if you choose to, do so only together with someone you trust. The symbolism here can feel overwhelming; your wellbeing comes first, always.")), /* @__PURE__ */ import_react21.default.createElement("h3", { style: { marginTop: 6 } }, "A short self-check"), /* @__PURE__ */ import_react21.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".82rem" } }, "This is not a diagnosis \u2014 just a moment to pause. Answer honestly; nothing is stored or sent anywhere."), /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 10 } }, QUESTIONS.map((q, i) => /* @__PURE__ */ import_react21.default.createElement("div", { key: i, className: "iv", style: { padding: "10px 12px" } }, /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem", marginBottom: 7 } }, q), /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", gap: 8 } }, /* @__PURE__ */ import_react21.default.createElement("button", { className: answers[i] === true ? "on" : "", onClick: () => set(i, true), "aria-pressed": answers[i] === true }, "Yes"), /* @__PURE__ */ import_react21.default.createElement("button", { className: answers[i] === false ? "on" : "", onClick: () => set(i, false), "aria-pressed": answers[i] === false }, "No"))))), done && /* @__PURE__ */ import_react21.default.createElement("div", { className: "iv", style: { marginTop: 12, borderColor: risk ? "var(--warn)" : "var(--green)" } }, risk ? /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem" } }, /* @__PURE__ */ import_react21.default.createElement("b", { style: { color: "var(--warn)" } }, "Please be gentle with yourself."), " Consider talking to someone you trust or a mental-health professional before going deeper. You can always come back later.") : /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem", color: "var(--green)" } }, /* @__PURE__ */ import_react21.default.createElement("b", null, "Thank you for checking."), " Take what is useful, leave the rest.")), /* @__PURE__ */ import_react21.default.createElement("div", { className: "controls", style: { marginTop: 16, justifyContent: "space-between", flexWrap: "wrap", gap: 10 } }, /* @__PURE__ */ import_react21.default.createElement("button", { onClick: onClose, title: "Close this notice and stay here" }, "\u25C0 Go back"), /* @__PURE__ */ import_react21.default.createElement("button", { className: "btn-cta", onClick: onProceed, disabled: !done, title: done ? "Enter the sky-reader app" : "Answer the self-check to continue" }, done ? "Proceed to the app \u2192" : "Answer to continue")), /* @__PURE__ */ import_react21.default.createElement("div", { className: "note", style: { marginTop: 10 } }, "If you are in crisis, please reach out \u2014 in the US, ", /* @__PURE__ */ import_react21.default.createElement("a", { href: "https://988lifeline.org", target: "_blank", rel: "noreferrer" }, "988 Suicide & Crisis Lifeline"), "; elsewhere, contact your local emergency services. You matter.")));
+}
+
+// src/pages/Landing.jsx
+var REF_DATE = (() => {
+  const d = /* @__PURE__ */ new Date();
+  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+})();
+function Fa({ n, c, size, spin }) {
+  return /* @__PURE__ */ import_react22.default.createElement("i", { className: "fa-solid fa-" + n + (spin ? " fa-spin" : ""), style: { color: c ? "var(--" + c + ")" : "var(--txt)", fontSize: size || "1.4rem" }, "aria-hidden": "true" });
+}
+function ReadingRule() {
+  return /* @__PURE__ */ import_react22.default.createElement("svg", { viewBox: "0 0 320 240", style: { width: "100%", height: "100%", maxHeight: 300 }, role: "img", "aria-label": "Reading rule: S is a subset of O" }, /* @__PURE__ */ import_react22.default.createElement("circle", { cx: "135", cy: "115", r: "92", fill: "none", stroke: "var(--violet)", strokeWidth: "2", opacity: ".5" }), /* @__PURE__ */ import_react22.default.createElement("text", { x: "135", y: "40", textAnchor: "middle", fill: "var(--violet)", fontSize: "13", fontWeight: "700" }, "O \xB7 occupied signs"), /* @__PURE__ */ import_react22.default.createElement("circle", { cx: "135", cy: "115", r: "52", fill: "rgba(232,200,122,.10)", stroke: "var(--gold)", strokeWidth: "2" }), /* @__PURE__ */ import_react22.default.createElement("text", { x: "135", y: "122", textAnchor: "middle", fill: "var(--gold)", fontSize: "22", fontWeight: "700" }, "S"), /* @__PURE__ */ import_react22.default.createElement("text", { x: "135", y: "148", textAnchor: "middle", fill: "var(--gold)", fontSize: "11" }, "word's simples"), /* @__PURE__ */ import_react22.default.createElement("text", { x: "160", y: "215", textAnchor: "middle", fill: "var(--txt)", fontSize: "16", fontWeight: "700" }, "S \u2286 O  \u2192  readable"));
+}
+function GematriaTable() {
+  const L2 = [["\u05D0", 1], ["\u05D1", 2], ["\u05D2", 3], ["\u05D3", 4], ["\u05D4", 5], ["\u05D5", 6], ["\u05D6", 7], ["\u05D7", 8], ["\u05D8", 9], ["\u05D9", 10], ["\u05DB", 20], ["\u05DC", 30], ["\u05DE", 40], ["\u05E0", 50], ["\u05E1", 60], ["\u05E2", 70], ["\u05E4", 80], ["\u05E6", 90], ["\u05E7", 100], ["\u05E8", 200], ["\u05E9", 300], ["\u05EA", 400]];
+  return /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", flexWrap: "wrap", gap: 6, justifyContent: "center", alignContent: "center", maxWidth: 340 } }, L2.map(([h, v]) => /* @__PURE__ */ import_react22.default.createElement("div", { key: h, style: { width: 52, textAlign: "center", border: "1px solid var(--line)", borderRadius: 8, padding: "5px 2px", background: "#000" } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { color: "var(--gold)", fontSize: "1.25rem", fontWeight: 700 } }, h), /* @__PURE__ */ import_react22.default.createElement("div", { style: { color: "var(--dim)", fontSize: ".72rem" } }, v))));
+}
+function ShemGrid() {
+  return /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 12, alignItems: "center", justifyContent: "center", height: "100%", width: "100%" } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", alignItems: "baseline", gap: 10 } }, /* @__PURE__ */ import_react22.default.createElement("span", { style: { color: "var(--gold)", fontSize: "2.6rem", fontWeight: 800, lineHeight: 1 } }, "72"), /* @__PURE__ */ import_react22.default.createElement("span", { className: "muted", style: { fontSize: ".8rem" } }, "triplets \xB7 3 verses \xD7 72 letters")), /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "grid", gridTemplateColumns: "repeat(12,1fr)", gap: 5, width: 330, maxWidth: "100%" } }, Array.from({ length: 72 }, (_, i) => {
+    const v = i % 3;
+    const bg = v === 0 ? "#8a05ff" : v === 1 ? "#c29eff" : "#00db7c";
+    return /* @__PURE__ */ import_react22.default.createElement("div", { key: i, title: "Triplet " + (i + 1), style: { height: 22, borderRadius: 4, background: bg, display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".58rem", color: "#0a0a0a", fontWeight: 700 } }, i + 1);
+  })), /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", gap: 14, fontSize: ".72rem", color: "var(--dim)" } }, /* @__PURE__ */ import_react22.default.createElement("span", { style: { display: "flex", alignItems: "center", gap: 5 } }, /* @__PURE__ */ import_react22.default.createElement("i", { style: { width: 9, height: 9, borderRadius: 2, background: "#8a05ff", display: "inline-block" } }), "14:19"), /* @__PURE__ */ import_react22.default.createElement("span", { style: { display: "flex", alignItems: "center", gap: 5 } }, /* @__PURE__ */ import_react22.default.createElement("i", { style: { width: 9, height: 9, borderRadius: 2, background: "#c29eff", display: "inline-block" } }), "14:20"), /* @__PURE__ */ import_react22.default.createElement("span", { style: { display: "flex", alignItems: "center", gap: 5 } }, /* @__PURE__ */ import_react22.default.createElement("i", { style: { width: 9, height: 9, borderRadius: 2, background: "#00db7c", display: "inline-block" } }), "14:21")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "muted", style: { fontSize: ".74rem" } }, "each triplet +\u05D0\u05DC / +\u05D9\u05D4 \u2192 a 5-letter angel"));
+}
+function ELSGrid() {
+  const letters = ["\u05D0", "\u05D1", "\u05D2", "\u05D3", "\u05D4", "\u05D5", "\u05D6", "\u05D7", "\u05D8", "\u05D9", "\u05DB", "\u05DC", "\u05DE", "\u05E0", "\u05E1", "\u05E2", "\u05E4", "\u05E6", "\u05E7", "\u05E8", "\u05E9", "\u05EA", "\u05D0", "\u05D1", "\u05D2", "\u05D3", "\u05D4", "\u05D5", "\u05D6", "\u05D7", "\u05D8", "\u05D9", "\u05DB", "\u05DC", "\u05DE", "\u05E0", "\u05E1", "\u05E2", "\u05E4", "\u05E6", "\u05E7", "\u05E8", "\u05E9", "\u05EA"];
+  const hits = /* @__PURE__ */ new Set([4, 9, 14, 19, 24, 29, 34]);
+  return /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 10, alignItems: "center" } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "grid", gridTemplateColumns: "repeat(11,1fr)", gap: 3, maxWidth: 340 } }, letters.map((l, i) => /* @__PURE__ */ import_react22.default.createElement("div", { key: i, style: { textAlign: "center", padding: "4px 0", borderRadius: 4, fontSize: ".85rem", color: hits.has(i) ? "var(--gold)" : "var(--dim)", background: hits.has(i) ? "rgba(232,200,122,.14)" : "transparent", border: "1px solid " + (hits.has(i) ? "var(--gold)" : "transparent") } }, l))), /* @__PURE__ */ import_react22.default.createElement("div", { className: "muted", style: { fontSize: ".76rem" } }, "skip every 5th letter \u2192 a hidden word emerges"));
+}
+function AlignDiagram() {
+  const signs = ["\u2648", "\u2649", "\u264A", "\u264B", "\u264C", "\u264D", "\u264E", "\u264F", "\u2650", "\u2651", "\u2652", "\u2653"];
+  const planets = ["\u2609", "\u263D", "\u263F", "\u2640", "\u2642", "\u2643", "\u2644"];
+  const hot = 4;
+  return /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 12, alignItems: "center", justifyContent: "center", height: "100%", width: "100%" } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 7, maxWidth: 300 } }, signs.map((s, i) => /* @__PURE__ */ import_react22.default.createElement("div", { key: i, style: { width: 64, height: 58, border: "1px solid " + (i === hot ? "var(--gold)" : "var(--line)"), borderRadius: 9, background: i === hot ? "rgba(232,200,122,.14)" : "#000", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 3 } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { fontSize: "1.15rem", color: i === hot ? "var(--gold)" : "var(--dim)" } }, s), i === hot && /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", gap: 2, fontSize: ".72rem", color: "var(--gold)", fontWeight: 700 } }, planets.map((p, j2) => /* @__PURE__ */ import_react22.default.createElement("span", { key: j2 }, p)))))), /* @__PURE__ */ import_react22.default.createElement("div", { className: "muted", style: { fontSize: ".76rem" } }, "7 bodies in one sign \xB7 a century-grade conjunction"));
+}
+function PsalmsGrid() {
+  const today = 42;
+  return /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 12, alignItems: "center", justifyContent: "center", height: "100%", width: "100%" } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", alignItems: "baseline", gap: 10 } }, /* @__PURE__ */ import_react22.default.createElement("span", { style: { color: "var(--gold)", fontSize: "2.6rem", fontWeight: 800, lineHeight: 1 } }, "150"), /* @__PURE__ */ import_react22.default.createElement("span", { className: "muted", style: { fontSize: ".8rem" } }, "Psalms \xB7 one per day")), /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "grid", gridTemplateColumns: "repeat(15,1fr)", gap: 3, width: 340, maxWidth: "100%" } }, Array.from({ length: 150 }, (_, i) => {
+    const n = i + 1;
+    const hot = n === today;
+    return /* @__PURE__ */ import_react22.default.createElement("div", { key: i, style: { height: 15, borderRadius: 2, background: hot ? "var(--gold)" : "var(--panel2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".5rem", color: hot ? "#0a0a0a" : "var(--dim)", fontWeight: 700 } }, n);
+  })), /* @__PURE__ */ import_react22.default.createElement("div", { className: "muted", style: { fontSize: ".76rem" } }, "today \u2192 Psalm ", today));
+}
+function Slides({ rows, occ }) {
+  return [
+    {
+      key: "skymap",
+      graphic: /* @__PURE__ */ import_react22.default.createElement(SkyMap, { rows, occ }),
+      icon: "star",
+      iconColor: "gold",
+      title: "Sky map",
+      body: "The twelve signs of the zodiac are not symbols \u2014 they are the twelve simple letters of the Sefer Yetzirah. As the planets move, they occupy signs and light up letters; whichever signs hold a planet today is the alphabet the sky is spelling tonight. The gold sectors are the letters you can read right now."
+    },
+    {
+      key: "align",
+      graphic: /* @__PURE__ */ import_react22.default.createElement(AlignDiagram, null),
+      icon: "compass",
+      iconColor: "violet",
+      title: "Rare alignments",
+      body: "Most nights the planets spread across many signs. Once a century or so they concentrate inside a single one \u2014 the whole moving retinue in one house of the zodiac. These are the rare alignments: 171 of them across the recorded span, each a day when the sky narrows its alphabet to a few letters and the readable names tighten with it."
+    },
+    {
+      key: "reader",
+      graphic: /* @__PURE__ */ import_react22.default.createElement(ReadingRule, null),
+      icon: "circle-check",
+      iconColor: "green",
+      title: "Reader",
+      body: "A name is built from letters, and a letter is readable only when its sign is occupied. So a word reads on a given day only if every letter it needs sits inside an occupied sign \u2014 a subset of the sky's current alphabet. Nothing is forced, nothing invented: the word either rises from the sky or it does not. The reader lists every Hebrew name the sky spells on that date."
+    },
+    {
+      key: "time",
+      graphic: /* @__PURE__ */ import_react22.default.createElement(PrecessionDiagram, null),
+      icon: "arrows-rotate",
+      iconColor: "violet",
+      title: "Time",
+      body: "The zero-point of Aries can be read two ways: fixed to the equinox (tropical) or fixed to the stars (sidereal). The stars drift away from the equinox by a degree every seventy-two years, and the widening gap between them is the ayanamsa \u2014 the slow engine that turns the great ages. The predictor scans years ahead for the days a chosen word rises."
+    },
+    {
+      key: "gematria",
+      graphic: /* @__PURE__ */ import_react22.default.createElement(GematriaTable, null),
+      icon: "hashtag",
+      iconColor: "violet",
+      title: "Gematria",
+      body: "Every letter is also a number, from \u05D0 = 1 to \u05EA = 400. Add the letters of a name and it yields a value; words that share a value rhyme in meaning, as if they were translations of the same idea. The same arithmetic runs through Hebrew, Greek, Arabic and Indian letters \u2014 and through the digital roots and Aiq Bekar that fold the numbers back into themselves."
+    },
+    {
+      key: "sigils",
+      graphic: /* @__PURE__ */ import_react22.default.createElement(ShemGrid, null),
+      icon: "feather",
+      iconColor: "teal",
+      title: "Sigils",
+      body: "Three consecutive verses of Exodus \u2014 14:19, 14:20, 14:21 \u2014 hold seventy-two letters each. Read columnwise, they yield the seventy-two triplets of the Shem HaMephorash; each takes +\u05D0\u05DC or +\u05D9\u05D4 and becomes a five-letter angel. Around them stand the sigil forge and the Kameot magic squares \u2014 the practical craft of the letters."
+    },
+    {
+      key: "codes",
+      graphic: /* @__PURE__ */ import_react22.default.createElement(ELSGrid, null),
+      icon: "barcode",
+      iconColor: "brand",
+      title: "Codes",
+      body: "Skip a fixed number of letters through the Torah and, at equal intervals, a word surfaces \u2014 as if the text were written in two directions at once. Around it sit the older arts: Temurah and Atbash, which rearrange the alphabet, and Ziruph, which pairs letter with letter. The techniques are ancient; the source text is fixed and unchanging."
+    },
+    {
+      key: "psalms",
+      graphic: /* @__PURE__ */ import_react22.default.createElement(PsalmsGrid, null),
+      icon: "music",
+      iconColor: "gold",
+      title: "Psalms",
+      body: "A Psalm is appointed to each day, read alongside the sky of that date \u2014 one hundred and fifty songs laid over the turning year. The stellar alphabet spells its names; the Psalms answer them back, a second voice in the same key."
+    }
+  ];
+}
+function Slider({ rows, occ }) {
+  const slides = (0, import_react22.useMemo)(() => Slides({ rows, occ }), [rows, occ]);
+  const [i, setI] = (0, import_react22.useState)(0);
+  const [paused, setPaused] = (0, import_react22.useState)(false);
+  const next = (0, import_react22.useCallback)(() => setI((p) => (p + 1) % slides.length), [slides.length]);
+  const prev = () => setI((p) => (p - 1 + slides.length) % slides.length);
+  (0, import_react22.useEffect)(() => {
+    if (paused) return;
+    const t = setInterval(next, 6500);
+    return () => clearInterval(t);
+  }, [next, paused]);
+  const s = slides[i];
+  return /* @__PURE__ */ import_react22.default.createElement("div", { className: "slider", onMouseEnter: () => setPaused(true), onMouseLeave: () => setPaused(false), role: "region", "aria-label": "Concept slider" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "slide" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "slide-graphic" }, s.graphic), /* @__PURE__ */ import_react22.default.createElement("div", { className: "slide-copy" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "slide-icon" }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: s.icon, c: s.iconColor, size: "1.6rem" })), /* @__PURE__ */ import_react22.default.createElement("h3", { style: { margin: "6px 0 8px", color: "var(--gold)", fontSize: "1.15rem" } }, s.title), /* @__PURE__ */ import_react22.default.createElement("p", { className: "muted", style: { fontSize: ".92rem", lineHeight: 1.6 } }, s.body))), /* @__PURE__ */ import_react22.default.createElement("div", { className: "slider-ctrl" }, /* @__PURE__ */ import_react22.default.createElement("button", { onClick: prev, "aria-label": "Previous slide" }, "\u25C0"), /* @__PURE__ */ import_react22.default.createElement("div", { className: "slider-dots" }, slides.map((x, j2) => /* @__PURE__ */ import_react22.default.createElement("button", { key: x.key, className: "dot" + (j2 === i ? " active" : ""), onClick: () => setI(j2), "aria-label": `Go to slide ${j2 + 1}` }))), /* @__PURE__ */ import_react22.default.createElement("button", { onClick: next, "aria-label": "Next slide" }, "\u25B6")));
+}
+var FEATURES = [
+  { n: "star", c: "gold", t: "Sky map", d: "Real planet positions in the 12 zodiac signs \u2014 the 12 simple letters lit up today.", go: "/app" },
+  { n: "compass", c: "violet", t: "Rare alignments", d: "171 century & millennium conjunctions \u2014 planets concentrated in a single sign.", go: "/alignments" },
+  { n: "book-open", c: "green", t: "Reader", d: "The Hebrew names and words the occupied signs spell on a given date.", go: "/app" },
+  { n: "clock", c: "teal", t: "Time", d: "The day predictor and the precessional ages \u2014 deep time of the stellar alphabet.", go: "/app" },
+  { n: "hashtag", c: "violet", t: "Gematria", d: "Hebrew, Greek, Arabic and Indian numerology \u2014 Aiq Bekar and digital roots.", go: "/app" },
+  { n: "wand-magic", c: "gold", t: "Sigils", d: "The sigil forge, the Kameot magic squares, and the 72 angels of the Shem HaMephorash.", go: "/app" },
+  { n: "barcode", c: "brand", t: "Codes", d: "Equidistant letter sequences, Temurah / Atbash and Ziruph on the source texts.", go: "/app" },
+  { n: "music", c: "gold", t: "Psalms", d: "A Psalm appointed to each day, read alongside the sky of that date.", go: "/app" }
+];
+function Landing({ goApp }) {
+  const rows = (0, import_react22.useMemo)(() => skyAt(REF_DATE), []);
+  const occ = (0, import_react22.useMemo)(() => occupiedLetters(rows), [rows]);
+  const [warnOpen, setWarnOpen] = (0, import_react22.useState)(false);
+  const enterApp = () => {
+    setWarnOpen(false);
+    goApp && goApp();
+  };
+  return /* @__PURE__ */ import_react22.default.createElement("div", { className: "landing" }, /* @__PURE__ */ import_react22.default.createElement("section", { className: "hero" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-copy" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-eyebrow" }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "star-of-life", c: "gold", size: "1rem" }), " Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet"), /* @__PURE__ */ import_react22.default.createElement("h1", { className: "hero-title" }, "The Apocalypse ", /* @__PURE__ */ import_react22.default.createElement("span", { style: { color: "var(--gold)" } }, "of Adam")), /* @__PURE__ */ import_react22.default.createElement("blockquote", { className: "hero-tag", style: { borderLeft: "3px solid var(--gold)", paddingLeft: 14, fontStyle: "italic", color: "var(--dim)" } }, "\u201CAnd the thirteenth kingdom says of him that every birth of their ruler is a word. And this word received a mandate there. He received glory and power. And thus he came to the water, in order that the desire of those powers might be satisfied.\u201D", /* @__PURE__ */ import_react22.default.createElement("cite", { style: { display: "block", marginTop: 10, fontStyle: "normal", fontSize: ".82rem", color: "var(--dim)" } }, "\u2014 The Apocalypse of Adam \xB7 the thirteenth kingdom")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-cta" }, /* @__PURE__ */ import_react22.default.createElement("button", { className: "btn-cta", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "compass", c: "txt", size: "1rem" }), " \xA0Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react22.default.createElement("a", { className: "hero-ghost", href: "https://adam-apocalypse-paper.onrender.com/", target: "_blank", rel: "noreferrer" }, "Read the paper \u2197")), /* @__PURE__ */ import_react22.default.createElement("button", { className: "hero-note-link", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".85rem" }), " \xA0Content notice \u2014 for visitors with psychosis, mania, or schizophrenia")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-sky panel" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-sky-label muted" }, "Sky of ", REF_DATE, " \xB7 ", occ.size, " of 12 signs occupied"), /* @__PURE__ */ import_react22.default.createElement(SkyMap, { rows, occ }))), /* @__PURE__ */ import_react22.default.createElement("section", { className: "panel", style: { padding: 18, marginTop: 18 } }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { margin: 0 } }, "The grammar of the sky")), /* @__PURE__ */ import_react22.default.createElement(Slider, { rows, occ })), /* @__PURE__ */ import_react22.default.createElement("section", { style: { marginTop: 22 } }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { margin: 0 } }, "What you can do in the app")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-grid" }, FEATURES.map((f, idx) => /* @__PURE__ */ import_react22.default.createElement("a", { key: idx, className: "feat-card", href: f.go }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-icon" }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: f.n, c: f.c, size: "1.5rem" })), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-t" }, f.t), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-d muted" }, f.d), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-go muted" }, "open \u2192"))))), /* @__PURE__ */ import_react22.default.createElement("section", { className: "panel entry-cta", style: { marginTop: 26, padding: 28, textAlign: "center", borderColor: "var(--brand)" } }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { marginTop: 0 } }, "Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react22.default.createElement("p", { className: "muted", style: { maxWidth: 620, margin: "0 auto 16px" } }, "Learn a few simple things about the ancients, then read the sky for yourself. A short content notice opens first \u2014 for visitors diagnosed with psychosis or schizophrenia."), /* @__PURE__ */ import_react22.default.createElement("button", { className: "btn-cta", style: { fontSize: "1.1rem", padding: "14px 34px" }, onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "compass", c: "txt", size: "1.1rem" }), " \xA0Enter the app"), /* @__PURE__ */ import_react22.default.createElement("div", { className: "muted", style: { marginTop: 14, fontSize: ".8rem" } }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".9rem" }), " \xA0", /* @__PURE__ */ import_react22.default.createElement("b", null, "Notice:"), " I have schizophrenia \xB7 I am psychotic \xB7 I am manic \u2014 a short self-check is offered before entry.")), /* @__PURE__ */ import_react22.default.createElement(WarningModal, { open: warnOpen, onClose: () => setWarnOpen(false), onProceed: enterApp }));
+}
+
+// src/pages/About.jsx
+var import_react23 = __toESM(require_react());
+function About() {
+  return /* @__PURE__ */ import_react23.default.createElement("div", { className: "about-page" }, /* @__PURE__ */ import_react23.default.createElement("h1", { style: { fontSize: "1.9rem", marginBottom: 4 } }, "About ", /* @__PURE__ */ import_react23.default.createElement("span", { style: { color: "var(--gold)" } }, "The Apocalypse of Adam")), /* @__PURE__ */ import_react23.default.createElement("div", { className: "sub", style: { marginBottom: 16 } }, "Hebrew letters read in the sky \u2014 a stellar-alphabet reader behind the paper ", /* @__PURE__ */ import_react23.default.createElement("i", null, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "What this is"), /* @__PURE__ */ import_react23.default.createElement("p", null, /* @__PURE__ */ import_react23.default.createElement("i", null, "Apocalypse"), " means ", /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation"), " \u2014 the unveiling of knowledge, not something sinister. This project reads the sky as the ancients did: real planet positions (computed live by ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://github.com/cosinekitty/astronomy-engine", target: "_blank", rel: "noreferrer" }, "astronomy-engine"), ") map the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "12 zodiac signs"), " to the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "12 simple letters"), " of the ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", target: "_blank", rel: "noreferrer" }, "Sefer Yetzirah"), ". Every date spells a set of readable Hebrew names \u2014 a stellar alphabet that no one can erase, encoded across the only medium that survives the malice of men."), /* @__PURE__ */ import_react23.default.createElement("p", null, "The app is a calculator suite: a live ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Sky Map"), ", a ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Reader"), " of every readable word, the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Reading Rule"), " (YHVH, Genesis 1:1), a ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Time"), " predictor and precessional ages, ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Gematria"), " (Hebrew / Greek / Arabic / Indian), the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Sigil"), " forge, the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "72"), " Shem HaMephorash angels, ", /* @__PURE__ */ import_react23.default.createElement("b", null, "ELS / Torah codes"), ", Temurah, Ziruph, rare stellar ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Alignments"), ", a 9-culture ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Revelations"), " survey, and ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Psalms"), " by date.")), /* @__PURE__ */ import_react23.default.createElement("div", { className: "grid2" }, /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "How a reading works"), /* @__PURE__ */ import_react23.default.createElement("p", { className: "muted" }, "The ", /* @__PURE__ */ import_react23.default.createElement("b", null, "3 mothers"), " (\u05D0 \u05DE \u05E9) sit on a fixed circumpolar axis. The ", /* @__PURE__ */ import_react23.default.createElement("b", null, "7 doubles"), " (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) are the 7 moving bodies. The ", /* @__PURE__ */ import_react23.default.createElement("b", null, "12 simples"), " are the 12 signs. A word is readable on a date when every simple it needs sits in an ", /* @__PURE__ */ import_react23.default.createElement("b", null, "occupied"), " sign (S\u2286O). Rare alignments concentrate the planets \u2014 fewer letters, fewer words, a sharper reading.")), /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "The numbers, briefly"), /* @__PURE__ */ import_react23.default.createElement("ul", { className: "muted", style: { margin: "6px 0 0", paddingLeft: 20 } }, /* @__PURE__ */ import_react23.default.createElement("li", null, /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "6,045"), " consonantal Hebrew roots in the lexicon."), /* @__PURE__ */ import_react23.default.createElement("li", null, /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "171"), " rare century/millennium alignments catalogued."), /* @__PURE__ */ import_react23.default.createElement("li", null, /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "72"), " Shem HaMephorash triplets (Exodus 14:19\u201321)."), /* @__PURE__ */ import_react23.default.createElement("li", null, "Precessional age length \u2248 ", /* @__PURE__ */ import_react23.default.createElement("b", null, AGE.toFixed(0)), " years; full cycle \u2248 ", /* @__PURE__ */ import_react23.default.createElement("b", null, (FULL || 0).toFixed(0)), " years.")))), /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 18, marginTop: 14 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "Authors & sources"), /* @__PURE__ */ import_react23.default.createElement("p", { className: "muted" }, "By ", /* @__PURE__ */ import_react23.default.createElement("b", null, "V. Nos"), " & ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Julian S."), " \xB7 Source on ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://github.com/VABISMO/adam-apocalypse", target: "_blank", rel: "noreferrer" }, "GitHub"), " \xB7 Paper: ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://adam-apocalypse-paper.onrender.com/", target: "_blank", rel: "noreferrer" }, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react23.default.createElement("p", { className: "muted" }, "Ephemerides: astronomy-engine. Frame: Sefer Yetzirah. Lexicon: Strong Hebrew lexicon (OpenScriptures). No content on this site is medical, financial, or doctrinal advice \u2014 it is a reading of symbols and astronomy."), /* @__PURE__ */ import_react23.default.createElement("div", { style: { marginTop: 12 } }, /* @__PURE__ */ import_react23.default.createElement("a", { className: "btn-cta", href: "/app", style: { display: "inline-block", textDecoration: "none" } }, "Open the app \u2192"))));
 }
 
 // src/App.jsx
+var PROPHET_BY_SLUG = new Map(PROPHETS.map((p) => [slugify(p.name), p]));
+var MAGE_BY_SLUG = new Map(MAGES.map((m) => [slugify(m.name), m]));
 var TABS = [
   ["cycles", "Cycles"],
   ["sky", "Sky Map"],
@@ -28553,57 +33880,74 @@ var SUB = {
 function parseRoute() {
   const pathname = typeof window !== "undefined" ? window.location.pathname : typeof globalThis !== "undefined" && globalThis.__ROUTE_PATH__ || "/";
   const hash = typeof window !== "undefined" ? window.location.hash : "";
+  const path = pathname.replace(/\/+$/, "") || "/";
   let m;
-  if (m = /^\/reader\/(.+)$/.exec(pathname)) {
+  if (m = /^\/reader\/(.+)$/.exec(path)) {
     try {
       return { name: "gloss", he: decodeURIComponent(m[1]) };
     } catch (e) {
       return { name: "home" };
     }
   }
-  if (m = /^\/align\/(.+)$/.exec(pathname)) {
+  if (m = /^\/align\/(.+)$/.exec(path)) {
     return { name: "align", date: decodeURIComponent(m[1]) };
   }
-  if (pathname === "/prophets") return { name: "prophets" };
-  if (pathname === "/mages") return { name: "mages" };
-  if (pathname === "/alignments") return { name: "alignments" };
-  if (pathname === "/readings") return { name: "readings" };
+  if (m = /^\/prophet\/(.+)$/.exec(path)) {
+    return { name: "prophet", slug: decodeURIComponent(m[1]) };
+  }
+  if (m = /^\/mage\/(.+)$/.exec(path)) {
+    return { name: "mage", slug: decodeURIComponent(m[1]) };
+  }
+  if (path === "/prophets") return { name: "prophets" };
+  if (path === "/mages") return { name: "mages" };
+  if (path === "/alignments") return { name: "alignments" };
+  if (path === "/readings") return { name: "readings" };
+  if (path === "/app") return { name: "app" };
+  if (path === "/about") return { name: "about" };
   if (m = /^#\/reader\/(.+)$/.exec(hash)) {
     try {
       return { name: "gloss", he: decodeURIComponent(m[1]) };
     } catch (e) {
-      return { name: "home" };
+      return { name: "landing" };
     }
   }
-  return { name: "home" };
+  return { name: "landing" };
 }
 function App() {
   const today = "2026-08-08";
-  const [active, setActive] = (0, import_react18.useState)("cycles");
-  const [sub, setSub] = (0, import_react18.useState)({ reading: "rule", time: "predictor", sigils: "sigil", cycles: "alignments", revelation: "hebrew", codes: "els" });
-  const [lex, setLex] = (0, import_react18.useState)(null);
-  const [lexErr, setLexErr] = (0, import_react18.useState)(null);
-  const [angels, setAngels] = (0, import_react18.useState)(null);
-  const [date, setDate] = (0, import_react18.useState)(today);
-  const [genYear, setGenYear] = (0, import_react18.useState)(2026);
-  const [genData, setGenData] = (0, import_react18.useState)(null);
-  const [loading, setLoading] = (0, import_react18.useState)(false);
-  const [q, setQ] = (0, import_react18.useState)("");
-  const [loc, setLoc] = (0, import_react18.useState)(() => typeof window !== "undefined" ? window.location.pathname + window.location.hash : "/");
-  (0, import_react18.useEffect)(() => {
+  const [active, setActive] = (0, import_react24.useState)("cycles");
+  const [sub, setSub] = (0, import_react24.useState)({ reading: "rule", time: "predictor", sigils: "sigil", cycles: "alignments", revelation: "hebrew", codes: "els" });
+  const [lex, setLex] = (0, import_react24.useState)(null);
+  const [lexErr, setLexErr] = (0, import_react24.useState)(null);
+  const [angels, setAngels] = (0, import_react24.useState)(null);
+  const [nameRefs, setNameRefs] = (0, import_react24.useState)(null);
+  const [date, setDate] = (0, import_react24.useState)(today);
+  const [genYear, setGenYear] = (0, import_react24.useState)(2026);
+  const [genData, setGenData] = (0, import_react24.useState)(null);
+  const [loading, setLoading] = (0, import_react24.useState)(false);
+  const [q, setQ] = (0, import_react24.useState)("");
+  const [loc, setLoc] = (0, import_react24.useState)(() => typeof window !== "undefined" ? window.location.pathname + window.location.hash : "/");
+  (0, import_react24.useEffect)(() => {
     fetch("/lexicon.json").then((r) => {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
     }).then(setLex).catch((e) => setLexErr(e.message));
   }, []);
-  (0, import_react18.useEffect)(() => {
+  (0, import_react24.useEffect)(() => {
     fetch("/angels72.json").then((r) => {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
     }).then(setAngels).catch(() => {
     });
   }, []);
-  (0, import_react18.useEffect)(() => {
+  (0, import_react24.useEffect)(() => {
+    fetch("/name_refs.json").then((r) => {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    }).then(setNameRefs).catch(() => {
+    });
+  }, []);
+  (0, import_react24.useEffect)(() => {
     const h = () => setLoc(window.location.pathname + window.location.hash);
     window.addEventListener("popstate", h);
     window.addEventListener("hashchange", h);
@@ -28617,34 +33961,34 @@ function App() {
     window.history.pushState({}, "", to);
     setLoc(to);
   };
-  const effDate = (0, import_react18.useMemo)(() => {
+  const effDate = (0, import_react24.useMemo)(() => {
     if (!date) return today;
     return parseDate(date) ? date : today;
   }, [date]);
-  const rows = (0, import_react18.useMemo)(() => skyAt(effDate), [effDate]);
-  const occ = (0, import_react18.useMemo)(() => occupiedLetters(rows), [rows]);
-  const occSigns = (0, import_react18.useMemo)(() => new Set(rows.map((r) => r.sign)), [rows]);
-  const bs = (0, import_react18.useMemo)(() => bySign(rows), [rows]);
+  const rows = (0, import_react24.useMemo)(() => skyAt(effDate), [effDate]);
+  const occ = (0, import_react24.useMemo)(() => occupiedLetters(rows), [rows]);
+  const occSigns = (0, import_react24.useMemo)(() => new Set(rows.map((r) => r.sign)), [rows]);
+  const bs = (0, import_react24.useMemo)(() => bySign(rows), [rows]);
   const yhvhOk = occ.has("\u05D9") && occ.has("\u05D4") && occ.has("\u05D5");
   const genesisOk = genesisReadable(occ);
-  const ANGEL72 = (0, import_react18.useMemo)(() => {
+  const ANGEL72 = (0, import_react24.useMemo)(() => {
     const m = /* @__PURE__ */ new Map();
     if (angels) angels.triplets.forEach((t, i) => {
       m.set(norm(t), { el: angels.angelsEL[i], yh: angels.angelsYH[i] });
     });
     return m;
   }, [angels]);
-  (0, import_react18.useEffect)(() => {
+  (0, import_react24.useEffect)(() => {
     if (lex) registerWebMCPTools({ lex, angelMap: ANGEL72 });
   }, [lex, ANGEL72]);
-  const words = (0, import_react18.useMemo)(() => lex ? readableWords(occ, lex.lexicon, ANGEL72) : [], [occ, lex, ANGEL72]);
+  const words = (0, import_react24.useMemo)(() => lex ? readableWords(occ, lex.lexicon, ANGEL72) : [], [occ, lex, ANGEL72]);
   const sentence = rows.map((r) => SIMPLE[r.sign][0]).join(" ");
   const year = (() => {
     const d = parseDate(effDate);
     return d ? d.getUTCFullYear() : 2026;
   })();
-  const route = (0, import_react18.useMemo)(() => parseRoute(), [loc]);
-  const glossWord = (0, import_react18.useMemo)(() => {
+  const route = (0, import_react24.useMemo)(() => parseRoute(), [loc]);
+  const glossWord = (0, import_react24.useMemo)(() => {
     if (route.name !== "gloss" || !lex) return null;
     return words.find((x) => x.he === route.he) || findWord(route.he, lex.lexicon, ANGEL72);
   }, [route, words, lex, ANGEL72]);
@@ -28652,9 +33996,9 @@ function App() {
     navigate("/reader/" + encodeURIComponent(w.he));
   };
   const backHome = () => {
-    navigate("/");
+    navigate("/app");
   };
-  (0, import_react18.useEffect)(() => {
+  (0, import_react24.useEffect)(() => {
     let t = BASE_TITLE, d = BASE_DESC;
     if (route.name === "gloss" && glossWord) {
       const w = glossWord;
@@ -28669,12 +34013,29 @@ function App() {
     } else if (route.name === "mages") {
       t = "Magi timeline \u2014 Daniel to Felipe II | Apocalypse of Adam";
       d = "A chronology of magi and royal-sage occult figures from the Babylonian court magi (Daniel, Shadrach, Meshach, Abednego) through Ramon Llull, Alfonso X and Felipe II, with Wikipedia bios and a ficha of their works.";
+    } else if (route.name === "prophet") {
+      const p = PROPHET_BY_SLUG.get(route.slug);
+      t = p ? `${p.name} \u2014 prophet ficha | Apocalypse of Adam` : "Prophet ficha | Apocalypse of Adam";
+      d = p ? `${p.name} (${p.region}, ${p.y0 === p.y1 ? p.y0 : p.y0 + "\u2013" + p.y1}): Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table. ${p.role}` : "Prophet detail ficha with Wikipedia biography and a summary table.";
+    } else if (route.name === "mage") {
+      const m2 = MAGE_BY_SLUG.get(route.slug);
+      t = m2 ? `${m2.name} \u2014 magus ficha | Apocalypse of Adam` : "Magus ficha | Apocalypse of Adam";
+      d = m2 ? `${m2.name} (${m2.region}, ${m2.years}): Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions summary table. ${m2.role}` : "Magus detail ficha with Wikipedia biography and a works table.";
     } else if (route.name === "alignments") {
       t = "Stellar alignments \u2014 rare century & millennium conjunctions | Apocalypse of Adam";
       d = "All rare stellar alignments (planets concentrated in one zodiac sign): dates, tightest arc, precessional era, and the readable names of each alignment day.";
     } else if (route.name === "readings") {
       t = "Sky readings \u2014 Hebrew words readable in the stars | Apocalypse of Adam";
       d = "Every Hebrew word readable from the zodiac signs occupied by the planets: a glossary of consonantal roots, gematria, and the stellar letters that spell each name.";
+    } else if (route.name === "landing") {
+      t = "The Apocalypse of Adam \u2014 Hebrew letters in the stars \xB7 stellar alphabet & sky reader";
+      d = "Apocalypse means revelation. The thirteenth kingdom says every birth of their ruler is a word. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells readable Hebrew names. Sky map, alignments, reader, time, gematria, sigils, codes and psalms.";
+    } else if (route.name === "about") {
+      t = "About \u2014 The Apocalypse of Adam | Hebrew sky reader";
+      d = "About The Apocalypse of Adam: a stellar-alphabet reader that maps real planet positions to the 12 simple letters of the Sefer Yetzirah. Authors, sources, and how a reading works.";
+    } else if (route.name === "app") {
+      t = "Sky reader app \u2014 Cycles, Sky Map, Reader, Gematria, Alignments | Apocalypse of Adam";
+      d = "The interactive calculators: live sky map, readable-word reader, reading rule (YHVH, Genesis), time predictor, gematria, sigils, 72 angels, ELS codes, rare alignments, revelations, psalms.";
     }
     setRouteMeta(t, d);
   }, [route, glossWord, effDate]);
@@ -28693,7 +34054,7 @@ function App() {
       setLoading(false);
     }, 20);
   }
-  (0, import_react18.useEffect)(() => {
+  (0, import_react24.useEffect)(() => {
     if (lex) scanYear(genYear);
   }, [genYear, lex]);
   function step(n) {
@@ -28705,36 +34066,40 @@ function App() {
   function stepYear(n) {
     setGenYear(genYear + n);
   }
-  if (lexErr) return /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react18.default.createElement("h2", null, "Error"), /* @__PURE__ */ import_react18.default.createElement("p", null, "Could not load lexicon.json (", lexErr, "). Serve the ", /* @__PURE__ */ import_react18.default.createElement("code", null, "web/"), " folder over HTTP (", /* @__PURE__ */ import_react18.default.createElement("code", null, "python3 -m http.server 8008"), ") and open ", /* @__PURE__ */ import_react18.default.createElement("code", null, "http://127.0.0.1:8008/"), "."));
-  if (!lex) return /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react18.default.createElement("h2", null, "Loading lexicon\u2026"), /* @__PURE__ */ import_react18.default.createElement("p", null, "Reading lexicon.json (6045 consonantal roots)."));
+  if (lexErr) return /* @__PURE__ */ import_react24.default.createElement("div", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement("h2", null, "Error"), /* @__PURE__ */ import_react24.default.createElement("p", null, "Could not load the lexicon. Please refresh the page; if the problem persists, the data may be unavailable right now."));
+  if (!lex) return /* @__PURE__ */ import_react24.default.createElement("div", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement("h2", null, "Loading lexicon\u2026"), /* @__PURE__ */ import_react24.default.createElement("p", null, "Reading the lexicon (6045 consonantal roots)."));
   const setSubTab = (g) => (id) => setSub((s) => ({ ...s, [g]: id }));
   const goTab = (id) => {
     const p = typeof window !== "undefined" ? window.location.pathname : "/";
-    if (p !== "/") navigate("/");
+    if (p !== "/app") navigate("/app");
     setActive(id);
   };
-  if (route.name === "prophets") return /* @__PURE__ */ import_react18.default.createElement("div", null, /* @__PURE__ */ import_react18.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react18.default.createElement("section", { className: "panel" }, /* @__PURE__ */ import_react18.default.createElement(ProphetsPage, null)), /* @__PURE__ */ import_react18.default.createElement(Footer, null));
-  if (route.name === "mages") return /* @__PURE__ */ import_react18.default.createElement("div", null, /* @__PURE__ */ import_react18.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react18.default.createElement("section", { className: "panel" }, /* @__PURE__ */ import_react18.default.createElement(MagesPage, null)), /* @__PURE__ */ import_react18.default.createElement(Footer, null));
-  if (route.name === "align") return /* @__PURE__ */ import_react18.default.createElement("div", null, /* @__PURE__ */ import_react18.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react18.default.createElement("section", { className: "panel" }, /* @__PURE__ */ import_react18.default.createElement(AlignmentFicha, { date: route.date, lex, angelMap: ANGEL72, onBack: backHome })), /* @__PURE__ */ import_react18.default.createElement(Footer, null));
-  if (route.name === "alignments") return /* @__PURE__ */ import_react18.default.createElement("div", null, /* @__PURE__ */ import_react18.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react18.default.createElement("section", { className: "panel" }, /* @__PURE__ */ import_react18.default.createElement(AlignmentsTab, { setDate, goReader: (d) => {
+  if (route.name === "landing") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(Landing, { goApp: () => navigate("/app") }), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
+  if (route.name === "about") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(About, null), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
+  if (route.name === "prophets") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(ProphetsPage, null)), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
+  if (route.name === "mages") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(MagesPage, null)), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
+  if (route.name === "align") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(AlignmentFicha, { date: route.date, lex, angelMap: ANGEL72, onBack: backHome, nameRefs })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
+  if (route.name === "prophet") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(ProphetFicha, { slug: route.slug })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
+  if (route.name === "mage") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(MageFicha, { slug: route.slug })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
+  if (route.name === "alignments") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(AlignmentsTab, { setDate, goReader: (d) => {
     setDate(d);
     setActive("translator");
     navigate("/");
-  }, lex, angelMap: ANGEL72, genData })), /* @__PURE__ */ import_react18.default.createElement(Footer, null));
-  if (route.name === "readings") return /* @__PURE__ */ import_react18.default.createElement("div", null, /* @__PURE__ */ import_react18.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react18.default.createElement("section", { className: "panel" }, /* @__PURE__ */ import_react18.default.createElement(TranslatorTab, { date: effDate, occ, words, q, setQ, genData, onOpen: openGloss })), /* @__PURE__ */ import_react18.default.createElement(Footer, null));
-  return /* @__PURE__ */ import_react18.default.createElement("div", null, /* @__PURE__ */ import_react18.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react18.default.createElement("div", { key: id, role: "tab", "aria-selected": active === id, className: "tab" + (active === id ? " active" : ""), onClick: () => goTab(id) }, label))), /* @__PURE__ */ import_react18.default.createElement("section", { className: "panel" }, route.name === "gloss" && glossWord && /* @__PURE__ */ import_react18.default.createElement(GlossPage, { word: glossWord, date: effDate, rows, occ, genData, onBack: backHome }), route.name === "gloss" && !glossWord && /* @__PURE__ */ import_react18.default.createElement("div", null, /* @__PURE__ */ import_react18.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("button", { onClick: backHome }, "\u25C0 back")), /* @__PURE__ */ import_react18.default.createElement("h2", null, "Gloss not found"), /* @__PURE__ */ import_react18.default.createElement("div", { className: "muted" }, "No Hebrew word matches \u201C", route.he, "\u201D in the lexicon. It may use letters unavailable today; open it from the Reader list on a date when it is readable.")), route.name !== "gloss" && /* @__PURE__ */ import_react18.default.createElement(import_react18.default.Fragment, null, active === "sky" && /* @__PURE__ */ import_react18.default.createElement(SkyTab, { date: effDate, rawDate: date, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step }), active === "translator" && /* @__PURE__ */ import_react18.default.createElement(TranslatorTab, { date: effDate, occ, words, q, setQ, genData, onOpen: openGloss }), active === "reading" && /* @__PURE__ */ import_react18.default.createElement(import_react18.default.Fragment, null, /* @__PURE__ */ import_react18.default.createElement(SubTabs, { items: SUB.reading, active: sub.reading, onChange: setSubTab("reading") }), sub.reading === "rule" && /* @__PURE__ */ import_react18.default.createElement(RuleTab, { occ }), sub.reading === "yhvh" && /* @__PURE__ */ import_react18.default.createElement(YhvhTab, { date: effDate, occ, yhvhOk, bs }), sub.reading === "genesis" && /* @__PURE__ */ import_react18.default.createElement(GenesisTab, { date: effDate, occ, genesisOk })), active === "time" && /* @__PURE__ */ import_react18.default.createElement(import_react18.default.Fragment, null, /* @__PURE__ */ import_react18.default.createElement(SubTabs, { items: SUB.time, active: sub.time, onChange: setSubTab("time") }), sub.time === "predictor" && /* @__PURE__ */ import_react18.default.createElement(PredictorTab, { date: effDate, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear }), sub.time === "ages" && /* @__PURE__ */ import_react18.default.createElement(AgesTab, { date: effDate, rows })), active === "gematria" && /* @__PURE__ */ import_react18.default.createElement(GematriaTab, null), active === "sigils" && /* @__PURE__ */ import_react18.default.createElement(import_react18.default.Fragment, null, /* @__PURE__ */ import_react18.default.createElement(SubTabs, { items: SUB.sigils, active: sub.sigils, onChange: setSubTab("sigils") }), sub.sigils === "sigil" && /* @__PURE__ */ import_react18.default.createElement(SigilTab, null), sub.sigils === "kameot" && /* @__PURE__ */ import_react18.default.createElement(KameotTab, null), sub.sigils === "angels" && /* @__PURE__ */ import_react18.default.createElement(AngelsTab, null)), active === "cycles" && /* @__PURE__ */ import_react18.default.createElement(import_react18.default.Fragment, null, /* @__PURE__ */ import_react18.default.createElement(SubTabs, { items: SUB.cycles, active: sub.cycles, onChange: setSubTab("cycles") }), sub.cycles === "saros" && /* @__PURE__ */ import_react18.default.createElement(SarosTab, null), sub.cycles === "ayanamsa" && /* @__PURE__ */ import_react18.default.createElement(AyanamsaTab, null), sub.cycles === "lunarsolar" && /* @__PURE__ */ import_react18.default.createElement(LunarSolarTab, null), sub.cycles === "alignments" && /* @__PURE__ */ import_react18.default.createElement(AlignmentsTab, { setDate, goReader: (d) => {
+  }, lex, angelMap: ANGEL72, genData, nameRefs })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
+  if (route.name === "readings") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(TranslatorTab, { date: effDate, occ, words, q, setQ, genData, onOpen: openGloss, nameRefs })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
+  return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react24.default.createElement("div", { key: id, role: "tab", "aria-selected": active === id, className: "tab" + (active === id ? " active" : ""), onClick: () => goTab(id) }, label))), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, route.name === "gloss" && glossWord && /* @__PURE__ */ import_react24.default.createElement(GlossPage, { word: glossWord, date: effDate, rows, occ, genData, onBack: backHome, nameRefs }), route.name === "gloss" && !glossWord && /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react24.default.createElement("button", { onClick: backHome }, "\u25C0 back")), /* @__PURE__ */ import_react24.default.createElement("h2", null, "Gloss not found"), /* @__PURE__ */ import_react24.default.createElement("div", { className: "muted" }, "No Hebrew word matches \u201C", route.he, "\u201D in the lexicon. It may use letters unavailable today; open it from the Reader list on a date when it is readable.")), route.name !== "gloss" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, active === "sky" && /* @__PURE__ */ import_react24.default.createElement(SkyTab, { date: effDate, rawDate: date, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step }), active === "translator" && /* @__PURE__ */ import_react24.default.createElement(TranslatorTab, { date: effDate, occ, words, q, setQ, genData, onOpen: openGloss, nameRefs }), active === "reading" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.reading, active: sub.reading, onChange: setSubTab("reading") }), sub.reading === "rule" && /* @__PURE__ */ import_react24.default.createElement(RuleTab, { occ }), sub.reading === "yhvh" && /* @__PURE__ */ import_react24.default.createElement(YhvhTab, { date: effDate, occ, yhvhOk, bs }), sub.reading === "genesis" && /* @__PURE__ */ import_react24.default.createElement(GenesisTab, { date: effDate, occ, genesisOk })), active === "time" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.time, active: sub.time, onChange: setSubTab("time") }), sub.time === "predictor" && /* @__PURE__ */ import_react24.default.createElement(PredictorTab, { date: effDate, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear }), sub.time === "ages" && /* @__PURE__ */ import_react24.default.createElement(AgesTab, { date: effDate, rows })), active === "gematria" && /* @__PURE__ */ import_react24.default.createElement(GematriaTab, null), active === "sigils" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.sigils, active: sub.sigils, onChange: setSubTab("sigils") }), sub.sigils === "sigil" && /* @__PURE__ */ import_react24.default.createElement(SigilTab, null), sub.sigils === "kameot" && /* @__PURE__ */ import_react24.default.createElement(KameotTab, null), sub.sigils === "angels" && /* @__PURE__ */ import_react24.default.createElement(AngelsTab, null)), active === "cycles" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.cycles, active: sub.cycles, onChange: setSubTab("cycles") }), sub.cycles === "saros" && /* @__PURE__ */ import_react24.default.createElement(SarosTab, null), sub.cycles === "ayanamsa" && /* @__PURE__ */ import_react24.default.createElement(AyanamsaTab, null), sub.cycles === "lunarsolar" && /* @__PURE__ */ import_react24.default.createElement(LunarSolarTab, null), sub.cycles === "alignments" && /* @__PURE__ */ import_react24.default.createElement(AlignmentsTab, { setDate, goReader: (d) => {
     setDate(d);
     setActive("translator");
-  }, lex, angelMap: ANGEL72, genData }), sub.cycles === "week" && /* @__PURE__ */ import_react18.default.createElement(WeekTab, { date: effDate, rows })), active === "revelation" && /* @__PURE__ */ import_react18.default.createElement(RevelationsTab, { sub: sub.revelation, setSubTab: setSubTab("revelation"), date: effDate, rows, occ, words, genData, genYear }), active === "psalms" && /* @__PURE__ */ import_react18.default.createElement(PsalmsTab, null), active === "codes" && /* @__PURE__ */ import_react18.default.createElement(CodesTab, { sub: sub.codes, setSubTab: setSubTab("codes") }), active === "method" && /* @__PURE__ */ import_react18.default.createElement(MethodTab, { esGlossCount: Object.keys(lex.esGloss || {}).length }))), /* @__PURE__ */ import_react18.default.createElement(Footer, null));
+  }, lex, angelMap: ANGEL72, genData, nameRefs }), sub.cycles === "week" && /* @__PURE__ */ import_react24.default.createElement(WeekTab, { date: effDate, rows })), active === "revelation" && /* @__PURE__ */ import_react24.default.createElement(RevelationsTab, { sub: sub.revelation, setSubTab: setSubTab("revelation"), date: effDate, rows, occ, words, genData, genYear }), active === "psalms" && /* @__PURE__ */ import_react24.default.createElement(PsalmsTab, null), active === "codes" && /* @__PURE__ */ import_react24.default.createElement(CodesTab, { sub: sub.codes, setSubTab: setSubTab("codes") }), active === "method" && /* @__PURE__ */ import_react24.default.createElement(MethodTab, { esGlossCount: Object.keys(lex.esGloss || {}).length }))), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
 }
 function TabsBar({ goTab }) {
-  return /* @__PURE__ */ import_react18.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react18.default.createElement("div", { key: id, role: "tab", className: "tab", onClick: () => goTab(id) }, label)));
+  return /* @__PURE__ */ import_react24.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react24.default.createElement("div", { key: id, role: "tab", className: "tab", onClick: () => goTab(id) }, label)));
 }
 
 // app.jsx
 if (typeof document !== "undefined") {
   const root = document.getElementById("root");
-  (0, import_client.createRoot)(root).render(/* @__PURE__ */ import_react19.default.createElement(App, null));
+  (0, import_client.createRoot)(root).render(/* @__PURE__ */ import_react25.default.createElement(App, null));
 }
 export {
   App

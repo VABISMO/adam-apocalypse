@@ -19,6 +19,18 @@ import { MethodTab } from './tabs/MethodTab.jsx';
 import { ProphetsPage } from './pages/ProphetsPage.jsx';
 import { MagesPage } from './pages/MagesPage.jsx';
 import { AlignmentFicha } from './pages/AlignmentFicha.jsx';
+import { ProphetFicha } from './pages/ProphetFicha.jsx';
+import { MageFicha } from './pages/MageFicha.jsx';
+import { Landing } from './pages/Landing.jsx';
+import { About } from './pages/About.jsx';
+import { slugify } from './data/wiki.js';
+import { PROPHETS } from './data/prophets.js';
+import { MAGES } from './data/mages.js';
+
+// slug → figure, for client-side <title>/<meta> on ficha routes (the prerendered
+// deep links carry the precise per-ficha meta; this is for in-app navigation).
+const PROPHET_BY_SLUG = new Map(PROPHETS.map((p) => [slugify(p.name), p]));
+const MAGE_BY_SLUG = new Map(MAGES.map((m) => [slugify(m.name), m]));
 
 const TABS = [
   ['cycles','Cycles'],['sky','Sky Map'],['translator','Reader'],['reading','Reading'],['time','Time'],
@@ -38,15 +50,23 @@ const SUB = {
 function parseRoute(){
   const pathname = (typeof window!=='undefined') ? window.location.pathname : ((typeof globalThis!=='undefined' && globalThis.__ROUTE_PATH__) || '/');
   const hash = (typeof window!=='undefined') ? window.location.hash : '';
+  // Normalise a trailing slash so /prophets/ matches /prophets (static hosts serve
+  // prerendered /prophets/index.html at the /prophets/ URL). Without this, the exact
+  // `==='/prophets'` checks fail and the SPA falls back to home after boot.
+  const path = pathname.replace(/\/+$/, '') || '/';
   let m;
-  if((m=/^\/reader\/(.+)$/.exec(pathname))){ try{ return {name:'gloss', he:decodeURIComponent(m[1])}; }catch(e){ return {name:'home'}; } }
-  if((m=/^\/align\/(.+)$/.exec(pathname))){ return {name:'align', date:decodeURIComponent(m[1])}; }
-  if(pathname==='/prophets') return {name:'prophets'};
-  if(pathname==='/mages') return {name:'mages'};
-  if(pathname==='/alignments') return {name:'alignments'};
-  if(pathname==='/readings') return {name:'readings'};
-  if((m=/^#\/reader\/(.+)$/.exec(hash))){ try{ return {name:'gloss', he:decodeURIComponent(m[1])}; }catch(e){ return {name:'home'}; } }
-  return {name:'home'};
+  if((m=/^\/reader\/(.+)$/.exec(path))){ try{ return {name:'gloss', he:decodeURIComponent(m[1])}; }catch(e){ return {name:'home'}; } }
+  if((m=/^\/align\/(.+)$/.exec(path))){ return {name:'align', date:decodeURIComponent(m[1])}; }
+  if((m=/^\/prophet\/(.+)$/.exec(path))){ return {name:'prophet', slug:decodeURIComponent(m[1])}; }
+  if((m=/^\/mage\/(.+)$/.exec(path))){ return {name:'mage', slug:decodeURIComponent(m[1])}; }
+  if(path==='/prophets') return {name:'prophets'};
+  if(path==='/mages') return {name:'mages'};
+  if(path==='/alignments') return {name:'alignments'};
+  if(path==='/readings') return {name:'readings'};
+  if(path==='/app') return {name:'app'};
+  if(path==='/about') return {name:'about'};
+  if((m=/^#\/reader\/(.+)$/.exec(hash))){ try{ return {name:'gloss', he:decodeURIComponent(m[1])}; }catch(e){ return {name:'landing'}; } }
+  return {name:'landing'};
 }
 
 function App(){
@@ -56,6 +76,7 @@ function App(){
   const [lex,setLex]=useState(null);
   const [lexErr,setLexErr]=useState(null);
   const [angels,setAngels]=useState(null);
+  const [nameRefs,setNameRefs]=useState(null);
   const [date,setDate]=useState(today);
   const [genYear,setGenYear]=useState(2026);
   const [genData,setGenData]=useState(null);
@@ -67,6 +88,10 @@ function App(){
   // relative 'lexicon.json' would resolve to /prophets/lexicon.json → 404.
   useEffect(()=>{ fetch('/lexicon.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setLex).catch(e=>setLexErr(e.message)); },[]);
   useEffect(()=>{ fetch('/angels72.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setAngels).catch(()=>{}); },[]);
+  // Bible references per proper name (scraped from the Sefaria Hebrew Tanakh, scripts/build_name_refs.mjs).
+  // Object keyed by lexicon consonants (== w.he), value {translit, name, n, refs:[...]}. Empty catch: refs are an
+  // enhancement, not load-bearing — the app still works if the file is absent.
+  useEffect(()=>{ fetch('/name_refs.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setNameRefs).catch(()=>{}); },[]);
   useEffect(()=>{
     const h=()=>setLoc(window.location.pathname+window.location.hash);
     window.addEventListener('popstate',h); window.addEventListener('hashchange',h);
@@ -97,7 +122,7 @@ function App(){
     return words.find(x=>x.he===route.he) || findWord(route.he, lex.lexicon, ANGEL72);
   },[route,words,lex,ANGEL72]);
   const openGloss = (w)=>{ navigate('/reader/'+encodeURIComponent(w.he)); };
-  const backHome = ()=>{ navigate('/'); };
+  const backHome = ()=>{ navigate('/app'); };
 
   // per-route SEO: title + meta description.
   useEffect(()=>{
@@ -115,12 +140,29 @@ function App(){
     } else if(route.name==='mages'){
       t='Magi timeline — Daniel to Felipe II | Apocalypse of Adam';
       d='A chronology of magi and royal-sage occult figures from the Babylonian court magi (Daniel, Shadrach, Meshach, Abednego) through Ramon Llull, Alfonso X and Felipe II, with Wikipedia bios and a ficha of their works.';
+    } else if(route.name==='prophet'){
+      const p = PROPHET_BY_SLUG.get(route.slug);
+      t = p ? `${p.name} — prophet ficha | Apocalypse of Adam` : 'Prophet ficha | Apocalypse of Adam';
+      d = p ? `${p.name} (${p.region}, ${p.y0===p.y1?p.y0:p.y0+'–'+p.y1}): Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table. ${p.role}` : 'Prophet detail ficha with Wikipedia biography and a summary table.';
+    } else if(route.name==='mage'){
+      const m2 = MAGE_BY_SLUG.get(route.slug);
+      t = m2 ? `${m2.name} — magus ficha | Apocalypse of Adam` : 'Magus ficha | Apocalypse of Adam';
+      d = m2 ? `${m2.name} (${m2.region}, ${m2.years}): Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions summary table. ${m2.role}` : 'Magus detail ficha with Wikipedia biography and a works table.';
     } else if(route.name==='alignments'){
       t='Stellar alignments — rare century & millennium conjunctions | Apocalypse of Adam';
       d='All rare stellar alignments (planets concentrated in one zodiac sign): dates, tightest arc, precessional era, and the readable names of each alignment day.';
     } else if(route.name==='readings'){
       t='Sky readings — Hebrew words readable in the stars | Apocalypse of Adam';
       d='Every Hebrew word readable from the zodiac signs occupied by the planets: a glossary of consonantal roots, gematria, and the stellar letters that spell each name.';
+    } else if(route.name==='landing'){
+      t='The Apocalypse of Adam — Hebrew letters in the stars · stellar alphabet & sky reader';
+      d='Apocalypse means revelation. The thirteenth kingdom says every birth of their ruler is a word. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells readable Hebrew names. Sky map, alignments, reader, time, gematria, sigils, codes and psalms.';
+    } else if(route.name==='about'){
+      t='About — The Apocalypse of Adam | Hebrew sky reader';
+      d='About The Apocalypse of Adam: a stellar-alphabet reader that maps real planet positions to the 12 simple letters of the Sefer Yetzirah. Authors, sources, and how a reading works.';
+    } else if(route.name==='app'){
+      t='Sky reader app — Cycles, Sky Map, Reader, Gematria, Alignments | Apocalypse of Adam';
+      d='The interactive calculators: live sky map, readable-word reader, reading rule (YHVH, Genesis), time predictor, gematria, sigils, 72 angels, ELS codes, rare alignments, revelations, psalms.';
     }
     setRouteMeta(t, d);
   },[route,glossWord,effDate]);
@@ -143,18 +185,22 @@ function App(){
   function step(n){ const d=parseDate(effDate); if(!d) return; d.setUTCDate(d.getUTCDate()+n); setDate(fmtDate(d)); }
   function stepYear(n){ setGenYear(genYear+n); }
 
-  if(lexErr) return <div className="panel"><h2>Error</h2><p>Could not load lexicon.json ({lexErr}). Serve the <code>web/</code> folder over HTTP (<code>python3 -m http.server 8008</code>) and open <code>http://127.0.0.1:8008/</code>.</p></div>;
-  if(!lex) return <div className="panel"><h2>Loading lexicon…</h2><p>Reading lexicon.json (6045 consonantal roots).</p></div>;
+  if(lexErr) return <div className="panel app-panel"><h2>Error</h2><p>Could not load the lexicon. Please refresh the page; if the problem persists, the data may be unavailable right now.</p></div>;
+  if(!lex) return <div className="panel app-panel"><h2>Loading lexicon…</h2><p>Reading the lexicon (6045 consonantal roots).</p></div>;
 
   const setSubTab = (g)=>(id)=>setSub(s=>({...s,[g]:id}));
-  const goTab = (id)=>{ const p=(typeof window!=='undefined')?window.location.pathname:'/'; if(p!=='/') navigate('/'); setActive(id); };
+  const goTab = (id)=>{ const p=(typeof window!=='undefined')?window.location.pathname:'/'; if(p!=='/app') navigate('/app'); setActive(id); };
 
   // Path-based dedicated pages (full-page routes for SEO / deep links).
-  if(route.name==='prophets') return <div><TabsBar goTab={goTab}/><section className="panel"><ProphetsPage/></section><Footer/></div>;
-  if(route.name==='mages') return <div><TabsBar goTab={goTab}/><section className="panel"><MagesPage/></section><Footer/></div>;
-  if(route.name==='align') return <div><TabsBar goTab={goTab}/><section className="panel"><AlignmentFicha date={route.date} lex={lex} angelMap={ANGEL72} onBack={backHome}/></section><Footer/></div>;
-  if(route.name==='alignments') return <div><TabsBar goTab={goTab}/><section className="panel"><AlignmentsTab setDate={setDate} goReader={(d)=>{ setDate(d); setActive('translator'); navigate('/'); }} lex={lex} angelMap={ANGEL72} genData={genData}/></section><Footer/></div>;
-  if(route.name==='readings') return <div><TabsBar goTab={goTab}/><section className="panel"><TranslatorTab date={effDate} occ={occ} words={words} q={q} setQ={setQ} genData={genData} onOpen={openGloss}/></section><Footer/></div>;
+  if(route.name==='landing') return <div><Landing goApp={()=>navigate('/app')}/><Footer/></div>;
+  if(route.name==='about') return <div><About/><Footer/></div>;
+  if(route.name==='prophets') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><ProphetsPage/></section><Footer/></div>;
+  if(route.name==='mages') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><MagesPage/></section><Footer/></div>;
+  if(route.name==='align') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><AlignmentFicha date={route.date} lex={lex} angelMap={ANGEL72} onBack={backHome} nameRefs={nameRefs}/></section><Footer/></div>;
+  if(route.name==='prophet') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><ProphetFicha slug={route.slug}/></section><Footer/></div>;
+  if(route.name==='mage') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><MageFicha slug={route.slug}/></section><Footer/></div>;
+  if(route.name==='alignments') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><AlignmentsTab setDate={setDate} goReader={(d)=>{ setDate(d); setActive('translator'); navigate('/'); }} lex={lex} angelMap={ANGEL72} genData={genData} nameRefs={nameRefs}/></section><Footer/></div>;
+  if(route.name==='readings') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><TranslatorTab date={effDate} occ={occ} words={words} q={q} setQ={setQ} genData={genData} onOpen={openGloss} nameRefs={nameRefs}/></section><Footer/></div>;
 
   return (
     <div>
@@ -162,9 +208,9 @@ function App(){
         {TABS.map(([id,label])=> <div key={id} role="tab" aria-selected={active===id} className={'tab'+(active===id?' active':'')} onClick={()=>goTab(id)}>{label}</div>)}
       </div>
 
-      <section className="panel">
+      <section className="panel app-panel">
         {route.name==='gloss' && glossWord && (
-          <GlossPage word={glossWord} date={effDate} rows={rows} occ={occ} genData={genData} onBack={backHome}/>
+          <GlossPage word={glossWord} date={effDate} rows={rows} occ={occ} genData={genData} onBack={backHome} nameRefs={nameRefs}/>
         )}
         {route.name==='gloss' && !glossWord && (
           <div>
@@ -175,7 +221,7 @@ function App(){
         )}
         {route.name!=='gloss' && <>
         {active==='sky' && <SkyTab date={effDate} rawDate={date} setDate={setDate} rows={rows} occ={occ} occSigns={occSigns} yhvhOk={yhvhOk} genesisOk={genesisOk} bs={bs} sentence={sentence} step={step}/>}
-        {active==='translator' && <TranslatorTab date={effDate} occ={occ} words={words} q={q} setQ={setQ} genData={genData} onOpen={openGloss}/>}
+        {active==='translator' && <TranslatorTab date={effDate} occ={occ} words={words} q={q} setQ={setQ} genData={genData} onOpen={openGloss} nameRefs={nameRefs}/>}
 
         {active==='reading' && <>
           <SubTabs items={SUB.reading} active={sub.reading} onChange={setSubTab('reading')}/>
@@ -204,7 +250,7 @@ function App(){
           {sub.cycles==='saros' && <SarosTab/>}
           {sub.cycles==='ayanamsa' && <AyanamsaTab/>}
           {sub.cycles==='lunarsolar' && <LunarSolarTab/>}
-          {sub.cycles==='alignments' && <AlignmentsTab setDate={setDate} goReader={(d)=>{ setDate(d); setActive('translator'); }} lex={lex} angelMap={ANGEL72} genData={genData}/>}
+          {sub.cycles==='alignments' && <AlignmentsTab setDate={setDate} goReader={(d)=>{ setDate(d); setActive('translator'); }} lex={lex} angelMap={ANGEL72} genData={genData} nameRefs={nameRefs}/>}
           {sub.cycles==='week' && <WeekTab date={effDate} rows={rows}/>}
         </>}
 

@@ -6,18 +6,23 @@ app.bundle.mjs
 test-entry.bundle.mjs
 
 # SSG output — generated at build/deploy time by:
-#   node scripts/prerender.bundle.mjs
-# (the script + its bundle are committed; the HTML output below is not)
+#   node web/prerender.cjs
+# (the built prerender.cjs is committed; the HTML output below is not)
 align/
 reader/
+prophet/
+mage/
 prophets/
 mages/
+app/
+about/
 alignments/index.html
 readings/index.html
 sitemap.xml
 sitemap_alignments.xml
 sitemap_readings.xml
 sitemap_hub.xml
+sitemap_figures.xml
 robots.txt
 llms.txt
 llms-full.txt

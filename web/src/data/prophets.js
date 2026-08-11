@@ -34,7 +34,7 @@ const RAW = [
   {name:"Abraham Abulafia",he:"",era:"CE",y0:1240,y1:1291,region:"Spain/Italy",role:"Medieval prophetic Kabbalist; ecstatic practices and messianic self-claims (13th c.).",thread:"mystical"},
   {name:"Sabbatai Tsevi",he:"",era:"CE",y0:1626,y1:1676,region:"Smyrna/Ottoman lands",role:"Smyrna-born messianic claimant; center of the 1665–66 Sabbatean movement.",thread:"sabbatean-frankist"},
   {name:"Nathan of Gaza",he:"",era:"CE",y0:1644,y1:1680,region:"Ottoman Gaza",role:"Sabbatai Tsevi's prophet; theological architect of Sabbatean messianism.",thread:"sabbatean-frankist"},
-  {name:"Jacob Frank",he:"",era:"CE",y0:1726,y1:1791,region:"Poland/Ottoman",role:"Polish Sabbatean successor; founder of the Frankist movement — final endpoint of this lineage.",thread:"sabbatean-frankist",endpoint:true}
+  {name:"Jacob Frank",he:"",era:"CE",y0:1726,y1:1791,region:"Poland/Ottoman",role:"Polish Sabbatean successor; founder of the Frankist movement, cast by his own doctrine as the Antichrist — the antinomian messianic counterpart who abolishes the old law.",thread:"sabbatean-frankist",endpoint:true,designation:"Antichrist"}
 ];
 const PROPHETS = RAW.map(p=>({ ...p, he: (p.he||'').replace(POINTED,'') }));
 export { PROPHETS };

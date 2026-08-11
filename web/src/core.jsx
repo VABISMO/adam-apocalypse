@@ -89,6 +89,18 @@ const ANGEL_LEXICON = [
 ];
 const ANGEL_NAME_MAP = new Map(ANGEL_LEXICON.map(([he,en,src])=>[norm(he), {en, src}]));
 
+// Bible-reference pills: abbrev (as stored in name_refs.json) → Sefaria book title.
+export const SEFARIA_TITLE = {
+  'Gen':'Genesis','Ex':'Exodus','Lev':'Leviticus','Num':'Numbers','Deut':'Deuteronomy',
+  'Josh':'Joshua','Judg':'Judges','1 Sam':'I_Samuel','2 Sam':'II_Samuel','1 Ki':'I_Kings','2 Ki':'II_Kings',
+  'Isa':'Isaiah','Jer':'Jeremiah','Ezek':'Ezekiel','Hos':'Hosea','Joel':'Joel','Amos':'Amos','Obad':'Obadiah',
+  'Jon':'Jonah','Mic':'Micah','Nah':'Nahum','Hab':'Habakkuk','Zeph':'Zephaniah','Hag':'Haggai','Zech':'Zechariah','Mal':'Malachi',
+  'Ps':'Psalms','Prov':'Proverbs','Job':'Job','Song':'Song_of_Songs','Ruth':'Ruth','Lam':'Lamentations',
+  'Eccl':'Ecclesiastes','Esth':'Esther','Dan':'Daniel','Ezra':'Ezra','Neh':'Nehemiah','1 Chr':'I_Chronicles','2 Chr':'II_Chronicles',
+};
+// "1 Ki 4:14" -> "https://www.sefaria.org/I_Kings.4:14"  (Sefaria accepts title.chap:verse)
+export function refUrl(ref){ const li=String(ref).lastIndexOf(' '); const book=ref.slice(0,li), cv=ref.slice(li+1); const t=SEFARIA_TITLE[book]; return t ? `https://www.sefaria.org/${t}.${cv}` : null; }
+
 function readableWords(occ, LEX, angelMap){
   const res=[], seen=new Set();
   for(const [cons,trans,gloss,pos] of LEX){
@@ -101,6 +113,8 @@ function readableWords(occ, LEX, angelMap){
       res.push({he:cons, disp:displayHe(cons), translit:trans, gloss, pos, len:cons.length, gem:gematria(cons), simp,
         pal:isPalindrome(cons), m37:gematria(cons)%37===0,
         name: (pos||'').startsWith('n-pr'),
+        person: /n-pr-m|n-pr-f/.test(pos||'') || ((pos||'').startsWith('n-pr') && !/loc/.test(pos||'')),
+        place: /loc/.test(pos||''),
         theo: /אל|יהו|יאל|יה/.test(cons),
         compound: /\s/.test(trans),
         angel: am ? {el:am.el, yh:am.yh} : null,
@@ -110,13 +124,15 @@ function readableWords(occ, LEX, angelMap){
   // add extra-biblical angel names not already in the Strong lexicon
   for(const [he,en,src] of ANGEL_LEXICON){
     if(seen.has(he)) continue;
-    if(formable(he, occ)){
+    const n=norm(he);   // final letters (ן/ץ/ך/ם/ף) must count as their base value — norm first
+    if(formable(n, occ)){
       seen.add(he);
-      const simp=[...simpleSet(he)].sort().join('');
-      res.push({he, disp:displayHe(he), translit:en, gloss:'angel — '+en, pos:'n-pr', len:he.length, gem:gematria(he), simp,
-        pal:isPalindrome(he), m37:gematria(he)%37===0,
-        name:true, theo:/אל|יה/.test(he), compound:false,
-        angel: angelMap?angelMap.get(norm(he)):null, angelName:{en,src}});
+      const gem=gematria(n);
+      const simp=[...simpleSet(n)].sort().join('');
+      res.push({he, disp:displayHe(he), translit:en, gloss:'angel — '+en, pos:'n-pr', len:he.length, gem, simp,
+        pal:isPalindrome(he), m37:gem%37===0,
+        name:true, person:true, place:false, theo:/אל|יה/.test(he), compound:false,
+        angel: angelMap?angelMap.get(n):null, angelName:{en,src}});
     }
   }
   res.sort((a,b)=> b.len-a.len || a.gem-b.gem || (a.he<b.he?-1:1));

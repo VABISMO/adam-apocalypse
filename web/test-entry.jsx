@@ -4,3 +4,8 @@ export { App } from './src/App.jsx';
 export { ProphetsPage } from './src/pages/ProphetsPage.jsx';
 export { MagesPage } from './src/pages/MagesPage.jsx';
 export { AlignmentFicha } from './src/pages/AlignmentFicha.jsx';
+export { ProphetFicha } from './src/pages/ProphetFicha.jsx';
+export { MageFicha } from './src/pages/MageFicha.jsx';
+export { Landing } from './src/pages/Landing.jsx';
+export { About } from './src/pages/About.jsx';
+export { WarningModal } from './src/components/WarningModal.jsx';

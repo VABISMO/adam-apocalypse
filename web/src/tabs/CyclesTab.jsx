@@ -1,7 +1,7 @@
 // tabs/CyclesTab.jsx — Saros / Ayanamsa / Lunar-Solar / Alignments / Week + diagrams
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import * as Astronomy from 'astronomy-engine';
-import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate } from '../core.jsx';
+import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate, refUrl } from '../core.jsx';
 import { SkyMap, KameaGrid, Fig, DateEntry, YearInput, SubTabs } from '../ui.jsx';
 
 // ====== Cycles tab — graphical representations (inline SVG, self-contained) ======
@@ -18,11 +18,11 @@ function Heptagram(){
   const starD=order.map((k,j)=>{ const [x,y]=pt(k); return (j===0?'M':'L')+x.toFixed(1)+' '+y.toFixed(1); }).join(' ')+' Z';
   return <svg viewBox="0 0 340 300" width="100%" style={{maxWidth:340}} role="img" aria-label="Chaldean heptagram">
     <path d={starD} fill="none" stroke="#e8c87a" strokeWidth="1.4" opacity="0.85"/>
-    <circle cx={cx} cy={cy} r={R} fill="none" stroke="#283145" strokeWidth="1"/>
+    <circle cx={cx} cy={cy} r={R} fill="none" stroke="#2a2a38" strokeWidth="1"/>
     {planets.map((p,i)=>{ const [x,y]=pt(i); return <g key={p}>
-      <circle cx={x} cy={y} r="18" fill="#1a2030" stroke="#7fb0ff" strokeWidth="1.4"/>
-      <text x={x} y={y-1} textAnchor="middle" fontSize="15" fill="#e8c87a">{GLYPH[p]}</text>
-      <text x={x} y={y+11} textAnchor="middle" fontSize="13" fill="#7fb0ff" fontFamily="serif">{he[i]}</text>
+      <circle cx={x} cy={y} r="18" fill="#0f1518" stroke="#5eead4" strokeWidth="1.4"/>
+      <text x={x} y={y-1} textAnchor="middle" fontSize="15" fill="#5eead4">{GLYPH[p]}</text>
+      <text x={x} y={y+11} textAnchor="middle" fontSize="13" fill="#e8c87a" fontFamily="serif">{he[i]}</text>
       <text x={x} y={y-26} textAnchor="middle" fontSize="10" fill="#8a96ad">{p} · {dayOf[p]}</text>
     </g>; })}
     <text x={cx} y={cy-6} textAnchor="middle" fontSize="11" fill="#8a96ad">Chaldean order</text>
@@ -35,19 +35,19 @@ function Heptagram(){
 // the |β|<1.6° window that the live scan uses. Moon at node → eclipse; far from node → none.
 function SarosDiagram(){
   return <svg viewBox="0 0 460 220" width="100%" style={{maxWidth:460}} role="img" aria-label="Eclipse node geometry">
-    <rect x="40" y="98" width="380" height="24" fill="#6fe0a0" opacity="0.07"/>
-    <line x1="40" y1="110" x2="420" y2="110" stroke="#7fb0ff" strokeWidth="1.5"/>
-    <line x1="60" y1="95" x2="400" y2="125" stroke="#c79bff" strokeWidth="1.3" strokeDasharray="5 4"/>
+    <rect x="40" y="98" width="380" height="24" fill="#00db7c" opacity="0.07"/>
+    <line x1="40" y1="110" x2="420" y2="110" stroke="#5eead4" strokeWidth="1.5"/>
+    <line x1="60" y1="95" x2="400" y2="125" stroke="#9b8ec4" strokeWidth="1.3" strokeDasharray="5 4"/>
     <circle cx="230" cy="110" r="16" fill="#e8c87a"/>
-    <circle cx="230" cy="110" r="16" fill="none" stroke="#ffcf6a" strokeWidth="1"/>
-    <circle cx="262" cy="110" r="6" fill="#1a2030" stroke="#6fe0a0" strokeWidth="1.4"/>
-    <circle cx="120" cy="92" r="6" fill="#1a2030" stroke="#ff8a8a" strokeWidth="1.4"/>
-    <text x="230" y="74" textAnchor="middle" fontSize="10" fill="#ffcf6a">node · eclipse season</text>
-    <text x="262" y="135" textAnchor="middle" fontSize="9" fill="#6fe0a0">Moon at node → eclipse</text>
-    <text x="120" y="80" textAnchor="middle" fontSize="9" fill="#ff8a8a">Moon far from node → none</text>
-    <text x="40" y="92" fontSize="9" fill="#7fb0ff">ecliptic (Sun's path)</text>
-    <text x="300" y="140" fontSize="9" fill="#c79bff">Moon's path · 5.1° incline</text>
-    <text x="40" y="158" fontSize="9" fill="#6fe0a0">|β| &lt; 1.6° window (scan threshold)</text>
+    <circle cx="230" cy="110" r="16" fill="none" stroke="#f4a8c0" strokeWidth="1"/>
+    <circle cx="262" cy="110" r="6" fill="#16161f" stroke="#00db7c" strokeWidth="1.4"/>
+    <circle cx="120" cy="92" r="6" fill="#16161f" stroke="#e96770" strokeWidth="1.4"/>
+    <text x="230" y="74" textAnchor="middle" fontSize="10" fill="#f4a8c0">node · eclipse season</text>
+    <text x="262" y="135" textAnchor="middle" fontSize="9" fill="#00db7c">Moon at node → eclipse</text>
+    <text x="120" y="80" textAnchor="middle" fontSize="9" fill="#e96770">Moon far from node → none</text>
+    <text x="40" y="92" fontSize="9" fill="#5eead4">ecliptic (Sun's path)</text>
+    <text x="300" y="140" fontSize="9" fill="#9b8ec4">Moon's path · 5.1° incline</text>
+    <text x="40" y="158" fontSize="9" fill="#00db7c">|β| &lt; 1.6° window (scan threshold)</text>
   </svg>;
 }
 
@@ -60,7 +60,7 @@ function PrecessionDiagram(){
     const x1=cx+R*Math.cos(a1), y1=cy+R*Math.sin(a1), x2=cx+R*Math.cos(a2), y2=cy+R*Math.sin(a2);
     const mx=cx+(R-22)*Math.cos((a1+a2)/2), my=cy+(R-22)*Math.sin((a1+a2)/2);
     return <g key={i}>
-      <path d={`M ${cx} ${cy} L ${x1} ${y1} A ${R} ${R} 0 0 1 ${x2} ${y2} Z`} fill={cls} stroke="#283145" strokeWidth="0.8"/>
+      <path d={`M ${cx} ${cy} L ${x1} ${y1} A ${R} ${R} 0 0 1 ${x2} ${y2} Z`} fill={cls} stroke="#2a2a38" strokeWidth="0.8"/>
       <text x={mx} y={my} textAnchor="middle" dominantBaseline="middle" fontSize="9" fill="#8a96ad">{lab}</text>
     </g>; };
   // tropical Aries 0° at top (-90°); sidereal Aries 0° offset by +ayanamsa
@@ -68,19 +68,19 @@ function PrecessionDiagram(){
   const tx=cx+R*Math.cos(-90*Math.PI/180), ty=cy+R*Math.sin(-90*Math.PI/180);
   const sx=cx+R*Math.cos(ayAng), sy=cy+R*Math.sin(ayAng);
   return <svg viewBox="0 0 460 280" width="100%" style={{maxWidth:460}} role="img" aria-label="Precession: tropical vs sidereal zodiac">
-    <circle cx={cx} cy={cy} r={R} fill="#1a2030" stroke="#283145"/>
-    {SIGNS.map((s,i)=>seg(i, i%2? '#131826':'#1a2030', s.slice(0,3)))}
+    <circle cx={cx} cy={cy} r={R} fill="#16161f" stroke="#2a2a38"/>
+    {SIGNS.map((s,i)=>seg(i, i%2? '#16161f':'#16161f', s.slice(0,3)))}
     {/* tropical Aries 0° marker — fixed */}
     <line x1={cx} y1={cy} x2={tx} y2={ty} stroke="#e8c87a" strokeWidth="2"/>
     <circle cx={tx} cy={ty} r="5" fill="#e8c87a"/>
     <text x={tx} y={ty-10} textAnchor="middle" fontSize="9" fill="#e8c87a">♈ tropical 0° (fixed to equinox — does NOT precess)</text>
     {/* sidereal Aries 0° marker — precessing */}
-    <line x1={cx} y1={cy} x2={sx} y2={sy} stroke="#c79bff" strokeWidth="2" strokeDasharray="4 3"/>
-    <circle cx={sx} cy={sy} r="5" fill="#c79bff"/>
-    <text x={sx+10} y={sy+4} fontSize="9" fill="#c79bff">sidereal 0° (fixed to stars — precesses)</text>
+    <line x1={cx} y1={cy} x2={sx} y2={sy} stroke="#9b8ec4" strokeWidth="2" strokeDasharray="4 3"/>
+    <circle cx={sx} cy={sy} r="5" fill="#9b8ec4"/>
+    <text x={sx+10} y={sy+4} fontSize="9" fill="#9b8ec4">sidereal 0° (fixed to stars — precesses)</text>
     {/* ayanamsa arc */}
-    <path d={`M ${cx+(R-34)*Math.cos(-90*Math.PI/180)} ${cy+(R-34)*Math.sin(-90*Math.PI/180)} A ${R-34} ${R-34} 0 0 1 ${cx+(R-34)*Math.cos(ayAng)} ${cy+(R-34)*Math.sin(ayAng)}`} fill="none" stroke="#ffcf6a" strokeWidth="1.4"/>
-    <text x={cx+ (R-50)*Math.cos((-90+12)*Math.PI/180)} y={cy+(R-50)*Math.sin((-90+12)*Math.PI/180)+3} textAnchor="middle" fontSize="9" fill="#ffcf6a">ayanamsa 24.18°</text>
+    <path d={`M ${cx+(R-34)*Math.cos(-90*Math.PI/180)} ${cy+(R-34)*Math.sin(-90*Math.PI/180)} A ${R-34} ${R-34} 0 0 1 ${cx+(R-34)*Math.cos(ayAng)} ${cy+(R-34)*Math.sin(ayAng)}`} fill="none" stroke="#f4a8c0" strokeWidth="1.4"/>
+    <text x={cx+ (R-50)*Math.cos((-90+12)*Math.PI/180)} y={cy+(R-50)*Math.sin((-90+12)*Math.PI/180)+3} textAnchor="middle" fontSize="9" fill="#f4a8c0">ayanamsa 24.18°</text>
     {/* precession direction arrow */}
     <path d={`M ${cx} ${cy+44} A 44 44 0 0 0 ${cx-31} ${cy+31}`} fill="none" stroke="#8a96ad" strokeWidth="1.2" markerEnd="url(#ar)"/>
     <defs><marker id="ar" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#8a96ad"/></marker></defs>
@@ -95,9 +95,9 @@ function MetonDiagram(){
   const leap=new Set([3,6,8,11,14,17,19]);
   const pt=y=>{ const a=(-90+(y-1)*360/19)*Math.PI/180; return [cx+R*Math.cos(a), cy+R*Math.sin(a)]; };
   return <svg viewBox="0 0 360 220" width="100%" style={{maxWidth:360}} role="img" aria-label="Metonic 19-year cycle">
-    <circle cx={cx} cy={cy} r={R+14} fill="none" stroke="#283145"/>
+    <circle cx={cx} cy={cy} r={R+14} fill="none" stroke="#2a2a38"/>
     {Array.from({length:19},(_,i)=>i+1).map(y=>{ const [x,yp]=pt(y); const L=leap.has(y); return <g key={y}>
-      <circle cx={x} cy={yp} r={L?13:10} fill={L?'#e8c87a':'#1a2030'} stroke={L?'#e8c87a':'#283145'} strokeWidth="1.2"/>
+      <circle cx={x} cy={yp} r={L?13:10} fill={L?'#e8c87a':'#16161f'} stroke={L?'#e8c87a':'#2a2a38'} strokeWidth="1.2"/>
       <text x={x} y={yp+3} textAnchor="middle" fontSize="9" fill={L?'#0b0e14':'#8a96ad'} fontWeight={L?700:400}>{L?'13':'12'}</text>
       <text x={x} y={L?yp-19:yp-16} textAnchor="middle" fontSize="8" fill="#8a96ad">{y}</text>
     </g>; })}
@@ -159,7 +159,7 @@ function SarosTab(){
   useEffect(()=>{ scan(yr); },[yr]);
   return <>
     <h2>Saros — solar eclipses &amp; the saros series (§15b.6, §9)</h2>
-    <div className="muted" style={{marginBottom:10}}>A live scan: every new moon in the chosen year, a solar eclipse if the Moon's ecliptic latitude |β| &lt; 1.6° (the same threshold calibrated in <code>calc_saros_series.mjs</code>). One year is fast; the full 5000-year enumeration that counts saros series members runs offline.</div>
+    <div className="muted" style={{marginBottom:10}}>A live scan: every new moon in the chosen year, a solar eclipse if the Moon's ecliptic latitude |β| &lt; 1.6° (the calibrated eclipse threshold). One year is fast; the full 5000-year enumeration that counts saros series members runs offline.</div>
     <div className="fig"><SarosDiagram/><div className="cap">Why eclipses cluster at nodes: the Moon's path is inclined 5.1° to the ecliptic and crosses it only twice per month. A new moon within the |β|&lt;1.6° window (green band) = solar eclipse; elsewhere = a normal new moon. The scan tests exactly this.</div></div>
     <div className="controls" style={{marginBottom:10}}>
       <button onClick={()=>setYr(yr-1)}>◀ {yr-1}</button>
@@ -372,7 +372,7 @@ function EphemeridesModal({eph, onClose}){
   </div>;
 }
 
-function AlignmentsTab({setDate, goReader, lex, angelMap, genData}){
+function AlignmentsTab({setDate, goReader, lex, angelMap, genData, nameRefs}){
   const [data,setData]=useState(null);
   const [err,setErr]=useState(null);
   const [sel,setSel]=useState(null);
@@ -415,17 +415,15 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData}){
     // Anchor to the sky-map + top reading so the user sees what changed on that alignment.
     setTimeout(()=>{ if(mapRef.current) mapRef.current.scrollIntoView({behavior:'smooth', block:'start'}); }, 60); };
   const openEph=(e,set)=>setEph({date:e.date,set,ev:e});
-  if(err) return <div className="panel"><h2>Alignments</h2><p>Could not load alignments.json ({err}). Run <code>node calc_alignments.mjs</code> in <code>scripts/</code> and serve <code>web/</code> over HTTP.</p></div>;
+  if(err) return <div className="panel app-panel"><h2>Alignments</h2><p>Could not load the alignment data. Please refresh the page; if the problem persists, the data may be unavailable right now.</p></div>;
   if(!data) return <div className="panel"><h2>Alignments</h2><p>Loading alignments.json…</p></div>;
 
   const byDateDesc=(a,b)=>parseDate(b.date)-parseDate(a.date);                 // newest first, past last
   const deep=[...data.scanB].sort(byDateDesc);                                  // deep chronology, current→past
-  const modern=[...data.scanA].sort(byDateDesc);                                // modern era, current→past
   const all7=deep.filter(e=>e.maxInSign>=7);                                    // all-7-in-sign, current→past
   const tight=all7.slice().sort((a,b)=>a.span-b.span);                          // tightest first
   const tight4=[...tight.slice(0,4)].sort(byDateDesc);                          // 4 tightest, shown current→past
   const tightGap=tight.length>=2 ? Math.abs((parseDate(tight[0].date)-parseDate(tight[1].date))/86400000/365.25) : null;
-  const cc=data.crossCheck||{};
   const ev = (selSet==='A'?data.scanA:data.scanB).find(e=>e.date===sel);
   const rows = sel ? (selSet==='A'?skyAt(sel):skyAt7(sel)) : [];
   const occ = occupiedLetters(rows);
@@ -454,7 +452,30 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData}){
 
   return <>
     <h2>Alignments — rare century/millennium stellar conjunctions</h2>
-    <div className="muted" style={{marginBottom:10}}>An offline scan (<code>calc_alignments.mjs</code>) of two body-sets. <b>Deep chronology</b> = the 7 classical bodies (Sun, Moon, Mercury..Saturn), 20000 BCE → 2200 CE — fast at every date and its mean motion is secularly stable, so great-conjunction <i>dates</i> stay trustworthy across the whole range (beyond ~±4000 y from J2000 the VSOP87 perturbation terms diverge, so exact <i>degrees</i> in the deep past are an extrapolation). <b>Modern era</b> = the app's 10 bodies (adds Uranus/Neptune/Pluto), 1700–2200 CE daily (the Pluto-valid range). For each day <b>maxInSign</b> = the most planets in a single zodiacal sign, <b>span</b> = the smallest arc (°) containing every body, <b>era</b> = the precessional era (~{AGE.toFixed(0)} y each, cyclic). Click a row for that day's sky-map + reading (your place in the list is kept); filter by year or search; <span style={{opacity:.6}}>📜 what happened</span> opens what historically happened on that date (Wikipedia On This Day + an AI search link); <span style={{opacity:.6}}>📖 Reader</span> opens that day in the Reader tab (its readable names). Generated {data.generated}.</div>
+    <div className="panel" style={{marginBottom:14,padding:16,lineHeight:1.6}}>
+      <p className="muted" style={{marginTop:0,marginBottom:12}}>An offline scan of the 7 classical bodies — Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn — the set the ancients observed and the one this project reads.</p>
+
+      <div style={{marginBottom:12}}>
+        <div style={{fontWeight:600,color:'var(--gold)',marginBottom:4}}>Deep chronology · 7 classical bodies</div>
+        <p className="muted" style={{margin:0,fontSize:'.9rem'}}>20000 BCE → 2200 CE. Fast at every date and its mean motion is secularly stable, so great-conjunction <i>dates</i> stay trustworthy across the whole range. Beyond ~±4000 y from J2000 the VSOP87 perturbation terms diverge, so exact <i>degrees</i> in the deep past are an extrapolation.</p>
+      </div>
+
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:10,marginBottom:12}}>
+        <div style={{border:'1px solid var(--line)',borderRadius:8,padding:'8px 10px'}}>
+          <span style={{color:'var(--violet)',fontWeight:700}}>maxInSign</span>
+          <div className="muted" style={{fontSize:'.82rem',marginTop:2}}>the most planets in a single zodiacal sign that day</div>
+        </div>
+        <div style={{border:'1px solid var(--line)',borderRadius:8,padding:'8px 10px'}}>
+          <span style={{color:'var(--violet)',fontWeight:700}}>span</span>
+          <div className="muted" style={{fontSize:'.82rem',marginTop:2}}>the smallest arc (°) containing every body</div>
+        </div>
+        <div style={{border:'1px solid var(--line)',borderRadius:8,padding:'8px 10px'}}>
+          <span style={{color:'var(--violet)',fontWeight:700}}>era</span>
+          <div className="muted" style={{fontSize:'.82rem',marginTop:2}}>the precessional era (~{AGE.toFixed(0)} y each, cyclic)</div>
+        </div>
+      </div>
+
+    </div>
 
     <div className="fig" style={{maxWidth:760}}>
       <div style={{fontWeight:600,color:'var(--gold)',marginBottom:4}}>The millennia signal — tightest classical grand conjunctions</div>
@@ -469,14 +490,8 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData}){
       {tightGap!=null && <div className="note">Tightest pair gap: <b style={{color:'var(--gold)'}}>{tightGap.toFixed(0)} y</b> ≈ <b>{(tightGap/AGE).toFixed(2)}</b> precessional era(s). The two tightest grand conjunctions — {displayDate(tight[0].date)} ({tight[0].span}°, era {tight[0].era}) and {displayDate(tight[1].date)} ({tight[1].span}°, era {tight[1].era}) — are ~{tightGap.toFixed(0)} y apart. The tightest classical alignments (all 7 within a small arc) are the rarest class and recur on a multi-millennium scale; the all-7-in-one-sign events below recur on a centuries scale (avg ~429 y, 51 events in 22000 y).</div>}
     </div>
 
-    <h3>Cross-check — does a rare alignment produce a stellar reading NOT seen on ordinary days?</h3>
-    <div className="note">
-      <b>Question:</b> does any 7-classical stellar reading arise <i>only</i> on these rare century/millennium alignments, and not on ordinary days (same 7-body set, apples-to-apples)?
-      <br/><b>Result: NO.</b> Across {cc.rareDays} rare-alignment days, Genesis 1:1 is legible <b>{cc.rareGenRate}%</b> ({cc.rareGenLegible}/{cc.rareDays}) vs <b>{cc.baselineGenRate}%</b> on {cc.baselineDays} ordinary 2024–2030 days; avg readable names <b>{cc.rareAvgReadable}</b> vs <b>{cc.baselineAvgReadable}</b>; and the <b>same {cc.rareDistinctAngelRoots}</b> Shem HaMephorash angel-roots are readable as on ordinary days — <b>{(cc.angelRootsOnlyOnRare||[]).length} new</b>. Concentrating planets in one sign <i>reduces</i> letter diversity, so rare alignments are <i>poorer</i> readings, not richer ones — they are a rarity filter, not a richness source.
-    </div>
-
     {ev && <>
-      <h3 ref={mapRef}>Sky map — {displayDate(sel)} <span className="pill" style={{fontSize:'.72rem'}}>{selSet==='A'?'10 bodies':'7 classical'}</span></h3>
+      <h3 ref={mapRef}>Sky map — {displayDate(sel)} <span className="pill" style={{fontSize:'.72rem'}}>7 classical</span></h3>
       <div className="fig" style={{maxWidth:700, margin:'14px auto'}}><SkyMap rows={rows} occ={occ}/></div>
       <div className="muted" style={{marginBottom:8}}>maxInSign <b>{ev.maxInSign}</b> in {ev.sign} · span <b>{ev.span}°</b> · era <b>{ev.era}</b></div>
       {r && <>
@@ -488,7 +503,7 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData}){
             <button className={topView==='date'?'on':''} onClick={()=>setTopView('date')} aria-pressed={topView==='date'}>this sky ({r.topDate.length})</button>
             <button className={topView==='always'?'on':''} onClick={()=>setTopView('always')} aria-pressed={topView==='always'}>always-readable ({r.topAlways.length})</button>
             {!probs && <span className="muted" style={{fontSize:'.78rem'}}>· computing legibility %…</span>}
-            {probs && <span className="muted" style={{fontSize:'.76rem'}}>· % = empirical legibility over {probs.n} days of {probs.year} ({probs.bodies}): <span className="prob ok">green</span>=special/rare · <span className="prob mid">amber</span>=frequent · <span className="prob spec">red</span>=common</span>}
+            {probs && <span className="muted" style={{fontSize:'.76rem'}}>· % = empirical legibility over {probs.n} days of {probs.year} ({probs.bodies}): <span className="prob ok">green</span>=special/rare · <span className="prob mid">rose</span>=frequent · <span className="prob spec">red</span>=common</span>}
           </div>
           <div className="muted" style={{marginBottom:6,fontSize:'.82rem'}}>{topView==='date'
             ? <>Date-specific — the most important names whose zodiac letters are among <b>this alignment's</b> occupied signs, so the list changes with the alignment. Proper names first, then longest.</>
@@ -498,7 +513,15 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData}){
               <div className="the">{n.disp||n.he}</div>
               <div className="read">{n.translit}</div>
               <div className="trans">{n.gloss}</div>
-              <div className="g">{n.len} letters · gematria {n.gem}{n.pal && <span style={{color:'var(--gold)'}}> · palindrome</span>}{n.m37 && <span style={{color:'var(--green)'}}> · ×37</span>}{n.angelName && <span style={{color:'var(--violet)'}}> · angel</span>}{n.name && <span style={{color:'var(--blue)'}}> · name</span>}</div>
+              <div className="g">{n.len} letters · gematria {n.gem}{n.pal && <span style={{color:'var(--gold)'}}> · palindrome</span>}{n.m37 && <span style={{color:'var(--green)'}}> · ×37</span>}{n.angelName && <span style={{color:'var(--violet)'}}> · angel</span>}</div>
+              {(n.person||n.place||n.compound||(nameRefs&&nameRefs[n.he]&&nameRefs[n.he].n>0)) && (
+                <div style={{marginTop:4,display:'flex',flexWrap:'wrap',gap:4}}>
+                  {n.person && <span className="pill" style={{color:'var(--blue)',borderColor:'var(--blue)'}}>name{n.theo?' (theophoric)':''}</span>}
+                  {n.place && <span className="pill" style={{color:'var(--green)',borderColor:'var(--green)'}} title="A biblical PLACE — proper locative noun in Strong (city, mountain, region…)">place</span>}
+                  {n.compound && <span className="pill" style={{color:'var(--warn)',borderColor:'var(--warn)'}} title="Concatenated multi-root entry whose gloss is truncated">compound</span>}
+                  {nameRefs && nameRefs[n.he] && nameRefs[n.he].n>0 && (()=>{ const r=nameRefs[n.he]; return <span className="pill" style={{color:'var(--violet)',borderColor:'var(--violet)'}} title={'Where this name appears in the Hebrew Bible (Sefaria): '+r.refs.join(', ')}>📖 {r.refs[0]}{r.n>1?' · +'+(r.n-1):''}</span>; })()}
+                </div>
+              )}
               {probs && probs.map.has(n.he) && (()=>{ const p=probs.map.get(n.he); const pct = p<0.001 ? '<0.1' : (p*100).toFixed(p<0.1?1:0); const cls = p>=0.5 ? 'spec' : p>=0.2 ? 'mid' : 'ok'; const tag = p>=0.5 ? 'common' : p>=0.2 ? 'frequent' : 'special'; return <span className={'prob '+cls} title={`Empirical legibility over ${probs.n} days of ${probs.year} (${probs.bodies}): ${pct}% of days this word's required simples are all occupied (S⊆O, computed from astronomy-engine — not hardcoded). A within-year rate, NOT the recurrence of a specific stellar alignment (which recurs over centuries→millennia, §15c.11). Low % = special/rare (green); high % = common (red).`}>{pct}% · {tag}</span>; })()}
               {n.angelName && <div className="simp" style={{color:'var(--violet)'}}>angel: {n.angelName.en} <span style={{color:'var(--dim)'}}>· {n.angelName.src}</span></div>}
               {n.angel && <div className="simp" style={{color:'var(--violet)'}}>Shem triplet +אל → <span className="he" style={{fontSize:'.95rem'}}>{n.angel.el}</span> · +יה → <span className="he" style={{fontSize:'.95rem'}}>{n.angel.yh}</span></div>}
@@ -513,12 +536,10 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData}){
 
     <AlignTable title="All-7-in-one-sign timeline — every classical grand conjunction (current→past)" sub={`${all7.length} occurrences where all 7 classical bodies share one zodiacal sign — the rarest class, recurring every few centuries (irregular). Click to render that conjunction.`} items={all7} set="B" sel={sel} pick={pick} openEph={openEph} goReader={goReader} showMax={false}/>
 
-    <AlignTable title="Modern era — 10 bodies (app set), 1700–2200 CE (all rare alignments, current→past)" sub={`${modern.length} rare 10-body alignments (maxInSign ≥ 6 or span ≤ 90°). The 10-body set clusters on a ~decades scale (8-in-one-sign never occurs in 500 y); the centuries scale belongs to the 7 classical bodies above.`} items={modern} set="A" sel={sel} pick={pick} openEph={openEph} goReader={goReader}/>
-
-    <div className="note">Method: astronomy-engine v2.1.19, GeoVector → Ecliptic.elon, noon UT. Deep scan 3-day step (daily-refined around peaks); modern scan daily. Beyond ~±4000 y from J2000 the planetary series are an extrapolation — alignment <i>dates</i> (mean motion, secularly stable) are reliable, exact <i>degrees</i> in the deep past are approximate. Per-event stellar readings are computed in the browser for the selected alignment (skyAt is fast); the cross-check summary is precomputed.</div>
+    <div className="note">Method: astronomy-engine v2.1.19, GeoVector → Ecliptic.elon, noon UT. Deep scan 3-day step (daily-refined around peaks). Beyond ~±4000 y from J2000 the planetary series are an extrapolation — alignment <i>dates</i> (mean motion, secularly stable) are reliable, exact <i>degrees</i> in the deep past are approximate. Per-event stellar readings are computed in the browser for the selected alignment (skyAt7 is fast).</div>
 
     <EphemeridesModal eph={eph} onClose={()=>setEph(null)}/>
   </>;
 }
 
-export { SarosTab, AyanamsaTab, LunarSolarTab, AlignmentsTab, WeekTab };
+export { SarosTab, AyanamsaTab, LunarSolarTab, AlignmentsTab, WeekTab, Heptagram, SarosDiagram, PrecessionDiagram, MetonDiagram };
