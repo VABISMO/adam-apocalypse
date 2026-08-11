@@ -14,7 +14,7 @@
 <img width="1103" height="952" alt="image" src="https://github.com/user-attachments/assets/c247a869-5693-44af-a6f5-433daeed53d9" />
 
 
-# Caeli Reader (קורא השמים)
+# Adam Star Reader (קורא השמים)
 
 Operationalization of the tripartite mapping of the *Sefer Yetzirah* (3 Mothers / 7 Doubles / 12 Simples) onto real astronomical ephemerides (*astronomy-engine*). Article version: **3.1**.
 
