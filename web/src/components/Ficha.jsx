@@ -63,7 +63,7 @@ function Ficha({ figure, kind, axisMin, axisMax, backHref, backLabel, wiki }) {
     <div className="grid2" style={{ alignItems: 'start' }}>
       <div>
         {w.thumbnail && <div className="fig" style={{ marginBottom: 12, padding: 8 }}>
-          <img src={w.thumbnail} alt={figure.name} style={{ maxHeight: 320, width: 'auto', borderRadius: 8, maxWidth: '100%' }} loading="lazy" />
+          <img src={w.thumbnail} alt={figure.name} style={{ maxHeight: 320, width: '100%', borderRadius: 8, display: 'block' }} loading="lazy" />
         </div>}
         <div className="panel" style={{ marginBottom: 14 }}>
           <h2 style={{ marginTop: 0 }}>Description</h2>
@@ -97,6 +97,23 @@ function Ficha({ figure, kind, axisMin, axisMax, backHref, backLabel, wiki }) {
           {rows.map((r, i) => <tr key={i}>
             <td style={{ padding: '6px 8px', fontWeight: 600, verticalAlign: 'top' }}>{r.title}</td>
             <td style={{ padding: '6px 8px' }} className="muted">{r.note}</td>
+          </tr>)}
+        </tbody>
+      </table>
+    </div>}
+
+    {figure.prophecies && figure.prophecies.length > 0 && <div className="panel" style={{ marginBottom: 14 }}>
+      <h2 style={{ marginTop: 0 }}>Prophecies</h2>
+      <p className="muted" style={{ fontSize: '.82rem', marginTop: 0 }}>Key prophetic utterances and visions attributed to {figure.name}, with sources.</p>
+      <table style={{ width: '100%', fontSize: '.9rem' }}>
+        <thead><tr>
+          <th style={{ textAlign: 'left', padding: '6px 8px', width: '70%' }}>Prophecy / vision</th>
+          <th style={{ textAlign: 'left', padding: '6px 8px', width: '30%' }}>Source</th>
+        </tr></thead>
+        <tbody>
+          {figure.prophecies.map((pr, i) => <tr key={i}>
+            <td style={{ padding: '6px 8px', verticalAlign: 'top' }}>{pr.t}</td>
+            <td style={{ padding: '6px 8px', color: 'var(--gold)' }}>{pr.r}</td>
           </tr>)}
         </tbody>
       </table>

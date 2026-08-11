@@ -26439,7 +26439,176 @@ var RAW = [
   { name: "Nathan of Gaza", he: "", era: "CE", y0: 1644, y1: 1680, region: "Ottoman Gaza", role: "Sabbatai Tsevi's prophet; theological architect of Sabbatean messianism.", thread: "sabbatean-frankist" },
   { name: "Jacob Frank", he: "", era: "CE", y0: 1726, y1: 1791, region: "Poland/Ottoman", role: "Polish Sabbatean successor; founder of the Frankist movement, cast by his own doctrine as the Antichrist \u2014 the antinomian messianic counterpart who abolishes the old law.", thread: "sabbatean-frankist", endpoint: true, designation: "Antichrist" }
 ];
-var PROPHETS = RAW.map((p) => ({ ...p, he: (p.he || "").replace(POINTED, "") }));
+var PROPHECIES = {
+  "Adam": [
+    { t: "The seed of the woman shall bruise the serpent's head", r: "Gen 3:15" },
+    { t: "Eve named 'mother of all living'", r: "Gen 3:20" }
+  ],
+  "Enoch": [
+    { t: "Enoch walked with God; and he was not, for God took him", r: "Gen 5:24" },
+    { t: "Judgment of the fallen watchers; Azazel bound and cast into darkness", r: "1 Enoch 10" },
+    { t: "The Son of Man seated on the throne of glory judges the kings of the earth", r: "1 Enoch 62" }
+  ],
+  "Noah": [
+    { t: "The earth is filled with violence; a flood destroys all flesh", r: "Gen 6:13" },
+    { t: "Cursed be Canaan; blessed be YHWH the God of Shem", r: "Gen 9:25-26" }
+  ],
+  "Abraham": [
+    { t: "A great nation from you; in you all families of the earth blessed", r: "Gen 12:2-3" },
+    { t: "Seed as the stars; your offspring sojourns 400 years, then returns", r: "Gen 15:5-13" },
+    { t: "Circumcision a sign; Sarah bears a son within the year", r: "Gen 17:10-21" },
+    { t: "In your seed all nations of the earth blessed", r: "Gen 22:18" }
+  ],
+  "Moses": [
+    { t: "A prophet like you I will raise; to him you shall listen", r: "Deut 18:15" },
+    { t: "YHWH our God, YHWH is one", r: "Deut 6:4" },
+    { t: "Blessings for obedience; curses, exile and dispersion for idolatry", r: "Deut 28" },
+    { t: "Song of witness against Israel's future apostasy", r: "Deut 32" }
+  ],
+  "Elijah": [
+    { t: "No dew nor rain these years except by my word", r: "1 Kgs 17:1" },
+    { t: "Fire falls on the Carmel offering; YHWH, He is God", r: "1 Kgs 18:38" },
+    { t: "Before the great and terrible day of YHWH, Elijah is sent", r: "Mal 4:5" }
+  ],
+  "Elisha": [
+    { t: "A double share of your spirit upon me", r: "2 Kgs 2:9" },
+    { t: "The valley filled with water without wind or rain; victory over Moab", r: "2 Kgs 3:17" },
+    { t: "Hazael shall be king of Aram; the man wept for Israel", r: "2 Kgs 8:12" }
+  ],
+  "Joel": [
+    { t: "The locust plague \u2014 the day of YHWH is at hand, a destruction from the Almighty", r: "Joel 1:15" },
+    { t: "I will pour my Spirit on all flesh; sons and daughters prophesy", r: "Joel 2:28" },
+    { t: "Sun turned to darkness, moon to blood before the great day of YHWH", r: "Joel 2:31" }
+  ],
+  "Jonah": [
+    { t: "Yet forty days and Nineveh is overthrown", r: "Jonah 3:4" },
+    { t: "Three days and three nights in the belly of the fish", r: "Jonah 1:17" },
+    { t: "God relents from disaster; should I not pity Nineveh?", r: "Jonah 4:11" }
+  ],
+  "Amos": [
+    { t: "Let justice roll down like waters, and righteousness like a stream", r: "Amos 5:24" },
+    { t: "The day of YHWH is darkness and not light", r: "Amos 5:18-20" },
+    { t: "I will raise the fallen booth of David", r: "Amos 9:11" }
+  ],
+  "Hosea": [
+    { t: "Jezreel \u2014 I will soon punish the house of Jehu", r: "Hos 1:4" },
+    { t: "Not pitied, not my people \u2192 I will have pity and say 'my people'", r: "Hos 1:6-9; 2:23" },
+    { t: "After two days he revives us; on the third he raises us up", r: "Hos 6:2" }
+  ],
+  "Isaiah": [
+    { t: "A virgin conceives and bears a son, Immanuel", r: "Isa 7:14" },
+    { t: "A child is born; the Prince of Peace on David's throne forever", r: "Isa 9:6-7" },
+    { t: "A shoot from the stump of Jesse; the Spirit of YHWH rests on him", r: "Isa 11:1-2" },
+    { t: "The Servant bears the sins of many and makes intercession", r: "Isa 53:11-12" },
+    { t: "New heavens and a new earth; the former not remembered", r: "Isa 65:17" }
+  ],
+  "Micah": [
+    { t: "They shall beat their swords into plowshares; none shall make afraid", r: "Mic 4:3-4" },
+    { t: "A ruler from Bethlehem Ephrathah, whose coming forth is from ancient days", r: "Mic 5:2" },
+    { t: "What does YHWH require? Do justice, love kindness, walk humbly", r: "Mic 6:8" }
+  ],
+  "Nahum": [
+    { t: "An overflowing flood and pursuers of darkness pursue Nineveh", r: "Nah 1:8; 2:8" },
+    { t: "There is no healing for your bruise; all who hear clap hands over you", r: "Nah 3:19" }
+  ],
+  "Zephaniah": [
+    { t: "The great day of YHWH: a day of wrath, distress and darkness", r: "Zeph 1:15" },
+    { t: "From beyond the rivers of Cush my worshippers bring offering", r: "Zeph 3:10" },
+    { t: "The remnant of Israel seeks refuge in YHWH's name; none makes afraid", r: "Zeph 3:12-13" }
+  ],
+  "Jeremiah": [
+    { t: "Out of the north evil breaks forth upon Jerusalem", r: "Jer 1:14; 4:6" },
+    { t: "Seventy years' desolation for the nations, then Babylon judged", r: "Jer 25:11-12" },
+    { t: "A voice heard in Ramah: Rachel weeping for her children", r: "Jer 31:15" },
+    { t: "A new covenant written on the heart; their sin remembered no more", r: "Jer 31:31-34" }
+  ],
+  "Baruch": [
+    { t: "Writes Jeremiah's scroll, read in the temple, then burned by the king", r: "Jer 36" },
+    { t: "Seek no great things \u2014 I bring disaster on all flesh", r: "Jer 45:5" },
+    { t: "Vision of Zion taken up by angels; the nations judged and Zion restored", r: "2 Baruch" }
+  ],
+  "Habakkuk": [
+    { t: "The vision awaits its appointed time; it will not lie", r: "Hab 2:3" },
+    { t: "The righteous shall live by his faith", r: "Hab 2:4" },
+    { t: "The earth filled with the knowledge of YHWH as the waters cover the sea", r: "Hab 2:14" }
+  ],
+  "Daniel": [
+    { t: "A statue of kingdoms; a stone cut without hands fills the whole earth", r: "Dan 2" },
+    { t: "One like a Son of Man comes with clouds to an everlasting kingdom", r: "Dan 7:13-14" },
+    { t: "Seventy weeks decreed; an Anointed One cut off; the city and sanctuary destroyed", r: "Dan 9:24-26" },
+    { t: "The abomination of desolation; many who sleep awake to everlasting life or shame", r: "Dan 11:31; 12:2" }
+  ],
+  "Obadiah": [
+    { t: "Edom brought down; the day of YHWH is near upon all the nations", r: "Obad 1:8,15" },
+    { t: "Deliverers on Mount Zion judge the hills; the kingdom is YHWH's", r: "Obad 1:21" }
+  ],
+  "Ezekiel": [
+    { t: "Vision of the chariot; the likeness of the glory of YHWH", r: "Ezek 1" },
+    { t: "Dry bones live again; the whole house of Israel brought up from the graves", r: "Ezek 37:5-12" },
+    { t: "Gog of Magog gathered against the mountains of Israel; consumed by fire", r: "Ezek 38-39" },
+    { t: "A new temple and a river flowing from the sanctuary to heal the sea", r: "Ezek 40-47" }
+  ],
+  "Haggai": [
+    { t: "I shake the heavens and earth; the Desired One comes; fill this house with glory", r: "Hag 2:6-7" },
+    { t: "The latter glory of this house greater than the former", r: "Hag 2:9" }
+  ],
+  "Zechariah": [
+    { t: "The Branch; he builds the temple and bears royal majesty", r: "Zech 3:8; 6:12" },
+    { t: "Two olive trees \u2014 the two Anointed Ones who stand by the Lord", r: "Zech 4:14" },
+    { t: "Your king comes to you, lowly and riding on a donkey", r: "Zech 9:9" },
+    { t: "They look on me, the one they pierced; mourn as for an only son", r: "Zech 12:10" },
+    { t: "Day of YHWH: his feet stand on the Mount of Olives; living waters flow from Jerusalem", r: "Zech 14:4,8" }
+  ],
+  "Ezra": [
+    { t: "Return to Jerusalem and rebuild the house of God", r: "Ezra 1:3" },
+    { t: "Separate from the peoples of the land; keep the Torah and do it", r: "Ezra 10:11" }
+  ],
+  "Malachi": [
+    { t: "From the rising to the setting of the sun, my name great among the nations", r: "Mal 1:11" },
+    { t: "I send my messenger to prepare the way before me", r: "Mal 3:1" },
+    { t: "Elijah the prophet before the great and terrible day of YHWH", r: "Mal 4:5" }
+  ],
+  "John the Baptist": [
+    { t: "Repent, the kingdom of the heavens is at hand", r: "Matt 3:2" },
+    { t: "Every tree not bearing good fruit cut down and thrown into the fire", r: "Matt 3:10" },
+    { t: "One mightier comes after me; he baptizes with Holy Spirit and fire", r: "Matt 3:11" }
+  ],
+  "Jesus of Nazareth": [
+    { t: "The time is fulfilled; the kingdom of God is at hand; repent and believe", r: "Mark 1:15" },
+    { t: "Not one stone left on another; the temple thrown down", r: "Matt 24:2" },
+    { t: "The Son of Man comes on the clouds of heaven with power and great glory", r: "Matt 24:30" },
+    { t: "This generation shall not pass until all these things are fulfilled", r: "Matt 24:34" }
+  ],
+  "John of Patmos": [
+    { t: "Letters to seven churches; the one who conquers inherits all things", r: "Rev 2-3" },
+    { t: "The number of the beast: 666; the mark on hand and forehead", r: "Rev 13:16-18" },
+    { t: "Fallen, fallen is Babylon the great; the kings of the earth mourn", r: "Rev 18:2,9" },
+    { t: "A new heaven and new earth; New Jerusalem descends from God", r: "Rev 21:1-2" }
+  ],
+  "Shimon bar Yochai": [
+    { t: "13 years hidden in a cave; the secrets of the Torah revealed", r: "Shabbat 33b" },
+    { t: "The inner light of the chariot; the hidden world of Atzilut disclosed", r: "Zohar" }
+  ],
+  "Abraham Abulafia": [
+    { t: "Prophetic ecstasy by permuting and combining the letters of the Name", r: "Sefer ha-Melamed" },
+    { t: "Unsealing the Name; the spirit united with the letter", r: "Sefer ha-Ot" },
+    { t: "Declares himself Messiah in 1295 \u2014 the prophecy fails", r: "Vital / Sabbatean chronicles" }
+  ],
+  "Sabbatai Tsevi": [
+    { t: "Declares himself Messiah, 12 December 1665; the nations are told to submit", r: "Nathan of Gaza, 1665" },
+    { t: "Prophecy of his universal kingship \u2014 overturned by his apostasy", r: "Sabbatean sources" }
+  ],
+  "Nathan of Gaza": [
+    { t: "Vision of Sabbatai Tsevi seated on a royal throne in Gaza; confirmed as Messiah", r: "Nathan's testimony, 1665" },
+    { t: "The Messiah must descend into the demonic shells (kelippot) to liberate them", r: "Perush ha-Torah" },
+    { t: "The faith of the Messiah \u2014 belief beyond the apostasy", r: "Ma'amar" }
+  ],
+  "Jacob Frank": [
+    { t: "Declares himself the reincarnation of Sabbatai Tsevi and the Antichrist", r: "Frankist sources" },
+    { t: "Abolition of the old law; 'the holy religion of Edom'", r: "Book of the Words of the Lord" }
+  ]
+};
+var PROPHETS = RAW.map((p) => ({ ...p, he: (p.he || "").replace(POINTED, ""), prophecies: PROPHECIES[p.name] || null }));
 
 // src/data/mages.js
 var MAGES = [
@@ -33579,15 +33748,22 @@ function Timeline({ items, title, accent = "#8a05ff" }) {
 }
 
 // src/pages/ProphetsPage.jsx
-function ProphetCard({ p }) {
+function ProphetCard({ p, onOpen }) {
   const dates = p.y0 === p.y1 ? fmtYear(p.y0) : `${fmtYear(p.y0)} \u2013 ${fmtYear(p.y1)}`;
   const end = !!p.endpoint;
   const pill = p.designation || (end ? "lineage end" : null);
+  const href = "/prophet/" + slugify(p.name);
+  const onClick = onOpen ? (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    onOpen(href);
+  } : null;
   return /* @__PURE__ */ import_react15.default.createElement(
     "a",
     {
       className: "tcard" + (end ? " always" : ""),
-      href: "/prophet/" + slugify(p.name),
+      href,
+      onClick,
       style: { textDecoration: "none", display: "block", borderColor: end ? "var(--gold)" : void 0, boxShadow: end ? "0 0 0 1px var(--gold)" : void 0 }
     },
     /* @__PURE__ */ import_react15.default.createElement("div", { className: "the" }, p.he && /* @__PURE__ */ import_react15.default.createElement("span", { className: "he", style: { fontSize: "1.5rem", marginLeft: 6 } }, p.he)),
@@ -33597,24 +33773,31 @@ function ProphetCard({ p }) {
     /* @__PURE__ */ import_react15.default.createElement("div", { className: "simp" }, p.role)
   );
 }
-function ProphetsPage() {
+function ProphetsPage({ onOpen }) {
   const span = `${fmtYear(PROPHETS[0].y0)} \u2013 ${fmtYear(PROPHETS[PROPHETS.length - 1].y1)}`;
   const last = PROPHETS[PROPHETS.length - 1];
-  return /* @__PURE__ */ import_react15.default.createElement("div", null, /* @__PURE__ */ import_react15.default.createElement("h1", null, "Prophets \u2014 from Adam to Jacob Frank"), /* @__PURE__ */ import_react15.default.createElement("p", { className: "muted" }, "A chronology of prophetic and revelatory figures, from the first human ", /* @__PURE__ */ import_react15.default.createElement("span", { className: "he" }, "\u05D0\u05D3\u05DD"), " through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, down to the Sabbatean\u2013Frankist thread whose ", /* @__PURE__ */ import_react15.default.createElement("b", { style: { color: "var(--gold)" } }, last.designation || "final", " figure is ", last.name, " (", fmtYear(last.y0), "\u2013", fmtYear(last.y1), ")"), ". ", PROPHETS.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table."), /* @__PURE__ */ import_react15.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react15.default.createElement(Timeline, { items: PROPHETS, title: "Prophet timeline \u2014 Adam to Jacob Frank", accent: "#8a05ff" })), /* @__PURE__ */ import_react15.default.createElement("div", { className: "tcards" }, PROPHETS.map((p, i) => /* @__PURE__ */ import_react15.default.createElement(ProphetCard, { key: i, p }))));
+  return /* @__PURE__ */ import_react15.default.createElement("div", null, /* @__PURE__ */ import_react15.default.createElement("h1", null, "Prophets \u2014 from Adam to Jacob Frank"), /* @__PURE__ */ import_react15.default.createElement("p", { className: "muted" }, "A chronology of prophetic and revelatory figures, from the first human ", /* @__PURE__ */ import_react15.default.createElement("span", { className: "he" }, "\u05D0\u05D3\u05DD"), " through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, down to the Sabbatean\u2013Frankist thread whose ", /* @__PURE__ */ import_react15.default.createElement("b", { style: { color: "var(--gold)" } }, last.designation || "final", " figure is ", last.name, " (", fmtYear(last.y0), "\u2013", fmtYear(last.y1), ")"), ". ", PROPHETS.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table."), /* @__PURE__ */ import_react15.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react15.default.createElement(Timeline, { items: PROPHETS, title: "Prophet timeline \u2014 Adam to Jacob Frank", accent: "#8a05ff" })), /* @__PURE__ */ import_react15.default.createElement("div", { className: "tcards" }, PROPHETS.map((p, i) => /* @__PURE__ */ import_react15.default.createElement(ProphetCard, { key: i, p, onOpen }))));
 }
 
 // src/pages/MagesPage.jsx
 var import_react16 = __toESM(require_react());
-function MageCard({ m }) {
+function MageCard({ m, onOpen }) {
   const dates = m.years || `${fmtYear(m.y0)} \u2013 ${fmtYear(m.y1)}`;
   const end = !!m.endpoint;
   const pill = m.designation || (end ? "lineage end" : null);
   const hasWiki = !!(WIKI[m.name] && WIKI[m.name].description);
+  const href = "/mage/" + slugify(m.name);
+  const onClick = onOpen ? (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    onOpen(href);
+  } : null;
   return /* @__PURE__ */ import_react16.default.createElement(
     "a",
     {
       className: "tcard" + (end ? " always" : ""),
-      href: "/mage/" + slugify(m.name),
+      href,
+      onClick,
       style: { textDecoration: "none", display: "block", borderColor: end ? "var(--gold)" : void 0, boxShadow: end ? "0 0 0 1px var(--gold)" : void 0 }
     },
     /* @__PURE__ */ import_react16.default.createElement("div", { className: "the", style: { minHeight: 26 } }, m.name),
@@ -33623,10 +33806,10 @@ function MageCard({ m }) {
     hasWiki && /* @__PURE__ */ import_react16.default.createElement("div", { className: "simp" }, WIKI[m.name].description.slice(0, 120), "\u2026")
   );
 }
-function MagesPage() {
+function MagesPage({ onOpen }) {
   const span = `${fmtYear(MAGES[0].y0)} \u2013 ${fmtYear(MAGES[MAGES.length - 1].y1)}`;
   const last = MAGES[MAGES.length - 1];
-  return /* @__PURE__ */ import_react16.default.createElement("div", null, /* @__PURE__ */ import_react16.default.createElement("h1", null, "Magi \u2014 from Daniel to Felipe II"), /* @__PURE__ */ import_react16.default.createElement("p", { className: "muted" }, "A chronology of ", /* @__PURE__ */ import_react16.default.createElement("b", null, "magi / wise-men / royal-sage occult figures"), ", from the Babylonian court magi (", /* @__PURE__ */ import_react16.default.createElement("b", null, "Daniel, Shadrach, Meshach, Abednego"), ") through the medieval Iberian sages \u2014 ", /* @__PURE__ */ import_react16.default.createElement("b", null, "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n"), " \u2014 to the Renaissance Christian-kabbalists and royal astrologers, ending with ", /* @__PURE__ */ import_react16.default.createElement("b", { style: { color: "var(--gold)" } }, last.name, " (", last.years, ")"), ", who closes the era of kings. ", MAGES.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table."), /* @__PURE__ */ import_react16.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react16.default.createElement(Timeline, { items: MAGES, title: "Magi timeline \u2014 Daniel to Felipe II", accent: "#8a05ff" })), /* @__PURE__ */ import_react16.default.createElement("div", { className: "tcards" }, MAGES.map((m, i) => /* @__PURE__ */ import_react16.default.createElement(MageCard, { key: i, m }))));
+  return /* @__PURE__ */ import_react16.default.createElement("div", null, /* @__PURE__ */ import_react16.default.createElement("h1", null, "Magi \u2014 from Daniel to Felipe II"), /* @__PURE__ */ import_react16.default.createElement("p", { className: "muted" }, "A chronology of ", /* @__PURE__ */ import_react16.default.createElement("b", null, "magi / wise-men / royal-sage occult figures"), ", from the Babylonian court magi (", /* @__PURE__ */ import_react16.default.createElement("b", null, "Daniel, Shadrach, Meshach, Abednego"), ") through the medieval Iberian sages \u2014 ", /* @__PURE__ */ import_react16.default.createElement("b", null, "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n"), " \u2014 to the Renaissance Christian-kabbalists and royal astrologers, ending with ", /* @__PURE__ */ import_react16.default.createElement("b", { style: { color: "var(--gold)" } }, last.name, " (", last.years, ")"), ", who closes the era of kings. ", MAGES.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table."), /* @__PURE__ */ import_react16.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react16.default.createElement(Timeline, { items: MAGES, title: "Magi timeline \u2014 Daniel to Felipe II", accent: "#8a05ff" })), /* @__PURE__ */ import_react16.default.createElement("div", { className: "tcards" }, MAGES.map((m, i) => /* @__PURE__ */ import_react16.default.createElement(MageCard, { key: i, m, onOpen }))));
 }
 
 // src/pages/AlignmentFicha.jsx
@@ -33696,7 +33879,7 @@ function Ficha({ figure, kind, axisMin, axisMax, backHref, backLabel, wiki }) {
   const designation = figure.designation || (figure.endpoint ? kind === "mage" ? "end of the era" : "lineage end" : null);
   return /* @__PURE__ */ import_react18.default.createElement("div", { className: "ficha" }, /* @__PURE__ */ import_react18.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("button", { onClick: () => {
     if (typeof window !== "undefined") window.history.back();
-  } }, "\u25C0 ", backLabel), /* @__PURE__ */ import_react18.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer", style: { marginLeft: "auto" } }, "Wikipedia \u2192")), /* @__PURE__ */ import_react18.default.createElement("h1", { style: { marginBottom: 4 } }, figure.name, figure.he && /* @__PURE__ */ import_react18.default.createElement("span", { className: "he", style: { marginLeft: 10, color: "var(--gold)" } }, figure.he)), /* @__PURE__ */ import_react18.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".9rem" } }, dates, dates && " \xB7 ", figure.region, designation && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 8, color: "var(--gold)", borderColor: "var(--gold)" } }, designation), kind === "mage" && figure.isIberian && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--green)", borderColor: "var(--green)" } }, "Iberian"), kind === "mage" && figure.isRoyal && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--violet)", borderColor: "var(--violet)" } }, "royal"), figure.thread && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 6 } }, figure.thread)), axisMin != null && axisMax != null && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { padding: 12, marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement(LifeBar, { figure, min: axisMin, max: axisMax })), /* @__PURE__ */ import_react18.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react18.default.createElement("div", null, w.thumbnail && /* @__PURE__ */ import_react18.default.createElement("div", { className: "fig", style: { marginBottom: 12, padding: 8 } }, /* @__PURE__ */ import_react18.default.createElement("img", { src: w.thumbnail, alt: figure.name, style: { maxHeight: 320, width: "auto", borderRadius: 8, maxWidth: "100%" }, loading: "lazy" })), /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Description"), /* @__PURE__ */ import_react18.default.createElement("p", { style: { lineHeight: 1.6, marginBottom: 0 } }, desc || "No Wikipedia description available."))), /* @__PURE__ */ import_react18.default.createElement("div", null, facts.length > 0 && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Facts"), /* @__PURE__ */ import_react18.default.createElement("table", { style: { fontSize: ".88rem" } }, /* @__PURE__ */ import_react18.default.createElement("tbody", null, facts.map((f, i) => /* @__PURE__ */ import_react18.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)", width: "38%", verticalAlign: "top" } }, f.label), /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "5px 8px" } }, f.value)))))))), rows.length > 0 && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Life & work in brief"), /* @__PURE__ */ import_react18.default.createElement("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 } }, "Summarised by section \u2014 one row per topic, for fast reading."), /* @__PURE__ */ import_react18.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react18.default.createElement("thead", null, /* @__PURE__ */ import_react18.default.createElement("tr", null, /* @__PURE__ */ import_react18.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "32%" } }, kind === "mage" ? "Work / contribution" : "Topic"), /* @__PURE__ */ import_react18.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px" } }, kind === "mage" ? "Significance" : "Summary"))), /* @__PURE__ */ import_react18.default.createElement("tbody", null, rows.map((r, i) => /* @__PURE__ */ import_react18.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "6px 8px", fontWeight: 600, verticalAlign: "top" } }, r.title), /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, r.note)))))), /* @__PURE__ */ import_react18.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react18.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer" }, "Read the full article on Wikipedia \u2192")));
+  } }, "\u25C0 ", backLabel), /* @__PURE__ */ import_react18.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer", style: { marginLeft: "auto" } }, "Wikipedia \u2192")), /* @__PURE__ */ import_react18.default.createElement("h1", { style: { marginBottom: 4 } }, figure.name, figure.he && /* @__PURE__ */ import_react18.default.createElement("span", { className: "he", style: { marginLeft: 10, color: "var(--gold)" } }, figure.he)), /* @__PURE__ */ import_react18.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".9rem" } }, dates, dates && " \xB7 ", figure.region, designation && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 8, color: "var(--gold)", borderColor: "var(--gold)" } }, designation), kind === "mage" && figure.isIberian && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--green)", borderColor: "var(--green)" } }, "Iberian"), kind === "mage" && figure.isRoyal && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--violet)", borderColor: "var(--violet)" } }, "royal"), figure.thread && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 6 } }, figure.thread)), axisMin != null && axisMax != null && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { padding: 12, marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement(LifeBar, { figure, min: axisMin, max: axisMax })), /* @__PURE__ */ import_react18.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react18.default.createElement("div", null, w.thumbnail && /* @__PURE__ */ import_react18.default.createElement("div", { className: "fig", style: { marginBottom: 12, padding: 8 } }, /* @__PURE__ */ import_react18.default.createElement("img", { src: w.thumbnail, alt: figure.name, style: { maxHeight: 320, width: "100%", borderRadius: 8, display: "block" }, loading: "lazy" })), /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Description"), /* @__PURE__ */ import_react18.default.createElement("p", { style: { lineHeight: 1.6, marginBottom: 0 } }, desc || "No Wikipedia description available."))), /* @__PURE__ */ import_react18.default.createElement("div", null, facts.length > 0 && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Facts"), /* @__PURE__ */ import_react18.default.createElement("table", { style: { fontSize: ".88rem" } }, /* @__PURE__ */ import_react18.default.createElement("tbody", null, facts.map((f, i) => /* @__PURE__ */ import_react18.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)", width: "38%", verticalAlign: "top" } }, f.label), /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "5px 8px" } }, f.value)))))))), rows.length > 0 && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Life & work in brief"), /* @__PURE__ */ import_react18.default.createElement("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 } }, "Summarised by section \u2014 one row per topic, for fast reading."), /* @__PURE__ */ import_react18.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react18.default.createElement("thead", null, /* @__PURE__ */ import_react18.default.createElement("tr", null, /* @__PURE__ */ import_react18.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "32%" } }, kind === "mage" ? "Work / contribution" : "Topic"), /* @__PURE__ */ import_react18.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px" } }, kind === "mage" ? "Significance" : "Summary"))), /* @__PURE__ */ import_react18.default.createElement("tbody", null, rows.map((r, i) => /* @__PURE__ */ import_react18.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "6px 8px", fontWeight: 600, verticalAlign: "top" } }, r.title), /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, r.note)))))), figure.prophecies && figure.prophecies.length > 0 && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Prophecies"), /* @__PURE__ */ import_react18.default.createElement("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 } }, "Key prophetic utterances and visions attributed to ", figure.name, ", with sources."), /* @__PURE__ */ import_react18.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react18.default.createElement("thead", null, /* @__PURE__ */ import_react18.default.createElement("tr", null, /* @__PURE__ */ import_react18.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "70%" } }, "Prophecy / vision"), /* @__PURE__ */ import_react18.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "30%" } }, "Source"))), /* @__PURE__ */ import_react18.default.createElement("tbody", null, figure.prophecies.map((pr, i) => /* @__PURE__ */ import_react18.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "6px 8px", verticalAlign: "top" } }, pr.t), /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "6px 8px", color: "var(--gold)" } }, pr.r)))))), /* @__PURE__ */ import_react18.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react18.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer" }, "Read the full article on Wikipedia \u2192")));
 }
 
 // src/pages/ProphetFicha.jsx
@@ -34143,8 +34326,8 @@ function App() {
   };
   if (route.name === "landing") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(Landing, { goApp: () => navigate("/app") }), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
   if (route.name === "about") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(About, null), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
-  if (route.name === "prophets") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(ProphetsPage, null)), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
-  if (route.name === "mages") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(MagesPage, null)), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
+  if (route.name === "prophets") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(ProphetsPage, { onOpen: navigate })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
+  if (route.name === "mages") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(MagesPage, { onOpen: navigate })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
   if (route.name === "align") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(AlignmentFicha, { date: route.date, lex, angelMap: ANGEL72, onBack: backHome, nameRefs })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
   if (route.name === "prophet") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(ProphetFicha, { slug: route.slug })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
   if (route.name === "mage") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(MageFicha, { slug: route.slug })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));

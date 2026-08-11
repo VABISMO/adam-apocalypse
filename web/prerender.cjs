@@ -5,7 +5,11 @@ var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __commonJS = (cb, mod) => function __require() {
-  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  try {
+    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  } catch (e) {
+    throw mod = 0, e;
+  }
 };
 var __copyProps = (to, from, except, desc) => {
   if (from && typeof from === "object" || typeof from === "function") {
@@ -28,17 +32,17 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 var require_react_production_min = __commonJS({
   "../node_modules/react/cjs/react.production.min.js"(exports2) {
     "use strict";
-    var l = Symbol.for("react.element");
-    var n = Symbol.for("react.portal");
-    var p = Symbol.for("react.fragment");
-    var q = Symbol.for("react.strict_mode");
-    var r = Symbol.for("react.profiler");
-    var t = Symbol.for("react.provider");
-    var u = Symbol.for("react.context");
-    var v = Symbol.for("react.forward_ref");
-    var w = Symbol.for("react.suspense");
-    var x = Symbol.for("react.memo");
-    var y = Symbol.for("react.lazy");
+    var l = /* @__PURE__ */ Symbol.for("react.element");
+    var n = /* @__PURE__ */ Symbol.for("react.portal");
+    var p = /* @__PURE__ */ Symbol.for("react.fragment");
+    var q = /* @__PURE__ */ Symbol.for("react.strict_mode");
+    var r = /* @__PURE__ */ Symbol.for("react.profiler");
+    var t = /* @__PURE__ */ Symbol.for("react.provider");
+    var u = /* @__PURE__ */ Symbol.for("react.context");
+    var v = /* @__PURE__ */ Symbol.for("react.forward_ref");
+    var w = /* @__PURE__ */ Symbol.for("react.suspense");
+    var x = /* @__PURE__ */ Symbol.for("react.memo");
+    var y = /* @__PURE__ */ Symbol.for("react.lazy");
     var z = Symbol.iterator;
     function A(a) {
       if (null === a || "object" !== typeof a) return null;
@@ -308,19 +312,19 @@ var require_react_development = __commonJS({
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
         }
         var ReactVersion = "18.3.1";
-        var REACT_ELEMENT_TYPE = Symbol.for("react.element");
-        var REACT_PORTAL_TYPE = Symbol.for("react.portal");
-        var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
-        var REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode");
-        var REACT_PROFILER_TYPE = Symbol.for("react.profiler");
-        var REACT_PROVIDER_TYPE = Symbol.for("react.provider");
-        var REACT_CONTEXT_TYPE = Symbol.for("react.context");
-        var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref");
-        var REACT_SUSPENSE_TYPE = Symbol.for("react.suspense");
-        var REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list");
-        var REACT_MEMO_TYPE = Symbol.for("react.memo");
-        var REACT_LAZY_TYPE = Symbol.for("react.lazy");
-        var REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen");
+        var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
+        var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
+        var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
+        var REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode");
+        var REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler");
+        var REACT_PROVIDER_TYPE = /* @__PURE__ */ Symbol.for("react.provider");
+        var REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context");
+        var REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref");
+        var REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense");
+        var REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list");
+        var REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo");
+        var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
+        var REACT_OFFSCREEN_TYPE = /* @__PURE__ */ Symbol.for("react.offscreen");
         var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
         var FAUX_ITERATOR_SYMBOL = "@@iterator";
         function getIteratorFn(maybeIterable) {
@@ -1284,7 +1288,7 @@ var require_react_development = __commonJS({
         }
         var REACT_MODULE_REFERENCE;
         {
-          REACT_MODULE_REFERENCE = Symbol.for("react.module.reference");
+          REACT_MODULE_REFERENCE = /* @__PURE__ */ Symbol.for("react.module.reference");
         }
         function isValidElementType(type) {
           if (typeof type === "string" || typeof type === "function") {
@@ -2802,22 +2806,22 @@ var require_react_dom_server_legacy_node_production_min = __commonJS({
       return a;
     }
     var A = Object.assign;
-    var Ia = Symbol.for("react.element");
-    var Ja = Symbol.for("react.portal");
-    var Ka = Symbol.for("react.fragment");
-    var La = Symbol.for("react.strict_mode");
-    var Ma = Symbol.for("react.profiler");
-    var Na = Symbol.for("react.provider");
-    var Oa = Symbol.for("react.context");
-    var Pa = Symbol.for("react.forward_ref");
-    var Qa = Symbol.for("react.suspense");
-    var Ra = Symbol.for("react.suspense_list");
-    var Sa = Symbol.for("react.memo");
-    var Ta = Symbol.for("react.lazy");
-    var Ua = Symbol.for("react.scope");
-    var Va = Symbol.for("react.debug_trace_mode");
-    var Wa = Symbol.for("react.legacy_hidden");
-    var Xa = Symbol.for("react.default_value");
+    var Ia = /* @__PURE__ */ Symbol.for("react.element");
+    var Ja = /* @__PURE__ */ Symbol.for("react.portal");
+    var Ka = /* @__PURE__ */ Symbol.for("react.fragment");
+    var La = /* @__PURE__ */ Symbol.for("react.strict_mode");
+    var Ma = /* @__PURE__ */ Symbol.for("react.profiler");
+    var Na = /* @__PURE__ */ Symbol.for("react.provider");
+    var Oa = /* @__PURE__ */ Symbol.for("react.context");
+    var Pa = /* @__PURE__ */ Symbol.for("react.forward_ref");
+    var Qa = /* @__PURE__ */ Symbol.for("react.suspense");
+    var Ra = /* @__PURE__ */ Symbol.for("react.suspense_list");
+    var Sa = /* @__PURE__ */ Symbol.for("react.memo");
+    var Ta = /* @__PURE__ */ Symbol.for("react.lazy");
+    var Ua = /* @__PURE__ */ Symbol.for("react.scope");
+    var Va = /* @__PURE__ */ Symbol.for("react.debug_trace_mode");
+    var Wa = /* @__PURE__ */ Symbol.for("react.legacy_hidden");
+    var Xa = /* @__PURE__ */ Symbol.for("react.default_value");
     var Ya = Symbol.iterator;
     function Za(a) {
       if (null == a) return null;
@@ -3694,7 +3698,7 @@ var require_react_dom_server_legacy_node_production_min = __commonJS({
       a.prototype.constructor = a;
       a.__proto__ = b;
     }
-    var Xb = function(a) {
+    var Xb = (function(a) {
       function b() {
         var b2 = a.call(this, {}) || this;
         b2.request = null;
@@ -3711,7 +3715,7 @@ var require_react_dom_server_legacy_node_production_min = __commonJS({
         this.startedFlowing && Sb(this.request, this);
       };
       return b;
-    }(fa.Readable);
+    })(fa.Readable);
     function Yb() {
     }
     function Zb(a, b) {
@@ -4464,22 +4468,22 @@ var require_react_dom_server_node_production_min = __commonJS({
       });
     }
     var O = Object.assign;
-    var Qb = Symbol.for("react.element");
-    var Rb = Symbol.for("react.portal");
-    var Sb = Symbol.for("react.fragment");
-    var Tb = Symbol.for("react.strict_mode");
-    var Ub = Symbol.for("react.profiler");
-    var Vb = Symbol.for("react.provider");
-    var Wb = Symbol.for("react.context");
-    var Xb = Symbol.for("react.forward_ref");
-    var Yb = Symbol.for("react.suspense");
-    var Zb = Symbol.for("react.suspense_list");
-    var $b = Symbol.for("react.memo");
-    var ac = Symbol.for("react.lazy");
-    var bc = Symbol.for("react.scope");
-    var cc = Symbol.for("react.debug_trace_mode");
-    var dc = Symbol.for("react.legacy_hidden");
-    var ec = Symbol.for("react.default_value");
+    var Qb = /* @__PURE__ */ Symbol.for("react.element");
+    var Rb = /* @__PURE__ */ Symbol.for("react.portal");
+    var Sb = /* @__PURE__ */ Symbol.for("react.fragment");
+    var Tb = /* @__PURE__ */ Symbol.for("react.strict_mode");
+    var Ub = /* @__PURE__ */ Symbol.for("react.profiler");
+    var Vb = /* @__PURE__ */ Symbol.for("react.provider");
+    var Wb = /* @__PURE__ */ Symbol.for("react.context");
+    var Xb = /* @__PURE__ */ Symbol.for("react.forward_ref");
+    var Yb = /* @__PURE__ */ Symbol.for("react.suspense");
+    var Zb = /* @__PURE__ */ Symbol.for("react.suspense_list");
+    var $b = /* @__PURE__ */ Symbol.for("react.memo");
+    var ac = /* @__PURE__ */ Symbol.for("react.lazy");
+    var bc = /* @__PURE__ */ Symbol.for("react.scope");
+    var cc = /* @__PURE__ */ Symbol.for("react.debug_trace_mode");
+    var dc = /* @__PURE__ */ Symbol.for("react.legacy_hidden");
+    var ec = /* @__PURE__ */ Symbol.for("react.default_value");
     var fc = Symbol.iterator;
     function gc(a) {
       if (null == a) return null;
@@ -5570,6 +5574,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           }
           switch (typeof value) {
             case "function":
+            // $FlowIssue symbol is perfectly valid here
             case "symbol":
               return true;
             case "boolean": {
@@ -6063,6 +6068,10 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             return typeof props.is === "string";
           }
           switch (tagName) {
+            // These are reserved SVG and MathML elements.
+            // We don't mind this list too much because we expect it to never grow.
+            // The alternative is to track the namespace in a few places which is convoluted.
+            // https://w3c.github.io/webcomponents/spec/custom/#custom-elements-core-concepts
             case "annotation-xml":
             case "color-profile":
             case "font-face":
@@ -7042,6 +7051,8 @@ var require_react_dom_server_legacy_node_development = __commonJS({
               return createFormatContext(MATHML_MODE, null);
             case "foreignObject":
               return createFormatContext(HTML_MODE, null);
+            // Table parents are special in that their children can only be created at all if they're
+            // wrapped in a table parent. So we need to encode that we're entering this mode.
             case "table":
               return createFormatContext(HTML_TABLE_MODE, null);
             case "thead":
@@ -7169,7 +7180,9 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             }
             case "defaultValue":
             case "defaultChecked":
+            // These shouldn't be set as attributes on generic HTML elements.
             case "innerHTML":
+            // Must use dangerouslySetInnerHTML instead.
             case "suppressContentEditableWarning":
             case "suppressHydrationWarning":
               return;
@@ -7185,6 +7198,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           if (propertyInfo !== null) {
             switch (typeof value) {
               case "function":
+              // $FlowIssue symbol is perfectly valid here
               case "symbol":
                 return;
               case "boolean": {
@@ -7232,6 +7246,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           } else if (isAttributeNameSafe(name)) {
             switch (typeof value) {
               case "function":
+              // $FlowIssue symbol is perfectly valid here
               case "symbol":
                 return;
               case "boolean": {
@@ -7368,8 +7383,11 @@ var require_react_dom_server_legacy_node_development = __commonJS({
                 case "dangerouslySetInnerHTML":
                   innerHTML = propValue;
                   break;
+                // eslint-disable-next-line-no-fallthrough
                 case "value":
                   value = propValue;
+                // We intentionally fallthrough to also set the attribute on the node.
+                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -7447,6 +7465,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
                 case "children":
                 case "dangerouslySetInnerHTML":
                   throw new Error("input is a self-closing tag and must neither have `children` nor use `dangerouslySetInnerHTML`.");
+                // eslint-disable-next-line-no-fallthrough
                 case "defaultChecked":
                   defaultChecked = propValue;
                   break;
@@ -7508,6 +7527,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
                   break;
                 case "dangerouslySetInnerHTML":
                   throw new Error("`dangerouslySetInnerHTML` does not make sense on <textarea>.");
+                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -7562,6 +7582,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
                 case "children":
                 case "dangerouslySetInnerHTML":
                   throw new Error(tag + " is a self-closing tag and must neither have `children` nor use `dangerouslySetInnerHTML`.");
+                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -7583,6 +7604,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
                 case "children":
                 case "dangerouslySetInnerHTML":
                   throw new Error("menuitems cannot have `children` nor `dangerouslySetInnerHTML`.");
+                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -7607,6 +7629,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
                   break;
                 case "dangerouslySetInnerHTML":
                   throw new Error("`dangerouslySetInnerHTML` does not make sense on <title>.");
+                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -7770,6 +7793,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             }
           }
           switch (type) {
+            // Special tags
             case "select":
               return pushStartSelect(target, props, responseState);
             case "option":
@@ -7782,10 +7806,12 @@ var require_react_dom_server_legacy_node_development = __commonJS({
               return pushStartMenuItem(target, props, responseState);
             case "title":
               return pushStartTitle(target, props, responseState);
+            // Newline eating tags
             case "listing":
             case "pre": {
               return pushStartPreformattedElement(target, props, type, responseState);
             }
+            // Omitted close tags
             case "area":
             case "base":
             case "br":
@@ -7802,6 +7828,8 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             case "wbr": {
               return pushSelfClosing(target, props, type, responseState);
             }
+            // These are reserved SVG and MathML elements, that are never custom elements.
+            // https://w3c.github.io/webcomponents/spec/custom/#custom-elements-core-concepts
             case "annotation-xml":
             case "color-profile":
             case "font-face":
@@ -7831,6 +7859,9 @@ var require_react_dom_server_legacy_node_development = __commonJS({
         var endTag2 = stringToPrecomputedChunk(">");
         function pushEndInstance(target, type, props) {
           switch (type) {
+            // Omitted close tags
+            // TODO: Instead of repeating this switch we could try to pass a flag from above.
+            // That would require returning a tuple. Which might be ok if it gets inlined.
             case "area":
             case "base":
             case "br":
@@ -7976,6 +8007,10 @@ var require_react_dom_server_legacy_node_development = __commonJS({
               writeChunk(destination, stringToChunk(id.toString(16)));
               return writeChunkAndReturn(destination, startSegmentTable2);
             }
+            // TODO: For the rest of these, there will be extra wrapper nodes that never
+            // get deleted from the document. We need to delete the table too as part
+            // of the injected scripts. They are invisible though so it's not too terrible
+            // and it's kind of an edge case to suspend in a table. Totally supported though.
             case HTML_TABLE_BODY_MODE: {
               writeChunk(destination, startSegmentTableBody);
               writeChunk(destination, responseState.segmentPrefix);
@@ -8110,6 +8145,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           var escaped = JSON.stringify(input);
           return escaped.replace(regexForJSStringsInScripts, function(match) {
             switch (match) {
+              // santizing breaking out of strings and script tags
               case "<":
                 return "\\u003c";
               case "\u2028":
@@ -8187,22 +8223,22 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           return writeEndClientRenderedSuspenseBoundary(destination);
         }
         var assign = Object.assign;
-        var REACT_ELEMENT_TYPE = Symbol.for("react.element");
-        var REACT_PORTAL_TYPE = Symbol.for("react.portal");
-        var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
-        var REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode");
-        var REACT_PROFILER_TYPE = Symbol.for("react.profiler");
-        var REACT_PROVIDER_TYPE = Symbol.for("react.provider");
-        var REACT_CONTEXT_TYPE = Symbol.for("react.context");
-        var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref");
-        var REACT_SUSPENSE_TYPE = Symbol.for("react.suspense");
-        var REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list");
-        var REACT_MEMO_TYPE = Symbol.for("react.memo");
-        var REACT_LAZY_TYPE = Symbol.for("react.lazy");
-        var REACT_SCOPE_TYPE = Symbol.for("react.scope");
-        var REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode");
-        var REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden");
-        var REACT_SERVER_CONTEXT_DEFAULT_VALUE_NOT_LOADED = Symbol.for("react.default_value");
+        var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
+        var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
+        var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
+        var REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode");
+        var REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler");
+        var REACT_PROVIDER_TYPE = /* @__PURE__ */ Symbol.for("react.provider");
+        var REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context");
+        var REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref");
+        var REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense");
+        var REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list");
+        var REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo");
+        var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
+        var REACT_SCOPE_TYPE = /* @__PURE__ */ Symbol.for("react.scope");
+        var REACT_DEBUG_TRACING_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.debug_trace_mode");
+        var REACT_LEGACY_HIDDEN_TYPE = /* @__PURE__ */ Symbol.for("react.legacy_hidden");
+        var REACT_SERVER_CONTEXT_DEFAULT_VALUE_NOT_LOADED = /* @__PURE__ */ Symbol.for("react.default_value");
         var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
         var FAUX_ITERATOR_SYMBOL = "@@iterator";
         function getIteratorFn(maybeIterable) {
@@ -10054,6 +10090,14 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             return;
           }
           switch (type) {
+            // TODO: LegacyHidden acts the same as a fragment. This only works
+            // because we currently assume that every instance of LegacyHidden is
+            // accompanied by a host component wrapper. In the hidden mode, the host
+            // component is given a `hidden` attribute, which ensures that the
+            // initial HTML is not visible. To support the use of LegacyHidden as a
+            // true fragment, without an extra DOM node, we would have to hide the
+            // initial HTML in some other way.
+            // TODO: Add REACT_OFFSCREEN_TYPE here too with the same capability.
             case REACT_LEGACY_HIDDEN_TYPE:
             case REACT_DEBUG_TRACING_MODE_TYPE:
             case REACT_STRICT_MODE_TYPE:
@@ -10071,6 +10115,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             case REACT_SCOPE_TYPE: {
               throw new Error("ReactDOMServer does not yet support scope components.");
             }
+            // eslint-disable-next-line-no-fallthrough
             case REACT_SUSPENSE_TYPE: {
               {
                 renderSuspenseBoundary(request, task, props);
@@ -10154,6 +10199,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
               }
               case REACT_PORTAL_TYPE:
                 throw new Error("Portals are not currently supported by the server renderer. Render them conditionally so that they only appear on the client render.");
+              // eslint-disable-next-line-no-fallthrough
               case REACT_LAZY_TYPE: {
                 var lazyNode = node;
                 var payload = lazyNode._payload;
@@ -10761,7 +10807,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           subClass.prototype.constructor = subClass;
           subClass.__proto__ = superClass;
         }
-        var ReactMarkupReadableStream = /* @__PURE__ */ function(_Readable) {
+        var ReactMarkupReadableStream = /* @__PURE__ */ (function(_Readable) {
           _inheritsLoose(ReactMarkupReadableStream2, _Readable);
           function ReactMarkupReadableStream2() {
             var _this;
@@ -10781,7 +10827,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             }
           };
           return ReactMarkupReadableStream2;
-        }(stream.Readable);
+        })(stream.Readable);
         function onError$1() {
         }
         function renderToNodeStreamImpl(children, options, generateStaticMarkup) {
@@ -11067,6 +11113,7 @@ var require_react_dom_server_node_development = __commonJS({
           }
           switch (typeof value) {
             case "function":
+            // $FlowIssue symbol is perfectly valid here
             case "symbol":
               return true;
             case "boolean": {
@@ -11560,6 +11607,10 @@ var require_react_dom_server_node_development = __commonJS({
             return typeof props.is === "string";
           }
           switch (tagName) {
+            // These are reserved SVG and MathML elements.
+            // We don't mind this list too much because we expect it to never grow.
+            // The alternative is to track the namespace in a few places which is convoluted.
+            // https://w3c.github.io/webcomponents/spec/custom/#custom-elements-core-concepts
             case "annotation-xml":
             case "color-profile":
             case "font-face":
@@ -12543,6 +12594,8 @@ var require_react_dom_server_node_development = __commonJS({
               return createFormatContext(MATHML_MODE, null);
             case "foreignObject":
               return createFormatContext(HTML_MODE, null);
+            // Table parents are special in that their children can only be created at all if they're
+            // wrapped in a table parent. So we need to encode that we're entering this mode.
             case "table":
               return createFormatContext(HTML_TABLE_MODE, null);
             case "thead":
@@ -12670,7 +12723,9 @@ var require_react_dom_server_node_development = __commonJS({
             }
             case "defaultValue":
             case "defaultChecked":
+            // These shouldn't be set as attributes on generic HTML elements.
             case "innerHTML":
+            // Must use dangerouslySetInnerHTML instead.
             case "suppressContentEditableWarning":
             case "suppressHydrationWarning":
               return;
@@ -12686,6 +12741,7 @@ var require_react_dom_server_node_development = __commonJS({
           if (propertyInfo !== null) {
             switch (typeof value) {
               case "function":
+              // $FlowIssue symbol is perfectly valid here
               case "symbol":
                 return;
               case "boolean": {
@@ -12733,6 +12789,7 @@ var require_react_dom_server_node_development = __commonJS({
           } else if (isAttributeNameSafe(name)) {
             switch (typeof value) {
               case "function":
+              // $FlowIssue symbol is perfectly valid here
               case "symbol":
                 return;
               case "boolean": {
@@ -12869,8 +12926,11 @@ var require_react_dom_server_node_development = __commonJS({
                 case "dangerouslySetInnerHTML":
                   innerHTML = propValue;
                   break;
+                // eslint-disable-next-line-no-fallthrough
                 case "value":
                   value = propValue;
+                // We intentionally fallthrough to also set the attribute on the node.
+                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -12948,6 +13008,7 @@ var require_react_dom_server_node_development = __commonJS({
                 case "children":
                 case "dangerouslySetInnerHTML":
                   throw new Error("input is a self-closing tag and must neither have `children` nor use `dangerouslySetInnerHTML`.");
+                // eslint-disable-next-line-no-fallthrough
                 case "defaultChecked":
                   defaultChecked = propValue;
                   break;
@@ -13009,6 +13070,7 @@ var require_react_dom_server_node_development = __commonJS({
                   break;
                 case "dangerouslySetInnerHTML":
                   throw new Error("`dangerouslySetInnerHTML` does not make sense on <textarea>.");
+                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -13063,6 +13125,7 @@ var require_react_dom_server_node_development = __commonJS({
                 case "children":
                 case "dangerouslySetInnerHTML":
                   throw new Error(tag + " is a self-closing tag and must neither have `children` nor use `dangerouslySetInnerHTML`.");
+                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -13084,6 +13147,7 @@ var require_react_dom_server_node_development = __commonJS({
                 case "children":
                 case "dangerouslySetInnerHTML":
                   throw new Error("menuitems cannot have `children` nor `dangerouslySetInnerHTML`.");
+                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -13108,6 +13172,7 @@ var require_react_dom_server_node_development = __commonJS({
                   break;
                 case "dangerouslySetInnerHTML":
                   throw new Error("`dangerouslySetInnerHTML` does not make sense on <title>.");
+                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -13271,6 +13336,7 @@ var require_react_dom_server_node_development = __commonJS({
             }
           }
           switch (type) {
+            // Special tags
             case "select":
               return pushStartSelect(target, props, responseState);
             case "option":
@@ -13283,10 +13349,12 @@ var require_react_dom_server_node_development = __commonJS({
               return pushStartMenuItem(target, props, responseState);
             case "title":
               return pushStartTitle(target, props, responseState);
+            // Newline eating tags
             case "listing":
             case "pre": {
               return pushStartPreformattedElement(target, props, type, responseState);
             }
+            // Omitted close tags
             case "area":
             case "base":
             case "br":
@@ -13303,6 +13371,8 @@ var require_react_dom_server_node_development = __commonJS({
             case "wbr": {
               return pushSelfClosing(target, props, type, responseState);
             }
+            // These are reserved SVG and MathML elements, that are never custom elements.
+            // https://w3c.github.io/webcomponents/spec/custom/#custom-elements-core-concepts
             case "annotation-xml":
             case "color-profile":
             case "font-face":
@@ -13332,6 +13402,9 @@ var require_react_dom_server_node_development = __commonJS({
         var endTag2 = stringToPrecomputedChunk(">");
         function pushEndInstance(target, type, props) {
           switch (type) {
+            // Omitted close tags
+            // TODO: Instead of repeating this switch we could try to pass a flag from above.
+            // That would require returning a tuple. Which might be ok if it gets inlined.
             case "area":
             case "base":
             case "br":
@@ -13477,6 +13550,10 @@ var require_react_dom_server_node_development = __commonJS({
               writeChunk(destination, stringToChunk(id.toString(16)));
               return writeChunkAndReturn(destination, startSegmentTable2);
             }
+            // TODO: For the rest of these, there will be extra wrapper nodes that never
+            // get deleted from the document. We need to delete the table too as part
+            // of the injected scripts. They are invisible though so it's not too terrible
+            // and it's kind of an edge case to suspend in a table. Totally supported though.
             case HTML_TABLE_BODY_MODE: {
               writeChunk(destination, startSegmentTableBody);
               writeChunk(destination, responseState.segmentPrefix);
@@ -13611,6 +13688,7 @@ var require_react_dom_server_node_development = __commonJS({
           var escaped = JSON.stringify(input);
           return escaped.replace(regexForJSStringsInScripts, function(match) {
             switch (match) {
+              // santizing breaking out of strings and script tags
               case "<":
                 return "\\u003c";
               case "\u2028":
@@ -13624,22 +13702,22 @@ var require_react_dom_server_node_development = __commonJS({
           });
         }
         var assign = Object.assign;
-        var REACT_ELEMENT_TYPE = Symbol.for("react.element");
-        var REACT_PORTAL_TYPE = Symbol.for("react.portal");
-        var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
-        var REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode");
-        var REACT_PROFILER_TYPE = Symbol.for("react.profiler");
-        var REACT_PROVIDER_TYPE = Symbol.for("react.provider");
-        var REACT_CONTEXT_TYPE = Symbol.for("react.context");
-        var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref");
-        var REACT_SUSPENSE_TYPE = Symbol.for("react.suspense");
-        var REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list");
-        var REACT_MEMO_TYPE = Symbol.for("react.memo");
-        var REACT_LAZY_TYPE = Symbol.for("react.lazy");
-        var REACT_SCOPE_TYPE = Symbol.for("react.scope");
-        var REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode");
-        var REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden");
-        var REACT_SERVER_CONTEXT_DEFAULT_VALUE_NOT_LOADED = Symbol.for("react.default_value");
+        var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
+        var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
+        var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
+        var REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode");
+        var REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler");
+        var REACT_PROVIDER_TYPE = /* @__PURE__ */ Symbol.for("react.provider");
+        var REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context");
+        var REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref");
+        var REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense");
+        var REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list");
+        var REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo");
+        var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
+        var REACT_SCOPE_TYPE = /* @__PURE__ */ Symbol.for("react.scope");
+        var REACT_DEBUG_TRACING_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.debug_trace_mode");
+        var REACT_LEGACY_HIDDEN_TYPE = /* @__PURE__ */ Symbol.for("react.legacy_hidden");
+        var REACT_SERVER_CONTEXT_DEFAULT_VALUE_NOT_LOADED = /* @__PURE__ */ Symbol.for("react.default_value");
         var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
         var FAUX_ITERATOR_SYMBOL = "@@iterator";
         function getIteratorFn(maybeIterable) {
@@ -15491,6 +15569,14 @@ var require_react_dom_server_node_development = __commonJS({
             return;
           }
           switch (type) {
+            // TODO: LegacyHidden acts the same as a fragment. This only works
+            // because we currently assume that every instance of LegacyHidden is
+            // accompanied by a host component wrapper. In the hidden mode, the host
+            // component is given a `hidden` attribute, which ensures that the
+            // initial HTML is not visible. To support the use of LegacyHidden as a
+            // true fragment, without an extra DOM node, we would have to hide the
+            // initial HTML in some other way.
+            // TODO: Add REACT_OFFSCREEN_TYPE here too with the same capability.
             case REACT_LEGACY_HIDDEN_TYPE:
             case REACT_DEBUG_TRACING_MODE_TYPE:
             case REACT_STRICT_MODE_TYPE:
@@ -15508,6 +15594,7 @@ var require_react_dom_server_node_development = __commonJS({
             case REACT_SCOPE_TYPE: {
               throw new Error("ReactDOMServer does not yet support scope components.");
             }
+            // eslint-disable-next-line-no-fallthrough
             case REACT_SUSPENSE_TYPE: {
               {
                 renderSuspenseBoundary(request, task, props);
@@ -15591,6 +15678,7 @@ var require_react_dom_server_node_development = __commonJS({
               }
               case REACT_PORTAL_TYPE:
                 throw new Error("Portals are not currently supported by the server renderer. Render them conditionally so that they only appear on the client render.");
+              // eslint-disable-next-line-no-fallthrough
               case REACT_LAZY_TYPE: {
                 var lazyNode = node;
                 var payload = lazyNode._payload;
@@ -16280,7 +16368,176 @@ var RAW = [
   { name: "Nathan of Gaza", he: "", era: "CE", y0: 1644, y1: 1680, region: "Ottoman Gaza", role: "Sabbatai Tsevi's prophet; theological architect of Sabbatean messianism.", thread: "sabbatean-frankist" },
   { name: "Jacob Frank", he: "", era: "CE", y0: 1726, y1: 1791, region: "Poland/Ottoman", role: "Polish Sabbatean successor; founder of the Frankist movement, cast by his own doctrine as the Antichrist \u2014 the antinomian messianic counterpart who abolishes the old law.", thread: "sabbatean-frankist", endpoint: true, designation: "Antichrist" }
 ];
-var PROPHETS = RAW.map((p) => ({ ...p, he: (p.he || "").replace(POINTED, "") }));
+var PROPHECIES = {
+  "Adam": [
+    { t: "The seed of the woman shall bruise the serpent's head", r: "Gen 3:15" },
+    { t: "Eve named 'mother of all living'", r: "Gen 3:20" }
+  ],
+  "Enoch": [
+    { t: "Enoch walked with God; and he was not, for God took him", r: "Gen 5:24" },
+    { t: "Judgment of the fallen watchers; Azazel bound and cast into darkness", r: "1 Enoch 10" },
+    { t: "The Son of Man seated on the throne of glory judges the kings of the earth", r: "1 Enoch 62" }
+  ],
+  "Noah": [
+    { t: "The earth is filled with violence; a flood destroys all flesh", r: "Gen 6:13" },
+    { t: "Cursed be Canaan; blessed be YHWH the God of Shem", r: "Gen 9:25-26" }
+  ],
+  "Abraham": [
+    { t: "A great nation from you; in you all families of the earth blessed", r: "Gen 12:2-3" },
+    { t: "Seed as the stars; your offspring sojourns 400 years, then returns", r: "Gen 15:5-13" },
+    { t: "Circumcision a sign; Sarah bears a son within the year", r: "Gen 17:10-21" },
+    { t: "In your seed all nations of the earth blessed", r: "Gen 22:18" }
+  ],
+  "Moses": [
+    { t: "A prophet like you I will raise; to him you shall listen", r: "Deut 18:15" },
+    { t: "YHWH our God, YHWH is one", r: "Deut 6:4" },
+    { t: "Blessings for obedience; curses, exile and dispersion for idolatry", r: "Deut 28" },
+    { t: "Song of witness against Israel's future apostasy", r: "Deut 32" }
+  ],
+  "Elijah": [
+    { t: "No dew nor rain these years except by my word", r: "1 Kgs 17:1" },
+    { t: "Fire falls on the Carmel offering; YHWH, He is God", r: "1 Kgs 18:38" },
+    { t: "Before the great and terrible day of YHWH, Elijah is sent", r: "Mal 4:5" }
+  ],
+  "Elisha": [
+    { t: "A double share of your spirit upon me", r: "2 Kgs 2:9" },
+    { t: "The valley filled with water without wind or rain; victory over Moab", r: "2 Kgs 3:17" },
+    { t: "Hazael shall be king of Aram; the man wept for Israel", r: "2 Kgs 8:12" }
+  ],
+  "Joel": [
+    { t: "The locust plague \u2014 the day of YHWH is at hand, a destruction from the Almighty", r: "Joel 1:15" },
+    { t: "I will pour my Spirit on all flesh; sons and daughters prophesy", r: "Joel 2:28" },
+    { t: "Sun turned to darkness, moon to blood before the great day of YHWH", r: "Joel 2:31" }
+  ],
+  "Jonah": [
+    { t: "Yet forty days and Nineveh is overthrown", r: "Jonah 3:4" },
+    { t: "Three days and three nights in the belly of the fish", r: "Jonah 1:17" },
+    { t: "God relents from disaster; should I not pity Nineveh?", r: "Jonah 4:11" }
+  ],
+  "Amos": [
+    { t: "Let justice roll down like waters, and righteousness like a stream", r: "Amos 5:24" },
+    { t: "The day of YHWH is darkness and not light", r: "Amos 5:18-20" },
+    { t: "I will raise the fallen booth of David", r: "Amos 9:11" }
+  ],
+  "Hosea": [
+    { t: "Jezreel \u2014 I will soon punish the house of Jehu", r: "Hos 1:4" },
+    { t: "Not pitied, not my people \u2192 I will have pity and say 'my people'", r: "Hos 1:6-9; 2:23" },
+    { t: "After two days he revives us; on the third he raises us up", r: "Hos 6:2" }
+  ],
+  "Isaiah": [
+    { t: "A virgin conceives and bears a son, Immanuel", r: "Isa 7:14" },
+    { t: "A child is born; the Prince of Peace on David's throne forever", r: "Isa 9:6-7" },
+    { t: "A shoot from the stump of Jesse; the Spirit of YHWH rests on him", r: "Isa 11:1-2" },
+    { t: "The Servant bears the sins of many and makes intercession", r: "Isa 53:11-12" },
+    { t: "New heavens and a new earth; the former not remembered", r: "Isa 65:17" }
+  ],
+  "Micah": [
+    { t: "They shall beat their swords into plowshares; none shall make afraid", r: "Mic 4:3-4" },
+    { t: "A ruler from Bethlehem Ephrathah, whose coming forth is from ancient days", r: "Mic 5:2" },
+    { t: "What does YHWH require? Do justice, love kindness, walk humbly", r: "Mic 6:8" }
+  ],
+  "Nahum": [
+    { t: "An overflowing flood and pursuers of darkness pursue Nineveh", r: "Nah 1:8; 2:8" },
+    { t: "There is no healing for your bruise; all who hear clap hands over you", r: "Nah 3:19" }
+  ],
+  "Zephaniah": [
+    { t: "The great day of YHWH: a day of wrath, distress and darkness", r: "Zeph 1:15" },
+    { t: "From beyond the rivers of Cush my worshippers bring offering", r: "Zeph 3:10" },
+    { t: "The remnant of Israel seeks refuge in YHWH's name; none makes afraid", r: "Zeph 3:12-13" }
+  ],
+  "Jeremiah": [
+    { t: "Out of the north evil breaks forth upon Jerusalem", r: "Jer 1:14; 4:6" },
+    { t: "Seventy years' desolation for the nations, then Babylon judged", r: "Jer 25:11-12" },
+    { t: "A voice heard in Ramah: Rachel weeping for her children", r: "Jer 31:15" },
+    { t: "A new covenant written on the heart; their sin remembered no more", r: "Jer 31:31-34" }
+  ],
+  "Baruch": [
+    { t: "Writes Jeremiah's scroll, read in the temple, then burned by the king", r: "Jer 36" },
+    { t: "Seek no great things \u2014 I bring disaster on all flesh", r: "Jer 45:5" },
+    { t: "Vision of Zion taken up by angels; the nations judged and Zion restored", r: "2 Baruch" }
+  ],
+  "Habakkuk": [
+    { t: "The vision awaits its appointed time; it will not lie", r: "Hab 2:3" },
+    { t: "The righteous shall live by his faith", r: "Hab 2:4" },
+    { t: "The earth filled with the knowledge of YHWH as the waters cover the sea", r: "Hab 2:14" }
+  ],
+  "Daniel": [
+    { t: "A statue of kingdoms; a stone cut without hands fills the whole earth", r: "Dan 2" },
+    { t: "One like a Son of Man comes with clouds to an everlasting kingdom", r: "Dan 7:13-14" },
+    { t: "Seventy weeks decreed; an Anointed One cut off; the city and sanctuary destroyed", r: "Dan 9:24-26" },
+    { t: "The abomination of desolation; many who sleep awake to everlasting life or shame", r: "Dan 11:31; 12:2" }
+  ],
+  "Obadiah": [
+    { t: "Edom brought down; the day of YHWH is near upon all the nations", r: "Obad 1:8,15" },
+    { t: "Deliverers on Mount Zion judge the hills; the kingdom is YHWH's", r: "Obad 1:21" }
+  ],
+  "Ezekiel": [
+    { t: "Vision of the chariot; the likeness of the glory of YHWH", r: "Ezek 1" },
+    { t: "Dry bones live again; the whole house of Israel brought up from the graves", r: "Ezek 37:5-12" },
+    { t: "Gog of Magog gathered against the mountains of Israel; consumed by fire", r: "Ezek 38-39" },
+    { t: "A new temple and a river flowing from the sanctuary to heal the sea", r: "Ezek 40-47" }
+  ],
+  "Haggai": [
+    { t: "I shake the heavens and earth; the Desired One comes; fill this house with glory", r: "Hag 2:6-7" },
+    { t: "The latter glory of this house greater than the former", r: "Hag 2:9" }
+  ],
+  "Zechariah": [
+    { t: "The Branch; he builds the temple and bears royal majesty", r: "Zech 3:8; 6:12" },
+    { t: "Two olive trees \u2014 the two Anointed Ones who stand by the Lord", r: "Zech 4:14" },
+    { t: "Your king comes to you, lowly and riding on a donkey", r: "Zech 9:9" },
+    { t: "They look on me, the one they pierced; mourn as for an only son", r: "Zech 12:10" },
+    { t: "Day of YHWH: his feet stand on the Mount of Olives; living waters flow from Jerusalem", r: "Zech 14:4,8" }
+  ],
+  "Ezra": [
+    { t: "Return to Jerusalem and rebuild the house of God", r: "Ezra 1:3" },
+    { t: "Separate from the peoples of the land; keep the Torah and do it", r: "Ezra 10:11" }
+  ],
+  "Malachi": [
+    { t: "From the rising to the setting of the sun, my name great among the nations", r: "Mal 1:11" },
+    { t: "I send my messenger to prepare the way before me", r: "Mal 3:1" },
+    { t: "Elijah the prophet before the great and terrible day of YHWH", r: "Mal 4:5" }
+  ],
+  "John the Baptist": [
+    { t: "Repent, the kingdom of the heavens is at hand", r: "Matt 3:2" },
+    { t: "Every tree not bearing good fruit cut down and thrown into the fire", r: "Matt 3:10" },
+    { t: "One mightier comes after me; he baptizes with Holy Spirit and fire", r: "Matt 3:11" }
+  ],
+  "Jesus of Nazareth": [
+    { t: "The time is fulfilled; the kingdom of God is at hand; repent and believe", r: "Mark 1:15" },
+    { t: "Not one stone left on another; the temple thrown down", r: "Matt 24:2" },
+    { t: "The Son of Man comes on the clouds of heaven with power and great glory", r: "Matt 24:30" },
+    { t: "This generation shall not pass until all these things are fulfilled", r: "Matt 24:34" }
+  ],
+  "John of Patmos": [
+    { t: "Letters to seven churches; the one who conquers inherits all things", r: "Rev 2-3" },
+    { t: "The number of the beast: 666; the mark on hand and forehead", r: "Rev 13:16-18" },
+    { t: "Fallen, fallen is Babylon the great; the kings of the earth mourn", r: "Rev 18:2,9" },
+    { t: "A new heaven and new earth; New Jerusalem descends from God", r: "Rev 21:1-2" }
+  ],
+  "Shimon bar Yochai": [
+    { t: "13 years hidden in a cave; the secrets of the Torah revealed", r: "Shabbat 33b" },
+    { t: "The inner light of the chariot; the hidden world of Atzilut disclosed", r: "Zohar" }
+  ],
+  "Abraham Abulafia": [
+    { t: "Prophetic ecstasy by permuting and combining the letters of the Name", r: "Sefer ha-Melamed" },
+    { t: "Unsealing the Name; the spirit united with the letter", r: "Sefer ha-Ot" },
+    { t: "Declares himself Messiah in 1295 \u2014 the prophecy fails", r: "Vital / Sabbatean chronicles" }
+  ],
+  "Sabbatai Tsevi": [
+    { t: "Declares himself Messiah, 12 December 1665; the nations are told to submit", r: "Nathan of Gaza, 1665" },
+    { t: "Prophecy of his universal kingship \u2014 overturned by his apostasy", r: "Sabbatean sources" }
+  ],
+  "Nathan of Gaza": [
+    { t: "Vision of Sabbatai Tsevi seated on a royal throne in Gaza; confirmed as Messiah", r: "Nathan's testimony, 1665" },
+    { t: "The Messiah must descend into the demonic shells (kelippot) to liberate them", r: "Perush ha-Torah" },
+    { t: "The faith of the Messiah \u2014 belief beyond the apostasy", r: "Ma'amar" }
+  ],
+  "Jacob Frank": [
+    { t: "Declares himself the reincarnation of Sabbatai Tsevi and the Antichrist", r: "Frankist sources" },
+    { t: "Abolition of the old law; 'the holy religion of Edom'", r: "Book of the Words of the Lord" }
+  ]
+};
+var PROPHETS = RAW.map((p) => ({ ...p, he: (p.he || "").replace(POINTED, ""), prophecies: PROPHECIES[p.name] || null }));
 
 // src/data/wiki_content.json
 var wiki_content_default = {
@@ -21361,15 +21618,22 @@ function Timeline({ items, title, accent = "#8a05ff" }) {
 }
 
 // src/pages/ProphetsPage.jsx
-function ProphetCard({ p }) {
+function ProphetCard({ p, onOpen }) {
   const dates = p.y0 === p.y1 ? fmtYear(p.y0) : `${fmtYear(p.y0)} \u2013 ${fmtYear(p.y1)}`;
   const end = !!p.endpoint;
   const pill = p.designation || (end ? "lineage end" : null);
+  const href = "/prophet/" + slugify(p.name);
+  const onClick = onOpen ? (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    onOpen(href);
+  } : null;
   return /* @__PURE__ */ import_react2.default.createElement(
     "a",
     {
       className: "tcard" + (end ? " always" : ""),
-      href: "/prophet/" + slugify(p.name),
+      href,
+      onClick,
       style: { textDecoration: "none", display: "block", borderColor: end ? "var(--gold)" : void 0, boxShadow: end ? "0 0 0 1px var(--gold)" : void 0 }
     },
     /* @__PURE__ */ import_react2.default.createElement("div", { className: "the" }, p.he && /* @__PURE__ */ import_react2.default.createElement("span", { className: "he", style: { fontSize: "1.5rem", marginLeft: 6 } }, p.he)),
@@ -21379,10 +21643,10 @@ function ProphetCard({ p }) {
     /* @__PURE__ */ import_react2.default.createElement("div", { className: "simp" }, p.role)
   );
 }
-function ProphetsPage() {
+function ProphetsPage({ onOpen }) {
   const span = `${fmtYear(PROPHETS[0].y0)} \u2013 ${fmtYear(PROPHETS[PROPHETS.length - 1].y1)}`;
   const last = PROPHETS[PROPHETS.length - 1];
-  return /* @__PURE__ */ import_react2.default.createElement("div", null, /* @__PURE__ */ import_react2.default.createElement("h1", null, "Prophets \u2014 from Adam to Jacob Frank"), /* @__PURE__ */ import_react2.default.createElement("p", { className: "muted" }, "A chronology of prophetic and revelatory figures, from the first human ", /* @__PURE__ */ import_react2.default.createElement("span", { className: "he" }, "\u05D0\u05D3\u05DD"), " through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, down to the Sabbatean\u2013Frankist thread whose ", /* @__PURE__ */ import_react2.default.createElement("b", { style: { color: "var(--gold)" } }, last.designation || "final", " figure is ", last.name, " (", fmtYear(last.y0), "\u2013", fmtYear(last.y1), ")"), ". ", PROPHETS.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table."), /* @__PURE__ */ import_react2.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react2.default.createElement(Timeline, { items: PROPHETS, title: "Prophet timeline \u2014 Adam to Jacob Frank", accent: "#8a05ff" })), /* @__PURE__ */ import_react2.default.createElement("div", { className: "tcards" }, PROPHETS.map((p, i) => /* @__PURE__ */ import_react2.default.createElement(ProphetCard, { key: i, p }))));
+  return /* @__PURE__ */ import_react2.default.createElement("div", null, /* @__PURE__ */ import_react2.default.createElement("h1", null, "Prophets \u2014 from Adam to Jacob Frank"), /* @__PURE__ */ import_react2.default.createElement("p", { className: "muted" }, "A chronology of prophetic and revelatory figures, from the first human ", /* @__PURE__ */ import_react2.default.createElement("span", { className: "he" }, "\u05D0\u05D3\u05DD"), " through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, down to the Sabbatean\u2013Frankist thread whose ", /* @__PURE__ */ import_react2.default.createElement("b", { style: { color: "var(--gold)" } }, last.designation || "final", " figure is ", last.name, " (", fmtYear(last.y0), "\u2013", fmtYear(last.y1), ")"), ". ", PROPHETS.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table."), /* @__PURE__ */ import_react2.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react2.default.createElement(Timeline, { items: PROPHETS, title: "Prophet timeline \u2014 Adam to Jacob Frank", accent: "#8a05ff" })), /* @__PURE__ */ import_react2.default.createElement("div", { className: "tcards" }, PROPHETS.map((p, i) => /* @__PURE__ */ import_react2.default.createElement(ProphetCard, { key: i, p, onOpen }))));
 }
 
 // src/pages/MagesPage.jsx
@@ -21417,16 +21681,23 @@ var MAGES = [
 ];
 
 // src/pages/MagesPage.jsx
-function MageCard({ m }) {
+function MageCard({ m, onOpen }) {
   const dates = m.years || `${fmtYear(m.y0)} \u2013 ${fmtYear(m.y1)}`;
   const end = !!m.endpoint;
   const pill = m.designation || (end ? "lineage end" : null);
   const hasWiki = !!(WIKI[m.name] && WIKI[m.name].description);
+  const href = "/mage/" + slugify(m.name);
+  const onClick = onOpen ? (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    onOpen(href);
+  } : null;
   return /* @__PURE__ */ import_react3.default.createElement(
     "a",
     {
       className: "tcard" + (end ? " always" : ""),
-      href: "/mage/" + slugify(m.name),
+      href,
+      onClick,
       style: { textDecoration: "none", display: "block", borderColor: end ? "var(--gold)" : void 0, boxShadow: end ? "0 0 0 1px var(--gold)" : void 0 }
     },
     /* @__PURE__ */ import_react3.default.createElement("div", { className: "the", style: { minHeight: 26 } }, m.name),
@@ -21435,10 +21706,10 @@ function MageCard({ m }) {
     hasWiki && /* @__PURE__ */ import_react3.default.createElement("div", { className: "simp" }, WIKI[m.name].description.slice(0, 120), "\u2026")
   );
 }
-function MagesPage() {
+function MagesPage({ onOpen }) {
   const span = `${fmtYear(MAGES[0].y0)} \u2013 ${fmtYear(MAGES[MAGES.length - 1].y1)}`;
   const last = MAGES[MAGES.length - 1];
-  return /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("h1", null, "Magi \u2014 from Daniel to Felipe II"), /* @__PURE__ */ import_react3.default.createElement("p", { className: "muted" }, "A chronology of ", /* @__PURE__ */ import_react3.default.createElement("b", null, "magi / wise-men / royal-sage occult figures"), ", from the Babylonian court magi (", /* @__PURE__ */ import_react3.default.createElement("b", null, "Daniel, Shadrach, Meshach, Abednego"), ") through the medieval Iberian sages \u2014 ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n"), " \u2014 to the Renaissance Christian-kabbalists and royal astrologers, ending with ", /* @__PURE__ */ import_react3.default.createElement("b", { style: { color: "var(--gold)" } }, last.name, " (", last.years, ")"), ", who closes the era of kings. ", MAGES.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table."), /* @__PURE__ */ import_react3.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react3.default.createElement(Timeline, { items: MAGES, title: "Magi timeline \u2014 Daniel to Felipe II", accent: "#8a05ff" })), /* @__PURE__ */ import_react3.default.createElement("div", { className: "tcards" }, MAGES.map((m, i) => /* @__PURE__ */ import_react3.default.createElement(MageCard, { key: i, m }))));
+  return /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("h1", null, "Magi \u2014 from Daniel to Felipe II"), /* @__PURE__ */ import_react3.default.createElement("p", { className: "muted" }, "A chronology of ", /* @__PURE__ */ import_react3.default.createElement("b", null, "magi / wise-men / royal-sage occult figures"), ", from the Babylonian court magi (", /* @__PURE__ */ import_react3.default.createElement("b", null, "Daniel, Shadrach, Meshach, Abednego"), ") through the medieval Iberian sages \u2014 ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n"), " \u2014 to the Renaissance Christian-kabbalists and royal astrologers, ending with ", /* @__PURE__ */ import_react3.default.createElement("b", { style: { color: "var(--gold)" } }, last.name, " (", last.years, ")"), ", who closes the era of kings. ", MAGES.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table."), /* @__PURE__ */ import_react3.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react3.default.createElement(Timeline, { items: MAGES, title: "Magi timeline \u2014 Daniel to Felipe II", accent: "#8a05ff" })), /* @__PURE__ */ import_react3.default.createElement("div", { className: "tcards" }, MAGES.map((m, i) => /* @__PURE__ */ import_react3.default.createElement(MageCard, { key: i, m, onOpen }))));
 }
 
 // src/pages/AlignmentFicha.jsx
@@ -21447,7 +21718,7 @@ var import_react5 = __toESM(require_react());
 // src/ui.jsx
 var import_react4 = __toESM(require_react());
 
-// ../../../../../tmp/ae.mjs
+// ../data/astronomy-engine.mjs
 var C_AUDAY = 173.1446326846693;
 var KM_PER_AU = 14959787069098932e-8;
 var DEG2RAD = 0.017453292519943295;
@@ -23869,7 +24140,7 @@ function Ficha({ figure, kind, axisMin, axisMax, backHref, backLabel, wiki }) {
   const designation = figure.designation || (figure.endpoint ? kind === "mage" ? "end of the era" : "lineage end" : null);
   return /* @__PURE__ */ import_react6.default.createElement("div", { className: "ficha" }, /* @__PURE__ */ import_react6.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("button", { onClick: () => {
     if (typeof window !== "undefined") window.history.back();
-  } }, "\u25C0 ", backLabel), /* @__PURE__ */ import_react6.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer", style: { marginLeft: "auto" } }, "Wikipedia \u2192")), /* @__PURE__ */ import_react6.default.createElement("h1", { style: { marginBottom: 4 } }, figure.name, figure.he && /* @__PURE__ */ import_react6.default.createElement("span", { className: "he", style: { marginLeft: 10, color: "var(--gold)" } }, figure.he)), /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".9rem" } }, dates, dates && " \xB7 ", figure.region, designation && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 8, color: "var(--gold)", borderColor: "var(--gold)" } }, designation), kind === "mage" && figure.isIberian && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--green)", borderColor: "var(--green)" } }, "Iberian"), kind === "mage" && figure.isRoyal && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--violet)", borderColor: "var(--violet)" } }, "royal"), figure.thread && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 6 } }, figure.thread)), axisMin != null && axisMax != null && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { padding: 12, marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement(LifeBar, { figure, min: axisMin, max: axisMax })), /* @__PURE__ */ import_react6.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react6.default.createElement("div", null, w.thumbnail && /* @__PURE__ */ import_react6.default.createElement("div", { className: "fig", style: { marginBottom: 12, padding: 8 } }, /* @__PURE__ */ import_react6.default.createElement("img", { src: w.thumbnail, alt: figure.name, style: { maxHeight: 320, width: "auto", borderRadius: 8, maxWidth: "100%" }, loading: "lazy" })), /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Description"), /* @__PURE__ */ import_react6.default.createElement("p", { style: { lineHeight: 1.6, marginBottom: 0 } }, desc || "No Wikipedia description available."))), /* @__PURE__ */ import_react6.default.createElement("div", null, facts.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Facts"), /* @__PURE__ */ import_react6.default.createElement("table", { style: { fontSize: ".88rem" } }, /* @__PURE__ */ import_react6.default.createElement("tbody", null, facts.map((f, i) => /* @__PURE__ */ import_react6.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)", width: "38%", verticalAlign: "top" } }, f.label), /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "5px 8px" } }, f.value)))))))), rows2.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Life & work in brief"), /* @__PURE__ */ import_react6.default.createElement("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 } }, "Summarised by section \u2014 one row per topic, for fast reading."), /* @__PURE__ */ import_react6.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react6.default.createElement("thead", null, /* @__PURE__ */ import_react6.default.createElement("tr", null, /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "32%" } }, kind === "mage" ? "Work / contribution" : "Topic"), /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px" } }, kind === "mage" ? "Significance" : "Summary"))), /* @__PURE__ */ import_react6.default.createElement("tbody", null, rows2.map((r, i) => /* @__PURE__ */ import_react6.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px", fontWeight: 600, verticalAlign: "top" } }, r.title), /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, r.note)))))), /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react6.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer" }, "Read the full article on Wikipedia \u2192")));
+  } }, "\u25C0 ", backLabel), /* @__PURE__ */ import_react6.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer", style: { marginLeft: "auto" } }, "Wikipedia \u2192")), /* @__PURE__ */ import_react6.default.createElement("h1", { style: { marginBottom: 4 } }, figure.name, figure.he && /* @__PURE__ */ import_react6.default.createElement("span", { className: "he", style: { marginLeft: 10, color: "var(--gold)" } }, figure.he)), /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".9rem" } }, dates, dates && " \xB7 ", figure.region, designation && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 8, color: "var(--gold)", borderColor: "var(--gold)" } }, designation), kind === "mage" && figure.isIberian && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--green)", borderColor: "var(--green)" } }, "Iberian"), kind === "mage" && figure.isRoyal && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--violet)", borderColor: "var(--violet)" } }, "royal"), figure.thread && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 6 } }, figure.thread)), axisMin != null && axisMax != null && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { padding: 12, marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement(LifeBar, { figure, min: axisMin, max: axisMax })), /* @__PURE__ */ import_react6.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react6.default.createElement("div", null, w.thumbnail && /* @__PURE__ */ import_react6.default.createElement("div", { className: "fig", style: { marginBottom: 12, padding: 8 } }, /* @__PURE__ */ import_react6.default.createElement("img", { src: w.thumbnail, alt: figure.name, style: { maxHeight: 320, width: "100%", borderRadius: 8, display: "block" }, loading: "lazy" })), /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Description"), /* @__PURE__ */ import_react6.default.createElement("p", { style: { lineHeight: 1.6, marginBottom: 0 } }, desc || "No Wikipedia description available."))), /* @__PURE__ */ import_react6.default.createElement("div", null, facts.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Facts"), /* @__PURE__ */ import_react6.default.createElement("table", { style: { fontSize: ".88rem" } }, /* @__PURE__ */ import_react6.default.createElement("tbody", null, facts.map((f, i) => /* @__PURE__ */ import_react6.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)", width: "38%", verticalAlign: "top" } }, f.label), /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "5px 8px" } }, f.value)))))))), rows2.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Life & work in brief"), /* @__PURE__ */ import_react6.default.createElement("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 } }, "Summarised by section \u2014 one row per topic, for fast reading."), /* @__PURE__ */ import_react6.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react6.default.createElement("thead", null, /* @__PURE__ */ import_react6.default.createElement("tr", null, /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "32%" } }, kind === "mage" ? "Work / contribution" : "Topic"), /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px" } }, kind === "mage" ? "Significance" : "Summary"))), /* @__PURE__ */ import_react6.default.createElement("tbody", null, rows2.map((r, i) => /* @__PURE__ */ import_react6.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px", fontWeight: 600, verticalAlign: "top" } }, r.title), /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, r.note)))))), figure.prophecies && figure.prophecies.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Prophecies"), /* @__PURE__ */ import_react6.default.createElement("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 } }, "Key prophetic utterances and visions attributed to ", figure.name, ", with sources."), /* @__PURE__ */ import_react6.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react6.default.createElement("thead", null, /* @__PURE__ */ import_react6.default.createElement("tr", null, /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "70%" } }, "Prophecy / vision"), /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "30%" } }, "Source"))), /* @__PURE__ */ import_react6.default.createElement("tbody", null, figure.prophecies.map((pr, i) => /* @__PURE__ */ import_react6.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px", verticalAlign: "top" } }, pr.t), /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px", color: "var(--gold)" } }, pr.r)))))), /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react6.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer" }, "Read the full article on Wikipedia \u2192")));
 }
 
 // src/pages/ProphetFicha.jsx
@@ -24057,7 +24328,7 @@ function L({ href, children, ext = false }) {
 }
 function Footer() {
   const year = 2026;
-  return /* @__PURE__ */ import_react10.default.createElement("footer", { className: "site-footer" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react10.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react10.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react10.default.createElement(L, { href: PAPER }, "The paper \u2014 The Reader of the Sky \u2197"), /* @__PURE__ */ import_react10.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react10.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react10.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Felipe II"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/alignments" }, "Stellar alignments (171 fiches)"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/" }, "Sky reader app")), /* @__PURE__ */ import_react10.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react10.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react10.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react10.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react10.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react10.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react10.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react10.default.createElement("span", null, "\xA9 ", year, " V. Nos & Julian S. \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react10.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react10.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
+  return /* @__PURE__ */ import_react10.default.createElement("footer", { className: "site-footer" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react10.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react10.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react10.default.createElement(L, { href: PAPER }, "The paper \u2014 The Reader of the Sky \u2192"), /* @__PURE__ */ import_react10.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react10.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react10.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Felipe II"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/alignments" }, "Stellar alignments (171 fiches)"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/" }, "Sky reader app")), /* @__PURE__ */ import_react10.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react10.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react10.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react10.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react10.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react10.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react10.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react10.default.createElement("span", null, "\xA9 ", year, " V. Nos & Julian S. \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react10.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react10.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
 }
 
 // src/pages/Landing.jsx
@@ -24094,7 +24365,7 @@ function WarningModal({ open, onClose, onProceed }) {
   const yesCount = answers.filter((a) => a === true).length;
   const done = answers.every((a) => a !== null);
   const risk = yesCount >= 1;
-  return /* @__PURE__ */ import_react12.default.createElement("div", { className: "eph-modal", role: "dialog", "aria-modal": "true", "aria-labelledby": "wm-title", onClick: onClose }, /* @__PURE__ */ import_react12.default.createElement("div", { className: "eph-panel panel", style: { maxWidth: 560 }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react12.default.createElement("h2", { id: "wm-title", style: { marginTop: 0 } }, "Before you enter"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 12, fontSize: ".9rem" } }, "This project explores ", /* @__PURE__ */ import_react12.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation, cosmology and altered-state symbolism"), " \u2014 the meaning of ", /* @__PURE__ */ import_react12.default.createElement("i", null, "apocalypse"), " as the unveiling of knowledge, read through the stars. Some of it can feel intense or destabilizing."), /* @__PURE__ */ import_react12.default.createElement("div", { className: "iv", style: { borderColor: "var(--warn)", marginBottom: 14 } }, /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: ".9rem", lineHeight: 1.55 } }, /* @__PURE__ */ import_react12.default.createElement("b", { style: { color: "var(--warn)" } }, "Please do not use this tool if you suffer from psychosis, mania, or schizophrenia"), " \u2014 or, if you choose to, do so only together with someone you trust. The symbolism here can feel overwhelming; your wellbeing comes first, always.")), /* @__PURE__ */ import_react12.default.createElement("h3", { style: { marginTop: 6 } }, "A short self-check"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".82rem" } }, "This is not a diagnosis \u2014 just a moment to pause. Answer honestly; nothing is stored or sent anywhere."), /* @__PURE__ */ import_react12.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 10 } }, QUESTIONS.map((q, i) => /* @__PURE__ */ import_react12.default.createElement("div", { key: i, className: "iv", style: { padding: "10px 12px" } }, /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: ".9rem", marginBottom: 7 } }, q), /* @__PURE__ */ import_react12.default.createElement("div", { style: { display: "flex", gap: 8 } }, /* @__PURE__ */ import_react12.default.createElement("button", { className: answers[i] === true ? "on" : "", onClick: () => set(i, true), "aria-pressed": answers[i] === true }, "Yes"), /* @__PURE__ */ import_react12.default.createElement("button", { className: answers[i] === false ? "on" : "", onClick: () => set(i, false), "aria-pressed": answers[i] === false }, "No"))))), done && /* @__PURE__ */ import_react12.default.createElement("div", { className: "iv", style: { marginTop: 12, borderColor: risk ? "var(--warn)" : "var(--green)" } }, risk ? /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: ".9rem" } }, /* @__PURE__ */ import_react12.default.createElement("b", { style: { color: "var(--warn)" } }, "Please be gentle with yourself."), " Consider talking to someone you trust or a mental-health professional before going deeper. You can always come back later.") : /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: ".9rem", color: "var(--green)" } }, /* @__PURE__ */ import_react12.default.createElement("b", null, "Thank you for checking."), " Take what is useful, leave the rest.")), /* @__PURE__ */ import_react12.default.createElement("div", { className: "controls", style: { marginTop: 16, justifyContent: "space-between", flexWrap: "wrap", gap: 10 } }, /* @__PURE__ */ import_react12.default.createElement("button", { onClick: onClose, title: "Close this notice and stay here" }, "\u25C0 Go back"), /* @__PURE__ */ import_react12.default.createElement("button", { className: "btn-cta", onClick: onProceed, disabled: !done, title: done ? "Enter the sky-reader app" : "Answer the self-check to continue" }, done ? "Proceed to the app \u2192" : "Answer to continue")), /* @__PURE__ */ import_react12.default.createElement("div", { className: "note", style: { marginTop: 10 } }, "If you are in crisis, please reach out \u2014 in the US, ", /* @__PURE__ */ import_react12.default.createElement("a", { href: "https://988lifeline.org", target: "_blank", rel: "noreferrer" }, "988 Suicide & Crisis Lifeline"), "; elsewhere, contact your local emergency services. You matter.")));
+  return /* @__PURE__ */ import_react12.default.createElement("div", { className: "eph-modal warn-modal", role: "dialog", "aria-modal": "true", "aria-labelledby": "wm-title", onClick: onClose }, /* @__PURE__ */ import_react12.default.createElement("div", { className: "eph-panel panel warn-panel", style: { maxWidth: 560 }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react12.default.createElement("h2", { id: "wm-title", style: { marginTop: 0 } }, "Before you enter"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 12, fontSize: ".9rem" } }, "This project explores ", /* @__PURE__ */ import_react12.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation, cosmology and altered-state symbolism"), " \u2014 the meaning of ", /* @__PURE__ */ import_react12.default.createElement("i", null, "apocalypse"), " as the unveiling of knowledge, read through the stars. Some of it can feel intense or destabilizing."), /* @__PURE__ */ import_react12.default.createElement("div", { className: "iv", style: { borderColor: "var(--warn)", marginBottom: 14 } }, /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: ".9rem", lineHeight: 1.55 } }, /* @__PURE__ */ import_react12.default.createElement("b", { style: { color: "var(--warn)" } }, "Please do not use this tool if you suffer from psychosis, mania, or schizophrenia"), " \u2014 or, if you choose to, do so only together with someone you trust. The symbolism here can feel overwhelming; your wellbeing comes first, always.")), /* @__PURE__ */ import_react12.default.createElement("h3", { style: { marginTop: 6 } }, "A short self-check"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".82rem" } }, "This is not a diagnosis \u2014 just a moment to pause. Answer honestly; nothing is stored or sent anywhere."), /* @__PURE__ */ import_react12.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 10 } }, QUESTIONS.map((q, i) => /* @__PURE__ */ import_react12.default.createElement("div", { key: i, className: "iv", style: { padding: "10px 12px" } }, /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: ".9rem", marginBottom: 7 } }, q), /* @__PURE__ */ import_react12.default.createElement("div", { style: { display: "flex", gap: 8 } }, /* @__PURE__ */ import_react12.default.createElement("button", { className: answers[i] === true ? "on" : "", onClick: () => set(i, true), "aria-pressed": answers[i] === true }, "Yes"), /* @__PURE__ */ import_react12.default.createElement("button", { className: answers[i] === false ? "on" : "", onClick: () => set(i, false), "aria-pressed": answers[i] === false }, "No"))))), done && /* @__PURE__ */ import_react12.default.createElement("div", { className: "iv", style: { marginTop: 12, borderColor: risk ? "var(--warn)" : "var(--green)" } }, risk ? /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: ".9rem" } }, /* @__PURE__ */ import_react12.default.createElement("b", { style: { color: "var(--warn)" } }, "Please be gentle with yourself."), " Consider talking to someone you trust or a mental-health professional before going deeper. You can always come back later.") : /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: ".9rem", color: "var(--green)" } }, /* @__PURE__ */ import_react12.default.createElement("b", null, "Thank you for checking."), " Take what is useful, leave the rest.")), /* @__PURE__ */ import_react12.default.createElement("div", { className: "controls", style: { marginTop: 16, justifyContent: "space-between", flexWrap: "wrap", gap: 10 } }, /* @__PURE__ */ import_react12.default.createElement("button", { onClick: onClose, title: "Close this notice and stay here" }, "\u25C0 Go back"), /* @__PURE__ */ import_react12.default.createElement("button", { className: "btn-cta", onClick: onProceed, disabled: !done, title: done ? "Enter the sky-reader app" : "Answer the self-check to continue" }, done ? "Proceed to the app \u2192" : "Answer to continue")), /* @__PURE__ */ import_react12.default.createElement("div", { className: "note", style: { marginTop: 10 } }, "If you are in crisis, please reach out \u2014 in the US, ", /* @__PURE__ */ import_react12.default.createElement("a", { href: "https://988lifeline.org", target: "_blank", rel: "noreferrer" }, "988 Suicide & Crisis Lifeline"), "; elsewhere, contact your local emergency services. You matter.")));
 }
 
 // src/pages/Landing.jsx
@@ -24238,7 +24509,7 @@ function Landing({ goApp }) {
     setWarnOpen(false);
     goApp && goApp();
   };
-  return /* @__PURE__ */ import_react13.default.createElement("div", { className: "landing" }, /* @__PURE__ */ import_react13.default.createElement("section", { className: "hero" }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-copy" }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-eyebrow" }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "star-of-life", c: "gold", size: "1rem" }), " Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet"), /* @__PURE__ */ import_react13.default.createElement("h1", { className: "hero-title" }, "The Apocalypse ", /* @__PURE__ */ import_react13.default.createElement("span", { style: { color: "var(--gold)" } }, "of Adam")), /* @__PURE__ */ import_react13.default.createElement("blockquote", { className: "hero-tag", style: { borderLeft: "3px solid var(--gold)", paddingLeft: 14, fontStyle: "italic", color: "var(--dim)" } }, "\u201CAnd the thirteenth kingdom says of him that every birth of their ruler is a word. And this word received a mandate there. He received glory and power. And thus he came to the water, in order that the desire of those powers might be satisfied.\u201D", /* @__PURE__ */ import_react13.default.createElement("cite", { style: { display: "block", marginTop: 10, fontStyle: "normal", fontSize: ".82rem", color: "var(--dim)" } }, "\u2014 The Apocalypse of Adam \xB7 the thirteenth kingdom")), /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-cta" }, /* @__PURE__ */ import_react13.default.createElement("button", { className: "btn-cta", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "compass", c: "txt", size: "1rem" }), " \xA0Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react13.default.createElement("a", { className: "hero-ghost", href: "/paper" }, "Read the paper \u2197")), /* @__PURE__ */ import_react13.default.createElement("button", { className: "hero-note-link", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".85rem" }), " \xA0Content notice \u2014 for visitors with psychosis, mania, or schizophrenia")), /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-sky panel" }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-sky-label muted" }, "Sky of ", REF_DATE, " \xB7 ", occ2.size, " of 12 signs occupied"), /* @__PURE__ */ import_react13.default.createElement(SkyMap, { rows: rows2, occ: occ2 }))), /* @__PURE__ */ import_react13.default.createElement("section", { className: "panel", style: { padding: 18, marginTop: 18 } }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react13.default.createElement("h2", { style: { margin: 0 } }, "The grammar of the sky")), /* @__PURE__ */ import_react13.default.createElement(Slider, { rows: rows2, occ: occ2 })), /* @__PURE__ */ import_react13.default.createElement("section", { style: { marginTop: 22 } }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react13.default.createElement("h2", { style: { margin: 0 } }, "What you can do in the app")), /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-grid" }, FEATURES.map((f, idx) => /* @__PURE__ */ import_react13.default.createElement("a", { key: idx, className: "feat-card", href: f.go }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-icon" }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: f.n, c: f.c, size: "1.5rem" })), /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-t" }, f.t), /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-d muted" }, f.d), /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-go muted" }, "open \u2192"))))), /* @__PURE__ */ import_react13.default.createElement("section", { className: "panel entry-cta", style: { marginTop: 26, padding: 28, textAlign: "center", borderColor: "var(--brand)" } }, /* @__PURE__ */ import_react13.default.createElement("h2", { style: { marginTop: 0 } }, "Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react13.default.createElement("p", { className: "muted", style: { maxWidth: 620, margin: "0 auto 16px" } }, "Learn a few simple things about the ancients, then read the sky for yourself. A short content notice opens first \u2014 for visitors diagnosed with psychosis or schizophrenia."), /* @__PURE__ */ import_react13.default.createElement("button", { className: "btn-cta", style: { fontSize: "1.1rem", padding: "14px 34px" }, onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "compass", c: "txt", size: "1.1rem" }), " \xA0Enter the app"), /* @__PURE__ */ import_react13.default.createElement("div", { className: "muted", style: { marginTop: 14, fontSize: ".8rem" } }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".9rem" }), " \xA0", /* @__PURE__ */ import_react13.default.createElement("b", null, "Notice:"), " I have schizophrenia \xB7 I am psychotic \xB7 I am manic \u2014 a short self-check is offered before entry.")), /* @__PURE__ */ import_react13.default.createElement(WarningModal, { open: warnOpen, onClose: () => setWarnOpen(false), onProceed: enterApp }));
+  return /* @__PURE__ */ import_react13.default.createElement("div", { className: "landing" }, /* @__PURE__ */ import_react13.default.createElement("section", { className: "hero" }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-copy" }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-eyebrow" }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "star-of-life", c: "gold", size: "1rem" }), " Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet"), /* @__PURE__ */ import_react13.default.createElement("h1", { className: "hero-title" }, "The Apocalypse ", /* @__PURE__ */ import_react13.default.createElement("span", { style: { color: "var(--gold)" } }, "of Adam")), /* @__PURE__ */ import_react13.default.createElement("blockquote", { className: "hero-tag", style: { borderLeft: "3px solid var(--gold)", paddingLeft: 14, fontStyle: "italic", color: "var(--dim)" } }, "\u201CAnd the thirteenth kingdom says of him that every birth of their ruler is a word. And this word received a mandate there. He received glory and power. And thus he came to the water, in order that the desire of those powers might be satisfied.\u201D", /* @__PURE__ */ import_react13.default.createElement("cite", { style: { display: "block", marginTop: 10, fontStyle: "normal", fontSize: ".82rem", color: "var(--dim)" } }, "\u2014 The Apocalypse of Adam \xB7 the thirteenth kingdom")), /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-cta" }, /* @__PURE__ */ import_react13.default.createElement("button", { className: "btn-cta", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "compass", c: "txt", size: "1rem" }), " \xA0Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react13.default.createElement("a", { className: "hero-ghost", href: "/paper" }, "Read the paper \u2192")), /* @__PURE__ */ import_react13.default.createElement("button", { className: "hero-note-link", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".85rem" }), " \xA0Content notice \u2014 for visitors with psychosis, mania, or schizophrenia")), /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-sky panel" }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-sky-label muted" }, "Sky of ", REF_DATE, " \xB7 ", occ2.size, " of 12 signs occupied"), /* @__PURE__ */ import_react13.default.createElement(SkyMap, { rows: rows2, occ: occ2 }))), /* @__PURE__ */ import_react13.default.createElement("section", { className: "panel", style: { padding: 18, marginTop: 18 } }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react13.default.createElement("h2", { style: { margin: 0 } }, "The grammar of the sky")), /* @__PURE__ */ import_react13.default.createElement(Slider, { rows: rows2, occ: occ2 })), /* @__PURE__ */ import_react13.default.createElement("section", { style: { marginTop: 22 } }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react13.default.createElement("h2", { style: { margin: 0 } }, "What you can do in the app")), /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-grid" }, FEATURES.map((f, idx) => /* @__PURE__ */ import_react13.default.createElement("a", { key: idx, className: "feat-card", href: f.go }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-icon" }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: f.n, c: f.c, size: "1.5rem" })), /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-t" }, f.t), /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-d muted" }, f.d), /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-go muted" }, "open \u2192"))))), /* @__PURE__ */ import_react13.default.createElement("section", { className: "panel entry-cta", style: { marginTop: 26, padding: 28, textAlign: "center", borderColor: "var(--brand)" } }, /* @__PURE__ */ import_react13.default.createElement("h2", { style: { marginTop: 0 } }, "Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react13.default.createElement("p", { className: "muted", style: { maxWidth: 620, margin: "0 auto 16px" } }, "Learn a few simple things about the ancients, then read the sky for yourself. A short content notice opens first \u2014 for visitors diagnosed with psychosis or schizophrenia."), /* @__PURE__ */ import_react13.default.createElement("button", { className: "btn-cta", style: { fontSize: "1.1rem", padding: "14px 34px" }, onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "compass", c: "txt", size: "1.1rem" }), " \xA0Enter the app"), /* @__PURE__ */ import_react13.default.createElement("div", { className: "muted", style: { marginTop: 14, fontSize: ".8rem" } }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".9rem" }), " \xA0", /* @__PURE__ */ import_react13.default.createElement("b", null, "Notice:"), " I have schizophrenia \xB7 I am psychotic \xB7 I am manic \u2014 a short self-check is offered before entry.")), /* @__PURE__ */ import_react13.default.createElement(WarningModal, { open: warnOpen, onClose: () => setWarnOpen(false), onProceed: enterApp }));
 }
 
 // src/pages/About.jsx
@@ -24328,17 +24599,17 @@ function shell({ title, desc, keywords, path: routePath, jsonld, body }) {
 <meta property="og:url" content="${esc(url)}" />
 <meta property="og:site_name" content="The Apocalypse of Adam" />
 <meta property="og:locale" content="en_US" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="${esc(title)}" />
-<meta name="twitter:description" content="${esc(desc)}" />
-<meta property="og:image" content="https://adam-apocalypse.onrender.com/logo_adam_apocalypse.png" />
-<meta property="og:image:secure_url" content="https://adam-apocalypse.onrender.com/logo_adam_apocalypse.png" />
+<meta property="og:image" content="${SITE}/logo_adam_apocalypse.png" />
+<meta property="og:image:secure_url" content="${SITE}/logo_adam_apocalypse.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1774" />
 <meta property="og:image:height" content="887" />
-<meta property="og:image:alt" content="The Apocalypse of Adam — Hebrew letters in the stars · stellar alphabet logo" />
-<meta name="twitter:image" content="https://adam-apocalypse.onrender.com/logo_adam_apocalypse.png" />
-<meta name="twitter:image:alt" content="The Apocalypse of Adam — Hebrew letters in the stars · stellar alphabet logo" />
+<meta property="og:image:alt" content="The Apocalypse of Adam \u2014 Hebrew letters in the stars \xB7 stellar alphabet logo" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="${esc(title)}" />
+<meta name="twitter:description" content="${esc(desc)}" />
+<meta name="twitter:image" content="${SITE}/logo_adam_apocalypse.png" />
+<meta name="twitter:image:alt" content="The Apocalypse of Adam \u2014 Hebrew letters in the stars \xB7 stellar alphabet logo" />
 <script type="application/ld+json">
 ${jsonld}
 </script>
@@ -24371,6 +24642,13 @@ function writeHtml(relPath, html) {
   import_node_fs.default.writeFileSync(full, html);
 }
 var R = (el) => (0, import_server.renderToStaticMarkup)(el);
+var TAB_LABELS = ["Cycles", "Sky Map", "Reader", "Reading", "Time", "Gematria", "Sigils", "Revelations", "Psalms", "Codes", "Methodology"];
+function TabsBarStatic() {
+  return /* @__PURE__ */ import_react15.default.createElement("div", { className: "tabs", role: "tablist" }, TAB_LABELS.map((label) => /* @__PURE__ */ import_react15.default.createElement("div", { key: label, className: "tab", role: "tab" }, label)), /* @__PURE__ */ import_react15.default.createElement("a", { className: "tab", style: { textDecoration: "none", borderColor: "var(--line)" }, href: "/paper", title: "The academic paper" }, "Paper \u2192"));
+}
+function appBody(page) {
+  return R(/* @__PURE__ */ import_react15.default.createElement("div", null, /* @__PURE__ */ import_react15.default.createElement(TabsBarStatic, null), /* @__PURE__ */ import_react15.default.createElement("section", { className: "panel app-panel" }, page), /* @__PURE__ */ import_react15.default.createElement(Footer, null)));
+}
 var jsonldWebApp = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "WebApplication",
@@ -24388,7 +24666,7 @@ writeHtml("prophets/index.html", shell({
   keywords: "prophets timeline, Adam to Jacob Frank, biblical prophets, apocalyptic writers, Sabbateanism, Frankism, revelation chronology, merkabah mysticism, Apocalypse of Adam",
   path: "/prophets",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Prophets \u2014 Adam to Jacob Frank", url: SITE + "/prophets" }),
-  body: R(/* @__PURE__ */ import_react15.default.createElement(import_react15.default.Fragment, null, /* @__PURE__ */ import_react15.default.createElement(ProphetsPage, null), /* @__PURE__ */ import_react15.default.createElement(Footer, null)))
+  body: appBody(/* @__PURE__ */ import_react15.default.createElement(ProphetsPage, null))
 }));
 writeHtml("mages/index.html", shell({
   title: "Magi timeline \u2014 Daniel to Felipe II | Apocalypse of Adam",
@@ -24396,7 +24674,7 @@ writeHtml("mages/index.html", shell({
   keywords: "magi timeline, Daniel magi, Shadrach Meshach Abednego, Ramon Llull Ars Magna, Alfonso X, Felipe II, Christian Kabbalah, Hermeticism, Renaissance magic, Apocalypse of Adam",
   path: "/mages",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Magi \u2014 Daniel to Felipe II", url: SITE + "/mages" }),
-  body: R(/* @__PURE__ */ import_react15.default.createElement(import_react15.default.Fragment, null, /* @__PURE__ */ import_react15.default.createElement(MagesPage, null), /* @__PURE__ */ import_react15.default.createElement(Footer, null)))
+  body: appBody(/* @__PURE__ */ import_react15.default.createElement(MagesPage, null))
 }));
 function AlignmentsIndex() {
   const rowsA = alignments.scanA;
@@ -24408,7 +24686,7 @@ writeHtml("alignments/index.html", shell({
   keywords: "stellar alignments, planetary conjunctions, rare astronomy, zodiac concentration, precession, tightest arc, 10-body conjunction, Hebrew sky reading, Apocalypse of Adam",
   path: "/alignments",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Stellar alignments", url: SITE + "/alignments", numberOfItems: alignments.scanA.length }),
-  body: R(/* @__PURE__ */ import_react15.default.createElement(import_react15.default.Fragment, null, /* @__PURE__ */ import_react15.default.createElement(AlignmentsIndex, null), /* @__PURE__ */ import_react15.default.createElement(Footer, null)))
+  body: appBody(/* @__PURE__ */ import_react15.default.createElement(AlignmentsIndex, null))
 }));
 function ReadingsIndex() {
   return /* @__PURE__ */ import_react15.default.createElement("div", null, /* @__PURE__ */ import_react15.default.createElement("h1", null, "Sky readings \u2014 Hebrew words readable in the stars"), /* @__PURE__ */ import_react15.default.createElement("p", { className: "muted" }, "Every consonantal Hebrew root in the lexicon (", LEX.length, " entries) has a reading fiche: its Hebrew letters, transliteration, gloss, gematria, the zodiac simple letters it requires, and its year-legibility timeline. Each links to its single-reading page."), /* @__PURE__ */ import_react15.default.createElement("div", { className: "tcards" }, LEX.map((row, i) => {
@@ -24423,7 +24701,7 @@ writeHtml("readings/index.html", shell({
   keywords: "Hebrew readings, sky reading glossary, consonantal roots, Hebrew gematria, zodiac simple letters, Sefer Yetzirah, 72 angels, lexicon, Apocalypse of Adam",
   path: "/readings",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Sky readings", url: SITE + "/readings", numberOfItems: LEX.length }),
-  body: R(/* @__PURE__ */ import_react15.default.createElement(import_react15.default.Fragment, null, /* @__PURE__ */ import_react15.default.createElement(ReadingsIndex, null), /* @__PURE__ */ import_react15.default.createElement(Footer, null)))
+  body: appBody(/* @__PURE__ */ import_react15.default.createElement(ReadingsIndex, null))
 }));
 writeHtml("about/index.html", shell({
   title: "About \u2014 The Apocalypse of Adam | Hebrew sky reader",
@@ -24460,7 +24738,7 @@ for (const p of PROPHETS) {
     nationality: p.region,
     sameAs: w.wikipediaUrl || null
   });
-  writeHtml("prophet/" + slug + "/index.html", shell({ title, desc, keywords, path: "/prophet/" + slug, jsonld, body: R(/* @__PURE__ */ import_react15.default.createElement(import_react15.default.Fragment, null, /* @__PURE__ */ import_react15.default.createElement(ProphetFicha, { slug }), /* @__PURE__ */ import_react15.default.createElement(Footer, null))) }));
+  writeHtml("prophet/" + slug + "/index.html", shell({ title, desc, keywords, path: "/prophet/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react15.default.createElement(ProphetFicha, { slug })) }));
   nProphet++;
 }
 var nMage = 0;
@@ -24482,7 +24760,7 @@ for (const m of MAGES) {
     nationality: m.region,
     sameAs: w.wikipediaUrl || null
   });
-  writeHtml("mage/" + slug + "/index.html", shell({ title, desc, keywords, path: "/mage/" + slug, jsonld, body: R(/* @__PURE__ */ import_react15.default.createElement(import_react15.default.Fragment, null, /* @__PURE__ */ import_react15.default.createElement(MageFicha, { slug }), /* @__PURE__ */ import_react15.default.createElement(Footer, null))) }));
+  writeHtml("mage/" + slug + "/index.html", shell({ title, desc, keywords, path: "/mage/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react15.default.createElement(MageFicha, { slug })) }));
   nMage++;
 }
 var nAlign = 0;
@@ -24514,7 +24792,7 @@ for (const e of alignments.scanA) {
     url: SITE + `/align/${date}`,
     location: { "@type": "Place", name: `Zodiac sign ${meta.sign}` }
   });
-  const body = R(import_react15.default.createElement(AlignmentFicha, { date, lex: lexicon, angelMap, onBack: () => {
+  const body = appBody(import_react15.default.createElement(AlignmentFicha, { date, lex: lexicon, angelMap, onBack: () => {
   }, nameRefs }));
   writeHtml(`align/${date}/index.html`, shell({ title, desc, keywords, path: `/align/${date}`, jsonld, body }));
   nAlign++;
@@ -24537,7 +24815,7 @@ for (const row of LEX) {
     url: SITE + `/reader/${encodeURIComponent(he)}`,
     inDefinedTermSet: "Hebrew Sky-Reading Lexicon"
   });
-  const body = R(import_react15.default.createElement(GlossPage, { word: w, date: REF_DATE2, rows, occ, genData, onBack: () => {
+  const body = appBody(import_react15.default.createElement(GlossPage, { word: w, date: REF_DATE2, rows, occ, genData, onBack: () => {
   }, nameRefs }));
   writeHtml(`reader/${he}/index.html`, shell({ title, desc, keywords, path: `/reader/${encodeURIComponent(he)}`, jsonld, body }));
   nGloss++;
@@ -24694,8 +24972,7 @@ writeHtml("index.html", shell({
   body: R(/* @__PURE__ */ import_react15.default.createElement(import_react15.default.Fragment, null, /* @__PURE__ */ import_react15.default.createElement(Landing, { goApp: () => {
   } }), /* @__PURE__ */ import_react15.default.createElement(Footer, null)))
 }));
-// serve the academic paper on the SAME domain at /paper/ (no external redirect)
-(function () {
+(() => {
   const src = import_node_path.default.join(WEB, "..", "paper", "index.html");
   if (import_node_fs.default.existsSync(src)) {
     const dst = import_node_path.default.join(OUT, "paper", "index.html");
@@ -24703,7 +24980,7 @@ writeHtml("index.html", shell({
     import_node_fs.default.copyFileSync(src, dst);
     console.log(`paper served same-domain: /paper/ (${import_node_fs.default.statSync(src).size} bytes)`);
   } else {
-    console.log("WARN: paper/index.html not found at", src, "— /paper/ not written");
+    console.log("WARN: paper/index.html not found at", src, "\u2014 /paper/ not written");
   }
 })();
 console.log(`prerender done: ${nAlign} alignment fiches, ${nGloss} gloss fiches, ${nProphet} prophet fiches, ${nMage} mage fiches, landing + about + app + 4 hub pages, sitemaps + robots.txt + llms.txt + llms-full.txt + site.webmanifest`);

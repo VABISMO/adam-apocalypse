@@ -203,8 +203,8 @@ function App(){
   // Path-based dedicated pages (full-page routes for SEO / deep links).
   if(route.name==='landing') return <div><Landing goApp={()=>navigate('/app')}/><Footer/></div>;
   if(route.name==='about') return <div><About/><Footer/></div>;
-  if(route.name==='prophets') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><ProphetsPage/></section><Footer/></div>;
-  if(route.name==='mages') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><MagesPage/></section><Footer/></div>;
+  if(route.name==='prophets') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><ProphetsPage onOpen={navigate}/></section><Footer/></div>;
+  if(route.name==='mages') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><MagesPage onOpen={navigate}/></section><Footer/></div>;
   if(route.name==='align') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><AlignmentFicha date={route.date} lex={lex} angelMap={ANGEL72} onBack={backHome} nameRefs={nameRefs}/></section><Footer/></div>;
   if(route.name==='prophet') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><ProphetFicha slug={route.slug}/></section><Footer/></div>;
   if(route.name==='mage') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><MageFicha slug={route.slug}/></section><Footer/></div>;

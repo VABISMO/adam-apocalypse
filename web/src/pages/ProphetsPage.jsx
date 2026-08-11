@@ -7,11 +7,14 @@ import { PROPHETS } from '../data/prophets.js';
 import { slugify } from '../data/wiki.js';
 import { Timeline, fmtYear } from '../components/Timeline.jsx';
 
-function ProphetCard({ p }) {
+function ProphetCard({ p, onOpen }) {
   const dates = (p.y0 === p.y1) ? fmtYear(p.y0) : `${fmtYear(p.y0)} – ${fmtYear(p.y1)}`;
   const end = !!p.endpoint;
   const pill = p.designation || (end ? 'lineage end' : null);
-  return <a className={'tcard' + (end ? ' always' : '')} href={'/prophet/' + slugify(p.name)}
+  const href = '/prophet/' + slugify(p.name);
+  const onClick = onOpen ? (e) => { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; e.preventDefault(); onOpen(href); } : null;
+  return <a className={'tcard' + (end ? ' always' : '')} href={href}
+      onClick={onClick}
       style={{ textDecoration: 'none', display: 'block', borderColor: end ? 'var(--gold)' : undefined, boxShadow: end ? '0 0 0 1px var(--gold)' : undefined }}>
     <div className="the">{p.he && <span className="he" style={{ fontSize: '1.5rem', marginLeft: 6 }}>{p.he}</span>}</div>
     <div className="read">{p.name}</div>
@@ -21,7 +24,7 @@ function ProphetCard({ p }) {
   </a>;
 }
 
-function ProphetsPage() {
+function ProphetsPage({ onOpen }) {
   const span = `${fmtYear(PROPHETS[0].y0)} – ${fmtYear(PROPHETS[PROPHETS.length - 1].y1)}`;
   const last = PROPHETS[PROPHETS.length - 1];
   return <div>
@@ -31,7 +34,7 @@ function ProphetsPage() {
       <Timeline items={PROPHETS} title="Prophet timeline — Adam to Jacob Frank" accent="#8a05ff" />
     </div>
     <div className="tcards">
-      {PROPHETS.map((p, i) => <ProphetCard key={i} p={p} />)}
+      {PROPHETS.map((p, i) => <ProphetCard key={i} p={p} onOpen={onOpen} />)}
     </div>
   </div>;
 }

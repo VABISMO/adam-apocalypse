@@ -8,12 +8,15 @@ import { MAGES } from '../data/mages.js';
 import { WIKI, slugify } from '../data/wiki.js';
 import { Timeline, fmtYear } from '../components/Timeline.jsx';
 
-function MageCard({ m }) {
+function MageCard({ m, onOpen }) {
   const dates = m.years || `${fmtYear(m.y0)} – ${fmtYear(m.y1)}`;
   const end = !!m.endpoint;
   const pill = m.designation || (end ? 'lineage end' : null);
   const hasWiki = !!(WIKI[m.name] && WIKI[m.name].description);
-  return <a className={'tcard' + (end ? ' always' : '')} href={'/mage/' + slugify(m.name)}
+  const href = '/mage/' + slugify(m.name);
+  const onClick = onOpen ? (e) => { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; e.preventDefault(); onOpen(href); } : null;
+  return <a className={'tcard' + (end ? ' always' : '')} href={href}
+      onClick={onClick}
       style={{ textDecoration: 'none', display: 'block', borderColor: end ? 'var(--gold)' : undefined, boxShadow: end ? '0 0 0 1px var(--gold)' : undefined }}>
     <div className="the" style={{ minHeight: 26 }}>{m.name}</div>
     <div className="read">{dates} · {m.region}</div>
@@ -27,7 +30,7 @@ function MageCard({ m }) {
   </a>;
 }
 
-function MagesPage() {
+function MagesPage({ onOpen }) {
   const span = `${fmtYear(MAGES[0].y0)} – ${fmtYear(MAGES[MAGES.length - 1].y1)}`;
   const last = MAGES[MAGES.length - 1];
   return <div>
@@ -37,7 +40,7 @@ function MagesPage() {
       <Timeline items={MAGES} title="Magi timeline — Daniel to Felipe II" accent="#8a05ff" />
     </div>
     <div className="tcards">
-      {MAGES.map((m, i) => <MageCard key={i} m={m} />)}
+      {MAGES.map((m, i) => <MageCard key={i} m={m} onOpen={onOpen} />)}
     </div>
   </div>;
 }
