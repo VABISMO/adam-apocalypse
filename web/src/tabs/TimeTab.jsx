@@ -118,15 +118,6 @@ function AgesTab({date, rows}){
         );
       })}
     </div>
-    <div style={{marginTop:12,padding:'12px 14px',background:'var(--panel2)',borderRadius:8}}>
-      <div className="muted"><b>Modern slow bodies today ({date}) — astronomical context only:</b></div>
-      <div style={{marginTop:6}}>
-        {['Neptune','Uranus'].map(p=>{const r=rows.find(x=>x.body===p); const era=ages.find(a=>a.sign===r.sign); return (
-          <div key={p} className="note">{GLYPH[p]} <b>{p}</b> in {r.sign} (<span className="he">{SIMPLE[r.sign][0]}</span>{era&&era.start<=2026&&2026<era.end?' · current age':''}{era&&era.start>2026?' · incoming age':''}) · {r.deg.toFixed(1)}°</div>
-        );})}
-      </div>
-      <div className="note" style={{marginTop:8}}>Uranus and Neptune are the slowest bodies the app tracks and are shown here for astronomical context. They are <b>not</b> among the Sefer Yetzirah's 7 doubles and contribute <b>no letter</b> to the reading — the reading uses only the 7 classical bodies. Genesis 1:1 legibility depends on those 7 occupying its five signs (Aquarius, Aries, Libra, Taurus, Virgo) at once: a rare conjunction, not a fixed cycle.</div>
-    </div>
   </>;
 }
 

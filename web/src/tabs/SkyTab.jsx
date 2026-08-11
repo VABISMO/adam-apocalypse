@@ -17,7 +17,7 @@ function SkyTab({date, rawDate, setDate, rows, occ, occSigns, yhvhOk, genesisOk,
     <div className="row">
       <div style={{flex:'1 1 100%'}}><SkyMap rows={rows} occ={occ}/></div>
     </div>
-    <div className="note">Today: <b>{occSigns.size}</b> signs occupied (by the 7 classical bodies), <b>{12-occSigns.size}</b> empty. Readable simples: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>. A sector <b>lights up</b> when one of the 7 classical bodies is inside it; Uranus and Neptune are plotted for astronomical context but do <b>not</b> light a sector (they have no letter in the Sefer Yetzirah). “×N” = N bodies in that sign. Centre: the 3 mothers <span className="he">א מ ש</span> on a fixed circumpolar axis. יהוה / Genesis legibility live in their own Reading tabs.</div>
+    <div className="note">Today: <b>{occSigns.size}</b> signs occupied (by the 7 classical bodies), <b>{12-occSigns.size}</b> empty. Readable simples: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>. A sector <b>lights up</b> when one of the 7 classical bodies is inside it. “×N” = N bodies in that sign. Centre: the 3 mothers <span className="he">א מ ש</span> on a fixed circumpolar axis. יהוה / Genesis legibility live in their own Reading tabs.</div>
     <h3>Angle table — ecliptic longitude per body ({date})</h3>
     <table>
       <thead><tr><th>Body</th><th>Sign</th><th>Longitude</th><th>Degree in sign</th><th>Simple</th><th>Double</th></tr></thead>
@@ -33,7 +33,7 @@ function SkyTab({date, rawDate, setDate, rows, occ, occSigns, yhvhOk, genesisOk,
       ))}
       </tbody>
     </table>
-    <div className="muted">Stellar reading (simple letters of the 10 bodies, slow → fast):</div>
+    <div className="muted">Stellar reading (simple letters of the 7 bodies, slow → fast):</div>
     <div className="sentence">{sentence}</div>
     <div className="note"><b>Precession & the map:</b> planet positions are computed for the actual date (astronomy-engine works for any year, past or future — including BCE, enter a negative year above), so the map reflects the real sky of that day. The 12 letter↔sign sectors are <b>tropical</b> — anchored to the equinox (Aries = λ☉=0°), so they do <b>not</b> precess and stay fixed to the seasons. <b>This is normal and intended:</b> the zodiac here is the fixed symbolic grid for reading letters, not the precessing sky. The slow drift of the sidereal constellations against the signs (precession, 50.29″/yr, 1° per ~72 yr) is tracked separately in the <b>Ages</b> and <b>Ayanamsa</b> tabs (precessional ages, Lahiri 24.18°). So: <b>tropical signs = the fixed grid that does NOT rotate with precession</b> (Raziel p.115 confirms: <i>“los signos del zodíaco están fijos”</i>); sidereal constellations = the precessing sky, handled in those tabs.</div>
   </>;

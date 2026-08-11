@@ -24,7 +24,7 @@ function About(){
           <h2 style={{marginTop:0}}>The numbers, briefly</h2>
           <ul className="muted" style={{margin:'6px 0 0',paddingLeft:20}}>
             <li><b style={{color:'var(--gold)'}}>6,045</b> consonantal Hebrew roots in the lexicon.</li>
-            <li><b style={{color:'var(--gold)'}}>171</b> rare century/millennium alignments catalogued.</li>
+            <li><b style={{color:'var(--gold)'}}>267</b> rare century/millennium alignments catalogued.</li>
             <li><b style={{color:'var(--gold)'}}>72</b> Shem HaMephorash triplets (Exodus 14:19–21).</li>
             <li>Precessional age length ≈ <b>{AGE.toFixed(0)}</b> years; full cycle ≈ <b>{(FULL||0).toFixed(0)}</b> years.</li>
           </ul>

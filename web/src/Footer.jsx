@@ -28,7 +28,7 @@ function Footer(){
       <Col title="Hub pages">
         <L href="/prophets">Prophets timeline — Adam to Jacob Frank</L>
         <L href="/mages">Magi timeline — Daniel to Felipe II</L>
-        <L href="/alignments">Stellar alignments (171 fiches)</L>
+        <L href="/alignments">Stellar alignments (267 fiches)</L>
         <L href="/readings">Sky readings (6045 glosses)</L>
         <L href="/">Sky reader app</L>
       </Col>

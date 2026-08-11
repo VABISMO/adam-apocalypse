@@ -207,7 +207,7 @@ function AyanamsaTab(){
   const allD=Object.values(aqu); const spread=Math.max(...allD)-Math.min(...allD);
   return <>
     <h2>Ayanamsa — sensitivity of the precessional ages (§15b.7)</h2>
-    <div className="muted" style={{marginBottom:10}}>The Ages tab dates the eras with Lahiri (24.18°). Other ayanamsas shift every era boundary by Δayanamsa / precession — up to ~190 years between extremes. The “Age of Aquarius” is not a clean astronomical prediction; it depends on the chosen sidereal zero. Caeli Reader does <b>not</b> date ages by ayanamsa but by <b>tropical</b> sign occupation (the 10 bodies) — independent of the ayanamsa, so its discard is robust.</div>
+    <div className="muted" style={{marginBottom:10}}>The Ages tab dates the eras with Lahiri (24.18°). Other ayanamsas shift every era boundary by Δayanamsa / precession — up to ~190 years between extremes. The “Age of Aquarius” is not a clean astronomical prediction; it depends on the chosen sidereal zero. The Reader does <b>not</b> date ages by ayanamsa but by <b>tropical</b> sign occupation (the 7 classical bodies) — independent of the ayanamsa, so its discard is robust.</div>
     <div className="fig"><PrecessionDiagram/><div className="cap">Tropical Aries 0° (gold) is fixed to the vernal equinox — it does <b>not</b> precess, so the Reader's 12 letter↔sign sectors never rotate. Sidereal Aries 0° (violet) is fixed to the stars and precesses away from it; the gap is the ayanamsa (24.18° today). This is why the zodiacs here don't move with precession — by design.</div></div>
     <table>
       <thead><tr><th>Ayanamsa</th><th>value (°, ~2024)</th><th>Aquarius entry</th></tr></thead>
@@ -386,9 +386,9 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData, nameRefs}){
   useEffect(()=>{ if(data && !sel){ const t=[...data.scanB].filter(e=>e.maxInSign>=7).sort((a,b)=>a.span-b.span); if(t.length){ setSel(t[0].date); setSelSet('B'); } } },[data,sel]);
   // 7-classical year scan (once, on lex load): the within-year occupied-sign distribution
   // so each top-8 word can show an empirical legibility % (special/frequent/common) like
-  // the Translator tab. The 10-body (modern) case reuses the App's genData.dayOccs — the
-  // very same scan, free. The 7-classical set is the deep-chronology default, so this scan
-  // covers the common case; it runs in a setTimeout so it never blocks first paint.
+  // the Translator tab. Both body sets are now the 7 classical bodies, so the App's
+  // genData.dayOccs (modern) and this dayOccs7 are the same scan; this one covers the
+  // deep-chronology default. It runs in a setTimeout so it never blocks first paint.
   useEffect(()=>{
     if(!lex) return;
     let cancelled=false;
@@ -409,7 +409,7 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData, nameRefs}){
     const frac=(cons)=>{ const req=[...simpleSet(cons)]; if(!req.length){ m.set(cons,1); return; } let c=0; for(const o of dayOccs){ let ok=true; for(const x of req) if(!o.has(x)){ ok=false; break; } if(ok) c++; } m.set(cons,c/n); };
     for(const [cons] of lex.lexicon) frac(cons);
     for(const [he] of ANGEL_LEXICON) if(!m.has(he)) frac(he);
-    return { map:m, n:dayOccs.length, year: selSet==='A' ? ((genData&&genData.year)||2026) : 2026, bodies: selSet==='A' ? '9 bodies (modern)' : '7 classical' };
+    return { map:m, n:dayOccs.length, year: selSet==='A' ? ((genData&&genData.year)||2026) : 2026, bodies: '7 classical' };
   },[lex,selSet,genData,dayOccs7]);
   const pick=(d,set='B')=>{ setSel(d); setSelSet(set); if(setDate) setDate(d);
     // Anchor to the sky-map + top reading so the user sees what changed on that alignment.
@@ -425,8 +425,8 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData, nameRefs}){
   const tight4=[...tight.slice(0,4)].sort(byDateDesc);                          // 4 tightest, shown current→past
   const tightGap=tight.length>=2 ? Math.abs((parseDate(tight[0].date)-parseDate(tight[1].date))/86400000/365.25) : null;
   const ev = (selSet==='A'?data.scanA:data.scanB).find(e=>e.date===sel);
-  const rows = sel ? skyAt(sel) : [];                          // 9-body display (Uranus/Neptune shown for context)
-  const occ = sel ? occupiedLetters(skyAt7(sel)) : new Set();  // 7-classical reading — no Neptune/Uranus letters
+  const rows = sel ? skyAt(sel) : [];                          // 7 classical bodies (sky-map dots)
+  const occ = sel ? occupiedLetters(skyAt7(sel)) : new Set();  // 7 classical bodies (reading) — same set
   // client-side stellar reading for the selected alignment (no precomputed reading
   // in the JSON — keeps alignments.json lean even with ~10⁴ deep events). Plain const,
   // NOT a hook: a useMemo here would sit after the early returns above and break the

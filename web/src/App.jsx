@@ -110,10 +110,11 @@ function App(){
   const navigate=(to)=>{ if(typeof window==='undefined') return; window.history.pushState({},'',to); setLoc(to); };
 
   const effDate = useMemo(()=>{ if(!date) return today; return parseDate(date) ? date : today; },[date]);
-  // rows = 9-body set (7 classical + Uranus + Neptune) for astronomical DISPLAY (sky-map
-  // dots, fiche, the Raziel table). rows7 = the 7 classical bodies the Sefer Yetzirah
-  // assigns to the 7 doubles — the ONLY bodies that occupy letters in the READING.
-  // Uranus/Neptune are shown but contribute no letter (they have none in the SY).
+  // rows = rows7 = the 7 classical bodies the Sefer Yetzirah assigns to the 7 doubles
+  // (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn). These are the ONLY moving bodies
+  // the app tracks — they occupy letters, light sectors, and drive the reading. The
+  // modern planets Uranus/Neptune/Pluto are not in the SY and are excluded entirely.
+  // rows and rows7 are the same set; both names kept for call-site readability.
   const rows=useMemo(()=>skyAt(effDate),[effDate]);
   const rows7=useMemo(()=>skyAt7(effDate),[effDate]);
   const occ=useMemo(()=>occupiedLetters(rows7),[rows7]);

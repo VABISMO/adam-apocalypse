@@ -19,11 +19,12 @@ function smallestArc(lons){
 }
 
 function AlignmentFicha({date, lex, angelMap, onBack, nameRefs}){
-  // rows = 9-body set (7 classical + Uranus + Neptune) for the SkyMap dots — astronomical
-  // context only. rows7 = the 7 classical bodies the Sefer Yetzirah assigns to the 7 doubles —
-  // the ONLY bodies that occupy letters, so the reading (occ, words, occSigns) and the
-  // alignment metrics (maxInSign, span) are computed from rows7. Uranus/Neptune are plotted
-  // on the map but contribute no letter and no alignment count (they have no SY letter).
+  // rows = rows7 = the 7 classical bodies the Sefer Yetzirah assigns to the 7 doubles (Sun,
+  // Moon, Mercury, Venus, Mars, Jupiter, Saturn) — the ONLY moving bodies the app tracks.
+  // They occupy letters, light sectors, and drive both the SkyMap dots and the reading
+  // (occ, words, occSigns) + the alignment metrics (maxInSign, span). The modern planets
+  // Uranus/Neptune/Pluto are not in the SY and are excluded entirely. Both names kept for
+  // call-site readability; rows and rows7 are the same set.
   const rows = useMemo(()=>skyAt(date),[date]);
   const rows7 = useMemo(()=>skyAt7(date),[date]);
   const occ = useMemo(()=>occupiedLetters(rows7),[rows7]);
@@ -56,13 +57,13 @@ function AlignmentFicha({date, lex, angelMap, onBack, nameRefs}){
     <div className="grid2" style={{alignItems:'start'}}>
       <div className="panel" style={{padding:14}}>
         <SkyMap rows={rows} occ={occ}/>
-        <div className="legend">{occSigns.size} of 12 zodiac signs occupied on {displayDate(date)} (by the 7 classical bodies). Readable simples: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>. Uranus and Neptune are plotted on the map for astronomical context but do <b>not</b> light a sector (they have no letter in the Sefer Yetzirah).</div>
+        <div className="legend">{occSigns.size} of 12 zodiac signs occupied on {displayDate(date)} (by the 7 classical bodies). Readable simples: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>.</div>
       </div>
       <div className="panel" style={{padding:16}}>
         <h3 style={{marginTop:0}}>Alignment metrics</h3>
         <table><tbody>
           <tr><th>Date</th><td>{displayDate(date)}</td></tr>
-          <tr><th>Bodies</th><td>{rows7.length} classical ({rows7.map(r=>GLYPH[r.body]).join(' ')}) <span className="muted">· {rows.length-rows7.length} modern plotted on map only ({rows.filter(r=>!rows7.some(r7=>r7.body===r.body)).map(r=>GLYPH[r.body]).join(' ')})</span></td></tr>
+          <tr><th>Bodies</th><td>{rows7.length} classical ({rows7.map(r=>GLYPH[r.body]).join(' ')})</td></tr>
           <tr><th>Max in one sign</th><td><b style={{color:'var(--gold)'}}>{meta.maxInSign}</b> in {meta.sign}</td></tr>
           <tr><th>Span (tightest arc)</th><td className="deg">{meta.span.toFixed(2)}°</td></tr>
           <tr><th>Precessional era</th><td>{meta.era}</td></tr>

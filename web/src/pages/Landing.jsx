@@ -176,7 +176,7 @@ function Slides({ rows, occ }){
       graphic: <AlignWheel/>,
       icon: 'compass', iconColor: 'violet',
       title: 'Rare alignments',
-      body: 'Most nights the planets spread across many signs. Once a century or so they concentrate inside a single one — the whole moving retinue in one house of the zodiac. The 5 February 1962 conjunction put seven bodies inside Aquarius inside a twenty-degree arc. These are the rare alignments: 171 of them across the recorded span, each a day when the sky narrows its alphabet to a few letters and the readable names tighten with it.'
+      body: 'Most nights the planets spread across many signs. Once a century or so they concentrate inside a single one — the whole moving retinue in one house of the zodiac. The 5 February 1962 conjunction put seven bodies inside Aquarius inside a twenty-degree arc. These are the rare alignments: 267 of them across the recorded span, each a day when the sky narrows its alphabet to a few letters and the readable names tighten with it.'
     },
     {
       key: 'skymap',
@@ -266,7 +266,7 @@ function Slider({ rows, occ }){
 // ── feature blocks ──
 const FEATURES = [
   { n: 'star', c: 'gold', t: 'Sky map', d: 'Real planet positions in the 12 zodiac signs — the 12 simple letters lit up today.', go: '/app' },
-  { n: 'compass', c: 'violet', t: 'Rare alignments', d: '171 century & millennium conjunctions — planets concentrated in a single sign.', go: '/alignments' },
+  { n: 'compass', c: 'violet', t: 'Rare alignments', d: '267 century & millennium conjunctions — planets concentrated in a single sign.', go: '/alignments' },
   { n: 'book-open', c: 'green', t: 'Reader', d: 'The Hebrew names and words the occupied signs spell on a given date.', go: '/app' },
   { n: 'clock', c: 'teal', t: 'Time', d: 'The day predictor and the precessional ages — deep time of the stellar alphabet.', go: '/app' },
   { n: 'hashtag', c: 'violet', t: 'Gematria', d: 'Hebrew, Greek, Arabic and Indian numerology — Aiq Bekar and digital roots.', go: '/app' },
@@ -276,8 +276,8 @@ const FEATURES = [
 ];
 
 function Landing({ goApp }){
-  const rows = useMemo(() => skyAt(REF_DATE), []);                  // 9-body display (sky-map dots)
-  const occ = useMemo(() => occupiedLetters(skyAt7(REF_DATE)), []);  // 7-classical reading (lit sectors)
+  const rows = useMemo(() => skyAt(REF_DATE), []);                  // 7 classical bodies (sky-map dots)
+  const occ = useMemo(() => occupiedLetters(skyAt7(REF_DATE)), []);  // 7 classical bodies (reading / lit sectors)
   const [warnOpen, setWarnOpen] = useState(false);
   const enterApp = () => { setWarnOpen(false); goApp && goApp(); };
 
