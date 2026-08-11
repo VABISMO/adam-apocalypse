@@ -53,31 +53,32 @@ function GematriaTable(){
   );
 }
 
-// The 72 triplets of the Shem HaMephorash — Exodus 14:19–21, 72 letters each,
-// read columnwise. A numbered, colour-coded 12×6 grid (one colour per source verse).
-function ShemGrid(){
+// A sigil traced over a kamea — the Lo Shu (Saturn 3×3) with the sigil of משיח
+// (Messiah): each letter's gematria reduced to its Aiq-Bekar digital root
+// (mem 40→4, shin 300→3, yod 10→1, chet 8→8), those cells joined in order.
+// Green = first cell, red = last; the gold trace IS the sigil. (§15b.3)
+function SigilKamea(){
+  // Lo Shu canonical: row,col → value
+  const sq = [[4,9,2],[3,5,7],[8,1,6]];
+  const pos = {}; for (let i=0;i<3;i++) for (let j=0;j<3;j++) pos[sq[i][j]]=[i,j];
+  const trace = [4,3,1,8]; // משיח → Aiq Bekar 4·3·1·8
+  const used = new Set(trace);
+  const order = {}; trace.forEach((v,k)=>{ if (!(v in order)) order[v]=k+1; });
+  const pad=18, cell=54, S=pad*2+cell*3;
+  const center = v => { const [i,j]=pos[v]; return [pad+cell*(j+0.5), pad+cell*(i+0.5)]; };
+  const d = trace.map((v,k)=>{ const [x,y]=center(v); return (k?'L':'M')+x.toFixed(1)+' '+y.toFixed(1); }).join(' ');
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 12, alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%' }}>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
-        <span style={{ color: 'var(--gold)', fontSize: '2.6rem', fontWeight: 800, lineHeight: 1 }}>72</span>
-        <span className="muted" style={{ fontSize: '.8rem' }}>triplets · 3 verses × 72 letters</span>
-      </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(12,1fr)', gap: 5, width: 330, maxWidth: '100%' }}>
-        {Array.from({ length: 72 }, (_, i) => {
-          const v = i % 3;
-          const bg = v === 0 ? '#8a05ff' : v === 1 ? '#c29eff' : '#00db7c';
-          return (
-            <div key={i} title={'Triplet ' + (i + 1)} style={{ height: 22, borderRadius: 4, background: bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '.58rem', color: '#0a0a0a', fontWeight: 700 }}>{i + 1}</div>
-          );
-        })}
-      </div>
-      <div style={{ display: 'flex', gap: 14, fontSize: '.72rem', color: 'var(--dim)' }}>
-        <span style={{ display: 'flex', alignItems: 'center', gap: 5 }}><i style={{ width: 9, height: 9, borderRadius: 2, background: '#8a05ff', display: 'inline-block' }}/>14:19</span>
-        <span style={{ display: 'flex', alignItems: 'center', gap: 5 }}><i style={{ width: 9, height: 9, borderRadius: 2, background: '#c29eff', display: 'inline-block' }}/>14:20</span>
-        <span style={{ display: 'flex', alignItems: 'center', gap: 5 }}><i style={{ width: 9, height: 9, borderRadius: 2, background: '#00db7c', display: 'inline-block' }}/>14:21</span>
-      </div>
-      <div className="muted" style={{ fontSize: '.74rem' }}>each triplet +אל / +יה → a 5-letter angel</div>
-    </div>
+    <svg viewBox={`0 0 ${S} ${S}`} style={{ width: '100%', height: '100%', maxHeight: 300 }} role="img" aria-label="Sigil of משיח traced on the Lo Shu kamea">
+      <rect x="0" y="0" width={S} height={S} fill="#0f0f15" rx="8"/>
+      {sq.flat().map((v,idx)=>{ const [i,j]=pos[v]; const x=pad+cell*j, y=pad+cell*i; const on=used.has(v);
+        return <g key={idx}>
+          <rect x={x+2} y={y+2} width={cell-4} height={cell-4} rx="4" fill={on?'#332b1a':'#16161f'} stroke="#2a2a38" strokeWidth="1"/>
+          <text x={x+cell/2} y={y+cell/2-3} textAnchor="middle" dominantBaseline="middle" fontSize="15" fontWeight="700" fill={on?'#e8c87a':'#5a5a6e'}>{v}</text>
+          {on && <text x={x+cell/2} y={y+cell/2+12} textAnchor="middle" dominantBaseline="middle" fontSize="7" fill="#9ca3af">#{order[v]}</text>}
+        </g>; })}
+      {trace.length>=2 && <path d={d} fill="none" stroke="#e8c87a" strokeWidth="2.4" opacity="0.92" strokeLinejoin="round" strokeLinecap="round"/>}
+      {trace.map((v,k)=>{ const [x,y]=center(v); const r=k===0||k===trace.length-1?5:3; const fill=k===0?'#6fe0a0':k===trace.length-1?'#ff8a8a':'#e8c87a'; return <circle key={k} cx={x} cy={y} r={r} fill={fill} stroke="#08080b" strokeWidth="0.6"/>; })}
+    </svg>
   );
 }
 
@@ -97,23 +98,52 @@ function ELSGrid(){
   );
 }
 
-// A rare alignment — many planets concentrated inside a single zodiac sign.
-function AlignDiagram(){
-  const signs = ['♈','♉','♊','♋','♌','♍','♎','♏','♐','♑','♒','♓'];
-  const planets = ['☉','☽','☿','♀','♂','♃','♄'];
-  const hot = 4; // one sign lit up with the whole planetary retinue
+// A rare alignment — the 5 Feb 1962 grand conjunction: 7 classical bodies
+// concentrated inside a single zodiac sign (Aquarius). Longitudes are real
+// astronomy-engine values; the wheel shows the whole retinue crowded into one
+// 30° house with a ~20° tightest arc.
+function AlignWheel(){
+  // 7 classical bodies on 1962-02-05 (astronomy-engine ecliptic longitudes)
+  const bodies = [
+    { b:'Mars', g:'♂', lon:302.7 }, { b:'Saturn', g:'♄', lon:303.9 },
+    { b:'Sun', g:'☉', lon:316.2 }, { b:'Mercury', g:'☿', lon:316.3 },
+    { b:'Venus', g:'♀', lon:318.4 }, { b:'Jupiter', g:'♃', lon:318.7 },
+    { b:'Moon', g:'☽', lon:323.2 },
+  ];
+  const signs = ['♈','♉','♊','♋','♌','♍','♎','♏','♐','♑','♒','♓']; // Aries=0…Pisces=11
+  const cx=110, cy=112, R=98, Rg=84, Rp=58;
+  const pt = (lon, r) => [cx + r*Math.sin(lon*Math.PI/180), cy - r*Math.cos(lon*Math.PI/180)];
+  const AQR = 10; // Aquarius sign index (300°–330°)
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 12, alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 7, maxWidth: 300 }}>
-        {signs.map((s, i) => (
-          <div key={i} style={{ width: 64, height: 58, border: '1px solid ' + (i === hot ? 'var(--gold)' : 'var(--line)'), borderRadius: 9, background: i === hot ? 'rgba(232,200,122,.14)' : '#000', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 3 }}>
-            <div style={{ fontSize: '1.15rem', color: i === hot ? 'var(--gold)' : 'var(--dim)' }}>{s}</div>
-            {i === hot && <div style={{ display: 'flex', gap: 2, fontSize: '.72rem', color: 'var(--gold)', fontWeight: 700 }}>{planets.map((p, j) => <span key={j}>{p}</span>)}</div>}
-          </div>
-        ))}
-      </div>
-      <div className="muted" style={{ fontSize: '.76rem' }}>7 bodies in one sign · a century-grade conjunction</div>
-    </div>
+    <svg viewBox="0 0 220 226" style={{ width: '100%', height: '100%', maxHeight: 300 }} role="img" aria-label="5 Feb 1962: 7 bodies aligned in Aquarius">
+      {/* Aquarius sector highlight (300°–330°) */}
+      <path d={`M${cx},${cy} L${pt(300,R).join(',')} A${R},${R} 0 0 1 ${pt(330,R).join(',')} Z`} fill="rgba(232,200,122,.16)" stroke="var(--gold)" strokeWidth="1.5"/>
+      <circle cx={cx} cy={cy} r={R} fill="none" stroke="var(--line)" strokeWidth="1"/>
+      {/* sector dividers + sign glyphs */}
+      {Array.from({ length: 12 }, (_, i) => {
+        const a0 = i * 30;
+        const [x0, y0] = pt(a0, R);
+        const [gx, gy] = pt(a0 + 15, Rg);
+        const aqr = i === AQR;
+        return <g key={i}>
+          <line x1={cx} y1={cy} x2={x0} y2={y0} stroke="var(--line)" strokeWidth="0.6"/>
+          <text x={gx} y={gy} textAnchor="middle" dominantBaseline="middle" fontSize="11" fill={aqr ? 'var(--gold)' : 'var(--dim)'}>{signs[i]}</text>
+        </g>;
+      })}
+      {/* the tight ~20° arc band across the clustered bodies (300°→323°) */}
+      <path d={`M${pt(300,Rp-16).join(',')} A${Rp-16},${Rp-16} 0 0 1 ${pt(323,Rp-16).join(',')} L${pt(323,Rp+16).join(',')} A${Rp+16},${Rp+16} 0 0 0 ${pt(300,Rp+16).join(',')} Z`} fill="rgba(138,5,255,.10)" stroke="var(--violet)" strokeWidth="1" strokeDasharray="3 2"/>
+      {/* 7 bodies, staggered radii so the glyphs separate inside the 20° arc */}
+      {bodies.map((p, i) => {
+        const r = Rp - 14 + i * 4.5;
+        const [x, y] = pt(p.lon, r);
+        return <g key={p.b}>
+          <circle cx={x} cy={y} r="8.5" fill="#0f0f15" stroke="var(--gold)" strokeWidth="1"/>
+          <text x={x} y={y} textAnchor="middle" dominantBaseline="middle" fontSize="9" fill="var(--gold)">{p.g}</text>
+        </g>;
+      })}
+      <text x={cx} y={cy - 4} textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--gold)">♒ Aquarius</text>
+      <text x={cx} y={cy + 11} textAnchor="middle" fontSize="9" fill="var(--dim)">5 Feb 1962 · 7 bodies · 20° arc</text>
+    </svg>
   );
 }
 
@@ -142,18 +172,18 @@ function PsalmsGrid(){
 function Slides({ rows, occ }){
   return [
     {
+      key: 'align',
+      graphic: <AlignWheel/>,
+      icon: 'compass', iconColor: 'violet',
+      title: 'Rare alignments',
+      body: 'Most nights the planets spread across many signs. Once a century or so they concentrate inside a single one — the whole moving retinue in one house of the zodiac. The 5 February 1962 conjunction put seven bodies inside Aquarius inside a twenty-degree arc. These are the rare alignments: 171 of them across the recorded span, each a day when the sky narrows its alphabet to a few letters and the readable names tighten with it.'
+    },
+    {
       key: 'skymap',
       graphic: <SkyMap rows={rows} occ={occ}/>,
       icon: 'star', iconColor: 'gold',
       title: 'Sky map',
       body: 'The twelve signs of the zodiac are not symbols — they are the twelve simple letters of the Sefer Yetzirah. As the planets move, they occupy signs and light up letters; whichever signs hold a planet today is the alphabet the sky is spelling tonight. The gold sectors are the letters you can read right now.'
-    },
-    {
-      key: 'align',
-      graphic: <AlignDiagram/>,
-      icon: 'compass', iconColor: 'violet',
-      title: 'Rare alignments',
-      body: 'Most nights the planets spread across many signs. Once a century or so they concentrate inside a single one — the whole moving retinue in one house of the zodiac. These are the rare alignments: 171 of them across the recorded span, each a day when the sky narrows its alphabet to a few letters and the readable names tighten with it.'
     },
     {
       key: 'reader',
@@ -178,7 +208,7 @@ function Slides({ rows, occ }){
     },
     {
       key: 'sigils',
-      graphic: <ShemGrid/>,
+      graphic: <SigilKamea/>,
       icon: 'feather', iconColor: 'teal',
       title: 'Sigils',
       body: 'Three consecutive verses of Exodus — 14:19, 14:20, 14:21 — hold seventy-two letters each. Read columnwise, they yield the seventy-two triplets of the Shem HaMephorash; each takes +אל or +יה and becomes a five-letter angel. Around them stand the sigil forge and the Kameot magic squares — the practical craft of the letters.'

@@ -33963,23 +33963,67 @@ function GematriaTable() {
   const L2 = [["\u05D0", 1], ["\u05D1", 2], ["\u05D2", 3], ["\u05D3", 4], ["\u05D4", 5], ["\u05D5", 6], ["\u05D6", 7], ["\u05D7", 8], ["\u05D8", 9], ["\u05D9", 10], ["\u05DB", 20], ["\u05DC", 30], ["\u05DE", 40], ["\u05E0", 50], ["\u05E1", 60], ["\u05E2", 70], ["\u05E4", 80], ["\u05E6", 90], ["\u05E7", 100], ["\u05E8", 200], ["\u05E9", 300], ["\u05EA", 400]];
   return /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", flexWrap: "wrap", gap: 6, justifyContent: "center", alignContent: "center", maxWidth: 340 } }, L2.map(([h, v]) => /* @__PURE__ */ import_react22.default.createElement("div", { key: h, style: { width: 52, textAlign: "center", border: "1px solid var(--line)", borderRadius: 8, padding: "5px 2px", background: "#000" } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { color: "var(--gold)", fontSize: "1.25rem", fontWeight: 700 } }, h), /* @__PURE__ */ import_react22.default.createElement("div", { style: { color: "var(--dim)", fontSize: ".72rem" } }, v))));
 }
-function ShemGrid() {
-  return /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 12, alignItems: "center", justifyContent: "center", height: "100%", width: "100%" } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", alignItems: "baseline", gap: 10 } }, /* @__PURE__ */ import_react22.default.createElement("span", { style: { color: "var(--gold)", fontSize: "2.6rem", fontWeight: 800, lineHeight: 1 } }, "72"), /* @__PURE__ */ import_react22.default.createElement("span", { className: "muted", style: { fontSize: ".8rem" } }, "triplets \xB7 3 verses \xD7 72 letters")), /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "grid", gridTemplateColumns: "repeat(12,1fr)", gap: 5, width: 330, maxWidth: "100%" } }, Array.from({ length: 72 }, (_, i) => {
-    const v = i % 3;
-    const bg = v === 0 ? "#8a05ff" : v === 1 ? "#c29eff" : "#00db7c";
-    return /* @__PURE__ */ import_react22.default.createElement("div", { key: i, title: "Triplet " + (i + 1), style: { height: 22, borderRadius: 4, background: bg, display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".58rem", color: "#0a0a0a", fontWeight: 700 } }, i + 1);
-  })), /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", gap: 14, fontSize: ".72rem", color: "var(--dim)" } }, /* @__PURE__ */ import_react22.default.createElement("span", { style: { display: "flex", alignItems: "center", gap: 5 } }, /* @__PURE__ */ import_react22.default.createElement("i", { style: { width: 9, height: 9, borderRadius: 2, background: "#8a05ff", display: "inline-block" } }), "14:19"), /* @__PURE__ */ import_react22.default.createElement("span", { style: { display: "flex", alignItems: "center", gap: 5 } }, /* @__PURE__ */ import_react22.default.createElement("i", { style: { width: 9, height: 9, borderRadius: 2, background: "#c29eff", display: "inline-block" } }), "14:20"), /* @__PURE__ */ import_react22.default.createElement("span", { style: { display: "flex", alignItems: "center", gap: 5 } }, /* @__PURE__ */ import_react22.default.createElement("i", { style: { width: 9, height: 9, borderRadius: 2, background: "#00db7c", display: "inline-block" } }), "14:21")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "muted", style: { fontSize: ".74rem" } }, "each triplet +\u05D0\u05DC / +\u05D9\u05D4 \u2192 a 5-letter angel"));
+function SigilKamea() {
+  const sq = [[4, 9, 2], [3, 5, 7], [8, 1, 6]];
+  const pos = {};
+  for (let i = 0; i < 3; i++) for (let j2 = 0; j2 < 3; j2++) pos[sq[i][j2]] = [i, j2];
+  const trace = [4, 3, 1, 8];
+  const used = new Set(trace);
+  const order = {};
+  trace.forEach((v, k) => {
+    if (!(v in order)) order[v] = k + 1;
+  });
+  const pad = 18, cell = 54, S = pad * 2 + cell * 3;
+  const center = (v) => {
+    const [i, j2] = pos[v];
+    return [pad + cell * (j2 + 0.5), pad + cell * (i + 0.5)];
+  };
+  const d = trace.map((v, k) => {
+    const [x, y] = center(v);
+    return (k ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
+  }).join(" ");
+  return /* @__PURE__ */ import_react22.default.createElement("svg", { viewBox: `0 0 ${S} ${S}`, style: { width: "100%", height: "100%", maxHeight: 300 }, role: "img", "aria-label": "Sigil of \u05DE\u05E9\u05D9\u05D7 traced on the Lo Shu kamea" }, /* @__PURE__ */ import_react22.default.createElement("rect", { x: "0", y: "0", width: S, height: S, fill: "#0f0f15", rx: "8" }), sq.flat().map((v, idx) => {
+    const [i, j2] = pos[v];
+    const x = pad + cell * j2, y = pad + cell * i;
+    const on = used.has(v);
+    return /* @__PURE__ */ import_react22.default.createElement("g", { key: idx }, /* @__PURE__ */ import_react22.default.createElement("rect", { x: x + 2, y: y + 2, width: cell - 4, height: cell - 4, rx: "4", fill: on ? "#332b1a" : "#16161f", stroke: "#2a2a38", strokeWidth: "1" }), /* @__PURE__ */ import_react22.default.createElement("text", { x: x + cell / 2, y: y + cell / 2 - 3, textAnchor: "middle", dominantBaseline: "middle", fontSize: "15", fontWeight: "700", fill: on ? "#e8c87a" : "#5a5a6e" }, v), on && /* @__PURE__ */ import_react22.default.createElement("text", { x: x + cell / 2, y: y + cell / 2 + 12, textAnchor: "middle", dominantBaseline: "middle", fontSize: "7", fill: "#9ca3af" }, "#", order[v]));
+  }), trace.length >= 2 && /* @__PURE__ */ import_react22.default.createElement("path", { d, fill: "none", stroke: "#e8c87a", strokeWidth: "2.4", opacity: "0.92", strokeLinejoin: "round", strokeLinecap: "round" }), trace.map((v, k) => {
+    const [x, y] = center(v);
+    const r = k === 0 || k === trace.length - 1 ? 5 : 3;
+    const fill = k === 0 ? "#6fe0a0" : k === trace.length - 1 ? "#ff8a8a" : "#e8c87a";
+    return /* @__PURE__ */ import_react22.default.createElement("circle", { key: k, cx: x, cy: y, r, fill, stroke: "#08080b", strokeWidth: "0.6" });
+  }));
 }
 function ELSGrid() {
   const letters = ["\u05D0", "\u05D1", "\u05D2", "\u05D3", "\u05D4", "\u05D5", "\u05D6", "\u05D7", "\u05D8", "\u05D9", "\u05DB", "\u05DC", "\u05DE", "\u05E0", "\u05E1", "\u05E2", "\u05E4", "\u05E6", "\u05E7", "\u05E8", "\u05E9", "\u05EA", "\u05D0", "\u05D1", "\u05D2", "\u05D3", "\u05D4", "\u05D5", "\u05D6", "\u05D7", "\u05D8", "\u05D9", "\u05DB", "\u05DC", "\u05DE", "\u05E0", "\u05E1", "\u05E2", "\u05E4", "\u05E6", "\u05E7", "\u05E8", "\u05E9", "\u05EA"];
   const hits = /* @__PURE__ */ new Set([4, 9, 14, 19, 24, 29, 34]);
   return /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 10, alignItems: "center" } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "grid", gridTemplateColumns: "repeat(11,1fr)", gap: 3, maxWidth: 340 } }, letters.map((l, i) => /* @__PURE__ */ import_react22.default.createElement("div", { key: i, style: { textAlign: "center", padding: "4px 0", borderRadius: 4, fontSize: ".85rem", color: hits.has(i) ? "var(--gold)" : "var(--dim)", background: hits.has(i) ? "rgba(232,200,122,.14)" : "transparent", border: "1px solid " + (hits.has(i) ? "var(--gold)" : "transparent") } }, l))), /* @__PURE__ */ import_react22.default.createElement("div", { className: "muted", style: { fontSize: ".76rem" } }, "skip every 5th letter \u2192 a hidden word emerges"));
 }
-function AlignDiagram() {
+function AlignWheel() {
+  const bodies = [
+    { b: "Mars", g: "\u2642", lon: 302.7 },
+    { b: "Saturn", g: "\u2644", lon: 303.9 },
+    { b: "Sun", g: "\u2609", lon: 316.2 },
+    { b: "Mercury", g: "\u263F", lon: 316.3 },
+    { b: "Venus", g: "\u2640", lon: 318.4 },
+    { b: "Jupiter", g: "\u2643", lon: 318.7 },
+    { b: "Moon", g: "\u263D", lon: 323.2 }
+  ];
   const signs = ["\u2648", "\u2649", "\u264A", "\u264B", "\u264C", "\u264D", "\u264E", "\u264F", "\u2650", "\u2651", "\u2652", "\u2653"];
-  const planets = ["\u2609", "\u263D", "\u263F", "\u2640", "\u2642", "\u2643", "\u2644"];
-  const hot = 4;
-  return /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 12, alignItems: "center", justifyContent: "center", height: "100%", width: "100%" } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 7, maxWidth: 300 } }, signs.map((s, i) => /* @__PURE__ */ import_react22.default.createElement("div", { key: i, style: { width: 64, height: 58, border: "1px solid " + (i === hot ? "var(--gold)" : "var(--line)"), borderRadius: 9, background: i === hot ? "rgba(232,200,122,.14)" : "#000", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 3 } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { fontSize: "1.15rem", color: i === hot ? "var(--gold)" : "var(--dim)" } }, s), i === hot && /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", gap: 2, fontSize: ".72rem", color: "var(--gold)", fontWeight: 700 } }, planets.map((p, j2) => /* @__PURE__ */ import_react22.default.createElement("span", { key: j2 }, p)))))), /* @__PURE__ */ import_react22.default.createElement("div", { className: "muted", style: { fontSize: ".76rem" } }, "7 bodies in one sign \xB7 a century-grade conjunction"));
+  const cx = 110, cy = 112, R = 98, Rg = 84, Rp = 58;
+  const pt = (lon, r) => [cx + r * Math.sin(lon * Math.PI / 180), cy - r * Math.cos(lon * Math.PI / 180)];
+  const AQR = 10;
+  return /* @__PURE__ */ import_react22.default.createElement("svg", { viewBox: "0 0 220 226", style: { width: "100%", height: "100%", maxHeight: 300 }, role: "img", "aria-label": "5 Feb 1962: 7 bodies aligned in Aquarius" }, /* @__PURE__ */ import_react22.default.createElement("path", { d: `M${cx},${cy} L${pt(300, R).join(",")} A${R},${R} 0 0 1 ${pt(330, R).join(",")} Z`, fill: "rgba(232,200,122,.16)", stroke: "var(--gold)", strokeWidth: "1.5" }), /* @__PURE__ */ import_react22.default.createElement("circle", { cx, cy, r: R, fill: "none", stroke: "var(--line)", strokeWidth: "1" }), Array.from({ length: 12 }, (_, i) => {
+    const a0 = i * 30;
+    const [x0, y0] = pt(a0, R);
+    const [gx, gy] = pt(a0 + 15, Rg);
+    const aqr = i === AQR;
+    return /* @__PURE__ */ import_react22.default.createElement("g", { key: i }, /* @__PURE__ */ import_react22.default.createElement("line", { x1: cx, y1: cy, x2: x0, y2: y0, stroke: "var(--line)", strokeWidth: "0.6" }), /* @__PURE__ */ import_react22.default.createElement("text", { x: gx, y: gy, textAnchor: "middle", dominantBaseline: "middle", fontSize: "11", fill: aqr ? "var(--gold)" : "var(--dim)" }, signs[i]));
+  }), /* @__PURE__ */ import_react22.default.createElement("path", { d: `M${pt(300, Rp - 16).join(",")} A${Rp - 16},${Rp - 16} 0 0 1 ${pt(323, Rp - 16).join(",")} L${pt(323, Rp + 16).join(",")} A${Rp + 16},${Rp + 16} 0 0 0 ${pt(300, Rp + 16).join(",")} Z`, fill: "rgba(138,5,255,.10)", stroke: "var(--violet)", strokeWidth: "1", strokeDasharray: "3 2" }), bodies.map((p, i) => {
+    const r = Rp - 14 + i * 4.5;
+    const [x, y] = pt(p.lon, r);
+    return /* @__PURE__ */ import_react22.default.createElement("g", { key: p.b }, /* @__PURE__ */ import_react22.default.createElement("circle", { cx: x, cy: y, r: "8.5", fill: "#0f0f15", stroke: "var(--gold)", strokeWidth: "1" }), /* @__PURE__ */ import_react22.default.createElement("text", { x, y, textAnchor: "middle", dominantBaseline: "middle", fontSize: "9", fill: "var(--gold)" }, p.g));
+  }), /* @__PURE__ */ import_react22.default.createElement("text", { x: cx, y: cy - 4, textAnchor: "middle", fontSize: "13", fontWeight: "700", fill: "var(--gold)" }, "\u2652 Aquarius"), /* @__PURE__ */ import_react22.default.createElement("text", { x: cx, y: cy + 11, textAnchor: "middle", fontSize: "9", fill: "var(--dim)" }, "5 Feb 1962 \xB7 7 bodies \xB7 20\xB0 arc"));
 }
 function PsalmsGrid() {
   const today = 42;
@@ -33992,20 +34036,20 @@ function PsalmsGrid() {
 function Slides({ rows, occ }) {
   return [
     {
+      key: "align",
+      graphic: /* @__PURE__ */ import_react22.default.createElement(AlignWheel, null),
+      icon: "compass",
+      iconColor: "violet",
+      title: "Rare alignments",
+      body: "Most nights the planets spread across many signs. Once a century or so they concentrate inside a single one \u2014 the whole moving retinue in one house of the zodiac. The 5 February 1962 conjunction put seven bodies inside Aquarius inside a twenty-degree arc. These are the rare alignments: 171 of them across the recorded span, each a day when the sky narrows its alphabet to a few letters and the readable names tighten with it."
+    },
+    {
       key: "skymap",
       graphic: /* @__PURE__ */ import_react22.default.createElement(SkyMap, { rows, occ }),
       icon: "star",
       iconColor: "gold",
       title: "Sky map",
       body: "The twelve signs of the zodiac are not symbols \u2014 they are the twelve simple letters of the Sefer Yetzirah. As the planets move, they occupy signs and light up letters; whichever signs hold a planet today is the alphabet the sky is spelling tonight. The gold sectors are the letters you can read right now."
-    },
-    {
-      key: "align",
-      graphic: /* @__PURE__ */ import_react22.default.createElement(AlignDiagram, null),
-      icon: "compass",
-      iconColor: "violet",
-      title: "Rare alignments",
-      body: "Most nights the planets spread across many signs. Once a century or so they concentrate inside a single one \u2014 the whole moving retinue in one house of the zodiac. These are the rare alignments: 171 of them across the recorded span, each a day when the sky narrows its alphabet to a few letters and the readable names tighten with it."
     },
     {
       key: "reader",
@@ -34033,7 +34077,7 @@ function Slides({ rows, occ }) {
     },
     {
       key: "sigils",
-      graphic: /* @__PURE__ */ import_react22.default.createElement(ShemGrid, null),
+      graphic: /* @__PURE__ */ import_react22.default.createElement(SigilKamea, null),
       icon: "feather",
       iconColor: "teal",
       title: "Sigils",
