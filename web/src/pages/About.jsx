@@ -47,7 +47,7 @@ function About(){
 
       <div className="panel" style={{padding:18,marginTop:14}}>
         <h2 style={{marginTop:0}}>Authors &amp; sources</h2>
-        <p className="muted">By <b>V. Nos</b> &amp; <b>Julian S.</b> · Source on <a href="https://github.com/VABISMO/adam-apocalypse" target="_blank" rel="noreferrer">GitHub</a> · Paper: <a href="/paper">The Reader of the Sky</a>.</p>
+        <p className="muted">By <b><a href="https://medium.com/@ancientencoder/sons-of-stars-269765bda7db" target="_blank" rel="noreferrer" style={{color:'inherit',textDecoration:'none'}}>AncientEncoder</a></b> &amp; <b>BartMan</b> · Source on <a href="https://github.com/VABISMO/adam-apocalypse" target="_blank" rel="noreferrer">GitHub</a> · Paper: <a href="/paper">The Reader of the Sky</a>.</p>
         <p className="muted">Ephemerides: astronomy-engine. Frame: Sefer Yetzirah. Lexicon: Strong Hebrew lexicon (OpenScriptures). No content on this site is medical, financial, or doctrinal advice — it is a reading of symbols and astronomy.</p>
         <div style={{marginTop:12}}><a className="btn-cta" href="/app" style={{display:'inline-block',textDecoration:'none'}}>Open the app →</a></div>
       </div>

@@ -51,7 +51,7 @@ function Footer(){
     </div>
 
     <div className="ft-bottom">
-      <span>© {year} V. Nos &amp; Julian S. · The Apocalypse of Adam</span>
+      <span>© {year} <a href="https://medium.com/@ancientencoder/sons-of-stars-269765bda7db" target="_blank" rel="noreferrer">AncientEncoder</a> and BartMan · The Apocalypse of Adam</span>
       <span className="ft-sep">·</span>
       <span>Hebrew letters in the stars · Sefer Yetzirah stellar alphabet</span>
     </div>
