@@ -18,8 +18,12 @@ const MOTHERS = [
   ['מ','Mem','water · Ursa Minor',89],
   ['ש','Shin','fire · Cassiopea',38]
 ];
-const BODIES = ['Saturn','Jupiter','Mars','Sun','Venus','Mercury','Moon','Uranus','Neptune','Pluto'];
-const GLYPH = {Sun:'☉',Moon:'☽',Mercury:'☿',Venus:'♀',Mars:'♂',Jupiter:'♃',Saturn:'♄',Uranus:'♅',Neptune:'♆',Pluto:'♇'};
+// BODIES = the modern set shown for astronomical display (7 classical + Uranus + Neptune).
+// Pluto is excluded — it is not in the Sefer Yetzirah and has no letter role. The READING
+// (occupied letters, readable words, Genesis legibility) uses BODIES7 / skyAt7 — the 7
+// classical bodies that the SY assigns to the 7 doubles. Uranus/Neptune are display-only.
+const BODIES = ['Saturn','Jupiter','Mars','Sun','Venus','Mercury','Moon','Uranus','Neptune'];
+const GLYPH = {Sun:'☉',Moon:'☽',Mercury:'☿',Venus:'♀',Mars:'♂',Jupiter:'♃',Saturn:'♄',Uranus:'♅',Neptune:'♆'};
 const WEEK = [['Sunday','Sun'],['Monday','Moon'],['Tuesday','Mars'],['Wednesday','Mercury'],['Thursday','Jupiter'],['Friday','Venus'],['Saturday','Saturn']];
 
 const FIN2REG = {'ן':'נ','ץ':'צ','ך':'כ','ם':'מ','ף':'פ'};
@@ -173,9 +177,10 @@ function fmtDate(d){                           // Date -> "YYYY-MM-DD" | "-YYYY-
   return sign + String(Math.abs(y)).padStart(4,'0') + '-' + mo + '-' + da;
 }
 
-// The 7 classical bodies (Sun, Moon, Mercury..Saturn): accurate over millennia AND
-// fast at every date (no Pluto, whose GeoVector is ~4000 ms/call before 1700 CE). Used
-// for the deep-past alignment readings, where the 10-body skyAt is infeasible.
+// The 7 classical bodies (Sun, Moon, Mercury..Saturn): the set the Sefer Yetzirah assigns
+// to the 7 doubles — the ONLY bodies that occupy letters in the reading. Accurate over
+// millennia AND fast at every date. Used for the reading (skyAt7) and for the deep-past
+// alignment readings, where the 9-body skyAt (incl. Uranus/Neptune) is imprecise far from J2000.
 const BODIES7 = ['Sun','Moon','Mercury','Venus','Mars','Jupiter','Saturn'];
 function skyAtSet(dateStr, bodies){
   if(!dateStr) return [];

@@ -28,9 +28,9 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 
-// ../node_modules/react/cjs/react.development.js
+// node_modules/react/cjs/react.development.js
 var require_react_development = __commonJS({
-  "../node_modules/react/cjs/react.development.js"(exports, module) {
+  "node_modules/react/cjs/react.development.js"(exports, module) {
     "use strict";
     if (true) {
       (function() {
@@ -1902,9 +1902,9 @@ var require_react_development = __commonJS({
   }
 });
 
-// ../node_modules/react/index.js
+// node_modules/react/index.js
 var require_react = __commonJS({
-  "../node_modules/react/index.js"(exports, module) {
+  "node_modules/react/index.js"(exports, module) {
     "use strict";
     if (false) {
       module.exports = null;
@@ -1914,9 +1914,9 @@ var require_react = __commonJS({
   }
 });
 
-// ../node_modules/scheduler/cjs/scheduler.development.js
+// node_modules/scheduler/cjs/scheduler.development.js
 var require_scheduler_development = __commonJS({
-  "../node_modules/scheduler/cjs/scheduler.development.js"(exports) {
+  "node_modules/scheduler/cjs/scheduler.development.js"(exports) {
     "use strict";
     if (true) {
       (function() {
@@ -2364,9 +2364,9 @@ var require_scheduler_development = __commonJS({
   }
 });
 
-// ../node_modules/scheduler/index.js
+// node_modules/scheduler/index.js
 var require_scheduler = __commonJS({
-  "../node_modules/scheduler/index.js"(exports, module) {
+  "node_modules/scheduler/index.js"(exports, module) {
     "use strict";
     if (false) {
       module.exports = null;
@@ -2376,9 +2376,9 @@ var require_scheduler = __commonJS({
   }
 });
 
-// ../node_modules/react-dom/cjs/react-dom.development.js
+// node_modules/react-dom/cjs/react-dom.development.js
 var require_react_dom_development = __commonJS({
-  "../node_modules/react-dom/cjs/react-dom.development.js"(exports) {
+  "node_modules/react-dom/cjs/react-dom.development.js"(exports) {
     "use strict";
     if (true) {
       (function() {
@@ -2437,7 +2437,7 @@ var require_react_dom_development = __commonJS({
         var HostPortal = 4;
         var HostComponent = 5;
         var HostText = 6;
-        var Fragment = 7;
+        var Fragment13 = 7;
         var Mode = 8;
         var ContextConsumer = 9;
         var ContextProvider = 10;
@@ -3594,7 +3594,7 @@ var require_react_dom_development = __commonJS({
               return "DehydratedFragment";
             case ForwardRef:
               return getWrappedName$1(type, type.render, "ForwardRef");
-            case Fragment:
+            case Fragment13:
               return "Fragment";
             case HostComponent:
               return type;
@@ -12023,7 +12023,7 @@ var require_react_dom_development = __commonJS({
             }
           }
           function updateFragment2(returnFiber, current2, fragment, lanes, key) {
-            if (current2 === null || current2.tag !== Fragment) {
+            if (current2 === null || current2.tag !== Fragment13) {
               var created = createFiberFromFragment(fragment, returnFiber.mode, lanes, key);
               created.return = returnFiber;
               return created;
@@ -12426,7 +12426,7 @@ var require_react_dom_development = __commonJS({
               if (child.key === key) {
                 var elementType = element.type;
                 if (elementType === REACT_FRAGMENT_TYPE) {
-                  if (child.tag === Fragment) {
+                  if (child.tag === Fragment13) {
                     deleteRemainingChildren(returnFiber, child.sibling);
                     var existing = useFiber(child, element.props.children);
                     existing.return = returnFiber;
@@ -17902,7 +17902,7 @@ var require_react_dom_development = __commonJS({
               var _resolvedProps2 = workInProgress2.elementType === type ? _unresolvedProps2 : resolveDefaultProps(type, _unresolvedProps2);
               return updateForwardRef(current2, workInProgress2, type, _resolvedProps2, renderLanes2);
             }
-            case Fragment:
+            case Fragment13:
               return updateFragment(current2, workInProgress2, renderLanes2);
             case Mode:
               return updateMode(current2, workInProgress2, renderLanes2);
@@ -18174,7 +18174,7 @@ var require_react_dom_development = __commonJS({
             case SimpleMemoComponent:
             case FunctionComponent:
             case ForwardRef:
-            case Fragment:
+            case Fragment13:
             case Mode:
             case Profiler:
             case ContextConsumer:
@@ -22435,7 +22435,7 @@ var require_react_dom_development = __commonJS({
           return fiber;
         }
         function createFiberFromFragment(elements, mode, lanes, key) {
-          var fiber = createFiber(Fragment, elements, key, mode);
+          var fiber = createFiber(Fragment13, elements, key, mode);
           fiber.lanes = lanes;
           return fiber;
         }
@@ -23540,9 +23540,9 @@ var require_react_dom_development = __commonJS({
   }
 });
 
-// ../node_modules/react-dom/index.js
+// node_modules/react-dom/index.js
 var require_react_dom = __commonJS({
-  "../node_modules/react-dom/index.js"(exports, module) {
+  "node_modules/react-dom/index.js"(exports, module) {
     "use strict";
     if (false) {
       checkDCE();
@@ -23553,9 +23553,9 @@ var require_react_dom = __commonJS({
   }
 });
 
-// ../node_modules/react-dom/client.js
+// node_modules/react-dom/client.js
 var require_client = __commonJS({
-  "../node_modules/react-dom/client.js"(exports) {
+  "node_modules/react-dom/client.js"(exports) {
     "use strict";
     var m = require_react_dom();
     if (false) {
@@ -23584,14 +23584,919 @@ var require_client = __commonJS({
   }
 });
 
-// app.jsx
+// node_modules/react/cjs/react-jsx-runtime.development.js
+var require_react_jsx_runtime_development = __commonJS({
+  "node_modules/react/cjs/react-jsx-runtime.development.js"(exports) {
+    "use strict";
+    if (true) {
+      (function() {
+        "use strict";
+        var React26 = require_react();
+        var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
+        var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
+        var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
+        var REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode");
+        var REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler");
+        var REACT_PROVIDER_TYPE = /* @__PURE__ */ Symbol.for("react.provider");
+        var REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context");
+        var REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref");
+        var REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense");
+        var REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list");
+        var REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo");
+        var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
+        var REACT_OFFSCREEN_TYPE = /* @__PURE__ */ Symbol.for("react.offscreen");
+        var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
+        var FAUX_ITERATOR_SYMBOL = "@@iterator";
+        function getIteratorFn(maybeIterable) {
+          if (maybeIterable === null || typeof maybeIterable !== "object") {
+            return null;
+          }
+          var maybeIterator = MAYBE_ITERATOR_SYMBOL && maybeIterable[MAYBE_ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL];
+          if (typeof maybeIterator === "function") {
+            return maybeIterator;
+          }
+          return null;
+        }
+        var ReactSharedInternals = React26.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        function error(format) {
+          {
+            {
+              for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+                args[_key2 - 1] = arguments[_key2];
+              }
+              printWarning("error", format, args);
+            }
+          }
+        }
+        function printWarning(level, format, args) {
+          {
+            var ReactDebugCurrentFrame2 = ReactSharedInternals.ReactDebugCurrentFrame;
+            var stack = ReactDebugCurrentFrame2.getStackAddendum();
+            if (stack !== "") {
+              format += "%s";
+              args = args.concat([stack]);
+            }
+            var argsWithFormat = args.map(function(item) {
+              return String(item);
+            });
+            argsWithFormat.unshift("Warning: " + format);
+            Function.prototype.apply.call(console[level], console, argsWithFormat);
+          }
+        }
+        var enableScopeAPI = false;
+        var enableCacheElement = false;
+        var enableTransitionTracing = false;
+        var enableLegacyHidden = false;
+        var enableDebugTracing = false;
+        var REACT_MODULE_REFERENCE;
+        {
+          REACT_MODULE_REFERENCE = /* @__PURE__ */ Symbol.for("react.module.reference");
+        }
+        function isValidElementType(type) {
+          if (typeof type === "string" || typeof type === "function") {
+            return true;
+          }
+          if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || enableDebugTracing || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || enableLegacyHidden || type === REACT_OFFSCREEN_TYPE || enableScopeAPI || enableCacheElement || enableTransitionTracing) {
+            return true;
+          }
+          if (typeof type === "object" && type !== null) {
+            if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || // This needs to include all possible module reference object
+            // types supported by any Flight configuration anywhere since
+            // we don't know which Flight build this will end up being used
+            // with.
+            type.$$typeof === REACT_MODULE_REFERENCE || type.getModuleId !== void 0) {
+              return true;
+            }
+          }
+          return false;
+        }
+        function getWrappedName(outerType, innerType, wrapperName) {
+          var displayName = outerType.displayName;
+          if (displayName) {
+            return displayName;
+          }
+          var functionName = innerType.displayName || innerType.name || "";
+          return functionName !== "" ? wrapperName + "(" + functionName + ")" : wrapperName;
+        }
+        function getContextName(type) {
+          return type.displayName || "Context";
+        }
+        function getComponentNameFromType(type) {
+          if (type == null) {
+            return null;
+          }
+          {
+            if (typeof type.tag === "number") {
+              error("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue.");
+            }
+          }
+          if (typeof type === "function") {
+            return type.displayName || type.name || null;
+          }
+          if (typeof type === "string") {
+            return type;
+          }
+          switch (type) {
+            case REACT_FRAGMENT_TYPE:
+              return "Fragment";
+            case REACT_PORTAL_TYPE:
+              return "Portal";
+            case REACT_PROFILER_TYPE:
+              return "Profiler";
+            case REACT_STRICT_MODE_TYPE:
+              return "StrictMode";
+            case REACT_SUSPENSE_TYPE:
+              return "Suspense";
+            case REACT_SUSPENSE_LIST_TYPE:
+              return "SuspenseList";
+          }
+          if (typeof type === "object") {
+            switch (type.$$typeof) {
+              case REACT_CONTEXT_TYPE:
+                var context = type;
+                return getContextName(context) + ".Consumer";
+              case REACT_PROVIDER_TYPE:
+                var provider = type;
+                return getContextName(provider._context) + ".Provider";
+              case REACT_FORWARD_REF_TYPE:
+                return getWrappedName(type, type.render, "ForwardRef");
+              case REACT_MEMO_TYPE:
+                var outerName = type.displayName || null;
+                if (outerName !== null) {
+                  return outerName;
+                }
+                return getComponentNameFromType(type.type) || "Memo";
+              case REACT_LAZY_TYPE: {
+                var lazyComponent = type;
+                var payload = lazyComponent._payload;
+                var init = lazyComponent._init;
+                try {
+                  return getComponentNameFromType(init(payload));
+                } catch (x) {
+                  return null;
+                }
+              }
+            }
+          }
+          return null;
+        }
+        var assign = Object.assign;
+        var disabledDepth = 0;
+        var prevLog;
+        var prevInfo;
+        var prevWarn;
+        var prevError;
+        var prevGroup;
+        var prevGroupCollapsed;
+        var prevGroupEnd;
+        function disabledLog() {
+        }
+        disabledLog.__reactDisabledLog = true;
+        function disableLogs() {
+          {
+            if (disabledDepth === 0) {
+              prevLog = console.log;
+              prevInfo = console.info;
+              prevWarn = console.warn;
+              prevError = console.error;
+              prevGroup = console.group;
+              prevGroupCollapsed = console.groupCollapsed;
+              prevGroupEnd = console.groupEnd;
+              var props = {
+                configurable: true,
+                enumerable: true,
+                value: disabledLog,
+                writable: true
+              };
+              Object.defineProperties(console, {
+                info: props,
+                log: props,
+                warn: props,
+                error: props,
+                group: props,
+                groupCollapsed: props,
+                groupEnd: props
+              });
+            }
+            disabledDepth++;
+          }
+        }
+        function reenableLogs() {
+          {
+            disabledDepth--;
+            if (disabledDepth === 0) {
+              var props = {
+                configurable: true,
+                enumerable: true,
+                writable: true
+              };
+              Object.defineProperties(console, {
+                log: assign({}, props, {
+                  value: prevLog
+                }),
+                info: assign({}, props, {
+                  value: prevInfo
+                }),
+                warn: assign({}, props, {
+                  value: prevWarn
+                }),
+                error: assign({}, props, {
+                  value: prevError
+                }),
+                group: assign({}, props, {
+                  value: prevGroup
+                }),
+                groupCollapsed: assign({}, props, {
+                  value: prevGroupCollapsed
+                }),
+                groupEnd: assign({}, props, {
+                  value: prevGroupEnd
+                })
+              });
+            }
+            if (disabledDepth < 0) {
+              error("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
+            }
+          }
+        }
+        var ReactCurrentDispatcher = ReactSharedInternals.ReactCurrentDispatcher;
+        var prefix;
+        function describeBuiltInComponentFrame(name, source, ownerFn) {
+          {
+            if (prefix === void 0) {
+              try {
+                throw Error();
+              } catch (x) {
+                var match = x.stack.trim().match(/\n( *(at )?)/);
+                prefix = match && match[1] || "";
+              }
+            }
+            return "\n" + prefix + name;
+          }
+        }
+        var reentry = false;
+        var componentFrameCache;
+        {
+          var PossiblyWeakMap = typeof WeakMap === "function" ? WeakMap : Map;
+          componentFrameCache = new PossiblyWeakMap();
+        }
+        function describeNativeComponentFrame(fn, construct) {
+          if (!fn || reentry) {
+            return "";
+          }
+          {
+            var frame = componentFrameCache.get(fn);
+            if (frame !== void 0) {
+              return frame;
+            }
+          }
+          var control;
+          reentry = true;
+          var previousPrepareStackTrace = Error.prepareStackTrace;
+          Error.prepareStackTrace = void 0;
+          var previousDispatcher;
+          {
+            previousDispatcher = ReactCurrentDispatcher.current;
+            ReactCurrentDispatcher.current = null;
+            disableLogs();
+          }
+          try {
+            if (construct) {
+              var Fake = function() {
+                throw Error();
+              };
+              Object.defineProperty(Fake.prototype, "props", {
+                set: function() {
+                  throw Error();
+                }
+              });
+              if (typeof Reflect === "object" && Reflect.construct) {
+                try {
+                  Reflect.construct(Fake, []);
+                } catch (x) {
+                  control = x;
+                }
+                Reflect.construct(fn, [], Fake);
+              } else {
+                try {
+                  Fake.call();
+                } catch (x) {
+                  control = x;
+                }
+                fn.call(Fake.prototype);
+              }
+            } else {
+              try {
+                throw Error();
+              } catch (x) {
+                control = x;
+              }
+              fn();
+            }
+          } catch (sample) {
+            if (sample && control && typeof sample.stack === "string") {
+              var sampleLines = sample.stack.split("\n");
+              var controlLines = control.stack.split("\n");
+              var s = sampleLines.length - 1;
+              var c = controlLines.length - 1;
+              while (s >= 1 && c >= 0 && sampleLines[s] !== controlLines[c]) {
+                c--;
+              }
+              for (; s >= 1 && c >= 0; s--, c--) {
+                if (sampleLines[s] !== controlLines[c]) {
+                  if (s !== 1 || c !== 1) {
+                    do {
+                      s--;
+                      c--;
+                      if (c < 0 || sampleLines[s] !== controlLines[c]) {
+                        var _frame = "\n" + sampleLines[s].replace(" at new ", " at ");
+                        if (fn.displayName && _frame.includes("<anonymous>")) {
+                          _frame = _frame.replace("<anonymous>", fn.displayName);
+                        }
+                        {
+                          if (typeof fn === "function") {
+                            componentFrameCache.set(fn, _frame);
+                          }
+                        }
+                        return _frame;
+                      }
+                    } while (s >= 1 && c >= 0);
+                  }
+                  break;
+                }
+              }
+            }
+          } finally {
+            reentry = false;
+            {
+              ReactCurrentDispatcher.current = previousDispatcher;
+              reenableLogs();
+            }
+            Error.prepareStackTrace = previousPrepareStackTrace;
+          }
+          var name = fn ? fn.displayName || fn.name : "";
+          var syntheticFrame = name ? describeBuiltInComponentFrame(name) : "";
+          {
+            if (typeof fn === "function") {
+              componentFrameCache.set(fn, syntheticFrame);
+            }
+          }
+          return syntheticFrame;
+        }
+        function describeFunctionComponentFrame(fn, source, ownerFn) {
+          {
+            return describeNativeComponentFrame(fn, false);
+          }
+        }
+        function shouldConstruct(Component) {
+          var prototype = Component.prototype;
+          return !!(prototype && prototype.isReactComponent);
+        }
+        function describeUnknownElementTypeFrameInDEV(type, source, ownerFn) {
+          if (type == null) {
+            return "";
+          }
+          if (typeof type === "function") {
+            {
+              return describeNativeComponentFrame(type, shouldConstruct(type));
+            }
+          }
+          if (typeof type === "string") {
+            return describeBuiltInComponentFrame(type);
+          }
+          switch (type) {
+            case REACT_SUSPENSE_TYPE:
+              return describeBuiltInComponentFrame("Suspense");
+            case REACT_SUSPENSE_LIST_TYPE:
+              return describeBuiltInComponentFrame("SuspenseList");
+          }
+          if (typeof type === "object") {
+            switch (type.$$typeof) {
+              case REACT_FORWARD_REF_TYPE:
+                return describeFunctionComponentFrame(type.render);
+              case REACT_MEMO_TYPE:
+                return describeUnknownElementTypeFrameInDEV(type.type, source, ownerFn);
+              case REACT_LAZY_TYPE: {
+                var lazyComponent = type;
+                var payload = lazyComponent._payload;
+                var init = lazyComponent._init;
+                try {
+                  return describeUnknownElementTypeFrameInDEV(init(payload), source, ownerFn);
+                } catch (x) {
+                }
+              }
+            }
+          }
+          return "";
+        }
+        var hasOwnProperty = Object.prototype.hasOwnProperty;
+        var loggedTypeFailures = {};
+        var ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
+        function setCurrentlyValidatingElement(element) {
+          {
+            if (element) {
+              var owner = element._owner;
+              var stack = describeUnknownElementTypeFrameInDEV(element.type, element._source, owner ? owner.type : null);
+              ReactDebugCurrentFrame.setExtraStackFrame(stack);
+            } else {
+              ReactDebugCurrentFrame.setExtraStackFrame(null);
+            }
+          }
+        }
+        function checkPropTypes(typeSpecs, values, location, componentName, element) {
+          {
+            var has = Function.call.bind(hasOwnProperty);
+            for (var typeSpecName in typeSpecs) {
+              if (has(typeSpecs, typeSpecName)) {
+                var error$1 = void 0;
+                try {
+                  if (typeof typeSpecs[typeSpecName] !== "function") {
+                    var err = Error((componentName || "React class") + ": " + location + " type `" + typeSpecName + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof typeSpecs[typeSpecName] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+                    err.name = "Invariant Violation";
+                    throw err;
+                  }
+                  error$1 = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
+                } catch (ex) {
+                  error$1 = ex;
+                }
+                if (error$1 && !(error$1 instanceof Error)) {
+                  setCurrentlyValidatingElement(element);
+                  error("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", componentName || "React class", location, typeSpecName, typeof error$1);
+                  setCurrentlyValidatingElement(null);
+                }
+                if (error$1 instanceof Error && !(error$1.message in loggedTypeFailures)) {
+                  loggedTypeFailures[error$1.message] = true;
+                  setCurrentlyValidatingElement(element);
+                  error("Failed %s type: %s", location, error$1.message);
+                  setCurrentlyValidatingElement(null);
+                }
+              }
+            }
+          }
+        }
+        var isArrayImpl = Array.isArray;
+        function isArray(a) {
+          return isArrayImpl(a);
+        }
+        function typeName(value) {
+          {
+            var hasToStringTag = typeof Symbol === "function" && Symbol.toStringTag;
+            var type = hasToStringTag && value[Symbol.toStringTag] || value.constructor.name || "Object";
+            return type;
+          }
+        }
+        function willCoercionThrow(value) {
+          {
+            try {
+              testStringCoercion(value);
+              return false;
+            } catch (e) {
+              return true;
+            }
+          }
+        }
+        function testStringCoercion(value) {
+          return "" + value;
+        }
+        function checkKeyStringCoercion(value) {
+          {
+            if (willCoercionThrow(value)) {
+              error("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", typeName(value));
+              return testStringCoercion(value);
+            }
+          }
+        }
+        var ReactCurrentOwner = ReactSharedInternals.ReactCurrentOwner;
+        var RESERVED_PROPS = {
+          key: true,
+          ref: true,
+          __self: true,
+          __source: true
+        };
+        var specialPropKeyWarningShown;
+        var specialPropRefWarningShown;
+        var didWarnAboutStringRefs;
+        {
+          didWarnAboutStringRefs = {};
+        }
+        function hasValidRef(config) {
+          {
+            if (hasOwnProperty.call(config, "ref")) {
+              var getter = Object.getOwnPropertyDescriptor(config, "ref").get;
+              if (getter && getter.isReactWarning) {
+                return false;
+              }
+            }
+          }
+          return config.ref !== void 0;
+        }
+        function hasValidKey(config) {
+          {
+            if (hasOwnProperty.call(config, "key")) {
+              var getter = Object.getOwnPropertyDescriptor(config, "key").get;
+              if (getter && getter.isReactWarning) {
+                return false;
+              }
+            }
+          }
+          return config.key !== void 0;
+        }
+        function warnIfStringRefCannotBeAutoConverted(config, self) {
+          {
+            if (typeof config.ref === "string" && ReactCurrentOwner.current && self && ReactCurrentOwner.current.stateNode !== self) {
+              var componentName = getComponentNameFromType(ReactCurrentOwner.current.type);
+              if (!didWarnAboutStringRefs[componentName]) {
+                error('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', getComponentNameFromType(ReactCurrentOwner.current.type), config.ref);
+                didWarnAboutStringRefs[componentName] = true;
+              }
+            }
+          }
+        }
+        function defineKeyPropWarningGetter(props, displayName) {
+          {
+            var warnAboutAccessingKey = function() {
+              if (!specialPropKeyWarningShown) {
+                specialPropKeyWarningShown = true;
+                error("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", displayName);
+              }
+            };
+            warnAboutAccessingKey.isReactWarning = true;
+            Object.defineProperty(props, "key", {
+              get: warnAboutAccessingKey,
+              configurable: true
+            });
+          }
+        }
+        function defineRefPropWarningGetter(props, displayName) {
+          {
+            var warnAboutAccessingRef = function() {
+              if (!specialPropRefWarningShown) {
+                specialPropRefWarningShown = true;
+                error("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", displayName);
+              }
+            };
+            warnAboutAccessingRef.isReactWarning = true;
+            Object.defineProperty(props, "ref", {
+              get: warnAboutAccessingRef,
+              configurable: true
+            });
+          }
+        }
+        var ReactElement = function(type, key, ref, self, source, owner, props) {
+          var element = {
+            // This tag allows us to uniquely identify this as a React Element
+            $$typeof: REACT_ELEMENT_TYPE,
+            // Built-in properties that belong on the element
+            type,
+            key,
+            ref,
+            props,
+            // Record the component responsible for creating this element.
+            _owner: owner
+          };
+          {
+            element._store = {};
+            Object.defineProperty(element._store, "validated", {
+              configurable: false,
+              enumerable: false,
+              writable: true,
+              value: false
+            });
+            Object.defineProperty(element, "_self", {
+              configurable: false,
+              enumerable: false,
+              writable: false,
+              value: self
+            });
+            Object.defineProperty(element, "_source", {
+              configurable: false,
+              enumerable: false,
+              writable: false,
+              value: source
+            });
+            if (Object.freeze) {
+              Object.freeze(element.props);
+              Object.freeze(element);
+            }
+          }
+          return element;
+        };
+        function jsxDEV(type, config, maybeKey, source, self) {
+          {
+            var propName;
+            var props = {};
+            var key = null;
+            var ref = null;
+            if (maybeKey !== void 0) {
+              {
+                checkKeyStringCoercion(maybeKey);
+              }
+              key = "" + maybeKey;
+            }
+            if (hasValidKey(config)) {
+              {
+                checkKeyStringCoercion(config.key);
+              }
+              key = "" + config.key;
+            }
+            if (hasValidRef(config)) {
+              ref = config.ref;
+              warnIfStringRefCannotBeAutoConverted(config, self);
+            }
+            for (propName in config) {
+              if (hasOwnProperty.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) {
+                props[propName] = config[propName];
+              }
+            }
+            if (type && type.defaultProps) {
+              var defaultProps = type.defaultProps;
+              for (propName in defaultProps) {
+                if (props[propName] === void 0) {
+                  props[propName] = defaultProps[propName];
+                }
+              }
+            }
+            if (key || ref) {
+              var displayName = typeof type === "function" ? type.displayName || type.name || "Unknown" : type;
+              if (key) {
+                defineKeyPropWarningGetter(props, displayName);
+              }
+              if (ref) {
+                defineRefPropWarningGetter(props, displayName);
+              }
+            }
+            return ReactElement(type, key, ref, self, source, ReactCurrentOwner.current, props);
+          }
+        }
+        var ReactCurrentOwner$1 = ReactSharedInternals.ReactCurrentOwner;
+        var ReactDebugCurrentFrame$1 = ReactSharedInternals.ReactDebugCurrentFrame;
+        function setCurrentlyValidatingElement$1(element) {
+          {
+            if (element) {
+              var owner = element._owner;
+              var stack = describeUnknownElementTypeFrameInDEV(element.type, element._source, owner ? owner.type : null);
+              ReactDebugCurrentFrame$1.setExtraStackFrame(stack);
+            } else {
+              ReactDebugCurrentFrame$1.setExtraStackFrame(null);
+            }
+          }
+        }
+        var propTypesMisspellWarningShown;
+        {
+          propTypesMisspellWarningShown = false;
+        }
+        function isValidElement(object) {
+          {
+            return typeof object === "object" && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+          }
+        }
+        function getDeclarationErrorAddendum() {
+          {
+            if (ReactCurrentOwner$1.current) {
+              var name = getComponentNameFromType(ReactCurrentOwner$1.current.type);
+              if (name) {
+                return "\n\nCheck the render method of `" + name + "`.";
+              }
+            }
+            return "";
+          }
+        }
+        function getSourceInfoErrorAddendum(source) {
+          {
+            if (source !== void 0) {
+              var fileName = source.fileName.replace(/^.*[\\\/]/, "");
+              var lineNumber = source.lineNumber;
+              return "\n\nCheck your code at " + fileName + ":" + lineNumber + ".";
+            }
+            return "";
+          }
+        }
+        var ownerHasKeyUseWarning = {};
+        function getCurrentComponentErrorInfo(parentType) {
+          {
+            var info = getDeclarationErrorAddendum();
+            if (!info) {
+              var parentName = typeof parentType === "string" ? parentType : parentType.displayName || parentType.name;
+              if (parentName) {
+                info = "\n\nCheck the top-level render call using <" + parentName + ">.";
+              }
+            }
+            return info;
+          }
+        }
+        function validateExplicitKey(element, parentType) {
+          {
+            if (!element._store || element._store.validated || element.key != null) {
+              return;
+            }
+            element._store.validated = true;
+            var currentComponentErrorInfo = getCurrentComponentErrorInfo(parentType);
+            if (ownerHasKeyUseWarning[currentComponentErrorInfo]) {
+              return;
+            }
+            ownerHasKeyUseWarning[currentComponentErrorInfo] = true;
+            var childOwner = "";
+            if (element && element._owner && element._owner !== ReactCurrentOwner$1.current) {
+              childOwner = " It was passed a child from " + getComponentNameFromType(element._owner.type) + ".";
+            }
+            setCurrentlyValidatingElement$1(element);
+            error('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', currentComponentErrorInfo, childOwner);
+            setCurrentlyValidatingElement$1(null);
+          }
+        }
+        function validateChildKeys(node, parentType) {
+          {
+            if (typeof node !== "object") {
+              return;
+            }
+            if (isArray(node)) {
+              for (var i = 0; i < node.length; i++) {
+                var child = node[i];
+                if (isValidElement(child)) {
+                  validateExplicitKey(child, parentType);
+                }
+              }
+            } else if (isValidElement(node)) {
+              if (node._store) {
+                node._store.validated = true;
+              }
+            } else if (node) {
+              var iteratorFn = getIteratorFn(node);
+              if (typeof iteratorFn === "function") {
+                if (iteratorFn !== node.entries) {
+                  var iterator = iteratorFn.call(node);
+                  var step;
+                  while (!(step = iterator.next()).done) {
+                    if (isValidElement(step.value)) {
+                      validateExplicitKey(step.value, parentType);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        function validatePropTypes(element) {
+          {
+            var type = element.type;
+            if (type === null || type === void 0 || typeof type === "string") {
+              return;
+            }
+            var propTypes;
+            if (typeof type === "function") {
+              propTypes = type.propTypes;
+            } else if (typeof type === "object" && (type.$$typeof === REACT_FORWARD_REF_TYPE || // Note: Memo only checks outer props here.
+            // Inner props are checked in the reconciler.
+            type.$$typeof === REACT_MEMO_TYPE)) {
+              propTypes = type.propTypes;
+            } else {
+              return;
+            }
+            if (propTypes) {
+              var name = getComponentNameFromType(type);
+              checkPropTypes(propTypes, element.props, "prop", name, element);
+            } else if (type.PropTypes !== void 0 && !propTypesMisspellWarningShown) {
+              propTypesMisspellWarningShown = true;
+              var _name = getComponentNameFromType(type);
+              error("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", _name || "Unknown");
+            }
+            if (typeof type.getDefaultProps === "function" && !type.getDefaultProps.isReactClassApproved) {
+              error("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
+            }
+          }
+        }
+        function validateFragmentProps(fragment) {
+          {
+            var keys = Object.keys(fragment.props);
+            for (var i = 0; i < keys.length; i++) {
+              var key = keys[i];
+              if (key !== "children" && key !== "key") {
+                setCurrentlyValidatingElement$1(fragment);
+                error("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", key);
+                setCurrentlyValidatingElement$1(null);
+                break;
+              }
+            }
+            if (fragment.ref !== null) {
+              setCurrentlyValidatingElement$1(fragment);
+              error("Invalid attribute `ref` supplied to `React.Fragment`.");
+              setCurrentlyValidatingElement$1(null);
+            }
+          }
+        }
+        var didWarnAboutKeySpread = {};
+        function jsxWithValidation(type, props, key, isStaticChildren, source, self) {
+          {
+            var validType = isValidElementType(type);
+            if (!validType) {
+              var info = "";
+              if (type === void 0 || typeof type === "object" && type !== null && Object.keys(type).length === 0) {
+                info += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.";
+              }
+              var sourceInfo = getSourceInfoErrorAddendum(source);
+              if (sourceInfo) {
+                info += sourceInfo;
+              } else {
+                info += getDeclarationErrorAddendum();
+              }
+              var typeString;
+              if (type === null) {
+                typeString = "null";
+              } else if (isArray(type)) {
+                typeString = "array";
+              } else if (type !== void 0 && type.$$typeof === REACT_ELEMENT_TYPE) {
+                typeString = "<" + (getComponentNameFromType(type.type) || "Unknown") + " />";
+                info = " Did you accidentally export a JSX literal instead of a component?";
+              } else {
+                typeString = typeof type;
+              }
+              error("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", typeString, info);
+            }
+            var element = jsxDEV(type, props, key, source, self);
+            if (element == null) {
+              return element;
+            }
+            if (validType) {
+              var children = props.children;
+              if (children !== void 0) {
+                if (isStaticChildren) {
+                  if (isArray(children)) {
+                    for (var i = 0; i < children.length; i++) {
+                      validateChildKeys(children[i], type);
+                    }
+                    if (Object.freeze) {
+                      Object.freeze(children);
+                    }
+                  } else {
+                    error("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");
+                  }
+                } else {
+                  validateChildKeys(children, type);
+                }
+              }
+            }
+            {
+              if (hasOwnProperty.call(props, "key")) {
+                var componentName = getComponentNameFromType(type);
+                var keys = Object.keys(props).filter(function(k) {
+                  return k !== "key";
+                });
+                var beforeExample = keys.length > 0 ? "{key: someKey, " + keys.join(": ..., ") + ": ...}" : "{key: someKey}";
+                if (!didWarnAboutKeySpread[componentName + beforeExample]) {
+                  var afterExample = keys.length > 0 ? "{" + keys.join(": ..., ") + ": ...}" : "{}";
+                  error('A props object containing a "key" prop is being spread into JSX:\n  let props = %s;\n  <%s {...props} />\nReact keys must be passed directly to JSX without using spread:\n  let props = %s;\n  <%s key={someKey} {...props} />', beforeExample, componentName, afterExample, componentName);
+                  didWarnAboutKeySpread[componentName + beforeExample] = true;
+                }
+              }
+            }
+            if (type === REACT_FRAGMENT_TYPE) {
+              validateFragmentProps(element);
+            } else {
+              validatePropTypes(element);
+            }
+            return element;
+          }
+        }
+        function jsxWithValidationStatic(type, props, key) {
+          {
+            return jsxWithValidation(type, props, key, true);
+          }
+        }
+        function jsxWithValidationDynamic(type, props, key) {
+          {
+            return jsxWithValidation(type, props, key, false);
+          }
+        }
+        var jsx26 = jsxWithValidationDynamic;
+        var jsxs23 = jsxWithValidationStatic;
+        exports.Fragment = REACT_FRAGMENT_TYPE;
+        exports.jsx = jsx26;
+        exports.jsxs = jsxs23;
+      })();
+    }
+  }
+});
+
+// node_modules/react/jsx-runtime.js
+var require_jsx_runtime = __commonJS({
+  "node_modules/react/jsx-runtime.js"(exports, module) {
+    "use strict";
+    if (false) {
+      module.exports = null;
+    } else {
+      module.exports = require_react_jsx_runtime_development();
+    }
+  }
+});
+
+// web/app.jsx
 var import_react25 = __toESM(require_react());
 var import_client = __toESM(require_client());
 
-// src/App.jsx
+// web/src/App.jsx
 var import_react24 = __toESM(require_react());
 
-// ../data/astronomy-engine.mjs
+// data/astronomy-engine.mjs
 var C_AUDAY = 173.1446326846693;
 var KM_PER_AU = 14959787069098932e-8;
 var DEG2RAD = 0.017453292519943295;
@@ -25771,7 +26676,7 @@ var NodeEventKind;
   NodeEventKind2[NodeEventKind2["Descending"] = -1] = "Descending";
 })(NodeEventKind || (NodeEventKind = {}));
 
-// src/core.jsx
+// web/src/core.jsx
 var SIGNS = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
 var SIMPLE = {
   "Aries": ["\u05D4", "Heh", 5],
@@ -25800,8 +26705,8 @@ var DOUBLES = {
   "Mercury": ["\u05E8", "Resh", 200],
   "Moon": ["\u05EA", "Tav", 400]
 };
-var BODIES = ["Saturn", "Jupiter", "Mars", "Sun", "Venus", "Mercury", "Moon", "Uranus", "Neptune", "Pluto"];
-var GLYPH = { Sun: "\u2609", Moon: "\u263D", Mercury: "\u263F", Venus: "\u2640", Mars: "\u2642", Jupiter: "\u2643", Saturn: "\u2644", Uranus: "\u2645", Neptune: "\u2646", Pluto: "\u2647" };
+var BODIES = ["Saturn", "Jupiter", "Mars", "Sun", "Venus", "Mercury", "Moon", "Uranus", "Neptune"];
+var GLYPH = { Sun: "\u2609", Moon: "\u263D", Mercury: "\u263F", Venus: "\u2640", Mars: "\u2642", Jupiter: "\u2643", Saturn: "\u2644", Uranus: "\u2645", Neptune: "\u2646" };
 var WEEK = [["Sunday", "Sun"], ["Monday", "Moon"], ["Tuesday", "Mars"], ["Wednesday", "Mercury"], ["Thursday", "Jupiter"], ["Friday", "Venus"], ["Saturday", "Saturn"]];
 var FIN2REG = { "\u05DF": "\u05E0", "\u05E5": "\u05E6", "\u05DA": "\u05DB", "\u05DD": "\u05DE", "\u05E3": "\u05E4" };
 var REG2FIN = { "\u05E0": "\u05DF", "\u05E6": "\u05E5", "\u05DB": "\u05DA", "\u05DE": "\u05DD", "\u05E4": "\u05E3" };
@@ -26104,14 +27009,6 @@ function eraForYear(y) {
 function yrLabel(y) {
   return y < 0 ? Math.round(-y) + " BCE" : Math.round(y) + " CE";
 }
-var ERA_WINDOWS = [
-  { w: "427\u2013417 BCE", ev: "Axial Age (Plato b. 427; Torah redaction; Buddha)" },
-  { w: "61\u201373 CE", ev: "Second Temple destroyed (70); rabbinic Judaism; Christian break" },
-  { w: "552\u2013565", ev: "Justinian; Hagia Sophia; closure of the Talmud; pre-Islam" },
-  { w: "1043\u20131056", ev: "East\u2013West Schism (1054)" },
-  { w: "1535\u20131547", ev: "Reformation (1517); Copernicus, De revolutionibus (1543)" },
-  { w: "2025\u20132038", ev: "current window" }
-];
 function letterVal(ch) {
   return GV[FIN2REG[ch] || ch] ?? 0;
 }
@@ -26264,13 +27161,14 @@ function displayDate(ds) {
 }
 var MONTHNAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-// src/ui.jsx
+// web/src/ui.jsx
 var import_react = __toESM(require_react());
 
-// figures.js
+// web/figures.js
 var FIGS = { "1": { "svg": '<svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Star map">\n<rect x="0" y="0" width="440" height="440" fill="#0e1320"/>\n<circle cx="220" cy="220" r="196" fill="none" stroke="#283145" stroke-width="2"/>\n<circle cx="220" cy="220" r="142" fill="none" stroke="#1c2333" stroke-width="1"/>\n<path d="M 220 220 L 220.0 24.0 A 196 196 0 0 0 318.0 50.3 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 318.0 50.3 A 196 196 0 0 0 389.7 122.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 389.7 122.0 A 196 196 0 0 0 416.0 220.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 416.0 220.0 A 196 196 0 0 0 389.7 318.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 389.7 318.0 A 196 196 0 0 0 318.0 389.7 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 318.0 389.7 A 196 196 0 0 0 220.0 416.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 220.0 416.0 A 196 196 0 0 0 122.0 389.7 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 122.0 389.7 A 196 196 0 0 0 50.3 318.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 50.3 318.0 A 196 196 0 0 0 24.0 220.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 24.0 220.0 A 196 196 0 0 0 50.3 122.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 50.3 122.0 A 196 196 0 0 0 122.0 50.3 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 122.0 50.3 A 196 196 0 0 0 220.0 24.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<text x="265.6" y="50.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D4</text>\n<text x="270.0" y="33.6" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Aries \xB7\xD74</text>\n<text x="344.5" y="95.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D5</text>\n<text x="356.5" y="83.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Taurus</text>\n<text x="390.0" y="174.4" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05D6</text>\n<text x="406.4" y="170.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Gemini</text>\n<text x="390.0" y="265.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D7</text>\n<text x="406.4" y="270.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Cancer</text>\n<text x="344.5" y="344.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05D8</text>\n<text x="356.5" y="356.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Leo</text>\n<text x="265.6" y="390.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05D9</text>\n<text x="270.0" y="406.4" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Virgo</text>\n<text x="174.4" y="390.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05DC</text>\n<text x="170.0" y="406.4" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Libra</text>\n<text x="95.5" y="344.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E0</text>\n<text x="83.5" y="356.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Scorpio</text>\n<text x="50.0" y="265.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E1</text>\n<text x="33.6" y="270.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Sagittarius</text>\n<text x="50.0" y="174.4" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E2</text>\n<text x="33.6" y="170.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Capricorn</text>\n<text x="95.5" y="95.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05E6</text>\n<text x="83.5" y="83.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Aquarius</text>\n<text x="174.4" y="50.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05E7</text>\n<text x="170.0" y="33.6" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Pisces \xB7\xD73</text>\n<path d="M228.6 100.3 L322.1 156.9 L228.6 100.3" fill="none" stroke="#e8c87a" stroke-width="2.4" stroke-dasharray="5 4" opacity="0.9" stroke-linejoin="round"/>\n<circle cx="228.6" cy="100.3" r="12" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/>\n<text x="228.6" y="100.3" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="14" fill="#0b0e14" font-weight="bold">\u05D4</text>\n<circle cx="335.8" cy="251.5" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="335.8" y="251.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2643</text>\n<circle cx="187.1" cy="104.6" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="187.1" y="104.6" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2642</text>\n<circle cx="219.8" cy="100.0" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="219.8" y="100.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2609</text>\n<circle cx="219.8" cy="100.0" r="11.5" fill="none" stroke="#ffcf6a" stroke-width="1" stroke-dasharray="2 2" opacity="0.8"/>\n<circle cx="256.0" cy="105.5" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="256.0" y="105.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2640</text>\n<circle cx="176.0" cy="108.4" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="176.0" y="108.4" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u263F</text>\n<circle cx="258.8" cy="106.4" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="258.8" y="106.4" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u263D</text>\n<circle cx="322.1" cy="156.9" r="12" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/>\n<text x="322.1" y="156.9" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="14" fill="#0b0e14" font-weight="bold">\u05D5</text>\n<circle cx="223.7" cy="100.1" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="223.7" y="100.1" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2646</text>\n<circle cx="121.7" cy="151.2" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="121.7" y="151.2" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2647</text>\n<text x="220" y="16" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#ff8a8a">\u05D9\u05D4\u05D5\u05D4 \u2717</text>\n<text x="220" y="30" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#ff8a8a">Genesis \u2717</text>\n<circle cx="220" cy="220" r="32" fill="#0e1320" stroke="#2a3346" stroke-width="1" stroke-dasharray="3 3"/>\n<line x1="176.0" y1="221.5" x2="48.1" y2="226.0" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="202.0" y="220.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05D0</text>\n<text x="182.0" y="221.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Draco</text>\n<line x1="264.0" y1="219.2" x2="392.0" y2="217.0" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="238.0" y="219.7" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05DE</text>\n<text x="258.0" y="219.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Ursa Minor</text>\n<line x1="247.1" y1="185.3" x2="325.9" y2="84.5" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="231.1" y="205.8" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05E9</text>\n<text x="243.4" y="190.1" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Cassiopeia</text>\n<text x="220" y="254" text-anchor="middle" font-family="sans-serif" font-size="6.5" fill="#525d72">3 mothers \xB7 fixed circumpolar axis</text>\n<text x="220" y="226" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#8aa0c0">Spring equinox 2026 \u2014 \u03BB\u2609 = 0\xB0 (Aries 0\xB0)</text>\n</svg>', "cap": "Fig. 1. Stellar wheel at the spring equinox 2026 (\u03BB\u2609 = 0\xB0, entry of Aries). Each 30\xB0 sector is a tropical sign with its simple letter; the highlighted sectors are occupied by \u22651 of the 10 bodies. The 3 mothers (\u05D0 \u05DE \u05E9) on the fixed circumpolar axis (Draco, Ursa Minor, Cassiopeia)." }, "2": { "svg": '<svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Star map">\n<rect x="0" y="0" width="440" height="440" fill="#0e1320"/>\n<circle cx="220" cy="220" r="196" fill="none" stroke="#283145" stroke-width="2"/>\n<circle cx="220" cy="220" r="142" fill="none" stroke="#1c2333" stroke-width="1"/>\n<path d="M 220 220 L 220.0 24.0 A 196 196 0 0 0 318.0 50.3 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 318.0 50.3 A 196 196 0 0 0 389.7 122.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 389.7 122.0 A 196 196 0 0 0 416.0 220.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 416.0 220.0 A 196 196 0 0 0 389.7 318.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 389.7 318.0 A 196 196 0 0 0 318.0 389.7 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 318.0 389.7 A 196 196 0 0 0 220.0 416.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 220.0 416.0 A 196 196 0 0 0 122.0 389.7 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 122.0 389.7 A 196 196 0 0 0 50.3 318.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 50.3 318.0 A 196 196 0 0 0 24.0 220.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 24.0 220.0 A 196 196 0 0 0 50.3 122.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 50.3 122.0 A 196 196 0 0 0 122.0 50.3 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 122.0 50.3 A 196 196 0 0 0 220.0 24.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<text x="265.6" y="50.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D4</text>\n<text x="270.0" y="33.6" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Aries \xB7\xD72</text>\n<text x="344.5" y="95.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05D5</text>\n<text x="356.5" y="83.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Taurus</text>\n<text x="390.0" y="174.4" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D6</text>\n<text x="406.4" y="170.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Gemini \xB7\xD73</text>\n<text x="390.0" y="265.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D7</text>\n<text x="406.4" y="270.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Cancer</text>\n<text x="344.5" y="344.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D8</text>\n<text x="356.5" y="356.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Leo \xB7\xD72</text>\n<text x="265.6" y="390.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05D9</text>\n<text x="270.0" y="406.4" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Virgo</text>\n<text x="174.4" y="390.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05DC</text>\n<text x="170.0" y="406.4" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Libra</text>\n<text x="95.5" y="344.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E0</text>\n<text x="83.5" y="356.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Scorpio</text>\n<text x="50.0" y="265.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E1</text>\n<text x="33.6" y="270.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Sagittarius</text>\n<text x="50.0" y="174.4" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E2</text>\n<text x="33.6" y="170.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Capricorn</text>\n<text x="95.5" y="95.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05E6</text>\n<text x="83.5" y="83.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Aquarius</text>\n<text x="174.4" y="50.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E7</text>\n<text x="170.0" y="33.6" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Pisces</text>\n<path d="M250.3 103.9 L250.3 103.9" fill="none" stroke="#e8c87a" stroke-width="2.4" stroke-dasharray="5 4" opacity="0.9" stroke-linejoin="round"/>\n<circle cx="250.3" cy="103.9" r="12" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/>\n<text x="250.3" y="103.9" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="14" fill="#0b0e14" font-weight="bold">\u05D4</text>\n<circle cx="314.0" cy="294.5" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="314.0" y="294.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2643</text>\n<circle cx="339.9" cy="214.6" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="339.9" y="214.6" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2642</text>\n<circle cx="304.8" cy="304.9" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="304.8" y="304.9" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2609</text>\n<circle cx="218.5" cy="340.0" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="218.5" y="340.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2640</text>\n<circle cx="218.5" cy="340.0" r="11.5" fill="none" stroke="#ffcf6a" stroke-width="1" stroke-dasharray="2 2" opacity="0.8"/>\n<circle cx="327.2" cy="274.0" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="327.2" y="274.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u263F</text>\n<circle cx="327.4" cy="166.5" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="327.4" y="166.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u263D</text>\n<circle cx="328.9" cy="169.7" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="328.9" y="169.7" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2645</text>\n<circle cx="228.7" cy="100.3" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="228.7" y="100.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2646</text>\n<circle cx="120.5" cy="152.9" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="120.5" y="152.9" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2647</text>\n<text x="220" y="16" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#ff8a8a">\u05D9\u05D4\u05D5\u05D4 \u2717</text>\n<text x="220" y="30" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#ff8a8a">Genesis \u2717</text>\n<circle cx="220" cy="220" r="32" fill="#0e1320" stroke="#2a3346" stroke-width="1" stroke-dasharray="3 3"/>\n<line x1="176.0" y1="221.5" x2="48.1" y2="226.0" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="202.0" y="220.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05D0</text>\n<text x="182.0" y="221.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Draco</text>\n<line x1="264.0" y1="219.2" x2="392.0" y2="217.0" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="238.0" y="219.7" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05DE</text>\n<text x="258.0" y="219.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Ursa Minor</text>\n<line x1="247.1" y1="185.3" x2="325.9" y2="84.5" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="231.1" y="205.8" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05E9</text>\n<text x="243.4" y="190.1" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Cassiopeia</text>\n<text x="220" y="254" text-anchor="middle" font-family="sans-serif" font-size="6.5" fill="#525d72">3 mothers \xB7 fixed circumpolar axis</text>\n<text x="220" y="226" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#8aa0c0">Sky 2026-08-07 \xB7 10 bodies, 12 simples, 3 mothers</text>\n</svg>', "cap": "Fig. 2. The tripartite mapping of the Sefer Yetzirah over the real sky (2026-08-07). Outer ring: 12 simples = 12 signs with their letter. Middle ring: planetary glyphs = the 7 doubles (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) at their longitudes. Center: the 3 mothers, a fixed axis that does not precess. Highlighted sector = occupied sign = simple legible that day." }, "3": { "svg": '<svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Star map">\n<rect x="0" y="0" width="440" height="440" fill="#0e1320"/>\n<circle cx="303.4" cy="136.6" r="14" fill="none" stroke="#c98b3a" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.7"/>\n<circle cx="303.4" cy="303.4" r="14" fill="none" stroke="#c98b3a" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.7"/>\n<circle cx="136.6" cy="303.4" r="14" fill="none" stroke="#c98b3a" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.7"/>\n<circle cx="136.6" cy="136.6" r="14" fill="none" stroke="#c98b3a" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.7"/>\n<line x1="303.4" y1="136.6" x2="303.4" y2="303.4" stroke="#c98b3a" stroke-width="1" stroke-dasharray="4 4" opacity="0.45"/>\n<line x1="136.6" y1="303.4" x2="136.6" y2="136.6" stroke="#c98b3a" stroke-width="1" stroke-dasharray="4 4" opacity="0.45"/>\n<circle cx="220" cy="220" r="196" fill="none" stroke="#283145" stroke-width="2"/>\n<circle cx="220" cy="220" r="142" fill="none" stroke="#1c2333" stroke-width="1"/>\n<path d="M 220 220 L 220.0 24.0 A 196 196 0 0 0 318.0 50.3 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 318.0 50.3 A 196 196 0 0 0 389.7 122.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 389.7 122.0 A 196 196 0 0 0 416.0 220.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 416.0 220.0 A 196 196 0 0 0 389.7 318.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 389.7 318.0 A 196 196 0 0 0 318.0 389.7 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 318.0 389.7 A 196 196 0 0 0 220.0 416.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 220.0 416.0 A 196 196 0 0 0 122.0 389.7 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 122.0 389.7 A 196 196 0 0 0 50.3 318.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 50.3 318.0 A 196 196 0 0 0 24.0 220.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 24.0 220.0 A 196 196 0 0 0 50.3 122.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 50.3 122.0 A 196 196 0 0 0 122.0 50.3 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 122.0 50.3 A 196 196 0 0 0 220.0 24.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<text x="265.6" y="50.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D4</text>\n<text x="270.0" y="33.6" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Aries \xB7\xD72</text>\n<text x="344.5" y="95.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05D5</text>\n<text x="356.5" y="83.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Taurus</text>\n<text x="390.0" y="174.4" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D6</text>\n<text x="406.4" y="170.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Gemini \xB7\xD73</text>\n<text x="390.0" y="265.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D7</text>\n<text x="406.4" y="270.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Cancer</text>\n<text x="344.5" y="344.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D8</text>\n<text x="356.5" y="356.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Leo \xB7\xD72</text>\n<text x="265.6" y="390.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05D9</text>\n<text x="270.0" y="406.4" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Virgo</text>\n<text x="174.4" y="390.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05DC</text>\n<text x="170.0" y="406.4" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Libra</text>\n<text x="95.5" y="344.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E0</text>\n<text x="83.5" y="356.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Scorpio</text>\n<text x="50.0" y="265.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E1</text>\n<text x="33.6" y="270.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Sagittarius</text>\n<text x="50.0" y="174.4" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E2</text>\n<text x="33.6" y="170.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Capricorn</text>\n<text x="95.5" y="95.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05E6</text>\n<text x="83.5" y="83.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Aquarius</text>\n<text x="174.4" y="50.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E7</text>\n<text x="170.0" y="33.6" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Pisces</text>\n<path d="M250.3 103.9 L250.3 103.9" fill="none" stroke="#e8c87a" stroke-width="2.4" stroke-dasharray="5 4" opacity="0.9" stroke-linejoin="round"/>\n<circle cx="250.3" cy="103.9" r="12" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/>\n<text x="250.3" y="103.9" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="14" fill="#0b0e14" font-weight="bold">\u05D4</text>\n<circle cx="314.0" cy="294.5" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="314.0" y="294.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2643</text>\n<circle cx="339.9" cy="214.6" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="339.9" y="214.6" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2642</text>\n<circle cx="304.8" cy="304.9" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="304.8" y="304.9" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2609</text>\n<circle cx="218.5" cy="340.0" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="218.5" y="340.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2640</text>\n<circle cx="218.5" cy="340.0" r="11.5" fill="none" stroke="#ffcf6a" stroke-width="1" stroke-dasharray="2 2" opacity="0.8"/>\n<circle cx="327.2" cy="274.0" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="327.2" y="274.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u263F</text>\n<circle cx="327.4" cy="166.5" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="327.4" y="166.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u263D</text>\n<circle cx="328.9" cy="169.7" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="328.9" y="169.7" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2645</text>\n<circle cx="228.7" cy="100.3" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="228.7" y="100.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2646</text>\n<circle cx="120.5" cy="152.9" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="120.5" y="152.9" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2647</text>\n<text x="220" y="16" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#ff8a8a">\u05D9\u05D4\u05D5\u05D4 \u2717</text>\n<text x="220" y="30" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#ff8a8a">Genesis \u2717</text>\n<circle cx="220" cy="220" r="32" fill="#0e1320" stroke="#2a3346" stroke-width="1" stroke-dasharray="3 3"/>\n<line x1="176.0" y1="221.5" x2="48.1" y2="226.0" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="202.0" y="220.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05D0</text>\n<text x="182.0" y="221.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Draco</text>\n<line x1="264.0" y1="219.2" x2="392.0" y2="217.0" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="238.0" y="219.7" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05DE</text>\n<text x="258.0" y="219.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Ursa Minor</text>\n<line x1="247.1" y1="185.3" x2="325.9" y2="84.5" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="231.1" y="205.8" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05E9</text>\n<text x="243.4" y="190.1" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Cassiopeia</text>\n<text x="220" y="254" text-anchor="middle" font-family="sans-serif" font-size="6.5" fill="#525d72">3 mothers \xB7 fixed circumpolar axis</text>\n<text x="220" y="226" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#8aa0c0">Fixed cross: Taurus-Leo-Scorpio-Aquarius (exact 90\xB0) = tetramorph</text>\n</svg>', "cap": "Fig. 3. The fixed cross: Taurus-Leo-Scorpio-Aquarius at exact 90\xB0 (135\u221245 = 225\u2212135 = 315\u2212225 = 90), the geometric image of the tetramorph of Ezekiel 1 / Revelation 4 (ox, lion, eagle, man). Dashed rings marking the 4 fixed signs." }, "4": { "svg": '<svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Star map">\n<rect x="0" y="0" width="440" height="440" fill="#0e1320"/>\n<circle cx="220" cy="220" r="196" fill="none" stroke="#283145" stroke-width="2"/>\n<circle cx="220" cy="220" r="142" fill="none" stroke="#1c2333" stroke-width="1"/>\n<path d="M 220 220 L 220.0 24.0 A 196 196 0 0 0 318.0 50.3 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 318.0 50.3 A 196 196 0 0 0 389.7 122.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 389.7 122.0 A 196 196 0 0 0 416.0 220.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 416.0 220.0 A 196 196 0 0 0 389.7 318.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 389.7 318.0 A 196 196 0 0 0 318.0 389.7 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 318.0 389.7 A 196 196 0 0 0 220.0 416.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 220.0 416.0 A 196 196 0 0 0 122.0 389.7 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 122.0 389.7 A 196 196 0 0 0 50.3 318.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 50.3 318.0 A 196 196 0 0 0 24.0 220.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 24.0 220.0 A 196 196 0 0 0 50.3 122.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 50.3 122.0 A 196 196 0 0 0 122.0 50.3 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 122.0 50.3 A 196 196 0 0 0 220.0 24.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<text x="265.6" y="50.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D4</text>\n<text x="270.0" y="33.6" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Aries</text>\n<text x="344.5" y="95.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D5</text>\n<text x="356.5" y="83.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Taurus</text>\n<text x="390.0" y="174.4" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05D6</text>\n<text x="406.4" y="170.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Gemini</text>\n<text x="390.0" y="265.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D7</text>\n<text x="406.4" y="270.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Cancer</text>\n<text x="344.5" y="344.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05D8</text>\n<text x="356.5" y="356.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Leo</text>\n<text x="265.6" y="390.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D9</text>\n<text x="270.0" y="406.4" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Virgo</text>\n<text x="174.4" y="390.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05DC</text>\n<text x="170.0" y="406.4" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Libra</text>\n<text x="95.5" y="344.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E0</text>\n<text x="83.5" y="356.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Scorpio</text>\n<text x="50.0" y="265.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E1</text>\n<text x="33.6" y="270.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Sagittarius</text>\n<text x="50.0" y="174.4" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E2</text>\n<text x="33.6" y="170.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Capricorn</text>\n<text x="95.5" y="95.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05E6</text>\n<text x="83.5" y="83.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Aquarius \xB7\xD75</text>\n<text x="174.4" y="50.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05E7</text>\n<text x="170.0" y="33.6" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Pisces</text>\n<path d="M270.9 328.7 L220.4 100.0 L321.2 155.5 L220.4 100.0" fill="none" stroke="#e8c87a" stroke-width="2.4" stroke-dasharray="none" opacity="0.9" stroke-linejoin="round"/>\n<circle cx="217.7" cy="100.0" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="217.7" y="100.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2644</text>\n<circle cx="334.7" cy="255.3" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="334.7" y="255.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2643</text>\n<circle cx="126.3" cy="145.0" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="126.3" y="145.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2642</text>\n<circle cx="134.6" cy="135.7" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="134.6" y="135.7" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2609</text>\n<circle cx="145.0" cy="126.3" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="145.0" y="126.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2640</text>\n<circle cx="149.3" cy="123.0" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="149.3" y="123.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u263F</text>\n<circle cx="270.9" cy="328.7" r="12" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/>\n<text x="270.9" y="328.7" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="14" fill="#0b0e14" font-weight="bold">\u05D9</text>\n<circle cx="321.2" cy="155.5" r="12" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/>\n<text x="321.2" y="155.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="14" fill="#0b0e14" font-weight="bold">\u05D5</text>\n<circle cx="220.4" cy="100.0" r="12" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/>\n<text x="220.4" y="100.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="14" fill="#0b0e14" font-weight="bold">\u05D4</text>\n<circle cx="120.3" cy="153.3" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="120.3" y="153.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2647</text>\n<text x="220" y="16" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#e8c87a">\u05D9\u05D4\u05D5\u05D4 \u2713</text>\n<text x="220" y="30" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#ff8a8a">Genesis \u2717</text>\n<circle cx="220" cy="220" r="32" fill="#0e1320" stroke="#2a3346" stroke-width="1" stroke-dasharray="3 3"/>\n<line x1="176.0" y1="221.5" x2="48.1" y2="226.0" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="202.0" y="220.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05D0</text>\n<text x="182.0" y="221.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Draco</text>\n<line x1="264.0" y1="219.2" x2="392.0" y2="217.0" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="238.0" y="219.7" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05DE</text>\n<text x="258.0" y="219.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Ursa Minor</text>\n<line x1="247.1" y1="185.3" x2="325.9" y2="84.5" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="231.1" y="205.8" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05E9</text>\n<text x="243.4" y="190.1" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Cassiopeia</text>\n<text x="220" y="254" text-anchor="middle" font-family="sans-serif" font-size="6.5" fill="#525d72">3 mothers \xB7 fixed circumpolar axis</text>\n<text x="220" y="226" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#8aa0c0">\u05D9\u05D4\u05D5\u05D4: {\u05D9 Virgo, \u05D4 Aries, \u05D5 Taurus} \u2014 cadence ~monthly (without Aquarius: not Genesis)</text>\n</svg>', "cap": "Fig. 4. Cadence of \u05D9\u05D4\u05D5\u05D4. The golden line traces the path \u05D9\u2192\u05D4\u2192\u05D5\u2192\u05D4 over the signs Virgo-Aries-Taurus-Aries, occupied by fast planets (2026-02-03, \u05D9\u05D4\u05D5\u05D4 legible). Without Aquarius (\u05E6) in the set \u2192 it is not Genesis: the cadence is monthly, not secular." }, "5": { "svg": '<svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Star map">\n<rect x="0" y="0" width="440" height="440" fill="#0e1320"/>\n<circle cx="220" cy="220" r="196" fill="none" stroke="#283145" stroke-width="2"/>\n<circle cx="220" cy="220" r="142" fill="none" stroke="#1c2333" stroke-width="1"/>\n<path d="M 220 220 L 220.0 24.0 A 196 196 0 0 0 318.0 50.3 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 318.0 50.3 A 196 196 0 0 0 389.7 122.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 389.7 122.0 A 196 196 0 0 0 416.0 220.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 416.0 220.0 A 196 196 0 0 0 389.7 318.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 389.7 318.0 A 196 196 0 0 0 318.0 389.7 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 318.0 389.7 A 196 196 0 0 0 220.0 416.0 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 220.0 416.0 A 196 196 0 0 0 122.0 389.7 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 122.0 389.7 A 196 196 0 0 0 50.3 318.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 50.3 318.0 A 196 196 0 0 0 24.0 220.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 24.0 220.0 A 196 196 0 0 0 50.3 122.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<path d="M 220 220 L 50.3 122.0 A 196 196 0 0 0 122.0 50.3 Z" fill="rgba(127.176.255.0.10)" stroke="#3a4762" stroke-width="0.7"/>\n<path d="M 220 220 L 122.0 50.3 A 196 196 0 0 0 220.0 24.0 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>\n<text x="265.6" y="50.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D4</text>\n<text x="270.0" y="33.6" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Aries \xB7\xD72</text>\n<text x="344.5" y="95.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D5</text>\n<text x="356.5" y="83.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Taurus</text>\n<text x="390.0" y="174.4" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D6</text>\n<text x="406.4" y="170.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Gemini</text>\n<text x="390.0" y="265.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D7</text>\n<text x="406.4" y="270.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Cancer</text>\n<text x="344.5" y="344.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D8</text>\n<text x="356.5" y="356.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Leo</text>\n<text x="265.6" y="390.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05D9</text>\n<text x="270.0" y="406.4" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Virgo \xB7\xD72</text>\n<text x="174.4" y="390.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05DC</text>\n<text x="170.0" y="406.4" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Libra</text>\n<text x="95.5" y="344.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E0</text>\n<text x="83.5" y="356.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Scorpio</text>\n<text x="50.0" y="265.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E1</text>\n<text x="33.6" y="270.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Sagittarius</text>\n<text x="50.0" y="174.4" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E2</text>\n<text x="33.6" y="170.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Capricorn</text>\n<text x="95.5" y="95.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#cfe0ff">\u05E6</text>\n<text x="83.5" y="83.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Aquarius</text>\n<text x="174.4" y="50.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="21" fill="#5a647a">\u05E7</text>\n<text x="170.0" y="33.6" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="8" fill="#424b5e">Pisces</text>\n<path d="M262.9 332.1 L248.3 103.4 L284.1 118.5 L248.3 103.4" fill="none" stroke="#e8c87a" stroke-width="2.4" stroke-dasharray="none" opacity="0.9" stroke-linejoin="round"/>\n<circle cx="248.3" cy="103.4" r="12" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/>\n<text x="248.3" y="103.4" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="14" fill="#0b0e14" font-weight="bold">\u05D4</text>\n<circle cx="306.6" cy="303.1" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="306.6" y="303.1" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2643</text>\n<circle cx="336.6" cy="248.4" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="336.6" y="248.4" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2642</text>\n<circle cx="262.9" cy="332.1" r="12" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/>\n<text x="262.9" y="332.1" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="14" fill="#0b0e14" font-weight="bold">\u05D9</text>\n<circle cx="172.0" cy="330.0" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="172.0" y="330.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2640</text>\n<circle cx="253.8" cy="335.1" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="253.8" y="335.1" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u263F</text>\n<circle cx="284.1" cy="118.5" r="12" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/>\n<text x="284.1" y="118.5" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="14" fill="#0b0e14" font-weight="bold">\u05D5</text>\n<circle cx="329.3" cy="170.5" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="329.3" y="170.5" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2645</text>\n<circle cx="227.7" cy="100.2" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="227.7" y="100.2" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2646</text>\n<circle cx="119.9" cy="153.8" r="8.5" fill="#131826" stroke="#7fb0ff" stroke-width="1.2"/>\n<text x="119.9" y="153.8" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="12" fill="#7fb0ff">\u2647</text>\n<text x="220" y="16" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#e8c87a">\u05D9\u05D4\u05D5\u05D4 \u2713</text>\n<text x="220" y="30" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#6fe0a0">Genesis \u2713</text>\n<circle cx="220" cy="220" r="32" fill="#0e1320" stroke="#2a3346" stroke-width="1" stroke-dasharray="3 3"/>\n<line x1="176.0" y1="221.5" x2="48.1" y2="226.0" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="202.0" y="220.6" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05D0</text>\n<text x="182.0" y="221.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Draco</text>\n<line x1="264.0" y1="219.2" x2="392.0" y2="217.0" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="238.0" y="219.7" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05DE</text>\n<text x="258.0" y="219.3" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Ursa Minor</text>\n<line x1="247.1" y1="185.3" x2="325.9" y2="84.5" stroke="#33405a" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.55"/>\n<text x="231.1" y="205.8" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="19" fill="#9aa6bd">\u05E9</text>\n<text x="243.4" y="190.1" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="5.6" fill="#5d6883">Cassiopeia</text>\n<text x="220" y="254" text-anchor="middle" font-family="sans-serif" font-size="6.5" fill="#525d72">3 mothers \xB7 fixed circumpolar axis</text>\n<text x="220" y="226" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#8aa0c0">Genesis 1:1 legible \u2014 window 2025\u20132038 (Neptune\u2208Aries, Pluto\u2208Aquarius)</text>\n</svg>', "cap": "Fig. 5. Genesis 1:1 legible (2026-09-01, window 2025\u20132038). The set {\u05D9,\u05D4,\u05DC,\u05D5,\u05E6} = Virgo+Aries+Libra+Taurus+Aquarius demands Aquarius (\u05E6, anchored by Pluto) and Aries (\u05D4, anchored by Neptune): the slow Neptune\u2013Pluto pair in Aries\u2013Aquarius phase opens the ~13-year window that recurs every ~491 years." }, "6": { "svg": '<svg viewBox="0 0 730 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Seven planetary kameot"><rect x="0" y="0" width="730" height="178" fill="#0e1320"/><text x="56.4" y="16" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#cfe0ff">\u2644</text><text x="56.4" y="30" text-anchor="middle" font-family="sans-serif" font-size="7.6" fill="#8aa0c0">Saturn  3x3</text><rect x="10.0" y="40.0" width="92.9" height="92.9" fill="none" stroke="#3a4762" stroke-width="1"/><line x1="41.0" y1="40.0" x2="41.0" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="10.0" y1="71.0" x2="102.9" y2="71.0" stroke="#283145" stroke-width="0.6"/><line x1="71.9" y1="40.0" x2="71.9" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="10.0" y1="101.9" x2="102.9" y2="101.9" stroke="#283145" stroke-width="0.6"/><text x="56.4" y="147.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">M=15</text><text x="159.3" y="16" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#cfe0ff">\u2643</text><text x="159.3" y="30" text-anchor="middle" font-family="sans-serif" font-size="7.6" fill="#8aa0c0">Jupiter  4x4</text><rect x="112.9" y="40.0" width="92.9" height="92.9" fill="none" stroke="#3a4762" stroke-width="1"/><line x1="136.1" y1="40.0" x2="136.1" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="112.9" y1="63.2" x2="205.7" y2="63.2" stroke="#283145" stroke-width="0.6"/><line x1="159.3" y1="40.0" x2="159.3" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="112.9" y1="86.4" x2="205.7" y2="86.4" stroke="#283145" stroke-width="0.6"/><line x1="182.5" y1="40.0" x2="182.5" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="112.9" y1="109.6" x2="205.7" y2="109.6" stroke="#283145" stroke-width="0.6"/><text x="159.3" y="147.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">M=34</text><text x="262.1" y="16" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#cfe0ff">\u2642</text><text x="262.1" y="30" text-anchor="middle" font-family="sans-serif" font-size="7.6" fill="#8aa0c0">Mars  5x5</text><rect x="215.7" y="40.0" width="92.9" height="92.9" fill="none" stroke="#3a4762" stroke-width="1"/><line x1="234.3" y1="40.0" x2="234.3" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="215.7" y1="58.6" x2="308.6" y2="58.6" stroke="#283145" stroke-width="0.6"/><line x1="252.9" y1="40.0" x2="252.9" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="215.7" y1="77.1" x2="308.6" y2="77.1" stroke="#283145" stroke-width="0.6"/><line x1="271.4" y1="40.0" x2="271.4" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="215.7" y1="95.7" x2="308.6" y2="95.7" stroke="#283145" stroke-width="0.6"/><line x1="290.0" y1="40.0" x2="290.0" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="215.7" y1="114.3" x2="308.6" y2="114.3" stroke="#283145" stroke-width="0.6"/><text x="262.1" y="147.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">M=65</text><text x="365.0" y="16" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#ffcf6a">\u2609</text><text x="365.0" y="30" text-anchor="middle" font-family="sans-serif" font-size="7.6" fill="#8aa0c0">Sun  6x6</text><rect x="318.6" y="40.0" width="92.9" height="92.9" fill="none" stroke="#3a4762" stroke-width="1"/><line x1="334.0" y1="40.0" x2="334.0" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="318.6" y1="55.5" x2="411.4" y2="55.5" stroke="#283145" stroke-width="0.6"/><line x1="349.5" y1="40.0" x2="349.5" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="318.6" y1="71.0" x2="411.4" y2="71.0" stroke="#283145" stroke-width="0.6"/><line x1="365.0" y1="40.0" x2="365.0" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="318.6" y1="86.4" x2="411.4" y2="86.4" stroke="#283145" stroke-width="0.6"/><line x1="380.5" y1="40.0" x2="380.5" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="318.6" y1="101.9" x2="411.4" y2="101.9" stroke="#283145" stroke-width="0.6"/><line x1="396.0" y1="40.0" x2="396.0" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="318.6" y1="117.4" x2="411.4" y2="117.4" stroke="#283145" stroke-width="0.6"/><text x="365.0" y="147.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">M=111</text><text x="467.9" y="16" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#cfe0ff">\u2640</text><text x="467.9" y="30" text-anchor="middle" font-family="sans-serif" font-size="7.6" fill="#8aa0c0">Venus  7x7</text><rect x="421.4" y="40.0" width="92.9" height="92.9" fill="none" stroke="#3a4762" stroke-width="1"/><line x1="434.7" y1="40.0" x2="434.7" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="421.4" y1="53.3" x2="514.3" y2="53.3" stroke="#283145" stroke-width="0.6"/><line x1="448.0" y1="40.0" x2="448.0" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="421.4" y1="66.5" x2="514.3" y2="66.5" stroke="#283145" stroke-width="0.6"/><line x1="461.2" y1="40.0" x2="461.2" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="421.4" y1="79.8" x2="514.3" y2="79.8" stroke="#283145" stroke-width="0.6"/><line x1="474.5" y1="40.0" x2="474.5" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="421.4" y1="93.1" x2="514.3" y2="93.1" stroke="#283145" stroke-width="0.6"/><line x1="487.8" y1="40.0" x2="487.8" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="421.4" y1="106.3" x2="514.3" y2="106.3" stroke="#283145" stroke-width="0.6"/><line x1="501.0" y1="40.0" x2="501.0" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="421.4" y1="119.6" x2="514.3" y2="119.6" stroke="#283145" stroke-width="0.6"/><text x="467.9" y="147.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">M=175</text><text x="570.7" y="16" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#7fb0ff">\u263F</text><text x="570.7" y="30" text-anchor="middle" font-family="sans-serif" font-size="7.6" fill="#8aa0c0">Mercury  8x8</text><rect x="524.3" y="40.0" width="92.9" height="92.9" fill="none" stroke="#3a4762" stroke-width="1"/><line x1="535.9" y1="40.0" x2="535.9" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="524.3" y1="51.6" x2="617.1" y2="51.6" stroke="#283145" stroke-width="0.6"/><line x1="547.5" y1="40.0" x2="547.5" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="524.3" y1="63.2" x2="617.1" y2="63.2" stroke="#283145" stroke-width="0.6"/><line x1="559.1" y1="40.0" x2="559.1" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="524.3" y1="74.8" x2="617.1" y2="74.8" stroke="#283145" stroke-width="0.6"/><line x1="570.7" y1="40.0" x2="570.7" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="524.3" y1="86.4" x2="617.1" y2="86.4" stroke="#283145" stroke-width="0.6"/><line x1="582.3" y1="40.0" x2="582.3" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="524.3" y1="98.0" x2="617.1" y2="98.0" stroke="#283145" stroke-width="0.6"/><line x1="593.9" y1="40.0" x2="593.9" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="524.3" y1="109.6" x2="617.1" y2="109.6" stroke="#283145" stroke-width="0.6"/><line x1="605.5" y1="40.0" x2="605.5" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="524.3" y1="121.2" x2="617.1" y2="121.2" stroke="#283145" stroke-width="0.6"/><text x="570.7" y="147.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">M=260</text><text x="673.6" y="16" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#cfe0ff">\u263E</text><text x="673.6" y="30" text-anchor="middle" font-family="sans-serif" font-size="7.6" fill="#8aa0c0">Moon  9x9</text><rect x="627.1" y="40.0" width="92.9" height="92.9" fill="none" stroke="#3a4762" stroke-width="1"/><line x1="637.5" y1="40.0" x2="637.5" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="627.1" y1="50.3" x2="720.0" y2="50.3" stroke="#283145" stroke-width="0.6"/><line x1="647.8" y1="40.0" x2="647.8" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="627.1" y1="60.6" x2="720.0" y2="60.6" stroke="#283145" stroke-width="0.6"/><line x1="658.1" y1="40.0" x2="658.1" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="627.1" y1="71.0" x2="720.0" y2="71.0" stroke="#283145" stroke-width="0.6"/><line x1="668.4" y1="40.0" x2="668.4" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="627.1" y1="81.3" x2="720.0" y2="81.3" stroke="#283145" stroke-width="0.6"/><line x1="678.7" y1="40.0" x2="678.7" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="627.1" y1="91.6" x2="720.0" y2="91.6" stroke="#283145" stroke-width="0.6"/><line x1="689.0" y1="40.0" x2="689.0" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="627.1" y1="101.9" x2="720.0" y2="101.9" stroke="#283145" stroke-width="0.6"/><line x1="699.4" y1="40.0" x2="699.4" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="627.1" y1="112.2" x2="720.0" y2="112.2" stroke="#283145" stroke-width="0.6"/><line x1="709.7" y1="40.0" x2="709.7" y2="132.9" stroke="#283145" stroke-width="0.6"/><line x1="627.1" y1="122.5" x2="720.0" y2="122.5" stroke="#283145" stroke-width="0.6"/><text x="673.6" y="147.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">M=369</text><text x="365.0" y="172" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#7fb0ff">Mercury M=260 = Maya Tzolkin  \xB7  Sun 6x6: 1+...+36 = 666 = 6x111  \xB7  Saturn 3x3 = Lo Shu</text></svg>', "cap": "Fig. 6. The 7 planetary kameot (magic squares), orders 3-9, in Chaldean order with their magic constants M(n)=n(n\xB2+1)/2. They are seven, like the 7 doubles = 7 planets of the SY: the kamea of order n is assigned to the nth planet. Saturn 3x3 is the Lo Shu (M=15), the basis of the sigils; Mercury 8x8 (M=260) coincides with the Maya Tzolkin; the Sun 6x6 sums 1+\u2026+36 = 666 = 6\xD7111." }, "7": { "svg": '<svg viewBox="0 0 460 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lo Shu and sigil"><rect x="0" y="0" width="460" height="430" fill="#0e1320"/><text x="220.0" y="48" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cfe0ff">Lo Shu (Saturn 3x3, M=15) + Aiq Bekar groups</text><rect x="70" y="70" width="300" height="300" fill="none" stroke="#3a4762" stroke-width="1.4"/><line x1="170.0" y1="70" x2="170.0" y2="370" stroke="#3a4762" stroke-width="1"/><line x1="70" y1="170.0" x2="370" y2="170.0" stroke="#3a4762" stroke-width="1"/><line x1="270.0" y1="70" x2="270.0" y2="370" stroke="#3a4762" stroke-width="1"/><line x1="70" y1="270.0" x2="370" y2="270.0" stroke="#3a4762" stroke-width="1"/><text x="120.0" y="116.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="26" fill="#cfe0ff">4</text><text x="120.0" y="138.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="11" fill="#8aa0c0">\u05D3 \u05DE \u05EA</text><text x="220.0" y="116.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="26" fill="#cfe0ff">9</text><text x="220.0" y="138.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="11" fill="#8aa0c0">\u05D8 \u05E6 \u05E5</text><text x="320.0" y="116.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="26" fill="#cfe0ff">2</text><text x="320.0" y="138.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="11" fill="#8aa0c0">\u05D1 \u05DB \u05E8</text><text x="120.0" y="216.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="26" fill="#cfe0ff">3</text><text x="120.0" y="238.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="11" fill="#8aa0c0">\u05D2 \u05DC \u05E9</text><text x="220.0" y="216.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="26" fill="#cfe0ff">5</text><text x="220.0" y="238.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="11" fill="#8aa0c0">\u05D4 \u05E0 \u05DA</text><text x="320.0" y="216.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="26" fill="#cfe0ff">7</text><text x="320.0" y="238.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="11" fill="#8aa0c0">\u05D6 \u05E2 \u05DF</text><text x="120.0" y="316.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="26" fill="#cfe0ff">8</text><text x="120.0" y="338.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="11" fill="#8aa0c0">\u05D7 \u05E4 \u05E3</text><text x="220.0" y="316.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="26" fill="#cfe0ff">1</text><text x="220.0" y="338.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="11" fill="#8aa0c0">\u05D0 \u05D9 \u05E7</text><text x="320.0" y="316.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="26" fill="#cfe0ff">6</text><text x="320.0" y="338.0" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="11" fill="#8aa0c0">\u05D5 \u05E1 \u05DD</text><path d="M120.0 120.0L120.0 220.0L220.0 320.0L120.0 320.0" fill="none" stroke="#e8c87a" stroke-width="2.4" stroke-linejoin="round" opacity="0.95"/><circle cx="120.0" cy="120.0" r="10" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/><text x="120.0" y="120.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="10" fill="#0b0e14" font-weight="bold">1</text><circle cx="120.0" cy="220.0" r="10" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/><text x="120.0" y="220.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="10" fill="#0b0e14" font-weight="bold">2</text><circle cx="220.0" cy="320.0" r="10" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/><text x="220.0" y="320.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="10" fill="#0b0e14" font-weight="bold">3</text><circle cx="120.0" cy="320.0" r="10" fill="#e8c87a" stroke="#fff3d0" stroke-width="1"/><text x="120.0" y="320.0" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-size="10" fill="#0b0e14" font-weight="bold">4</text><text x="70" y="404" text-anchor="start" font-family="serif" font-size="14" fill="#e8c87a">\u05DE\u05E9\u05D9\u05D7  \u2192  Aiq Bekar 4\xB73\xB71\xB78</text><text x="70" y="424" text-anchor="start" font-family="sans-serif" font-size="9.5" fill="#8aa0c0">Each cell holds its Lo Shu digit; the sigil joins the reduced cells of the name in order.</text></svg>', "cap": "Fig. 7. The Lo Shu (Saturn 3x3, magic constant 15) with the 9 Aiq Bekar groups overlaid: each cell gathers the letters whose gematria digit-sums to that cell. The golden trace is the sigil of \u05DE\u05E9\u05D9\u05D7 (Messiah): vowels removed \u2192 Aiq Bekar 4\xB73\xB71\xB78 \u2192 the reduced cells joined in order on the Lo Shu. Aiq Bekar is exactly the digit-sum of the decimal-positional gematria of \xA72 \u2014 the bridge from the alphabet to the sigil." }, "8": { "svg": '<svg viewBox="0 0 580 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="72 triplets extraction"><rect x="0" y="0" width="580" height="360" fill="#0e1320"/><text x="75.0" y="56" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#e8c87a">\u2193</text><text x="75.0" y="74" text-anchor="middle" font-family="serif" font-size="11" fill="#cfe0ff">Ex 14:19</text><rect x="40" y="86" width="70" height="220" fill="none" stroke="#3a4762" stroke-width="1.2"/><line x1="40" y1="113.5" x2="110" y2="113.5" stroke="#1c2333" stroke-width="0.6"/><line x1="40" y1="141.0" x2="110" y2="141.0" stroke="#1c2333" stroke-width="0.6"/><line x1="40" y1="168.5" x2="110" y2="168.5" stroke="#1c2333" stroke-width="0.6"/><line x1="40" y1="196.0" x2="110" y2="196.0" stroke="#1c2333" stroke-width="0.6"/><line x1="40" y1="223.5" x2="110" y2="223.5" stroke="#1c2333" stroke-width="0.6"/><line x1="40" y1="251.0" x2="110" y2="251.0" stroke="#1c2333" stroke-width="0.6"/><line x1="40" y1="278.5" x2="110" y2="278.5" stroke="#1c2333" stroke-width="0.6"/><text x="75.0" y="321" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#8aa0c0">72 letters</text><text x="179.0" y="56" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#e8c87a">\u2191</text><text x="179.0" y="74" text-anchor="middle" font-family="serif" font-size="11" fill="#cfe0ff">Ex 14:20</text><rect x="144" y="86" width="70" height="220" fill="none" stroke="#3a4762" stroke-width="1.2"/><line x1="144" y1="113.5" x2="214" y2="113.5" stroke="#1c2333" stroke-width="0.6"/><line x1="144" y1="141.0" x2="214" y2="141.0" stroke="#1c2333" stroke-width="0.6"/><line x1="144" y1="168.5" x2="214" y2="168.5" stroke="#1c2333" stroke-width="0.6"/><line x1="144" y1="196.0" x2="214" y2="196.0" stroke="#1c2333" stroke-width="0.6"/><line x1="144" y1="223.5" x2="214" y2="223.5" stroke="#1c2333" stroke-width="0.6"/><line x1="144" y1="251.0" x2="214" y2="251.0" stroke="#1c2333" stroke-width="0.6"/><line x1="144" y1="278.5" x2="214" y2="278.5" stroke="#1c2333" stroke-width="0.6"/><text x="179.0" y="321" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#8aa0c0">72 letters</text><text x="283.0" y="56" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#e8c87a">\u2193</text><text x="283.0" y="74" text-anchor="middle" font-family="serif" font-size="11" fill="#cfe0ff">Ex 14:21</text><rect x="248" y="86" width="70" height="220" fill="none" stroke="#3a4762" stroke-width="1.2"/><line x1="248" y1="113.5" x2="318" y2="113.5" stroke="#1c2333" stroke-width="0.6"/><line x1="248" y1="141.0" x2="318" y2="141.0" stroke="#1c2333" stroke-width="0.6"/><line x1="248" y1="168.5" x2="318" y2="168.5" stroke="#1c2333" stroke-width="0.6"/><line x1="248" y1="196.0" x2="318" y2="196.0" stroke="#1c2333" stroke-width="0.6"/><line x1="248" y1="223.5" x2="318" y2="223.5" stroke="#1c2333" stroke-width="0.6"/><line x1="248" y1="251.0" x2="318" y2="251.0" stroke="#1c2333" stroke-width="0.6"/><line x1="248" y1="278.5" x2="318" y2="278.5" stroke="#1c2333" stroke-width="0.6"/><text x="283.0" y="321" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#8aa0c0">72 letters</text><text x="372" y="74" text-anchor="start" font-family="serif" font-size="11" fill="#cfe0ff">72 triplets  ( trio[i] = v19[i] + v20[71\u2212i] + v21[i] )</text><text x="372" y="96" text-anchor="start" font-family="serif" font-size="15" fill="#e8c87a">\u05D5\u05D4\u05D5</text><text x="424" y="96" text-anchor="start" font-family="sans-serif" font-size="9.5" fill="#8aa0c0">Vehuiah</text><text x="372" y="126" text-anchor="start" font-family="serif" font-size="15" fill="#e8c87a">\u05D9\u05DC\u05D9</text><text x="424" y="126" text-anchor="start" font-family="sans-serif" font-size="9.5" fill="#8aa0c0">Jeliel</text><text x="372" y="156" text-anchor="start" font-family="serif" font-size="15" fill="#e8c87a">\u05E1\u05D9\u05D8</text><text x="424" y="156" text-anchor="start" font-family="sans-serif" font-size="9.5" fill="#8aa0c0">Sitael</text><text x="372" y="186" text-anchor="start" font-family="serif" font-size="15" fill="#e8c87a">\u05D0\u05DC\u05DE</text><text x="424" y="186" text-anchor="start" font-family="sans-serif" font-size="9.5" fill="#8aa0c0">Elemiah</text><text x="372" y="216" text-anchor="start" font-family="serif" font-size="15" fill="#e8c87a">\u05DE\u05D4\u05E9</text><text x="424" y="216" text-anchor="start" font-family="sans-serif" font-size="9.5" fill="#8aa0c0">Mahashiah</text><text x="372" y="246" text-anchor="start" font-family="serif" font-size="15" fill="#e8c87a">\u2026</text><text x="290.0" y="336" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7fb0ff">72 \xD7 3 = 216 = 6\xB3 consonants  \u2192  72 triplets (Shem HaMephorash)</text><text x="290.0" y="351" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#525d72">v20 read bottom-up (inverted), as tradition requires</text></svg>', "cap": "Fig. 8. Extraction of the 72 triplets of the Shem HaMephorash from Exodus 14:19-21 (3 verses \xD7 72 consonants = 216 = 6\xB3). The three columns are read in parallel \u2014 v19 downward, v20 upward (inverted), v21 downward \u2014 so that row i yields trio[i]. The first trios are \u05D5\u05D4\u05D5 (Vehuiah), \u05D9\u05DC\u05D9 (Jeliel), \u05E1\u05D9\u05D8 (Sitael)\u2026, verified against the canonical list." }, "9": { "svg": '<svg viewBox="0 0 720 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Six windows timeline"><rect x="0" y="0" width="720" height="210" fill="#0e1320"/><text x="360.0" y="20" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#cfe0ff">Genesis 1:1 legibility windows  \xB7  ~491-year cadence (Neptune\u2013Pluto synodic)</text><line x1="70" y1="120" x2="650" y2="120" stroke="#3a4762" stroke-width="1.4"/><line x1="261.8" y1="116" x2="261.8" y2="124" stroke="#3a4762" stroke-width="0.6"/><text x="261.8" y="135" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#525d72">293</text><line x1="107.2" y1="120" x2="107.2" y2="94" stroke="#e8c87a" stroke-width="1"/><circle cx="107.2" cy="120" r="5" fill="#e8c87a"/><text x="107.2" y="106" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#e8c87a" font-weight="bold">-427</text><text x="107.2" y="86" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#cfe0ff">Axial Age</text><text x="107.2" y="75" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">(Plato, Torah, Buddha)</text><line x1="212.0" y1="120" x2="212.0" y2="146" stroke="#e8c87a" stroke-width="1"/><circle cx="212.0" cy="120" r="5" fill="#e8c87a"/><text x="212.0" y="134" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#e8c87a" font-weight="bold">61</text><text x="212.0" y="154" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#cfe0ff">Second Temple</text><text x="212.0" y="165" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">destroyed (70)</text><line x1="317.5" y1="120" x2="317.5" y2="94" stroke="#e8c87a" stroke-width="1"/><circle cx="317.5" cy="120" r="5" fill="#e8c87a"/><text x="317.5" y="106" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#e8c87a" font-weight="bold">552</text><text x="317.5" y="86" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#cfe0ff">Justinian</text><text x="317.5" y="75" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">(Hagia Sophia)</text><line x1="422.9" y1="120" x2="422.9" y2="146" stroke="#e8c87a" stroke-width="1"/><circle cx="422.9" cy="120" r="5" fill="#e8c87a"/><text x="422.9" y="134" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#e8c87a" font-weight="bold">1043</text><text x="422.9" y="154" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#cfe0ff">East/West</text><text x="422.9" y="165" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">Schism (1054)</text><line x1="528.6" y1="120" x2="528.6" y2="94" stroke="#e8c87a" stroke-width="1"/><circle cx="528.6" cy="120" r="5" fill="#e8c87a"/><text x="528.6" y="106" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#e8c87a" font-weight="bold">1535</text><text x="528.6" y="86" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#cfe0ff">Reformation</text><text x="528.6" y="75" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">(Copernicus 1543)</text><line x1="633.9" y1="120" x2="633.9" y2="146" stroke="#e8c87a" stroke-width="1"/><circle cx="633.9" cy="120" r="5" fill="#e8c87a"/><text x="633.9" y="134" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#e8c87a" font-weight="bold">2025</text><text x="633.9" y="154" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#cfe0ff">Present</text><text x="633.9" y="165" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">(2025)</text><text x="360.0" y="202" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#525d72">mean separation 490.5 y  \xB7  regularity p &lt; 5\xD710\u207B\u2076 (caveat: n=6, selection bias)</text></svg>', "cap": "Fig. 9. The six ~13-year windows in which Genesis 1:1 is legible (Neptune\u2208Aries \u2227 Pluto\u2208Aquarius), from \u2212427 BCE to 2025 CE, mean separation 490.5 years = the Neptune\u2013Pluto synodic. Each coincides with a major religious-linguistic re-formation. The regularity is very high against chance (p &lt; 5\xD710\u207B\u2076), though n = 6 and selection bias leave causality as a hypothesis (\xA715b.8)." }, "10": { "svg": '<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Seven words of Genesis 1:1"><rect x="0" y="0" width="640" height="300" fill="#0e1320"/><text x="320.0" y="22" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#cfe0ff">The 7 words of Genesis 1:1  \xB7  total = 2701 = 37\xD773</text><rect x="72.1" y="42.0" width="48.2" height="186.0" fill="#3a5e8a" opacity="0.82" stroke="#fff3d0" stroke-width="0.4"/><text x="96.1" y="36.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">913</text><text x="96.1" y="244.0" text-anchor="middle" font-family="serif" font-size="13" fill="#cfe0ff">\u05D1\u05E8\u05D0\u05E9\u05D9\u05EA</text><text x="96.1" y="274.0" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#525d72">w1</text><rect x="152.3" y="186.6" width="48.2" height="41.4" fill="#3a5e8a" opacity="0.82" stroke="#fff3d0" stroke-width="0.4"/><text x="176.4" y="180.6" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">203</text><text x="176.4" y="244.0" text-anchor="middle" font-family="serif" font-size="13" fill="#cfe0ff">\u05D1\u05E8\u05D0</text><text x="176.4" y="274.0" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#525d72">w2</text><rect x="232.6" y="210.5" width="48.2" height="17.5" fill="#3a5e8a" opacity="0.82" stroke="#fff3d0" stroke-width="0.4"/><text x="256.7" y="204.5" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">86</text><text x="256.7" y="244.0" text-anchor="middle" font-family="serif" font-size="13" fill="#cfe0ff">\u05D0\u05DC\u05D4\u05D9\u05DD</text><text x="256.7" y="274.0" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#525d72">w3</text><rect x="312.9" y="146.3" width="48.2" height="81.7" fill="#3a5e8a" opacity="0.82" stroke="#fff3d0" stroke-width="0.4"/><text x="337.0" y="140.3" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">401</text><text x="337.0" y="244.0" text-anchor="middle" font-family="serif" font-size="13" fill="#cfe0ff">\u05D0\u05EA</text><text x="337.0" y="274.0" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#525d72">w4</text><rect x="393.2" y="147.5" width="48.2" height="80.5" fill="#3a5e8a" opacity="0.82" stroke="#fff3d0" stroke-width="0.4"/><text x="417.3" y="141.5" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">395</text><text x="417.3" y="244.0" text-anchor="middle" font-family="serif" font-size="13" fill="#cfe0ff">\u05D4\u05E9\u05DE\u05D9\u05DD</text><text x="417.3" y="274.0" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#525d72">w5</text><rect x="473.5" y="145.1" width="48.2" height="82.9" fill="#e8c87a" opacity="0.97" stroke="#fff3d0" stroke-width="0.4"/><text x="497.6" y="139.1" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">407</text><text x="497.6" y="244.0" text-anchor="middle" font-family="serif" font-size="13" fill="#cfe0ff">\u05D5\u05D0\u05EA</text><text x="497.6" y="258.0" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#e8c87a">11x37</text><text x="497.6" y="274.0" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#525d72">w6</text><rect x="553.8" y="167.7" width="48.2" height="60.3" fill="#e8c87a" opacity="0.97" stroke="#fff3d0" stroke-width="0.4"/><text x="577.9" y="161.7" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#cfe0ff">296</text><text x="577.9" y="244.0" text-anchor="middle" font-family="serif" font-size="13" fill="#cfe0ff">\u05D4\u05D0\u05E8\u05E5</text><text x="577.9" y="258.0" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#e8c87a">8x37</text><text x="577.9" y="274.0" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#525d72">w7</text><line x1="56" y1="228" x2="618" y2="228" stroke="#3a4762" stroke-width="1"/><text x="320.0" y="291" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#7fb0ff">2 of 7 words are multiples of 37 (407=11\xD737, 296=8\xD737)  \xB7  23/127 subsets multiples of 37  \xB7  p\u22483.1\xD710\u207B\u2074</text></svg>', "cap": "Fig. 10. The 7 words of Genesis 1:1 and their gematrias (913, 203, 86, 401, 395, 407, 296 = 2701 = 37\xD773). The two gold bars are the words that are multiples of 37 \u2014 the last two, \u05D5\u05D0\u05EA (407=11\xD737) and \u05D4\u05D0\u05E8\u05E5 (296=8\xD737). A permutation null of the 28-letter multiset shows this bias is real: 23 of 127 non-empty subsets are multiples of 37 (p\u22483.1\xD710\u207B\u2074) and 2/7 words (p\u22488.2\xD710\u207B\xB3), beyond the trivial total 2701=37\xD773." }, "11": { "svg": '<svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zodiacal scroll rolling up"><rect x="0" y="0" width="600" height="240" fill="#0e1320"/><text x="300" y="22" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#cfe0ff">Rev 6:14 \u2014 the sky as a scroll that rolls up</text><defs><g id="star11"><polygon points="0,-6 1.4,-2 6,-2 2.2,1 3.6,5 0,2.5 -3.6,5 -2.2,1 -6,-2 -1.4,-2" fill="#cfe0ff"/></g></defs><circle cx="50" cy="120" r="16" fill="none" stroke="#3a4762" stroke-width="1.4"/><circle cx="50" cy="120" r="9" fill="none" stroke="#3a4762" stroke-width="1"/><rect x="66" y="95" width="300" height="50" rx="3" fill="#10182a" stroke="#3a4762" stroke-width="1.2"/><line x1="91" y1="95" x2="91" y2="145" stroke="#283145" stroke-width="0.6"/><line x1="116" y1="95" x2="116" y2="145" stroke="#283145" stroke-width="0.6"/><line x1="141" y1="95" x2="141" y2="145" stroke="#283145" stroke-width="0.6"/><line x1="166" y1="95" x2="166" y2="145" stroke="#283145" stroke-width="0.6"/><line x1="191" y1="95" x2="191" y2="145" stroke="#283145" stroke-width="0.6"/><line x1="216" y1="95" x2="216" y2="145" stroke="#283145" stroke-width="0.6"/><line x1="241" y1="95" x2="241" y2="145" stroke="#283145" stroke-width="0.6"/><line x1="266" y1="95" x2="266" y2="145" stroke="#283145" stroke-width="0.6"/><line x1="291" y1="95" x2="291" y2="145" stroke="#283145" stroke-width="0.6"/><line x1="316" y1="95" x2="316" y2="145" stroke="#283145" stroke-width="0.6"/><line x1="341" y1="95" x2="341" y2="145" stroke="#283145" stroke-width="0.6"/><text x="78.5" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#cfe0ff">\u2648</text><text x="103.5" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#cfe0ff">\u2649</text><text x="128.5" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#cfe0ff">\u264A</text><text x="153.5" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#cfe0ff">\u264B</text><text x="178.5" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#cfe0ff">\u264C</text><text x="203.5" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#cfe0ff">\u264D</text><text x="228.5" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#cfe0ff">\u264E</text><text x="253.5" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#cfe0ff">\u264F</text><text x="278.5" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#cfe0ff">\u2650</text><text x="303.5" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#cfe0ff">\u2651</text><text x="328.5" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#cfe0ff">\u2652</text><text x="353.5" y="126" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#cfe0ff">\u2653</text><path d="M366,120 C 396,120 410,108 416,96 A 26 26 0 1 1 416 144 C 408,150 396,150 380,140" fill="none" stroke="#3a4762" stroke-width="1.4"/><circle cx="416" cy="120" r="26" fill="none" stroke="#3a4762" stroke-width="1.2"/><circle cx="416" cy="120" r="17" fill="none" stroke="#3a4762" stroke-width="0.9"/><circle cx="416" cy="120" r="8" fill="none" stroke="#3a4762" stroke-width="0.7"/><text x="50" y="126" text-anchor="middle" font-family="serif" font-size="17" fill="#ffcf6a">\u0391</text><text x="416" y="100" text-anchor="middle" font-family="serif" font-size="17" fill="#ffcf6a">\u03A9</text><line x1="430" y1="150" x2="440" y2="166" stroke="#283145" stroke-width="0.5"/><line x1="455" y1="165" x2="465" y2="181" stroke="#283145" stroke-width="0.5"/><line x1="478" y1="178" x2="488" y2="194" stroke="#283145" stroke-width="0.5"/><use href="#star11" x="430" y="150"/><use href="#star11" x="455" y="165"/><use href="#star11" x="478" y="178"/><use href="#star11" x="445" y="195"/><use href="#star11" x="500" y="150"/><use href="#star11" x="470" y="200"/><use href="#star11" x="515" y="172"/><text x="588" y="212" text-anchor="end" font-family="sans-serif" font-size="8" fill="#8aa0c0">stars = letters that fall</text><text x="300" y="232" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#7fb0ff">the Lamb opens the book = the Lector Caeli  \xB7  the sky is a \u03B2\u03B9\u03B2\u03BB\u03AF\u03BF\u03BD</text></svg>', "cap": 'Fig. 11. Rev 6:14 \u2014 the zodiacal band (the 12 simples) as a written scroll that rolls up; the stars (the constellation-letters) fall out of their seats. "I am the Alpha and the Omega" = the bounds of the alphabet = the cosmos as text. The Lamb who opens the sealed scroll is the one who can read the sky as a book \u2014 the Lector Caeli.' }, "12": { "svg": '<svg viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="New Jerusalem cube of 12"><rect x="0" y="0" width="440" height="340" fill="#0e1320"/><text x="220" y="22" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#cfe0ff">Rev 21 \u2014 the New Jerusalem = the 12-cube</text><polygon points="220,87 287.5,126 220,165 152.5,126" fill="#14223a" stroke="#3a4762" stroke-width="1.2"/><polygon points="287.5,126 287.5,204 220,243 220,165" fill="#0e1320" stroke="#3a4762" stroke-width="1.2"/><polygon points="152.5,126 220,165 220,243 152.5,204" fill="#11192a" stroke="#3a4762" stroke-width="1.2"/><text x="220" y="120" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#ffcf6a">12</text><text x="300" y="168" text-anchor="start" font-family="sans-serif" font-size="7.5" fill="#8aa0c0">12 000 stadia</text><text x="160" y="168" text-anchor="end" font-family="sans-serif" font-size="7.5" fill="#8aa0c0">wall 144 = 12\xB2</text><text x="220" y="156" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#8aa0c0">cubit</text><line x1="150" y1="262" x2="290" y2="262" stroke="#3a4762" stroke-width="1"/><line x1="153" y1="259" x2="153" y2="265" stroke="#7fb0ff" stroke-width="1"/><line x1="164.5" y1="259" x2="164.5" y2="265" stroke="#7fb0ff" stroke-width="1"/><line x1="176" y1="259" x2="176" y2="265" stroke="#7fb0ff" stroke-width="1"/><line x1="187.5" y1="259" x2="187.5" y2="265" stroke="#7fb0ff" stroke-width="1"/><line x1="199" y1="259" x2="199" y2="265" stroke="#7fb0ff" stroke-width="1"/><line x1="210.5" y1="259" x2="210.5" y2="265" stroke="#7fb0ff" stroke-width="1"/><line x1="222" y1="259" x2="222" y2="265" stroke="#7fb0ff" stroke-width="1"/><line x1="233.5" y1="259" x2="233.5" y2="265" stroke="#7fb0ff" stroke-width="1"/><line x1="245" y1="259" x2="245" y2="265" stroke="#7fb0ff" stroke-width="1"/><line x1="256.5" y1="259" x2="256.5" y2="265" stroke="#7fb0ff" stroke-width="1"/><line x1="268" y1="259" x2="268" y2="265" stroke="#7fb0ff" stroke-width="1"/><line x1="279.5" y1="259" x2="279.5" y2="265" stroke="#7fb0ff" stroke-width="1"/><text x="220" y="278" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#7fb0ff">12 gates (3 \xD7 4 sides)</text><text x="220" y="292" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#8aa0c0">12 foundations (apostles)</text><text x="220" y="312" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#cfe0ff">144 000 sealed = 12\xB2 \xD7 10\xB3   \xB7   12\xB3 = 1 728   \xB7   cube = 3 mothers \xD7 edge 12 (simples)</text><text x="220" y="328" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#8aa0c0">144 = 12\xB2 (Meton 144+91 = 235 \xB7 Maya baktun 144 000 \xB7 Rev 7 sealed)</text></svg>', "cap": "Fig. 12. Rev 21 \u2014 the New Jerusalem is a cube of edge 12,000 stadia (the 3 mothers = the 3 dimensions \xD7 edge 12 = the simples; 12\xB3 = 1728), walled in 144 = 12\xB2 cubits, with 12 gates + 12 foundations = 24 (= 12 tribes + 12 apostles). The 144,000 sealed = 12\xB2 \xD7 10\xB3 = (zodiac)\xB2 \xD7 (millennium = 10 sefirot cubed)." } };
 
-// src/ui.jsx
+// web/src/ui.jsx
+var import_jsx_runtime = __toESM(require_jsx_runtime());
 function SkyMap({ rows, occ, hl }) {
   const C = 220, R = 196, Rp = 120;
   const pt = (lon, r) => {
@@ -26284,36 +27182,63 @@ function SkyMap({ rows, occ, hl }) {
   });
   const HLS = hl ? new Set(hl) : null;
   const occupied = occ.size;
-  return /* @__PURE__ */ import_react.default.createElement("svg", { viewBox: "0 0 440 440", width: "100%", height: "auto", style: { maxWidth: "100%" }, role: "img", "aria-label": HLS ? `Sky map: word requires ${[...HLS].join(" ")} (${occupied} signs occupied)` : `Sky map: ${occupied} of 12 signs occupied` }, /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: R, fill: "#0f0f15", stroke: "#2a2a38", strokeWidth: "2" }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: Rp + 22, fill: "none", stroke: "#202028", strokeWidth: "1" }), SIGNS.map((s, i) => {
-    const [x0, y0] = pt(i * 30, R), [x1, y1] = pt((i + 1) * 30, R);
-    const on = occ.has(SIMPLE[s][0]);
-    const isHl = HLS && HLS.has(SIMPLE[s][0]);
-    const fill = isHl ? "rgba(232,200,122,0.18)" : on ? "rgba(207,208,232,0.10)" : "transparent";
-    const stroke = isHl ? "#e8c87a" : on ? "#3a3a4a" : "#2a2a38";
-    return /* @__PURE__ */ import_react.default.createElement("path", { key: s, d: `M ${C} ${C} L ${x0} ${y0} A ${R} ${R} 0 0 0 ${x1} ${y1} Z`, fill, stroke, strokeWidth: isHl ? 1.4 : 0.7 });
-  }), SIGNS.map((s, i) => {
-    const [lx, ly] = pt(i * 30 + 15, R - 20);
-    const [nx, ny] = pt(i * 30 + 15, R - 3);
-    const on = occ.has(SIMPLE[s][0]), n = signCount[s] || 0;
-    const isHl = HLS && HLS.has(SIMPLE[s][0]);
-    const letterFill = isHl ? "#e8c87a" : on ? "#cfd0e8" : "#5a5a6e";
-    const nameFill = isHl ? "#e8c87a" : on ? "#9ca3af" : "#4a4a55";
-    return /* @__PURE__ */ import_react.default.createElement("g", { key: s }, /* @__PURE__ */ import_react.default.createElement("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "21", fontWeight: isHl ? 700 : 400, fill: letterFill }, SIMPLE[s][0]), /* @__PURE__ */ import_react.default.createElement("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "8.5", fill: nameFill }, s, n > 1 ? " \xB7\xD7" + n : ""));
-  }), rows.map((r) => {
-    const [px, py] = pt(r.lon, Rp);
-    return /* @__PURE__ */ import_react.default.createElement("g", { key: r.body }, /* @__PURE__ */ import_react.default.createElement("circle", { cx: px, cy: py, r: "8.5", fill: "#0f1518", stroke: "#5eead4", strokeWidth: "1.2" }), /* @__PURE__ */ import_react.default.createElement("text", { x: px, y: py, textAnchor: "middle", dominantBaseline: "middle", fontSize: "12", fill: "#5eead4" }, GLYPH[r.body]), r.boundary && /* @__PURE__ */ import_react.default.createElement("circle", { cx: px, cy: py, r: "11.5", fill: "none", stroke: "#f4a8c0", strokeWidth: "1", strokeDasharray: "2 2", opacity: "0.8" }));
-  }), /* @__PURE__ */ import_react.default.createElement("circle", { cx: C, cy: C, r: "32", fill: "#0f0f15", stroke: "#2a2a38", strokeWidth: "1", strokeDasharray: "3 3" }), MOTHER_LON.map(([h, con, lon]) => {
-    const [lx, ly] = pt(lon, 18);
-    const [nx, ny] = pt(lon, 38);
-    const [ox, oy] = pt(lon, R - 24);
-    const [sx, sy] = pt(lon, 44);
-    return /* @__PURE__ */ import_react.default.createElement("g", { key: h }, /* @__PURE__ */ import_react.default.createElement("line", { x1: sx, y1: sy, x2: ox, y2: oy, stroke: "#3a3a4a", strokeWidth: "0.6", strokeDasharray: "2 3", opacity: "0.55" }), /* @__PURE__ */ import_react.default.createElement("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "19", fill: "#9b8ec4" }, h), /* @__PURE__ */ import_react.default.createElement("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "5.6", fill: "#6a6a86" }, con));
-  }), /* @__PURE__ */ import_react.default.createElement("text", { x: C, y: C + 34, textAnchor: "middle", fontSize: "6.5", fill: "#6a6a86" }, "3 mothers \xB7 fixed circumpolar axis"));
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { viewBox: "0 0 440 440", width: "100%", height: "auto", style: { maxWidth: "100%" }, role: "img", "aria-label": HLS ? `Sky map: word requires ${[...HLS].join(" ")} (${occupied} signs occupied)` : `Sky map: ${occupied} of 12 signs occupied`, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: C, cy: C, r: R, fill: "#0f0f15", stroke: "#2a2a38", strokeWidth: "2" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: C, cy: C, r: Rp + 22, fill: "none", stroke: "#202028", strokeWidth: "1" }),
+    SIGNS.map((s, i) => {
+      const [x0, y0] = pt(i * 30, R), [x1, y1] = pt((i + 1) * 30, R);
+      const on = occ.has(SIMPLE[s][0]);
+      const isHl = HLS && HLS.has(SIMPLE[s][0]);
+      const fill = isHl ? "rgba(232,200,122,0.18)" : on ? "rgba(207,208,232,0.10)" : "transparent";
+      const stroke = isHl ? "#e8c87a" : on ? "#3a3a4a" : "#2a2a38";
+      return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: `M ${C} ${C} L ${x0} ${y0} A ${R} ${R} 0 0 0 ${x1} ${y1} Z`, fill, stroke, strokeWidth: isHl ? 1.4 : 0.7 }, s);
+    }),
+    SIGNS.map((s, i) => {
+      const [lx, ly] = pt(i * 30 + 15, R - 20);
+      const [nx, ny] = pt(i * 30 + 15, R - 3);
+      const on = occ.has(SIMPLE[s][0]), n = signCount[s] || 0;
+      const isHl = HLS && HLS.has(SIMPLE[s][0]);
+      const letterFill = isHl ? "#e8c87a" : on ? "#cfd0e8" : "#5a5a6e";
+      const nameFill = isHl ? "#e8c87a" : on ? "#9ca3af" : "#4a4a55";
+      return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "21", fontWeight: isHl ? 700 : 400, fill: letterFill, children: SIMPLE[s][0] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "8.5", fill: nameFill, children: [
+          s,
+          n > 1 ? " \xB7\xD7" + n : ""
+        ] })
+      ] }, s);
+    }),
+    rows.map((r) => {
+      const [px, py] = pt(r.lon, Rp);
+      return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: px, cy: py, r: "8.5", fill: "#0f1518", stroke: "#5eead4", strokeWidth: "1.2" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", { x: px, y: py, textAnchor: "middle", dominantBaseline: "middle", fontSize: "12", fill: "#5eead4", children: GLYPH[r.body] }),
+        r.boundary && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: px, cy: py, r: "11.5", fill: "none", stroke: "#f4a8c0", strokeWidth: "1", strokeDasharray: "2 2", opacity: "0.8" })
+      ] }, r.body);
+    }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: C, cy: C, r: "32", fill: "#0f0f15", stroke: "#2a2a38", strokeWidth: "1", strokeDasharray: "3 3" }),
+    MOTHER_LON.map(([h, con, lon]) => {
+      const [lx, ly] = pt(lon, 18);
+      const [nx, ny] = pt(lon, 38);
+      const [ox, oy] = pt(lon, R - 24);
+      const [sx, sy] = pt(lon, 44);
+      return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", { x1: sx, y1: sy, x2: ox, y2: oy, stroke: "#3a3a4a", strokeWidth: "0.6", strokeDasharray: "2 3", opacity: "0.55" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "19", fill: "#9b8ec4", children: h }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "5.6", fill: "#6a6a86", children: con })
+      ] }, h);
+    }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", { x: C, y: C + 34, textAnchor: "middle", fontSize: "6.5", fill: "#6a6a86", children: "3 mothers \xB7 fixed circumpolar axis" })
+  ] });
 }
 function Fig({ n, doc }) {
   const f = FIGS[n];
   if (!f) return null;
-  return /* @__PURE__ */ import_react.default.createElement("div", { className: "fig", role: "img", "aria-label": `Figure ${n}` }, /* @__PURE__ */ import_react.default.createElement("div", { dangerouslySetInnerHTML: { __html: f.svg } }), /* @__PURE__ */ import_react.default.createElement("div", { className: "cap" }, f.cap), doc && /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { marginTop: 6, textAlign: "left" } }, doc));
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "fig", role: "img", "aria-label": `Figure ${n}`, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { dangerouslySetInnerHTML: { __html: f.svg } }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "cap", children: f.cap }),
+    doc && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "muted", style: { marginTop: 6, textAlign: "left" }, children: doc })
+  ] });
 }
 function DateEntry({ value, onChange }) {
   const d = parseDate(value) || parseDate("2026-08-08");
@@ -26327,22 +27252,30 @@ function DateEntry({ value, onChange }) {
     if (!isNaN(n)) set(n, mo, da);
     else setYs(String(y));
   };
-  return /* @__PURE__ */ import_react.default.createElement("span", { style: { display: "inline-flex", gap: 5, alignItems: "center" } }, /* @__PURE__ */ import_react.default.createElement(
-    "input",
-    {
-      type: "text",
-      inputMode: "numeric",
-      value: ys,
-      style: { width: 78 },
-      title: "year \u2014 negative = BCE",
-      onChange: (e) => setYs(e.target.value),
-      onBlur: commitYear,
-      onKeyDown: (e) => {
-        if (e.key === "Enter") e.target.blur();
-      },
-      "aria-label": "Year (negative = BCE)"
-    }
-  ), /* @__PURE__ */ import_react.default.createElement("select", { value: mo, onChange: (e) => set(y, parseInt(e.target.value, 10), da), "aria-label": "Month" }, MON.map((n, i) => /* @__PURE__ */ import_react.default.createElement("option", { key: n, value: i + 1 }, n))), /* @__PURE__ */ import_react.default.createElement("select", { value: da, onChange: (e) => set(y, mo, parseInt(e.target.value, 10)), "aria-label": "Day" }, Array.from({ length: dim }, (_, i) => /* @__PURE__ */ import_react.default.createElement("option", { key: i + 1, value: i + 1 }, i + 1))), y < 0 && /* @__PURE__ */ import_react.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, Math.abs(y), " BCE"));
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { display: "inline-flex", gap: 5, alignItems: "center" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+      "input",
+      {
+        type: "text",
+        inputMode: "numeric",
+        value: ys,
+        style: { width: 78 },
+        title: "year \u2014 negative = BCE",
+        onChange: (e) => setYs(e.target.value),
+        onBlur: commitYear,
+        onKeyDown: (e) => {
+          if (e.key === "Enter") e.target.blur();
+        },
+        "aria-label": "Year (negative = BCE)"
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("select", { value: mo, onChange: (e) => set(y, parseInt(e.target.value, 10), da), "aria-label": "Month", children: MON.map((n, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", { value: i + 1, children: n }, n)) }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("select", { value: da, onChange: (e) => set(y, mo, parseInt(e.target.value, 10)), "aria-label": "Day", children: Array.from({ length: dim }, (_, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", { value: i + 1, children: i + 1 }, i + 1)) }),
+    y < 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "muted", style: { fontSize: ".78rem" }, children: [
+      Math.abs(y),
+      " BCE"
+    ] })
+  ] });
 }
 function YearInput({ value, onCommit, width = 90, title = "year \u2014 negative = BCE" }) {
   const [s, setS] = (0, import_react.useState)(String(value));
@@ -26352,7 +27285,7 @@ function YearInput({ value, onCommit, width = 90, title = "year \u2014 negative 
     if (!isNaN(n) && n !== value) onCommit(n);
     else setS(String(value));
   };
-  return /* @__PURE__ */ import_react.default.createElement(
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
     "input",
     {
       type: "text",
@@ -26370,10 +27303,10 @@ function YearInput({ value, onCommit, width = 90, title = "year \u2014 negative 
   );
 }
 function SubTabs({ items, active, onChange }) {
-  return /* @__PURE__ */ import_react.default.createElement("div", { className: "subtabs", role: "tablist" }, items.map(([id, label]) => /* @__PURE__ */ import_react.default.createElement("div", { key: id, role: "tab", "aria-selected": active === id, className: "subtab" + (active === id ? " active" : ""), onClick: () => onChange(id) }, label)));
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "subtabs", role: "tablist", children: items.map(([id, label]) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { role: "tab", "aria-selected": active === id, className: "subtab" + (active === id ? " active" : ""), onClick: () => onChange(id), children: label }, id)) });
 }
 
-// src/seo.jsx
+// web/src/seo.jsx
 var BASE_TITLE = "Hebrew Letters in the Stars \xB7 Sefer Yetzirah Stellar Alphabet & Sky Reader";
 var BASE_DESC = "Read Hebrew words written in the sky: real planet positions (astronomy-engine) map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names. Sky map, alignments, reader, time, gematria, sigils, codes, psalms \u2014 the live calculators of The Apocalypse of Adam.";
 function setMeta(name, content) {
@@ -26387,22 +27320,70 @@ function setRouteMeta(title, desc) {
   setMeta("description", desc);
 }
 
-// src/Footer.jsx
+// web/src/Footer.jsx
 var import_react2 = __toESM(require_react());
+var import_jsx_runtime2 = __toESM(require_jsx_runtime());
 var GITHUB = "https://github.com/VABISMO/adam-apocalypse";
 var PAPER = "/paper";
 function Col({ title, children }) {
-  return /* @__PURE__ */ import_react2.default.createElement("section", { className: "ft-col" }, /* @__PURE__ */ import_react2.default.createElement("h4", { className: "ft-h" }, title), children);
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("section", { className: "ft-col", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h4", { className: "ft-h", children: title }),
+    children
+  ] });
 }
 function L({ href, children, ext = false }) {
-  return /* @__PURE__ */ import_react2.default.createElement("a", { className: "ft-a", href, ...ext ? { target: "_blank", rel: "noreferrer" } : {} }, children);
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { className: "ft-a", href, ...ext ? { target: "_blank", rel: "noreferrer" } : {}, children });
 }
 function Footer() {
   const year = 2026;
-  return /* @__PURE__ */ import_react2.default.createElement("footer", { className: "site-footer" }, /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react2.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react2.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react2.default.createElement(L, { href: PAPER }, "The paper \u2014 The Reader of the Sky \u2192"), /* @__PURE__ */ import_react2.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Felipe II"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/alignments" }, "Stellar alignments (171 fiches)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/" }, "Sky reader app")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react2.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react2.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react2.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react2.default.createElement("span", null, "\xA9 ", year, " V. Nos & Julian S. \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react2.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react2.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("footer", { className: "site-footer", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "ft-grid", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(Col, { title: "The Apocalypse of Adam", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "ft-blurb", children: "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper." }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: PAPER, children: "The paper \u2014 The Reader of the Sky \u2192" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: GITHUB, ext: true, children: "Source on GitHub \u2197" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(Col, { title: "Hub pages", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "/prophets", children: "Prophets timeline \u2014 Adam to Jacob Frank" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "/mages", children: "Magi timeline \u2014 Daniel to Felipe II" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "/alignments", children: "Stellar alignments (171 fiches)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "/readings", children: "Sky readings (6045 glosses)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "/", children: "Sky reader app" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(Col, { title: "Data & sources", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true, children: "astronomy-engine \u2014 ephemerides \u2197" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true, children: "Sefer Yetzirah \u2014 the frame \u2197" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true, children: "Strong Hebrew lexicon \u2197" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "/angels72.json", children: "72 Shem HaMephorash angels (JSON)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "/alignments.json", children: "Rare alignments dataset (JSON)" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(Col, { title: "For search & AI", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "/sitemap.xml", children: "Sitemap index" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "/llms.txt", children: "llms.txt \u2014 guide for LLMs" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "/robots.txt", children: "robots.txt" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(L, { href: "/site.webmanifest", children: "Web app manifest" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("p", { className: "ft-note", children: [
+          "This page exposes ",
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("b", { children: "WebMCP" }),
+          " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ",
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("code", { children: "document.modelContext" }),
+          "."
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "ft-bottom", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("span", { children: [
+        "\xA9 ",
+        year,
+        " V. Nos & Julian S. \xB7 The Apocalypse of Adam"
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "ft-sep", children: "\xB7" }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet" })
+    ] })
+  ] });
 }
 
-// src/data/prophets.js
+// web/src/data/prophets.js
 var POINTED = /[֑-ֽֿׁ-ׇׅ]/g;
 var RAW = [
   { name: "Adam", he: "\u05D0\u05B8\u05D3\u05B8\u05DD", era: "BCE", y0: -4e3, y1: -4e3, region: "Eden (legendary)", role: "First human in Genesis; paradigmatic figure of creation and fall.", thread: "biblical" },
@@ -26610,7 +27591,7 @@ var PROPHECIES = {
 };
 var PROPHETS = RAW.map((p) => ({ ...p, he: (p.he || "").replace(POINTED, ""), prophecies: PROPHECIES[p.name] || null }));
 
-// src/data/mages.js
+// web/src/data/mages.js
 var MAGES = [
   { name: "Hermes Trismegistus", years: "legendary", y0: -1500, y1: -1450, region: "Egypt (legendary)", role: "Legendary thrice-greatest sage; fountainhead of the Hermetic stellar-sapiential tradition.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "Solomon", years: "-990\u2013-931", y0: -990, y1: -931, region: "Israel/Judah", role: "Legendary wise-king; archetype of the royal sapiential and magical-solomonic tradition.", isIberian: false, isRoyal: true, endpoint: false },
@@ -26638,7 +27619,7 @@ var MAGES = [
   { name: "Felipe II of Spain", years: "1527\u20131598", y0: 1527, y1: 1598, region: "Iberia (Spain)", role: "Habsburg royal-sage king; patron of astrologers and esoterica \u2014 closes the era of kings.", isIberian: true, isRoyal: true, endpoint: true, designation: "end of the era of kings" }
 ];
 
-// src/data/mages-content.js
+// web/src/data/mages-content.js
 var MAGES_CONTENT = {
   "Solomon": { wikipediaUrl: "https://en.wikipedia.org/wiki/Solomon", bio: "Solomon (also called Jedidiah) was, per the Hebrew Bible, a king of ancient Israel who succeeded his father David and reigned c. 970\u2013931 BCE over a united Israel and Judah. Born in Jerusalem to David and Bathsheba, he is credited with building the First Temple and a royal palace complex, forging trade alliances with Hiram I of Tyre, and presiding over a period of reported commercial prosperity. He died around age 55 after a 40-year reign, and his son Rehoboam's succession was followed by the schism of the kingdom into Israel (north) and Judah (south).\n\nThe biblical portrait emphasizes Solomon's legendary wisdom: when offered anything by God he asked for wisdom, the Judgement of Solomon is his best-known display of it, and the Queen of Sheba is said to have visited to test his fame. His accumulation of 700 wives and 300 concubines\u2014many foreign\u2014and his wealth, horses, and idolatrous influences are presented as leading to divine displeasure. The historicity of Solomon is hotly debated: most scholars think he probably existed, but the biblical description of his empire's lavishness is widely regarded as an anachronistic exaggeration, with maximalist and minimalist scholars differing on how much can be recovered.\n\nBeyond the canon, a vast pseudepigraphical and occult corpus attached itself to Solomon in Jewish, Islamic, and Western esoteric tradition. Rabbinic literature describes him commanding demons, spirits, and animals by means of a signet ring\u2014the Seal of Solomon\u2014often depicted as a pentagram or hexagram and considered the predecessor of the Star of David. Medieval grimoires and demonological texts (the Testament of Solomon, the Key of Solomon, the Lemegeton) made Solomon the archetypal magician-sovereign who binds and interrogates spirits, a motif that fed Jewish mysticism, Sufi parallels, and Renaissance occultism.", works: [{ "title": "Proverbs (Mishlei)", "note": "Wisdom maxims attributed to Solomon; shaped later Hebrew stellar-letter sapiential tradition." }, { "title": "Ecclesiastes (Kohelet)", "note": "Book on time and vanity; its time-cycles later informed kabbalistic chronosophy." }, { "title": "Song of Songs (Shir ha-Shirim)", "note": "Allegorical poetry; central to kabbalistic mystical reading of divine-human union." }, { "title": "Key of Solomon (Clavicula Salomonis)", "note": "Medieval grimoire: seals, planetary talismans, and spirit-binding rituals." }, { "title": "Lesser Key of Solomon (Lemegeton)", "note": "Renaissance grimoire casting Solomon as demon-binder; lists 72 spirits in the Ars Goetia." }] },
   "Hermes Trismegistus": { wikipediaUrl: "https://en.wikipedia.org/wiki/Hermes_Trismegistus", bio: `Hermes Trismegistus ("Thrice-Greatest Hermes") is a legendary Hellenistic figure arising from the syncretic fusion of the Greek god Hermes and the Egyptian god Thoth, worshiped as one at the Temple of Thoth in Khemenu (Hermopolis) in the Ptolemaic period. The epithet "thrice great" likely derives from an Egyptian temple inscription "Thoth the great, the great, the great," with the earliest datable occurrence in minutes of a 172 BCE Ibis-cult council meeting near Memphis. He is not a historical person but the eponym of a body of Greco-Egyptian religious-philosophical texts.
@@ -26742,7 +27723,7 @@ His reign was defined by the decisive naval victory at Lepanto (1571) against th
 Philip died at El Escorial in 1598 and was buried in the palace-monastery he had built. The Wikipedia article provides no documented connection to astrology, the occult, stellar symbolism, or kabbalistic/mystical interests; El Escorial is framed solely as a Catholic palace-monastery-pantheon monument to Spain's role as a centre of the Christian world, and he prohibited biographical accounts of his life, contributing to an enigmatic reputation but with no documented private esoteric practice.`, works: [{ "title": "El Escorial (completed 1584)", "note": "Palace-monastery-pantheon monument to Spain as centre of the Christian world; no documented esoteric program." }, { "title": "Battle of Lepanto (1571)", "note": "Decisive Holy League naval victory over the Ottomans under his half-brother John of Austria." }, { "title": "Move of the court to Madrid (1561)", "note": "Established Madrid as the permanent Spanish capital, centralizing Habsburg imperial governance." }, { "title": "Relaciones geogr\xE1ficas", "note": "Extensive questionnaires to New World towns; systematic geographic and ethnographic governance." }, { "title": "Iberian Union (1580)", "note": "Personal union of Spain and Portugal; created the largest European empire of the era and a global domain." }] }
 };
 
-// src/webmcp.jsx
+// web/src/webmcp.jsx
 var j = (o) => JSON.stringify(o);
 function smallestArc(lons) {
   const s = [...lons].sort((a, b) => a - b);
@@ -26753,7 +27734,7 @@ function smallestArc(lons) {
   return 360 - maxGap;
 }
 function alignmentMetrics(date) {
-  const rows = skyAt(date);
+  const rows = skyAt7(date);
   const bs = bySign(rows);
   let best = null;
   for (const [sg, list] of Object.entries(bs)) if (!best || list.length > best.list.length) best = { sign: sg, list };
@@ -26785,7 +27766,7 @@ function registerWebMCPTools({ lex, angelMap }) {
     description: "Read the Hebrew letters spelled in the sky on a given Gregorian date. Returns the occupied zodiac signs, the readable simple letters (Sefer Yetzirah), the precessional era, whether Genesis 1:1 is legible, and the top readable Hebrew names. Use ISO date YYYY-MM-DD (BCE as -YYYY-MM-DD).",
     inputSchema: { type: "object", properties: { date: { type: "string", description: "ISO date, e.g. 2026-08-10 or -0427-01-01" } }, required: ["date"] },
     execute: async ({ date }) => {
-      const rows = skyAt(date);
+      const rows = skyAt7(date);
       const occ = occupiedLetters(rows);
       const words = LEX ? readableWords(occ, LEX, angelMap) : [];
       const top = words.slice(0, 20).map((w) => ({ he: w.disp, translit: w.translit, gloss: w.gloss, gematria: w.gem, letters: w.len, name: !!w.name, angel: !!w.angelName }));
@@ -26794,7 +27775,7 @@ function registerWebMCPTools({ lex, angelMap }) {
   });
   reg({
     name: "alignment_metrics",
-    description: "Compute the rare-alignment metrics for a date: how many of the 10 bodies (Sun, Moon, 8 planets) fall in a single zodiac sign, the tightest enclosing arc in degrees, and the precessional era. Use ISO date YYYY-MM-DD.",
+    description: "Compute the rare-alignment metrics for a date: how many of the 7 classical bodies (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn \u2014 the Sefer Yetzirah's 7 doubles) fall in a single zodiac sign, the tightest enclosing arc in degrees, and the precessional era. Use ISO date YYYY-MM-DD.",
     inputSchema: { type: "object", properties: { date: { type: "string" } }, required: ["date"] },
     execute: async ({ date }) => j(alignmentMetrics(date))
   });
@@ -26897,18 +27878,122 @@ function registerWebMCPTools({ lex, angelMap }) {
   });
 }
 
-// src/tabs/SkyTab.jsx
+// web/src/tabs/SkyTab.jsx
 var import_react3 = __toESM(require_react());
+var import_jsx_runtime3 = __toESM(require_jsx_runtime());
 function SkyTab({ date, rawDate, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step }) {
   const dateEmpty = !rawDate || !parseDate(rawDate);
-  return /* @__PURE__ */ import_react3.default.createElement(import_react3.default.Fragment, null, /* @__PURE__ */ import_react3.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react3.default.createElement("button", { onClick: () => step(-1) }, "\u25C0 day"), /* @__PURE__ */ import_react3.default.createElement(DateEntry, { value: rawDate, onChange: setDate }), /* @__PURE__ */ import_react3.default.createElement("button", { onClick: () => step(1) }, "day \u25B6"), /* @__PURE__ */ import_react3.default.createElement("button", { onClick: () => step(7) }, "+ week"), /* @__PURE__ */ import_react3.default.createElement("button", { onClick: () => setDate("2026-08-08") }, "today"), /* @__PURE__ */ import_react3.default.createElement("span", { className: "muted" }, "noon UT \xB7 geocentric apparent positions \xB7 ecliptic longitude", dateEmpty && /* @__PURE__ */ import_react3.default.createElement("span", { style: { color: "var(--warn)" } }, " \xB7 enter a date \u2014 showing ", date))), /* @__PURE__ */ import_react3.default.createElement("div", { className: "row" }, /* @__PURE__ */ import_react3.default.createElement("div", { style: { flex: "1 1 100%" } }, /* @__PURE__ */ import_react3.default.createElement(SkyMap, { rows, occ }))), /* @__PURE__ */ import_react3.default.createElement("div", { className: "note" }, "Today: ", /* @__PURE__ */ import_react3.default.createElement("b", null, occSigns.size), " signs occupied, ", /* @__PURE__ */ import_react3.default.createElement("b", null, 12 - occSigns.size), " empty. Readable simples: ", /* @__PURE__ */ import_react3.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ].sort().join(" ") || "none"), ". A sector ", /* @__PURE__ */ import_react3.default.createElement("b", null, "lights up"), " when a planet is inside it; \u201C\xD7N\u201D = N planets in that sign (informational \u2014 the reuse rule needs no conjunction to repeat a letter). Centre: the 3 mothers ", /* @__PURE__ */ import_react3.default.createElement("span", { className: "he" }, "\u05D0 \u05DE \u05E9"), " on a fixed circumpolar axis. \u05D9\u05D4\u05D5\u05D4 / Genesis legibility live in their own Reading tabs."), /* @__PURE__ */ import_react3.default.createElement("h3", null, "Angle table \u2014 ecliptic longitude per body (", date, ")"), /* @__PURE__ */ import_react3.default.createElement("table", null, /* @__PURE__ */ import_react3.default.createElement("thead", null, /* @__PURE__ */ import_react3.default.createElement("tr", null, /* @__PURE__ */ import_react3.default.createElement("th", null, "Body"), /* @__PURE__ */ import_react3.default.createElement("th", null, "Sign"), /* @__PURE__ */ import_react3.default.createElement("th", null, "Longitude"), /* @__PURE__ */ import_react3.default.createElement("th", null, "Degree in sign"), /* @__PURE__ */ import_react3.default.createElement("th", null, "Simple"), /* @__PURE__ */ import_react3.default.createElement("th", null, "Double"))), /* @__PURE__ */ import_react3.default.createElement("tbody", null, rows.map((r) => /* @__PURE__ */ import_react3.default.createElement("tr", { key: r.body }, /* @__PURE__ */ import_react3.default.createElement("td", null, GLYPH[r.body], " ", r.body), /* @__PURE__ */ import_react3.default.createElement("td", null, r.sign), /* @__PURE__ */ import_react3.default.createElement("td", { className: "deg" }, r.lon.toFixed(2), "\xB0"), /* @__PURE__ */ import_react3.default.createElement("td", { className: "deg" }, r.deg.toFixed(2), "\xB0 ", r.boundary && /* @__PURE__ */ import_react3.default.createElement("span", { className: "boundary" }, "\u26A0")), /* @__PURE__ */ import_react3.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react3.default.createElement("span", { className: "he" }, SIMPLE[r.sign][0]), /* @__PURE__ */ import_react3.default.createElement("br", null), /* @__PURE__ */ import_react3.default.createElement("span", { className: "muted" }, SIMPLE[r.sign][1], "=", SIMPLE[r.sign][2])), /* @__PURE__ */ import_react3.default.createElement("td", { className: "letter-cell" }, DOUBLES[r.body] ? /* @__PURE__ */ import_react3.default.createElement(import_react3.default.Fragment, null, /* @__PURE__ */ import_react3.default.createElement("span", { className: "he", style: { color: "var(--blue)" } }, DOUBLES[r.body][0]), /* @__PURE__ */ import_react3.default.createElement("br", null), /* @__PURE__ */ import_react3.default.createElement("span", { className: "muted" }, DOUBLES[r.body][1])) : /* @__PURE__ */ import_react3.default.createElement("span", { className: "muted" }, "\u2014")))))), /* @__PURE__ */ import_react3.default.createElement("div", { className: "muted" }, "Stellar reading (simple letters of the 10 bodies, slow \u2192 fast):"), /* @__PURE__ */ import_react3.default.createElement("div", { className: "sentence" }, sentence), /* @__PURE__ */ import_react3.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react3.default.createElement("b", null, "Precession & the map:"), " planet positions are computed for the actual date (astronomy-engine works for any year, past or future \u2014 including BCE, enter a negative year above), so the map reflects the real sky of that day. The 12 letter\u2194sign sectors are ", /* @__PURE__ */ import_react3.default.createElement("b", null, "tropical"), " \u2014 anchored to the equinox (Aries = \u03BB\u2609=0\xB0), so they do ", /* @__PURE__ */ import_react3.default.createElement("b", null, "not"), " precess and stay fixed to the seasons. ", /* @__PURE__ */ import_react3.default.createElement("b", null, "This is normal and intended:"), " the zodiac here is the fixed symbolic grid for reading letters, not the precessing sky. The slow drift of the sidereal constellations against the signs (precession, 50.29\u2033/yr, 1\xB0 per ~72 yr) is tracked separately in the ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Ages"), " and ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Ayanamsa"), " tabs (precessional ages, Lahiri 24.18\xB0). So: ", /* @__PURE__ */ import_react3.default.createElement("b", null, "tropical signs = the fixed grid that does NOT rotate with precession"), " (Raziel p.115 confirms: ", /* @__PURE__ */ import_react3.default.createElement("i", null, "\u201Clos signos del zod\xEDaco est\xE1n fijos\u201D"), "); sidereal constellations = the precessing sky, handled in those tabs."));
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(import_jsx_runtime3.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "controls", style: { marginBottom: 12 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("button", { onClick: () => step(-1), children: "\u25C0 day" }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(DateEntry, { value: rawDate, onChange: setDate }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("button", { onClick: () => step(1), children: "day \u25B6" }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("button", { onClick: () => step(7), children: "+ week" }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("button", { onClick: () => setDate("2026-08-08"), children: "today" }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { className: "muted", children: [
+        "noon UT \xB7 geocentric apparent positions \xB7 ecliptic longitude",
+        dateEmpty && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { style: { color: "var(--warn)" }, children: [
+          " \xB7 enter a date \u2014 showing ",
+          date
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "row", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { style: { flex: "1 1 100%" }, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(SkyMap, { rows, occ }) }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "note", children: [
+      "Today: ",
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: occSigns.size }),
+      " signs occupied (by the 7 classical bodies), ",
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: 12 - occSigns.size }),
+      " empty. Readable simples: ",
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { style: { color: "var(--gold)" }, children: [...occ].sort().join(" ") || "none" }),
+      ". A sector ",
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "lights up" }),
+      " when one of the 7 classical bodies is inside it; Uranus and Neptune are plotted for astronomical context but do ",
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "not" }),
+      " light a sector (they have no letter in the Sefer Yetzirah). \u201C\xD7N\u201D = N bodies in that sign. Centre: the 3 mothers ",
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "he", children: "\u05D0 \u05DE \u05E9" }),
+      " on a fixed circumpolar axis. \u05D9\u05D4\u05D5\u05D4 / Genesis legibility live in their own Reading tabs."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("h3", { children: [
+      "Angle table \u2014 ecliptic longitude per body (",
+      date,
+      ")"
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("th", { children: "Body" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("th", { children: "Sign" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("th", { children: "Longitude" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("th", { children: "Degree in sign" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("th", { children: "Simple" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("th", { children: "Double" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("tbody", { children: rows.map((r) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("td", { children: [
+          GLYPH[r.body],
+          " ",
+          r.body
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("td", { children: r.sign }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("td", { className: "deg", children: [
+          r.lon.toFixed(2),
+          "\xB0"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("td", { className: "deg", children: [
+          r.deg.toFixed(2),
+          "\xB0 ",
+          r.boundary && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "boundary", children: "\u26A0" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("td", { className: "letter-cell", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "he", children: SIMPLE[r.sign][0] }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("br", {}),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { className: "muted", children: [
+            SIMPLE[r.sign][1],
+            "=",
+            SIMPLE[r.sign][2]
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("td", { className: "letter-cell", children: DOUBLES[r.body] ? /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(import_jsx_runtime3.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "he", style: { color: "var(--blue)" }, children: DOUBLES[r.body][0] }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("br", {}),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "muted", children: DOUBLES[r.body][1] })
+        ] }) : /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "muted", children: "\u2014" }) })
+      ] }, r.body)) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "muted", children: "Stellar reading (simple letters of the 10 bodies, slow \u2192 fast):" }),
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "sentence", children: sentence }),
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "note", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "Precession & the map:" }),
+      " planet positions are computed for the actual date (astronomy-engine works for any year, past or future \u2014 including BCE, enter a negative year above), so the map reflects the real sky of that day. The 12 letter\u2194sign sectors are ",
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "tropical" }),
+      " \u2014 anchored to the equinox (Aries = \u03BB\u2609=0\xB0), so they do ",
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "not" }),
+      " precess and stay fixed to the seasons. ",
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "This is normal and intended:" }),
+      " the zodiac here is the fixed symbolic grid for reading letters, not the precessing sky. The slow drift of the sidereal constellations against the signs (precession, 50.29\u2033/yr, 1\xB0 per ~72 yr) is tracked separately in the ",
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "Ages" }),
+      " and ",
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "Ayanamsa" }),
+      " tabs (precessional ages, Lahiri 24.18\xB0). So: ",
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "tropical signs = the fixed grid that does NOT rotate with precession" }),
+      " (Raziel p.115 confirms: ",
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("i", { children: "\u201Clos signos del zod\xEDaco est\xE1n fijos\u201D" }),
+      "); sidereal constellations = the precessing sky, handled in those tabs."
+    ] })
+  ] });
 }
 
-// src/tabs/ReaderTab.jsx
+// web/src/tabs/ReaderTab.jsx
 var import_react4 = __toESM(require_react());
+var import_jsx_runtime4 = __toESM(require_jsx_runtime());
 var PAGE_SIZE = 48;
 function FilterChip({ active, count, label, title, onToggle }) {
-  return /* @__PURE__ */ import_react4.default.createElement("button", { className: active ? "on" : "", onClick: onToggle, title, "aria-pressed": active }, label, " (", count, ")");
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("button", { className: active ? "on" : "", onClick: onToggle, title, "aria-pressed": active, children: [
+    label,
+    " (",
+    count,
+    ")"
+  ] });
 }
 function TranslatorTab({ date, occ, words, q, setQ, genData, onOpen, nameRefs }) {
   const [page, setPage] = (0, import_react4.useState)(0);
@@ -26973,29 +28058,204 @@ function TranslatorTab({ date, occ, words, q, setQ, genData, onOpen, nameRefs })
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const cur = Math.min(page, pages - 1);
   const slice = filtered.slice(cur * PAGE_SIZE, cur * PAGE_SIZE + PAGE_SIZE);
-  return /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("h2", null, "Reader \u2014 everything readable on ", date, " ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill" }, words.length, " words"), " ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, "\xB7 click a gloss for its single-reading page (sky map \xB7 year timeline \xB7 Wikipedia)")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "controls", style: { marginBottom: 8 } }, /* @__PURE__ */ import_react4.default.createElement("input", { type: "text", placeholder: "search by gloss or transliteration\u2026", value: q, onChange: (e) => setQ(e.target.value), style: { flex: "1 1 240px" }, autoFocus: true, "aria-label": "Search readable words" })), /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 6, fontSize: ".8rem" } }, "Select filters, then choose a mode. ", /* @__PURE__ */ import_react4.default.createElement("b", null, "Include \u2713"), " keeps only words matching ", /* @__PURE__ */ import_react4.default.createElement("b", null, "all"), " selected filters; ", /* @__PURE__ */ import_react4.default.createElement("b", null, "Exclude \u2717"), " drops words matching ", /* @__PURE__ */ import_react4.default.createElement("b", null, "any"), " selected filter. With no filter selected, all words show. Glosses are Strong's English."), /* @__PURE__ */ import_react4.default.createElement("div", { className: "controls", style: { marginBottom: 8, flexWrap: "wrap", alignItems: "center" } }, /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".8rem" } }, "filters:"), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("date"), count: dateCount, label: "date-specific", title: "Words with zodiac simples (date signal). Include = only date-specific; exclude = only always-readable", onToggle: () => toggle("date") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("pal"), count: palCount, label: "palindrome", title: "Consonant palindrome (reads the same backwards)", onToggle: () => toggle("pal") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("g37"), count: g37Count, label: "gematria \xD737", title: "Gematria is a multiple of 37", onToggle: () => toggle("g37") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("angel"), count: angelCount, label: "angel name", title: "A known angel name in Hebrew \u2014 Bible, Apocrypha, 1 Enoch watchers, Kabbalah, Islamic/Judeo-Arabic (Michael, Gabriel, Raphael, Uriel, Metatron, Sandalphon, Raziel, Azrael, the Watchers\u2026). Matched by consonants, not suffix.", onToggle: () => toggle("angel") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("name"), count: nameCount, label: "name (proper)", title: "The word is a proper noun (name) in Strong \u2014 incl. theophoric names bearing \u05D0\u05DC / \u05D9\u05D4", onToggle: () => toggle("name") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("place"), count: placeCount, label: "place (LUGAR)", title: "The word is a biblical PLACE \u2014 a proper locative noun in Strong (n-pr-loc): city, mountain, region, etc.", onToggle: () => toggle("place") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("comp"), count: compCount, label: "compound", title: "Concatenated multi-root entry whose gloss is truncated (e.g. 'dove of')", onToggle: () => toggle("comp") }), /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".8rem", marginLeft: 4 } }, "\xB7"), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("special"), count: specialCount, label: "special", title: "Empirically rare this year: required simples co-occupied < 20% of days (green). Include = only rare/special words", onToggle: () => toggle("special") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("frequent"), count: frequentCount, label: "frequent", title: "Empirically moderate this year: required simples co-occupied 20\u201350% of days (rose)", onToggle: () => toggle("frequent") }), /* @__PURE__ */ import_react4.default.createElement(FilterChip, { active: sel.has("common"), count: commonCount, label: "common", title: "Empirically common this year: required simples co-occupied \u2265 50% of days (red) \u2014 incl. always-readable words (no simples)", onToggle: () => toggle("common") }), /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".8rem", marginLeft: 6 } }, "mode:"), /* @__PURE__ */ import_react4.default.createElement("button", { className: mode === "include" ? "on" : "", onClick: () => setMode("include"), title: "Keep only words matching ALL selected filters", "aria-pressed": mode === "include" }, "\u2713 include"), /* @__PURE__ */ import_react4.default.createElement("button", { className: mode === "exclude" ? "ex" : "", onClick: () => setMode("exclude"), title: "Drop words matching ANY selected filter", "aria-pressed": mode === "exclude" }, "\u2717 exclude"), sel.size > 0 && /* @__PURE__ */ import_react4.default.createElement("button", { onClick: () => setSel(/* @__PURE__ */ new Set()), title: "Clear all selected filters", style: { fontSize: ".78rem" } }, "clear (", sel.size, ")")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "controls", style: { marginBottom: 8, flexWrap: "wrap", alignItems: "center" } }, /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted" }, "min length"), /* @__PURE__ */ import_react4.default.createElement("input", { type: "number", min: "1", max: "12", value: minLen, onChange: (e) => {
-    const n = parseInt(e.target.value, 10);
-    setMinLen(isNaN(n) || n < 1 ? 1 : n);
-  }, style: { width: 56 }, "aria-label": "Minimum word length" }), /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted" }, filtered.length, " shown \xB7 ", alwaysCount, " always-readable")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Reading rule applied: every ", /* @__PURE__ */ import_react4.default.createElement("b", null, "simple (zodiac) letter"), " in a word must sit in an ", /* @__PURE__ */ import_react4.default.createElement("b", null, "occupied sign"), " today. Mothers + doubles are always available. Available today: ", /* @__PURE__ */ import_react4.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ].sort().join(" ") || "none"), ". ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--violet)" } }, "violet"), " = always readable (no simples). Badges: ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--gold)" } }, "palindrome"), " \xB7 ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, "\xD737"), " \xB7 ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--violet)" } }, "angel name"), " \xB7 ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--brand-hi)" } }, "name"), " \xB7 ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--warn)" } }, "compound"), ". ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "prob ok" }, "%"), " = empirical legibility over the scanned year (computed from astronomy-engine, not hardcoded): ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "prob ok" }, "green"), " special (rare), ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "prob mid" }, "rose"), " frequent, ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "prob spec" }, "red"), " common. ", /* @__PURE__ */ import_react4.default.createElement("b", null, "This within-year % measures only how often a word's required simples are co-occupied as the planets drift this year \u2014 it is NOT the recurrence of a specific stellar alignment."), " A particular sky configuration recurs over years \u2192 centuries \u2192 millennia (the precalculated rare grand conjunctions in the ", /* @__PURE__ */ import_react4.default.createElement("b", null, "Alignments"), " subtab, \xA715c.11); a reading during such a rare alignment is the significant one, while ordinary readability is the common noise floor (~1 day in 9, ~2031 names/day). Sorted: longest first."), /* @__PURE__ */ import_react4.default.createElement("div", { className: "tcards" }, slice.map((w, i) => /* @__PURE__ */ import_react4.default.createElement("div", { key: w.he + w.translit + i, className: "tcard" + (w.simp ? "" : " always"), style: { cursor: "pointer", transition: "border-color .12s,transform .12s" }, title: `Open the single-reading page for ${w.translit} (${w.gloss})`, onClick: () => onOpen && onOpen(w), onMouseEnter: (e) => {
-    e.currentTarget.style.borderColor = "var(--brand)";
-    e.currentTarget.style.transform = "translateY(-1px)";
-  }, onMouseLeave: (e) => {
-    e.currentTarget.style.borderColor = "";
-    e.currentTarget.style.transform = "";
-  } }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "the" }, w.disp, " ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--dim)", fontSize: ".6em", verticalAlign: "super" } }, "\u25B8")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "read" }, w.translit), /* @__PURE__ */ import_react4.default.createElement("div", { className: "trans" }, w.gloss), /* @__PURE__ */ import_react4.default.createElement("div", { className: "g" }, w.len, " letters \xB7 gematria ", w.gem, w.pal && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--gold)" } }, " \xB7 palindrome"), w.m37 && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, " \xB7 \xD737"), w.angelName && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--violet)" } }, " \xB7 angel")), (w.person || w.place || w.compound || nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0) && /* @__PURE__ */ import_react4.default.createElement("div", { style: { marginTop: 4, display: "flex", flexWrap: "wrap", gap: 4 } }, w.person && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--blue)", borderColor: "var(--blue)" } }, "name", w.theo ? " (theophoric)" : ""), w.place && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--green)", borderColor: "var(--green)" }, title: "A biblical PLACE \u2014 proper locative noun in Strong (city, mountain, region\u2026)" }, "place"), w.compound && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--warn)", borderColor: "var(--warn)" }, title: "Concatenated multi-root entry whose gloss is truncated (e.g. \u2018dove of\u2019)" }, "compound"), nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0 && (() => {
-    const r = nameRefs[w.he];
-    return /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" }, title: "Where this name appears in the Hebrew Bible (Sefaria): " + r.refs.join(", ") }, "\u{1F4D6} ", r.refs[0], r.n > 1 ? " \xB7 +" + (r.n - 1) : "");
-  })()), probsAll.has(w.he) && (() => {
-    const p = probsAll.get(w.he);
-    const n = genData.dayOccs.length;
-    const pct = p < 1e-3 ? "<0.1" : (p * 100).toFixed(p < 0.1 ? 1 : 0);
-    const cls = p >= 0.5 ? "spec" : p >= 0.2 ? "mid" : "ok";
-    const tag = p >= 0.5 ? "common" : p >= 0.2 ? "frequent" : "special";
-    return /* @__PURE__ */ import_react4.default.createElement("span", { className: "prob " + cls, title: `Empirical legibility over ${n} days of ${genData.year}: ${pct}% of days this word's required simples are all occupied (S\u2286O, computed from astronomy-engine \u2014 not hardcoded). This is a within-year rate, NOT the recurrence of a specific stellar alignment: a particular sky configuration recurs over years\u2192centuries\u2192millennia (rare grand conjunctions, \xA715c.11). Low % = special/rare (green); high % = common (red).` }, pct, "% \xB7 ", tag);
-  })(), w.angelName && /* @__PURE__ */ import_react4.default.createElement("div", { className: "simp", style: { color: "var(--violet)" } }, "angel: ", w.angelName.en, " ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--dim)" } }, "\xB7 ", w.angelName.src)), w.angel && /* @__PURE__ */ import_react4.default.createElement("div", { className: "simp", style: { color: "var(--violet)" } }, "Shem triplet +\u05D0\u05DC \u2192 ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, w.angel.el), " \xB7 +\u05D9\u05D4 \u2192 ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, w.angel.yh)), /* @__PURE__ */ import_react4.default.createElement("div", { className: "simp" }, w.simp ? "simples: " + [...w.simp].join(" ") : "no simples (always)")))), filtered.length === 0 && /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { padding: "18px 0" } }, "No words match these filters on ", date, ". Loosen a filter or pick another date."), filtered.length > PAGE_SIZE && /* @__PURE__ */ import_react4.default.createElement("div", { className: "controls", style: { marginTop: 12 } }, /* @__PURE__ */ import_react4.default.createElement("button", { onClick: () => setPage((p) => Math.max(0, p - 1)), disabled: cur === 0, className: cur === 0 ? "" : "" }, "\u25C0 prev"), /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill" }, "page ", cur + 1, " / ", pages, " \xB7 ", filtered.length, " words \xB7 ", PAGE_SIZE, "/page"), /* @__PURE__ */ import_react4.default.createElement("button", { onClick: () => setPage((p) => Math.min(pages - 1, p + 1)), disabled: cur >= pages - 1 }, "next \u25B6"), /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted" }, "jump:"), /* @__PURE__ */ import_react4.default.createElement("input", { type: "number", min: "1", max: pages, value: cur + 1, onChange: (e) => {
-    const n = parseInt(e.target.value, 10);
-    if (!isNaN(n)) setPage(Math.max(0, Math.min(pages - 1, n - 1)));
-  }, style: { width: 64 }, "aria-label": "Jump to page" })), /* @__PURE__ */ import_react4.default.createElement("div", { className: "note" }, "Reuse rule: a simple is either present or not; revisiting a sign adds or removes no letters. That is why one date reads thousands of words \u2014 paginate, search and filter to cut them down. Palindrome and \xD737 are textual facts about the word, not sky-reading rules; use them to surface structure, not to decide legibility. ", /* @__PURE__ */ import_react4.default.createElement("b", null, "Angel name"), " = the word is a known angel name in Hebrew \u2014 from the Bible (Michael, Gabriel, Azazel, Ariel\u2026), the Apocrypha (Raphael, Uriel, Jeremiel), the 1 Enoch watchers (Shemhazai, Kokabiel, Kasbeel\u2026), the Kabbalah (Metatron, Sandalphon, Raziel, Samael, the planetary archangels) and the Islamic/Judeo-Arabic tradition (Azrael, Israfil) \u2014 matched by its consonants, not by a suffix. Extra-biblical names not in the Strong lexicon are added in so the Reader can surface them. ", /* @__PURE__ */ import_react4.default.createElement("b", null, "Shem triplet"), " (shown under the card where present) = the word is also a 3-letter root of one of the 72 Shem HaMephorash names (Exodus 14:19-21, \xA715b.4), shown with its +", /* @__PURE__ */ import_react4.default.createElement("span", { className: "he" }, "\u05D0\u05DC"), " / +", /* @__PURE__ */ import_react4.default.createElement("span", { className: "he" }, "\u05D9\u05D4"), " forms. ", /* @__PURE__ */ import_react4.default.createElement("b", null, "Name"), " = the word is a proper noun in Strong (people, places, theophoric names bearing ", /* @__PURE__ */ import_react4.default.createElement("span", { className: "he" }, "\u05D0\u05DC"), "/", /* @__PURE__ */ import_react4.default.createElement("span", { className: "he" }, "\u05D9\u05D4"), ")."));
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("h2", { children: [
+      "Reader \u2014 everything readable on ",
+      date,
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "pill", children: [
+        words.length,
+        " words"
+      ] }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "muted", style: { fontSize: ".78rem" }, children: "\xB7 click a gloss for its single-reading page (sky map \xB7 year timeline \xB7 Wikipedia)" })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "controls", style: { marginBottom: 8 }, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("input", { type: "text", placeholder: "search by gloss or transliteration\u2026", value: q, onChange: (e) => setQ(e.target.value), style: { flex: "1 1 240px" }, autoFocus: true, "aria-label": "Search readable words" }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "muted", style: { marginBottom: 6, fontSize: ".8rem" }, children: [
+      "Select filters, then choose a mode. ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { children: "Include \u2713" }),
+      " keeps only words matching ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { children: "all" }),
+      " selected filters; ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { children: "Exclude \u2717" }),
+      " drops words matching ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { children: "any" }),
+      " selected filter. With no filter selected, all words show. Glosses are Strong's English."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "controls", style: { marginBottom: 8, flexWrap: "wrap", alignItems: "center" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "muted", style: { fontSize: ".8rem" }, children: "filters:" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(FilterChip, { active: sel.has("date"), count: dateCount, label: "date-specific", title: "Words with zodiac simples (date signal). Include = only date-specific; exclude = only always-readable", onToggle: () => toggle("date") }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(FilterChip, { active: sel.has("pal"), count: palCount, label: "palindrome", title: "Consonant palindrome (reads the same backwards)", onToggle: () => toggle("pal") }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(FilterChip, { active: sel.has("g37"), count: g37Count, label: "gematria \xD737", title: "Gematria is a multiple of 37", onToggle: () => toggle("g37") }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(FilterChip, { active: sel.has("angel"), count: angelCount, label: "angel name", title: "A known angel name in Hebrew \u2014 Bible, Apocrypha, 1 Enoch watchers, Kabbalah, Islamic/Judeo-Arabic (Michael, Gabriel, Raphael, Uriel, Metatron, Sandalphon, Raziel, Azrael, the Watchers\u2026). Matched by consonants, not suffix.", onToggle: () => toggle("angel") }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(FilterChip, { active: sel.has("name"), count: nameCount, label: "name (proper)", title: "The word is a proper noun (name) in Strong \u2014 incl. theophoric names bearing \u05D0\u05DC / \u05D9\u05D4", onToggle: () => toggle("name") }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(FilterChip, { active: sel.has("place"), count: placeCount, label: "place (LUGAR)", title: "The word is a biblical PLACE \u2014 a proper locative noun in Strong (n-pr-loc): city, mountain, region, etc.", onToggle: () => toggle("place") }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(FilterChip, { active: sel.has("comp"), count: compCount, label: "compound", title: "Concatenated multi-root entry whose gloss is truncated (e.g. 'dove of')", onToggle: () => toggle("comp") }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "muted", style: { fontSize: ".8rem", marginLeft: 4 }, children: "\xB7" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(FilterChip, { active: sel.has("special"), count: specialCount, label: "special", title: "Empirically rare this year: required simples co-occupied < 20% of days (green). Include = only rare/special words", onToggle: () => toggle("special") }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(FilterChip, { active: sel.has("frequent"), count: frequentCount, label: "frequent", title: "Empirically moderate this year: required simples co-occupied 20\u201350% of days (rose)", onToggle: () => toggle("frequent") }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(FilterChip, { active: sel.has("common"), count: commonCount, label: "common", title: "Empirically common this year: required simples co-occupied \u2265 50% of days (red) \u2014 incl. always-readable words (no simples)", onToggle: () => toggle("common") }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "muted", style: { fontSize: ".8rem", marginLeft: 6 }, children: "mode:" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("button", { className: mode === "include" ? "on" : "", onClick: () => setMode("include"), title: "Keep only words matching ALL selected filters", "aria-pressed": mode === "include", children: "\u2713 include" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("button", { className: mode === "exclude" ? "ex" : "", onClick: () => setMode("exclude"), title: "Drop words matching ANY selected filter", "aria-pressed": mode === "exclude", children: "\u2717 exclude" }),
+      sel.size > 0 && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("button", { onClick: () => setSel(/* @__PURE__ */ new Set()), title: "Clear all selected filters", style: { fontSize: ".78rem" }, children: [
+        "clear (",
+        sel.size,
+        ")"
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "controls", style: { marginBottom: 8, flexWrap: "wrap", alignItems: "center" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "muted", children: "min length" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("input", { type: "number", min: "1", max: "12", value: minLen, onChange: (e) => {
+        const n = parseInt(e.target.value, 10);
+        setMinLen(isNaN(n) || n < 1 ? 1 : n);
+      }, style: { width: 56 }, "aria-label": "Minimum word length" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "muted", children: [
+        filtered.length,
+        " shown \xB7 ",
+        alwaysCount,
+        " always-readable"
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "Reading rule applied: every ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { children: "simple (zodiac) letter" }),
+      " in a word must sit in an ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { children: "occupied sign" }),
+      " today. Mothers + doubles are always available. Available today: ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { style: { color: "var(--gold)" }, children: [...occ].sort().join(" ") || "none" }),
+      ". ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--violet)" }, children: "violet" }),
+      " = always readable (no simples). Badges: ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--gold)" }, children: "palindrome" }),
+      " \xB7 ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--green)" }, children: "\xD737" }),
+      " \xB7 ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--violet)" }, children: "angel name" }),
+      " \xB7 ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--brand-hi)" }, children: "name" }),
+      " \xB7 ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--warn)" }, children: "compound" }),
+      ". ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "prob ok", children: "%" }),
+      " = empirical legibility over the scanned year (computed from astronomy-engine, not hardcoded): ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "prob ok", children: "green" }),
+      " special (rare), ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "prob mid", children: "rose" }),
+      " frequent, ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "prob spec", children: "red" }),
+      " common. ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { children: "This within-year % measures only how often a word's required simples are co-occupied as the planets drift this year \u2014 it is NOT the recurrence of a specific stellar alignment." }),
+      " A particular sky configuration recurs over years \u2192 centuries \u2192 millennia (the precalculated rare grand conjunctions in the ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { children: "Alignments" }),
+      " subtab, \xA715c.11); a reading during such a rare alignment is the significant one, while ordinary readability is the common noise floor (~1 day in 9, ~2031 names/day). Sorted: longest first."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "tcards", children: slice.map((w, i) => /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "tcard" + (w.simp ? "" : " always"), style: { cursor: "pointer", transition: "border-color .12s,transform .12s" }, title: `Open the single-reading page for ${w.translit} (${w.gloss})`, onClick: () => onOpen && onOpen(w), onMouseEnter: (e) => {
+      e.currentTarget.style.borderColor = "var(--brand)";
+      e.currentTarget.style.transform = "translateY(-1px)";
+    }, onMouseLeave: (e) => {
+      e.currentTarget.style.borderColor = "";
+      e.currentTarget.style.transform = "";
+    }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "the", children: w.disp }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "read", children: w.translit }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "trans", children: w.gloss }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "g", children: [
+        w.len,
+        " letters \xB7 gematria ",
+        w.gem,
+        w.pal && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--gold)" }, children: " \xB7 palindrome" }),
+        w.m37 && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--green)" }, children: " \xB7 \xD737" }),
+        w.angelName && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--violet)" }, children: " \xB7 angel" })
+      ] }),
+      (w.person || w.place || w.compound || nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0) && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: { marginTop: 4, display: "flex", flexWrap: "wrap", gap: 4 }, children: [
+        w.person && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "pill", style: { color: "var(--blue)", borderColor: "var(--blue)" }, children: [
+          "name",
+          w.theo ? " (theophoric)" : ""
+        ] }),
+        w.place && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "pill", style: { color: "var(--green)", borderColor: "var(--green)" }, title: "A biblical PLACE \u2014 proper locative noun in Strong (city, mountain, region\u2026)", children: "place" }),
+        w.compound && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "pill", style: { color: "var(--warn)", borderColor: "var(--warn)" }, title: "Concatenated multi-root entry whose gloss is truncated (e.g. \u2018dove of\u2019)", children: "compound" }),
+        nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0 && (() => {
+          const r = nameRefs[w.he];
+          return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" }, title: "Where this name appears in the Hebrew Bible (Sefaria): " + r.refs.join(", "), children: [
+            "\u{1F4D6} ",
+            r.refs[0],
+            r.n > 1 ? " \xB7 +" + (r.n - 1) : ""
+          ] });
+        })()
+      ] }),
+      probsAll.has(w.he) && (() => {
+        const p = probsAll.get(w.he);
+        const n = genData.dayOccs.length;
+        const pct = p < 1e-3 ? "<0.1" : (p * 100).toFixed(p < 0.1 ? 1 : 0);
+        const cls = p >= 0.5 ? "spec" : p >= 0.2 ? "mid" : "ok";
+        const tag = p >= 0.5 ? "common" : p >= 0.2 ? "frequent" : "special";
+        return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "prob " + cls, title: `Empirical legibility over ${n} days of ${genData.year}: ${pct}% of days this word's required simples are all occupied (S\u2286O, computed from astronomy-engine \u2014 not hardcoded). This is a within-year rate, NOT the recurrence of a specific stellar alignment: a particular sky configuration recurs over years\u2192centuries\u2192millennia (rare grand conjunctions, \xA715c.11). Low % = special/rare (green); high % = common (red).`, children: [
+          pct,
+          "% \xB7 ",
+          tag
+        ] });
+      })(),
+      w.angelName && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "simp", style: { color: "var(--violet)" }, children: [
+        "angel: ",
+        w.angelName.en,
+        " ",
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { style: { color: "var(--dim)" }, children: [
+          "\xB7 ",
+          w.angelName.src
+        ] })
+      ] }),
+      w.angel && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "simp", style: { color: "var(--violet)" }, children: [
+        "Shem triplet +\u05D0\u05DC \u2192 ",
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "he", style: { fontSize: ".95rem" }, children: w.angel.el }),
+        " \xB7 +\u05D9\u05D4 \u2192 ",
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "he", style: { fontSize: ".95rem" }, children: w.angel.yh })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "simp", children: w.simp ? "simples: " + [...w.simp].join(" ") : "no simples (always)" })
+    ] }, w.he + w.translit + i)) }),
+    filtered.length === 0 && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "muted", style: { padding: "18px 0" }, children: [
+      "No words match these filters on ",
+      date,
+      ". Loosen a filter or pick another date."
+    ] }),
+    filtered.length > PAGE_SIZE && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "controls", style: { marginTop: 12 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("button", { onClick: () => setPage((p) => Math.max(0, p - 1)), disabled: cur === 0, className: cur === 0 ? "" : "", children: "\u25C0 prev" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "pill", children: [
+        "page ",
+        cur + 1,
+        " / ",
+        pages,
+        " \xB7 ",
+        filtered.length,
+        " words \xB7 ",
+        PAGE_SIZE,
+        "/page"
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("button", { onClick: () => setPage((p) => Math.min(pages - 1, p + 1)), disabled: cur >= pages - 1, children: "next \u25B6" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "muted", children: "jump:" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("input", { type: "number", min: "1", max: pages, value: cur + 1, onChange: (e) => {
+        const n = parseInt(e.target.value, 10);
+        if (!isNaN(n)) setPage(Math.max(0, Math.min(pages - 1, n - 1)));
+      }, style: { width: 64 }, "aria-label": "Jump to page" })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "note", children: [
+      "Reuse rule: a simple is either present or not; revisiting a sign adds or removes no letters. That is why one date reads thousands of words \u2014 paginate, search and filter to cut them down. Palindrome and \xD737 are textual facts about the word, not sky-reading rules; use them to surface structure, not to decide legibility. ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { children: "Angel name" }),
+      " = the word is a known angel name in Hebrew \u2014 from the Bible (Michael, Gabriel, Azazel, Ariel\u2026), the Apocrypha (Raphael, Uriel, Jeremiel), the 1 Enoch watchers (Shemhazai, Kokabiel, Kasbeel\u2026), the Kabbalah (Metatron, Sandalphon, Raziel, Samael, the planetary archangels) and the Islamic/Judeo-Arabic tradition (Azrael, Israfil) \u2014 matched by its consonants, not by a suffix. Extra-biblical names not in the Strong lexicon are added in so the Reader can surface them. ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { children: "Shem triplet" }),
+      " (shown under the card where present) = the word is also a 3-letter root of one of the 72 Shem HaMephorash names (Exodus 14:19-21, \xA715b.4), shown with its +",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "he", children: "\u05D0\u05DC" }),
+      " / +",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "he", children: "\u05D9\u05D4" }),
+      " forms. ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { children: "Name" }),
+      " = the word is a proper noun in Strong (people, places, theophoric names bearing ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "he", children: "\u05D0\u05DC" }),
+      "/",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "he", children: "\u05D9\u05D4" }),
+      ")."
+    ] })
+  ] });
 }
 function findWord(he, LEX, angelMap) {
   if (!LEX) return null;
@@ -27111,48 +28371,599 @@ function GlossPage({ word, date, rows, occ, genData, onBack, nameRefs }) {
   const pctStr = req.length ? prob < 1e-3 ? "<0.1" : (prob * 100).toFixed(prob < 0.1 ? 1 : 0) : "100";
   const cat = req.length ? prob >= 0.5 ? "common" : prob >= 0.2 ? "frequent" : "special" : "always";
   const catCls = req.length ? prob >= 0.5 ? "spec" : prob >= 0.2 ? "mid" : "ok" : "ok";
-  return /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react4.default.createElement("button", { onClick: onBack, title: "Back to the Reader list" }, "\u25C0 back to Reader"), /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill" }, "single reading"), /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted", style: { fontSize: ".82rem" } }, "sky on ", displayDate(date))), /* @__PURE__ */ import_react4.default.createElement("h1", { style: { margin: "0 0 2px" } }, /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: "1.9rem" } }, w.disp), " ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--dim)", fontSize: ".95rem" } }, "\xB7 ", w.translit)), /* @__PURE__ */ import_react4.default.createElement("div", { className: "sub", style: { marginBottom: 14 } }, w.gloss), /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi-row" }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi " + (readableNow ? "ok" : "no") }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "v" }, readableNow ? "\u25CF" : "\u25CB"), /* @__PURE__ */ import_react4.default.createElement("div", { className: "l" }, "today \xB7 ", displayDate(date)), /* @__PURE__ */ import_react4.default.createElement("div", { className: "sub" }, readableNow ? "readable \u2014 all simples occupied" : "missing " + missing.join(" "))), /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi" }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "v" }, w.len), /* @__PURE__ */ import_react4.default.createElement("div", { className: "l" }, "consonants")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi" }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "v", style: { color: "var(--gold)" } }, w.gem), /* @__PURE__ */ import_react4.default.createElement("div", { className: "l" }, "gematria", w.m37 ? " \xB7 \xD737" : "")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi " + catCls }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "v" }, pctStr, req.length ? "%" : ""), /* @__PURE__ */ import_react4.default.createElement("div", { className: "l" }, "year legibility"), /* @__PURE__ */ import_react4.default.createElement("div", { className: "sub" }, cat)), /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi" }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "v" }, tl ? `${tl.onDays.length}/${tl.n}` : "\u2014"), /* @__PURE__ */ import_react4.default.createElement("div", { className: "l" }, "readable days")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "kpi" }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "v", style: { color: req.length ? "var(--violet)" : "var(--green)" } }, req.length ? req.length : "0"), /* @__PURE__ */ import_react4.default.createElement("div", { className: "l" }, "simple letters"), /* @__PURE__ */ import_react4.default.createElement("div", { className: "sub" }, req.length ? [...w.simp].join(" ") : "none \xB7 always"))), /* @__PURE__ */ import_react4.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "panel", style: { padding: 14 } }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 8, fontSize: ".8rem" } }, readableNow ? /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, "\u25CF readable on ", displayDate(date), " \u2014 all required simples occupied") : /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--red)" } }, "\u25CB not readable on ", displayDate(date), " \u2014 missing: ", /* @__PURE__ */ import_react4.default.createElement("b", { style: { color: "var(--gold)" } }, missing.join(" ")))), /* @__PURE__ */ import_react4.default.createElement(SkyMap, { rows, occ, hl: req.length ? new Set(req) : null }), /* @__PURE__ */ import_react4.default.createElement("div", { className: "legend" }, "Gold sectors = the simple (zodiac) letters this word needs. Lavender = occupied today but not required by this word.")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react4.default.createElement("h3", { style: { marginTop: 0 } }, "Gloss"), /* @__PURE__ */ import_react4.default.createElement("table", null, /* @__PURE__ */ import_react4.default.createElement("tbody", null, /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Hebrew"), /* @__PURE__ */ import_react4.default.createElement("td", null, /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: "1.8rem" } }, w.disp))), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Transliteration"), /* @__PURE__ */ import_react4.default.createElement("td", null, /* @__PURE__ */ import_react4.default.createElement("b", null, w.translit))), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Gloss"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.gloss)), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Part of speech"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.pos || "\u2014")), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Length"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.len, " consonants")), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Gematria"), /* @__PURE__ */ import_react4.default.createElement("td", null, /* @__PURE__ */ import_react4.default.createElement("b", { style: { color: "var(--gold)" } }, w.gem), w.m37 && /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, " \xB7 multiple of 37"))), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Simple letters"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.simp ? /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--blue)" } }, [...w.simp].join(" ")) : /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--violet)" } }, "none (always readable)"))), /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Badges"), /* @__PURE__ */ import_react4.default.createElement("td", null, w.pal && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--gold)", borderColor: "var(--gold)" } }, "palindrome"), w.m37 && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill ok" }, "\xD737"), w.angelName && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" } }, "angel name"), w.person && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--blue)", borderColor: "var(--blue)" } }, "name", w.theo ? " (theophoric)" : ""), w.place && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--green)", borderColor: "var(--green)" }, title: "A biblical PLACE \u2014 proper locative noun in Strong (city, mountain, region\u2026)" }, "place"), w.compound && /* @__PURE__ */ import_react4.default.createElement("span", { className: "pill", style: { color: "var(--warn)", borderColor: "var(--warn)" } }, "compound"), !w.pal && !w.m37 && !w.angelName && !w.person && !w.place && !w.compound && /* @__PURE__ */ import_react4.default.createElement("span", { className: "muted" }, "\u2014"))), nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0 && (() => {
-    const r = nameRefs[w.he];
-    return /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Bible refs"), /* @__PURE__ */ import_react4.default.createElement("td", { style: { display: "flex", flexWrap: "wrap", gap: 4 } }, r.refs.map((ref, idx) => {
-      const u = refUrl(ref);
-      return u ? /* @__PURE__ */ import_react4.default.createElement("a", { key: ref + idx, className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)", textDecoration: "none" }, href: u, target: "_blank", rel: "noopener noreferrer", title: `Open ${ref} on Sefaria (Hebrew + translation)` }, "\u{1F4D6} ", ref) : /* @__PURE__ */ import_react4.default.createElement("span", { key: ref + idx, className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" } }, "\u{1F4D6} ", ref);
-    })));
-  })(), w.angelName && /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Angel"), /* @__PURE__ */ import_react4.default.createElement("td", { style: { color: "var(--violet)" } }, w.angelName.en, " ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--dim)" } }, "\xB7 ", w.angelName.src))), w.angel && /* @__PURE__ */ import_react4.default.createElement("tr", null, /* @__PURE__ */ import_react4.default.createElement("th", null, "Shem triplet"), /* @__PURE__ */ import_react4.default.createElement("td", null, "+", /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, w.angel.el), " \xB7 +", /* @__PURE__ */ import_react4.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, w.angel.yh))))))), /* @__PURE__ */ import_react4.default.createElement("div", { className: "panel", style: { marginTop: 14, padding: 16 } }, /* @__PURE__ */ import_react4.default.createElement("h3", { style: { marginTop: 0 } }, "Year legibility \u2014 when ", w.disp, " is readable in ", genData ? genData.year : "the scanned year"), /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".82rem" } }, "Each cell = one day of the scanned Predictor year (computed from astronomy-engine, not hardcoded). ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--gold)" } }, "gold"), " = the required simples are all occupied that day (S\u2286O); ", /* @__PURE__ */ import_react4.default.createElement("span", { style: { color: "var(--green)" } }, "green outline"), " = ", displayDate(date), ".", req.length === 0 && " This word has no simple letters, so it is always readable \u2014 every day is gold."), tl ? /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("div", { className: "tl", role: "img", "aria-label": `${w.translit}: ${tl.onDays.length} readable days in ${genData.year}` }, Array.from({ length: tl.n }, (_, i) => {
-    const on = tl.daySet.has(i);
-    return /* @__PURE__ */ import_react4.default.createElement("div", { key: i, className: "d" + (on ? " on" : "") + (i === tl.curDoy ? " cur" : ""), title: `${genData.year}-${String(i + 1).padStart(3, "0")} (day ${i + 1})${on ? " \xB7 readable" : ""}${i === tl.curDoy ? " \xB7 current" : ""}` });
-  })), /* @__PURE__ */ import_react4.default.createElement("div", { className: "legend" }, req.length === 0 ? /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, "every day \xB7 ", tl.n, " days") : /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, tl.onDays.length, " of ", tl.n, " days (", probsAll != null ? probsAll.toFixed(probsAll < 1 ? 1 : 0) : "?", "%) \xB7 first ", tl.onDays.length ? displayDate(fmtDate(makeDate(genData.year, 1, 1 + tl.onDays[0]))) : "\u2014", " \xB7 last ", tl.onDays.length ? displayDate(fmtDate(makeDate(genData.year, 1, 1 + tl.onDays[tl.onDays.length - 1]))) : "\u2014"))) : /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted" }, "Run the Predictor scan for this year to see the day-by-day timeline.")), wikiTitle && /* @__PURE__ */ import_react4.default.createElement("div", { className: "panel", style: { marginTop: 14, padding: 16 } }, /* @__PURE__ */ import_react4.default.createElement("h3", { style: { marginTop: 0 } }, "Wikipedia \u2014 ", wikiTitle), wiki && wiki.loading && /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted" }, "Looking up ", wikiTitle, " on Wikipedia\u2026"), wiki && wiki.error && /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { color: "var(--red)" } }, "No Wikipedia article found for \u201C", wikiTitle, "\u201D (", wiki.error, ")."), wiki && wiki.j && /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, wiki.j.type === "disambiguation" ? /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted" }, "\u201C", wiki.j.title, "\u201D is a disambiguation page \u2014 see ", /* @__PURE__ */ import_react4.default.createElement("a", { href: wiki.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer" }, "Wikipedia"), " for the list of meanings.") : /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("div", { style: { display: "flex", gap: 14, flexWrap: "wrap", alignItems: "flex-start" } }, wiki.j.thumbnail && /* @__PURE__ */ import_react4.default.createElement("img", { src: wiki.j.thumbnail.source, alt: wiki.j.title, style: { maxWidth: 160, maxHeight: 200, borderRadius: 8, border: "1px solid var(--line)" } }), /* @__PURE__ */ import_react4.default.createElement("div", { style: { flex: "1 1 320px" } }, wiki.j.description && /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted", style: { marginBottom: 6 } }, wiki.j.description), /* @__PURE__ */ import_react4.default.createElement("div", null, wiki.j.extract), /* @__PURE__ */ import_react4.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react4.default.createElement("a", { href: wiki.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer" }, "Read more on Wikipedia \u2192")))))), !wiki && /* @__PURE__ */ import_react4.default.createElement("div", { className: "muted" }, "Preparing Wikipedia lookup\u2026")), /* @__PURE__ */ import_react4.default.createElement("div", { className: "note", style: { marginTop: 14 } }, "This single-reading page is a shareable deep link: ", /* @__PURE__ */ import_react4.default.createElement("code", null, typeof window !== "undefined" ? window.location.href : ""), ". The sky map, gloss and year timeline are computed live from astronomy-engine planet positions; the Wikipedia panel (shown for proper and angel names) is the free Wikipedia REST summary API."));
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "controls", style: { marginBottom: 14 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("button", { onClick: onBack, title: "Back to the Reader list", children: "\u25C0 back to Reader" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "pill", children: "single reading" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "muted", style: { fontSize: ".82rem" }, children: [
+        "sky on ",
+        displayDate(date)
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("h1", { style: { margin: "0 0 2px" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "he", style: { fontSize: "1.9rem" }, children: w.disp }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { style: { color: "var(--dim)", fontSize: ".95rem" }, children: [
+        "\xB7 ",
+        w.translit
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "sub", style: { marginBottom: 14 }, children: w.gloss }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "kpi-row", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "kpi " + (readableNow ? "ok" : "no"), children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "v", children: readableNow ? "\u25CF" : "\u25CB" }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "l", children: displayDate(date) }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "sub", children: readableNow ? "readable \u2014 all simples occupied" : "missing " + missing.join(" ") })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "kpi", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "v", children: w.len }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "l", children: "consonants" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "kpi", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "v", style: { color: "var(--gold)" }, children: w.gem }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "l", children: [
+          "gematria",
+          w.m37 ? " \xB7 \xD737" : ""
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "kpi " + catCls, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "v", children: [
+          pctStr,
+          req.length ? "%" : ""
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "l", children: "year legibility" }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "sub", children: cat })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "kpi", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "v", children: tl ? `${tl.onDays.length}/${tl.n}` : "\u2014" }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "l", children: "readable days" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "kpi", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "v", style: { color: req.length ? "var(--violet)" : "var(--green)" }, children: req.length ? req.length : "0" }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "l", children: "simple letters" }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "sub", children: req.length ? [...w.simp].join(" ") : "none \xB7 always" })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "grid2", style: { alignItems: "start" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "panel", style: { padding: 14 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "muted", style: { marginBottom: 8, fontSize: ".8rem" }, children: readableNow ? /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { style: { color: "var(--green)" }, children: [
+          "\u25CF readable on ",
+          displayDate(date),
+          " \u2014 all required simples occupied"
+        ] }) : /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { style: { color: "var(--red)" }, children: [
+          "\u25CB not readable on ",
+          displayDate(date),
+          " \u2014 missing: ",
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { style: { color: "var(--gold)" }, children: missing.join(" ") })
+        ] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkyMap, { rows, occ, hl: req.length ? new Set(req) : null }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "legend", children: "Gold sectors = the simple (zodiac) letters this word needs. Lavender = occupied today but not required by this word." })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "panel", style: { padding: 16 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h3", { style: { marginTop: 0 }, children: "Gloss" }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("table", { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("tbody", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("th", { children: "Hebrew" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "he", style: { fontSize: "1.8rem" }, children: w.disp }) })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("th", { children: "Transliteration" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { children: w.translit }) })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("th", { children: "Gloss" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("td", { children: w.gloss })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("th", { children: "Part of speech" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("td", { children: w.pos || "\u2014" })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("th", { children: "Length" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("td", { children: [
+              w.len,
+              " consonants"
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("th", { children: "Gematria" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("td", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("b", { style: { color: "var(--gold)" }, children: w.gem }),
+              w.m37 && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--green)" }, children: " \xB7 multiple of 37" })
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("th", { children: "Simple letters" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("td", { children: w.simp ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--blue)" }, children: [...w.simp].join(" ") }) : /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--violet)" }, children: "none (always readable)" }) })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("th", { children: "Badges" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("td", { children: [
+              w.pal && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "pill", style: { color: "var(--gold)", borderColor: "var(--gold)" }, children: "palindrome" }),
+              w.m37 && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "pill ok", children: "\xD737" }),
+              w.angelName && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" }, children: "angel name" }),
+              w.person && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "pill", style: { color: "var(--blue)", borderColor: "var(--blue)" }, children: [
+                "name",
+                w.theo ? " (theophoric)" : ""
+              ] }),
+              w.place && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "pill", style: { color: "var(--green)", borderColor: "var(--green)" }, title: "A biblical PLACE \u2014 proper locative noun in Strong (city, mountain, region\u2026)", children: "place" }),
+              w.compound && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "pill", style: { color: "var(--warn)", borderColor: "var(--warn)" }, children: "compound" }),
+              !w.pal && !w.m37 && !w.angelName && !w.person && !w.place && !w.compound && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "muted", children: "\u2014" })
+            ] })
+          ] }),
+          nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0 && (() => {
+            const r = nameRefs[w.he];
+            return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("tr", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("th", { children: "Bible refs" }),
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("td", { style: { display: "flex", flexWrap: "wrap", gap: 4 }, children: r.refs.map((ref, idx) => {
+                const u = refUrl(ref);
+                return u ? /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("a", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)", textDecoration: "none" }, href: u, target: "_blank", rel: "noopener noreferrer", title: `Open ${ref} on Sefaria (Hebrew + translation)`, children: [
+                  "\u{1F4D6} ",
+                  ref
+                ] }, ref + idx) : /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" }, children: [
+                  "\u{1F4D6} ",
+                  ref
+                ] }, ref + idx);
+              }) })
+            ] });
+          })(),
+          w.angelName && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("th", { children: "Angel" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("td", { style: { color: "var(--violet)" }, children: [
+              w.angelName.en,
+              " ",
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { style: { color: "var(--dim)" }, children: [
+                "\xB7 ",
+                w.angelName.src
+              ] })
+            ] })
+          ] }),
+          w.angel && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("th", { children: "Shem triplet" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("td", { children: [
+              "+",
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "he", style: { fontSize: ".95rem" }, children: w.angel.el }),
+              " \xB7 +",
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "he", style: { fontSize: ".95rem" }, children: w.angel.yh })
+            ] })
+          ] })
+        ] }) })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "panel", style: { marginTop: 14, padding: 16 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("h3", { style: { marginTop: 0 }, children: [
+        "Year legibility \u2014 when ",
+        w.disp,
+        " is readable in ",
+        genData ? genData.year : "the scanned year"
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "muted", style: { marginBottom: 10, fontSize: ".82rem" }, children: [
+        "Each cell = one day of the scanned Predictor year (computed from astronomy-engine, not hardcoded). ",
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--gold)" }, children: "gold" }),
+        " = the required simples are all occupied that day (S\u2286O); ",
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { style: { color: "var(--green)" }, children: "green outline" }),
+        " = ",
+        displayDate(date),
+        ".",
+        req.length === 0 && " This word has no simple letters, so it is always readable \u2014 every day is gold."
+      ] }),
+      tl ? /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "tl", role: "img", "aria-label": `${w.translit}: ${tl.onDays.length} readable days in ${genData.year}`, children: Array.from({ length: tl.n }, (_, i) => {
+          const on = tl.daySet.has(i);
+          return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "d" + (on ? " on" : "") + (i === tl.curDoy ? " cur" : ""), title: `${genData.year}-${String(i + 1).padStart(3, "0")} (day ${i + 1})${on ? " \xB7 readable" : ""}${i === tl.curDoy ? " \xB7 current" : ""}` }, i);
+        }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "legend", children: req.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
+          "every day \xB7 ",
+          tl.n,
+          " days"
+        ] }) : /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
+          tl.onDays.length,
+          " of ",
+          tl.n,
+          " days (",
+          probsAll != null ? probsAll.toFixed(probsAll < 1 ? 1 : 0) : "?",
+          "%) \xB7 first ",
+          tl.onDays.length ? displayDate(fmtDate(makeDate(genData.year, 1, 1 + tl.onDays[0]))) : "\u2014",
+          " \xB7 last ",
+          tl.onDays.length ? displayDate(fmtDate(makeDate(genData.year, 1, 1 + tl.onDays[tl.onDays.length - 1]))) : "\u2014"
+        ] }) })
+      ] }) : /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "muted", children: "Run the Predictor scan for this year to see the day-by-day timeline." })
+    ] }),
+    wikiTitle && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "panel", style: { marginTop: 14, padding: 16 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("h3", { style: { marginTop: 0 }, children: [
+        "Wikipedia \u2014 ",
+        wikiTitle
+      ] }),
+      wiki && wiki.loading && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "muted", children: [
+        "Looking up ",
+        wikiTitle,
+        " on Wikipedia\u2026"
+      ] }),
+      wiki && wiki.error && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "muted", style: { color: "var(--red)" }, children: [
+        "No Wikipedia article found for \u201C",
+        wikiTitle,
+        "\u201D (",
+        wiki.error,
+        ")."
+      ] }),
+      wiki && wiki.j && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_jsx_runtime4.Fragment, { children: wiki.j.type === "disambiguation" ? /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "muted", children: [
+        "\u201C",
+        wiki.j.title,
+        "\u201D is a disambiguation page \u2014 see ",
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("a", { href: wiki.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer", children: "Wikipedia" }),
+        " for the list of meanings."
+      ] }) : /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_jsx_runtime4.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: { display: "flex", gap: 14, flexWrap: "wrap", alignItems: "flex-start" }, children: [
+        wiki.j.thumbnail && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("img", { src: wiki.j.thumbnail.source, alt: wiki.j.title, style: { maxWidth: 160, maxHeight: 200, borderRadius: 8, border: "1px solid var(--line)" } }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: { flex: "1 1 320px" }, children: [
+          wiki.j.description && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "muted", style: { marginBottom: 6 }, children: wiki.j.description }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { children: wiki.j.extract }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { style: { marginTop: 8 }, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("a", { href: wiki.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer", children: "Read more on Wikipedia \u2192" }) })
+        ] })
+      ] }) }) }),
+      !wiki && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "muted", children: "Preparing Wikipedia lookup\u2026" })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "note", style: { marginTop: 14 }, children: [
+      "This single-reading page is a shareable deep link: ",
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("code", { children: typeof window !== "undefined" ? window.location.href : "" }),
+      ". The sky map, gloss and year timeline are computed live from astronomy-engine planet positions; the Wikipedia panel (shown for proper and angel names) is the free Wikipedia REST summary API."
+    ] })
+  ] });
 }
 
-// src/tabs/ReadingTab.jsx
+// web/src/tabs/ReadingTab.jsx
 var import_react5 = __toESM(require_react());
+var import_jsx_runtime5 = __toESM(require_jsx_runtime());
 function RuleTab({ occ }) {
-  return /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, /* @__PURE__ */ import_react5.default.createElement("h2", null, "How it reads \u2014 the reuse rule"), /* @__PURE__ */ import_react5.default.createElement("table", null, /* @__PURE__ */ import_react5.default.createElement("thead", null, /* @__PURE__ */ import_react5.default.createElement("tr", null, /* @__PURE__ */ import_react5.default.createElement("th", null, "Class"), /* @__PURE__ */ import_react5.default.createElement("th", null, "Letters"), /* @__PURE__ */ import_react5.default.createElement("th", null, "Assigned to"), /* @__PURE__ */ import_react5.default.createElement("th", null, "Position-dependent?"), /* @__PURE__ */ import_react5.default.createElement("th", null, "Reusable?"))), /* @__PURE__ */ import_react5.default.createElement("tbody", null, /* @__PURE__ */ import_react5.default.createElement("tr", null, /* @__PURE__ */ import_react5.default.createElement("td", null, "3 mothers"), /* @__PURE__ */ import_react5.default.createElement("td", null, "\u05D0 \u05DE \u05E9"), /* @__PURE__ */ import_react5.default.createElement("td", null, "elements \xB7 Draco / Ursa Minor / Cassiopea (fixed)"), /* @__PURE__ */ import_react5.default.createElement("td", null, "no"), /* @__PURE__ */ import_react5.default.createElement("td", null, "yes, always")), /* @__PURE__ */ import_react5.default.createElement("tr", null, /* @__PURE__ */ import_react5.default.createElement("td", null, "7 doubles"), /* @__PURE__ */ import_react5.default.createElement("td", null, "\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA"), /* @__PURE__ */ import_react5.default.createElement("td", null, "the 7 planets (identity of the planet)"), /* @__PURE__ */ import_react5.default.createElement("td", null, "no"), /* @__PURE__ */ import_react5.default.createElement("td", null, "yes, always")), /* @__PURE__ */ import_react5.default.createElement("tr", null, /* @__PURE__ */ import_react5.default.createElement("td", null, "12 simples"), /* @__PURE__ */ import_react5.default.createElement("td", null, "\u05D4 \u05D5 \u05D6 \u05D7 \u05D8 \u05D9 \u05DC \u05E0 \u05E1 \u05E2 \u05E6 \u05E7"), /* @__PURE__ */ import_react5.default.createElement("td", null, "the 12 zodiac signs"), /* @__PURE__ */ import_react5.default.createElement("td", null, /* @__PURE__ */ import_react5.default.createElement("b", null, "yes \u2014 if its sign is occupied")), /* @__PURE__ */ import_react5.default.createElement("td", null, "yes (membership)")))), /* @__PURE__ */ import_react5.default.createElement("div", { className: "muted", style: { marginTop: 10 } }, "Read the simple of the occupied sign. Repeating a simple needs no conjunction. Words using only mothers+doubles (", /* @__PURE__ */ import_react5.default.createElement("span", { className: "he" }, "\u05D1\u05E8\u05D0"), ", ", /* @__PURE__ */ import_react5.default.createElement("span", { className: "he" }, "\u05D0\u05D1"), ", ", /* @__PURE__ */ import_react5.default.createElement("span", { className: "he" }, "\u05E9\u05D1\u05EA"), ", ", /* @__PURE__ */ import_react5.default.createElement("span", { className: "he" }, "\u05D0\u05DE\u05EA"), ") are always readable."), /* @__PURE__ */ import_react5.default.createElement("div", { style: { marginTop: 10 } }, /* @__PURE__ */ import_react5.default.createElement("span", { className: "muted" }, "Simples today: "), SIGNS.map((s) => {
-    const he = SIMPLE[s][0];
-    return /* @__PURE__ */ import_react5.default.createElement("span", { key: s, className: "key " + (occ.has(he) ? "on" : "off") }, he, " ", s);
-  })), /* @__PURE__ */ import_react5.default.createElement("div", { className: "note" }, "Empty today: ", SIGNS.filter((s) => !occ.has(SIMPLE[s][0])).map((s) => SIMPLE[s][0] + " (" + s + ")").join(", ") || "none", "."), /* @__PURE__ */ import_react5.default.createElement(Fig, { n: 2, doc: "From the article (\xA73): the tripartite mapping of the Sefer Yetzirah over the real sky. Outer ring: 12 simples = 12 signs. Middle ring: the 7 doubles = the 7 planets at their longitudes. Centre: the 3 mothers on the fixed circumpolar axis that does not precess. A highlighted sector = an occupied sign = a simple legible that day \u2014 this is the reading rule, drawn." }), /* @__PURE__ */ import_react5.default.createElement("h2", { style: { marginTop: 18 } }, "Why stellar alignments matter \u2014 rare ", /* @__PURE__ */ import_react5.default.createElement("i", null, "and"), " reductive"), /* @__PURE__ */ import_react5.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "An ordinary day scatters the 7 planets across many signs, so most of the 12 simples are occupied and the readable set is large. A rare stellar alignment concentrates those planets into one sign, which empties the others \u2014 so ", /* @__PURE__ */ import_react5.default.createElement("b", null, "fewer"), " letters are legible and ", /* @__PURE__ */ import_react5.default.createElement("b", null, "fewer"), " words are readable. Two things make such a day astronomically distinctive, and both are proven below."), /* @__PURE__ */ import_react5.default.createElement("div", { className: "grid2", style: { marginTop: 6 } }, /* @__PURE__ */ import_react5.default.createElement("div", { className: "iv" }, /* @__PURE__ */ import_react5.default.createElement("div", { style: { fontWeight: 600, color: "var(--gold)", marginBottom: 4 } }, "1. It reduces what can be read"), /* @__PURE__ */ import_react5.default.createElement("div", { className: "muted" }, "Concentrating planets in one zodiacal sign lowers letter diversity: the occupied-sign set shrinks, so fewer Hebrew roots are formable. Measured on the 7-classical set, apples-to-apples (rare-alignment days vs an ordinary 2024\u20132030 baseline):"), /* @__PURE__ */ import_react5.default.createElement("ul", { className: "muted", style: { marginTop: 6 } }, /* @__PURE__ */ import_react5.default.createElement("li", null, "average readable names: ", /* @__PURE__ */ import_react5.default.createElement("b", { style: { color: "var(--warn)" } }, "826"), " on rare days vs ", /* @__PURE__ */ import_react5.default.createElement("b", { style: { color: "var(--green)" } }, "1486"), " on ordinary days \u2014 a ", /* @__PURE__ */ import_react5.default.createElement("b", null, "~44% reduction"), "."), /* @__PURE__ */ import_react5.default.createElement("li", null, "Genesis 1:1 legibility: ", /* @__PURE__ */ import_react5.default.createElement("b", null, "0.0%"), " on rare days vs ", /* @__PURE__ */ import_react5.default.createElement("b", null, "0.1%"), " baseline (both 7-classical) \u2014 the tightest reading all but vanishes."), /* @__PURE__ */ import_react5.default.createElement("li", null, "Shem HaMephorash angel-roots: the ", /* @__PURE__ */ import_react5.default.createElement("b", null, "same 13"), " roots on rare days as on ordinary days \u2014 ", /* @__PURE__ */ import_react5.default.createElement("b", null, "0 new"), ". Clustering ", /* @__PURE__ */ import_react5.default.createElement("i", null, "removes"), " readings; it never invents unique ones.")), /* @__PURE__ */ import_react5.default.createElement("div", { className: "note" }, "So a rare alignment is a ", /* @__PURE__ */ import_react5.default.createElement("b", null, "rarity filter"), ", not a richness source: it selects a smaller, sharper subset of words \u2014 the opposite of an ordinary day's broad scatter.")), /* @__PURE__ */ import_react5.default.createElement("div", { className: "iv" }, /* @__PURE__ */ import_react5.default.createElement("div", { style: { fontWeight: 600, color: "var(--gold)", marginBottom: 4 } }, "2. It recurs every centuries / millennia"), /* @__PURE__ */ import_react5.default.createElement("div", { className: "muted" }, "The alignment itself is rare on a human timescale. From the 20000 BCE \u2192 2200 CE deep scan (7 classical bodies, 3-day step):"), /* @__PURE__ */ import_react5.default.createElement("ul", { className: "muted", style: { marginTop: 6 } }, /* @__PURE__ */ import_react5.default.createElement("li", null, /* @__PURE__ */ import_react5.default.createElement("b", null, "51"), " all-7-in-one-sign events in 22000 years \u2014 gaps from ", /* @__PURE__ */ import_react5.default.createElement("b", null, "38 y"), " to ", /* @__PURE__ */ import_react5.default.createElement("b", null, "1768 y"), " (avg ", /* @__PURE__ */ import_react5.default.createElement("b", null, "~429 y"), "): a ", /* @__PURE__ */ import_react5.default.createElement("i", null, "centuries"), " rhythm, irregular."), /* @__PURE__ */ import_react5.default.createElement("li", null, "the tightest conjunctions (all 7 within a small arc) reach ", /* @__PURE__ */ import_react5.default.createElement("b", null, "5.1\xB0"), " (\u22128267 BCE, Gemini) and recur on a ", /* @__PURE__ */ import_react5.default.createElement("i", null, "multi-millennium"), " scale."), /* @__PURE__ */ import_react5.default.createElement("li", null, "Jupiter\u2013Saturn great conjunctions recur every ", /* @__PURE__ */ import_react5.default.createElement("b", null, "~20 y"), " and drift through the signs over one precessional era (~", AGE.toFixed(0), " y) \u2014 the slow engine behind the pattern.")), /* @__PURE__ */ import_react5.default.createElement("div", { className: "note" }, "An event that ", /* @__PURE__ */ import_react5.default.createElement("i", null, "both"), " shrinks the readable set ", /* @__PURE__ */ import_react5.default.createElement("i", null, "and"), " returns only every few centuries is what makes a stellar alignment a meaningful reading moment: a small, stable lexicon that co-occurs only on those rare days. Ordinary days are common and read broadly; alignments are rare and read narrowly."))), /* @__PURE__ */ import_react5.default.createElement("div", { className: "note", style: { marginTop: 10 } }, "Proof = the stored cross-check in ", /* @__PURE__ */ import_react5.default.createElement("b", null, "Alignments"), " (Cycles tab): rare-day readability vs ordinary baseline, same 7-classical set. Numbers above are read from that cross-check, so the claim is reproducible, not asserted."));
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(import_jsx_runtime5.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h2", { children: "How it reads \u2014 the reuse rule" }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("th", { children: "Class" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("th", { children: "Letters" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("th", { children: "Assigned to" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("th", { children: "Position-dependent?" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("th", { children: "Reusable?" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("tbody", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "3 mothers" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "\u05D0 \u05DE \u05E9" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "elements \xB7 Draco / Ursa Minor / Cassiopea (fixed)" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "no" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "yes, always" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "7 doubles" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "the 7 planets (identity of the planet)" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "no" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "yes, always" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "12 simples" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "\u05D4 \u05D5 \u05D6 \u05D7 \u05D8 \u05D9 \u05DC \u05E0 \u05E1 \u05E2 \u05E6 \u05E7" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "the 12 zodiac signs" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "yes \u2014 if its sign is occupied" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("td", { children: "yes (membership)" })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "muted", style: { marginTop: 10 }, children: [
+      "Read the simple of the occupied sign. Repeating a simple needs no conjunction. Words using only mothers+doubles (",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "he", children: "\u05D1\u05E8\u05D0" }),
+      ", ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "he", children: "\u05D0\u05D1" }),
+      ", ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "he", children: "\u05E9\u05D1\u05EA" }),
+      ", ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "he", children: "\u05D0\u05DE\u05EA" }),
+      ") are always readable."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { style: { marginTop: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "muted", children: "Simples today: " }),
+      SIGNS.map((s) => {
+        const he = SIMPLE[s][0];
+        return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("span", { className: "key " + (occ.has(he) ? "on" : "off"), children: [
+          he,
+          " ",
+          s
+        ] }, s);
+      })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "note", children: [
+      "Empty today: ",
+      SIGNS.filter((s) => !occ.has(SIMPLE[s][0])).map((s) => SIMPLE[s][0] + " (" + s + ")").join(", ") || "none",
+      "."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Fig, { n: 2, doc: "From the article (\xA73): the tripartite mapping of the Sefer Yetzirah over the real sky. Outer ring: 12 simples = 12 signs. Middle ring: the 7 doubles = the 7 planets at their longitudes. Centre: the 3 mothers on the fixed circumpolar axis that does not precess. A highlighted sector = an occupied sign = a simple legible that day \u2014 this is the reading rule, drawn." }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("h2", { style: { marginTop: 18 }, children: [
+      "Why stellar alignments matter \u2014 rare ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("i", { children: "and" }),
+      " reductive"
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "An ordinary day scatters the 7 planets across many signs, so most of the 12 simples are occupied and the readable set is large. A rare stellar alignment concentrates those planets into one sign, which empties the others \u2014 so ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "fewer" }),
+      " letters are legible and ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "fewer" }),
+      " words are readable. Two things make such a day astronomically distinctive, and both are proven below."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "grid2", style: { marginTop: 6 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "iv", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { style: { fontWeight: 600, color: "var(--gold)", marginBottom: 4 }, children: "1. It reduces what can be read" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "muted", children: "Concentrating planets in one zodiacal sign lowers letter diversity: the occupied-sign set shrinks, so fewer Hebrew roots are formable. Measured on the 7-classical set, apples-to-apples (rare-alignment days vs an ordinary 2024\u20132030 baseline):" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("ul", { className: "muted", style: { marginTop: 6 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("li", { children: [
+            "average readable names: ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { style: { color: "var(--warn)" }, children: "826" }),
+            " on rare days vs ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { style: { color: "var(--green)" }, children: "1486" }),
+            " on ordinary days \u2014 a ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "~44% reduction" }),
+            "."
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("li", { children: [
+            "Genesis 1:1 legibility: ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "0.0%" }),
+            " on rare days vs ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "0.1%" }),
+            " baseline (both 7-classical) \u2014 the tightest reading all but vanishes."
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("li", { children: [
+            "Shem HaMephorash angel-roots: the ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "same 13" }),
+            " roots on rare days as on ordinary days \u2014 ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "0 new" }),
+            ". Clustering ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("i", { children: "removes" }),
+            " readings; it never invents unique ones."
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "note", children: [
+          "So a rare alignment is a ",
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "rarity filter" }),
+          ", not a richness source: it selects a smaller, sharper subset of words \u2014 the opposite of an ordinary day's broad scatter."
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "iv", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { style: { fontWeight: 600, color: "var(--gold)", marginBottom: 4 }, children: "2. It recurs every centuries / millennia" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "muted", children: "The alignment itself is rare on a human timescale. From the 20000 BCE \u2192 2200 CE deep scan (7 classical bodies, 3-day step):" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("ul", { className: "muted", style: { marginTop: 6 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("li", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "51" }),
+            " all-7-in-one-sign events in 22000 years \u2014 gaps from ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "38 y" }),
+            " to ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "1768 y" }),
+            " (avg ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "~429 y" }),
+            "): a ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("i", { children: "centuries" }),
+            " rhythm, irregular."
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("li", { children: [
+            "the tightest conjunctions (all 7 within a small arc) reach ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "5.1\xB0" }),
+            " (\u22128267 BCE, Gemini) and recur on a ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("i", { children: "multi-millennium" }),
+            " scale."
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("li", { children: [
+            "Jupiter\u2013Saturn great conjunctions recur every ",
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "~20 y" }),
+            " and drift through the signs over one precessional era (~",
+            AGE.toFixed(0),
+            " y) \u2014 the slow engine behind the pattern."
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "note", children: [
+          "An event that ",
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("i", { children: "both" }),
+          " shrinks the readable set ",
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("i", { children: "and" }),
+          " returns only every few centuries is what makes a stellar alignment a meaningful reading moment: a small, stable lexicon that co-occurs only on those rare days. Ordinary days are common and read broadly; alignments are rare and read narrowly."
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "note", style: { marginTop: 10 }, children: [
+      "Proof = the stored cross-check in ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "Alignments" }),
+      " (Cycles tab): rare-day readability vs ordinary baseline, same 7-classical set. Numbers above are read from that cross-check, so the claim is reproducible, not asserted."
+    ] })
+  ] });
 }
 function YhvhTab({ date, occ, yhvhOk, bs }) {
-  return /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, /* @__PURE__ */ import_react5.default.createElement("h2", null, "The 4 letters of ", /* @__PURE__ */ import_react5.default.createElement("span", { className: "he" }, "\u05D9\u05D4\u05D5\u05D4"), " on ", date, " ", /* @__PURE__ */ import_react5.default.createElement("span", { className: "pill " + (yhvhOk ? "ok" : "no") }, yhvhOk ? "readable" : "not readable")), /* @__PURE__ */ import_react5.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "With reuse, 3 signs suffice: ", /* @__PURE__ */ import_react5.default.createElement("b", null, "\u05D9"), "(Virgo) + ", /* @__PURE__ */ import_react5.default.createElement("b", null, "\u05D4"), "(Aries, twice) + ", /* @__PURE__ */ import_react5.default.createElement("b", null, "\u05D5"), "(Taurus). No conjunction needed."), /* @__PURE__ */ import_react5.default.createElement("div", { className: "cards" }, /* @__PURE__ */ import_react5.default.createElement("div", { className: "card" + (occ.has("\u05D9") ? "" : " missing") }, /* @__PURE__ */ import_react5.default.createElement("span", { className: "l" }, "\u05D9"), /* @__PURE__ */ import_react5.default.createElement("div", { style: { fontSize: ".8rem", fontWeight: 600 } }, "Yod"), /* @__PURE__ */ import_react5.default.createElement("div", { className: "src" }, "needs Virgo"), /* @__PURE__ */ import_react5.default.createElement("div", { className: "src" }, bs["Virgo"]?.length ? /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, "from ", /* @__PURE__ */ import_react5.default.createElement("b", null, bs["Virgo"][0].body), " \xB7 ", bs["Virgo"][0].deg.toFixed(1), "\xB0") : /* @__PURE__ */ import_react5.default.createElement("b", null, "no planet"))), /* @__PURE__ */ import_react5.default.createElement("div", { className: "card" + (occ.has("\u05D4") ? "" : " missing") }, /* @__PURE__ */ import_react5.default.createElement("span", { className: "l" }, "\u05D4"), /* @__PURE__ */ import_react5.default.createElement("div", { style: { fontSize: ".8rem", fontWeight: 600 } }, "Heh (1st)"), /* @__PURE__ */ import_react5.default.createElement("div", { className: "src" }, "needs Aries"), /* @__PURE__ */ import_react5.default.createElement("div", { className: "src" }, bs["Aries"]?.length ? /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, "from ", /* @__PURE__ */ import_react5.default.createElement("b", null, bs["Aries"][0].body), " \xB7 ", bs["Aries"][0].deg.toFixed(1), "\xB0") : /* @__PURE__ */ import_react5.default.createElement("b", null, "no planet"))), /* @__PURE__ */ import_react5.default.createElement("div", { className: "card" + (occ.has("\u05D5") ? "" : " missing") }, /* @__PURE__ */ import_react5.default.createElement("span", { className: "l" }, "\u05D5"), /* @__PURE__ */ import_react5.default.createElement("div", { style: { fontSize: ".8rem", fontWeight: 600 } }, "Vav"), /* @__PURE__ */ import_react5.default.createElement("div", { className: "src" }, "needs Taurus"), /* @__PURE__ */ import_react5.default.createElement("div", { className: "src" }, bs["Taurus"]?.length ? /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, "from ", /* @__PURE__ */ import_react5.default.createElement("b", null, bs["Taurus"][0].body), " \xB7 ", bs["Taurus"][0].deg.toFixed(1), "\xB0") : /* @__PURE__ */ import_react5.default.createElement("b", null, "no planet"))), /* @__PURE__ */ import_react5.default.createElement("div", { className: "card" + (occ.has("\u05D4") ? "" : " missing") }, /* @__PURE__ */ import_react5.default.createElement("span", { className: "l" }, "\u05D4"), /* @__PURE__ */ import_react5.default.createElement("div", { style: { fontSize: ".8rem", fontWeight: 600 } }, "Heh (2nd)"), /* @__PURE__ */ import_react5.default.createElement("div", { className: "src" }, "reuses Aries"), /* @__PURE__ */ import_react5.default.createElement("div", { className: "src" }, bs["Aries"]?.length ? /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, "same ", /* @__PURE__ */ import_react5.default.createElement("b", null, bs["Aries"][0].body)) : /* @__PURE__ */ import_react5.default.createElement("b", null, "no planet")))), /* @__PURE__ */ import_react5.default.createElement("div", { style: { marginTop: 12, padding: "12px 14px", background: "var(--panel2)", borderRadius: 8 } }, yhvhOk ? /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, /* @__PURE__ */ import_react5.default.createElement("div", { className: "muted" }, "It forms today (", date, "):"), /* @__PURE__ */ import_react5.default.createElement("div", { className: "big" }, "\u05D9 (", bs["Virgo"][0].body, ") \u2192 \u05D4 (", bs["Aries"][0].body, ") \u2192 \u05D5 (", bs["Taurus"][0].body, ") \u2192 \u05D4 (", bs["Aries"][0].body, " reused)"), /* @__PURE__ */ import_react5.default.createElement("div", { className: "big" }, "= ", /* @__PURE__ */ import_react5.default.createElement("span", { className: "he" }, "\u05D9\u05D4\u05D5\u05D4"), " \xB7 \u201Cthe One who is / Eternal\u201D \xB7 gematria 26")) : /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, /* @__PURE__ */ import_react5.default.createElement("div", { className: "muted" }, "It does not form ", /* @__PURE__ */ import_react5.default.createElement("span", { className: "he" }, "\u05D9\u05D4\u05D5\u05D4"), " today. Missing:"), ["\u05D9:Virgo", "\u05D4:Aries", "\u05D5:Taurus"].filter((x) => !occ.has(x[0])).map((x, i) => {
-    const [l, s] = x.split(":");
-    return /* @__PURE__ */ import_react5.default.createElement("div", { key: i, className: "note", style: { color: "var(--red)" } }, /* @__PURE__ */ import_react5.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, l), " \u2192 needs ", s, " \xB7 no planet today");
-  }))));
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(import_jsx_runtime5.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("h2", { children: [
+      "The 4 letters of ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "he", children: "\u05D9\u05D4\u05D5\u05D4" }),
+      " on ",
+      date,
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "pill " + (yhvhOk ? "ok" : "no"), children: yhvhOk ? "readable" : "not readable" })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "With reuse, 3 signs suffice: ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "\u05D9" }),
+      "(Virgo) + ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "\u05D4" }),
+      "(Aries, twice) + ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "\u05D5" }),
+      "(Taurus). No conjunction needed."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "cards", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "card" + (occ.has("\u05D9") ? "" : " missing"), children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "l", children: "\u05D9" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { style: { fontSize: ".8rem", fontWeight: 600 }, children: "Yod" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "src", children: "needs Virgo" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "src", children: bs["Virgo"]?.length ? /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(import_jsx_runtime5.Fragment, { children: [
+          "from ",
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: bs["Virgo"][0].body }),
+          " \xB7 ",
+          bs["Virgo"][0].deg.toFixed(1),
+          "\xB0"
+        ] }) : /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "no planet" }) })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "card" + (occ.has("\u05D4") ? "" : " missing"), children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "l", children: "\u05D4" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { style: { fontSize: ".8rem", fontWeight: 600 }, children: "Heh (1st)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "src", children: "needs Aries" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "src", children: bs["Aries"]?.length ? /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(import_jsx_runtime5.Fragment, { children: [
+          "from ",
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: bs["Aries"][0].body }),
+          " \xB7 ",
+          bs["Aries"][0].deg.toFixed(1),
+          "\xB0"
+        ] }) : /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "no planet" }) })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "card" + (occ.has("\u05D5") ? "" : " missing"), children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "l", children: "\u05D5" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { style: { fontSize: ".8rem", fontWeight: 600 }, children: "Vav" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "src", children: "needs Taurus" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "src", children: bs["Taurus"]?.length ? /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(import_jsx_runtime5.Fragment, { children: [
+          "from ",
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: bs["Taurus"][0].body }),
+          " \xB7 ",
+          bs["Taurus"][0].deg.toFixed(1),
+          "\xB0"
+        ] }) : /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "no planet" }) })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "card" + (occ.has("\u05D4") ? "" : " missing"), children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "l", children: "\u05D4" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { style: { fontSize: ".8rem", fontWeight: 600 }, children: "Heh (2nd)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "src", children: "reuses Aries" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "src", children: bs["Aries"]?.length ? /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(import_jsx_runtime5.Fragment, { children: [
+          "same ",
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: bs["Aries"][0].body })
+        ] }) : /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "no planet" }) })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { style: { marginTop: 12, padding: "12px 14px", background: "var(--panel2)", borderRadius: 8 }, children: yhvhOk ? /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(import_jsx_runtime5.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "muted", children: [
+        "It forms today (",
+        date,
+        "):"
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "big", children: [
+        "\u05D9 (",
+        bs["Virgo"][0].body,
+        ") \u2192 \u05D4 (",
+        bs["Aries"][0].body,
+        ") \u2192 \u05D5 (",
+        bs["Taurus"][0].body,
+        ") \u2192 \u05D4 (",
+        bs["Aries"][0].body,
+        " reused)"
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "big", children: [
+        "= ",
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "he", children: "\u05D9\u05D4\u05D5\u05D4" }),
+        " \xB7 \u201Cthe One who is / Eternal\u201D \xB7 gematria 26"
+      ] })
+    ] }) : /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(import_jsx_runtime5.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "muted", children: [
+        "It does not form ",
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "he", children: "\u05D9\u05D4\u05D5\u05D4" }),
+        " today. Missing:"
+      ] }),
+      ["\u05D9:Virgo", "\u05D4:Aries", "\u05D5:Taurus"].filter((x) => !occ.has(x[0])).map((x, i) => {
+        const [l, s] = x.split(":");
+        return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "note", style: { color: "var(--red)" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "he", style: { fontSize: "1.2rem" }, children: l }),
+          " \u2192 needs ",
+          s,
+          " \xB7 no planet today"
+        ] }, i);
+      })
+    ] }) })
+  ] });
 }
 function GenesisTab({ date, occ, genesisOk }) {
   const lengths = [6, 3, 5, 2, 5, 3, 4];
   const words37 = GEN_VALUES.filter((v) => v % 37 === 0).length;
   const sub37 = countSubset(GEN_VALUES, 37);
   const totalLetters = lengths.reduce((a, b) => a + b, 0);
-  return /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, /* @__PURE__ */ import_react5.default.createElement("h2", null, "Genesis 1:1 \xB7 ", /* @__PURE__ */ import_react5.default.createElement("span", { className: "he" }, "\u05D1\u05E8\u05D0\u05E9\u05D9\u05EA \u05D1\u05E8\u05D0 \u05D0\u05DC\u05D4\u05D9\u05DD \u05D0\u05EA \u05D4\u05E9\u05DE\u05D9\u05DD \u05D5\u05D0\u05EA \u05D4\u05D0\u05E8\u05E5"), " ", /* @__PURE__ */ import_react5.default.createElement("span", { className: "pill " + (genesisOk ? "ok" : "no") }, genesisOk ? `readable on ${date}` : `not readable on ${date}`)), /* @__PURE__ */ import_react5.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "The 7 words together use the simples ", /* @__PURE__ */ import_react5.default.createElement("b", null, "\u05D9 \u05D4 \u05DC \u05D5 \u05E6"), " (Virgo, Aries, Libra, Taurus, Aquarius). Readable only when all 5 signs are occupied at once \u2014 Aquarius and Aries anchored by Pluto and Neptune."), GENESIS.map(([w, en], i) => {
-    const c = norm(w);
-    const ss = [...simpleSet(c)].sort();
-    const ok = formable(c, occ);
-    const m37 = GEN_VALUES[i] % 37 === 0;
-    return /* @__PURE__ */ import_react5.default.createElement("div", { key: i, className: "gw " + (ok ? "ok" : "no") }, /* @__PURE__ */ import_react5.default.createElement("span", { className: "w" }, displayHe(c)), /* @__PURE__ */ import_react5.default.createElement("span", { className: "es", style: { color: ok ? "var(--green)" : "var(--red)" } }, en), /* @__PURE__ */ import_react5.default.createElement("span", { className: "muted" }, "\xB7 gematria ", GEN_VALUES[i], m37 ? ` = ${GEN_VALUES[i] / 37}\xD737` : ""), /* @__PURE__ */ import_react5.default.createElement("span", { style: { marginLeft: "auto" } }, ss.length === 0 ? /* @__PURE__ */ import_react5.default.createElement("span", { style: { color: "var(--violet)" } }, "no simples \u2192 always") : ss.map((l) => /* @__PURE__ */ import_react5.default.createElement("span", { key: l, className: "key " + (occ.has(l) ? "on" : "off"), style: { marginLeft: 2 } }, l, " ", LETTER_TO_SIGN[l]))));
-  }), /* @__PURE__ */ import_react5.default.createElement("div", { style: { marginTop: 10, padding: "10px 14px", background: "var(--panel2)", borderRadius: 8 } }, /* @__PURE__ */ import_react5.default.createElement("span", { className: "muted" }, "Standard gematria total: "), /* @__PURE__ */ import_react5.default.createElement("b", { style: { color: "var(--gold)", fontSize: "1.15rem" } }, GEN_TOTAL), /* @__PURE__ */ import_react5.default.createElement("span", { className: "muted" }, " = 913 + 203 + 86 + 401 + 395 + 407 + 296 \xB7 2701 = 37\xD773 \xB7 triangular T\u2087\u2083 \xB7 2701+1072 = 3773 (mirror-palindrome, but non-selective: ~38% of a random text does the same).")), /* @__PURE__ */ import_react5.default.createElement("h3", null, "37\xD773 structure of the 7 words (\xA715b.5 \u2014 verified)"), /* @__PURE__ */ import_react5.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react5.default.createElement("li", null, "Total = 2701 = 37\xD773 = T\u2087\u2083. Letter count = ", totalLetters, " = T\u2087 (7\xD78/2 = 28). 7 words \xD7 ", totalLetters, " letters = ", 7 * totalLetters, " = 14\xB2."), /* @__PURE__ */ import_react5.default.createElement("li", null, "Word-sums that are multiples of 37: ", /* @__PURE__ */ import_react5.default.createElement("b", null, words37, "/7"), " (407 = 11\xD737, 296 = 8\xD737 \u2014 the last two)."), /* @__PURE__ */ import_react5.default.createElement("li", null, "Subsets (of 2\u2077\u22121 = 127) whose sum is a multiple of 37: ", /* @__PURE__ */ import_react5.default.createElement("b", null, sub37, "/127"), " (uniform chance \u2248 ", 127 / 37, "\u22483.4)."), /* @__PURE__ */ import_react5.default.createElement("li", null, /* @__PURE__ */ import_react5.default.createElement("b", { style: { color: "var(--green)" } }, "Null"), ": 100,000 permutations of the 28-letter multiset regrouped into the fixed lengths (6,3,5,2,5,3,4), mulberry32 seed 20260807 \u2192 subsets p \u2248 ", /* @__PURE__ */ import_react5.default.createElement("b", null, "3.1\xD710\u207B\u2074"), "; words p \u2248 8.2\xD710\u207B\xB3. The partition is genuinely biased toward 37, beyond the trivial total=2701=37\xD773.")), /* @__PURE__ */ import_react5.default.createElement("div", { className: "note" }, "Genesis opens in ~13-year windows recurring every ~491 years (the Neptune\u2013Pluto synodic cycle). Previous: 427 BCE (Axial Age), 61 CE (Temple), 552, 1043 (Schism), 1535 (Reformation/Copernicus). Current: 2025\u20132038."), /* @__PURE__ */ import_react5.default.createElement(Fig, { n: 10, doc: "From the article (\xA715b.5): the 7 words and their gematrias. The two gold bars are the words that are multiples of 37 (\u05D5\u05D0\u05EA 407=11\xD737, \u05D4\u05D0\u05E8\u05E5 296=8\xD737). The permutation null shows the bias toward 37 is real (p\u22483.1\xD710\u207B\u2074), beyond the trivial total 2701=37\xD773." }));
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(import_jsx_runtime5.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("h2", { children: [
+      "Genesis 1:1 \xB7 ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "he", children: "\u05D1\u05E8\u05D0\u05E9\u05D9\u05EA \u05D1\u05E8\u05D0 \u05D0\u05DC\u05D4\u05D9\u05DD \u05D0\u05EA \u05D4\u05E9\u05DE\u05D9\u05DD \u05D5\u05D0\u05EA \u05D4\u05D0\u05E8\u05E5" }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "pill " + (genesisOk ? "ok" : "no"), children: genesisOk ? `readable on ${date}` : `not readable on ${date}` })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "The 7 words together use the simples ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "\u05D9 \u05D4 \u05DC \u05D5 \u05E6" }),
+      " (Virgo, Aries, Libra, Taurus, Aquarius). Readable only when all 5 signs are occupied by the 7 classical bodies at once \u2014 a rare conjunction with no fixed cadence."
+    ] }),
+    GENESIS.map(([w, en], i) => {
+      const c = norm(w);
+      const ss = [...simpleSet(c)].sort();
+      const ok = formable(c, occ);
+      const m37 = GEN_VALUES[i] % 37 === 0;
+      return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "gw " + (ok ? "ok" : "no"), children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "w", children: displayHe(c) }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "es", style: { color: ok ? "var(--green)" : "var(--red)" }, children: en }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("span", { className: "muted", children: [
+          "\xB7 gematria ",
+          GEN_VALUES[i],
+          m37 ? ` = ${GEN_VALUES[i] / 37}\xD737` : ""
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { style: { marginLeft: "auto" }, children: ss.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { style: { color: "var(--violet)" }, children: "no simples \u2192 always" }) : ss.map((l) => /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("span", { className: "key " + (occ.has(l) ? "on" : "off"), style: { marginLeft: 2 }, children: [
+          l,
+          " ",
+          LETTER_TO_SIGN[l]
+        ] }, l)) })
+      ] }, i);
+    }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { style: { marginTop: 10, padding: "10px 14px", background: "var(--panel2)", borderRadius: 8 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "muted", children: "Standard gematria total: " }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { style: { color: "var(--gold)", fontSize: "1.15rem" }, children: GEN_TOTAL }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "muted", children: " = 913 + 203 + 86 + 401 + 395 + 407 + 296 \xB7 2701 = 37\xD773 \xB7 triangular T\u2087\u2083 \xB7 2701+1072 = 3773 (mirror-palindrome, but non-selective: ~38% of a random text does the same)." })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h3", { children: "37\xD773 structure of the 7 words (\xA715b.5 \u2014 verified)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("ul", { className: "muted", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("li", { children: [
+        "Total = 2701 = 37\xD773 = T\u2087\u2083. Letter count = ",
+        totalLetters,
+        " = T\u2087 (7\xD78/2 = 28). 7 words \xD7 ",
+        totalLetters,
+        " letters = ",
+        7 * totalLetters,
+        " = 14\xB2."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("li", { children: [
+        "Word-sums that are multiples of 37: ",
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("b", { children: [
+          words37,
+          "/7"
+        ] }),
+        " (407 = 11\xD737, 296 = 8\xD737 \u2014 the last two)."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("li", { children: [
+        "Subsets (of 2\u2077\u22121 = 127) whose sum is a multiple of 37: ",
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("b", { children: [
+          sub37,
+          "/127"
+        ] }),
+        " (uniform chance \u2248 ",
+        127 / 37,
+        "\u22483.4)."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { style: { color: "var(--green)" }, children: "Null" }),
+        ": 100,000 permutations of the 28-letter multiset regrouped into the fixed lengths (6,3,5,2,5,3,4), mulberry32 seed 20260807 \u2192 subsets p \u2248 ",
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("b", { children: "3.1\xD710\u207B\u2074" }),
+        "; words p \u2248 8.2\xD710\u207B\xB3. The partition is genuinely biased toward 37, beyond the trivial total=2701=37\xD773."
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "note", children: "Genesis 1:1 is readable only when its five signs (Aquarius, Aries, Libra, Taurus, Virgo) are all occupied by the 7 classical bodies \u2014 a rare conjunction; no fixed cadence is claimed." }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Fig, { n: 10, doc: "From the article (\xA715b.5): the 7 words and their gematrias. The two gold bars are the words that are multiples of 37 (\u05D5\u05D0\u05EA 407=11\xD737, \u05D4\u05D0\u05E8\u05E5 296=8\xD737). The permutation null shows the bias toward 37 is real (p\u22483.1\xD710\u207B\u2074), beyond the trivial total 2701=37\xD773." })
+  ] });
 }
 
-// src/tabs/TimeTab.jsx
+// web/src/tabs/TimeTab.jsx
 var import_react6 = __toESM(require_react());
+var import_jsx_runtime6 = __toESM(require_jsx_runtime());
 function PredictorTab({ date, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear }) {
   const [custom, setCustom] = (0, import_react6.useState)("");
   const [sel, setSel] = (0, import_react6.useState)("\u05D9\u05D4\u05D5\u05D4");
@@ -27194,50 +29005,203 @@ function PredictorTab({ date, setDate, genYear, setGenYear, genData, loading, sc
     const pct = nDays ? count / nDays * 100 : 0;
     const tag = pct >= 80 ? "common" : pct >= 40 ? "frequent" : pct >= 10 ? "occasional" : "special";
     const cls = pct >= 40 ? "spec" : pct >= 10 ? "mid" : "ok";
-    return /* @__PURE__ */ import_react6.default.createElement("span", { className: "prob " + cls }, pct.toFixed(1), "% \xB7 ", tag);
+    return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("span", { className: "prob " + cls, children: [
+      pct.toFixed(1),
+      "% \xB7 ",
+      tag
+    ] });
   }
   function CalendarRow({ word, label }) {
     const days = wordDoyList(word);
     const daySet = (0, import_react6.useMemo)(() => new Set(days), [days.join(",")]);
     const cad = days.length > 0 ? (nDays / days.length).toFixed(1) : "\u2014";
     const isSel = sel === word;
-    return /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, /* @__PURE__ */ import_react6.default.createElement("div", { style: { display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 6 } }, /* @__PURE__ */ import_react6.default.createElement("span", { className: "he", style: { fontSize: "1.5rem", color: isSel ? "var(--green)" : "var(--gold)", cursor: "pointer" }, onClick: () => setSel(word), title: "click to select" }, displayHe(word)), /* @__PURE__ */ import_react6.default.createElement("span", { className: "muted", style: { flex: "0 0 180px" } }, label), /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill" }, "readable ", /* @__PURE__ */ import_react6.default.createElement("b", { style: { color: "var(--gold)" } }, days.length), "/", nDays, " \xB7 ~every ", cad, " d"), /* @__PURE__ */ import_react6.default.createElement(ProbPill, { count: days.length })), /* @__PURE__ */ import_react6.default.createElement("div", { className: "tl", role: "img", "aria-label": `${word}: ${days.length} readable days in ${genYear}` }, Array.from({ length: nDays }, (_, i) => {
-      const on = daySet.has(i);
-      return /* @__PURE__ */ import_react6.default.createElement("div", { key: i, className: "d" + (on ? " on" : "") + (i === curDoy ? " cur" : ""), title: `${genYear}-${String(i + 1).padStart(3, "0")} (doy ${i + 1})${on ? " \xB7 readable" : ""}${i === curDoy ? " \xB7 date" : ""}` });
-    })));
+    return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(import_jsx_runtime6.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 6 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "he", style: { fontSize: "1.5rem", color: isSel ? "var(--green)" : "var(--gold)", cursor: "pointer" }, onClick: () => setSel(word), title: "click to select", children: displayHe(word) }),
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "muted", style: { flex: "0 0 180px" }, children: label }),
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("span", { className: "pill", children: [
+          "readable ",
+          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("b", { style: { color: "var(--gold)" }, children: days.length }),
+          "/",
+          nDays,
+          " \xB7 ~every ",
+          cad,
+          " d"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ProbPill, { count: days.length })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "tl", role: "img", "aria-label": `${word}: ${days.length} readable days in ${genYear}`, children: Array.from({ length: nDays }, (_, i) => {
+        const on = daySet.has(i);
+        return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "d" + (on ? " on" : "") + (i === curDoy ? " cur" : ""), title: `${genYear}-${String(i + 1).padStart(3, "0")} (doy ${i + 1})${on ? " \xB7 readable" : ""}${i === curDoy ? " \xB7 date" : ""}` }, i);
+      }) })
+    ] });
   }
-  return /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, /* @__PURE__ */ import_react6.default.createElement("h2", null, "Predictor \u2014 gloss frequency across ", genYear, " ", loading && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill" }, "computing\u2026")), /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "For each gloss the strip shows the whole year (one square per day). ", /* @__PURE__ */ import_react6.default.createElement("b", { style: { color: "var(--gold)" } }, "Gold"), " = the word is readable that day (all its required zodiacal simples occupied); ", /* @__PURE__ */ import_react6.default.createElement("b", { style: { color: "var(--green)" } }, "green outline"), " = the chosen date (", date, "). Words built only of mothers+doubles (Emet, Shabbat) have no zodiacal simples \u2192 readable every day. The cadence (\u2248every N days) measures how common each gloss is. Click a word to list its dates below."), /* @__PURE__ */ import_react6.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react6.default.createElement("button", { onClick: () => stepYear(-1) }, "\u25C0 ", genYear - 1), /* @__PURE__ */ import_react6.default.createElement(YearInput, { value: genYear, onCommit: setGenYear }), /* @__PURE__ */ import_react6.default.createElement("button", { onClick: () => stepYear(1) }, genYear + 1, " \u25B6"), /* @__PURE__ */ import_react6.default.createElement("button", { onClick: () => setGenYear(year) }, "this year"), genYear < 0 && /* @__PURE__ */ import_react6.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, Math.abs(genYear), " BCE")), /* @__PURE__ */ import_react6.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("input", { type: "text", value: custom, onChange: (e) => setCustom(e.target.value), placeholder: "add a Hebrew word, e.g. \u05D0\u05D4\u05D9\u05D4", style: { flex: "1 1 220px" } }), /* @__PURE__ */ import_react6.default.createElement("button", { onClick: () => {
-    if (/[א-ת]/.test(custom)) {
-      setSel(custom);
-    }
-  }, disabled: !/[א-ת]/.test(custom) }, "add gloss")), genData && /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, presets.map(([w, l]) => /* @__PURE__ */ import_react6.default.createElement(CalendarRow, { key: w, word: w, label: l })), /[א-ת]/.test(custom) && /* @__PURE__ */ import_react6.default.createElement(CalendarRow, { word: norm(custom), label: `custom: ${custom}` }), /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: 12 } }, /* @__PURE__ */ import_react6.default.createElement("span", { className: "muted" }, "Readable dates of ", /* @__PURE__ */ import_react6.default.createElement("span", { className: "he", style: { fontSize: "1.2rem", color: "var(--green)" } }, displayHe(sel)), " in ", genYear, " (click to set the date): "), (() => {
-    const days = wordDoyList(sel);
-    if (days.length === 0) return /* @__PURE__ */ import_react6.default.createElement("span", { className: "muted" }, "none this year.");
-    return days.slice(0, 200).map((i) => {
-      const ds = fmtDate(makeDate(genYear, 1, 1 + i));
-      return /* @__PURE__ */ import_react6.default.createElement("span", { key: ds, className: "key on click", onClick: () => setDate(ds) }, ds);
-    });
-  })(), wordDoyList(sel).length > 200 && /* @__PURE__ */ import_react6.default.createElement("span", { className: "muted" }, " \u2026 (", wordDoyList(sel).length, " total)")), /* @__PURE__ */ import_react6.default.createElement("div", { className: "legend" }, "Move years with \u25C0 \u25B6. The 2028\u20132029 cluster (Pluto in Aquarius, Neptune in Aries) lifts the rare glosses' counts.")));
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(import_jsx_runtime6.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("h2", { children: [
+      "Predictor \u2014 gloss frequency across ",
+      genYear,
+      " ",
+      loading && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "pill", children: "computing\u2026" })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "For each gloss the strip shows the whole year (one square per day). ",
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("b", { style: { color: "var(--gold)" }, children: "Gold" }),
+      " = the word is readable that day (all its required zodiacal simples occupied); ",
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("b", { style: { color: "var(--green)" }, children: "green outline" }),
+      " = the chosen date (",
+      date,
+      "). Words built only of mothers+doubles (Emet, Shabbat) have no zodiacal simples \u2192 readable every day. The cadence (\u2248every N days) measures how common each gloss is. Click a word to list its dates below."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "controls", style: { marginBottom: 12 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("button", { onClick: () => stepYear(-1), children: [
+        "\u25C0 ",
+        genYear - 1
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(YearInput, { value: genYear, onCommit: setGenYear }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("button", { onClick: () => stepYear(1), children: [
+        genYear + 1,
+        " \u25B6"
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("button", { onClick: () => setGenYear(year), children: "this year" }),
+      genYear < 0 && /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("span", { className: "muted", style: { fontSize: ".78rem" }, children: [
+        Math.abs(genYear),
+        " BCE"
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "controls", style: { marginBottom: 14 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("input", { type: "text", value: custom, onChange: (e) => setCustom(e.target.value), placeholder: "add a Hebrew word, e.g. \u05D0\u05D4\u05D9\u05D4", style: { flex: "1 1 220px" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("button", { onClick: () => {
+        if (/[א-ת]/.test(custom)) {
+          setSel(custom);
+        }
+      }, disabled: !/[א-ת]/.test(custom), children: "add gloss" })
+    ] }),
+    genData && /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(import_jsx_runtime6.Fragment, { children: [
+      presets.map(([w, l]) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(CalendarRow, { word: w, label: l }, w)),
+      /[א-ת]/.test(custom) && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(CalendarRow, { word: norm(custom), label: `custom: ${custom}` }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { style: { marginTop: 12 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("span", { className: "muted", children: [
+          "Readable dates of ",
+          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "he", style: { fontSize: "1.2rem", color: "var(--green)" }, children: displayHe(sel) }),
+          " in ",
+          genYear,
+          " (click to set the date): "
+        ] }),
+        (() => {
+          const days = wordDoyList(sel);
+          if (days.length === 0) return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "muted", children: "none this year." });
+          return days.slice(0, 200).map((i) => {
+            const ds = fmtDate(makeDate(genYear, 1, 1 + i));
+            return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "key on click", onClick: () => setDate(ds), children: ds }, ds);
+          });
+        })(),
+        wordDoyList(sel).length > 200 && /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("span", { className: "muted", children: [
+          " \u2026 (",
+          wordDoyList(sel).length,
+          " total)"
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "legend", children: "Move years with \u25C0 \u25B6. Clusters appear when the 7 classical bodies concentrate into few signs, emptying the others and lifting the rare glosses' counts." })
+    ] })
+  ] });
 }
 function AgesTab({ date, rows }) {
   const ages = (0, import_react6.useMemo)(() => ageBoundaries(), []);
-  return /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, /* @__PURE__ */ import_react6.default.createElement("h2", null, "Stellar ages \xB7 precession + the Neptune\u2013Pluto cycle"), /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The equinox recedes 50.29\u2033/year \u2192 one precessional age per sign, \u2248", Math.round(AGE), " years. Equinox today: ", /* @__PURE__ */ import_react6.default.createElement("b", null, EQUINOX_LON.toFixed(1), "\xB0"), " sidereal (Pisces). Lahiri ayanamsa 24.18\xB0 (2024). The 6 Genesis windows (Neptune\u2208Aries \u2227 Pluto\u2208Aquarius) recur every ~491 years and coincide with major religious-linguistic reformations:"), /* @__PURE__ */ import_react6.default.createElement("div", { className: "grid2", style: { marginBottom: 10 } }, ERA_WINDOWS.map((e, i) => /* @__PURE__ */ import_react6.default.createElement("div", { key: i, className: "era" + (i === ERA_WINDOWS.length - 1 ? " next" : "") }, /* @__PURE__ */ import_react6.default.createElement("div", { className: "top" }, /* @__PURE__ */ import_react6.default.createElement("span", null, /* @__PURE__ */ import_react6.default.createElement("b", null, e.w)), /* @__PURE__ */ import_react6.default.createElement("span", { className: "yr" }, "~491 y")), /* @__PURE__ */ import_react6.default.createElement("div", { className: "desc" }, e.ev)))), /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Precessional ages (equinox entry into each sign):"), /* @__PURE__ */ import_react6.default.createElement("div", { className: "grid2" }, ages.map((a) => {
-    const now = a.start <= 2026 && 2026 < a.end;
-    const next = a.start > 2026 && a.start < 2460;
-    return /* @__PURE__ */ import_react6.default.createElement("div", { key: a.sign, className: "era" + (now ? " now" : "") + (next ? " next" : "") }, /* @__PURE__ */ import_react6.default.createElement("div", { className: "top" }, /* @__PURE__ */ import_react6.default.createElement("span", null, /* @__PURE__ */ import_react6.default.createElement("span", { className: "ehe he", style: { color: now ? "var(--gold)" : next ? "var(--violet)" : "var(--dim)" } }, a.he), " ", /* @__PURE__ */ import_react6.default.createElement("b", null, a.sign)), /* @__PURE__ */ import_react6.default.createElement("span", { className: "yr" }, yrLabel(a.start), " \u2014 ", yrLabel(a.end))), /* @__PURE__ */ import_react6.default.createElement("div", { className: "desc" }, "Age of ", a.sign, " \xB7 letter ", a.he, ". ", now ? "\u2190 current age" : next ? "\u2190 incoming age" : ""));
-  })), /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: 12, padding: "12px 14px", background: "var(--panel2)", borderRadius: 8 } }, /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted" }, /* @__PURE__ */ import_react6.default.createElement("b", null, "Slow activators today (", date, "):")), /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: 6 } }, ["Pluto", "Neptune", "Uranus"].map((p) => {
-    const r = rows.find((x) => x.body === p);
-    const era = ages.find((a) => a.sign === r.sign);
-    return /* @__PURE__ */ import_react6.default.createElement("div", { key: p, className: "note" }, GLYPH[p], " ", /* @__PURE__ */ import_react6.default.createElement("b", null, p), " in ", r.sign, " (", /* @__PURE__ */ import_react6.default.createElement("span", { className: "he" }, SIMPLE[r.sign][0]), era && era.start <= 2026 && 2026 < era.end ? " \xB7 current age" : "", era && era.start > 2026 ? " \xB7 incoming age" : "", ") \xB7 ", r.deg.toFixed(1), "\xB0");
-  })), /* @__PURE__ */ import_react6.default.createElement("div", { className: "note", style: { marginTop: 8 } }, "Pluto in Aquarius (", /* @__PURE__ */ import_react6.default.createElement("span", { className: "he" }, "\u05E6"), ") and Neptune in Aries (", /* @__PURE__ */ import_react6.default.createElement("span", { className: "he" }, "\u05D4"), ") are the two anchors that make Genesis 1:1 readable. The Age of Aquarius (~", yrLabel(ages.find((a) => a.sign === "Aquarius").start), ", precessional) and the Neptune\u2013Pluto synodic cycle (~491 y) coincide now.")), /* @__PURE__ */ import_react6.default.createElement(Fig, { n: 9, doc: "From the article (\xA715b.8): the six ~13-year windows in which Genesis 1:1 is legible (Neptune\u2208Aries \u2227 Pluto\u2208Aquarius), mean separation 490.5 y = the Neptune\u2013Pluto synodic. Each marks a major religious-linguistic re-formation. Regularity p < 5\xD710\u207B\u2076; caveat: n=6 and selection bias \u2014 hypothesis, not cause." }));
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(import_jsx_runtime6.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h2", { children: "Stellar ages \xB7 precession" }),
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "The equinox recedes 50.29\u2033/year \u2192 one precessional age per sign, \u2248",
+      Math.round(AGE),
+      " years. Equinox today: ",
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("b", { children: [
+        EQUINOX_LON.toFixed(1),
+        "\xB0"
+      ] }),
+      " sidereal (Pisces). Lahiri ayanamsa 24.18\xB0 (2024). Genesis 1:1 is readable only when all five of its signs (Aquarius, Aries, Libra, Taurus, Virgo) are occupied by the 7 classical bodies at once \u2014 a rare conjunction; no fixed cadence is claimed."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "muted", style: { marginBottom: 8 }, children: "Precessional ages (equinox entry into each sign):" }),
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "grid2", children: ages.map((a) => {
+      const now = a.start <= 2026 && 2026 < a.end;
+      const next = a.start > 2026 && a.start < 2460;
+      return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "era" + (now ? " now" : "") + (next ? " next" : ""), children: [
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "top", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("span", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "ehe he", style: { color: now ? "var(--gold)" : next ? "var(--violet)" : "var(--dim)" }, children: a.he }),
+            " ",
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("b", { children: a.sign })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("span", { className: "yr", children: [
+            yrLabel(a.start),
+            " \u2014 ",
+            yrLabel(a.end)
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "desc", children: [
+          "Age of ",
+          a.sign,
+          " \xB7 letter ",
+          a.he,
+          ". ",
+          now ? "\u2190 current age" : next ? "\u2190 incoming age" : ""
+        ] })
+      ] }, a.sign);
+    }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { style: { marginTop: 12, padding: "12px 14px", background: "var(--panel2)", borderRadius: 8 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "muted", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("b", { children: [
+        "Modern slow bodies today (",
+        date,
+        ") \u2014 astronomical context only:"
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { style: { marginTop: 6 }, children: ["Neptune", "Uranus"].map((p) => {
+        const r = rows.find((x) => x.body === p);
+        const era = ages.find((a) => a.sign === r.sign);
+        return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "note", children: [
+          GLYPH[p],
+          " ",
+          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("b", { children: p }),
+          " in ",
+          r.sign,
+          " (",
+          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "he", children: SIMPLE[r.sign][0] }),
+          era && era.start <= 2026 && 2026 < era.end ? " \xB7 current age" : "",
+          era && era.start > 2026 ? " \xB7 incoming age" : "",
+          ") \xB7 ",
+          r.deg.toFixed(1),
+          "\xB0"
+        ] }, p);
+      }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "note", style: { marginTop: 8 }, children: [
+        "Uranus and Neptune are the slowest bodies the app tracks and are shown here for astronomical context. They are ",
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("b", { children: "not" }),
+        " among the Sefer Yetzirah's 7 doubles and contribute ",
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("b", { children: "no letter" }),
+        " to the reading \u2014 the reading uses only the 7 classical bodies. Genesis 1:1 legibility depends on those 7 occupying its five signs (Aquarius, Aries, Libra, Taurus, Virgo) at once: a rare conjunction, not a fixed cycle."
+      ] })
+    ] })
+  ] });
 }
 
-// src/tabs/GematriaTab.jsx
+// web/src/tabs/GematriaTab.jsx
 var import_react7 = __toESM(require_react());
+var import_jsx_runtime7 = __toESM(require_jsx_runtime());
 function GematriaTab() {
   const [gSub, setGSub] = (0, import_react7.useState)("hebrew");
   const subs = [["hebrew", "Hebrew"], ["greek", "Greek"], ["arabic", "Arabic"], ["indian", "Indian"], ["more", "More"]];
-  return /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement("h2", null, "Gematria \u2014 letter-number systems across cultures (\xA72, \xA715b.2)"), /* @__PURE__ */ import_react7.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "Every culture with a written alphabet developed a letter\u2192number system. The additive isopsephies (Hebrew, Greek, Arabic, Coptic, Cyrillic) share one structure \u2014 units 1\u20139, tens 10\u201390, hundreds 100\u2013900/1000 \u2014 because all descend from the Phoenician/Greek scheme. India is different: the katapayadi is ", /* @__PURE__ */ import_react7.default.createElement("b", null, "positional"), " (right-to-left) and the \u0100ryabha\u1E6Da is consonant\xD7vowel-power. Pre-1500 systems only; post-1500 constructions are flagged."), /* @__PURE__ */ import_react7.default.createElement(SubTabs, { items: subs, active: gSub, onChange: setGSub }), gSub === "hebrew" && /* @__PURE__ */ import_react7.default.createElement(GematriaHebrew, null), gSub === "greek" && /* @__PURE__ */ import_react7.default.createElement(GematriaGreek, null), gSub === "arabic" && /* @__PURE__ */ import_react7.default.createElement(GematriaArabic, null), gSub === "indian" && /* @__PURE__ */ import_react7.default.createElement(GematriaIndian, null), gSub === "more" && /* @__PURE__ */ import_react7.default.createElement(GematriaMore, null));
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(import_jsx_runtime7.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h2", { children: "Gematria \u2014 letter-number systems across cultures (\xA72, \xA715b.2)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "Every culture with a written alphabet developed a letter\u2192number system. The additive isopsephies (Hebrew, Greek, Arabic, Coptic, Cyrillic) share one structure \u2014 units 1\u20139, tens 10\u201390, hundreds 100\u2013900/1000 \u2014 because all descend from the Phoenician/Greek scheme. India is different: the katapayadi is ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "positional" }),
+      " (right-to-left) and the \u0100ryabha\u1E6Da is consonant\xD7vowel-power. Pre-1500 systems only; post-1500 constructions are flagged."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(SubTabs, { items: subs, active: gSub, onChange: setGSub }),
+    gSub === "hebrew" && /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(GematriaHebrew, {}),
+    gSub === "greek" && /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(GematriaGreek, {}),
+    gSub === "arabic" && /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(GematriaArabic, {}),
+    gSub === "indian" && /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(GematriaIndian, {}),
+    gSub === "more" && /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(GematriaMore, {})
+  ] });
 }
 function GematriaHebrew() {
   const [inp, setInp] = (0, import_react7.useState)("\u05DE\u05E9\u05D9\u05D7");
@@ -27249,40 +29213,425 @@ function GematriaHebrew() {
   const val = (ch) => big && BIG_GV[ch] !== void 0 ? BIG_GV[ch] : letterVal(ch);
   const total = letters.reduce((a, ch) => a + val(ch), 0);
   const groups = aiqGroups();
-  return /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react7.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Hebrew name, e.g. \u05DE\u05E9\u05D9\u05D7 / \u05D0\u05D1\u05E8\u05D4\u05DD", style: { flex: "1 1 260px" } }), /* @__PURE__ */ import_react7.default.createElement("span", { className: "pill" }, "letters: ", letters.length), /* @__PURE__ */ import_react7.default.createElement("button", { className: "subtab" + (big ? " active" : ""), onClick: () => setBig((b) => !b), title: "Mispar Gadol: finals = 500\u2013900 (off = Mispar Hechrachi, finals = regular). Genesis 1:1 = 2701 needs Hechrachi." }, "Mispar Gadol ", big ? "ON" : "off")), /* @__PURE__ */ import_react7.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "22-letter gematria, \u05D0=1 \u2026 \u05EA=400. ", /* @__PURE__ */ import_react7.default.createElement("b", null, "Mispar Hechrachi"), " (default): final letters count as their regular value \u2014 required for Gen 1:1 = 2701 = 37\xD773. ", /* @__PURE__ */ import_react7.default.createElement("b", null, "Mispar Gadol"), ": finals = 500\u2013900. ", /* @__PURE__ */ import_react7.default.createElement("b", null, "Mispar Katan Mispari"), ' = the digital-root reduction (below, "Aiq Bekar").'), letters.length > 0 && /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement("table", null, /* @__PURE__ */ import_react7.default.createElement("thead", null, /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("th", null, "Letter"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Name"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Reduction (1\u20139)"))), /* @__PURE__ */ import_react7.default.createElement("tbody", null, letters.map((ch, i) => {
-    return /* @__PURE__ */ import_react7.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react7.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react7.default.createElement("span", { className: "he" }, displayHe(c).includes(ch) ? ch : ch)), /* @__PURE__ */ import_react7.default.createElement("td", { className: "muted" }, ch), /* @__PURE__ */ import_react7.default.createElement("td", { className: "big" }, val(ch)), /* @__PURE__ */ import_react7.default.createElement("td", { className: "big", style: { color: "var(--blue)" } }, reduce9(val(ch))));
-  }))), /* @__PURE__ */ import_react7.default.createElement("div", { style: { marginTop: 10, padding: "12px 14px", background: "var(--panel2)", borderRadius: 8 } }, /* @__PURE__ */ import_react7.default.createElement("span", { className: "muted" }, "Standard gematria: "), /* @__PURE__ */ import_react7.default.createElement("b", { className: "big" }, total), /* @__PURE__ */ import_react7.default.createElement("span", { className: "muted" }, " \xB7 Mispar Katan (digital root): "), /* @__PURE__ */ import_react7.default.createElement("b", { className: "big", style: { color: "var(--blue)" } }, reduce9(total) === 0 ? 9 : reduce9(total)))), /* @__PURE__ */ import_react7.default.createElement("h3", null, "The 22 letters \u2192 digital-root groups (Mispar Katan Mispari)"), /* @__PURE__ */ import_react7.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Each of the 22 letters reduces (sum of digits) to 1\u20139. Groups 1\u20134 gather three letters each (units / tens / hundreds 100\u2013400); groups 5\u20139 gather two (the hundreds stop at 400 \u2014 ancient Hebrew has only 22 letters, no medieval 500\u2013900 finals). This digital root is the bridge to the kamea: without it there is no sigil (\xA715b.3). ", /* @__PURE__ */ import_react7.default.createElement("b", null, "Terminology note:"), " this reduction is ", /* @__PURE__ */ import_react7.default.createElement("i", null, "Mispar Katan Mispari"), '; "Aiq Bekar" properly names a 10\xD7 letter-substitution cipher, not this reduction.'), /* @__PURE__ */ import_react7.default.createElement("div", { className: "grid2" }, [1, 2, 3, 4, 5, 6, 7, 8, 9].map((g) => /* @__PURE__ */ import_react7.default.createElement("div", { key: g, className: "kbox" }, /* @__PURE__ */ import_react7.default.createElement("b", { style: { color: "var(--gold)" } }, g), " \xB7 ", groups[g].join(", ")))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05E8\u05D4\u05DD") }, "\u05D0\u05D1\u05E8\u05D4\u05DD"), " ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05E9\u05DC\u05DE\u05D4") }, "\u05E9\u05DC\u05DE\u05D4"), " ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05DC\u05D4\u05D9\u05DD") }, "\u05D0\u05DC\u05D4\u05D9\u05DD"), " ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05D3\u05D5\u05DF") }, "\u05D0\u05D1\u05D3\u05D5\u05DF"), " (Abaddon = 63 = 7\xD79). Gen 1:1 = ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D1\u05E8\u05D0\u05E9\u05D9\u05EA") }, "\u05D1\u05E8\u05D0\u05E9\u05D9\u05EA"), " ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05DC\u05D4\u05D9\u05DD") }, "\u05D0\u05DC\u05D4\u05D9\u05DD"), " ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D4\u05E9\u05DE\u05D9\u05DD") }, "\u05D4\u05E9\u05DE\u05D9\u05DD"), " ", /* @__PURE__ */ import_react7.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D4\u05D0\u05E8\u05E5") }, "\u05D4\u05D0\u05E8\u05E5"), " \u2192 913+86+395+401+407+296+203 = 2701 = 37\xD773."));
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(import_jsx_runtime7.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "controls", style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Hebrew name, e.g. \u05DE\u05E9\u05D9\u05D7 / \u05D0\u05D1\u05E8\u05D4\u05DD", style: { flex: "1 1 260px" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("span", { className: "pill", children: [
+        "letters: ",
+        letters.length
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("button", { className: "subtab" + (big ? " active" : ""), onClick: () => setBig((b) => !b), title: "Mispar Gadol: finals = 500\u2013900 (off = Mispar Hechrachi, finals = regular). Genesis 1:1 = 2701 needs Hechrachi.", children: [
+        "Mispar Gadol ",
+        big ? "ON" : "off"
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "22-letter gematria, \u05D0=1 \u2026 \u05EA=400. ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Mispar Hechrachi" }),
+      " (default): final letters count as their regular value \u2014 required for Gen 1:1 = 2701 = 37\xD773. ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Mispar Gadol" }),
+      ": finals = 500\u2013900. ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Mispar Katan Mispari" }),
+      ' = the digital-root reduction (below, "Aiq Bekar").'
+    ] }),
+    letters.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(import_jsx_runtime7.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("table", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Letter" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Name" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Value" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Reduction (1\u20139)" })
+        ] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("tbody", { children: letters.map((ch, i) => {
+          return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "letter-cell", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "he", children: displayHe(c).includes(ch) ? ch : ch }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "muted", children: ch }),
+            /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "big", children: val(ch) }),
+            /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "big", style: { color: "var(--blue)" }, children: reduce9(val(ch)) })
+          ] }, i);
+        }) })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { style: { marginTop: 10, padding: "12px 14px", background: "var(--panel2)", borderRadius: 8 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "muted", children: "Standard gematria: " }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { className: "big", children: total }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "muted", children: " \xB7 Mispar Katan (digital root): " }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { className: "big", style: { color: "var(--blue)" }, children: reduce9(total) === 0 ? 9 : reduce9(total) })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h3", { children: "The 22 letters \u2192 digital-root groups (Mispar Katan Mispari)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "Each of the 22 letters reduces (sum of digits) to 1\u20139. Groups 1\u20134 gather three letters each (units / tens / hundreds 100\u2013400); groups 5\u20139 gather two (the hundreds stop at 400 \u2014 ancient Hebrew has only 22 letters, no medieval 500\u2013900 finals). This digital root is the bridge to the kamea: without it there is no sigil (\xA715b.3). ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Terminology note:" }),
+      " this reduction is ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("i", { children: "Mispar Katan Mispari" }),
+      '; "Aiq Bekar" properly names a 10\xD7 letter-substitution cipher, not this reduction.'
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "grid2", children: [1, 2, 3, 4, 5, 6, 7, 8, 9].map((g) => /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "kbox", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { style: { color: "var(--gold)" }, children: g }),
+      " \xB7 ",
+      groups[g].join(", ")
+    ] }, g)) }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "note", children: [
+      "Try: ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05E8\u05D4\u05DD"), children: "\u05D0\u05D1\u05E8\u05D4\u05DD" }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "key click", onClick: () => setInp("\u05E9\u05DC\u05DE\u05D4"), children: "\u05E9\u05DC\u05DE\u05D4" }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "key click", onClick: () => setInp("\u05D0\u05DC\u05D4\u05D9\u05DD"), children: "\u05D0\u05DC\u05D4\u05D9\u05DD" }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05D3\u05D5\u05DF"), children: "\u05D0\u05D1\u05D3\u05D5\u05DF" }),
+      " (Abaddon = 63 = 7\xD79). Gen 1:1 = ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "key click", onClick: () => setInp("\u05D1\u05E8\u05D0\u05E9\u05D9\u05EA"), children: "\u05D1\u05E8\u05D0\u05E9\u05D9\u05EA" }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "key click", onClick: () => setInp("\u05D0\u05DC\u05D4\u05D9\u05DD"), children: "\u05D0\u05DC\u05D4\u05D9\u05DD" }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "key click", onClick: () => setInp("\u05D4\u05E9\u05DE\u05D9\u05DD"), children: "\u05D4\u05E9\u05DE\u05D9\u05DD" }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "key click", onClick: () => setInp("\u05D4\u05D0\u05E8\u05E5"), children: "\u05D4\u05D0\u05E8\u05E5" }),
+      " \u2192 913+86+395+401+407+296+203 = 2701 = 37\xD773."
+    ] })
+  ] });
 }
 function GematriaGreek() {
   const [inp, setInp] = (0, import_react7.useState)("\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2");
   const v = isopsephy(inp);
   const ex = [["\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2", "Jesus", 888, "8\xD7111"], ["\u03A7\u03C1\u03B9\u03C3\u03C4\u03CC\u03C2", "Christ", 1480, "40\xD737"], ["Jesus + Christ", "", 2368, "64\xD737 = 888+1480"], ["\u039A\u03CD\u03C1\u03B9\u03BF\u03C2", "Lord", 800, ""], ["\u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD", "Apollyon (Rev 9:11)", 1461, "Sothic cycle"], ["666", "the beast (Rev 13:18)", 666, "6\xD7111 = \u03A31..36"]];
-  return /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react7.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Greek, e.g. \u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2 / \u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD", style: { flex: "1 1 280px" } }), /* @__PURE__ */ import_react7.default.createElement("span", { className: "pill" }, "isopsephy: ", /* @__PURE__ */ import_react7.default.createElement("b", { style: { color: "var(--gold)" } }, v))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "27 letters: 24 standard + 3 archaic retained only as numerals (digamma \u03DD/\u03DB=6, koppa \u03DF/\u03D9=90, sampi \u03E1=900). Final sigma \u03C2 = 200. Additive \u2014 no reduction. Thousands reuse \u03B1\u2013\u03B8 with a lower keraia (\u0375\u03B1=1000)."), /* @__PURE__ */ import_react7.default.createElement("table", { style: { marginBottom: 10 } }, /* @__PURE__ */ import_react7.default.createElement("thead", null, /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("th", null, "Units 1\u20139"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Tens 10\u201390"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Hundreds 100\u2013900"))), /* @__PURE__ */ import_react7.default.createElement("tbody", null, /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("td", { className: "gk" }, "\u03B1 \u03B2 \u03B3 \u03B4 \u03B5 \u03DB \u03B6 \u03B7 \u03B8"), /* @__PURE__ */ import_react7.default.createElement("td", { className: "gk" }, "\u03B9 \u03BA \u03BB \u03BC \u03BD \u03BE \u03BF \u03C0 \u03DF"), /* @__PURE__ */ import_react7.default.createElement("td", { className: "gk" }, "\u03C1 \u03C3 \u03C4 \u03C5 \u03C6 \u03C7 \u03C8 \u03C9 \u03E1")), /* @__PURE__ */ import_react7.default.createElement("tr", { className: "muted" }, /* @__PURE__ */ import_react7.default.createElement("td", null, "1 2 3 4 5 6 7 8 9"), /* @__PURE__ */ import_react7.default.createElement("td", null, "10 20 30 40 50 60 70 80 90"), /* @__PURE__ */ import_react7.default.createElement("td", null, "100 200 300 400 500 600 700 800 900")))), /* @__PURE__ */ import_react7.default.createElement("table", null, /* @__PURE__ */ import_react7.default.createElement("thead", null, /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("th", null, "Name"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Reading"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Notes"))), /* @__PURE__ */ import_react7.default.createElement("tbody", null, ex.map((r, i) => /* @__PURE__ */ import_react7.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react7.default.createElement("td", { className: "letter-cell" }, r[0] ? /* @__PURE__ */ import_react7.default.createElement("span", { className: "gk", style: { fontSize: "1.4rem" } }, r[0]) : ""), /* @__PURE__ */ import_react7.default.createElement("td", null, r[1]), /* @__PURE__ */ import_react7.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, r[2]), /* @__PURE__ */ import_react7.default.createElement("td", { className: "muted" }, r[3]))))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react7.default.createElement("b", null, "666 / original referent:"), " the scholarly consensus is the ", /* @__PURE__ */ import_react7.default.createElement("i", null, "Hebrew"), " gematria \u05E0\u05E8\u05D5\u05DF \u05E7\u05E1\u05E8 (Neron Kesar) = 666; the Latin form (dropping final nun) = 616 (alternate manuscript). No single Greek word is widely accepted as the original Revelation 666. ", /* @__PURE__ */ import_react7.default.createElement("b", null, "Apollyon 1461 \u2194 Sothic"), " is an esoteric parallel (arithmetic exact), not a scholarly lexicon entry."));
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(import_jsx_runtime7.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "controls", style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Greek, e.g. \u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2 / \u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD", style: { flex: "1 1 280px" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("span", { className: "pill", children: [
+        "isopsephy: ",
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { style: { color: "var(--gold)" }, children: v })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "muted", style: { marginBottom: 8 }, children: "27 letters: 24 standard + 3 archaic retained only as numerals (digamma \u03DD/\u03DB=6, koppa \u03DF/\u03D9=90, sampi \u03E1=900). Final sigma \u03C2 = 200. Additive \u2014 no reduction. Thousands reuse \u03B1\u2013\u03B8 with a lower keraia (\u0375\u03B1=1000)." }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("table", { style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Units 1\u20139" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Tens 10\u201390" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Hundreds 100\u2013900" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tbody", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "gk", children: "\u03B1 \u03B2 \u03B3 \u03B4 \u03B5 \u03DB \u03B6 \u03B7 \u03B8" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "gk", children: "\u03B9 \u03BA \u03BB \u03BC \u03BD \u03BE \u03BF \u03C0 \u03DF" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "gk", children: "\u03C1 \u03C3 \u03C4 \u03C5 \u03C6 \u03C7 \u03C8 \u03C9 \u03E1" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { className: "muted", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "1 2 3 4 5 6 7 8 9" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "10 20 30 40 50 60 70 80 90" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "100 200 300 400 500 600 700 800 900" })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Name" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Reading" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Value" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Notes" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("tbody", { children: ex.map((r, i) => /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "letter-cell", children: r[0] ? /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "gk", style: { fontSize: "1.4rem" }, children: r[0] }) : "" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: r[1] }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "big", style: { color: "var(--gold)" }, children: r[2] }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "muted", children: r[3] })
+      ] }, i)) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "note", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "666 / original referent:" }),
+      " the scholarly consensus is the ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("i", { children: "Hebrew" }),
+      " gematria \u05E0\u05E8\u05D5\u05DF \u05E7\u05E1\u05E8 (Neron Kesar) = 666; the Latin form (dropping final nun) = 616 (alternate manuscript). No single Greek word is widely accepted as the original Revelation 666. ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Apollyon 1461 \u2194 Sothic" }),
+      " is an esoteric parallel (arithmetic exact), not a scholarly lexicon entry."
+    ] })
+  ] });
 }
 function GematriaArabic() {
   const [inp, setInp] = (0, import_react7.useState)("\u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646 \u0627\u0644\u0631\u062D\u064A\u0645");
   const v = abjad(inp);
   const letters = [...inp].filter((ch) => ABJAD[ch]);
   const ex = [["\u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646 \u0627\u0644\u0631\u062D\u064A\u0645", "Bismillah", 786, "19 letters; 2+60+40+66+329+289"], ["\u0627\u0644\u0644\u0647", "Allah", 66, ""], ["\u0645\u062D\u0645\u062F", "Muhammad", 92, ""], ["\u0639\u0644\u064A", "Ali", 110, ""], ["\u062D\u0633\u064A\u0646", "Husayn", 128, ""]];
-  return /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react7.default.createElement("input", { type: "text", dir: "rtl", lang: "ar", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Arabic, e.g. \u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646 \u0627\u0644\u0631\u062D\u064A\u0645", style: { flex: "1 1 320px", textAlign: "right" } }), /* @__PURE__ */ import_react7.default.createElement("span", { className: "pill" }, "abjad (\u1E25is\u0101b al-jummal): ", /* @__PURE__ */ import_react7.default.createElement("b", { style: { color: "var(--gold)" } }, v))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "28 letters in the ", /* @__PURE__ */ import_react7.default.createElement("b", null, "abjad (\u1E24ij\u0101\u02BE\u012B) order"), " \u2014 the numeral order, ", /* @__PURE__ */ import_react7.default.createElement("i", null, "not"), " the alphabetical alifb\u0101\u02BE\u012B order (\u0627\u0628 \u062A \u062B\u2026). Mnemonic: \u02BEabjad hawwaz \u1E25u\u1E6D\u1E6D\u012B kalaman sa\u02BFfa\u1E63 qarashat thakhadh \u1E0Da\u1E93agh. Additive. (The Maghrebi/archaic variant differs at 6 positions \u2014 not shown.)"), /* @__PURE__ */ import_react7.default.createElement("table", { style: { marginBottom: 10 } }, /* @__PURE__ */ import_react7.default.createElement("thead", null, /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("th", null, "Units 1\u20139"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Tens 10\u201390"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Hundreds 100\u2013900"), /* @__PURE__ */ import_react7.default.createElement("th", null, "1000"))), /* @__PURE__ */ import_react7.default.createElement("tbody", null, /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("td", { className: "he", dir: "rtl", style: { fontSize: "1.25rem" } }, "\u0627 \u0628 \u062C \u062F \u0647 \u0648 \u0632 \u062D \u0637"), /* @__PURE__ */ import_react7.default.createElement("td", { className: "he", dir: "rtl", style: { fontSize: "1.25rem" } }, "\u064A \u0643 \u0644 \u0645 \u0646 \u0633 \u0639 \u0641 \u0635"), /* @__PURE__ */ import_react7.default.createElement("td", { className: "he", dir: "rtl", style: { fontSize: "1.25rem" } }, "\u0642 \u0631 \u0634 \u062A \u062B \u062E \u0630 \u0636 \u0638"), /* @__PURE__ */ import_react7.default.createElement("td", { className: "he", dir: "rtl", style: { fontSize: "1.25rem" } }, "\u063A")), /* @__PURE__ */ import_react7.default.createElement("tr", { className: "muted" }, /* @__PURE__ */ import_react7.default.createElement("td", null, "1 2 3 4 5 6 7 8 9"), /* @__PURE__ */ import_react7.default.createElement("td", null, "10 20 30 40 50 60 70 80 90"), /* @__PURE__ */ import_react7.default.createElement("td", null, "100 200 300 400 500 600 700 800 900"), /* @__PURE__ */ import_react7.default.createElement("td", null, "1000")))), letters.length > 0 && /* @__PURE__ */ import_react7.default.createElement("div", { style: { marginBottom: 10, padding: "10px 14px", background: "var(--panel2)", borderRadius: 8 } }, /* @__PURE__ */ import_react7.default.createElement("span", { className: "muted" }, "letters: "), letters.map((ch, i) => /* @__PURE__ */ import_react7.default.createElement("span", { key: i, className: "he", dir: "rtl", style: { fontSize: "1.3rem", marginLeft: 6 } }, ch, "=", ABJAD[ch]))), /* @__PURE__ */ import_react7.default.createElement("table", null, /* @__PURE__ */ import_react7.default.createElement("thead", null, /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("th", null, "Phrase"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Reading"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Notes"))), /* @__PURE__ */ import_react7.default.createElement("tbody", null, ex.map((r, i) => /* @__PURE__ */ import_react7.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react7.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react7.default.createElement("span", { className: "he", dir: "rtl", style: { fontSize: "1.3rem" } }, r[0])), /* @__PURE__ */ import_react7.default.createElement("td", null, r[1]), /* @__PURE__ */ import_react7.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, r[2]), /* @__PURE__ */ import_react7.default.createElement("td", { className: "muted" }, r[3]))))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react7.default.createElement("b", null, "The 19 Bismillah claim:"), " \u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646 \u0627\u0644\u0631\u062D\u064A\u0645 = 19 letters (the alif of the article is counted) \u2014 the count is correct; the Code-19 / Rashad Khalifa debate rests on it. ", /* @__PURE__ */ import_react7.default.createElement("b", null, "786"), " is the abjad sum, used as a shorthand for Bismillah in South Asia (some scholars call it bid\u02BFah). Both are tradition, not Quran text."));
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(import_jsx_runtime7.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "controls", style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("input", { type: "text", dir: "rtl", lang: "ar", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Arabic, e.g. \u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646 \u0627\u0644\u0631\u062D\u064A\u0645", style: { flex: "1 1 320px", textAlign: "right" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("span", { className: "pill", children: [
+        "abjad (\u1E25is\u0101b al-jummal): ",
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { style: { color: "var(--gold)" }, children: v })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "28 letters in the ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "abjad (\u1E24ij\u0101\u02BE\u012B) order" }),
+      " \u2014 the numeral order, ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("i", { children: "not" }),
+      " the alphabetical alifb\u0101\u02BE\u012B order (\u0627\u0628 \u062A \u062B\u2026). Mnemonic: \u02BEabjad hawwaz \u1E25u\u1E6D\u1E6D\u012B kalaman sa\u02BFfa\u1E63 qarashat thakhadh \u1E0Da\u1E93agh. Additive. (The Maghrebi/archaic variant differs at 6 positions \u2014 not shown.)"
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("table", { style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Units 1\u20139" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Tens 10\u201390" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Hundreds 100\u2013900" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "1000" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tbody", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "he", dir: "rtl", style: { fontSize: "1.25rem" }, children: "\u0627 \u0628 \u062C \u062F \u0647 \u0648 \u0632 \u062D \u0637" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "he", dir: "rtl", style: { fontSize: "1.25rem" }, children: "\u064A \u0643 \u0644 \u0645 \u0646 \u0633 \u0639 \u0641 \u0635" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "he", dir: "rtl", style: { fontSize: "1.25rem" }, children: "\u0642 \u0631 \u0634 \u062A \u062B \u062E \u0630 \u0636 \u0638" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "he", dir: "rtl", style: { fontSize: "1.25rem" }, children: "\u063A" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { className: "muted", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "1 2 3 4 5 6 7 8 9" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "10 20 30 40 50 60 70 80 90" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "100 200 300 400 500 600 700 800 900" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "1000" })
+        ] })
+      ] })
+    ] }),
+    letters.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { style: { marginBottom: 10, padding: "10px 14px", background: "var(--panel2)", borderRadius: 8 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "muted", children: "letters: " }),
+      letters.map((ch, i) => /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("span", { className: "he", dir: "rtl", style: { fontSize: "1.3rem", marginLeft: 6 }, children: [
+        ch,
+        "=",
+        ABJAD[ch]
+      ] }, i))
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Phrase" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Reading" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Value" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Notes" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("tbody", { children: ex.map((r, i) => /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "letter-cell", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "he", dir: "rtl", style: { fontSize: "1.3rem" }, children: r[0] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: r[1] }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "big", style: { color: "var(--gold)" }, children: r[2] }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "muted", children: r[3] })
+      ] }, i)) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "note", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "The 19 Bismillah claim:" }),
+      " \u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646 \u0627\u0644\u0631\u062D\u064A\u0645 = 19 letters (the alif of the article is counted) \u2014 the count is correct; the Code-19 / Rashad Khalifa debate rests on it. ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "786" }),
+      " is the abjad sum, used as a shorthand for Bismillah in South Asia (some scholars call it bid\u02BFah). Both are tradition, not Quran text."
+    ] })
+  ] });
 }
 function GematriaIndian() {
   const [inp, setInp] = (0, import_react7.useState)("\u0917\u092A\u094D\u092F\u092D\u093E\u0917\u094D\u092F");
   const dec = katapayadi(inp);
-  return /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react7.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Devanagari consonants, e.g. \u0905\u0928\u0941\u0937\u094D\u091F\u0941\u092D\u094D\u0928 (or any)", style: { flex: "1 1 320px" } }), /* @__PURE__ */ import_react7.default.createElement("span", { className: "pill" }, "decoded (right-to-left): ", /* @__PURE__ */ import_react7.default.createElement("b", { style: { color: "var(--gold)" } }, dec || "\u2014"))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, /* @__PURE__ */ import_react7.default.createElement("b", null, "Katapayadi"), " (Haridatta, 683 CE; Kerala school, pre-1500): consonants \u2192 digits, read ", /* @__PURE__ */ import_react7.default.createElement("b", null, "right-to-left"), ' (\u0905\u0919\u094D\u0915\u093E\u0928\u093E\u0902 \u0935\u093E\u092E\u0924\u094B \u0917\u0924\u093F\u0903, "numbers go from left to right" reversed). ', /* @__PURE__ */ import_react7.default.createElement("b", null, "Vowels = 0"), "; \u0928, \u091E = 0. In a conjunct, only the ", /* @__PURE__ */ import_react7.default.createElement("b", null, "last"), " consonant carries a value. Named for the four consonants heading the four groups (\u0915 \u091F \u092A \u092F, all = 1). This is ", /* @__PURE__ */ import_react7.default.createElement("b", null, "positional"), ", not additive isopsephy."), /* @__PURE__ */ import_react7.default.createElement("table", { style: { marginBottom: 10 } }, /* @__PURE__ */ import_react7.default.createElement("thead", null, /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("th", null, "Digit"), /* @__PURE__ */ import_react7.default.createElement("th", null, "ka-group"), /* @__PURE__ */ import_react7.default.createElement("th", null, "\u1E6Da-group"), /* @__PURE__ */ import_react7.default.createElement("th", null, "pa-group"), /* @__PURE__ */ import_react7.default.createElement("th", null, "ya-group"))), /* @__PURE__ */ import_react7.default.createElement("tbody", null, [["1", "\u0915", "\u091F", "\u092A", "\u092F"], ["2", "\u0916", "\u0920", "\u092B", "\u0930"], ["3", "\u0917", "\u0921", "\u092C", "\u0932"], ["4", "\u0918", "\u0922", "\u092D", "\u0935"], ["5", "\u0919", "\u0923", "\u092E", "\u0936"], ["6", "\u091A", "\u0924", "\u2014", "\u0937"], ["7", "\u091B", "\u0925", "\u2014", "\u0938"], ["8", "\u091C", "\u0926", "\u2014", "\u0939"], ["9", "\u091D", "\u0927", "\u2014", "\u2014"], ["0", "\u091E", "\u0928", "\u2014", "\u2014"]].map((r) => /* @__PURE__ */ import_react7.default.createElement("tr", { key: r[0] }, /* @__PURE__ */ import_react7.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, r[0]), r.slice(1).map((c, i) => /* @__PURE__ */ import_react7.default.createElement("td", { key: i, className: "he", style: { fontSize: "1.3rem" } }, c)))))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react7.default.createElement("b", null, "Famous encodings (\u03C0):"), " the Kara\u1E47apaddhati verse (Kerala school, 15th c.) decodes to ", /* @__PURE__ */ import_react7.default.createElement("b", null, "31415926536"), " (\u03C0 to 10 places) under the standard right-to-left rule. The 31-place gop\u012Bbh\u0101gya verse ", /* @__PURE__ */ import_react7.default.createElement("i", null, "violates"), " the reversal rule \u2014 a standard decoder will not reproduce it. ", /* @__PURE__ */ import_react7.default.createElement("b", null, "Flag:"), ' "\u0915\u091F\u092A\u092F\u093E\u0926\u093F encodes 31416" is FALSE \u2014 the name is etymological ("starting with ka,\u1E6Da,pa,ya"), not a numerical encoding.'), /* @__PURE__ */ import_react7.default.createElement("div", { className: "muted", style: { marginTop: 8 } }, "The Sanskrit vargas (5 consonant classes) and the 14 Shiva Sutras are ", /* @__PURE__ */ import_react7.default.createElement("b", null, "phonological/grammatical"), ", NOT gematria \u2014 no numbers are assigned. The sacred numbers 108 (= 27 nakshatras \xD7 4 p\u0101das), 1008, 432,000 are fixed constants, not letter-sums."));
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(import_jsx_runtime7.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "controls", style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Devanagari consonants, e.g. \u0905\u0928\u0941\u0937\u094D\u091F\u0941\u092D\u094D\u0928 (or any)", style: { flex: "1 1 320px" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("span", { className: "pill", children: [
+        "decoded (right-to-left): ",
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { style: { color: "var(--gold)" }, children: dec || "\u2014" })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Katapayadi" }),
+      " (Haridatta, 683 CE; Kerala school, pre-1500): consonants \u2192 digits, read ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "right-to-left" }),
+      ' (\u0905\u0919\u094D\u0915\u093E\u0928\u093E\u0902 \u0935\u093E\u092E\u0924\u094B \u0917\u0924\u093F\u0903, "numbers go from left to right" reversed). ',
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Vowels = 0" }),
+      "; \u0928, \u091E = 0. In a conjunct, only the ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "last" }),
+      " consonant carries a value. Named for the four consonants heading the four groups (\u0915 \u091F \u092A \u092F, all = 1). This is ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "positional" }),
+      ", not additive isopsephy."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("table", { style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Digit" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "ka-group" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "\u1E6Da-group" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "pa-group" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "ya-group" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("tbody", { children: [["1", "\u0915", "\u091F", "\u092A", "\u092F"], ["2", "\u0916", "\u0920", "\u092B", "\u0930"], ["3", "\u0917", "\u0921", "\u092C", "\u0932"], ["4", "\u0918", "\u0922", "\u092D", "\u0935"], ["5", "\u0919", "\u0923", "\u092E", "\u0936"], ["6", "\u091A", "\u0924", "\u2014", "\u0937"], ["7", "\u091B", "\u0925", "\u2014", "\u0938"], ["8", "\u091C", "\u0926", "\u2014", "\u0939"], ["9", "\u091D", "\u0927", "\u2014", "\u2014"], ["0", "\u091E", "\u0928", "\u2014", "\u2014"]].map((r) => /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "big", style: { color: "var(--gold)" }, children: r[0] }),
+        r.slice(1).map((c, i) => /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "he", style: { fontSize: "1.3rem" }, children: c }, i))
+      ] }, r[0])) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "note", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Famous encodings (\u03C0):" }),
+      " the Kara\u1E47apaddhati verse (Kerala school, 15th c.) decodes to ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "31415926536" }),
+      " (\u03C0 to 10 places) under the standard right-to-left rule. The 31-place gop\u012Bbh\u0101gya verse ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("i", { children: "violates" }),
+      " the reversal rule \u2014 a standard decoder will not reproduce it. ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Flag:" }),
+      ' "\u0915\u091F\u092A\u092F\u093E\u0926\u093F encodes 31416" is FALSE \u2014 the name is etymological ("starting with ka,\u1E6Da,pa,ya"), not a numerical encoding.'
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "muted", style: { marginTop: 8 }, children: [
+      "The Sanskrit vargas (5 consonant classes) and the 14 Shiva Sutras are ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "phonological/grammatical" }),
+      ", NOT gematria \u2014 no numbers are assigned. The sacred numbers 108 (= 27 nakshatras \xD7 4 p\u0101das), 1008, 432,000 are fixed constants, not letter-sums."
+    ] })
+  ] });
 }
 function GematriaMore() {
-  return /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement("h3", null, "\u0100ryabha\u1E6Da numeration (India, early 6th c. CE) \u2014 positional, not additive"), /* @__PURE__ */ import_react7.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "A true alphasyllabic numeral: ", /* @__PURE__ */ import_react7.default.createElement("b", null, "consonant = fixed value 1\u2013100; vowel = power-of-100 multiplier"), "; syllable = consonant \xD7 vowel. e.g. \u0915\u093F = \u0915(1) \xD7 100 = 100; \u0939\u094C = \u0939(100) \xD7 10\xB9\u2076 = 10\xB9\u2078. Concatenated least-significant first. Pre-1500. This is a large-number positional notation, ", /* @__PURE__ */ import_react7.default.createElement("b", null, "not"), " a word-summing gematria."), /* @__PURE__ */ import_react7.default.createElement("table", { style: { marginBottom: 12 } }, /* @__PURE__ */ import_react7.default.createElement("thead", null, /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("th", null, "Category"), /* @__PURE__ */ import_react7.default.createElement("th", null, "Consonants \u2192 values"))), /* @__PURE__ */ import_react7.default.createElement("tbody", null, /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("td", null, "Velar"), /* @__PURE__ */ import_react7.default.createElement("td", { className: "he" }, "\u09151 \u09162 \u09173 \u09184 \u09195")), /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("td", null, "Palatal"), /* @__PURE__ */ import_react7.default.createElement("td", { className: "he" }, "\u091A6 \u091B7 \u091C8 \u091D9 \u091E10")), /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("td", null, "Retroflex"), /* @__PURE__ */ import_react7.default.createElement("td", { className: "he" }, "\u091F11 \u092012 \u092113 \u092214 \u092315")), /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("td", null, "Dental"), /* @__PURE__ */ import_react7.default.createElement("td", { className: "he" }, "\u092416 \u092517 \u092618 \u092719 \u092820")), /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("td", null, "Labial"), /* @__PURE__ */ import_react7.default.createElement("td", { className: "he" }, "\u092A21 \u092B22 \u092C23 \u092D24 \u092E25")), /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("td", null, "Semivowels"), /* @__PURE__ */ import_react7.default.createElement("td", { className: "he" }, "\u092F30 \u093040 \u093250 \u093560")), /* @__PURE__ */ import_react7.default.createElement("tr", null, /* @__PURE__ */ import_react7.default.createElement("td", null, "Fricatives"), /* @__PURE__ */ import_react7.default.createElement("td", { className: "he" }, "\u093670 \u093780 \u093890 \u0939100")), /* @__PURE__ */ import_react7.default.createElement("tr", { className: "muted" }, /* @__PURE__ */ import_react7.default.createElement("td", null, "Vowel mult."), /* @__PURE__ */ import_react7.default.createElement("td", null, "a=1, i=100, u=10\u2074, \u1E5B=10\u2076, \u1E37=10\u2078, e=10\xB9\u2070, ai=10\xB9\xB2, o=10\xB9\u2074, au=10\xB9\u2076")))), /* @__PURE__ */ import_react7.default.createElement("h3", null, "Cyrillic (10th c., Greek-derived) \u2014 true pre-1500 isopsephy"), /* @__PURE__ */ import_react7.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Direct adaptation of Byzantine Greek isopsephy. Order follows Greek, not Cyrillic alphabetical. Borrowed letters \u046E(ksi)=60, \u0470(psi)=700, \u0472(theta)=9 carry numerals; Slavic-only letters (\u0431 \u0436 \u0448 \u0449\u2026) get NO value. e.g. \u0470\u0417 = 700+7 = 707."), /* @__PURE__ */ import_react7.default.createElement("h3", null, "Coptic \u2014 Greek + Fai=90"), /* @__PURE__ */ import_react7.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Essentially Greek isopsephy reused, with ONE Demotic addition: ", /* @__PURE__ */ import_react7.default.createElement("b", null, "\u03E5 (Fai) = 90"), ', filling the Greek qoppa slot. The other 5 Demotic letters have no numeric value. Treat as "Greek + Fai=90."'), /* @__PURE__ */ import_react7.default.createElement("h3", null, "POST-1500 / NOT gematria (flagged)"), /* @__PURE__ */ import_react7.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react7.default.createElement("li", null, /* @__PURE__ */ import_react7.default.createElement("b", null, "Latin A-Z gematria"), " \u2014 ", /* @__PURE__ */ import_react7.default.createElement("span", { style: { color: "var(--red)" } }, "post-1500"), ". No pre-1500 full Latin A-Z system exists. Earliest: Rudolff 1525; famous: ", /* @__PURE__ */ import_react7.default.createElement("b", null, "Agrippa, De Occulta Philosophia (1532), Bk II ch. XX"), " (A=1\u2026Z=500). e.g. IESUS = 394. A Renaissance construction \u2014 flag, do not treat as ancient."), /* @__PURE__ */ import_react7.default.createElement("li", null, /* @__PURE__ */ import_react7.default.createElement("b", null, "Roman numerals"), " \u2014 7 symbols (I V X L C D M), additive/subtractive. Numeral notation, ", /* @__PURE__ */ import_react7.default.createElement("b", null, "not"), " word-summing isopsephy."), /* @__PURE__ */ import_react7.default.createElement("li", null, /* @__PURE__ */ import_react7.default.createElement("b", null, "Runic calendars"), " \u2014 16 Younger Futhark runes encode golden numbers 1\u201316 + 3 special (Metonic calendrical), not gematria."), /* @__PURE__ */ import_react7.default.createElement("li", null, /* @__PURE__ */ import_react7.default.createElement("b", null, "Ogham"), " \u2014 the 20 fid have NO numeric assignment; stroke-count is phonological organization."), /* @__PURE__ */ import_react7.default.createElement("li", null, /* @__PURE__ */ import_react7.default.createElement("b", null, "Chinese stroke-count divination"), " (\u6E2C\u5B57) \u2014 pre-1500 roots but NO fixed standardized stroke\u2192number table; systematized only post-1612.")));
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(import_jsx_runtime7.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h3", { children: "\u0100ryabha\u1E6Da numeration (India, early 6th c. CE) \u2014 positional, not additive" }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "A true alphasyllabic numeral: ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "consonant = fixed value 1\u2013100; vowel = power-of-100 multiplier" }),
+      "; syllable = consonant \xD7 vowel. e.g. \u0915\u093F = \u0915(1) \xD7 100 = 100; \u0939\u094C = \u0939(100) \xD7 10\xB9\u2076 = 10\xB9\u2078. Concatenated least-significant first. Pre-1500. This is a large-number positional notation, ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "not" }),
+      " a word-summing gematria."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("table", { style: { marginBottom: 12 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Category" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("th", { children: "Consonants \u2192 values" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tbody", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "Velar" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "he", children: "\u09151 \u09162 \u09173 \u09184 \u09195" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "Palatal" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "he", children: "\u091A6 \u091B7 \u091C8 \u091D9 \u091E10" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "Retroflex" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "he", children: "\u091F11 \u092012 \u092113 \u092214 \u092315" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "Dental" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "he", children: "\u092416 \u092517 \u092618 \u092719 \u092820" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "Labial" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "he", children: "\u092A21 \u092B22 \u092C23 \u092D24 \u092E25" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "Semivowels" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "he", children: "\u092F30 \u093040 \u093250 \u093560" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "Fricatives" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { className: "he", children: "\u093670 \u093780 \u093890 \u0939100" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("tr", { className: "muted", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "Vowel mult." }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("td", { children: "a=1, i=100, u=10\u2074, \u1E5B=10\u2076, \u1E37=10\u2078, e=10\xB9\u2070, ai=10\xB9\xB2, o=10\xB9\u2074, au=10\xB9\u2076" })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h3", { children: "Cyrillic (10th c., Greek-derived) \u2014 true pre-1500 isopsephy" }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "muted", style: { marginBottom: 8 }, children: "Direct adaptation of Byzantine Greek isopsephy. Order follows Greek, not Cyrillic alphabetical. Borrowed letters \u046E(ksi)=60, \u0470(psi)=700, \u0472(theta)=9 carry numerals; Slavic-only letters (\u0431 \u0436 \u0448 \u0449\u2026) get NO value. e.g. \u0470\u0417 = 700+7 = 707." }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h3", { children: "Coptic \u2014 Greek + Fai=90" }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "Essentially Greek isopsephy reused, with ONE Demotic addition: ",
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "\u03E5 (Fai) = 90" }),
+      ', filling the Greek qoppa slot. The other 5 Demotic letters have no numeric value. Treat as "Greek + Fai=90."'
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h3", { children: "POST-1500 / NOT gematria (flagged)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("ul", { className: "muted", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Latin A-Z gematria" }),
+        " \u2014 ",
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { style: { color: "var(--red)" }, children: "post-1500" }),
+        ". No pre-1500 full Latin A-Z system exists. Earliest: Rudolff 1525; famous: ",
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Agrippa, De Occulta Philosophia (1532), Bk II ch. XX" }),
+        " (A=1\u2026Z=500). e.g. IESUS = 394. A Renaissance construction \u2014 flag, do not treat as ancient."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Roman numerals" }),
+        " \u2014 7 symbols (I V X L C D M), additive/subtractive. Numeral notation, ",
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "not" }),
+        " word-summing isopsephy."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Runic calendars" }),
+        " \u2014 16 Younger Futhark runes encode golden numbers 1\u201316 + 3 special (Metonic calendrical), not gematria."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Ogham" }),
+        " \u2014 the 20 fid have NO numeric assignment; stroke-count is phonological organization."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("b", { children: "Chinese stroke-count divination" }),
+        " (\u6E2C\u5B57) \u2014 pre-1500 roots but NO fixed standardized stroke\u2192number table; systematized only post-1612."
+      ] })
+    ] })
+  ] });
 }
 
-// src/tabs/SigilsTab.jsx
+// web/src/tabs/SigilsTab.jsx
 var import_react8 = __toESM(require_react());
+var import_jsx_runtime8 = __toESM(require_jsx_runtime());
 function SigilTab() {
   const [inp, setInp] = (0, import_react8.useState)("\u05DE\u05E9\u05D9\u05D7");
   const sp = sigilPath(inp);
   const isHeb = /[א-ת]/.test(inp);
   const entries = isHeb ? [...norm(inp)].filter((ch) => GV[ch]).map((ch) => ({ l: displayHe(ch), v: letterVal(ch) })) : [...inp.toUpperCase().replace(/[^A-Z]/g, "")].map((ch) => ({ l: ch, v: ch.charCodeAt(0) - 64 }));
-  return /* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement("h2", null, "Sigil Forge \u2014 the Aiq Bekar / Lo Shu sigil (Saturn 3\xD73, \xA715b.3)"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The kamea-sigil method: (1) take the name (consonants); (2) reduce each letter's gematria to its digital root 1\u20139 (Aiq Bekar); (3) mark those cells on the Lo Shu (Saturn 3\xD73) in order and join them \u2014 the trace ", /* @__PURE__ */ import_react8.default.createElement("b", null, "is"), " the sigil; (4) consecutive repeats collapse (the pen does not lift). Aiq Bekar = the digit-sum of the 22-letter gematria of \xA72, the bridge from alphabet to sigil. ", /* @__PURE__ */ import_react8.default.createElement("span", { style: { color: "var(--green)" } }, "Green"), " = first cell, ", /* @__PURE__ */ import_react8.default.createElement("span", { style: { color: "var(--red)" } }, "red"), " = last. The ", /* @__PURE__ */ import_react8.default.createElement("b", null, "Kameot"), " tab traces the same name on all 7 planetary squares (Saturn \u2192 Moon)."), /* @__PURE__ */ import_react8.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react8.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Hebrew name, e.g. \u05DE\u05E9\u05D9\u05D7", style: { flex: "1 1 260px" }, autoFocus: true }), /* @__PURE__ */ import_react8.default.createElement("span", { className: "pill" }, "Aiq Bekar cells used: ", sp.cellsUsed.length, "/9")), /* @__PURE__ */ import_react8.default.createElement("div", { className: "row", style: { alignItems: "flex-start" } }, /* @__PURE__ */ import_react8.default.createElement("div", { style: { flex: "0 0 auto" } }, /* @__PURE__ */ import_react8.default.createElement(KameaSigil, { n: 3, word: inp, compact: true })), /* @__PURE__ */ import_react8.default.createElement("div", { style: { flex: "1 1 200px" } }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Letters: ", /* @__PURE__ */ import_react8.default.createElement("b", { style: { color: "var(--gold)" } }, entries.map((e) => e.l).join(" ") || "\u2014")), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Values: ", entries.map((e) => e.v).join(", ") || "\u2014"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Aiq Bekar (1\u20139): ", /* @__PURE__ */ import_react8.default.createElement("b", { style: { color: "var(--blue)" } }, sp.reduced.join("  ") || "\u2014")), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Saturn trace (repeats collapsed):"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "big", style: { color: "var(--gold)" } }, sp.cells.map((c) => c.v).join(" \u2192 ") || "\u2014"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, "The sigil is the geometric footprint of the name on the Lo Shu \u2014 deterministic from the name alone. The ", /* @__PURE__ */ import_react8.default.createElement("b", null, "Kameot"), " tab traces the same name on all 7 planetary squares (Saturn \u2192 Moon): each square's different modulus n\xB2 = 9,16,25,36,49,64,81 yields a distinct sigil per planet. ", /* @__PURE__ */ import_react8.default.createElement("em", null, "Caveat (\xA76.3 / \xA715b.3):"), " the sigil-over-kamea method is Renaissance (Agrippa, 1531), not medieval Jewish."), /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D3\u05DD") }, "\u05D0\u05D3\u05DD"), " ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("\u05DE\u05E9\u05D4") }, "\u05DE\u05E9\u05D4"), " ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D9\u05E9\u05E8\u05D0\u05DC") }, "\u05D9\u05E9\u05E8\u05D0\u05DC"), " ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D5\u05D4\u05D5") }, "\u05D5\u05D4\u05D5"), " (1st Shem angel) \xB7 ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setInp("MICHAEL") }, "MICHAEL")))), /* @__PURE__ */ import_react8.default.createElement(Fig, { n: 7, doc: "From the article (\xA715b.3): the Lo Shu (Saturn 3\xD73, M=15) with the 9 Aiq Bekar groups overlaid \u2014 each cell gathers the letters whose gematria digit-sums to it. The gold trace is the sigil of \u05DE\u05E9\u05D9\u05D7 (Messiah): Aiq Bekar 4\xB73\xB71\xB78, the reduced cells joined in order. Aiq Bekar = the digit-sum of the 22-letter gematria of \xA72 \u2014 the bridge from alphabet to sigil." }));
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(import_jsx_runtime8.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h2", { children: "Sigil Forge \u2014 the Aiq Bekar / Lo Shu sigil (Saturn 3\xD73, \xA715b.3)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "The kamea-sigil method: (1) take the name (consonants); (2) reduce each letter's gematria to its digital root 1\u20139 (Aiq Bekar); (3) mark those cells on the Lo Shu (Saturn 3\xD73) in order and join them \u2014 the trace ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: "is" }),
+      " the sigil; (4) consecutive repeats collapse (the pen does not lift). Aiq Bekar = the digit-sum of the 22-letter gematria of \xA72, the bridge from alphabet to sigil. ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { style: { color: "var(--green)" }, children: "Green" }),
+      " = first cell, ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { style: { color: "var(--red)" }, children: "red" }),
+      " = last. The ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: "Kameot" }),
+      " tab traces the same name on all 7 planetary squares (Saturn \u2192 Moon)."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "controls", style: { marginBottom: 12 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Hebrew name, e.g. \u05DE\u05E9\u05D9\u05D7", style: { flex: "1 1 260px" }, autoFocus: true }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("span", { className: "pill", children: [
+        "Aiq Bekar cells used: ",
+        sp.cellsUsed.length,
+        "/9"
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "row", style: { alignItems: "flex-start" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { style: { flex: "0 0 auto" }, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(KameaSigil, { n: 3, word: inp, compact: true }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { style: { flex: "1 1 200px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "muted", children: [
+          "Letters: ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { style: { color: "var(--gold)" }, children: entries.map((e) => e.l).join(" ") || "\u2014" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "muted", children: [
+          "Values: ",
+          entries.map((e) => e.v).join(", ") || "\u2014"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "muted", children: [
+          "Aiq Bekar (1\u20139): ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { style: { color: "var(--blue)" }, children: sp.reduced.join("  ") || "\u2014" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "muted", children: "Saturn trace (repeats collapsed):" }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "big", style: { color: "var(--gold)" }, children: sp.cells.map((c) => c.v).join(" \u2192 ") || "\u2014" }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "note", children: [
+          "The sigil is the geometric footprint of the name on the Lo Shu \u2014 deterministic from the name alone. The ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: "Kameot" }),
+          " tab traces the same name on all 7 planetary squares (Saturn \u2192 Moon): each square's different modulus n\xB2 = 9,16,25,36,49,64,81 yields a distinct sigil per planet. ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("em", { children: "Caveat (\xA76.3 / \xA715b.3):" }),
+          " the sigil-over-kamea method is Renaissance (Agrippa, 1531), not medieval Jewish."
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "note", children: [
+          "Try: ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "key click", onClick: () => setInp("\u05D0\u05D3\u05DD"), children: "\u05D0\u05D3\u05DD" }),
+          " ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "key click", onClick: () => setInp("\u05DE\u05E9\u05D4"), children: "\u05DE\u05E9\u05D4" }),
+          " ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "key click", onClick: () => setInp("\u05D9\u05E9\u05E8\u05D0\u05DC"), children: "\u05D9\u05E9\u05E8\u05D0\u05DC" }),
+          " ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "key click", onClick: () => setInp("\u05D5\u05D4\u05D5"), children: "\u05D5\u05D4\u05D5" }),
+          " (1st Shem angel) \xB7 ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "key click", onClick: () => setInp("MICHAEL"), children: "MICHAEL" })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Fig, { n: 7, doc: "From the article (\xA715b.3): the Lo Shu (Saturn 3\xD73, M=15) with the 9 Aiq Bekar groups overlaid \u2014 each cell gathers the letters whose gematria digit-sums to it. The gold trace is the sigil of \u05DE\u05E9\u05D9\u05D7 (Messiah): Aiq Bekar 4\xB73\xB71\xB78, the reduced cells joined in order. Aiq Bekar = the digit-sum of the 22-letter gematria of \xA72 \u2014 the bridge from alphabet to sigil." })
+  ] });
 }
 function KameaSigil({ n, word, compact }) {
   const sq = buildMagic(n);
@@ -27317,48 +29666,223 @@ function KameaSigil({ n, word, compact }) {
     const [x, y] = center(v);
     return (k ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
   }).join(" ");
-  return /* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement("svg", { viewBox: `0 0 ${S} ${S}`, width: S, height: S, style: { maxWidth: "100%" }, role: "img", "aria-label": `Sigil of ${word} on ${n}\xD7${n} kamea` }, /* @__PURE__ */ import_react8.default.createElement("rect", { x: "0", y: "0", width: S, height: S, fill: "#0f0f15", rx: "8" }), sq.flat().map((v, idx) => {
-    const [i, j2] = pos[v];
-    const x = pad + cellPx * j2, y = pad + cellPx * i;
-    const on = used.has(v);
-    return /* @__PURE__ */ import_react8.default.createElement("g", { key: idx }, /* @__PURE__ */ import_react8.default.createElement("rect", { x: x + 1.5, y: y + 1.5, width: cellPx - 3, height: cellPx - 3, rx: "3", fill: on ? "#332b1a" : "#16161f", stroke: "#2a2a38", strokeWidth: "1" }), /* @__PURE__ */ import_react8.default.createElement("text", { x: x + cellPx / 2, y: y + cellPx / 2 - 1, textAnchor: "middle", dominantBaseline: "middle", fontSize: n <= 6 ? 11 : 9, fill: on ? "#e8c87a" : "#5a5a6e" }, v), on && /* @__PURE__ */ import_react8.default.createElement("text", { x: x + cellPx / 2, y: y + cellPx / 2 + 9, textAnchor: "middle", dominantBaseline: "middle", fontSize: 6.5, fill: "#9ca3af" }, "#", order[v]));
-  }), path.length >= 2 && /* @__PURE__ */ import_react8.default.createElement("path", { d, fill: "none", stroke: "#e8c87a", strokeWidth: "2.2", opacity: "0.9", strokeLinejoin: "round", strokeLinecap: "round" }), path.map((v, k) => {
-    const [x, y] = center(v);
-    const r = k === 0 || k === path.length - 1 ? 4.5 : 2.8;
-    const fill = k === 0 ? "#6fe0a0" : k === path.length - 1 ? "#ff8a8a" : "#e8c87a";
-    return /* @__PURE__ */ import_react8.default.createElement("circle", { key: k, cx: x, cy: y, r, fill, stroke: "#08080b", strokeWidth: "0.6" });
-  })), !compact && /* @__PURE__ */ import_react8.default.createElement("div", { style: { marginTop: 8, minWidth: 200 } }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, isHeb ? "Hebrew gematria (22 letters; finals = base letter)" : "Latin A=1\u2026Z=26", " \u2192 reduced into the square (n\xB2=", N, ")", n === 3 ? " \u2014 for Saturn n\xB2=9 this is the digital root = the Aiq Bekar method of \xA715b.3" : "", "."), entries.length === 0 ? /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, "Type a word to trace its sigil on this kamea.") : /* @__PURE__ */ import_react8.default.createElement("table", { style: { marginTop: 6 } }, /* @__PURE__ */ import_react8.default.createElement("thead", null, /* @__PURE__ */ import_react8.default.createElement("tr", null, /* @__PURE__ */ import_react8.default.createElement("th", null, "Letter"), /* @__PURE__ */ import_react8.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react8.default.createElement("th", null, "Cell"))), /* @__PURE__ */ import_react8.default.createElement("tbody", null, entries.map((e, i) => /* @__PURE__ */ import_react8.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react8.default.createElement("td", null, /* @__PURE__ */ import_react8.default.createElement("span", { className: isHeb ? "he" : "gk", style: { fontSize: "1.2rem" } }, e.l)), /* @__PURE__ */ import_react8.default.createElement("td", { className: "deg" }, e.v), /* @__PURE__ */ import_react8.default.createElement("td", { className: "deg" }, targets[i]))))), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted", style: { marginTop: 6 } }, "Trace (", path.length, " pts, repeats collapsed): ", /* @__PURE__ */ import_react8.default.createElement("b", { style: { color: "var(--gold)" } }, path.join(" \u2192 ") || "\u2014"), " \xB7 cells ", used.size, "/", N)));
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(import_jsx_runtime8.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("svg", { viewBox: `0 0 ${S} ${S}`, width: S, height: S, style: { maxWidth: "100%" }, role: "img", "aria-label": `Sigil of ${word} on ${n}\xD7${n} kamea`, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("rect", { x: "0", y: "0", width: S, height: S, fill: "#0f0f15", rx: "8" }),
+      sq.flat().map((v, idx) => {
+        const [i, j2] = pos[v];
+        const x = pad + cellPx * j2, y = pad + cellPx * i;
+        const on = used.has(v);
+        return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("g", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("rect", { x: x + 1.5, y: y + 1.5, width: cellPx - 3, height: cellPx - 3, rx: "3", fill: on ? "#332b1a" : "#16161f", stroke: "#2a2a38", strokeWidth: "1" }),
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("text", { x: x + cellPx / 2, y: y + cellPx / 2 - 1, textAnchor: "middle", dominantBaseline: "middle", fontSize: n <= 6 ? 11 : 9, fill: on ? "#e8c87a" : "#5a5a6e", children: v }),
+          on && /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("text", { x: x + cellPx / 2, y: y + cellPx / 2 + 9, textAnchor: "middle", dominantBaseline: "middle", fontSize: 6.5, fill: "#9ca3af", children: [
+            "#",
+            order[v]
+          ] })
+        ] }, idx);
+      }),
+      path.length >= 2 && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("path", { d, fill: "none", stroke: "#e8c87a", strokeWidth: "2.2", opacity: "0.9", strokeLinejoin: "round", strokeLinecap: "round" }),
+      path.map((v, k) => {
+        const [x, y] = center(v);
+        const r = k === 0 || k === path.length - 1 ? 4.5 : 2.8;
+        const fill = k === 0 ? "#6fe0a0" : k === path.length - 1 ? "#ff8a8a" : "#e8c87a";
+        return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("circle", { cx: x, cy: y, r, fill, stroke: "#08080b", strokeWidth: "0.6" }, k);
+      })
+    ] }),
+    !compact && /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { style: { marginTop: 8, minWidth: 200 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "muted", children: [
+        isHeb ? "Hebrew gematria (22 letters; finals = base letter)" : "Latin A=1\u2026Z=26",
+        " \u2192 reduced into the square (n\xB2=",
+        N,
+        ")",
+        n === 3 ? " \u2014 for Saturn n\xB2=9 this is the digital root = the Aiq Bekar method of \xA715b.3" : "",
+        "."
+      ] }),
+      entries.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "note", children: "Type a word to trace its sigil on this kamea." }) : /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("table", { style: { marginTop: 6 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("th", { children: "Letter" }),
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("th", { children: "Value" }),
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("th", { children: "Cell" })
+        ] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("tbody", { children: entries.map((e, i) => /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: isHeb ? "he" : "gk", style: { fontSize: "1.2rem" }, children: e.l }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("td", { className: "deg", children: e.v }),
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("td", { className: "deg", children: targets[i] })
+        ] }, i)) })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "muted", style: { marginTop: 6 }, children: [
+        "Trace (",
+        path.length,
+        " pts, repeats collapsed): ",
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { style: { color: "var(--gold)" }, children: path.join(" \u2192 ") || "\u2014" }),
+        " \xB7 cells ",
+        used.size,
+        "/",
+        N
+      ] })
+    ] })
+  ] });
 }
 function KameotTab() {
   const [word, setWord] = (0, import_react8.useState)("\u05D9\u05D4\u05D5\u05D4");
   const [planet, setPlanet] = (0, import_react8.useState)("Saturn");
   const [pn, n, pdbl] = KAMEOT.find((k) => k[0] === planet);
-  return /* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement("h2", null, "The 7 kameot \u2014 planetary magic squares + sigil tracer (\xA715b.1, \xA715b.3)"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "7 magic squares \u2194 7 doubles \u2194 7 planets (Sefer Yetzirah \xA74). Type a word (Hebrew or English/Latin), pick a planet, and trace its sigil on that kamea: each letter \u2192 value \u2192 cell on the square (values reduced modulo n\xB2; for Saturn n\xB2=9 this is the digital root = Aiq Bekar). ", /* @__PURE__ */ import_react8.default.createElement("span", { style: { color: "var(--green)" } }, "green"), " = first, ", /* @__PURE__ */ import_react8.default.createElement("span", { style: { color: "var(--red)" } }, "red"), " = last; consecutive repeats collapse (the pen does not lift)."), /* @__PURE__ */ import_react8.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react8.default.createElement("input", { type: "text", value: word, onChange: (e) => setWord(e.target.value), placeholder: "Hebrew (\u05D9\u05D4\u05D5\u05D4) or English (MICHAEL)", style: { flex: "1 1 260px" }, autoFocus: true }), /* @__PURE__ */ import_react8.default.createElement("select", { value: planet, onChange: (e) => setPlanet(e.target.value), "aria-label": "Planet kamea", style: { background: "var(--panel2)", color: "var(--txt)", border: "1px solid var(--line)", borderRadius: 8, padding: "8px", fontSize: ".9rem" } }, KAMEOT.map(([p, nn]) => /* @__PURE__ */ import_react8.default.createElement("option", { key: p, value: p }, GLYPH[p], " ", p, " (", nn, "\xD7", nn, ")")))), /* @__PURE__ */ import_react8.default.createElement("div", { className: "row", style: { alignItems: "flex-start" } }, /* @__PURE__ */ import_react8.default.createElement("div", { style: { flex: "0 0 auto" } }, /* @__PURE__ */ import_react8.default.createElement(KameaSigil, { n, word })), /* @__PURE__ */ import_react8.default.createElement("div", { style: { flex: "1 1 200px" } }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Planet: ", /* @__PURE__ */ import_react8.default.createElement("b", null, GLYPH[planet], " ", planet), " \xB7 ", n, "\xD7", n, " kamea \xB7 double ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, pdbl), " \xB7 constant ", /* @__PURE__ */ import_react8.default.createElement("b", { style: { color: "var(--gold)" } }, n * (n * n + 1) / 2), "."), /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, "How the trace is built: letters of the word \u2192 gematria value (Hebrew, 22 letters \u2014 finals = base letter, no 500\u2013900; or A=1\u2026Z=26 for Latin) \u2192 reduce each value into the square's range (1\u2026n\xB2) by ((value\u22121) mod n\xB2)+1 \u2192 mark those cells in order \u2192 join them. For ", /* @__PURE__ */ import_react8.default.createElement("b", null, "Saturn"), " (n\xB2=9) this reduces to the digital root \u2014 exactly the Aiq Bekar \u2192 Lo Shu method verified in \xA715b.3 and used in the Sigil Forge tab."), /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setWord("\u05D9\u05D4\u05D5\u05D4") }, "\u05D9\u05D4\u05D5\u05D4"), " ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setWord("\u05DE\u05E9\u05D9\u05D7") }, "\u05DE\u05E9\u05D9\u05D7"), " ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setWord("\u05D0\u05D3\u05DD") }, "\u05D0\u05D3\u05DD"), " ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setWord("MICHAEL") }, "MICHAEL"), " ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "key click", onClick: () => setWord("RAPHAEL") }, "RAPHAEL"), " \u2014 then switch planet."), /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react8.default.createElement("em", null, "Caveat (\xA76.3 / \xA715b.3):"), " the sigil-over-kamea method is Renaissance (Agrippa, 1531), not medieval Jewish. The English A=1\u2026Z=26 mapping is a modern Latin gematria, not traditional."))), /* @__PURE__ */ import_react8.default.createElement("h3", null, "All 7 kameot \u2014 ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "he", style: { fontSize: "1.1rem" } }, word ? displayHe(norm(word)) : ""), " traced on each square"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "tcards", style: { gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))" } }, KAMEOT.map(([planet2, n2, dbl]) => {
-    const M = n2 * (n2 * n2 + 1) / 2;
-    const sq = buildMagic(n2);
-    const ok = isMagic(sq);
-    return /* @__PURE__ */ import_react8.default.createElement("div", { key: planet2, className: "kbox", style: { textAlign: "center" } }, /* @__PURE__ */ import_react8.default.createElement("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 } }, /* @__PURE__ */ import_react8.default.createElement("b", null, GLYPH[planet2], " ", planet2), /* @__PURE__ */ import_react8.default.createElement("span", { className: "muted" }, n2, "\xD7", n2, " \xB7 M=", M)), /* @__PURE__ */ import_react8.default.createElement("div", { style: { display: "flex", justifyContent: "center" } }, /* @__PURE__ */ import_react8.default.createElement(KameaSigil, { n: n2, word, compact: true })), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted", style: { marginTop: 6 } }, "double ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "he", style: { fontSize: "1rem" } }, dbl), " \xB7 constant ", /* @__PURE__ */ import_react8.default.createElement("b", { style: { color: "var(--gold)" } }, M), " \xB7 magic ", ok ? "\u2713" : "\u2717"));
-  })), /* @__PURE__ */ import_react8.default.createElement("h3", null, "Cross-links (\xA715b.1.D)"), /* @__PURE__ */ import_react8.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react8.default.createElement("li", null, /* @__PURE__ */ import_react8.default.createElement("b", null, "Mercury"), " 8\xD78 constant = 260 = the Maya ", /* @__PURE__ */ import_react8.default.createElement("b", null, "Tzolkin"), " (260 days)."), /* @__PURE__ */ import_react8.default.createElement("li", null, /* @__PURE__ */ import_react8.default.createElement("b", null, "Sun"), " 6\xD76 constant = 111; sum 1..36 = 666 = 6\xD7111 (the \u201Csolar number\u201D, Rev 13:18 \u2014 see the Revelation tab)."), /* @__PURE__ */ import_react8.default.createElement("li", null, /* @__PURE__ */ import_react8.default.createElement("b", null, "Saturn"), " 3\xD73 = the Lo Shu, constant 15 = \u05D9\u05D4 (10+5); total 45 = \u05DE\u05D4 (40+5), \u201CWhat?\u201D."), /* @__PURE__ */ import_react8.default.createElement("li", null, "The 7 kameot = the 7 days of the planetary week in Chaldean order (see the Week tab).")), /* @__PURE__ */ import_react8.default.createElement(Fig, { n: 6, doc: "From the article (\xA715b.1): the 7 planetary kameot, orders 3\u20139 in Chaldean order, with constants M(n)=n(n\xB2+1)/2. Saturn 3\xD73 = the Lo Shu (M=15, basis of the sigils); Mercury 8\xD78 (M=260) = the Maya Tzolkin; the Sun 6\xD76 sums 1+\u2026+36 = 666 = 6\xD7111." }));
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(import_jsx_runtime8.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h2", { children: "The 7 kameot \u2014 planetary magic squares + sigil tracer (\xA715b.1, \xA715b.3)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "7 magic squares \u2194 7 doubles \u2194 7 planets (Sefer Yetzirah \xA74). Type a word (Hebrew or English/Latin), pick a planet, and trace its sigil on that kamea: each letter \u2192 value \u2192 cell on the square (values reduced modulo n\xB2; for Saturn n\xB2=9 this is the digital root = Aiq Bekar). ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { style: { color: "var(--green)" }, children: "green" }),
+      " = first, ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { style: { color: "var(--red)" }, children: "red" }),
+      " = last; consecutive repeats collapse (the pen does not lift)."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "controls", style: { marginBottom: 12 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("input", { type: "text", value: word, onChange: (e) => setWord(e.target.value), placeholder: "Hebrew (\u05D9\u05D4\u05D5\u05D4) or English (MICHAEL)", style: { flex: "1 1 260px" }, autoFocus: true }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("select", { value: planet, onChange: (e) => setPlanet(e.target.value), "aria-label": "Planet kamea", style: { background: "var(--panel2)", color: "var(--txt)", border: "1px solid var(--line)", borderRadius: 8, padding: "8px", fontSize: ".9rem" }, children: KAMEOT.map(([p, nn]) => /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("option", { value: p, children: [
+        GLYPH[p],
+        " ",
+        p,
+        " (",
+        nn,
+        "\xD7",
+        nn,
+        ")"
+      ] }, p)) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "row", style: { alignItems: "flex-start" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { style: { flex: "0 0 auto" }, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(KameaSigil, { n, word }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { style: { flex: "1 1 200px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "muted", children: [
+          "Planet: ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("b", { children: [
+            GLYPH[planet],
+            " ",
+            planet
+          ] }),
+          " \xB7 ",
+          n,
+          "\xD7",
+          n,
+          " kamea \xB7 double ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "he", style: { fontSize: "1.2rem" }, children: pdbl }),
+          " \xB7 constant ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { style: { color: "var(--gold)" }, children: n * (n * n + 1) / 2 }),
+          "."
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "note", children: [
+          "How the trace is built: letters of the word \u2192 gematria value (Hebrew, 22 letters \u2014 finals = base letter, no 500\u2013900; or A=1\u2026Z=26 for Latin) \u2192 reduce each value into the square's range (1\u2026n\xB2) by ((value\u22121) mod n\xB2)+1 \u2192 mark those cells in order \u2192 join them. For ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: "Saturn" }),
+          " (n\xB2=9) this reduces to the digital root \u2014 exactly the Aiq Bekar \u2192 Lo Shu method verified in \xA715b.3 and used in the Sigil Forge tab."
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "note", children: [
+          "Try: ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "key click", onClick: () => setWord("\u05D9\u05D4\u05D5\u05D4"), children: "\u05D9\u05D4\u05D5\u05D4" }),
+          " ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "key click", onClick: () => setWord("\u05DE\u05E9\u05D9\u05D7"), children: "\u05DE\u05E9\u05D9\u05D7" }),
+          " ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "key click", onClick: () => setWord("\u05D0\u05D3\u05DD"), children: "\u05D0\u05D3\u05DD" }),
+          " ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "key click", onClick: () => setWord("MICHAEL"), children: "MICHAEL" }),
+          " ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "key click", onClick: () => setWord("RAPHAEL"), children: "RAPHAEL" }),
+          " \u2014 then switch planet."
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "note", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("em", { children: "Caveat (\xA76.3 / \xA715b.3):" }),
+          " the sigil-over-kamea method is Renaissance (Agrippa, 1531), not medieval Jewish. The English A=1\u2026Z=26 mapping is a modern Latin gematria, not traditional."
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("h3", { children: [
+      "All 7 kameot \u2014 ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "he", style: { fontSize: "1.1rem" }, children: word ? displayHe(norm(word)) : "" }),
+      " traced on each square"
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "tcards", style: { gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))" }, children: KAMEOT.map(([planet2, n2, dbl]) => {
+      const M = n2 * (n2 * n2 + 1) / 2;
+      const sq = buildMagic(n2);
+      const ok = isMagic(sq);
+      return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "kbox", style: { textAlign: "center" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("b", { children: [
+            GLYPH[planet2],
+            " ",
+            planet2
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("span", { className: "muted", children: [
+            n2,
+            "\xD7",
+            n2,
+            " \xB7 M=",
+            M
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { style: { display: "flex", justifyContent: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(KameaSigil, { n: n2, word, compact: true }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "muted", style: { marginTop: 6 }, children: [
+          "double ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "he", style: { fontSize: "1rem" }, children: dbl }),
+          " \xB7 constant ",
+          /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { style: { color: "var(--gold)" }, children: M }),
+          " \xB7 magic ",
+          ok ? "\u2713" : "\u2717"
+        ] })
+      ] }, planet2);
+    }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { children: "Cross-links (\xA715b.1.D)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("ul", { className: "muted", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: "Mercury" }),
+        " 8\xD78 constant = 260 = the Maya ",
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: "Tzolkin" }),
+        " (260 days)."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: "Sun" }),
+        " 6\xD76 constant = 111; sum 1..36 = 666 = 6\xD7111 (the \u201Csolar number\u201D, Rev 13:18 \u2014 see the Revelation tab)."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: "Saturn" }),
+        " 3\xD73 = the Lo Shu, constant 15 = \u05D9\u05D4 (10+5); total 45 = \u05DE\u05D4 (40+5), \u201CWhat?\u201D."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("li", { children: "The 7 kameot = the 7 days of the planetary week in Chaldean order (see the Week tab)." })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Fig, { n: 6, doc: "From the article (\xA715b.1): the 7 planetary kameot, orders 3\u20139 in Chaldean order, with constants M(n)=n(n\xB2+1)/2. Saturn 3\xD73 = the Lo Shu (M=15, basis of the sigils); Mercury 8\xD78 (M=260) = the Maya Tzolkin; the Sun 6\xD76 sums 1+\u2026+36 = 666 = 6\xD7111." })
+  ] });
 }
 function AngelsCircle({ triplets }) {
   const C = 240;
   const ang = (i) => (-90 + i * 5) * Math.PI / 180;
   const pt = (r, a) => [C + r * Math.cos(a), C + r * Math.sin(a)];
   const Rout = 212, RtickIn = 200, Rnum = 224, RlabOut = 188, RlabIn = 168;
-  return /* @__PURE__ */ import_react8.default.createElement("svg", { viewBox: "0 0 480 482", width: "100%", height: "auto", style: { maxWidth: 470, margin: "0 auto" }, role: "img", "aria-label": "72 angels around the precessional circle" }, /* @__PURE__ */ import_react8.default.createElement("rect", { x: "0", y: "0", width: "480", height: "482", fill: "#0f0f15", rx: "10" }), /* @__PURE__ */ import_react8.default.createElement("circle", { cx: C, cy: C, r: Rout, fill: "none", stroke: "#2a2a38", strokeWidth: "1.4" }), /* @__PURE__ */ import_react8.default.createElement("circle", { cx: C, cy: C, r: RlabOut + 10, fill: "none", stroke: "#202028", strokeWidth: "0.7" }), triplets.map((t, i) => {
-    const a = ang(i);
-    const [x0, y0] = pt(Rout, a);
-    const [x1, y1] = pt(RtickIn, a);
-    const major = i % 6 === 0;
-    return /* @__PURE__ */ import_react8.default.createElement("line", { key: "t" + i, x1: x0, y1: y0, x2: x1, y2: y1, stroke: major ? "#c29eff" : "#33343f", strokeWidth: major ? 1.3 : 0.6 });
-  }), triplets.map((t, i) => {
-    const a = ang(i);
-    const outer = i % 2 === 0;
-    const rl = outer ? RlabOut : RlabIn;
-    const [lx, ly] = pt(rl, a);
-    const [nx, ny] = pt(Rnum, a);
-    return /* @__PURE__ */ import_react8.default.createElement("g", { key: "a" + i }, /* @__PURE__ */ import_react8.default.createElement("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "8.6", fill: outer ? "#e8c87a" : "#c29eff", fontFamily: "serif" }, t), /* @__PURE__ */ import_react8.default.createElement("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "5", fill: "#5a5a6e" }, i + 1));
-  }), /* @__PURE__ */ import_react8.default.createElement("circle", { cx: C, cy: C, r: "58", fill: "#0f0f15", stroke: "#2a2a38", strokeWidth: "0.8" }), /* @__PURE__ */ import_react8.default.createElement("text", { x: C, y: C - 18, textAnchor: "middle", fontSize: "24", fill: "#e8c87a", fontFamily: "serif" }, "72"), /* @__PURE__ */ import_react8.default.createElement("text", { x: C, y: C - 2, textAnchor: "middle", fontSize: "8", fill: "#9ca3af" }, "5\xB0 per angel \xB7 360\xB0/72"), /* @__PURE__ */ import_react8.default.createElement("text", { x: C, y: C + 13, textAnchor: "middle", fontSize: "7.6", fill: "#c29eff" }, "1\xB0 / 72 yr precession"), /* @__PURE__ */ import_react8.default.createElement("text", { x: C, y: C + 25, textAnchor: "middle", fontSize: "6.8", fill: "#5a5a6e" }, "72 \xD7 360 = 25 920 yr"));
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("svg", { viewBox: "0 0 480 482", width: "100%", height: "auto", style: { maxWidth: 470, margin: "0 auto" }, role: "img", "aria-label": "72 angels around the precessional circle", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("rect", { x: "0", y: "0", width: "480", height: "482", fill: "#0f0f15", rx: "10" }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("circle", { cx: C, cy: C, r: Rout, fill: "none", stroke: "#2a2a38", strokeWidth: "1.4" }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("circle", { cx: C, cy: C, r: RlabOut + 10, fill: "none", stroke: "#202028", strokeWidth: "0.7" }),
+    triplets.map((t, i) => {
+      const a = ang(i);
+      const [x0, y0] = pt(Rout, a);
+      const [x1, y1] = pt(RtickIn, a);
+      const major = i % 6 === 0;
+      return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("line", { x1: x0, y1: y0, x2: x1, y2: y1, stroke: major ? "#c29eff" : "#33343f", strokeWidth: major ? 1.3 : 0.6 }, "t" + i);
+    }),
+    triplets.map((t, i) => {
+      const a = ang(i);
+      const outer = i % 2 === 0;
+      const rl = outer ? RlabOut : RlabIn;
+      const [lx, ly] = pt(rl, a);
+      const [nx, ny] = pt(Rnum, a);
+      return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("g", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("text", { x: lx, y: ly, textAnchor: "middle", dominantBaseline: "middle", fontSize: "8.6", fill: outer ? "#e8c87a" : "#c29eff", fontFamily: "serif", children: t }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("text", { x: nx, y: ny, textAnchor: "middle", dominantBaseline: "middle", fontSize: "5", fill: "#5a5a6e", children: i + 1 })
+      ] }, "a" + i);
+    }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("circle", { cx: C, cy: C, r: "58", fill: "#0f0f15", stroke: "#2a2a38", strokeWidth: "0.8" }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("text", { x: C, y: C - 18, textAnchor: "middle", fontSize: "24", fill: "#e8c87a", fontFamily: "serif", children: "72" }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("text", { x: C, y: C - 2, textAnchor: "middle", fontSize: "8", fill: "#9ca3af", children: "5\xB0 per angel \xB7 360\xB0/72" }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("text", { x: C, y: C + 13, textAnchor: "middle", fontSize: "7.6", fill: "#c29eff", children: "1\xB0 / 72 yr precession" }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("text", { x: C, y: C + 25, textAnchor: "middle", fontSize: "6.8", fill: "#5a5a6e", children: "72 \xD7 360 = 25 920 yr" })
+  ] });
 }
 function AngelsTab() {
   const [data, setData] = (0, import_react8.useState)(null);
@@ -27370,16 +29894,73 @@ function AngelsTab() {
       return r.json();
     }).then(setData).catch((e) => setErr(e.message));
   }, []);
-  if (err) return /* @__PURE__ */ import_react8.default.createElement("div", { className: "panel app-panel" }, /* @__PURE__ */ import_react8.default.createElement("h2", null, "72 Angels"), /* @__PURE__ */ import_react8.default.createElement("p", null, "Could not load the 72-angel data. Please refresh the page; if the problem persists, the data may be unavailable right now."));
-  if (!data) return /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted" }, "Loading the 72 Shem HaMephorash triplets\u2026");
+  if (err) return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "panel app-panel", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h2", { children: "72 Angels" }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { children: "Could not load the 72-angel data. Please refresh the page; if the problem persists, the data may be unavailable right now." })
+  ] });
+  if (!data) return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "muted", children: "Loading the 72 Shem HaMephorash triplets\u2026" });
   const qn = q.trim().toLowerCase();
   const rows = data.triplets.map((t, i) => ({ i: i + 1, trio: t, el: t + "\u05D0\u05DC", yh: t + "\u05D9\u05D4", gemEL: data.gemEL ? data.gemEL[i] : gematria(norm(t + "\u05D0\u05DC")), gemYH: data.gemYH ? data.gemYH[i] : gematria(norm(t + "\u05D9\u05D4")) }));
   const filtered = qn ? rows.filter((r) => r.trio.includes(qn) || "" + r.i === qn || r.el.includes(qn) || r.yh.includes(qn)) : rows;
-  return /* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement("h2", null, "The 72 angels \u2014 Shem HaMephorash from Exodus 14:19-21 (\xA715b.4)"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "72 consonants \xD7 3 verses. The 72 triplets are read by ", /* @__PURE__ */ import_react8.default.createElement("b", null, "columns"), ": tr\xEDos[i] = v19[i] + v20[71\u2212i] + v21[i] (v20 read backwards, as tradition requires). 72\xD73 = 216 = 6\xB3. Triplet 0 = ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "he" }, "\u05D5\u05D4\u05D5"), " = Vehuiah (canonical \u2713). Each triplet + suffix ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "he" }, "\u05D0\u05DC"), " (Hod) or ", /* @__PURE__ */ import_react8.default.createElement("span", { className: "he" }, "\u05D9\u05D4"), " (Malkhut) gives the angelic name."), /* @__PURE__ */ import_react8.default.createElement("h3", null, "The 72 around the precessional circle"), /* @__PURE__ */ import_react8.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "The 72 angels placed one every 5\xB0 (360\xB0/72). This is the precessional clock: precession carries the equinox \u2248 1\xB0 every 71.6 \u2248 ", /* @__PURE__ */ import_react8.default.createElement("b", null, "72 years"), ", so ", /* @__PURE__ */ import_react8.default.createElement("b", null, "72 = the years per degree of precession"), ", and each 5\xB0 angel = ~360 yr of precession; the full 72-division circuit = 72 \xD7 360 \u2248 ", /* @__PURE__ */ import_react8.default.createElement("b", null, "25 920 yr"), " \u2014 the traditional Platonic great year (modern value 25 771 yr). Major ticks every 6th (the 12 decans). The decanatal attribution (each Shem angel \u2192 5\xB0) is traditional; the precessional reading is a mnemonic, not a physical model."), /* @__PURE__ */ import_react8.default.createElement("div", { style: { marginBottom: 14 } }, /* @__PURE__ */ import_react8.default.createElement(AngelsCircle, { triplets: data.triplets })), /* @__PURE__ */ import_react8.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react8.default.createElement("input", { type: "text", value: q, onChange: (e) => setQ(e.target.value), placeholder: "filter by # or triplet\u2026", style: { flex: "1 1 220px" } }), /* @__PURE__ */ import_react8.default.createElement("span", { className: "pill" }, filtered.length, " of 72")), /* @__PURE__ */ import_react8.default.createElement("table", null, /* @__PURE__ */ import_react8.default.createElement("thead", null, /* @__PURE__ */ import_react8.default.createElement("tr", null, /* @__PURE__ */ import_react8.default.createElement("th", null, "#"), /* @__PURE__ */ import_react8.default.createElement("th", null, "Triplet"), /* @__PURE__ */ import_react8.default.createElement("th", null, "+\u05D0\u05DC (Hod)"), /* @__PURE__ */ import_react8.default.createElement("th", null, "gem"), /* @__PURE__ */ import_react8.default.createElement("th", null, "+\u05D9\u05D4 (Malkhut)"), /* @__PURE__ */ import_react8.default.createElement("th", null, "gem"))), /* @__PURE__ */ import_react8.default.createElement("tbody", null, filtered.map((r) => /* @__PURE__ */ import_react8.default.createElement("tr", { key: r.i }, /* @__PURE__ */ import_react8.default.createElement("td", null, r.i), /* @__PURE__ */ import_react8.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react8.default.createElement("span", { className: "he" }, r.trio)), /* @__PURE__ */ import_react8.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react8.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, r.el)), /* @__PURE__ */ import_react8.default.createElement("td", { className: "deg" }, r.gemEL), /* @__PURE__ */ import_react8.default.createElement("td", { className: "letter-cell" }, /* @__PURE__ */ import_react8.default.createElement("span", { className: "he", style: { fontSize: "1.2rem" } }, r.yh)), /* @__PURE__ */ import_react8.default.createElement("td", { className: "deg" }, r.gemYH))))), /* @__PURE__ */ import_react8.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react8.default.createElement("em", null, "Caveat (\xA76.3):"), " the mechanical extraction 72\xD73 from Exodus is demonstrated (p\u22485\xD710\u207B\u2077); the method is medieval (Rashi, 11th c.); the decanatal attribution (each angel \u2192 5\xB0) is a hypothesis, not demonstrated here. The sigil of each triplet is computed on the Sigil Forge tab."));
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(import_jsx_runtime8.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h2", { children: "The 72 angels \u2014 Shem HaMephorash from Exodus 14:19-21 (\xA715b.4)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "72 consonants \xD7 3 verses. The 72 triplets are read by ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: "columns" }),
+      ": tr\xEDos[i] = v19[i] + v20[71\u2212i] + v21[i] (v20 read backwards, as tradition requires). 72\xD73 = 216 = 6\xB3. Triplet 0 = ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "he", children: "\u05D5\u05D4\u05D5" }),
+      " = Vehuiah (canonical \u2713). Each triplet + suffix ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "he", children: "\u05D0\u05DC" }),
+      " (Hod) or ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "he", children: "\u05D9\u05D4" }),
+      " (Malkhut) gives the angelic name."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { children: "The 72 around the precessional circle" }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "The 72 angels placed one every 5\xB0 (360\xB0/72). This is the precessional clock: precession carries the equinox \u2248 1\xB0 every 71.6 \u2248 ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: "72 years" }),
+      ", so ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: "72 = the years per degree of precession" }),
+      ", and each 5\xB0 angel = ~360 yr of precession; the full 72-division circuit = 72 \xD7 360 \u2248 ",
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("b", { children: "25 920 yr" }),
+      " \u2014 the traditional Platonic great year (modern value 25 771 yr). Major ticks every 6th (the 12 decans). The decanatal attribution (each Shem angel \u2192 5\xB0) is traditional; the precessional reading is a mnemonic, not a physical model."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { style: { marginBottom: 14 }, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(AngelsCircle, { triplets: data.triplets }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "controls", style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("input", { type: "text", value: q, onChange: (e) => setQ(e.target.value), placeholder: "filter by # or triplet\u2026", style: { flex: "1 1 220px" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("span", { className: "pill", children: [
+        filtered.length,
+        " of 72"
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("th", { children: "#" }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("th", { children: "Triplet" }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("th", { children: "+\u05D0\u05DC (Hod)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("th", { children: "gem" }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("th", { children: "+\u05D9\u05D4 (Malkhut)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("th", { children: "gem" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("tbody", { children: filtered.map((r) => /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("td", { children: r.i }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("td", { className: "letter-cell", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "he", children: r.trio }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("td", { className: "letter-cell", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "he", style: { fontSize: "1.2rem" }, children: r.el }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("td", { className: "deg", children: r.gemEL }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("td", { className: "letter-cell", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("span", { className: "he", style: { fontSize: "1.2rem" }, children: r.yh }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("td", { className: "deg", children: r.gemYH })
+      ] }, r.i)) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "note", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("em", { children: "Caveat (\xA76.3):" }),
+      " the mechanical extraction 72\xD73 from Exodus is demonstrated (p\u22485\xD710\u207B\u2077); the method is medieval (Rashi, 11th c.); the decanatal attribution (each angel \u2192 5\xB0) is a hypothesis, not demonstrated here. The sigil of each triplet is computed on the Sigil Forge tab."
+    ] })
+  ] });
 }
 
-// src/tabs/CyclesTab.jsx
+// web/src/tabs/CyclesTab.jsx
 var import_react9 = __toESM(require_react());
+var import_jsx_runtime9 = __toESM(require_jsx_runtime());
 function Heptagram() {
   const cx = 170, cy = 150, R = 120;
   const planets = ["Saturn", "Jupiter", "Mars", "Sun", "Venus", "Mercury", "Moon"];
@@ -27394,13 +29975,43 @@ function Heptagram() {
     const [x, y] = pt(k);
     return (j2 === 0 ? "M" : "L") + x.toFixed(1) + " " + y.toFixed(1);
   }).join(" ") + " Z";
-  return /* @__PURE__ */ import_react9.default.createElement("svg", { viewBox: "0 0 340 300", width: "100%", style: { maxWidth: 340 }, role: "img", "aria-label": "Chaldean heptagram" }, /* @__PURE__ */ import_react9.default.createElement("path", { d: starD, fill: "none", stroke: "#e8c87a", strokeWidth: "1.4", opacity: "0.85" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx, cy, r: R, fill: "none", stroke: "#2a2a38", strokeWidth: "1" }), planets.map((p, i) => {
-    const [x, y] = pt(i);
-    return /* @__PURE__ */ import_react9.default.createElement("g", { key: p }, /* @__PURE__ */ import_react9.default.createElement("circle", { cx: x, cy: y, r: "18", fill: "#0f1518", stroke: "#5eead4", strokeWidth: "1.4" }), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: y - 1, textAnchor: "middle", fontSize: "15", fill: "#5eead4" }, GLYPH[p]), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: y + 11, textAnchor: "middle", fontSize: "13", fill: "#e8c87a", fontFamily: "serif" }, he[i]), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: y - 26, textAnchor: "middle", fontSize: "10", fill: "#8a96ad" }, p, " \xB7 ", dayOf[p]));
-  }), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy - 6, textAnchor: "middle", fontSize: "11", fill: "#8a96ad" }, "Chaldean order"), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy + 10, textAnchor: "middle", fontSize: "11", fill: "#e8c87a" }, "7 = 7 = 7"), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy + 26, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "sidereal \xB7 mod 7 \xB7 days"));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("svg", { viewBox: "0 0 340 300", width: "100%", style: { maxWidth: 340 }, role: "img", "aria-label": "Chaldean heptagram", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("path", { d: starD, fill: "none", stroke: "#e8c87a", strokeWidth: "1.4", opacity: "0.85" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("circle", { cx, cy, r: R, fill: "none", stroke: "#2a2a38", strokeWidth: "1" }),
+    planets.map((p, i) => {
+      const [x, y] = pt(i);
+      return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("g", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("circle", { cx: x, cy: y, r: "18", fill: "#0f1518", stroke: "#5eead4", strokeWidth: "1.4" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x, y: y - 1, textAnchor: "middle", fontSize: "15", fill: "#5eead4", children: GLYPH[p] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x, y: y + 11, textAnchor: "middle", fontSize: "13", fill: "#e8c87a", fontFamily: "serif", children: he[i] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("text", { x, y: y - 26, textAnchor: "middle", fontSize: "10", fill: "#8a96ad", children: [
+          p,
+          " \xB7 ",
+          dayOf[p]
+        ] })
+      ] }, p);
+    }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: cx, y: cy - 6, textAnchor: "middle", fontSize: "11", fill: "#8a96ad", children: "Chaldean order" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: cx, y: cy + 10, textAnchor: "middle", fontSize: "11", fill: "#e8c87a", children: "7 = 7 = 7" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: cx, y: cy + 26, textAnchor: "middle", fontSize: "9", fill: "#8a96ad", children: "sidereal \xB7 mod 7 \xB7 days" })
+  ] });
 }
 function SarosDiagram() {
-  return /* @__PURE__ */ import_react9.default.createElement("svg", { viewBox: "0 0 460 220", width: "100%", style: { maxWidth: 460 }, role: "img", "aria-label": "Eclipse node geometry" }, /* @__PURE__ */ import_react9.default.createElement("rect", { x: "40", y: "98", width: "380", height: "24", fill: "#00db7c", opacity: "0.07" }), /* @__PURE__ */ import_react9.default.createElement("line", { x1: "40", y1: "110", x2: "420", y2: "110", stroke: "#5eead4", strokeWidth: "1.5" }), /* @__PURE__ */ import_react9.default.createElement("line", { x1: "60", y1: "95", x2: "400", y2: "125", stroke: "#9b8ec4", strokeWidth: "1.3", strokeDasharray: "5 4" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: "230", cy: "110", r: "16", fill: "#e8c87a" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: "230", cy: "110", r: "16", fill: "none", stroke: "#f4a8c0", strokeWidth: "1" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: "262", cy: "110", r: "6", fill: "#16161f", stroke: "#00db7c", strokeWidth: "1.4" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: "120", cy: "92", r: "6", fill: "#16161f", stroke: "#e96770", strokeWidth: "1.4" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: "230", y: "74", textAnchor: "middle", fontSize: "10", fill: "#f4a8c0" }, "node \xB7 eclipse season"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "262", y: "135", textAnchor: "middle", fontSize: "9", fill: "#00db7c" }, "Moon at node \u2192 eclipse"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "120", y: "80", textAnchor: "middle", fontSize: "9", fill: "#e96770" }, "Moon far from node \u2192 none"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "40", y: "92", fontSize: "9", fill: "#5eead4" }, "ecliptic (Sun's path)"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "300", y: "140", fontSize: "9", fill: "#9b8ec4" }, "Moon's path \xB7 5.1\xB0 incline"), /* @__PURE__ */ import_react9.default.createElement("text", { x: "40", y: "158", fontSize: "9", fill: "#00db7c" }, "|\u03B2| < 1.6\xB0 window (scan threshold)"));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("svg", { viewBox: "0 0 460 220", width: "100%", style: { maxWidth: 460 }, role: "img", "aria-label": "Eclipse node geometry", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("rect", { x: "40", y: "98", width: "380", height: "24", fill: "#00db7c", opacity: "0.07" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("line", { x1: "40", y1: "110", x2: "420", y2: "110", stroke: "#5eead4", strokeWidth: "1.5" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("line", { x1: "60", y1: "95", x2: "400", y2: "125", stroke: "#9b8ec4", strokeWidth: "1.3", strokeDasharray: "5 4" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("circle", { cx: "230", cy: "110", r: "16", fill: "#e8c87a" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("circle", { cx: "230", cy: "110", r: "16", fill: "none", stroke: "#f4a8c0", strokeWidth: "1" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("circle", { cx: "262", cy: "110", r: "6", fill: "#16161f", stroke: "#00db7c", strokeWidth: "1.4" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("circle", { cx: "120", cy: "92", r: "6", fill: "#16161f", stroke: "#e96770", strokeWidth: "1.4" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: "230", y: "74", textAnchor: "middle", fontSize: "10", fill: "#f4a8c0", children: "node \xB7 eclipse season" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: "262", y: "135", textAnchor: "middle", fontSize: "9", fill: "#00db7c", children: "Moon at node \u2192 eclipse" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: "120", y: "80", textAnchor: "middle", fontSize: "9", fill: "#e96770", children: "Moon far from node \u2192 none" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: "40", y: "92", fontSize: "9", fill: "#5eead4", children: "ecliptic (Sun's path)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: "300", y: "140", fontSize: "9", fill: "#9b8ec4", children: "Moon's path \xB7 5.1\xB0 incline" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: "40", y: "158", fontSize: "9", fill: "#00db7c", children: "|\u03B2| < 1.6\xB0 window (scan threshold)" })
+  ] });
 }
 function PrecessionDiagram() {
   const cx = 230, cy = 130, R = 120, r = 70;
@@ -27408,12 +30019,29 @@ function PrecessionDiagram() {
     const a1 = (-90 + i * 30) * Math.PI / 180, a2 = (-90 + (i + 1) * 30) * Math.PI / 180;
     const x1 = cx + R * Math.cos(a1), y1 = cy + R * Math.sin(a1), x2 = cx + R * Math.cos(a2), y2 = cy + R * Math.sin(a2);
     const mx = cx + (R - 22) * Math.cos((a1 + a2) / 2), my = cy + (R - 22) * Math.sin((a1 + a2) / 2);
-    return /* @__PURE__ */ import_react9.default.createElement("g", { key: i }, /* @__PURE__ */ import_react9.default.createElement("path", { d: `M ${cx} ${cy} L ${x1} ${y1} A ${R} ${R} 0 0 1 ${x2} ${y2} Z`, fill: cls, stroke: "#2a2a38", strokeWidth: "0.8" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: mx, y: my, textAnchor: "middle", dominantBaseline: "middle", fontSize: "9", fill: "#8a96ad" }, lab));
+    return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("g", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("path", { d: `M ${cx} ${cy} L ${x1} ${y1} A ${R} ${R} 0 0 1 ${x2} ${y2} Z`, fill: cls, stroke: "#2a2a38", strokeWidth: "0.8" }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: mx, y: my, textAnchor: "middle", dominantBaseline: "middle", fontSize: "9", fill: "#8a96ad", children: lab })
+    ] }, i);
   };
   const ayAng = (-90 + 24.18) * Math.PI / 180;
   const tx = cx + R * Math.cos(-90 * Math.PI / 180), ty = cy + R * Math.sin(-90 * Math.PI / 180);
   const sx = cx + R * Math.cos(ayAng), sy = cy + R * Math.sin(ayAng);
-  return /* @__PURE__ */ import_react9.default.createElement("svg", { viewBox: "0 0 460 280", width: "100%", style: { maxWidth: 460 }, role: "img", "aria-label": "Precession: tropical vs sidereal zodiac" }, /* @__PURE__ */ import_react9.default.createElement("circle", { cx, cy, r: R, fill: "#16161f", stroke: "#2a2a38" }), SIGNS.map((s, i) => seg(i, i % 2 ? "#16161f" : "#16161f", s.slice(0, 3))), /* @__PURE__ */ import_react9.default.createElement("line", { x1: cx, y1: cy, x2: tx, y2: ty, stroke: "#e8c87a", strokeWidth: "2" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: tx, cy: ty, r: "5", fill: "#e8c87a" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: tx, y: ty - 10, textAnchor: "middle", fontSize: "9", fill: "#e8c87a" }, "\u2648 tropical 0\xB0 (fixed to equinox \u2014 does NOT precess)"), /* @__PURE__ */ import_react9.default.createElement("line", { x1: cx, y1: cy, x2: sx, y2: sy, stroke: "#9b8ec4", strokeWidth: "2", strokeDasharray: "4 3" }), /* @__PURE__ */ import_react9.default.createElement("circle", { cx: sx, cy: sy, r: "5", fill: "#9b8ec4" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: sx + 10, y: sy + 4, fontSize: "9", fill: "#9b8ec4" }, "sidereal 0\xB0 (fixed to stars \u2014 precesses)"), /* @__PURE__ */ import_react9.default.createElement("path", { d: `M ${cx + (R - 34) * Math.cos(-90 * Math.PI / 180)} ${cy + (R - 34) * Math.sin(-90 * Math.PI / 180)} A ${R - 34} ${R - 34} 0 0 1 ${cx + (R - 34) * Math.cos(ayAng)} ${cy + (R - 34) * Math.sin(ayAng)}`, fill: "none", stroke: "#f4a8c0", strokeWidth: "1.4" }), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx + (R - 50) * Math.cos((-90 + 12) * Math.PI / 180), y: cy + (R - 50) * Math.sin((-90 + 12) * Math.PI / 180) + 3, textAnchor: "middle", fontSize: "9", fill: "#f4a8c0" }, "ayanamsa 24.18\xB0"), /* @__PURE__ */ import_react9.default.createElement("path", { d: `M ${cx} ${cy + 44} A 44 44 0 0 0 ${cx - 31} ${cy + 31}`, fill: "none", stroke: "#8a96ad", strokeWidth: "1.2", markerEnd: "url(#ar)" }), /* @__PURE__ */ import_react9.default.createElement("defs", null, /* @__PURE__ */ import_react9.default.createElement("marker", { id: "ar", markerWidth: "6", markerHeight: "6", refX: "3", refY: "3", orient: "auto" }, /* @__PURE__ */ import_react9.default.createElement("path", { d: "M0 0 L6 3 L0 6 Z", fill: "#8a96ad" }))), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "precession \u2192"));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("svg", { viewBox: "0 0 460 280", width: "100%", style: { maxWidth: 460 }, role: "img", "aria-label": "Precession: tropical vs sidereal zodiac", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("circle", { cx, cy, r: R, fill: "#16161f", stroke: "#2a2a38" }),
+    SIGNS.map((s, i) => seg(i, i % 2 ? "#16161f" : "#16161f", s.slice(0, 3))),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("line", { x1: cx, y1: cy, x2: tx, y2: ty, stroke: "#e8c87a", strokeWidth: "2" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("circle", { cx: tx, cy: ty, r: "5", fill: "#e8c87a" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: tx, y: ty - 10, textAnchor: "middle", fontSize: "9", fill: "#e8c87a", children: "\u2648 tropical 0\xB0 (fixed to equinox \u2014 does NOT precess)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("line", { x1: cx, y1: cy, x2: sx, y2: sy, stroke: "#9b8ec4", strokeWidth: "2", strokeDasharray: "4 3" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("circle", { cx: sx, cy: sy, r: "5", fill: "#9b8ec4" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: sx + 10, y: sy + 4, fontSize: "9", fill: "#9b8ec4", children: "sidereal 0\xB0 (fixed to stars \u2014 precesses)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("path", { d: `M ${cx + (R - 34) * Math.cos(-90 * Math.PI / 180)} ${cy + (R - 34) * Math.sin(-90 * Math.PI / 180)} A ${R - 34} ${R - 34} 0 0 1 ${cx + (R - 34) * Math.cos(ayAng)} ${cy + (R - 34) * Math.sin(ayAng)}`, fill: "none", stroke: "#f4a8c0", strokeWidth: "1.4" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: cx + (R - 50) * Math.cos((-90 + 12) * Math.PI / 180), y: cy + (R - 50) * Math.sin((-90 + 12) * Math.PI / 180) + 3, textAnchor: "middle", fontSize: "9", fill: "#f4a8c0", children: "ayanamsa 24.18\xB0" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("path", { d: `M ${cx} ${cy + 44} A 44 44 0 0 0 ${cx - 31} ${cy + 31}`, fill: "none", stroke: "#8a96ad", strokeWidth: "1.2", markerEnd: "url(#ar)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("defs", { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("marker", { id: "ar", markerWidth: "6", markerHeight: "6", refX: "3", refY: "3", orient: "auto", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("path", { d: "M0 0 L6 3 L0 6 Z", fill: "#8a96ad" }) }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: cx, y: cy, textAnchor: "middle", fontSize: "9", fill: "#8a96ad", children: "precession \u2192" })
+  ] });
 }
 function MetonDiagram() {
   const cx = 160, cy = 110, R = 95;
@@ -27422,21 +30050,78 @@ function MetonDiagram() {
     const a = (-90 + (y - 1) * 360 / 19) * Math.PI / 180;
     return [cx + R * Math.cos(a), cy + R * Math.sin(a)];
   };
-  return /* @__PURE__ */ import_react9.default.createElement("svg", { viewBox: "0 0 360 220", width: "100%", style: { maxWidth: 360 }, role: "img", "aria-label": "Metonic 19-year cycle" }, /* @__PURE__ */ import_react9.default.createElement("circle", { cx, cy, r: R + 14, fill: "none", stroke: "#2a2a38" }), Array.from({ length: 19 }, (_, i) => i + 1).map((y) => {
-    const [x, yp] = pt(y);
-    const L2 = leap.has(y);
-    return /* @__PURE__ */ import_react9.default.createElement("g", { key: y }, /* @__PURE__ */ import_react9.default.createElement("circle", { cx: x, cy: yp, r: L2 ? 13 : 10, fill: L2 ? "#e8c87a" : "#16161f", stroke: L2 ? "#e8c87a" : "#2a2a38", strokeWidth: "1.2" }), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: yp + 3, textAnchor: "middle", fontSize: "9", fill: L2 ? "#0b0e14" : "#8a96ad", fontWeight: L2 ? 700 : 400 }, L2 ? "13" : "12"), /* @__PURE__ */ import_react9.default.createElement("text", { x, y: L2 ? yp - 19 : yp - 16, textAnchor: "middle", fontSize: "8", fill: "#8a96ad" }, y));
-  }), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy - 8, textAnchor: "middle", fontSize: "11", fill: "#e8c87a" }, "19 yr"), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy + 6, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "= 235 months"), /* @__PURE__ */ import_react9.default.createElement("text", { x: cx, y: cy + 20, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "7 leap + 12 common"));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("svg", { viewBox: "0 0 360 220", width: "100%", style: { maxWidth: 360 }, role: "img", "aria-label": "Metonic 19-year cycle", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("circle", { cx, cy, r: R + 14, fill: "none", stroke: "#2a2a38" }),
+    Array.from({ length: 19 }, (_, i) => i + 1).map((y) => {
+      const [x, yp] = pt(y);
+      const L2 = leap.has(y);
+      return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("g", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("circle", { cx: x, cy: yp, r: L2 ? 13 : 10, fill: L2 ? "#e8c87a" : "#16161f", stroke: L2 ? "#e8c87a" : "#2a2a38", strokeWidth: "1.2" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x, y: yp + 3, textAnchor: "middle", fontSize: "9", fill: L2 ? "#0b0e14" : "#8a96ad", fontWeight: L2 ? 700 : 400, children: L2 ? "13" : "12" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x, y: L2 ? yp - 19 : yp - 16, textAnchor: "middle", fontSize: "8", fill: "#8a96ad", children: y })
+      ] }, y);
+    }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: cx, y: cy - 8, textAnchor: "middle", fontSize: "11", fill: "#e8c87a", children: "19 yr" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: cx, y: cy + 6, textAnchor: "middle", fontSize: "9", fill: "#8a96ad", children: "= 235 months" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("text", { x: cx, y: cy + 20, textAnchor: "middle", fontSize: "9", fill: "#8a96ad", children: "7 leap + 12 common" })
+  ] });
 }
 function WeekTab({ date, rows }) {
-  return /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("h2", null, "The week \u2014 7 doubles = 7 planets = 7 days \xB7 where each is on ", date), /* @__PURE__ */ import_react9.default.createElement("div", { className: "week" }, WEEK.map(([day, plan], idx) => {
-    const r = rows.find((x) => x.body === plan);
-    const isToday = (() => {
-      const d = parseDate(date);
-      return d ? idx === d.getUTCDay() : false;
-    })();
-    return /* @__PURE__ */ import_react9.default.createElement("div", { key: day, className: "day" + (isToday ? " today" : "") }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "dn" }, day, isToday ? " \xB7 date" : ""), /* @__PURE__ */ import_react9.default.createElement("div", { className: "pl" }, plan), /* @__PURE__ */ import_react9.default.createElement("div", { className: "l" }, DOUBLES[plan][0]), /* @__PURE__ */ import_react9.default.createElement("div", { className: "pl" }, r ? /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, r.sign, " ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { fontSize: "1rem" } }, SIMPLE[r.sign][0])) : "\u2014"));
-  })), /* @__PURE__ */ import_react9.default.createElement("h3", null, "Chaldean order \u2014 the heptagram 7 = 7 = 7 (\xA715b.9, verified)"), /* @__PURE__ */ import_react9.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react9.default.createElement("li", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "(A) Sidereal periods"), ", slow \u2192 fast: Saturn (29.46 a) > Jupiter (11.86) > Mars (1.88) > Sun (1.00) > Venus (0.615) > Mercury (0.241) > Moon (0.075). This is the Chaldean order \u2014 an astronomical fact."), /* @__PURE__ */ import_react9.default.createElement("li", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "(B) Hourly week"), ": 24 h/day, each hour ruled by the next planet in Chaldean order. The planet of the 1st hour names the day. 24 mod 7 = 3 \u2192 the next day jumps 3 planets."), /* @__PURE__ */ import_react9.default.createElement("li", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "(C) Etymology"), ": Tuesday = Mars/Martes, Wednesday = Mercury/Mi\xE9rcoles, Thursday = Jupiter/Jueves, Friday = Venus/Viernes, Saturday = Saturn/S\xE1bado \u2014 the Romance names preserve the planet."), /* @__PURE__ */ import_react9.default.createElement("li", null, "The 7 doubles (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) are the 7 planets; the 7 planets are the 7 days. The heptagram 7=7=7 closes by sidereal periods + mod-7 arithmetic + etymology. ", /* @__PURE__ */ import_react9.default.createElement("b", null, "Note"), ": the 7-day week is a cultural (Chaldean-Babylonian) artefact, not a continuous astronomical cycle; its astronomical anchor is the Chaldean order of the 7 planets, which is real.")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "fig" }, /* @__PURE__ */ import_react9.default.createElement(Heptagram, null), /* @__PURE__ */ import_react9.default.createElement("div", { className: "cap" }, "The Chaldean heptagram \u2014 7 planets in sidereal order on the ring; the gold ", `{7/3}`, " star traces weekday order (Sat\u2192Sun\u2192Mon\u2192Tue\u2192Wed\u2192Thu\u2192Fri), each day jumping 3 planets (24 h mod 7 = 3). 7 doubles = 7 planets = 7 days.")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, "Each planet (a double) travels through the 12 signs (simples); that planet is read in a different sign depending on the day."));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("h2", { children: [
+      "The week \u2014 7 doubles = 7 planets = 7 days \xB7 where each is on ",
+      date
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "week", children: WEEK.map(([day, plan], idx) => {
+      const r = rows.find((x) => x.body === plan);
+      const isToday = (() => {
+        const d = parseDate(date);
+        return d ? idx === d.getUTCDay() : false;
+      })();
+      return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "day" + (isToday ? " today" : ""), children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "dn", children: [
+          day,
+          isToday ? " \xB7 date" : ""
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "pl", children: plan }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "l", children: DOUBLES[plan][0] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "pl", children: r ? /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+          r.sign,
+          " ",
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "he", style: { fontSize: "1rem" }, children: SIMPLE[r.sign][0] })
+        ] }) : "\u2014" })
+      ] }, day);
+    }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h3", { children: "Chaldean order \u2014 the heptagram 7 = 7 = 7 (\xA715b.9, verified)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("ul", { className: "muted", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "(A) Sidereal periods" }),
+        ", slow \u2192 fast: Saturn (29.46 a) > Jupiter (11.86) > Mars (1.88) > Sun (1.00) > Venus (0.615) > Mercury (0.241) > Moon (0.075). This is the Chaldean order \u2014 an astronomical fact."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "(B) Hourly week" }),
+        ": 24 h/day, each hour ruled by the next planet in Chaldean order. The planet of the 1st hour names the day. 24 mod 7 = 3 \u2192 the next day jumps 3 planets."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "(C) Etymology" }),
+        ": Tuesday = Mars/Martes, Wednesday = Mercury/Mi\xE9rcoles, Thursday = Jupiter/Jueves, Friday = Venus/Viernes, Saturday = Saturn/S\xE1bado \u2014 the Romance names preserve the planet."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("li", { children: [
+        "The 7 doubles (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) are the 7 planets; the 7 planets are the 7 days. The heptagram 7=7=7 closes by sidereal periods + mod-7 arithmetic + etymology. ",
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "Note" }),
+        ": the 7-day week is a cultural (Chaldean-Babylonian) artefact, not a continuous astronomical cycle; its astronomical anchor is the Chaldean order of the 7 planets, which is real."
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "fig", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Heptagram, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "cap", children: [
+        "The Chaldean heptagram \u2014 7 planets in sidereal order on the ring; the gold ",
+        `{7/3}`,
+        " star traces weekday order (Sat\u2192Sun\u2192Mon\u2192Tue\u2192Wed\u2192Thu\u2192Fri), each day jumping 3 planets (24 h mod 7 = 3). 7 doubles = 7 planets = 7 days."
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "note", children: "Each planet (a double) travels through the 12 signs (simples); that planet is read in a different sign depending on the day." })
+  ] });
 }
 function SarosTab() {
   const [yr, setYr] = (0, import_react9.useState)(2026);
@@ -27464,7 +30149,169 @@ function SarosTab() {
   (0, import_react9.useEffect)(() => {
     scan(yr);
   }, [yr]);
-  return /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Saros \u2014 solar eclipses & the saros series (\xA715b.6, \xA79)"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A live scan: every new moon in the chosen year, a solar eclipse if the Moon's ecliptic latitude |\u03B2| < 1.6\xB0 (the calibrated eclipse threshold). One year is fast; the full 5000-year enumeration that counts saros series members runs offline."), /* @__PURE__ */ import_react9.default.createElement("div", { className: "fig" }, /* @__PURE__ */ import_react9.default.createElement(SarosDiagram, null), /* @__PURE__ */ import_react9.default.createElement("div", { className: "cap" }, "Why eclipses cluster at nodes: the Moon's path is inclined 5.1\xB0 to the ecliptic and crosses it only twice per month. A new moon within the |\u03B2|<1.6\xB0 window (green band) = solar eclipse; elsewhere = a normal new moon. The scan tests exactly this.")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react9.default.createElement("button", { onClick: () => setYr(yr - 1) }, "\u25C0 ", yr - 1), /* @__PURE__ */ import_react9.default.createElement(YearInput, { value: yr, onCommit: setYr }), /* @__PURE__ */ import_react9.default.createElement("button", { onClick: () => setYr(yr + 1) }, yr + 1, " \u25B6"), yr < 0 && /* @__PURE__ */ import_react9.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, Math.abs(yr), " BCE"), busy && /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill" }, "scanning\u2026")), list && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted" }, "Solar eclipses in ", list.y, ": ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: "var(--gold)" } }, list.out.length)), /* @__PURE__ */ import_react9.default.createElement("table", null, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", null, "Date"), /* @__PURE__ */ import_react9.default.createElement("th", null, "\u03B2 (Moon lat)"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Type"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, list.out.length === 0 && /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { className: "muted" }, "none"), /* @__PURE__ */ import_react9.default.createElement("td", null), /* @__PURE__ */ import_react9.default.createElement("td", null)), list.out.map((e) => /* @__PURE__ */ import_react9.default.createElement("tr", { key: e.ds }, /* @__PURE__ */ import_react9.default.createElement("td", null, e.ds), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, e.beta.toFixed(3), "\xB0"), /* @__PURE__ */ import_react9.default.createElement("td", null, e.kind === "central" ? '<b style="color:var(--gold)">central</b>' : "partial")))))), /* @__PURE__ */ import_react9.default.createElement("h3", null, "The saros-series count (\xA715b.6 \u2014 verified by calculation)"), /* @__PURE__ */ import_react9.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react9.default.createElement("li", null, "The saros = 223 synodic months = ", /* @__PURE__ */ import_react9.default.createElement("b", null, (223 * SYN).toFixed(2), " d"), ". Eclipses of one series are separated by ~", (223 * SYN).toFixed(2), " d; a chain = a saros series."), /* @__PURE__ */ import_react9.default.createElement("li", null, "Full enumeration (5000 years, all new moons, |\u03B2| < 1.6\xB0): ", /* @__PURE__ */ import_react9.default.createElement("b", null, "152 complete series, lengths 54\u201387, median 72"), " \u2014 the empirical member count of a saros series.")), /* @__PURE__ */ import_react9.default.createElement("h3", null, "Hebrew stellar-alphabet mnemonics for eclipse seasons"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "The ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Sefer Yetzirah"), " does not predict eclipses, and the ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Sefer Raziel"), " (p.144: \u201Ccombina los signos y la rueda\u2026 calcula los per\xEDodos\u2026 calcula para ver las generaciones\u201D) gives the letter-astronomy scaffold but no eclipse algorithm. The real engine is the Hebrew calendar, and its constants are the SY's constants:"), /* @__PURE__ */ import_react9.default.createElement("table", null, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", null, "Astronomy"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Stellar alphabet (SY)"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "Molad = 29d 12h 793p = ", /* @__PURE__ */ import_react9.default.createElement("b", null, MOLAD.toFixed(6), " d")), /* @__PURE__ */ import_react9.default.createElement("td", null, "\u2248 synodic month ", /* @__PURE__ */ import_react9.default.createElement("b", null, SYN.toFixed(6), " d"), " \u21D2 a conjunction engine (eclipse = conjunction/opposition near a node)")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "Metonic cycle = ", /* @__PURE__ */ import_react9.default.createElement("b", null, "19 yr"), " (12 common + 7 leap)"), /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "19 = 7 doubles + 12 simples"), " (the SY's own partition)")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "7 leap years of the 19-yr cycle"), /* @__PURE__ */ import_react9.default.createElement("td", null, "= the ", /* @__PURE__ */ import_react9.default.createElement("b", null, "7 doubles"), " (mnemonic)")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "28 lunar mansions (node / Moon path)"), /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "28 = T\u2087"), " \u2014 triangular number of the 7 doubles")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "Saros \u2248 19 eclipse years (\u0394 ", (19 * ECLY - 223 * SYN).toFixed(2), " d)"), /* @__PURE__ */ import_react9.default.createElement("td", null, "the SY's ", /* @__PURE__ */ import_react9.default.createElement("b", null, "19"), " structures the saros")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "Saros = 223 synodic = 242 draconic months"), /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "242 \u2212 223 = 19"), " \u2014 the SY number embedded in the saros")))), /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, "Sources the Hebrew calendar actually uses (absent from the rest of this app): molad + tekufot (Shmuel/Ada), ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Baraita of Samuel"), " (the one Jewish source with a nodal cycle), Maimonides ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Kiddush HaChodesh"), " (mean lunar motion), Ibn Ezra ", /* @__PURE__ */ import_react9.default.createElement("i", null, "Sefer ha-Olam"), " (28 mansions, precession). ", /* @__PURE__ */ import_react9.default.createElement("b", null, "Caveat:"), " these mnemonics predict ", /* @__PURE__ */ import_react9.default.createElement("i", null, "eclipse seasons"), " (a window near a node), not individual eclipses or paths; the molad + 19-yr cycle is a real calculation engine, the stellar-alphabet constants are a mnemonic, not a physical model."));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h2", { children: "Saros \u2014 solar eclipses & the saros series (\xA715b.6, \xA79)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "muted", style: { marginBottom: 10 }, children: "A live scan: every new moon in the chosen year, a solar eclipse if the Moon's ecliptic latitude |\u03B2| < 1.6\xB0 (the calibrated eclipse threshold). One year is fast; the full 5000-year enumeration that counts saros series members runs offline." }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "fig", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(SarosDiagram, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "cap", children: "Why eclipses cluster at nodes: the Moon's path is inclined 5.1\xB0 to the ecliptic and crosses it only twice per month. A new moon within the |\u03B2|<1.6\xB0 window (green band) = solar eclipse; elsewhere = a normal new moon. The scan tests exactly this." })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "controls", style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("button", { onClick: () => setYr(yr - 1), children: [
+        "\u25C0 ",
+        yr - 1
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(YearInput, { value: yr, onCommit: setYr }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("button", { onClick: () => setYr(yr + 1), children: [
+        yr + 1,
+        " \u25B6"
+      ] }),
+      yr < 0 && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("span", { className: "muted", style: { fontSize: ".78rem" }, children: [
+        Math.abs(yr),
+        " BCE"
+      ] }),
+      busy && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "pill", children: "scanning\u2026" })
+    ] }),
+    list && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "muted", children: [
+        "Solar eclipses in ",
+        list.y,
+        ": ",
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { style: { color: "var(--gold)" }, children: list.out.length })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("table", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Date" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "\u03B2 (Moon lat)" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Type" })
+        ] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tbody", { children: [
+          list.out.length === 0 && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { className: "muted", children: "none" }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", {}),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", {})
+          ] }),
+          list.out.map((e) => /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: e.ds }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { className: "deg", children: [
+              e.beta.toFixed(3),
+              "\xB0"
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: e.kind === "central" ? '<b style="color:var(--gold)">central</b>' : "partial" })
+          ] }, e.ds))
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h3", { children: "The saros-series count (\xA715b.6 \u2014 verified by calculation)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("ul", { className: "muted", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("li", { children: [
+        "The saros = 223 synodic months = ",
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("b", { children: [
+          (223 * SYN).toFixed(2),
+          " d"
+        ] }),
+        ". Eclipses of one series are separated by ~",
+        (223 * SYN).toFixed(2),
+        " d; a chain = a saros series."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("li", { children: [
+        "Full enumeration (5000 years, all new moons, |\u03B2| < 1.6\xB0): ",
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "152 complete series, lengths 54\u201387, median 72" }),
+        " \u2014 the empirical member count of a saros series."
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h3", { children: "Hebrew stellar-alphabet mnemonics for eclipse seasons" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "The ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("i", { children: "Sefer Yetzirah" }),
+      " does not predict eclipses, and the ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("i", { children: "Sefer Raziel" }),
+      " (p.144: \u201Ccombina los signos y la rueda\u2026 calcula los per\xEDodos\u2026 calcula para ver las generaciones\u201D) gives the letter-astronomy scaffold but no eclipse algorithm. The real engine is the Hebrew calendar, and its constants are the SY's constants:"
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Astronomy" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Stellar alphabet (SY)" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tbody", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { children: [
+            "Molad = 29d 12h 793p = ",
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("b", { children: [
+              MOLAD.toFixed(6),
+              " d"
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { children: [
+            "\u2248 synodic month ",
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("b", { children: [
+              SYN.toFixed(6),
+              " d"
+            ] }),
+            " \u21D2 a conjunction engine (eclipse = conjunction/opposition near a node)"
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { children: [
+            "Metonic cycle = ",
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "19 yr" }),
+            " (12 common + 7 leap)"
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "19 = 7 doubles + 12 simples" }),
+            " (the SY's own partition)"
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: "7 leap years of the 19-yr cycle" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { children: [
+            "= the ",
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "7 doubles" }),
+            " (mnemonic)"
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: "28 lunar mansions (node / Moon path)" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "28 = T\u2087" }),
+            " \u2014 triangular number of the 7 doubles"
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { children: [
+            "Saros \u2248 19 eclipse years (\u0394 ",
+            (19 * ECLY - 223 * SYN).toFixed(2),
+            " d)"
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { children: [
+            "the SY's ",
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "19" }),
+            " structures the saros"
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: "Saros = 223 synodic = 242 draconic months" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "242 \u2212 223 = 19" }),
+            " \u2014 the SY number embedded in the saros"
+          ] })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "note", children: [
+      "Sources the Hebrew calendar actually uses (absent from the rest of this app): molad + tekufot (Shmuel/Ada), ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("i", { children: "Baraita of Samuel" }),
+      " (the one Jewish source with a nodal cycle), Maimonides ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("i", { children: "Kiddush HaChodesh" }),
+      " (mean lunar motion), Ibn Ezra ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("i", { children: "Sefer ha-Olam" }),
+      " (28 mansions, precession). ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "Caveat:" }),
+      " these mnemonics predict ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("i", { children: "eclipse seasons" }),
+      " (a window near a node), not individual eclipses or paths; the molad + 19-yr cycle is a real calculation engine, the stellar-alphabet constants are a mnemonic, not a physical model."
+    ] })
+  ] });
 }
 function AyanamsaTab() {
   const AYA = { "Lahiri (Chitrapaksha)": 24.18, "Krishnamurti (KP)": 23.93, "Fagan-Bradley": 25.06, "Raman": 22.4 };
@@ -27475,13 +30322,140 @@ function AyanamsaTab() {
   }
   const allD = Object.values(aqu);
   const spread = Math.max(...allD) - Math.min(...allD);
-  return /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Ayanamsa \u2014 sensitivity of the precessional ages (\xA715b.7)"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The Ages tab dates the eras with Lahiri (24.18\xB0). Other ayanamsas shift every era boundary by \u0394ayanamsa / precession \u2014 up to ~190 years between extremes. The \u201CAge of Aquarius\u201D is not a clean astronomical prediction; it depends on the chosen sidereal zero. Caeli Reader does ", /* @__PURE__ */ import_react9.default.createElement("b", null, "not"), " date ages by ayanamsa but by ", /* @__PURE__ */ import_react9.default.createElement("b", null, "tropical"), " sign occupation (the 10 bodies) \u2014 independent of the ayanamsa, so its discard is robust."), /* @__PURE__ */ import_react9.default.createElement("div", { className: "fig" }, /* @__PURE__ */ import_react9.default.createElement(PrecessionDiagram, null), /* @__PURE__ */ import_react9.default.createElement("div", { className: "cap" }, "Tropical Aries 0\xB0 (gold) is fixed to the vernal equinox \u2014 it does ", /* @__PURE__ */ import_react9.default.createElement("b", null, "not"), " precess, so the Reader's 12 letter\u2194sign sectors never rotate. Sidereal Aries 0\xB0 (violet) is fixed to the stars and precesses away from it; the gap is the ayanamsa (24.18\xB0 today). This is why the zodiacs here don't move with precession \u2014 by design.")), /* @__PURE__ */ import_react9.default.createElement("table", null, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", null, "Ayanamsa"), /* @__PURE__ */ import_react9.default.createElement("th", null, "value (\xB0, ~2024)"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Aquarius entry"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, Object.entries(AYA).map(([name, a]) => /* @__PURE__ */ import_react9.default.createElement("tr", { key: name }, /* @__PURE__ */ import_react9.default.createElement("td", null, name), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, a.toFixed(2)), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, yrLabel(aqu[name])))))), /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, "Spread of the Aquarius entry: ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: "var(--gold)" } }, spread.toFixed(0), " years"), ". Invariants (independent of ayanamsa): great year = 360\xB0/PREC = ", Math.round(FULL), " y; one age = 30\xB0/PREC = ", AGE.toFixed(1), " y."));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h2", { children: "Ayanamsa \u2014 sensitivity of the precessional ages (\xA715b.7)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "The Ages tab dates the eras with Lahiri (24.18\xB0). Other ayanamsas shift every era boundary by \u0394ayanamsa / precession \u2014 up to ~190 years between extremes. The \u201CAge of Aquarius\u201D is not a clean astronomical prediction; it depends on the chosen sidereal zero. Caeli Reader does ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "not" }),
+      " date ages by ayanamsa but by ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "tropical" }),
+      " sign occupation (the 10 bodies) \u2014 independent of the ayanamsa, so its discard is robust."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "fig", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(PrecessionDiagram, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "cap", children: [
+        "Tropical Aries 0\xB0 (gold) is fixed to the vernal equinox \u2014 it does ",
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "not" }),
+        " precess, so the Reader's 12 letter\u2194sign sectors never rotate. Sidereal Aries 0\xB0 (violet) is fixed to the stars and precesses away from it; the gap is the ayanamsa (24.18\xB0 today). This is why the zodiacs here don't move with precession \u2014 by design."
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Ayanamsa" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "value (\xB0, ~2024)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Aquarius entry" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("tbody", { children: Object.entries(AYA).map(([name, a]) => /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: name }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { className: "deg", children: a.toFixed(2) }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { className: "deg", children: yrLabel(aqu[name]) })
+      ] }, name)) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "note", children: [
+      "Spread of the Aquarius entry: ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("b", { style: { color: "var(--gold)" }, children: [
+        spread.toFixed(0),
+        " years"
+      ] }),
+      ". Invariants (independent of ayanamsa): great year = 360\xB0/PREC = ",
+      Math.round(FULL),
+      " y; one age = 30\xB0/PREC = ",
+      AGE.toFixed(1),
+      " y."
+    ] })
+  ] });
 }
 function LunarSolarTab() {
   const meton19 = 19 * TROP, meton235 = 235 * SYN;
   const oct8 = 8 * TROP, oct99 = 99 * SYN;
   const isl33lunar = 33 * 12 * SYN, isl33solar = 33 * TROP;
-  return /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Lunar\u2013Solar synchronisation \u2014 Meton, octaeteris, Islamic (\xA77\u2013\xA78)"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The 19-year lunisolar cycle (Meton) and its cross-cultural echoes. All numbers computed live from SYN = ", SYN, " and TROP = ", TROP, "."), /* @__PURE__ */ import_react9.default.createElement("div", { className: "fig" }, /* @__PURE__ */ import_react9.default.createElement(MetonDiagram, null), /* @__PURE__ */ import_react9.default.createElement("div", { className: "cap" }, "The Metonic 19-year cycle: 7 leap years (13 months, gold = the 7 doubles) + 12 common years (12 months) = 235 lunations \u2248 19 tropical years. 19 = 7 doubles + 12 simples \u2014 the SY's own partition is the lunisolar cycle.")), /* @__PURE__ */ import_react9.default.createElement("table", null, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", null, "Cycle"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Relation"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Days (lunar)"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Days (solar)"), /* @__PURE__ */ import_react9.default.createElement("th", null, "\u0394"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "Meton"), " (19a / 235m)"), /* @__PURE__ */ import_react9.default.createElement("td", null, "12\xD712 + 7\xD713 = 144 + 91 = 235"), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, meton235.toFixed(2)), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, meton19.toFixed(2)), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, (meton235 - meton19).toFixed(3))), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "Octaeteris"), " (8a / 99m)"), /* @__PURE__ */ import_react9.default.createElement("td", null, "8\xD712 + 3 = 99"), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, oct99.toFixed(2)), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, oct8.toFixed(2)), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, (oct99 - oct8).toFixed(3))), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", null, "Islamic 33y (33\xD712m)"), /* @__PURE__ */ import_react9.default.createElement("td", null, "drift of the Hijri year"), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, isl33lunar.toFixed(0)), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, isl33solar.toFixed(0)), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, (isl33lunar - isl33solar).toFixed(0))))), /* @__PURE__ */ import_react9.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react9.default.createElement("li", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "Meton"), ": 19 tropical years \u2248 235 synodic months (\u0394 \u2248 ", (meton235 - meton19).toFixed(2), " d). 235 = 12\xD712 + 7\xD713 \u2014 the 12\xB2 appears here too (cf. 144 in the Revelation tab)."), /* @__PURE__ */ import_react9.default.createElement("li", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "Octaeteris"), ": 8 years \u2248 99 months (the older, rougher cycle; \u0394 \u2248 ", (oct99 - oct8).toFixed(2), " d)."), /* @__PURE__ */ import_react9.default.createElement("li", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "Islamic"), ": a 33-year cycle brings the lunar calendar back near the solar year (drift \u2248 ", (isl33lunar - isl33solar).toFixed(0), " d over 33 y \u2248 11 d/y)."), /* @__PURE__ */ import_react9.default.createElement("li", null, /* @__PURE__ */ import_react9.default.createElement("b", null, "China"), ": the \u7AE0 (zh\u0101ng) = 19 years = 235 months = Meton, discovered independently."), /* @__PURE__ */ import_react9.default.createElement("li", null, "Draconic month ", DRAC, " d \xB7 anomalistic ", ANOM, " d \xB7 eclipse year ", ECLY.toFixed(2), " d \u2192 saros 223\xD7SYN = ", (223 * SYN).toFixed(2), " d (see the Saros tab).")));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h2", { children: "Lunar\u2013Solar synchronisation \u2014 Meton, octaeteris, Islamic (\xA77\u2013\xA78)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "The 19-year lunisolar cycle (Meton) and its cross-cultural echoes. All numbers computed live from SYN = ",
+      SYN,
+      " and TROP = ",
+      TROP,
+      "."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "fig", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(MetonDiagram, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "cap", children: "The Metonic 19-year cycle: 7 leap years (13 months, gold = the 7 doubles) + 12 common years (12 months) = 235 lunations \u2248 19 tropical years. 19 = 7 doubles + 12 simples \u2014 the SY's own partition is the lunisolar cycle." })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Cycle" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Relation" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Days (lunar)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Days (solar)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "\u0394" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tbody", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "Meton" }),
+            " (19a / 235m)"
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: "12\xD712 + 7\xD713 = 144 + 91 = 235" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { className: "deg", children: meton235.toFixed(2) }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { className: "deg", children: meton19.toFixed(2) }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { className: "deg", children: (meton235 - meton19).toFixed(3) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "Octaeteris" }),
+            " (8a / 99m)"
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: "8\xD712 + 3 = 99" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { className: "deg", children: oct99.toFixed(2) }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { className: "deg", children: oct8.toFixed(2) }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { className: "deg", children: (oct99 - oct8).toFixed(3) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: "Islamic 33y (33\xD712m)" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: "drift of the Hijri year" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { className: "deg", children: isl33lunar.toFixed(0) }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { className: "deg", children: isl33solar.toFixed(0) }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { className: "deg", children: (isl33lunar - isl33solar).toFixed(0) })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("ul", { className: "muted", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "Meton" }),
+        ": 19 tropical years \u2248 235 synodic months (\u0394 \u2248 ",
+        (meton235 - meton19).toFixed(2),
+        " d). 235 = 12\xD712 + 7\xD713 \u2014 the 12\xB2 appears here too (cf. 144 in the Revelation tab)."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "Octaeteris" }),
+        ": 8 years \u2248 99 months (the older, rougher cycle; \u0394 \u2248 ",
+        (oct99 - oct8).toFixed(2),
+        " d)."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "Islamic" }),
+        ": a 33-year cycle brings the lunar calendar back near the solar year (drift \u2248 ",
+        (isl33lunar - isl33solar).toFixed(0),
+        " d over 33 y \u2248 11 d/y)."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "China" }),
+        ": the \u7AE0 (zh\u0101ng) = 19 years = 235 months = Meton, discovered independently."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("li", { children: [
+        "Draconic month ",
+        DRAC,
+        " d \xB7 anomalistic ",
+        ANOM,
+        " d \xB7 eclipse year ",
+        ECLY.toFixed(2),
+        " d \u2192 saros 223\xD7SYN = ",
+        (223 * SYN).toFixed(2),
+        " d (see the Saros tab)."
+      ] })
+    ] })
+  ] });
 }
 function AlignTable({ title, sub, items, set, sel, pick, openEph, goReader, showMax = true }) {
   const [page, setPage] = (0, import_react9.useState)(0);
@@ -27505,14 +30479,76 @@ function AlignTable({ title, sub, items, set, sel, pick, openEph, goReader, show
   }, [qn, yrN]);
   const PS = 22, pages = Math.max(1, Math.ceil(filtered.length / PS)), cur = Math.min(page, pages - 1);
   const slice = filtered.slice(cur * PS, cur * PS + PS);
-  return /* @__PURE__ */ import_react9.default.createElement("div", { style: { marginBottom: 18 } }, /* @__PURE__ */ import_react9.default.createElement("h3", null, title), sub && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 6 } }, sub), /* @__PURE__ */ import_react9.default.createElement("div", { className: "controls", style: { marginBottom: 8 } }, /* @__PURE__ */ import_react9.default.createElement("input", { type: "text", placeholder: "search date \xB7 sign \xB7 era \xB7 max\u2026", value: q, onChange: (e) => setQ(e.target.value), style: { flex: "1 1 220px" }, "aria-label": "Filter alignments" }), /* @__PURE__ */ import_react9.default.createElement("input", { type: "number", placeholder: "year", value: yr, onChange: (e) => setYr(e.target.value), style: { width: 84 }, "aria-label": "Filter by year (empty = all years)" }), /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill" }, filtered.length, " alignments \xB7 page ", cur + 1, "/", pages, " \xB7 ", PS, "/page")), /* @__PURE__ */ import_react9.default.createElement("table", null, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", null, "Date"), showMax && /* @__PURE__ */ import_react9.default.createElement("th", null, "maxInSign"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Sign"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Span"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Era"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Actions"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, slice.map((e) => /* @__PURE__ */ import_react9.default.createElement("tr", { key: e.date, style: e.date === sel ? { background: "rgba(127,176,255,0.10)" } : void 0 }, /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("button", { className: "linkish", onClick: () => pick(e.date, set) }, displayDate(e.date))), showMax && /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, e.maxInSign), /* @__PURE__ */ import_react9.default.createElement("td", null, e.sign), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, e.span, "\xB0"), /* @__PURE__ */ import_react9.default.createElement("td", null, e.era), /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("div", { style: { display: "flex", gap: 4, flexWrap: "wrap" } }, /* @__PURE__ */ import_react9.default.createElement("button", { onClick: () => openEph(e, set), title: "What historically happened on this date (Wikipedia On This Day + AI search, opens a modal)", "aria-label": `What happened on ${e.date}`, style: { fontSize: ".76rem", padding: "3px 9px", whiteSpace: "nowrap" } }, "\u{1F4DC} what happened"), /* @__PURE__ */ import_react9.default.createElement("button", { onClick: () => goReader(e.date), title: "Open this day in the Reader tab (the readable names of that sky)", "aria-label": `Open ${e.date} in Reader`, style: { fontSize: ".76rem", padding: "3px 9px", whiteSpace: "nowrap" } }, "\u{1F4D6} Reader"))))))), pages > 1 && /* @__PURE__ */ import_react9.default.createElement("div", { className: "controls", style: { marginTop: 8 } }, /* @__PURE__ */ import_react9.default.createElement("button", { onClick: () => setPage((p) => Math.max(0, p - 1)), disabled: cur === 0 }, "\u25C0 prev"), /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill" }, "page ", cur + 1, " / ", pages), /* @__PURE__ */ import_react9.default.createElement("button", { onClick: () => setPage((p) => Math.min(pages - 1, p + 1)), disabled: cur >= pages - 1 }, "next \u25B6"), /* @__PURE__ */ import_react9.default.createElement("span", { className: "muted" }, "jump:"), /* @__PURE__ */ import_react9.default.createElement("input", { type: "number", min: "1", max: pages, value: cur + 1, onChange: (e) => {
-    const n = parseInt(e.target.value, 10);
-    if (!isNaN(n)) setPage(Math.max(0, Math.min(pages - 1, n - 1)));
-  }, style: { width: 64 }, "aria-label": "Jump to page" })));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { style: { marginBottom: 18 }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h3", { children: title }),
+    sub && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "muted", style: { marginBottom: 6 }, children: sub }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "controls", style: { marginBottom: 8 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("input", { type: "text", placeholder: "search date \xB7 sign \xB7 era \xB7 max\u2026", value: q, onChange: (e) => setQ(e.target.value), style: { flex: "1 1 220px" }, "aria-label": "Filter alignments" }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("input", { type: "number", placeholder: "year", value: yr, onChange: (e) => setYr(e.target.value), style: { width: 84 }, "aria-label": "Filter by year (empty = all years)" }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("span", { className: "pill", children: [
+        filtered.length,
+        " alignments \xB7 page ",
+        cur + 1,
+        "/",
+        pages,
+        " \xB7 ",
+        PS,
+        "/page"
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Date" }),
+        showMax && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "maxInSign" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Sign" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Span" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Era" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Actions" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("tbody", { children: slice.map((e) => /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { style: e.date === sel ? { background: "rgba(127,176,255,0.10)" } : void 0, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("button", { className: "linkish", onClick: () => pick(e.date, set), children: displayDate(e.date) }) }),
+        showMax && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { className: "deg", children: e.maxInSign }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: e.sign }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { className: "deg", children: [
+          e.span,
+          "\xB0"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: e.era }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { style: { display: "flex", gap: 4, flexWrap: "wrap" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("button", { onClick: () => openEph(e, set), title: "What historically happened on this date (Wikipedia On This Day + AI search, opens a modal)", "aria-label": `What happened on ${e.date}`, style: { fontSize: ".76rem", padding: "3px 9px", whiteSpace: "nowrap" }, children: "\u{1F4DC} what happened" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("button", { onClick: () => goReader(e.date), title: "Open this day in the Reader tab (the readable names of that sky)", "aria-label": `Open ${e.date} in Reader`, style: { fontSize: ".76rem", padding: "3px 9px", whiteSpace: "nowrap" }, children: "\u{1F4D6} Reader" })
+        ] }) })
+      ] }, e.date)) })
+    ] }),
+    pages > 1 && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "controls", style: { marginTop: 8 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("button", { onClick: () => setPage((p) => Math.max(0, p - 1)), disabled: cur === 0, children: "\u25C0 prev" }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("span", { className: "pill", children: [
+        "page ",
+        cur + 1,
+        " / ",
+        pages
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("button", { onClick: () => setPage((p) => Math.min(pages - 1, p + 1)), disabled: cur >= pages - 1, children: "next \u25B6" }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "muted", children: "jump:" }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("input", { type: "number", min: "1", max: pages, value: cur + 1, onChange: (e) => {
+        const n = parseInt(e.target.value, 10);
+        if (!isNaN(n)) setPage(Math.max(0, Math.min(pages - 1, n - 1)));
+      }, style: { width: 64 }, "aria-label": "Jump to page" })
+    ] })
+  ] });
 }
 function HistEvent({ e }) {
   const yr = e.year < 0 ? Math.abs(e.year) + " BCE" : "" + e.year;
-  return /* @__PURE__ */ import_react9.default.createElement("div", { style: { display: "flex", gap: 8, padding: "4px 0", borderBottom: "1px solid var(--line)", alignItems: "flex-start" } }, /* @__PURE__ */ import_react9.default.createElement("span", { className: "deg", style: { minWidth: 54, color: "var(--gold)", fontWeight: 600, flexShrink: 0 } }, yr), /* @__PURE__ */ import_react9.default.createElement("span", { style: { flex: 1, fontSize: ".86rem" } }, e.text, e.url && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, " \xB7 ", /* @__PURE__ */ import_react9.default.createElement("a", { href: e.url, target: "_blank", rel: "noopener" }, "Wikipedia"))));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { style: { display: "flex", gap: 8, padding: "4px 0", borderBottom: "1px solid var(--line)", alignItems: "flex-start" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "deg", style: { minWidth: 54, color: "var(--gold)", fontWeight: 600, flexShrink: 0 }, children: yr }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("span", { style: { flex: 1, fontSize: ".86rem" }, children: [
+      e.text,
+      e.url && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+        " \xB7 ",
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("a", { href: e.url, target: "_blank", rel: "noopener", children: "Wikipedia" })
+      ] })
+    ] })
+  ] });
 }
 function EphemeridesModal({ eph, onClose }) {
   const [hist, setHist] = (0, import_react9.useState)(null);
@@ -27551,7 +30587,70 @@ function EphemeridesModal({ eph, onClose }) {
   const mmName = hist ? MONTHNAMES[mi] : "";
   const wikiDay = hist ? `https://en.wikipedia.org/wiki/${mmName}_${di}` : null;
   const CAP = 40, shown = hist && hist.events ? hist.events.slice(0, CAP) : [];
-  return /* @__PURE__ */ import_react9.default.createElement("div", { className: "eph-modal", onClick: onClose }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel eph-panel", onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react9.default.createElement("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 } }, /* @__PURE__ */ import_react9.default.createElement("h3", { style: { margin: 0 } }, "What happened \u2014 ", disp), /* @__PURE__ */ import_react9.default.createElement("button", { className: "linkish", onClick: onClose, style: { fontSize: "1.1rem" }, title: "Close" }, "close \u2715")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Historical events on this date \u2014 from Wikipedia's ", /* @__PURE__ */ import_react9.default.createElement("b", null, "On This Day"), ", the largest free day-by-day historical corpus (recorded history back to antiquity). Sorted current \u2192 past. This is ", /* @__PURE__ */ import_react9.default.createElement("b", null, "human history"), ", not the astronomical alignment."), hist && hist.loading && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted" }, "Loading historical events\u2026"), hist && hist.error && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { color: "var(--red)" } }, "Could not load events (", hist.error, "). Use the AI search below."), hist && !hist.loading && hist.events && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, hist.exact.length > 0 && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("div", { style: { color: "var(--gold)", fontWeight: 700, margin: "6px 0 4px" } }, "On this date \u2014 ", disp), hist.exact.map((e, i) => /* @__PURE__ */ import_react9.default.createElement(HistEvent, { key: "x" + i, e }))), /* @__PURE__ */ import_react9.default.createElement("div", { style: { color: "var(--blue)", fontWeight: 600, margin: "10px 0 4px" } }, hist.exact.length > 0 ? `Also on ${mmName} ${di} in history (current \u2192 past)` : `On ${mmName} ${di} in history (current \u2192 past)`), hist.exact.length === 0 && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 6, fontSize: ".84rem" } }, "No event recorded for the exact year ", hist.year < 0 ? Math.abs(hist.year) + " BCE" : hist.year, ".", hist.year < 0 ? " This date is before recorded history;" : "", " ask the AI (below) for more."), shown.map((e, i) => /* @__PURE__ */ import_react9.default.createElement(HistEvent, { key: i, e })), hist.events.length > CAP && /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react9.default.createElement("a", { href: wikiDay, target: "_blank", rel: "noopener" }, "See all ", hist.events.length, " events on Wikipedia \u2192"))), /* @__PURE__ */ import_react9.default.createElement("div", { style: { marginTop: 10, padding: "8px 10px", background: "var(--panel2)", border: "1px solid var(--line)", borderRadius: 8 } }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 4, fontSize: ".82rem" } }, "Ask an AI what happened on this date:"), /* @__PURE__ */ import_react9.default.createElement("a", { href: `https://www.google.com/search?q=${googleQ}`, target: "_blank", rel: "noopener", style: { fontWeight: 600 } }, "\u{1F50D} what happened on ", disp, " \u2192")), ev && /* @__PURE__ */ import_react9.default.createElement("div", { className: "note", style: { marginTop: 8 } }, "Astronomical alignment on this date: ", ev.maxInSign, " bodies in ", ev.sign, ", span ", ev.span, "\xB0, era ", ev.era, ".")));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "eph-modal", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "panel eph-panel", onClick: (e) => e.stopPropagation(), children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("h3", { style: { margin: 0 }, children: [
+        "What happened \u2014 ",
+        disp
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("button", { className: "linkish", onClick: onClose, style: { fontSize: "1.1rem" }, title: "Close", children: "close \u2715" })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "Historical events on this date \u2014 from Wikipedia's ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "On This Day" }),
+      ", the largest free day-by-day historical corpus (recorded history back to antiquity). Sorted current \u2192 past. This is ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "human history" }),
+      ", not the astronomical alignment."
+    ] }),
+    hist && hist.loading && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "muted", children: "Loading historical events\u2026" }),
+    hist && hist.error && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "muted", style: { color: "var(--red)" }, children: [
+      "Could not load events (",
+      hist.error,
+      "). Use the AI search below."
+    ] }),
+    hist && !hist.loading && hist.events && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+      hist.exact.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { style: { color: "var(--gold)", fontWeight: 700, margin: "6px 0 4px" }, children: [
+          "On this date \u2014 ",
+          disp
+        ] }),
+        hist.exact.map((e, i) => /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(HistEvent, { e }, "x" + i))
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { style: { color: "var(--blue)", fontWeight: 600, margin: "10px 0 4px" }, children: hist.exact.length > 0 ? `Also on ${mmName} ${di} in history (current \u2192 past)` : `On ${mmName} ${di} in history (current \u2192 past)` }),
+      hist.exact.length === 0 && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "muted", style: { marginBottom: 6, fontSize: ".84rem" }, children: [
+        "No event recorded for the exact year ",
+        hist.year < 0 ? Math.abs(hist.year) + " BCE" : hist.year,
+        ".",
+        hist.year < 0 ? " This date is before recorded history;" : "",
+        " ask the AI (below) for more."
+      ] }),
+      shown.map((e, i) => /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(HistEvent, { e }, i)),
+      hist.events.length > CAP && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "note", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("a", { href: wikiDay, target: "_blank", rel: "noopener", children: [
+        "See all ",
+        hist.events.length,
+        " events on Wikipedia \u2192"
+      ] }) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { style: { marginTop: 10, padding: "8px 10px", background: "var(--panel2)", border: "1px solid var(--line)", borderRadius: 8 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "muted", style: { marginBottom: 4, fontSize: ".82rem" }, children: "Ask an AI what happened on this date:" }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("a", { href: `https://www.google.com/search?q=${googleQ}`, target: "_blank", rel: "noopener", style: { fontWeight: 600 }, children: [
+        "\u{1F50D} what happened on ",
+        disp,
+        " \u2192"
+      ] })
+    ] }),
+    ev && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "note", style: { marginTop: 8 }, children: [
+      "Astronomical alignment on this date: ",
+      ev.maxInSign,
+      " bodies in ",
+      ev.sign,
+      ", span ",
+      ev.span,
+      "\xB0, era ",
+      ev.era,
+      "."
+    ] })
+  ] }) });
 }
 function AlignmentsTab({ setDate, goReader, lex, angelMap, genData, nameRefs }) {
   const [data, setData] = (0, import_react9.useState)(null);
@@ -27614,7 +30713,7 @@ function AlignmentsTab({ setDate, goReader, lex, angelMap, genData, nameRefs }) 
     };
     for (const [cons] of lex.lexicon) frac(cons);
     for (const [he] of ANGEL_LEXICON) if (!m.has(he)) frac(he);
-    return { map: m, n: dayOccs.length, year: selSet === "A" ? genData && genData.year || 2026 : 2026, bodies: selSet === "A" ? "10 bodies" : "7 classical" };
+    return { map: m, n: dayOccs.length, year: selSet === "A" ? genData && genData.year || 2026 : 2026, bodies: selSet === "A" ? "9 bodies (modern)" : "7 classical" };
   }, [lex, selSet, genData, dayOccs7]);
   const pick = (d, set = "B") => {
     setSel(d);
@@ -27625,8 +30724,14 @@ function AlignmentsTab({ setDate, goReader, lex, angelMap, genData, nameRefs }) 
     }, 60);
   };
   const openEph = (e, set) => setEph({ date: e.date, set, ev: e });
-  if (err) return /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel app-panel" }, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Alignments"), /* @__PURE__ */ import_react9.default.createElement("p", null, "Could not load the alignment data. Please refresh the page; if the problem persists, the data may be unavailable right now."));
-  if (!data) return /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Alignments"), /* @__PURE__ */ import_react9.default.createElement("p", null, "Loading alignments.json\u2026"));
+  if (err) return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "panel app-panel", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h2", { children: "Alignments" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { children: "Could not load the alignment data. Please refresh the page; if the problem persists, the data may be unavailable right now." })
+  ] });
+  if (!data) return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "panel", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h2", { children: "Alignments" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { children: "Loading alignments.json\u2026" })
+  ] });
   const byDateDesc = (a, b) => parseDate(b.date) - parseDate(a.date);
   const deep = [...data.scanB].sort(byDateDesc);
   const all7 = deep.filter((e) => e.maxInSign >= 7);
@@ -27634,8 +30739,8 @@ function AlignmentsTab({ setDate, goReader, lex, angelMap, genData, nameRefs }) 
   const tight4 = [...tight.slice(0, 4)].sort(byDateDesc);
   const tightGap = tight.length >= 2 ? Math.abs((parseDate(tight[0].date) - parseDate(tight[1].date)) / 864e5 / 365.25) : null;
   const ev = (selSet === "A" ? data.scanA : data.scanB).find((e) => e.date === sel);
-  const rows = sel ? selSet === "A" ? skyAt(sel) : skyAt7(sel) : [];
-  const occ = occupiedLetters(rows);
+  const rows = sel ? skyAt(sel) : [];
+  const occ = sel ? occupiedLetters(skyAt7(sel)) : /* @__PURE__ */ new Set();
   const r = sel && lex ? (() => {
     const names = readableWords(occ, lex.lexicon, angelMap);
     const byImp = (a, b) => (b.name ? 1 : 0) - (a.name ? 1 : 0) || b.len - a.len || a.gem - b.gem;
@@ -27651,20 +30756,242 @@ function AlignmentsTab({ setDate, goReader, lex, angelMap, genData, nameRefs }) 
       topAlways: names.filter((n) => !n.simp).sort(byImp).slice(0, 8)
     };
   })() : null;
-  return /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Alignments \u2014 rare century/millennium stellar conjunctions"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14, padding: 16, lineHeight: 1.6 } }, /* @__PURE__ */ import_react9.default.createElement("p", { className: "muted", style: { marginTop: 0, marginBottom: 12 } }, "An offline scan of the 7 classical bodies \u2014 Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn \u2014 the set the ancients observed and the one this project reads."), /* @__PURE__ */ import_react9.default.createElement("div", { style: { marginBottom: 12 } }, /* @__PURE__ */ import_react9.default.createElement("div", { style: { fontWeight: 600, color: "var(--gold)", marginBottom: 4 } }, "Deep chronology \xB7 7 classical bodies"), /* @__PURE__ */ import_react9.default.createElement("p", { className: "muted", style: { margin: 0, fontSize: ".9rem" } }, "20000 BCE \u2192 2200 CE. Fast at every date and its mean motion is secularly stable, so great-conjunction ", /* @__PURE__ */ import_react9.default.createElement("i", null, "dates"), " stay trustworthy across the whole range. Beyond ~\xB14000 y from J2000 the VSOP87 perturbation terms diverge, so exact ", /* @__PURE__ */ import_react9.default.createElement("i", null, "degrees"), " in the deep past are an extrapolation.")), /* @__PURE__ */ import_react9.default.createElement("div", { style: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 10, marginBottom: 12 } }, /* @__PURE__ */ import_react9.default.createElement("div", { style: { border: "1px solid var(--line)", borderRadius: 8, padding: "8px 10px" } }, /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--violet)", fontWeight: 700 } }, "maxInSign"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { fontSize: ".82rem", marginTop: 2 } }, "the most planets in a single zodiacal sign that day")), /* @__PURE__ */ import_react9.default.createElement("div", { style: { border: "1px solid var(--line)", borderRadius: 8, padding: "8px 10px" } }, /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--violet)", fontWeight: 700 } }, "span"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { fontSize: ".82rem", marginTop: 2 } }, "the smallest arc (\xB0) containing every body")), /* @__PURE__ */ import_react9.default.createElement("div", { style: { border: "1px solid var(--line)", borderRadius: 8, padding: "8px 10px" } }, /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--violet)", fontWeight: 700 } }, "era"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { fontSize: ".82rem", marginTop: 2 } }, "the precessional era (~", AGE.toFixed(0), " y each, cyclic)")))), /* @__PURE__ */ import_react9.default.createElement("div", { className: "fig", style: { maxWidth: 760 } }, /* @__PURE__ */ import_react9.default.createElement("div", { style: { fontWeight: 600, color: "var(--gold)", marginBottom: 4 } }, "The millennia signal \u2014 tightest classical grand conjunctions"), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "All 7 classical planets in one zodiacal sign, within the smallest arc found (the 4 tightest, current\u2192past):"), /* @__PURE__ */ import_react9.default.createElement("table", null, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", null, "Date"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Bodies"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Sign"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Span"), /* @__PURE__ */ import_react9.default.createElement("th", null, "Era"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, tight4.map((e) => /* @__PURE__ */ import_react9.default.createElement("tr", { key: e.date, style: e.date === sel ? { background: "rgba(127,176,255,0.10)" } : void 0 }, /* @__PURE__ */ import_react9.default.createElement("td", null, /* @__PURE__ */ import_react9.default.createElement("button", { className: "linkish", onClick: () => pick(e.date, "B") }, displayDate(e.date))), /* @__PURE__ */ import_react9.default.createElement("td", null, "7 classical"), /* @__PURE__ */ import_react9.default.createElement("td", null, e.sign), /* @__PURE__ */ import_react9.default.createElement("td", { className: "deg" }, e.span, "\xB0"), /* @__PURE__ */ import_react9.default.createElement("td", null, e.era))))), tightGap != null && /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, "Tightest pair gap: ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: "var(--gold)" } }, tightGap.toFixed(0), " y"), " \u2248 ", /* @__PURE__ */ import_react9.default.createElement("b", null, (tightGap / AGE).toFixed(2)), " precessional era(s). The two tightest grand conjunctions \u2014 ", displayDate(tight[0].date), " (", tight[0].span, "\xB0, era ", tight[0].era, ") and ", displayDate(tight[1].date), " (", tight[1].span, "\xB0, era ", tight[1].era, ") \u2014 are ~", tightGap.toFixed(0), " y apart. The tightest classical alignments (all 7 within a small arc) are the rarest class and recur on a multi-millennium scale; the all-7-in-one-sign events below recur on a centuries scale (avg ~429 y, 51 events in 22000 y).")), ev && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("h3", { ref: mapRef }, "Sky map \u2014 ", displayDate(sel), " ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { fontSize: ".72rem" } }, "7 classical")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "fig", style: { maxWidth: 700, margin: "14px auto" } }, /* @__PURE__ */ import_react9.default.createElement(SkyMap, { rows, occ })), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "maxInSign ", /* @__PURE__ */ import_react9.default.createElement("b", null, ev.maxInSign), " in ", ev.sign, " \xB7 span ", /* @__PURE__ */ import_react9.default.createElement("b", null, ev.span, "\xB0"), " \xB7 era ", /* @__PURE__ */ import_react9.default.createElement("b", null, ev.era)), r && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Genesis 1:1 legible: ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: r.genesisLegible ? "var(--gold)" : "var(--warn)" } }, r.genesisLegible ? "YES" : "no"), " \xB7 readable names: ", /* @__PURE__ */ import_react9.default.createElement("b", null, r.readableCount), " \xB7 proper names: ", /* @__PURE__ */ import_react9.default.createElement("b", null, r.properNames), " \xB7 occupied simples: ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { fontSize: "1.15rem", color: "var(--gold)" } }, r.occupied || "\u2014")), r.angels && r.angels.length > 0 && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "Shem HaMephorash angel-roots readable: ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, r.angels.join(" "))), r && (r.topDate.length > 0 || r.topAlways.length > 0) && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("div", { className: "controls", style: { marginTop: 6, marginBottom: 4 } }, /* @__PURE__ */ import_react9.default.createElement("span", { className: "muted", style: { fontSize: ".82rem" } }, "top readable names:"), /* @__PURE__ */ import_react9.default.createElement("button", { className: topView === "date" ? "on" : "", onClick: () => setTopView("date"), "aria-pressed": topView === "date" }, "this sky (", r.topDate.length, ")"), /* @__PURE__ */ import_react9.default.createElement("button", { className: topView === "always" ? "on" : "", onClick: () => setTopView("always"), "aria-pressed": topView === "always" }, "always-readable (", r.topAlways.length, ")"), !probs && /* @__PURE__ */ import_react9.default.createElement("span", { className: "muted", style: { fontSize: ".78rem" } }, "\xB7 computing legibility %\u2026"), probs && /* @__PURE__ */ import_react9.default.createElement("span", { className: "muted", style: { fontSize: ".76rem" } }, "\xB7 % = empirical legibility over ", probs.n, " days of ", probs.year, " (", probs.bodies, "): ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "prob ok" }, "green"), "=special/rare \xB7 ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "prob mid" }, "rose"), "=frequent \xB7 ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "prob spec" }, "red"), "=common")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 6, fontSize: ".82rem" } }, topView === "date" ? /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, "Date-specific \u2014 the most important names whose zodiac letters are among ", /* @__PURE__ */ import_react9.default.createElement("b", null, "this alignment's"), " occupied signs, so the list changes with the alignment. Proper names first, then longest.") : /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, "Always-readable \u2014 words with no zodiac letters (mothers + doubles only), readable on ", /* @__PURE__ */ import_react9.default.createElement("b", null, "every"), " day, so this list never changes (e.g. ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, "\u05D0\u05E8\u05E4\u05DB\u05E9\u05D3"), " Arphaxad, ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, "\u05E4\u05E8\u05DE\u05E9\u05EA\u05D0"), " Parmashta, ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, "\u05E9\u05DE\u05D0\u05D1\u05E8"), " Shem-eber). Proper names first, then longest.")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "tcards", style: { gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))" } }, (topView === "date" ? r.topDate : r.topAlways).map((n, i) => /* @__PURE__ */ import_react9.default.createElement("div", { key: i, className: "tcard" + (n.simp ? "" : " always") }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "the" }, n.disp || n.he), /* @__PURE__ */ import_react9.default.createElement("div", { className: "read" }, n.translit), /* @__PURE__ */ import_react9.default.createElement("div", { className: "trans" }, n.gloss), /* @__PURE__ */ import_react9.default.createElement("div", { className: "g" }, n.len, " letters \xB7 gematria ", n.gem, n.pal && /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--gold)" } }, " \xB7 palindrome"), n.m37 && /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--green)" } }, " \xB7 \xD737"), n.angelName && /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--violet)" } }, " \xB7 angel")), (n.person || n.place || n.compound || nameRefs && nameRefs[n.he] && nameRefs[n.he].n > 0) && /* @__PURE__ */ import_react9.default.createElement("div", { style: { marginTop: 4, display: "flex", flexWrap: "wrap", gap: 4 } }, n.person && /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { color: "var(--blue)", borderColor: "var(--blue)" } }, "name", n.theo ? " (theophoric)" : ""), n.place && /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { color: "var(--green)", borderColor: "var(--green)" }, title: "A biblical PLACE \u2014 proper locative noun in Strong (city, mountain, region\u2026)" }, "place"), n.compound && /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { color: "var(--warn)", borderColor: "var(--warn)" }, title: "Concatenated multi-root entry whose gloss is truncated" }, "compound"), nameRefs && nameRefs[n.he] && nameRefs[n.he].n > 0 && (() => {
-    const r2 = nameRefs[n.he];
-    return /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" }, title: "Where this name appears in the Hebrew Bible (Sefaria): " + r2.refs.join(", ") }, "\u{1F4D6} ", r2.refs[0], r2.n > 1 ? " \xB7 +" + (r2.n - 1) : "");
-  })()), probs && probs.map.has(n.he) && (() => {
-    const p = probs.map.get(n.he);
-    const pct = p < 1e-3 ? "<0.1" : (p * 100).toFixed(p < 0.1 ? 1 : 0);
-    const cls = p >= 0.5 ? "spec" : p >= 0.2 ? "mid" : "ok";
-    const tag = p >= 0.5 ? "common" : p >= 0.2 ? "frequent" : "special";
-    return /* @__PURE__ */ import_react9.default.createElement("span", { className: "prob " + cls, title: `Empirical legibility over ${probs.n} days of ${probs.year} (${probs.bodies}): ${pct}% of days this word's required simples are all occupied (S\u2286O, computed from astronomy-engine \u2014 not hardcoded). A within-year rate, NOT the recurrence of a specific stellar alignment (which recurs over centuries\u2192millennia, \xA715c.11). Low % = special/rare (green); high % = common (red).` }, pct, "% \xB7 ", tag);
-  })(), n.angelName && /* @__PURE__ */ import_react9.default.createElement("div", { className: "simp", style: { color: "var(--violet)" } }, "angel: ", n.angelName.en, " ", /* @__PURE__ */ import_react9.default.createElement("span", { style: { color: "var(--dim)" } }, "\xB7 ", n.angelName.src)), n.angel && /* @__PURE__ */ import_react9.default.createElement("div", { className: "simp", style: { color: "var(--violet)" } }, "Shem triplet +\u05D0\u05DC \u2192 ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, n.angel.el), " \xB7 +\u05D9\u05D4 \u2192 ", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { fontSize: ".95rem" } }, n.angel.yh)), /* @__PURE__ */ import_react9.default.createElement("div", { className: "simp" }, n.simp ? "simples: " + [...n.simp].join(" ") : "no simples (always)"))))))), /* @__PURE__ */ import_react9.default.createElement(AlignTable, { title: "Deep chronology \u2014 7 classical bodies, 20000 BCE \u2192 2200 CE (all rare alignments, current\u2192past)", sub: `${deep.length} rare alignments (maxInSign \u2265 5 or span \u2264 60\xB0), sorted newest first. The 7-classical set makes the centuries/millennia scale visible: great conjunctions recur every ~20 y and drift through the signs over the precessional era (~${AGE.toFixed(0)} y).`, items: deep, set: "B", sel, pick, openEph, goReader }), /* @__PURE__ */ import_react9.default.createElement(AlignTable, { title: "All-7-in-one-sign timeline \u2014 every classical grand conjunction (current\u2192past)", sub: `${all7.length} occurrences where all 7 classical bodies share one zodiacal sign \u2014 the rarest class, recurring every few centuries (irregular). Click to render that conjunction.`, items: all7, set: "B", sel, pick, openEph, goReader, showMax: false }), /* @__PURE__ */ import_react9.default.createElement("div", { className: "note" }, "Method: astronomy-engine v2.1.19, GeoVector \u2192 Ecliptic.elon, noon UT. Deep scan 3-day step (daily-refined around peaks). Beyond ~\xB14000 y from J2000 the planetary series are an extrapolation \u2014 alignment ", /* @__PURE__ */ import_react9.default.createElement("i", null, "dates"), " (mean motion, secularly stable) are reliable, exact ", /* @__PURE__ */ import_react9.default.createElement("i", null, "degrees"), " in the deep past are approximate. Per-event stellar readings are computed in the browser for the selected alignment (skyAt7 is fast)."), /* @__PURE__ */ import_react9.default.createElement(EphemeridesModal, { eph, onClose: () => setEph(null) }));
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h2", { children: "Alignments \u2014 rare century/millennium stellar conjunctions" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "panel", style: { marginBottom: 14, padding: 16, lineHeight: 1.6 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "muted", style: { marginTop: 0, marginBottom: 12 }, children: "An offline scan of the 7 classical bodies \u2014 Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn \u2014 the set the ancients observed and the one this project reads." }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { style: { marginBottom: 12 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { style: { fontWeight: 600, color: "var(--gold)", marginBottom: 4 }, children: "Deep chronology \xB7 7 classical bodies" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("p", { className: "muted", style: { margin: 0, fontSize: ".9rem" }, children: [
+          "20000 BCE \u2192 2200 CE. Fast at every date and its mean motion is secularly stable, so great-conjunction ",
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("i", { children: "dates" }),
+          " stay trustworthy across the whole range. Beyond ~\xB14000 y from J2000 the VSOP87 perturbation terms diverge, so exact ",
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("i", { children: "degrees" }),
+          " in the deep past are an extrapolation."
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 10, marginBottom: 12 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { style: { border: "1px solid var(--line)", borderRadius: 8, padding: "8px 10px" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { style: { color: "var(--violet)", fontWeight: 700 }, children: "maxInSign" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "muted", style: { fontSize: ".82rem", marginTop: 2 }, children: "the most planets in a single zodiacal sign that day" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { style: { border: "1px solid var(--line)", borderRadius: 8, padding: "8px 10px" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { style: { color: "var(--violet)", fontWeight: 700 }, children: "span" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "muted", style: { fontSize: ".82rem", marginTop: 2 }, children: "the smallest arc (\xB0) containing every body" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { style: { border: "1px solid var(--line)", borderRadius: 8, padding: "8px 10px" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { style: { color: "var(--violet)", fontWeight: 700 }, children: "era" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "muted", style: { fontSize: ".82rem", marginTop: 2 }, children: [
+            "the precessional era (~",
+            AGE.toFixed(0),
+            " y each, cyclic)"
+          ] })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "fig", style: { maxWidth: 760 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { style: { fontWeight: 600, color: "var(--gold)", marginBottom: 4 }, children: "The millennia signal \u2014 tightest classical grand conjunctions" }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "muted", style: { marginBottom: 8 }, children: "All 7 classical planets in one zodiacal sign, within the smallest arc found (the 4 tightest, current\u2192past):" }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("table", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Date" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Bodies" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Sign" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Span" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("th", { children: "Era" })
+        ] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("tbody", { children: tight4.map((e) => /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("tr", { style: e.date === sel ? { background: "rgba(127,176,255,0.10)" } : void 0, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("button", { className: "linkish", onClick: () => pick(e.date, "B"), children: displayDate(e.date) }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: "7 classical" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: e.sign }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("td", { className: "deg", children: [
+            e.span,
+            "\xB0"
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("td", { children: e.era })
+        ] }, e.date)) })
+      ] }),
+      tightGap != null && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "note", children: [
+        "Tightest pair gap: ",
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("b", { style: { color: "var(--gold)" }, children: [
+          tightGap.toFixed(0),
+          " y"
+        ] }),
+        " \u2248 ",
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: (tightGap / AGE).toFixed(2) }),
+        " precessional era(s). The two tightest grand conjunctions \u2014 ",
+        displayDate(tight[0].date),
+        " (",
+        tight[0].span,
+        "\xB0, era ",
+        tight[0].era,
+        ") and ",
+        displayDate(tight[1].date),
+        " (",
+        tight[1].span,
+        "\xB0, era ",
+        tight[1].era,
+        ") \u2014 are ~",
+        tightGap.toFixed(0),
+        " y apart. The tightest classical alignments (all 7 within a small arc) are the rarest class and recur on a multi-millennium scale; the all-7-in-one-sign events below recur on a centuries scale (avg ~429 y, 51 events in 22000 y)."
+      ] })
+    ] }),
+    ev && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("h3", { ref: mapRef, children: [
+        "Sky map \u2014 ",
+        displayDate(sel),
+        " ",
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "pill", style: { fontSize: ".72rem" }, children: "7 classical" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "fig", style: { maxWidth: 700, margin: "14px auto" }, children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(SkyMap, { rows, occ }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+        "maxInSign ",
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: ev.maxInSign }),
+        " in ",
+        ev.sign,
+        " \xB7 span ",
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("b", { children: [
+          ev.span,
+          "\xB0"
+        ] }),
+        " \xB7 era ",
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: ev.era })
+      ] }),
+      r && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+          "Genesis 1:1 legible: ",
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { style: { color: r.genesisLegible ? "var(--gold)" : "var(--warn)" }, children: r.genesisLegible ? "YES" : "no" }),
+          " \xB7 readable names: ",
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: r.readableCount }),
+          " \xB7 proper names: ",
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: r.properNames }),
+          " \xB7 occupied simples: ",
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "he", style: { fontSize: "1.15rem", color: "var(--gold)" }, children: r.occupied || "\u2014" })
+        ] }),
+        r.angels && r.angels.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+          "Shem HaMephorash angel-roots readable: ",
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "he", children: r.angels.join(" ") })
+        ] }),
+        r && (r.topDate.length > 0 || r.topAlways.length > 0) && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "controls", style: { marginTop: 6, marginBottom: 4 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "muted", style: { fontSize: ".82rem" }, children: "top readable names:" }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("button", { className: topView === "date" ? "on" : "", onClick: () => setTopView("date"), "aria-pressed": topView === "date", children: [
+              "this sky (",
+              r.topDate.length,
+              ")"
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("button", { className: topView === "always" ? "on" : "", onClick: () => setTopView("always"), "aria-pressed": topView === "always", children: [
+              "always-readable (",
+              r.topAlways.length,
+              ")"
+            ] }),
+            !probs && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "muted", style: { fontSize: ".78rem" }, children: "\xB7 computing legibility %\u2026" }),
+            probs && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("span", { className: "muted", style: { fontSize: ".76rem" }, children: [
+              "\xB7 % = empirical legibility over ",
+              probs.n,
+              " days of ",
+              probs.year,
+              " (",
+              probs.bodies,
+              "): ",
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "prob ok", children: "green" }),
+              "=special/rare \xB7 ",
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "prob mid", children: "rose" }),
+              "=frequent \xB7 ",
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "prob spec", children: "red" }),
+              "=common"
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "muted", style: { marginBottom: 6, fontSize: ".82rem" }, children: topView === "date" ? /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+            "Date-specific \u2014 the most important names whose zodiac letters are among ",
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "this alignment's" }),
+            " occupied signs, so the list changes with the alignment. Proper names first, then longest."
+          ] }) : /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+            "Always-readable \u2014 words with no zodiac letters (mothers + doubles only), readable on ",
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("b", { children: "every" }),
+            " day, so this list never changes (e.g. ",
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "he", children: "\u05D0\u05E8\u05E4\u05DB\u05E9\u05D3" }),
+            " Arphaxad, ",
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "he", children: "\u05E4\u05E8\u05DE\u05E9\u05EA\u05D0" }),
+            " Parmashta, ",
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "he", children: "\u05E9\u05DE\u05D0\u05D1\u05E8" }),
+            " Shem-eber). Proper names first, then longest."
+          ] }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "tcards", style: { gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))" }, children: (topView === "date" ? r.topDate : r.topAlways).map((n, i) => /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "tcard" + (n.simp ? "" : " always"), children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "the", children: n.disp || n.he }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "read", children: n.translit }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "trans", children: n.gloss }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "g", children: [
+              n.len,
+              " letters \xB7 gematria ",
+              n.gem,
+              n.pal && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { style: { color: "var(--gold)" }, children: " \xB7 palindrome" }),
+              n.m37 && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { style: { color: "var(--green)" }, children: " \xB7 \xD737" }),
+              n.angelName && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { style: { color: "var(--violet)" }, children: " \xB7 angel" })
+            ] }),
+            (n.person || n.place || n.compound || nameRefs && nameRefs[n.he] && nameRefs[n.he].n > 0) && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { style: { marginTop: 4, display: "flex", flexWrap: "wrap", gap: 4 }, children: [
+              n.person && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("span", { className: "pill", style: { color: "var(--blue)", borderColor: "var(--blue)" }, children: [
+                "name",
+                n.theo ? " (theophoric)" : ""
+              ] }),
+              n.place && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "pill", style: { color: "var(--green)", borderColor: "var(--green)" }, title: "A biblical PLACE \u2014 proper locative noun in Strong (city, mountain, region\u2026)", children: "place" }),
+              n.compound && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "pill", style: { color: "var(--warn)", borderColor: "var(--warn)" }, title: "Concatenated multi-root entry whose gloss is truncated", children: "compound" }),
+              nameRefs && nameRefs[n.he] && nameRefs[n.he].n > 0 && (() => {
+                const r2 = nameRefs[n.he];
+                return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" }, title: "Where this name appears in the Hebrew Bible (Sefaria): " + r2.refs.join(", "), children: [
+                  "\u{1F4D6} ",
+                  r2.refs[0],
+                  r2.n > 1 ? " \xB7 +" + (r2.n - 1) : ""
+                ] });
+              })()
+            ] }),
+            probs && probs.map.has(n.he) && (() => {
+              const p = probs.map.get(n.he);
+              const pct = p < 1e-3 ? "<0.1" : (p * 100).toFixed(p < 0.1 ? 1 : 0);
+              const cls = p >= 0.5 ? "spec" : p >= 0.2 ? "mid" : "ok";
+              const tag = p >= 0.5 ? "common" : p >= 0.2 ? "frequent" : "special";
+              return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("span", { className: "prob " + cls, title: `Empirical legibility over ${probs.n} days of ${probs.year} (${probs.bodies}): ${pct}% of days this word's required simples are all occupied (S\u2286O, computed from astronomy-engine \u2014 not hardcoded). A within-year rate, NOT the recurrence of a specific stellar alignment (which recurs over centuries\u2192millennia, \xA715c.11). Low % = special/rare (green); high % = common (red).`, children: [
+                pct,
+                "% \xB7 ",
+                tag
+              ] });
+            })(),
+            n.angelName && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "simp", style: { color: "var(--violet)" }, children: [
+              "angel: ",
+              n.angelName.en,
+              " ",
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("span", { style: { color: "var(--dim)" }, children: [
+                "\xB7 ",
+                n.angelName.src
+              ] })
+            ] }),
+            n.angel && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "simp", style: { color: "var(--violet)" }, children: [
+              "Shem triplet +\u05D0\u05DC \u2192 ",
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "he", style: { fontSize: ".95rem" }, children: n.angel.el }),
+              " \xB7 +\u05D9\u05D4 \u2192 ",
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "he", style: { fontSize: ".95rem" }, children: n.angel.yh })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "simp", children: n.simp ? "simples: " + [...n.simp].join(" ") : "no simples (always)" })
+          ] }, i)) })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(AlignTable, { title: "Deep chronology \u2014 7 classical bodies, 20000 BCE \u2192 2200 CE (all rare alignments, current\u2192past)", sub: `${deep.length} rare alignments (maxInSign \u2265 5 or span \u2264 60\xB0), sorted newest first. The 7-classical set makes the centuries/millennia scale visible: great conjunctions recur every ~20 y and drift through the signs over the precessional era (~${AGE.toFixed(0)} y).`, items: deep, set: "B", sel, pick, openEph, goReader }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(AlignTable, { title: "All-7-in-one-sign timeline \u2014 every classical grand conjunction (current\u2192past)", sub: `${all7.length} occurrences where all 7 classical bodies share one zodiacal sign \u2014 the rarest class, recurring every few centuries (irregular). Click to render that conjunction.`, items: all7, set: "B", sel, pick, openEph, goReader, showMax: false }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "note", children: [
+      "Method: astronomy-engine v2.1.19, GeoVector \u2192 Ecliptic.elon, noon UT. Deep scan 3-day step (daily-refined around peaks). Beyond ~\xB14000 y from J2000 the planetary series are an extrapolation \u2014 alignment ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("i", { children: "dates" }),
+      " (mean motion, secularly stable) are reliable, exact ",
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("i", { children: "degrees" }),
+      " in the deep past are approximate. Per-event stellar readings are computed in the browser for the selected alignment (skyAt7 is fast)."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(EphemeridesModal, { eph, onClose: () => setEph(null) })
+  ] });
 }
 
-// src/tabs/RevelationsTab.jsx
+// web/src/tabs/RevelationsTab.jsx
 var import_react10 = __toESM(require_react());
+var import_jsx_runtime10 = __toESM(require_jsx_runtime());
 var PHRASES = [
   ["The sky vanished like a scroll that is rolled up, and every mountain and island was removed", "Rev 6:14", "The zodiac <b>is the scroll</b>: 12 signs inscribed, rolled along the ecliptic. Echoes Isa 34:4."],
   ["I am the Alpha and the Omega, the first and the last", "Rev 1:8; 22:13", "\u0391 and \u03A9 <b>bracket the alphabet</b> \u2014 the letters are the frame of creation. Christ names himself as the whole alphabet."],
@@ -27698,18 +31025,356 @@ function RevelationHebrewTab({ date, rows, occ, words, genData, genYear }) {
   const nameCount = (words || []).filter((w) => w.name).length;
   const angelCount = (words || []).filter((w) => w.angel).length;
   const genDays = genData && genData.list ? genData.list.length : null;
-  return /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, null, /* @__PURE__ */ import_react10.default.createElement("h2", null, "Revelation \u2014 the sky as a sealed scroll (\xA715c) \xB7 isopsephy"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A structural reading, not a confessional exegesis. Revelation (c. 95 CE) shares the late-Jewish symbolic cosmos (merkabah + creator-letters + 360/7/12) with the textualised Sefer Yetzirah \u2014 they ", /* @__PURE__ */ import_react10.default.createElement("b", null, "converge without borrowing"), ". Rev 13:18 is the only NT verse that ", /* @__PURE__ */ import_react10.default.createElement("b", null, "commands a gematria calculation"), "."), /* @__PURE__ */ import_react10.default.createElement("h3", null, "Sefer Raziel HaMalakh \u2014 \u201Ccalculate to see the generations\u201D"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "An older sibling text frames exactly what this app does: ", /* @__PURE__ */ import_react10.default.createElement("b", null, "compute the planets and the zodiacal signs in their fixed order, and so read the generations from beginning to end"), ". From the Spanish ", /* @__PURE__ */ import_react10.default.createElement("i", null, "Sefer Raziel HaMalakh"), " (p. 144 of the source PDF):"), /* @__PURE__ */ import_react10.default.createElement("blockquote", { style: { borderLeft: "3px solid var(--gold)", margin: "8px 0", paddingLeft: 14, color: "var(--txt)" } }, /* @__PURE__ */ import_react10.default.createElement("i", null, "\u201CCombina los signos y la rueda. Graba y calcula y asigna y numera. Considera los c\xE1lculos de los planetas y los signos del zod\xEDaco. Calcula los per\xEDodos y dando vueltas los planetas. De aquellos suspendidos y los signos del zod\xEDaco en el orden perpetuo, ve con la luz. Calcula en orden para ver las generaciones. Prepara para verlos desde el principio hasta el final."), /* @__PURE__ */ import_react10.default.createElement("br", null), /* @__PURE__ */ import_react10.default.createElement("br", null), /* @__PURE__ */ import_react10.default.createElement("i", null, "Est\xE1 escrito, quien act\xFAa y crea, proclama las generaciones desde el principio, antes de la creaci\xF3n del universo. Para comprender las acciones de cada hombre en la rectitud y la maldad, decreta sobre cada uno. De acuerdo a las obras, prepara las obras entre el bien y el mal.\u201D")), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "\u2014 ", /* @__PURE__ */ import_react10.default.createElement("i", null, "Sefer Raziel HaMalakh"), " (Spanish ed.), p. 144. The \u201C144\u201D the eye reads as ", /* @__PURE__ */ import_react10.default.createElement("i", null, "ve144 con la luz"), " is the page number the text extractor merged into \u201Cve con la luz\u201D \u2014 a real textual fact of the document, and 144 = 12\xB2 = the New Jerusalem wall (Rev 21:17) / the 144,000 sealed (Rev 7:4)."), /* @__PURE__ */ import_react10.default.createElement("h3", null, "The Raziel instruction, computed on today's sky"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Each line of the Raziel instruction, mapped to what the apparatus computes live (not asserted):"), /* @__PURE__ */ import_react10.default.createElement("table", null, /* @__PURE__ */ import_react10.default.createElement("thead", null, /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("th", null, "Raziel instruction"), /* @__PURE__ */ import_react10.default.createElement("th", null, "Computed on ", date))), /* @__PURE__ */ import_react10.default.createElement("tbody", null, /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("td", null, /* @__PURE__ */ import_react10.default.createElement("i", null, "\u201CCalcula los per\xEDodos y dando vueltas los planetas\u201D")), /* @__PURE__ */ import_react10.default.createElement("td", null, (rows || []).length, " bodies, ecliptic longitude \u2192 sign. Today: ", (rows || []).map((r) => `${r.body} ${r.deg.toFixed(0)}\xB0\u2192${r.sign}`).join(" \xB7 "), ".")), /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("td", null, /* @__PURE__ */ import_react10.default.createElement("i", null, "\u201Clos signos del zod\xEDaco en el orden perpetuo\u201D")), /* @__PURE__ */ import_react10.default.createElement("td", null, "12 signs \xD7 30\xB0, fixed order. Today ", /* @__PURE__ */ import_react10.default.createElement("b", null, (occ || /* @__PURE__ */ new Set()).size), " occupied: ", /* @__PURE__ */ import_react10.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ || []].sort().join(" ") || "none"), ".")), /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("td", null, /* @__PURE__ */ import_react10.default.createElement("i", null, "\u201Cve [144] con la luz\u201D")), /* @__PURE__ */ import_react10.default.createElement("td", null, "144 = ", /* @__PURE__ */ import_react10.default.createElement("b", null, "12\xB2"), " = the New Jerusalem wall (Rev 21:17) / 144,000 sealed (Rev 7:4) = (zodiac)\xB2.")), /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("td", null, /* @__PURE__ */ import_react10.default.createElement("i", null, "\u201CCalcula en orden para ver las generaciones\u201D")), /* @__PURE__ */ import_react10.default.createElement("td", null, "The Reader enumerates every readable name today: ", /* @__PURE__ */ import_react10.default.createElement("b", { style: { color: "var(--gold)" } }, (words || []).length), " names (the generations ", /* @__PURE__ */ import_react10.default.createElement("i", null, "now"), ") \u2014 incl. ", /* @__PURE__ */ import_react10.default.createElement("b", null, nameCount), " proper names and ", /* @__PURE__ */ import_react10.default.createElement("b", null, angelCount), " Shem HaMephorash angel-roots (word + suffix ", /* @__PURE__ */ import_react10.default.createElement("span", { className: "he" }, "\u05D0\u05DC"), "/", /* @__PURE__ */ import_react10.default.createElement("span", { className: "he" }, "\u05D9\u05D4"), ").")), /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("td", null, /* @__PURE__ */ import_react10.default.createElement("i", null, "\u201CPrepara para verlos desde el principio hasta el final\u201D")), /* @__PURE__ */ import_react10.default.createElement("td", null, "The Predictor scans the whole year ", genYear, " (beginning \u2192 end): ", /* @__PURE__ */ import_react10.default.createElement("b", { style: { color: "var(--gold)" } }, genDays != null ? genDays : "\u2026"), " days where Genesis 1:1 is legible = the generations across time.")), /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("td", null, /* @__PURE__ */ import_react10.default.createElement("i", null, "\u201Cdecreta sobre cada uno\u2026 entre el bien y el mal\u201D")), /* @__PURE__ */ import_react10.default.createElement("td", null, "Revelation's judgment: the sky read as a decree on each \u2014 the sealed scroll opened (Rev 5\u20138), the same letters that name the generations now judging them.")))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "note", style: { marginBottom: 12 } }, "Verdict: the Raziel instruction is not metaphor. ", /* @__PURE__ */ import_react10.default.createElement("b", null, "Calculate the planets"), " = astronomy-engine longitudes; ", /* @__PURE__ */ import_react10.default.createElement("b", null, "the signs in perpetual order"), " = the 12 simples; ", /* @__PURE__ */ import_react10.default.createElement("b", null, "see the generations from beginning to end"), " = the Reader (today's names) + the Predictor (the year's legible days). The \u201Cnames of the ancestors and those to come\u201D are the readable names of any date \u2014 past or future \u2014 and the apparatus enumerates them."), /* @__PURE__ */ import_react10.default.createElement("h3", null, "15c.9 \xB7 The two registers of the Name \u2014 the eternal and the temporal"), /* @__PURE__ */ import_react10.default.createElement("p", { className: "muted" }, "The reading rule opens a theological contrast the apparatus makes measurable. 3 ", /* @__PURE__ */ import_react10.default.createElement("i", null, "mothers"), " (aleph, mem, shin \u2014 primordial elements, fixed) + 7 ", /* @__PURE__ */ import_react10.default.createElement("i", null, "doubles"), " (bet, gimel, dalet, kaf, pe, resh, tav \u2014 the 7 planets, always available) do not depend on the zodiac; the 12 ", /* @__PURE__ */ import_react10.default.createElement("i", null, "simples"), " do. A word of only mothers+doubles is ", /* @__PURE__ */ import_react10.default.createElement("b", null, "always readable"), " \u2014 it transcends the sky. A word of simples is ", /* @__PURE__ */ import_react10.default.createElement("b", null, "gated"), " \u2014 readable only when its signs are occupied, i.e. in time."), /* @__PURE__ */ import_react10.default.createElement("p", { className: "muted" }, "The always-readable tier holds the theological anchors:"), /* @__PURE__ */ import_react10.default.createElement("table", null, /* @__PURE__ */ import_react10.default.createElement("thead", null, /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("th", null, "Hebrew"), /* @__PURE__ */ import_react10.default.createElement("th", null, "translation"), /* @__PURE__ */ import_react10.default.createElement("th", null, "letters"), /* @__PURE__ */ import_react10.default.createElement("th", null, "gematria"), /* @__PURE__ */ import_react10.default.createElement("th", null, "note"))), /* @__PURE__ */ import_react10.default.createElement("tbody", null, /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D1\u05E8\u05D0"), /* @__PURE__ */ import_react10.default.createElement("td", null, "to create"), /* @__PURE__ */ import_react10.default.createElement("td", null, "2 doubles + 1 mother"), /* @__PURE__ */ import_react10.default.createElement("td", null, "203"), /* @__PURE__ */ import_react10.default.createElement("td", { className: "muted" }, "the act of creation")), /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D0\u05D1"), /* @__PURE__ */ import_react10.default.createElement("td", null, "father"), /* @__PURE__ */ import_react10.default.createElement("td", null, "1 mother + 1 double"), /* @__PURE__ */ import_react10.default.createElement("td", null, "3"), /* @__PURE__ */ import_react10.default.createElement("td", { className: "muted" }, "\u2014")), /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D0\u05DE"), /* @__PURE__ */ import_react10.default.createElement("td", null, "mother"), /* @__PURE__ */ import_react10.default.createElement("td", null, "2 mothers"), /* @__PURE__ */ import_react10.default.createElement("td", null, "41"), /* @__PURE__ */ import_react10.default.createElement("td", { className: "muted" }, "\u2014")), /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05E9\u05D1\u05EA"), /* @__PURE__ */ import_react10.default.createElement("td", null, "sabbath (rest)"), /* @__PURE__ */ import_react10.default.createElement("td", null, "1 mother + 2 doubles"), /* @__PURE__ */ import_react10.default.createElement("td", null, "702 = 27\xD726"), /* @__PURE__ */ import_react10.default.createElement("td", { className: "muted" }, "the whole alphabet \xD7 the Name")), /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("td", { className: "he", style: { fontSize: "1.25rem" } }, "\u05D0\u05DE\u05EA"), /* @__PURE__ */ import_react10.default.createElement("td", null, "truth"), /* @__PURE__ */ import_react10.default.createElement("td", null, "2 mothers + 1 double"), /* @__PURE__ */ import_react10.default.createElement("td", null, "441 = 21\xB2"), /* @__PURE__ */ import_react10.default.createElement("td", { className: "muted" }, "the seal of God is Truth")))), /* @__PURE__ */ import_react10.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react10.default.createElement("li", null, /* @__PURE__ */ import_react10.default.createElement("b", null, "Truth (\u05D0\u05DE\u05EA) = 441 = 21\xB2"), ", and 21 = C(7,2) = seals + trumpets + bowls (\xA715c.3). The rabbinic \u201Cthe seal of the Holy One is Truth (\u05D0\u05DE\u05EA)\u201D is the same 21 that structures the sealed scroll of Revelation \u2014 the seal, squared."), /* @__PURE__ */ import_react10.default.createElement("li", null, /* @__PURE__ */ import_react10.default.createElement("b", null, "Sabbath (\u05E9\u05D1\u05EA) = 702 = 27 \xD7 26"), ": the alphabet with finals (27) \xD7 \u05D9\u05D4\u05D5\u05D4 (26). Rest = the whole language \xD7 the Name."), /* @__PURE__ */ import_react10.default.createElement("li", null, /* @__PURE__ */ import_react10.default.createElement("b", null, "\u05D9\u05D4\u05D5\u05D4 is built entirely of simples"), " \u2014 yod (Virgo), he (Aries), vav (Taurus) \u2014 three temporal letters, none eternal. The Name is ", /* @__PURE__ */ import_react10.default.createElement("i", null, "never"), " always-readable: bound to the turning sky, legible only in its windows (the ~monthly cadence of \xA711, \u201Cthe cadence of \u05D9\u05D4\u05D5\u05D4\u201D).")), /* @__PURE__ */ import_react10.default.createElement("div", { className: "note", style: { marginBottom: 12 } }, "The sealed scroll of Revelation is the zodiac, and the names divide as the scroll does: the ", /* @__PURE__ */ import_react10.default.createElement("b", null, "eternal"), " register (mothers+doubles: create, father, mother, sabbath, truth\u2026) readable always, needing no opening; the ", /* @__PURE__ */ import_react10.default.createElement("b", null, "temporal"), " register (the 12 simples: ", /* @__PURE__ */ import_react10.default.createElement("b", null, "\u05D9\u05D4\u05D5\u05D4"), ") \u2014 the Name of \u201Cwho was and is and is to come\u201D (Rev 1:4), readable only when the sky computes it, only when the scroll is opened. Truth is the seal (441 = 21\xB2); the Name is what the seal guards. He who opens the scroll (Rev 5) is he who can calculate the temporal Name \u2014 and the eternal tier was never sealed."), /* @__PURE__ */ import_react10.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react10.default.createElement("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Greek (\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2) or Hebrew (\u05D0\u05D1\u05D3\u05D5\u05DF)", style: { flex: "1 1 280px" } }), /* @__PURE__ */ import_react10.default.createElement("span", { className: "pill" }, hebrew != null ? "Hebrew gematria" : "Greek isopsephy", ": ", /* @__PURE__ */ import_react10.default.createElement("b", { style: { color: "var(--gold)" } }, hebrew != null ? hebrew : greek))), /* @__PURE__ */ import_react10.default.createElement("table", null, /* @__PURE__ */ import_react10.default.createElement("thead", null, /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("th", null, "Name"), /* @__PURE__ */ import_react10.default.createElement("th", null, "Reading"), /* @__PURE__ */ import_react10.default.createElement("th", null, "Value"), /* @__PURE__ */ import_react10.default.createElement("th", null, "Notes"))), /* @__PURE__ */ import_react10.default.createElement("tbody", null, verified.map((v, i) => /* @__PURE__ */ import_react10.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react10.default.createElement("td", { className: "letter-cell" }, v[0] ? /* @__PURE__ */ import_react10.default.createElement("span", { className: /[א-ת]/.test(v[0]) ? "he" : "gk", style: { fontSize: "1.4rem" } }, v[0]) : ""), /* @__PURE__ */ import_react10.default.createElement("td", null, v[1]), /* @__PURE__ */ import_react10.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, v[2]), /* @__PURE__ */ import_react10.default.createElement("td", { className: "muted" }, v[3]))))), /* @__PURE__ */ import_react10.default.createElement("h3", null, "The arithmetic of Revelation \u2192 Sefer Yetzirah"), /* @__PURE__ */ import_react10.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react10.default.createElement("li", null, /* @__PURE__ */ import_react10.default.createElement("b", null, "The 111 family"), ": 666 = 6\xD7111 (the beast, the 6 falling short of 7 = the material); 888 = 8\xD7111 (Christ, the 8 = the eighth day, beyond-7 = resurrection). 666/888 = 3/4. Beast and Christ are the same 111 scaled by 6 and by 8."), /* @__PURE__ */ import_react10.default.createElement("li", null, /* @__PURE__ */ import_react10.default.createElement("b", null, "Apollyon = 1461 = the Sothic cycle"), ": 1461 vague Egyptian years (= 1460 Julian) is the return period of the heliacal rising of ", /* @__PURE__ */ import_react10.default.createElement("b", null, "Sirius"), " (the dog star). The 5th seal-trumpet where Apollyon appears is literally about a star falling from heaven and opening the abyss (Rev 9:1). Rev 9:11 gives the name in ", /* @__PURE__ */ import_react10.default.createElement("b", null, "both"), " systems \u2014 Hebrew (Abaddon, 63) and Greek (Apollyon, 1461) \u2014 a gematria/isopsephy bridge. ", /* @__PURE__ */ import_react10.default.createElement("em", null, "1461 is an arithmetic fact; that John meant Sirius is a hypothesis (strong, but not intent).")), /* @__PURE__ */ import_react10.default.createElement("li", null, /* @__PURE__ */ import_react10.default.createElement("b", null, "7 seals + 7 trumpets + 7 bowls = 21 = C(7,2)"), " = the distinct pairs among the 7 doubles. + 7 thunders sealed (hidden) = 28 = the 28 lunar mansions / the abjad."), /* @__PURE__ */ import_react10.default.createElement("li", null, /* @__PURE__ */ import_react10.default.createElement("b", null, "144,000 sealed = 12\xB2 \xD7 10\xB3"), " = (zodiac)\xB2 \xD7 millennium. The New Jerusalem is a ", /* @__PURE__ */ import_react10.default.createElement("b", null, "cube"), " of edge 12,000 stadia = 3 mothers (3 dimensions) \xD7 edge 12 (the simples); 12\xB3 = 1728; wall 144 = 12\xB2 cubits; 24 elders + 4 creatures = 28."), /* @__PURE__ */ import_react10.default.createElement("li", null, /* @__PURE__ */ import_react10.default.createElement("b", null, "Judgment fractions"), " climb in twelfths: \xBC = 3/12 \u2192 \u2153 = 4/12 \u2192 1 = 12/12; each heptad raises the fraction by one zodiacal sign."), /* @__PURE__ */ import_react10.default.createElement("li", null, /* @__PURE__ */ import_react10.default.createElement("b", null, "3\xBD = the half-heptad"), " = the beast's domain: 1260 days = 3\xBD \xD7 360 = half of 7 \xD7 the degree-circle (theological, not orbital)."), /* @__PURE__ */ import_react10.default.createElement("li", null, "The 7 seals = the 7 doubles ", /* @__PURE__ */ import_react10.default.createElement("b", null, "inscribed & silent"), "; the 7 trumpets = the same 7 doubles ", /* @__PURE__ */ import_react10.default.createElement("b", null, "sounded"), " (the shofar) \u2014 the \u201Ctwo tongues\u201D (stop/fricative) of the SY. The 7th seal = silence in heaven = the Sabbath = the 7th double at rest.")), /* @__PURE__ */ import_react10.default.createElement("h3", null, "The sky as a sealed scroll \u2014 the biblical phrases"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Revelation is one long act of ", /* @__PURE__ */ import_react10.default.createElement("b", null, "reading the sky as writing"), ": a sealed scroll, letters that sound, stars that fall, a city measured in 12s. Every one of these images maps onto the Sefer Yetzirah frame (3 mothers / 7 doubles / 12 simples). The full list, with reference and its reading in the system:"), /* @__PURE__ */ import_react10.default.createElement("table", null, /* @__PURE__ */ import_react10.default.createElement("thead", null, /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("th", null, "Phrase"), /* @__PURE__ */ import_react10.default.createElement("th", null, "Ref."), /* @__PURE__ */ import_react10.default.createElement("th", null, "Reading in the system"))), /* @__PURE__ */ import_react10.default.createElement("tbody", null, PHRASES.map((p, i) => /* @__PURE__ */ import_react10.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react10.default.createElement("td", null, /* @__PURE__ */ import_react10.default.createElement("i", null, "\u201C", p[0], "\u201D")), /* @__PURE__ */ import_react10.default.createElement("td", { className: "deg" }, p[1]), /* @__PURE__ */ import_react10.default.createElement("td", { className: "muted", dangerouslySetInnerHTML: { __html: p[2] } }))))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "note" }, "Two roots reach further back than Revelation: ", /* @__PURE__ */ import_react10.default.createElement("i", null, "\u201CThe heavens declare the glory of God; day to day pours out speech\u201D"), " (Ps 19:1-2) and ", /* @__PURE__ */ import_react10.default.createElement("i", null, "\u201CLift up your eyes on high and see: who created these? He brings out their host by number\u201D"), " (Isa 40:26) \u2014 the OT seed of the sky-as-text idea that Revelation dramatizes and the Sefer Yetzirah formalises."), /* @__PURE__ */ import_react10.default.createElement(Fig, { n: 11, doc: "From the article (\xA715c.1): Rev 6:14 \u2014 the zodiacal band (the 12 simples) as a written scroll that rolls up; the stars (the constellation-letters) fall out of their seats. \u201CI am the Alpha and the Omega\u201D = the bounds of the alphabet = the cosmos as text. The Lamb who opens the sealed scroll is the one who can read the sky as a book \u2014 the Caeli Reader." }), /* @__PURE__ */ import_react10.default.createElement(Fig, { n: 12, doc: "From the article (\xA715c.4): Rev 21 \u2014 the New Jerusalem is a cube of edge 12,000 stadia (the 3 mothers = the 3 dimensions \xD7 edge 12 = the simples; 12\xB3 = 1728), walled in 144 = 12\xB2 cubits, with 12 gates + 12 foundations = 24 (= 12 tribes + 12 apostles). The 144,000 sealed = 12\xB2 \xD7 10\xB3 = (zodiac)\xB2 \xD7 (millennium = 10 sefirot cubed)." }), /* @__PURE__ */ import_react10.default.createElement("div", { className: "note" }, "Try: ", /* @__PURE__ */ import_react10.default.createElement("span", { className: "key click", onClick: () => setInp("\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2") }, "\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2"), " ", /* @__PURE__ */ import_react10.default.createElement("span", { className: "key click", onClick: () => setInp("\u03A7\u03C1\u03B9\u03C3\u03C4\u03CC\u03C2") }, "\u03A7\u03C1\u03B9\u03C3\u03C4\u03CC\u03C2"), " ", /* @__PURE__ */ import_react10.default.createElement("span", { className: "key click", onClick: () => setInp("\u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD") }, "\u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD"), " ", /* @__PURE__ */ import_react10.default.createElement("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05D3\u05D5\u05DF") }, "\u05D0\u05D1\u05D3\u05D5\u05DF")));
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h2", { children: "Revelation \u2014 the sky as a sealed scroll (\xA715c) \xB7 isopsephy" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "A structural reading, not a confessional exegesis. Revelation (c. 95 CE) shares the late-Jewish symbolic cosmos (merkabah + creator-letters + 360/7/12) with the textualised Sefer Yetzirah \u2014 they ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "converge without borrowing" }),
+      ". Rev 13:18 is the only NT verse that ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "commands a gematria calculation" }),
+      "."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { children: "Sefer Raziel HaMalakh \u2014 \u201Ccalculate to see the generations\u201D" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "An older sibling text frames exactly what this app does: ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "compute the planets and the zodiacal signs in their fixed order, and so read the generations from beginning to end" }),
+      ". From the Spanish ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "Sefer Raziel HaMalakh" }),
+      " (pp. 143\u2013144 of the source PDF, Sepher Hamezeloth \u2014 Book Five), one continuous passage that reads like a specification of the Lector Caeli:"
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("blockquote", { style: { borderLeft: "3px solid var(--gold)", margin: "8px 0", paddingLeft: 14, color: "var(--txt)" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "\u201CCombina los signos y la rueda. Graba y calcula y asigna y numera. Considera los c\xE1lculos de los planetas y los signos del zod\xEDaco. Calcula los per\xEDodos y dando vueltas los planetas. De aquellos suspendidos y los signos del zod\xEDaco en el orden perpetuo, ve con la luz. Calcula en orden para ver las generaciones. Prepara para verlos desde el principio hasta el final." }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("br", {}),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("br", {}),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "Est\xE1 escrito, quien act\xFAa y crea, proclama las generaciones desde el principio, antes de la creaci\xF3n del universo. Para comprender las acciones de cada hombre en la rectitud y la maldad, decreta sobre cada uno. De acuerdo a las obras, prepara las obras entre el bien y el mal." }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("br", {}),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("br", {}),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "Numera los planetas y los signos del zod\xEDaco, disperso en las horas. Pon de manifiesto entre el bien y el mal. Todo fue creado por Elohim en sabidur\xEDa e inteligencia, ante el elevamiento del universo." }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("br", {}),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("br", {}),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "La sabidur\xEDa del Se\xF1or es el cimiento de la Tierra. Numera los planetas y los signos del zod\xEDaco de cada hombre. El universo fue formado ante ellos. De acuerdo a las obras, el hombre es creado para preparar. Dios no da los planetas y los signos del zod\xEDaco debido al permiso de la maldad o la bondad.\u201D" })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "muted", style: { marginBottom: 6 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "English:" }),
+      " \u201CCombine the signs and the wheel. Engrave and compute and assign and number. Consider the reckonings of the planets and the signs of the zodiac. Compute the periods and the turning planets. Of those suspended and the signs of the zodiac in their perpetual order, see with the light. Compute in order to see the generations. Prepare to see them from the beginning to the end. It is written: he who acts and creates proclaims the generations from the beginning, before the creation of the universe [Isaiah 41:4]. To understand the actions of each man in righteousness and in wickedness, he decrees upon each one. According to the works, he prepares the works between good and evil. Number the planets and the signs of the zodiac, dispersed in the hours. Make manifest between good and evil. All was created by Elohim in wisdom and in understanding, before the raising-up of the universe. The wisdom of the Lord is the foundation of the earth [Proverbs 3:19]. Number the planets and the signs of the zodiac of each man. The universe was formed before them. According to the works, man is created to prepare. God does not give the planets and the signs of the zodiac by permission of evil or of good.\u201D"
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "\u2014 ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "Sefer Raziel HaMalakh" }),
+      " (Spanish ed.), pp. 143\u2013144. The passage spans the page break: page 143 ends \u201C\u2026ve\u201D, page 144 begins \u201Ccon la luz\u201D, and the printed page number \u201C144\u201D is what the text extractor merged into the non-word ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "ve144 con la luz" }),
+      ". The text itself says ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "ve con la luz" }),
+      " \u2014 \u201Csee, with the light\u201D \u2014 not \u201C144\u201D. (144 = 12\xB2 does appear elsewhere in this study, from Meton / Revelation \u2014 \xA715c.4 \u2014 but it is ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "not" }),
+      " in this Raziel passage; the page-number coincidence is pagination, not an encoded signal.)"
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { children: "The Raziel instruction, computed on today's sky" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "muted", style: { marginBottom: 8 }, children: "Each line of the Raziel instruction, mapped to what the apparatus computes live (not asserted):" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Raziel instruction" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("th", { children: [
+          "Computed on ",
+          date
+        ] })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tbody", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "\u201CCalcula los per\xEDodos y dando vueltas los planetas\u201D" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("td", { children: [
+            (rows || []).length,
+            " bodies, ecliptic longitude \u2192 sign. Today: ",
+            (rows || []).map((r) => `${r.body} ${r.deg.toFixed(0)}\xB0\u2192${r.sign}`).join(" \xB7 "),
+            "."
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "\u201Clos signos del zod\xEDaco en el orden perpetuo\u201D" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("td", { children: [
+            "12 signs \xD7 30\xB0, fixed order. Today ",
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: (occ || /* @__PURE__ */ new Set()).size }),
+            " occupied: ",
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { style: { color: "var(--gold)" }, children: [...occ || []].sort().join(" ") || "none" }),
+            "."
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "\u201Cve con la luz\u201D" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("td", { children: [
+            "\u201CSee, with the light\u201D \u2014 the planets' longitude is the light; the signs they touch are the readable letters. Today ",
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: (occ || /* @__PURE__ */ new Set()).size }),
+            "/12 signs are lit."
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "\u201CCalcula en orden para ver las generaciones\u201D" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("td", { children: [
+            "The Reader enumerates every readable name today: ",
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { style: { color: "var(--gold)" }, children: (words || []).length }),
+            " names (the generations ",
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "now" }),
+            ") \u2014 incl. ",
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: nameCount }),
+            " proper names and ",
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: angelCount }),
+            " Shem HaMephorash angel-roots (word + suffix ",
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "he", children: "\u05D0\u05DC" }),
+            "/",
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "he", children: "\u05D9\u05D4" }),
+            ")."
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "\u201CPrepara para verlos desde el principio hasta el final\u201D" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("td", { children: [
+            "The Predictor scans the whole year ",
+            genYear,
+            " (beginning \u2192 end): ",
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { style: { color: "var(--gold)" }, children: genDays != null ? genDays : "\u2026" }),
+            " days where Genesis 1:1 is legible = the generations across time."
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "\u201Cdecreta sobre cada uno\u2026 entre el bien y el mal\u201D" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "Revelation's judgment: the sky read as a decree on each \u2014 the sealed scroll opened (Rev 5\u20138), the same letters that name the generations now judging them." })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "note", style: { marginBottom: 12 }, children: [
+      "Verdict: the Raziel instruction is not metaphor. ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "Calculate the planets" }),
+      " = astronomy-engine longitudes; ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "the signs in perpetual order" }),
+      " = the 12 simples; ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "see the generations from beginning to end" }),
+      " = the Reader (today's names) + the Predictor (the year's legible days). The \u201Cnames of the ancestors and those to come\u201D are the readable names of any date \u2014 past or future \u2014 and the apparatus enumerates them."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { children: "15c.9 \xB7 The two registers of the Name \u2014 the eternal and the temporal" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("p", { className: "muted", children: [
+      "The reading rule opens a theological contrast the apparatus makes measurable. 3 ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "mothers" }),
+      " (aleph, mem, shin \u2014 primordial elements, fixed) + 7 ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "doubles" }),
+      " (bet, gimel, dalet, kaf, pe, resh, tav \u2014 the 7 planets, always available) do not depend on the zodiac; the 12 ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "simples" }),
+      " do. A word of only mothers+doubles is ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "always readable" }),
+      " \u2014 it transcends the sky. A word of simples is ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "gated" }),
+      " \u2014 readable only when its signs are occupied, i.e. in time."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { className: "muted", children: "The always-readable tier holds the theological anchors:" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Hebrew" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "translation" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "letters" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "gematria" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "note" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tbody", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "he", style: { fontSize: "1.25rem" }, children: "\u05D1\u05E8\u05D0" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "to create" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "2 doubles + 1 mother" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "203" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "muted", children: "the act of creation" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "he", style: { fontSize: "1.25rem" }, children: "\u05D0\u05D1" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "father" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "1 mother + 1 double" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "3" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "muted", children: "\u2014" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "he", style: { fontSize: "1.25rem" }, children: "\u05D0\u05DE" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "mother" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "2 mothers" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "41" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "muted", children: "\u2014" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "he", style: { fontSize: "1.25rem" }, children: "\u05E9\u05D1\u05EA" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "sabbath (rest)" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "1 mother + 2 doubles" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "702 = 27\xD726" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "muted", children: "the whole alphabet \xD7 the Name" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "he", style: { fontSize: "1.25rem" }, children: "\u05D0\u05DE\u05EA" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "truth" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "2 mothers + 1 double" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: "441 = 21\xB2" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "muted", children: "the seal of God is Truth" })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("ul", { className: "muted", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "Truth (\u05D0\u05DE\u05EA) = 441 = 21\xB2" }),
+        ", and 21 = C(7,2) = seals + trumpets + bowls (\xA715c.3). The rabbinic \u201Cthe seal of the Holy One is Truth (\u05D0\u05DE\u05EA)\u201D is the same 21 that structures the sealed scroll of Revelation \u2014 the seal, squared."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "Sabbath (\u05E9\u05D1\u05EA) = 702 = 27 \xD7 26" }),
+        ": the alphabet with finals (27) \xD7 \u05D9\u05D4\u05D5\u05D4 (26). Rest = the whole language \xD7 the Name."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "\u05D9\u05D4\u05D5\u05D4 is built entirely of simples" }),
+        " \u2014 yod (Virgo), he (Aries), vav (Taurus) \u2014 three temporal letters, none eternal. The Name is ",
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "never" }),
+        " always-readable: bound to the turning sky, legible only in its windows (the ~monthly cadence of \xA711, \u201Cthe cadence of \u05D9\u05D4\u05D5\u05D4\u201D)."
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "note", style: { marginBottom: 12 }, children: [
+      "The sealed scroll of Revelation is the zodiac, and the names divide as the scroll does: the ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "eternal" }),
+      " register (mothers+doubles: create, father, mother, sabbath, truth\u2026) readable always, needing no opening; the ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "temporal" }),
+      " register (the 12 simples: ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "\u05D9\u05D4\u05D5\u05D4" }),
+      ") \u2014 the Name of \u201Cwho was and is and is to come\u201D (Rev 1:4), readable only when the sky computes it, only when the scroll is opened. Truth is the seal (441 = 21\xB2); the Name is what the seal guards. He who opens the scroll (Rev 5) is he who can calculate the temporal Name \u2014 and the eternal tier was never sealed."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "controls", style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("input", { type: "text", value: inp, onChange: (e) => setInp(e.target.value), placeholder: "Greek (\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2) or Hebrew (\u05D0\u05D1\u05D3\u05D5\u05DF)", style: { flex: "1 1 280px" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("span", { className: "pill", children: [
+        hebrew != null ? "Hebrew gematria" : "Greek isopsephy",
+        ": ",
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { style: { color: "var(--gold)" }, children: hebrew != null ? hebrew : greek })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Name" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Reading" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Value" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Notes" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("tbody", { children: verified.map((v, i) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "letter-cell", children: v[0] ? /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: /[א-ת]/.test(v[0]) ? "he" : "gk", style: { fontSize: "1.4rem" }, children: v[0] }) : "" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: v[1] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "big", style: { color: "var(--gold)" }, children: v[2] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "muted", children: v[3] })
+      ] }, i)) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { children: "The arithmetic of Revelation \u2192 Sefer Yetzirah" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("ul", { className: "muted", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "The 111 family" }),
+        ": 666 = 6\xD7111 (the beast, the 6 falling short of 7 = the material); 888 = 8\xD7111 (Christ, the 8 = the eighth day, beyond-7 = resurrection). 666/888 = 3/4. Beast and Christ are the same 111 scaled by 6 and by 8."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "Apollyon = 1461 = the Sothic cycle" }),
+        ": 1461 vague Egyptian years (= 1460 Julian) is the return period of the heliacal rising of ",
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "Sirius" }),
+        " (the dog star). The 5th seal-trumpet where Apollyon appears is literally about a star falling from heaven and opening the abyss (Rev 9:1). Rev 9:11 gives the name in ",
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "both" }),
+        " systems \u2014 Hebrew (Abaddon, 63) and Greek (Apollyon, 1461) \u2014 a gematria/isopsephy bridge. ",
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("em", { children: "1461 is an arithmetic fact; that John meant Sirius is a hypothesis (strong, but not intent)." })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "7 seals + 7 trumpets + 7 bowls = 21 = C(7,2)" }),
+        " = the distinct pairs among the 7 doubles. + 7 thunders sealed (hidden) = 28 = the 28 lunar mansions / the abjad."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "144,000 sealed = 12\xB2 \xD7 10\xB3" }),
+        " = (zodiac)\xB2 \xD7 millennium. The New Jerusalem is a ",
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "cube" }),
+        " of edge 12,000 stadia = 3 mothers (3 dimensions) \xD7 edge 12 (the simples); 12\xB3 = 1728; wall 144 = 12\xB2 cubits; 24 elders + 4 creatures = 28."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "Judgment fractions" }),
+        " climb in twelfths: \xBC = 3/12 \u2192 \u2153 = 4/12 \u2192 1 = 12/12; each heptad raises the fraction by one zodiacal sign."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "3\xBD = the half-heptad" }),
+        " = the beast's domain: 1260 days = 3\xBD \xD7 360 = half of 7 \xD7 the degree-circle (theological, not orbital)."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("li", { children: [
+        "The 7 seals = the 7 doubles ",
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "inscribed & silent" }),
+        "; the 7 trumpets = the same 7 doubles ",
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "sounded" }),
+        " (the shofar) \u2014 the \u201Ctwo tongues\u201D (stop/fricative) of the SY. The 7th seal = silence in heaven = the Sabbath = the 7th double at rest."
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { children: "The sky as a sealed scroll \u2014 the biblical phrases" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "muted", style: { marginBottom: 8 }, children: [
+      "Revelation is one long act of ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "reading the sky as writing" }),
+      ": a sealed scroll, letters that sound, stars that fall, a city measured in 12s. Every one of these images maps onto the Sefer Yetzirah frame (3 mothers / 7 doubles / 12 simples). The full list, with reference and its reading in the system:"
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Phrase" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Ref." }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Reading in the system" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("tbody", { children: PHRASES.map((p, i) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("i", { children: [
+          "\u201C",
+          p[0],
+          "\u201D"
+        ] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "deg", children: p[1] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "muted", dangerouslySetInnerHTML: { __html: p[2] } })
+      ] }, i)) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "note", children: [
+      "Two roots reach further back than Revelation: ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "\u201CThe heavens declare the glory of God; day to day pours out speech\u201D" }),
+      " (Ps 19:1-2) and ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "\u201CLift up your eyes on high and see: who created these? He brings out their host by number\u201D" }),
+      " (Isa 40:26) \u2014 the OT seed of the sky-as-text idea that Revelation dramatizes and the Sefer Yetzirah formalises."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Fig, { n: 11, doc: "From the article (\xA715c.1): Rev 6:14 \u2014 the zodiacal band (the 12 simples) as a written scroll that rolls up; the stars (the constellation-letters) fall out of their seats. \u201CI am the Alpha and the Omega\u201D = the bounds of the alphabet = the cosmos as text. The Lamb who opens the sealed scroll is the one who can read the sky as a book \u2014 the Caeli Reader." }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Fig, { n: 12, doc: "From the article (\xA715c.4): Rev 21 \u2014 the New Jerusalem is a cube of edge 12,000 stadia (the 3 mothers = the 3 dimensions \xD7 edge 12 = the simples; 12\xB3 = 1728), walled in 144 = 12\xB2 cubits, with 12 gates + 12 foundations = 24 (= 12 tribes + 12 apostles). The 144,000 sealed = 12\xB2 \xD7 10\xB3 = (zodiac)\xB2 \xD7 (millennium = 10 sefirot cubed)." }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "note", children: [
+      "Try: ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "key click", onClick: () => setInp("\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2"), children: "\u1F38\u03B7\u03C3\u03BF\u1FE6\u03C2" }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "key click", onClick: () => setInp("\u03A7\u03C1\u03B9\u03C3\u03C4\u03CC\u03C2"), children: "\u03A7\u03C1\u03B9\u03C3\u03C4\u03CC\u03C2" }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "key click", onClick: () => setInp("\u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD"), children: "\u1F08\u03C0\u03BF\u03BB\u03BB\u03CD\u03C9\u03BD" }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "key click", onClick: () => setInp("\u05D0\u05D1\u05D3\u05D5\u05DF"), children: "\u05D0\u05D1\u05D3\u05D5\u05DF" })
+    ] })
+  ] });
 }
 var REV_CLS = { "(a)": "var(--green)", "(b)": "var(--warn)", "(c)": "var(--blue)", "(u)": "var(--red)" };
 function ClassTag({ c }) {
   const col = REV_CLS[c] || "var(--dim)";
-  return /* @__PURE__ */ import_react10.default.createElement("span", { className: "pill", style: { color: col, borderColor: col, fontSize: ".68rem", padding: "1px 7px" } }, c);
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("span", { className: "pill", style: { color: col, borderColor: col, fontSize: ".68rem", padding: "1px 7px" }, children: c });
 }
 function SrcList({ items }) {
-  return /* @__PURE__ */ import_react10.default.createElement("details", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react10.default.createElement("summary", { className: "muted", style: { cursor: "pointer" } }, "sources (", items.length, ")"), /* @__PURE__ */ import_react10.default.createElement("ul", { className: "muted", style: { marginTop: 6 } }, items.map((s, i) => /* @__PURE__ */ import_react10.default.createElement("li", { key: i }, /* @__PURE__ */ import_react10.default.createElement("a", { href: s[1], target: "_blank", rel: "noreferrer" }, s[0])))));
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("details", { style: { marginTop: 8 }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("summary", { className: "muted", style: { cursor: "pointer" }, children: [
+      "sources (",
+      items.length,
+      ")"
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("ul", { className: "muted", style: { marginTop: 6 }, children: items.map((s, i) => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("a", { href: s[1], target: "_blank", rel: "noreferrer", children: s[0] }) }, i)) })
+  ] });
 }
 function Section({ name, rows }) {
-  return /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, null, /* @__PURE__ */ import_react10.default.createElement("h3", null, name), /* @__PURE__ */ import_react10.default.createElement("table", null, /* @__PURE__ */ import_react10.default.createElement("thead", null, /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("th", null, "Claim"), /* @__PURE__ */ import_react10.default.createElement("th", null, "Number"), /* @__PURE__ */ import_react10.default.createElement("th", null), /* @__PURE__ */ import_react10.default.createElement("th", null, "Note"))), /* @__PURE__ */ import_react10.default.createElement("tbody", null, rows.map((r, i) => /* @__PURE__ */ import_react10.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react10.default.createElement("td", null, r[0]), /* @__PURE__ */ import_react10.default.createElement("td", { className: "big", style: { color: "var(--gold)", whiteSpace: "nowrap" } }, r[1]), /* @__PURE__ */ import_react10.default.createElement("td", null, /* @__PURE__ */ import_react10.default.createElement(ClassTag, { c: r[2] })), /* @__PURE__ */ import_react10.default.createElement("td", { className: "muted" }, r[3]))))));
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { children: name }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("table", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Claim" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Number" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", {}),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Note" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("tbody", { children: rows.map((r, i) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: r[0] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "big", style: { color: "var(--gold)", whiteSpace: "nowrap" }, children: r[1] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ClassTag, { c: r[2] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "muted", children: r[3] })
+      ] }, i)) })
+    ] })
+  ] });
 }
 var REV_SUMMARY = [
   ["7", "7 planets / powers / heavens", "Hebrew \xB7 Gnostic \xB7 Sufi \xB7 Vedic \xB7 Egyptian", "(a)"],
@@ -27727,62 +31392,105 @@ var REV_SUMMARY = [
   ["1260 / 42 mo", "half-heptad \xB7 beast domain", "Hebrew-Christian only", "(c)"]
 ];
 function RevelationMayaTab() {
-  return /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, null, /* @__PURE__ */ import_react10.default.createElement("h2", null, "Maya \u2014 independent 73, 144000, 260"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The Maya calendar corroborates 73, 144, 260 and 365 with no contact with Hebrew or Revelation \u2014 the strongest independent witnesses to the system's constants."), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Maya astronomy", rows: [
-    ["Tzolkin 260-day sacred round", "260", "(a)", "= the Mercury 8\xD78 kamea constant (\xA715b.1). 260 = 4\xD75\xD713."],
-    ["Haab 365 = 73 \xD7 5", "365", "(a)", "73 pentads of 5 days = the civil solar year (cf. Hebrew 73\xD75=365, \xA79.4)."],
-    ["Calendar Round = 73 \xD7 260 = 52 \xD7 365", "18,980", "(a)", "73 tzolkin cycles = 52 Haab years. 73 appears twice \u2014 pentads and tzolkin-rounds."],
-    ["Baktun = 144,000 days = 400 \xD7 360", "144,000", "(a)/(c)", "144,000 = 144\xD71000 = 12\xB2\xD710\xB3 \u2014 the Long Count major unit (cf. Rev 7:4 sealed). Independent of Revelation."],
-    ["144 = 12\xB2", "144", "(c)", "the square of the zodiac \u2014 Maya and Revelation agree without contact."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(SrcList, { items: [["Maya Long Count (Wikipedia)", "https://en.wikipedia.org/wiki/Mesoamerican_Long_Count"], ["Tzolkin (Wikipedia)", "https://en.wikipedia.org/wiki/Tzolk%27in"]] }));
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h2", { children: "Maya \u2014 independent 73, 144000, 260" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "muted", style: { marginBottom: 10 }, children: "The Maya calendar corroborates 73, 144, 260 and 365 with no contact with Hebrew or Revelation \u2014 the strongest independent witnesses to the system's constants." }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Maya astronomy", rows: [
+      ["Tzolkin 260-day sacred round", "260", "(a)", "= the Mercury 8\xD78 kamea constant (\xA715b.1). 260 = 4\xD75\xD713."],
+      ["Haab 365 = 73 \xD7 5", "365", "(a)", "73 pentads of 5 days = the civil solar year (cf. Hebrew 73\xD75=365, \xA79.4)."],
+      ["Calendar Round = 73 \xD7 260 = 52 \xD7 365", "18,980", "(a)", "73 tzolkin cycles = 52 Haab years. 73 appears twice \u2014 pentads and tzolkin-rounds."],
+      ["Baktun = 144,000 days = 400 \xD7 360", "144,000", "(a)/(c)", "144,000 = 144\xD71000 = 12\xB2\xD710\xB3 \u2014 the Long Count major unit (cf. Rev 7:4 sealed). Independent of Revelation."],
+      ["144 = 12\xB2", "144", "(c)", "the square of the zodiac \u2014 Maya and Revelation agree without contact."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(SrcList, { items: [["Maya Long Count (Wikipedia)", "https://en.wikipedia.org/wiki/Mesoamerican_Long_Count"], ["Tzolkin (Wikipedia)", "https://en.wikipedia.org/wiki/Tzolk%27in"]] })
+  ] });
 }
 function RevelationChineseTab() {
-  return /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, null, /* @__PURE__ */ import_react10.default.createElement("h2", null, "Chinese \u2014 independent Meton & 28 mansions"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "Chinese astronomy independently recovered the Metonic 19-year cycle and runs a 28-lunar-mansion scheme \u2014 convergences with no borrowing."), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Chinese astronomy", rows: [
-    ["\u7AE0 zh\u0101ng = 19 years = 235 months", "19 / 235", "(a)", "the Metonic cycle, discovered independently in China (\xA77\u20138). 19 = 7 doubles + 12 simples in the SY."],
-    ["28 lunar mansions (xiu \u5BBF)", "28", "(a)", "28 stations along the equator \u2014 same 28 = T\u2087 = abjad / Sufi letters."],
-    ["24 solar terms (12 \xD7 2)", "24", "(a)", "12 major + 12 minor solar terms = 12 signs \xD7 2."],
-    ["sexagenary cycle = 12 \xD7 5", "60", "(a)", "12 Earthly Branches \xD7 5 Elements; 60 = 12\xD75."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(SrcList, { items: [["Metonic cycle (Wikipedia)", "https://en.wikipedia.org/wiki/Metonic_cycle"], ["Chinese lunar mansions (Wikipedia)", "https://en.wikipedia.org/wiki/Twenty-Eight_Mansions"]] }));
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h2", { children: "Chinese \u2014 independent Meton & 28 mansions" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "muted", style: { marginBottom: 10 }, children: "Chinese astronomy independently recovered the Metonic 19-year cycle and runs a 28-lunar-mansion scheme \u2014 convergences with no borrowing." }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Chinese astronomy", rows: [
+      ["\u7AE0 zh\u0101ng = 19 years = 235 months", "19 / 235", "(a)", "the Metonic cycle, discovered independently in China (\xA77\u20138). 19 = 7 doubles + 12 simples in the SY."],
+      ["28 lunar mansions (xiu \u5BBF)", "28", "(a)", "28 stations along the equator \u2014 same 28 = T\u2087 = abjad / Sufi letters."],
+      ["24 solar terms (12 \xD7 2)", "24", "(a)", "12 major + 12 minor solar terms = 12 signs \xD7 2."],
+      ["sexagenary cycle = 12 \xD7 5", "60", "(a)", "12 Earthly Branches \xD7 5 Elements; 60 = 12\xD75."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(SrcList, { items: [["Metonic cycle (Wikipedia)", "https://en.wikipedia.org/wiki/Metonic_cycle"], ["Chinese lunar mansions (Wikipedia)", "https://en.wikipedia.org/wiki/Twenty-Eight_Mansions"]] })
+  ] });
 }
 function RevelationVedicTab() {
-  return /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, null, /* @__PURE__ */ import_react10.default.createElement("h2", null, "Indian / Vedic \u2014 the year-wheel, 7 metres, 27 nakshatras"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The \u1E5Ag Veda Samhita (c. 1500\u20131000 BCE) is the oldest text here and carries the system's constants in its own idiom: a ", /* @__PURE__ */ import_react10.default.createElement("b", null, "12-spoked / 360-spoke year-wheel"), ", ", /* @__PURE__ */ import_react10.default.createElement("b", null, "720 sons"), ", ", /* @__PURE__ */ import_react10.default.createElement("b", null, "7 metres"), ", the ", /* @__PURE__ */ import_react10.default.createElement("b", null, "7 horses of S\u016Brya"), ", and the ", /* @__PURE__ */ import_react10.default.createElement("b", null, "27/28 nakshatras"), ". Mined from the Griffith translation (source copies in ", /* @__PURE__ */ import_react10.default.createElement("code", null, "library/rig-veda/"), ")."), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "\u1E5Ag Veda 1.164 \u2014 the riddle of the year-wheel (strongest Vedic overlap)", rows: [
-    ['"Twelve are the fellies, and the wheel is single; three are the naves"', "12 / 3", "(a)", "RV 1.164.48 \u2014 a wheel of 12 (the months/signs) on 3 (the mothers?), undivided."],
-    ['"therein are set together spokes three hundred and sixty"', "360", "(a)", "RV 1.164.48 \u2014 360 spokes = the degrees/days of the year. The explicit 12\xD730."],
-    ['"seven hundred Sons and twenty stand, O Agni"', "720", "(a)", "RV 1.164.11 \u2014 720 = 360\xD72 = days + nights = the full year of the wheel."],
-    ['"with the syllable they form seven metres"', "7", "(a)", "RV 1.164.24 \u2014 the 7 chandas (metres) of Vedic verse."],
-    ['"the six twin pairs are called \u1E5A\u1E63is\u2026 the seventh single-born"', "6+1", "(c)", "RV 1.164.15 \u2014 6 paired + 1 alone = the 7, structurally like the 7 doubles (2 tongues / 1 single)."],
-    ['"Speech hath been measured out in four divisions"', "4", "(c)", "RV 1.164.45 \u2014 3 hidden + 1 spoken = the 3 mothers + the manifest (cf. the 3 soft + 4 hard of the SY)."],
-    ['"Two Birds with fair wings\u2026 in the same tree"', "2", "(c)", "RV 1.164.20 \u2014 the Self and the soul on the cosmic tree (a pan-Indo-Iranian image)."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "The 7 chandas (Vedic metres) \u2014 the 7 as poetic measure", rows: [
-    ["G\u0101yatr\u012B = 24 syllables", "24", "(a)", "3\xD78. The simplest metre."],
-    ["U\u1E63\u1E47ih = 28", "28", "(a)", "= the lunar mansions \u2014 28 appears as a metre."],
-    ["Anu\u1E63\u1E6Dubh = 32", "32", "(a)", "4\xD78; later the \u015Bloka of epic verse."],
-    ["B\u1E5Bhat\u012B = 36", "36", "(a)", "4\xD79."],
-    ["Pankti = 40", "40", "(a)", "5\xD78."],
-    ["Tri\u1E63\u1E6Dubh = 44", "44", "(a)", "4\xD711; the dominant metre of the \u1E5Ag Veda."],
-    ["Jagat\u012B = 48", "48", "(a)", "6\xD78."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "S\u016Brya, the Adityas, the Nasadiya", rows: [
-    ['"Seven Bay Steeds harnessed to thy car" \u2014 S\u016Brya', "7", "(a)", "RV 1.50.8 \u2014 the 7 horses of the Sun = the 7 days / 7 colours of the spectrum (traditional)."],
-    ['"Eight are the Sons of Aditi\u2026 with seven she went to meet the Gods; she cast Martanda far away"', "8 \u2192 7+1", "(a)/(c)", "RV 10.72.8\u20139 \u2014 8 Adityas, 7 + the mortal Martanda (the throwaway = the material), structurally like 8 vs 7."],
-    ['"Darkness was hidden by darkness\u2026 that One, breathing without wind, by its own impulse"', "1", "(c)", "RV 10.129 (Nasadiya) \u2014 the uncreated One before being/non-being (the cosmogonic seed)."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Cosmology \u2014 nakshatras, rasis, yugas", rows: [
-    ["27 nakshatras \xD7 13\xB020\u2032 = 360\xB0", "27 / 360", "(a)", "27 lunar mansions (or 28 with Abhijit); 27 = 22 Hebrew + 5 finals, structurally."],
-    ["12 rasis \xD7 30\xB0 = 360\xB0", "12 / 360", "(a)", "the 12-sign zodiac, India receiving it from Babylonia/Greece."],
-    ["Kali-yuga = 432,000 years", "432,000", "(c)", "= 72 \xD7 6000; 432 = 72\xD76 \u2014 the yuga base (cf. Berossos\u2019s Chaldean 432,000)."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react10.default.createElement("b", null, "Not Rig Vedic (flagged):"), " the 12 Adityas and 108 are ", /* @__PURE__ */ import_react10.default.createElement("i", null, "later"), " Vedic / Puranic, not \u1E5Ag Veda Samhita. 108 = 27 nakshatras \xD7 4 p\u0101das (or 12 \xD7 9) \u2014 a later sacred number, not an \u1E5Ag Vedic constant. The \u1E5Ag Vedic set is 7 (metres/horses), 12, 27/28, 360, 720."), /* @__PURE__ */ import_react10.default.createElement(SrcList, { items: [
-    ["\u1E5Ag Veda 1.164 (Griffith, sacred-texts)", "https://www.sacred-texts.com/hin/rigveda/rv01164.htm"],
-    ["\u1E5Ag Veda 10.72 Aditi (Griffith)", "https://www.sacred-texts.com/hin/rigveda/rv10072.htm"],
-    ["\u1E5Ag Veda 1.50 S\u016Brya (Griffith)", "https://www.sacred-texts.com/hin/rigveda/rv01050.htm"],
-    ["Nakshatra (Wikipedia)", "https://en.wikipedia.org/wiki/Nakshatra"],
-    ["Yuga Cycle (Wikipedia)", "https://en.wikipedia.org/wiki/Yuga_Cycle"]
-  ] }));
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h2", { children: "Indian / Vedic \u2014 the year-wheel, 7 metres, 27 nakshatras" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "The \u1E5Ag Veda Samhita (c. 1500\u20131000 BCE) is the oldest text here and carries the system's constants in its own idiom: a ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "12-spoked / 360-spoke year-wheel" }),
+      ", ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "720 sons" }),
+      ", ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "7 metres" }),
+      ", the ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "7 horses of S\u016Brya" }),
+      ", and the ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "27/28 nakshatras" }),
+      ". Mined from the Griffith translation (source copies in ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("code", { children: "library/rig-veda/" }),
+      ")."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "\u1E5Ag Veda 1.164 \u2014 the riddle of the year-wheel (strongest Vedic overlap)", rows: [
+      ['"Twelve are the fellies, and the wheel is single; three are the naves"', "12 / 3", "(a)", "RV 1.164.48 \u2014 a wheel of 12 (the months/signs) on 3 (the mothers?), undivided."],
+      ['"therein are set together spokes three hundred and sixty"', "360", "(a)", "RV 1.164.48 \u2014 360 spokes = the degrees/days of the year. The explicit 12\xD730."],
+      ['"seven hundred Sons and twenty stand, O Agni"', "720", "(a)", "RV 1.164.11 \u2014 720 = 360\xD72 = days + nights = the full year of the wheel."],
+      ['"with the syllable they form seven metres"', "7", "(a)", "RV 1.164.24 \u2014 the 7 chandas (metres) of Vedic verse."],
+      ['"the six twin pairs are called \u1E5A\u1E63is\u2026 the seventh single-born"', "6+1", "(c)", "RV 1.164.15 \u2014 6 paired + 1 alone = the 7, structurally like the 7 doubles (2 tongues / 1 single)."],
+      ['"Speech hath been measured out in four divisions"', "4", "(c)", "RV 1.164.45 \u2014 3 hidden + 1 spoken = the 3 mothers + the manifest (cf. the 3 soft + 4 hard of the SY)."],
+      ['"Two Birds with fair wings\u2026 in the same tree"', "2", "(c)", "RV 1.164.20 \u2014 the Self and the soul on the cosmic tree (a pan-Indo-Iranian image)."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "The 7 chandas (Vedic metres) \u2014 the 7 as poetic measure", rows: [
+      ["G\u0101yatr\u012B = 24 syllables", "24", "(a)", "3\xD78. The simplest metre."],
+      ["U\u1E63\u1E47ih = 28", "28", "(a)", "= the lunar mansions \u2014 28 appears as a metre."],
+      ["Anu\u1E63\u1E6Dubh = 32", "32", "(a)", "4\xD78; later the \u015Bloka of epic verse."],
+      ["B\u1E5Bhat\u012B = 36", "36", "(a)", "4\xD79."],
+      ["Pankti = 40", "40", "(a)", "5\xD78."],
+      ["Tri\u1E63\u1E6Dubh = 44", "44", "(a)", "4\xD711; the dominant metre of the \u1E5Ag Veda."],
+      ["Jagat\u012B = 48", "48", "(a)", "6\xD78."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "S\u016Brya, the Adityas, the Nasadiya", rows: [
+      ['"Seven Bay Steeds harnessed to thy car" \u2014 S\u016Brya', "7", "(a)", "RV 1.50.8 \u2014 the 7 horses of the Sun = the 7 days / 7 colours of the spectrum (traditional)."],
+      ['"Eight are the Sons of Aditi\u2026 with seven she went to meet the Gods; she cast Martanda far away"', "8 \u2192 7+1", "(a)/(c)", "RV 10.72.8\u20139 \u2014 8 Adityas, 7 + the mortal Martanda (the throwaway = the material), structurally like 8 vs 7."],
+      ['"Darkness was hidden by darkness\u2026 that One, breathing without wind, by its own impulse"', "1", "(c)", "RV 10.129 (Nasadiya) \u2014 the uncreated One before being/non-being (the cosmogonic seed)."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Cosmology \u2014 nakshatras, rasis, yugas", rows: [
+      ["27 nakshatras \xD7 13\xB020\u2032 = 360\xB0", "27 / 360", "(a)", "27 lunar mansions (or 28 with Abhijit); 27 = 22 Hebrew + 5 finals, structurally."],
+      ["12 rasis \xD7 30\xB0 = 360\xB0", "12 / 360", "(a)", "the 12-sign zodiac, India receiving it from Babylonia/Greece."],
+      ["Kali-yuga = 432,000 years", "432,000", "(c)", "= 72 \xD7 6000; 432 = 72\xD76 \u2014 the yuga base (cf. Berossos\u2019s Chaldean 432,000)."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "note", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "Not Rig Vedic (flagged):" }),
+      " the 12 Adityas and 108 are ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "later" }),
+      " Vedic / Puranic, not \u1E5Ag Veda Samhita. 108 = 27 nakshatras \xD7 4 p\u0101das (or 12 \xD7 9) \u2014 a later sacred number, not an \u1E5Ag Vedic constant. The \u1E5Ag Vedic set is 7 (metres/horses), 12, 27/28, 360, 720."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(SrcList, { items: [
+      ["\u1E5Ag Veda 1.164 (Griffith, sacred-texts)", "https://www.sacred-texts.com/hin/rigveda/rv01164.htm"],
+      ["\u1E5Ag Veda 10.72 Aditi (Griffith)", "https://www.sacred-texts.com/hin/rigveda/rv10072.htm"],
+      ["\u1E5Ag Veda 1.50 S\u016Brya (Griffith)", "https://www.sacred-texts.com/hin/rigveda/rv01050.htm"],
+      ["Nakshatra (Wikipedia)", "https://en.wikipedia.org/wiki/Nakshatra"],
+      ["Yuga Cycle (Wikipedia)", "https://en.wikipedia.org/wiki/Yuga_Cycle"]
+    ] })
+  ] });
 }
 function RevelationEgyptianTab() {
-  return /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, null, /* @__PURE__ */ import_react10.default.createElement("h2", null, "Egyptian \u2014 365, 36 decans, Sothis 1461, 72"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "Egypt gives the 365-day civil year, the 36 decans (\u2192 the zodiac), the Sothic 1461-year Sirius cycle, and 72 conspirators of Set."), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Egyptian astronomy & myth", rows: [
-    ["365-day civil year", "365", "(a)", "the Egyptian civil calendar (12\xD730 + 5 epagomenal); = the 365 angels of the Apocryphon of John."],
-    ["36 decans \xD7 10 = 360 (+5)", "36 / 360", "(a)", "36 ten-day asterisms \u2192 the 36 decans that seed the 12-sign zodiac (3 decans/sign)."],
-    ["Sothic cycle = 1461 years", "1,461", "(a)", "1461 vague civil years (= 1460 Julian): the heliacal rising of Sirius resets the calendar (cf. Apollyon 1461, \xA715c)."],
-    ["72 conspirators of Set", "72", "(c)", "the 72 accomplices in the murder of Osiris \u2192 72 nations/languages (cf. Shem HaMephorash 72, \xA715b.5)."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(SrcList, { items: [["Egyptian calendar (Wikipedia)", "https://en.wikipedia.org/wiki/Egyptian_calendar"], ["Sothic cycle (Wikipedia)", "https://en.wikipedia.org/wiki/Sothic_cycle"], ["Decan (Wikipedia)", "https://en.wikipedia.org/wiki/Decan"]] }));
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h2", { children: "Egyptian \u2014 365, 36 decans, Sothis 1461, 72" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "muted", style: { marginBottom: 10 }, children: "Egypt gives the 365-day civil year, the 36 decans (\u2192 the zodiac), the Sothic 1461-year Sirius cycle, and 72 conspirators of Set." }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Egyptian astronomy & myth", rows: [
+      ["365-day civil year", "365", "(a)", "the Egyptian civil calendar (12\xD730 + 5 epagomenal); = the 365 angels of the Apocryphon of John."],
+      ["36 decans \xD7 10 = 360 (+5)", "36 / 360", "(a)", "36 ten-day asterisms \u2192 the 36 decans that seed the 12-sign zodiac (3 decans/sign)."],
+      ["Sothic cycle = 1461 years", "1,461", "(a)", "1461 vague civil years (= 1460 Julian): the heliacal rising of Sirius resets the calendar (cf. Apollyon 1461, \xA715c)."],
+      ["72 conspirators of Set", "72", "(c)", "the 72 accomplices in the murder of Osiris \u2192 72 nations/languages (cf. Shem HaMephorash 72, \xA715b.5)."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(SrcList, { items: [["Egyptian calendar (Wikipedia)", "https://en.wikipedia.org/wiki/Egyptian_calendar"], ["Sothic cycle (Wikipedia)", "https://en.wikipedia.org/wiki/Sothic_cycle"], ["Decan (Wikipedia)", "https://en.wikipedia.org/wiki/Decan"]] })
+  ] });
 }
 function RevelationPersianTab() {
   const asrc = [
@@ -27796,27 +31504,56 @@ function RevelationPersianTab() {
     ["Gaffarel \u2014 EEBO-TCP transcription (Univ. Michigan, CC0)", "https://quod.lib.umich.edu/e/eebo2/A85346.0001.001"],
     ["Gaffarel \u2014 folding plates (Science History Institute)", "https://digital.sciencehistory.org/works/fpj6eec"]
   ];
-  return /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, null, /* @__PURE__ */ import_react10.default.createElement("h2", null, "Persian / Avestan \u2014 7 Amesha Spentas, 16 lands, 72 Yasna chapters"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The ", /* @__PURE__ */ import_react10.default.createElement("i", null, "Avesta"), " (the Zoroastrian scripture, Gathas c. 1000 BCE; Young Avestan and Vendidad later) is the Indo-Iranian sibling of the \u1E5Ag Veda and carries the constants in its own frame: the ", /* @__PURE__ */ import_react10.default.createElement("b", null, "7 Amesha Spentas"), ", ", /* @__PURE__ */ import_react10.default.createElement("b", null, "16 sacred lands"), ", ", /* @__PURE__ */ import_react10.default.createElement("b", null, "21 Yashts"), ", ", /* @__PURE__ */ import_react10.default.createElement("b", null, "72 Yasna chapters"), ", and the striking ", /* @__PURE__ */ import_react10.default.createElement("b", null, "99,999 diseases"), ". Mined from the SBE translation (source copies in ", /* @__PURE__ */ import_react10.default.createElement("code", null, "library/avesta/"), ")."), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "The 7 Amesha Spentas \u2014 the Bountiful Immortals", rows: [
-    ["7 Amesha Spentas (Vohu Manah, Asha Vahishta, Khshathra Vairya, Spenta Armaiti, Haurvatat, Ameterat, + Ahura Mazda)", "7", "(c)", "Yasna 28\u201334 (Ahunavaiti Gatha): 6 emanations + the Lord = 7; the 7 correspond to the 7 creations (sky, water, earth, plants, animals, metals, fire). The closest Avestan parallel to the 7 doubles."],
-    ['"the seven, who are the lords" / "the seven that have the best rule"', "7", "(a)", "Yasna 39.3 \u2014 the 7 named lords of creation."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Vendidad \u2014 16 lands, Yima, 99,999 diseases", rows: [
-    ["16 sacred lands created by Ahura Mazda (Vendidad 1)", "16", "(a)", "vd1: 16 ideal lands, each with a paired evil-counterpart. 16 = 4\xB2 (cf. the 4 mothers\xD74, or the doubled 8)."],
-    ["Yima's Vara \u2014 a three-storied enclosure for the seed", "3 / 9", "(c)", "vd2: Yima/Khshaeta builds a refuge against the winter. The three rows (three, six, ninefold) echo 3\xD73."],
-    ["99,999 diseases (Vendidad 22)", "99,999", "(c)", "vd22: 99,999 diseases and 99,999 cures \u2014 the most striking Avestan large number; cf. the limitless legions of Revelation."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Structure \u2014 Yasna, Yashts", rows: [
-    ["Yasna = 72 chapters", "72", "(a)", "the Yasna liturgy (including the Gathas) runs to 72 chapters = the same 72 as the nations/languages/angels."],
-    ["21 Yashts (hymns to the yazatas)", "21", "(a)", "21 = C(7,2) = the seals/trumpets/bowls (\xA715c.3); the Yashts honor the 21 divine entities."],
-    ['72+5 = 77 "good names" of Ahura Mazda (tradition)', "77", "(c)", "later tradition: 72 + 5 = 77 names; 72 recurs."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Cosmology", rows: [
-    ["12 \xD7 30 = 360\xB0 zodiac (received from Babylonia)", "12 / 360", "(a)", "the 12-sign frame shared across Persia, India, Greece, and the Hebrew SY."],
-    ["Haoma = the plant of immortality", "\u2014", "(c)", "the Indo-Iranian soma/haoma \u2014 the Vedic Soma (RV 9) and the Avestan Haoma are the same rite."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Gaffarel (1629/1650) \u2014 the Persian talismanic reading of the stars", rows: [
-    ["Stars ranged in the heavens in the form of Hebrew letters", "22", "(b)", 'Part IV ch. XIII: the "celestiall writing" is in Hebrew characters (not Arabick/Samaritan); the heavens are a book (Isa 34:4, "rolled together\u2026 Because they are a Booke") = the same sky-as-\u03B2\u03B9\u03B2\u03BB\u03AF\u03BF\u03BD as Rev 6:14. Source text in library/gaffarel/.'],
-    ["Reading instrument = the 3 Cabala: Gematria / Notaricon / Temurah", "3", "(c)", "to read the celestial word: Gematria (number\u2194event), Notaricon (letter=initial of a word), Temurah (anagram). The same operations the Reader uses to turn a sky-config into a name+number (\xA76, \xA715b)."],
-    ["Rabbi Chomer \u2014 nations read in the stars by Gematria", "\u2014", "(u)", '\u05D7\u05E8\u05D1/Charab "desolate" over Greece = \u05D9\u05D5\u05DF/Javan (Gen 10); \u05E0\u05EA\u05E7/Nataq=505 = the years of the Jewish kingdom (Saul\u2192Zedekiah); \u05DB\u05E2\u05D4/Caah=1025 over Turkey. The celestial word names the nation and its fate by number \u2014 attested tradition, not reproduced here.'],
-    ["A new star rewrites the word (AKE\u2192LAKE\u2192ARKE)", "\u2014", "(c)", "a new star/comet adds a letter and changes the reading \u2014 the dynamical core the Lector Caeli replaces with celestial mechanics: a planet entering a sign rewrites the sky-sentence."],
-    ["Persian talismanic sculpture (Part II) \u2014 images under constellations", "\u2014", "(c)", `figures cast "under certain Constellations" = the operative counterpart; Part IV reads the configuration itself as the Hebrew letter-word. Persian (Part II) + Hebrew (Part IV) converge with Rev's sealed-book sky (\xA715c.1, \xA715c.10).`]
-  ] }), /* @__PURE__ */ import_react10.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react10.default.createElement("b", null, "Boundary respected:"), " the Gathas (Yasna 28\u201354, the oldest stratum, attributed to Zarathushtra) are kept distinct from the later Young Avestan / Vendidad material. The 7 Amesha Spentas are Gathic; the 99,999 and the 16 lands are Vendidad (later)."), /* @__PURE__ */ import_react10.default.createElement(SrcList, { items: asrc }));
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h2", { children: "Persian / Avestan \u2014 7 Amesha Spentas, 16 lands, 72 Yasna chapters" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "The ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "Avesta" }),
+      " (the Zoroastrian scripture, Gathas c. 1000 BCE; Young Avestan and Vendidad later) is the Indo-Iranian sibling of the \u1E5Ag Veda and carries the constants in its own frame: the ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "7 Amesha Spentas" }),
+      ", ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "16 sacred lands" }),
+      ", ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "21 Yashts" }),
+      ", ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "72 Yasna chapters" }),
+      ", and the striking ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "99,999 diseases" }),
+      ". Mined from the SBE translation (source copies in ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("code", { children: "library/avesta/" }),
+      ")."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "The 7 Amesha Spentas \u2014 the Bountiful Immortals", rows: [
+      ["7 Amesha Spentas (Vohu Manah, Asha Vahishta, Khshathra Vairya, Spenta Armaiti, Haurvatat, Ameterat, + Ahura Mazda)", "7", "(c)", "Yasna 28\u201334 (Ahunavaiti Gatha): 6 emanations + the Lord = 7; the 7 correspond to the 7 creations (sky, water, earth, plants, animals, metals, fire). The closest Avestan parallel to the 7 doubles."],
+      ['"the seven, who are the lords" / "the seven that have the best rule"', "7", "(a)", "Yasna 39.3 \u2014 the 7 named lords of creation."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Vendidad \u2014 16 lands, Yima, 99,999 diseases", rows: [
+      ["16 sacred lands created by Ahura Mazda (Vendidad 1)", "16", "(a)", "vd1: 16 ideal lands, each with a paired evil-counterpart. 16 = 4\xB2 (cf. the 4 mothers\xD74, or the doubled 8)."],
+      ["Yima's Vara \u2014 a three-storied enclosure for the seed", "3 / 9", "(c)", "vd2: Yima/Khshaeta builds a refuge against the winter. The three rows (three, six, ninefold) echo 3\xD73."],
+      ["99,999 diseases (Vendidad 22)", "99,999", "(c)", "vd22: 99,999 diseases and 99,999 cures \u2014 the most striking Avestan large number; cf. the limitless legions of Revelation."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Structure \u2014 Yasna, Yashts", rows: [
+      ["Yasna = 72 chapters", "72", "(a)", "the Yasna liturgy (including the Gathas) runs to 72 chapters = the same 72 as the nations/languages/angels."],
+      ["21 Yashts (hymns to the yazatas)", "21", "(a)", "21 = C(7,2) = the seals/trumpets/bowls (\xA715c.3); the Yashts honor the 21 divine entities."],
+      ['72+5 = 77 "good names" of Ahura Mazda (tradition)', "77", "(c)", "later tradition: 72 + 5 = 77 names; 72 recurs."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Cosmology", rows: [
+      ["12 \xD7 30 = 360\xB0 zodiac (received from Babylonia)", "12 / 360", "(a)", "the 12-sign frame shared across Persia, India, Greece, and the Hebrew SY."],
+      ["Haoma = the plant of immortality", "\u2014", "(c)", "the Indo-Iranian soma/haoma \u2014 the Vedic Soma (RV 9) and the Avestan Haoma are the same rite."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Gaffarel (1629/1650) \u2014 the Persian talismanic reading of the stars", rows: [
+      ["Stars ranged in the heavens in the form of Hebrew letters", "22", "(b)", 'Part IV ch. XIII: the "celestiall writing" is in Hebrew characters (not Arabick/Samaritan); the heavens are a book (Isa 34:4, "rolled together\u2026 Because they are a Booke") = the same sky-as-\u03B2\u03B9\u03B2\u03BB\u03AF\u03BF\u03BD as Rev 6:14. Source text in library/gaffarel/.'],
+      ["Reading instrument = the 3 Cabala: Gematria / Notaricon / Temurah", "3", "(c)", "to read the celestial word: Gematria (number\u2194event), Notaricon (letter=initial of a word), Temurah (anagram). The same operations the Reader uses to turn a sky-config into a name+number (\xA76, \xA715b)."],
+      ["Rabbi Chomer \u2014 nations read in the stars by Gematria", "\u2014", "(u)", '\u05D7\u05E8\u05D1/Charab "desolate" over Greece = \u05D9\u05D5\u05DF/Javan (Gen 10); \u05E0\u05EA\u05E7/Nataq=505 = the years of the Jewish kingdom (Saul\u2192Zedekiah); \u05DB\u05E2\u05D4/Caah=1025 over Turkey. The celestial word names the nation and its fate by number \u2014 attested tradition, not reproduced here.'],
+      ["A new star rewrites the word (AKE\u2192LAKE\u2192ARKE)", "\u2014", "(c)", "a new star/comet adds a letter and changes the reading \u2014 the dynamical core the Lector Caeli replaces with celestial mechanics: a planet entering a sign rewrites the sky-sentence."],
+      ["Persian talismanic sculpture (Part II) \u2014 images under constellations", "\u2014", "(c)", `figures cast "under certain Constellations" = the operative counterpart; Part IV reads the configuration itself as the Hebrew letter-word. Persian (Part II) + Hebrew (Part IV) converge with Rev's sealed-book sky (\xA715c.1, \xA715c.10).`]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "note", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "Boundary respected:" }),
+      " the Gathas (Yasna 28\u201354, the oldest stratum, attributed to Zarathushtra) are kept distinct from the later Young Avestan / Vendidad material. The 7 Amesha Spentas are Gathic; the 99,999 and the 16 lands are Vendidad (later)."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(SrcList, { items: asrc })
+  ] });
 }
 function RevelationSufiTab() {
   const sufiSrc = [
@@ -27834,45 +31571,70 @@ function RevelationSufiTab() {
     ["Hadith 72 branches (Bukhari 9)", "https://sunnah.com/bukhari:9"],
     ["Hadith 70,000 tawakkul (Bukhari 6233)", "https://livingnoor.com/quran/hadiths/sahih-al-bukhari/6233"]
   ];
-  return /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, null, /* @__PURE__ */ import_react10.default.createElement("h2", null, "Islamic / Sufi \u2014 28 letters = 28 mansions, Hurufi 360 = 6\xD7(28+32)"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The Arabic letter-science ('ilm al-huruf) is the closest non-Hebrew sibling of the Sefer Yetzirah: ", /* @__PURE__ */ import_react10.default.createElement("b", null, "28 letters = 28 lunar mansions"), " recurs in Ibn al-Arabi, the Ikhwan al-Safa, the received ", /* @__PURE__ */ import_react10.default.createElement("i", null, "Shams al-ma'arif"), ", and the Hurufiyya. The Hurufi equation ", /* @__PURE__ */ import_react10.default.createElement("b", null, "360\xB0 = 6 \xD7 (28 + 32)"), " directly welds the astronomical circle to the Arabic/Persian letter-counts. The Quran itself carries the constants in its own text (Pickthall translation, source copies in ", /* @__PURE__ */ import_react10.default.createElement("code", null, "library/quran/"), ")."), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "The Quran \u2014 in the text (Pickthall)", rows: [
-    ['"seven heavens, and of the earth the like thereof"', "7 + 7", "(c)", '65:12 \u2014 7 heavens + 7 earths; cf. 67:3 "seven heavens in harmony (tib\u0101qan)", 71:15.'],
-    ['"the number of the months with Allah is twelve months"', "12", "(c)", "9:36 \u2014 12 lunar months, 4 sacred; 9:37 condemns nas\u012B\u02BE (intercalation) \u2192 the strict lunar calendar."],
-    ['"for the moon We have appointed mansions (man\u0101zil)"', "28", "(a)/(c)", '36:39 \u2014 the WORD man\u0101zil is in the text; the COUNT 28 is from Arabic astronomy, not the verse. (53:1 "an-najm" = Pleiades/Venus in tafsir, NOT the 28 mansions.)'],
-    ['"Above it are nineteen"', "19", "(b)", "74:30 \u2014 19 keepers over Hell; the only explicit 19 in the Quran (Islamic-distinctive, cf. Metonic 19 elsewhere)."],
-    ['"seven of the oft-repeated (al-math\u0101n\u012B) and the great Quran"', "7", "(c)", `15:87 \u2014 "seven oft-repeated"; identification with al-F\u0101tiha's 7 verses is traditional tafsir, not the text.`],
-    ['"the sun and the moon [move] by calculation (\u1E25isb\u0101n)"', "\u2014", "(a)", '55:5; cf. 6:96, 10:5 \u2014 reckoning; 36:40 "each floats in an orbit."']
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Not in the Quran text (flagged)", rows: [
-    ["360 \u2014 NOT a Quran verse", "\u2014", "(u)", "360 appears only in tafsir (al-Tabari: 360 sunrises) and hadith (360 joints/idols); the lunar year is 354. A Late-Antique symbolic number absorbed into cosmology."],
-    ["99 Names \u2014 hadith, not text", "99", "(b)/(u)", "Sahih Muslim 2675 states only the NUMBER 99; the LISTS (Tirmidhi 3507 etc.) are graded gharib/mudraj and differ between collections."],
-    ["73 sects \u2014 hadith", "73", "(b)", 'Abu Dawud 4596 (Hasan Sahih) = "73 sects"; the "72 in Hell, 1 saved" addition (4597) is weak/fabricated (al-Shawkani: fabrication). 72\u226073 \u2014 do not conflate.'],
-    ["Bismillah abjad = 786", "786", "(c)", '\u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646 \u0627\u0644\u0631\u062D\u064A\u0645 = 2+60+40+66+329+289 = 786 (19 letters). Verifiable arithmetic; the use of "786" for Bismillah is tradition, not Quran text.'],
-    ["114 suras / 6236 verses", "114 / 6236", "(c)", "structural only, NOT cosmic."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Ibn al-Arabi (1165\u20131240) \u2014 Futuhat al-Makkiyya", rows: [
-    ["28 Arabic letters = 28 lunar mansions", "28", "(c)", 'each letter \u2194 a mansion \u2194 a lunar phase (Futuhat ch. 198, Vol II 390\u2013478; not "ch. 2" \u2014 the locus is ch. 198).'],
-    ["29th letter (lam-alif) = the qutb", "29", "(c)", '"If not for that twenty-ninth, the 28 would not be stabilized" \u2014 the cosmic pole.'],
-    ["14 luminous (undotted) \u2194 14 waxing; 14 dark \u2194 14 waning", "14+14", "(c)", "14th letter ra (= full moon / badr); 28th (waw) = darkest phase."],
-    ["7 heavens; Sun at the heart of the 7", "7", "(a)/(c)", "Futuhat Ch. 371; earth spherical and rotating."],
-    ["114 abode-chapters \u2194 114 Quran suras", "114", "(c)", "114 = 6\xD719; the Futuhat mirrors the Quran in reverse."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Ikhwan al-Safa (Brethren of Purity, 10th c. Basra)", rows: [
-    ["7 planets; 12 signs = 12 world-ages", "7 / 12", "(a)", "12 ages of decreasing length; Adam created in the 7th age (Virgo)."],
-    ["28 lunar mansions = 28 vertebrae of the spine", "28", "(a)/(c)", 'Epistle 22: "every organ agrees in number with some category of existent beings."'],
-    ["360 veins in the body \u2194 360\xB0 of the zodiac", "360", "(c)", "alongside 12 orifices and 28 vertebrae (Epistle 22)."],
-    ["36,000-year precession; 360,000-year great cycle", "36k / 360k", "(b)", 'Epistle 36: equinoctial precession \u2192 geological interchange; "Annus Platonicus."']
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "al-Buni (d. ca. 1225) \u2014 received Shams al-ma'arif al-kubra", rows: [
-    ["28 mansions \u2194 28 letters (14 undotted / 14 dotted)", "28", "(c)", "14 luminous \u2192 14 visible mansions (benefic); 14 dark \u2192 14 hidden (malefic)."],
-    ["abjad 1\u20261000 builds magic squares (awfaq)", "\u2014", "(c)", "squares tied to divine names, planets, intentions."],
-    ['12 signs \u2194 12 letters of "La ilaha illa Allah"', "12", "(c)", "integrating mansions, 7 planets, and divine unity."],
-    ["AUTHORSHIP CAVEAT", "\u2014", "(u)", 'the famous Shams al-kubra is a pseudepigraphic Ottoman compilation (Gardiner/Coulon), not by al-Buni himself. Cite as "received Shams al-kubra."']
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Hurufiyya \u2014 Fazlallah Astarabadi (d. 1394)", rows: [
-    ["28 letters = 28 mansions = 28 lines on the face", "28", "(c)", "the lettrist incarnation: letters/mansions substantively present in the human form."],
-    ["360\xB0 = 6 \xD7 (28 + 32)", "360", "(c)", "six directions \xD7 (28 Arabic + 32 Persian letters) \u2014 fuses the astronomical circle to the letter-counts (Usluer 2024)."],
-    ["32 Persian letters = 32 pre-eternal words taught to Adam", "32", "(c)", "28 Arabic (to Muhammad) vs 32 Persian (to Adam); 32 human teeth confirm physiologically."],
-    ["khatt al-istiw\u0101 divides the zodiac into 14 + 14", "14+14", "(c)", "14 maternal/visible + 14 paternal/hidden."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "The 72 / 73 / 70,000 hadiths (do not conflate)", rows: [
-    ["73 sects (al-iftiraq)", "73", "(b)", 'core = Hasan/Sahih; the "72 in Hell, 1 saved" addition is only in weaker chains.'],
-    ["72 branches of faith", "72", "(c)", 'scholastic derivation from the sahih "over seventy branches" hadith \u2014 the exact 72 is later, not in the sahih text.'],
-    ["70,000 enter Paradise without account", "70,000", "(b)", "a separate tawakkul hadith (Bukhari); not the sects, not the branches."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react10.default.createElement("b", null, "Not found in pre-1500 Sufi sources:"), " 19, 22, 37, 144, 144000, 1260, 42 months, and a direct 365 \u2014 these are Hebrew/Sefer Yetzirah or Revelation constants, absent from the Arabic-Islamic corpus. Their absence is itself a finding."), /* @__PURE__ */ import_react10.default.createElement(SrcList, { items: sufiSrc }));
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h2", { children: "Islamic / Sufi \u2014 28 letters = 28 mansions, Hurufi 360 = 6\xD7(28+32)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "The Arabic letter-science ('ilm al-huruf) is the closest non-Hebrew sibling of the Sefer Yetzirah: ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "28 letters = 28 lunar mansions" }),
+      " recurs in Ibn al-Arabi, the Ikhwan al-Safa, the received ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "Shams al-ma'arif" }),
+      ", and the Hurufiyya. The Hurufi equation ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "360\xB0 = 6 \xD7 (28 + 32)" }),
+      " directly welds the astronomical circle to the Arabic/Persian letter-counts. The Quran itself carries the constants in its own text (Pickthall translation, source copies in ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("code", { children: "library/quran/" }),
+      ")."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "The Quran \u2014 in the text (Pickthall)", rows: [
+      ['"seven heavens, and of the earth the like thereof"', "7 + 7", "(c)", '65:12 \u2014 7 heavens + 7 earths; cf. 67:3 "seven heavens in harmony (tib\u0101qan)", 71:15.'],
+      ['"the number of the months with Allah is twelve months"', "12", "(c)", "9:36 \u2014 12 lunar months, 4 sacred; 9:37 condemns nas\u012B\u02BE (intercalation) \u2192 the strict lunar calendar."],
+      ['"for the moon We have appointed mansions (man\u0101zil)"', "28", "(a)/(c)", '36:39 \u2014 the WORD man\u0101zil is in the text; the COUNT 28 is from Arabic astronomy, not the verse. (53:1 "an-najm" = Pleiades/Venus in tafsir, NOT the 28 mansions.)'],
+      ['"Above it are nineteen"', "19", "(b)", "74:30 \u2014 19 keepers over Hell; the only explicit 19 in the Quran (Islamic-distinctive, cf. Metonic 19 elsewhere)."],
+      ['"seven of the oft-repeated (al-math\u0101n\u012B) and the great Quran"', "7", "(c)", `15:87 \u2014 "seven oft-repeated"; identification with al-F\u0101tiha's 7 verses is traditional tafsir, not the text.`],
+      ['"the sun and the moon [move] by calculation (\u1E25isb\u0101n)"', "\u2014", "(a)", '55:5; cf. 6:96, 10:5 \u2014 reckoning; 36:40 "each floats in an orbit."']
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Not in the Quran text (flagged)", rows: [
+      ["360 \u2014 NOT a Quran verse", "\u2014", "(u)", "360 appears only in tafsir (al-Tabari: 360 sunrises) and hadith (360 joints/idols); the lunar year is 354. A Late-Antique symbolic number absorbed into cosmology."],
+      ["99 Names \u2014 hadith, not text", "99", "(b)/(u)", "Sahih Muslim 2675 states only the NUMBER 99; the LISTS (Tirmidhi 3507 etc.) are graded gharib/mudraj and differ between collections."],
+      ["73 sects \u2014 hadith", "73", "(b)", 'Abu Dawud 4596 (Hasan Sahih) = "73 sects"; the "72 in Hell, 1 saved" addition (4597) is weak/fabricated (al-Shawkani: fabrication). 72\u226073 \u2014 do not conflate.'],
+      ["Bismillah abjad = 786", "786", "(c)", '\u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646 \u0627\u0644\u0631\u062D\u064A\u0645 = 2+60+40+66+329+289 = 786 (19 letters). Verifiable arithmetic; the use of "786" for Bismillah is tradition, not Quran text.'],
+      ["114 suras / 6236 verses", "114 / 6236", "(c)", "structural only, NOT cosmic."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Ibn al-Arabi (1165\u20131240) \u2014 Futuhat al-Makkiyya", rows: [
+      ["28 Arabic letters = 28 lunar mansions", "28", "(c)", 'each letter \u2194 a mansion \u2194 a lunar phase (Futuhat ch. 198, Vol II 390\u2013478; not "ch. 2" \u2014 the locus is ch. 198).'],
+      ["29th letter (lam-alif) = the qutb", "29", "(c)", '"If not for that twenty-ninth, the 28 would not be stabilized" \u2014 the cosmic pole.'],
+      ["14 luminous (undotted) \u2194 14 waxing; 14 dark \u2194 14 waning", "14+14", "(c)", "14th letter ra (= full moon / badr); 28th (waw) = darkest phase."],
+      ["7 heavens; Sun at the heart of the 7", "7", "(a)/(c)", "Futuhat Ch. 371; earth spherical and rotating."],
+      ["114 abode-chapters \u2194 114 Quran suras", "114", "(c)", "114 = 6\xD719; the Futuhat mirrors the Quran in reverse."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Ikhwan al-Safa (Brethren of Purity, 10th c. Basra)", rows: [
+      ["7 planets; 12 signs = 12 world-ages", "7 / 12", "(a)", "12 ages of decreasing length; Adam created in the 7th age (Virgo)."],
+      ["28 lunar mansions = 28 vertebrae of the spine", "28", "(a)/(c)", 'Epistle 22: "every organ agrees in number with some category of existent beings."'],
+      ["360 veins in the body \u2194 360\xB0 of the zodiac", "360", "(c)", "alongside 12 orifices and 28 vertebrae (Epistle 22)."],
+      ["36,000-year precession; 360,000-year great cycle", "36k / 360k", "(b)", 'Epistle 36: equinoctial precession \u2192 geological interchange; "Annus Platonicus."']
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "al-Buni (d. ca. 1225) \u2014 received Shams al-ma'arif al-kubra", rows: [
+      ["28 mansions \u2194 28 letters (14 undotted / 14 dotted)", "28", "(c)", "14 luminous \u2192 14 visible mansions (benefic); 14 dark \u2192 14 hidden (malefic)."],
+      ["abjad 1\u20261000 builds magic squares (awfaq)", "\u2014", "(c)", "squares tied to divine names, planets, intentions."],
+      ['12 signs \u2194 12 letters of "La ilaha illa Allah"', "12", "(c)", "integrating mansions, 7 planets, and divine unity."],
+      ["AUTHORSHIP CAVEAT", "\u2014", "(u)", 'the famous Shams al-kubra is a pseudepigraphic Ottoman compilation (Gardiner/Coulon), not by al-Buni himself. Cite as "received Shams al-kubra."']
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Hurufiyya \u2014 Fazlallah Astarabadi (d. 1394)", rows: [
+      ["28 letters = 28 mansions = 28 lines on the face", "28", "(c)", "the lettrist incarnation: letters/mansions substantively present in the human form."],
+      ["360\xB0 = 6 \xD7 (28 + 32)", "360", "(c)", "six directions \xD7 (28 Arabic + 32 Persian letters) \u2014 fuses the astronomical circle to the letter-counts (Usluer 2024)."],
+      ["32 Persian letters = 32 pre-eternal words taught to Adam", "32", "(c)", "28 Arabic (to Muhammad) vs 32 Persian (to Adam); 32 human teeth confirm physiologically."],
+      ["khatt al-istiw\u0101 divides the zodiac into 14 + 14", "14+14", "(c)", "14 maternal/visible + 14 paternal/hidden."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "The 72 / 73 / 70,000 hadiths (do not conflate)", rows: [
+      ["73 sects (al-iftiraq)", "73", "(b)", 'core = Hasan/Sahih; the "72 in Hell, 1 saved" addition is only in weaker chains.'],
+      ["72 branches of faith", "72", "(c)", 'scholastic derivation from the sahih "over seventy branches" hadith \u2014 the exact 72 is later, not in the sahih text.'],
+      ["70,000 enter Paradise without account", "70,000", "(b)", "a separate tawakkul hadith (Bukhari); not the sects, not the branches."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "note", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "Not found in pre-1500 Sufi sources:" }),
+      " 19, 22, 37, 144, 144000, 1260, 42 months, and a direct 365 \u2014 these are Hebrew/Sefer Yetzirah or Revelation constants, absent from the Arabic-Islamic corpus. Their absence is itself a finding."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(SrcList, { items: sufiSrc })
+  ] });
 }
 function RevelationGnosticTab() {
   const gsrc = [
@@ -27883,72 +31645,198 @@ function RevelationGnosticTab() {
     ["Concept of Our Great Power (text)", "http://earlychristianwritings.com/text/greatpower.html"],
     ["Ple\u0161e, Fate/Astrology in Gnosticism (2007)", "https://www.scribd.com/document/382360129/Fate-Providence-and-Astrology-in-Gnosticism-1-The-Apocryphon-of-John-Zlatko-Plese-pdf"]
   ];
-  return /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, null, /* @__PURE__ */ import_react10.default.createElement("h2", null, "Gnostic / Nag Hammadi \u2014 365 angels, 72 languages, the 12\u219272\u2192360 cascade"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The Nag Hammadi library (Coptic Gnostic codices, copies of 1st\u20133rd-c. originals) carries the cleanest astronomical overlaps: ", /* @__PURE__ */ import_react10.default.createElement("b", null, "365 angels"), " (Apocryphon of John) = the solar year; ", /* @__PURE__ */ import_react10.default.createElement("b", null, "72 gods = 72 languages"), " (Origin of the World); the ", /* @__PURE__ */ import_react10.default.createElement("b", null, "12 \u2192 72 \u2192 360"), " cascade (Eugnostos) mirroring 12 months / 360 days. The Apocalypse of Adam supplies the eschatological register (12 / 13 / 14 kingdoms)."), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Apocalypse of Adam (NHC V,5) \u2014 eschatological register", rows: [
-    ['Adam reveals to Seth "in the 700th year"', "700", "(c)", "testamentary frame echoing Genesis 5; no explicit star/planet references."],
-    ["seed of Ham & Japheth establish 12 kingdoms", "12", "(b)", "12 false mythic origins."],
-    ["13 kingdoms each give a false oracle of the Illuminator's birth", "13", "(c)", "explicitly numbered 1st\u201313th; each gives a false cosmogony (a spirit, a prophet, a virgin womb, a drop from heaven, a cloud, the nine Muses, two illuminators\u2026)."],
-    ['13th kingdom: "every birth of their ruler is a word"', "13 / word", "(b)/(c)", `the 13th oracle \u2014 the messiah's birth <b>is</b> a word, and "this word received a mandate\u2026 glory and power." <b>Not</b> "born of a word alone" (a common misreading) \u2014 the text says the ruler's every birth <i>is</i> a word. The closest the NH comes to the creator-word / Sefer Yetzirah letter-theology.`],
-    ['14th voice \u2014 "the generation without a king"', "14", "(c)", 'the kingless generation alone says the truth: "God chose him from all the aeons." 13 false + 1 true = 14 voices (structural 14, not Matthew 1:17).'],
-    ['Illuminator "will for a third time pass by"', "3", "(b)", "eschatological prophecy of the Ph\u014Dt\u0113r."],
-    ["400,000 join the seed of Seth", "400,000", "(b)", "eschatological number."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Apocryphon of John (NHC II,1)", rows: [
-    ["365 angels fashion Adam's body", "365", "(a)", "= days of the solar year \u2014 the single strongest astronomical overlap in NH."],
-    ['7 powers = "the sevenness of the week"', "7", "(a)", "7 planets / 7 weekdays."],
-    ["12 authorities; 7 kings + 5 = 12", "12", "(a)", "12 zodiac / months."],
-    ["4 lights preside over 12 aeons", "4 / 12", "(c)", "4 lights \xD7 3 aeons each."],
-    ["72 pentads underlying the melothesia", "72", "(u)", "Ple\u0161e reconstruction of the Egyptian 72\xD75-day periods; NOT explicit in the text."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "On the Origin of the World (NHC II,5)", rows: [
-    ["7 heavens of chaos", "7", "(a)", "7 planets."],
-    ["12 gods of chaos (the zodiac)", "12", "(a)", '"above the twelve gods of chaos."'],
-    ["64 forms (8 shapes \xD7 4 corners) + 7 archangels + Sabaoth = 72", "64 / 72", "(c)", "the strongest 72 overlap: 72 gods rule the 72 languages of the peoples (cf. Deut 32:8 LXX)."],
-    ["49 demons (7 offspring \xD7 7)", "49", "(c)", "7\xD77."],
-    ['930 years of Adam; luminaries for "signs, seasons, years, months, days"', "930", "(c)", "echoes Genesis 5:5; the luminaries mark time."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Eugnostos the Blessed (NHC III,3 / V,1)", rows: [
-    ["12 \u2192 72 \u2192 360 cascade", "12/72/360", "(c)", "12 powers \u2192 72 powers (12 pairs) \u2192 360 powers (72 \xD7 5); mirrored by 12 months / 360 days."],
-    ["12 aeons \xB7 72 heavens (12\xD76) \xB7 360 firmaments (72\xD75)", "12/72/360", "(c)", "the cleanest numerical cascade in the corpus \u2014 maps directly onto the project."],
-    ["360 days of the year = type of the 360 powers", "360", "(a)", "Egyptian 360-day civil calendar (NOT 365)."],
-    ["8 = the Ogdoad", "8", "(c)", "the Assembly of the Eighth."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "Concept of Our Great Power (NHC VI,4)", rows: [
-    [`120 appears 3\xD7 (age-limit, Noah's preaching, "the perfect number")`, "120", "(c)"],
-    ["final conflagration after 1,460 years", "1,460", "(b)", "Wisse translation (some cite 1,468 \u2014 UNVERIFIED discrepancy)."],
-    ["72 tongues", "72", "(c)"]
-  ] }), /* @__PURE__ */ import_react10.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react10.default.createElement("b", null, "Not found in Nag Hammadi:"), " 144, 144000, 1260, 42 months, 19, 22, 28, 37, 73 \u2014 these belong to Revelation / Hebrew / Sufi, not the Gnostic corpus."), /* @__PURE__ */ import_react10.default.createElement(SrcList, { items: gsrc }));
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h2", { children: "Gnostic / Nag Hammadi \u2014 365 angels, 72 languages, the 12\u219272\u2192360 cascade" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "The Nag Hammadi library (Coptic Gnostic codices, copies of 1st\u20133rd-c. originals) carries the cleanest astronomical overlaps: ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "365 angels" }),
+      " (Apocryphon of John) = the solar year; ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "72 gods = 72 languages" }),
+      " (Origin of the World); the ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "12 \u2192 72 \u2192 360" }),
+      " cascade (Eugnostos) mirroring 12 months / 360 days. The Apocalypse of Adam supplies the eschatological register (12 / 13 / 14 kingdoms)."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Apocalypse of Adam (NHC V,5) \u2014 eschatological register", rows: [
+      ['Adam reveals to Seth "in the 700th year"', "700", "(c)", "testamentary frame echoing Genesis 5; no explicit star/planet references."],
+      ["seed of Ham & Japheth establish 12 kingdoms", "12", "(b)", "12 false mythic origins."],
+      ["13 kingdoms each give a false oracle of the Illuminator's birth", "13", "(c)", "explicitly numbered 1st\u201313th; each gives a false cosmogony (a spirit, a prophet, a virgin womb, a drop from heaven, a cloud, the nine Muses, two illuminators\u2026)."],
+      ['13th kingdom: "every birth of their ruler is a word"', "13 / word", "(b)/(c)", `the 13th oracle \u2014 the messiah's birth <b>is</b> a word, and "this word received a mandate\u2026 glory and power." <b>Not</b> "born of a word alone" (a common misreading) \u2014 the text says the ruler's every birth <i>is</i> a word. The closest the NH comes to the creator-word / Sefer Yetzirah letter-theology.`],
+      ['14th voice \u2014 "the generation without a king"', "14", "(c)", 'the kingless generation alone says the truth: "God chose him from all the aeons." 13 false + 1 true = 14 voices (structural 14, not Matthew 1:17).'],
+      ['Illuminator "will for a third time pass by"', "3", "(b)", "eschatological prophecy of the Ph\u014Dt\u0113r."],
+      ["400,000 join the seed of Seth", "400,000", "(b)", "eschatological number."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Apocryphon of John (NHC II,1)", rows: [
+      ["365 angels fashion Adam's body", "365", "(a)", "= days of the solar year \u2014 the single strongest astronomical overlap in NH."],
+      ['7 powers = "the sevenness of the week"', "7", "(a)", "7 planets / 7 weekdays."],
+      ["12 authorities; 7 kings + 5 = 12", "12", "(a)", "12 zodiac / months."],
+      ["4 lights preside over 12 aeons", "4 / 12", "(c)", "4 lights \xD7 3 aeons each."],
+      ["72 pentads underlying the melothesia", "72", "(u)", "Ple\u0161e reconstruction of the Egyptian 72\xD75-day periods; NOT explicit in the text."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "On the Origin of the World (NHC II,5)", rows: [
+      ["7 heavens of chaos", "7", "(a)", "7 planets."],
+      ["12 gods of chaos (the zodiac)", "12", "(a)", '"above the twelve gods of chaos."'],
+      ["64 forms (8 shapes \xD7 4 corners) + 7 archangels + Sabaoth = 72", "64 / 72", "(c)", "the strongest 72 overlap: 72 gods rule the 72 languages of the peoples (cf. Deut 32:8 LXX)."],
+      ["49 demons (7 offspring \xD7 7)", "49", "(c)", "7\xD77."],
+      ['930 years of Adam; luminaries for "signs, seasons, years, months, days"', "930", "(c)", "echoes Genesis 5:5; the luminaries mark time."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Eugnostos the Blessed (NHC III,3 / V,1)", rows: [
+      ["12 \u2192 72 \u2192 360 cascade", "12/72/360", "(c)", "12 powers \u2192 72 powers (12 pairs) \u2192 360 powers (72 \xD7 5); mirrored by 12 months / 360 days."],
+      ["12 aeons \xB7 72 heavens (12\xD76) \xB7 360 firmaments (72\xD75)", "12/72/360", "(c)", "the cleanest numerical cascade in the corpus \u2014 maps directly onto the project."],
+      ["360 days of the year = type of the 360 powers", "360", "(a)", "Egyptian 360-day civil calendar (NOT 365)."],
+      ["8 = the Ogdoad", "8", "(c)", "the Assembly of the Eighth."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "Concept of Our Great Power (NHC VI,4)", rows: [
+      [`120 appears 3\xD7 (age-limit, Noah's preaching, "the perfect number")`, "120", "(c)"],
+      ["final conflagration after 1,460 years", "1,460", "(b)", "Wisse translation (some cite 1,468 \u2014 UNVERIFIED discrepancy)."],
+      ["72 tongues", "72", "(c)"]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "note", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "Not found in Nag Hammadi:" }),
+      " 144, 144000, 1260, 42 months, 19, 22, 28, 37, 73 \u2014 these belong to Revelation / Hebrew / Sufi, not the Gnostic corpus."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(SrcList, { items: gsrc })
+  ] });
 }
 function RevelationRazielTab() {
   const rsrc = [
     ["Sefer Raziel HaMalakh \u2014 Spanish ed. (322pp, source PDF)", "pdf/razielbook.pdf"],
     ["Sefer Raziel HaMalakh \u2014 Hebrew ed. (90pp, source PDF)", "pdf/raziel-hebrew.pdf"]
   ];
-  return /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, null, /* @__PURE__ */ import_react10.default.createElement("h2", null, "Sefer Raziel HaMalakh \u2014 the indisputable findings (\xA79.6)"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "The ", /* @__PURE__ */ import_react10.default.createElement("i", null, "Sefer Raziel HaMalakh"), " (Book of the Angel Raziel) is the older sibling of the ", /* @__PURE__ */ import_react10.default.createElement("i", null, "Sefer Yetzirah"), " in this register: a late-antique / early-medieval manual of letter-astronomy that tells the reader to ", /* @__PURE__ */ import_react10.default.createElement("b", null, "compute the planets and the fixed zodiacal signs to read the generations"), ". Mined 2026-08-10 from the two source PDFs in ", /* @__PURE__ */ import_react10.default.createElement("code", null, "pdf/"), " \u2014 the Spanish ", /* @__PURE__ */ import_react10.default.createElement("i", null, "Sepher Raziel Hamelach"), " (322pp, clean text) and the Hebrew edition (90pp, OCR-garbled but cross-confirming). Page refs = Spanish PDF. Only findings verified against the text are listed; loose coincidences are flagged at the end."), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "1 \xB7 Alphabet \u2194 astronomy (the core thesis \u2014 strongest validation)", rows: [
-    ["22-letter gematria explicit, \u05D0=1 \u2026 \u05EA=400, NO 500\u2013900 finals", "22", "(a)", 'p.95: "Aleph es 1, Beth es 2 \u2026 Qoph 100, Resh 200, Shin 300, Tau 400." = the SAME ancient system this app uses (not Mispar Gadol).'],
-    ["Triangular numbers T(2..9) by letter", "T(n)", "(a)", "p.95: \u05D0\u05D1\u21923, \u05D2\u21926, \u05D3\u219210, \u05D4\u219215, \u05D5\u219221, \u05D6(Zayin,7)\u219228, \u05D7(8)\u219236, \u05D8(9)\u219245. Confirms T(7)=28 = lunar mansions and gives the full series."],
-    ["12 simples \u2194 12 hours day + 12 night, 12 months, 12 signs, 12 tribes", "12", "(a)", "p.106 \u2014 the explicit 12-simples\u219412-signs mapping this app reads."],
-    ["22 letters in 3 palaces, engraved with each sign", "22 / 3", "(c)", "p.226 \u2014 22\u2194signs via 3 palaces (= the 3 mothers)."],
-    ["3 letters (the mothers) \u2194 12 signs", "3 / 12", "(c)", "p.81."],
-    ["Raziel cites the Sefer Yetzirah directly", "\u2014", "(a)", 'Heb p.24: "as written in Sefer Yetzirah: ten sefirot\u2026" \u2014 Raziel is built on the SY.']
-  ] }), /* @__PURE__ */ import_react10.default.createElement("h3", null, "1b \xB7 The triangular series T(2..9) \u2014 the lunar-mansion key"), /* @__PURE__ */ import_react10.default.createElement("table", { style: { marginBottom: 6 } }, /* @__PURE__ */ import_react10.default.createElement("thead", null, /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("th", null, "Letter"), /* @__PURE__ */ import_react10.default.createElement("th", null, "n"), /* @__PURE__ */ import_react10.default.createElement("th", null, "T(n) = n(n+1)/2"), /* @__PURE__ */ import_react10.default.createElement("th", null, "astronomy"))), /* @__PURE__ */ import_react10.default.createElement("tbody", null, [["\u05D0", 1, 1, "unity"], ["\u05D1", 2, 3, "\u2014"], ["\u05D2", 3, 6, "\u2014"], ["\u05D3", 4, 10, "\u2014"], ["\u05D4", 5, 15, "\u2014"], ["\u05D5", 6, 21, "\u2014"], ["\u05D6", 7, 28, "28 lunar mansions"], ["\u05D7", 8, 36, "\u2014"], ["\u05D8", 9, 45, "\u2014"]].map((r) => /* @__PURE__ */ import_react10.default.createElement("tr", { key: r[0] }, /* @__PURE__ */ import_react10.default.createElement("td", { className: "he", style: { fontSize: "1.2rem", color: "var(--gold)" } }, r[0]), /* @__PURE__ */ import_react10.default.createElement("td", { className: "deg" }, r[1]), /* @__PURE__ */ import_react10.default.createElement("td", { className: "deg", style: { color: "var(--gold)" } }, r[2]), /* @__PURE__ */ import_react10.default.createElement("td", { className: "muted" }, r[3]))))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "note", style: { marginBottom: 12 } }, "Zayin (\u05D6=7) \u2192 T(7)=28 = the 28 lunar mansions (Manzil), tying the 7 doubles to the Moon's path \u2014 the same 28 the Saros mnemonic panel uses."), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "2 \xB7 The 72 / 73 / 28 / 248+365", rows: [
-    ["72 names derived from Genesis 1:1 (Bereshit \u2192 Bohu)", "72", "(a)", "= the Shem HaMephorash triplets (\u05D5\u05D4\u05D5/\u05D9\u05DC\u05D9/\u05E1\u05D9\u05D8\u2026). Variant of the Exodus-14:19-21 extraction this app uses; Raziel is Genesis-centric like the project."],
-    ["72 letters from patriarchs + 12 tribes + Sabbatai + Yesheron", "72", "(c)", "Abraham\u2026Benjamin."],
-    ["73 names of God inscribed on the right", "73", "(c)", 'p.72; Heb p.24 "\u05E2\u05F4\u05D2 \u05E9\u05DE\u05D5\u05EA" = 73 names \u2014 attests 73 (= 2701 = 37\xD773).'],
-    ["28 Malachim per lunar month (Tammuz & Adar = 28)", "28", "(a)", "p.148 \u2014 28 = lunar mansions tied to the Hebrew months."],
-    ["248 mighty [limbs] + 365 degrees = 613", "248+365", "(a)", "the 613 structure (248 positive + 365 negative commandments); 365 = degrees/days."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement(Section, { name: "3 \xB7 Astronomy scaffold", rows: [
-    ["360\xB0 \u2192 12 signs (Aries\u2026Pisces), each 30\xB0", "360 / 12", "(a)", "p.146-147 \u2014 base-60 sexagesimal subdivision chain (60\xD760\xD760\u2026)."],
-    ['"Los signos del zod\xEDaco est\xE1n fijos" \u2014 the signs are FIXED', "fixed", "(a)", "p.115 \u2014 tropical (equinox-anchored), non-precessing grid. Directly supports this app's tropical-vs-sidereal split: the Reader's 12 sectors do NOT rotate with precession (see Sky tab note)."],
-    ["4 tekufot (Nis\xE1n/Tammuz/Tishri/Tevet), each 3 months = 12", "4 / 12", "(a)", "p.114; Heb p.10 lists all 12 signs across 4 tekufot with month-angels. Sun qualities: warm / hot-dry / cold-moist / cold-dry."],
-    ["7 planets in Chaldean order", "7", "(a)", "p.114-115 \u2014 \u05E9\u05D1\u05EA\u05D0\u05D9/\u05E6\u05D3\u05E7/\u05DE\u05D0\u05D3\u05D9\u05DD/\u05E9\u05DE\u05E9/\u05E0\u05D5\u05D2\u05D4/\u05DB\u05D5\u05DB\u05D1/\u05DC\u05D1\u05E0\u05D4."],
-    ["Planet periods: Saturn 30y, Jupiter 12y", "30 / 12", "(a)", "Both match real sidereal periods (29.46 / 11.86 yr). 28-year & 36-year cycles also present (see caveat)."],
-    ["Draqon Dinor (the dragon) surrounding the 7 planets", "Draco", "(a)", "p.146 \u2014 the Draco axis = this app's 3rd mother (Shin \xB7 Cassiopea axis / circumpolar)."],
-    ["Planet-angel assignments", "7", "(c)", "Saturn=Gabriel, Jupiter=Tzedeqial, Mars=Samael, Sun=Raphael, Venus=Anael, Mercury=Beraqial, Moon=Chesedial; Michael = force in the Sun."]
-  ] }), /* @__PURE__ */ import_react10.default.createElement("h3", null, "4 \xB7 Loose \u2014 do not force"), /* @__PURE__ */ import_react10.default.createElement("ul", { className: "muted" }, /* @__PURE__ */ import_react10.default.createElement("li", null, /* @__PURE__ */ import_react10.default.createElement("b", null, "7\xD770 = 490"), " (p.71) \u2248 the 491-year Neptune\u2013Pluto Genesis window. An arithmetic-mnemonic coincidence, ", /* @__PURE__ */ import_react10.default.createElement("b", null, "not"), " a real link \u2014 flagged, not claimed."), /* @__PURE__ */ import_react10.default.createElement("li", null, /* @__PURE__ */ import_react10.default.createElement("b", null, '"23 princes of the signs"'), " (p.147) \u2014 unclear; does not map to any app constant. Left unmapped."), /* @__PURE__ */ import_react10.default.createElement("li", null, /* @__PURE__ */ import_react10.default.createElement("b", null, "The 28-year cycle"), " the Spanish PDF attributes to Venus is likely a garbled tekufat-chamah (the 28-year solar cycle), since real Venus sidereal = 225 days. Needs clean Hebrew verification before any claim.")), /* @__PURE__ */ import_react10.default.createElement("div", { className: "note" }, /* @__PURE__ */ import_react10.default.createElement("b", null, "Why this matters:"), " Raziel independently attests the apparatus this app is built on \u2014 the 22-letter gematria, the triangular-to-28 lunar key, the 12\u2194signs mapping, the fixed tropical zodiac, the 72-from-Genesis, the 7 Chaldean planets, and the Draco axis \u2014 in a text that explicitly instructs the reader to ", /* @__PURE__ */ import_react10.default.createElement("i", null, "calculate"), " them. That is corroboration of the ", /* @__PURE__ */ import_react10.default.createElement("i", null, "method"), ", not a prediction."), /* @__PURE__ */ import_react10.default.createElement(SrcList, { items: rsrc }));
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h2", { children: "Sefer Raziel HaMalakh \u2014 the indisputable findings (\xA79.6)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "The ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "Sefer Raziel HaMalakh" }),
+      " (Book of the Angel Raziel) is the older sibling of the ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "Sefer Yetzirah" }),
+      " in this register: a late-antique / early-medieval manual of letter-astronomy that tells the reader to ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "compute the planets and the fixed zodiacal signs to read the generations" }),
+      ". Mined 2026-08-10 from the two source PDFs in ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("code", { children: "pdf/" }),
+      " \u2014 the Spanish ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "Sepher Raziel Hamelach" }),
+      " (322pp, clean text) and the Hebrew edition (90pp, OCR-garbled but cross-confirming). Page refs = Spanish PDF. Only findings verified against the text are listed; loose coincidences are flagged at the end."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "1 \xB7 Alphabet \u2194 astronomy (the core thesis \u2014 strongest validation)", rows: [
+      ["22-letter gematria explicit, \u05D0=1 \u2026 \u05EA=400, NO 500\u2013900 finals", "22", "(a)", 'p.95: "Aleph es 1, Beth es 2 \u2026 Qoph 100, Resh 200, Shin 300, Tau 400." = the SAME ancient system this app uses (not Mispar Gadol).'],
+      ["Triangular numbers T(2..9) by letter", "T(n)", "(a)", "p.95: \u05D0\u05D1\u21923, \u05D2\u21926, \u05D3\u219210, \u05D4\u219215, \u05D5\u219221, \u05D6(Zayin,7)\u219228, \u05D7(8)\u219236, \u05D8(9)\u219245. Confirms T(7)=28 = lunar mansions and gives the full series."],
+      ["12 simples \u2194 12 hours day + 12 night, 12 months, 12 signs, 12 tribes", "12", "(a)", "p.106 \u2014 the explicit 12-simples\u219412-signs mapping this app reads."],
+      ["22 letters in 3 palaces, engraved with each sign", "22 / 3", "(c)", "p.226 \u2014 22\u2194signs via 3 palaces (= the 3 mothers)."],
+      ["3 letters (the mothers) \u2194 12 signs", "3 / 12", "(c)", "p.81."],
+      ["Raziel cites the Sefer Yetzirah directly", "\u2014", "(a)", 'Heb p.24: "as written in Sefer Yetzirah: ten sefirot\u2026" \u2014 Raziel is built on the SY.']
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { children: "1b \xB7 The triangular series T(2..9) \u2014 the lunar-mansion key" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("table", { style: { marginBottom: 6 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Letter" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "n" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "T(n) = n(n+1)/2" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "astronomy" })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("tbody", { children: [["\u05D0", 1, 1, "unity"], ["\u05D1", 2, 3, "\u2014"], ["\u05D2", 3, 6, "\u2014"], ["\u05D3", 4, 10, "\u2014"], ["\u05D4", 5, 15, "\u2014"], ["\u05D5", 6, 21, "\u2014"], ["\u05D6", 7, 28, "28 lunar mansions"], ["\u05D7", 8, 36, "\u2014"], ["\u05D8", 9, 45, "\u2014"]].map((r) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "he", style: { fontSize: "1.2rem", color: "var(--gold)" }, children: r[0] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "deg", children: r[1] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "deg", style: { color: "var(--gold)" }, children: r[2] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "muted", children: r[3] })
+      ] }, r[0])) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "note", style: { marginBottom: 12 }, children: "Zayin (\u05D6=7) \u2192 T(7)=28 = the 28 lunar mansions (Manzil), tying the 7 doubles to the Moon's path \u2014 the same 28 the Saros mnemonic panel uses." }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "2 \xB7 The 72 / 73 / 28 / 248+365", rows: [
+      ["72 names derived from Genesis 1:1 (Bereshit \u2192 Bohu)", "72", "(a)", "= the Shem HaMephorash triplets (\u05D5\u05D4\u05D5/\u05D9\u05DC\u05D9/\u05E1\u05D9\u05D8\u2026). Variant of the Exodus-14:19-21 extraction this app uses; Raziel is Genesis-centric like the project."],
+      ["72 letters from patriarchs + 12 tribes + Sabbatai + Yesheron", "72", "(c)", "Abraham\u2026Benjamin."],
+      ["73 names of God inscribed on the right", "73", "(c)", 'p.72; Heb p.24 "\u05E2\u05F4\u05D2 \u05E9\u05DE\u05D5\u05EA" = 73 names \u2014 attests 73 (= 2701 = 37\xD773).'],
+      ["28 Malachim per lunar month (Tammuz & Adar = 28)", "28", "(a)", "p.148 \u2014 28 = lunar mansions tied to the Hebrew months."],
+      ["248 mighty [limbs] + 365 degrees = 613", "248+365", "(a)", "the 613 structure (248 positive + 365 negative commandments); 365 = degrees/days."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { name: "3 \xB7 Astronomy scaffold", rows: [
+      ["360\xB0 \u2192 12 signs (Aries\u2026Pisces), each 30\xB0", "360 / 12", "(a)", "p.146-147 \u2014 base-60 sexagesimal subdivision chain (60\xD760\xD760\u2026)."],
+      ['"Los signos del zod\xEDaco est\xE1n fijos" \u2014 the signs are FIXED', "fixed", "(a)", "p.115 \u2014 tropical (equinox-anchored), non-precessing grid. Directly supports this app's tropical-vs-sidereal split: the Reader's 12 sectors do NOT rotate with precession (see Sky tab note)."],
+      ["4 tekufot (Nis\xE1n/Tammuz/Tishri/Tevet), each 3 months = 12", "4 / 12", "(a)", "p.114; Heb p.10 lists all 12 signs across 4 tekufot with month-angels. Sun qualities: warm / hot-dry / cold-moist / cold-dry."],
+      ["7 planets in Chaldean order", "7", "(a)", "p.114-115 \u2014 \u05E9\u05D1\u05EA\u05D0\u05D9/\u05E6\u05D3\u05E7/\u05DE\u05D0\u05D3\u05D9\u05DD/\u05E9\u05DE\u05E9/\u05E0\u05D5\u05D2\u05D4/\u05DB\u05D5\u05DB\u05D1/\u05DC\u05D1\u05E0\u05D4."],
+      ["Planet periods: Saturn 30y, Jupiter 12y", "30 / 12", "(a)", "Both match real sidereal periods (29.46 / 11.86 yr). 28-year & 36-year cycles also present (see caveat)."],
+      ["Draqon Dinor (the dragon) surrounding the 7 planets", "Draco", "(a)", "p.146 \u2014 the Draco axis = this app's 3rd mother (Shin \xB7 Cassiopea axis / circumpolar)."],
+      ["Planet-angel assignments", "7", "(c)", "Saturn=Gabriel, Jupiter=Tzedeqial, Mars=Samael, Sun=Raphael, Venus=Anael, Mercury=Beraqial, Moon=Chesedial; Michael = force in the Sun."]
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { children: "4 \xB7 Loose \u2014 do not force" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("ul", { className: "muted", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "7\xD770 = 490" }),
+        " (p.71). An arithmetic-mnemonic figure; ",
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "not" }),
+        " tied to any astronomical window in this app \u2014 flagged, not claimed."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: '"23 princes of the signs"' }),
+        " (p.147) \u2014 unclear; does not map to any app constant. Left unmapped."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "The 28-year cycle" }),
+        " the Spanish PDF attributes to Venus is likely a garbled tekufat-chamah (the 28-year solar cycle), since real Venus sidereal = 225 days. Needs clean Hebrew verification before any claim."
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "note", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "Why this matters:" }),
+      " Raziel independently attests the apparatus this app is built on \u2014 the 22-letter gematria, the triangular-to-28 lunar key, the 12\u2194signs mapping, the fixed tropical zodiac, the 72-from-Genesis, the 7 Chaldean planets, and the Draco axis \u2014 in a text that explicitly instructs the reader to ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "calculate" }),
+      " them. That is corroboration of the ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("i", { children: "method" }),
+      ", not a prediction."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(SrcList, { items: rsrc })
+  ] });
 }
 function RevelationsTab({ sub, setSubTab, date, rows, occ, words, genData, genYear }) {
   const subtabs = [["hebrew", "Hebrew \xB7 Christian"], ["raziel", "Raziel"], ["gnostic", "Gnostic / Nag Hammadi"], ["vedic", "Indian / Vedic"], ["persian", "Persian / Avestan"], ["sufi", "Islamic / Sufi"], ["egyptian", "Egyptian"], ["maya", "Maya"], ["chinese", "Chinese"]];
-  return /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, null, /* @__PURE__ */ import_react10.default.createElement("h2", null, "Revelations \u2014 the constants across all cultures (\xA715c, \xA79.6)"), /* @__PURE__ */ import_react10.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "Revelation = the cross-cultural register: every tradition that independently carries the system's constants (gematria, prophecies, cosmology). No cultural borrowing is claimed \u2014 only independent corroboration. Class tags: ", /* @__PURE__ */ import_react10.default.createElement(ClassTag, { c: "(a)" }), " verifiable astronomy \xB7 ", /* @__PURE__ */ import_react10.default.createElement(ClassTag, { c: "(b)" }), " eschatological/prophecy \xB7 ", /* @__PURE__ */ import_react10.default.createElement(ClassTag, { c: "(c)" }), " cosmological-doctrine \xB7 ", /* @__PURE__ */ import_react10.default.createElement(ClassTag, { c: "(u)" }), " unverified."), /* @__PURE__ */ import_react10.default.createElement("h3", null, "Cross-cultural numeric summary \u2014 project constants vs. the corpora"), /* @__PURE__ */ import_react10.default.createElement("table", { style: { marginBottom: 6 } }, /* @__PURE__ */ import_react10.default.createElement("thead", null, /* @__PURE__ */ import_react10.default.createElement("tr", null, /* @__PURE__ */ import_react10.default.createElement("th", null, "Constant"), /* @__PURE__ */ import_react10.default.createElement("th", null, "Meaning"), /* @__PURE__ */ import_react10.default.createElement("th", null, "Where attested"), /* @__PURE__ */ import_react10.default.createElement("th", null))), /* @__PURE__ */ import_react10.default.createElement("tbody", null, REV_SUMMARY.map((r, i) => /* @__PURE__ */ import_react10.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react10.default.createElement("td", { className: "big", style: { color: "var(--gold)", whiteSpace: "nowrap" } }, r[0]), /* @__PURE__ */ import_react10.default.createElement("td", null, r[1]), /* @__PURE__ */ import_react10.default.createElement("td", { className: "muted" }, r[2]), /* @__PURE__ */ import_react10.default.createElement("td", null, /* @__PURE__ */ import_react10.default.createElement(ClassTag, { c: r[3] })))))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "note", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react10.default.createElement("b", null, "Load-bearing for accuracy:"), " 22, 37, 73, 144, 1260, 42 months are NOT securely attested in either Nag Hammadi or pre-1500 Sufi sources \u2014 they are Hebrew/Sefer Yetzirah (22) or Revelation (144, 1260, 42) constants. The citable cross-cultural overlaps concentrate on ", /* @__PURE__ */ import_react10.default.createElement("b", null, "7, 12, 28, 72, 360, 365, 14"), "."), /* @__PURE__ */ import_react10.default.createElement(SubTabs, { items: subtabs, active: sub, onChange: setSubTab }), sub === "hebrew" && /* @__PURE__ */ import_react10.default.createElement(RevelationHebrewTab, { date, rows, occ, words, genData, genYear }), sub === "raziel" && /* @__PURE__ */ import_react10.default.createElement(RevelationRazielTab, null), sub === "maya" && /* @__PURE__ */ import_react10.default.createElement(RevelationMayaTab, null), sub === "chinese" && /* @__PURE__ */ import_react10.default.createElement(RevelationChineseTab, null), sub === "vedic" && /* @__PURE__ */ import_react10.default.createElement(RevelationVedicTab, null), sub === "sufi" && /* @__PURE__ */ import_react10.default.createElement(RevelationSufiTab, null), sub === "egyptian" && /* @__PURE__ */ import_react10.default.createElement(RevelationEgyptianTab, null), sub === "gnostic" && /* @__PURE__ */ import_react10.default.createElement(RevelationGnosticTab, null), sub === "persian" && /* @__PURE__ */ import_react10.default.createElement(RevelationPersianTab, null));
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h2", { children: "Revelations \u2014 the constants across all cultures (\xA715c, \xA79.6)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "Revelation = the cross-cultural register: every tradition that independently carries the system's constants (gematria, prophecies, cosmology). No cultural borrowing is claimed \u2014 only independent corroboration. Class tags: ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ClassTag, { c: "(a)" }),
+      " verifiable astronomy \xB7 ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ClassTag, { c: "(b)" }),
+      " eschatological/prophecy \xB7 ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ClassTag, { c: "(c)" }),
+      " cosmological-doctrine \xB7 ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ClassTag, { c: "(u)" }),
+      " unverified."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { children: "Cross-cultural numeric summary \u2014 project constants vs. the corpora" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("table", { style: { marginBottom: 6 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Constant" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Meaning" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", { children: "Where attested" }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("th", {})
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("tbody", { children: REV_SUMMARY.map((r, i) => /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "big", style: { color: "var(--gold)", whiteSpace: "nowrap" }, children: r[0] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: r[1] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { className: "muted", children: r[2] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ClassTag, { c: r[3] }) })
+      ] }, i)) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "note", style: { marginBottom: 12 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "Load-bearing for accuracy:" }),
+      " 22, 37, 73, 144, 1260, 42 months are NOT securely attested in either Nag Hammadi or pre-1500 Sufi sources \u2014 they are Hebrew/Sefer Yetzirah (22) or Revelation (144, 1260, 42) constants. The citable cross-cultural overlaps concentrate on ",
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("b", { children: "7, 12, 28, 72, 360, 365, 14" }),
+      "."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(SubTabs, { items: subtabs, active: sub, onChange: setSubTab }),
+    sub === "hebrew" && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(RevelationHebrewTab, { date, rows, occ, words, genData, genYear }),
+    sub === "raziel" && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(RevelationRazielTab, {}),
+    sub === "maya" && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(RevelationMayaTab, {}),
+    sub === "chinese" && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(RevelationChineseTab, {}),
+    sub === "vedic" && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(RevelationVedicTab, {}),
+    sub === "sufi" && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(RevelationSufiTab, {}),
+    sub === "egyptian" && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(RevelationEgyptianTab, {}),
+    sub === "gnostic" && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(RevelationGnosticTab, {}),
+    sub === "persian" && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(RevelationPersianTab, {})
+  ] });
 }
 
-// src/tabs/PsalmsTab.jsx
+// web/src/tabs/PsalmsTab.jsx
 var import_react11 = __toESM(require_react());
+var import_jsx_runtime11 = __toESM(require_jsx_runtime());
 var PSALM_ADJ = 137.035999177;
 var SUBHARMONIC_DIVISORS = [1, 2, 4, 8, 16, 32, 64, 128];
 var PSALM_GEM = {
@@ -28460,19 +32348,149 @@ function PsalmsTab() {
     setLoading(false);
   }
   const elsLong = res && res.els_result && res.els_result.text.length > 400;
-  return /* @__PURE__ */ import_react11.default.createElement(import_react11.default.Fragment, null, /* @__PURE__ */ import_react11.default.createElement("h2", null, "Daily Psalms \u2014 name & date \u2192 Genesis ELS \u2192 Psalm"), /* @__PURE__ */ import_react11.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A JavaScript port of the ", /* @__PURE__ */ import_react11.default.createElement("i", null, "daily-psalms-api"), " pipeline (", /* @__PURE__ */ import_react11.default.createElement("code", null, "gitlab.com/ch-zz/daily-psalms-api"), ", route ", /* @__PURE__ */ import_react11.default.createElement("code", null, "/api/psalm"), "). The gematria of your ", /* @__PURE__ */ import_react11.default.createElement("b", null, "name + the date written out in words"), " sets an Equidistant-Letter-Sequence step over ", /* @__PURE__ */ import_react11.default.createElement("b", null, "Genesis"), "; the gematria of that ELS string is then matched to the ", /* @__PURE__ */ import_react11.default.createElement("b", null, "shortest Hebrew phrase in the Psalms"), " with the same value (falling back through octave sub-harmonics \xF72, \xF74 \u2026 \xF7128). All data is bundled \u2014 the phrase index is built in your browser, so nothing depends on a server or a database upload."), /* @__PURE__ */ import_react11.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react11.default.createElement("input", { type: "text", value: name, onChange: (e) => setName(e.target.value), placeholder: "Name (Latin / Hebrew / Greek / Arabic)", style: { flex: "1 1 260px" } }), /* @__PURE__ */ import_react11.default.createElement("input", { type: "date", value: date, onChange: (e) => setDate(e.target.value), style: { flex: "0 0 170px" } }), /* @__PURE__ */ import_react11.default.createElement("select", { value: calendar, onChange: (e) => setCalendar(e.target.value), style: { flex: "0 0 200px" } }, /* @__PURE__ */ import_react11.default.createElement("option", { value: "gregorian" }, "Gregorian (ELS on Genesis)"), /* @__PURE__ */ import_react11.default.createElement("option", { value: "jewish" }, "Jewish (ELS bypassed)"))), /* @__PURE__ */ import_react11.default.createElement("div", { className: "controls", style: { marginBottom: 12 } }, /* @__PURE__ */ import_react11.default.createElement("label", { style: { display: "inline-flex", gap: 6, alignItems: "center", cursor: "pointer" } }, /* @__PURE__ */ import_react11.default.createElement("input", { type: "checkbox", checked: adjusted, onChange: (e) => setAdjusted(e.target.checked) }), " 137.036 adjustment"), /* @__PURE__ */ import_react11.default.createElement("label", { style: { display: "inline-flex", gap: 6, alignItems: "center", cursor: "pointer" } }, /* @__PURE__ */ import_react11.default.createElement("input", { type: "checkbox", checked: subharmonic, onChange: (e) => setSubharmonic(e.target.checked) }), " subharmonic fallback (\xF72\u2026\xF7128)"), /* @__PURE__ */ import_react11.default.createElement("button", { onClick: run, disabled: !ready || loading, className: "btn-cta" }, loading ? "Computing\u2026" : ready ? "Reveal Psalm \u2192" : "Loading data\u2026"), /* @__PURE__ */ import_react11.default.createElement("span", { className: "muted", style: { marginLeft: "auto" } }, ready ? "phrase index ready" : "building phrase index\u2026")), err && /* @__PURE__ */ import_react11.default.createElement("div", { className: "note", style: { color: "var(--red)" } }, err), res && /* @__PURE__ */ import_react11.default.createElement(import_react11.default.Fragment, null, res.error ? /* @__PURE__ */ import_react11.default.createElement("div", { className: "note", style: { color: "var(--red)" } }, res.error) : /* @__PURE__ */ import_react11.default.createElement(import_react11.default.Fragment, null, /* @__PURE__ */ import_react11.default.createElement("h3", null, "Input"), /* @__PURE__ */ import_react11.default.createElement("table", null, /* @__PURE__ */ import_react11.default.createElement("tbody", null, /* @__PURE__ */ import_react11.default.createElement("tr", null, /* @__PURE__ */ import_react11.default.createElement("th", null, "name"), /* @__PURE__ */ import_react11.default.createElement("td", null, res.input.name || /* @__PURE__ */ import_react11.default.createElement("span", { className: "muted" }, "\u2014"))), /* @__PURE__ */ import_react11.default.createElement("tr", null, /* @__PURE__ */ import_react11.default.createElement("th", null, "date"), /* @__PURE__ */ import_react11.default.createElement("td", null, res.input.date, " ", /* @__PURE__ */ import_react11.default.createElement("span", { className: "muted" }, "(", res.input.calendar, ")"))), /* @__PURE__ */ import_react11.default.createElement("tr", null, /* @__PURE__ */ import_react11.default.createElement("th", null, "date in words"), /* @__PURE__ */ import_react11.default.createElement("td", null, res.input.date_words ? res.input.calendar === "jewish" ? /* @__PURE__ */ import_react11.default.createElement("span", { className: "he", style: { direction: "rtl" } }, res.input.date_words) : res.input.date_words : /* @__PURE__ */ import_react11.default.createElement("span", { className: "muted" }, "\u2014"))), /* @__PURE__ */ import_react11.default.createElement("tr", null, /* @__PURE__ */ import_react11.default.createElement("th", null, "raw gematria sum"), /* @__PURE__ */ import_react11.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, res.input.raw_gematria_sum)), res.input.adjusted && /* @__PURE__ */ import_react11.default.createElement("tr", null, /* @__PURE__ */ import_react11.default.createElement("th", null, "adjusted sum (+sum \xF7 137.035999177, ceiled)"), /* @__PURE__ */ import_react11.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, res.input.initial_gematria_sum)))), /* @__PURE__ */ import_react11.default.createElement("h3", null, "ELS result \u2014 Genesis"), res.els_result.bypassed ? /* @__PURE__ */ import_react11.default.createElement("div", { className: "note" }, "Jewish calendar: the ELS scan of Genesis is bypassed and the raw gematria sum (", /* @__PURE__ */ import_react11.default.createElement("b", null, res.els_result.gematria_sum), ") feeds the Psalm match directly (upstream behaviour).") : /* @__PURE__ */ import_react11.default.createElement(import_react11.default.Fragment, null, /* @__PURE__ */ import_react11.default.createElement("table", null, /* @__PURE__ */ import_react11.default.createElement("tbody", null, /* @__PURE__ */ import_react11.default.createElement("tr", null, /* @__PURE__ */ import_react11.default.createElement("th", null, "step (every Nth letter)"), /* @__PURE__ */ import_react11.default.createElement("td", null, res.els_result.step)), /* @__PURE__ */ import_react11.default.createElement("tr", null, /* @__PURE__ */ import_react11.default.createElement("th", null, "gematria of the ELS string"), /* @__PURE__ */ import_react11.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, res.els_result.gematria_sum)))), /* @__PURE__ */ import_react11.default.createElement("div", { className: "muted", style: { marginBottom: 4 } }, "ELS string (", res.els_result.text.length, " chars):"), /* @__PURE__ */ import_react11.default.createElement("div", { className: "he", style: {
-    direction: "rtl",
-    fontSize: "1.1rem",
-    lineHeight: 1.8,
-    wordBreak: "break-all",
-    maxHeight: elsLong && !showEls ? "7.5em" : null,
-    overflow: elsLong && !showEls ? "hidden" : null,
-    marginBottom: 6
-  } }, res.els_result.text || " "), elsLong && /* @__PURE__ */ import_react11.default.createElement("div", { className: "click muted", onClick: () => setShowEls(!showEls) }, showEls ? "\u25B2 collapse" : "\u25BC expand full string")), /* @__PURE__ */ import_react11.default.createElement("h3", null, "Psalm"), res.psalm.error ? /* @__PURE__ */ import_react11.default.createElement("div", { className: "note", style: { color: "var(--red)" } }, res.psalm.error) : /* @__PURE__ */ import_react11.default.createElement(import_react11.default.Fragment, null, /* @__PURE__ */ import_react11.default.createElement("div", { className: "he", style: { direction: "rtl", fontSize: "1.6rem", lineHeight: 1.7, marginBottom: 8 } }, res.psalm.words), /* @__PURE__ */ import_react11.default.createElement("table", null, /* @__PURE__ */ import_react11.default.createElement("tbody", null, /* @__PURE__ */ import_react11.default.createElement("tr", null, /* @__PURE__ */ import_react11.default.createElement("th", null, "reference"), /* @__PURE__ */ import_react11.default.createElement("td", null, /* @__PURE__ */ import_react11.default.createElement("b", null, res.psalm.reference), " \u2014 ", /* @__PURE__ */ import_react11.default.createElement("a", { href: res.psalm.url, target: "_blank", rel: "noopener noreferrer" }, "BibleGateway (CJB)"))), res.psalm.subharmonic_divisor && res.psalm.subharmonic_divisor > 1 && /* @__PURE__ */ import_react11.default.createElement("tr", null, /* @__PURE__ */ import_react11.default.createElement("th", null, "subharmonic divisor"), /* @__PURE__ */ import_react11.default.createElement("td", null, "\xF7", res.psalm.subharmonic_divisor, " \u2014 the ELS gematria \xF7 ", res.psalm.subharmonic_divisor, " = ", res.psalm.queried_gematria_sum, " matched")), /* @__PURE__ */ import_react11.default.createElement("tr", null, /* @__PURE__ */ import_react11.default.createElement("th", null, "queried gematria"), /* @__PURE__ */ import_react11.default.createElement("td", null, res.psalm.queried_gematria_sum)), /* @__PURE__ */ import_react11.default.createElement("tr", null, /* @__PURE__ */ import_react11.default.createElement("th", null, "ELS gematria (original)"), /* @__PURE__ */ import_react11.default.createElement("td", null, res.psalm.original_gematria_sum))))))));
+  return /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(import_jsx_runtime11.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("h2", { children: "Daily Psalms \u2014 name & date \u2192 Genesis ELS \u2192 Psalm" }),
+    /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "A JavaScript port of the ",
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("i", { children: "daily-psalms-api" }),
+      " pipeline (",
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("code", { children: "gitlab.com/ch-zz/daily-psalms-api" }),
+      ", route ",
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("code", { children: "/api/psalm" }),
+      "). The gematria of your ",
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("b", { children: "name + the date written out in words" }),
+      " sets an Equidistant-Letter-Sequence step over ",
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("b", { children: "Genesis" }),
+      "; the gematria of that ELS string is then matched to the ",
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("b", { children: "shortest Hebrew phrase in the Psalms" }),
+      " with the same value (falling back through octave sub-harmonics \xF72, \xF74 \u2026 \xF7128). All data is bundled \u2014 the phrase index is built in your browser, so nothing depends on a server or a database upload."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "controls", style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("input", { type: "text", value: name, onChange: (e) => setName(e.target.value), placeholder: "Name (Latin / Hebrew / Greek / Arabic)", style: { flex: "1 1 260px" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("input", { type: "date", value: date, onChange: (e) => setDate(e.target.value), style: { flex: "0 0 170px" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("select", { value: calendar, onChange: (e) => setCalendar(e.target.value), style: { flex: "0 0 200px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("option", { value: "gregorian", children: "Gregorian (ELS on Genesis)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("option", { value: "jewish", children: "Jewish (ELS bypassed)" })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "controls", style: { marginBottom: 12 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("label", { style: { display: "inline-flex", gap: 6, alignItems: "center", cursor: "pointer" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("input", { type: "checkbox", checked: adjusted, onChange: (e) => setAdjusted(e.target.checked) }),
+        " 137.036 adjustment"
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("label", { style: { display: "inline-flex", gap: 6, alignItems: "center", cursor: "pointer" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("input", { type: "checkbox", checked: subharmonic, onChange: (e) => setSubharmonic(e.target.checked) }),
+        " subharmonic fallback (\xF72\u2026\xF7128)"
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("button", { onClick: run, disabled: !ready || loading, className: "btn-cta", children: loading ? "Computing\u2026" : ready ? "Reveal Psalm \u2192" : "Loading data\u2026" }),
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "muted", style: { marginLeft: "auto" }, children: ready ? "phrase index ready" : "building phrase index\u2026" })
+    ] }),
+    err && /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "note", style: { color: "var(--red)" }, children: err }),
+    res && /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_jsx_runtime11.Fragment, { children: res.error ? /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "note", style: { color: "var(--red)" }, children: res.error }) : /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(import_jsx_runtime11.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("h3", { children: "Input" }),
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("table", { children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tbody", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("th", { children: "name" }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("td", { children: res.input.name || /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "muted", children: "\u2014" }) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("th", { children: "date" }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("td", { children: [
+            res.input.date,
+            " ",
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("span", { className: "muted", children: [
+              "(",
+              res.input.calendar,
+              ")"
+            ] })
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("th", { children: "date in words" }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("td", { children: res.input.date_words ? res.input.calendar === "jewish" ? /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "he", style: { direction: "rtl" }, children: res.input.date_words }) : res.input.date_words : /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "muted", children: "\u2014" }) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("th", { children: "raw gematria sum" }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("td", { className: "big", style: { color: "var(--gold)" }, children: res.input.raw_gematria_sum })
+        ] }),
+        res.input.adjusted && /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("th", { children: "adjusted sum (+sum \xF7 137.035999177, ceiled)" }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("td", { className: "big", style: { color: "var(--gold)" }, children: res.input.initial_gematria_sum })
+        ] })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("h3", { children: "ELS result \u2014 Genesis" }),
+      res.els_result.bypassed ? /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "note", children: [
+        "Jewish calendar: the ELS scan of Genesis is bypassed and the raw gematria sum (",
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("b", { children: res.els_result.gematria_sum }),
+        ") feeds the Psalm match directly (upstream behaviour)."
+      ] }) : /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(import_jsx_runtime11.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("table", { children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tbody", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("th", { children: "step (every Nth letter)" }),
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("td", { children: res.els_result.step })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("th", { children: "gematria of the ELS string" }),
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("td", { className: "big", style: { color: "var(--gold)" }, children: res.els_result.gematria_sum })
+          ] })
+        ] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "muted", style: { marginBottom: 4 }, children: [
+          "ELS string (",
+          res.els_result.text.length,
+          " chars):"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "he", style: {
+          direction: "rtl",
+          fontSize: "1.1rem",
+          lineHeight: 1.8,
+          wordBreak: "break-all",
+          maxHeight: elsLong && !showEls ? "7.5em" : null,
+          overflow: elsLong && !showEls ? "hidden" : null,
+          marginBottom: 6
+        }, children: res.els_result.text || " " }),
+        elsLong && /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "click muted", onClick: () => setShowEls(!showEls), children: showEls ? "\u25B2 collapse" : "\u25BC expand full string" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("h3", { children: "Psalm" }),
+      res.psalm.error ? /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "note", style: { color: "var(--red)" }, children: res.psalm.error }) : /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(import_jsx_runtime11.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "he", style: { direction: "rtl", fontSize: "1.6rem", lineHeight: 1.7, marginBottom: 8 }, children: res.psalm.words }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("table", { children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tbody", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("th", { children: "reference" }),
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("td", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("b", { children: res.psalm.reference }),
+              " \u2014 ",
+              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("a", { href: res.psalm.url, target: "_blank", rel: "noopener noreferrer", children: "BibleGateway (CJB)" })
+            ] })
+          ] }),
+          res.psalm.subharmonic_divisor && res.psalm.subharmonic_divisor > 1 && /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("th", { children: "subharmonic divisor" }),
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("td", { children: [
+              "\xF7",
+              res.psalm.subharmonic_divisor,
+              " \u2014 the ELS gematria \xF7 ",
+              res.psalm.subharmonic_divisor,
+              " = ",
+              res.psalm.queried_gematria_sum,
+              " matched"
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("th", { children: "queried gematria" }),
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("td", { children: res.psalm.queried_gematria_sum })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("th", { children: "ELS gematria (original)" }),
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("td", { children: res.psalm.original_gematria_sum })
+          ] })
+        ] }) })
+      ] })
+    ] }) })
+  ] });
 }
 
-// src/tabs/CodesTab.jsx
+// web/src/tabs/CodesTab.jsx
 var import_react12 = __toESM(require_react());
+var import_jsx_runtime12 = __toESM(require_jsx_runtime());
 var HEB_ALPHA = "\u05D0\u05D1\u05D2\u05D3\u05D4\u05D5\u05D6\u05D7\u05D8\u05D9\u05DB\u05DC\u05DE\u05E0\u05E1\u05E2\u05E4\u05E6\u05E7\u05E8\u05E9\u05EA";
 var LAT_ALPHA = "abcdefghijklmnopqrstuvwxyz";
 var GRK_ALPHA = "\u0391\u0392\u0393\u0394\u0395\u0396\u0397\u0398\u0399\u039A\u039B\u039C\u039D\u039E\u039F\u03A0\u03A1\u03A3\u03A4\u03A5\u03A6\u03A7\u03A8\u03A9";
@@ -28623,7 +32641,120 @@ function ElsSubTab() {
       setFinding(false);
     }, 20);
   }
-  return /* @__PURE__ */ import_react12.default.createElement(import_react12.default.Fragment, null, /* @__PURE__ */ import_react12.default.createElement("h3", null, "ELS search grid \u2014 Equidistant Letter Sequence over Genesis"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A JS port of the ", /* @__PURE__ */ import_react12.default.createElement("i", null, "torahcodes"), " library (", /* @__PURE__ */ import_react12.default.createElement("code", null, "github.com/pedroelbanquero/torahcodespython"), ", ", /* @__PURE__ */ import_react12.default.createElement("code", null, "torah.els"), "). A single counter walks the Genesis consonants and picks every ", /* @__PURE__ */ import_react12.default.createElement("b", null, "N"), "th letter (1-based positions N, 2N, 3N\u2026). The ", /* @__PURE__ */ import_react12.default.createElement("b", null, "gematria of a search term"), " sets N; the extracted letters are laid out as a matrix whose ", /* @__PURE__ */ import_react12.default.createElement("b", null, "last column is the ELS"), " (highlighted gold) \u2014 the hidden word reads ", /* @__PURE__ */ import_react12.default.createElement("i", null, "down"), " that column. Source text = the cleaned 78069-letter Genesis (maqaf-stripped, identical to upstream)."), /* @__PURE__ */ import_react12.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react12.default.createElement("input", { type: "text", value: term, onChange: (e) => setTerm(e.target.value), placeholder: "search term (Hebrew or Latin)", style: { flex: "1 1 240px", direction: hasHebrew ? "rtl" : "ltr" } }), /* @__PURE__ */ import_react12.default.createElement("input", { type: "number", value: manualSkip, onChange: (e) => setManualSkip(e.target.value), placeholder: "skip (auto = gematria)", style: { width: 170 } }), /* @__PURE__ */ import_react12.default.createElement("button", { onClick: () => setManualSkip(""), className: "linkish" }, "auto")), err && /* @__PURE__ */ import_react12.default.createElement("div", { className: "note", style: { color: "var(--red)" } }, err), data && /* @__PURE__ */ import_react12.default.createElement(import_react12.default.Fragment, null, /* @__PURE__ */ import_react12.default.createElement("table", null, /* @__PURE__ */ import_react12.default.createElement("tbody", null, /* @__PURE__ */ import_react12.default.createElement("tr", null, /* @__PURE__ */ import_react12.default.createElement("th", null, "term"), /* @__PURE__ */ import_react12.default.createElement("td", null, /* @__PURE__ */ import_react12.default.createElement("span", { className: "he", style: { direction: "rtl" } }, term || "\u2014"), " ", /* @__PURE__ */ import_react12.default.createElement("span", { className: "muted" }, "(", hasHebrew ? "Hebrew GV" : "Latin gcode", ")"))), /* @__PURE__ */ import_react12.default.createElement("tr", null, /* @__PURE__ */ import_react12.default.createElement("th", null, "gematria \u2192 skip (N)"), /* @__PURE__ */ import_react12.default.createElement("td", { className: "big", style: { color: "var(--gold)" } }, tGem, ms !== "" && /* @__PURE__ */ import_react12.default.createElement("span", { className: "muted" }, " (manual: ", skip, ")"))), /* @__PURE__ */ import_react12.default.createElement("tr", null, /* @__PURE__ */ import_react12.default.createElement("th", null, "Genesis letters"), /* @__PURE__ */ import_react12.default.createElement("td", null, data.length)), /* @__PURE__ */ import_react12.default.createElement("tr", null, /* @__PURE__ */ import_react12.default.createElement("th", null, "ELS length"), /* @__PURE__ */ import_react12.default.createElement("td", null, els.length, " letters")))), /* @__PURE__ */ import_react12.default.createElement("h3", null, "ELS string (every ", skip, "-th letter)"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "he", style: { direction: "rtl", fontSize: "1.15rem", lineHeight: 1.8, wordBreak: "break-all", maxHeight: "7em", overflow: "auto", marginBottom: 10, padding: "6px 8px", background: "var(--panel2)", border: "1px solid var(--line)", borderRadius: 8 } }, els || " "), /* @__PURE__ */ import_react12.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react12.default.createElement("span", { className: "muted" }, "context columns"), /* @__PURE__ */ import_react12.default.createElement("input", { type: "number", min: 4, max: 60, value: ctxCols, onChange: (e) => setCtxCols(Math.max(4, Math.min(60, parseInt(e.target.value, 10) || 14))), style: { width: 70 } }), /* @__PURE__ */ import_react12.default.createElement("span", { className: "muted" }, "rows"), /* @__PURE__ */ import_react12.default.createElement("input", { type: "number", min: 5, max: 200, value: rows, onChange: (e) => setRows(Math.max(5, Math.min(200, parseInt(e.target.value, 10) || 42))), style: { width: 70 } }), /* @__PURE__ */ import_react12.default.createElement("span", { className: "muted", style: { marginLeft: "auto" } }, "ELS column = rightmost (gold)")), /* @__PURE__ */ import_react12.default.createElement("div", { className: "els-grid", style: { "--cols": ctxCols } }, matrix.map((row, k) => /* @__PURE__ */ import_react12.default.createElement("div", { key: k, className: "els-row" }, [...row].map((c, i) => /* @__PURE__ */ import_react12.default.createElement("span", { key: i, className: "els-cell" + (i === row.length - 1 ? " hl" : "") }, c))))), /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginTop: 6 } }, "Row ", 0, "\u2026", matrix.length - 1, " of the matrix; the gold rightmost cell of each row is the (k+1)-th ELS letter \u2014 read top-to-bottom to recover the ELS string above."), /* @__PURE__ */ import_react12.default.createElement("h3", null, "Find this word at any skip (2\u20132000)"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 8 } }, "Scans every skip and reports where the literal term appears in the forward ELS (the classic \u201CTorah codes\u201D term search)."), /* @__PURE__ */ import_react12.default.createElement("button", { onClick: findAny, disabled: finding || !data, className: "btn-cta" }, finding ? "Scanning\u2026" : "Find at any skip \u2192"), finds && (finds.length === 0 ? /* @__PURE__ */ import_react12.default.createElement("div", { className: "note" }, "No occurrences of ", /* @__PURE__ */ import_react12.default.createElement("span", { className: "he" }, term), " found in any forward ELS of skip 2\u20132000.") : /* @__PURE__ */ import_react12.default.createElement(import_react12.default.Fragment, null, /* @__PURE__ */ import_react12.default.createElement("div", { className: "note" }, finds.length, " occurrence", finds.length > 1 ? "s" : "", " (capped at 60):"), /* @__PURE__ */ import_react12.default.createElement("table", null, /* @__PURE__ */ import_react12.default.createElement("thead", null, /* @__PURE__ */ import_react12.default.createElement("tr", null, /* @__PURE__ */ import_react12.default.createElement("th", null, "skip"), /* @__PURE__ */ import_react12.default.createElement("th", null, "position in ELS"), /* @__PURE__ */ import_react12.default.createElement("th", null, "ELS length"), /* @__PURE__ */ import_react12.default.createElement("th", null, "snippet"))), /* @__PURE__ */ import_react12.default.createElement("tbody", null, finds.map((f, i) => /* @__PURE__ */ import_react12.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react12.default.createElement("td", { className: "deg", style: { color: "var(--gold)" } }, f.skip), /* @__PURE__ */ import_react12.default.createElement("td", { className: "deg" }, f.pos), /* @__PURE__ */ import_react12.default.createElement("td", { className: "deg" }, f.els), /* @__PURE__ */ import_react12.default.createElement("td", { className: "he", style: { direction: "rtl" } }, f.snippet)))))))));
+  return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(import_jsx_runtime12.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h3", { children: "ELS search grid \u2014 Equidistant Letter Sequence over Genesis" }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "A JS port of the ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("i", { children: "torahcodes" }),
+      " library (",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("code", { children: "github.com/pedroelbanquero/torahcodespython" }),
+      ", ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("code", { children: "torah.els" }),
+      "). A single counter walks the Genesis consonants and picks every ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: "N" }),
+      "th letter (1-based positions N, 2N, 3N\u2026). The ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: "gematria of a search term" }),
+      " sets N; the extracted letters are laid out as a matrix whose ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: "last column is the ELS" }),
+      " (highlighted gold) \u2014 the hidden word reads ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("i", { children: "down" }),
+      " that column. Source text = the cleaned 78069-letter Genesis (maqaf-stripped, identical to upstream)."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "controls", style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("input", { type: "text", value: term, onChange: (e) => setTerm(e.target.value), placeholder: "search term (Hebrew or Latin)", style: { flex: "1 1 240px", direction: hasHebrew ? "rtl" : "ltr" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("input", { type: "number", value: manualSkip, onChange: (e) => setManualSkip(e.target.value), placeholder: "skip (auto = gematria)", style: { width: 170 } }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("button", { onClick: () => setManualSkip(""), className: "linkish", children: "auto" })
+    ] }),
+    err && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "note", style: { color: "var(--red)" }, children: err }),
+    data && /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(import_jsx_runtime12.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("table", { children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("tbody", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("th", { children: "term" }),
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("td", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "he", style: { direction: "rtl" }, children: term || "\u2014" }),
+            " ",
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("span", { className: "muted", children: [
+              "(",
+              hasHebrew ? "Hebrew GV" : "Latin gcode",
+              ")"
+            ] })
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("th", { children: "gematria \u2192 skip (N)" }),
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("td", { className: "big", style: { color: "var(--gold)" }, children: [
+            tGem,
+            ms !== "" && /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("span", { className: "muted", children: [
+              " (manual: ",
+              skip,
+              ")"
+            ] })
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("th", { children: "Genesis letters" }),
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("td", { children: data.length })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("th", { children: "ELS length" }),
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("td", { children: [
+            els.length,
+            " letters"
+          ] })
+        ] })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("h3", { children: [
+        "ELS string (every ",
+        skip,
+        "-th letter)"
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "he", style: { direction: "rtl", fontSize: "1.15rem", lineHeight: 1.8, wordBreak: "break-all", maxHeight: "7em", overflow: "auto", marginBottom: 10, padding: "6px 8px", background: "var(--panel2)", border: "1px solid var(--line)", borderRadius: 8 }, children: els || " " }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "controls", style: { marginBottom: 10 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "muted", children: "context columns" }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("input", { type: "number", min: 4, max: 60, value: ctxCols, onChange: (e) => setCtxCols(Math.max(4, Math.min(60, parseInt(e.target.value, 10) || 14))), style: { width: 70 } }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "muted", children: "rows" }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("input", { type: "number", min: 5, max: 200, value: rows, onChange: (e) => setRows(Math.max(5, Math.min(200, parseInt(e.target.value, 10) || 42))), style: { width: 70 } }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "muted", style: { marginLeft: "auto" }, children: "ELS column = rightmost (gold)" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "els-grid", style: { "--cols": ctxCols }, children: matrix.map((row, k) => /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "els-row", children: [...row].map((c, i) => /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "els-cell" + (i === row.length - 1 ? " hl" : ""), children: c }, i)) }, k)) }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "muted", style: { marginTop: 6 }, children: [
+        "Row ",
+        0,
+        "\u2026",
+        matrix.length - 1,
+        " of the matrix; the gold rightmost cell of each row is the (k+1)-th ELS letter \u2014 read top-to-bottom to recover the ELS string above."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h3", { children: "Find this word at any skip (2\u20132000)" }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "muted", style: { marginBottom: 8 }, children: "Scans every skip and reports where the literal term appears in the forward ELS (the classic \u201CTorah codes\u201D term search)." }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("button", { onClick: findAny, disabled: finding || !data, className: "btn-cta", children: finding ? "Scanning\u2026" : "Find at any skip \u2192" }),
+      finds && (finds.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "note", children: [
+        "No occurrences of ",
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "he", children: term }),
+        " found in any forward ELS of skip 2\u20132000."
+      ] }) : /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(import_jsx_runtime12.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "note", children: [
+          finds.length,
+          " occurrence",
+          finds.length > 1 ? "s" : "",
+          " (capped at 60):"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("table", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("th", { children: "skip" }),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("th", { children: "position in ELS" }),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("th", { children: "ELS length" }),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("th", { children: "snippet" })
+          ] }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("tbody", { children: finds.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("td", { className: "deg", style: { color: "var(--gold)" }, children: f.skip }),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("td", { className: "deg", children: f.pos }),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("td", { className: "deg", children: f.els }),
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("td", { className: "he", style: { direction: "rtl" }, children: f.snippet })
+          ] }, i)) })
+        ] })
+      ] }))
+    ] })
+  ] });
 }
 function TemurahSubTab() {
   const [text, setText] = (0, import_react12.useState)("\u05D1\u05E4\u05D5\u05DE\u05EA");
@@ -28636,7 +32767,64 @@ function TemurahSubTab() {
     const a = alpha[i], b = m[a];
     if (i < alpha.length / 2) pairs.push([a, b]);
   }
-  return /* @__PURE__ */ import_react12.default.createElement(import_react12.default.Fragment, null, /* @__PURE__ */ import_react12.default.createElement("h3", null, "Temurah / Atbash \u2014 the mirror cipher"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A JS port of ", /* @__PURE__ */ import_react12.default.createElement("code", null, "sophia_ai_robot_prophet"), " ", /* @__PURE__ */ import_react12.default.createElement("i", null, "lib/temuraeh.py"), " (", /* @__PURE__ */ import_react12.default.createElement("code", null, "temurah(reverse=True)"), "): each letter of the alphabet is paired with its mirror (\u05D0\u2194\u05EA, \u05D1\u2194\u05E9 \u2026). The classic Templar example is reproduced exactly: ", /* @__PURE__ */ import_react12.default.createElement("b", null, "BAPHOMET"), " = ", /* @__PURE__ */ import_react12.default.createElement("span", { className: "he" }, "\u05D1\u05E4\u05D5\u05DE\u05EA"), " \u2192 ", /* @__PURE__ */ import_react12.default.createElement("span", { className: "he" }, "\u05E9\u05D5\u05E4\u05D9\u05D0"), " = ", /* @__PURE__ */ import_react12.default.createElement("b", null, "SOPHIA"), "."), /* @__PURE__ */ import_react12.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react12.default.createElement("input", { type: "text", value: text, onChange: (e) => setText(e.target.value), placeholder: "text to encode", style: { flex: "1 1 280px", direction: lang === "Hebrew" ? "rtl" : "ltr" } }), /* @__PURE__ */ import_react12.default.createElement("select", { value: lang, onChange: (e) => setLang(e.target.value), style: { flex: "0 0 140px" } }, /* @__PURE__ */ import_react12.default.createElement("option", { value: "Hebrew" }, "Hebrew (22)"), /* @__PURE__ */ import_react12.default.createElement("option", { value: "Latin" }, "Latin (26)"), /* @__PURE__ */ import_react12.default.createElement("option", { value: "Greek" }, "Greek (24)"))), /* @__PURE__ */ import_react12.default.createElement("div", { className: "grid2" }, /* @__PURE__ */ import_react12.default.createElement("div", { className: "iv" }, /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 4 } }, "Input"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "he", style: { direction: lang === "Hebrew" ? "rtl" : "ltr", fontSize: "1.5rem", lineHeight: 1.6, wordBreak: "break-all" } }, text || " ")), /* @__PURE__ */ import_react12.default.createElement("div", { className: "iv" }, /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 4 } }, "Temurah / Atbash"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "he", style: { direction: lang === "Hebrew" ? "rtl" : "ltr", fontSize: "1.5rem", lineHeight: 1.6, wordBreak: "break-all", color: "var(--gold)" } }, out || " "))), /* @__PURE__ */ import_react12.default.createElement("h3", { style: { marginTop: 14 } }, "Substitution table \u2014 ", lang), /* @__PURE__ */ import_react12.default.createElement("div", { className: "kbox", style: { display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(74px,1fr))", gap: 6, textAlign: "center" } }, pairs.map(([a, b], i) => /* @__PURE__ */ import_react12.default.createElement("div", { key: i, className: "chip", style: { display: "flex", alignItems: "center", justifyContent: "center", gap: 4 } }, /* @__PURE__ */ import_react12.default.createElement("span", { className: "he", style: { color: "var(--dim)" } }, a), /* @__PURE__ */ import_react12.default.createElement("span", { className: "muted" }, "\u2194"), /* @__PURE__ */ import_react12.default.createElement("span", { className: "he", style: { color: "var(--gold)" } }, b)))), lang === "Hebrew" && /* @__PURE__ */ import_react12.default.createElement("div", { className: "note", style: { marginTop: 10 } }, "Final forms (\u05DA \u05DD \u05DF \u05E3 \u05E5) are normalized to their base letter before the mirror, so the cipher is a proper atbash. The cited ", /* @__PURE__ */ import_react12.default.createElement("span", { className: "he" }, "\u05D1\u05E4\u05D5\u05DE\u05EA"), " contains no finals, so the output ", /* @__PURE__ */ import_react12.default.createElement("span", { className: "he" }, "\u05E9\u05D5\u05E4\u05D9\u05D0"), " is byte-identical to the upstream Python (", /* @__PURE__ */ import_react12.default.createElement("code", null, "temura_conv('\u05D1\u05E4\u05D5\u05DE\u05EA','Hebrew')"), " \u2192 ", /* @__PURE__ */ import_react12.default.createElement("span", { className: "he" }, "\u05E9\u05D5\u05E4\u05D9\u05D0"), ")."));
+  return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(import_jsx_runtime12.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h3", { children: "Temurah / Atbash \u2014 the mirror cipher" }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "A JS port of ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("code", { children: "sophia_ai_robot_prophet" }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("i", { children: "lib/temuraeh.py" }),
+      " (",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("code", { children: "temurah(reverse=True)" }),
+      "): each letter of the alphabet is paired with its mirror (\u05D0\u2194\u05EA, \u05D1\u2194\u05E9 \u2026). The classic Templar example is reproduced exactly: ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: "BAPHOMET" }),
+      " = ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "he", children: "\u05D1\u05E4\u05D5\u05DE\u05EA" }),
+      " \u2192 ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "he", children: "\u05E9\u05D5\u05E4\u05D9\u05D0" }),
+      " = ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: "SOPHIA" }),
+      "."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "controls", style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("input", { type: "text", value: text, onChange: (e) => setText(e.target.value), placeholder: "text to encode", style: { flex: "1 1 280px", direction: lang === "Hebrew" ? "rtl" : "ltr" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("select", { value: lang, onChange: (e) => setLang(e.target.value), style: { flex: "0 0 140px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("option", { value: "Hebrew", children: "Hebrew (22)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("option", { value: "Latin", children: "Latin (26)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("option", { value: "Greek", children: "Greek (24)" })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "grid2", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "iv", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "muted", style: { marginBottom: 4 }, children: "Input" }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "he", style: { direction: lang === "Hebrew" ? "rtl" : "ltr", fontSize: "1.5rem", lineHeight: 1.6, wordBreak: "break-all" }, children: text || " " })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "iv", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "muted", style: { marginBottom: 4 }, children: "Temurah / Atbash" }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "he", style: { direction: lang === "Hebrew" ? "rtl" : "ltr", fontSize: "1.5rem", lineHeight: 1.6, wordBreak: "break-all", color: "var(--gold)" }, children: out || " " })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("h3", { style: { marginTop: 14 }, children: [
+      "Substitution table \u2014 ",
+      lang
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "kbox", style: { display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(74px,1fr))", gap: 6, textAlign: "center" }, children: pairs.map(([a, b], i) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "chip", style: { display: "flex", alignItems: "center", justifyContent: "center", gap: 4 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "he", style: { color: "var(--dim)" }, children: a }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "muted", children: "\u2194" }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "he", style: { color: "var(--gold)" }, children: b })
+    ] }, i)) }),
+    lang === "Hebrew" && /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "note", style: { marginTop: 10 }, children: [
+      "Final forms (\u05DA \u05DD \u05DF \u05E3 \u05E5) are normalized to their base letter before the mirror, so the cipher is a proper atbash. The cited ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "he", children: "\u05D1\u05E4\u05D5\u05DE\u05EA" }),
+      " contains no finals, so the output ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "he", children: "\u05E9\u05D5\u05E4\u05D9\u05D0" }),
+      " is byte-identical to the upstream Python (",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("code", { children: "temura_conv('\u05D1\u05E4\u05D5\u05DE\u05EA','Hebrew')" }),
+      " \u2192 ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "he", children: "\u05E9\u05D5\u05E4\u05D9\u05D0" }),
+      ")."
+    ] })
+  ] });
 }
 function ZiruphSubTab() {
   const [text, setText] = (0, import_react12.useState)("BAPHOMET");
@@ -28653,23 +32841,137 @@ function ZiruphSubTab() {
     if (n === 25 && idx > 8) idx -= 1;
     preview.push([ch, idx < n ? keyArr[idx] : "\u2014"]);
   }
-  return /* @__PURE__ */ import_react12.default.createElement(import_react12.default.Fragment, null, /* @__PURE__ */ import_react12.default.createElement("h3", null, "Ziruph \u2014 Kircher substitution cipher"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "A JS port of ", /* @__PURE__ */ import_react12.default.createElement("code", null, "sophia_ai_robot_prophet"), " ", /* @__PURE__ */ import_react12.default.createElement("i", null, "lib/ziruph.py"), ". Kircher\u2019s ", /* @__PURE__ */ import_react12.default.createElement("b", null, "Ziruph"), " substitutes each letter from a key alphabet and ", /* @__PURE__ */ import_react12.default.createElement("b", null, "swaps case"), " (uppercase\u2192lowercase, lowercase\u2192uppercase, as in the source). The upstream code never split its key string \u2014 a bug that injected spaces for half the alphabet \u2014 so it could not round-trip; here the dictionary is split into letters and the cipher runs as intended (with I/J merged for a 25-letter key), so encrypt\u2192decrypt restores the plaintext letters. Custom dictionary supported."), /* @__PURE__ */ import_react12.default.createElement("div", { className: "controls", style: { marginBottom: 8 } }, /* @__PURE__ */ import_react12.default.createElement("input", { type: "text", value: text, onChange: (e) => setText(e.target.value), placeholder: "text", style: { flex: "1 1 220px" } }), /* @__PURE__ */ import_react12.default.createElement("div", { className: "chips" }, /* @__PURE__ */ import_react12.default.createElement("button", { className: "subtab" + (mode === "encrypt" ? " active" : ""), onClick: () => setMode("encrypt") }, "Encrypt"), /* @__PURE__ */ import_react12.default.createElement("button", { className: "subtab" + (mode === "decrypt" ? " active" : ""), onClick: () => setMode("decrypt") }, "Decrypt"))), /* @__PURE__ */ import_react12.default.createElement("div", { className: "controls", style: { marginBottom: 10 } }, /* @__PURE__ */ import_react12.default.createElement("input", { type: "text", value: dict, onChange: (e) => setDict(e.target.value), style: { flex: "1 1 460px", fontFamily: "monospace" } }), /* @__PURE__ */ import_react12.default.createElement("span", { className: "muted" }, n, " letters ", n === 25 ? "(I/J merged)" : "(A\u2013Z)")), /* @__PURE__ */ import_react12.default.createElement("div", { className: "grid2" }, /* @__PURE__ */ import_react12.default.createElement("div", { className: "iv" }, /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 4 } }, mode === "encrypt" ? "Plaintext" : "Ciphertext"), /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: "1.3rem", wordBreak: "break-all" } }, text || " ")), /* @__PURE__ */ import_react12.default.createElement("div", { className: "iv" }, /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 4 } }, mode === "encrypt" ? "Ciphertext" : "Plaintext", " (case-swapped)"), /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: "1.3rem", wordBreak: "break-all", color: "var(--gold)" } }, out || " "))), /* @__PURE__ */ import_react12.default.createElement("h3", { style: { marginTop: 14 } }, "Key map (A\u2192?)"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "kbox", style: { display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(64px,1fr))", gap: 6, textAlign: "center" } }, preview.map(([a, b]) => /* @__PURE__ */ import_react12.default.createElement("div", { key: a, className: "chip", style: { display: "flex", alignItems: "center", justifyContent: "center", gap: 4 } }, /* @__PURE__ */ import_react12.default.createElement("b", { style: { color: "var(--dim)" } }, a), /* @__PURE__ */ import_react12.default.createElement("span", { className: "muted" }, "\u2192"), /* @__PURE__ */ import_react12.default.createElement("b", { style: { color: "var(--gold)" } }, b)))), /* @__PURE__ */ import_react12.default.createElement("div", { className: "note", style: { marginTop: 10 } }, "Round-trip (encrypt then decrypt) restores the letters: ", /* @__PURE__ */ import_react12.default.createElement("b", null, text), " \u2192 ", /* @__PURE__ */ import_react12.default.createElement("span", { style: { color: "var(--gold)" } }, ziruphEncrypt(text, keyArr)), " \u2192 ", /* @__PURE__ */ import_react12.default.createElement("b", { style: { color: "var(--green)" } }, roundtrip), " (case may swap, per the Kircher case-swap)."));
+  return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(import_jsx_runtime12.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h3", { children: "Ziruph \u2014 Kircher substitution cipher" }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "A JS port of ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("code", { children: "sophia_ai_robot_prophet" }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("i", { children: "lib/ziruph.py" }),
+      ". Kircher\u2019s ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: "Ziruph" }),
+      " substitutes each letter from a key alphabet and ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: "swaps case" }),
+      " (uppercase\u2192lowercase, lowercase\u2192uppercase, as in the source). The upstream code never split its key string \u2014 a bug that injected spaces for half the alphabet \u2014 so it could not round-trip; here the dictionary is split into letters and the cipher runs as intended (with I/J merged for a 25-letter key), so encrypt\u2192decrypt restores the plaintext letters. Custom dictionary supported."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "controls", style: { marginBottom: 8 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("input", { type: "text", value: text, onChange: (e) => setText(e.target.value), placeholder: "text", style: { flex: "1 1 220px" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "chips", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("button", { className: "subtab" + (mode === "encrypt" ? " active" : ""), onClick: () => setMode("encrypt"), children: "Encrypt" }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("button", { className: "subtab" + (mode === "decrypt" ? " active" : ""), onClick: () => setMode("decrypt"), children: "Decrypt" })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "controls", style: { marginBottom: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("input", { type: "text", value: dict, onChange: (e) => setDict(e.target.value), style: { flex: "1 1 460px", fontFamily: "monospace" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("span", { className: "muted", children: [
+        n,
+        " letters ",
+        n === 25 ? "(I/J merged)" : "(A\u2013Z)"
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "grid2", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "iv", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "muted", style: { marginBottom: 4 }, children: mode === "encrypt" ? "Plaintext" : "Ciphertext" }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { style: { fontSize: "1.3rem", wordBreak: "break-all" }, children: text || " " })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "iv", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "muted", style: { marginBottom: 4 }, children: [
+          mode === "encrypt" ? "Ciphertext" : "Plaintext",
+          " (case-swapped)"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { style: { fontSize: "1.3rem", wordBreak: "break-all", color: "var(--gold)" }, children: out || " " })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h3", { style: { marginTop: 14 }, children: "Key map (A\u2192?)" }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "kbox", style: { display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(64px,1fr))", gap: 6, textAlign: "center" }, children: preview.map(([a, b]) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "chip", style: { display: "flex", alignItems: "center", justifyContent: "center", gap: 4 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { style: { color: "var(--dim)" }, children: a }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "muted", children: "\u2192" }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { style: { color: "var(--gold)" }, children: b })
+    ] }, a)) }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "note", style: { marginTop: 10 }, children: [
+      "Round-trip (encrypt then decrypt) restores the letters: ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: text }),
+      " \u2192 ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { style: { color: "var(--gold)" }, children: ziruphEncrypt(text, keyArr) }),
+      " \u2192 ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { style: { color: "var(--green)" }, children: roundtrip }),
+      " (case may swap, per the Kircher case-swap)."
+    ] })
+  ] });
 }
 function CodesTab({ sub, setSubTab }) {
   const subtabs = [["els", "ELS grid"], ["temurah", "Temurah / Atbash"], ["ziruph", "Ziruph"]];
-  return /* @__PURE__ */ import_react12.default.createElement(import_react12.default.Fragment, null, /* @__PURE__ */ import_react12.default.createElement("h2", null, "Codes \u2014 ELS \xB7 Temurah \xB7 Ziruph"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 10 } }, "Three kabbalistic ciphers, ported to JavaScript from their original Python and bundled for in-browser use. ", /* @__PURE__ */ import_react12.default.createElement("b", null, "ELS"), " lays the Torah as a search matrix (source: ", /* @__PURE__ */ import_react12.default.createElement("code", null, "pedroelbanquero/torahcodespython"), "); ", /* @__PURE__ */ import_react12.default.createElement("b", null, "Temurah"), " and ", /* @__PURE__ */ import_react12.default.createElement("b", null, "Ziruph"), " are substitution ciphers (source: ", /* @__PURE__ */ import_react12.default.createElement("code", null, "cryptocalypse/sophia_ai_robot_prophet"), "). Nothing leaves your browser."), /* @__PURE__ */ import_react12.default.createElement(SubTabs, { items: subtabs, active: sub, onChange: setSubTab }), sub === "els" && /* @__PURE__ */ import_react12.default.createElement(ElsSubTab, null), sub === "temurah" && /* @__PURE__ */ import_react12.default.createElement(TemurahSubTab, null), sub === "ziruph" && /* @__PURE__ */ import_react12.default.createElement(ZiruphSubTab, null));
+  return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(import_jsx_runtime12.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h2", { children: "Codes \u2014 ELS \xB7 Temurah \xB7 Ziruph" }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "muted", style: { marginBottom: 10 }, children: [
+      "Three kabbalistic ciphers, ported to JavaScript from their original Python and bundled for in-browser use. ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: "ELS" }),
+      " lays the Torah as a search matrix (source: ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("code", { children: "pedroelbanquero/torahcodespython" }),
+      "); ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: "Temurah" }),
+      " and ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("b", { children: "Ziruph" }),
+      " are substitution ciphers (source: ",
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("code", { children: "cryptocalypse/sophia_ai_robot_prophet" }),
+      "). Nothing leaves your browser."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(SubTabs, { items: subtabs, active: sub, onChange: setSubTab }),
+    sub === "els" && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(ElsSubTab, {}),
+    sub === "temurah" && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(TemurahSubTab, {}),
+    sub === "ziruph" && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(ZiruphSubTab, {})
+  ] });
 }
 
-// src/tabs/MethodTab.jsx
+// web/src/tabs/MethodTab.jsx
 var import_react13 = __toESM(require_react());
+var import_jsx_runtime13 = __toESM(require_jsx_runtime());
 function MethodTab({ esGlossCount }) {
-  return /* @__PURE__ */ import_react13.default.createElement(import_react13.default.Fragment, null, /* @__PURE__ */ import_react13.default.createElement("h2", null, "Methodology & scope"), /* @__PURE__ */ import_react13.default.createElement("ul", { className: "muted", style: { marginTop: 4, lineHeight: 1.7 } }, /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Frame:"), " a formal synthesis of the Sefer Yetzirah's letter\u2192luminary mapping with astronomical ephemerides. The classical ", /* @__PURE__ */ import_react13.default.createElement("i", null, "Sefer Yetzirah"), " is cosmogonic linguistics \u2014 it binds the 22 letters to sky and speech; this operationalisation takes that mapping as a verifiable protocol and tests the regularities it produces against a null model, posing the design question directly. The stellar-letter reading was historically a divinatory technique, attested in the Sefer Yetzirah, Sefer Raziel, and Gaffarel's Persian\u2013Hebrew star-reading (\xA715c.8/\xA715c.10) and replicated here from those instructions; this work documents that use and the intentional design behind it, without claiming the technique predicts the future."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Simple\u2194sign mapping:"), " equal 30\xB0 tropical sectors (not IAU constellations, which are unequal and 13). A symbolic convention necessary for the one-to-one letter\u2194sign grid. The mothers are placed opposite their real circumpolar constellations (Draco, Ursa Minor, Cassiopea)."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Astronomy:"), " astronomy-engine v2.1.19, geocentric apparent ecliptic longitude, noon UT."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Lexicon:"), " Strong (OpenScriptures), 6045 consonantal roots."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Pluto ephemeris:"), " precision degrades outside 1700\u20132200; ancient windows rely on sign-level (30\xB0) determination, validated by smooth continuity, not arcminute precision."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Negative results (tested):"), " the mirror-palindrome 2701\u21923773 does not discriminate at corpus level (Genesis 39.3% \u2248 Markov 39.2% \u2248 uniform 38.4%); Genesis-days do not correlate with eclipses (7.5% observed vs 28% expected \u2014 they avoid them)."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Positive results:"), " 37/73 fit the civil solar year (365=73\xD75; 2701 pentads = 37 years), corroborated by the Maya Haab and Calendar Round; Genesis 1 core palindromes 51.6% vs 37.4% paired null (p\u22480.076, borderline \u2014 not significant, but very close; hypothesis)."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Positive results v3.1 (\xA715b):"), " 37\xD773 structure of the 7 Genesis words demonstrated (23/127 subsets, p\u22483.1\xD710\u207B\u2074); saros-series count by calculation (152 series, 54\u201387, median 72); 7 kameot = 7 doubles (Mercury 260 = Tzolkin); Aiq Bekar = decimal-positional gematria of \xA72 (bridge to sigils); 72 Shem HaMephorash angels from Exodus (216=6\xB3); the 7-doubles=7-days heptagram (Chaldean order + mod 7 + Romance etymology); ayanamsa: 190-year spread (tropical discard robust); 6 windows 491-year cadence (p<5\xD710\u207B\u2076, hypothesis not cause)."), /* @__PURE__ */ import_react13.default.createElement("li", null, /* @__PURE__ */ import_react13.default.createElement("b", null, "Validation:"), " 88 assertions \u2014 all green. Full source and the paper are available in the repository.")));
+  return /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(import_jsx_runtime13.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h2", { children: "Methodology & scope" }),
+    /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("ul", { className: "muted", style: { marginTop: 4, lineHeight: 1.7 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("b", { children: "Frame:" }),
+        " a formal synthesis of the Sefer Yetzirah's letter\u2192luminary mapping with astronomical ephemerides. The classical ",
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("i", { children: "Sefer Yetzirah" }),
+        " is cosmogonic linguistics \u2014 it binds the 22 letters to sky and speech; this operationalisation takes that mapping as a verifiable protocol and tests the regularities it produces against a null model, posing the design question directly. The stellar-letter reading was historically a divinatory technique, attested in the Sefer Yetzirah, Sefer Raziel, and Gaffarel's Persian\u2013Hebrew star-reading (\xA715c.8/\xA715c.10) and replicated here from those instructions; this work documents that use and the intentional design behind it, without claiming the technique predicts the future."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("b", { children: "Simple\u2194sign mapping:" }),
+        " equal 30\xB0 tropical sectors (not IAU constellations, which are unequal and 13). A symbolic convention necessary for the one-to-one letter\u2194sign grid. The mothers are placed opposite their real circumpolar constellations (Draco, Ursa Minor, Cassiopea)."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("b", { children: "Astronomy:" }),
+        " astronomy-engine v2.1.19, geocentric apparent ecliptic longitude, noon UT."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("b", { children: "Lexicon:" }),
+        " Strong (OpenScriptures), 6045 consonantal roots."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("b", { children: "Negative results (tested):" }),
+        " the mirror-palindrome 2701\u21923773 does not discriminate at corpus level (Genesis 39.3% \u2248 Markov 39.2% \u2248 uniform 38.4%); Genesis-days do not correlate with eclipses (7.5% observed vs 28% expected \u2014 they avoid them)."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("b", { children: "Positive results:" }),
+        " 37/73 fit the civil solar year (365=73\xD75; 2701 pentads = 37 years), corroborated by the Maya Haab and Calendar Round; Genesis 1 core palindromes 51.6% vs 37.4% paired null (p\u22480.076, borderline \u2014 not significant, but very close; hypothesis)."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("b", { children: "Positive results v3.1 (\xA715b):" }),
+        " 37\xD773 structure of the 7 Genesis words demonstrated (23/127 subsets, p\u22483.1\xD710\u207B\u2074); saros-series count by calculation (152 series, 54\u201387, median 72); 7 kameot = 7 doubles (Mercury 260 = Tzolkin); Aiq Bekar = decimal-positional gematria of \xA72 (bridge to sigils); 72 Shem HaMephorash angels from Exodus (216=6\xB3); the 7-doubles=7-days heptagram (Chaldean order + mod 7 + Romance etymology); ayanamsa: 190-year spread (tropical discard robust); 6 windows 491-year cadence (p<5\xD710\u207B\u2076, hypothesis not cause)."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("li", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("b", { children: "Validation:" }),
+        " 88 assertions \u2014 all green. Full source and the paper are available in the repository."
+      ] })
+    ] })
+  ] });
 }
 
-// src/pages/ProphetsPage.jsx
+// web/src/pages/ProphetsPage.jsx
 var import_react15 = __toESM(require_react());
 
-// src/data/wiki_content.json
+// web/src/data/wiki_content.json
 var wiki_content_default = {
   Adam: {
     title: "Adam",
@@ -33706,14 +38008,15 @@ Little else is known about his childhood, although there is a persistent traditi
   }
 };
 
-// src/data/wiki.js
+// web/src/data/wiki.js
 var WIKI = wiki_content_default;
 function slugify(name) {
   return String(name).toLowerCase().replace(/[()]/g, " ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 }
 
-// src/components/Timeline.jsx
+// web/src/components/Timeline.jsx
 var import_react14 = __toESM(require_react());
+var import_jsx_runtime14 = __toESM(require_jsx_runtime());
 function fmtYear(y) {
   if (y < 0) return Math.abs(y) + " BCE";
   return y + " CE";
@@ -33735,19 +38038,45 @@ function Timeline({ items, title, accent = "#8a05ff" }) {
     if (it.endpoint) labelIdx.add(i);
   });
   for (const i of [Math.floor(items.length * 0.25), Math.floor(items.length * 0.5), Math.floor(items.length * 0.75)]) labelIdx.add(i);
-  return /* @__PURE__ */ import_react14.default.createElement("div", { className: "timeline-wrap", role: "img", "aria-label": title }, /* @__PURE__ */ import_react14.default.createElement("svg", { viewBox: `0 0 ${W} ${H}`, width: "100%", height: "auto", style: { maxWidth: "100%" } }, /* @__PURE__ */ import_react14.default.createElement("line", { x1: PADX, y1: midY, x2: W - PADX, y2: midY, stroke: "#33343f", strokeWidth: "2" }), ticks.map((t) => /* @__PURE__ */ import_react14.default.createElement("g", { key: t }, /* @__PURE__ */ import_react14.default.createElement("line", { x1: xOf(t), y1: midY - 6, x2: xOf(t), y2: midY + 6, stroke: "#3a3347", strokeWidth: "1" }), /* @__PURE__ */ import_react14.default.createElement("text", { x: xOf(t), y: midY + 20, textAnchor: "middle", fontSize: "11", fill: "#6a6a7a" }, fmtYear(t)))), items.map((it, i) => {
-    const ym = it.y1 == null ? it.y0 : Math.round((it.y0 + it.y1) / 2);
-    const x = xOf(ym);
-    const end = !!it.endpoint;
-    const r = end ? 8 : 5;
-    const fill = end ? "#e8c87a" : it.isRoyal ? "#c29eff" : accent;
-    const above = i % 2 === 0;
-    const ly = above ? midY - 18 : midY + 34;
-    return /* @__PURE__ */ import_react14.default.createElement("g", { key: i }, /* @__PURE__ */ import_react14.default.createElement("line", { x1: x, y1: midY, x2: x, y2: above ? midY - 12 : midY + 12, stroke: fill, strokeWidth: "1", opacity: "0.5" }), end ? /* @__PURE__ */ import_react14.default.createElement("g", null, /* @__PURE__ */ import_react14.default.createElement("circle", { cx: x, cy: midY, r: r + 3, fill: "none", stroke: "#e8c87a", strokeWidth: "1.2", opacity: "0.7" }), /* @__PURE__ */ import_react14.default.createElement("circle", { cx: x, cy: midY, r, fill: "#e8c87a", stroke: "#fbcfff", strokeWidth: "1" })) : /* @__PURE__ */ import_react14.default.createElement("circle", { cx: x, cy: midY, r, fill, stroke: "#16161f", strokeWidth: "1.2" }), labelIdx.has(i) && /* @__PURE__ */ import_react14.default.createElement("text", { x, y: ly, textAnchor: "middle", fontSize: "12", fontWeight: end ? 700 : 400, fill: end ? "#e8c87a" : "#9ca3af" }, it.name), /* @__PURE__ */ import_react14.default.createElement("title", null, `${it.name} (${it.years || fmtYear(it.y0)}) \u2014 ${it.role || ""}`));
-  })), /* @__PURE__ */ import_react14.default.createElement("div", { className: "muted", style: { textAlign: "center", fontSize: ".78rem", marginTop: 2 } }, /* @__PURE__ */ import_react14.default.createElement("span", { style: { color: "#e8c87a" } }, "\u25CF"), " lineage end \xB7 ", /* @__PURE__ */ import_react14.default.createElement("span", { style: { color: "#c29eff" } }, "\u25CF"), " royal \xB7 ", /* @__PURE__ */ import_react14.default.createElement("span", { style: { color: accent } }, "\u25CF"), " mage/prophet \xB7 hover a dot for the figure"));
+  return /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "timeline-wrap", role: "img", "aria-label": title, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("svg", { viewBox: `0 0 ${W} ${H}`, width: "100%", height: "auto", style: { maxWidth: "100%" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("line", { x1: PADX, y1: midY, x2: W - PADX, y2: midY, stroke: "#33343f", strokeWidth: "2" }),
+      ticks.map((t) => /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("g", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("line", { x1: xOf(t), y1: midY - 6, x2: xOf(t), y2: midY + 6, stroke: "#3a3347", strokeWidth: "1" }),
+        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("text", { x: xOf(t), y: midY + 20, textAnchor: "middle", fontSize: "11", fill: "#6a6a7a", children: fmtYear(t) })
+      ] }, t)),
+      items.map((it, i) => {
+        const ym = it.y1 == null ? it.y0 : Math.round((it.y0 + it.y1) / 2);
+        const x = xOf(ym);
+        const end = !!it.endpoint;
+        const r = end ? 8 : 5;
+        const fill = end ? "#e8c87a" : it.isRoyal ? "#c29eff" : accent;
+        const above = i % 2 === 0;
+        const ly = above ? midY - 18 : midY + 34;
+        return /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("g", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("line", { x1: x, y1: midY, x2: x, y2: above ? midY - 12 : midY + 12, stroke: fill, strokeWidth: "1", opacity: "0.5" }),
+          end ? /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("g", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("circle", { cx: x, cy: midY, r: r + 3, fill: "none", stroke: "#e8c87a", strokeWidth: "1.2", opacity: "0.7" }),
+            /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("circle", { cx: x, cy: midY, r, fill: "#e8c87a", stroke: "#fbcfff", strokeWidth: "1" })
+          ] }) : /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("circle", { cx: x, cy: midY, r, fill, stroke: "#16161f", strokeWidth: "1.2" }),
+          labelIdx.has(i) && /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("text", { x, y: ly, textAnchor: "middle", fontSize: "12", fontWeight: end ? 700 : 400, fill: end ? "#e8c87a" : "#9ca3af", children: it.name }),
+          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("title", { children: `${it.name} (${it.years || fmtYear(it.y0)}) \u2014 ${it.role || ""}` })
+        ] }, i);
+      })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "muted", style: { textAlign: "center", fontSize: ".78rem", marginTop: 2 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { style: { color: "#e8c87a" }, children: "\u25CF" }),
+      " lineage end \xB7 ",
+      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { style: { color: "#c29eff" }, children: "\u25CF" }),
+      " royal \xB7 ",
+      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { style: { color: accent }, children: "\u25CF" }),
+      " mage/prophet \xB7 hover a dot for the figure"
+    ] })
+  ] });
 }
 
-// src/pages/ProphetsPage.jsx
+// web/src/pages/ProphetsPage.jsx
+var import_jsx_runtime15 = __toESM(require_jsx_runtime());
 function ProphetCard({ p, onOpen }) {
   const dates = p.y0 === p.y1 ? fmtYear(p.y0) : `${fmtYear(p.y0)} \u2013 ${fmtYear(p.y1)}`;
   const end = !!p.endpoint;
@@ -33758,29 +38087,63 @@ function ProphetCard({ p, onOpen }) {
     e.preventDefault();
     onOpen(href);
   } : null;
-  return /* @__PURE__ */ import_react15.default.createElement(
+  return /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(
     "a",
     {
       className: "tcard" + (end ? " always" : ""),
       href,
       onClick,
-      style: { textDecoration: "none", display: "block", borderColor: end ? "var(--gold)" : void 0, boxShadow: end ? "0 0 0 1px var(--gold)" : void 0 }
-    },
-    /* @__PURE__ */ import_react15.default.createElement("div", { className: "the" }, p.he && /* @__PURE__ */ import_react15.default.createElement("span", { className: "he", style: { fontSize: "1.5rem", marginLeft: 6 } }, p.he)),
-    /* @__PURE__ */ import_react15.default.createElement("div", { className: "read" }, p.name),
-    /* @__PURE__ */ import_react15.default.createElement("div", { className: "trans" }, dates, " \xB7 ", p.region),
-    /* @__PURE__ */ import_react15.default.createElement("div", { className: "g" }, /* @__PURE__ */ import_react15.default.createElement("span", { className: "pill", style: { fontSize: ".7rem" } }, p.thread), pill && /* @__PURE__ */ import_react15.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", marginLeft: 6, color: "var(--gold)", borderColor: "var(--gold)" } }, pill)),
-    /* @__PURE__ */ import_react15.default.createElement("div", { className: "simp" }, p.role)
+      style: { textDecoration: "none", display: "block", borderColor: end ? "var(--gold)" : void 0, boxShadow: end ? "0 0 0 1px var(--gold)" : void 0 },
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "the", children: p.he && /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "he", style: { fontSize: "1.5rem", marginLeft: 6 }, children: p.he }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "read", children: p.name }),
+        /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "trans", children: [
+          dates,
+          " \xB7 ",
+          p.region
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "g", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "pill", style: { fontSize: ".7rem" }, children: p.thread }),
+          pill && /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "pill", style: { fontSize: ".68rem", marginLeft: 6, color: "var(--gold)", borderColor: "var(--gold)" }, children: pill })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "simp", children: p.role })
+      ]
+    }
   );
 }
 function ProphetsPage({ onOpen }) {
   const span = `${fmtYear(PROPHETS[0].y0)} \u2013 ${fmtYear(PROPHETS[PROPHETS.length - 1].y1)}`;
   const last = PROPHETS[PROPHETS.length - 1];
-  return /* @__PURE__ */ import_react15.default.createElement("div", null, /* @__PURE__ */ import_react15.default.createElement("h1", null, "Prophets \u2014 from Adam to Jacob Frank"), /* @__PURE__ */ import_react15.default.createElement("p", { className: "muted" }, "A chronology of prophetic and revelatory figures, from the first human ", /* @__PURE__ */ import_react15.default.createElement("span", { className: "he" }, "\u05D0\u05D3\u05DD"), " through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, down to the Sabbatean\u2013Frankist thread whose ", /* @__PURE__ */ import_react15.default.createElement("b", { style: { color: "var(--gold)" } }, last.designation || "final", " figure is ", last.name, " (", fmtYear(last.y0), "\u2013", fmtYear(last.y1), ")"), ". ", PROPHETS.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table."), /* @__PURE__ */ import_react15.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react15.default.createElement(Timeline, { items: PROPHETS, title: "Prophet timeline \u2014 Adam to Jacob Frank", accent: "#8a05ff" })), /* @__PURE__ */ import_react15.default.createElement("div", { className: "tcards" }, PROPHETS.map((p, i) => /* @__PURE__ */ import_react15.default.createElement(ProphetCard, { key: i, p, onOpen }))));
+  return /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("h1", { children: "Prophets \u2014 from Adam to Jacob Frank" }),
+    /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("p", { className: "muted", children: [
+      "A chronology of prophetic and revelatory figures, from the first human ",
+      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "he", children: "\u05D0\u05D3\u05DD" }),
+      " through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, down to the Sabbatean\u2013Frankist thread whose ",
+      /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("b", { style: { color: "var(--gold)" }, children: [
+        last.designation || "final",
+        " figure is ",
+        last.name,
+        " (",
+        fmtYear(last.y0),
+        "\u2013",
+        fmtYear(last.y1),
+        ")"
+      ] }),
+      ". ",
+      PROPHETS.length,
+      " figures across ",
+      span,
+      ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "panel", style: { padding: 14, marginBottom: 14 }, children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(Timeline, { items: PROPHETS, title: "Prophet timeline \u2014 Adam to Jacob Frank", accent: "#8a05ff" }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "tcards", children: PROPHETS.map((p, i) => /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(ProphetCard, { p, onOpen }, i)) })
+  ] });
 }
 
-// src/pages/MagesPage.jsx
+// web/src/pages/MagesPage.jsx
 var import_react16 = __toESM(require_react());
+var import_jsx_runtime16 = __toESM(require_jsx_runtime());
 function MageCard({ m, onOpen }) {
   const dates = m.years || `${fmtYear(m.y0)} \u2013 ${fmtYear(m.y1)}`;
   const end = !!m.endpoint;
@@ -33792,28 +38155,67 @@ function MageCard({ m, onOpen }) {
     e.preventDefault();
     onOpen(href);
   } : null;
-  return /* @__PURE__ */ import_react16.default.createElement(
+  return /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(
     "a",
     {
       className: "tcard" + (end ? " always" : ""),
       href,
       onClick,
-      style: { textDecoration: "none", display: "block", borderColor: end ? "var(--gold)" : void 0, boxShadow: end ? "0 0 0 1px var(--gold)" : void 0 }
-    },
-    /* @__PURE__ */ import_react16.default.createElement("div", { className: "the", style: { minHeight: 26 } }, m.name),
-    /* @__PURE__ */ import_react16.default.createElement("div", { className: "read" }, dates, " \xB7 ", m.region),
-    /* @__PURE__ */ import_react16.default.createElement("div", { className: "g", style: { display: "flex", flexWrap: "wrap", gap: 4, alignItems: "center" } }, /* @__PURE__ */ import_react16.default.createElement("span", { className: "pill", style: { fontSize: ".7rem" } }, m.role.split(";")[0]), m.isIberian && /* @__PURE__ */ import_react16.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--green)", borderColor: "var(--green)" } }, "Iberian"), m.isRoyal && /* @__PURE__ */ import_react16.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--violet)", borderColor: "var(--violet)" } }, "royal"), pill && /* @__PURE__ */ import_react16.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--gold)", borderColor: "var(--gold)" } }, pill)),
-    hasWiki && /* @__PURE__ */ import_react16.default.createElement("div", { className: "simp" }, WIKI[m.name].description.slice(0, 120), "\u2026")
+      style: { textDecoration: "none", display: "block", borderColor: end ? "var(--gold)" : void 0, boxShadow: end ? "0 0 0 1px var(--gold)" : void 0 },
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("div", { className: "the", style: { minHeight: 26 }, children: m.name }),
+        /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "read", children: [
+          dates,
+          " \xB7 ",
+          m.region
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "g", style: { display: "flex", flexWrap: "wrap", gap: 4, alignItems: "center" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { className: "pill", style: { fontSize: ".7rem" }, children: m.role.split(";")[0] }),
+          m.isIberian && /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--green)", borderColor: "var(--green)" }, children: "Iberian" }),
+          m.isRoyal && /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--violet)", borderColor: "var(--violet)" }, children: "royal" }),
+          pill && /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--gold)", borderColor: "var(--gold)" }, children: pill })
+        ] }),
+        hasWiki && /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "simp", children: [
+          WIKI[m.name].description.slice(0, 120),
+          "\u2026"
+        ] })
+      ]
+    }
   );
 }
 function MagesPage({ onOpen }) {
   const span = `${fmtYear(MAGES[0].y0)} \u2013 ${fmtYear(MAGES[MAGES.length - 1].y1)}`;
   const last = MAGES[MAGES.length - 1];
-  return /* @__PURE__ */ import_react16.default.createElement("div", null, /* @__PURE__ */ import_react16.default.createElement("h1", null, "Magi \u2014 from Daniel to Felipe II"), /* @__PURE__ */ import_react16.default.createElement("p", { className: "muted" }, "A chronology of ", /* @__PURE__ */ import_react16.default.createElement("b", null, "magi / wise-men / royal-sage occult figures"), ", from the Babylonian court magi (", /* @__PURE__ */ import_react16.default.createElement("b", null, "Daniel, Shadrach, Meshach, Abednego"), ") through the medieval Iberian sages \u2014 ", /* @__PURE__ */ import_react16.default.createElement("b", null, "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n"), " \u2014 to the Renaissance Christian-kabbalists and royal astrologers, ending with ", /* @__PURE__ */ import_react16.default.createElement("b", { style: { color: "var(--gold)" } }, last.name, " (", last.years, ")"), ", who closes the era of kings. ", MAGES.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table."), /* @__PURE__ */ import_react16.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react16.default.createElement(Timeline, { items: MAGES, title: "Magi timeline \u2014 Daniel to Felipe II", accent: "#8a05ff" })), /* @__PURE__ */ import_react16.default.createElement("div", { className: "tcards" }, MAGES.map((m, i) => /* @__PURE__ */ import_react16.default.createElement(MageCard, { key: i, m, onOpen }))));
+  return /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("h1", { children: "Magi \u2014 from Daniel to Felipe II" }),
+    /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("p", { className: "muted", children: [
+      "A chronology of ",
+      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("b", { children: "magi / wise-men / royal-sage occult figures" }),
+      ", from the Babylonian court magi (",
+      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("b", { children: "Daniel, Shadrach, Meshach, Abednego" }),
+      ") through the medieval Iberian sages \u2014 ",
+      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("b", { children: "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n" }),
+      " \u2014 to the Renaissance Christian-kabbalists and royal astrologers, ending with ",
+      /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("b", { style: { color: "var(--gold)" }, children: [
+        last.name,
+        " (",
+        last.years,
+        ")"
+      ] }),
+      ", who closes the era of kings. ",
+      MAGES.length,
+      " figures across ",
+      span,
+      ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("div", { className: "panel", style: { padding: 14, marginBottom: 14 }, children: /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Timeline, { items: MAGES, title: "Magi timeline \u2014 Daniel to Felipe II", accent: "#8a05ff" }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("div", { className: "tcards", children: MAGES.map((m, i) => /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(MageCard, { m, onOpen }, i)) })
+  ] });
 }
 
-// src/pages/AlignmentFicha.jsx
+// web/src/pages/AlignmentFicha.jsx
 var import_react17 = __toESM(require_react());
+var import_jsx_runtime17 = __toESM(require_jsx_runtime());
 function smallestArc2(lons) {
   const s = [...lons].sort((a, b) => a - b);
   if (s.length < 2) return 0;
@@ -33824,36 +38226,162 @@ function smallestArc2(lons) {
 }
 function AlignmentFicha({ date, lex, angelMap, onBack, nameRefs }) {
   const rows = (0, import_react17.useMemo)(() => skyAt(date), [date]);
-  const occ = (0, import_react17.useMemo)(() => occupiedLetters(rows), [rows]);
-  const occSigns = (0, import_react17.useMemo)(() => new Set(rows.map((r) => r.sign)), [rows]);
-  const bs = (0, import_react17.useMemo)(() => bySign(rows), [rows]);
+  const rows7 = (0, import_react17.useMemo)(() => skyAt7(date), [date]);
+  const occ = (0, import_react17.useMemo)(() => occupiedLetters(rows7), [rows7]);
+  const occSigns = (0, import_react17.useMemo)(() => new Set(rows7.map((r) => r.sign)), [rows7]);
+  const bs = (0, import_react17.useMemo)(() => bySign(rows7), [rows7]);
   const words = (0, import_react17.useMemo)(() => lex ? readableWords(occ, lex.lexicon, angelMap) : [], [occ, lex, angelMap]);
   const meta = (0, import_react17.useMemo)(() => {
     let best = null;
     for (const [sign, list] of Object.entries(bs)) {
       if (!best || list.length > best.list.length) best = { sign, list };
     }
-    const lons = rows.map((r) => r.lon);
-    const year2 = (() => {
-      const d = makeDate ? makeDate(date.slice(0, 4) | 0, 1, 1) : null;
-      return parseInt(date.slice(0, 4), 10) || 2026;
-    })();
+    const lons = rows7.map((r) => r.lon);
+    const year2 = parseInt(date.slice(0, 4), 10) || 2026;
     return { maxInSign: best ? best.list.length : 0, sign: best ? best.sign : "\u2014", span: smallestArc2(lons), era: eraForYear(year2) };
-  }, [rows, bs, date]);
+  }, [rows7, bs, date]);
   const dateWords = words.filter((w) => w.simp).sort((a, b) => (b.name ? 1 : 0) - (a.name ? 1 : 0) || b.len - a.len);
   const top = dateWords.slice(0, 12);
   const year = parseInt(date.slice(0, 4), 10) || 2026;
-  return /* @__PURE__ */ import_react17.default.createElement("div", null, onBack && /* @__PURE__ */ import_react17.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react17.default.createElement("button", { onClick: onBack, title: "Back" }, "\u25C0 back to Alignments"), /* @__PURE__ */ import_react17.default.createElement("span", { className: "pill" }, "stellar alignment")), /* @__PURE__ */ import_react17.default.createElement("h1", null, "Stellar alignment \u2014 ", displayDate(date)), /* @__PURE__ */ import_react17.default.createElement("div", { className: "sub", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react17.default.createElement("b", { style: { color: "var(--gold)" } }, meta.maxInSign), " of ", rows.length, " bodies in ", /* @__PURE__ */ import_react17.default.createElement("b", null, meta.sign), " \xB7 span ", /* @__PURE__ */ import_react17.default.createElement("b", { className: "deg" }, meta.span.toFixed(1), "\xB0"), " \xB7 era ", /* @__PURE__ */ import_react17.default.createElement("b", null, meta.era)), /* @__PURE__ */ import_react17.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react17.default.createElement("div", { className: "panel", style: { padding: 14 } }, /* @__PURE__ */ import_react17.default.createElement(SkyMap, { rows, occ }), /* @__PURE__ */ import_react17.default.createElement("div", { className: "legend" }, occSigns.size, " of 12 zodiac signs occupied on ", displayDate(date), ". Readable simples: ", /* @__PURE__ */ import_react17.default.createElement("b", { style: { color: "var(--gold)" } }, [...occ].sort().join(" ") || "none"), ".")), /* @__PURE__ */ import_react17.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react17.default.createElement("h3", { style: { marginTop: 0 } }, "Alignment metrics"), /* @__PURE__ */ import_react17.default.createElement("table", null, /* @__PURE__ */ import_react17.default.createElement("tbody", null, /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Date"), /* @__PURE__ */ import_react17.default.createElement("td", null, displayDate(date))), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Bodies"), /* @__PURE__ */ import_react17.default.createElement("td", null, rows.length, " (", rows.map((r) => GLYPH[r.body]).join(" "), ")")), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Max in one sign"), /* @__PURE__ */ import_react17.default.createElement("td", null, /* @__PURE__ */ import_react17.default.createElement("b", { style: { color: "var(--gold)" } }, meta.maxInSign), " in ", meta.sign)), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Span (tightest arc)"), /* @__PURE__ */ import_react17.default.createElement("td", { className: "deg" }, meta.span.toFixed(2), "\xB0")), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Precessional era"), /* @__PURE__ */ import_react17.default.createElement("td", null, meta.era)), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Occupied signs"), /* @__PURE__ */ import_react17.default.createElement("td", null, occSigns.size, "/12")), /* @__PURE__ */ import_react17.default.createElement("tr", null, /* @__PURE__ */ import_react17.default.createElement("th", null, "Readable simples"), /* @__PURE__ */ import_react17.default.createElement("td", null, /* @__PURE__ */ import_react17.default.createElement("span", { className: "he", style: { fontSize: "1.1rem" } }, [...occ].sort().join(" ") || "none"))))))), /* @__PURE__ */ import_react17.default.createElement("div", { className: "panel", style: { marginTop: 14, padding: 16 } }, /* @__PURE__ */ import_react17.default.createElement("h3", { style: { marginTop: 0 } }, "Top readable names on ", displayDate(date), " \u2014 ", dateWords.length, " date-specific"), /* @__PURE__ */ import_react17.default.createElement("div", { className: "muted", style: { marginBottom: 8, fontSize: ".82rem" } }, "Names whose zodiac simples are among this alignment's occupied signs (proper names first, then longest). A particular sky configuration recurs over years \u2192 centuries \u2192 millennia; this is the readable layer of that day."), top.length ? /* @__PURE__ */ import_react17.default.createElement("div", { className: "tcards" }, top.map((w, i) => /* @__PURE__ */ import_react17.default.createElement("div", { key: i, className: "tcard" }, /* @__PURE__ */ import_react17.default.createElement("div", { className: "the" }, w.disp), /* @__PURE__ */ import_react17.default.createElement("div", { className: "read" }, w.translit), /* @__PURE__ */ import_react17.default.createElement("div", { className: "trans" }, w.gloss), /* @__PURE__ */ import_react17.default.createElement("div", { className: "g" }, w.len, " letters \xB7 gematria ", w.gem, w.angelName && /* @__PURE__ */ import_react17.default.createElement("span", { style: { color: "var(--violet)" } }, " \xB7 angel")), (w.person || w.place || w.compound || nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0) && /* @__PURE__ */ import_react17.default.createElement("div", { style: { marginTop: 4, display: "flex", flexWrap: "wrap", gap: 4 } }, w.person && /* @__PURE__ */ import_react17.default.createElement("span", { className: "pill", style: { color: "var(--blue)", borderColor: "var(--blue)" } }, "name", w.theo ? " (theophoric)" : ""), w.place && /* @__PURE__ */ import_react17.default.createElement("span", { className: "pill", style: { color: "var(--green)", borderColor: "var(--green)" }, title: "A biblical PLACE \u2014 proper locative noun in Strong (city, mountain, region\u2026)" }, "place"), w.compound && /* @__PURE__ */ import_react17.default.createElement("span", { className: "pill", style: { color: "var(--warn)", borderColor: "var(--warn)" }, title: "Concatenated multi-root entry whose gloss is truncated" }, "compound"), nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0 && (() => {
-    const r = nameRefs[w.he];
-    return /* @__PURE__ */ import_react17.default.createElement("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" }, title: "Where this name appears in the Hebrew Bible (Sefaria): " + r.refs.join(", ") }, "\u{1F4D6} ", r.refs[0], r.n > 1 ? " \xB7 +" + (r.n - 1) : "");
-  })())))) : /* @__PURE__ */ import_react17.default.createElement("div", { className: "muted" }, "No date-specific readable names on this day.")));
+  return /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { children: [
+    onBack && /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "controls", style: { marginBottom: 14 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("button", { onClick: onBack, title: "Back", children: "\u25C0 back to Alignments" }),
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("span", { className: "pill", children: "stellar alignment" })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("h1", { children: [
+      "Stellar alignment \u2014 ",
+      displayDate(date)
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "sub", style: { marginBottom: 14 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("b", { style: { color: "var(--gold)" }, children: meta.maxInSign }),
+      " of ",
+      rows7.length,
+      " classical bodies in ",
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("b", { children: meta.sign }),
+      " \xB7 span ",
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("b", { className: "deg", children: [
+        meta.span.toFixed(1),
+        "\xB0"
+      ] }),
+      " \xB7 era ",
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("b", { children: meta.era })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "grid2", style: { alignItems: "start" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "panel", style: { padding: 14 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(SkyMap, { rows, occ }),
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "legend", children: [
+          occSigns.size,
+          " of 12 zodiac signs occupied on ",
+          displayDate(date),
+          " (by the 7 classical bodies). Readable simples: ",
+          /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("b", { style: { color: "var(--gold)" }, children: [...occ].sort().join(" ") || "none" }),
+          ". Uranus and Neptune are plotted on the map for astronomical context but do ",
+          /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("b", { children: "not" }),
+          " light a sector (they have no letter in the Sefer Yetzirah)."
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "panel", style: { padding: 16 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("h3", { style: { marginTop: 0 }, children: "Alignment metrics" }),
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("table", { children: /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("tbody", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("th", { children: "Date" }),
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("td", { children: displayDate(date) })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("th", { children: "Bodies" }),
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("td", { children: [
+              rows7.length,
+              " classical (",
+              rows7.map((r) => GLYPH[r.body]).join(" "),
+              ") ",
+              /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("span", { className: "muted", children: [
+                "\xB7 ",
+                rows.length - rows7.length,
+                " modern plotted on map only (",
+                rows.filter((r) => !rows7.some((r7) => r7.body === r.body)).map((r) => GLYPH[r.body]).join(" "),
+                ")"
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("th", { children: "Max in one sign" }),
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("td", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("b", { style: { color: "var(--gold)" }, children: meta.maxInSign }),
+              " in ",
+              meta.sign
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("th", { children: "Span (tightest arc)" }),
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("td", { className: "deg", children: [
+              meta.span.toFixed(2),
+              "\xB0"
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("th", { children: "Precessional era" }),
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("td", { children: meta.era })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("th", { children: "Occupied signs" }),
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("td", { children: [
+              occSigns.size,
+              "/12"
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("tr", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("th", { children: "Readable simples" }),
+            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("span", { className: "he", style: { fontSize: "1.1rem" }, children: [...occ].sort().join(" ") || "none" }) })
+          ] })
+        ] }) })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "panel", style: { marginTop: 14, padding: 16 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("h3", { style: { marginTop: 0 }, children: [
+        "Top readable names on ",
+        displayDate(date),
+        " \u2014 ",
+        dateWords.length,
+        " date-specific"
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "muted", style: { marginBottom: 8, fontSize: ".82rem" }, children: "Names whose zodiac simples are among this alignment's occupied signs (proper names first, then longest). A particular sky configuration recurs over years \u2192 centuries \u2192 millennia; this is the readable layer of that day." }),
+      top.length ? /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "tcards", children: top.map((w, i) => /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "tcard", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "the", children: w.disp }),
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "read", children: w.translit }),
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "trans", children: w.gloss }),
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "g", children: [
+          w.len,
+          " letters \xB7 gematria ",
+          w.gem,
+          w.angelName && /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("span", { style: { color: "var(--violet)" }, children: " \xB7 angel" })
+        ] }),
+        (w.person || w.place || w.compound || nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0) && /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { style: { marginTop: 4, display: "flex", flexWrap: "wrap", gap: 4 }, children: [
+          w.person && /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("span", { className: "pill", style: { color: "var(--blue)", borderColor: "var(--blue)" }, children: [
+            "name",
+            w.theo ? " (theophoric)" : ""
+          ] }),
+          w.place && /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("span", { className: "pill", style: { color: "var(--green)", borderColor: "var(--green)" }, title: "A biblical PLACE \u2014 proper locative noun in Strong (city, mountain, region\u2026)", children: "place" }),
+          w.compound && /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("span", { className: "pill", style: { color: "var(--warn)", borderColor: "var(--warn)" }, title: "Concatenated multi-root entry whose gloss is truncated", children: "compound" }),
+          nameRefs && nameRefs[w.he] && nameRefs[w.he].n > 0 && (() => {
+            const r = nameRefs[w.he];
+            return /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("span", { className: "pill", style: { color: "var(--violet)", borderColor: "var(--violet)" }, title: "Where this name appears in the Hebrew Bible (Sefaria): " + r.refs.join(", "), children: [
+              "\u{1F4D6} ",
+              r.refs[0],
+              r.n > 1 ? " \xB7 +" + (r.n - 1) : ""
+            ] });
+          })()
+        ] })
+      ] }, i)) }) : /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "muted", children: "No date-specific readable names on this day." })
+    ] })
+  ] });
 }
 
-// src/pages/ProphetFicha.jsx
+// web/src/pages/ProphetFicha.jsx
 var import_react19 = __toESM(require_react());
 
-// src/components/Ficha.jsx
+// web/src/components/Ficha.jsx
 var import_react18 = __toESM(require_react());
+var import_jsx_runtime18 = __toESM(require_jsx_runtime());
 function datesOf(figure) {
   if (figure.years) return figure.years;
   if (figure.y0 != null && figure.y1 != null) return figure.y0 === figure.y1 ? fmtYear(figure.y0) : `${fmtYear(figure.y0)} \u2013 ${fmtYear(figure.y1)}`;
@@ -33866,10 +38394,20 @@ function LifeBar({ figure, min, max }) {
   const x0 = (y0 - min) / span * 100;
   const x1 = (y1 - min) / span * 100;
   const W = 100, H = 34;
-  return /* @__PURE__ */ import_react18.default.createElement("div", { className: "lifebar-wrap", role: "img", "aria-label": `Life span ${fmtYear(y0)} to ${fmtYear(y1)}` }, /* @__PURE__ */ import_react18.default.createElement("svg", { viewBox: `0 0 ${W} ${H}`, width: "100%", height: "auto", style: { maxWidth: "100%" } }, /* @__PURE__ */ import_react18.default.createElement("line", { x1: 0, y1: H / 2, x2: W, y2: H / 2, stroke: "#2a2a38", strokeWidth: "2" }), /* @__PURE__ */ import_react18.default.createElement("line", { x1: x0, y1: H / 2 - 9, x2: x0, y2: H / 2 + 9, stroke: "#9ca3af", strokeWidth: "1.5" }), /* @__PURE__ */ import_react18.default.createElement("line", { x1, y1: H / 2 - 9, x2: x1, y2: H / 2 + 9, stroke: "#9ca3af", strokeWidth: "1.5" }), /* @__PURE__ */ import_react18.default.createElement("rect", { x: x0, y: H / 2 - 5, width: Math.max(1.5, x1 - x0), height: 10, rx: 5, fill: "#8a05ff" }), /* @__PURE__ */ import_react18.default.createElement("text", { x: x0, y: 6, textAnchor: "start", fontSize: "7", fill: "#9ca3af" }, fmtYear(y0)), /* @__PURE__ */ import_react18.default.createElement("text", { x: x1, y: H - 1, textAnchor: "end", fontSize: "7", fill: "#9ca3af" }, fmtYear(y1))));
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("div", { className: "lifebar-wrap", role: "img", "aria-label": `Life span ${fmtYear(y0)} to ${fmtYear(y1)}`, children: /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("svg", { viewBox: `0 0 ${W} ${H}`, width: "100%", height: "auto", style: { maxWidth: "100%" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("line", { x1: 0, y1: H / 2, x2: W, y2: H / 2, stroke: "#2a2a38", strokeWidth: "2" }),
+    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("line", { x1: x0, y1: H / 2 - 9, x2: x0, y2: H / 2 + 9, stroke: "#9ca3af", strokeWidth: "1.5" }),
+    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("line", { x1, y1: H / 2 - 9, x2: x1, y2: H / 2 + 9, stroke: "#9ca3af", strokeWidth: "1.5" }),
+    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("rect", { x: x0, y: H / 2 - 5, width: Math.max(1.5, x1 - x0), height: 10, rx: 5, fill: "#8a05ff" }),
+    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("text", { x: x0, y: 6, textAnchor: "start", fontSize: "7", fill: "#9ca3af", children: fmtYear(y0) }),
+    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("text", { x: x1, y: H - 1, textAnchor: "end", fontSize: "7", fill: "#9ca3af", children: fmtYear(y1) })
+  ] }) });
 }
 function Ficha({ figure, kind, axisMin, axisMax, backHref, backLabel, wiki }) {
-  if (!figure) return /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react18.default.createElement("h2", null, "Not found"), /* @__PURE__ */ import_react18.default.createElement("p", null, "No figure matches this path."));
+  if (!figure) return /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "panel", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("h2", { children: "Not found" }),
+    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("p", { children: "No figure matches this path." })
+  ] });
   const w = wiki || {};
   const desc = w.description || figure.role;
   const facts = w.infobox || [];
@@ -33877,19 +38415,91 @@ function Ficha({ figure, kind, axisMin, axisMax, backHref, backLabel, wiki }) {
   const url = w.wikipediaUrl || "https://en.wikipedia.org/wiki/" + encodeURIComponent(figure.name.replace(/ /g, "_"));
   const dates = datesOf(figure);
   const designation = figure.designation || (figure.endpoint ? kind === "mage" ? "end of the era" : "lineage end" : null);
-  return /* @__PURE__ */ import_react18.default.createElement("div", { className: "ficha" }, /* @__PURE__ */ import_react18.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("button", { onClick: () => {
-    if (typeof window !== "undefined") window.history.back();
-  } }, "\u25C0 ", backLabel), /* @__PURE__ */ import_react18.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer", style: { marginLeft: "auto" } }, "Wikipedia \u2192")), /* @__PURE__ */ import_react18.default.createElement("h1", { style: { marginBottom: 4 } }, figure.name, figure.he && /* @__PURE__ */ import_react18.default.createElement("span", { className: "he", style: { marginLeft: 10, color: "var(--gold)" } }, figure.he)), /* @__PURE__ */ import_react18.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".9rem" } }, dates, dates && " \xB7 ", figure.region, designation && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 8, color: "var(--gold)", borderColor: "var(--gold)" } }, designation), kind === "mage" && figure.isIberian && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--green)", borderColor: "var(--green)" } }, "Iberian"), kind === "mage" && figure.isRoyal && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--violet)", borderColor: "var(--violet)" } }, "royal"), figure.thread && /* @__PURE__ */ import_react18.default.createElement("span", { className: "pill", style: { marginLeft: 6 } }, figure.thread)), axisMin != null && axisMax != null && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { padding: 12, marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement(LifeBar, { figure, min: axisMin, max: axisMax })), /* @__PURE__ */ import_react18.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react18.default.createElement("div", null, w.thumbnail && /* @__PURE__ */ import_react18.default.createElement("div", { className: "fig", style: { marginBottom: 12, padding: 8 } }, /* @__PURE__ */ import_react18.default.createElement("img", { src: w.thumbnail, alt: figure.name, style: { maxHeight: 320, width: "100%", borderRadius: 8, display: "block" }, loading: "lazy" })), /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Description"), /* @__PURE__ */ import_react18.default.createElement("p", { style: { lineHeight: 1.6, marginBottom: 0 } }, desc || "No Wikipedia description available."))), /* @__PURE__ */ import_react18.default.createElement("div", null, facts.length > 0 && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Facts"), /* @__PURE__ */ import_react18.default.createElement("table", { style: { fontSize: ".88rem" } }, /* @__PURE__ */ import_react18.default.createElement("tbody", null, facts.map((f, i) => /* @__PURE__ */ import_react18.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)", width: "38%", verticalAlign: "top" } }, f.label), /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "5px 8px" } }, f.value)))))))), rows.length > 0 && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Life & work in brief"), /* @__PURE__ */ import_react18.default.createElement("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 } }, "Summarised by section \u2014 one row per topic, for fast reading."), /* @__PURE__ */ import_react18.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react18.default.createElement("thead", null, /* @__PURE__ */ import_react18.default.createElement("tr", null, /* @__PURE__ */ import_react18.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "32%" } }, kind === "mage" ? "Work / contribution" : "Topic"), /* @__PURE__ */ import_react18.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px" } }, kind === "mage" ? "Significance" : "Summary"))), /* @__PURE__ */ import_react18.default.createElement("tbody", null, rows.map((r, i) => /* @__PURE__ */ import_react18.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "6px 8px", fontWeight: 600, verticalAlign: "top" } }, r.title), /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, r.note)))))), figure.prophecies && figure.prophecies.length > 0 && /* @__PURE__ */ import_react18.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("h2", { style: { marginTop: 0 } }, "Prophecies"), /* @__PURE__ */ import_react18.default.createElement("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 } }, "Key prophetic utterances and visions attributed to ", figure.name, ", with sources."), /* @__PURE__ */ import_react18.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react18.default.createElement("thead", null, /* @__PURE__ */ import_react18.default.createElement("tr", null, /* @__PURE__ */ import_react18.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "70%" } }, "Prophecy / vision"), /* @__PURE__ */ import_react18.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "30%" } }, "Source"))), /* @__PURE__ */ import_react18.default.createElement("tbody", null, figure.prophecies.map((pr, i) => /* @__PURE__ */ import_react18.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "6px 8px", verticalAlign: "top" } }, pr.t), /* @__PURE__ */ import_react18.default.createElement("td", { style: { padding: "6px 8px", color: "var(--gold)" } }, pr.r)))))), /* @__PURE__ */ import_react18.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react18.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer" }, "Read the full article on Wikipedia \u2192")));
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "ficha", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "controls", style: { marginBottom: 14 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("button", { onClick: () => {
+        if (typeof window !== "undefined") window.history.back();
+      }, children: [
+        "\u25C0 ",
+        backLabel
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("a", { href: url, target: "_blank", rel: "noreferrer", style: { marginLeft: "auto" }, children: "Wikipedia \u2192" })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("h1", { style: { marginBottom: 4 }, children: [
+      figure.name,
+      figure.he && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("span", { className: "he", style: { marginLeft: 10, color: "var(--gold)" }, children: figure.he })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "muted", style: { marginBottom: 10, fontSize: ".9rem" }, children: [
+      dates,
+      dates && " \xB7 ",
+      figure.region,
+      designation && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("span", { className: "pill", style: { marginLeft: 8, color: "var(--gold)", borderColor: "var(--gold)" }, children: designation }),
+      kind === "mage" && figure.isIberian && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("span", { className: "pill", style: { marginLeft: 6, color: "var(--green)", borderColor: "var(--green)" }, children: "Iberian" }),
+      kind === "mage" && figure.isRoyal && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("span", { className: "pill", style: { marginLeft: 6, color: "var(--violet)", borderColor: "var(--violet)" }, children: "royal" }),
+      figure.thread && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("span", { className: "pill", style: { marginLeft: 6 }, children: figure.thread })
+    ] }),
+    axisMin != null && axisMax != null && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("div", { className: "panel", style: { padding: 12, marginBottom: 14 }, children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(LifeBar, { figure, min: axisMin, max: axisMax }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "grid2", style: { alignItems: "start" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { children: [
+        w.thumbnail && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("div", { className: "fig", style: { marginBottom: 12, padding: 8 }, children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("img", { src: w.thumbnail, alt: figure.name, style: { maxHeight: 320, width: "100%", borderRadius: 8, display: "block" }, loading: "lazy" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "panel", style: { marginBottom: 14 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("h2", { style: { marginTop: 0 }, children: "Description" }),
+          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("p", { style: { lineHeight: 1.6, marginBottom: 0 }, children: desc || "No Wikipedia description available." })
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("div", { children: facts.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "panel", style: { marginBottom: 14 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("h2", { style: { marginTop: 0 }, children: "Facts" }),
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("table", { style: { fontSize: ".88rem" }, children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("tbody", { children: facts.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("td", { style: { padding: "5px 8px", color: "var(--dim)", width: "38%", verticalAlign: "top" }, children: f.label }),
+          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("td", { style: { padding: "5px 8px" }, children: f.value })
+        ] }, i)) }) })
+      ] }) })
+    ] }),
+    rows.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "panel", style: { marginBottom: 14 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("h2", { style: { marginTop: 0 }, children: "Life & work in brief" }),
+      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 }, children: "Summarised by section \u2014 one row per topic, for fast reading." }),
+      /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("table", { style: { width: "100%", fontSize: ".9rem" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("th", { style: { textAlign: "left", padding: "6px 8px", width: "32%" }, children: kind === "mage" ? "Work / contribution" : "Topic" }),
+          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("th", { style: { textAlign: "left", padding: "6px 8px" }, children: kind === "mage" ? "Significance" : "Summary" })
+        ] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("tbody", { children: rows.map((r, i) => /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("td", { style: { padding: "6px 8px", fontWeight: 600, verticalAlign: "top" }, children: r.title }),
+          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("td", { style: { padding: "6px 8px" }, className: "muted", children: r.note })
+        ] }, i)) })
+      ] })
+    ] }),
+    figure.prophecies && figure.prophecies.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "panel", style: { marginBottom: 14 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("h2", { style: { marginTop: 0 }, children: "Prophecies" }),
+      /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 }, children: [
+        "Key prophetic utterances and visions attributed to ",
+        figure.name,
+        ", with sources."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("table", { style: { width: "100%", fontSize: ".9rem" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("th", { style: { textAlign: "left", padding: "6px 8px", width: "70%" }, children: "Prophecy / vision" }),
+          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("th", { style: { textAlign: "left", padding: "6px 8px", width: "30%" }, children: "Source" })
+        ] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("tbody", { children: figure.prophecies.map((pr, i) => /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("td", { style: { padding: "6px 8px", verticalAlign: "top" }, children: pr.t }),
+          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("td", { style: { padding: "6px 8px", color: "var(--gold)" }, children: pr.r })
+        ] }, i)) })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("div", { style: { marginTop: 8 }, children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("a", { href: url, target: "_blank", rel: "noreferrer", children: "Read the full article on Wikipedia \u2192" }) })
+  ] });
 }
 
-// src/pages/ProphetFicha.jsx
+// web/src/pages/ProphetFicha.jsx
+var import_jsx_runtime19 = __toESM(require_jsx_runtime());
 var BY_SLUG = new Map(PROPHETS.map((p) => [slugify(p.name), p]));
 var AXIS_MIN = Math.min(...PROPHETS.map((p) => p.y0));
 var AXIS_MAX = Math.max(...PROPHETS.map((p) => p.y1 == null ? p.y0 : p.y1));
 function ProphetFicha({ slug }) {
   const figure = BY_SLUG.get(slug) || null;
   const wiki = figure ? WIKI[figure.name] : null;
-  return /* @__PURE__ */ import_react19.default.createElement(
+  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
     Ficha,
     {
       figure,
@@ -33904,15 +38514,16 @@ function ProphetFicha({ slug }) {
 }
 var PROPHET_SLUGS = [...BY_SLUG.keys()];
 
-// src/pages/MageFicha.jsx
+// web/src/pages/MageFicha.jsx
 var import_react20 = __toESM(require_react());
+var import_jsx_runtime20 = __toESM(require_jsx_runtime());
 var BY_SLUG2 = new Map(MAGES.map((m) => [slugify(m.name), m]));
 var AXIS_MIN2 = Math.min(...MAGES.map((m) => m.y0));
 var AXIS_MAX2 = Math.max(...MAGES.map((m) => m.y1 == null ? m.y0 : m.y1));
 function MageFicha({ slug }) {
   const figure = BY_SLUG2.get(slug) || null;
   const wiki = figure ? WIKI[figure.name] : null;
-  return /* @__PURE__ */ import_react20.default.createElement(
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
     Ficha,
     {
       figure,
@@ -33927,11 +38538,12 @@ function MageFicha({ slug }) {
 }
 var MAGE_SLUGS = [...BY_SLUG2.keys()];
 
-// src/pages/Landing.jsx
+// web/src/pages/Landing.jsx
 var import_react22 = __toESM(require_react());
 
-// src/components/WarningModal.jsx
+// web/src/components/WarningModal.jsx
 var import_react21 = __toESM(require_react());
+var import_jsx_runtime21 = __toESM(require_jsx_runtime());
 var QUESTIONS = [
   "Do you currently feel your thoughts or actions are being controlled by an outside force?",
   "Are you hearing voices or seeing things that the people around you do not?",
@@ -33945,23 +38557,72 @@ function WarningModal({ open, onClose, onProceed }) {
   const yesCount = answers.filter((a) => a === true).length;
   const done = answers.every((a) => a !== null);
   const risk = yesCount >= 1;
-  return /* @__PURE__ */ import_react21.default.createElement("div", { className: "eph-modal warn-modal", role: "dialog", "aria-modal": "true", "aria-labelledby": "wm-title", onClick: onClose }, /* @__PURE__ */ import_react21.default.createElement("div", { className: "eph-panel panel warn-panel", style: { maxWidth: 560 }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react21.default.createElement("h2", { id: "wm-title", style: { marginTop: 0 } }, "Before you enter"), /* @__PURE__ */ import_react21.default.createElement("div", { className: "muted", style: { marginBottom: 12, fontSize: ".9rem" } }, "This project explores ", /* @__PURE__ */ import_react21.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation, cosmology and altered-state symbolism"), " \u2014 the meaning of ", /* @__PURE__ */ import_react21.default.createElement("i", null, "apocalypse"), " as the unveiling of knowledge, read through the stars. Some of it can feel intense or destabilizing."), /* @__PURE__ */ import_react21.default.createElement("div", { className: "iv", style: { borderColor: "var(--warn)", marginBottom: 14 } }, /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem", lineHeight: 1.55 } }, /* @__PURE__ */ import_react21.default.createElement("b", { style: { color: "var(--warn)" } }, "Please do not use this tool if you suffer from psychosis, mania, or schizophrenia"), " \u2014 or, if you choose to, do so only together with someone you trust. The symbolism here can feel overwhelming; your wellbeing comes first, always.")), /* @__PURE__ */ import_react21.default.createElement("h3", { style: { marginTop: 6 } }, "A short self-check"), /* @__PURE__ */ import_react21.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".82rem" } }, "This is not a diagnosis \u2014 just a moment to pause. Answer honestly; nothing is stored or sent anywhere."), /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 10 } }, QUESTIONS.map((q, i) => /* @__PURE__ */ import_react21.default.createElement("div", { key: i, className: "iv", style: { padding: "10px 12px" } }, /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem", marginBottom: 7 } }, q), /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", gap: 8 } }, /* @__PURE__ */ import_react21.default.createElement("button", { className: answers[i] === true ? "on" : "", onClick: () => set(i, true), "aria-pressed": answers[i] === true }, "Yes"), /* @__PURE__ */ import_react21.default.createElement("button", { className: answers[i] === false ? "on" : "", onClick: () => set(i, false), "aria-pressed": answers[i] === false }, "No"))))), done && /* @__PURE__ */ import_react21.default.createElement("div", { className: "iv", style: { marginTop: 12, borderColor: risk ? "var(--warn)" : "var(--green)" } }, risk ? /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem" } }, /* @__PURE__ */ import_react21.default.createElement("b", { style: { color: "var(--warn)" } }, "Please be gentle with yourself."), " Consider talking to someone you trust or a mental-health professional before going deeper. You can always come back later.") : /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem", color: "var(--green)" } }, /* @__PURE__ */ import_react21.default.createElement("b", null, "Thank you for checking."), " Take what is useful, leave the rest.")), /* @__PURE__ */ import_react21.default.createElement("div", { className: "controls", style: { marginTop: 16, justifyContent: "space-between", flexWrap: "wrap", gap: 10 } }, /* @__PURE__ */ import_react21.default.createElement("button", { onClick: onClose, title: "Close this notice and stay here" }, "\u25C0 Go back"), /* @__PURE__ */ import_react21.default.createElement("button", { className: "btn-cta", onClick: onProceed, disabled: !done, title: done ? "Enter the sky-reader app" : "Answer the self-check to continue" }, done ? "Proceed to the app \u2192" : "Answer to continue")), /* @__PURE__ */ import_react21.default.createElement("div", { className: "note", style: { marginTop: 10 } }, "If you are in crisis, please reach out \u2014 in the US, ", /* @__PURE__ */ import_react21.default.createElement("a", { href: "https://988lifeline.org", target: "_blank", rel: "noreferrer" }, "988 Suicide & Crisis Lifeline"), "; elsewhere, contact your local emergency services. You matter.")));
+  return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", { className: "eph-modal warn-modal", role: "dialog", "aria-modal": "true", "aria-labelledby": "wm-title", onClick: onClose, children: /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "eph-panel panel warn-panel", style: { maxWidth: 560 }, onClick: (e) => e.stopPropagation(), children: [
+    /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("h2", { id: "wm-title", style: { marginTop: 0 }, children: "Before you enter" }),
+    /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "muted", style: { marginBottom: 12, fontSize: ".9rem" }, children: [
+      "This project explores ",
+      /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("b", { style: { color: "var(--gold)" }, children: "revelation, cosmology and altered-state symbolism" }),
+      " \u2014 the meaning of ",
+      /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("i", { children: "apocalypse" }),
+      " as the unveiling of knowledge, read through the stars. Some of it can feel intense or destabilizing."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", { className: "iv", style: { borderColor: "var(--warn)", marginBottom: 14 }, children: /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { style: { fontSize: ".9rem", lineHeight: 1.55 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("b", { style: { color: "var(--warn)" }, children: "Please do not use this tool if you suffer from psychosis, mania, or schizophrenia" }),
+      " \u2014 or, if you choose to, do so only together with someone you trust. The symbolism here can feel overwhelming; your wellbeing comes first, always."
+    ] }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("h3", { style: { marginTop: 6 }, children: "A short self-check" }),
+    /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", { className: "muted", style: { marginBottom: 10, fontSize: ".82rem" }, children: "This is not a diagnosis \u2014 just a moment to pause. Answer honestly; nothing is stored or sent anywhere." }),
+    /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", { style: { display: "flex", flexDirection: "column", gap: 10 }, children: QUESTIONS.map((q, i) => /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "iv", style: { padding: "10px 12px" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", { style: { fontSize: ".9rem", marginBottom: 7 }, children: q }),
+      /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { style: { display: "flex", gap: 8 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("button", { className: answers[i] === true ? "on" : "", onClick: () => set(i, true), "aria-pressed": answers[i] === true, children: "Yes" }),
+        /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("button", { className: answers[i] === false ? "on" : "", onClick: () => set(i, false), "aria-pressed": answers[i] === false, children: "No" })
+      ] })
+    ] }, i)) }),
+    done && /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", { className: "iv", style: { marginTop: 12, borderColor: risk ? "var(--warn)" : "var(--green)" }, children: risk ? /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { style: { fontSize: ".9rem" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("b", { style: { color: "var(--warn)" }, children: "Please be gentle with yourself." }),
+      " Consider talking to someone you trust or a mental-health professional before going deeper. You can always come back later."
+    ] }) : /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { style: { fontSize: ".9rem", color: "var(--green)" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("b", { children: "Thank you for checking." }),
+      " Take what is useful, leave the rest."
+    ] }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "controls", style: { marginTop: 16, justifyContent: "space-between", flexWrap: "wrap", gap: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("button", { onClick: onClose, title: "Close this notice and stay here", children: "\u25C0 Go back" }),
+      /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("button", { className: "btn-cta", onClick: onProceed, disabled: !done, title: done ? "Enter the sky-reader app" : "Answer the self-check to continue", children: done ? "Proceed to the app \u2192" : "Answer to continue" })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "note", style: { marginTop: 10 }, children: [
+      "If you are in crisis, please reach out \u2014 in the US, ",
+      /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("a", { href: "https://988lifeline.org", target: "_blank", rel: "noreferrer", children: "988 Suicide & Crisis Lifeline" }),
+      "; elsewhere, contact your local emergency services. You matter."
+    ] })
+  ] }) });
 }
 
-// src/pages/Landing.jsx
+// web/src/pages/Landing.jsx
+var import_jsx_runtime22 = __toESM(require_jsx_runtime());
 var REF_DATE = (() => {
   const d = /* @__PURE__ */ new Date();
   return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
 })();
 function Fa({ n, c, size, spin }) {
-  return /* @__PURE__ */ import_react22.default.createElement("i", { className: "fa-solid fa-" + n + (spin ? " fa-spin" : ""), style: { color: c ? "var(--" + c + ")" : "var(--txt)", fontSize: size || "1.4rem" }, "aria-hidden": "true" });
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("i", { className: "fa-solid fa-" + n + (spin ? " fa-spin" : ""), style: { color: c ? "var(--" + c + ")" : "var(--txt)", fontSize: size || "1.4rem" }, "aria-hidden": "true" });
 }
 function ReadingRule() {
-  return /* @__PURE__ */ import_react22.default.createElement("svg", { viewBox: "0 0 320 240", style: { width: "100%", height: "100%", maxHeight: 300 }, role: "img", "aria-label": "Reading rule: S is a subset of O" }, /* @__PURE__ */ import_react22.default.createElement("circle", { cx: "135", cy: "115", r: "92", fill: "none", stroke: "var(--violet)", strokeWidth: "2", opacity: ".5" }), /* @__PURE__ */ import_react22.default.createElement("text", { x: "135", y: "40", textAnchor: "middle", fill: "var(--violet)", fontSize: "13", fontWeight: "700" }, "O \xB7 occupied signs"), /* @__PURE__ */ import_react22.default.createElement("circle", { cx: "135", cy: "115", r: "52", fill: "rgba(232,200,122,.10)", stroke: "var(--gold)", strokeWidth: "2" }), /* @__PURE__ */ import_react22.default.createElement("text", { x: "135", y: "122", textAnchor: "middle", fill: "var(--gold)", fontSize: "22", fontWeight: "700" }, "S"), /* @__PURE__ */ import_react22.default.createElement("text", { x: "135", y: "148", textAnchor: "middle", fill: "var(--gold)", fontSize: "11" }, "word's simples"), /* @__PURE__ */ import_react22.default.createElement("text", { x: "160", y: "215", textAnchor: "middle", fill: "var(--txt)", fontSize: "16", fontWeight: "700" }, "S \u2286 O  \u2192  readable"));
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("svg", { viewBox: "0 0 320 240", style: { width: "100%", height: "100%", maxHeight: 300 }, role: "img", "aria-label": "Reading rule: S is a subset of O", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("circle", { cx: "135", cy: "115", r: "92", fill: "none", stroke: "var(--violet)", strokeWidth: "2", opacity: ".5" }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("text", { x: "135", y: "40", textAnchor: "middle", fill: "var(--violet)", fontSize: "13", fontWeight: "700", children: "O \xB7 occupied signs" }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("circle", { cx: "135", cy: "115", r: "52", fill: "rgba(232,200,122,.10)", stroke: "var(--gold)", strokeWidth: "2" }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("text", { x: "135", y: "122", textAnchor: "middle", fill: "var(--gold)", fontSize: "22", fontWeight: "700", children: "S" }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("text", { x: "135", y: "148", textAnchor: "middle", fill: "var(--gold)", fontSize: "11", children: "word's simples" }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("text", { x: "160", y: "215", textAnchor: "middle", fill: "var(--txt)", fontSize: "16", fontWeight: "700", children: "S \u2286 O  \u2192  readable" })
+  ] });
 }
 function GematriaTable() {
   const L2 = [["\u05D0", 1], ["\u05D1", 2], ["\u05D2", 3], ["\u05D3", 4], ["\u05D4", 5], ["\u05D5", 6], ["\u05D6", 7], ["\u05D7", 8], ["\u05D8", 9], ["\u05D9", 10], ["\u05DB", 20], ["\u05DC", 30], ["\u05DE", 40], ["\u05E0", 50], ["\u05E1", 60], ["\u05E2", 70], ["\u05E4", 80], ["\u05E6", 90], ["\u05E7", 100], ["\u05E8", 200], ["\u05E9", 300], ["\u05EA", 400]];
-  return /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", flexWrap: "wrap", gap: 6, justifyContent: "center", alignContent: "center", maxWidth: 340 } }, L2.map(([h, v]) => /* @__PURE__ */ import_react22.default.createElement("div", { key: h, style: { width: 52, textAlign: "center", border: "1px solid var(--line)", borderRadius: 8, padding: "5px 2px", background: "#000" } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { color: "var(--gold)", fontSize: "1.25rem", fontWeight: 700 } }, h), /* @__PURE__ */ import_react22.default.createElement("div", { style: { color: "var(--dim)", fontSize: ".72rem" } }, v))));
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { style: { display: "flex", flexWrap: "wrap", gap: 6, justifyContent: "center", alignContent: "center", maxWidth: 340 }, children: L2.map(([h, v]) => /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { style: { width: 52, textAlign: "center", border: "1px solid var(--line)", borderRadius: 8, padding: "5px 2px", background: "#000" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { style: { color: "var(--gold)", fontSize: "1.25rem", fontWeight: 700 }, children: h }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { style: { color: "var(--dim)", fontSize: ".72rem" }, children: v })
+  ] }, h)) });
 }
 function SigilKamea() {
   const sq = [[4, 9, 2], [3, 5, 7], [8, 1, 6]];
@@ -33982,22 +38643,37 @@ function SigilKamea() {
     const [x, y] = center(v);
     return (k ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
   }).join(" ");
-  return /* @__PURE__ */ import_react22.default.createElement("svg", { viewBox: `0 0 ${S} ${S}`, style: { width: "100%", height: "100%", maxHeight: 300 }, role: "img", "aria-label": "Sigil of \u05DE\u05E9\u05D9\u05D7 traced on the Lo Shu kamea" }, /* @__PURE__ */ import_react22.default.createElement("rect", { x: "0", y: "0", width: S, height: S, fill: "#0f0f15", rx: "8" }), sq.flat().map((v, idx) => {
-    const [i, j2] = pos[v];
-    const x = pad + cell * j2, y = pad + cell * i;
-    const on = used.has(v);
-    return /* @__PURE__ */ import_react22.default.createElement("g", { key: idx }, /* @__PURE__ */ import_react22.default.createElement("rect", { x: x + 2, y: y + 2, width: cell - 4, height: cell - 4, rx: "4", fill: on ? "#332b1a" : "#16161f", stroke: "#2a2a38", strokeWidth: "1" }), /* @__PURE__ */ import_react22.default.createElement("text", { x: x + cell / 2, y: y + cell / 2 - 3, textAnchor: "middle", dominantBaseline: "middle", fontSize: "15", fontWeight: "700", fill: on ? "#e8c87a" : "#5a5a6e" }, v), on && /* @__PURE__ */ import_react22.default.createElement("text", { x: x + cell / 2, y: y + cell / 2 + 12, textAnchor: "middle", dominantBaseline: "middle", fontSize: "7", fill: "#9ca3af" }, "#", order[v]));
-  }), trace.length >= 2 && /* @__PURE__ */ import_react22.default.createElement("path", { d, fill: "none", stroke: "#e8c87a", strokeWidth: "2.4", opacity: "0.92", strokeLinejoin: "round", strokeLinecap: "round" }), trace.map((v, k) => {
-    const [x, y] = center(v);
-    const r = k === 0 || k === trace.length - 1 ? 5 : 3;
-    const fill = k === 0 ? "#6fe0a0" : k === trace.length - 1 ? "#ff8a8a" : "#e8c87a";
-    return /* @__PURE__ */ import_react22.default.createElement("circle", { key: k, cx: x, cy: y, r, fill, stroke: "#08080b", strokeWidth: "0.6" });
-  }));
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("svg", { viewBox: `0 0 ${S} ${S}`, style: { width: "100%", height: "100%", maxHeight: 300 }, role: "img", "aria-label": "Sigil of \u05DE\u05E9\u05D9\u05D7 traced on the Lo Shu kamea", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("rect", { x: "0", y: "0", width: S, height: S, fill: "#0f0f15", rx: "8" }),
+    sq.flat().map((v, idx) => {
+      const [i, j2] = pos[v];
+      const x = pad + cell * j2, y = pad + cell * i;
+      const on = used.has(v);
+      return /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("g", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("rect", { x: x + 2, y: y + 2, width: cell - 4, height: cell - 4, rx: "4", fill: on ? "#332b1a" : "#16161f", stroke: "#2a2a38", strokeWidth: "1" }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("text", { x: x + cell / 2, y: y + cell / 2 - 3, textAnchor: "middle", dominantBaseline: "middle", fontSize: "15", fontWeight: "700", fill: on ? "#e8c87a" : "#5a5a6e", children: v }),
+        on && /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("text", { x: x + cell / 2, y: y + cell / 2 + 12, textAnchor: "middle", dominantBaseline: "middle", fontSize: "7", fill: "#9ca3af", children: [
+          "#",
+          order[v]
+        ] })
+      ] }, idx);
+    }),
+    trace.length >= 2 && /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("path", { d, fill: "none", stroke: "#e8c87a", strokeWidth: "2.4", opacity: "0.92", strokeLinejoin: "round", strokeLinecap: "round" }),
+    trace.map((v, k) => {
+      const [x, y] = center(v);
+      const r = k === 0 || k === trace.length - 1 ? 5 : 3;
+      const fill = k === 0 ? "#6fe0a0" : k === trace.length - 1 ? "#ff8a8a" : "#e8c87a";
+      return /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("circle", { cx: x, cy: y, r, fill, stroke: "#08080b", strokeWidth: "0.6" }, k);
+    })
+  ] });
 }
 function ELSGrid() {
   const letters = ["\u05D0", "\u05D1", "\u05D2", "\u05D3", "\u05D4", "\u05D5", "\u05D6", "\u05D7", "\u05D8", "\u05D9", "\u05DB", "\u05DC", "\u05DE", "\u05E0", "\u05E1", "\u05E2", "\u05E4", "\u05E6", "\u05E7", "\u05E8", "\u05E9", "\u05EA", "\u05D0", "\u05D1", "\u05D2", "\u05D3", "\u05D4", "\u05D5", "\u05D6", "\u05D7", "\u05D8", "\u05D9", "\u05DB", "\u05DC", "\u05DE", "\u05E0", "\u05E1", "\u05E2", "\u05E4", "\u05E6", "\u05E7", "\u05E8", "\u05E9", "\u05EA"];
   const hits = /* @__PURE__ */ new Set([4, 9, 14, 19, 24, 29, 34]);
-  return /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 10, alignItems: "center" } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "grid", gridTemplateColumns: "repeat(11,1fr)", gap: 3, maxWidth: 340 } }, letters.map((l, i) => /* @__PURE__ */ import_react22.default.createElement("div", { key: i, style: { textAlign: "center", padding: "4px 0", borderRadius: 4, fontSize: ".85rem", color: hits.has(i) ? "var(--gold)" : "var(--dim)", background: hits.has(i) ? "rgba(232,200,122,.14)" : "transparent", border: "1px solid " + (hits.has(i) ? "var(--gold)" : "transparent") } }, l))), /* @__PURE__ */ import_react22.default.createElement("div", { className: "muted", style: { fontSize: ".76rem" } }, "skip every 5th letter \u2192 a hidden word emerges"));
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { style: { display: "flex", flexDirection: "column", gap: 10, alignItems: "center" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(11,1fr)", gap: 3, maxWidth: 340 }, children: letters.map((l, i) => /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { style: { textAlign: "center", padding: "4px 0", borderRadius: 4, fontSize: ".85rem", color: hits.has(i) ? "var(--gold)" : "var(--dim)", background: hits.has(i) ? "rgba(232,200,122,.14)" : "transparent", border: "1px solid " + (hits.has(i) ? "var(--gold)" : "transparent") }, children: l }, i)) }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "muted", style: { fontSize: ".76rem" }, children: "skip every 5th letter \u2192 a hidden word emerges" })
+  ] });
 }
 function AlignWheel() {
   const bodies = [
@@ -34013,31 +38689,55 @@ function AlignWheel() {
   const cx = 110, cy = 112, R = 98, Rg = 84, Rp = 58;
   const pt = (lon, r) => [cx + r * Math.sin(lon * Math.PI / 180), cy - r * Math.cos(lon * Math.PI / 180)];
   const AQR = 10;
-  return /* @__PURE__ */ import_react22.default.createElement("svg", { viewBox: "0 0 220 226", style: { width: "100%", height: "100%", maxHeight: 300 }, role: "img", "aria-label": "5 Feb 1962: 7 bodies aligned in Aquarius" }, /* @__PURE__ */ import_react22.default.createElement("path", { d: `M${cx},${cy} L${pt(300, R).join(",")} A${R},${R} 0 0 1 ${pt(330, R).join(",")} Z`, fill: "rgba(232,200,122,.16)", stroke: "var(--gold)", strokeWidth: "1.5" }), /* @__PURE__ */ import_react22.default.createElement("circle", { cx, cy, r: R, fill: "none", stroke: "var(--line)", strokeWidth: "1" }), Array.from({ length: 12 }, (_, i) => {
-    const a0 = i * 30;
-    const [x0, y0] = pt(a0, R);
-    const [gx, gy] = pt(a0 + 15, Rg);
-    const aqr = i === AQR;
-    return /* @__PURE__ */ import_react22.default.createElement("g", { key: i }, /* @__PURE__ */ import_react22.default.createElement("line", { x1: cx, y1: cy, x2: x0, y2: y0, stroke: "var(--line)", strokeWidth: "0.6" }), /* @__PURE__ */ import_react22.default.createElement("text", { x: gx, y: gy, textAnchor: "middle", dominantBaseline: "middle", fontSize: "11", fill: aqr ? "var(--gold)" : "var(--dim)" }, signs[i]));
-  }), /* @__PURE__ */ import_react22.default.createElement("path", { d: `M${pt(300, Rp - 16).join(",")} A${Rp - 16},${Rp - 16} 0 0 1 ${pt(323, Rp - 16).join(",")} L${pt(323, Rp + 16).join(",")} A${Rp + 16},${Rp + 16} 0 0 0 ${pt(300, Rp + 16).join(",")} Z`, fill: "rgba(138,5,255,.10)", stroke: "var(--violet)", strokeWidth: "1", strokeDasharray: "3 2" }), bodies.map((p, i) => {
-    const r = Rp - 14 + i * 4.5;
-    const [x, y] = pt(p.lon, r);
-    return /* @__PURE__ */ import_react22.default.createElement("g", { key: p.b }, /* @__PURE__ */ import_react22.default.createElement("circle", { cx: x, cy: y, r: "8.5", fill: "#0f0f15", stroke: "var(--gold)", strokeWidth: "1" }), /* @__PURE__ */ import_react22.default.createElement("text", { x, y, textAnchor: "middle", dominantBaseline: "middle", fontSize: "9", fill: "var(--gold)" }, p.g));
-  }), /* @__PURE__ */ import_react22.default.createElement("text", { x: cx, y: cy - 4, textAnchor: "middle", fontSize: "13", fontWeight: "700", fill: "var(--gold)" }, "\u2652 Aquarius"), /* @__PURE__ */ import_react22.default.createElement("text", { x: cx, y: cy + 11, textAnchor: "middle", fontSize: "9", fill: "var(--dim)" }, "5 Feb 1962 \xB7 7 bodies \xB7 20\xB0 arc"));
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("svg", { viewBox: "0 0 220 226", style: { width: "100%", height: "100%", maxHeight: 300 }, role: "img", "aria-label": "5 Feb 1962: 7 bodies aligned in Aquarius", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("path", { d: `M${cx},${cy} L${pt(300, R).join(",")} A${R},${R} 0 0 1 ${pt(330, R).join(",")} Z`, fill: "rgba(232,200,122,.16)", stroke: "var(--gold)", strokeWidth: "1.5" }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("circle", { cx, cy, r: R, fill: "none", stroke: "var(--line)", strokeWidth: "1" }),
+    Array.from({ length: 12 }, (_, i) => {
+      const a0 = i * 30;
+      const [x0, y0] = pt(a0, R);
+      const [gx, gy] = pt(a0 + 15, Rg);
+      const aqr = i === AQR;
+      return /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("g", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("line", { x1: cx, y1: cy, x2: x0, y2: y0, stroke: "var(--line)", strokeWidth: "0.6" }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("text", { x: gx, y: gy, textAnchor: "middle", dominantBaseline: "middle", fontSize: "11", fill: aqr ? "var(--gold)" : "var(--dim)", children: signs[i] })
+      ] }, i);
+    }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("path", { d: `M${pt(300, Rp - 16).join(",")} A${Rp - 16},${Rp - 16} 0 0 1 ${pt(323, Rp - 16).join(",")} L${pt(323, Rp + 16).join(",")} A${Rp + 16},${Rp + 16} 0 0 0 ${pt(300, Rp + 16).join(",")} Z`, fill: "rgba(138,5,255,.10)", stroke: "var(--violet)", strokeWidth: "1", strokeDasharray: "3 2" }),
+    bodies.map((p, i) => {
+      const r = Rp - 14 + i * 4.5;
+      const [x, y] = pt(p.lon, r);
+      return /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("g", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("circle", { cx: x, cy: y, r: "8.5", fill: "#0f0f15", stroke: "var(--gold)", strokeWidth: "1" }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("text", { x, y, textAnchor: "middle", dominantBaseline: "middle", fontSize: "9", fill: "var(--gold)", children: p.g })
+      ] }, p.b);
+    }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("text", { x: cx, y: cy - 4, textAnchor: "middle", fontSize: "13", fontWeight: "700", fill: "var(--gold)", children: "\u2652 Aquarius" }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("text", { x: cx, y: cy + 11, textAnchor: "middle", fontSize: "9", fill: "var(--dim)", children: "5 Feb 1962 \xB7 7 bodies \xB7 20\xB0 arc" })
+  ] });
 }
 function PsalmsGrid() {
   const today = 42;
-  return /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 12, alignItems: "center", justifyContent: "center", height: "100%", width: "100%" } }, /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "flex", alignItems: "baseline", gap: 10 } }, /* @__PURE__ */ import_react22.default.createElement("span", { style: { color: "var(--gold)", fontSize: "2.6rem", fontWeight: 800, lineHeight: 1 } }, "150"), /* @__PURE__ */ import_react22.default.createElement("span", { className: "muted", style: { fontSize: ".8rem" } }, "Psalms \xB7 one per day")), /* @__PURE__ */ import_react22.default.createElement("div", { style: { display: "grid", gridTemplateColumns: "repeat(15,1fr)", gap: 3, width: 340, maxWidth: "100%" } }, Array.from({ length: 150 }, (_, i) => {
-    const n = i + 1;
-    const hot = n === today;
-    return /* @__PURE__ */ import_react22.default.createElement("div", { key: i, style: { height: 15, borderRadius: 2, background: hot ? "var(--gold)" : "var(--panel2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".5rem", color: hot ? "#0a0a0a" : "var(--dim)", fontWeight: 700 } }, n);
-  })), /* @__PURE__ */ import_react22.default.createElement("div", { className: "muted", style: { fontSize: ".76rem" } }, "today \u2192 Psalm ", today));
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { style: { display: "flex", flexDirection: "column", gap: 12, alignItems: "center", justifyContent: "center", height: "100%", width: "100%" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { style: { display: "flex", alignItems: "baseline", gap: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("span", { style: { color: "var(--gold)", fontSize: "2.6rem", fontWeight: 800, lineHeight: 1 }, children: "150" }),
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("span", { className: "muted", style: { fontSize: ".8rem" }, children: "Psalms \xB7 one per day" })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(15,1fr)", gap: 3, width: 340, maxWidth: "100%" }, children: Array.from({ length: 150 }, (_, i) => {
+      const n = i + 1;
+      const hot = n === today;
+      return /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { style: { height: 15, borderRadius: 2, background: hot ? "var(--gold)" : "var(--panel2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".5rem", color: hot ? "#0a0a0a" : "var(--dim)", fontWeight: 700 }, children: n }, i);
+    }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "muted", style: { fontSize: ".76rem" }, children: [
+      "today \u2192 Psalm ",
+      today
+    ] })
+  ] });
 }
 function Slides({ rows, occ }) {
   return [
     {
       key: "align",
-      graphic: /* @__PURE__ */ import_react22.default.createElement(AlignWheel, null),
+      graphic: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(AlignWheel, {}),
       icon: "compass",
       iconColor: "violet",
       title: "Rare alignments",
@@ -34045,7 +38745,7 @@ function Slides({ rows, occ }) {
     },
     {
       key: "skymap",
-      graphic: /* @__PURE__ */ import_react22.default.createElement(SkyMap, { rows, occ }),
+      graphic: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(SkyMap, { rows, occ }),
       icon: "star",
       iconColor: "gold",
       title: "Sky map",
@@ -34053,7 +38753,7 @@ function Slides({ rows, occ }) {
     },
     {
       key: "reader",
-      graphic: /* @__PURE__ */ import_react22.default.createElement(ReadingRule, null),
+      graphic: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(ReadingRule, {}),
       icon: "circle-check",
       iconColor: "green",
       title: "Reader",
@@ -34061,7 +38761,7 @@ function Slides({ rows, occ }) {
     },
     {
       key: "time",
-      graphic: /* @__PURE__ */ import_react22.default.createElement(PrecessionDiagram, null),
+      graphic: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(PrecessionDiagram, {}),
       icon: "arrows-rotate",
       iconColor: "violet",
       title: "Time",
@@ -34069,7 +38769,7 @@ function Slides({ rows, occ }) {
     },
     {
       key: "gematria",
-      graphic: /* @__PURE__ */ import_react22.default.createElement(GematriaTable, null),
+      graphic: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(GematriaTable, {}),
       icon: "hashtag",
       iconColor: "violet",
       title: "Gematria",
@@ -34077,7 +38777,7 @@ function Slides({ rows, occ }) {
     },
     {
       key: "sigils",
-      graphic: /* @__PURE__ */ import_react22.default.createElement(SigilKamea, null),
+      graphic: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(SigilKamea, {}),
       icon: "feather",
       iconColor: "teal",
       title: "Sigils",
@@ -34085,7 +38785,7 @@ function Slides({ rows, occ }) {
     },
     {
       key: "codes",
-      graphic: /* @__PURE__ */ import_react22.default.createElement(ELSGrid, null),
+      graphic: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(ELSGrid, {}),
       icon: "barcode",
       iconColor: "brand",
       title: "Codes",
@@ -34093,7 +38793,7 @@ function Slides({ rows, occ }) {
     },
     {
       key: "psalms",
-      graphic: /* @__PURE__ */ import_react22.default.createElement(PsalmsGrid, null),
+      graphic: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(PsalmsGrid, {}),
       icon: "music",
       iconColor: "gold",
       title: "Psalms",
@@ -34113,7 +38813,21 @@ function Slider({ rows, occ }) {
     return () => clearInterval(t);
   }, [next, paused]);
   const s = slides[i];
-  return /* @__PURE__ */ import_react22.default.createElement("div", { className: "slider", onMouseEnter: () => setPaused(true), onMouseLeave: () => setPaused(false), role: "region", "aria-label": "Concept slider" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "slide" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "slide-graphic" }, s.graphic), /* @__PURE__ */ import_react22.default.createElement("div", { className: "slide-copy" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "slide-icon" }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: s.icon, c: s.iconColor, size: "1.6rem" })), /* @__PURE__ */ import_react22.default.createElement("h3", { style: { margin: "6px 0 8px", color: "var(--gold)", fontSize: "1.15rem" } }, s.title), /* @__PURE__ */ import_react22.default.createElement("p", { className: "muted", style: { fontSize: ".92rem", lineHeight: 1.6 } }, s.body))), /* @__PURE__ */ import_react22.default.createElement("div", { className: "slider-ctrl" }, /* @__PURE__ */ import_react22.default.createElement("button", { onClick: prev, "aria-label": "Previous slide" }, "\u25C0"), /* @__PURE__ */ import_react22.default.createElement("div", { className: "slider-dots" }, slides.map((x, j2) => /* @__PURE__ */ import_react22.default.createElement("button", { key: x.key, className: "dot" + (j2 === i ? " active" : ""), onClick: () => setI(j2), "aria-label": `Go to slide ${j2 + 1}` }))), /* @__PURE__ */ import_react22.default.createElement("button", { onClick: next, "aria-label": "Next slide" }, "\u25B6")));
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "slider", onMouseEnter: () => setPaused(true), onMouseLeave: () => setPaused(false), role: "region", "aria-label": "Concept slider", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "slide", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "slide-graphic", children: s.graphic }),
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "slide-copy", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "slide-icon", children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(Fa, { n: s.icon, c: s.iconColor, size: "1.6rem" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("h3", { style: { margin: "6px 0 8px", color: "var(--gold)", fontSize: "1.15rem" }, children: s.title }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("p", { className: "muted", style: { fontSize: ".92rem", lineHeight: 1.6 }, children: s.body })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "slider-ctrl", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("button", { onClick: prev, "aria-label": "Previous slide", children: "\u25C0" }),
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "slider-dots", children: slides.map((x, j2) => /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("button", { className: "dot" + (j2 === i ? " active" : ""), onClick: () => setI(j2), "aria-label": `Go to slide ${j2 + 1}` }, x.key)) }),
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("button", { onClick: next, "aria-label": "Next slide", children: "\u25B6" })
+    ] })
+  ] });
 }
 var FEATURES = [
   { n: "star", c: "gold", t: "Sky map", d: "Real planet positions in the 12 zodiac signs \u2014 the 12 simple letters lit up today.", go: "/app" },
@@ -34127,27 +38841,203 @@ var FEATURES = [
 ];
 function Landing({ goApp }) {
   const rows = (0, import_react22.useMemo)(() => skyAt(REF_DATE), []);
-  const occ = (0, import_react22.useMemo)(() => occupiedLetters(rows), [rows]);
+  const occ = (0, import_react22.useMemo)(() => occupiedLetters(skyAt7(REF_DATE)), []);
   const [warnOpen, setWarnOpen] = (0, import_react22.useState)(false);
   const enterApp = () => {
     setWarnOpen(false);
     goApp && goApp();
   };
-  return /* @__PURE__ */ import_react22.default.createElement("div", { className: "landing" }, /* @__PURE__ */ import_react22.default.createElement("section", { className: "hero" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-copy" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-eyebrow" }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "star-of-life", c: "gold", size: "1rem" }), " Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet"), /* @__PURE__ */ import_react22.default.createElement("h1", { className: "hero-title" }, "The Apocalypse ", /* @__PURE__ */ import_react22.default.createElement("span", { style: { color: "var(--gold)" } }, "of Adam")), /* @__PURE__ */ import_react22.default.createElement("blockquote", { className: "hero-tag", style: { borderLeft: "3px solid var(--gold)", paddingLeft: 14, fontStyle: "italic", color: "var(--dim)" } }, "\u201CAnd the thirteenth kingdom says of him that every birth of their ruler is a word. And this word received a mandate there. He received glory and power. And thus he came to the water, in order that the desire of those powers might be satisfied.\u201D", /* @__PURE__ */ import_react22.default.createElement("cite", { style: { display: "block", marginTop: 10, fontStyle: "normal", fontSize: ".82rem", color: "var(--dim)" } }, "\u2014 The Apocalypse of Adam \xB7 the thirteenth kingdom")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-cta" }, /* @__PURE__ */ import_react22.default.createElement("button", { className: "btn-cta", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "compass", c: "txt", size: "1rem" }), " \xA0Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react22.default.createElement("a", { className: "hero-ghost", href: "/paper" }, "Read the paper \u2192")), /* @__PURE__ */ import_react22.default.createElement("button", { className: "hero-note-link", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".85rem" }), " \xA0Content notice \u2014 for visitors with psychosis, mania, or schizophrenia")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-sky panel" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-sky-label muted" }, "Sky of ", REF_DATE, " \xB7 ", occ.size, " of 12 signs occupied"), /* @__PURE__ */ import_react22.default.createElement(SkyMap, { rows, occ }))), /* @__PURE__ */ import_react22.default.createElement("section", { className: "panel", style: { padding: 18, marginTop: 18 } }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { margin: 0 } }, "The grammar of the sky")), /* @__PURE__ */ import_react22.default.createElement(Slider, { rows, occ })), /* @__PURE__ */ import_react22.default.createElement("section", { style: { marginTop: 22 } }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { margin: 0 } }, "What you can do in the app")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-grid" }, FEATURES.map((f, idx) => /* @__PURE__ */ import_react22.default.createElement("a", { key: idx, className: "feat-card", href: f.go }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-icon" }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: f.n, c: f.c, size: "1.5rem" })), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-t" }, f.t), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-d muted" }, f.d), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-go muted" }, "open \u2192"))))), /* @__PURE__ */ import_react22.default.createElement("section", { className: "panel entry-cta", style: { marginTop: 26, padding: 28, textAlign: "center", borderColor: "var(--brand)" } }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { marginTop: 0 } }, "Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react22.default.createElement("p", { className: "muted", style: { maxWidth: 620, margin: "0 auto 16px" } }, "Learn a few simple things about the ancients, then read the sky for yourself. A short content notice opens first \u2014 for visitors diagnosed with psychosis or schizophrenia."), /* @__PURE__ */ import_react22.default.createElement("button", { className: "btn-cta", style: { fontSize: "1.1rem", padding: "14px 34px" }, onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "compass", c: "txt", size: "1.1rem" }), " \xA0Enter the app"), /* @__PURE__ */ import_react22.default.createElement("div", { className: "muted", style: { marginTop: 14, fontSize: ".8rem" } }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".9rem" }), " \xA0", /* @__PURE__ */ import_react22.default.createElement("b", null, "Notice:"), " I have schizophrenia \xB7 I am psychotic \xB7 I am manic \u2014 a short self-check is offered before entry.")), /* @__PURE__ */ import_react22.default.createElement(WarningModal, { open: warnOpen, onClose: () => setWarnOpen(false), onProceed: enterApp }));
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "landing", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("section", { className: "hero", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "hero-copy", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "hero-eyebrow", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(Fa, { n: "star-of-life", c: "gold", size: "1rem" }),
+          " Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("h1", { className: "hero-title", children: [
+          "The Apocalypse ",
+          /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("span", { style: { color: "var(--gold)" }, children: "of Adam" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("blockquote", { className: "hero-tag", style: { borderLeft: "3px solid var(--gold)", paddingLeft: 14, fontStyle: "italic", color: "var(--dim)" }, children: [
+          "\u201CAnd the thirteenth kingdom says of him that every birth of their ruler is a word. And this word received a mandate there. He received glory and power. And thus he came to the water, in order that the desire of those powers might be satisfied.\u201D",
+          /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("cite", { style: { display: "block", marginTop: 10, fontStyle: "normal", fontSize: ".82rem", color: "var(--dim)" }, children: "\u2014 The Apocalypse of Adam \xB7 the thirteenth kingdom" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "hero-cta", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("button", { className: "btn-cta", onClick: () => setWarnOpen(true), children: [
+            /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(Fa, { n: "compass", c: "txt", size: "1rem" }),
+            " \xA0Initiate \u2014 explore the stars"
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("a", { className: "hero-ghost", href: "/paper", children: "Read the paper \u2192" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("button", { className: "hero-note-link", onClick: () => setWarnOpen(true), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(Fa, { n: "triangle-exclamation", c: "warn", size: ".85rem" }),
+          " \xA0Content notice \u2014 for visitors with psychosis, mania, or schizophrenia"
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "hero-sky panel", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "hero-sky-label muted", children: [
+          "Sky of ",
+          REF_DATE,
+          " \xB7 ",
+          occ.size,
+          " of 12 signs occupied"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(SkyMap, { rows, occ })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("section", { className: "panel", style: { padding: 18, marginTop: 18 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "section-head", children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("h2", { style: { margin: 0 }, children: "The grammar of the sky" }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(Slider, { rows, occ })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("section", { style: { marginTop: 22 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "section-head", children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("h2", { style: { margin: 0 }, children: "What you can do in the app" }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "feat-grid", children: FEATURES.map((f, idx) => /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("a", { className: "feat-card", href: f.go, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "feat-icon", children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(Fa, { n: f.n, c: f.c, size: "1.5rem" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "feat-t", children: f.t }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "feat-d muted", children: f.d }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "feat-go muted", children: "open \u2192" })
+      ] }, idx)) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("section", { className: "panel entry-cta", style: { marginTop: 26, padding: 28, textAlign: "center", borderColor: "var(--brand)" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("h2", { style: { marginTop: 0 }, children: "Initiate \u2014 explore the stars" }),
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("p", { className: "muted", style: { maxWidth: 620, margin: "0 auto 16px" }, children: "Learn a few simple things about the ancients, then read the sky for yourself. A short content notice opens first \u2014 for visitors diagnosed with psychosis or schizophrenia." }),
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("button", { className: "btn-cta", style: { fontSize: "1.1rem", padding: "14px 34px" }, onClick: () => setWarnOpen(true), children: [
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(Fa, { n: "compass", c: "txt", size: "1.1rem" }),
+        " \xA0Enter the app"
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "muted", style: { marginTop: 14, fontSize: ".8rem" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(Fa, { n: "triangle-exclamation", c: "warn", size: ".9rem" }),
+        " \xA0",
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("b", { children: "Notice:" }),
+        " I have schizophrenia \xB7 I am psychotic \xB7 I am manic \u2014 a short self-check is offered before entry."
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(WarningModal, { open: warnOpen, onClose: () => setWarnOpen(false), onProceed: enterApp })
+  ] });
 }
 
-// src/pages/About.jsx
+// web/src/pages/About.jsx
 var import_react23 = __toESM(require_react());
+var import_jsx_runtime23 = __toESM(require_jsx_runtime());
 function About() {
-  return /* @__PURE__ */ import_react23.default.createElement("div", { className: "about-page" }, /* @__PURE__ */ import_react23.default.createElement("h1", { style: { fontSize: "1.9rem", marginBottom: 4 } }, "About ", /* @__PURE__ */ import_react23.default.createElement("span", { style: { color: "var(--gold)" } }, "The Apocalypse of Adam")), /* @__PURE__ */ import_react23.default.createElement("div", { className: "sub", style: { marginBottom: 16 } }, "Hebrew letters read in the sky \u2014 a stellar-alphabet reader behind the paper ", /* @__PURE__ */ import_react23.default.createElement("i", null, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "What this is"), /* @__PURE__ */ import_react23.default.createElement("p", null, /* @__PURE__ */ import_react23.default.createElement("i", null, "Apocalypse"), " means ", /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation"), " \u2014 the unveiling of knowledge, not something sinister. This project reads the sky as the ancients did: real planet positions (computed live by ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://github.com/cosinekitty/astronomy-engine", target: "_blank", rel: "noreferrer" }, "astronomy-engine"), ") map the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "12 zodiac signs"), " to the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "12 simple letters"), " of the ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", target: "_blank", rel: "noreferrer" }, "Sefer Yetzirah"), ". Every date spells a set of readable Hebrew names \u2014 a stellar alphabet that no one can erase, encoded across the only medium that survives the malice of men."), /* @__PURE__ */ import_react23.default.createElement("p", null, "The app is a calculator suite: a live ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Sky Map"), ", a ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Reader"), " of every readable word, the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Reading Rule"), " (YHVH, Genesis 1:1), a ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Time"), " predictor and precessional ages, ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Gematria"), " (Hebrew / Greek / Arabic / Indian), the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Sigil"), " forge, the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "72"), " Shem HaMephorash angels, ", /* @__PURE__ */ import_react23.default.createElement("b", null, "ELS / Torah codes"), ", Temurah, Ziruph, rare stellar ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Alignments"), ", a 9-culture ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Revelations"), " survey, and ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Psalms"), " by date.")), /* @__PURE__ */ import_react23.default.createElement("div", { className: "grid2" }, /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "How a reading works"), /* @__PURE__ */ import_react23.default.createElement("p", { className: "muted" }, "The ", /* @__PURE__ */ import_react23.default.createElement("b", null, "3 mothers"), " (\u05D0 \u05DE \u05E9) sit on a fixed circumpolar axis. The ", /* @__PURE__ */ import_react23.default.createElement("b", null, "7 doubles"), " (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) are the 7 moving bodies. The ", /* @__PURE__ */ import_react23.default.createElement("b", null, "12 simples"), " are the 12 signs. A word is readable on a date when every simple it needs sits in an ", /* @__PURE__ */ import_react23.default.createElement("b", null, "occupied"), " sign (S\u2286O). Rare alignments concentrate the planets \u2014 fewer letters, fewer words, a sharper reading.")), /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "The numbers, briefly"), /* @__PURE__ */ import_react23.default.createElement("ul", { className: "muted", style: { margin: "6px 0 0", paddingLeft: 20 } }, /* @__PURE__ */ import_react23.default.createElement("li", null, /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "6,045"), " consonantal Hebrew roots in the lexicon."), /* @__PURE__ */ import_react23.default.createElement("li", null, /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "171"), " rare century/millennium alignments catalogued."), /* @__PURE__ */ import_react23.default.createElement("li", null, /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "72"), " Shem HaMephorash triplets (Exodus 14:19\u201321)."), /* @__PURE__ */ import_react23.default.createElement("li", null, "Precessional age length \u2248 ", /* @__PURE__ */ import_react23.default.createElement("b", null, AGE.toFixed(0)), " years; full cycle \u2248 ", /* @__PURE__ */ import_react23.default.createElement("b", null, (FULL || 0).toFixed(0)), " years.")))), /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 18, marginTop: 14 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "Authors & sources"), /* @__PURE__ */ import_react23.default.createElement("p", { className: "muted" }, "By ", /* @__PURE__ */ import_react23.default.createElement("b", null, "V. Nos"), " & ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Julian S."), " \xB7 Source on ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://github.com/VABISMO/adam-apocalypse", target: "_blank", rel: "noreferrer" }, "GitHub"), " \xB7 Paper: ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "/paper" }, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react23.default.createElement("p", { className: "muted" }, "Ephemerides: astronomy-engine. Frame: Sefer Yetzirah. Lexicon: Strong Hebrew lexicon (OpenScriptures). No content on this site is medical, financial, or doctrinal advice \u2014 it is a reading of symbols and astronomy."), /* @__PURE__ */ import_react23.default.createElement("div", { style: { marginTop: 12 } }, /* @__PURE__ */ import_react23.default.createElement("a", { className: "btn-cta", href: "/app", style: { display: "inline-block", textDecoration: "none" } }, "Open the app \u2192"))));
+  return /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("div", { className: "about-page", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("h1", { style: { fontSize: "1.9rem", marginBottom: 4 }, children: [
+      "About ",
+      /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("span", { style: { color: "var(--gold)" }, children: "The Apocalypse of Adam" })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("div", { className: "sub", style: { marginBottom: 16 }, children: [
+      "Hebrew letters read in the sky \u2014 a stellar-alphabet reader behind the paper ",
+      /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("i", { children: "The Reader of the Sky" }),
+      "."
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("div", { className: "panel", style: { padding: 18, marginBottom: 14 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("h2", { style: { marginTop: 0 }, children: "What this is" }),
+      /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("p", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("i", { children: "Apocalypse" }),
+        " means ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { style: { color: "var(--gold)" }, children: "revelation" }),
+        " \u2014 the unveiling of knowledge, not something sinister. This project reads the sky as the ancients did: real planet positions (computed live by ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("a", { href: "https://github.com/cosinekitty/astronomy-engine", target: "_blank", rel: "noreferrer", children: "astronomy-engine" }),
+        ") map the ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "12 zodiac signs" }),
+        " to the ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "12 simple letters" }),
+        " of the ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("a", { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", target: "_blank", rel: "noreferrer", children: "Sefer Yetzirah" }),
+        ". Every date spells a set of readable Hebrew names \u2014 a stellar alphabet that no one can erase, encoded across the only medium that survives the malice of men."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("p", { children: [
+        "The app is a calculator suite: a live ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "Sky Map" }),
+        ", a ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "Reader" }),
+        " of every readable word, the ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "Reading Rule" }),
+        " (YHVH, Genesis 1:1), a ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "Time" }),
+        " predictor and precessional ages, ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "Gematria" }),
+        " (Hebrew / Greek / Arabic / Indian), the ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "Sigil" }),
+        " forge, the ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "72" }),
+        " Shem HaMephorash angels, ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "ELS / Torah codes" }),
+        ", Temurah, Ziruph, rare stellar ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "Alignments" }),
+        ", a 9-culture ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "Revelations" }),
+        " survey, and ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "Psalms" }),
+        " by date."
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("div", { className: "grid2", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("div", { className: "panel", style: { padding: 16 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("h2", { style: { marginTop: 0 }, children: "How a reading works" }),
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("p", { className: "muted", children: [
+          "The ",
+          /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "3 mothers" }),
+          " (\u05D0 \u05DE \u05E9) sit on a fixed circumpolar axis. The ",
+          /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "7 doubles" }),
+          " (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) are the 7 moving bodies. The ",
+          /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "12 simples" }),
+          " are the 12 signs. A word is readable on a date when every simple it needs sits in an ",
+          /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "occupied" }),
+          " sign (S\u2286O). Rare alignments concentrate the planets \u2014 fewer letters, fewer words, a sharper reading."
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("div", { className: "panel", style: { padding: 16 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("h2", { style: { marginTop: 0 }, children: "The numbers, briefly" }),
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("ul", { className: "muted", style: { margin: "6px 0 0", paddingLeft: 20 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("li", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { style: { color: "var(--gold)" }, children: "6,045" }),
+            " consonantal Hebrew roots in the lexicon."
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("li", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { style: { color: "var(--gold)" }, children: "171" }),
+            " rare century/millennium alignments catalogued."
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("li", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { style: { color: "var(--gold)" }, children: "72" }),
+            " Shem HaMephorash triplets (Exodus 14:19\u201321)."
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("li", { children: [
+            "Precessional age length \u2248 ",
+            /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: AGE.toFixed(0) }),
+            " years; full cycle \u2248 ",
+            /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: (FULL || 0).toFixed(0) }),
+            " years."
+          ] })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("div", { className: "panel", style: { padding: 18, marginTop: 14 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("h2", { style: { marginTop: 0 }, children: "Authors & sources" }),
+      /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)("p", { className: "muted", children: [
+        "By ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "V. Nos" }),
+        " & ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("b", { children: "Julian S." }),
+        " \xB7 Source on ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("a", { href: "https://github.com/VABISMO/adam-apocalypse", target: "_blank", rel: "noreferrer", children: "GitHub" }),
+        " \xB7 Paper: ",
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("a", { href: "/paper", children: "The Reader of the Sky" }),
+        "."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("p", { className: "muted", children: "Ephemerides: astronomy-engine. Frame: Sefer Yetzirah. Lexicon: Strong Hebrew lexicon (OpenScriptures). No content on this site is medical, financial, or doctrinal advice \u2014 it is a reading of symbols and astronomy." }),
+      /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("div", { style: { marginTop: 12 }, children: /* @__PURE__ */ (0, import_jsx_runtime23.jsx)("a", { className: "btn-cta", href: "/app", style: { display: "inline-block", textDecoration: "none" }, children: "Open the app \u2192" }) })
+    ] })
+  ] });
 }
 
-// src/App.jsx
+// web/src/App.jsx
+var import_jsx_runtime24 = __toESM(require_jsx_runtime());
 var PROPHET_BY_SLUG = new Map(PROPHETS.map((p) => [slugify(p.name), p]));
 var MAGE_BY_SLUG = new Map(MAGES.map((m) => [slugify(m.name), m]));
 var PAPER_URL = "/paper";
 function PaperTab() {
-  return /* @__PURE__ */ import_react24.default.createElement("a", { className: "tab", style: { textDecoration: "none", borderColor: "var(--line)" }, href: PAPER_URL, title: "The academic paper" }, "Paper \u2192");
+  return /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("a", { className: "tab", style: { textDecoration: "none", borderColor: "var(--line)" }, href: PAPER_URL, title: "The academic paper", children: "Paper \u2192" });
 }
 var TABS = [
   ["cycles", "Cycles"],
@@ -34260,9 +39150,10 @@ function App() {
     return parseDate(date) ? date : today;
   }, [date]);
   const rows = (0, import_react24.useMemo)(() => skyAt(effDate), [effDate]);
-  const occ = (0, import_react24.useMemo)(() => occupiedLetters(rows), [rows]);
-  const occSigns = (0, import_react24.useMemo)(() => new Set(rows.map((r) => r.sign)), [rows]);
-  const bs = (0, import_react24.useMemo)(() => bySign(rows), [rows]);
+  const rows7 = (0, import_react24.useMemo)(() => skyAt7(effDate), [effDate]);
+  const occ = (0, import_react24.useMemo)(() => occupiedLetters(rows7), [rows7]);
+  const occSigns = (0, import_react24.useMemo)(() => new Set(rows7.map((r) => r.sign)), [rows7]);
+  const bs = (0, import_react24.useMemo)(() => bySign(rows7), [rows7]);
   const yhvhOk = occ.has("\u05D9") && occ.has("\u05D4") && occ.has("\u05D5");
   const genesisOk = genesisReadable(occ);
   const ANGEL72 = (0, import_react24.useMemo)(() => {
@@ -34276,7 +39167,7 @@ function App() {
     if (lex) registerWebMCPTools({ lex, angelMap: ANGEL72 });
   }, [lex, ANGEL72]);
   const words = (0, import_react24.useMemo)(() => lex ? readableWords(occ, lex.lexicon, ANGEL72) : [], [occ, lex, ANGEL72]);
-  const sentence = rows.map((r) => SIMPLE[r.sign][0]).join(" ");
+  const sentence = rows7.map((r) => SIMPLE[r.sign][0]).join(" ");
   const year = (() => {
     const d = parseDate(effDate);
     return d ? d.getUTCFullYear() : 2026;
@@ -34340,7 +39231,7 @@ function App() {
       const nDays = y % 4 === 0 && (y % 100 !== 0 || y % 400 === 0) ? 366 : 365;
       for (let i = 0; i < nDays; i++) {
         const ds = fmtDate(makeDate(y, 1, 1 + i));
-        const o = occupiedLetters(skyAt(ds));
+        const o = occupiedLetters(skyAt7(ds));
         dayOccs.push(o);
         if (genesisReadable(o)) days.push(ds);
       }
@@ -34360,40 +39251,136 @@ function App() {
   function stepYear(n) {
     setGenYear(genYear + n);
   }
-  if (lexErr) return /* @__PURE__ */ import_react24.default.createElement("div", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement("h2", null, "Error"), /* @__PURE__ */ import_react24.default.createElement("p", null, "Could not load the lexicon. Please refresh the page; if the problem persists, the data may be unavailable right now."));
-  if (!lex) return /* @__PURE__ */ import_react24.default.createElement("div", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement("h2", null, "Loading lexicon\u2026"), /* @__PURE__ */ import_react24.default.createElement("p", null, "Reading the lexicon (6045 consonantal roots)."));
+  if (lexErr) return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { className: "panel app-panel", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("h2", { children: "Error" }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("p", { children: "Could not load the lexicon. Please refresh the page; if the problem persists, the data may be unavailable right now." })
+  ] });
+  if (!lex) return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { className: "panel app-panel", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("h2", { children: "Loading lexicon\u2026" }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("p", { children: "Reading the lexicon (6045 consonantal roots)." })
+  ] });
   const setSubTab = (g) => (id) => setSub((s) => ({ ...s, [g]: id }));
   const goTab = (id) => {
     const p = typeof window !== "undefined" ? window.location.pathname : "/";
     if (p !== "/app") navigate("/app");
     setActive(id);
   };
-  if (route.name === "landing") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(Landing, { goApp: () => navigate("/app") }), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
-  if (route.name === "about") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(About, null), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
-  if (route.name === "prophets") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(ProphetsPage, { onOpen: navigate })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
-  if (route.name === "mages") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(MagesPage, { onOpen: navigate })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
-  if (route.name === "align") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(AlignmentFicha, { date: route.date, lex, angelMap: ANGEL72, onBack: backHome, nameRefs })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
-  if (route.name === "prophet") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(ProphetFicha, { slug: route.slug })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
-  if (route.name === "mage") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(MageFicha, { slug: route.slug })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
-  if (route.name === "alignments") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(AlignmentsTab, { setDate, goReader: (d) => {
-    setDate(d);
-    setActive("translator");
-    navigate("/");
-  }, lex, angelMap: ANGEL72, genData, nameRefs })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
-  if (route.name === "readings") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(TranslatorTab, { date: effDate, occ, words, q, setQ, genData, onOpen: openGloss, nameRefs })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
-  return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react24.default.createElement("div", { key: id, role: "tab", "aria-selected": active === id, className: "tab" + (active === id ? " active" : ""), onClick: () => goTab(id) }, label)), /* @__PURE__ */ import_react24.default.createElement(PaperTab, null)), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, route.name === "gloss" && glossWord && /* @__PURE__ */ import_react24.default.createElement(GlossPage, { word: glossWord, date: effDate, rows, occ, genData, onBack: backHome, nameRefs }), route.name === "gloss" && !glossWord && /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react24.default.createElement("button", { onClick: backHome }, "\u25C0 back")), /* @__PURE__ */ import_react24.default.createElement("h2", null, "Gloss not found"), /* @__PURE__ */ import_react24.default.createElement("div", { className: "muted" }, "No Hebrew word matches \u201C", route.he, "\u201D in the lexicon. It may use letters unavailable today; open it from the Reader list on a date when it is readable.")), route.name !== "gloss" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, active === "sky" && /* @__PURE__ */ import_react24.default.createElement(SkyTab, { date: effDate, rawDate: date, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step }), active === "translator" && /* @__PURE__ */ import_react24.default.createElement(TranslatorTab, { date: effDate, occ, words, q, setQ, genData, onOpen: openGloss, nameRefs }), active === "reading" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.reading, active: sub.reading, onChange: setSubTab("reading") }), sub.reading === "rule" && /* @__PURE__ */ import_react24.default.createElement(RuleTab, { occ }), sub.reading === "yhvh" && /* @__PURE__ */ import_react24.default.createElement(YhvhTab, { date: effDate, occ, yhvhOk, bs }), sub.reading === "genesis" && /* @__PURE__ */ import_react24.default.createElement(GenesisTab, { date: effDate, occ, genesisOk })), active === "time" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.time, active: sub.time, onChange: setSubTab("time") }), sub.time === "predictor" && /* @__PURE__ */ import_react24.default.createElement(PredictorTab, { date: effDate, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear }), sub.time === "ages" && /* @__PURE__ */ import_react24.default.createElement(AgesTab, { date: effDate, rows })), active === "gematria" && /* @__PURE__ */ import_react24.default.createElement(GematriaTab, null), active === "sigils" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.sigils, active: sub.sigils, onChange: setSubTab("sigils") }), sub.sigils === "sigil" && /* @__PURE__ */ import_react24.default.createElement(SigilTab, null), sub.sigils === "kameot" && /* @__PURE__ */ import_react24.default.createElement(KameotTab, null), sub.sigils === "angels" && /* @__PURE__ */ import_react24.default.createElement(AngelsTab, null)), active === "cycles" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.cycles, active: sub.cycles, onChange: setSubTab("cycles") }), sub.cycles === "saros" && /* @__PURE__ */ import_react24.default.createElement(SarosTab, null), sub.cycles === "ayanamsa" && /* @__PURE__ */ import_react24.default.createElement(AyanamsaTab, null), sub.cycles === "lunarsolar" && /* @__PURE__ */ import_react24.default.createElement(LunarSolarTab, null), sub.cycles === "alignments" && /* @__PURE__ */ import_react24.default.createElement(AlignmentsTab, { setDate, goReader: (d) => {
-    setDate(d);
-    setActive("translator");
-  }, lex, angelMap: ANGEL72, genData, nameRefs }), sub.cycles === "week" && /* @__PURE__ */ import_react24.default.createElement(WeekTab, { date: effDate, rows })), active === "revelation" && /* @__PURE__ */ import_react24.default.createElement(RevelationsTab, { sub: sub.revelation, setSubTab: setSubTab("revelation"), date: effDate, rows, occ, words, genData, genYear }), active === "psalms" && /* @__PURE__ */ import_react24.default.createElement(PsalmsTab, null), active === "codes" && /* @__PURE__ */ import_react24.default.createElement(CodesTab, { sub: sub.codes, setSubTab: setSubTab("codes") }), active === "method" && /* @__PURE__ */ import_react24.default.createElement(MethodTab, { esGlossCount: Object.keys(lex.esGloss || {}).length }))), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
+  if (route.name === "landing") return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Landing, { goApp: () => navigate("/app") }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Footer, {})
+  ] });
+  if (route.name === "about") return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(About, {}),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Footer, {})
+  ] });
+  if (route.name === "prophets") return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(TabsBar, { goTab }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("section", { className: "panel app-panel", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(ProphetsPage, { onOpen: navigate }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Footer, {})
+  ] });
+  if (route.name === "mages") return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(TabsBar, { goTab }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("section", { className: "panel app-panel", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(MagesPage, { onOpen: navigate }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Footer, {})
+  ] });
+  if (route.name === "align") return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(TabsBar, { goTab }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("section", { className: "panel app-panel", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(AlignmentFicha, { date: route.date, lex, angelMap: ANGEL72, onBack: backHome, nameRefs }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Footer, {})
+  ] });
+  if (route.name === "prophet") return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(TabsBar, { goTab }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("section", { className: "panel app-panel", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(ProphetFicha, { slug: route.slug }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Footer, {})
+  ] });
+  if (route.name === "mage") return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(TabsBar, { goTab }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("section", { className: "panel app-panel", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(MageFicha, { slug: route.slug }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Footer, {})
+  ] });
+  if (route.name === "alignments") return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(TabsBar, { goTab }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("section", { className: "panel app-panel", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(AlignmentsTab, { setDate, goReader: (d) => {
+      setDate(d);
+      setActive("translator");
+      navigate("/");
+    }, lex, angelMap: ANGEL72, genData, nameRefs }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Footer, {})
+  ] });
+  if (route.name === "readings") return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(TabsBar, { goTab }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("section", { className: "panel app-panel", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(TranslatorTab, { date: effDate, occ, words, q, setQ, genData, onOpen: openGloss, nameRefs }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Footer, {})
+  ] });
+  return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { className: "tabs", role: "tablist", children: [
+      TABS.map(([id, label]) => /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { role: "tab", "aria-selected": active === id, className: "tab" + (active === id ? " active" : ""), onClick: () => goTab(id), children: label }, id)),
+      /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(PaperTab, {})
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("section", { className: "panel app-panel", children: [
+      route.name === "gloss" && glossWord && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(GlossPage, { word: glossWord, date: effDate, rows, occ, genData, onBack: backHome, nameRefs }),
+      route.name === "gloss" && !glossWord && /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "controls", style: { marginBottom: 14 }, children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("button", { onClick: backHome, children: "\u25C0 back" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("h2", { children: "Gloss not found" }),
+        /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { className: "muted", children: [
+          "No Hebrew word matches \u201C",
+          route.he,
+          "\u201D in the lexicon. It may use letters unavailable today; open it from the Reader list on a date when it is readable."
+        ] })
+      ] }),
+      route.name !== "gloss" && /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(import_jsx_runtime24.Fragment, { children: [
+        active === "sky" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(SkyTab, { date: effDate, rawDate: date, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step }),
+        active === "translator" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(TranslatorTab, { date: effDate, occ, words, q, setQ, genData, onOpen: openGloss, nameRefs }),
+        active === "reading" && /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(import_jsx_runtime24.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(SubTabs, { items: SUB.reading, active: sub.reading, onChange: setSubTab("reading") }),
+          sub.reading === "rule" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(RuleTab, { occ }),
+          sub.reading === "yhvh" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(YhvhTab, { date: effDate, occ, yhvhOk, bs }),
+          sub.reading === "genesis" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(GenesisTab, { date: effDate, occ, genesisOk })
+        ] }),
+        active === "time" && /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(import_jsx_runtime24.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(SubTabs, { items: SUB.time, active: sub.time, onChange: setSubTab("time") }),
+          sub.time === "predictor" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(PredictorTab, { date: effDate, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear }),
+          sub.time === "ages" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(AgesTab, { date: effDate, rows })
+        ] }),
+        active === "gematria" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(GematriaTab, {}),
+        active === "sigils" && /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(import_jsx_runtime24.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(SubTabs, { items: SUB.sigils, active: sub.sigils, onChange: setSubTab("sigils") }),
+          sub.sigils === "sigil" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(SigilTab, {}),
+          sub.sigils === "kameot" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(KameotTab, {}),
+          sub.sigils === "angels" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(AngelsTab, {})
+        ] }),
+        active === "cycles" && /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(import_jsx_runtime24.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(SubTabs, { items: SUB.cycles, active: sub.cycles, onChange: setSubTab("cycles") }),
+          sub.cycles === "saros" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(SarosTab, {}),
+          sub.cycles === "ayanamsa" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(AyanamsaTab, {}),
+          sub.cycles === "lunarsolar" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(LunarSolarTab, {}),
+          sub.cycles === "alignments" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(AlignmentsTab, { setDate, goReader: (d) => {
+            setDate(d);
+            setActive("translator");
+          }, lex, angelMap: ANGEL72, genData, nameRefs }),
+          sub.cycles === "week" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(WeekTab, { date: effDate, rows })
+        ] }),
+        active === "revelation" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(RevelationsTab, { sub: sub.revelation, setSubTab: setSubTab("revelation"), date: effDate, rows, occ, words, genData, genYear }),
+        active === "psalms" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(PsalmsTab, {}),
+        active === "codes" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(CodesTab, { sub: sub.codes, setSubTab: setSubTab("codes") }),
+        active === "method" && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(MethodTab, { esGlossCount: Object.keys(lex.esGloss || {}).length })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Footer, {})
+  ] });
 }
 function TabsBar({ goTab }) {
-  return /* @__PURE__ */ import_react24.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react24.default.createElement("div", { key: id, role: "tab", className: "tab", onClick: () => goTab(id) }, label)), /* @__PURE__ */ import_react24.default.createElement(PaperTab, null));
+  return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { className: "tabs", role: "tablist", children: [
+    TABS.map(([id, label]) => /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { role: "tab", className: "tab", onClick: () => goTab(id), children: label }, id)),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(PaperTab, {})
+  ] });
 }
 
-// app.jsx
+// web/app.jsx
+var import_jsx_runtime25 = __toESM(require_jsx_runtime());
 if (typeof document !== "undefined") {
   const root = document.getElementById("root");
-  (0, import_client.createRoot)(root).render(/* @__PURE__ */ import_react25.default.createElement(App, null));
+  (0, import_client.createRoot)(root).render(/* @__PURE__ */ (0, import_jsx_runtime25.jsx)(App, {}));
 }
 export {
   App
@@ -34477,5 +39464,16 @@ react-dom/cjs/react-dom.development.js:
    * @return {boolean} True if the event is supported.
    * @internal
    * @license Modernizr 3.0.0pre (Custom Build) | MIT
+   *)
+
+react/cjs/react-jsx-runtime.development.js:
+  (**
+   * @license React
+   * react-jsx-runtime.development.js
+   *
+   * Copyright (c) Facebook, Inc. and its affiliates.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
    *)
 */

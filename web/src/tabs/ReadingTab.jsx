@@ -78,7 +78,7 @@ function GenesisTab({date, occ, genesisOk}){
   const totalLetters=lengths.reduce((a,b)=>a+b,0);
   return <>
     <h2>Genesis 1:1 · <span className="he">בראשית ברא אלהים את השמים ואת הארץ</span> <span className={'pill '+(genesisOk?'ok':'no')}>{genesisOk?`readable on ${date}`:`not readable on ${date}`}</span></h2>
-    <div className="muted" style={{marginBottom:8}}>The 7 words together use the simples <b>י ה ל ו צ</b> (Virgo, Aries, Libra, Taurus, Aquarius). Readable only when all 5 signs are occupied at once — Aquarius and Aries anchored by Pluto and Neptune.</div>
+    <div className="muted" style={{marginBottom:8}}>The 7 words together use the simples <b>י ה ל ו צ</b> (Virgo, Aries, Libra, Taurus, Aquarius). Readable only when all 5 signs are occupied by the 7 classical bodies at once — a rare conjunction with no fixed cadence.</div>
     {GENESIS.map(([w,en],i)=>{const c=norm(w); const ss=[...simpleSet(c)].sort(); const ok=formable(c,occ); const m37=GEN_VALUES[i]%37===0; return (
       <div key={i} className={'gw '+(ok?'ok':'no')}>
         <span className="w">{displayHe(c)}</span>
@@ -100,7 +100,7 @@ function GenesisTab({date, occ, genesisOk}){
       <li>Subsets (of 2⁷−1 = 127) whose sum is a multiple of 37: <b>{sub37}/127</b> (uniform chance ≈ {127/37}≈3.4).</li>
       <li><b style={{color:'var(--green)'}}>Null</b>: 100,000 permutations of the 28-letter multiset regrouped into the fixed lengths (6,3,5,2,5,3,4), mulberry32 seed 20260807 → subsets p ≈ <b>3.1×10⁻⁴</b>; words p ≈ 8.2×10⁻³. The partition is genuinely biased toward 37, beyond the trivial total=2701=37×73.</li>
     </ul>
-    <div className="note">Genesis opens in ~13-year windows recurring every ~491 years (the Neptune–Pluto synodic cycle). Previous: 427 BCE (Axial Age), 61 CE (Temple), 552, 1043 (Schism), 1535 (Reformation/Copernicus). Current: 2025–2038.</div>
+    <div className="note">Genesis 1:1 is readable only when its five signs (Aquarius, Aries, Libra, Taurus, Virgo) are all occupied by the 7 classical bodies — a rare conjunction; no fixed cadence is claimed.</div>
     <Fig n={10} doc="From the article (§15b.5): the 7 words and their gematrias. The two gold bars are the words that are multiples of 37 (ואת 407=11×37, הארץ 296=8×37). The permutation null shows the bias toward 37 is real (p≈3.1×10⁻⁴), beyond the trivial total 2701=37×73."/>
   </>;
 }

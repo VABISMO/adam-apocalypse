@@ -110,10 +110,15 @@ function App(){
   const navigate=(to)=>{ if(typeof window==='undefined') return; window.history.pushState({},'',to); setLoc(to); };
 
   const effDate = useMemo(()=>{ if(!date) return today; return parseDate(date) ? date : today; },[date]);
+  // rows = 9-body set (7 classical + Uranus + Neptune) for astronomical DISPLAY (sky-map
+  // dots, fiche, the Raziel table). rows7 = the 7 classical bodies the Sefer Yetzirah
+  // assigns to the 7 doubles — the ONLY bodies that occupy letters in the READING.
+  // Uranus/Neptune are shown but contribute no letter (they have none in the SY).
   const rows=useMemo(()=>skyAt(effDate),[effDate]);
-  const occ=useMemo(()=>occupiedLetters(rows),[rows]);
-  const occSigns=useMemo(()=>new Set(rows.map(r=>r.sign)),[rows]);
-  const bs=useMemo(()=>bySign(rows),[rows]);
+  const rows7=useMemo(()=>skyAt7(effDate),[effDate]);
+  const occ=useMemo(()=>occupiedLetters(rows7),[rows7]);
+  const occSigns=useMemo(()=>new Set(rows7.map(r=>r.sign)),[rows7]);
+  const bs=useMemo(()=>bySign(rows7),[rows7]);
   const yhvhOk=occ.has('י')&&occ.has('ה')&&occ.has('ו');
   const genesisOk=genesisReadable(occ);
   const ANGEL72=useMemo(()=>{ const m=new Map(); if(angels) angels.triplets.forEach((t,i)=>{ m.set(norm(t), {el:angels.angelsEL[i], yh:angels.angelsYH[i]}); }); return m; },[angels]);
@@ -122,7 +127,7 @@ function App(){
   // loaded so word/search tools have data; re-registration is idempotent + best-effort.
   useEffect(()=>{ if(lex) registerWebMCPTools({ lex, angelMap: ANGEL72 }); },[lex,ANGEL72]);
   const words=useMemo(()=> lex?readableWords(occ,lex.lexicon,ANGEL72):[],[occ,lex,ANGEL72]);
-  const sentence=rows.map(r=>SIMPLE[r.sign][0]).join(' ');
+  const sentence=rows7.map(r=>SIMPLE[r.sign][0]).join(' ');
   const year = (()=>{ const d=parseDate(effDate); return d ? d.getUTCFullYear() : 2026; })();
 
   const route = useMemo(()=>parseRoute(),[loc]);
@@ -183,7 +188,7 @@ function App(){
       const nDays=(y%4===0&&(y%100!==0||y%400===0))?366:365;
       for(let i=0;i<nDays;i++){
         const ds=fmtDate(makeDate(y,1,1+i));
-        const o=occupiedLetters(skyAt(ds));
+        const o=occupiedLetters(skyAt7(ds));
         dayOccs.push(o);
         if(genesisReadable(o)) days.push(ds);
       }

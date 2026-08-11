@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23000'/%3E%3Ctext x='12' y='18' text-anchor='middle' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23e8c87a'%3EA%3C/text%3E%3C/svg%3E" />
+<title>The Reader of the Sky: the stellar alphabet of *Sefer Yetzirah* as a framework for versicular legibility, lunar–solar synchrony, and a marker of precessional eras</title>
+<style>
+@page { size: A4; margin: 22mm 18mm 20mm 18mm; }
+:root{ --ink:#f4f4f7; --muted:#9ca3af; --rule:#2a2a38; --accent:#c29eff; --gold:#e8c87a; --paper:#000000; --txt:#f4f4f7; --dim:#9ca3af; --line:#2a2a38; --panel:#0f0f15; --panel2:#16161f; --brand:#8a05ff; --teal:#5eead4; }
+*{ box-sizing:border-box; }
+html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; scrollbar-color: var(--accent) var(--panel); }
+::-webkit-scrollbar{ width:11px; height:11px; }
+::-webkit-scrollbar-track{ background:var(--panel); }
+::-webkit-scrollbar-thumb{ background:linear-gradient(180deg,var(--accent),var(--brand)); border-radius:6px; border:2px solid var(--panel); }
+::-webkit-scrollbar-thumb:hover{ background:var(--accent); }
+body{
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-size: 10.3pt; line-height: 1.55; color: var(--txt); margin:0 auto; max-width: 210mm;
+  background:var(--paper); text-align: justify; hyphens:auto;
+}
+/* fuentes hebreas */
+.heb, [lang="he"], svg text { font-family: "Times New Roman","Noto Serif Hebrew","Ezra SIL",serif; }
+h1,h2,h3,h4{ font-family: system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.25; text-align:left; color:var(--gold); page-break-after:avoid; letter-spacing:.2px; }
+h2{ font-size:15pt; margin:1.3em 0 .5em; padding-bottom:.18em; border-bottom:1px solid var(--line); page-break-before:auto; }
+h3{ font-size:12pt; margin:1.1em 0 .4em; color:var(--gold); }
+h4{ font-size:10.8pt; margin:1em 0 .3em; color:var(--accent); }
+p{ margin:.5em 0; }
+strong{ color:#ffffff; font-weight:700; }
+em{ font-style:italic; }
+code{ font-family:"DejaVu Sans Mono","Consolas",monospace; font-size:9pt; background:var(--panel2); color:var(--txt); padding:.05em .3em; border-radius:3px; border:1px solid var(--line); }
+a{ color:var(--accent); text-decoration:none; }
+/* portada */
+.cover{ page-break-after:always; padding-top:30mm; text-align:center; }
+.cover .kicker{ font-size:9.5pt; letter-spacing:.28em; text-transform:uppercase; color:var(--muted); margin-bottom:14mm; }
+.cover h1{ font-size:25pt; line-height:1.18; max-width:160mm; margin:0 auto .18em; color:var(--ink); }
+.cover .subtitle{ font-size:12.5pt; color:var(--muted); max-width:150mm; margin:0 auto 16mm; font-style:italic; }
+.cover .authors{ font-size:13pt; margin:0 auto 4mm; }
+.cover .authors .name{ font-weight:bold; color:var(--accent); }
+.cover .model{ font-size:10.5pt; color:var(--muted); margin-bottom:14mm; }
+.cover .meta{ font-size:9.5pt; color:var(--muted); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:6mm 0; max-width:120mm; margin:0 auto; }
+.abstract-box{ text-align:justify; max-width:165mm; margin:12mm auto 0; font-size:9.6pt; line-height:1.5; }
+.abstract-box h2{ text-align:center; font-size:11pt; border:none; color:var(--gold); margin-bottom:.6em; }
+.abstract-box ol{ padding-left:18px; margin:.4em 0; }
+.abstract-box p{ font-size:9.7pt; }
+/* TOC */
+.toc{ page-break-after:always; }
+.toc h2{ font-size:14pt; }
+.toc ol{ list-style:none; padding-left:0; font-size:9.8pt; columns:1; }
+.toc li{ margin:.18em 0; }
+.toc a{ color:var(--ink); }
+/* tablas */
+table{ border-collapse:collapse; width:100%; margin:.8em 0; font-size:8.6pt; page-break-inside:avoid; }
+th,td{ border:1px solid var(--line); padding:3px 6px; text-align:left; vertical-align:top; }
+th{ background:var(--panel2); color:var(--gold); font-weight:600; }
+tbody tr:nth-child(even){ background:var(--panel); }
+td:empty{ background:#08080b; }
+.verify-tbl td:nth-child(2){ width:46px; text-align:center; white-space:nowrap; }
+.verify-tbl tr td[colspan="2"]{ background:var(--panel2); color:var(--gold); font-weight:700; }
+.verify-tbl{ font-size:8.4pt; } /* desync-test */
+/* four-column conclusions check-table (§18) — fixed layout so the long
+   "Empirical check" column wraps instead of overflowing the content block.
+   Do NOT reuse .verify-tbl here: its nth-child(2)=46px nowrap rule is meant
+   for the 2-column ✓ table and would crush this column. */
+.concl-tbl{ table-layout:fixed; width:100%; font-size:8.2pt; }
+.concl-tbl th, .concl-tbl td{ word-break:break-word; overflow-wrap:anywhere; vertical-align:top; }
+.concl-tbl td:nth-child(1){ width:9%; }
+.concl-tbl td:nth-child(2){ width:41%; }
+.concl-tbl td:nth-child(3){ width:22%; }
+.concl-tbl td:nth-child(4){ width:28%; color:var(--accent); font-weight:600; }
+.concl-tbl tbody tr td:nth-child(4){ background:var(--panel2); }
+/* safety wrapper: any table wider than the content block scrolls instead
+   of breaking the layout. */
+.tbl-wrap{ overflow-x:auto; page-break-inside:avoid; }
+/* §19 conclusions as a readable list — each conclusion on its own block. */
+ol.concl{ font-size:9.7pt; margin:.6em 0; padding-left:22px; }
+ol.concl li{ margin:.55em 0; text-align:justify; }
+ol.concl li > strong:first-child{ color:var(--accent); }
+/* figuras */
+figure.fig{ margin:1em auto; text-align:center; page-break-inside:avoid; max-width:100%; }
+.fig-frame{ background:#0e1320; border-radius:6px; padding:6px; display:inline-block; max-width:100%; }
+.fig-frame svg{ width:118mm; height:auto; max-width:100%; display:block; }
+figure.fig.fig-wide{ max-width:100%; }
+figure.fig.fig-wide .fig-frame{ display:block; width:100%; }
+figure.fig.fig-wide .fig-frame svg{ width:100%; max-width:none; height:auto; }
+figcaption{ font-size:8.4pt; color:var(--dim); margin-top:.4em; text-align:justify; max-width:150mm; margin-left:auto; margin-right:auto; }
+.fnum{ font-weight:bold; color:var(--accent); }
+blockquote{ margin:.7em 0; padding:.5em .9em; border-left:3px solid var(--gold); background:var(--panel); font-size:9.4pt; color:var(--dim); page-break-inside:avoid; }
+ol,ul{ margin:.4em 0 .6em; padding-left:20px; }
+li{ margin:.22em 0; text-align:justify; }
+hr{ border:none; border-top:1px solid var(--line); margin:1.2em 0; }
+.refs{ font-size:9.2pt; }
+.refs p{ margin:.3em 0; padding-left:14px; text-indent:-14px; }
+@media print{
+  body{ max-width:none; font-size:10pt; background:#fff !important; color:#000 !important; }
+  h1,h2,h3,h4{ color:#1f3a5f !important; }
+  a{ color:#1f3a5f !important; }
+  strong{ color:#102a44 !important; }
+  code,pre{ background:#f3f4f6 !important; color:#102a44 !important; border-color:#d8dee9 !important; }
+  th{ background:#eef1f5 !important; color:#1f3a5f !important; }
+  th,td{ border-color:#c8ccd2 !important; }
+  tbody tr:nth-child(even){ background:#f7f8fa !important; }
+  td:empty{ background:#fbfbfc !important; }
+  .verify-tbl tr td[colspan="2"]{ background:#102a44 !important; color:#fff !important; }
+  .concl-tbl tbody tr td:nth-child(4){ background:#eef1f5 !important; }
+  blockquote{ background:#faf8f0 !important; color:#3a3320 !important; }
+  hr{ border-top-color:#cfcfcf !important; }
+  h2{ page-break-before:auto; }
+  figure.fig, table, blockquote{ page-break-inside:avoid; }
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GYBWT5R5SH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GYBWT5R5SH');
+</script>
+</head>
+<body>
+
+<section class="cover">
+  <div class="kicker">Hermetic–Astronomical Synthesis · 2026</div>
+  <h1>The Reader of the Sky: the stellar alphabet of the <em>Sefer Yetzirah</em> as a framework for versicular legibility, lunar–solar synchrony, and a marker of precessional eras</h1>
+  <div class="subtitle">The stellar alphabet of the <em>Sefer Yetzirah</em> as a framework for versicular legibility, lunar–solar synchrony, and a marker of precessional eras</div>
+  <div class="authors">
+    <div class="name">AncientEncoder</div>
+  </div>
+  <div class="model">Model: GLM-5.2</div>
+  <div class="meta">
+    Version 3.1 · Date 2026-08-08<br>
+    Companion software: <code>index.html</code> + <code>app.bundle.js</code> + <code>lexicon.json</code>; reproducible scripts: <code>tests.mjs</code> (88 assertions, all green), <code>calc_all.mjs</code>, <code>calc_37_73.mjs</code>, <code>calc_eclipse_deep.mjs</code>, <code>calc_mazzalot.mjs</code>, <code>calc_72.mjs</code>, <code>calc_phrase.mjs</code>, <code>palindrome.mjs</code>, <code>slow_scan.mjs</code>, <code>gen_eclipse.mjs</code>, <code>calc_crosscultural.mjs</code>; new v3.1 (§15b): <code>calc_magic_squares.mjs</code>, <code>calc_sigils.mjs</code>, <code>calc_angels72.mjs</code>, <code>calc_gen11_structure.mjs</code>, <code>calc_saros_series.mjs</code>, <code>calc_ayanamsa.mjs</code>, <code>calc_windows_causality.mjs</code>, <code>calc_week_chaldean.mjs</code>
+  </div>
+  <div class="abstract-box">
+    

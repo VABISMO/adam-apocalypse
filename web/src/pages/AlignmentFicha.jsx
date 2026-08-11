@@ -4,7 +4,7 @@
 // {date, lex, angelMap}. Presentational (renders identically server & client).
 import React, { useMemo } from 'react';
 import { SkyMap } from '../ui.jsx';
-import { SIMPLE, BODIES, GLYPH, skyAt, occupiedLetters, bySign, readableWords, displayDate, makeDate, fmtDate, eraForYear, refUrl } from '../core.jsx';
+import { SIMPLE, BODIES, GLYPH, skyAt, skyAt7, occupiedLetters, bySign, readableWords, displayDate, makeDate, fmtDate, eraForYear, refUrl } from '../core.jsx';
 
 const SIGN_EN = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'];
 
@@ -19,18 +19,24 @@ function smallestArc(lons){
 }
 
 function AlignmentFicha({date, lex, angelMap, onBack, nameRefs}){
+  // rows = 9-body set (7 classical + Uranus + Neptune) for the SkyMap dots — astronomical
+  // context only. rows7 = the 7 classical bodies the Sefer Yetzirah assigns to the 7 doubles —
+  // the ONLY bodies that occupy letters, so the reading (occ, words, occSigns) and the
+  // alignment metrics (maxInSign, span) are computed from rows7. Uranus/Neptune are plotted
+  // on the map but contribute no letter and no alignment count (they have no SY letter).
   const rows = useMemo(()=>skyAt(date),[date]);
-  const occ = useMemo(()=>occupiedLetters(rows),[rows]);
-  const occSigns = useMemo(()=>new Set(rows.map(r=>r.sign)),[rows]);
-  const bs = useMemo(()=>bySign(rows),[rows]);
+  const rows7 = useMemo(()=>skyAt7(date),[date]);
+  const occ = useMemo(()=>occupiedLetters(rows7),[rows7]);
+  const occSigns = useMemo(()=>new Set(rows7.map(r=>r.sign)),[rows7]);
+  const bs = useMemo(()=>bySign(rows7),[rows7]);
   const words = useMemo(()=> lex?readableWords(occ,lex.lexicon,angelMap):[],[occ,lex,angelMap]);
   const meta = useMemo(()=>{
     let best=null;
     for(const [sign,list] of Object.entries(bs)){ if(!best || list.length>best.list.length) best={sign,list}; }
-    const lons=rows.map(r=>r.lon);
-    const year=(()=>{ const d=makeDate? makeDate(date.slice(0,4)|0,1,1):null; return parseInt(date.slice(0,4),10)||2026; })();
+    const lons=rows7.map(r=>r.lon);
+    const year=parseInt(date.slice(0,4),10)||2026;
     return { maxInSign: best?best.list.length:0, sign: best?best.sign:'—', span: smallestArc(lons), era: eraForYear(year) };
-  },[rows,bs,date]);
+  },[rows7,bs,date]);
 
   const dateWords = words.filter(w=>w.simp).sort((a,b)=> (b.name?1:0)-(a.name?1:0) || b.len-a.len);
   const top = dateWords.slice(0,12);
@@ -44,19 +50,19 @@ function AlignmentFicha({date, lex, angelMap, onBack, nameRefs}){
 
     <h1>Stellar alignment — {displayDate(date)}</h1>
     <div className="sub" style={{marginBottom:14}}>
-      <b style={{color:'var(--gold)'}}>{meta.maxInSign}</b> of {rows.length} bodies in <b>{meta.sign}</b> · span <b className="deg">{meta.span.toFixed(1)}°</b> · era <b>{meta.era}</b>
+      <b style={{color:'var(--gold)'}}>{meta.maxInSign}</b> of {rows7.length} classical bodies in <b>{meta.sign}</b> · span <b className="deg">{meta.span.toFixed(1)}°</b> · era <b>{meta.era}</b>
     </div>
 
     <div className="grid2" style={{alignItems:'start'}}>
       <div className="panel" style={{padding:14}}>
         <SkyMap rows={rows} occ={occ}/>
-        <div className="legend">{occSigns.size} of 12 zodiac signs occupied on {displayDate(date)}. Readable simples: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>.</div>
+        <div className="legend">{occSigns.size} of 12 zodiac signs occupied on {displayDate(date)} (by the 7 classical bodies). Readable simples: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>. Uranus and Neptune are plotted on the map for astronomical context but do <b>not</b> light a sector (they have no letter in the Sefer Yetzirah).</div>
       </div>
       <div className="panel" style={{padding:16}}>
         <h3 style={{marginTop:0}}>Alignment metrics</h3>
         <table><tbody>
           <tr><th>Date</th><td>{displayDate(date)}</td></tr>
-          <tr><th>Bodies</th><td>{rows.length} ({rows.map(r=>GLYPH[r.body]).join(' ')})</td></tr>
+          <tr><th>Bodies</th><td>{rows7.length} classical ({rows7.map(r=>GLYPH[r.body]).join(' ')}) <span className="muted">· {rows.length-rows7.length} modern plotted on map only ({rows.filter(r=>!rows7.some(r7=>r7.body===r.body)).map(r=>GLYPH[r.body]).join(' ')})</span></td></tr>
           <tr><th>Max in one sign</th><td><b style={{color:'var(--gold)'}}>{meta.maxInSign}</b> in {meta.sign}</td></tr>
           <tr><th>Span (tightest arc)</th><td className="deg">{meta.span.toFixed(2)}°</td></tr>
           <tr><th>Precessional era</th><td>{meta.era}</td></tr>

@@ -99,7 +99,7 @@ function TranslatorTab({date, occ, words, q, setQ, genData, onOpen, nameRefs}){
     <div className="tcards">
       {slice.map((w,i)=>(
         <div key={w.he+w.translit+i} className={'tcard'+(w.simp?'':' always')} style={{cursor:'pointer',transition:'border-color .12s,transform .12s'}} title={`Open the single-reading page for ${w.translit} (${w.gloss})`} onClick={()=>onOpen&&onOpen(w)} onMouseEnter={e=>{e.currentTarget.style.borderColor='var(--brand)';e.currentTarget.style.transform='translateY(-1px)';}} onMouseLeave={e=>{e.currentTarget.style.borderColor='';e.currentTarget.style.transform='';}}>
-          <div className="the">{w.disp} <span style={{color:'var(--dim)',fontSize:'.6em',verticalAlign:'super'}}>▸</span></div>
+          <div className="the">{w.disp}</div>
           <div className="read">{w.translit}</div>
           <div className="trans">{w.gloss}</div>
           <div className="g">{w.len} letters · gematria {w.gem}{w.pal && <span style={{color:'var(--gold)'}}> · palindrome</span>}{w.m37 && <span style={{color:'var(--green)'}}> · ×37</span>}{w.angelName && <span style={{color:'var(--violet)'}}> · angel</span>}</div>
@@ -216,7 +216,7 @@ function GlossPage({word, date, rows, occ, genData, onBack, nameRefs}){
     <div className="kpi-row">
       <div className={'kpi '+(readableNow?'ok':'no')}>
         <div className="v">{readableNow?'●':'○'}</div>
-        <div className="l">today · {displayDate(date)}</div>
+        <div className="l">{displayDate(date)}</div>
         <div className="sub">{readableNow?'readable — all simples occupied':'missing '+missing.join(' ')}</div>
       </div>
       <div className="kpi">

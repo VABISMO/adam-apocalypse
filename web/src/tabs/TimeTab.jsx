@@ -92,7 +92,7 @@ function PredictorTab({date, setDate, genYear, setGenYear, genData, loading, sca
         })()}
         {wordDoyList(sel).length>200 && <span className="muted"> … ({wordDoyList(sel).length} total)</span>}
       </div>
-      <div className="legend">Move years with ◀ ▶. The 2028–2029 cluster (Pluto in Aquarius, Neptune in Aries) lifts the rare glosses' counts.</div>
+      <div className="legend">Move years with ◀ ▶. Clusters appear when the 7 classical bodies concentrate into few signs, emptying the others and lifting the rare glosses' counts.</div>
     </>}
   </>;
 }
@@ -100,16 +100,8 @@ function PredictorTab({date, setDate, genYear, setGenYear, genData, loading, sca
 function AgesTab({date, rows}){
   const ages=useMemo(()=>ageBoundaries(),[]);
   return <>
-    <h2>Stellar ages · precession + the Neptune–Pluto cycle</h2>
-    <div className="muted" style={{marginBottom:10}}>The equinox recedes 50.29″/year → one precessional age per sign, ≈{Math.round(AGE)} years. Equinox today: <b>{EQUINOX_LON.toFixed(1)}°</b> sidereal (Pisces). Lahiri ayanamsa 24.18° (2024). The 6 Genesis windows (Neptune∈Aries ∧ Pluto∈Aquarius) recur every ~491 years and coincide with major religious-linguistic reformations:</div>
-    <div className="grid2" style={{marginBottom:10}}>
-      {ERA_WINDOWS.map((e,i)=>(
-        <div key={i} className={'era'+(i===ERA_WINDOWS.length-1?' next':'')}>
-          <div className="top"><span><b>{e.w}</b></span><span className="yr">~491 y</span></div>
-          <div className="desc">{e.ev}</div>
-        </div>
-      ))}
-    </div>
+    <h2>Stellar ages · precession</h2>
+    <div className="muted" style={{marginBottom:10}}>The equinox recedes 50.29″/year → one precessional age per sign, ≈{Math.round(AGE)} years. Equinox today: <b>{EQUINOX_LON.toFixed(1)}°</b> sidereal (Pisces). Lahiri ayanamsa 24.18° (2024). Genesis 1:1 is readable only when all five of its signs (Aquarius, Aries, Libra, Taurus, Virgo) are occupied by the 7 classical bodies at once — a rare conjunction; no fixed cadence is claimed.</div>
     <div className="muted" style={{marginBottom:8}}>Precessional ages (equinox entry into each sign):</div>
     <div className="grid2">
       {ages.map(a=>{
@@ -127,15 +119,14 @@ function AgesTab({date, rows}){
       })}
     </div>
     <div style={{marginTop:12,padding:'12px 14px',background:'var(--panel2)',borderRadius:8}}>
-      <div className="muted"><b>Slow activators today ({date}):</b></div>
+      <div className="muted"><b>Modern slow bodies today ({date}) — astronomical context only:</b></div>
       <div style={{marginTop:6}}>
-        {['Pluto','Neptune','Uranus'].map(p=>{const r=rows.find(x=>x.body===p); const era=ages.find(a=>a.sign===r.sign); return (
+        {['Neptune','Uranus'].map(p=>{const r=rows.find(x=>x.body===p); const era=ages.find(a=>a.sign===r.sign); return (
           <div key={p} className="note">{GLYPH[p]} <b>{p}</b> in {r.sign} (<span className="he">{SIMPLE[r.sign][0]}</span>{era&&era.start<=2026&&2026<era.end?' · current age':''}{era&&era.start>2026?' · incoming age':''}) · {r.deg.toFixed(1)}°</div>
         );})}
       </div>
-      <div className="note" style={{marginTop:8}}>Pluto in Aquarius (<span className="he">צ</span>) and Neptune in Aries (<span className="he">ה</span>) are the two anchors that make Genesis 1:1 readable. The Age of Aquarius (~{yrLabel(ages.find(a=>a.sign==='Aquarius').start)}, precessional) and the Neptune–Pluto synodic cycle (~491 y) coincide now.</div>
+      <div className="note" style={{marginTop:8}}>Uranus and Neptune are the slowest bodies the app tracks and are shown here for astronomical context. They are <b>not</b> among the Sefer Yetzirah's 7 doubles and contribute <b>no letter</b> to the reading — the reading uses only the 7 classical bodies. Genesis 1:1 legibility depends on those 7 occupying its five signs (Aquarius, Aries, Libra, Taurus, Virgo) at once: a rare conjunction, not a fixed cycle.</div>
     </div>
-    <Fig n={9} doc="From the article (§15b.8): the six ~13-year windows in which Genesis 1:1 is legible (Neptune∈Aries ∧ Pluto∈Aquarius), mean separation 490.5 y = the Neptune–Pluto synodic. Each marks a major religious-linguistic re-formation. Regularity p &lt; 5×10⁻⁶; caveat: n=6 and selection bias — hypothesis, not cause."/>
   </>;
 }
 

@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-10",
- "note": "modern = 10 bodies (app set), 1700–2200 CE daily, Pluto-valid range. deep = 7 classical bodies, 20000 BCE–2200 CE 3-day step (the 7-classical set is fast and its mean motion is secularly stable, so conjunction dates stay trustworthy across the whole range; beyond ~±4000 y from J2000 the VSOP87/ELP perturbation terms diverge, so exact degrees — and thus the sign of a given deep-past conjunction — are an extrapolation). maxInSign = count in the most-occupied single sign; span = smallest arc (°) containing all bodies; era = precessional era (~2147 y each, cyclic mod the ~25771-y great year). Per-event stellar readings are computed in the browser for the selected alignment (skyAt is fast); the cross-check summary is stored here.",
+ "generated": "2026-08-11",
+ "note": "modern = 9 bodies (7 classical + Uranus + Neptune — the app display set; Pluto is dropped, it is not in the Sefer Yetzirah), 1700–2200 CE daily. deep = 7 classical bodies (the Sefer Yetzirah 7 doubles), 20000 BCE–2200 CE 3-day step (the 7-classical set is fast and its mean motion is secularly stable, so conjunction dates stay trustworthy across the whole range; beyond ~±4000 y from J2000 the VSOP87/ELP perturbation terms diverge, so exact degrees — and thus the sign of a given deep-past conjunction — are an extrapolation). maxInSign = count in the most-occupied single sign; span = smallest arc (°) containing all bodies; era = precessional era (~2147 y each, cyclic mod the ~25771-y great year). Per-event stellar readings are computed in the browser for the selected alignment (skyAt is fast); the cross-check summary is stored here.",
  "ranges": {
   "modern": {
    "bodies": [
@@ -12,8 +12,7 @@
     "Jupiter",
     "Saturn",
     "Uranus",
-    "Neptune",
-    "Pluto"
+    "Neptune"
    ],
    "span": "1700–2200 CE"
   },
@@ -39,45 +38,10 @@
    "era": "Piscis"
   },
   {
-   "date": "1857-04-24",
-   "maxInSign": 7,
-   "sign": "Tauro",
-   "span": 107.5,
-   "era": "Piscis"
-  },
-  {
-   "date": "1995-11-24",
-   "maxInSign": 7,
-   "sign": "Sagitario",
-   "span": 107.5,
-   "era": "Piscis"
-  },
-  {
-   "date": "1881-06-23",
-   "maxInSign": 7,
-   "sign": "Tauro",
-   "span": 129,
-   "era": "Piscis"
-  },
-  {
-   "date": "1881-05-07",
-   "maxInSign": 7,
-   "sign": "Tauro",
-   "span": 163.5,
-   "era": "Piscis"
-  },
-  {
-   "date": "1915-07-11",
-   "maxInSign": 7,
-   "sign": "Cáncer",
-   "span": 165,
-   "era": "Piscis"
-  },
-  {
    "date": "2000-05-03",
    "maxInSign": 7,
    "sign": "Tauro",
-   "span": 167.5,
+   "span": 113.2,
    "era": "Piscis"
   },
   {
@@ -95,23 +59,23 @@
    "era": "Piscis"
   },
   {
-   "date": "2149-11-30",
-   "maxInSign": 7,
-   "sign": "Sagitario",
-   "span": 191.5,
-   "era": "Piscis"
-  },
-  {
    "date": "1899-12-02",
    "maxInSign": 7,
    "sign": "Sagitario",
-   "span": 193.8,
+   "span": 183.5,
    "era": "Piscis"
   },
   {
-   "date": "1968-08-24",
+   "date": "2149-11-30",
    "maxInSign": 7,
-   "sign": "Virgo",
+   "sign": "Sagitario",
+   "span": 187.4,
+   "era": "Piscis"
+  },
+  {
+   "date": "2080-02-18",
+   "maxInSign": 7,
+   "sign": "Acuario",
    "span": 208.6,
    "era": "Piscis"
   },
@@ -123,52 +87,66 @@
    "era": "Piscis"
   },
   {
-   "date": "1853-05-19",
-   "maxInSign": 7,
-   "sign": "Tauro",
-   "span": 229.9,
-   "era": "Piscis"
-  },
-  {
-   "date": "2080-02-18",
-   "maxInSign": 7,
-   "sign": "Acuario",
-   "span": 237.7,
-   "era": "Piscis"
-  },
-  {
-   "date": "2107-05-21",
-   "maxInSign": 7,
-   "sign": "Tauro",
-   "span": 246.6,
-   "era": "Piscis"
-  },
-  {
-   "date": "1982-10-17",
+   "date": "1803-11-13",
    "maxInSign": 6,
-   "sign": "Libra",
-   "span": 79,
-   "era": "Piscis"
-  },
-  {
-   "date": "1845-04-02",
-   "maxInSign": 6,
-   "sign": "Aries",
-   "span": 98.5,
+   "sign": "Escorpio",
+   "span": 57.3,
    "era": "Piscis"
   },
   {
    "date": "1842-01-11",
    "maxInSign": 6,
    "sign": "Capricornio",
-   "span": 103.3,
+   "span": 75.6,
    "era": "Piscis"
   },
   {
-   "date": "1955-08-17",
+   "date": "1995-12-23",
+   "maxInSign": 6,
+   "sign": "Capricornio",
+   "span": 81.3,
+   "era": "Piscis"
+  },
+  {
+   "date": "1816-12-18",
+   "maxInSign": 6,
+   "sign": "Sagitario",
+   "span": 81.7,
+   "era": "Piscis"
+  },
+  {
+   "date": "2123-07-24",
    "maxInSign": 6,
    "sign": "Leo",
-   "span": 105.6,
+   "span": 94.4,
+   "era": "Piscis"
+  },
+  {
+   "date": "1818-11-29",
+   "maxInSign": 6,
+   "sign": "Sagitario",
+   "span": 98,
+   "era": "Piscis"
+  },
+  {
+   "date": "2164-12-14",
+   "maxInSign": 6,
+   "sign": "Sagitario",
+   "span": 101.2,
+   "era": "Piscis"
+  },
+  {
+   "date": "2021-02-10",
+   "maxInSign": 6,
+   "sign": "Acuario",
+   "span": 101.7,
+   "era": "Piscis"
+  },
+  {
+   "date": "2026-04-17",
+   "maxInSign": 6,
+   "sign": "Aries",
+   "span": 104.4,
    "era": "Piscis"
   },
   {
@@ -179,10 +157,10 @@
    "era": "Piscis"
   },
   {
-   "date": "1818-11-29",
+   "date": "1857-04-24",
    "maxInSign": 6,
-   "sign": "Sagitario",
-   "span": 110.7,
+   "sign": "Tauro",
+   "span": 107.5,
    "era": "Piscis"
   },
   {
@@ -193,38 +171,24 @@
    "era": "Piscis"
   },
   {
-   "date": "2021-02-10",
+   "date": "2167-02-18",
    "maxInSign": 6,
    "sign": "Acuario",
-   "span": 112.2,
+   "span": 125.2,
    "era": "Piscis"
   },
   {
-   "date": "1993-11-13",
+   "date": "2176-03-11",
+   "maxInSign": 6,
+   "sign": "Piscis",
+   "span": 127.5,
+   "era": "Piscis"
+  },
+  {
+   "date": "1806-11-09",
    "maxInSign": 6,
    "sign": "Escorpio",
-   "span": 113.2,
-   "era": "Piscis"
-  },
-  {
-   "date": "1816-12-18",
-   "maxInSign": 6,
-   "sign": "Sagitario",
-   "span": 113.7,
-   "era": "Piscis"
-  },
-  {
-   "date": "1855-05-14",
-   "maxInSign": 6,
-   "sign": "Tauro",
-   "span": 118.5,
-   "era": "Piscis"
-  },
-  {
-   "date": "1957-07-28",
-   "maxInSign": 6,
-   "sign": "Leo",
-   "span": 122.7,
+   "span": 127.6,
    "era": "Piscis"
   },
   {
@@ -235,10 +199,17 @@
    "era": "Piscis"
   },
   {
-   "date": "1882-04-28",
+   "date": "1881-06-23",
    "maxInSign": 6,
    "sign": "Tauro",
-   "span": 131,
+   "span": 129,
+   "era": "Piscis"
+  },
+  {
+   "date": "2137-12-13",
+   "maxInSign": 6,
+   "sign": "Sagitario",
+   "span": 129.8,
    "era": "Piscis"
   },
   {
@@ -256,6 +227,20 @@
    "era": "Piscis"
   },
   {
+   "date": "1701-07-05",
+   "maxInSign": 6,
+   "sign": "Cáncer",
+   "span": 138.6,
+   "era": "Piscis"
+  },
+  {
+   "date": "2162-01-14",
+   "maxInSign": 6,
+   "sign": "Capricornio",
+   "span": 139.3,
+   "era": "Piscis"
+  },
+  {
    "date": "1853-03-09",
    "maxInSign": 6,
    "sign": "Piscis",
@@ -270,10 +255,17 @@
    "era": "Piscis"
   },
   {
-   "date": "1947-08-15",
+   "date": "1765-08-05",
    "maxInSign": 6,
    "sign": "Leo",
-   "span": 143.9,
+   "span": 141.9,
+   "era": "Piscis"
+  },
+  {
+   "date": "1989-02-03",
+   "maxInSign": 6,
+   "sign": "Capricornio",
+   "span": 142.8,
    "era": "Piscis"
   },
   {
@@ -291,10 +283,31 @@
    "era": "Piscis"
   },
   {
-   "date": "1714-08-11",
+   "date": "2178-02-19",
    "maxInSign": 6,
-   "sign": "Virgo",
-   "span": 150.1,
+   "sign": "Piscis",
+   "span": 146.5,
+   "era": "Piscis"
+  },
+  {
+   "date": "2164-01-24",
+   "maxInSign": 6,
+   "sign": "Acuario",
+   "span": 149.7,
+   "era": "Piscis"
+  },
+  {
+   "date": "1761-04-05",
+   "maxInSign": 6,
+   "sign": "Aries",
+   "span": 150.6,
+   "era": "Piscis"
+  },
+  {
+   "date": "2060-07-06",
+   "maxInSign": 6,
+   "sign": "Géminis",
+   "span": 151.3,
    "era": "Piscis"
   },
   {
@@ -312,31 +325,38 @@
    "era": "Piscis"
   },
   {
-   "date": "1701-07-05",
+   "date": "2134-11-23",
    "maxInSign": 6,
-   "sign": "Cáncer",
+   "sign": "Sagitario",
+   "span": 153.3,
+   "era": "Piscis"
+  },
+  {
+   "date": "1778-05-27",
+   "maxInSign": 6,
+   "sign": "Géminis",
    "span": 154,
    "era": "Piscis"
   },
   {
-   "date": "2018-01-16",
+   "date": "1803-09-28",
    "maxInSign": 6,
-   "sign": "Capricornio",
-   "span": 155.3,
+   "sign": "Libra",
+   "span": 154.1,
    "era": "Piscis"
   },
   {
-   "date": "1803-11-14",
+   "date": "1895-11-15",
    "maxInSign": 6,
    "sign": "Escorpio",
-   "span": 155.7,
+   "span": 155.6,
    "era": "Piscis"
   },
   {
-   "date": "2123-07-24",
+   "date": "2200-03-16",
    "maxInSign": 6,
-   "sign": "Leo",
-   "span": 157.8,
+   "sign": "Piscis",
+   "span": 157.7,
    "era": "Piscis"
   },
   {
@@ -347,6 +367,27 @@
    "era": "Piscis"
   },
   {
+   "date": "2171-03-05",
+   "maxInSign": 6,
+   "sign": "Piscis",
+   "span": 158.9,
+   "era": "Piscis"
+  },
+  {
+   "date": "2061-05-21",
+   "maxInSign": 6,
+   "sign": "Géminis",
+   "span": 159.1,
+   "era": "Piscis"
+  },
+  {
+   "date": "2157-01-10",
+   "maxInSign": 6,
+   "sign": "Capricornio",
+   "span": 159.7,
+   "era": "Piscis"
+  },
+  {
    "date": "1880-09-04",
    "maxInSign": 6,
    "sign": "Virgo",
@@ -354,31 +395,45 @@
    "era": "Piscis"
   },
   {
-   "date": "1895-11-15",
+   "date": "2040-09-08",
    "maxInSign": 6,
-   "sign": "Escorpio",
+   "sign": "Libra",
+   "span": 160.4,
+   "era": "Piscis"
+  },
+  {
+   "date": "2028-06-20",
+   "maxInSign": 6,
+   "sign": "Géminis",
    "span": 160.8,
    "era": "Piscis"
   },
   {
-   "date": "1803-09-28",
+   "date": "1881-05-07",
    "maxInSign": 6,
-   "sign": "Libra",
-   "span": 161.5,
+   "sign": "Tauro",
+   "span": 163.5,
    "era": "Piscis"
   },
   {
-   "date": "2167-02-18",
+   "date": "1767-08-24",
    "maxInSign": 6,
-   "sign": "Acuario",
-   "span": 161.6,
+   "sign": "Virgo",
+   "span": 163.6,
    "era": "Piscis"
   },
   {
-   "date": "2026-04-16",
+   "date": "1915-07-11",
    "maxInSign": 6,
-   "sign": "Aries",
-   "span": 161.7,
+   "sign": "Cáncer",
+   "span": 165,
+   "era": "Piscis"
+  },
+  {
+   "date": "2141-03-07",
+   "maxInSign": 6,
+   "sign": "Piscis",
+   "span": 165.8,
    "era": "Piscis"
   },
   {
@@ -389,10 +444,17 @@
    "era": "Piscis"
   },
   {
-   "date": "2200-03-16",
+   "date": "1990-02-22",
    "maxInSign": 6,
-   "sign": "Piscis",
-   "span": 166.5,
+   "sign": "Capricornio",
+   "span": 172.3,
+   "era": "Piscis"
+  },
+  {
+   "date": "2197-01-17",
+   "maxInSign": 6,
+   "sign": "Capricornio",
+   "span": 174.1,
    "era": "Piscis"
   },
   {
@@ -403,34 +465,6 @@
    "era": "Piscis"
   },
   {
-   "date": "1709-08-05",
-   "maxInSign": 6,
-   "sign": "Leo",
-   "span": 176.5,
-   "era": "Piscis"
-  },
-  {
-   "date": "2167-07-15",
-   "maxInSign": 6,
-   "sign": "Cáncer",
-   "span": 176.9,
-   "era": "Piscis"
-  },
-  {
-   "date": "1720-09-02",
-   "maxInSign": 6,
-   "sign": "Virgo",
-   "span": 177.2,
-   "era": "Piscis"
-  },
-  {
-   "date": "2008-12-27",
-   "maxInSign": 6,
-   "sign": "Capricornio",
-   "span": 177.4,
-   "era": "Piscis"
-  },
-  {
    "date": "2086-08-08",
    "maxInSign": 6,
    "sign": "Leo",
@@ -438,24 +472,10 @@
    "era": "Piscis"
   },
   {
-   "date": "2124-05-14",
+   "date": "1720-10-01",
    "maxInSign": 6,
-   "sign": "Tauro",
-   "span": 177.7,
-   "era": "Piscis"
-  },
-  {
-   "date": "1914-05-25",
-   "maxInSign": 6,
-   "sign": "Géminis",
-   "span": 180.6,
-   "era": "Piscis"
-  },
-  {
-   "date": "1906-05-23",
-   "maxInSign": 6,
-   "sign": "Géminis",
-   "span": 180.8,
+   "sign": "Libra",
+   "span": 179.9,
    "era": "Piscis"
   },
   {
@@ -466,6 +486,13 @@
    "era": "Piscis"
   },
   {
+   "date": "1702-04-26",
+   "maxInSign": 6,
+   "sign": "Aries",
+   "span": 184.2,
+   "era": "Piscis"
+  },
+  {
    "date": "2100-10-03",
    "maxInSign": 6,
    "sign": "Libra",
@@ -473,10 +500,17 @@
    "era": "Piscis"
   },
   {
-   "date": "1850-04-12",
+   "date": "1783-01-02",
    "maxInSign": 6,
-   "sign": "Aries",
-   "span": 188.1,
+   "sign": "Capricornio",
+   "span": 187,
+   "era": "Piscis"
+  },
+  {
+   "date": "1779-10-09",
+   "maxInSign": 6,
+   "sign": "Libra",
+   "span": 189.6,
    "era": "Piscis"
   },
   {
@@ -494,45 +528,17 @@
    "era": "Piscis"
   },
   {
-   "date": "1851-04-01",
-   "maxInSign": 6,
-   "sign": "Aries",
-   "span": 190.2,
-   "era": "Piscis"
-  },
-  {
-   "date": "1972-10-06",
-   "maxInSign": 6,
-   "sign": "Libra",
-   "span": 190.6,
-   "era": "Piscis"
-  },
-  {
-   "date": "1989-02-03",
-   "maxInSign": 6,
-   "sign": "Capricornio",
-   "span": 191.3,
-   "era": "Piscis"
-  },
-  {
-   "date": "1806-11-09",
-   "maxInSign": 6,
-   "sign": "Escorpio",
-   "span": 191.4,
-   "era": "Piscis"
-  },
-  {
-   "date": "2164-01-25",
-   "maxInSign": 6,
-   "sign": "Acuario",
-   "span": 191.7,
-   "era": "Piscis"
-  },
-  {
    "date": "1861-09-04",
    "maxInSign": 6,
    "sign": "Virgo",
    "span": 191.9,
+   "era": "Piscis"
+  },
+  {
+   "date": "2132-11-15",
+   "maxInSign": 6,
+   "sign": "Escorpio",
+   "span": 192,
    "era": "Piscis"
   },
   {
@@ -550,31 +556,10 @@
    "era": "Piscis"
   },
   {
-   "date": "2006-12-10",
+   "date": "2170-02-01",
    "maxInSign": 6,
-   "sign": "Sagitario",
-   "span": 195.9,
-   "era": "Piscis"
-  },
-  {
-   "date": "1747-11-02",
-   "maxInSign": 6,
-   "sign": "Escorpio",
-   "span": 196.3,
-   "era": "Piscis"
-  },
-  {
-   "date": "2178-02-19",
-   "maxInSign": 6,
-   "sign": "Piscis",
-   "span": 196.4,
-   "era": "Piscis"
-  },
-  {
-   "date": "2118-05-18",
-   "maxInSign": 6,
-   "sign": "Tauro",
-   "span": 197,
+   "sign": "Acuario",
+   "span": 196.6,
    "era": "Piscis"
   },
   {
@@ -592,31 +577,10 @@
    "era": "Piscis"
   },
   {
-   "date": "2176-03-11",
+   "date": "2041-11-21",
    "maxInSign": 6,
-   "sign": "Piscis",
-   "span": 198.8,
-   "era": "Piscis"
-  },
-  {
-   "date": "1870-05-01",
-   "maxInSign": 6,
-   "sign": "Tauro",
-   "span": 200.4,
-   "era": "Piscis"
-  },
-  {
-   "date": "2134-12-01",
-   "maxInSign": 6,
-   "sign": "Sagitario",
-   "span": 200.7,
-   "era": "Piscis"
-  },
-  {
-   "date": "2157-01-10",
-   "maxInSign": 6,
-   "sign": "Capricornio",
-   "span": 202.6,
+   "sign": "Escorpio",
+   "span": 203.5,
    "era": "Piscis"
   },
   {
@@ -627,17 +591,10 @@
    "era": "Piscis"
   },
   {
-   "date": "1990-01-18",
+   "date": "1797-05-27",
    "maxInSign": 6,
-   "sign": "Capricornio",
-   "span": 205.8,
-   "era": "Piscis"
-  },
-  {
-   "date": "1715-09-17",
-   "maxInSign": 6,
-   "sign": "Virgo",
-   "span": 207.5,
+   "sign": "Géminis",
+   "span": 206.5,
    "era": "Piscis"
   },
   {
@@ -662,17 +619,17 @@
    "era": "Piscis"
   },
   {
-   "date": "2164-12-14",
+   "date": "1968-08-24",
    "maxInSign": 6,
-   "sign": "Sagitario",
-   "span": 208.8,
+   "sign": "Virgo",
+   "span": 208.6,
    "era": "Piscis"
   },
   {
-   "date": "1706-07-25",
+   "date": "2185-12-23",
    "maxInSign": 6,
-   "sign": "Leo",
-   "span": 209,
+   "sign": "Capricornio",
+   "span": 208.6,
    "era": "Piscis"
   },
   {
@@ -683,10 +640,10 @@
    "era": "Piscis"
   },
   {
-   "date": "1702-04-26",
+   "date": "1759-02-28",
    "maxInSign": 6,
-   "sign": "Aries",
-   "span": 210,
+   "sign": "Piscis",
+   "span": 210.1,
    "era": "Piscis"
   },
   {
@@ -697,17 +654,10 @@
    "era": "Piscis"
   },
   {
-   "date": "2162-01-15",
+   "date": "1901-01-19",
    "maxInSign": 6,
    "sign": "Capricornio",
-   "span": 211.4,
-   "era": "Piscis"
-  },
-  {
-   "date": "1783-01-02",
-   "maxInSign": 6,
-   "sign": "Capricornio",
-   "span": 212.2,
+   "span": 211.7,
    "era": "Piscis"
   },
   {
@@ -718,87 +668,45 @@
    "era": "Piscis"
   },
   {
-   "date": "1739-11-01",
+   "date": "1826-01-07",
+   "maxInSign": 6,
+   "sign": "Capricornio",
+   "span": 213.5,
+   "era": "Piscis"
+  },
+  {
+   "date": "1762-03-25",
+   "maxInSign": 6,
+   "sign": "Aries",
+   "span": 213.9,
+   "era": "Piscis"
+  },
+  {
+   "date": "2128-07-28",
+   "maxInSign": 6,
+   "sign": "Leo",
+   "span": 215.1,
+   "era": "Piscis"
+  },
+  {
+   "date": "1758-12-30",
+   "maxInSign": 6,
+   "sign": "Capricornio",
+   "span": 216.4,
+   "era": "Piscis"
+  },
+  {
+   "date": "2102-11-09",
    "maxInSign": 6,
    "sign": "Escorpio",
-   "span": 213,
+   "span": 217.8,
    "era": "Piscis"
   },
   {
-   "date": "1851-06-08",
+   "date": "1991-01-15",
    "maxInSign": 6,
-   "sign": "Tauro",
-   "span": 213.8,
-   "era": "Piscis"
-  },
-  {
-   "date": "1758-11-30",
-   "maxInSign": 6,
-   "sign": "Sagitario",
-   "span": 215.7,
-   "era": "Piscis"
-  },
-  {
-   "date": "1896-06-11",
-   "maxInSign": 6,
-   "sign": "Géminis",
-   "span": 215.9,
-   "era": "Piscis"
-  },
-  {
-   "date": "1720-10-07",
-   "maxInSign": 6,
-   "sign": "Libra",
-   "span": 216.2,
-   "era": "Piscis"
-  },
-  {
-   "date": "1779-10-09",
-   "maxInSign": 6,
-   "sign": "Libra",
-   "span": 217.1,
-   "era": "Piscis"
-  },
-  {
-   "date": "2132-11-20",
-   "maxInSign": 6,
-   "sign": "Escorpio",
-   "span": 218.1,
-   "era": "Piscis"
-  },
-  {
-   "date": "1963-09-17",
-   "maxInSign": 6,
-   "sign": "Virgo",
-   "span": 220.3,
-   "era": "Piscis"
-  },
-  {
-   "date": "1759-02-27",
-   "maxInSign": 6,
-   "sign": "Piscis",
-   "span": 220.5,
-   "era": "Piscis"
-  },
-  {
-   "date": "2028-06-20",
-   "maxInSign": 6,
-   "sign": "Géminis",
-   "span": 221.1,
-   "era": "Piscis"
-  },
-  {
-   "date": "2060-07-05",
-   "maxInSign": 6,
-   "sign": "Géminis",
-   "span": 221.1,
-   "era": "Piscis"
-  },
-  {
-   "date": "2060-05-27",
-   "maxInSign": 6,
-   "sign": "Géminis",
-   "span": 222,
+   "sign": "Capricornio",
+   "span": 219.1,
    "era": "Piscis"
   },
   {
@@ -806,69 +714,6 @@
    "maxInSign": 6,
    "sign": "Piscis",
    "span": 222.3,
-   "era": "Piscis"
-  },
-  {
-   "date": "2058-02-23",
-   "maxInSign": 6,
-   "sign": "Piscis",
-   "span": 222.6,
-   "era": "Piscis"
-  },
-  {
-   "date": "2102-11-09",
-   "maxInSign": 6,
-   "sign": "Escorpio",
-   "span": 222.7,
-   "era": "Piscis"
-  },
-  {
-   "date": "1901-01-19",
-   "maxInSign": 6,
-   "sign": "Capricornio",
-   "span": 222.8,
-   "era": "Piscis"
-  },
-  {
-   "date": "1990-02-22",
-   "maxInSign": 6,
-   "sign": "Capricornio",
-   "span": 223,
-   "era": "Piscis"
-  },
-  {
-   "date": "2137-12-12",
-   "maxInSign": 6,
-   "sign": "Sagitario",
-   "span": 223.7,
-   "era": "Piscis"
-  },
-  {
-   "date": "2170-01-30",
-   "maxInSign": 6,
-   "sign": "Acuario",
-   "span": 225.2,
-   "era": "Piscis"
-  },
-  {
-   "date": "1967-09-04",
-   "maxInSign": 6,
-   "sign": "Virgo",
-   "span": 225.3,
-   "era": "Piscis"
-  },
-  {
-   "date": "2061-05-21",
-   "maxInSign": 6,
-   "sign": "Géminis",
-   "span": 226,
-   "era": "Piscis"
-  },
-  {
-   "date": "2141-03-07",
-   "maxInSign": 6,
-   "sign": "Piscis",
-   "span": 226.6,
    "era": "Piscis"
   },
   {
@@ -886,52 +731,17 @@
    "era": "Piscis"
   },
   {
-   "date": "1761-04-05",
-   "maxInSign": 6,
-   "sign": "Aries",
-   "span": 229.7,
-   "era": "Piscis"
-  },
-  {
-   "date": "1858-04-14",
+   "date": "1853-05-19",
    "maxInSign": 6,
    "sign": "Tauro",
-   "span": 229.8,
-   "era": "Piscis"
-  },
-  {
-   "date": "1974-10-15",
-   "maxInSign": 6,
-   "sign": "Libra",
    "span": 229.9,
    "era": "Piscis"
   },
   {
-   "date": "1791-02-02",
+   "date": "1903-01-28",
    "maxInSign": 6,
    "sign": "Acuario",
-   "span": 230.2,
-   "era": "Piscis"
-  },
-  {
-   "date": "2040-09-08",
-   "maxInSign": 6,
-   "sign": "Libra",
-   "span": 230.5,
-   "era": "Piscis"
-  },
-  {
-   "date": "1923-07-12",
-   "maxInSign": 6,
-   "sign": "Cáncer",
-   "span": 231.7,
-   "era": "Piscis"
-  },
-  {
-   "date": "1762-03-25",
-   "maxInSign": 6,
-   "sign": "Aries",
-   "span": 232.2,
+   "span": 233.1,
    "era": "Piscis"
   },
   {
@@ -942,59 +752,31 @@
    "era": "Piscis"
   },
   {
-   "date": "1966-09-13",
+   "date": "2070-10-03",
    "maxInSign": 6,
-   "sign": "Virgo",
-   "span": 233.2,
+   "sign": "Libra",
+   "span": 233.6,
    "era": "Piscis"
   },
   {
-   "date": "1765-07-30",
-   "maxInSign": 6,
-   "sign": "Leo",
-   "span": 233.8,
-   "era": "Piscis"
-  },
-  {
-   "date": "2109-05-01",
-   "maxInSign": 6,
-   "sign": "Tauro",
-   "span": 234.1,
-   "era": "Piscis"
-  },
-  {
-   "date": "1990-12-18",
-   "maxInSign": 6,
-   "sign": "Capricornio",
-   "span": 235,
-   "era": "Piscis"
-  },
-  {
-   "date": "1894-06-03",
+   "date": "2107-06-20",
    "maxInSign": 6,
    "sign": "Géminis",
+   "span": 233.6,
+   "era": "Piscis"
+  },
+  {
+   "date": "2184-03-11",
+   "maxInSign": 6,
+   "sign": "Piscis",
+   "span": 234.2,
+   "era": "Piscis"
+  },
+  {
+   "date": "1925-07-23",
+   "maxInSign": 6,
+   "sign": "Leo",
    "span": 235.2,
-   "era": "Piscis"
-  },
-  {
-   "date": "1713-08-23",
-   "maxInSign": 6,
-   "sign": "Virgo",
-   "span": 235.4,
-   "era": "Piscis"
-  },
-  {
-   "date": "2192-08-07",
-   "maxInSign": 6,
-   "sign": "Leo",
-   "span": 235.4,
-   "era": "Piscis"
-  },
-  {
-   "date": "1778-05-27",
-   "maxInSign": 6,
-   "sign": "Géminis",
-   "span": 235.6,
    "era": "Piscis"
   },
   {
@@ -1012,17 +794,10 @@
    "era": "Piscis"
   },
   {
-   "date": "2197-01-17",
+   "date": "1928-04-18",
    "maxInSign": 6,
-   "sign": "Capricornio",
-   "span": 240.5,
-   "era": "Piscis"
-  },
-  {
-   "date": "2171-03-07",
-   "maxInSign": 6,
-   "sign": "Piscis",
-   "span": 240.8,
+   "sign": "Aries",
+   "span": 241.7,
    "era": "Piscis"
   },
   {
@@ -1033,13 +808,6 @@
    "era": "Piscis"
   },
   {
-   "date": "2108-05-11",
-   "maxInSign": 6,
-   "sign": "Tauro",
-   "span": 242.9,
-   "era": "Piscis"
-  },
-  {
    "date": "2113-10-10",
    "maxInSign": 6,
    "sign": "Libra",
@@ -1047,17 +815,10 @@
    "era": "Piscis"
   },
   {
-   "date": "2053-03-18",
+   "date": "2070-12-02",
    "maxInSign": 6,
-   "sign": "Piscis",
-   "span": 243.9,
-   "era": "Piscis"
-  },
-  {
-   "date": "2128-07-27",
-   "maxInSign": 6,
-   "sign": "Leo",
-   "span": 244.6,
+   "sign": "Sagitario",
+   "span": 244.5,
    "era": "Piscis"
   },
   {
@@ -1068,31 +829,10 @@
    "era": "Piscis"
   },
   {
-   "date": "1852-05-18",
-   "maxInSign": 6,
-   "sign": "Tauro",
-   "span": 245.8,
-   "era": "Piscis"
-  },
-  {
    "date": "1863-09-24",
    "maxInSign": 6,
    "sign": "Libra",
    "span": 246.2,
-   "era": "Piscis"
-  },
-  {
-   "date": "1767-08-24",
-   "maxInSign": 6,
-   "sign": "Virgo",
-   "span": 246.3,
-   "era": "Piscis"
-  },
-  {
-   "date": "1903-01-28",
-   "maxInSign": 6,
-   "sign": "Acuario",
-   "span": 246.7,
    "era": "Piscis"
   },
   {
@@ -1103,94 +843,38 @@
    "era": "Piscis"
   },
   {
-   "date": "1928-04-18",
-   "maxInSign": 6,
-   "sign": "Aries",
-   "span": 247.7,
-   "era": "Piscis"
-  },
-  {
-   "date": "1797-05-27",
-   "maxInSign": 6,
-   "sign": "Géminis",
-   "span": 248.1,
-   "era": "Piscis"
-  },
-  {
-   "date": "2077-03-24",
-   "maxInSign": 6,
-   "sign": "Aries",
-   "span": 250.2,
-   "era": "Piscis"
-  },
-  {
-   "date": "1925-07-23",
-   "maxInSign": 6,
-   "sign": "Leo",
-   "span": 251.8,
-   "era": "Piscis"
-  },
-  {
-   "date": "2184-03-12",
-   "maxInSign": 6,
-   "sign": "Piscis",
-   "span": 254,
-   "era": "Piscis"
-  },
-  {
-   "date": "2070-12-03",
-   "maxInSign": 6,
-   "sign": "Sagitario",
-   "span": 254.6,
-   "era": "Piscis"
-  },
-  {
-   "date": "2070-10-03",
-   "maxInSign": 6,
+   "date": "1805-10-22",
+   "maxInSign": 5,
    "sign": "Libra",
-   "span": 256.7,
+   "span": 48.1,
    "era": "Piscis"
   },
   {
-   "date": "1936-07-17",
-   "maxInSign": 6,
-   "sign": "Cáncer",
-   "span": 263.2,
-   "era": "Piscis"
-  },
-  {
-   "date": "2041-11-21",
-   "maxInSign": 6,
-   "sign": "Escorpio",
-   "span": 263.3,
-   "era": "Piscis"
-  },
-  {
-   "date": "2185-12-22",
-   "maxInSign": 6,
-   "sign": "Capricornio",
-   "span": 263.8,
-   "era": "Piscis"
-  },
-  {
-   "date": "1826-01-08",
-   "maxInSign": 6,
-   "sign": "Capricornio",
-   "span": 271.9,
-   "era": "Piscis"
-  },
-  {
-   "date": "1787-02-17",
-   "maxInSign": 6,
+   "date": "2163-02-02",
+   "maxInSign": 5,
    "sign": "Acuario",
-   "span": 272.9,
+   "span": 59.6,
    "era": "Piscis"
   },
   {
-   "date": "1984-10-25",
+   "date": "1844-01-21",
+   "maxInSign": 5,
+   "sign": "Acuario",
+   "span": 60.7,
+   "era": "Piscis"
+  },
+  {
+   "date": "2024-05-07",
+   "maxInSign": 5,
+   "sign": "Tauro",
+   "span": 68.5,
+   "era": "Piscis"
+  },
+  {
+   "date": "1982-11-14",
    "maxInSign": 5,
    "sign": "Escorpio",
-   "span": 72.2,
+   "span": 71.8,
    "era": "Piscis"
   },
   {
@@ -1201,24 +885,73 @@
    "era": "Piscis"
   },
   {
-   "date": "1980-11-06",
-   "maxInSign": 5,
-   "sign": "Libra",
-   "span": 79.1,
-   "era": "Piscis"
-  },
-  {
-   "date": "1844-02-21",
+   "date": "1998-03-28",
    "maxInSign": 5,
    "sign": "Aries",
-   "span": 79.5,
+   "span": 79.7,
    "era": "Piscis"
   },
   {
-   "date": "1982-11-17",
+   "date": "1801-10-08",
+   "maxInSign": 5,
+   "sign": "Libra",
+   "span": 79.8,
+   "era": "Piscis"
+  },
+  {
+   "date": "1805-11-23",
+   "maxInSign": 5,
+   "sign": "Sagitario",
+   "span": 80.7,
+   "era": "Piscis"
+  },
+  {
+   "date": "1805-08-30",
+   "maxInSign": 5,
+   "sign": "Libra",
+   "span": 81.9,
+   "era": "Piscis"
+  },
+  {
+   "date": "1986-02-09",
+   "maxInSign": 5,
+   "sign": "Acuario",
+   "span": 83.1,
+   "era": "Piscis"
+  },
+  {
+   "date": "2165-02-10",
+   "maxInSign": 5,
+   "sign": "Acuario",
+   "span": 83.9,
+   "era": "Piscis"
+  },
+  {
+   "date": "2134-09-22",
+   "maxInSign": 5,
+   "sign": "Virgo",
+   "span": 85.7,
+   "era": "Piscis"
+  },
+  {
+   "date": "1984-10-28",
+   "maxInSign": 4,
+   "sign": "Sagitario",
+   "span": 71.3,
+   "era": "Piscis"
+  },
+  {
+   "date": "2175-02-24",
+   "maxInSign": 4,
+   "sign": "Aries",
+   "span": 72.2,
+   "era": "Piscis"
+  },
+  {
+   "date": "1980-11-08",
    "maxInSign": 4,
    "sign": "Escorpio",
-   "span": 74.5,
+   "span": 78.8,
    "era": "Piscis"
   },
   {
@@ -1226,6 +959,34 @@
    "maxInSign": 4,
    "sign": "Piscis",
    "span": 79.1,
+   "era": "Piscis"
+  },
+  {
+   "date": "2160-11-30",
+   "maxInSign": 4,
+   "sign": "Capricornio",
+   "span": 84.4,
+   "era": "Piscis"
+  },
+  {
+   "date": "1819-02-22",
+   "maxInSign": 4,
+   "sign": "Acuario",
+   "span": 84.8,
+   "era": "Piscis"
+  },
+  {
+   "date": "2022-03-28",
+   "maxInSign": 4,
+   "sign": "Acuario",
+   "span": 86,
+   "era": "Piscis"
+  },
+  {
+   "date": "2124-10-04",
+   "maxInSign": 4,
+   "sign": "Leo",
+   "span": 89.9,
    "era": "Piscis"
   }
  ],

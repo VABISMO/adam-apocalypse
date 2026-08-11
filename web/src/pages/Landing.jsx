@@ -8,7 +8,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { SkyMap } from '../ui.jsx';
 import { PrecessionDiagram } from '../tabs/CyclesTab.jsx';
 import { WarningModal } from '../components/WarningModal.jsx';
-import { skyAt, occupiedLetters } from '../core.jsx';
+import { skyAt, skyAt7, occupiedLetters } from '../core.jsx';
 
 // Today's date, local — the hero sky map loads the planets of the actual day.
 const REF_DATE = (() => {
@@ -276,8 +276,8 @@ const FEATURES = [
 ];
 
 function Landing({ goApp }){
-  const rows = useMemo(() => skyAt(REF_DATE), []);
-  const occ = useMemo(() => occupiedLetters(rows), [rows]);
+  const rows = useMemo(() => skyAt(REF_DATE), []);                  // 9-body display (sky-map dots)
+  const occ = useMemo(() => occupiedLetters(skyAt7(REF_DATE)), []);  // 7-classical reading (lit sectors)
   const [warnOpen, setWarnOpen] = useState(false);
   const enterApp = () => { setWarnOpen(false); goApp && goApp(); };
 

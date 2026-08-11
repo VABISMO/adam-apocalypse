@@ -17,7 +17,7 @@ function SkyTab({date, rawDate, setDate, rows, occ, occSigns, yhvhOk, genesisOk,
     <div className="row">
       <div style={{flex:'1 1 100%'}}><SkyMap rows={rows} occ={occ}/></div>
     </div>
-    <div className="note">Today: <b>{occSigns.size}</b> signs occupied, <b>{12-occSigns.size}</b> empty. Readable simples: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>. A sector <b>lights up</b> when a planet is inside it; “×N” = N planets in that sign (informational — the reuse rule needs no conjunction to repeat a letter). Centre: the 3 mothers <span className="he">א מ ש</span> on a fixed circumpolar axis. יהוה / Genesis legibility live in their own Reading tabs.</div>
+    <div className="note">Today: <b>{occSigns.size}</b> signs occupied (by the 7 classical bodies), <b>{12-occSigns.size}</b> empty. Readable simples: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>. A sector <b>lights up</b> when one of the 7 classical bodies is inside it; Uranus and Neptune are plotted for astronomical context but do <b>not</b> light a sector (they have no letter in the Sefer Yetzirah). “×N” = N bodies in that sign. Centre: the 3 mothers <span className="he">א מ ש</span> on a fixed circumpolar axis. יהוה / Genesis legibility live in their own Reading tabs.</div>
     <h3>Angle table — ecliptic longitude per body ({date})</h3>
     <table>
       <thead><tr><th>Body</th><th>Sign</th><th>Longitude</th><th>Degree in sign</th><th>Simple</th><th>Double</th></tr></thead>

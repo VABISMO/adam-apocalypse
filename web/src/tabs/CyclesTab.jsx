@@ -409,7 +409,7 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData, nameRefs}){
     const frac=(cons)=>{ const req=[...simpleSet(cons)]; if(!req.length){ m.set(cons,1); return; } let c=0; for(const o of dayOccs){ let ok=true; for(const x of req) if(!o.has(x)){ ok=false; break; } if(ok) c++; } m.set(cons,c/n); };
     for(const [cons] of lex.lexicon) frac(cons);
     for(const [he] of ANGEL_LEXICON) if(!m.has(he)) frac(he);
-    return { map:m, n:dayOccs.length, year: selSet==='A' ? ((genData&&genData.year)||2026) : 2026, bodies: selSet==='A' ? '10 bodies' : '7 classical' };
+    return { map:m, n:dayOccs.length, year: selSet==='A' ? ((genData&&genData.year)||2026) : 2026, bodies: selSet==='A' ? '9 bodies (modern)' : '7 classical' };
   },[lex,selSet,genData,dayOccs7]);
   const pick=(d,set='B')=>{ setSel(d); setSelSet(set); if(setDate) setDate(d);
     // Anchor to the sky-map + top reading so the user sees what changed on that alignment.
@@ -425,8 +425,8 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData, nameRefs}){
   const tight4=[...tight.slice(0,4)].sort(byDateDesc);                          // 4 tightest, shown current→past
   const tightGap=tight.length>=2 ? Math.abs((parseDate(tight[0].date)-parseDate(tight[1].date))/86400000/365.25) : null;
   const ev = (selSet==='A'?data.scanA:data.scanB).find(e=>e.date===sel);
-  const rows = sel ? (selSet==='A'?skyAt(sel):skyAt7(sel)) : [];
-  const occ = occupiedLetters(rows);
+  const rows = sel ? skyAt(sel) : [];                          // 9-body display (Uranus/Neptune shown for context)
+  const occ = sel ? occupiedLetters(skyAt7(sel)) : new Set();  // 7-classical reading — no Neptune/Uranus letters
   // client-side stellar reading for the selected alignment (no precomputed reading
   // in the JSON — keeps alignments.json lean even with ~10⁴ deep events). Plain const,
   // NOT a hook: a useMemo here would sit after the early returns above and break the

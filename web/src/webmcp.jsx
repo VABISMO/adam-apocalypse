@@ -8,7 +8,7 @@
 // is bit-identical to what a human sees on screen. No-op when the API is absent (older
 // browsers, SSR prerender in Node) — registration is feature-gated.
 import {
-  skyAt, occupiedLetters, bySign, eraForYear, readableWords, genesisReadable,
+  skyAt, skyAt7, occupiedLetters, bySign, eraForYear, readableWords, genesisReadable,
   gematria, simpleSet, norm, displayHe, displayDate, isopsephy, abjad, katapayadi,
   ANGEL_NAME_MAP, SIMPLE, SIGNS
 } from './core.jsx';
@@ -28,7 +28,7 @@ function smallestArc(lons){
 }
 
 function alignmentMetrics(date){
-  const rows = skyAt(date);
+  const rows = skyAt7(date);   // 7 classical bodies — the Sefer Yetzirah's 7 doubles (the alignment set)
   const bs = bySign(rows);
   let best=null;
   for(const [sg,list] of Object.entries(bs)) if(!best || list.length>best.list.length) best={sign:sg,list};
@@ -56,7 +56,7 @@ export function registerWebMCPTools({ lex, angelMap }){
     description: 'Read the Hebrew letters spelled in the sky on a given Gregorian date. Returns the occupied zodiac signs, the readable simple letters (Sefer Yetzirah), the precessional era, whether Genesis 1:1 is legible, and the top readable Hebrew names. Use ISO date YYYY-MM-DD (BCE as -YYYY-MM-DD).',
     inputSchema: { type:'object', properties:{ date:{ type:'string', description:'ISO date, e.g. 2026-08-10 or -0427-01-01' } }, required:['date'] },
     execute: async ({ date }) => {
-      const rows = skyAt(date);
+      const rows = skyAt7(date);   // 7 classical bodies — the only bodies that occupy letters in the reading
       const occ = occupiedLetters(rows);
       const words = LEX ? readableWords(occ, LEX, angelMap) : [];
       const top = words.slice(0,20).map(w=>({ he:w.disp, translit:w.translit, gloss:w.gloss, gematria:w.gem, letters:w.len, name:!!w.name, angel:!!w.angelName }));
@@ -66,7 +66,7 @@ export function registerWebMCPTools({ lex, angelMap }){
 
   reg({
     name: 'alignment_metrics',
-    description: 'Compute the rare-alignment metrics for a date: how many of the 10 bodies (Sun, Moon, 8 planets) fall in a single zodiac sign, the tightest enclosing arc in degrees, and the precessional era. Use ISO date YYYY-MM-DD.',
+    description: 'Compute the rare-alignment metrics for a date: how many of the 7 classical bodies (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn — the Sefer Yetzirah\'s 7 doubles) fall in a single zodiac sign, the tightest enclosing arc in degrees, and the precessional era. Use ISO date YYYY-MM-DD.',
     inputSchema: { type:'object', properties:{ date:{ type:'string' } }, required:['date'] },
     execute: async ({ date }) => j(alignmentMetrics(date))
   });
