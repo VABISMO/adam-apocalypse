@@ -24625,6 +24625,7 @@ ${CSS}
 
   gtag('config', 'G-GYBWT5R5SH');
 </script>
+<meta name="google-site-verification" content="_p8LavxMrR0uYawfQRIaVx0f3cUsZNSlKOv5lEmFCIU" />
 </head>
 <body>
 <header class="site-header">
@@ -24861,6 +24862,7 @@ var sIndex = [
   `  <sitemap><loc>${SITE}/sitemap_alignments.xml</loc><lastmod>${today}</lastmod></sitemap>`,
   `  <sitemap><loc>${SITE}/sitemap_readings.xml</loc><lastmod>${today}</lastmod></sitemap>`,
   `  <sitemap><loc>${SITE}/sitemap_figures.xml</loc><lastmod>${today}</lastmod></sitemap>`,
+  `  <sitemap><loc>${SITE}/sitemap_hub.xml</loc><lastmod>${today}</lastmod></sitemap>`,
   "</sitemapindex>"
 ].join("\n");
 import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "sitemap.xml"), sIndex);
