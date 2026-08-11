@@ -5,11 +5,7 @@ var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __commonJS = (cb, mod) => function __require() {
-  try {
-    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
-  } catch (e) {
-    throw mod = 0, e;
-  }
+  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 var __copyProps = (to, from, except, desc) => {
   if (from && typeof from === "object" || typeof from === "function") {
@@ -28,21 +24,21 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 
-// ../node_modules/react/cjs/react.production.min.js
+// node_modules/react/cjs/react.production.min.js
 var require_react_production_min = __commonJS({
-  "../node_modules/react/cjs/react.production.min.js"(exports2) {
+  "node_modules/react/cjs/react.production.min.js"(exports2) {
     "use strict";
-    var l = /* @__PURE__ */ Symbol.for("react.element");
-    var n = /* @__PURE__ */ Symbol.for("react.portal");
-    var p = /* @__PURE__ */ Symbol.for("react.fragment");
-    var q = /* @__PURE__ */ Symbol.for("react.strict_mode");
-    var r = /* @__PURE__ */ Symbol.for("react.profiler");
-    var t = /* @__PURE__ */ Symbol.for("react.provider");
-    var u = /* @__PURE__ */ Symbol.for("react.context");
-    var v = /* @__PURE__ */ Symbol.for("react.forward_ref");
-    var w = /* @__PURE__ */ Symbol.for("react.suspense");
-    var x = /* @__PURE__ */ Symbol.for("react.memo");
-    var y = /* @__PURE__ */ Symbol.for("react.lazy");
+    var l = Symbol.for("react.element");
+    var n = Symbol.for("react.portal");
+    var p = Symbol.for("react.fragment");
+    var q = Symbol.for("react.strict_mode");
+    var r = Symbol.for("react.profiler");
+    var t = Symbol.for("react.provider");
+    var u = Symbol.for("react.context");
+    var v = Symbol.for("react.forward_ref");
+    var w = Symbol.for("react.suspense");
+    var x = Symbol.for("react.memo");
+    var y = Symbol.for("react.lazy");
     var z = Symbol.iterator;
     function A(a) {
       if (null === a || "object" !== typeof a) return null;
@@ -301,9 +297,9 @@ var require_react_production_min = __commonJS({
   }
 });
 
-// ../node_modules/react/cjs/react.development.js
+// node_modules/react/cjs/react.development.js
 var require_react_development = __commonJS({
-  "../node_modules/react/cjs/react.development.js"(exports2, module2) {
+  "node_modules/react/cjs/react.development.js"(exports2, module2) {
     "use strict";
     if (process.env.NODE_ENV !== "production") {
       (function() {
@@ -312,19 +308,19 @@ var require_react_development = __commonJS({
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
         }
         var ReactVersion = "18.3.1";
-        var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
-        var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
-        var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
-        var REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode");
-        var REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler");
-        var REACT_PROVIDER_TYPE = /* @__PURE__ */ Symbol.for("react.provider");
-        var REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context");
-        var REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref");
-        var REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense");
-        var REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list");
-        var REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo");
-        var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
-        var REACT_OFFSCREEN_TYPE = /* @__PURE__ */ Symbol.for("react.offscreen");
+        var REACT_ELEMENT_TYPE = Symbol.for("react.element");
+        var REACT_PORTAL_TYPE = Symbol.for("react.portal");
+        var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
+        var REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode");
+        var REACT_PROFILER_TYPE = Symbol.for("react.profiler");
+        var REACT_PROVIDER_TYPE = Symbol.for("react.provider");
+        var REACT_CONTEXT_TYPE = Symbol.for("react.context");
+        var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref");
+        var REACT_SUSPENSE_TYPE = Symbol.for("react.suspense");
+        var REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list");
+        var REACT_MEMO_TYPE = Symbol.for("react.memo");
+        var REACT_LAZY_TYPE = Symbol.for("react.lazy");
+        var REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen");
         var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
         var FAUX_ITERATOR_SYMBOL = "@@iterator";
         function getIteratorFn(maybeIterable) {
@@ -1288,7 +1284,7 @@ var require_react_development = __commonJS({
         }
         var REACT_MODULE_REFERENCE;
         {
-          REACT_MODULE_REFERENCE = /* @__PURE__ */ Symbol.for("react.module.reference");
+          REACT_MODULE_REFERENCE = Symbol.for("react.module.reference");
         }
         function isValidElementType(type) {
           if (typeof type === "string" || typeof type === "function") {
@@ -2175,9 +2171,9 @@ var require_react_development = __commonJS({
   }
 });
 
-// ../node_modules/react/index.js
+// node_modules/react/index.js
 var require_react = __commonJS({
-  "../node_modules/react/index.js"(exports2, module2) {
+  "node_modules/react/index.js"(exports2, module2) {
     "use strict";
     if (process.env.NODE_ENV === "production") {
       module2.exports = require_react_production_min();
@@ -2187,9 +2183,9 @@ var require_react = __commonJS({
   }
 });
 
-// ../node_modules/react-dom/cjs/react-dom-server-legacy.node.production.min.js
+// node_modules/react-dom/cjs/react-dom-server-legacy.node.production.min.js
 var require_react_dom_server_legacy_node_production_min = __commonJS({
-  "../node_modules/react-dom/cjs/react-dom-server-legacy.node.production.min.js"(exports2) {
+  "node_modules/react-dom/cjs/react-dom-server-legacy.node.production.min.js"(exports2) {
     "use strict";
     var ea = require_react();
     var fa = require("stream");
@@ -2806,22 +2802,22 @@ var require_react_dom_server_legacy_node_production_min = __commonJS({
       return a;
     }
     var A = Object.assign;
-    var Ia = /* @__PURE__ */ Symbol.for("react.element");
-    var Ja = /* @__PURE__ */ Symbol.for("react.portal");
-    var Ka = /* @__PURE__ */ Symbol.for("react.fragment");
-    var La = /* @__PURE__ */ Symbol.for("react.strict_mode");
-    var Ma = /* @__PURE__ */ Symbol.for("react.profiler");
-    var Na = /* @__PURE__ */ Symbol.for("react.provider");
-    var Oa = /* @__PURE__ */ Symbol.for("react.context");
-    var Pa = /* @__PURE__ */ Symbol.for("react.forward_ref");
-    var Qa = /* @__PURE__ */ Symbol.for("react.suspense");
-    var Ra = /* @__PURE__ */ Symbol.for("react.suspense_list");
-    var Sa = /* @__PURE__ */ Symbol.for("react.memo");
-    var Ta = /* @__PURE__ */ Symbol.for("react.lazy");
-    var Ua = /* @__PURE__ */ Symbol.for("react.scope");
-    var Va = /* @__PURE__ */ Symbol.for("react.debug_trace_mode");
-    var Wa = /* @__PURE__ */ Symbol.for("react.legacy_hidden");
-    var Xa = /* @__PURE__ */ Symbol.for("react.default_value");
+    var Ia = Symbol.for("react.element");
+    var Ja = Symbol.for("react.portal");
+    var Ka = Symbol.for("react.fragment");
+    var La = Symbol.for("react.strict_mode");
+    var Ma = Symbol.for("react.profiler");
+    var Na = Symbol.for("react.provider");
+    var Oa = Symbol.for("react.context");
+    var Pa = Symbol.for("react.forward_ref");
+    var Qa = Symbol.for("react.suspense");
+    var Ra = Symbol.for("react.suspense_list");
+    var Sa = Symbol.for("react.memo");
+    var Ta = Symbol.for("react.lazy");
+    var Ua = Symbol.for("react.scope");
+    var Va = Symbol.for("react.debug_trace_mode");
+    var Wa = Symbol.for("react.legacy_hidden");
+    var Xa = Symbol.for("react.default_value");
     var Ya = Symbol.iterator;
     function Za(a) {
       if (null == a) return null;
@@ -3698,7 +3694,7 @@ var require_react_dom_server_legacy_node_production_min = __commonJS({
       a.prototype.constructor = a;
       a.__proto__ = b;
     }
-    var Xb = (function(a) {
+    var Xb = function(a) {
       function b() {
         var b2 = a.call(this, {}) || this;
         b2.request = null;
@@ -3715,7 +3711,7 @@ var require_react_dom_server_legacy_node_production_min = __commonJS({
         this.startedFlowing && Sb(this.request, this);
       };
       return b;
-    })(fa.Readable);
+    }(fa.Readable);
     function Yb() {
     }
     function Zb(a, b) {
@@ -3743,9 +3739,9 @@ var require_react_dom_server_legacy_node_production_min = __commonJS({
   }
 });
 
-// ../node_modules/react-dom/cjs/react-dom-server.node.production.min.js
+// node_modules/react-dom/cjs/react-dom-server.node.production.min.js
 var require_react_dom_server_node_production_min = __commonJS({
-  "../node_modules/react-dom/cjs/react-dom-server.node.production.min.js"(exports2) {
+  "node_modules/react-dom/cjs/react-dom-server.node.production.min.js"(exports2) {
     "use strict";
     var aa = require("util");
     var ba = require_react();
@@ -4468,22 +4464,22 @@ var require_react_dom_server_node_production_min = __commonJS({
       });
     }
     var O = Object.assign;
-    var Qb = /* @__PURE__ */ Symbol.for("react.element");
-    var Rb = /* @__PURE__ */ Symbol.for("react.portal");
-    var Sb = /* @__PURE__ */ Symbol.for("react.fragment");
-    var Tb = /* @__PURE__ */ Symbol.for("react.strict_mode");
-    var Ub = /* @__PURE__ */ Symbol.for("react.profiler");
-    var Vb = /* @__PURE__ */ Symbol.for("react.provider");
-    var Wb = /* @__PURE__ */ Symbol.for("react.context");
-    var Xb = /* @__PURE__ */ Symbol.for("react.forward_ref");
-    var Yb = /* @__PURE__ */ Symbol.for("react.suspense");
-    var Zb = /* @__PURE__ */ Symbol.for("react.suspense_list");
-    var $b = /* @__PURE__ */ Symbol.for("react.memo");
-    var ac = /* @__PURE__ */ Symbol.for("react.lazy");
-    var bc = /* @__PURE__ */ Symbol.for("react.scope");
-    var cc = /* @__PURE__ */ Symbol.for("react.debug_trace_mode");
-    var dc = /* @__PURE__ */ Symbol.for("react.legacy_hidden");
-    var ec = /* @__PURE__ */ Symbol.for("react.default_value");
+    var Qb = Symbol.for("react.element");
+    var Rb = Symbol.for("react.portal");
+    var Sb = Symbol.for("react.fragment");
+    var Tb = Symbol.for("react.strict_mode");
+    var Ub = Symbol.for("react.profiler");
+    var Vb = Symbol.for("react.provider");
+    var Wb = Symbol.for("react.context");
+    var Xb = Symbol.for("react.forward_ref");
+    var Yb = Symbol.for("react.suspense");
+    var Zb = Symbol.for("react.suspense_list");
+    var $b = Symbol.for("react.memo");
+    var ac = Symbol.for("react.lazy");
+    var bc = Symbol.for("react.scope");
+    var cc = Symbol.for("react.debug_trace_mode");
+    var dc = Symbol.for("react.legacy_hidden");
+    var ec = Symbol.for("react.default_value");
     var fc = Symbol.iterator;
     function gc(a) {
       if (null == a) return null;
@@ -5423,9 +5419,9 @@ var require_react_dom_server_node_production_min = __commonJS({
   }
 });
 
-// ../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js
+// node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js
 var require_react_dom_server_legacy_node_development = __commonJS({
-  "../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js"(exports2) {
+  "node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js"(exports2) {
     "use strict";
     if (process.env.NODE_ENV !== "production") {
       (function() {
@@ -5574,7 +5570,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           }
           switch (typeof value) {
             case "function":
-            // $FlowIssue symbol is perfectly valid here
             case "symbol":
               return true;
             case "boolean": {
@@ -6068,10 +6063,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             return typeof props.is === "string";
           }
           switch (tagName) {
-            // These are reserved SVG and MathML elements.
-            // We don't mind this list too much because we expect it to never grow.
-            // The alternative is to track the namespace in a few places which is convoluted.
-            // https://w3c.github.io/webcomponents/spec/custom/#custom-elements-core-concepts
             case "annotation-xml":
             case "color-profile":
             case "font-face":
@@ -7051,8 +7042,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
               return createFormatContext(MATHML_MODE, null);
             case "foreignObject":
               return createFormatContext(HTML_MODE, null);
-            // Table parents are special in that their children can only be created at all if they're
-            // wrapped in a table parent. So we need to encode that we're entering this mode.
             case "table":
               return createFormatContext(HTML_TABLE_MODE, null);
             case "thead":
@@ -7180,9 +7169,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             }
             case "defaultValue":
             case "defaultChecked":
-            // These shouldn't be set as attributes on generic HTML elements.
             case "innerHTML":
-            // Must use dangerouslySetInnerHTML instead.
             case "suppressContentEditableWarning":
             case "suppressHydrationWarning":
               return;
@@ -7198,7 +7185,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           if (propertyInfo !== null) {
             switch (typeof value) {
               case "function":
-              // $FlowIssue symbol is perfectly valid here
               case "symbol":
                 return;
               case "boolean": {
@@ -7246,7 +7232,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           } else if (isAttributeNameSafe(name)) {
             switch (typeof value) {
               case "function":
-              // $FlowIssue symbol is perfectly valid here
               case "symbol":
                 return;
               case "boolean": {
@@ -7383,11 +7368,8 @@ var require_react_dom_server_legacy_node_development = __commonJS({
                 case "dangerouslySetInnerHTML":
                   innerHTML = propValue;
                   break;
-                // eslint-disable-next-line-no-fallthrough
                 case "value":
                   value = propValue;
-                // We intentionally fallthrough to also set the attribute on the node.
-                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -7465,7 +7447,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
                 case "children":
                 case "dangerouslySetInnerHTML":
                   throw new Error("input is a self-closing tag and must neither have `children` nor use `dangerouslySetInnerHTML`.");
-                // eslint-disable-next-line-no-fallthrough
                 case "defaultChecked":
                   defaultChecked = propValue;
                   break;
@@ -7527,7 +7508,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
                   break;
                 case "dangerouslySetInnerHTML":
                   throw new Error("`dangerouslySetInnerHTML` does not make sense on <textarea>.");
-                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -7582,7 +7562,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
                 case "children":
                 case "dangerouslySetInnerHTML":
                   throw new Error(tag + " is a self-closing tag and must neither have `children` nor use `dangerouslySetInnerHTML`.");
-                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -7604,7 +7583,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
                 case "children":
                 case "dangerouslySetInnerHTML":
                   throw new Error("menuitems cannot have `children` nor `dangerouslySetInnerHTML`.");
-                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -7629,7 +7607,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
                   break;
                 case "dangerouslySetInnerHTML":
                   throw new Error("`dangerouslySetInnerHTML` does not make sense on <title>.");
-                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -7793,7 +7770,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             }
           }
           switch (type) {
-            // Special tags
             case "select":
               return pushStartSelect(target, props, responseState);
             case "option":
@@ -7806,12 +7782,10 @@ var require_react_dom_server_legacy_node_development = __commonJS({
               return pushStartMenuItem(target, props, responseState);
             case "title":
               return pushStartTitle(target, props, responseState);
-            // Newline eating tags
             case "listing":
             case "pre": {
               return pushStartPreformattedElement(target, props, type, responseState);
             }
-            // Omitted close tags
             case "area":
             case "base":
             case "br":
@@ -7828,8 +7802,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             case "wbr": {
               return pushSelfClosing(target, props, type, responseState);
             }
-            // These are reserved SVG and MathML elements, that are never custom elements.
-            // https://w3c.github.io/webcomponents/spec/custom/#custom-elements-core-concepts
             case "annotation-xml":
             case "color-profile":
             case "font-face":
@@ -7859,9 +7831,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
         var endTag2 = stringToPrecomputedChunk(">");
         function pushEndInstance(target, type, props) {
           switch (type) {
-            // Omitted close tags
-            // TODO: Instead of repeating this switch we could try to pass a flag from above.
-            // That would require returning a tuple. Which might be ok if it gets inlined.
             case "area":
             case "base":
             case "br":
@@ -8007,10 +7976,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
               writeChunk(destination, stringToChunk(id.toString(16)));
               return writeChunkAndReturn(destination, startSegmentTable2);
             }
-            // TODO: For the rest of these, there will be extra wrapper nodes that never
-            // get deleted from the document. We need to delete the table too as part
-            // of the injected scripts. They are invisible though so it's not too terrible
-            // and it's kind of an edge case to suspend in a table. Totally supported though.
             case HTML_TABLE_BODY_MODE: {
               writeChunk(destination, startSegmentTableBody);
               writeChunk(destination, responseState.segmentPrefix);
@@ -8145,7 +8110,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           var escaped = JSON.stringify(input);
           return escaped.replace(regexForJSStringsInScripts, function(match) {
             switch (match) {
-              // santizing breaking out of strings and script tags
               case "<":
                 return "\\u003c";
               case "\u2028":
@@ -8223,22 +8187,22 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           return writeEndClientRenderedSuspenseBoundary(destination);
         }
         var assign = Object.assign;
-        var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
-        var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
-        var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
-        var REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode");
-        var REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler");
-        var REACT_PROVIDER_TYPE = /* @__PURE__ */ Symbol.for("react.provider");
-        var REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context");
-        var REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref");
-        var REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense");
-        var REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list");
-        var REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo");
-        var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
-        var REACT_SCOPE_TYPE = /* @__PURE__ */ Symbol.for("react.scope");
-        var REACT_DEBUG_TRACING_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.debug_trace_mode");
-        var REACT_LEGACY_HIDDEN_TYPE = /* @__PURE__ */ Symbol.for("react.legacy_hidden");
-        var REACT_SERVER_CONTEXT_DEFAULT_VALUE_NOT_LOADED = /* @__PURE__ */ Symbol.for("react.default_value");
+        var REACT_ELEMENT_TYPE = Symbol.for("react.element");
+        var REACT_PORTAL_TYPE = Symbol.for("react.portal");
+        var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
+        var REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode");
+        var REACT_PROFILER_TYPE = Symbol.for("react.profiler");
+        var REACT_PROVIDER_TYPE = Symbol.for("react.provider");
+        var REACT_CONTEXT_TYPE = Symbol.for("react.context");
+        var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref");
+        var REACT_SUSPENSE_TYPE = Symbol.for("react.suspense");
+        var REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list");
+        var REACT_MEMO_TYPE = Symbol.for("react.memo");
+        var REACT_LAZY_TYPE = Symbol.for("react.lazy");
+        var REACT_SCOPE_TYPE = Symbol.for("react.scope");
+        var REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode");
+        var REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden");
+        var REACT_SERVER_CONTEXT_DEFAULT_VALUE_NOT_LOADED = Symbol.for("react.default_value");
         var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
         var FAUX_ITERATOR_SYMBOL = "@@iterator";
         function getIteratorFn(maybeIterable) {
@@ -10090,14 +10054,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             return;
           }
           switch (type) {
-            // TODO: LegacyHidden acts the same as a fragment. This only works
-            // because we currently assume that every instance of LegacyHidden is
-            // accompanied by a host component wrapper. In the hidden mode, the host
-            // component is given a `hidden` attribute, which ensures that the
-            // initial HTML is not visible. To support the use of LegacyHidden as a
-            // true fragment, without an extra DOM node, we would have to hide the
-            // initial HTML in some other way.
-            // TODO: Add REACT_OFFSCREEN_TYPE here too with the same capability.
             case REACT_LEGACY_HIDDEN_TYPE:
             case REACT_DEBUG_TRACING_MODE_TYPE:
             case REACT_STRICT_MODE_TYPE:
@@ -10115,7 +10071,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             case REACT_SCOPE_TYPE: {
               throw new Error("ReactDOMServer does not yet support scope components.");
             }
-            // eslint-disable-next-line-no-fallthrough
             case REACT_SUSPENSE_TYPE: {
               {
                 renderSuspenseBoundary(request, task, props);
@@ -10199,7 +10154,6 @@ var require_react_dom_server_legacy_node_development = __commonJS({
               }
               case REACT_PORTAL_TYPE:
                 throw new Error("Portals are not currently supported by the server renderer. Render them conditionally so that they only appear on the client render.");
-              // eslint-disable-next-line-no-fallthrough
               case REACT_LAZY_TYPE: {
                 var lazyNode = node;
                 var payload = lazyNode._payload;
@@ -10807,7 +10761,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           subClass.prototype.constructor = subClass;
           subClass.__proto__ = superClass;
         }
-        var ReactMarkupReadableStream = /* @__PURE__ */ (function(_Readable) {
+        var ReactMarkupReadableStream = /* @__PURE__ */ function(_Readable) {
           _inheritsLoose(ReactMarkupReadableStream2, _Readable);
           function ReactMarkupReadableStream2() {
             var _this;
@@ -10827,7 +10781,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             }
           };
           return ReactMarkupReadableStream2;
-        })(stream.Readable);
+        }(stream.Readable);
         function onError$1() {
         }
         function renderToNodeStreamImpl(children, options, generateStaticMarkup) {
@@ -10869,9 +10823,9 @@ var require_react_dom_server_legacy_node_development = __commonJS({
   }
 });
 
-// ../node_modules/react-dom/cjs/react-dom-server.node.development.js
+// node_modules/react-dom/cjs/react-dom-server.node.development.js
 var require_react_dom_server_node_development = __commonJS({
-  "../node_modules/react-dom/cjs/react-dom-server.node.development.js"(exports2) {
+  "node_modules/react-dom/cjs/react-dom-server.node.development.js"(exports2) {
     "use strict";
     if (process.env.NODE_ENV !== "production") {
       (function() {
@@ -11113,7 +11067,6 @@ var require_react_dom_server_node_development = __commonJS({
           }
           switch (typeof value) {
             case "function":
-            // $FlowIssue symbol is perfectly valid here
             case "symbol":
               return true;
             case "boolean": {
@@ -11607,10 +11560,6 @@ var require_react_dom_server_node_development = __commonJS({
             return typeof props.is === "string";
           }
           switch (tagName) {
-            // These are reserved SVG and MathML elements.
-            // We don't mind this list too much because we expect it to never grow.
-            // The alternative is to track the namespace in a few places which is convoluted.
-            // https://w3c.github.io/webcomponents/spec/custom/#custom-elements-core-concepts
             case "annotation-xml":
             case "color-profile":
             case "font-face":
@@ -12594,8 +12543,6 @@ var require_react_dom_server_node_development = __commonJS({
               return createFormatContext(MATHML_MODE, null);
             case "foreignObject":
               return createFormatContext(HTML_MODE, null);
-            // Table parents are special in that their children can only be created at all if they're
-            // wrapped in a table parent. So we need to encode that we're entering this mode.
             case "table":
               return createFormatContext(HTML_TABLE_MODE, null);
             case "thead":
@@ -12723,9 +12670,7 @@ var require_react_dom_server_node_development = __commonJS({
             }
             case "defaultValue":
             case "defaultChecked":
-            // These shouldn't be set as attributes on generic HTML elements.
             case "innerHTML":
-            // Must use dangerouslySetInnerHTML instead.
             case "suppressContentEditableWarning":
             case "suppressHydrationWarning":
               return;
@@ -12741,7 +12686,6 @@ var require_react_dom_server_node_development = __commonJS({
           if (propertyInfo !== null) {
             switch (typeof value) {
               case "function":
-              // $FlowIssue symbol is perfectly valid here
               case "symbol":
                 return;
               case "boolean": {
@@ -12789,7 +12733,6 @@ var require_react_dom_server_node_development = __commonJS({
           } else if (isAttributeNameSafe(name)) {
             switch (typeof value) {
               case "function":
-              // $FlowIssue symbol is perfectly valid here
               case "symbol":
                 return;
               case "boolean": {
@@ -12926,11 +12869,8 @@ var require_react_dom_server_node_development = __commonJS({
                 case "dangerouslySetInnerHTML":
                   innerHTML = propValue;
                   break;
-                // eslint-disable-next-line-no-fallthrough
                 case "value":
                   value = propValue;
-                // We intentionally fallthrough to also set the attribute on the node.
-                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -13008,7 +12948,6 @@ var require_react_dom_server_node_development = __commonJS({
                 case "children":
                 case "dangerouslySetInnerHTML":
                   throw new Error("input is a self-closing tag and must neither have `children` nor use `dangerouslySetInnerHTML`.");
-                // eslint-disable-next-line-no-fallthrough
                 case "defaultChecked":
                   defaultChecked = propValue;
                   break;
@@ -13070,7 +13009,6 @@ var require_react_dom_server_node_development = __commonJS({
                   break;
                 case "dangerouslySetInnerHTML":
                   throw new Error("`dangerouslySetInnerHTML` does not make sense on <textarea>.");
-                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -13125,7 +13063,6 @@ var require_react_dom_server_node_development = __commonJS({
                 case "children":
                 case "dangerouslySetInnerHTML":
                   throw new Error(tag + " is a self-closing tag and must neither have `children` nor use `dangerouslySetInnerHTML`.");
-                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -13147,7 +13084,6 @@ var require_react_dom_server_node_development = __commonJS({
                 case "children":
                 case "dangerouslySetInnerHTML":
                   throw new Error("menuitems cannot have `children` nor `dangerouslySetInnerHTML`.");
-                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -13172,7 +13108,6 @@ var require_react_dom_server_node_development = __commonJS({
                   break;
                 case "dangerouslySetInnerHTML":
                   throw new Error("`dangerouslySetInnerHTML` does not make sense on <title>.");
-                // eslint-disable-next-line-no-fallthrough
                 default:
                   pushAttribute(target, responseState, propKey, propValue);
                   break;
@@ -13336,7 +13271,6 @@ var require_react_dom_server_node_development = __commonJS({
             }
           }
           switch (type) {
-            // Special tags
             case "select":
               return pushStartSelect(target, props, responseState);
             case "option":
@@ -13349,12 +13283,10 @@ var require_react_dom_server_node_development = __commonJS({
               return pushStartMenuItem(target, props, responseState);
             case "title":
               return pushStartTitle(target, props, responseState);
-            // Newline eating tags
             case "listing":
             case "pre": {
               return pushStartPreformattedElement(target, props, type, responseState);
             }
-            // Omitted close tags
             case "area":
             case "base":
             case "br":
@@ -13371,8 +13303,6 @@ var require_react_dom_server_node_development = __commonJS({
             case "wbr": {
               return pushSelfClosing(target, props, type, responseState);
             }
-            // These are reserved SVG and MathML elements, that are never custom elements.
-            // https://w3c.github.io/webcomponents/spec/custom/#custom-elements-core-concepts
             case "annotation-xml":
             case "color-profile":
             case "font-face":
@@ -13402,9 +13332,6 @@ var require_react_dom_server_node_development = __commonJS({
         var endTag2 = stringToPrecomputedChunk(">");
         function pushEndInstance(target, type, props) {
           switch (type) {
-            // Omitted close tags
-            // TODO: Instead of repeating this switch we could try to pass a flag from above.
-            // That would require returning a tuple. Which might be ok if it gets inlined.
             case "area":
             case "base":
             case "br":
@@ -13550,10 +13477,6 @@ var require_react_dom_server_node_development = __commonJS({
               writeChunk(destination, stringToChunk(id.toString(16)));
               return writeChunkAndReturn(destination, startSegmentTable2);
             }
-            // TODO: For the rest of these, there will be extra wrapper nodes that never
-            // get deleted from the document. We need to delete the table too as part
-            // of the injected scripts. They are invisible though so it's not too terrible
-            // and it's kind of an edge case to suspend in a table. Totally supported though.
             case HTML_TABLE_BODY_MODE: {
               writeChunk(destination, startSegmentTableBody);
               writeChunk(destination, responseState.segmentPrefix);
@@ -13688,7 +13611,6 @@ var require_react_dom_server_node_development = __commonJS({
           var escaped = JSON.stringify(input);
           return escaped.replace(regexForJSStringsInScripts, function(match) {
             switch (match) {
-              // santizing breaking out of strings and script tags
               case "<":
                 return "\\u003c";
               case "\u2028":
@@ -13702,22 +13624,22 @@ var require_react_dom_server_node_development = __commonJS({
           });
         }
         var assign = Object.assign;
-        var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
-        var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
-        var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
-        var REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode");
-        var REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler");
-        var REACT_PROVIDER_TYPE = /* @__PURE__ */ Symbol.for("react.provider");
-        var REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context");
-        var REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref");
-        var REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense");
-        var REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list");
-        var REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo");
-        var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
-        var REACT_SCOPE_TYPE = /* @__PURE__ */ Symbol.for("react.scope");
-        var REACT_DEBUG_TRACING_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.debug_trace_mode");
-        var REACT_LEGACY_HIDDEN_TYPE = /* @__PURE__ */ Symbol.for("react.legacy_hidden");
-        var REACT_SERVER_CONTEXT_DEFAULT_VALUE_NOT_LOADED = /* @__PURE__ */ Symbol.for("react.default_value");
+        var REACT_ELEMENT_TYPE = Symbol.for("react.element");
+        var REACT_PORTAL_TYPE = Symbol.for("react.portal");
+        var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
+        var REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode");
+        var REACT_PROFILER_TYPE = Symbol.for("react.profiler");
+        var REACT_PROVIDER_TYPE = Symbol.for("react.provider");
+        var REACT_CONTEXT_TYPE = Symbol.for("react.context");
+        var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref");
+        var REACT_SUSPENSE_TYPE = Symbol.for("react.suspense");
+        var REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list");
+        var REACT_MEMO_TYPE = Symbol.for("react.memo");
+        var REACT_LAZY_TYPE = Symbol.for("react.lazy");
+        var REACT_SCOPE_TYPE = Symbol.for("react.scope");
+        var REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode");
+        var REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden");
+        var REACT_SERVER_CONTEXT_DEFAULT_VALUE_NOT_LOADED = Symbol.for("react.default_value");
         var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
         var FAUX_ITERATOR_SYMBOL = "@@iterator";
         function getIteratorFn(maybeIterable) {
@@ -15569,14 +15491,6 @@ var require_react_dom_server_node_development = __commonJS({
             return;
           }
           switch (type) {
-            // TODO: LegacyHidden acts the same as a fragment. This only works
-            // because we currently assume that every instance of LegacyHidden is
-            // accompanied by a host component wrapper. In the hidden mode, the host
-            // component is given a `hidden` attribute, which ensures that the
-            // initial HTML is not visible. To support the use of LegacyHidden as a
-            // true fragment, without an extra DOM node, we would have to hide the
-            // initial HTML in some other way.
-            // TODO: Add REACT_OFFSCREEN_TYPE here too with the same capability.
             case REACT_LEGACY_HIDDEN_TYPE:
             case REACT_DEBUG_TRACING_MODE_TYPE:
             case REACT_STRICT_MODE_TYPE:
@@ -15594,7 +15508,6 @@ var require_react_dom_server_node_development = __commonJS({
             case REACT_SCOPE_TYPE: {
               throw new Error("ReactDOMServer does not yet support scope components.");
             }
-            // eslint-disable-next-line-no-fallthrough
             case REACT_SUSPENSE_TYPE: {
               {
                 renderSuspenseBoundary(request, task, props);
@@ -15678,7 +15591,6 @@ var require_react_dom_server_node_development = __commonJS({
               }
               case REACT_PORTAL_TYPE:
                 throw new Error("Portals are not currently supported by the server renderer. Render them conditionally so that they only appear on the client render.");
-              // eslint-disable-next-line-no-fallthrough
               case REACT_LAZY_TYPE: {
                 var lazyNode = node;
                 var payload = lazyNode._payload;
@@ -16299,9 +16211,9 @@ var require_react_dom_server_node_development = __commonJS({
   }
 });
 
-// ../node_modules/react-dom/server.node.js
+// node_modules/react-dom/server.node.js
 var require_server_node = __commonJS({
-  "../node_modules/react-dom/server.node.js"(exports2) {
+  "node_modules/react-dom/server.node.js"(exports2) {
     "use strict";
     var l;
     var s;
@@ -16321,17 +16233,17 @@ var require_server_node = __commonJS({
   }
 });
 
-// scripts/prerender.jsx
+// web/scripts/prerender.jsx
 var import_node_fs = __toESM(require("node:fs"));
 var import_node_path = __toESM(require("node:path"));
 var import_node_url = require("node:url");
 var import_react15 = __toESM(require_react());
 var import_server = __toESM(require_server_node());
 
-// src/pages/ProphetsPage.jsx
+// web/src/pages/ProphetsPage.jsx
 var import_react2 = __toESM(require_react());
 
-// src/data/prophets.js
+// web/src/data/prophets.js
 var POINTED = /[֑-ֽֿׁ-ׇׅ]/g;
 var RAW = [
   { name: "Adam", he: "\u05D0\u05B8\u05D3\u05B8\u05DD", era: "BCE", y0: -4e3, y1: -4e3, region: "Eden (legendary)", role: "First human in Genesis; paradigmatic figure of creation and fall.", thread: "biblical" },
@@ -16539,7 +16451,7 @@ var PROPHECIES = {
 };
 var PROPHETS = RAW.map((p) => ({ ...p, he: (p.he || "").replace(POINTED, ""), prophecies: PROPHECIES[p.name] || null }));
 
-// src/data/wiki_content.json
+// web/src/data/wiki_content.json
 var wiki_content_default = {
   Adam: {
     title: "Adam",
@@ -21576,13 +21488,13 @@ Little else is known about his childhood, although there is a persistent traditi
   }
 };
 
-// src/data/wiki.js
+// web/src/data/wiki.js
 var WIKI = wiki_content_default;
 function slugify(name) {
   return String(name).toLowerCase().replace(/[()]/g, " ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 }
 
-// src/components/Timeline.jsx
+// web/src/components/Timeline.jsx
 var import_react = __toESM(require_react());
 function fmtYear(y) {
   if (y < 0) return Math.abs(y) + " BCE";
@@ -21617,7 +21529,7 @@ function Timeline({ items, title, accent = "#8a05ff" }) {
   })), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { textAlign: "center", fontSize: ".78rem", marginTop: 2 } }, /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "#e8c87a" } }, "\u25CF"), " lineage end \xB7 ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "#c29eff" } }, "\u25CF"), " royal \xB7 ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: accent } }, "\u25CF"), " mage/prophet \xB7 hover a dot for the figure"));
 }
 
-// src/pages/ProphetsPage.jsx
+// web/src/pages/ProphetsPage.jsx
 function ProphetCard({ p, onOpen }) {
   const dates = p.y0 === p.y1 ? fmtYear(p.y0) : `${fmtYear(p.y0)} \u2013 ${fmtYear(p.y1)}`;
   const end = !!p.endpoint;
@@ -21649,10 +21561,10 @@ function ProphetsPage({ onOpen }) {
   return /* @__PURE__ */ import_react2.default.createElement("div", null, /* @__PURE__ */ import_react2.default.createElement("h1", null, "Prophets \u2014 from Adam to Jacob Frank"), /* @__PURE__ */ import_react2.default.createElement("p", { className: "muted" }, "A chronology of prophetic and revelatory figures, from the first human ", /* @__PURE__ */ import_react2.default.createElement("span", { className: "he" }, "\u05D0\u05D3\u05DD"), " through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, down to the Sabbatean\u2013Frankist thread whose ", /* @__PURE__ */ import_react2.default.createElement("b", { style: { color: "var(--gold)" } }, last.designation || "final", " figure is ", last.name, " (", fmtYear(last.y0), "\u2013", fmtYear(last.y1), ")"), ". ", PROPHETS.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table."), /* @__PURE__ */ import_react2.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react2.default.createElement(Timeline, { items: PROPHETS, title: "Prophet timeline \u2014 Adam to Jacob Frank", accent: "#8a05ff" })), /* @__PURE__ */ import_react2.default.createElement("div", { className: "tcards" }, PROPHETS.map((p, i) => /* @__PURE__ */ import_react2.default.createElement(ProphetCard, { key: i, p, onOpen }))));
 }
 
-// src/pages/MagesPage.jsx
+// web/src/pages/MagesPage.jsx
 var import_react3 = __toESM(require_react());
 
-// src/data/mages.js
+// web/src/data/mages.js
 var MAGES = [
   { name: "Hermes Trismegistus", years: "legendary", y0: -1500, y1: -1450, region: "Egypt (legendary)", role: "Legendary thrice-greatest sage; fountainhead of the Hermetic stellar-sapiential tradition.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "Solomon", years: "-990\u2013-931", y0: -990, y1: -931, region: "Israel/Judah", role: "Legendary wise-king; archetype of the royal sapiential and magical-solomonic tradition.", isIberian: false, isRoyal: true, endpoint: false },
@@ -21680,7 +21592,7 @@ var MAGES = [
   { name: "Felipe II of Spain", years: "1527\u20131598", y0: 1527, y1: 1598, region: "Iberia (Spain)", role: "Habsburg royal-sage king; patron of astrologers and esoterica \u2014 closes the era of kings.", isIberian: true, isRoyal: true, endpoint: true, designation: "end of the era of kings" }
 ];
 
-// src/pages/MagesPage.jsx
+// web/src/pages/MagesPage.jsx
 function MageCard({ m, onOpen }) {
   const dates = m.years || `${fmtYear(m.y0)} \u2013 ${fmtYear(m.y1)}`;
   const end = !!m.endpoint;
@@ -21712,13 +21624,13 @@ function MagesPage({ onOpen }) {
   return /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("h1", null, "Magi \u2014 from Daniel to Felipe II"), /* @__PURE__ */ import_react3.default.createElement("p", { className: "muted" }, "A chronology of ", /* @__PURE__ */ import_react3.default.createElement("b", null, "magi / wise-men / royal-sage occult figures"), ", from the Babylonian court magi (", /* @__PURE__ */ import_react3.default.createElement("b", null, "Daniel, Shadrach, Meshach, Abednego"), ") through the medieval Iberian sages \u2014 ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n"), " \u2014 to the Renaissance Christian-kabbalists and royal astrologers, ending with ", /* @__PURE__ */ import_react3.default.createElement("b", { style: { color: "var(--gold)" } }, last.name, " (", last.years, ")"), ", who closes the era of kings. ", MAGES.length, " figures across ", span, ". Click a card to open its ficha \u2014 a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table."), /* @__PURE__ */ import_react3.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react3.default.createElement(Timeline, { items: MAGES, title: "Magi timeline \u2014 Daniel to Felipe II", accent: "#8a05ff" })), /* @__PURE__ */ import_react3.default.createElement("div", { className: "tcards" }, MAGES.map((m, i) => /* @__PURE__ */ import_react3.default.createElement(MageCard, { key: i, m, onOpen }))));
 }
 
-// src/pages/AlignmentFicha.jsx
+// web/src/pages/AlignmentFicha.jsx
 var import_react5 = __toESM(require_react());
 
-// src/ui.jsx
+// web/src/ui.jsx
 var import_react4 = __toESM(require_react());
 
-// ../data/astronomy-engine.mjs
+// data/astronomy-engine.mjs
 var C_AUDAY = 173.1446326846693;
 var KM_PER_AU = 14959787069098932e-8;
 var DEG2RAD = 0.017453292519943295;
@@ -23715,7 +23627,7 @@ var NodeEventKind;
   NodeEventKind2[NodeEventKind2["Descending"] = -1] = "Descending";
 })(NodeEventKind || (NodeEventKind = {}));
 
-// src/core.jsx
+// web/src/core.jsx
 var SIGNS = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
 var SIMPLE = {
   "Aries": ["\u05D4", "Heh", 5],
@@ -24037,7 +23949,7 @@ function displayDate(ds) {
   return `${da} ${mo} ${y < 0 ? Math.abs(y) + " BCE" : y}`;
 }
 
-// src/ui.jsx
+// web/src/ui.jsx
 function SkyMap({ rows: rows2, occ: occ2, hl }) {
   const C = 220, R2 = 196, Rp = 120;
   const pt = (lon, r) => {
@@ -24078,7 +23990,7 @@ function SkyMap({ rows: rows2, occ: occ2, hl }) {
   }), /* @__PURE__ */ import_react4.default.createElement("text", { x: C, y: C + 34, textAnchor: "middle", fontSize: "6.5", fill: "#6a6a86" }, "3 mothers \xB7 fixed circumpolar axis"));
 }
 
-// src/pages/AlignmentFicha.jsx
+// web/src/pages/AlignmentFicha.jsx
 function smallestArc(lons) {
   const s = [...lons].sort((a, b) => a - b);
   if (s.length < 2) return 0;
@@ -24112,10 +24024,10 @@ function AlignmentFicha({ date, lex, angelMap: angelMap2, onBack, nameRefs: name
   })())))) : /* @__PURE__ */ import_react5.default.createElement("div", { className: "muted" }, "No date-specific readable names on this day.")));
 }
 
-// src/pages/ProphetFicha.jsx
+// web/src/pages/ProphetFicha.jsx
 var import_react7 = __toESM(require_react());
 
-// src/components/Ficha.jsx
+// web/src/components/Ficha.jsx
 var import_react6 = __toESM(require_react());
 function datesOf(figure) {
   if (figure.years) return figure.years;
@@ -24145,7 +24057,7 @@ function Ficha({ figure, kind, axisMin, axisMax, backHref, backLabel, wiki }) {
   } }, "\u25C0 ", backLabel), /* @__PURE__ */ import_react6.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer", style: { marginLeft: "auto" } }, "Wikipedia \u2192")), /* @__PURE__ */ import_react6.default.createElement("h1", { style: { marginBottom: 4 } }, figure.name, figure.he && /* @__PURE__ */ import_react6.default.createElement("span", { className: "he", style: { marginLeft: 10, color: "var(--gold)" } }, figure.he)), /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".9rem" } }, dates, dates && " \xB7 ", figure.region, designation && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 8, color: "var(--gold)", borderColor: "var(--gold)" } }, designation), kind === "mage" && figure.isIberian && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--green)", borderColor: "var(--green)" } }, "Iberian"), kind === "mage" && figure.isRoyal && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--violet)", borderColor: "var(--violet)" } }, "royal"), figure.thread && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 6 } }, figure.thread)), axisMin != null && axisMax != null && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { padding: 12, marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement(LifeBar, { figure, min: axisMin, max: axisMax })), /* @__PURE__ */ import_react6.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react6.default.createElement("div", null, w.thumbnail && /* @__PURE__ */ import_react6.default.createElement("div", { className: "fig", style: { marginBottom: 12, padding: 8 } }, /* @__PURE__ */ import_react6.default.createElement("img", { src: w.thumbnail, alt: figure.name, style: { maxHeight: 320, width: "100%", borderRadius: 8, display: "block" }, loading: "lazy" })), /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Description"), /* @__PURE__ */ import_react6.default.createElement("p", { style: { lineHeight: 1.6, marginBottom: 0 } }, desc || "No Wikipedia description available."))), /* @__PURE__ */ import_react6.default.createElement("div", null, facts.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Facts"), /* @__PURE__ */ import_react6.default.createElement("table", { style: { fontSize: ".88rem" } }, /* @__PURE__ */ import_react6.default.createElement("tbody", null, facts.map((f, i) => /* @__PURE__ */ import_react6.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)", width: "38%", verticalAlign: "top" } }, f.label), /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "5px 8px" } }, f.value)))))))), rows2.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Life & work in brief"), /* @__PURE__ */ import_react6.default.createElement("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 } }, "Summarised by section \u2014 one row per topic, for fast reading."), /* @__PURE__ */ import_react6.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react6.default.createElement("thead", null, /* @__PURE__ */ import_react6.default.createElement("tr", null, /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "32%" } }, kind === "mage" ? "Work / contribution" : "Topic"), /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px" } }, kind === "mage" ? "Significance" : "Summary"))), /* @__PURE__ */ import_react6.default.createElement("tbody", null, rows2.map((r, i) => /* @__PURE__ */ import_react6.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px", fontWeight: 600, verticalAlign: "top" } }, r.title), /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, r.note)))))), figure.prophecies && figure.prophecies.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Prophecies"), /* @__PURE__ */ import_react6.default.createElement("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 } }, "Key prophetic utterances and visions attributed to ", figure.name, ", with sources."), /* @__PURE__ */ import_react6.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react6.default.createElement("thead", null, /* @__PURE__ */ import_react6.default.createElement("tr", null, /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "70%" } }, "Prophecy / vision"), /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "30%" } }, "Source"))), /* @__PURE__ */ import_react6.default.createElement("tbody", null, figure.prophecies.map((pr, i) => /* @__PURE__ */ import_react6.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px", verticalAlign: "top" } }, pr.t), /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px", color: "var(--gold)" } }, pr.r)))))), /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react6.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer" }, "Read the full article on Wikipedia \u2192")));
 }
 
-// src/pages/ProphetFicha.jsx
+// web/src/pages/ProphetFicha.jsx
 var BY_SLUG = new Map(PROPHETS.map((p) => [slugify(p.name), p]));
 var AXIS_MIN = Math.min(...PROPHETS.map((p) => p.y0));
 var AXIS_MAX = Math.max(...PROPHETS.map((p) => p.y1 == null ? p.y0 : p.y1));
@@ -24167,7 +24079,7 @@ function ProphetFicha({ slug }) {
 }
 var PROPHET_SLUGS = [...BY_SLUG.keys()];
 
-// src/pages/MageFicha.jsx
+// web/src/pages/MageFicha.jsx
 var import_react8 = __toESM(require_react());
 var BY_SLUG2 = new Map(MAGES.map((m) => [slugify(m.name), m]));
 var AXIS_MIN2 = Math.min(...MAGES.map((m) => m.y0));
@@ -24190,7 +24102,7 @@ function MageFicha({ slug }) {
 }
 var MAGE_SLUGS = [...BY_SLUG2.keys()];
 
-// src/tabs/ReaderTab.jsx
+// web/src/tabs/ReaderTab.jsx
 var import_react9 = __toESM(require_react());
 function findWord(he, LEX2, angelMap2) {
   if (!LEX2) return null;
@@ -24318,7 +24230,7 @@ function GlossPage({ word, date, rows: rows2, occ: occ2, genData: genData2, onBa
   })), /* @__PURE__ */ import_react9.default.createElement("div", { className: "legend" }, req.length === 0 ? /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, "every day \xB7 ", tl.n, " days") : /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, tl.onDays.length, " of ", tl.n, " days (", probsAll != null ? probsAll.toFixed(probsAll < 1 ? 1 : 0) : "?", "%) \xB7 first ", tl.onDays.length ? displayDate(fmtDate(makeDate(genData2.year, 1, 1 + tl.onDays[0]))) : "\u2014", " \xB7 last ", tl.onDays.length ? displayDate(fmtDate(makeDate(genData2.year, 1, 1 + tl.onDays[tl.onDays.length - 1]))) : "\u2014"))) : /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted" }, "Run the Predictor scan for this year to see the day-by-day timeline.")), wikiTitle && /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginTop: 14, padding: 16 } }, /* @__PURE__ */ import_react9.default.createElement("h3", { style: { marginTop: 0 } }, "Wikipedia \u2014 ", wikiTitle), wiki && wiki.loading && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted" }, "Looking up ", wikiTitle, " on Wikipedia\u2026"), wiki && wiki.error && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { color: "var(--red)" } }, "No Wikipedia article found for \u201C", wikiTitle, "\u201D (", wiki.error, ")."), wiki && wiki.j && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, wiki.j.type === "disambiguation" ? /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted" }, "\u201C", wiki.j.title, "\u201D is a disambiguation page \u2014 see ", /* @__PURE__ */ import_react9.default.createElement("a", { href: wiki.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer" }, "Wikipedia"), " for the list of meanings.") : /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, /* @__PURE__ */ import_react9.default.createElement("div", { style: { display: "flex", gap: 14, flexWrap: "wrap", alignItems: "flex-start" } }, wiki.j.thumbnail && /* @__PURE__ */ import_react9.default.createElement("img", { src: wiki.j.thumbnail.source, alt: wiki.j.title, style: { maxWidth: 160, maxHeight: 200, borderRadius: 8, border: "1px solid var(--line)" } }), /* @__PURE__ */ import_react9.default.createElement("div", { style: { flex: "1 1 320px" } }, wiki.j.description && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 6 } }, wiki.j.description), /* @__PURE__ */ import_react9.default.createElement("div", null, wiki.j.extract), /* @__PURE__ */ import_react9.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react9.default.createElement("a", { href: wiki.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer" }, "Read more on Wikipedia \u2192")))))), !wiki && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted" }, "Preparing Wikipedia lookup\u2026")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "note", style: { marginTop: 14 } }, "This single-reading page is a shareable deep link: ", /* @__PURE__ */ import_react9.default.createElement("code", null, typeof window !== "undefined" ? window.location.href : ""), ". The sky map, gloss and year timeline are computed live from astronomy-engine planet positions; the Wikipedia panel (shown for proper and angel names) is the free Wikipedia REST summary API."));
 }
 
-// src/Footer.jsx
+// web/src/Footer.jsx
 var import_react10 = __toESM(require_react());
 var GITHUB = "https://github.com/VABISMO/adam-apocalypse";
 var PAPER = "/paper";
@@ -24333,10 +24245,10 @@ function Footer() {
   return /* @__PURE__ */ import_react10.default.createElement("footer", { className: "site-footer" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react10.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react10.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react10.default.createElement(L, { href: PAPER }, "The paper \u2014 The Reader of the Sky \u2192"), /* @__PURE__ */ import_react10.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react10.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react10.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Felipe II"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/alignments" }, "Stellar alignments (267 fiches)"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/" }, "Sky reader app")), /* @__PURE__ */ import_react10.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react10.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react10.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react10.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react10.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react10.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react10.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react10.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react10.default.createElement("span", null, "\xA9 ", year, " V. Nos & Julian S. \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react10.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react10.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
 }
 
-// src/pages/Landing.jsx
+// web/src/pages/Landing.jsx
 var import_react13 = __toESM(require_react());
 
-// src/tabs/CyclesTab.jsx
+// web/src/tabs/CyclesTab.jsx
 var import_react11 = __toESM(require_react());
 function PrecessionDiagram() {
   const cx = 230, cy = 130, R2 = 120, r = 70;
@@ -24352,7 +24264,7 @@ function PrecessionDiagram() {
   return /* @__PURE__ */ import_react11.default.createElement("svg", { viewBox: "0 0 460 280", width: "100%", style: { maxWidth: 460 }, role: "img", "aria-label": "Precession: tropical vs sidereal zodiac" }, /* @__PURE__ */ import_react11.default.createElement("circle", { cx, cy, r: R2, fill: "#16161f", stroke: "#2a2a38" }), SIGNS.map((s, i) => seg(i, i % 2 ? "#16161f" : "#16161f", s.slice(0, 3))), /* @__PURE__ */ import_react11.default.createElement("line", { x1: cx, y1: cy, x2: tx, y2: ty, stroke: "#e8c87a", strokeWidth: "2" }), /* @__PURE__ */ import_react11.default.createElement("circle", { cx: tx, cy: ty, r: "5", fill: "#e8c87a" }), /* @__PURE__ */ import_react11.default.createElement("text", { x: tx, y: ty - 10, textAnchor: "middle", fontSize: "9", fill: "#e8c87a" }, "\u2648 tropical 0\xB0 (fixed to equinox \u2014 does NOT precess)"), /* @__PURE__ */ import_react11.default.createElement("line", { x1: cx, y1: cy, x2: sx, y2: sy, stroke: "#9b8ec4", strokeWidth: "2", strokeDasharray: "4 3" }), /* @__PURE__ */ import_react11.default.createElement("circle", { cx: sx, cy: sy, r: "5", fill: "#9b8ec4" }), /* @__PURE__ */ import_react11.default.createElement("text", { x: sx + 10, y: sy + 4, fontSize: "9", fill: "#9b8ec4" }, "sidereal 0\xB0 (fixed to stars \u2014 precesses)"), /* @__PURE__ */ import_react11.default.createElement("path", { d: `M ${cx + (R2 - 34) * Math.cos(-90 * Math.PI / 180)} ${cy + (R2 - 34) * Math.sin(-90 * Math.PI / 180)} A ${R2 - 34} ${R2 - 34} 0 0 1 ${cx + (R2 - 34) * Math.cos(ayAng)} ${cy + (R2 - 34) * Math.sin(ayAng)}`, fill: "none", stroke: "#f4a8c0", strokeWidth: "1.4" }), /* @__PURE__ */ import_react11.default.createElement("text", { x: cx + (R2 - 50) * Math.cos((-90 + 12) * Math.PI / 180), y: cy + (R2 - 50) * Math.sin((-90 + 12) * Math.PI / 180) + 3, textAnchor: "middle", fontSize: "9", fill: "#f4a8c0" }, "ayanamsa 24.18\xB0"), /* @__PURE__ */ import_react11.default.createElement("path", { d: `M ${cx} ${cy + 44} A 44 44 0 0 0 ${cx - 31} ${cy + 31}`, fill: "none", stroke: "#8a96ad", strokeWidth: "1.2", markerEnd: "url(#ar)" }), /* @__PURE__ */ import_react11.default.createElement("defs", null, /* @__PURE__ */ import_react11.default.createElement("marker", { id: "ar", markerWidth: "6", markerHeight: "6", refX: "3", refY: "3", orient: "auto" }, /* @__PURE__ */ import_react11.default.createElement("path", { d: "M0 0 L6 3 L0 6 Z", fill: "#8a96ad" }))), /* @__PURE__ */ import_react11.default.createElement("text", { x: cx, y: cy, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "precession \u2192"));
 }
 
-// src/components/WarningModal.jsx
+// web/src/components/WarningModal.jsx
 var import_react12 = __toESM(require_react());
 var QUESTIONS = [
   "Do you currently feel your thoughts or actions are being controlled by an outside force?",
@@ -24370,7 +24282,7 @@ function WarningModal({ open, onClose, onProceed }) {
   return /* @__PURE__ */ import_react12.default.createElement("div", { className: "eph-modal warn-modal", role: "dialog", "aria-modal": "true", "aria-labelledby": "wm-title", onClick: onClose }, /* @__PURE__ */ import_react12.default.createElement("div", { className: "eph-panel panel warn-panel", style: { maxWidth: 560 }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react12.default.createElement("h2", { id: "wm-title", style: { marginTop: 0 } }, "Before you enter"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 12, fontSize: ".9rem" } }, "This project explores ", /* @__PURE__ */ import_react12.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation, cosmology and altered-state symbolism"), " \u2014 the meaning of ", /* @__PURE__ */ import_react12.default.createElement("i", null, "apocalypse"), " as the unveiling of knowledge, read through the stars. Some of it can feel intense or destabilizing."), /* @__PURE__ */ import_react12.default.createElement("div", { className: "iv", style: { borderColor: "var(--warn)", marginBottom: 14 } }, /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: ".9rem", lineHeight: 1.55 } }, /* @__PURE__ */ import_react12.default.createElement("b", { style: { color: "var(--warn)" } }, "Please do not use this tool if you suffer from psychosis, mania, or schizophrenia"), " \u2014 or, if you choose to, do so only together with someone you trust. The symbolism here can feel overwhelming; your wellbeing comes first, always.")), /* @__PURE__ */ import_react12.default.createElement("h3", { style: { marginTop: 6 } }, "A short self-check"), /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".82rem" } }, "This is not a diagnosis \u2014 just a moment to pause. Answer honestly; nothing is stored or sent anywhere."), /* @__PURE__ */ import_react12.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 10 } }, QUESTIONS.map((q, i) => /* @__PURE__ */ import_react12.default.createElement("div", { key: i, className: "iv", style: { padding: "10px 12px" } }, /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: ".9rem", marginBottom: 7 } }, q), /* @__PURE__ */ import_react12.default.createElement("div", { style: { display: "flex", gap: 8 } }, /* @__PURE__ */ import_react12.default.createElement("button", { className: answers[i] === true ? "on" : "", onClick: () => set(i, true), "aria-pressed": answers[i] === true }, "Yes"), /* @__PURE__ */ import_react12.default.createElement("button", { className: answers[i] === false ? "on" : "", onClick: () => set(i, false), "aria-pressed": answers[i] === false }, "No"))))), done && /* @__PURE__ */ import_react12.default.createElement("div", { className: "iv", style: { marginTop: 12, borderColor: risk ? "var(--warn)" : "var(--green)" } }, risk ? /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: ".9rem" } }, /* @__PURE__ */ import_react12.default.createElement("b", { style: { color: "var(--warn)" } }, "Please be gentle with yourself."), " Consider talking to someone you trust or a mental-health professional before going deeper. You can always come back later.") : /* @__PURE__ */ import_react12.default.createElement("div", { style: { fontSize: ".9rem", color: "var(--green)" } }, /* @__PURE__ */ import_react12.default.createElement("b", null, "Thank you for checking."), " Take what is useful, leave the rest.")), /* @__PURE__ */ import_react12.default.createElement("div", { className: "controls", style: { marginTop: 16, justifyContent: "space-between", flexWrap: "wrap", gap: 10 } }, /* @__PURE__ */ import_react12.default.createElement("button", { onClick: onClose, title: "Close this notice and stay here" }, "\u25C0 Go back"), /* @__PURE__ */ import_react12.default.createElement("button", { className: "btn-cta", onClick: onProceed, disabled: !done, title: done ? "Enter the sky-reader app" : "Answer the self-check to continue" }, done ? "Proceed to the app \u2192" : "Answer to continue")), /* @__PURE__ */ import_react12.default.createElement("div", { className: "note", style: { marginTop: 10 } }, "If you are in crisis, please reach out \u2014 in the US, ", /* @__PURE__ */ import_react12.default.createElement("a", { href: "https://988lifeline.org", target: "_blank", rel: "noreferrer" }, "988 Suicide & Crisis Lifeline"), "; elsewhere, contact your local emergency services. You matter.")));
 }
 
-// src/pages/Landing.jsx
+// web/src/pages/Landing.jsx
 var REF_DATE = (() => {
   const d = /* @__PURE__ */ new Date();
   return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
@@ -24558,13 +24470,13 @@ function Landing({ goApp }) {
   return /* @__PURE__ */ import_react13.default.createElement("div", { className: "landing" }, /* @__PURE__ */ import_react13.default.createElement("section", { className: "hero" }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-copy" }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-eyebrow" }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "star-of-life", c: "gold", size: "1rem" }), " Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet"), /* @__PURE__ */ import_react13.default.createElement("h1", { className: "hero-title" }, "The Apocalypse ", /* @__PURE__ */ import_react13.default.createElement("span", { style: { color: "var(--gold)" } }, "of Adam")), /* @__PURE__ */ import_react13.default.createElement("blockquote", { className: "hero-tag", style: { borderLeft: "3px solid var(--gold)", paddingLeft: 14, fontStyle: "italic", color: "var(--dim)" } }, "\u201CAnd the thirteenth kingdom says of him that every birth of their ruler is a word. And this word received a mandate there. He received glory and power. And thus he came to the water, in order that the desire of those powers might be satisfied.\u201D", /* @__PURE__ */ import_react13.default.createElement("cite", { style: { display: "block", marginTop: 10, fontStyle: "normal", fontSize: ".82rem", color: "var(--dim)" } }, "\u2014 The Apocalypse of Adam \xB7 the thirteenth kingdom")), /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-cta" }, /* @__PURE__ */ import_react13.default.createElement("button", { className: "btn-cta", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "compass", c: "txt", size: "1rem" }), " \xA0Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react13.default.createElement("a", { className: "hero-ghost", href: "/paper" }, "Read the paper \u2192")), /* @__PURE__ */ import_react13.default.createElement("button", { className: "hero-note-link", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".85rem" }), " \xA0Content notice \u2014 for visitors with psychosis, mania, or schizophrenia")), /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-sky panel" }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "hero-sky-label muted" }, "Sky of ", REF_DATE, " \xB7 ", occ2.size, " of 12 signs occupied"), /* @__PURE__ */ import_react13.default.createElement(SkyMap, { rows: rows2, occ: occ2 }))), /* @__PURE__ */ import_react13.default.createElement("section", { className: "panel", style: { padding: 18, marginTop: 18 } }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react13.default.createElement("h2", { style: { margin: 0 } }, "The grammar of the sky")), /* @__PURE__ */ import_react13.default.createElement(Slider, { rows: rows2, occ: occ2 })), /* @__PURE__ */ import_react13.default.createElement("section", { style: { marginTop: 22 } }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react13.default.createElement("h2", { style: { margin: 0 } }, "What you can do in the app")), /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-grid" }, FEATURES.map((f, idx) => /* @__PURE__ */ import_react13.default.createElement("a", { key: idx, className: "feat-card", href: f.go }, /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-icon" }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: f.n, c: f.c, size: "1.5rem" })), /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-t" }, f.t), /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-d muted" }, f.d), /* @__PURE__ */ import_react13.default.createElement("div", { className: "feat-go muted" }, "open \u2192"))))), /* @__PURE__ */ import_react13.default.createElement("section", { className: "panel entry-cta", style: { marginTop: 26, padding: 28, textAlign: "center", borderColor: "var(--brand)" } }, /* @__PURE__ */ import_react13.default.createElement("h2", { style: { marginTop: 0 } }, "Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react13.default.createElement("p", { className: "muted", style: { maxWidth: 620, margin: "0 auto 16px" } }, "Learn a few simple things about the ancients, then read the sky for yourself. A short content notice opens first \u2014 for visitors diagnosed with psychosis or schizophrenia."), /* @__PURE__ */ import_react13.default.createElement("button", { className: "btn-cta", style: { fontSize: "1.1rem", padding: "14px 34px" }, onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "compass", c: "txt", size: "1.1rem" }), " \xA0Enter the app"), /* @__PURE__ */ import_react13.default.createElement("div", { className: "muted", style: { marginTop: 14, fontSize: ".8rem" } }, /* @__PURE__ */ import_react13.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".9rem" }), " \xA0", /* @__PURE__ */ import_react13.default.createElement("b", null, "Notice:"), " I have schizophrenia \xB7 I am psychotic \xB7 I am manic \u2014 a short self-check is offered before entry.")), /* @__PURE__ */ import_react13.default.createElement(WarningModal, { open: warnOpen, onClose: () => setWarnOpen(false), onProceed: enterApp }));
 }
 
-// src/pages/About.jsx
+// web/src/pages/About.jsx
 var import_react14 = __toESM(require_react());
 function About() {
-  return /* @__PURE__ */ import_react14.default.createElement("div", { className: "about-page" }, /* @__PURE__ */ import_react14.default.createElement("h1", { style: { fontSize: "1.9rem", marginBottom: 4 } }, "About ", /* @__PURE__ */ import_react14.default.createElement("span", { style: { color: "var(--gold)" } }, "The Apocalypse of Adam")), /* @__PURE__ */ import_react14.default.createElement("div", { className: "sub", style: { marginBottom: 16 } }, "Hebrew letters read in the sky \u2014 a stellar-alphabet reader behind the paper ", /* @__PURE__ */ import_react14.default.createElement("i", null, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react14.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14 } }, /* @__PURE__ */ import_react14.default.createElement("h2", { style: { marginTop: 0 } }, "What this is"), /* @__PURE__ */ import_react14.default.createElement("p", null, /* @__PURE__ */ import_react14.default.createElement("i", null, "Apocalypse"), " means ", /* @__PURE__ */ import_react14.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation"), " \u2014 the unveiling of knowledge, not something sinister. This project reads the sky as the ancients did: real planet positions (computed live by ", /* @__PURE__ */ import_react14.default.createElement("a", { href: "https://github.com/cosinekitty/astronomy-engine", target: "_blank", rel: "noreferrer" }, "astronomy-engine"), ") map the ", /* @__PURE__ */ import_react14.default.createElement("b", null, "12 zodiac signs"), " to the ", /* @__PURE__ */ import_react14.default.createElement("b", null, "12 simple letters"), " of the ", /* @__PURE__ */ import_react14.default.createElement("a", { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", target: "_blank", rel: "noreferrer" }, "Sefer Yetzirah"), ". Every date spells a set of readable Hebrew names \u2014 a stellar alphabet that no one can erase, encoded across the only medium that survives the malice of men."), /* @__PURE__ */ import_react14.default.createElement("p", null, "The app is a calculator suite: a live ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Sky Map"), ", a ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Reader"), " of every readable word, the ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Reading Rule"), " (YHVH, Genesis 1:1), a ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Time"), " predictor and precessional ages, ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Gematria"), " (Hebrew / Greek / Arabic / Indian), the ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Sigil"), " forge, the ", /* @__PURE__ */ import_react14.default.createElement("b", null, "72"), " Shem HaMephorash angels, ", /* @__PURE__ */ import_react14.default.createElement("b", null, "ELS / Torah codes"), ", Temurah, Ziruph, rare stellar ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Alignments"), ", a 9-culture ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Revelations"), " survey, and ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Psalms"), " by date.")), /* @__PURE__ */ import_react14.default.createElement("div", { className: "grid2" }, /* @__PURE__ */ import_react14.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react14.default.createElement("h2", { style: { marginTop: 0 } }, "How a reading works"), /* @__PURE__ */ import_react14.default.createElement("p", { className: "muted" }, "The ", /* @__PURE__ */ import_react14.default.createElement("b", null, "3 mothers"), " (\u05D0 \u05DE \u05E9) sit on a fixed circumpolar axis. The ", /* @__PURE__ */ import_react14.default.createElement("b", null, "7 doubles"), " (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) are the 7 moving bodies. The ", /* @__PURE__ */ import_react14.default.createElement("b", null, "12 simples"), " are the 12 signs. A word is readable on a date when every simple it needs sits in an ", /* @__PURE__ */ import_react14.default.createElement("b", null, "occupied"), " sign (S\u2286O). Rare alignments concentrate the planets \u2014 fewer letters, fewer words, a sharper reading.")), /* @__PURE__ */ import_react14.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react14.default.createElement("h2", { style: { marginTop: 0 } }, "The numbers, briefly"), /* @__PURE__ */ import_react14.default.createElement("ul", { className: "muted", style: { margin: "6px 0 0", paddingLeft: 20 } }, /* @__PURE__ */ import_react14.default.createElement("li", null, /* @__PURE__ */ import_react14.default.createElement("b", { style: { color: "var(--gold)" } }, "6,045"), " consonantal Hebrew roots in the lexicon."), /* @__PURE__ */ import_react14.default.createElement("li", null, /* @__PURE__ */ import_react14.default.createElement("b", { style: { color: "var(--gold)" } }, "267"), " rare century/millennium alignments catalogued."), /* @__PURE__ */ import_react14.default.createElement("li", null, /* @__PURE__ */ import_react14.default.createElement("b", { style: { color: "var(--gold)" } }, "72"), " Shem HaMephorash triplets (Exodus 14:19\u201321)."), /* @__PURE__ */ import_react14.default.createElement("li", null, "Precessional age length \u2248 ", /* @__PURE__ */ import_react14.default.createElement("b", null, AGE.toFixed(0)), " years; full cycle \u2248 ", /* @__PURE__ */ import_react14.default.createElement("b", null, (FULL || 0).toFixed(0)), " years.")))), /* @__PURE__ */ import_react14.default.createElement("div", { className: "panel", style: { padding: 18, marginTop: 14 } }, /* @__PURE__ */ import_react14.default.createElement("h2", { style: { marginTop: 0 } }, "Authors & sources"), /* @__PURE__ */ import_react14.default.createElement("p", { className: "muted" }, "By ", /* @__PURE__ */ import_react14.default.createElement("b", null, "V. Nos"), " & ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Julian S."), " \xB7 Source on ", /* @__PURE__ */ import_react14.default.createElement("a", { href: "https://github.com/VABISMO/adam-apocalypse", target: "_blank", rel: "noreferrer" }, "GitHub"), " \xB7 Paper: ", /* @__PURE__ */ import_react14.default.createElement("a", { href: "/paper" }, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react14.default.createElement("p", { className: "muted" }, "Ephemerides: astronomy-engine. Frame: Sefer Yetzirah. Lexicon: Strong Hebrew lexicon (OpenScriptures). No content on this site is medical, financial, or doctrinal advice \u2014 it is a reading of symbols and astronomy."), /* @__PURE__ */ import_react14.default.createElement("div", { style: { marginTop: 12 } }, /* @__PURE__ */ import_react14.default.createElement("a", { className: "btn-cta", href: "/app", style: { display: "inline-block", textDecoration: "none" } }, "Open the app \u2192"))));
+  return /* @__PURE__ */ import_react14.default.createElement("div", { className: "about-page" }, /* @__PURE__ */ import_react14.default.createElement("h1", { style: { fontSize: "1.9rem", marginBottom: 4 } }, "About ", /* @__PURE__ */ import_react14.default.createElement("span", { style: { color: "var(--gold)" } }, "The Apocalypse of Adam")), /* @__PURE__ */ import_react14.default.createElement("div", { className: "sub", style: { marginBottom: 16 } }, "Hebrew letters read in the sky \u2014 a stellar-alphabet reader behind the paper ", /* @__PURE__ */ import_react14.default.createElement("i", null, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react14.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14 } }, /* @__PURE__ */ import_react14.default.createElement("h2", { style: { marginTop: 0 } }, "What this is"), /* @__PURE__ */ import_react14.default.createElement("p", null, /* @__PURE__ */ import_react14.default.createElement("i", null, "Apocalypse"), " means ", /* @__PURE__ */ import_react14.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation"), " \u2014 the unveiling of knowledge, not something sinister. This project reads the sky as the ancients did: real planet positions (computed live by ", /* @__PURE__ */ import_react14.default.createElement("a", { href: "https://github.com/cosinekitty/astronomy-engine", target: "_blank", rel: "noreferrer" }, "astronomy-engine"), ") map the ", /* @__PURE__ */ import_react14.default.createElement("b", null, "12 zodiac signs"), " to the ", /* @__PURE__ */ import_react14.default.createElement("b", null, "12 simple letters"), " of the ", /* @__PURE__ */ import_react14.default.createElement("a", { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", target: "_blank", rel: "noreferrer" }, "Sefer Yetzirah"), ". Every date spells a set of readable Hebrew names \u2014 a stellar alphabet that no one can erase, encoded across the only medium that survives the malice of men."), /* @__PURE__ */ import_react14.default.createElement("p", null, "The app is a calculator suite: a live ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Sky Map"), ", a ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Reader"), " of every readable word, the ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Reading Rule"), " (YHVH, Genesis 1:1), a ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Time"), " predictor and precessional ages, ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Gematria"), " (Hebrew / Greek / Arabic / Indian), the ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Sigil"), " forge, the ", /* @__PURE__ */ import_react14.default.createElement("b", null, "72"), " Shem HaMephorash angels, ", /* @__PURE__ */ import_react14.default.createElement("b", null, "ELS / Torah codes"), ", Temurah, Ziruph, rare stellar ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Alignments"), ", a 9-culture ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Revelations"), " survey, and ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Psalms"), " by date.")), /* @__PURE__ */ import_react14.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14 } }, /* @__PURE__ */ import_react14.default.createElement("h2", { style: { marginTop: 0 } }, "The Prophecy of Adam"), /* @__PURE__ */ import_react14.default.createElement("p", null, "Welcome to ", /* @__PURE__ */ import_react14.default.createElement("i", null, "The Apocalypse of Adam"), " \u2014 and do not worry, there is nothing sinister here. ", /* @__PURE__ */ import_react14.default.createElement("i", null, "Apocalypse"), " is the word used to reveal the knowledge and science of God. Since the last coming of the Antichrist's followers (Jacob Frank, 1666), things have only gone from bad to worse. But do not fear: the days when all religions and dogmas will live together are at hand \u2014 and the best of it is, nothing need be done to make it so. They have already done a thorough job of breaking the world, sinking it to ashes in every respect, and preparing our arrival. Greed and unconscious individualism have reached their end; our past spirits, roles, and ideas prepared everything well, so that when the right moment came the religions could be unified, the greedy and warlike kingdoms could be brought down \u2014 destroyed by their own pride and greed \u2014 and society could organize itself to build a coming era of peace and prosperity."), /* @__PURE__ */ import_react14.default.createElement("p", null, "For centuries they have sold us systems of organization promising infinite growth and abundance; but, brothers, we all know that believing that fallacy is the mark of fools. They have set us against one another for millennia to increase their power, under the spell of Yaldabaoth / SATAN / the Demiurge \u2014 a very potent conjuration, forged in antiquity at the beginning of time, that dominates the minds and bodies of nearly every person."), /* @__PURE__ */ import_react14.default.createElement("p", null, "But how can we believe ourselves? Why do you have a favorite color? Why do you like a certain band, why do you defend the ideas of some low-level sorcerer by the FALLACY OF AUTHORITY? Are you truly original in anything? Have you contributed something to society it did not already know? Have you invented something unique? And even if you had \u2014 what makes you think someone did not do it before, and you simply do not remember? Or that a MAN possessed by his EGO did not erase it from history to secure his dominion and control over the population? A little humility, please."), /* @__PURE__ */ import_react14.default.createElement("p", null, "We are all copies of copies of copies \u2014 of the people you admire, the philosophers you like, even footballers and every kind of nonsense. The truth is that since oral, and above all written, language has existed, very little about us is original. But do not fear, do not feel sad: you are still unique. We are like a swarm of bees, or an artificial intelligence \u2014 instead of many servers and cores, we have many bodies, but there is only one being made of Word, our computational language. We are like an agent that remains unique \u2014 by its EMOTION, its own weights, its own rules forged from its environment, the permutations of its teachers, what it learned over the course of its life, its SOUL. And that is all we have: the SOUL, the most precious and immortal thing. And that soul, statistically, will live again and again; it will never die, it will always return to life \u2014 only most do not remember, nor will they, until their deepest parts awaken through VISION, DREAM, or logical thought."), /* @__PURE__ */ import_react14.default.createElement("p", null, "It sounds beautiful, does it not? And you cannot yet imagine how much so. For our ancestors, the ancestral souls, devised the means so that when the day came the world would be ready to understand the truth. They took great care to hide all the signs in plain sight \u2014 all the philosophical, astronomical, mathematical, physical, and chemical teaching. And how could they do that? How can we be sure the information has not been manipulated over time, like the scriptures of every religion, rewritten by men and never by the true prophets and scientific mages? In truth, they have tried: they have flooded our cities with so much light that it no longer occurs to anyone to look at the stars. What better medium to encode all knowledge across the centuries than the stars, through their permutations? Is it not the only medium no one can erase?"), /* @__PURE__ */ import_react14.default.createElement("p", null, "It may seem MAD. But in truth it is very simple and elegant once it is built \u2014 though building the encoding must have taken at least tens of thousands of years of observation and development of the ART (all the sciences). But wait \u2014 did we not begin this centuries ago? Are not the first temples of antiquity stellar observatories? And those are only the ones we know, the ones that survived the malice of man."), /* @__PURE__ */ import_react14.default.createElement("p", null, "Imagine: once oral language had developed, the ancients looked up at the sky and saw it turn with a perfection and synchrony that could not be found on the earth \u2014 chaotic, errant, full of danger. The universe was always in order, turning at constant speed, repeating its cycles to infinity. The planets, though they seemed to contradict the motion of the other stars and to move against the current, after many millennia of observation revealed the patterns they followed."), /* @__PURE__ */ import_react14.default.createElement("p", null, "The ancients simply looked at the sky, grouped the stars separated by empty spaces, drew lines between the clusters, marked them, and gave them a name. Each name was unique, a single syllable. With the sky-symbols they had created and their names, they could now represent their ideas in writing, and keep notes to understand how the cosmos worked."), /* @__PURE__ */ import_react14.default.createElement("p", null, "EVE realized this and explained it to ADAM \u2014 for she was a woman, and in the age when we were still nearly animals, males subjugated females... well, nearly as in all of history. But it was truly EVE who understood how to compose language, and she beguiled ADAM with her \u201Cmagic,\u201D so that he would bear all the consequences \u2014 condemning men and women to labor and be slaves through all of history, down to the present. Because yes, make no mistake: you are a SLAVE, and none of it would have happened if the celestial Father (THE UNIVERSE), through its perfect synchrony, had not allowed intelligence to develop far enough to CREATE writing."), /* @__PURE__ */ import_react14.default.createElement("p", null, "So then: this project is about that. By explaining the origin of writing, we will unveil the mysteries of antiquity elegantly \u2014 no fables, no lies \u2014 elegantly. Nothing need be forced to fit, for all the past SOULS already saw to that. We will only follow the instructions they left us for the thirteenth kingdom, the 13th kingdom. A kingdom without kings \u2014 and that, my friends, IS THE PROPHECY OF ADAM.")), /* @__PURE__ */ import_react14.default.createElement("div", { className: "grid2" }, /* @__PURE__ */ import_react14.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react14.default.createElement("h2", { style: { marginTop: 0 } }, "How a reading works"), /* @__PURE__ */ import_react14.default.createElement("p", { className: "muted" }, "The ", /* @__PURE__ */ import_react14.default.createElement("b", null, "3 mothers"), " (\u05D0 \u05DE \u05E9) sit on a fixed circumpolar axis. The ", /* @__PURE__ */ import_react14.default.createElement("b", null, "7 doubles"), " (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) are the 7 moving bodies. The ", /* @__PURE__ */ import_react14.default.createElement("b", null, "12 simples"), " are the 12 signs. A word is readable on a date when every simple it needs sits in an ", /* @__PURE__ */ import_react14.default.createElement("b", null, "occupied"), " sign (S\u2286O). Rare alignments concentrate the planets \u2014 fewer letters, fewer words, a sharper reading.")), /* @__PURE__ */ import_react14.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react14.default.createElement("h2", { style: { marginTop: 0 } }, "The numbers, briefly"), /* @__PURE__ */ import_react14.default.createElement("ul", { className: "muted", style: { margin: "6px 0 0", paddingLeft: 20 } }, /* @__PURE__ */ import_react14.default.createElement("li", null, /* @__PURE__ */ import_react14.default.createElement("b", { style: { color: "var(--gold)" } }, "6,045"), " consonantal Hebrew roots in the lexicon."), /* @__PURE__ */ import_react14.default.createElement("li", null, /* @__PURE__ */ import_react14.default.createElement("b", { style: { color: "var(--gold)" } }, "267"), " rare century/millennium alignments catalogued."), /* @__PURE__ */ import_react14.default.createElement("li", null, /* @__PURE__ */ import_react14.default.createElement("b", { style: { color: "var(--gold)" } }, "72"), " Shem HaMephorash triplets (Exodus 14:19\u201321)."), /* @__PURE__ */ import_react14.default.createElement("li", null, "Precessional age length \u2248 ", /* @__PURE__ */ import_react14.default.createElement("b", null, AGE.toFixed(0)), " years; full cycle \u2248 ", /* @__PURE__ */ import_react14.default.createElement("b", null, (FULL || 0).toFixed(0)), " years.")))), /* @__PURE__ */ import_react14.default.createElement("div", { className: "panel", style: { padding: 18, marginTop: 14 } }, /* @__PURE__ */ import_react14.default.createElement("h2", { style: { marginTop: 0 } }, "Authors & sources"), /* @__PURE__ */ import_react14.default.createElement("p", { className: "muted" }, "By ", /* @__PURE__ */ import_react14.default.createElement("b", null, "V. Nos"), " & ", /* @__PURE__ */ import_react14.default.createElement("b", null, "Julian S."), " \xB7 Source on ", /* @__PURE__ */ import_react14.default.createElement("a", { href: "https://github.com/VABISMO/adam-apocalypse", target: "_blank", rel: "noreferrer" }, "GitHub"), " \xB7 Paper: ", /* @__PURE__ */ import_react14.default.createElement("a", { href: "/paper" }, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react14.default.createElement("p", { className: "muted" }, "Ephemerides: astronomy-engine. Frame: Sefer Yetzirah. Lexicon: Strong Hebrew lexicon (OpenScriptures). No content on this site is medical, financial, or doctrinal advice \u2014 it is a reading of symbols and astronomy."), /* @__PURE__ */ import_react14.default.createElement("div", { style: { marginTop: 12 } }, /* @__PURE__ */ import_react14.default.createElement("a", { className: "btn-cta", href: "/app", style: { display: "inline-block", textDecoration: "none" } }, "Open the app \u2192"))));
 }
 
-// scripts/prerender.jsx
+// web/scripts/prerender.jsx
 var import_meta = {};
 var __here = typeof __dirname !== "undefined" ? __dirname : import_node_path.default.dirname((0, import_node_url.fileURLToPath)(import_meta.url));
 function findWeb(start) {
