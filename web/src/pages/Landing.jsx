@@ -264,7 +264,7 @@ function Landing({ goApp }){
           </blockquote>
           <div className="hero-cta">
             <button className="btn-cta" onClick={() => setWarnOpen(true)}><Fa n="compass" c="txt" size="1rem"/> &nbsp;Initiate — explore the stars</button>
-            <a className="hero-ghost" href="https://adam-apocalypse-paper.onrender.com/" target="_blank" rel="noreferrer">Read the paper ↗</a>
+            <a className="hero-ghost" href="/paper">Read the paper →</a>
           </div>
           <button className="hero-note-link" onClick={() => setWarnOpen(true)}><Fa n="triangle-exclamation" c="warn" size=".85rem"/> &nbsp;Content notice — for visitors with psychosis, mania, or schizophrenia</button>
         </div>

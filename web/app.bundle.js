@@ -5,7 +5,11 @@ var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __commonJS = (cb, mod) => function __require() {
-  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  try {
+    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  } catch (e) {
+    throw mod = 0, e;
+  }
 };
 var __copyProps = (to, from, except, desc) => {
   if (from && typeof from === "object" || typeof from === "function") {
@@ -35,19 +39,19 @@ var require_react_development = __commonJS({
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
         }
         var ReactVersion = "18.3.1";
-        var REACT_ELEMENT_TYPE = Symbol.for("react.element");
-        var REACT_PORTAL_TYPE = Symbol.for("react.portal");
-        var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
-        var REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode");
-        var REACT_PROFILER_TYPE = Symbol.for("react.profiler");
-        var REACT_PROVIDER_TYPE = Symbol.for("react.provider");
-        var REACT_CONTEXT_TYPE = Symbol.for("react.context");
-        var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref");
-        var REACT_SUSPENSE_TYPE = Symbol.for("react.suspense");
-        var REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list");
-        var REACT_MEMO_TYPE = Symbol.for("react.memo");
-        var REACT_LAZY_TYPE = Symbol.for("react.lazy");
-        var REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen");
+        var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
+        var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
+        var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
+        var REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode");
+        var REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler");
+        var REACT_PROVIDER_TYPE = /* @__PURE__ */ Symbol.for("react.provider");
+        var REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context");
+        var REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref");
+        var REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense");
+        var REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list");
+        var REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo");
+        var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
+        var REACT_OFFSCREEN_TYPE = /* @__PURE__ */ Symbol.for("react.offscreen");
         var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
         var FAUX_ITERATOR_SYMBOL = "@@iterator";
         function getIteratorFn(maybeIterable) {
@@ -1011,7 +1015,7 @@ var require_react_development = __commonJS({
         }
         var REACT_MODULE_REFERENCE;
         {
-          REACT_MODULE_REFERENCE = Symbol.for("react.module.reference");
+          REACT_MODULE_REFERENCE = /* @__PURE__ */ Symbol.for("react.module.reference");
         }
         function isValidElementType(type) {
           if (typeof type === "string" || typeof type === "function") {
@@ -2604,6 +2608,7 @@ var require_react_dom_development = __commonJS({
           }
           switch (typeof value) {
             case "function":
+            // $FlowIssue symbol is perfectly valid here
             case "symbol":
               return true;
             case "boolean": {
@@ -3176,24 +3181,24 @@ var require_react_dom_development = __commonJS({
             }
           }
         }
-        var REACT_ELEMENT_TYPE = Symbol.for("react.element");
-        var REACT_PORTAL_TYPE = Symbol.for("react.portal");
-        var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
-        var REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode");
-        var REACT_PROFILER_TYPE = Symbol.for("react.profiler");
-        var REACT_PROVIDER_TYPE = Symbol.for("react.provider");
-        var REACT_CONTEXT_TYPE = Symbol.for("react.context");
-        var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref");
-        var REACT_SUSPENSE_TYPE = Symbol.for("react.suspense");
-        var REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list");
-        var REACT_MEMO_TYPE = Symbol.for("react.memo");
-        var REACT_LAZY_TYPE = Symbol.for("react.lazy");
-        var REACT_SCOPE_TYPE = Symbol.for("react.scope");
-        var REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode");
-        var REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen");
-        var REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden");
-        var REACT_CACHE_TYPE = Symbol.for("react.cache");
-        var REACT_TRACING_MARKER_TYPE = Symbol.for("react.tracing_marker");
+        var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
+        var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
+        var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
+        var REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode");
+        var REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler");
+        var REACT_PROVIDER_TYPE = /* @__PURE__ */ Symbol.for("react.provider");
+        var REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context");
+        var REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref");
+        var REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense");
+        var REACT_SUSPENSE_LIST_TYPE = /* @__PURE__ */ Symbol.for("react.suspense_list");
+        var REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo");
+        var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
+        var REACT_SCOPE_TYPE = /* @__PURE__ */ Symbol.for("react.scope");
+        var REACT_DEBUG_TRACING_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.debug_trace_mode");
+        var REACT_OFFSCREEN_TYPE = /* @__PURE__ */ Symbol.for("react.offscreen");
+        var REACT_LEGACY_HIDDEN_TYPE = /* @__PURE__ */ Symbol.for("react.legacy_hidden");
+        var REACT_CACHE_TYPE = /* @__PURE__ */ Symbol.for("react.cache");
+        var REACT_TRACING_MARKER_TYPE = /* @__PURE__ */ Symbol.for("react.tracing_marker");
         var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
         var FAUX_ITERATOR_SYMBOL = "@@iterator";
         function getIteratorFn(maybeIterable) {
@@ -3618,6 +3623,7 @@ var require_react_dom_development = __commonJS({
               return "SuspenseList";
             case TracingMarkerComponent:
               return "TracingMarker";
+            // The display name for this tags come from the user-provided type:
             case ClassComponent:
             case FunctionComponent:
             case IncompleteClassComponent:
@@ -4615,6 +4621,10 @@ var require_react_dom_development = __commonJS({
             return typeof props.is === "string";
           }
           switch (tagName) {
+            // These are reserved SVG and MathML elements.
+            // We don't mind this list too much because we expect it to never grow.
+            // The alternative is to track the namespace in a few places which is convoluted.
+            // https://w3c.github.io/webcomponents/spec/custom/#custom-elements-core-concepts
             case "annotation-xml":
             case "color-profile":
             case "font-face":
@@ -7444,6 +7454,7 @@ var require_react_dom_development = __commonJS({
         }
         function getEventPriority(domEventName) {
           switch (domEventName) {
+            // Used by SimpleEventPlugin:
             case "cancel":
             case "click":
             case "close":
@@ -7479,14 +7490,20 @@ var require_react_dom_development = __commonJS({
             case "touchend":
             case "touchstart":
             case "volumechange":
+            // Used by polyfills:
+            // eslint-disable-next-line no-fallthrough
             case "change":
             case "selectionchange":
             case "textInput":
             case "compositionstart":
             case "compositionend":
             case "compositionupdate":
+            // Only enableCreateEventHandleAPI:
+            // eslint-disable-next-line no-fallthrough
             case "beforeblur":
             case "afterblur":
+            // Not used by React but could be by user code:
+            // eslint-disable-next-line no-fallthrough
             case "beforeinput":
             case "blur":
             case "fullscreenchange":
@@ -7511,6 +7528,8 @@ var require_react_dom_development = __commonJS({
             case "toggle":
             case "touchmove":
             case "wheel":
+            // Not used by React but could be by user code:
+            // eslint-disable-next-line no-fallthrough
             case "mouseenter":
             case "mouseleave":
             case "pointerenter":
@@ -8696,6 +8715,7 @@ var require_react_dom_development = __commonJS({
         function extractEvents$3(dispatchQueue, domEventName, targetInst, nativeEvent, nativeEventTarget, eventSystemFlags, targetContainer) {
           var targetNode = targetInst ? getNodeFromInstance(targetInst) : window;
           switch (domEventName) {
+            // Track the input node that has focus.
             case "focusin":
               if (isTextInputElement(targetNode) || targetNode.contentEditable === "true") {
                 activeElement$1 = targetNode;
@@ -8708,6 +8728,8 @@ var require_react_dom_development = __commonJS({
               activeElementInst$1 = null;
               lastSelection = null;
               break;
+            // Don't fire the event while the user is dragging. This matches the
+            // semantics of the native select event.
             case "mousedown":
               mouseDown = true;
               break;
@@ -8717,10 +8739,20 @@ var require_react_dom_development = __commonJS({
               mouseDown = false;
               constructSelectEvent(dispatchQueue, nativeEvent, nativeEventTarget);
               break;
+            // Chrome and IE fire non-standard event when selection is changed (and
+            // sometimes when it hasn't). IE's event fires out of order with respect
+            // to key and input events on deletion, so we discard it.
+            //
+            // Firefox doesn't support selectionchange, so check selection status
+            // after each key entry. The selection changes after keydown and before
+            // keyup, but we check on keydown as well in the case of holding down a
+            // key, when multiple keydown events are fired but only one keyup is.
+            // This is also our approach for IE handling, for the reason above.
             case "selectionchange":
               if (skipSelectionChangeEvent) {
                 break;
               }
+            // falls through
             case "keydown":
             case "keyup":
               constructSelectEvent(dispatchQueue, nativeEvent, nativeEventTarget);
@@ -8803,6 +8835,7 @@ var require_react_dom_development = __commonJS({
               if (getEventCharCode(nativeEvent) === 0) {
                 return;
               }
+            /* falls through */
             case "keydown":
             case "keyup":
               SyntheticEventCtor = SyntheticKeyboardEvent;
@@ -8823,11 +8856,14 @@ var require_react_dom_development = __commonJS({
               if (nativeEvent.button === 2) {
                 return;
               }
+            /* falls through */
             case "auxclick":
             case "dblclick":
             case "mousedown":
             case "mousemove":
             case "mouseup":
+            // TODO: Disabled elements should not respond to mouse events
+            /* falls through */
             case "mouseout":
             case "mouseover":
             case "contextmenu":
@@ -9741,6 +9777,8 @@ var require_react_dom_development = __commonJS({
             for (var _i = 0; _i < attributes.length; _i++) {
               var name = attributes[_i].name.toLowerCase();
               switch (name) {
+                // Controlled attributes are not validated
+                // TODO: Only ignore them on controlled tags.
                 case "value":
                   break;
                 case "checked":
@@ -10008,24 +10046,37 @@ var require_react_dom_development = __commonJS({
           };
           var isTagValidWithParent = function(tag, parentTag) {
             switch (parentTag) {
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-inselect
               case "select":
                 return tag === "option" || tag === "optgroup" || tag === "#text";
               case "optgroup":
                 return tag === "option" || tag === "#text";
+              // Strictly speaking, seeing an <option> doesn't mean we're in a <select>
+              // but
               case "option":
                 return tag === "#text";
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-intd
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-incaption
+              // No special behavior since these rules fall back to "in body" mode for
+              // all except special table nodes which cause bad parsing behavior anyway.
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-intr
               case "tr":
                 return tag === "th" || tag === "td" || tag === "style" || tag === "script" || tag === "template";
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-intbody
               case "tbody":
               case "thead":
               case "tfoot":
                 return tag === "tr" || tag === "style" || tag === "script" || tag === "template";
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-incolgroup
               case "colgroup":
                 return tag === "col" || tag === "template";
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-intable
               case "table":
                 return tag === "caption" || tag === "colgroup" || tag === "tbody" || tag === "tfoot" || tag === "thead" || tag === "style" || tag === "script" || tag === "template";
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-inhead
               case "head":
                 return tag === "base" || tag === "basefont" || tag === "bgsound" || tag === "link" || tag === "meta" || tag === "title" || tag === "noscript" || tag === "noframes" || tag === "style" || tag === "script" || tag === "template";
+              // https://html.spec.whatwg.org/multipage/semantics.html#the-html-element
               case "html":
                 return tag === "head" || tag === "body" || tag === "frameset";
               case "frameset":
@@ -12984,6 +13035,7 @@ var require_react_dom_development = __commonJS({
             case CaptureUpdate: {
               workInProgress2.flags = workInProgress2.flags & ~ShouldCapture | DidCapture;
             }
+            // Intentional fallthrough
             case UpdateState: {
               var _payload = update.payload;
               var partialState;
@@ -19301,6 +19353,7 @@ var require_react_dom_development = __commonJS({
               insertOrAppendPlacementNodeIntoContainer(finishedWork, _before, _parent);
               break;
             }
+            // eslint-disable-next-line-no-fallthrough
             default:
               throw new Error("Invalid host parent fiber. This error is likely caused by a bug in React. Please file an issue.");
           }
@@ -19400,6 +19453,7 @@ var require_react_dom_development = __commonJS({
                 safelyDetachRef(deletedFiber, nearestMountedAncestor);
               }
             }
+            // eslint-disable-next-line-no-fallthrough
             case HostText: {
               {
                 var prevHostParent = hostParent;
@@ -20661,6 +20715,9 @@ var require_react_dom_development = __commonJS({
             case RootFatalErrored: {
               throw new Error("Root did not complete. This is a bug in React.");
             }
+            // Flow knows about invariant, so it complains if I add a break
+            // statement, but eslint doesn't know about invariant, so it complains
+            // if I do. eslint-disable-next-line no-fallthrough
             case RootErrored: {
               commitRoot(root2, workInProgressRootRecoverableErrors, workInProgressTransitions);
               break;
@@ -22306,10 +22363,15 @@ var require_react_dom_development = __commonJS({
               case REACT_OFFSCREEN_TYPE:
                 return createFiberFromOffscreen(pendingProps, mode, lanes, key);
               case REACT_LEGACY_HIDDEN_TYPE:
+              // eslint-disable-next-line no-fallthrough
               case REACT_SCOPE_TYPE:
+              // eslint-disable-next-line no-fallthrough
               case REACT_CACHE_TYPE:
+              // eslint-disable-next-line no-fallthrough
               case REACT_TRACING_MARKER_TYPE:
+              // eslint-disable-next-line no-fallthrough
               case REACT_DEBUG_TRACING_MODE_TYPE:
+              // eslint-disable-next-line no-fallthrough
               default: {
                 if (typeof type === "object" && type !== null) {
                   switch (type.$$typeof) {
@@ -23529,7 +23591,7 @@ var import_client = __toESM(require_client());
 // src/App.jsx
 var import_react24 = __toESM(require_react());
 
-// ../../../../../tmp/ae.mjs
+// ../data/astronomy-engine.mjs
 var C_AUDAY = 173.1446326846693;
 var KM_PER_AU = 14959787069098932e-8;
 var DEG2RAD = 0.017453292519943295;
@@ -26328,7 +26390,7 @@ function setRouteMeta(title, desc) {
 // src/Footer.jsx
 var import_react2 = __toESM(require_react());
 var GITHUB = "https://github.com/VABISMO/adam-apocalypse";
-var PAPER = "https://adam-apocalypse-paper.onrender.com/";
+var PAPER = "/paper";
 function Col({ title, children }) {
   return /* @__PURE__ */ import_react2.default.createElement("section", { className: "ft-col" }, /* @__PURE__ */ import_react2.default.createElement("h4", { className: "ft-h" }, title), children);
 }
@@ -26337,7 +26399,7 @@ function L({ href, children, ext = false }) {
 }
 function Footer() {
   const year = 2026;
-  return /* @__PURE__ */ import_react2.default.createElement("footer", { className: "site-footer" }, /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react2.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react2.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react2.default.createElement(L, { href: PAPER, ext: true }, "The paper \u2014 The Reader of the Sky \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Felipe II"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/alignments" }, "Stellar alignments (171 fiches)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/" }, "Sky reader app")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react2.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react2.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react2.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react2.default.createElement("span", null, "\xA9 ", year, " V. Nos & Julian S. \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react2.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react2.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
+  return /* @__PURE__ */ import_react2.default.createElement("footer", { className: "site-footer" }, /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react2.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react2.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react2.default.createElement(L, { href: PAPER }, "The paper \u2014 The Reader of the Sky \u2192"), /* @__PURE__ */ import_react2.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Felipe II"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/alignments" }, "Stellar alignments (171 fiches)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/" }, "Sky reader app")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react2.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react2.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react2.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react2.default.createElement("span", null, "\xA9 ", year, " V. Nos & Julian S. \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react2.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react2.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
 }
 
 // src/data/prophets.js
@@ -33700,7 +33762,7 @@ function WarningModal({ open, onClose, onProceed }) {
   const yesCount = answers.filter((a) => a === true).length;
   const done = answers.every((a) => a !== null);
   const risk = yesCount >= 1;
-  return /* @__PURE__ */ import_react21.default.createElement("div", { className: "eph-modal", role: "dialog", "aria-modal": "true", "aria-labelledby": "wm-title", onClick: onClose }, /* @__PURE__ */ import_react21.default.createElement("div", { className: "eph-panel panel", style: { maxWidth: 560 }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react21.default.createElement("h2", { id: "wm-title", style: { marginTop: 0 } }, "Before you enter"), /* @__PURE__ */ import_react21.default.createElement("div", { className: "muted", style: { marginBottom: 12, fontSize: ".9rem" } }, "This project explores ", /* @__PURE__ */ import_react21.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation, cosmology and altered-state symbolism"), " \u2014 the meaning of ", /* @__PURE__ */ import_react21.default.createElement("i", null, "apocalypse"), " as the unveiling of knowledge, read through the stars. Some of it can feel intense or destabilizing."), /* @__PURE__ */ import_react21.default.createElement("div", { className: "iv", style: { borderColor: "var(--warn)", marginBottom: 14 } }, /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem", lineHeight: 1.55 } }, /* @__PURE__ */ import_react21.default.createElement("b", { style: { color: "var(--warn)" } }, "Please do not use this tool if you suffer from psychosis, mania, or schizophrenia"), " \u2014 or, if you choose to, do so only together with someone you trust. The symbolism here can feel overwhelming; your wellbeing comes first, always.")), /* @__PURE__ */ import_react21.default.createElement("h3", { style: { marginTop: 6 } }, "A short self-check"), /* @__PURE__ */ import_react21.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".82rem" } }, "This is not a diagnosis \u2014 just a moment to pause. Answer honestly; nothing is stored or sent anywhere."), /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 10 } }, QUESTIONS.map((q, i) => /* @__PURE__ */ import_react21.default.createElement("div", { key: i, className: "iv", style: { padding: "10px 12px" } }, /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem", marginBottom: 7 } }, q), /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", gap: 8 } }, /* @__PURE__ */ import_react21.default.createElement("button", { className: answers[i] === true ? "on" : "", onClick: () => set(i, true), "aria-pressed": answers[i] === true }, "Yes"), /* @__PURE__ */ import_react21.default.createElement("button", { className: answers[i] === false ? "on" : "", onClick: () => set(i, false), "aria-pressed": answers[i] === false }, "No"))))), done && /* @__PURE__ */ import_react21.default.createElement("div", { className: "iv", style: { marginTop: 12, borderColor: risk ? "var(--warn)" : "var(--green)" } }, risk ? /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem" } }, /* @__PURE__ */ import_react21.default.createElement("b", { style: { color: "var(--warn)" } }, "Please be gentle with yourself."), " Consider talking to someone you trust or a mental-health professional before going deeper. You can always come back later.") : /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem", color: "var(--green)" } }, /* @__PURE__ */ import_react21.default.createElement("b", null, "Thank you for checking."), " Take what is useful, leave the rest.")), /* @__PURE__ */ import_react21.default.createElement("div", { className: "controls", style: { marginTop: 16, justifyContent: "space-between", flexWrap: "wrap", gap: 10 } }, /* @__PURE__ */ import_react21.default.createElement("button", { onClick: onClose, title: "Close this notice and stay here" }, "\u25C0 Go back"), /* @__PURE__ */ import_react21.default.createElement("button", { className: "btn-cta", onClick: onProceed, disabled: !done, title: done ? "Enter the sky-reader app" : "Answer the self-check to continue" }, done ? "Proceed to the app \u2192" : "Answer to continue")), /* @__PURE__ */ import_react21.default.createElement("div", { className: "note", style: { marginTop: 10 } }, "If you are in crisis, please reach out \u2014 in the US, ", /* @__PURE__ */ import_react21.default.createElement("a", { href: "https://988lifeline.org", target: "_blank", rel: "noreferrer" }, "988 Suicide & Crisis Lifeline"), "; elsewhere, contact your local emergency services. You matter.")));
+  return /* @__PURE__ */ import_react21.default.createElement("div", { className: "eph-modal warn-modal", role: "dialog", "aria-modal": "true", "aria-labelledby": "wm-title", onClick: onClose }, /* @__PURE__ */ import_react21.default.createElement("div", { className: "eph-panel panel warn-panel", style: { maxWidth: 560 }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react21.default.createElement("h2", { id: "wm-title", style: { marginTop: 0 } }, "Before you enter"), /* @__PURE__ */ import_react21.default.createElement("div", { className: "muted", style: { marginBottom: 12, fontSize: ".9rem" } }, "This project explores ", /* @__PURE__ */ import_react21.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation, cosmology and altered-state symbolism"), " \u2014 the meaning of ", /* @__PURE__ */ import_react21.default.createElement("i", null, "apocalypse"), " as the unveiling of knowledge, read through the stars. Some of it can feel intense or destabilizing."), /* @__PURE__ */ import_react21.default.createElement("div", { className: "iv", style: { borderColor: "var(--warn)", marginBottom: 14 } }, /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem", lineHeight: 1.55 } }, /* @__PURE__ */ import_react21.default.createElement("b", { style: { color: "var(--warn)" } }, "Please do not use this tool if you suffer from psychosis, mania, or schizophrenia"), " \u2014 or, if you choose to, do so only together with someone you trust. The symbolism here can feel overwhelming; your wellbeing comes first, always.")), /* @__PURE__ */ import_react21.default.createElement("h3", { style: { marginTop: 6 } }, "A short self-check"), /* @__PURE__ */ import_react21.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".82rem" } }, "This is not a diagnosis \u2014 just a moment to pause. Answer honestly; nothing is stored or sent anywhere."), /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 10 } }, QUESTIONS.map((q, i) => /* @__PURE__ */ import_react21.default.createElement("div", { key: i, className: "iv", style: { padding: "10px 12px" } }, /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem", marginBottom: 7 } }, q), /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", gap: 8 } }, /* @__PURE__ */ import_react21.default.createElement("button", { className: answers[i] === true ? "on" : "", onClick: () => set(i, true), "aria-pressed": answers[i] === true }, "Yes"), /* @__PURE__ */ import_react21.default.createElement("button", { className: answers[i] === false ? "on" : "", onClick: () => set(i, false), "aria-pressed": answers[i] === false }, "No"))))), done && /* @__PURE__ */ import_react21.default.createElement("div", { className: "iv", style: { marginTop: 12, borderColor: risk ? "var(--warn)" : "var(--green)" } }, risk ? /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem" } }, /* @__PURE__ */ import_react21.default.createElement("b", { style: { color: "var(--warn)" } }, "Please be gentle with yourself."), " Consider talking to someone you trust or a mental-health professional before going deeper. You can always come back later.") : /* @__PURE__ */ import_react21.default.createElement("div", { style: { fontSize: ".9rem", color: "var(--green)" } }, /* @__PURE__ */ import_react21.default.createElement("b", null, "Thank you for checking."), " Take what is useful, leave the rest.")), /* @__PURE__ */ import_react21.default.createElement("div", { className: "controls", style: { marginTop: 16, justifyContent: "space-between", flexWrap: "wrap", gap: 10 } }, /* @__PURE__ */ import_react21.default.createElement("button", { onClick: onClose, title: "Close this notice and stay here" }, "\u25C0 Go back"), /* @__PURE__ */ import_react21.default.createElement("button", { className: "btn-cta", onClick: onProceed, disabled: !done, title: done ? "Enter the sky-reader app" : "Answer the self-check to continue" }, done ? "Proceed to the app \u2192" : "Answer to continue")), /* @__PURE__ */ import_react21.default.createElement("div", { className: "note", style: { marginTop: 10 } }, "If you are in crisis, please reach out \u2014 in the US, ", /* @__PURE__ */ import_react21.default.createElement("a", { href: "https://988lifeline.org", target: "_blank", rel: "noreferrer" }, "988 Suicide & Crisis Lifeline"), "; elsewhere, contact your local emergency services. You matter.")));
 }
 
 // src/pages/Landing.jsx
@@ -33844,18 +33906,22 @@ function Landing({ goApp }) {
     setWarnOpen(false);
     goApp && goApp();
   };
-  return /* @__PURE__ */ import_react22.default.createElement("div", { className: "landing" }, /* @__PURE__ */ import_react22.default.createElement("section", { className: "hero" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-copy" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-eyebrow" }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "star-of-life", c: "gold", size: "1rem" }), " Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet"), /* @__PURE__ */ import_react22.default.createElement("h1", { className: "hero-title" }, "The Apocalypse ", /* @__PURE__ */ import_react22.default.createElement("span", { style: { color: "var(--gold)" } }, "of Adam")), /* @__PURE__ */ import_react22.default.createElement("blockquote", { className: "hero-tag", style: { borderLeft: "3px solid var(--gold)", paddingLeft: 14, fontStyle: "italic", color: "var(--dim)" } }, "\u201CAnd the thirteenth kingdom says of him that every birth of their ruler is a word. And this word received a mandate there. He received glory and power. And thus he came to the water, in order that the desire of those powers might be satisfied.\u201D", /* @__PURE__ */ import_react22.default.createElement("cite", { style: { display: "block", marginTop: 10, fontStyle: "normal", fontSize: ".82rem", color: "var(--dim)" } }, "\u2014 The Apocalypse of Adam \xB7 the thirteenth kingdom")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-cta" }, /* @__PURE__ */ import_react22.default.createElement("button", { className: "btn-cta", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "compass", c: "txt", size: "1rem" }), " \xA0Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react22.default.createElement("a", { className: "hero-ghost", href: "https://adam-apocalypse-paper.onrender.com/", target: "_blank", rel: "noreferrer" }, "Read the paper \u2197")), /* @__PURE__ */ import_react22.default.createElement("button", { className: "hero-note-link", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".85rem" }), " \xA0Content notice \u2014 for visitors with psychosis, mania, or schizophrenia")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-sky panel" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-sky-label muted" }, "Sky of ", REF_DATE, " \xB7 ", occ.size, " of 12 signs occupied"), /* @__PURE__ */ import_react22.default.createElement(SkyMap, { rows, occ }))), /* @__PURE__ */ import_react22.default.createElement("section", { className: "panel", style: { padding: 18, marginTop: 18 } }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { margin: 0 } }, "The grammar of the sky")), /* @__PURE__ */ import_react22.default.createElement(Slider, { rows, occ })), /* @__PURE__ */ import_react22.default.createElement("section", { style: { marginTop: 22 } }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { margin: 0 } }, "What you can do in the app")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-grid" }, FEATURES.map((f, idx) => /* @__PURE__ */ import_react22.default.createElement("a", { key: idx, className: "feat-card", href: f.go }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-icon" }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: f.n, c: f.c, size: "1.5rem" })), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-t" }, f.t), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-d muted" }, f.d), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-go muted" }, "open \u2192"))))), /* @__PURE__ */ import_react22.default.createElement("section", { className: "panel entry-cta", style: { marginTop: 26, padding: 28, textAlign: "center", borderColor: "var(--brand)" } }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { marginTop: 0 } }, "Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react22.default.createElement("p", { className: "muted", style: { maxWidth: 620, margin: "0 auto 16px" } }, "Learn a few simple things about the ancients, then read the sky for yourself. A short content notice opens first \u2014 for visitors diagnosed with psychosis or schizophrenia."), /* @__PURE__ */ import_react22.default.createElement("button", { className: "btn-cta", style: { fontSize: "1.1rem", padding: "14px 34px" }, onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "compass", c: "txt", size: "1.1rem" }), " \xA0Enter the app"), /* @__PURE__ */ import_react22.default.createElement("div", { className: "muted", style: { marginTop: 14, fontSize: ".8rem" } }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".9rem" }), " \xA0", /* @__PURE__ */ import_react22.default.createElement("b", null, "Notice:"), " I have schizophrenia \xB7 I am psychotic \xB7 I am manic \u2014 a short self-check is offered before entry.")), /* @__PURE__ */ import_react22.default.createElement(WarningModal, { open: warnOpen, onClose: () => setWarnOpen(false), onProceed: enterApp }));
+  return /* @__PURE__ */ import_react22.default.createElement("div", { className: "landing" }, /* @__PURE__ */ import_react22.default.createElement("section", { className: "hero" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-copy" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-eyebrow" }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "star-of-life", c: "gold", size: "1rem" }), " Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet"), /* @__PURE__ */ import_react22.default.createElement("h1", { className: "hero-title" }, "The Apocalypse ", /* @__PURE__ */ import_react22.default.createElement("span", { style: { color: "var(--gold)" } }, "of Adam")), /* @__PURE__ */ import_react22.default.createElement("blockquote", { className: "hero-tag", style: { borderLeft: "3px solid var(--gold)", paddingLeft: 14, fontStyle: "italic", color: "var(--dim)" } }, "\u201CAnd the thirteenth kingdom says of him that every birth of their ruler is a word. And this word received a mandate there. He received glory and power. And thus he came to the water, in order that the desire of those powers might be satisfied.\u201D", /* @__PURE__ */ import_react22.default.createElement("cite", { style: { display: "block", marginTop: 10, fontStyle: "normal", fontSize: ".82rem", color: "var(--dim)" } }, "\u2014 The Apocalypse of Adam \xB7 the thirteenth kingdom")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-cta" }, /* @__PURE__ */ import_react22.default.createElement("button", { className: "btn-cta", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "compass", c: "txt", size: "1rem" }), " \xA0Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react22.default.createElement("a", { className: "hero-ghost", href: "/paper" }, "Read the paper \u2192")), /* @__PURE__ */ import_react22.default.createElement("button", { className: "hero-note-link", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".85rem" }), " \xA0Content notice \u2014 for visitors with psychosis, mania, or schizophrenia")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-sky panel" }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "hero-sky-label muted" }, "Sky of ", REF_DATE, " \xB7 ", occ.size, " of 12 signs occupied"), /* @__PURE__ */ import_react22.default.createElement(SkyMap, { rows, occ }))), /* @__PURE__ */ import_react22.default.createElement("section", { className: "panel", style: { padding: 18, marginTop: 18 } }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { margin: 0 } }, "The grammar of the sky")), /* @__PURE__ */ import_react22.default.createElement(Slider, { rows, occ })), /* @__PURE__ */ import_react22.default.createElement("section", { style: { marginTop: 22 } }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { margin: 0 } }, "What you can do in the app")), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-grid" }, FEATURES.map((f, idx) => /* @__PURE__ */ import_react22.default.createElement("a", { key: idx, className: "feat-card", href: f.go }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-icon" }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: f.n, c: f.c, size: "1.5rem" })), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-t" }, f.t), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-d muted" }, f.d), /* @__PURE__ */ import_react22.default.createElement("div", { className: "feat-go muted" }, "open \u2192"))))), /* @__PURE__ */ import_react22.default.createElement("section", { className: "panel entry-cta", style: { marginTop: 26, padding: 28, textAlign: "center", borderColor: "var(--brand)" } }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { marginTop: 0 } }, "Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react22.default.createElement("p", { className: "muted", style: { maxWidth: 620, margin: "0 auto 16px" } }, "Learn a few simple things about the ancients, then read the sky for yourself. A short content notice opens first \u2014 for visitors diagnosed with psychosis or schizophrenia."), /* @__PURE__ */ import_react22.default.createElement("button", { className: "btn-cta", style: { fontSize: "1.1rem", padding: "14px 34px" }, onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "compass", c: "txt", size: "1.1rem" }), " \xA0Enter the app"), /* @__PURE__ */ import_react22.default.createElement("div", { className: "muted", style: { marginTop: 14, fontSize: ".8rem" } }, /* @__PURE__ */ import_react22.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".9rem" }), " \xA0", /* @__PURE__ */ import_react22.default.createElement("b", null, "Notice:"), " I have schizophrenia \xB7 I am psychotic \xB7 I am manic \u2014 a short self-check is offered before entry.")), /* @__PURE__ */ import_react22.default.createElement(WarningModal, { open: warnOpen, onClose: () => setWarnOpen(false), onProceed: enterApp }));
 }
 
 // src/pages/About.jsx
 var import_react23 = __toESM(require_react());
 function About() {
-  return /* @__PURE__ */ import_react23.default.createElement("div", { className: "about-page" }, /* @__PURE__ */ import_react23.default.createElement("h1", { style: { fontSize: "1.9rem", marginBottom: 4 } }, "About ", /* @__PURE__ */ import_react23.default.createElement("span", { style: { color: "var(--gold)" } }, "The Apocalypse of Adam")), /* @__PURE__ */ import_react23.default.createElement("div", { className: "sub", style: { marginBottom: 16 } }, "Hebrew letters read in the sky \u2014 a stellar-alphabet reader behind the paper ", /* @__PURE__ */ import_react23.default.createElement("i", null, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "What this is"), /* @__PURE__ */ import_react23.default.createElement("p", null, /* @__PURE__ */ import_react23.default.createElement("i", null, "Apocalypse"), " means ", /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation"), " \u2014 the unveiling of knowledge, not something sinister. This project reads the sky as the ancients did: real planet positions (computed live by ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://github.com/cosinekitty/astronomy-engine", target: "_blank", rel: "noreferrer" }, "astronomy-engine"), ") map the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "12 zodiac signs"), " to the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "12 simple letters"), " of the ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", target: "_blank", rel: "noreferrer" }, "Sefer Yetzirah"), ". Every date spells a set of readable Hebrew names \u2014 a stellar alphabet that no one can erase, encoded across the only medium that survives the malice of men."), /* @__PURE__ */ import_react23.default.createElement("p", null, "The app is a calculator suite: a live ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Sky Map"), ", a ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Reader"), " of every readable word, the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Reading Rule"), " (YHVH, Genesis 1:1), a ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Time"), " predictor and precessional ages, ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Gematria"), " (Hebrew / Greek / Arabic / Indian), the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Sigil"), " forge, the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "72"), " Shem HaMephorash angels, ", /* @__PURE__ */ import_react23.default.createElement("b", null, "ELS / Torah codes"), ", Temurah, Ziruph, rare stellar ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Alignments"), ", a 9-culture ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Revelations"), " survey, and ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Psalms"), " by date.")), /* @__PURE__ */ import_react23.default.createElement("div", { className: "grid2" }, /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "How a reading works"), /* @__PURE__ */ import_react23.default.createElement("p", { className: "muted" }, "The ", /* @__PURE__ */ import_react23.default.createElement("b", null, "3 mothers"), " (\u05D0 \u05DE \u05E9) sit on a fixed circumpolar axis. The ", /* @__PURE__ */ import_react23.default.createElement("b", null, "7 doubles"), " (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) are the 7 moving bodies. The ", /* @__PURE__ */ import_react23.default.createElement("b", null, "12 simples"), " are the 12 signs. A word is readable on a date when every simple it needs sits in an ", /* @__PURE__ */ import_react23.default.createElement("b", null, "occupied"), " sign (S\u2286O). Rare alignments concentrate the planets \u2014 fewer letters, fewer words, a sharper reading.")), /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "The numbers, briefly"), /* @__PURE__ */ import_react23.default.createElement("ul", { className: "muted", style: { margin: "6px 0 0", paddingLeft: 20 } }, /* @__PURE__ */ import_react23.default.createElement("li", null, /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "6,045"), " consonantal Hebrew roots in the lexicon."), /* @__PURE__ */ import_react23.default.createElement("li", null, /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "171"), " rare century/millennium alignments catalogued."), /* @__PURE__ */ import_react23.default.createElement("li", null, /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "72"), " Shem HaMephorash triplets (Exodus 14:19\u201321)."), /* @__PURE__ */ import_react23.default.createElement("li", null, "Precessional age length \u2248 ", /* @__PURE__ */ import_react23.default.createElement("b", null, AGE.toFixed(0)), " years; full cycle \u2248 ", /* @__PURE__ */ import_react23.default.createElement("b", null, (FULL || 0).toFixed(0)), " years.")))), /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 18, marginTop: 14 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "Authors & sources"), /* @__PURE__ */ import_react23.default.createElement("p", { className: "muted" }, "By ", /* @__PURE__ */ import_react23.default.createElement("b", null, "V. Nos"), " & ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Julian S."), " \xB7 Source on ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://github.com/VABISMO/adam-apocalypse", target: "_blank", rel: "noreferrer" }, "GitHub"), " \xB7 Paper: ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://adam-apocalypse-paper.onrender.com/", target: "_blank", rel: "noreferrer" }, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react23.default.createElement("p", { className: "muted" }, "Ephemerides: astronomy-engine. Frame: Sefer Yetzirah. Lexicon: Strong Hebrew lexicon (OpenScriptures). No content on this site is medical, financial, or doctrinal advice \u2014 it is a reading of symbols and astronomy."), /* @__PURE__ */ import_react23.default.createElement("div", { style: { marginTop: 12 } }, /* @__PURE__ */ import_react23.default.createElement("a", { className: "btn-cta", href: "/app", style: { display: "inline-block", textDecoration: "none" } }, "Open the app \u2192"))));
+  return /* @__PURE__ */ import_react23.default.createElement("div", { className: "about-page" }, /* @__PURE__ */ import_react23.default.createElement("h1", { style: { fontSize: "1.9rem", marginBottom: 4 } }, "About ", /* @__PURE__ */ import_react23.default.createElement("span", { style: { color: "var(--gold)" } }, "The Apocalypse of Adam")), /* @__PURE__ */ import_react23.default.createElement("div", { className: "sub", style: { marginBottom: 16 } }, "Hebrew letters read in the sky \u2014 a stellar-alphabet reader behind the paper ", /* @__PURE__ */ import_react23.default.createElement("i", null, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "What this is"), /* @__PURE__ */ import_react23.default.createElement("p", null, /* @__PURE__ */ import_react23.default.createElement("i", null, "Apocalypse"), " means ", /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation"), " \u2014 the unveiling of knowledge, not something sinister. This project reads the sky as the ancients did: real planet positions (computed live by ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://github.com/cosinekitty/astronomy-engine", target: "_blank", rel: "noreferrer" }, "astronomy-engine"), ") map the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "12 zodiac signs"), " to the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "12 simple letters"), " of the ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", target: "_blank", rel: "noreferrer" }, "Sefer Yetzirah"), ". Every date spells a set of readable Hebrew names \u2014 a stellar alphabet that no one can erase, encoded across the only medium that survives the malice of men."), /* @__PURE__ */ import_react23.default.createElement("p", null, "The app is a calculator suite: a live ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Sky Map"), ", a ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Reader"), " of every readable word, the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Reading Rule"), " (YHVH, Genesis 1:1), a ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Time"), " predictor and precessional ages, ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Gematria"), " (Hebrew / Greek / Arabic / Indian), the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Sigil"), " forge, the ", /* @__PURE__ */ import_react23.default.createElement("b", null, "72"), " Shem HaMephorash angels, ", /* @__PURE__ */ import_react23.default.createElement("b", null, "ELS / Torah codes"), ", Temurah, Ziruph, rare stellar ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Alignments"), ", a 9-culture ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Revelations"), " survey, and ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Psalms"), " by date.")), /* @__PURE__ */ import_react23.default.createElement("div", { className: "grid2" }, /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "How a reading works"), /* @__PURE__ */ import_react23.default.createElement("p", { className: "muted" }, "The ", /* @__PURE__ */ import_react23.default.createElement("b", null, "3 mothers"), " (\u05D0 \u05DE \u05E9) sit on a fixed circumpolar axis. The ", /* @__PURE__ */ import_react23.default.createElement("b", null, "7 doubles"), " (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) are the 7 moving bodies. The ", /* @__PURE__ */ import_react23.default.createElement("b", null, "12 simples"), " are the 12 signs. A word is readable on a date when every simple it needs sits in an ", /* @__PURE__ */ import_react23.default.createElement("b", null, "occupied"), " sign (S\u2286O). Rare alignments concentrate the planets \u2014 fewer letters, fewer words, a sharper reading.")), /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "The numbers, briefly"), /* @__PURE__ */ import_react23.default.createElement("ul", { className: "muted", style: { margin: "6px 0 0", paddingLeft: 20 } }, /* @__PURE__ */ import_react23.default.createElement("li", null, /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "6,045"), " consonantal Hebrew roots in the lexicon."), /* @__PURE__ */ import_react23.default.createElement("li", null, /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "171"), " rare century/millennium alignments catalogued."), /* @__PURE__ */ import_react23.default.createElement("li", null, /* @__PURE__ */ import_react23.default.createElement("b", { style: { color: "var(--gold)" } }, "72"), " Shem HaMephorash triplets (Exodus 14:19\u201321)."), /* @__PURE__ */ import_react23.default.createElement("li", null, "Precessional age length \u2248 ", /* @__PURE__ */ import_react23.default.createElement("b", null, AGE.toFixed(0)), " years; full cycle \u2248 ", /* @__PURE__ */ import_react23.default.createElement("b", null, (FULL || 0).toFixed(0)), " years.")))), /* @__PURE__ */ import_react23.default.createElement("div", { className: "panel", style: { padding: 18, marginTop: 14 } }, /* @__PURE__ */ import_react23.default.createElement("h2", { style: { marginTop: 0 } }, "Authors & sources"), /* @__PURE__ */ import_react23.default.createElement("p", { className: "muted" }, "By ", /* @__PURE__ */ import_react23.default.createElement("b", null, "V. Nos"), " & ", /* @__PURE__ */ import_react23.default.createElement("b", null, "Julian S."), " \xB7 Source on ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "https://github.com/VABISMO/adam-apocalypse", target: "_blank", rel: "noreferrer" }, "GitHub"), " \xB7 Paper: ", /* @__PURE__ */ import_react23.default.createElement("a", { href: "/paper" }, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react23.default.createElement("p", { className: "muted" }, "Ephemerides: astronomy-engine. Frame: Sefer Yetzirah. Lexicon: Strong Hebrew lexicon (OpenScriptures). No content on this site is medical, financial, or doctrinal advice \u2014 it is a reading of symbols and astronomy."), /* @__PURE__ */ import_react23.default.createElement("div", { style: { marginTop: 12 } }, /* @__PURE__ */ import_react23.default.createElement("a", { className: "btn-cta", href: "/app", style: { display: "inline-block", textDecoration: "none" } }, "Open the app \u2192"))));
 }
 
 // src/App.jsx
 var PROPHET_BY_SLUG = new Map(PROPHETS.map((p) => [slugify(p.name), p]));
 var MAGE_BY_SLUG = new Map(MAGES.map((m) => [slugify(m.name), m]));
+var PAPER_URL = "/paper";
+function PaperTab() {
+  return /* @__PURE__ */ import_react24.default.createElement("a", { className: "tab", style: { textDecoration: "none", borderColor: "var(--line)" }, href: PAPER_URL, title: "The academic paper" }, "Paper \u2192");
+}
 var TABS = [
   ["cycles", "Cycles"],
   ["sky", "Sky Map"],
@@ -33915,13 +33981,14 @@ function parseRoute() {
 }
 function App() {
   const today = "2026-08-08";
+  const DEFAULT_DATE = "-6352-10-21";
   const [active, setActive] = (0, import_react24.useState)("cycles");
   const [sub, setSub] = (0, import_react24.useState)({ reading: "rule", time: "predictor", sigils: "sigil", cycles: "alignments", revelation: "hebrew", codes: "els" });
   const [lex, setLex] = (0, import_react24.useState)(null);
   const [lexErr, setLexErr] = (0, import_react24.useState)(null);
   const [angels, setAngels] = (0, import_react24.useState)(null);
   const [nameRefs, setNameRefs] = (0, import_react24.useState)(null);
-  const [date, setDate] = (0, import_react24.useState)(today);
+  const [date, setDate] = (0, import_react24.useState)(DEFAULT_DATE);
   const [genYear, setGenYear] = (0, import_react24.useState)(2026);
   const [genData, setGenData] = (0, import_react24.useState)(null);
   const [loading, setLoading] = (0, import_react24.useState)(false);
@@ -34087,13 +34154,13 @@ function App() {
     navigate("/");
   }, lex, angelMap: ANGEL72, genData, nameRefs })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
   if (route.name === "readings") return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement(TabsBar, { goTab }), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, /* @__PURE__ */ import_react24.default.createElement(TranslatorTab, { date: effDate, occ, words, q, setQ, genData, onOpen: openGloss, nameRefs })), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
-  return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react24.default.createElement("div", { key: id, role: "tab", "aria-selected": active === id, className: "tab" + (active === id ? " active" : ""), onClick: () => goTab(id) }, label))), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, route.name === "gloss" && glossWord && /* @__PURE__ */ import_react24.default.createElement(GlossPage, { word: glossWord, date: effDate, rows, occ, genData, onBack: backHome, nameRefs }), route.name === "gloss" && !glossWord && /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react24.default.createElement("button", { onClick: backHome }, "\u25C0 back")), /* @__PURE__ */ import_react24.default.createElement("h2", null, "Gloss not found"), /* @__PURE__ */ import_react24.default.createElement("div", { className: "muted" }, "No Hebrew word matches \u201C", route.he, "\u201D in the lexicon. It may use letters unavailable today; open it from the Reader list on a date when it is readable.")), route.name !== "gloss" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, active === "sky" && /* @__PURE__ */ import_react24.default.createElement(SkyTab, { date: effDate, rawDate: date, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step }), active === "translator" && /* @__PURE__ */ import_react24.default.createElement(TranslatorTab, { date: effDate, occ, words, q, setQ, genData, onOpen: openGloss, nameRefs }), active === "reading" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.reading, active: sub.reading, onChange: setSubTab("reading") }), sub.reading === "rule" && /* @__PURE__ */ import_react24.default.createElement(RuleTab, { occ }), sub.reading === "yhvh" && /* @__PURE__ */ import_react24.default.createElement(YhvhTab, { date: effDate, occ, yhvhOk, bs }), sub.reading === "genesis" && /* @__PURE__ */ import_react24.default.createElement(GenesisTab, { date: effDate, occ, genesisOk })), active === "time" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.time, active: sub.time, onChange: setSubTab("time") }), sub.time === "predictor" && /* @__PURE__ */ import_react24.default.createElement(PredictorTab, { date: effDate, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear }), sub.time === "ages" && /* @__PURE__ */ import_react24.default.createElement(AgesTab, { date: effDate, rows })), active === "gematria" && /* @__PURE__ */ import_react24.default.createElement(GematriaTab, null), active === "sigils" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.sigils, active: sub.sigils, onChange: setSubTab("sigils") }), sub.sigils === "sigil" && /* @__PURE__ */ import_react24.default.createElement(SigilTab, null), sub.sigils === "kameot" && /* @__PURE__ */ import_react24.default.createElement(KameotTab, null), sub.sigils === "angels" && /* @__PURE__ */ import_react24.default.createElement(AngelsTab, null)), active === "cycles" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.cycles, active: sub.cycles, onChange: setSubTab("cycles") }), sub.cycles === "saros" && /* @__PURE__ */ import_react24.default.createElement(SarosTab, null), sub.cycles === "ayanamsa" && /* @__PURE__ */ import_react24.default.createElement(AyanamsaTab, null), sub.cycles === "lunarsolar" && /* @__PURE__ */ import_react24.default.createElement(LunarSolarTab, null), sub.cycles === "alignments" && /* @__PURE__ */ import_react24.default.createElement(AlignmentsTab, { setDate, goReader: (d) => {
+  return /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react24.default.createElement("div", { key: id, role: "tab", "aria-selected": active === id, className: "tab" + (active === id ? " active" : ""), onClick: () => goTab(id) }, label)), /* @__PURE__ */ import_react24.default.createElement(PaperTab, null)), /* @__PURE__ */ import_react24.default.createElement("section", { className: "panel app-panel" }, route.name === "gloss" && glossWord && /* @__PURE__ */ import_react24.default.createElement(GlossPage, { word: glossWord, date: effDate, rows, occ, genData, onBack: backHome, nameRefs }), route.name === "gloss" && !glossWord && /* @__PURE__ */ import_react24.default.createElement("div", null, /* @__PURE__ */ import_react24.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react24.default.createElement("button", { onClick: backHome }, "\u25C0 back")), /* @__PURE__ */ import_react24.default.createElement("h2", null, "Gloss not found"), /* @__PURE__ */ import_react24.default.createElement("div", { className: "muted" }, "No Hebrew word matches \u201C", route.he, "\u201D in the lexicon. It may use letters unavailable today; open it from the Reader list on a date when it is readable.")), route.name !== "gloss" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, active === "sky" && /* @__PURE__ */ import_react24.default.createElement(SkyTab, { date: effDate, rawDate: date, setDate, rows, occ, occSigns, yhvhOk, genesisOk, bs, sentence, step }), active === "translator" && /* @__PURE__ */ import_react24.default.createElement(TranslatorTab, { date: effDate, occ, words, q, setQ, genData, onOpen: openGloss, nameRefs }), active === "reading" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.reading, active: sub.reading, onChange: setSubTab("reading") }), sub.reading === "rule" && /* @__PURE__ */ import_react24.default.createElement(RuleTab, { occ }), sub.reading === "yhvh" && /* @__PURE__ */ import_react24.default.createElement(YhvhTab, { date: effDate, occ, yhvhOk, bs }), sub.reading === "genesis" && /* @__PURE__ */ import_react24.default.createElement(GenesisTab, { date: effDate, occ, genesisOk })), active === "time" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.time, active: sub.time, onChange: setSubTab("time") }), sub.time === "predictor" && /* @__PURE__ */ import_react24.default.createElement(PredictorTab, { date: effDate, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear }), sub.time === "ages" && /* @__PURE__ */ import_react24.default.createElement(AgesTab, { date: effDate, rows })), active === "gematria" && /* @__PURE__ */ import_react24.default.createElement(GematriaTab, null), active === "sigils" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.sigils, active: sub.sigils, onChange: setSubTab("sigils") }), sub.sigils === "sigil" && /* @__PURE__ */ import_react24.default.createElement(SigilTab, null), sub.sigils === "kameot" && /* @__PURE__ */ import_react24.default.createElement(KameotTab, null), sub.sigils === "angels" && /* @__PURE__ */ import_react24.default.createElement(AngelsTab, null)), active === "cycles" && /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, /* @__PURE__ */ import_react24.default.createElement(SubTabs, { items: SUB.cycles, active: sub.cycles, onChange: setSubTab("cycles") }), sub.cycles === "saros" && /* @__PURE__ */ import_react24.default.createElement(SarosTab, null), sub.cycles === "ayanamsa" && /* @__PURE__ */ import_react24.default.createElement(AyanamsaTab, null), sub.cycles === "lunarsolar" && /* @__PURE__ */ import_react24.default.createElement(LunarSolarTab, null), sub.cycles === "alignments" && /* @__PURE__ */ import_react24.default.createElement(AlignmentsTab, { setDate, goReader: (d) => {
     setDate(d);
     setActive("translator");
   }, lex, angelMap: ANGEL72, genData, nameRefs }), sub.cycles === "week" && /* @__PURE__ */ import_react24.default.createElement(WeekTab, { date: effDate, rows })), active === "revelation" && /* @__PURE__ */ import_react24.default.createElement(RevelationsTab, { sub: sub.revelation, setSubTab: setSubTab("revelation"), date: effDate, rows, occ, words, genData, genYear }), active === "psalms" && /* @__PURE__ */ import_react24.default.createElement(PsalmsTab, null), active === "codes" && /* @__PURE__ */ import_react24.default.createElement(CodesTab, { sub: sub.codes, setSubTab: setSubTab("codes") }), active === "method" && /* @__PURE__ */ import_react24.default.createElement(MethodTab, { esGlossCount: Object.keys(lex.esGloss || {}).length }))), /* @__PURE__ */ import_react24.default.createElement(Footer, null));
 }
 function TabsBar({ goTab }) {
-  return /* @__PURE__ */ import_react24.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react24.default.createElement("div", { key: id, role: "tab", className: "tab", onClick: () => goTab(id) }, label)));
+  return /* @__PURE__ */ import_react24.default.createElement("div", { className: "tabs", role: "tablist" }, TABS.map(([id, label]) => /* @__PURE__ */ import_react24.default.createElement("div", { key: id, role: "tab", className: "tab", onClick: () => goTab(id) }, label)), /* @__PURE__ */ import_react24.default.createElement(PaperTab, null));
 }
 
 // app.jsx

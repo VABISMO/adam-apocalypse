@@ -23,8 +23,8 @@ function WarningModal({ open, onClose, onProceed }){
   const risk = yesCount >= 1;
 
   return (
-    <div className="eph-modal" role="dialog" aria-modal="true" aria-labelledby="wm-title" onClick={onClose}>
-      <div className="eph-panel panel" style={{maxWidth:560}} onClick={e=>e.stopPropagation()}>
+    <div className="eph-modal warn-modal" role="dialog" aria-modal="true" aria-labelledby="wm-title" onClick={onClose}>
+      <div className="eph-panel panel warn-panel" style={{maxWidth:560}} onClick={e=>e.stopPropagation()}>
         <h2 id="wm-title" style={{marginTop:0}}>Before you enter</h2>
         <div className="muted" style={{marginBottom:12,fontSize:'.9rem'}}>
           This project explores <b style={{color:'var(--gold)'}}>revelation, cosmology and altered-state symbolism</b> — the meaning of <i>apocalypse</i> as the unveiling of knowledge, read through the stars. Some of it can feel intense or destabilizing.

@@ -32,6 +32,12 @@ import { MAGES } from './data/mages.js';
 const PROPHET_BY_SLUG = new Map(PROPHETS.map((p) => [slugify(p.name), p]));
 const MAGE_BY_SLUG = new Map(MAGES.map((m) => [slugify(m.name), m]));
 
+// The academic paper — served on the same domain at /paper (no external redirect).
+const PAPER_URL = '/paper';
+function PaperTab() {
+  return <a className="tab" style={{ textDecoration: 'none', borderColor: 'var(--line)' }} href={PAPER_URL} title="The academic paper">Paper →</a>;
+}
+
 const TABS = [
   ['cycles','Cycles'],['sky','Sky Map'],['translator','Reader'],['reading','Reading'],['time','Time'],
   ['gematria','Gematria'],['sigils','Sigils'],['revelation','Revelations'],['psalms','Psalms'],['codes','Codes'],['method','Methodology'],
@@ -71,13 +77,16 @@ function parseRoute(){
 
 function App(){
   const today='2026-08-08';
+  // The app opens on the cited example alignment (-6352-10-21): a millennium-grade
+  // stellar constriction whose readable layer is verse-attested biblical names + cities.
+  const DEFAULT_DATE='-6352-10-21';
   const [active,setActive]=useState('cycles');
   const [sub,setSub]=useState({reading:'rule',time:'predictor',sigils:'sigil',cycles:'alignments',revelation:'hebrew',codes:'els'});
   const [lex,setLex]=useState(null);
   const [lexErr,setLexErr]=useState(null);
   const [angels,setAngels]=useState(null);
   const [nameRefs,setNameRefs]=useState(null);
-  const [date,setDate]=useState(today);
+  const [date,setDate]=useState(DEFAULT_DATE);
   const [genYear,setGenYear]=useState(2026);
   const [genData,setGenData]=useState(null);
   const [loading,setLoading]=useState(false);
@@ -206,6 +215,7 @@ function App(){
     <div>
       <div className="tabs" role="tablist">
         {TABS.map(([id,label])=> <div key={id} role="tab" aria-selected={active===id} className={'tab'+(active===id?' active':'')} onClick={()=>goTab(id)}>{label}</div>)}
+        <PaperTab/>
       </div>
 
       <section className="panel app-panel">
@@ -270,6 +280,7 @@ function App(){
 function TabsBar({goTab}){
   return <div className="tabs" role="tablist">
     {TABS.map(([id,label])=> <div key={id} role="tab" className="tab" onClick={()=>goTab(id)}>{label}</div>)}
+    <PaperTab/>
   </div>;
 }
 

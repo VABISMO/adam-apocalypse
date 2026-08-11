@@ -3,7 +3,7 @@
 import React from 'react';
 
 const GITHUB = 'https://github.com/VABISMO/adam-apocalypse';
-const PAPER = 'https://adam-apocalypse-paper.onrender.com/';
+const PAPER = '/paper';
 
 function Col({ title, children }){
   return <section className="ft-col">
@@ -21,7 +21,7 @@ function Footer(){
     <div className="ft-grid">
       <Col title="The Apocalypse of Adam">
         <p className="ft-blurb">Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names — the stellar alphabet behind the paper.</p>
-        <L href={PAPER} ext>The paper — The Reader of the Sky ↗</L>
+        <L href={PAPER}>The paper — The Reader of the Sky →</L>
         <L href={GITHUB} ext>Source on GitHub ↗</L>
       </Col>
 
