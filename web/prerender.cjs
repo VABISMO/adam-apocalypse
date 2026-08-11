@@ -24583,7 +24583,7 @@ function shell({ title, desc, keywords, path: routePath, jsonld, body }) {
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%2308080b'/%3E%3Cpath d='M12 2 L14.6 8.6 L22 9.3 L16.3 14.1 L18.2 21.3 L12 17.3 L5.8 21.3 L7.7 14.1 L2 9.3 L9.4 8.6 Z' fill='%23e8c87a'/%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23000'/%3E%3Ctext x='12' y='18' text-anchor='middle' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23e8c87a'%3EA%3C/text%3E%3C/svg%3E" />
 <link rel="manifest" href="/site.webmanifest" />
 <meta name="theme-color" content="#000000" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
