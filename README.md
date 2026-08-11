@@ -11,10 +11,9 @@
 
 [Adam Apocalypse Paper](https://adam-apocalypse-paper.onrender.com/)
 
-<img width="1156" height="603" alt="image" src="https://github.com/user-attachments/assets/e57db731-4697-494f-b273-8c61ee288edd" />
+<img width="1103" height="952" alt="image" src="https://github.com/user-attachments/assets/dc1b9a8c-6506-4522-a38d-6dea4311b732" />
 
-
-<img width="1156" height="768" alt="image" src="https://github.com/user-attachments/assets/a346323d-261f-4833-ae4f-2a5dafea1363" />
+<img width="1103" height="952" alt="image" src="https://github.com/user-attachments/assets/c247a869-5693-44af-a6f5-433daeed53d9" />
 
 
 # Caeli Reader (קורא השמים)
