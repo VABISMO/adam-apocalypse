@@ -24876,7 +24876,7 @@ for (const row of LEX) {
   writeHtml(`reader/${he}/index.html`, shell({ title, desc, keywords, path: `/reader/${encodeURIComponent(he)}`, jsonld, body }));
   nGloss++;
 }
-var today = "2026-08-10";
+var today = (/* @__PURE__ */ new Date()).toISOString().slice(0, 10);
 function urlEntry(loc, changefreq = "monthly", priority = "0.5") {
   return `  <url><loc>${esc(loc)}</loc><lastmod>${today}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>`;
 }
@@ -24905,6 +24905,7 @@ import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "sitemap
 var sIndex = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  `  <sitemap><loc>${SITE}/sitemap_hub.xml</loc><lastmod>${today}</lastmod></sitemap>`,
   `  <sitemap><loc>${SITE}/sitemap_alignments.xml</loc><lastmod>${today}</lastmod></sitemap>`,
   `  <sitemap><loc>${SITE}/sitemap_readings.xml</loc><lastmod>${today}</lastmod></sitemap>`,
   `  <sitemap><loc>${SITE}/sitemap_figures.xml</loc><lastmod>${today}</lastmod></sitemap>`,
@@ -24952,7 +24953,7 @@ var llmsTxt = `# The Apocalypse of Adam
 
 ## Machine-readable
 - [llms-full.txt](${SITE}/llms-full.txt) \u2014 full site description + WebMCP tool catalogue
-- [sitemap.xml](${SITE}/sitemap.xml) \u2014 index to all URLs (267 alignments + 6045 glosses + 57 figure fiches)
+- [sitemap.xml](${SITE}/sitemap.xml) \u2014 index to all sub-sitemaps (hub + 267 alignments + 6045 glosses + 57 figure fiches)
 - [robots.txt](${SITE}/robots.txt)
 - [site.webmanifest](${SITE}/site.webmanifest)
 - JSON datasets: [/alignments.json](${SITE}/alignments.json) \xB7 [/lexicon.json](${SITE}/lexicon.json) \xB7 [/angels72.json](${SITE}/angels72.json) \xB7 [/name_refs.json](${SITE}/name_refs.json)
