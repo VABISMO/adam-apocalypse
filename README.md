@@ -7,9 +7,7 @@
 
 ### Paper 
 
-[📄 View the PDF](pdf/lector-del-cielo_EN.pdf)
-
-[Adam Apocalypse Paper](https://adam-apocalypse-paper.onrender.com/)
+[Adam Apocalypse Paper ](https://adam-apocalypse.onrender.com/paper)
 
 <img width="1103" height="952" alt="image" src="https://github.com/user-attachments/assets/dc1b9a8c-6506-4522-a38d-6dea4311b732" />
 
