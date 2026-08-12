@@ -36,7 +36,7 @@ window.fetch = globalThis.fetch;
 const results = [];
 const check = (name, cond, extra) => results.push({ name, ok: !!cond, extra: extra || '' });
 
-const { App, ProphetsPage, MagesPage, AlignmentFicha, ProphetFicha, MageFicha, Landing, About, WarningModal } = await import('./test-entry.bundle.mjs');
+const { App, ProphetsPage, MagesPage, AlignmentFicha, ProphetFicha, MageFicha, PatriarchFicha, PlaceFicha, PatriarchsPage, PlacesPage, Landing, About, WarningModal } = await import('./test-entry.bundle.mjs');
 
 // --- mount App ---
 const root = window.document.getElementById('root');
@@ -105,6 +105,34 @@ try {
   check('route /prophet/jacob-frank: works table renders', /Life & work in brief|Life &amp; work in brief/.test(html));
   check('route /prophet/jacob-frank: Wikipedia link', /en\.wikipedia\.org/.test(html));
 } catch (e) { check('route /prophet/jacob-frank renders', false, String(e.message)); }
+
+// --- Patriarchs/Conquest + Places sections (§15c.11a name fichas) ---
+try {
+  const html = renderToStaticMarkup(React.createElement(PatriarchsPage));
+  check('route /patriarchs: h1 renders', /Patriarchs\/Conquest — names readable in the sky/.test(html));
+  check('route /patriarchs: period group renders', /Patriarchs\/Conquest/.test(html));
+  check('route /patriarchs: links to fichas', /href="\/patriarch\//.test(html));
+} catch (e) { check('route /patriarchs renders', false, String(e.message)); }
+
+try {
+  const html = renderToStaticMarkup(React.createElement(PlacesPage));
+  check('route /places: h1 renders', /Places — biblical toponyms readable in the sky/.test(html));
+  check('route /places: links to fichas', /href="\/place\//.test(html));
+} catch (e) { check('route /places renders', false, String(e.message)); }
+
+try {
+  const html = renderToStaticMarkup(React.createElement(PatriarchFicha, { slug: 'abraham' }));
+  check('route /patriarch/abraham: name renders', /Abraham/.test(html));
+  check('route /patriarch/abraham: gematria panel', /Gematria/.test(html));
+  check('route /patriarch/abraham: readable-on table', /Readable on these rare conjunctions/.test(html));
+  check('route /patriarch/abraham: reader link', /\/app\?date=/.test(html));
+} catch (e) { check('route /patriarch/abraham renders', false, String(e.message)); }
+
+try {
+  const html = renderToStaticMarkup(React.createElement(PlaceFicha, { slug: 'beer-sheba' }));
+  check('route /place/beer-sheba: name renders', /Beer-Sheba/.test(html));
+  check('route /place/beer-sheba: place label', /biblical place/.test(html));
+} catch (e) { check('route /place/beer-sheba renders', false, String(e.message)); }
 
 try {
   const lex = JSON.parse(readFileSync(new URL('lexicon.json', import.meta.url), 'utf8'));

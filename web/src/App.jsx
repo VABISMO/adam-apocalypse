@@ -21,16 +21,28 @@ import { MagesPage } from './pages/MagesPage.jsx';
 import { AlignmentFicha } from './pages/AlignmentFicha.jsx';
 import { ProphetFicha } from './pages/ProphetFicha.jsx';
 import { MageFicha } from './pages/MageFicha.jsx';
+import { PatriarchFicha } from './pages/PatriarchFicha.jsx';
+import { PlaceFicha } from './pages/PlaceFicha.jsx';
+import { PatriarchsPage } from './pages/PatriarchsPage.jsx';
+import { PlacesPage } from './pages/PlacesPage.jsx';
 import { Landing } from './pages/Landing.jsx';
 import { About } from './pages/About.jsx';
 import { slugify } from './data/wiki.js';
 import { PROPHETS } from './data/prophets.js';
 import { MAGES } from './data/mages.js';
+import { PATRIARCHS, BY_SLUG as PATRIARCH_BY } from './data/patriarchs.js';
+import { PLACES, BY_SLUG as PLACE_BY } from './data/places.js';
 
 // slug → figure, for client-side <title>/<meta> on ficha routes (the prerendered
 // deep links carry the precise per-ficha meta; this is for in-app navigation).
 const PROPHET_BY_SLUG = new Map(PROPHETS.map((p) => [slugify(p.name), p]));
 const MAGE_BY_SLUG = new Map(MAGES.map((m) => [slugify(m.name), m]));
+const PATRIARCH_BY_SLUG = PATRIARCH_BY;
+const PLACE_BY_SLUG = PLACE_BY;
+
+// query-param read for the ?date= / ?tab= boot (the §15c.11a table links here). Safe on
+// the server (prerender) where window is undefined — returns null.
+function qp(k){ if(typeof window==='undefined') return null; return new URLSearchParams(window.location.search).get(k); }
 
 // The academic paper — served on the same domain at /paper (no external redirect).
 // Linked from the Footer (every page) and the Landing hero, so no Paper tab in the tab bar.
@@ -61,8 +73,12 @@ function parseRoute(){
   if((m=/^\/align\/(.+)$/.exec(path))){ return {name:'align', date:decodeURIComponent(m[1])}; }
   if((m=/^\/prophet\/(.+)$/.exec(path))){ return {name:'prophet', slug:decodeURIComponent(m[1])}; }
   if((m=/^\/mage\/(.+)$/.exec(path))){ return {name:'mage', slug:decodeURIComponent(m[1])}; }
+  if((m=/^\/patriarch\/(.+)$/.exec(path))){ return {name:'patriarch', slug:decodeURIComponent(m[1])}; }
+  if((m=/^\/place\/(.+)$/.exec(path))){ return {name:'place', slug:decodeURIComponent(m[1])}; }
   if(path==='/prophets') return {name:'prophets'};
   if(path==='/mages') return {name:'mages'};
+  if(path==='/patriarchs') return {name:'patriarchs'};
+  if(path==='/places') return {name:'places'};
   if(path==='/alignments') return {name:'alignments'};
   if(path==='/readings') return {name:'readings'};
   if(path==='/app') return {name:'app'};
@@ -76,13 +92,13 @@ function App(){
   // The app opens on the cited example alignment (-6352-10-21): a millennium-grade
   // stellar constriction whose readable layer is verse-attested biblical names + cities.
   const DEFAULT_DATE='-6352-10-21';
-  const [active,setActive]=useState('cycles');
+  const [active,setActive]=useState(()=>{ const t=qp('tab'); return t && TABS.some(([id])=>id===t) ? t : 'cycles'; });
   const [sub,setSub]=useState({reading:'rule',time:'predictor',sigils:'sigil',cycles:'alignments',revelation:'hebrew',codes:'els'});
   const [lex,setLex]=useState(null);
   const [lexErr,setLexErr]=useState(null);
   const [angels,setAngels]=useState(null);
   const [nameRefs,setNameRefs]=useState(null);
-  const [date,setDate]=useState(DEFAULT_DATE);
+  const [date,setDate]=useState(()=>{ const d=qp('date'); return d && parseDate(d) ? d : DEFAULT_DATE; });
   const [genYear,setGenYear]=useState(2026);
   const [genData,setGenData]=useState(null);
   const [loading,setLoading]=useState(false);
@@ -159,6 +175,20 @@ function App(){
       const m2 = MAGE_BY_SLUG.get(route.slug);
       t = m2 ? `${m2.name} — magus ficha | Apocalypse of Adam` : 'Magus ficha | Apocalypse of Adam';
       d = m2 ? `${m2.name} (${m2.region}, ${m2.years}): Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions summary table. ${m2.role}` : 'Magus detail ficha with Wikipedia biography and a works table.';
+    } else if(route.name==='patriarchs'){
+      t='Patriarchs/Conquest — biblical names readable in the sky | Apocalypse of Adam';
+      d='The biblical persons whose names the stellar reading surfaces on the 12 dated rare conjunctions, grouped by biblical period. Each name links to a ficha: Hebrew, gematria, the stellar letters it needs, and the conjunctions where it reads.';
+    } else if(route.name==='places'){
+      t='Places — biblical toponyms readable in the sky | Apocalypse of Adam';
+      d='The biblical places (toponyms) the stellar reading surfaces on the 12 dated rare conjunctions, grouped by biblical period. Each place links to a ficha: Hebrew, gematria, the stellar letters it needs, and the conjunctions where it reads.';
+    } else if(route.name==='patriarch'){
+      const p = PATRIARCH_BY_SLUG.get(route.slug);
+      t = p ? `${p.name} — patriarch ficha | Apocalypse of Adam` : 'Patriarch ficha | Apocalypse of Adam';
+      d = p ? `${p.name} (${p.translit}, ${p.ref}): a biblical person readable in the sky. Gematria ${p.gem}, ${p.len} consonants, ${p.period}, readable on ${p.dates.length} of the 12 dated rare conjunctions.` : 'Patriarch detail ficha.';
+    } else if(route.name==='place'){
+      const p = PLACE_BY_SLUG.get(route.slug);
+      t = p ? `${p.name} — place ficha | Apocalypse of Adam` : 'Place ficha | Apocalypse of Adam';
+      d = p ? `${p.name} (${p.translit}, ${p.ref}): a biblical toponym readable in the sky. Gematria ${p.gem}, ${p.len} consonants, ${p.period}, readable on ${p.dates.length} of the 12 dated rare conjunctions.` : 'Place detail ficha.';
     } else if(route.name==='alignments'){
       t='Stellar alignments — rare century & millennium conjunctions | Apocalypse of Adam';
       d='All rare stellar alignments (planets concentrated in one zodiac sign): dates, tightest arc, precessional era, and the readable names of each alignment day.';
@@ -218,9 +248,13 @@ function App(){
   if(route.name==='about') return <div><About/><Footer/></div>;
   if(route.name==='prophets') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><ProphetsPage onOpen={navigate}/></section><Footer/></div>;
   if(route.name==='mages') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><MagesPage onOpen={navigate}/></section><Footer/></div>;
+  if(route.name==='patriarchs') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><PatriarchsPage/></section><Footer/></div>;
+  if(route.name==='places') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><PlacesPage/></section><Footer/></div>;
   if(route.name==='align') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><AlignmentFicha date={route.date} lex={lex} angelMap={ANGEL72} onBack={backHome} nameRefs={nameRefs}/></section><Footer/></div>;
   if(route.name==='prophet') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><ProphetFicha slug={route.slug}/></section><Footer/></div>;
   if(route.name==='mage') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><MageFicha slug={route.slug}/></section><Footer/></div>;
+  if(route.name==='patriarch') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><PatriarchFicha slug={route.slug}/></section><Footer/></div>;
+  if(route.name==='place') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><PlaceFicha slug={route.slug}/></section><Footer/></div>;
   if(route.name==='alignments') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><AlignmentsTab setDate={setDate} goReader={(d)=>{ setDate(d); setActive('translator'); navigate('/'); }} lex={lex} angelMap={ANGEL72} genData={genData} nameRefs={nameRefs}/></section><Footer/></div>;
   if(route.name==='readings') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><TranslatorTab date={effDate} occ={occ} words={words} q={q} setQ={setQ} genData={genData} onOpen={openGloss} nameRefs={nameRefs}/></section><Footer/></div>;
 
