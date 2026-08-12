@@ -24,9 +24,9 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 
-// node_modules/react/cjs/react.production.min.js
+// ../node_modules/react/cjs/react.production.min.js
 var require_react_production_min = __commonJS({
-  "node_modules/react/cjs/react.production.min.js"(exports2) {
+  "../node_modules/react/cjs/react.production.min.js"(exports2) {
     "use strict";
     var l = Symbol.for("react.element");
     var n = Symbol.for("react.portal");
@@ -297,9 +297,9 @@ var require_react_production_min = __commonJS({
   }
 });
 
-// node_modules/react/cjs/react.development.js
+// ../node_modules/react/cjs/react.development.js
 var require_react_development = __commonJS({
-  "node_modules/react/cjs/react.development.js"(exports2, module2) {
+  "../node_modules/react/cjs/react.development.js"(exports2, module2) {
     "use strict";
     if (process.env.NODE_ENV !== "production") {
       (function() {
@@ -904,12 +904,12 @@ var require_react_development = __commonJS({
         var SEPARATOR = ".";
         var SUBSEPARATOR = ":";
         function escape(key) {
-          var escapeRegex2 = /[=:]/g;
+          var escapeRegex = /[=:]/g;
           var escaperLookup = {
             "=": "=0",
             ":": "=2"
           };
-          var escapedString = key.replace(escapeRegex2, function(match) {
+          var escapedString = key.replace(escapeRegex, function(match) {
             return escaperLookup[match];
           });
           return "$" + escapedString;
@@ -1356,7 +1356,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher.useContext(Context);
         }
-        function useState8(initialState) {
+        function useState7(initialState) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState);
         }
@@ -1364,11 +1364,11 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useReducer(reducer, initialArg, init);
         }
-        function useRef5(initialValue) {
+        function useRef4(initialValue) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
-        function useEffect7(create, deps) {
+        function useEffect6(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useEffect(create, deps);
         }
@@ -1380,11 +1380,11 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useLayoutEffect(create, deps);
         }
-        function useCallback3(callback, deps) {
+        function useCallback2(callback, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useCallback(callback, deps);
         }
-        function useMemo7(create, deps) {
+        function useMemo6(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useMemo(create, deps);
         }
@@ -2147,19 +2147,19 @@ var require_react_development = __commonJS({
         exports2.memo = memo;
         exports2.startTransition = startTransition;
         exports2.unstable_act = act;
-        exports2.useCallback = useCallback3;
+        exports2.useCallback = useCallback2;
         exports2.useContext = useContext;
         exports2.useDebugValue = useDebugValue;
         exports2.useDeferredValue = useDeferredValue;
-        exports2.useEffect = useEffect7;
+        exports2.useEffect = useEffect6;
         exports2.useId = useId;
         exports2.useImperativeHandle = useImperativeHandle;
         exports2.useInsertionEffect = useInsertionEffect;
         exports2.useLayoutEffect = useLayoutEffect;
-        exports2.useMemo = useMemo7;
+        exports2.useMemo = useMemo6;
         exports2.useReducer = useReducer;
-        exports2.useRef = useRef5;
-        exports2.useState = useState8;
+        exports2.useRef = useRef4;
+        exports2.useState = useState7;
         exports2.useSyncExternalStore = useSyncExternalStore;
         exports2.useTransition = useTransition;
         exports2.version = ReactVersion;
@@ -2171,9 +2171,9 @@ var require_react_development = __commonJS({
   }
 });
 
-// node_modules/react/index.js
+// ../node_modules/react/index.js
 var require_react = __commonJS({
-  "node_modules/react/index.js"(exports2, module2) {
+  "../node_modules/react/index.js"(exports2, module2) {
     "use strict";
     if (process.env.NODE_ENV === "production") {
       module2.exports = require_react_production_min();
@@ -2183,9 +2183,9 @@ var require_react = __commonJS({
   }
 });
 
-// node_modules/react-dom/cjs/react-dom-server-legacy.node.production.min.js
+// ../node_modules/react-dom/cjs/react-dom-server-legacy.node.production.min.js
 var require_react_dom_server_legacy_node_production_min = __commonJS({
-  "node_modules/react-dom/cjs/react-dom-server-legacy.node.production.min.js"(exports2) {
+  "../node_modules/react-dom/cjs/react-dom-server-legacy.node.production.min.js"(exports2) {
     "use strict";
     var ea = require_react();
     var fa = require("stream");
@@ -3739,9 +3739,9 @@ var require_react_dom_server_legacy_node_production_min = __commonJS({
   }
 });
 
-// node_modules/react-dom/cjs/react-dom-server.node.production.min.js
+// ../node_modules/react-dom/cjs/react-dom-server.node.production.min.js
 var require_react_dom_server_node_production_min = __commonJS({
-  "node_modules/react-dom/cjs/react-dom-server.node.production.min.js"(exports2) {
+  "../node_modules/react-dom/cjs/react-dom-server.node.production.min.js"(exports2) {
     "use strict";
     var aa = require("util");
     var ba = require_react();
@@ -5419,17 +5419,17 @@ var require_react_dom_server_node_production_min = __commonJS({
   }
 });
 
-// node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js
+// ../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js
 var require_react_dom_server_legacy_node_development = __commonJS({
-  "node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js"(exports2) {
+  "../node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js"(exports2) {
     "use strict";
     if (process.env.NODE_ENV !== "production") {
       (function() {
         "use strict";
-        var React23 = require_react();
+        var React22 = require_react();
         var stream = require("stream");
         var ReactVersion = "18.3.1";
-        var ReactSharedInternals = React23.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React22.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function warn(format) {
           {
             {
@@ -7324,7 +7324,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
         }
         function flattenOptionChildren(children) {
           var content = "";
-          React23.Children.forEach(children, function(child) {
+          React22.Children.forEach(children, function(child) {
             if (child == null) {
               return;
             }
@@ -9317,7 +9317,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
         function basicStateReducer(state, action) {
           return typeof action === "function" ? action(state) : action;
         }
-        function useState8(initialState) {
+        function useState7(initialState) {
           {
             currentHookNameInDev = "useState";
           }
@@ -9382,7 +9382,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             return [workInProgressHook.memoizedState, _dispatch];
           }
         }
-        function useMemo7(nextCreate, deps) {
+        function useMemo6(nextCreate, deps) {
           currentlyRenderingComponent = resolveCurrentlyRenderingComponent();
           workInProgressHook = createWorkInProgressHook();
           var nextDeps = deps === void 0 ? null : deps;
@@ -9407,7 +9407,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           workInProgressHook.memoizedState = [nextValue, nextDeps];
           return nextValue;
         }
-        function useRef5(initialValue) {
+        function useRef4(initialValue) {
           currentlyRenderingComponent = resolveCurrentlyRenderingComponent();
           workInProgressHook = createWorkInProgressHook();
           var previousRef = workInProgressHook.memoizedState;
@@ -9455,8 +9455,8 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             }
           }
         }
-        function useCallback3(callback, deps) {
-          return useMemo7(function() {
+        function useCallback2(callback, deps) {
+          return useMemo6(function() {
             return callback;
           }, deps);
         }
@@ -9496,13 +9496,13 @@ var require_react_dom_server_legacy_node_development = __commonJS({
         var Dispatcher = {
           readContext: readContext$1,
           useContext,
-          useMemo: useMemo7,
+          useMemo: useMemo6,
           useReducer,
-          useRef: useRef5,
-          useState: useState8,
+          useRef: useRef4,
+          useState: useState7,
           useInsertionEffect: noop,
           useLayoutEffect,
-          useCallback: useCallback3,
+          useCallback: useCallback2,
           // useImperativeHandle is not run in the server environment
           useImperativeHandle: noop,
           // Effects are not run in the server environment.
@@ -10823,17 +10823,17 @@ var require_react_dom_server_legacy_node_development = __commonJS({
   }
 });
 
-// node_modules/react-dom/cjs/react-dom-server.node.development.js
+// ../node_modules/react-dom/cjs/react-dom-server.node.development.js
 var require_react_dom_server_node_development = __commonJS({
-  "node_modules/react-dom/cjs/react-dom-server.node.development.js"(exports2) {
+  "../node_modules/react-dom/cjs/react-dom-server.node.development.js"(exports2) {
     "use strict";
     if (process.env.NODE_ENV !== "production") {
       (function() {
         "use strict";
-        var React23 = require_react();
+        var React22 = require_react();
         var util = require("util");
         var ReactVersion = "18.3.1";
-        var ReactSharedInternals = React23.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React22.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function warn(format) {
           {
             {
@@ -12825,7 +12825,7 @@ var require_react_dom_server_node_development = __commonJS({
         }
         function flattenOptionChildren(children) {
           var content = "";
-          React23.Children.forEach(children, function(child) {
+          React22.Children.forEach(children, function(child) {
             if (child == null) {
               return;
             }
@@ -14754,7 +14754,7 @@ var require_react_dom_server_node_development = __commonJS({
         function basicStateReducer(state, action) {
           return typeof action === "function" ? action(state) : action;
         }
-        function useState8(initialState) {
+        function useState7(initialState) {
           {
             currentHookNameInDev = "useState";
           }
@@ -14819,7 +14819,7 @@ var require_react_dom_server_node_development = __commonJS({
             return [workInProgressHook.memoizedState, _dispatch];
           }
         }
-        function useMemo7(nextCreate, deps) {
+        function useMemo6(nextCreate, deps) {
           currentlyRenderingComponent = resolveCurrentlyRenderingComponent();
           workInProgressHook = createWorkInProgressHook();
           var nextDeps = deps === void 0 ? null : deps;
@@ -14844,7 +14844,7 @@ var require_react_dom_server_node_development = __commonJS({
           workInProgressHook.memoizedState = [nextValue, nextDeps];
           return nextValue;
         }
-        function useRef5(initialValue) {
+        function useRef4(initialValue) {
           currentlyRenderingComponent = resolveCurrentlyRenderingComponent();
           workInProgressHook = createWorkInProgressHook();
           var previousRef = workInProgressHook.memoizedState;
@@ -14892,8 +14892,8 @@ var require_react_dom_server_node_development = __commonJS({
             }
           }
         }
-        function useCallback3(callback, deps) {
-          return useMemo7(function() {
+        function useCallback2(callback, deps) {
+          return useMemo6(function() {
             return callback;
           }, deps);
         }
@@ -14933,13 +14933,13 @@ var require_react_dom_server_node_development = __commonJS({
         var Dispatcher = {
           readContext: readContext$1,
           useContext,
-          useMemo: useMemo7,
+          useMemo: useMemo6,
           useReducer,
-          useRef: useRef5,
-          useState: useState8,
+          useRef: useRef4,
+          useState: useState7,
           useInsertionEffect: noop,
           useLayoutEffect,
-          useCallback: useCallback3,
+          useCallback: useCallback2,
           // useImperativeHandle is not run in the server environment
           useImperativeHandle: noop,
           // Effects are not run in the server environment.
@@ -16211,9 +16211,9 @@ var require_react_dom_server_node_development = __commonJS({
   }
 });
 
-// node_modules/react-dom/server.node.js
+// ../node_modules/react-dom/server.node.js
 var require_server_node = __commonJS({
-  "node_modules/react-dom/server.node.js"(exports2) {
+  "../node_modules/react-dom/server.node.js"(exports2) {
     "use strict";
     var l;
     var s;
@@ -16233,17 +16233,17 @@ var require_server_node = __commonJS({
   }
 });
 
-// web/scripts/prerender.jsx
-var import_node_fs2 = __toESM(require("node:fs"));
-var import_node_path2 = __toESM(require("node:path"));
+// scripts/prerender.jsx
+var import_node_fs = __toESM(require("node:fs"));
+var import_node_path = __toESM(require("node:path"));
 var import_node_url = require("node:url");
-var import_react22 = __toESM(require_react());
+var import_react21 = __toESM(require_react());
 var import_server = __toESM(require_server_node());
 
-// web/src/pages/ProphetsPage.jsx
+// src/pages/ProphetsPage.jsx
 var import_react2 = __toESM(require_react());
 
-// web/src/data/prophets.js
+// src/data/prophets.js
 var POINTED = /[֑-ֽֿׁ-ׇׅ]/g;
 var RAW = [
   { name: "Adam", he: "\u05D0\u05B8\u05D3\u05B8\u05DD", era: "BCE", y0: -4e3, y1: -4e3, region: "Eden (legendary)", role: "First human in Genesis; paradigmatic figure of creation and fall.", thread: "biblical" },
@@ -16595,7 +16595,7 @@ var PROPHECIES = {
 };
 var PROPHETS = RAW.map((p) => ({ ...p, he: (p.he || "").replace(POINTED, ""), prophecies: PROPHECIES[p.name] || null }));
 
-// web/src/data/wiki_content.json
+// src/data/wiki_content.json
 var wiki_content_default = {
   Adam: {
     title: "Adam",
@@ -25639,13 +25639,13 @@ Little else is known about his childhood, although there is a persistent traditi
   }
 };
 
-// web/src/data/wiki.js
+// src/data/wiki.js
 var WIKI = wiki_content_default;
 function slugify(name) {
   return String(name).toLowerCase().replace(/[()]/g, " ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 }
 
-// web/src/components/Timeline.jsx
+// src/components/Timeline.jsx
 var import_react = __toESM(require_react());
 function fmtYear(y) {
   if (y < 0) return Math.abs(y) + " BCE";
@@ -25680,7 +25680,7 @@ function Timeline({ items, title, accent = "#8a05ff" }) {
   })), /* @__PURE__ */ import_react.default.createElement("div", { className: "muted", style: { textAlign: "center", fontSize: ".78rem", marginTop: 2 } }, /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "#e8c87a" } }, "\u25CF"), " lineage end \xB7 ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: "#c29eff" } }, "\u25CF"), " royal \xB7 ", /* @__PURE__ */ import_react.default.createElement("span", { style: { color: accent } }, "\u25CF"), " mage/prophet \xB7 hover a dot for the figure"));
 }
 
-// web/src/pages/ProphetsPage.jsx
+// src/pages/ProphetsPage.jsx
 function ProphetCard({ p, onOpen }) {
   const dates = p.y0 === p.y1 ? fmtYear(p.y0) : `${fmtYear(p.y0)} \u2013 ${fmtYear(p.y1)}`;
   const end = !!p.endpoint;
@@ -25712,10 +25712,10 @@ function ProphetsPage({ onOpen }) {
   return /* @__PURE__ */ import_react2.default.createElement("div", null, /* @__PURE__ */ import_react2.default.createElement("h1", null, "Prophets \u2014 from Adam to Jacob Frank"), /* @__PURE__ */ import_react2.default.createElement("p", { className: "muted" }, "A chronology of prophetic and revelatory figures, from the first human ", /* @__PURE__ */ import_react2.default.createElement("span", { className: "he" }, "\u05D0\u05D3\u05DD"), " and his son ", /* @__PURE__ */ import_react2.default.createElement("b", null, "Seth"), " \u2014 who, per Josephus, inscribed the astronomical knowledge on two pillars (brick and stone) to outlast the flood \u2014 through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, the ", /* @__PURE__ */ import_react2.default.createElement("b", null, "Islamic prophets"), " (including Job/Ayyub) and the ", /* @__PURE__ */ import_react2.default.createElement("b", null, "Sufi mystics"), " (including the Illuminationist Suhrawardi), down to the Sabbatean\u2013Frankist thread whose ", /* @__PURE__ */ import_react2.default.createElement("b", { style: { color: "var(--gold)" } }, last.designation || "final", " figure is ", last.name, " (", fmtYear(last.y0), "\u2013", fmtYear(last.y1), ")"), ". ", PROPHETS.length, " figures across ", span, ". Click a card to open its profile \u2014 a Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table."), /* @__PURE__ */ import_react2.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react2.default.createElement(Timeline, { items: PROPHETS, title: "Prophet timeline \u2014 Adam to Jacob Frank", accent: "#8a05ff" })), /* @__PURE__ */ import_react2.default.createElement("div", { className: "tcards" }, PROPHETS.map((p, i) => /* @__PURE__ */ import_react2.default.createElement(ProphetCard, { key: i, p, onOpen }))));
 }
 
-// web/src/pages/MagesPage.jsx
+// src/pages/MagesPage.jsx
 var import_react3 = __toESM(require_react());
 
-// web/src/data/mages.js
+// src/data/mages.js
 var MAGES = [
   { name: "Adapa", years: "legendary (pre-flood)", y0: -3500, y1: -3450, region: "Mesopotamia (Eridu)", role: "Legendary first of the seven apkallu sages of Eridu; the Sumerian magus-sage archetype who knew the breaking of the south wind's wing.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "Imhotep", years: "c.-2670\u2013-2600", y0: -2670, y1: -2600, region: "Egypt (Memphis)", role: "Vizier of Djoser, architect and physician; deified as a sage-priest \u2014 the archetypal Egyptian magus-sage.", isIberian: false, isRoyal: false, endpoint: false },
@@ -25759,7 +25759,7 @@ var MAGES = [
   { name: "Aleister Crowley", years: "1875\u20131947", y0: 1875, y1: 1947, region: "England/Italy", role: "English occultist; founder of Thelema and author of Liber AL vel Legis (1904), which he held to have been dictated to him by a praeter-human intelligence; re-read scripture through a stellar-qabalistic lens and codified the Solomonic Goetia.", isIberian: false, isRoyal: false, endpoint: true }
 ];
 
-// web/src/pages/MagesPage.jsx
+// src/pages/MagesPage.jsx
 function MageCard({ m, onOpen }) {
   const dates = m.years || `${fmtYear(m.y0)} \u2013 ${fmtYear(m.y1)}`;
   const end = !!m.endpoint;
@@ -25791,13 +25791,13 @@ function MagesPage({ onOpen }) {
   return /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("h1", null, "Magi \u2014 from Adapa to Aleister Crowley"), /* @__PURE__ */ import_react3.default.createElement("p", { className: "muted" }, "A chronology of ", /* @__PURE__ */ import_react3.default.createElement("b", null, "magi / wise-men / royal-sage occult figures"), ", opening with the deepest sage-strata \u2014 the Sumerian apkallu ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Adapa"), ", the Egyptian deified sage ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Imhotep"), ", the priestess-poet ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Enheduanna"), ", ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Hermes Trismegistus"), ", and Pharaoh's magicians ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Jannes and Jambres"), " of Moses' era \u2014 through ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Pythagoras"), " (number as the root of the cosmos), the Babylonian court magi (", /* @__PURE__ */ import_react3.default.createElement("b", null, "Daniel, Shadrach, Meshach, Abednego"), "), the priest-astronomer ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Berossus"), ", the star-following ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Magi of Matthew 2"), ", the neo-Pythagorean magus ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Apollonius of Tyana"), ", the theurgist ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Iamblichus"), ", the magician-martyr ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Saint Cyprian of Antioch"), " ('San Cipriano', whose Libro de San Cipriano and Drag\xF3n Rojo transmit the Solomonic-Egyptian magical lineage to Iberia), the Arabic astrologers ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Abu Ma'shar, Al-Kindi"), " (De radiis stellarum) and ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Maslama al-Qurtubi"), " (Picatrix), the medieval Iberian sages \u2014 ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n"), " \u2014 the Renaissance Christian-kabbalists and royal astrologers, the Baroque ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Jesuit mage Athanasius Kircher"), " (", /* @__PURE__ */ import_react3.default.createElement("i", null, "Oedipus Aegyptiacus"), "), and the modern Hermetic line of ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Eliphas L\xE9vi and S.L. Mathers"), ", ending with ", /* @__PURE__ */ import_react3.default.createElement("b", { style: { color: "var(--gold)" } }, last.name, " (", last.years, ")"), ", founder of Thelema, who re-read scripture by the stars and codified the Solomonic Goetia. ", MAGES.length, " figures across ", span, ". Click a card to open its profile \u2014 a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table."), /* @__PURE__ */ import_react3.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react3.default.createElement(Timeline, { items: MAGES, title: "Magi timeline \u2014 Adapa to Aleister Crowley", accent: "#8a05ff" })), /* @__PURE__ */ import_react3.default.createElement("div", { className: "tcards" }, MAGES.map((m, i) => /* @__PURE__ */ import_react3.default.createElement(MageCard, { key: i, m, onOpen }))));
 }
 
-// web/src/pages/AlignmentFicha.jsx
+// src/pages/AlignmentFicha.jsx
 var import_react5 = __toESM(require_react());
 
-// web/src/ui.jsx
+// src/ui.jsx
 var import_react4 = __toESM(require_react());
 
-// data/astronomy-engine.mjs
+// ../data/astronomy-engine.mjs
 var C_AUDAY = 173.1446326846693;
 var KM_PER_AU = 14959787069098932e-8;
 var DEG2RAD = 0.017453292519943295;
@@ -27794,7 +27794,7 @@ var NodeEventKind;
   NodeEventKind2[NodeEventKind2["Descending"] = -1] = "Descending";
 })(NodeEventKind || (NodeEventKind = {}));
 
-// web/src/core.jsx
+// src/core.jsx
 var SIGNS = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
 var SIMPLE = {
   "Aries": ["\u05D4", "Heh", 5],
@@ -28116,7 +28116,7 @@ function displayDate(ds) {
   return `${da} ${mo} ${y < 0 ? Math.abs(y) + " BCE" : y}`;
 }
 
-// web/src/ui.jsx
+// src/ui.jsx
 function SkyMap({ rows: rows2, occ: occ2, hl }) {
   const C = 220, R2 = 196, Rp = 120;
   const pt = (lon, r) => {
@@ -28157,7 +28157,7 @@ function SkyMap({ rows: rows2, occ: occ2, hl }) {
   }), /* @__PURE__ */ import_react4.default.createElement("text", { x: C, y: C + 34, textAnchor: "middle", fontSize: "6.5", fill: "#6a6a86" }, "3 mothers \xB7 fixed circumpolar axis"));
 }
 
-// web/src/pages/AlignmentFicha.jsx
+// src/pages/AlignmentFicha.jsx
 function smallestArc(lons) {
   const s = [...lons].sort((a, b) => a - b);
   if (s.length < 2) return 0;
@@ -28191,10 +28191,10 @@ function AlignmentFicha({ date, lex, angelMap: angelMap2, onBack, nameRefs: name
   })())))) : /* @__PURE__ */ import_react5.default.createElement("div", { className: "muted" }, "No date-specific readable names on this day.")));
 }
 
-// web/src/pages/ProphetFicha.jsx
+// src/pages/ProphetFicha.jsx
 var import_react7 = __toESM(require_react());
 
-// web/src/components/Ficha.jsx
+// src/components/Ficha.jsx
 var import_react6 = __toESM(require_react());
 function datesOf(figure) {
   if (figure.years) return figure.years;
@@ -28224,7 +28224,7 @@ function Ficha({ figure, kind, axisMin, axisMax, backHref, backLabel, wiki }) {
   } }, "\u25C0 ", backLabel), /* @__PURE__ */ import_react6.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer", style: { marginLeft: "auto" } }, "Wikipedia \u2192")), /* @__PURE__ */ import_react6.default.createElement("h1", { style: { marginBottom: 4 } }, figure.name, figure.he && /* @__PURE__ */ import_react6.default.createElement("span", { className: "he", style: { marginLeft: 10, color: "var(--gold)" } }, figure.he)), /* @__PURE__ */ import_react6.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".9rem" } }, dates, dates && " \xB7 ", figure.region, designation && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 8, color: "var(--gold)", borderColor: "var(--gold)" } }, designation), kind === "mage" && figure.isIberian && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--green)", borderColor: "var(--green)" } }, "Iberian"), kind === "mage" && figure.isRoyal && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 6, color: "var(--violet)", borderColor: "var(--violet)" } }, "royal"), figure.thread && /* @__PURE__ */ import_react6.default.createElement("span", { className: "pill", style: { marginLeft: 6 } }, figure.thread)), axisMin != null && axisMax != null && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { padding: 12, marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement(LifeBar, { figure, min: axisMin, max: axisMax })), /* @__PURE__ */ import_react6.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react6.default.createElement("div", null, w.thumbnail && /* @__PURE__ */ import_react6.default.createElement("div", { className: "fig", style: { marginBottom: 12, padding: 8 } }, /* @__PURE__ */ import_react6.default.createElement("img", { src: w.thumbnail, alt: figure.name, style: { maxHeight: 320, width: "100%", borderRadius: 8, display: "block" }, loading: "lazy" })), /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Description"), /* @__PURE__ */ import_react6.default.createElement("p", { style: { lineHeight: 1.6, marginBottom: 0 } }, desc || "No Wikipedia description available."))), /* @__PURE__ */ import_react6.default.createElement("div", null, facts.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Facts"), /* @__PURE__ */ import_react6.default.createElement("table", { style: { fontSize: ".88rem" } }, /* @__PURE__ */ import_react6.default.createElement("tbody", null, facts.map((f, i) => /* @__PURE__ */ import_react6.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)", width: "38%", verticalAlign: "top" } }, f.label), /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "5px 8px" } }, f.value)))))))), rows2.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Life & work in brief"), /* @__PURE__ */ import_react6.default.createElement("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 } }, "Summarised by section \u2014 one row per topic, for fast reading."), /* @__PURE__ */ import_react6.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react6.default.createElement("thead", null, /* @__PURE__ */ import_react6.default.createElement("tr", null, /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "32%" } }, kind === "mage" ? "Work / contribution" : "Topic"), /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px" } }, kind === "mage" ? "Significance" : "Summary"))), /* @__PURE__ */ import_react6.default.createElement("tbody", null, rows2.map((r, i) => /* @__PURE__ */ import_react6.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px", fontWeight: 600, verticalAlign: "top" } }, r.title), /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, r.note)))))), figure.prophecies && figure.prophecies.length > 0 && /* @__PURE__ */ import_react6.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react6.default.createElement("h2", { style: { marginTop: 0 } }, "Prophecies"), /* @__PURE__ */ import_react6.default.createElement("p", { className: "muted", style: { fontSize: ".82rem", marginTop: 0 } }, "Key prophetic utterances and visions attributed to ", figure.name, ", with sources."), /* @__PURE__ */ import_react6.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react6.default.createElement("thead", null, /* @__PURE__ */ import_react6.default.createElement("tr", null, /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "70%" } }, "Prophecy / vision"), /* @__PURE__ */ import_react6.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "30%" } }, "Source"))), /* @__PURE__ */ import_react6.default.createElement("tbody", null, figure.prophecies.map((pr, i) => /* @__PURE__ */ import_react6.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px", verticalAlign: "top" } }, pr.t), /* @__PURE__ */ import_react6.default.createElement("td", { style: { padding: "6px 8px", color: "var(--gold)" } }, pr.r)))))), /* @__PURE__ */ import_react6.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react6.default.createElement("a", { href: url, target: "_blank", rel: "noreferrer" }, "Read the full article on Wikipedia \u2192")));
 }
 
-// web/src/pages/ProphetFicha.jsx
+// src/pages/ProphetFicha.jsx
 var BY_SLUG = new Map(PROPHETS.map((p) => [slugify(p.name), p]));
 var AXIS_MIN = Math.min(...PROPHETS.map((p) => p.y0));
 var AXIS_MAX = Math.max(...PROPHETS.map((p) => p.y1 == null ? p.y0 : p.y1));
@@ -28246,7 +28246,7 @@ function ProphetFicha({ slug }) {
 }
 var PROPHET_SLUGS = [...BY_SLUG.keys()];
 
-// web/src/pages/MageFicha.jsx
+// src/pages/MageFicha.jsx
 var import_react8 = __toESM(require_react());
 var BY_SLUG2 = new Map(MAGES.map((m) => [slugify(m.name), m]));
 var AXIS_MIN2 = Math.min(...MAGES.map((m) => m.y0));
@@ -28269,10 +28269,10 @@ function MageFicha({ slug }) {
 }
 var MAGE_SLUGS = [...BY_SLUG2.keys()];
 
-// web/src/pages/PatriarchFicha.jsx
+// src/pages/PatriarchFicha.jsx
 var import_react10 = __toESM(require_react());
 
-// web/src/data/patriarchs.js
+// src/data/patriarchs.js
 var PATRIARCHS = [{ "slug": "abagtha", "name": "Abagtha", "he": "\u05D0\u05D1\u05D2\u05EA\u05D0", "translit": "ab-ag-thaw'", "ref": "Esth 1:10", "refN": 1, "gem": 407, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "abda", "name": "Abda", "he": "\u05E2\u05D1\u05D3\u05D0", "translit": "ab-daw'", "ref": "Neh 11:17", "refN": 1, "gem": 77, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "abner", "name": "Abner", "he": "\u05D0\u05D1\u05E0\u05E8", "translit": "ab-nare'", "ref": "1 Sam 17:55", "refN": 40, "gem": 253, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "abraham", "name": "Abraham", "he": "\u05D0\u05D1\u05E8\u05D4\u05DE", "translit": "ab-raw-hawm'", "ref": "Gen 17:5", "refN": 130, "gem": 248, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "abram", "name": "Abram", "he": "\u05D0\u05D1\u05E8\u05DE", "translit": "ab-rawm'", "ref": "Gen 11:29", "refN": 38, "gem": 243, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "achab", "name": "Achab", "he": "\u05D0\u05D7\u05D0\u05D1", "translit": "akh-awb'", "ref": "1 Ki 16:28", "refN": 56, "gem": 12, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05D7", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "achashverosh", "name": "Achashverosh", "he": "\u05D0\u05D7\u05E9\u05D5\u05E8\u05D5\u05E9", "translit": "akh-ash-vay-rosh'", "ref": "Esth 1:1", "refN": 23, "gem": 821, "len": 7, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "achoach", "name": "Achoach", "he": "\u05D0\u05D7\u05D5\u05D7", "translit": "akh-o'-akh", "ref": "1 Chr 8:4", "refN": 1, "gem": 23, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "achrach", "name": "Achrach", "he": "\u05D0\u05D7\u05E8\u05D7", "translit": "akh-rakh'", "ref": "1 Chr 8:1", "refN": 1, "gem": 217, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D7", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "achuzzath", "name": "Achuzzath", "he": "\u05D0\u05D7\u05D6\u05EA", "translit": "akh-ooz-zath'", "ref": "Gen 17:8", "refN": 16, "gem": 416, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D6\u05D7", "dates": [{ "date": "-1912-06-21", "era": "Taurus", "O": 2 }] }, { "slug": "adad", "name": "Adad", "he": "\u05D0\u05D3\u05D3", "translit": "ad-ad'", "ref": "1 Ki 11:17", "refN": 1, "gem": 9, "len": 3, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "admatha", "name": "Admatha", "he": "\u05D0\u05D3\u05DE\u05EA\u05D0", "translit": "ad-maw-thaw'", "ref": "Esth 1:14", "refN": 1, "gem": 446, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "adna", "name": "Adna", "he": "\u05E2\u05D3\u05E0\u05D0", "translit": "ad-naw'", "ref": "Dan 2:8", "refN": 6, "gem": 125, "len": 4, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "adoram", "name": "Adoram", "he": "\u05D0\u05D3\u05E8\u05DE", "translit": "ad-o-rawm'", "ref": "2 Sam 20:24", "refN": 2, "gem": 245, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "agag", "name": "Agag", "he": "\u05D0\u05D2\u05D2", "translit": "ag-ag'", "ref": "Num 24:7", "refN": 2, "gem": 7, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "agur", "name": "Agur", "he": "\u05D0\u05D2\u05D5\u05E8", "translit": "aw-goor'", "ref": "Deut 32:27", "refN": 2, "gem": 210, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "akan", "name": "Akan", "he": "\u05E2\u05DB\u05E0", "translit": "aw-kawn'", "ref": "Josh 7:1", "refN": 4, "gem": 140, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "amasa", "name": "Amasa", "he": "\u05E2\u05DE\u05E9\u05D0", "translit": "am-aw-saw'", "ref": "2 Sam 17:25", "refN": 10, "gem": 411, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "amram", "name": "Amram", "he": "\u05E2\u05DE\u05E8\u05DE", "translit": "am-rawm'", "ref": "Ex 6:18", "refN": 11, "gem": 350, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "anath", "name": "Anath", "he": "\u05E2\u05E0\u05EA", "translit": "an-awth'", "ref": "Ex 10:3", "refN": 7, "gem": 520, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "ara", "name": "Ara", "he": "\u05D0\u05E8\u05D0", "translit": "ar-aw'", "ref": "Gen 31:10", "refN": 22, "gem": 202, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "aram", "name": "Aram", "he": "\u05D0\u05E8\u05DE", "translit": "arawm'", "ref": "Gen 10:22", "refN": 102, "gem": 241, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "aran", "name": "Aran", "he": "\u05D0\u05E8\u05E0", "translit": "ar-awn'", "ref": "Gen 36:28", "refN": 9, "gem": 251, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "ard", "name": "Ard", "he": "\u05D0\u05E8\u05D3", "translit": "ard", "ref": "Gen 46:4", "refN": 9, "gem": 205, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "arnan", "name": "Arnan", "he": "\u05D0\u05E8\u05E0\u05E0", "translit": "ar-nawn'", "ref": "Num 21:24", "refN": 24, "gem": 301, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "arpakshad", "name": "Arpakshad", "he": "\u05D0\u05E8\u05E4\u05DB\u05E9\u05D3", "translit": "ar-pak-shad'", "ref": "Gen 10:22", "refN": 7, "gem": 605, "len": 6, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "artachshasta", "name": "Artachshasta", "he": "\u05D0\u05E8\u05EA\u05D7\u05E9\u05E9\u05EA\u05D0", "translit": "ar-takh-shash-taw'", "ref": "Ezra 4:7", "refN": 4, "gem": 1610, "len": 8, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D7", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "artsa", "name": "Artsa", "he": "\u05D0\u05E8\u05E6\u05D0", "translit": "ar-tsaw'", "ref": "1 Ki 16:9", "refN": 1, "gem": 292, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "asa", "name": "Asa", "he": "\u05D0\u05E1\u05D0", "translit": "aw-saw'", "ref": "1 Ki 15:8", "refN": 45, "gem": 62, "len": 3, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "asbea", "name": "Asbea", "he": "\u05D0\u05E9\u05D1\u05E2", "translit": "ash-bay'-ah", "ref": "Gen 21:24", "refN": 5, "gem": 373, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "asenath", "name": "Asenath", "he": "\u05D0\u05E1\u05E0\u05EA", "translit": "aw-se-nath'", "ref": "Gen 41:50", "refN": 2, "gem": 511, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "ashchur", "name": "Ashchur", "he": "\u05D0\u05E9\u05D7\u05D5\u05E8", "translit": "ash-khoor'", "ref": "1 Chr 4:5", "refN": 1, "gem": 515, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "asherah", "name": "Asherah", "he": "\u05D0\u05E9\u05E8\u05D4", "translit": "ash-ay-raw'", "ref": "Deut 16:21", "refN": 13, "gem": 506, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ashtoreth", "name": "Ashtoreth", "he": "\u05E2\u05E9\u05EA\u05E8\u05EA", "translit": "ash-to'reth", "ref": "Gen 14:5", "refN": 8, "gem": 1370, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "baana", "name": "Baana", "he": "\u05D1\u05E2\u05E0\u05D0", "translit": "bah-an-aw'", "ref": "1 Ki 4:12", "refN": 2, "gem": 123, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "bakbakkar", "name": "Bakbakkar", "he": "\u05D1\u05E7\u05D1\u05E7\u05E8", "translit": "bak-bak-kar'", "ref": "1 Chr 9:15", "refN": 1, "gem": 404, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E7", "dates": [{ "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }] }, { "slug": "baruk", "name": "Baruk", "he": "\u05D1\u05E8\u05D5\u05DB", "translit": "baw-rook'", "ref": "Gen 9:26", "refN": 74, "gem": 228, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "basha", "name": "Basha", "he": "\u05D1\u05E2\u05E9\u05D0", "translit": "bah-shaw'", "ref": "1 Ki 15:16", "refN": 21, "gem": 373, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "bath-sheba", "name": "Bath-Sheba", "he": "\u05D1\u05EA\u05E9\u05D1\u05E2", "translit": "bath-sheh'-bah", "ref": "2 Sam 11:3", "refN": 8, "gem": 774, "len": 5, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "bedan", "name": "Bedan", "he": "\u05D1\u05D3\u05E0", "translit": "bed-awn'", "ref": "1 Ki 12:29", "refN": 2, "gem": 56, "len": 3, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "beera", "name": "Beera", "he": "\u05D1\u05D0\u05E8\u05D0", "translit": "be-ay-raw'", "ref": "1 Chr 7:37", "refN": 1, "gem": 204, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "beerah", "name": "Beerah", "he": "\u05D1\u05D0\u05E8\u05D4", "translit": "be-ay-raw'", "ref": "Gen 46:1", "refN": 4, "gem": 208, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ben-chanan", "name": "Ben-Chanan", "he": "\u05D1\u05E0\u05D7\u05E0\u05E0", "translit": "ben-khaw-nawn'", "ref": "1 Chr 4:20", "refN": 1, "gem": 160, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D7\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "ben-chesed", "name": "Ben-Chesed", "he": "\u05D1\u05E0\u05D7\u05E1\u05D3", "translit": "ben-kheh'-sed", "ref": "1 Ki 4:10", "refN": 1, "gem": 124, "len": 5, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05D7\u05E0\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "ben-geber", "name": "Ben-Geber", "he": "\u05D1\u05E0\u05D2\u05D1\u05E8", "translit": "ben-gheh'-ber", "ref": "1 Ki 4:13", "refN": 1, "gem": 257, "len": 5, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "bera", "name": "Bera", "he": "\u05D1\u05E8\u05E2", "translit": "beh'-rah", "ref": "Gen 44:34", "refN": 12, "gem": 272, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "bigtha", "name": "Bigtha", "he": "\u05D1\u05D2\u05EA\u05D0", "translit": "big-thaw'", "ref": "Esth 1:10", "refN": 1, "gem": 406, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "bigthan", "name": "Bigthan", "he": "\u05D1\u05D2\u05EA\u05E0", "translit": "big-thawn'", "ref": "Esth 2:21", "refN": 1, "gem": 455, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "birsha", "name": "Birsha", "he": "\u05D1\u05E8\u05E9\u05E2", "translit": "beer-shah'", "ref": "Ps 141:4", "refN": 2, "gem": 572, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "biztha", "name": "Biztha", "he": "\u05D1\u05D6\u05EA\u05D0", "translit": "biz-thaw'", "ref": "Esth 1:10", "refN": 1, "gem": 410, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D6", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }] }, { "slug": "bokeru", "name": "Bokeru", "he": "\u05D1\u05DB\u05E8\u05D5", "translit": "bo-ker-oo'", "ref": "Gen 10:15", "refN": 8, "gem": 228, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "bosmath", "name": "Bosmath", "he": "\u05D1\u05E9\u05DE\u05EA", "translit": "bos-math'", "ref": "Gen 36:4", "refN": 5, "gem": 742, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "cashubah", "name": "Cashubah", "he": "\u05D7\u05E9\u05D1\u05D4", "translit": "khash-oo-baw'", "ref": "Gen 50:20", "refN": 5, "gem": 315, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "chamran", "name": "Chamran", "he": "\u05D7\u05DE\u05E8\u05E0", "translit": "kham-rawn'", "ref": "1 Chr 1:41", "refN": 1, "gem": 298, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D7\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "charnepher", "name": "Charnepher", "he": "\u05D7\u05E8\u05E0\u05E4\u05E8", "translit": "khar-neh'fer", "ref": "1 Chr 7:36", "refN": 1, "gem": 538, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D7\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "charsha", "name": "Charsha", "he": "\u05D7\u05E8\u05E9\u05D0", "translit": "khar-shaw'", "ref": "Ezra 2:59", "refN": 2, "gem": 509, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D7", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "chashshub", "name": "Chashshub", "he": "\u05D7\u05E9\u05D5\u05D1", "translit": "khash-shoob'", "ref": "Neh 3:11", "refN": 3, "gem": 316, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "chashum", "name": "Chashum", "he": "\u05D7\u05E9\u05DE", "translit": "khaw-shoom'", "ref": "Gen 36:34", "refN": 8, "gem": 348, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D7", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "chemdan", "name": "Chemdan", "he": "\u05D7\u05DE\u05D3\u05E0", "translit": "khem-dawn'", "ref": "Gen 36:26", "refN": 1, "gem": 102, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D7\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "chenadad", "name": "Chenadad", "he": "\u05D7\u05E0\u05D3\u05D3", "translit": "khay-naw-dawd'", "ref": "Ezra 3:9", "refN": 2, "gem": 66, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D7\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "chupham", "name": "Chupham", "he": "\u05D7\u05D5\u05E4\u05DE", "translit": "khoo-fawm'", "ref": "Num 26:39", "refN": 1, "gem": 134, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "churam", "name": "Churam", "he": "\u05D7\u05D5\u05E8\u05DE", "translit": "khoo-rawm'", "ref": "1 Chr 8:5", "refN": 11, "gem": 254, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "chushah", "name": "Chushah", "he": "\u05D7\u05D5\u05E9\u05D4", "translit": "khoo-shaw'", "ref": "1 Sam 20:38", "refN": 8, "gem": 319, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05D4\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "chusham", "name": "Chusham", "he": "\u05D7\u05D5\u05E9\u05DE", "translit": "khoo-shawm'", "ref": "1 Chr 1:45", "refN": 2, "gem": 354, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "dan", "name": "Dan", "he": "\u05D3\u05E0", "translit": "dawn", "ref": "Gen 15:14", "refN": 38, "gem": 54, "len": 2, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "dara", "name": "Dara", "he": "\u05D3\u05E8\u05E2", "translit": "daw-rah'", "ref": "1 Chr 2:6", "refN": 1, "gem": 274, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "darda", "name": "Darda", "he": "\u05D3\u05E8\u05D3\u05E2", "translit": "dar-dah'", "ref": "1 Ki 5:11", "refN": 1, "gem": 278, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "dathan", "name": "Dathan", "he": "\u05D3\u05EA\u05E0", "translit": "daw-thawn'", "ref": "Gen 37:17", "refN": 9, "gem": 454, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "dodo", "name": "Dodo", "he": "\u05D3\u05D5\u05D3\u05D5", "translit": "do-do'", "ref": "Amos 6:10", "refN": 1, "gem": 20, "len": 4, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "echud", "name": "Echud", "he": "\u05D0\u05D7\u05D5\u05D3", "translit": "ay-khood'", "ref": "1 Chr 8:6", "refN": 1, "gem": 19, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ehud", "name": "Ehud", "he": "\u05D0\u05D4\u05D5\u05D3", "translit": "ay-hood'", "ref": "Judg 3:16", "refN": 7, "gem": 16, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ephrath", "name": "Ephrath", "he": "\u05D0\u05E4\u05E8\u05EA", "translit": "ef-rawth'", "ref": "Gen 48:7", "refN": 1, "gem": 681, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "eran", "name": "Eran", "he": "\u05E2\u05E8\u05E0", "translit": "ay-rawn'", "ref": "Num 26:36", "refN": 1, "gem": 320, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "eshban", "name": "Eshban", "he": "\u05D0\u05E9\u05D1\u05E0", "translit": "esh-bawn'", "ref": "Gen 36:26", "refN": 2, "gem": 353, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "eshtemoa", "name": "Eshtemoa", "he": "\u05D0\u05E9\u05EA\u05DE\u05E2", "translit": "esh-tem-o'-ah", "ref": "1 Chr 4:17", "refN": 2, "gem": 811, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "ester", "name": "Ester", "he": "\u05D0\u05E1\u05EA\u05E8", "translit": "es-tare'", "ref": "Gen 4:14", "refN": 44, "gem": 661, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "gatam", "name": "Gatam", "he": "\u05D2\u05E2\u05EA\u05DE", "translit": "gah-tawm'", "ref": "Gen 36:11", "refN": 5, "gem": 513, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "genubath", "name": "Genubath", "he": "\u05D2\u05E0\u05D1\u05EA", "translit": "ghen-oo-bath'", "ref": "Gen 31:30", "refN": 2, "gem": 455, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "gera", "name": "Gera", "he": "\u05D2\u05E8\u05D0", "translit": "gay-raw'", "ref": "Gen 46:21", "refN": 4, "gem": 204, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "gereshom", "name": "Gereshom", "he": "\u05D2\u05E8\u05E9\u05DE", "translit": "gay-resh-ome'", "ref": "Ex 2:22", "refN": 5, "gem": 543, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "geshur", "name": "Geshur", "he": "\u05D2\u05E9\u05D5\u05E8", "translit": "ghesh-oor'", "ref": "Josh 13:13", "refN": 7, "gem": 509, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "gether", "name": "Gether", "he": "\u05D2\u05EA\u05E8", "translit": "gheh'-ther", "ref": "Gen 10:23", "refN": 2, "gem": 603, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "giba", "name": "Giba", "he": "\u05D2\u05D1\u05E2\u05D0", "translit": "ghib-aw'", "ref": "1 Chr 2:49", "refN": 1, "gem": 76, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "gishpa", "name": "Gishpa", "he": "\u05D2\u05E9\u05E4\u05D0", "translit": "ghish-paw'", "ref": "Neh 11:21", "refN": 1, "gem": 384, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "gog", "name": "Gog", "he": "\u05D2\u05D5\u05D2", "translit": "gohg", "ref": "Gen 10:2", "refN": 11, "gem": 12, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "hadad", "name": "Hadad", "he": "\u05D4\u05D3\u05D3", "translit": "had-ad'", "ref": "Gen 36:35", "refN": 10, "gem": 13, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "hagar", "name": "Hagar", "he": "\u05D4\u05D2\u05E8", "translit": "haw-gawr'", "ref": "Gen 16:1", "refN": 30, "gem": 208, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "hashem", "name": "Hashem", "he": "\u05D4\u05E9\u05DE", "translit": "haw-shame'", "ref": "Isa 63:11", "refN": 4, "gem": 345, "len": 3, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "hathak", "name": "Hathak", "he": "\u05D4\u05EA\u05DB", "translit": "hath-awk'", "ref": "Esth 4:5", "refN": 4, "gem": 425, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "hege", "name": "Hege", "he": "\u05D4\u05D2\u05D0", "translit": "hay-gay'", "ref": "Esth 2:3", "refN": 1, "gem": 9, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "hodevah", "name": "Hodevah", "he": "\u05D4\u05D5\u05D3\u05D5\u05D4", "translit": "ho-dev-aw'", "ref": "Neh 7:43", "refN": 1, "gem": 26, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D4\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "homam", "name": "Homam", "he": "\u05D4\u05D5\u05DE\u05DE", "translit": "ho-mawm'", "ref": "1 Chr 1:39", "refN": 1, "gem": 91, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D4\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "horam", "name": "Horam", "he": "\u05D4\u05E8\u05DE", "translit": "ho-rawm'", "ref": "Ex 14:16", "refN": 5, "gem": 245, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ibtsan", "name": "Ibtsan", "he": "\u05D0\u05D1\u05E6\u05E0", "translit": "ib-tsawn'", "ref": "Judg 12:8", "refN": 2, "gem": 143, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "iddo", "name": "Iddo", "he": "\u05D0\u05D3\u05D5", "translit": "id-do", "ref": "Job 36:27", "refN": 1, "gem": 11, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "karkas", "name": "Karkas", "he": "\u05DB\u05E8\u05DB\u05E1", "translit": "kar-kas'", "ref": "Esth 1:10", "refN": 1, "gem": 300, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "karshena", "name": "Karshena", "he": "\u05DB\u05E8\u05E9\u05E0\u05D0", "translit": "kar-shen-aw'", "ref": "Esth 1:14", "refN": 1, "gem": 571, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "kehath", "name": "Kehath", "he": "\u05E7\u05D4\u05EA", "translit": "keh-hawth'", "ref": "Gen 46:11", "refN": 22, "gem": 505, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05E7", "dates": [{ "date": "-3242-03-20", "era": "Taurus", "O": 2 }] }, { "slug": "kemosh", "name": "Kemosh", "he": "\u05DB\u05DE\u05D5\u05E9", "translit": "kem-oshe'", "ref": "Judg 11:24", "refN": 6, "gem": 366, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "keran", "name": "Keran", "he": "\u05DB\u05E8\u05E0", "translit": "ker-awn'", "ref": "Gen 36:26", "refN": 2, "gem": 270, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "kesed", "name": "Kesed", "he": "\u05DB\u05E9\u05D3", "translit": "keh'-sed", "ref": "Isa 13:6", "refN": 3, "gem": 324, "len": 3, "theophoric": false, "period": "Exile/Prophets", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "koresh", "name": "Koresh", "he": "\u05DB\u05D5\u05E8\u05E9", "translit": "ko'-resh", "ref": "Isa 44:28", "refN": 17, "gem": 526, "len": 4, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "maats", "name": "Maats", "he": "\u05DE\u05E2\u05E6", "translit": "mah'-ats", "ref": "Gen 2:17", "refN": 4, "gem": 200, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "machath", "name": "Machath", "he": "\u05DE\u05D7\u05EA", "translit": "makh'-ath", "ref": "Deut 12:18", "refN": 24, "gem": 448, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D7", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "maroth", "name": "Maroth", "he": "\u05DE\u05E8\u05D5\u05EA", "translit": "maw-rohth'", "ref": "Isa 3:8", "refN": 7, "gem": 646, "len": 4, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "marsena", "name": "Marsena", "he": "\u05DE\u05E8\u05E1\u05E0\u05D0", "translit": "mar-sen-aw'", "ref": "Esth 1:14", "refN": 1, "gem": 351, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E0\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "mash", "name": "Mash", "he": "\u05DE\u05E9", "translit": "mash", "ref": "Gen 10:23", "refN": 121, "gem": 340, "len": 2, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "mattattah", "name": "Mattattah", "he": "\u05DE\u05EA\u05EA\u05D4", "translit": "mat-tat-taw'", "ref": "Ezra 10:33", "refN": 1, "gem": 845, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "menachem", "name": "Menachem", "he": "\u05DE\u05E0\u05D7\u05DE", "translit": "men-akh-ame'", "ref": "2 Ki 15:14", "refN": 13, "gem": 138, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05D7\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "merab", "name": "Merab", "he": "\u05DE\u05E8\u05D1", "translit": "may-rawb'", "ref": "Gen 16:10", "refN": 24, "gem": 242, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "meremoth", "name": "Meremoth", "he": "\u05DE\u05E8\u05DE\u05D5\u05EA", "translit": "mer-ay-mohth'", "ref": "Ps 10:7", "refN": 7, "gem": 686, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "meres", "name": "Meres", "he": "\u05DE\u05E8\u05E1", "translit": "meh'-res", "ref": "Isa 5:20", "refN": 3, "gem": 300, "len": 3, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "merodak", "name": "Merodak", "he": "\u05DE\u05E8\u05D3\u05DB", "translit": "mer-o-dawk'", "ref": "2 Ki 25:27", "refN": 4, "gem": 264, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "meshobab", "name": "Meshobab", "he": "\u05DE\u05E9\u05D5\u05D1\u05D1", "translit": "mesh-o-bawb'", "ref": "1 Chr 4:34", "refN": 1, "gem": 350, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "mibsam", "name": "Mibsam", "he": "\u05DE\u05D1\u05E9\u05DE", "translit": "mib-sawm'", "ref": "Gen 25:13", "refN": 3, "gem": 382, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "misham", "name": "Misham", "he": "\u05DE\u05E9\u05E2\u05DE", "translit": "mish-awm'", "ref": "1 Chr 8:12", "refN": 1, "gem": 450, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "mispereth", "name": "Mispereth", "he": "\u05DE\u05E1\u05E4\u05E8\u05EA", "translit": "mis-peh'-reth", "ref": "Neh 7:7", "refN": 1, "gem": 780, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "mithkah", "name": "Mithkah", "he": "\u05DE\u05EA\u05E7\u05D4", "translit": "mith-kaw'", "ref": "Num 33:28", "refN": 2, "gem": 545, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05E7", "dates": [{ "date": "-3242-03-20", "era": "Taurus", "O": 2 }] }, { "slug": "mithredath", "name": "Mithredath", "he": "\u05DE\u05EA\u05E8\u05D3\u05EA", "translit": "mith-red-awth'", "ref": "Ezra 1:8", "refN": 2, "gem": 1044, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "nechushta", "name": "Nechushta", "he": "\u05E0\u05D7\u05E9\u05EA\u05D0", "translit": "nekh-oosh-taw'", "ref": "2 Ki 24:8", "refN": 1, "gem": 759, "len": 5, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05D7\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "nepheg", "name": "Nepheg", "he": "\u05E0\u05E4\u05D2", "translit": "neh'-feg", "ref": "Ex 6:21", "refN": 4, "gem": 133, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "ner", "name": "Ner", "he": "\u05E0\u05E8", "translit": "nare", "ref": "Ex 27:20", "refN": 14, "gem": 250, "len": 2, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "nisrok", "name": "Nisrok", "he": "\u05E0\u05E1\u05E8\u05DB", "translit": "nis-roke'", "ref": "2 Ki 19:37", "refN": 2, "gem": 330, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E0\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "noach", "name": "Noach", "he": "\u05E0\u05D7", "translit": "no'-akh", "ref": "Gen 5:29", "refN": 27, "gem": 58, "len": 2, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D7\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "ohad", "name": "Ohad", "he": "\u05D0\u05D4\u05D3", "translit": "o'-had", "ref": "Gen 46:10", "refN": 3, "gem": 10, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "omar", "name": "Omar", "he": "\u05D0\u05D5\u05DE\u05E8", "translit": "o-mawr'", "ref": "Gen 36:11", "refN": 9, "gem": 247, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "osnappar", "name": "Osnappar", "he": "\u05D0\u05E1\u05E0\u05E4\u05E8", "translit": "os-nap-par'", "ref": "Ezra 4:10", "refN": 1, "gem": 391, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E0\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "otsem", "name": "Otsem", "he": "\u05D0\u05E6\u05DE", "translit": "o'-tsem", "ref": "1 Chr 2:15", "refN": 2, "gem": 131, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "parpar", "name": "Parpar", "he": "\u05E4\u05E8\u05E4\u05E8", "translit": "par-par'", "ref": "2 Ki 5:12", "refN": 1, "gem": 560, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "pasak", "name": "Pasak", "he": "\u05E4\u05E1\u05DB", "translit": "paw-sak'", "ref": "1 Chr 7:33", "refN": 1, "gem": 160, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "pashchur", "name": "Pashchur", "he": "\u05E4\u05E9\u05D7\u05D5\u05E8", "translit": "pash-khoor'", "ref": "Jer 20:1", "refN": 9, "gem": 594, "len": 5, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "perath", "name": "Perath", "he": "\u05E4\u05E8\u05EA", "translit": "per-awth'", "ref": "Gen 2:14", "refN": 19, "gem": 680, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "pitstsets", "name": "Pitstsets", "he": "\u05E4\u05E6\u05E6", "translit": "pits-tsates'", "ref": "Josh 19:21", "refN": 1, "gem": 260, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "puah", "name": "Puah", "he": "\u05E4\u05D5\u05D0\u05D4", "translit": "poo-aw'", "ref": "1 Chr 7:1", "refN": 1, "gem": 92, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D4\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ram", "name": "Ram", "he": "\u05E8\u05DE", "translit": "rawm", "ref": "Gen 9:20", "refN": 57, "gem": 240, "len": 2, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "raphu", "name": "Raphu", "he": "\u05E8\u05E4\u05D5\u05D0", "translit": "raw-foo'", "ref": "Isa 19:22", "refN": 1, "gem": 287, "len": 4, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "rechum", "name": "Rechum", "he": "\u05E8\u05D7\u05D5\u05DE", "translit": "rekh-oom'", "ref": "Ex 34:6", "refN": 17, "gem": 254, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "rephach", "name": "Rephach", "he": "\u05E8\u05E4\u05D7", "translit": "reh'-fakh", "ref": "1 Chr 7:25", "refN": 1, "gem": 288, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D7", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "reumah", "name": "Reumah", "he": "\u05E8\u05D0\u05D5\u05DE\u05D4", "translit": "reh-oo-maw'", "ref": "Gen 22:24", "refN": 1, "gem": 252, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ribkah", "name": "Ribkah", "he": "\u05E8\u05D1\u05E7\u05D4", "translit": "rib-kaw'", "ref": "Gen 24:15", "refN": 19, "gem": 307, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05E7", "dates": [{ "date": "-3242-03-20", "era": "Taurus", "O": 2 }] }, { "slug": "rithmah", "name": "Rithmah", "he": "\u05E8\u05EA\u05DE\u05D4", "translit": "rith-maw'", "ref": "Num 33:18", "refN": 2, "gem": 645, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "rohagah", "name": "Rohagah", "he": "\u05E8\u05D5\u05D4\u05D2\u05D4", "translit": "ro-hag-aw'", "ref": "1 Chr 7:34", "refN": 1, "gem": 219, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D4\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ruth", "name": "Ruth", "he": "\u05E8\u05D5\u05EA", "translit": "rooth", "ref": "Gen 37:20", "refN": 28, "gem": 606, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "sabta", "name": "Sabta", "he": "\u05E1\u05D1\u05EA\u05D0", "translit": "sab-taw'", "ref": "1 Chr 1:9", "refN": 1, "gem": 463, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "sabteca", "name": "Sabteca", "he": "\u05E1\u05D1\u05EA\u05DB\u05D0", "translit": "sab-tek-aw'", "ref": "Gen 10:7", "refN": 2, "gem": 483, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "segub", "name": "Segub", "he": "\u05E9\u05D2\u05D5\u05D1", "translit": "seg-oob'", "ref": "1 Ki 16:34", "refN": 2, "gem": 311, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "serach", "name": "Serach", "he": "\u05E9\u05E8\u05D7", "translit": "seh'-rakh", "ref": "Gen 46:17", "refN": 3, "gem": 508, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D7", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "sered", "name": "Sered", "he": "\u05E1\u05E8\u05D3", "translit": "seh'-red", "ref": "Gen 46:14", "refN": 2, "gem": 264, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "serug", "name": "Serug", "he": "\u05E9\u05E8\u05D5\u05D2", "translit": "ser-oog'", "ref": "Gen 11:22", "refN": 3, "gem": 509, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "shaaph", "name": "Shaaph", "he": "\u05E9\u05E2\u05E4", "translit": "shah'-af", "ref": "1 Chr 2:47", "refN": 2, "gem": 450, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "shadrak", "name": "Shadrak", "he": "\u05E9\u05D3\u05E8\u05DB", "translit": "shad-rak'", "ref": "Dan 1:7", "refN": 11, "gem": 524, "len": 4, "theophoric": false, "period": "Exile/Prophets", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "shamgar", "name": "Shamgar", "he": "\u05E9\u05DE\u05D2\u05E8", "translit": "sham-gar'", "ref": "Judg 3:31", "refN": 2, "gem": 543, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "shamhuth", "name": "Shamhuth", "he": "\u05E9\u05DE\u05D4\u05D5\u05EA", "translit": "sham-hooth'", "ref": "1 Chr 27:8", "refN": 1, "gem": 751, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D4\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "shamma", "name": "Shamma", "he": "\u05E9\u05DE\u05D0", "translit": "sham-maw'", "ref": "1 Chr 7:37", "refN": 1, "gem": 341, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "shammoth", "name": "Shammoth", "he": "\u05E9\u05DE\u05D5\u05EA", "translit": "sham-moth'", "ref": "Gen 2:20", "refN": 51, "gem": 746, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "shamur", "name": "Shamur", "he": "\u05E9\u05DE\u05D5\u05E8", "translit": "shaw-moor'", "ref": "Deut 5:12", "refN": 14, "gem": 546, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "sharetser", "name": "Sharetser", "he": "\u05E9\u05E8\u05D0\u05E6\u05E8", "translit": "shar-eh'-tser", "ref": "2 Ki 19:37", "refN": 5, "gem": 791, "len": 5, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "shashak", "name": "Shashak", "he": "\u05E9\u05E9\u05E7", "translit": "shaw-shak'", "ref": "1 Chr 8:14", "refN": 2, "gem": 700, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E7", "dates": [{ "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }] }, { "slug": "shavsha", "name": "Shavsha", "he": "\u05E9\u05D5\u05E9\u05D0", "translit": "shav-shaw'", "ref": "1 Chr 18:16", "refN": 1, "gem": 607, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "shebna", "name": "Shebna", "he": "\u05E9\u05D1\u05E0\u05D0", "translit": "sheb-naw'", "ref": "2 Ki 2:2", "refN": 9, "gem": 353, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "shemeber", "name": "Shemeber", "he": "\u05E9\u05DE\u05D0\u05D1\u05E8", "translit": "shem-ay'-ber", "ref": "Gen 14:2", "refN": 1, "gem": 543, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "shenatstsar", "name": "Shenatstsar", "he": "\u05E9\u05E0\u05D0\u05E6\u05E8", "translit": "shen-ats-tsar'", "ref": "1 Chr 3:18", "refN": 1, "gem": 641, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E0\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "shepho", "name": "Shepho", "he": "\u05E9\u05E4\u05D5", "translit": "shef-o'", "ref": "Gen 36:23", "refN": 2, "gem": 386, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "shephupham", "name": "Shephupham", "he": "\u05E9\u05E4\u05D5\u05E4\u05DE", "translit": "shef-oo-fawm'", "ref": "Num 26:39", "refN": 1, "gem": 506, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "sheshan", "name": "Sheshan", "he": "\u05E9\u05E9\u05E0", "translit": "shay-shawn'", "ref": "Esth 8:16", "refN": 4, "gem": 650, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "sheshbatstsar", "name": "Sheshbatstsar", "he": "\u05E9\u05E9\u05D1\u05E6\u05E8", "translit": "shaysh-bats-tsar'", "ref": "Ezra 1:8", "refN": 4, "gem": 892, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "shima", "name": "Shima", "he": "\u05E9\u05DE\u05E2\u05D0", "translit": "shim-aw'", "ref": "1 Chr 2:13", "refN": 3, "gem": 411, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "shimath", "name": "Shimath", "he": "\u05E9\u05DE\u05E2\u05EA", "translit": "shim-awth'", "ref": "Gen 18:10", "refN": 50, "gem": 810, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "shimrath", "name": "Shimrath", "he": "\u05E9\u05DE\u05E8\u05EA", "translit": "shim-rawth'", "ref": "Ex 12:6", "refN": 52, "gem": 940, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "shinab", "name": "Shinab", "he": "\u05E9\u05E0\u05D0\u05D1", "translit": "shin-awb'", "ref": "Gen 14:2", "refN": 1, "gem": 353, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "shomer", "name": "Shomer", "he": "\u05E9\u05D5\u05DE\u05E8", "translit": "sho-mare'", "ref": "1 Sam 17:22", "refN": 9, "gem": 546, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "shophak", "name": "Shophak", "he": "\u05E9\u05D5\u05E4\u05DB", "translit": "sho-fawk'", "ref": "Job 12:21", "refN": 3, "gem": 406, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "shucham", "name": "Shucham", "he": "\u05E9\u05D5\u05D7\u05DE", "translit": "shoo-khawm'", "ref": "Num 26:42", "refN": 1, "gem": 354, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "sophereth", "name": "Sophereth", "he": "\u05E1\u05E4\u05E8\u05EA", "translit": "so-feh'-reth", "ref": "Lev 25:8", "refN": 2, "gem": 740, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "taarea", "name": "Taarea", "he": "\u05EA\u05D0\u05E8\u05E2", "translit": "tah-ar-ay'-ah", "ref": "1 Chr 8:35", "refN": 1, "gem": 671, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "tabor", "name": "Tabor", "he": "\u05EA\u05D1\u05D5\u05E8", "translit": "taw-bore'", "ref": "Josh 19:22", "refN": 8, "gem": 608, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "tachan", "name": "Tachan", "he": "\u05EA\u05D7\u05E0", "translit": "takh'-an", "ref": "Num 26:35", "refN": 2, "gem": 458, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D7\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "teresh", "name": "Teresh", "he": "\u05EA\u05E8\u05E9", "translit": "teh'-resh", "ref": "Esth 2:21", "refN": 2, "gem": 900, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "timna", "name": "Timna", "he": "\u05EA\u05DE\u05E0\u05E2", "translit": "tim-naw'", "ref": "Gen 36:12", "refN": 6, "gem": 560, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "togarmah", "name": "Togarmah", "he": "\u05EA\u05D5\u05D2\u05E8\u05DE\u05D4", "translit": "to-gar-maw'", "ref": "Ezek 27:14", "refN": 2, "gem": 654, "len": 6, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05D4\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "tsereth", "name": "Tsereth", "he": "\u05E6\u05E8\u05EA", "translit": "tseh'-reth", "ref": "Gen 42:21", "refN": 11, "gem": 690, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "zaza", "name": "Zaza", "he": "\u05D6\u05D6\u05D0", "translit": "zaw-zaw'", "ref": "1 Chr 2:33", "refN": 1, "gem": 15, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D6", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }] }, { "slug": "zeresh", "name": "Zeresh", "he": "\u05D6\u05E8\u05E9", "translit": "zeh'-resh", "ref": "Esth 5:14", "refN": 2, "gem": 507, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D6", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }] }, { "slug": "zetham", "name": "Zetham", "he": "\u05D6\u05EA\u05DE", "translit": "zay-thawm'", "ref": "1 Chr 23:8", "refN": 2, "gem": 447, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D6", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }] }, { "slug": "zethar", "name": "Zethar", "he": "\u05D6\u05EA\u05E8", "translit": "zay-thar'", "ref": "Esth 1:10", "refN": 1, "gem": 607, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D6", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }] }];
 var BY_SLUG3 = /* @__PURE__ */ new Map([
   ["abagtha", PATRIARCHS[0]],
@@ -28462,10 +28462,10 @@ var BY_SLUG3 = /* @__PURE__ */ new Map([
   ["zethar", PATRIARCHS[184]]
 ]);
 
-// web/src/components/NameFicha.jsx
+// src/components/NameFicha.jsx
 var import_react9 = __toESM(require_react());
 
-// web/src/data/name_wiki.json
+// src/data/name_wiki.json
 var name_wiki_default = {
   abagtha: {
     title: "Abagtha",
@@ -28990,10 +28990,10 @@ is a person mentioned in the Hebrew Bible. His mother was Abigail, a sister of K
   }
 };
 
-// web/src/data/name_wiki.js
+// src/data/name_wiki.js
 var NAME_WIKI = name_wiki_default;
 
-// web/src/data/name_verses.json
+// src/data/name_verses.json
 var name_verses_default = {
   abagtha: {
     ref: "Esth 1:10",
@@ -30462,13 +30462,13 @@ var name_verses_default = {
   }
 };
 
-// web/src/data/name_verses.js
+// src/data/name_verses.js
 var NAME_VERSES = name_verses_default;
 function nameVerse(slug) {
   return NAME_VERSES[slug] || null;
 }
 
-// web/src/components/NameFicha.jsx
+// src/components/NameFicha.jsx
 function NameFicha({ figure, kind, backHref, backLabel }) {
   if (!figure) return /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Not found"), /* @__PURE__ */ import_react9.default.createElement("p", null, "No name matches this path."));
   const isPlace = kind === "place";
@@ -30483,17 +30483,17 @@ function NameFicha({ figure, kind, backHref, backLabel }) {
   return /* @__PURE__ */ import_react9.default.createElement("div", { className: "ficha" }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("a", { href: backHref }, "\u25C0 ", backLabel), /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { marginLeft: "auto", color: "var(--gold)", borderColor: "var(--gold)" } }, isPlace ? "biblical place" : "patriarchs/conquest")), /* @__PURE__ */ import_react9.default.createElement("h1", { style: { marginBottom: 4 } }, figure.name, figure.he && /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { marginLeft: 12, color: "var(--gold)" } }, figure.he)), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 12, fontSize: ".92rem" } }, figure.translit, figure.translit && " \xB7 ", figure.period), /* @__PURE__ */ import_react9.default.createElement("div", { className: "grid2", style: { alignItems: "stretch" } }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14, display: "flex", flexDirection: "column" } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "In the Bible"), /* @__PURE__ */ import_react9.default.createElement("p", { style: { lineHeight: 1.6, marginBottom: 6 } }, isPlace ? /* @__PURE__ */ import_react9.default.createElement("span", null, "A biblical toponym \u2014 ", /* @__PURE__ */ import_react9.default.createElement("b", null, figure.name), " \u2014 attested in ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: "var(--gold)" } }, figure.ref), figure.refN != null && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, " (", figure.refN, " occurrence", figure.refN === 1 ? "" : "s", " in the Hebrew Bible)"), ".") : /* @__PURE__ */ import_react9.default.createElement("span", null, "A biblical ", figure.theophoric ? "theophoric " : "", "personal name \u2014 ", /* @__PURE__ */ import_react9.default.createElement("b", null, figure.name), " (", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, figure.he), ") \u2014 attested in ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: "var(--gold)" } }, figure.ref), figure.refN != null && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, " (", figure.refN, " occurrence", figure.refN === 1 ? "" : "s", " in the Hebrew Bible)"), ".")), refLink && /* @__PURE__ */ import_react9.default.createElement("a", { href: refLink, target: "_blank", rel: "noreferrer" }, "Read ", figure.ref, " on Sefaria \u2192"), verse && (verse.he || verse.en) && /* @__PURE__ */ import_react9.default.createElement("div", { style: { marginTop: 12, paddingTop: 12, borderTop: "1px solid var(--line)" } }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { fontSize: ".72rem", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 6 } }, figure.ref), verse.he && /* @__PURE__ */ import_react9.default.createElement("p", { className: "he", dir: "rtl", style: { fontSize: "1.05rem", lineHeight: 1.9, margin: "0 0 8px", textAlign: "right" } }, verse.he), verse.en && /* @__PURE__ */ import_react9.default.createElement("p", { style: { fontSize: ".86rem", lineHeight: 1.6, margin: 0, color: "var(--dim)", fontStyle: "italic" } }, verse.en))), /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "Facts"), /* @__PURE__ */ import_react9.default.createElement("table", { style: { fontSize: ".88rem" } }, /* @__PURE__ */ import_react9.default.createElement("tbody", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)", width: "42%", verticalAlign: "top" } }, "Type"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, isPlace ? "place (toponym)" : "person")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)" } }, "Biblical period"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, figure.period)), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)" } }, "Gematria"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, figure.gem)), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)" } }, "Letters"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, figure.len, " consonants")), !isPlace && /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)" } }, "Theophoric"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, figure.theophoric ? "yes (contains a divine element)" : "no")))))), wiki && /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "Wikipedia \u2014 ", wiki.title), /* @__PURE__ */ import_react9.default.createElement("div", { style: { display: "flex", gap: 14, flexWrap: "wrap", alignItems: "flex-start" } }, wiki.thumbnail && /* @__PURE__ */ import_react9.default.createElement("img", { src: wiki.thumbnail.source, alt: wiki.title, style: { maxWidth: 200, maxHeight: 260, borderRadius: 8, border: "1px solid var(--line)" }, loading: "lazy" }), /* @__PURE__ */ import_react9.default.createElement("div", { style: { flex: "1 1 320px" } }, wiki.description && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 6 } }, wiki.description), wiki.extract && /* @__PURE__ */ import_react9.default.createElement("p", { style: { lineHeight: 1.6, marginBottom: 0 } }, wiki.extract), /* @__PURE__ */ import_react9.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react9.default.createElement("a", { href: wiki.url, target: "_blank", rel: "noreferrer" }, "Read more on Wikipedia \u2192"))))), stars.length > 0 && /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "Stellar letters"), /* @__PURE__ */ import_react9.default.createElement("p", { className: "muted", style: { fontSize: ".84rem", marginTop: 0 } }, "The ", figure.len, "-consonant name needs its ", stars.length, " distinct simple-letter", stars.length === 1 ? "" : "s", " to be occupied in the sky. The 7 classical bodies open a sign \u2192 its Hebrew simple letter; this name reads only when the planets sit in exactly these signs."), /* @__PURE__ */ import_react9.default.createElement("div", { style: { display: "flex", flexWrap: "wrap", gap: 10, marginTop: 6 } }, stars.map((s) => /* @__PURE__ */ import_react9.default.createElement("span", { key: s.ch, className: "panel", style: { padding: "8px 12px", textAlign: "center" } }, /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { fontSize: "1.6rem", color: "var(--gold)" } }, s.ch), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { fontSize: ".72rem", marginTop: 2 } }, s.sign, " \xB7 ", s.name))))), /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "Readable on these rare conjunctions"), /* @__PURE__ */ import_react9.default.createElement("p", { className: "muted", style: { fontSize: ".84rem", marginTop: 0 } }, figure.name, " appears in the stellar reading on ", figure.dates.length, " of the 12 dated rare conjunctions (proofs.json). Open any date in the Reader to verify it on that sky."), /* @__PURE__ */ import_react9.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "40%" } }, "Date"), /* @__PURE__ */ import_react9.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "24%" } }, "Precessional era"), /* @__PURE__ */ import_react9.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px" } }, "Occupied letters |O|"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, figure.dates.map((d) => /* @__PURE__ */ import_react9.default.createElement("tr", { key: d.date }, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "6px 8px" } }, /* @__PURE__ */ import_react9.default.createElement("a", { href: `/app?date=${d.date}&tab=translator` }, displayDate(d.date))), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, d.era), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, d.O)))))));
 }
 
-// web/src/pages/PatriarchFicha.jsx
+// src/pages/PatriarchFicha.jsx
 function PatriarchFicha({ slug }) {
   const figure = BY_SLUG3.get(slug) || null;
   return /* @__PURE__ */ import_react10.default.createElement(NameFicha, { figure, kind: "person", backHref: "/patriarchs", backLabel: "back to Patriarchs/Conquest" });
 }
 var PATRIARCH_SLUGS = PATRIARCHS.map((p) => p.slug);
 
-// web/src/pages/PlaceFicha.jsx
+// src/pages/PlaceFicha.jsx
 var import_react11 = __toESM(require_react());
 
-// web/src/data/places.js
+// src/data/places.js
 var PLACES = [{ "slug": "accad", "name": "Accad", "he": "\u05D0\u05DB\u05D3", "translit": "ak-kad'", "ref": "Gen 10:10", "refN": 1, "gem": 25, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "achmetha", "name": "Achmetha", "he": "\u05D0\u05D7\u05DE\u05EA\u05D0", "translit": "akh-me-thaw'", "ref": "Ezra 6:2", "refN": 1, "gem": 450, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D7", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "acshaph", "name": "Acshaph", "he": "\u05D0\u05DB\u05E9\u05E4", "translit": "ak-shawf'", "ref": "Josh 11:1", "refN": 3, "gem": 401, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "admah", "name": "Admah", "he": "\u05D0\u05D3\u05DE\u05D4", "translit": "ad-maw'", "ref": "Gen 1:25", "refN": 104, "gem": 50, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ahava", "name": "Ahava", "he": "\u05D0\u05D4\u05D5\u05D0", "translit": "a-hav-aw'", "ref": "Deut 32:34", "refN": 6, "gem": 13, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "amad", "name": "Amad", "he": "\u05E2\u05DE\u05E2\u05D3", "translit": "am-awd'", "ref": "Josh 19:26", "refN": 1, "gem": 184, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "amam", "name": "Amam", "he": "\u05D0\u05DE\u05DE", "translit": "am-awm'", "ref": "Josh 15:26", "refN": 2, "gem": 81, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "anab", "name": "Anab", "he": "\u05E2\u05E0\u05D1", "translit": "an-awb'", "ref": "Josh 15:50", "refN": 1, "gem": 122, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "anacharath", "name": "Anacharath", "he": "\u05D0\u05E0\u05D7\u05E8\u05EA", "translit": "an-aw-kha-rawth'", "ref": "Josh 19:19", "refN": 1, "gem": 659, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D7\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "anem", "name": "Anem", "he": "\u05E2\u05E0\u05DE", "translit": "aw-name'", "ref": "2 Sam 22:42", "refN": 2, "gem": 160, "len": 3, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "aner", "name": "Aner", "he": "\u05E2\u05E0\u05E8", "translit": "aw-nare'", "ref": "Gen 14:13", "refN": 2, "gem": 320, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "aphekah", "name": "Aphekah", "he": "\u05D0\u05E4\u05E7\u05D4", "translit": "af-ay-kaw'", "ref": "Josh 15:53", "refN": 3, "gem": 186, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05E7", "dates": [{ "date": "-3242-03-20", "era": "Taurus", "O": 2 }] }, { "slug": "ar", "name": "Ar", "he": "\u05E2\u05E8", "translit": "awr", "ref": "Gen 22:17", "refN": 215, "gem": 270, "len": 2, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "arad", "name": "Arad", "he": "\u05E2\u05E8\u05D3", "translit": "ar-awd'", "ref": "Num 33:40", "refN": 4, "gem": 274, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "argob", "name": "Argob", "he": "\u05D0\u05E8\u05D2\u05D1", "translit": "ar-gobe'", "ref": "Deut 3:4", "refN": 4, "gem": 206, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "arpad", "name": "Arpad", "he": "\u05D0\u05E8\u05E4\u05D3", "translit": "ar-pawd'", "ref": "2 Ki 18:34", "refN": 6, "gem": 285, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "arubboth", "name": "Arubboth", "he": "\u05D0\u05E8\u05D1\u05D5\u05EA", "translit": "ar-oob-both", "ref": "1 Ki 4:10", "refN": 6, "gem": 609, "len": 5, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "arumah", "name": "Arumah", "he": "\u05D0\u05E8\u05D5\u05DE\u05D4", "translit": "ar-oo-maw'", "ref": "Judg 9:41", "refN": 1, "gem": 252, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "arvad", "name": "Arvad", "he": "\u05D0\u05E8\u05D5\u05D3", "translit": "ar-vad'", "ref": "Num 26:17", "refN": 3, "gem": 211, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ashdod", "name": "Ashdod", "he": "\u05D0\u05E9\u05D3\u05D5\u05D3", "translit": "ash-dode'", "ref": "Josh 11:22", "refN": 11, "gem": 315, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ashshur", "name": "Ashshur", "he": "\u05D0\u05E9\u05D5\u05E8", "translit": "ash-shoor'", "ref": "Gen 2:14", "refN": 96, "gem": 507, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "athak", "name": "Athak", "he": "\u05E2\u05EA\u05DB", "translit": "ath-awk'", "ref": "1 Sam 16:15", "refN": 4, "gem": 490, "len": 3, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "baca", "name": "Baca", "he": "\u05D1\u05DB\u05D0", "translit": "baw-kaw'", "ref": "Ps 84:7", "refN": 5, "gem": 23, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "bamoth", "name": "Bamoth", "he": "\u05D1\u05DE\u05D5\u05EA", "translit": "baw-moth'", "ref": "Gen 21:16", "refN": 54, "gem": 448, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "bashan", "name": "Bashan", "he": "\u05D1\u05E9\u05E0", "translit": "baw-shawn'", "ref": "Gen 19:28", "refN": 46, "gem": 352, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "beer-sheba", "name": "Beer-Sheba", "he": "\u05D1\u05D0\u05E8\u05E9\u05D1\u05E2", "translit": "be-ayr' sheh'-bah", "ref": "Josh 19:2", "refN": 5, "gem": 575, "len": 6, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "beeroth", "name": "Beeroth", "he": "\u05D1\u05D0\u05E8\u05D5\u05EA", "translit": "be-ay-rohth'", "ref": "Josh 9:17", "refN": 5, "gem": 609, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "be-n", "name": "Be\xF6n", "he": "\u05D1\u05E2\u05E0", "translit": "beh-ohn'", "ref": "Num 32:3", "refN": 1, "gem": 122, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "chabor", "name": "Chabor", "he": "\u05D7\u05D1\u05D5\u05E8", "translit": "khaw-bore'", "ref": "2 Ki 17:6", "refN": 4, "gem": 216, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "chadashah", "name": "Chadashah", "he": "\u05D7\u05D3\u05E9\u05D4", "translit": "khad-aw-shaw'", "ref": "Lev 23:16", "refN": 22, "gem": 317, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "chadrak", "name": "Chadrak", "he": "\u05D7\u05D3\u05E8\u05DB", "translit": "khad-rawk'", "ref": "Zech 9:1", "refN": 1, "gem": 232, "len": 4, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05D7", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "chanes", "name": "Chanes", "he": "\u05D7\u05E0\u05E1", "translit": "khaw-nace'", "ref": "Isa 30:4", "refN": 1, "gem": 118, "len": 3, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05D7\u05E0\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "channathon", "name": "Channathon", "he": "\u05D7\u05E0\u05EA\u05E0", "translit": "khan-naw-thone'", "ref": "Josh 19:14", "refN": 1, "gem": 508, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D7\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "charan", "name": "Charan", "he": "\u05D7\u05E8\u05E0", "translit": "kaw-rawn'", "ref": "Gen 12:4", "refN": 6, "gem": 258, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D7\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "chormah", "name": "Chormah", "he": "\u05D7\u05E8\u05DE\u05D4", "translit": "khor-maw'", "ref": "Josh 12:14", "refN": 5, "gem": 253, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "cozeba", "name": "Cozeba", "he": "\u05DB\u05D6\u05D1\u05D0", "translit": "ko-zeb-aw'", "ref": "1 Chr 4:22", "refN": 1, "gem": 30, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D6", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }] }, { "slug": "cush", "name": "Cush", "he": "\u05DB\u05D5\u05E9", "translit": "koosh", "ref": "Gen 2:13", "refN": 18, "gem": 326, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "cuth", "name": "Cuth", "he": "\u05DB\u05D5\u05EA", "translit": "kooth", "ref": "Gen 8:21", "refN": 58, "gem": 426, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "daberath", "name": "Daberath", "he": "\u05D3\u05D1\u05E8\u05EA", "translit": "daw-ber-ath'", "ref": "Gen 18:5", "refN": 57, "gem": 606, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "dedan", "name": "Dedan", "he": "\u05D3\u05D3\u05E0", "translit": "ded-awn'", "ref": "Gen 10:7", "refN": 6, "gem": 58, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "dophkah", "name": "Dophkah", "he": "\u05D3\u05E4\u05E7\u05D4", "translit": "dof-kaw'", "ref": "Num 33:12", "refN": 2, "gem": 189, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05E7", "dates": [{ "date": "-3242-03-20", "era": "Taurus", "O": 2 }] }, { "slug": "dura", "name": "Dura", "he": "\u05D3\u05D5\u05E8\u05D0", "translit": "doo-raw'", "ref": "Dan 3:1", "refN": 1, "gem": 211, "len": 4, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ebets", "name": "Ebets", "he": "\u05D0\u05D1\u05E6", "translit": "eh'-bets", "ref": "Josh 19:20", "refN": 1, "gem": 93, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "ebron", "name": "Ebron", "he": "\u05E2\u05D1\u05E8\u05E0", "translit": "eb-rone'", "ref": "Josh 19:28", "refN": 1, "gem": 322, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "eshan", "name": "Eshan", "he": "\u05D0\u05E9\u05E2\u05E0", "translit": "esh-awn'", "ref": "Josh 15:52", "refN": 2, "gem": 421, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "etham", "name": "Etham", "he": "\u05D0\u05EA\u05DE", "translit": "ay-thawm'", "ref": "Gen 1:17", "refN": 550, "gem": 441, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "geba", "name": "Geba", "he": "\u05D2\u05D1\u05E2", "translit": "gheh'-bah", "ref": "Josh 18:24", "refN": 14, "gem": 75, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "gederoth", "name": "Gederoth", "he": "\u05D2\u05D3\u05E8\u05D5\u05EA", "translit": "ghed-ay-rohth'", "ref": "Josh 15:41", "refN": 4, "gem": 613, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "gibath", "name": "Gibath", "he": "\u05D2\u05D1\u05E2\u05EA", "translit": "ghib-ath'", "ref": "Gen 49:26", "refN": 21, "gem": 475, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "goshen", "name": "Goshen", "he": "\u05D2\u05E9\u05E0", "translit": "go'-shen", "ref": "Gen 46:28", "refN": 12, "gem": 353, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "gudgodah", "name": "Gudgodah", "he": "\u05D2\u05D3\u05D2\u05D3\u05D4", "translit": "gud-go'-daw", "ref": "Deut 10:7", "refN": 1, "gem": 19, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ham", "name": "Ham", "he": "\u05D4\u05DE", "translit": "hawm", "ref": "Gen 1:28", "refN": 960, "gem": 45, "len": 2, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "hara", "name": "Hara", "he": "\u05D4\u05E8\u05D0", "translit": "haw-raw'", "ref": "1 Chr 5:26", "refN": 1, "gem": 206, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "hodu", "name": "Hodu", "he": "\u05D4\u05D3\u05D5", "translit": "ho'-doo", "ref": "Ps 107:1", "refN": 3, "gem": 15, "len": 3, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D4\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "karkor", "name": "Karkor", "he": "\u05E7\u05E8\u05E7\u05E8", "translit": "kar-kore'", "ref": "Num 24:17", "refN": 3, "gem": 600, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E7", "dates": [{ "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }] }, { "slug": "kenaan", "name": "Kenaan", "he": "\u05DB\u05E0\u05E2\u05E0", "translit": "ken-ah'-an", "ref": "Gen 9:18", "refN": 77, "gem": 190, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "kimham", "name": "Kimham", "he": "\u05DB\u05DE\u05D4\u05DE", "translit": "kim-hawm'", "ref": "2 Sam 19:38", "refN": 3, "gem": 105, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "kub", "name": "Kub", "he": "\u05DB\u05D5\u05D1", "translit": "koob", "ref": "Ezek 30:5", "refN": 1, "gem": 28, "len": 3, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "maarath", "name": "Maarath", "he": "\u05DE\u05E2\u05E8\u05EA", "translit": "mah-ar-awth'", "ref": "Gen 50:13", "refN": 3, "gem": 710, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "magog", "name": "Magog", "he": "\u05DE\u05D2\u05D5\u05D2", "translit": "maw-gogue'", "ref": "Gen 10:2", "refN": 4, "gem": 52, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "makkedah", "name": "Makkedah", "he": "\u05DE\u05E7\u05D3\u05D4", "translit": "mak-kay-daw'", "ref": "Josh 10:16", "refN": 7, "gem": 149, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05E7", "dates": [{ "date": "-3242-03-20", "era": "Taurus", "O": 2 }] }, { "slug": "mamre", "name": "Mamre", "he": "\u05DE\u05DE\u05E8\u05D0", "translit": "mam-ray'", "ref": "Gen 13:18", "refN": 9, "gem": 281, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "manachath", "name": "Manachath", "he": "\u05DE\u05E0\u05D7\u05EA", "translit": "maw-nakh'-ath", "ref": "Gen 36:23", "refN": 16, "gem": 498, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D7\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "masrekah", "name": "Masrekah", "he": "\u05DE\u05E9\u05E8\u05E7\u05D4", "translit": "mas-ray-kaw'", "ref": "Gen 36:36", "refN": 2, "gem": 645, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05E7", "dates": [{ "date": "-3242-03-20", "era": "Taurus", "O": 2 }] }, { "slug": "mesha", "name": "Mesha", "he": "\u05DE\u05E9\u05D0", "translit": "may-shaw'", "ref": "Gen 10:30", "refN": 55, "gem": 341, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "mikmas", "name": "Mikmas", "he": "\u05DE\u05DB\u05DE\u05E1", "translit": "mik-maws'", "ref": "Ezra 2:27", "refN": 2, "gem": 160, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "mikmethath", "name": "Mikmethath", "he": "\u05DE\u05DB\u05DE\u05EA\u05EA", "translit": "mik-meth-awth'", "ref": "Josh 16:6", "refN": 2, "gem": 900, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "moab", "name": "Moab", "he": "\u05DE\u05D5\u05D0\u05D1", "translit": "mo-awb", "ref": "Gen 19:37", "refN": 137, "gem": 49, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "moph", "name": "Moph", "he": "\u05DE\u05E4", "translit": "mofe", "ref": "Gen 6:4", "refN": 25, "gem": 120, "len": 2, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "naaran", "name": "Naaran", "he": "\u05E0\u05E2\u05E8\u05E0", "translit": "nah-ar-awn'", "ref": "1 Chr 7:28", "refN": 1, "gem": 370, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "nibshan", "name": "Nibshan", "he": "\u05E0\u05D1\u05E9\u05E0", "translit": "nib-shawn'", "ref": "Josh 15:62", "refN": 1, "gem": 402, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "nob", "name": "Nob", "he": "\u05E0\u05D1", "translit": "nobe", "ref": "1 Sam 22:11", "refN": 5, "gem": 52, "len": 2, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "noph", "name": "Noph", "he": "\u05E0\u05E4", "translit": "nofe", "ref": "Gen 1:21", "refN": 26, "gem": 130, "len": 2, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "oboth", "name": "Oboth", "he": "\u05D0\u05D1\u05EA", "translit": "o-both'", "ref": "Gen 24:11", "refN": 6, "gem": 403, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "paddan", "name": "Paddan", "he": "\u05E4\u05D3\u05E0", "translit": "pad-dawn'", "ref": "Gen 25:20", "refN": 7, "gem": 134, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "paran", "name": "Paran", "he": "\u05E4\u05D0\u05E8\u05E0", "translit": "paw-rawn'", "ref": "Gen 14:6", "refN": 7, "gem": 331, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "parbar", "name": "Parbar", "he": "\u05E4\u05E8\u05D1\u05E8", "translit": "par-bawr'", "ref": "1 Chr 26:18", "refN": 1, "gem": 482, "len": 4, "theophoric": false, "period": "Post-exile/Writings", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "pethor", "name": "Pethor", "he": "\u05E4\u05EA\u05D5\u05E8", "translit": "peth-ore'", "ref": "Deut 23:5", "refN": 4, "gem": 686, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "pithom", "name": "Pithom", "he": "\u05E4\u05EA\u05DE", "translit": "pee-thome'", "ref": "Gen 11:7", "refN": 1, "gem": 520, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "rakkath", "name": "Rakkath", "he": "\u05E8\u05E7\u05EA", "translit": "rak-kath'", "ref": "Ex 28:17", "refN": 4, "gem": 700, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E7", "dates": [{ "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }] }, { "slug": "ramoth", "name": "Ramoth", "he": "\u05E8\u05D0\u05DE\u05D5\u05EA", "translit": "raw-moth'", "ref": "Prov 24:7", "refN": 2, "gem": 647, "len": 5, "theophoric": false, "period": "Post-exile/Writings", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "ramoth-negeb", "name": "Ramoth-Negeb", "he": "\u05E8\u05DE\u05D5\u05EA", "translit": "raw-moth", "ref": "Jer 31:40", "refN": 12, "gem": 646, "len": 4, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "rechoboth", "name": "Rechoboth", "he": "\u05E8\u05D7\u05D1\u05D5\u05EA", "translit": "rekh-o-both'", "ref": "Gen 26:22", "refN": 15, "gem": 616, "len": 5, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5\u05D7", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "rekah", "name": "Rekah", "he": "\u05E8\u05DB\u05D4", "translit": "ray-kaw'", "ref": "Gen 12:2", "refN": 41, "gem": 225, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "remeth", "name": "Remeth", "he": "\u05E8\u05DE\u05EA", "translit": "reh'-meth", "ref": "Num 31:28", "refN": 16, "gem": 640, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "rumah", "name": "Rumah", "he": "\u05E8\u05D5\u05DE\u05D4", "translit": "roo-maw'", "ref": "Josh 15:52", "refN": 11, "gem": 251, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "sebam", "name": "Sebam", "he": "\u05E9\u05D1\u05DE", "translit": "seb-awm'", "ref": "Gen 10:30", "refN": 3, "gem": 342, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "sedom", "name": "Sedom", "he": "\u05E1\u05D3\u05DE", "translit": "sed-ome'", "ref": "Gen 13:13", "refN": 26, "gem": 104, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "seku", "name": "Seku", "he": "\u05E9\u05DB\u05D5", "translit": "say'-koo", "ref": "Ex 12:21", "refN": 5, "gem": 326, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "sepharad", "name": "Sepharad", "he": "\u05E1\u05E4\u05E8\u05D3", "translit": "sef-aw-rawd'", "ref": "Gen 4:13", "refN": 13, "gem": 344, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }] }, { "slug": "sheba", "name": "Sheba", "he": "\u05E9\u05D1\u05D0", "translit": "sheb-aw'", "ref": "Gen 10:7", "refN": 15, "gem": 303, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "shepham", "name": "Shepham", "he": "\u05E9\u05E4\u05DE", "translit": "shef-awm'", "ref": "Num 34:11", "refN": 3, "gem": 420, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "sheshak", "name": "Sheshak", "he": "\u05E9\u05E9\u05DB", "translit": "shay-shak'", "ref": "Jer 25:26", "refN": 2, "gem": 620, "len": 3, "theophoric": false, "period": "Exile/Prophets", "simp": "", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-5685-03-11", "era": "Gemini", "O": 1 }, { "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-4018-11-05", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0958-11-09", "era": "Aries", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "shinar", "name": "Shinar", "he": "\u05E9\u05E0\u05E2\u05E8", "translit": "shin-awr'", "ref": "Gen 10:10", "refN": 6, "gem": 620, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "sokoh", "name": "Sokoh", "he": "\u05E9\u05D5\u05DB\u05D4", "translit": "so-ko'", "ref": "Josh 15:35", "refN": 3, "gem": 331, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D4\u05D5", "dates": [{ "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "taanak", "name": "Taanak", "he": "\u05EA\u05E2\u05E0\u05DB", "translit": "tah-an-awk'", "ref": "Deut 20:11", "refN": 5, "gem": 540, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E2", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "tachpanches", "name": "Tachpanches", "he": "\u05EA\u05D7\u05E4\u05E0\u05D7\u05E1", "translit": "takh-pan-khace'", "ref": "Jer 2:16", "refN": 6, "gem": 606, "len": 6, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05D7\u05E0\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "tebets", "name": "Tebets", "he": "\u05EA\u05D1\u05E6", "translit": "tay-bates'", "ref": "Judg 9:50", "refN": 2, "gem": 492, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "terach", "name": "Terach", "he": "\u05EA\u05E8\u05D7", "translit": "teh'-rakh", "ref": "Gen 11:27", "refN": 8, "gem": 608, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D7", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }, { "date": "-0144-07-18", "era": "Aries", "O": 1 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "timnath-cheres", "name": "Timnath-Cheres", "he": "\u05EA\u05DE\u05E0\u05EA\u05D7\u05E8\u05E1", "translit": "tim-nath kheh'-res", "ref": "Judg 2:9", "refN": 1, "gem": 1158, "len": 7, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D7\u05E0\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "tiphsach", "name": "Tiphsach", "he": "\u05EA\u05E4\u05E1\u05D7", "translit": "tif-sakh'", "ref": "1 Ki 5:4", "refN": 1, "gem": 548, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05D7\u05E1", "dates": [{ "date": "-6352-10-21", "era": "Cancer", "O": 3 }] }, { "slug": "tophteh", "name": "Tophteh", "he": "\u05EA\u05E4\u05EA\u05D4", "translit": "tof-teh'", "ref": "1 Ki 22:22", "refN": 3, "gem": 885, "len": 4, "theophoric": false, "period": "Monarchy (David/Solomon)", "simp": "\u05D4", "dates": [{ "date": "-4831-03-26", "era": "Gemini", "O": 1 }, { "date": "-3242-03-20", "era": "Taurus", "O": 2 }, { "date": "1857-04-24", "era": "Pisces", "O": 3 }] }, { "slug": "tsarethan", "name": "Tsarethan", "he": "\u05E6\u05E8\u05EA\u05E0", "translit": "tsaw-reth-awn'", "ref": "Josh 3:16", "refN": 2, "gem": 740, "len": 4, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "tsenan", "name": "Tsenan", "he": "\u05E6\u05E0\u05E0", "translit": "tsen-awn'", "ref": "Josh 15:37", "refN": 1, "gem": 190, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E0\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "tsephath", "name": "Tsephath", "he": "\u05E6\u05E4\u05EA", "translit": "tsef-ath'", "ref": "Judg 1:17", "refN": 2, "gem": 570, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }, { "date": "1962-02-04", "era": "Pisces", "O": 1 }] }, { "slug": "tsin", "name": "Tsin", "he": "\u05E6\u05E0", "translit": "tseen", "ref": "Ezek 23:24", "refN": 1, "gem": 140, "len": 2, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05E0\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "zaanan", "name": "Zaanan", "he": "\u05E6\u05D0\u05E0\u05E0", "translit": "tsah-an-awn'", "ref": "Mic 1:11", "refN": 1, "gem": 191, "len": 4, "theophoric": false, "period": "Exile/Prophets", "simp": "\u05E0\u05E6", "dates": [{ "date": "1994-01-12", "era": "Pisces", "O": 3 }] }, { "slug": "zered", "name": "Zered", "he": "\u05D6\u05E8\u05D3", "translit": "zeh'-red", "ref": "Num 21:12", "refN": 3, "gem": 211, "len": 3, "theophoric": false, "period": "Patriarchs/Conquest", "simp": "\u05D6", "dates": [{ "date": "-8267-06-03", "era": "Cancer", "O": 1 }, { "date": "-1912-06-21", "era": "Taurus", "O": 2 }] }];
 var BY_SLUG4 = /* @__PURE__ */ new Map([
   ["accad", PLACES[0]],
@@ -30606,17 +30606,17 @@ var BY_SLUG4 = /* @__PURE__ */ new Map([
   ["zered", PLACES[107]]
 ]);
 
-// web/src/pages/PlaceFicha.jsx
+// src/pages/PlaceFicha.jsx
 function PlaceFicha({ slug }) {
   const figure = BY_SLUG4.get(slug) || null;
   return /* @__PURE__ */ import_react11.default.createElement(NameFicha, { figure, kind: "place", backHref: "/places", backLabel: "back to Places" });
 }
 var PLACE_SLUGS = PLACES.map((p) => p.slug);
 
-// web/src/pages/PatriarchsPage.jsx
+// src/pages/PatriarchsPage.jsx
 var import_react13 = __toESM(require_react());
 
-// web/src/components/NameIndexPage.jsx
+// src/components/NameIndexPage.jsx
 var import_react12 = __toESM(require_react());
 var PAGE_SIZE = 48;
 function NameIndexPage({ title, intro, kind, items, basePath, onOpen }) {
@@ -30676,7 +30676,7 @@ function NameIndexPage({ title, intro, kind, items, basePath, onOpen }) {
   }, style: { width: 64 }, "aria-label": "Jump to page" })));
 }
 
-// web/src/pages/PatriarchsPage.jsx
+// src/pages/PatriarchsPage.jsx
 function PatriarchsPage({ onOpen }) {
   return /* @__PURE__ */ import_react13.default.createElement(
     NameIndexPage,
@@ -30691,7 +30691,7 @@ function PatriarchsPage({ onOpen }) {
   );
 }
 
-// web/src/pages/PlacesPage.jsx
+// src/pages/PlacesPage.jsx
 var import_react14 = __toESM(require_react());
 function PlacesPage({ onOpen }) {
   return /* @__PURE__ */ import_react14.default.createElement(
@@ -30707,7 +30707,7 @@ function PlacesPage({ onOpen }) {
   );
 }
 
-// web/src/tabs/ReaderTab.jsx
+// src/tabs/ReaderTab.jsx
 var import_react15 = __toESM(require_react());
 function findWord(he, LEX2, angelMap2) {
   if (!LEX2) return null;
@@ -30835,7 +30835,7 @@ function GlossPage({ word, date, rows: rows2, occ: occ2, genData: genData2, onBa
   })), /* @__PURE__ */ import_react15.default.createElement("div", { className: "legend" }, req.length === 0 ? /* @__PURE__ */ import_react15.default.createElement(import_react15.default.Fragment, null, "every day \xB7 ", tl.n, " days") : /* @__PURE__ */ import_react15.default.createElement(import_react15.default.Fragment, null, tl.onDays.length, " of ", tl.n, " days (", probsAll != null ? probsAll.toFixed(probsAll < 1 ? 1 : 0) : "?", "%) \xB7 first ", tl.onDays.length ? displayDate(fmtDate(makeDate(genData2.year, 1, 1 + tl.onDays[0]))) : "\u2014", " \xB7 last ", tl.onDays.length ? displayDate(fmtDate(makeDate(genData2.year, 1, 1 + tl.onDays[tl.onDays.length - 1]))) : "\u2014"))) : /* @__PURE__ */ import_react15.default.createElement("div", { className: "muted" }, "Run the Predictor scan for this year to see the day-by-day timeline.")), wikiTitle && /* @__PURE__ */ import_react15.default.createElement("div", { className: "panel", style: { marginTop: 14, padding: 16 } }, /* @__PURE__ */ import_react15.default.createElement("h3", { style: { marginTop: 0 } }, "Wikipedia \u2014 ", wikiTitle), wiki && wiki.loading && /* @__PURE__ */ import_react15.default.createElement("div", { className: "muted" }, "Looking up ", wikiTitle, " on Wikipedia\u2026"), wiki && wiki.error && /* @__PURE__ */ import_react15.default.createElement("div", { className: "muted", style: { color: "var(--red)" } }, "No Wikipedia article found for \u201C", wikiTitle, "\u201D (", wiki.error, ")."), wiki && wiki.j && /* @__PURE__ */ import_react15.default.createElement(import_react15.default.Fragment, null, wiki.j.type === "disambiguation" ? /* @__PURE__ */ import_react15.default.createElement("div", { className: "muted" }, "\u201C", wiki.j.title, "\u201D is a disambiguation page \u2014 see ", /* @__PURE__ */ import_react15.default.createElement("a", { href: wiki.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer" }, "Wikipedia"), " for the list of meanings.") : /* @__PURE__ */ import_react15.default.createElement(import_react15.default.Fragment, null, /* @__PURE__ */ import_react15.default.createElement("div", { style: { display: "flex", gap: 14, flexWrap: "wrap", alignItems: "flex-start" } }, wiki.j.thumbnail && /* @__PURE__ */ import_react15.default.createElement("img", { src: wiki.j.thumbnail.source, alt: wiki.j.title, style: { maxWidth: 160, maxHeight: 200, borderRadius: 8, border: "1px solid var(--line)" } }), /* @__PURE__ */ import_react15.default.createElement("div", { style: { flex: "1 1 320px" } }, wiki.j.description && /* @__PURE__ */ import_react15.default.createElement("div", { className: "muted", style: { marginBottom: 6 } }, wiki.j.description), /* @__PURE__ */ import_react15.default.createElement("div", null, wiki.j.extract), /* @__PURE__ */ import_react15.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react15.default.createElement("a", { href: wiki.j.content_urls?.desktop?.page, target: "_blank", rel: "noreferrer" }, "Read more on Wikipedia \u2192")))))), !wiki && /* @__PURE__ */ import_react15.default.createElement("div", { className: "muted" }, "Preparing Wikipedia lookup\u2026")), /* @__PURE__ */ import_react15.default.createElement("div", { className: "note", style: { marginTop: 14 } }, "This single-reading page is a shareable deep link: ", /* @__PURE__ */ import_react15.default.createElement("code", null, typeof window !== "undefined" ? window.location.href : ""), ". The sky map, gloss and year timeline are computed live from astronomy-engine planet positions; the Wikipedia panel (shown for proper and angel names) is the free Wikipedia REST summary API."));
 }
 
-// web/src/Footer.jsx
+// src/Footer.jsx
 var import_react16 = __toESM(require_react());
 var GITHUB = "https://github.com/VABISMO/adam-apocalypse";
 var PAPER = "/paper";
@@ -30867,10 +30867,10 @@ function Footer() {
   return /* @__PURE__ */ import_react16.default.createElement("footer", { className: "site-footer", onClick }, /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react16.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react16.default.createElement(L, { href: PAPER }, "The paper \u2014 The Reader of the Sky \u2192"), /* @__PURE__ */ import_react16.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Adapa to Aleister Crowley"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/patriarchs" }, "Patriarchs/Conquest \u2014 names readable in the sky"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/places" }, "Places \u2014 biblical toponyms readable in the sky"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments" }, "Stellar alignments (267 fiches)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/app" }, "Sky reader app")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react16.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react16.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react16.default.createElement("span", null, "\xA9 ", year, " ", /* @__PURE__ */ import_react16.default.createElement("a", { href: "https://medium.com/@ancientencoder/sons-of-stars-269765bda7db", target: "_blank", rel: "noreferrer" }, "AncientEncoder"), " and BartMan \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react16.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react16.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
 }
 
-// web/src/pages/Landing.jsx
+// src/pages/Landing.jsx
 var import_react19 = __toESM(require_react());
 
-// web/src/tabs/CyclesTab.jsx
+// src/tabs/CyclesTab.jsx
 var import_react17 = __toESM(require_react());
 function PrecessionDiagram() {
   const cx = 230, cy = 130, R2 = 120, r = 70;
@@ -30886,7 +30886,7 @@ function PrecessionDiagram() {
   return /* @__PURE__ */ import_react17.default.createElement("svg", { viewBox: "0 0 460 280", width: "100%", style: { maxWidth: 460 }, role: "img", "aria-label": "Precession: tropical vs sidereal zodiac" }, /* @__PURE__ */ import_react17.default.createElement("circle", { cx, cy, r: R2, fill: "#16161f", stroke: "#2a2a38" }), SIGNS.map((s, i) => seg(i, i % 2 ? "#16161f" : "#16161f", s.slice(0, 3))), /* @__PURE__ */ import_react17.default.createElement("line", { x1: cx, y1: cy, x2: tx, y2: ty, stroke: "#e8c87a", strokeWidth: "2" }), /* @__PURE__ */ import_react17.default.createElement("circle", { cx: tx, cy: ty, r: "5", fill: "#e8c87a" }), /* @__PURE__ */ import_react17.default.createElement("text", { x: tx, y: ty - 10, textAnchor: "middle", fontSize: "9", fill: "#e8c87a" }, "\u2648 tropical 0\xB0 (fixed to equinox \u2014 does NOT precess)"), /* @__PURE__ */ import_react17.default.createElement("line", { x1: cx, y1: cy, x2: sx, y2: sy, stroke: "#9b8ec4", strokeWidth: "2", strokeDasharray: "4 3" }), /* @__PURE__ */ import_react17.default.createElement("circle", { cx: sx, cy: sy, r: "5", fill: "#9b8ec4" }), /* @__PURE__ */ import_react17.default.createElement("text", { x: sx + 10, y: sy + 4, fontSize: "9", fill: "#9b8ec4" }, "sidereal 0\xB0 (fixed to stars \u2014 precesses)"), /* @__PURE__ */ import_react17.default.createElement("path", { d: `M ${cx + (R2 - 34) * Math.cos(-90 * Math.PI / 180)} ${cy + (R2 - 34) * Math.sin(-90 * Math.PI / 180)} A ${R2 - 34} ${R2 - 34} 0 0 1 ${cx + (R2 - 34) * Math.cos(ayAng)} ${cy + (R2 - 34) * Math.sin(ayAng)}`, fill: "none", stroke: "#f4a8c0", strokeWidth: "1.4" }), /* @__PURE__ */ import_react17.default.createElement("text", { x: cx + (R2 - 50) * Math.cos((-90 + 12) * Math.PI / 180), y: cy + (R2 - 50) * Math.sin((-90 + 12) * Math.PI / 180) + 3, textAnchor: "middle", fontSize: "9", fill: "#f4a8c0" }, "ayanamsa 24.18\xB0"), /* @__PURE__ */ import_react17.default.createElement("path", { d: `M ${cx} ${cy + 44} A 44 44 0 0 0 ${cx - 31} ${cy + 31}`, fill: "none", stroke: "#8a96ad", strokeWidth: "1.2", markerEnd: "url(#ar)" }), /* @__PURE__ */ import_react17.default.createElement("defs", null, /* @__PURE__ */ import_react17.default.createElement("marker", { id: "ar", markerWidth: "6", markerHeight: "6", refX: "3", refY: "3", orient: "auto" }, /* @__PURE__ */ import_react17.default.createElement("path", { d: "M0 0 L6 3 L0 6 Z", fill: "#8a96ad" }))), /* @__PURE__ */ import_react17.default.createElement("text", { x: cx, y: cy, textAnchor: "middle", fontSize: "9", fill: "#8a96ad" }, "precession \u2192"));
 }
 
-// web/src/components/WarningModal.jsx
+// src/components/WarningModal.jsx
 var import_react18 = __toESM(require_react());
 var QUESTIONS = [
   "Do you currently feel your thoughts or actions are being controlled by an outside force?",
@@ -30904,7 +30904,7 @@ function WarningModal({ open, onClose, onProceed }) {
   return /* @__PURE__ */ import_react18.default.createElement("div", { className: "eph-modal warn-modal", role: "dialog", "aria-modal": "true", "aria-labelledby": "wm-title", onClick: onClose }, /* @__PURE__ */ import_react18.default.createElement("div", { className: "eph-panel panel warn-panel", style: { maxWidth: 560 }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react18.default.createElement("h2", { id: "wm-title", style: { marginTop: 0 } }, "Before you enter"), /* @__PURE__ */ import_react18.default.createElement("div", { className: "muted", style: { marginBottom: 12, fontSize: ".9rem" } }, "This project explores ", /* @__PURE__ */ import_react18.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation, cosmology and altered-state symbolism"), " \u2014 the meaning of ", /* @__PURE__ */ import_react18.default.createElement("i", null, "apocalypse"), " as the unveiling of knowledge, read through the stars. Some of it can feel intense or destabilizing."), /* @__PURE__ */ import_react18.default.createElement("div", { className: "iv", style: { borderColor: "var(--warn)", marginBottom: 14 } }, /* @__PURE__ */ import_react18.default.createElement("div", { style: { fontSize: ".9rem", lineHeight: 1.55 } }, /* @__PURE__ */ import_react18.default.createElement("b", { style: { color: "var(--warn)" } }, "Please do not use this tool if you suffer from psychosis, mania, or schizophrenia"), " \u2014 or, if you choose to, do so only together with someone you trust. The symbolism here can feel overwhelming; your wellbeing comes first, always.")), /* @__PURE__ */ import_react18.default.createElement("h3", { style: { marginTop: 6 } }, "A short self-check"), /* @__PURE__ */ import_react18.default.createElement("div", { className: "muted", style: { marginBottom: 10, fontSize: ".82rem" } }, "This is not a diagnosis \u2014 just a moment to pause. Answer honestly; nothing is stored or sent anywhere."), /* @__PURE__ */ import_react18.default.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 10 } }, QUESTIONS.map((q, i) => /* @__PURE__ */ import_react18.default.createElement("div", { key: i, className: "iv", style: { padding: "10px 12px" } }, /* @__PURE__ */ import_react18.default.createElement("div", { style: { fontSize: ".9rem", marginBottom: 7 } }, q), /* @__PURE__ */ import_react18.default.createElement("div", { style: { display: "flex", gap: 8 } }, /* @__PURE__ */ import_react18.default.createElement("button", { className: answers[i] === true ? "on" : "", onClick: () => set(i, true), "aria-pressed": answers[i] === true }, "Yes"), /* @__PURE__ */ import_react18.default.createElement("button", { className: answers[i] === false ? "on" : "", onClick: () => set(i, false), "aria-pressed": answers[i] === false }, "No"))))), done && /* @__PURE__ */ import_react18.default.createElement("div", { className: "iv", style: { marginTop: 12, borderColor: risk ? "var(--warn)" : "var(--green)" } }, risk ? /* @__PURE__ */ import_react18.default.createElement("div", { style: { fontSize: ".9rem" } }, /* @__PURE__ */ import_react18.default.createElement("b", { style: { color: "var(--warn)" } }, "Please be gentle with yourself."), " Consider talking to someone you trust or a mental-health professional before going deeper. You can always come back later.") : /* @__PURE__ */ import_react18.default.createElement("div", { style: { fontSize: ".9rem", color: "var(--green)" } }, /* @__PURE__ */ import_react18.default.createElement("b", null, "Thank you for checking."), " Take what is useful, leave the rest.")), /* @__PURE__ */ import_react18.default.createElement("div", { className: "controls", style: { marginTop: 16, justifyContent: "space-between", flexWrap: "wrap", gap: 10 } }, /* @__PURE__ */ import_react18.default.createElement("button", { onClick: onClose, title: "Close this notice and stay here" }, "\u25C0 Go back"), /* @__PURE__ */ import_react18.default.createElement("button", { className: "btn-cta", onClick: onProceed, disabled: !done, title: done ? "Enter the sky-reader app" : "Answer the self-check to continue" }, done ? "Proceed to the app \u2192" : "Answer to continue")), /* @__PURE__ */ import_react18.default.createElement("div", { className: "note", style: { marginTop: 10 } }, "If you are in crisis, please reach out \u2014 in the US, ", /* @__PURE__ */ import_react18.default.createElement("a", { href: "https://988lifeline.org", target: "_blank", rel: "noreferrer" }, "988 Suicide & Crisis Lifeline"), "; elsewhere, contact your local emergency services. You matter.")));
 }
 
-// web/src/pages/Landing.jsx
+// src/pages/Landing.jsx
 var REF_DATE = (() => {
   const d = /* @__PURE__ */ new Date();
   return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
@@ -31085,1080 +31085,29 @@ function Landing({ goApp }) {
   const rows2 = (0, import_react19.useMemo)(() => skyAt(REF_DATE), []);
   const occ2 = (0, import_react19.useMemo)(() => occupiedLetters(skyAt7(REF_DATE)), []);
   const [warnOpen, setWarnOpen] = (0, import_react19.useState)(false);
-  const [libQuery, setLibQuery] = (0, import_react19.useState)("");
   const enterApp = () => {
     setWarnOpen(false);
     goApp && goApp();
   };
-  const submitLib = (e) => {
-    e.preventDefault();
-    const q = libQuery.trim();
-    window.location.href = "/library" + (q ? "?q=" + encodeURIComponent(q) : "");
-  };
-  return /* @__PURE__ */ import_react19.default.createElement("div", { className: "landing" }, /* @__PURE__ */ import_react19.default.createElement("section", { className: "hero" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-copy" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-eyebrow" }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "star-of-life", c: "gold", size: "1rem" }), " Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet"), /* @__PURE__ */ import_react19.default.createElement("h1", { className: "hero-title" }, "The Apocalypse ", /* @__PURE__ */ import_react19.default.createElement("span", { style: { color: "var(--gold)" } }, "of Adam")), /* @__PURE__ */ import_react19.default.createElement("blockquote", { className: "hero-tag", style: { borderLeft: "3px solid var(--gold)", paddingLeft: 14, fontStyle: "italic", color: "var(--dim)" } }, "\u201CAnd the thirteenth kingdom says of him that every birth of their ruler is a word. And this word received a mandate there. He received glory and power. And thus he came to the water, in order that the desire of those powers might be satisfied.\u201D", /* @__PURE__ */ import_react19.default.createElement("cite", { style: { display: "block", marginTop: 10, fontStyle: "normal", fontSize: ".82rem", color: "var(--dim)" } }, "\u2014 The Apocalypse of Adam \xB7 the thirteenth kingdom")), /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-cta" }, /* @__PURE__ */ import_react19.default.createElement("button", { className: "btn-cta", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "compass", c: "txt", size: "1rem" }), " \xA0Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react19.default.createElement("a", { className: "hero-ghost", href: "/paper" }, "Read the paper \u2192")), /* @__PURE__ */ import_react19.default.createElement("button", { className: "hero-note-link", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".85rem" }), " \xA0Content notice \u2014 for visitors with psychosis, mania, or schizophrenia")), /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-sky panel" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-sky-label muted" }, "Sky of ", REF_DATE, " \xB7 ", occ2.size, " of 12 signs occupied"), /* @__PURE__ */ import_react19.default.createElement(SkyMap, { rows: rows2, occ: occ2 }))), /* @__PURE__ */ import_react19.default.createElement("section", { className: "panel", style: { padding: 18, marginTop: 18 } }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { margin: 0 } }, "The grammar of the sky")), /* @__PURE__ */ import_react19.default.createElement(Slider, { rows: rows2, occ: occ2 })), /* @__PURE__ */ import_react19.default.createElement("section", { style: { marginTop: 22 } }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { margin: 0 } }, "What you can do in the app")), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-grid" }, FEATURES.map((f, idx) => /* @__PURE__ */ import_react19.default.createElement("a", { key: idx, className: "feat-card", href: f.go }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-icon" }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: f.n, c: f.c, size: "1.5rem" })), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-t" }, f.t), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-d muted" }, f.d), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-go muted" }, "open \u2192"))))), /* @__PURE__ */ import_react19.default.createElement("section", { className: "panel", style: { marginTop: 22, padding: 24 } }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "section-head", style: { textAlign: "center" } }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { margin: 0, color: "var(--gold)" } }, "The Luco Library \u2014 the Sacred Forest"), /* @__PURE__ */ import_react19.default.createElement("p", { className: "muted", style: { maxWidth: 640, margin: "6px auto 0" } }, /* @__PURE__ */ import_react19.default.createElement("i", null, "Luco"), ", from Latin ", /* @__PURE__ */ import_react19.default.createElement("i", null, "lucus"), " \u2014 the sacred grove of Roman Hispania. A BibleGateway-style search across the primary sources behind the project: Avesta, the Qur'an, Nag Hammadi, the Rig Veda, the Hermetic sermons, the Book of the Dead, the I Ching, the Popol Vuh, Josephus, 1 Enoch, the Sefer Yetzirah and Ramban's commentary, and the Sufi & gematria references.")), /* @__PURE__ */ import_react19.default.createElement("form", { className: "controls", style: { maxWidth: 560, margin: "16px auto 0", justifyContent: "center" }, action: "/library", method: "get", onSubmit: submitLib }, /* @__PURE__ */ import_react19.default.createElement(
-    "input",
-    {
-      type: "text",
-      name: "q",
-      className: "lib-search",
-      placeholder: "Search the library \u2014 e.g. Poimandres, watchmen, Marduk, gematria\u2026",
-      value: libQuery,
-      onChange: (e) => setLibQuery(e.target.value),
-      style: { flex: 1, minWidth: 220 },
-      "aria-label": "Search the library"
-    }
-  ), /* @__PURE__ */ import_react19.default.createElement("button", { type: "submit", className: "btn-cta" }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "magnifying-glass", c: "txt", size: ".95rem" }), " \xA0Search")), /* @__PURE__ */ import_react19.default.createElement("div", { style: { textAlign: "center", marginTop: 12 } }, /* @__PURE__ */ import_react19.default.createElement("a", { href: "/library", style: { color: "var(--violet)", fontSize: ".9rem" } }, "Browse all books \u2192"))), /* @__PURE__ */ import_react19.default.createElement("section", { className: "panel entry-cta", style: { marginTop: 26, padding: 28, textAlign: "center", borderColor: "var(--brand)" } }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { marginTop: 0 } }, "Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react19.default.createElement("p", { className: "muted", style: { maxWidth: 620, margin: "0 auto 16px" } }, "Learn a few simple things about the ancients, then read the sky for yourself. A short content notice opens first \u2014 for visitors diagnosed with psychosis or schizophrenia."), /* @__PURE__ */ import_react19.default.createElement("button", { className: "btn-cta", style: { fontSize: "1.1rem", padding: "14px 34px" }, onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "compass", c: "txt", size: "1.1rem" }), " \xA0Enter the app")), /* @__PURE__ */ import_react19.default.createElement(WarningModal, { open: warnOpen, onClose: () => setWarnOpen(false), onProceed: enterApp }));
+  return /* @__PURE__ */ import_react19.default.createElement("div", { className: "landing" }, /* @__PURE__ */ import_react19.default.createElement("section", { className: "hero" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-copy" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-eyebrow" }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "star-of-life", c: "gold", size: "1rem" }), " Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet"), /* @__PURE__ */ import_react19.default.createElement("h1", { className: "hero-title" }, "The Apocalypse ", /* @__PURE__ */ import_react19.default.createElement("span", { style: { color: "var(--gold)" } }, "of Adam")), /* @__PURE__ */ import_react19.default.createElement("blockquote", { className: "hero-tag", style: { borderLeft: "3px solid var(--gold)", paddingLeft: 14, fontStyle: "italic", color: "var(--dim)" } }, "\u201CAnd the thirteenth kingdom says of him that every birth of their ruler is a word. And this word received a mandate there. He received glory and power. And thus he came to the water, in order that the desire of those powers might be satisfied.\u201D", /* @__PURE__ */ import_react19.default.createElement("cite", { style: { display: "block", marginTop: 10, fontStyle: "normal", fontSize: ".82rem", color: "var(--dim)" } }, "\u2014 The Apocalypse of Adam \xB7 the thirteenth kingdom")), /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-cta" }, /* @__PURE__ */ import_react19.default.createElement("button", { className: "btn-cta", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "compass", c: "txt", size: "1rem" }), " \xA0Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react19.default.createElement("a", { className: "hero-ghost", href: "/paper" }, "Read the paper \u2192")), /* @__PURE__ */ import_react19.default.createElement("button", { className: "hero-note-link", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".85rem" }), " \xA0Content notice \u2014 for visitors with psychosis, mania, or schizophrenia")), /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-sky panel" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-sky-label muted" }, "Sky of ", REF_DATE, " \xB7 ", occ2.size, " of 12 signs occupied"), /* @__PURE__ */ import_react19.default.createElement(SkyMap, { rows: rows2, occ: occ2 }))), /* @__PURE__ */ import_react19.default.createElement("section", { className: "panel", style: { padding: 18, marginTop: 18 } }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { margin: 0 } }, "The grammar of the sky")), /* @__PURE__ */ import_react19.default.createElement(Slider, { rows: rows2, occ: occ2 })), /* @__PURE__ */ import_react19.default.createElement("section", { style: { marginTop: 22 } }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { margin: 0 } }, "What you can do in the app")), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-grid" }, FEATURES.map((f, idx) => /* @__PURE__ */ import_react19.default.createElement("a", { key: idx, className: "feat-card", href: f.go }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-icon" }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: f.n, c: f.c, size: "1.5rem" })), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-t" }, f.t), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-d muted" }, f.d), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-go muted" }, "open \u2192"))))), /* @__PURE__ */ import_react19.default.createElement("section", { className: "panel entry-cta", style: { marginTop: 26, padding: 28, textAlign: "center", borderColor: "var(--brand)" } }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { marginTop: 0 } }, "Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react19.default.createElement("p", { className: "muted", style: { maxWidth: 620, margin: "0 auto 16px" } }, "Learn a few simple things about the ancients, then read the sky for yourself. A short content notice opens first \u2014 for visitors diagnosed with psychosis or schizophrenia."), /* @__PURE__ */ import_react19.default.createElement("button", { className: "btn-cta", style: { fontSize: "1.1rem", padding: "14px 34px" }, onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "compass", c: "txt", size: "1.1rem" }), " \xA0Enter the app")), /* @__PURE__ */ import_react19.default.createElement(WarningModal, { open: warnOpen, onClose: () => setWarnOpen(false), onProceed: enterApp }));
 }
 
-// web/src/pages/About.jsx
+// src/pages/About.jsx
 var import_react20 = __toESM(require_react());
 function About() {
   return /* @__PURE__ */ import_react20.default.createElement("div", { className: "about-page" }, /* @__PURE__ */ import_react20.default.createElement("h1", { style: { fontSize: "1.9rem", marginBottom: 4 } }, "About ", /* @__PURE__ */ import_react20.default.createElement("span", { style: { color: "var(--gold)" } }, "The Apocalypse of Adam")), /* @__PURE__ */ import_react20.default.createElement("div", { className: "sub", style: { marginBottom: 16 } }, "Hebrew letters read in the sky \u2014 a stellar-alphabet reader behind the paper ", /* @__PURE__ */ import_react20.default.createElement("i", null, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react20.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14 } }, /* @__PURE__ */ import_react20.default.createElement("h2", { style: { marginTop: 0 } }, "What this is"), /* @__PURE__ */ import_react20.default.createElement("p", null, /* @__PURE__ */ import_react20.default.createElement("i", null, "Apocalypse"), " means ", /* @__PURE__ */ import_react20.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation"), " \u2014 the unveiling of knowledge, not something sinister. This project reads the sky as the ancients did: real planet positions (computed live by ", /* @__PURE__ */ import_react20.default.createElement("a", { href: "https://github.com/cosinekitty/astronomy-engine", target: "_blank", rel: "noreferrer" }, "astronomy-engine"), ") map the ", /* @__PURE__ */ import_react20.default.createElement("b", null, "12 zodiac signs"), " to the ", /* @__PURE__ */ import_react20.default.createElement("b", null, "12 simple letters"), " of the ", /* @__PURE__ */ import_react20.default.createElement("a", { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", target: "_blank", rel: "noreferrer" }, "Sefer Yetzirah"), ". Every date spells a set of readable Hebrew names \u2014 a stellar alphabet that no one can erase, encoded across the only medium that survives the malice of men."), /* @__PURE__ */ import_react20.default.createElement("p", null, "The app is a calculator suite: a live ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Sky Map"), ", a ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Reader"), " of every readable word, the ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Reading Rule"), " (YHVH, Genesis 1:1), a ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Time"), " predictor and precessional ages, ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Gematria"), " (Hebrew / Greek / Arabic / Indian), the ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Sigil"), " forge, the ", /* @__PURE__ */ import_react20.default.createElement("b", null, "72"), " Shem HaMephorash angels, ", /* @__PURE__ */ import_react20.default.createElement("b", null, "ELS / Torah codes"), ", Temurah, Ziruph, rare stellar ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Alignments"), ", a 9-culture ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Revelations"), " survey, and ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Psalms"), " by date.")), /* @__PURE__ */ import_react20.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14 } }, /* @__PURE__ */ import_react20.default.createElement("h2", { style: { marginTop: 0 } }, "The Prophecy of Adam"), /* @__PURE__ */ import_react20.default.createElement("p", null, "Welcome to ", /* @__PURE__ */ import_react20.default.createElement("i", null, "The Apocalypse of Adam"), " \u2014 and do not worry, there is nothing sinister here. ", /* @__PURE__ */ import_react20.default.createElement("i", null, "Apocalypse"), " is the word used to reveal the knowledge and science of God. Since the last coming of the Antichrist's followers (Jacob Frank, 1666), things have only gone from bad to worse. But do not fear: the days when all religions and dogmas will live together are at hand \u2014 and the best of it is, nothing need be done to make it so. They have already done a thorough job of breaking the world, sinking it to ashes in every respect, and preparing our arrival. Greed and unconscious individualism have reached their end; our past spirits, roles, and ideas prepared everything well, so that when the right moment came the religions could be unified, the greedy and warlike kingdoms could be brought down \u2014 destroyed by their own pride and greed \u2014 and society could organize itself to build a coming era of peace and prosperity."), /* @__PURE__ */ import_react20.default.createElement("p", null, "For centuries they have sold us systems of organization promising infinite growth and abundance; but, brothers, we all know that believing that fallacy is the mark of fools. They have set us against one another for millennia to increase their power, under the spell of Yaldabaoth / SATAN / the Demiurge \u2014 a very potent conjuration, forged in antiquity at the beginning of time, that dominates the minds and bodies of nearly every person."), /* @__PURE__ */ import_react20.default.createElement("p", null, "But how can we believe ourselves? Why do you have a favorite color? Why do you like a certain band, why do you defend the ideas of some low-level sorcerer by the FALLACY OF AUTHORITY? Are you truly original in anything? Have you contributed something to society it did not already know? Have you invented something unique? And even if you had \u2014 what makes you think someone did not do it before, and you simply do not remember? Or that a MAN possessed by his EGO did not erase it from history to secure his dominion and control over the population? A little humility, please."), /* @__PURE__ */ import_react20.default.createElement("p", null, "We are all copies of copies of copies \u2014 of the people you admire, the philosophers you like, even footballers and every kind of nonsense. The truth is that since oral, and above all written, language has existed, very little about us is original. But do not fear, do not feel sad: you are still unique. We are like a swarm of bees, or an artificial intelligence \u2014 instead of many servers and cores, we have many bodies, but there is only one being made of Word, our computational language. We are like an agent that remains unique \u2014 by its EMOTION, its own weights, its own rules forged from its environment, the permutations of its teachers, what it learned over the course of its life, its SOUL. And that is all we have: the SOUL, the most precious and immortal thing. And that soul, statistically, will live again and again; it will never die, it will always return to life \u2014 only most do not remember, nor will they, until their deepest parts awaken through VISION, DREAM, or logical thought."), /* @__PURE__ */ import_react20.default.createElement("p", null, "It sounds beautiful, does it not? And you cannot yet imagine how much so. For our ancestors, the ancestral souls, devised the means so that when the day came the world would be ready to understand the truth. They took great care to hide all the signs in plain sight \u2014 all the philosophical, astronomical, mathematical, physical, and chemical teaching. And how could they do that? How can we be sure the information has not been manipulated over time, like the scriptures of every religion, rewritten by men and never by the true prophets and scientific mages? In truth, they have tried: they have flooded our cities with so much light that it no longer occurs to anyone to look at the stars. What better medium to encode all knowledge across the centuries than the stars, through their permutations? Is it not the only medium no one can erase?"), /* @__PURE__ */ import_react20.default.createElement("p", null, "It may seem MAD. But in truth it is very simple and elegant once it is built \u2014 though building the encoding must have taken at least tens of thousands of years of observation and development of the ART (all the sciences). But wait \u2014 did we not begin this centuries ago? Are not the first temples of antiquity stellar observatories? And those are only the ones we know, the ones that survived the malice of man."), /* @__PURE__ */ import_react20.default.createElement("p", null, "Imagine: once oral language had developed, the ancients looked up at the sky and saw it turn with a perfection and synchrony that could not be found on the earth \u2014 chaotic, errant, full of danger. The universe was always in order, turning at constant speed, repeating its cycles to infinity. The planets, though they seemed to contradict the motion of the other stars and to move against the current, after many millennia of observation revealed the patterns they followed."), /* @__PURE__ */ import_react20.default.createElement("p", null, "The ancients simply looked at the sky, grouped the stars separated by empty spaces, drew lines between the clusters, marked them, and gave them a name. Each name was unique, a single syllable. With the sky-symbols they had created and their names, they could now represent their ideas in writing, and keep notes to understand how the cosmos worked."), /* @__PURE__ */ import_react20.default.createElement("p", null, "EVE realized this and explained it to ADAM \u2014 for she was a woman, and in the age when we were still nearly animals, males subjugated females... well, nearly as in all of history. But it was truly EVE who understood how to compose language, and she beguiled ADAM with her \u201Cmagic,\u201D so that he would bear all the consequences \u2014 condemning men and women to labor and be slaves through all of history, down to the present. Because yes, make no mistake: you are a SLAVE, and none of it would have happened if the celestial Father (THE UNIVERSE), through its perfect synchrony, had not allowed intelligence to develop far enough to CREATE writing."), /* @__PURE__ */ import_react20.default.createElement("p", null, "So then: this project is about that. By explaining the origin of writing, we will unveil the mysteries of antiquity elegantly \u2014 no fables, no lies \u2014 elegantly. Nothing need be forced to fit, for all the past SOULS already saw to that. We will only follow the instructions they left us for the thirteenth kingdom, the 13th kingdom. A kingdom without kings \u2014 and that, my friends, IS THE PROPHECY OF ADAM.")), /* @__PURE__ */ import_react20.default.createElement("div", { className: "grid2" }, /* @__PURE__ */ import_react20.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react20.default.createElement("h2", { style: { marginTop: 0 } }, "How a reading works"), /* @__PURE__ */ import_react20.default.createElement("p", { className: "muted" }, "The ", /* @__PURE__ */ import_react20.default.createElement("b", null, "3 mothers"), " (\u05D0 \u05DE \u05E9) sit on a fixed circumpolar axis. The ", /* @__PURE__ */ import_react20.default.createElement("b", null, "7 doubles"), " (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) are the 7 moving bodies. The ", /* @__PURE__ */ import_react20.default.createElement("b", null, "12 simples"), " are the 12 signs. A word is readable on a date when every simple it needs sits in an ", /* @__PURE__ */ import_react20.default.createElement("b", null, "occupied"), " sign (S\u2286O). Rare alignments concentrate the planets \u2014 fewer letters, fewer words, a sharper reading.")), /* @__PURE__ */ import_react20.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react20.default.createElement("h2", { style: { marginTop: 0 } }, "The numbers, briefly"), /* @__PURE__ */ import_react20.default.createElement("ul", { className: "muted", style: { margin: "6px 0 0", paddingLeft: 20 } }, /* @__PURE__ */ import_react20.default.createElement("li", null, /* @__PURE__ */ import_react20.default.createElement("b", { style: { color: "var(--gold)" } }, "6,045"), " consonantal Hebrew roots in the lexicon."), /* @__PURE__ */ import_react20.default.createElement("li", null, /* @__PURE__ */ import_react20.default.createElement("b", { style: { color: "var(--gold)" } }, "267"), " rare century/millennium alignments catalogued."), /* @__PURE__ */ import_react20.default.createElement("li", null, /* @__PURE__ */ import_react20.default.createElement("b", { style: { color: "var(--gold)" } }, "72"), " Shem HaMephorash triplets (Exodus 14:19\u201321)."), /* @__PURE__ */ import_react20.default.createElement("li", null, "Precessional age length \u2248 ", /* @__PURE__ */ import_react20.default.createElement("b", null, AGE.toFixed(0)), " years; full cycle \u2248 ", /* @__PURE__ */ import_react20.default.createElement("b", null, (FULL || 0).toFixed(0)), " years.")))), /* @__PURE__ */ import_react20.default.createElement("div", { className: "panel", style: { padding: 18, marginTop: 14 } }, /* @__PURE__ */ import_react20.default.createElement("h2", { style: { marginTop: 0 } }, "Authors & sources"), /* @__PURE__ */ import_react20.default.createElement("p", { className: "muted" }, "By ", /* @__PURE__ */ import_react20.default.createElement("b", null, /* @__PURE__ */ import_react20.default.createElement("a", { href: "https://medium.com/@ancientencoder/sons-of-stars-269765bda7db", target: "_blank", rel: "noreferrer", style: { color: "inherit", textDecoration: "none" } }, "AncientEncoder")), " & ", /* @__PURE__ */ import_react20.default.createElement("b", null, "BartMan"), " \xB7 Source on ", /* @__PURE__ */ import_react20.default.createElement("a", { href: "https://github.com/VABISMO/adam-apocalypse", target: "_blank", rel: "noreferrer" }, "GitHub"), " \xB7 Paper: ", /* @__PURE__ */ import_react20.default.createElement("a", { href: "/paper" }, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react20.default.createElement("p", { className: "muted" }, "Ephemerides: astronomy-engine. Frame: Sefer Yetzirah. Lexicon: Strong Hebrew lexicon (OpenScriptures). No content on this site is medical, financial, or doctrinal advice \u2014 it is a reading of symbols and astronomy."), /* @__PURE__ */ import_react20.default.createElement("div", { style: { marginTop: 12 } }, /* @__PURE__ */ import_react20.default.createElement("a", { className: "btn-cta", href: "/app", style: { display: "inline-block", textDecoration: "none" } }, "Open the app \u2192"))));
 }
 
-// web/src/library/LibraryApp.jsx
-var import_react21 = __toESM(require_react());
-var DATA = "/library/data/";
-var ORIG = "/library/original/";
-var _fetch = typeof fetch !== "undefined" ? fetch : null;
-function tokenize(s) {
-  if (!s) return [];
-  const d = s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase();
-  return d.match(/[a-z0-9֐-׿]{3,}/g) || [];
-}
-function escapeRegex(s) {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-function snippetFor(text, terms) {
-  const low = text.toLowerCase();
-  let idx = -1;
-  for (const t of terms) {
-    const i = low.indexOf(t);
-    if (i >= 0 && (idx < 0 || i < idx)) idx = i;
-  }
-  if (idx < 0) return text.slice(0, 150);
-  const start = Math.max(0, idx - 70), end = Math.min(text.length, idx + 70);
-  return (start > 0 ? "\u2026" : "") + text.slice(start, end) + (end < text.length ? "\u2026" : "");
-}
-function Highlighted({ text, terms }) {
-  if (!terms || !terms.length) return /* @__PURE__ */ import_react21.default.createElement("span", null, text);
-  const re = new RegExp("(" + terms.map(escapeRegex).join("|") + ")", "gi");
-  const low = terms.map((t) => t.toLowerCase());
-  const parts = text.split(re);
-  return /* @__PURE__ */ import_react21.default.createElement(import_react21.default.Fragment, null, parts.map((p, i) => low.indexOf(p.toLowerCase()) >= 0 ? /* @__PURE__ */ import_react21.default.createElement("mark", { key: i, className: "lib-mark" }, p) : /* @__PURE__ */ import_react21.default.createElement("span", { key: i }, p)));
-}
-function DownloadOriginal({ book }) {
-  const files = book.originalFiles || [];
-  if (!files.length) return null;
-  if (files.length === 1) {
-    const f = files[0];
-    return /* @__PURE__ */ import_react21.default.createElement("a", { className: "lib-dl", href: f, download: true }, "\u2B07 Download original");
-  }
-  return /* @__PURE__ */ import_react21.default.createElement("a", { className: "lib-dl", href: ORIG + book.slug + "/" }, "\u2B07 Download original (", files.length, " files)");
-}
-function BookCard({ book, onOpen }) {
-  return /* @__PURE__ */ import_react21.default.createElement(
-    "div",
-    {
-      className: "feat-card lib-card",
-      role: "button",
-      tabIndex: 0,
-      onClick: () => onOpen(book.slug),
-      onKeyDown: (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          onOpen(book.slug);
-        }
-      },
-      style: { textAlign: "left", cursor: "pointer", width: "100%" }
-    },
-    /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", justifyContent: "space-between", gap: 10, alignItems: "baseline" } }, /* @__PURE__ */ import_react21.default.createElement("h3", { style: { margin: 0, color: "var(--violet)", fontSize: "1.05rem" } }, book.title), /* @__PURE__ */ import_react21.default.createElement("span", { className: "pill" }, book.lang)),
-    /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted", style: { margin: "6px 0 8px" } }, book.author, book.year ? " \xB7 " + book.year : ""),
-    /* @__PURE__ */ import_react21.default.createElement("p", { style: { margin: "0 0 10px", fontSize: ".9rem", color: "var(--txt)" } }, book.description),
-    /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" } }, /* @__PURE__ */ import_react21.default.createElement("span", { className: "pill" }, book.segments, " sections"), /* @__PURE__ */ import_react21.default.createElement("span", { className: "pill" }, (book.words / 1e3).toFixed(0), "k words"), /* @__PURE__ */ import_react21.default.createElement("span", { className: "pill" }, book.genre)),
-    /* @__PURE__ */ import_react21.default.createElement("div", { style: { marginTop: 12 }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react21.default.createElement(DownloadOriginal, { book }))
-  );
-}
-function Reader({ book, bookJson, activeSeg, terms, onPickSeg, onBack }) {
-  const segs = bookJson ? bookJson.segments : [];
-  const active = segs.find((s) => s.id === activeSeg) || segs[0] || null;
-  const rtl = bookJson && bookJson.meta && bookJson.meta.rtl;
-  const mainRef = (0, import_react21.useRef)(null);
-  (0, import_react21.useEffect)(() => {
-    if (mainRef.current) mainRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [activeSeg]);
-  return /* @__PURE__ */ import_react21.default.createElement("section", { className: "panel", style: { padding: 20 } }, /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 10, flexWrap: "wrap" } }, /* @__PURE__ */ import_react21.default.createElement("div", null, /* @__PURE__ */ import_react21.default.createElement("button", { className: "lib-back", onClick: onBack }, "\u2190 Library"), /* @__PURE__ */ import_react21.default.createElement("h2", { style: { margin: "4px 0 2px", color: "var(--gold)" } }, book.title), /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted", style: { margin: 0 } }, book.author, book.year ? " \xB7 " + book.year : "", " \xB7 ", book.source)), /* @__PURE__ */ import_react21.default.createElement(DownloadOriginal, { book })), /* @__PURE__ */ import_react21.default.createElement("div", { className: "lib-reader" }, /* @__PURE__ */ import_react21.default.createElement("nav", { className: "lib-segnav" }, segs.map((s) => /* @__PURE__ */ import_react21.default.createElement("button", { key: s.id, className: "lib-segitem" + (active && s.id === active.id ? " active" : ""), onClick: () => onPickSeg(s.id), title: s.label }, s.label))), /* @__PURE__ */ import_react21.default.createElement("div", { className: "lib-segmain", ref: mainRef }, active ? /* @__PURE__ */ import_react21.default.createElement(import_react21.default.Fragment, null, /* @__PURE__ */ import_react21.default.createElement("h3", { style: { color: "var(--violet)", marginTop: 0 } }, active.label), /* @__PURE__ */ import_react21.default.createElement("div", { className: "lib-text", dir: rtl ? "rtl" : "ltr", style: { whiteSpace: "pre-wrap", lineHeight: 1.7 } }, /* @__PURE__ */ import_react21.default.createElement(Highlighted, { text: active.text, terms }))) : /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted" }, "No sections."))));
-}
-function LibraryApp(props) {
-  const initialCatalog = props && props.initialCatalog || null;
-  const [catalog, setCatalog] = (0, import_react21.useState)(initialCatalog ? initialCatalog.books || initialCatalog : null);
-  const [wordsMap, setWordsMap] = (0, import_react21.useState)(null);
-  const [query, setQuery] = (0, import_react21.useState)("");
-  const [results, setResults] = (0, import_react21.useState)(null);
-  const [searching, setSearching] = (0, import_react21.useState)(false);
-  const [activeBookSlug, setActiveBookSlug] = (0, import_react21.useState)(null);
-  const [activeSeg, setActiveSeg] = (0, import_react21.useState)(null);
-  const [bookCache, setBookCache] = (0, import_react21.useState)({});
-  const [loadingBook, setLoadingBook] = (0, import_react21.useState)(false);
-  const debounceRef = (0, import_react21.useRef)(null);
-  (0, import_react21.useEffect)(() => {
-    if (catalog) return;
-    if (!_fetch) return;
-    _fetch(DATA + "catalog.json").then((r) => r.json()).then((c) => setCatalog(c.books || c)).catch(() => setCatalog([]));
-  }, []);
-  (0, import_react21.useEffect)(() => {
-    if (typeof window === "undefined" || !window.location) return;
-    const sp = new URLSearchParams(window.location.search);
-    const q = sp.get("q") || "";
-    const bk = sp.get("book");
-    const s = sp.get("s");
-    if (q) {
-      setQuery(q);
-    }
-    if (bk) {
-      setActiveBookSlug(bk);
-      if (s) setActiveSeg(s);
-    }
-  }, []);
-  const terms = (0, import_react21.useMemo)(() => tokenize(query), [query]);
-  const runSearch = (0, import_react21.useCallback)(async (q) => {
-    const t = tokenize(q);
-    if (!t.length) {
-      setResults(null);
-      return;
-    }
-    if (!_fetch || !catalog) {
-      return;
-    }
-    setSearching(true);
-    try {
-      let wm = wordsMap;
-      if (!wm) {
-        const wj = await _fetch(DATA + "catalog.words.json").then((r) => r.json());
-        wm = {};
-        for (const k of Object.keys(wj)) wm[k] = new Set(wj[k].split(" "));
-        setWordsMap(wm);
-      }
-      const candidates = catalog.filter((b) => {
-        const set = wm[b.slug];
-        return set && t.every((term) => set.has(term));
-      });
-      const perBook = await Promise.all(candidates.map(async (b) => {
-        let json = bookCache[b.slug];
-        if (!json) {
-          json = await _fetch(DATA + b.slug + ".json").then((r) => r.json());
-          setBookCache((prev) => ({ ...prev, [b.slug]: json }));
-        }
-        const hits = [];
-        for (const seg of json.segments) {
-          const toks = tokenize(seg.text);
-          if (t.every((term) => toks.includes(term))) {
-            const hitCount = t.reduce((n, term) => n + toks.filter((x) => x === term).length, 0);
-            hits.push({ slug: b.slug, bookTitle: b.title, segId: seg.id, label: seg.label, snippet: snippetFor(seg.text, t), hitCount });
-          }
-        }
-        return hits;
-      }));
-      const flat = perBook.flat().sort((a, b) => b.hitCount - a.hitCount);
-      setResults(flat);
-    } catch (e) {
-      setResults([]);
-    } finally {
-      setSearching(false);
-    }
-  }, [catalog, wordsMap, bookCache]);
-  (0, import_react21.useEffect)(() => {
-    if (debounceRef.current) clearTimeout(debounceRef.current);
-    if (!query.trim()) {
-      setResults(null);
-      return;
-    }
-    debounceRef.current = setTimeout(() => {
-      runSearch(query);
-    }, 280);
-    return () => {
-      if (debounceRef.current) clearTimeout(debounceRef.current);
-    };
-  }, [query, runSearch]);
-  const openBook = (0, import_react21.useCallback)(async (slug, segId) => {
-    setActiveBookSlug(slug);
-    setActiveSeg(segId || null);
-    if (bookCache[slug]) return;
-    if (!_fetch) return;
-    setLoadingBook(true);
-    try {
-      const json = await _fetch(DATA + slug + ".json").then((r) => r.json());
-      setBookCache((prev) => ({ ...prev, [slug]: json }));
-    } catch (e) {
-    } finally {
-      setLoadingBook(false);
-    }
-  }, [bookCache]);
-  const activeBook = activeBookSlug && catalog ? catalog.find((b) => b.slug === activeBookSlug) : null;
-  const activeBookJson = activeBookSlug ? bookCache[activeBookSlug] : null;
-  const onSubmit = (e) => {
-    e.preventDefault();
-    if (debounceRef.current) clearTimeout(debounceRef.current);
-    runSearch(query);
-  };
-  const pickSeg = (id) => setActiveSeg(id);
-  const back = () => {
-    setActiveBookSlug(null);
-    setActiveSeg(null);
-  };
-  return /* @__PURE__ */ import_react21.default.createElement("div", { className: "lib" }, /* @__PURE__ */ import_react21.default.createElement("header", { className: "lib-head" }, /* @__PURE__ */ import_react21.default.createElement("h1", { style: { margin: "0 0 4px", color: "var(--gold)", fontSize: "1.7rem", letterSpacing: ".3px" } }, "The Luco Library"), /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted", style: { margin: 0, maxWidth: 620 } }, "the Sacred Forest \u2014 ", /* @__PURE__ */ import_react21.default.createElement("i", null, "Luco"), ", from Latin ", /* @__PURE__ */ import_react21.default.createElement("i", null, "lucus"), ", the sacred grove of Roman Hispania. Search the primary sources behind the project \u2014 scripture, Hermetic sermons, the Sefer Yetzirah, Enoch, Josephus, and more."), /* @__PURE__ */ import_react21.default.createElement("form", { className: "controls", style: { marginTop: 14, maxWidth: 620 }, onSubmit }, /* @__PURE__ */ import_react21.default.createElement(
-    "input",
-    {
-      type: "text",
-      className: "lib-search",
-      placeholder: "Search the library \u2014 e.g. Poimandres, Marduk, watchmen, gematria\u2026",
-      value: query,
-      onChange: (e) => setQuery(e.target.value),
-      style: { flex: 1, minWidth: 220 },
-      "aria-label": "Search the library"
-    }
-  ), /* @__PURE__ */ import_react21.default.createElement("button", { type: "submit", className: "btn-cta", disabled: searching }, searching ? "Searching\u2026" : "Search"))), activeBook ? activeBookJson ? /* @__PURE__ */ import_react21.default.createElement(Reader, { book: activeBook, bookJson: activeBookJson, activeSeg, terms, onPickSeg: pickSeg, onBack: back }) : /* @__PURE__ */ import_react21.default.createElement("section", { className: "panel" }, /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted" }, loadingBook ? "Loading\u2026" : "")) : terms.length && results ? /* @__PURE__ */ import_react21.default.createElement("section", { className: "panel", style: { padding: 18 } }, /* @__PURE__ */ import_react21.default.createElement("h2", { style: { marginTop: 0, color: "var(--violet)" } }, results.length, " result", results.length === 1 ? "" : "s", " for \u201C", query, "\u201D"), results.length === 0 ? /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted" }, "No matches. Try a shorter or different term.") : /* @__PURE__ */ import_react21.default.createElement("ul", { className: "lib-results" }, results.map((r, i) => /* @__PURE__ */ import_react21.default.createElement("li", { key: i, className: "lib-result" }, /* @__PURE__ */ import_react21.default.createElement("button", { className: "lib-result-btn", onClick: () => openBook(r.slug, r.segId) }, /* @__PURE__ */ import_react21.default.createElement("span", { className: "lib-result-meta" }, /* @__PURE__ */ import_react21.default.createElement("b", null, r.bookTitle), " \xB7 ", r.label, " \xB7 ", r.hitCount, " hit", r.hitCount === 1 ? "" : "s"), /* @__PURE__ */ import_react21.default.createElement("span", { className: "lib-result-snip" }, /* @__PURE__ */ import_react21.default.createElement(Highlighted, { text: r.snippet, terms }))))))) : /* @__PURE__ */ import_react21.default.createElement("section", null, /* @__PURE__ */ import_react21.default.createElement("h2", { style: { color: "var(--violet)", margin: "18px 0 10px" } }, catalog ? catalog.length + " books" : "Loading books\u2026"), /* @__PURE__ */ import_react21.default.createElement("div", { className: "lib-grid" }, catalog && catalog.map((b) => /* @__PURE__ */ import_react21.default.createElement(BookCard, { key: b.slug, book: b, onOpen: (slug) => openBook(slug) })))));
-}
-
-// web/scripts/library_build.js
-var import_node_fs = __toESM(require("node:fs"));
-var import_node_path = __toESM(require("node:path"));
-
-// web/src/data/library_manifest.js
-var MANIFEST = [
-  // ── sacred-texts per-chapter splits (English translations) ──────────────────
-  {
-    slug: "avesta",
-    title: "Avesta \u2014 Zoroastrian Scriptures",
-    author: "James Darmesteter et al. (Sacred Books of the East)",
-    year: 1898,
-    lang: "en",
-    source: "sacred-texts.com",
-    license: "public domain",
-    description: "The Zoroastrian scriptures: the Vendidad (22 Fargards), the Yashts (hymns to the yazatas), and the Yasna (sacred liturgy).",
-    genre: "scripture",
-    parser: "sacred-texts-chapter",
-    files: ["avesta/vendidad_vd1sbe.txt", "avesta/vendidad_vd2sbe.txt", "avesta/vendidad_vd3sbe.txt", "avesta/vendidad_vd4sbe.txt", "avesta/vendidad_vd5sbe.txt", "avesta/vendidad_vd6sbe.txt", "avesta/vendidad_vd7sbe.txt", "avesta/vendidad_vd8sbe.txt", "avesta/vendidad_vd9sbe.txt", "avesta/vendidad_vd10sbe.txt", "avesta/vendidad_vd11sbe.txt", "avesta/vendidad_vd12sbe.txt", "avesta/vendidad_vd13sbe.txt", "avesta/vendidad_vd14sbe.txt", "avesta/vendidad_vd15sbe.txt", "avesta/vendidad_vd16sbe.txt", "avesta/vendidad_vd17sbe.txt", "avesta/vendidad_vd18sbe.txt", "avesta/vendidad_vd19sbe.txt", "avesta/vendidad_vd20sbe.txt", "avesta/vendidad_vd21sbe.txt", "avesta/vendidad_vd22sbe.txt", "avesta/yasht_yt5sbe.txt", "avesta/yasht_yt6sbe.txt", "avesta/yasht_yt7sbe.txt", "avesta/yasht_yt8sbe.txt", "avesta/yasht_yt9sbe.txt", "avesta/yasht_yt10sbe.txt", "avesta/yasht_yt11sbe.txt", "avesta/yasht_yt12sbe.txt", "avesta/yasht_yt13sbe.txt", "avesta/yasht_yt14sbe.txt", "avesta/yasht_yt15sbe.txt", "avesta/yasht_yt16sbe.txt", "avesta/yasht_yt17sbe.txt", "avesta/yasht_yt18sbe.txt", "avesta/yasht_yt19sbe.txt", "avesta/yasht_yt21sbe.txt", "avesta/yasna_y0to8.txt", "avesta/yasna_y9to11.txt", "avesta/yasna_y12.txt", "avesta/yasna_y13to27.txt", "avesta/yasna_y28to34.txt", "avesta/yasna_y35to42.txt", "avesta/yasna_y43to46.txt", "avesta/yasna_y47to50.txt", "avesta/yasna_y51.txt", "avesta/yasna_y52.txt", "avesta/yasna_y53.txt", "avesta/yasna_y54to72.txt"],
-    options: { labelFirstLine: true }
-  },
-  {
-    slug: "quran",
-    title: "The Qur'an (Pickthall)",
-    author: "M.M. Pickthall",
-    year: 1930,
-    lang: "en",
-    source: "sacred-texts.com",
-    license: "public domain",
-    description: "The Meaning of the Glorious Qur'an, M.M. Pickthall's English translation \u2014 114 surahs.",
-    genre: "scripture",
-    parser: "sacred-texts-chapter",
-    files: Array.from({ length: 114 }, (_, i) => "quran/surah_" + String(i + 1).padStart(3, "0") + ".txt"),
-    options: { labelRegex: "^\\s*\\d+\\.\\s+al-" }
-  },
-  {
-    slug: "nag-hammadi",
-    title: "The Nag Hammadi Library",
-    author: "Various translators (Robinson edition)",
-    year: 1978,
-    lang: "en",
-    source: "sacred-texts.com",
-    license: "public domain",
-    description: "The Gnostic scriptures found near Nag Hammadi in 1945 \u2014 Gospel of Thomas, Gospel of Truth, Thunder Perfect Mind, the Apocryphon of John, and other tractates.",
-    genre: "gnostic",
-    parser: "sacred-texts-chapter",
-    files: ["nag-hammadi/1ja.txt", "nag-hammadi/2ja.txt", "nag-hammadi/2seth.txt", "nag-hammadi/actp.txt", "nag-hammadi/adam.txt", "nag-hammadi/anoi.txt", "nag-hammadi/apocjn.txt", "nag-hammadi/apopet.txt", "nag-hammadi/ascp.txt", "nag-hammadi/autho.txt", "nag-hammadi/bapta.txt", "nag-hammadi/baptb.txt", "nag-hammadi/bookt-jdt.txt", "nag-hammadi/cgp.txt", "nag-hammadi/dialog.txt", "nag-hammadi/discorse.txt", "nag-hammadi/eucha.txt", "nag-hammadi/euchb.txt", "nag-hammadi/eugn.txt", "nag-hammadi/exe.txt", "nag-hammadi/gop.txt", "nag-hammadi/gosthom.txt", "nag-hammadi/gostruth.txt", "nag-hammadi/got.txt", "nag-hammadi/gthlamb.txt", "nag-hammadi/hyphis.txt", "nag-hammadi/hypostas.txt", "nag-hammadi/intpr.txt", "nag-hammadi/jam.txt", "nag-hammadi/jam2.txt", "nag-hammadi/letpet.txt", "nag-hammadi/marsanes.txt", "nag-hammadi/nore.txt", "nag-hammadi/origin.txt", "nag-hammadi/para_shem.txt", "nag-hammadi/plato.txt", "nag-hammadi/prat.txt", "nag-hammadi/prayp.txt", "nag-hammadi/res.txt", "nag-hammadi/sent.txt", "nag-hammadi/sjc.txt", "nag-hammadi/steles.txt", "nag-hammadi/thunder.txt", "nag-hammadi/trimorph.txt", "nag-hammadi/valex.txt", "nag-hammadi/zostr.txt"],
-    options: { titleAfter: "The Nag Hammadi Library", bodyAfter: "Translated by" }
-  },
-  {
-    slug: "rig-veda",
-    title: "Rig Veda \u2014 Selected Hymns (Griffith)",
-    author: "Ralph T.H. Griffith",
-    year: 1896,
-    lang: "en",
-    source: "sacred-texts.com",
-    license: "public domain",
-    description: "Selected hymns of the Rig Veda in Griffith\u2019s translation \u2014 including the Nasadiya (creation), Purusha (cosmic man), Vac (speech), the Year-Wheel (1.164), and hymns to Agni, Surya, Visvakarman, and the Adityas.",
-    genre: "scripture",
-    parser: "sacred-texts-chapter",
-    files: ["rig-veda/hymn_adityas_10-72.txt", "rig-veda/hymn_agni_1-1.txt", "rig-veda/hymn_nasadiya_10-129.txt", "rig-veda/hymn_purusha_10-90.txt", "rig-veda/hymn_surya_1-50.txt", "rig-veda/hymn_vac_10-125.txt", "rig-veda/hymn_visvakarman_1-73.txt", "rig-veda/hymn_yearwheel_1-164.txt"],
-    options: { labelRegex: "^\\s*HYMN\\s+[IVXLCDM]+\\." }
-  },
-  // ── DjVu OCR prose (archive.org) ────────────────────────────────────────────
-  {
-    slug: "hermetica-vol1",
-    title: "Thrice-Greatest Hermes, Vol. I (Prolegomena)",
-    author: "G.R.S. Mead",
-    year: 1906,
-    lang: "en",
-    source: "archive.org (DjVuTXT)",
-    license: "public domain",
-    description: "Mead\u2019s Prolegomena to the Hermetic literature: the remains of the Trismegistic literature, the history of opinion, and Thoth as Master of Wisdom.",
-    genre: "hermetic",
-    parser: "djvu-prose",
-    files: ["hermetica/thrice-greatest-hermes-vol1.djvu.txt"],
-    options: { skipUntil: "I. THE REMAINS", headingRegex: "^([IVX]+\\.[A-Z].*)$", stripLines: ["^>.*$", "^[\\divxlcdm]+$", "^\\s*[\\u2022\\*]\xA0"] }
-  },
-  {
-    slug: "hermetica-vol2",
-    title: "Corpus Hermeticum (Mead, Vol. II)",
-    author: "G.R.S. Mead",
-    year: 1906,
-    lang: "en",
-    source: "archive.org (DjVuTXT)",
-    license: "public domain",
-    description: "The Corpus Hermeticum \u2014 the Hermetic sermons (Poimandres, the Asclepius dialogue, etc.) in Mead\u2019s translation.",
-    genre: "hermetic",
-    parser: "djvu-prose",
-    files: ["hermetica/thrice-greatest-hermes-vol2.djvu.txt"],
-    // Body sermon headers are OCR-garbled variants of "CORPUS HERMETICUM" (COKPUS/COEPUS/CORPUS + HEKMETICUM/HERMETICUM/HEEMETICUM).
-    // The TOC line (48) starts with "/", the part-divider (301) is lowercase "Corpus Hermeticum" — neither matches this
-    // uppercase-anchored regex, so front matter is auto-dropped (cur stays null until the first real sermon at line 307).
-    // labelReplacements de-garbles the captured header into a clean "Corpus Hermeticum <roman>" label.
-    options: { headingRegex: "^(C[O0][RKPEU]+S\\s+H[A-Z]*METICUM.*)$", labelReplacements: [["^C[O0][RKPEU]+S\\s+H[A-Z]*METICUM", "Corpus Hermeticum"]], stripLines: ["^\\*{3,}$", "^\\d{1,4}$"] }
-  },
-  {
-    slug: "hermetica-vol3",
-    title: "Thrice-Greatest Hermes, Vol. III (Excursions)",
-    author: "G.R.S. Mead",
-    year: 1906,
-    lang: "en",
-    source: "archive.org (DjVuTXT)",
-    license: "public domain",
-    description: "Mead\u2019s Excursions: the Hermetic fragments and supporting essays.",
-    genre: "hermetic",
-    parser: "djvu-prose",
-    files: ["hermetica/thrice-greatest-hermes-vol3.djvu.txt"],
-    options: { skipUntil: "FRAGMENT", headingRegex: "^(FRAGMENT[^\n]*)$", stripLines: ["^\\d{1,4}$"] }
-  },
-  {
-    slug: "book-of-the-dead",
-    title: "The Book of the Dead (Budge)",
-    author: "E.A. Wallis Budge",
-    year: 1895,
-    lang: "en",
-    source: "Project Gutenberg #1808",
-    license: "public domain",
-    description: "The Egyptian Book of the Dead \u2014 Budge\u2019s translation of the Theban recension, with chapters and vignettes.",
-    genre: "egyptian",
-    parser: "gutenberg",
-    files: ["book-of-the-dead/book-of-the-dead.gutenberg.txt"],
-    options: { encoding: "latin1", headingRegex: "^(CHAPTER\\s+[IVXLC]+\\.?.*)$" }
-  },
-  {
-    slug: "i-ching",
-    title: "I Ching (Legge, SBE vol. XVI)",
-    author: "James Legge",
-    year: 1882,
-    lang: "en",
-    source: "archive.org (DjVuTXT)",
-    license: "public domain",
-    description: "The Book of Changes \u2014 Legge\u2019s translation of the 64 hexagrams and the Wing commentaries. (OCR on hexagram headings is partly degraded; the full text remains searchable.)",
-    genre: "chinese",
-    parser: "djvu-prose",
-    files: ["i-ching/yi-king-legge-sbe16.djvu.txt"],
-    options: { skipUntil: "I. The Khien Hexagram", headingRegex: "^([IVXLCDM]+\\. The .* Hexagram\\.)$", stripLines: ["^\\d{1,4}$"] }
-  },
-  {
-    slug: "popol-vuh",
-    title: "Popol Vuh (Spence)",
-    author: "Lewis Spence",
-    year: 1908,
-    lang: "en",
-    source: "archive.org (DjVuTXT)",
-    license: "public domain",
-    description: "The sacred book of the Quich\xE9 Maya \u2014 Spence\u2019s translation of the creation epic in four books.",
-    genre: "maya",
-    parser: "djvu-prose",
-    files: ["popol-vuh/popol-vuh-spence-1908.djvu.txt"],
-    options: { skipUntil: "PREFACE", headingRegex: "^(The (First|Second|Third|Fourth) Book.*)$", fuzzyHeadings: true, stripLines: ["^\\s*\\d+\\s*$", "^[0-9]+\\s+THE POPOL VUH$"] }
-  },
-  {
-    slug: "josephus",
-    title: "The Complete Works of Flavius Josephus (Whiston)",
-    author: "Flavius Josephus (tr. William Whiston)",
-    year: 1905,
-    lang: "en",
-    source: "archive.org (DjVuTXT)",
-    license: "public domain",
-    description: "Josephus\u2019 complete works \u2014 Antiquities of the Jews, Wars of the Jews, Life, and Against Apion \u2014 segmented by Work > Book > Chapter.",
-    genre: "history",
-    parser: "josephus",
-    files: ["josephus/josephus-complete-works-1905.djvu.txt"]
-  },
-  // ── Wikisource sectioned ────────────────────────────────────────────────────
-  {
-    slug: "enoch",
-    title: "The Book of Enoch (1 Enoch, Charles)",
-    author: "R.H. Charles",
-    year: 1917,
-    lang: "en",
-    source: "Wikisource",
-    license: "public domain",
-    description: "1 Enoch in Charles\u2019 1917 translation \u2014 the Book of Watchers, the Parables, the Astronomical Enoch, the Dream Visions, and the Epistle of Enoch.",
-    genre: "pseudepigrapha",
-    parser: "wikisource-section",
-    files: ["enoch/1enoch_charles.txt"]
-  },
-  // ── Sefaria JSON (clean PD Hebrew) ───────────────────────────────────────────
-  {
-    slug: "sefer-yetzirah",
-    title: "Sefer Yetzirah (Hebrew)",
-    author: "Anonymous (Sefaria source)",
-    year: null,
-    lang: "he",
-    source: "Sefaria",
-    license: "public domain",
-    description: "The Book of Formation \u2014 the Hebrew source text, 6 chapters / 48 mishnayot. The stellar-alphabet root text of the project.",
-    genre: "kabbalah",
-    parser: "sefaria-json",
-    files: ["sefer-yetzirah/sefer_yetzirah_base.v3.json"],
-    options: { depth: 2, rtl: true }
-  },
-  {
-    slug: "sefer-yetzirah-ramban",
-    title: "Ramban on Sefer Yetzirah (Hebrew commentary)",
-    author: "Nachmanides (Ramban of Girona) \u2014 Girona-school attribution",
-    year: 1884,
-    lang: "he",
-    source: "Sefaria (Warsaw 1884 ed.)",
-    license: "public domain",
-    description: "The Ramban commentary on Sefer Yetzirah \u2014 3 chapters / 28 mishnayot / 105 comments. \xAB\u2026\xBB marks the dibur hamatchil (the lemma being glossed).",
-    genre: "kabbalah",
-    parser: "sefaria-json",
-    files: ["sefer-yetzirah/ramban_on_sefer_yetzirah.v3.json"],
-    options: { depth: 3, rtl: true, lemmaRegex: "^<b>(.+?)</b>" }
-  },
-  // ── Wikipedia reference dumps (secondary literature) ────────────────────────
-  {
-    slug: "sufi-references",
-    title: "Sufi & Islamic-esoteric references",
-    author: "Wikipedia / Encyclop\xE6dia Iranica articles",
-    year: null,
-    lang: "en",
-    source: "Wikipedia, Encyclop\xE6dia Iranica",
-    license: "CC-BY-SA / fair-use research excerpt",
-    description: "Reference articles on abjad numerals, the Hurufiyya, Ibn Arabi\u2019s astrology and the seven weekdays, the Ikhwat al-Safa, jafr, and Shams al-Din al-Kubra.",
-    genre: "reference",
-    parser: "wiki-ref",
-    files: ["sufi/ref_abjad_wiki.txt", "sufi/ref_hurufi_iranica.txt", "sufi/ref_ibnalarabi_astro.txt", "sufi/ref_ibnalarabi_week.txt", "sufi/ref_ikhwan_stanford.txt", "sufi/ref_jaafar_esoteric_iranica.txt", "sufi/ref_jafr_iranica.txt", "sufi/ref_jawdanname_iranica.txt", "sufi/ref_shams_kubra_wiki.txt"],
-    options: { dedupeGroup: "wiki-ref" }
-  },
-  {
-    slug: "gematria-references",
-    title: "Gematria & numerology references",
-    author: "Wikipedia articles",
-    year: null,
-    lang: "en",
-    source: "Wikipedia",
-    license: "CC-BY-SA / fair-use research excerpt",
-    description: "Reference articles on gematria, isopsephy, the abjad and katapayadi systems, Hebrew/Greek/Coptic/Cyrillic numerals, and the Number of the Beast.",
-    genre: "reference",
-    parser: "wiki-ref",
-    files: ["gematria/ref_abjad_numerals_wiki.txt", "gematria/ref_aryabhata_numeration_wiki.txt", "gematria/ref_coptic_numerals_wiki.txt", "gematria/ref_cyrillic_numerals_wiki.txt", "gematria/ref_gematria_wiki.txt", "gematria/ref_greek_numerals_wiki.txt", "gematria/ref_hebrew_numerals_wiki.txt", "gematria/ref_isopsephy_wiki.txt", "gematria/ref_katapayadi_wiki.txt", "gematria/ref_number_beast_wiki.txt", "gematria/ref_roman_numerals_wiki.txt"],
-    options: { dedupeGroup: "wiki-ref" }
-  },
-  // ── Gaffarel (clean excerpt; raw OCR blob skipped) ──────────────────────────
-  {
-    slug: "gaffarel",
-    title: "Jacques Gaffarel \u2014 Reading of the Stars (1650, excerpt)",
-    author: "Jacques Gaffarel",
-    year: 1650,
-    lang: "en",
-    source: "archive.org (clean excerpt)",
-    license: "public domain",
-    description: "An excerpt from Gaffarel\u2019s 1650 work on the reading of the stars and its structure. (The raw 754 KB OCR blob is too degraded to index.)",
-    genre: "renaissance-magic",
-    parser: "plain",
-    files: ["gaffarel/gaffarel_1650_part4_reading_of_stars.txt", "gaffarel/gaffarel_1650_structure.txt", "gaffarel/_idx.md"],
-    options: { labelPrefix: "gaffarel" }
-  }
-];
-
-// web/scripts/library_build.js
+// scripts/prerender.jsx
 var import_meta = {};
-var ENTITIES = { "&acirc;": "\xE2", "&Acirc;": "\xC2", "&atilde;": "\xE3", "&ccedil;": "\xE7", "&eacute;": "\xE9", "&egrave;": "\xE8", "&auml;": "\xE4", "&ouml;": "\xF6", "&uuml;": "\xFC", "&ntilde;": "\xF1", "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&apos;": "'", "&nbsp;": " ", "&shy;": "", "&hellip;": "\u2026", "&mdash;": "\u2014", "&ndash;": "\u2013", "&middot;": "\xB7", "&bull;": "\u2022", "&frac12;": "\xBD", "&frac14;": "\xBC", "&frac34;": "\xBE", "&rsquo;": "'", "&lsquo;": "'", "&ldquo;": '"', "&rdquo;": '"', "&laquo;": "\xAB", "&raquo;": "\xBB", "&copy;": "\xA9", "&sect;": "\xA7", "&para;": "\xB6", "&deg;": "\xB0" };
-function decodeEntities(s) {
-  if (!s) return s;
-  return s.replace(/&[a-z]+;|&#\d+;/gi, (m) => {
-    if (/^&#\d+$/.test(m)) return String.fromCodePoint(+m.slice(2, -1));
-    return ENTITIES[m] || m;
-  });
-}
-function stripHtml(s) {
-  if (!s) return "";
-  return decodeEntities(s.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
-}
-function deaccent(s) {
-  return s.normalize("NFKD").replace(/[̀-ͯ]/g, "");
-}
-function tokenize2(s) {
-  const d = deaccent(s).toLowerCase();
-  return d.match(/[a-z0-9֐-׿]{3,}/g) || [];
-}
-function humanize(rel) {
-  let b = import_node_path.default.basename(rel, import_node_path.default.extname(rel));
-  b = b.replace(/sbe$/i, "").replace(/_+/g, " ").replace(/\s+/g, " ").trim();
-  return b.replace(/\b\w/g, (c) => c.toUpperCase());
-}
-function slugish(s) {
-  return s.toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60) || "seg";
-}
-function hashStr(s) {
-  let h = 5381;
-  for (let i = 0; i < s.length; i++) h = (h << 5) + h + s.charCodeAt(i) | 0;
-  return (h >>> 0).toString(36);
-}
-function escapeRe(s) {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-function titleCaseAllCaps(s) {
-  return s.replace(/\b[A-Z]{2,}\b/g, (w) => w[0] + w.slice(1).toLowerCase());
-}
-function romanTo(s) {
-  const v = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1e3 };
-  let n = 0, pre = 0;
-  const u = s.toUpperCase().replace(/[^IVXLCDM]/g, "");
-  for (let i = u.length - 1; i >= 0; i--) {
-    const c = v[u[i]] || 0;
-    if (c < pre) n -= c;
-    else {
-      n += c;
-      pre = c;
-    }
-  }
-  return n || null;
-}
-function cleanBody(lines) {
-  const joined = [];
-  for (let i = 0; i < lines.length; i++) {
-    let l = lines[i].replace(/\s+$/, "");
-    if (l && joined.length && /-[a-zA-Z]$/.test(joined[joined.length - 1]) && /^[a-zA-Z]/.test(l.trim())) {
-      joined[joined.length - 1] = joined[joined.length - 1].slice(0, -1) + l.trimStart();
-    } else {
-      joined.push(l);
-    }
-  }
-  const paras = [];
-  let cur = [];
-  for (const l of joined) {
-    if (l.trim() === "") {
-      if (cur.length) {
-        paras.push(cur.join(" "));
-        cur = [];
-      }
-    } else {
-      const t = l.replace(/\s+/g, " ").trim();
-      if (t) cur.push(t);
-    }
-  }
-  if (cur.length) paras.push(cur.join(" "));
-  return paras.filter(Boolean).join("\n\n");
-}
-var ST_BOILER = [
-  /^(Home|Contents|Prev|Next|Index|Avestan|Glossary|English|Sanskrit)$/,
-  /^Avesta -- Zoroastrian Archives$/,
-  /^Hypertext Quran$/i,
-  /^Unicode Quran$/i,
-  /^Palmer Part I/i,
-  /^Yusuf Ali/i,
-  /Internet Sacred Text Archive/i,
-  /sacred-texts\.com/i,
-  /Buy this Book at Amazon\.com/i,
-  /^The Nag Hammadi Library$/i,
-  /^Visit the Bookstore/i,
-  /^\(Above image/i,
-  /^The Rig Veda$/i,
-  /^Ralph T\.?\s*H\.?\s*Griffith,? Translator$/i,
-  /^Book\s+\d+$/,
-  /^Next: HYMN/i,
-  /^Avesta: Khorda Avesta$/i,
-  /^Avesta: Yasna$/i,
-  /^This digital edition/i,
-  /^Translated by/i,
-  /^Based on edition of/i,
-  /^Compare this chapter/i,
-  /^The Meaning of the Glorious/i,
-  /^\d+\s+al-/i
-];
-function isStBoiler(s) {
-  return ST_BOILER.some((re) => re.test(s));
-}
-function cleanAvestaTitle(s) {
-  return titleCaseAllCaps(s.replace(/^AVESTA:\s*/i, "").replace(/^KHORDA AVESTA\s*/i, "").replace(/\s*\(English\)\s*:?\s*/i, ", ").replace(/\s*\(English\)\s*$/i, "").replace(/^YASNA\s*:?\s*/i, "Yasna, ").replace(/,\s*$/, "").replace(/\.$/, "").replace(/\s+/g, " ").trim());
-}
-function parseSacredTextsChapter(book, libRoot) {
-  const out = [];
-  const labelRe = book.options.labelRegex ? new RegExp(book.options.labelRegex) : null;
-  for (const rel of book.files) {
-    let raw;
-    try {
-      raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, rel), "utf8");
-    } catch (e) {
-      continue;
-    }
-    const lines = raw.replace(/\r\n/g, "\n").split("\n").map(decodeEntities);
-    let label = null, bodyStart = 0;
-    if (book.options.titleAfter) {
-      const idx = lines.findIndex((l) => l.trim() === book.options.titleAfter);
-      if (idx >= 0) {
-        for (let i = idx + 1; i < lines.length; i++) {
-          const t = lines[i].trim();
-          if (t && !isStBoiler(t) && !/^\(Above image/.test(t)) {
-            label = t;
-            bodyStart = i + 1;
-            break;
-          }
-        }
-      }
-    } else if (labelRe) {
-      const idx = lines.findIndex((l) => labelRe.test(l.trim()));
-      if (idx >= 0) {
-        label = lines[idx].trim();
-        bodyStart = idx + 1;
-      }
-    } else if (book.options.labelFirstLine) {
-      const idx = lines.findIndex((l) => {
-        const t = l.trim();
-        return t && !isStBoiler(t);
-      });
-      if (idx >= 0) {
-        label = cleanAvestaTitle(lines[idx].trim());
-        bodyStart = idx + 1;
-      }
-    }
-    if (!label) label = humanize(rel);
-    let body = lines.slice(bodyStart);
-    if (book.options.bodyAfter) {
-      const re = new RegExp("^\\s*" + escapeRe(book.options.bodyAfter));
-      const idx = body.findIndex((l) => re.test(l));
-      if (idx >= 0) body = body.slice(idx + 1);
-    }
-    const labLow = label.toLowerCase();
-    body = body.filter((l) => {
-      const t = l.trim();
-      return t && !isStBoiler(t) && t.toLowerCase() !== labLow;
-    });
-    const text = cleanBody(body);
-    if (text.trim().length < 20) continue;
-    out.push({ id: import_node_path.default.basename(rel, import_node_path.default.extname(rel)), label, ref: rel, text });
-  }
-  return out;
-}
-function applyStrip(lines, stripLines) {
-  if (!stripLines || !stripLines.length) return lines;
-  const res = stripLines.map((s) => new RegExp(s));
-  return lines.filter((l) => !res.some((re) => re.test(l)));
-}
-function cleanLabel(lab, reps) {
-  if (!reps || !reps.length) return lab;
-  let s = lab;
-  for (const [find, repl] of reps) {
-    s = s.replace(new RegExp(find, "g"), repl);
-  }
-  return s.replace(/\s+/g, " ").trim();
-}
-function parseDjvuProse(book, libRoot) {
-  let raw;
-  try {
-    raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, book.files[0]), "utf8");
-  } catch (e) {
-    return [];
-  }
-  let lines = raw.replace(/\r\n/g, "\n").split("\n");
-  if (book.options.skipUntil) {
-    const re = new RegExp(escapeRe(book.options.skipUntil));
-    const idx = lines.findIndex((l) => re.test(l));
-    if (idx >= 0) lines = lines.slice(idx);
-  }
-  lines = applyStrip(lines, book.options.stripLines);
-  const headingRe = book.options.headingRegex ? new RegExp(book.options.headingRegex) : null;
-  const segs = [];
-  let cur = null, buf = [];
-  const flush = () => {
-    if (cur && buf.length) {
-      const t = cleanBody(buf);
-      if (t.trim().length > 20) segs.push({ ...cur, text: t });
-    }
-    buf = [];
-  };
-  for (const l of lines) {
-    if (headingRe && headingRe.test(l.trim())) {
-      flush();
-      const m = l.trim().match(headingRe);
-      const lab = cleanLabel((m && m[1] || l.trim()).replace(/\s+/g, " ").trim(), book.options.labelReplacements);
-      cur = { id: slugish(lab), label: lab, ref: book.files[0] };
-      continue;
-    }
-    if (cur) buf.push(l);
-  }
-  flush();
-  if (!segs.length) {
-    const t = cleanBody(applyStrip(lines, book.options.stripLines));
-    if (t.trim().length > 20) segs.push({ id: slugish(book.slug), label: book.title, ref: book.files[0], text: t });
-  }
-  return segs;
-}
-function parseGutenberg(book, libRoot) {
-  const enc = book.options.encoding || "utf8";
-  let raw;
-  try {
-    raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, book.files[0]), enc);
-  } catch (e) {
-    return [];
-  }
-  raw = raw.replace(/\r\n/g, "\n");
-  const startM = raw.match(/\*\*\*\s*START[^]*?\*\*\*/);
-  if (startM) raw = raw.slice(startM.index + startM[0].length);
-  const endIdx = raw.search(/\*\*\*\s*END/);
-  if (endIdx >= 0) raw = raw.slice(0, endIdx);
-  let lines = raw.split("\n").map(decodeEntities);
-  lines = applyStrip(lines, book.options.stripLines);
-  const headingRe = book.options.headingRegex ? new RegExp(book.options.headingRegex) : null;
-  const segs = [];
-  let cur = null, buf = [];
-  const flush = () => {
-    if (cur && buf.length) {
-      const t = cleanBody(buf);
-      if (t.trim().length > 20) segs.push({ ...cur, text: t });
-    }
-    buf = [];
-  };
-  for (const l of lines) {
-    if (headingRe && headingRe.test(l.trim())) {
-      flush();
-      const m = l.trim().match(headingRe);
-      const lab = (m && m[1] || l.trim()).replace(/\s+/g, " ").trim();
-      cur = { id: slugish(lab), label: lab, ref: book.files[0] };
-      continue;
-    }
-    if (cur) buf.push(l);
-  }
-  flush();
-  if (!segs.length) {
-    const t = cleanBody(lines);
-    if (t.trim().length > 20) segs.push({ id: book.slug, label: book.title, ref: book.files[0], text: t });
-  }
-  return segs;
-}
-function parseWikisourceSection(book, libRoot) {
-  let raw;
-  try {
-    raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, book.files[0]), "utf8");
-  } catch (e) {
-    return [];
-  }
-  let lines = raw.replace(/\r\n/g, "\n").split("\n").map(decodeEntities);
-  lines = applyStrip(lines, book.options.stripLines || ["^\\d{1,5}$", "^[\u2190\u2192]", "^\\s*\u2190", "^\\s*\u2192", "^\\s*\\d+\\s*$"]);
-  const segs = [];
-  let cur = null, buf = [];
-  const flush = () => {
-    if (cur) {
-      const t = cleanBody(buf);
-      if (t.trim().length > 20) segs.push({ ...cur, text: t });
-    }
-    buf = [];
-  };
-  for (const l of lines) {
-    const m = l.match(/^=====\s*(.+?)\s*=====$/);
-    if (m) {
-      flush();
-      cur = { id: slugish(m[1]), label: m[1].trim(), ref: book.files[0] };
-    } else if (cur) buf.push(l);
-  }
-  flush();
-  return segs;
-}
-function parseSefariaJson(book, libRoot) {
-  let j;
-  try {
-    j = JSON.parse(import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, book.files[0]), "utf8"));
-  } catch (e) {
-    return [];
-  }
-  const text = j.versions && j.versions[0] && j.versions[0].text;
-  if (!text) return [];
-  const depth = book.options.depth || 2;
-  const rtl = !!book.options.rtl;
-  const lemmaRe = book.options.lemmaRegex ? new RegExp(book.options.lemmaRegex) : null;
-  const segs = [];
-  const walk = (arr, pref, depthLeft, emit) => {
-    for (let i = 0; i < arr.length; i++) {
-      const v = arr[i];
-      if (Array.isArray(v)) walk(v, pref + (pref ? ":" : "") + (i + 1), depthLeft - 1, emit);
-      else if (typeof v === "string" && depthLeft <= 1) {
-        emit(pref + (pref ? ":" : "") + (i + 1), v);
-      } else if (typeof v === "string" && depthLeft > 1) {
-        emit(pref + (pref ? ":" : "") + (i + 1), v);
-      }
-    }
-  };
-  if (depth === 2) {
-    for (let c = 0; c < text.length; c++) for (let m = 0; m < (text[c] ? text[c].length : 0); m++) {
-      const s = stripHtml(text[c][m]);
-      if (s && s.trim().length > 5) segs.push({ id: `${c + 1}:${m + 1}`, label: `${c + 1}:${m + 1}`, ref: `${book.title} ${c + 1}:${m + 1}`, text: s, rtl });
-    }
-  } else if (depth === 3) {
-    for (let c = 0; c < text.length; c++) for (let m = 0; m < (text[c] ? text[c].length : 0); m++) for (let k = 0; k < (text[c][m] ? text[c][m].length : 0); k++) {
-      const r = text[c][m][k];
-      if (!r) continue;
-      let body = stripHtml(r);
-      let label = `${c + 1}:${m + 1} #${k + 1}`;
-      if (lemmaRe) {
-        const mm = body.match(lemmaRe);
-        if (mm) {
-          label = `\xAB${stripHtml(mm[1]).trim()}\xBB`;
-          body = body.slice(mm.index + mm[0].length).trim();
-        }
-      }
-      if (body.trim().length > 5) segs.push({ id: `${c + 1}:${m + 1}-${k + 1}`, label, ref: `${book.title} ${c + 1}:${m + 1} #${k + 1}`, text: body, rtl });
-    }
-  }
-  return segs;
-}
-var WIKI_CRUFT = [
-  /^Jump to content$/i,
-  /^From Wikipedia, the free encyclopedia$/i,
-  /^From Wikipedia$/i,
-  /Learn how and when to remove/i,
-  /^\(Learn how/i,
-  /Find sources/i,
-  /^This article has/i,
-  /^This article needs/i,
-  /^Part of a series on/i,
-  /^Wikipedia:/i,
-  /^For other uses/i,
-  /^Contents$/i,
-  /^\[edit\]$/i,
-  /^\[.*\]$/i,
-  /^Navigation menu$/i,
-  /^References$/i,
-  /^External links$/i,
-  /^See also$/i,
-  /^Further reading$/i,
-  /^Citations$/i,
-  /^Sources$/i,
-  /^^Hidden categories:/i,
-  /^Categories:/i,
-  /^This box:/i,
-  /^v\s*t\s*e/i,
-  /^Academia\.edu/i,
-  /^\^\s*\d+$/i,
-  /^Jump to search$/i
-];
-function isWikiCruft(s) {
-  return WIKI_CRUFT.some((re) => re.test(s.trim())) || /^\s*\^\s*$/.test(s);
-}
-function parseWikiRef(book, libRoot, dedupeSets) {
-  const group = book.options.dedupeGroup;
-  const seen = group ? dedupeSets[group] || (dedupeSets[group] = /* @__PURE__ */ new Set()) : null;
-  const out = [];
-  for (const rel of book.files) {
-    let raw;
-    try {
-      raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, rel), "utf8");
-    } catch (e) {
-      continue;
-    }
-    const lines = raw.replace(/\r\n/g, "\n").split("\n").map(decodeEntities);
-    let title = (lines[0] || "").trim().replace(/\s*[-–—]\s*(Wikipedia|Encyclop[ae]dia Iranica).*$/i, "").replace(/\|.*$/, "").trim();
-    if (!title) title = humanize(rel);
-    const body = cleanBody(lines.filter((l) => !isWikiCruft(l)));
-    if (body.trim().length < 40) continue;
-    const h = hashStr(body);
-    if (seen && seen.has(h)) continue;
-    if (seen) seen.add(h);
-    out.push({ id: import_node_path.default.basename(rel, ".txt"), label: title, ref: rel, text: body });
-  }
-  return out;
-}
-function normalizeWork(s) {
-  if (/ANTIQUIT/i.test(s)) return "Antiquities";
-  if (/WARS/i.test(s)) return "Wars";
-  if (/LIFE/i.test(s)) return "Life";
-  if (/APION/i.test(s)) return "Against Apion";
-  return s;
-}
-function parseJosephus(book, libRoot) {
-  let raw;
-  try {
-    raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, book.files[0]), "utf8");
-  } catch (e) {
-    return [];
-  }
-  const lines = raw.replace(/\r\n/g, "\n").split("\n");
-  const HEADER = /^(ANTIQUITIES OF THE JEWS|WARS OF THE JEWS)$/i;
-  const WORK = /^(ANTIQUITIES OF THE JEWS|WARS OF THE JEWS|LIFE OF FLAVIUS JOSEPHUS|THE LIFE|THE WARS|AGAINST APION)/i;
-  const BOOK = /^BOOK\s+([IVXLCDM]+)/i;
-  const CHAP = /^CHAPTER\s+([IVXLCDM]+)/i;
-  let work = "Josephus", bookNo = null;
-  const segs = [];
-  let cur = null, buf = [];
-  const flush = () => {
-    if (cur && buf.length) {
-      const t = cleanBody(buf);
-      if (t.trim().length > 40) segs.push({ ...cur, text: t });
-    }
-    buf = [];
-  };
-  for (const l of lines) {
-    const t = l.trim();
-    if (HEADER.test(t)) continue;
-    if (/^CONTENTS\.?$/i.test(t)) continue;
-    if (/^\d{1,4}$/.test(t)) continue;
-    let m;
-    if (m = t.match(WORK)) {
-      work = normalizeWork(m[1]);
-      bookNo = null;
-      continue;
-    }
-    if (m = t.match(BOOK)) {
-      bookNo = romanTo(m[1]) || m[1];
-      continue;
-    }
-    if (m = t.match(CHAP)) {
-      flush();
-      const ch = romanTo(m[1]) || m[1];
-      const label = `${work} Book ${bookNo || "?"} Chapter ${ch}`;
-      cur = { id: slugish(label), label, ref: book.files[0] };
-      continue;
-    }
-    if (cur) buf.push(l);
-  }
-  flush();
-  return segs;
-}
-function parsePlain(book, libRoot) {
-  const out = [];
-  for (const rel of book.files) {
-    let raw;
-    try {
-      raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, rel), "utf8");
-    } catch (e) {
-      continue;
-    }
-    const text = cleanBody(raw.replace(/\r\n/g, "\n").split("\n").map(decodeEntities));
-    if (text.trim().length < 10) continue;
-    out.push({ id: import_node_path.default.basename(rel, import_node_path.default.extname(rel)), label: humanize(rel), ref: rel, text });
-  }
-  return out;
-}
-function writeOriginalIndex(origDir, book, originalFiles) {
-  const items = originalFiles.map((f) => `        <li><a href="${import_node_path.default.basename(f)}" download>\u2B07 ${import_node_path.default.basename(f)}</a> <span class="sz">(${(import_node_fs.default.statSync(import_node_path.default.join(origDir, import_node_path.default.basename(f))).size / 1024).toFixed(0)} KB)</span></li>`).join("\n");
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${book.title} \u2014 original files | The Luco Library</title>
-<style>:root{--bg:#000;--panel:#0f0f15;--line:#2a2a38;--txt:#f4f4f7;--dim:#9ca3af;--violet:#c29eff;--gold:#e8c87a}body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.6 -apple-system,Segoe UI,Helvetica,Arial,sans-serif}.w{max-width:760px;margin:0 auto;padding:32px 18px}h1{font-size:1.4rem;color:var(--gold);margin:0 0 4px}p.m{color:var(--dim);margin:0 0 18px;font-size:.9rem}a{color:var(--violet);text-decoration:none}a:hover{text-decoration:underline}li{list-style:none;padding:7px 0;border-bottom:1px solid var(--line)}.sz{color:var(--dim);font-size:.8rem}.bk{font-size:.8rem;color:var(--dim)}code{color:var(--violet)}</style></head>
-<body><div class="w"><p class="bk"><a href="/library/">\u2190 The Luco Library</a></p><h1>${book.title}</h1><p class="m">Original source file${originalFiles.length > 1 ? "s" : ""} \u2014 as downloaded (${book.source}). Right-click \u2192 \u201CSave link as\u2026\u201D to keep the file.</p><ul>
-${items}
-      </ul></div></body></html>`;
-  import_node_fs.default.writeFileSync(import_node_path.default.join(origDir, "index.html"), html);
-}
-function buildLibrary(webDir) {
-  const libRoot = import_node_path.default.resolve(webDir, "..", "library");
-  const outData = import_node_path.default.join(webDir, "library", "data");
-  const outOrig = import_node_path.default.join(webDir, "library", "original");
-  import_node_fs.default.mkdirSync(outData, { recursive: true });
-  import_node_fs.default.mkdirSync(outOrig, { recursive: true });
-  const dedupeSets = {};
-  const catalog = [];
-  const wordsMap = {};
-  let totalSegs = 0, totalWords = 0;
-  for (const book of MANIFEST) {
-    book.options = book.options || {};
-    let segs = [];
-    try {
-      switch (book.parser) {
-        case "sacred-texts-chapter":
-          segs = parseSacredTextsChapter(book, libRoot);
-          break;
-        case "djvu-prose":
-          segs = parseDjvuProse(book, libRoot);
-          break;
-        case "gutenberg":
-          segs = parseGutenberg(book, libRoot);
-          break;
-        case "wikisource-section":
-          segs = parseWikisourceSection(book, libRoot);
-          break;
-        case "sefaria-json":
-          segs = parseSefariaJson(book, libRoot);
-          break;
-        case "wiki-ref":
-          segs = parseWikiRef(book, libRoot, dedupeSets);
-          break;
-        case "josephus":
-          segs = parseJosephus(book, libRoot);
-          break;
-        case "plain":
-          segs = parsePlain(book, libRoot);
-          break;
-        default:
-          console.warn("[library] unknown parser", book.parser, "for", book.slug);
-      }
-    } catch (e) {
-      console.warn("[library] parse FAILED for", book.slug, "-", e.message);
-      segs = [];
-    }
-    if (!segs.length) {
-      console.warn("[library] NO segments for", book.slug, "(skipping)");
-      continue;
-    }
-    const origDir = import_node_path.default.join(outOrig, book.slug);
-    import_node_fs.default.mkdirSync(origDir, { recursive: true });
-    const originalFiles = [];
-    for (const rel of book.files) {
-      const src = import_node_path.default.join(libRoot, rel);
-      if (!import_node_fs.default.existsSync(src)) {
-        console.warn("[library] missing source", rel);
-        continue;
-      }
-      const base = import_node_path.default.basename(rel);
-      import_node_fs.default.copyFileSync(src, import_node_path.default.join(origDir, base));
-      originalFiles.push(`/library/original/${book.slug}/${base}`);
-    }
-    try {
-      writeOriginalIndex(origDir, book, originalFiles);
-    } catch (e) {
-    }
-    const words = /* @__PURE__ */ new Set();
-    let wc = 0;
-    for (const s of segs) {
-      const toks = tokenize2(s.text);
-      for (const w of toks) words.add(w);
-      wc += toks.length;
-    }
-    const rtl = !!(book.options && book.options.rtl);
-    import_node_fs.default.writeFileSync(import_node_path.default.join(outData, book.slug + ".json"), JSON.stringify({
-      slug: book.slug,
-      title: book.title,
-      meta: { author: book.author, year: book.year, lang: book.lang, source: book.source, license: book.license, description: book.description, genre: book.genre, rtl },
-      originalFiles,
-      segments: segs.map((s) => ({ id: s.id, label: s.label, ref: s.ref, text: s.text, rtl: rtl && s.rtl !== false }))
-    }));
-    wordsMap[book.slug] = [...words].sort().join(" ");
-    catalog.push({ slug: book.slug, title: book.title, author: book.author, year: book.year, lang: book.lang, genre: book.genre, description: book.description, segments: segs.length, words: wc, originalFiles });
-    totalSegs += segs.length;
-    totalWords += wc;
-    console.log(`[library] ${book.slug}: ${segs.length} segs, ${wc} words, ${originalFiles.length} originals`);
-  }
-  import_node_fs.default.writeFileSync(import_node_path.default.join(outData, "catalog.json"), JSON.stringify({ books: catalog }, null, 2));
-  import_node_fs.default.writeFileSync(import_node_path.default.join(outData, "catalog.words.json"), JSON.stringify(wordsMap));
-  console.log(`[library] DONE \u2014 ${catalog.length} books, ${totalSegs} segments, ${totalWords} words total.`);
-  return { books: catalog };
-}
-if (import_meta.url === `file://${process.argv[1]}`) {
-  const webDir = import_node_path.default.resolve(import_node_path.default.dirname(new URL(".", import_meta.url).pathname), "..");
-  buildLibrary(webDir);
-}
-
-// web/scripts/prerender.jsx
-var import_meta2 = {};
-var __here = typeof __dirname !== "undefined" ? __dirname : import_node_path2.default.dirname((0, import_node_url.fileURLToPath)(import_meta2.url));
+var __here = typeof __dirname !== "undefined" ? __dirname : import_node_path.default.dirname((0, import_node_url.fileURLToPath)(import_meta.url));
 function findWeb(start) {
   let dir = start;
   for (let i = 0; i < 6; i++) {
-    if (import_node_fs2.default.existsSync(import_node_path2.default.join(dir, "index.html")) && import_node_fs2.default.existsSync(import_node_path2.default.join(dir, "lexicon.json"))) return dir;
-    dir = import_node_path2.default.dirname(dir);
+    if (import_node_fs.default.existsSync(import_node_path.default.join(dir, "index.html")) && import_node_fs.default.existsSync(import_node_path.default.join(dir, "lexicon.json"))) return dir;
+    dir = import_node_path.default.dirname(dir);
   }
-  return import_node_path2.default.resolve(__here, "..");
+  return import_node_path.default.resolve(__here, "..");
 }
 var WEB = findWeb(__here);
 var OUT = WEB;
@@ -32180,17 +31129,16 @@ var SIGN_ES2EN = {
 };
 var ERA_ES2EN = { Piscis: "Pisces", Acuario: "Aquarius", Capricornio: "Capricorn", Sagitario: "Sagittarius", Escorpio: "Scorpio", Libra: "Libra", Virgo: "Virgo", Leo: "Leo", C\u00E1ncer: "Cancer", G\u00E9minis: "Gemini", Tauro: "Taurus", Aries: "Aries" };
 var signEN = (s) => SIGN_ES2EN[s] || ERA_ES2EN[s] || s;
-var lexicon = JSON.parse(import_node_fs2.default.readFileSync(import_node_path2.default.join(WEB, "lexicon.json"), "utf8"));
-var angels = JSON.parse(import_node_fs2.default.readFileSync(import_node_path2.default.join(WEB, "angels72.json"), "utf8"));
-var alignments = JSON.parse(import_node_fs2.default.readFileSync(import_node_path2.default.join(WEB, "alignments.json"), "utf8"));
-var nameRefs = JSON.parse(import_node_fs2.default.readFileSync(import_node_path2.default.join(WEB, "name_refs.json"), "utf8"));
+var lexicon = JSON.parse(import_node_fs.default.readFileSync(import_node_path.default.join(WEB, "lexicon.json"), "utf8"));
+var angels = JSON.parse(import_node_fs.default.readFileSync(import_node_path.default.join(WEB, "angels72.json"), "utf8"));
+var alignments = JSON.parse(import_node_fs.default.readFileSync(import_node_path.default.join(WEB, "alignments.json"), "utf8"));
+var nameRefs = JSON.parse(import_node_fs.default.readFileSync(import_node_path.default.join(WEB, "name_refs.json"), "utf8"));
 var LEX = lexicon.lexicon;
 var angelMap = (() => {
   const m = /* @__PURE__ */ new Map();
   angels.triplets.forEach((t, i) => m.set(norm(t), { el: angels.angelsEL[i], yh: angels.angelsYH[i] }));
   return m;
 })();
-var libraryCatalog = buildLibrary(WEB);
 function scanYear(y) {
   const nDays = y % 4 === 0 && (y % 100 !== 0 || y % 400 === 0) ? 366 : 365;
   const dayOccs = [];
@@ -32203,7 +31151,7 @@ function scanYear(y) {
 var genData = scanYear(2026);
 var rows = skyAt(REF_DATE2);
 var occ = occupiedLetters(rows);
-var indexHtml = import_node_fs2.default.readFileSync(import_node_path2.default.join(WEB, "index.html"), "utf8");
+var indexHtml = import_node_fs.default.readFileSync(import_node_path.default.join(WEB, "index.html"), "utf8");
 var CSS = (indexHtml.match(/<style>([\s\S]*?)<\/style>/) || ["", ""])[1];
 function esc(s) {
   return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -32268,11 +31216,10 @@ ${CSS}
       <a href="/app" data-s="app">App</a>
       <a href="/about" data-s="about">About</a>
       <a href="/paper" data-s="paper">Paper</a>
-      <a href="/library" data-s="library">Library</a>
     </nav>
   </div>
 </header>
-<script>(function(){var p=(location.pathname||'/').replace(/\\/\\+$/,'')||'/';var s='home';if(p==='/about')s='about';else if(p==='/paper')s='paper';else if(p==='/library')s='library';else if(p!=='/')s='app';var a=document.querySelector('.site-nav a[data-s="'+s+'"]');if(a)a.classList.add('active');})();</script>
+<script>(function(){var p=(location.pathname||'/').replace(/\\/\\+$/,'')||'/';var s='home';if(p==='/about')s='about';else if(p==='/paper')s='paper';else if(p!=='/')s='app';var a=document.querySelector('.site-nav a[data-s="'+s+'"]');if(a)a.classList.add('active');})();</script>
 <div class="wrap"><main id="root" class="app-panel">${body}</main></div>
 <script type="module" src="${scriptSrc}"></script>
 </body>
@@ -32280,17 +31227,17 @@ ${CSS}
 `;
 }
 function writeHtml(relPath, html) {
-  const full = import_node_path2.default.join(OUT, relPath);
-  import_node_fs2.default.mkdirSync(import_node_path2.default.dirname(full), { recursive: true });
-  import_node_fs2.default.writeFileSync(full, html);
+  const full = import_node_path.default.join(OUT, relPath);
+  import_node_fs.default.mkdirSync(import_node_path.default.dirname(full), { recursive: true });
+  import_node_fs.default.writeFileSync(full, html);
 }
 var R = (el) => (0, import_server.renderToStaticMarkup)(el);
 var TAB_LABELS = ["Cycles", "Sky Map", "Reader", "Reading", "Time", "Gematria", "Sigils", "Revelations", "Psalms", "Codes", "Methodology"];
 function TabsBarStatic() {
-  return /* @__PURE__ */ import_react22.default.createElement("div", { className: "tabs", role: "tablist" }, TAB_LABELS.map((label) => /* @__PURE__ */ import_react22.default.createElement("div", { key: label, className: "tab", role: "tab" }, label)));
+  return /* @__PURE__ */ import_react21.default.createElement("div", { className: "tabs", role: "tablist" }, TAB_LABELS.map((label) => /* @__PURE__ */ import_react21.default.createElement("div", { key: label, className: "tab", role: "tab" }, label)));
 }
 function appBody(page) {
-  return R(/* @__PURE__ */ import_react22.default.createElement("div", null, /* @__PURE__ */ import_react22.default.createElement(TabsBarStatic, null), /* @__PURE__ */ import_react22.default.createElement("section", { className: "panel app-panel" }, page), /* @__PURE__ */ import_react22.default.createElement(Footer, null)));
+  return R(/* @__PURE__ */ import_react21.default.createElement("div", null, /* @__PURE__ */ import_react21.default.createElement(TabsBarStatic, null), /* @__PURE__ */ import_react21.default.createElement("section", { className: "panel app-panel" }, page), /* @__PURE__ */ import_react21.default.createElement(Footer, null)));
 }
 var jsonldWebApp = JSON.stringify({
   "@context": "https://schema.org",
@@ -32309,7 +31256,7 @@ writeHtml("prophets/index.html", shell({
   keywords: "prophets timeline, Adam to Jacob Frank, Seth two pillars, biblical prophets, Islamic prophets, Sufi mystics, apocalyptic writers, Sabbateanism, Frankism, revelation chronology, merkabah mysticism, Apocalypse of Adam",
   path: "/prophets",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Prophets \u2014 Adam to Jacob Frank", url: SITE + "/prophets" }),
-  body: appBody(/* @__PURE__ */ import_react22.default.createElement(ProphetsPage, null))
+  body: appBody(/* @__PURE__ */ import_react21.default.createElement(ProphetsPage, null))
 }));
 writeHtml("mages/index.html", shell({
   title: "Magi timeline \u2014 Adapa to Aleister Crowley | Apocalypse of Adam",
@@ -32317,7 +31264,7 @@ writeHtml("mages/index.html", shell({
   keywords: "magi timeline, Adapa apkallu, Imhotep, Enheduanna, Hermes Trismegistus, Jannes and Jambres, Pythagoras, Daniel magi, Shadrach Meshach Abednego, Berossus, Biblical Magi, Apollonius of Tyana, Iamblichus theurgy, San Cipriano, Saint Cyprian of Antioch, Abu Ma'shar, Al-Kindi, De radiis stellarum, Maslama al-Qurtubi, Picatrix, Drag\xF3n Rojo, Ramon Llull Ars Magna, Alfonso X, Felipe II, Athanasius Kircher, Oedipus Aegyptiacus, Jesuit mage, Eliphas Levi, Mathers, Aleister Crowley, Thelema, Goetia, Christian Kabbalah, Hermeticism, Renaissance magic, Apocalypse of Adam",
   path: "/mages",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Magi \u2014 Adapa to Aleister Crowley", url: SITE + "/mages" }),
-  body: appBody(/* @__PURE__ */ import_react22.default.createElement(MagesPage, null))
+  body: appBody(/* @__PURE__ */ import_react21.default.createElement(MagesPage, null))
 }));
 writeHtml("patriarchs/index.html", shell({
   title: "Patriarchs/Conquest \u2014 names readable in the sky | Apocalypse of Adam",
@@ -32325,7 +31272,7 @@ writeHtml("patriarchs/index.html", shell({
   keywords: "biblical names, patriarchs, Hebrew gematria, stellar letters, Sefer Yetzirah, zodiac simple letters, rare conjunctions, sky reading, Apocalypse of Adam",
   path: "/patriarchs",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Patriarchs/Conquest \u2014 names readable in the sky", url: SITE + "/patriarchs", numberOfItems: PATRIARCHS.length }),
-  body: appBody(/* @__PURE__ */ import_react22.default.createElement(PatriarchsPage, null))
+  body: appBody(/* @__PURE__ */ import_react21.default.createElement(PatriarchsPage, null))
 }));
 writeHtml("places/index.html", shell({
   title: "Places \u2014 biblical toponyms readable in the sky | Apocalypse of Adam",
@@ -32333,11 +31280,11 @@ writeHtml("places/index.html", shell({
   keywords: "biblical places, toponyms, Hebrew gematria, stellar letters, Sefer Yetzirah, zodiac simple letters, rare conjunctions, sky reading, Apocalypse of Adam",
   path: "/places",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Places \u2014 biblical toponyms readable in the sky", url: SITE + "/places", numberOfItems: PLACES.length }),
-  body: appBody(/* @__PURE__ */ import_react22.default.createElement(PlacesPage, null))
+  body: appBody(/* @__PURE__ */ import_react21.default.createElement(PlacesPage, null))
 }));
 function AlignmentsIndex() {
   const rowsA = alignments.scanA;
-  return /* @__PURE__ */ import_react22.default.createElement("div", null, /* @__PURE__ */ import_react22.default.createElement("h1", null, "Stellar alignments \u2014 rare century & millennium conjunctions"), /* @__PURE__ */ import_react22.default.createElement("p", { className: "muted" }, "Every rare stellar alignment from a 7-classical scan (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn): the planets concentrated in a single zodiac sign, with the tightest enclosing arc and the precessional era. ", rowsA.length, " alignments. Each links to its fiche with a sky map, alignment metrics, and the top readable Hebrew names."), /* @__PURE__ */ import_react22.default.createElement("table", { style: { width: "100%", fontSize: ".86rem" } }, /* @__PURE__ */ import_react22.default.createElement("thead", null, /* @__PURE__ */ import_react22.default.createElement("tr", null, ["Date", "Max in one sign", "Sign", "Span (\xB0)", "Era", "Fiche"].map((h, i) => /* @__PURE__ */ import_react22.default.createElement("th", { key: i, style: { textAlign: i === 0 || i === 5 ? "left" : "right", padding: "4px 8px" } }, h)))), /* @__PURE__ */ import_react22.default.createElement("tbody", null, rowsA.map((e, i) => /* @__PURE__ */ import_react22.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react22.default.createElement("td", { style: { padding: "4px 8px" } }, e.date), /* @__PURE__ */ import_react22.default.createElement("td", { style: { padding: "4px 8px", textAlign: "right" } }, e.maxInSign), /* @__PURE__ */ import_react22.default.createElement("td", { style: { padding: "4px 8px" } }, signEN(e.sign)), /* @__PURE__ */ import_react22.default.createElement("td", { style: { padding: "4px 8px", textAlign: "right" }, className: "deg" }, e.span.toFixed(1)), /* @__PURE__ */ import_react22.default.createElement("td", { style: { padding: "4px 8px" } }, signEN(e.era)), /* @__PURE__ */ import_react22.default.createElement("td", { style: { padding: "4px 8px" } }, /* @__PURE__ */ import_react22.default.createElement("a", { href: `/align/${e.date}` }, "view fiche \u2192")))))));
+  return /* @__PURE__ */ import_react21.default.createElement("div", null, /* @__PURE__ */ import_react21.default.createElement("h1", null, "Stellar alignments \u2014 rare century & millennium conjunctions"), /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted" }, "Every rare stellar alignment from a 7-classical scan (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn): the planets concentrated in a single zodiac sign, with the tightest enclosing arc and the precessional era. ", rowsA.length, " alignments. Each links to its fiche with a sky map, alignment metrics, and the top readable Hebrew names."), /* @__PURE__ */ import_react21.default.createElement("table", { style: { width: "100%", fontSize: ".86rem" } }, /* @__PURE__ */ import_react21.default.createElement("thead", null, /* @__PURE__ */ import_react21.default.createElement("tr", null, ["Date", "Max in one sign", "Sign", "Span (\xB0)", "Era", "Fiche"].map((h, i) => /* @__PURE__ */ import_react21.default.createElement("th", { key: i, style: { textAlign: i === 0 || i === 5 ? "left" : "right", padding: "4px 8px" } }, h)))), /* @__PURE__ */ import_react21.default.createElement("tbody", null, rowsA.map((e, i) => /* @__PURE__ */ import_react21.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react21.default.createElement("td", { style: { padding: "4px 8px" } }, e.date), /* @__PURE__ */ import_react21.default.createElement("td", { style: { padding: "4px 8px", textAlign: "right" } }, e.maxInSign), /* @__PURE__ */ import_react21.default.createElement("td", { style: { padding: "4px 8px" } }, signEN(e.sign)), /* @__PURE__ */ import_react21.default.createElement("td", { style: { padding: "4px 8px", textAlign: "right" }, className: "deg" }, e.span.toFixed(1)), /* @__PURE__ */ import_react21.default.createElement("td", { style: { padding: "4px 8px" } }, signEN(e.era)), /* @__PURE__ */ import_react21.default.createElement("td", { style: { padding: "4px 8px" } }, /* @__PURE__ */ import_react21.default.createElement("a", { href: `/align/${e.date}` }, "view fiche \u2192")))))));
 }
 writeHtml("alignments/index.html", shell({
   title: "Stellar alignments \u2014 rare century & millennium conjunctions | Apocalypse of Adam",
@@ -32345,13 +31292,13 @@ writeHtml("alignments/index.html", shell({
   keywords: "stellar alignments, planetary conjunctions, rare astronomy, zodiac concentration, precession, tightest arc, 7-classical conjunction, Hebrew sky reading, Apocalypse of Adam",
   path: "/alignments",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Stellar alignments", url: SITE + "/alignments", numberOfItems: alignments.scanA.length }),
-  body: appBody(/* @__PURE__ */ import_react22.default.createElement(AlignmentsIndex, null))
+  body: appBody(/* @__PURE__ */ import_react21.default.createElement(AlignmentsIndex, null))
 }));
 function ReadingsIndex() {
-  return /* @__PURE__ */ import_react22.default.createElement("div", null, /* @__PURE__ */ import_react22.default.createElement("h1", null, "Sky readings \u2014 Hebrew words readable in the stars"), /* @__PURE__ */ import_react22.default.createElement("p", { className: "muted" }, "Every consonantal Hebrew root in the lexicon (", LEX.length, " entries) has a reading fiche: its Hebrew letters, transliteration, gloss, gematria, the zodiac simple letters it requires, and its year-legibility timeline. Each links to its single-reading page."), /* @__PURE__ */ import_react22.default.createElement("div", { className: "tcards" }, LEX.map((row, i) => {
+  return /* @__PURE__ */ import_react21.default.createElement("div", null, /* @__PURE__ */ import_react21.default.createElement("h1", null, "Sky readings \u2014 Hebrew words readable in the stars"), /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted" }, "Every consonantal Hebrew root in the lexicon (", LEX.length, " entries) has a reading fiche: its Hebrew letters, transliteration, gloss, gematria, the zodiac simple letters it requires, and its year-legibility timeline. Each links to its single-reading page."), /* @__PURE__ */ import_react21.default.createElement("div", { className: "tcards" }, LEX.map((row, i) => {
     const [cons, trans, gloss, pos] = row;
     const enc = encodeURIComponent(cons);
-    return /* @__PURE__ */ import_react22.default.createElement("a", { key: i, href: `/reader/${enc}`, className: "tcard", style: { textDecoration: "none", display: "block" } }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "the" }, /* @__PURE__ */ import_react22.default.createElement("span", { className: "he", style: { fontSize: "1.3rem" } }, cons)), /* @__PURE__ */ import_react22.default.createElement("div", { className: "read" }, trans), /* @__PURE__ */ import_react22.default.createElement("div", { className: "trans" }, gloss), /* @__PURE__ */ import_react22.default.createElement("div", { className: "g muted", style: { fontSize: ".78rem" } }, pos || "\u2014"));
+    return /* @__PURE__ */ import_react21.default.createElement("a", { key: i, href: `/reader/${enc}`, className: "tcard", style: { textDecoration: "none", display: "block" } }, /* @__PURE__ */ import_react21.default.createElement("div", { className: "the" }, /* @__PURE__ */ import_react21.default.createElement("span", { className: "he", style: { fontSize: "1.3rem" } }, cons)), /* @__PURE__ */ import_react21.default.createElement("div", { className: "read" }, trans), /* @__PURE__ */ import_react21.default.createElement("div", { className: "trans" }, gloss), /* @__PURE__ */ import_react21.default.createElement("div", { className: "g muted", style: { fontSize: ".78rem" } }, pos || "\u2014"));
   })));
 }
 writeHtml("readings/index.html", shell({
@@ -32360,7 +31307,7 @@ writeHtml("readings/index.html", shell({
   keywords: "Hebrew readings, sky reading glossary, consonantal roots, Hebrew gematria, zodiac simple letters, Sefer Yetzirah, 72 angels, lexicon, Apocalypse of Adam",
   path: "/readings",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Sky readings", url: SITE + "/readings", numberOfItems: LEX.length }),
-  body: appBody(/* @__PURE__ */ import_react22.default.createElement(ReadingsIndex, null))
+  body: appBody(/* @__PURE__ */ import_react21.default.createElement(ReadingsIndex, null))
 }));
 writeHtml("about/index.html", shell({
   title: "About \u2014 The Apocalypse of Adam | Hebrew sky reader",
@@ -32368,7 +31315,7 @@ writeHtml("about/index.html", shell({
   keywords: "About, Apocalypse of Adam, Sefer Yetzirah, stellar alphabet, Hebrew sky reading, astronomy-engine, authors, methodology",
   path: "/about",
   jsonld: jsonldWebApp,
-  body: R(/* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, null, /* @__PURE__ */ import_react22.default.createElement(About, null), /* @__PURE__ */ import_react22.default.createElement(Footer, null)))
+  body: R(/* @__PURE__ */ import_react21.default.createElement(import_react21.default.Fragment, null, /* @__PURE__ */ import_react21.default.createElement(About, null), /* @__PURE__ */ import_react21.default.createElement(Footer, null)))
 }));
 writeHtml("app/index.html", shell({
   title: "Sky reader app \u2014 Cycles, Sky Map, Reader, Gematria, Alignments | Apocalypse of Adam",
@@ -32376,17 +31323,7 @@ writeHtml("app/index.html", shell({
   keywords: "Sefer Yetzirah, Hebrew letters, zodiac, stellar alphabet, gematria, 72 angels, ELS, Torah codes, Temurah, Ziruph, alignments, sky reader, Apocalypse of Adam",
   path: "/app",
   jsonld: jsonldWebApp,
-  body: appBody(/* @__PURE__ */ import_react22.default.createElement("div", { style: { minHeight: "55vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" } }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { margin: 0 } }, "Loading the app\u2026"), /* @__PURE__ */ import_react22.default.createElement("p", { className: "muted", style: { marginTop: 8 } }, "Reading the lexicon (6045 consonantal roots).")))
-}));
-var libDesc = "The Luco Library \u2014 the Sacred Forest (Luco, from Latin lucus, the sacred grove of Roman Hispania). Search the primary sources behind the project: Avesta, the Qur'an, Nag Hammadi, Rig Veda, the Hermetic sermons (Corpus Hermeticum), the Book of the Dead, I Ching, Popol Vuh, Josephus, 1 Enoch, Sefer Yetzirah (Hebrew) + Ramban commentary, Sufi & gematria reference articles.";
-writeHtml("library/index.html", shell({
-  title: "The Luco Library \u2014 the Sacred Forest | Apocalypse of Adam",
-  desc: libDesc,
-  keywords: "primary source library, BibleGateway search, Avesta, Quran, Nag Hammadi, Rig Veda, Corpus Hermeticum, Poimandres, Book of the Dead, I Ching, Popol Vuh, Josephus, 1 Enoch, Sefer Yetzirah, Ramban, gematria, Sufism, sacred texts, Apocalypse of Adam",
-  path: "/library",
-  jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "Library", name: "The Luco Library \u2014 the Sacred Forest", url: SITE + "/library", description: libDesc }),
-  scriptSrc: "/library.bundle.js",
-  body: R(/* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, null, /* @__PURE__ */ import_react22.default.createElement(LibraryApp, { initialCatalog: libraryCatalog }), /* @__PURE__ */ import_react22.default.createElement(Footer, null)))
+  body: appBody(/* @__PURE__ */ import_react21.default.createElement("div", { style: { minHeight: "55vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" } }, /* @__PURE__ */ import_react21.default.createElement("h2", { style: { margin: 0 } }, "Loading the app\u2026"), /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted", style: { marginTop: 8 } }, "Reading the lexicon (6045 consonantal roots).")))
 }));
 var nProphet = 0;
 for (const p of PROPHETS) {
@@ -32407,7 +31344,7 @@ for (const p of PROPHETS) {
     nationality: p.region,
     sameAs: w.wikipediaUrl || null
   });
-  writeHtml("prophet/" + slug + "/index.html", shell({ title, desc, keywords, path: "/prophet/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react22.default.createElement(ProphetFicha, { slug })) }));
+  writeHtml("prophet/" + slug + "/index.html", shell({ title, desc, keywords, path: "/prophet/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react21.default.createElement(ProphetFicha, { slug })) }));
   nProphet++;
 }
 var nMage = 0;
@@ -32429,7 +31366,7 @@ for (const m of MAGES) {
     nationality: m.region,
     sameAs: w.wikipediaUrl || null
   });
-  writeHtml("mage/" + slug + "/index.html", shell({ title, desc, keywords, path: "/mage/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react22.default.createElement(MageFicha, { slug })) }));
+  writeHtml("mage/" + slug + "/index.html", shell({ title, desc, keywords, path: "/mage/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react21.default.createElement(MageFicha, { slug })) }));
   nMage++;
 }
 var nPatriarch = 0;
@@ -32448,7 +31385,7 @@ for (const p of PATRIARCHS) {
     url: SITE + "/patriarch/" + slug,
     nationality: "ancient Israel"
   });
-  writeHtml("patriarch/" + slug + "/index.html", shell({ title, desc, keywords, path: "/patriarch/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react22.default.createElement(PatriarchFicha, { slug })) }));
+  writeHtml("patriarch/" + slug + "/index.html", shell({ title, desc, keywords, path: "/patriarch/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react21.default.createElement(PatriarchFicha, { slug })) }));
   nPatriarch++;
 }
 var nPlace = 0;
@@ -32465,7 +31402,7 @@ for (const p of PLACES) {
     description: `Biblical toponym (${p.period}) readable in the sky on ${p.dates.length} of the 12 dated rare conjunctions.`,
     url: SITE + "/place/" + slug
   });
-  writeHtml("place/" + slug + "/index.html", shell({ title, desc, keywords, path: "/place/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react22.default.createElement(PlaceFicha, { slug })) }));
+  writeHtml("place/" + slug + "/index.html", shell({ title, desc, keywords, path: "/place/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react21.default.createElement(PlaceFicha, { slug })) }));
   nPlace++;
 }
 var nAlign = 0;
@@ -32497,7 +31434,7 @@ for (const e of alignments.scanA) {
     url: SITE + `/align/${date}`,
     location: { "@type": "Place", name: `Zodiac sign ${meta.sign}` }
   });
-  const body = appBody(import_react22.default.createElement(AlignmentFicha, { date, lex: lexicon, angelMap, onBack: () => {
+  const body = appBody(import_react21.default.createElement(AlignmentFicha, { date, lex: lexicon, angelMap, onBack: () => {
   }, nameRefs }));
   writeHtml(`align/${date}/index.html`, shell({ title, desc, keywords, path: `/align/${date}`, jsonld, body }));
   nAlign++;
@@ -32520,7 +31457,7 @@ for (const row of LEX) {
     url: SITE + `/reader/${encodeURIComponent(he)}`,
     inDefinedTermSet: "Hebrew Sky-Reading Lexicon"
   });
-  const body = appBody(import_react22.default.createElement(GlossPage, { word: w, date: REF_DATE2, rows, occ, genData, onBack: () => {
+  const body = appBody(import_react21.default.createElement(GlossPage, { word: w, date: REF_DATE2, rows, occ, genData, onBack: () => {
   }, nameRefs }));
   writeHtml(`reader/${he}/index.html`, shell({ title, desc, keywords, path: `/reader/${encodeURIComponent(he)}`, jsonld, body }));
   nGloss++;
@@ -32535,14 +31472,14 @@ var sAlign = [
   ...alignments.scanA.map((e) => urlEntry(`${SITE}/align/${e.date}`, "monthly", "0.7")),
   "</urlset>"
 ].join("\n");
-import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "sitemap_alignments.xml"), sAlign);
+import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "sitemap_alignments.xml"), sAlign);
 var sRead = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
   ...LEX.map((row) => urlEntry(`${SITE}/reader/${encodeURIComponent(row[0])}`, "monthly", "0.5")),
   "</urlset>"
 ].join("\n");
-import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "sitemap_readings.xml"), sRead);
+import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "sitemap_readings.xml"), sRead);
 var sFig = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -32552,7 +31489,7 @@ var sFig = [
   ...PLACES.map((p) => urlEntry(`${SITE}/place/${p.slug}`, "monthly", "0.5")),
   "</urlset>"
 ].join("\n");
-import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "sitemap_figures.xml"), sFig);
+import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "sitemap_figures.xml"), sFig);
 var sIndex = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -32562,7 +31499,7 @@ var sIndex = [
   `  <sitemap><loc>${SITE}/sitemap_figures.xml</loc><lastmod>${today}</lastmod></sitemap>`,
   "</sitemapindex>"
 ].join("\n");
-import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "sitemap.xml"), sIndex);
+import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "sitemap.xml"), sIndex);
 var sHub = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -32570,7 +31507,6 @@ var sHub = [
   urlEntry(`${SITE}/app`, "weekly", "0.9"),
   urlEntry(`${SITE}/about`, "monthly", "0.7"),
   urlEntry(`${SITE}/paper`, "monthly", "0.9"),
-  urlEntry(`${SITE}/library`, "monthly", "0.8"),
   urlEntry(`${SITE}/prophets`, "monthly", "0.8"),
   urlEntry(`${SITE}/mages`, "monthly", "0.8"),
   urlEntry(`${SITE}/patriarchs`, "monthly", "0.8"),
@@ -32579,9 +31515,9 @@ var sHub = [
   urlEntry(`${SITE}/readings`, "monthly", "0.8"),
   "</urlset>"
 ].join("\n");
-import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "sitemap_hub.xml"), sHub);
-import_node_fs2.default.writeFileSync(
-  import_node_path2.default.join(OUT, "robots.txt"),
+import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "sitemap_hub.xml"), sHub);
+import_node_fs.default.writeFileSync(
+  import_node_path.default.join(OUT, "robots.txt"),
   `User-agent: *
 Allow: /
 Sitemap: ${SITE}/sitemap.xml
@@ -32600,7 +31536,6 @@ var llmsTxt = `# The Apocalypse of Adam
 - [Sky reader app](${SITE}/app) \u2014 interactive calculators (11 tabs: Cycles, Sky Map, Reader, Reading, Time, Gematria, Sigils, Revelations, Psalms, Codes, Methodology)
 - [About](${SITE}/about) \u2014 what the project is, how a reading works, authors and sources.
 - [Paper \u2014 The Reader of the Sky](${SITE}/paper) \u2014 the long-form academic article (served on this domain).
-- [The Luco Library \u2014 the Sacred Forest](${SITE}/library) \u2014 BibleGateway-style search across the primary sources (Avesta, Qur'an, Nag Hammadi, Rig Veda, Corpus Hermeticum, Book of the Dead, I Ching, Popol Vuh, Josephus, 1 Enoch, Sefer Yetzirah + Ramban, Sufi & gematria references).
 - [Prophets timeline \u2014 Adam to Jacob Frank](${SITE}/prophets) \u2014 61 prophet fiches (/prophet/<slug>)
 - [Magi timeline \u2014 Adapa to Aleister Crowley](${SITE}/mages) \u2014 40 magus fiches (/mage/<slug>)
 - [Patriarchs/Conquest \u2014 names readable in the sky](${SITE}/patriarchs) \u2014 185 biblical-name fiches (/patriarch/<slug>)
@@ -32620,7 +31555,7 @@ var llmsTxt = `# The Apocalypse of Adam
 - Authors: AncientEncoder & BartMan. Source: https://github.com/VABISMO/adam-apocalypse. AncientEncoder: https://medium.com/@ancientencoder/sons-of-stars-269765bda7db
 - Paper: ${SITE}/paper
 `;
-import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "llms.txt"), llmsTxt);
+import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "llms.txt"), llmsTxt);
 var llmsFull = `# The Apocalypse of Adam \u2014 full site description for LLMs
 
 > Hebrew letters read in the sky: real planet positions (astronomy-engine) map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable Hebrew names. The reuse rule S\u2286O (a word's required simple letters must be among the signs occupied by the planets) decides what is readable on each date. This is the live computational engine behind the paper "The Reader of the Sky".
@@ -32661,7 +31596,7 @@ Available to browser AI agents when the API is present (Chrome origin trial). Al
 - Source: https://github.com/VABISMO/adam-apocalypse
 - Authors: AncientEncoder & BartMan. AncientEncoder: https://medium.com/@ancientencoder/sons-of-stars-269765bda7db
 `;
-import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "llms-full.txt"), llmsFull);
+import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "llms-full.txt"), llmsFull);
 var ICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23000'/%3E%3Ctext x='12' y='18' text-anchor='middle' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23e8c87a'%3EA%3C/text%3E%3C/svg%3E";
 var manifest = {
   name: "The Apocalypse of Adam \u2014 Hebrew Sky Reader",
@@ -32678,23 +31613,23 @@ var manifest = {
     { src: ICON, sizes: "192x192 512x512", type: "image/svg+xml", purpose: "any" }
   ]
 };
-import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "site.webmanifest"), JSON.stringify(manifest, null, 2));
+import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "site.webmanifest"), JSON.stringify(manifest, null, 2));
 writeHtml("index.html", shell({
   title: "The Apocalypse of Adam \u2014 Hebrew letters in the stars \xB7 stellar alphabet & sky reader",
   desc: "Apocalypse means revelation. The thirteenth kingdom says every birth of their ruler is a word. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells readable Hebrew names. Sky map, alignments, reader, time, gematria, sigils, codes and psalms.",
   keywords: "Sefer Yetzirah, Hebrew letters, zodiac, stellar alphabet, Hebrew gematria, 72 angels, ELS, Torah codes, Temurah, Ziruph, ayanamsa, saros, precession, Apocalypse of Adam, Revelation gematria, psalms by date",
   path: "/",
   jsonld: jsonldWebApp,
-  body: R(/* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, null, /* @__PURE__ */ import_react22.default.createElement(Landing, { goApp: () => {
-  } }), /* @__PURE__ */ import_react22.default.createElement(Footer, null)))
+  body: R(/* @__PURE__ */ import_react21.default.createElement(import_react21.default.Fragment, null, /* @__PURE__ */ import_react21.default.createElement(Landing, { goApp: () => {
+  } }), /* @__PURE__ */ import_react21.default.createElement(Footer, null)))
 }));
 (() => {
-  const src = import_node_path2.default.join(WEB, "..", "paper", "index.html");
-  if (import_node_fs2.default.existsSync(src)) {
-    const dst = import_node_path2.default.join(OUT, "paper", "index.html");
-    import_node_fs2.default.mkdirSync(import_node_path2.default.dirname(dst), { recursive: true });
-    import_node_fs2.default.copyFileSync(src, dst);
-    console.log(`paper served same-domain: /paper/ (${import_node_fs2.default.statSync(src).size} bytes)`);
+  const src = import_node_path.default.join(WEB, "..", "paper", "index.html");
+  if (import_node_fs.default.existsSync(src)) {
+    const dst = import_node_path.default.join(OUT, "paper", "index.html");
+    import_node_fs.default.mkdirSync(import_node_path.default.dirname(dst), { recursive: true });
+    import_node_fs.default.copyFileSync(src, dst);
+    console.log(`paper served same-domain: /paper/ (${import_node_fs.default.statSync(src).size} bytes)`);
   } else {
     console.log("WARN: paper/index.html not found at", src, "\u2014 /paper/ not written");
   }

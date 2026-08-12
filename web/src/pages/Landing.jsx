@@ -279,16 +279,7 @@ function Landing({ goApp }){
   const rows = useMemo(() => skyAt(REF_DATE), []);                  // 7 classical bodies (sky-map dots)
   const occ = useMemo(() => occupiedLetters(skyAt7(REF_DATE)), []);  // 7 classical bodies (reading / lit sectors)
   const [warnOpen, setWarnOpen] = useState(false);
-  const [libQuery, setLibQuery] = useState('');
   const enterApp = () => { setWarnOpen(false); goApp && goApp(); };
-  // home search bar → hand the query to the separate Library app (/library?q=…).
-  // /library is a full page load (its own bundle), not an SPA route, so a plain
-  // navigation is correct. The <form action="/library" method="get"> is the no-JS fallback.
-  const submitLib = (e) => {
-    e.preventDefault();
-    const q = libQuery.trim();
-    window.location.href = '/library' + (q ? ('?q=' + encodeURIComponent(q)) : '');
-  };
 
   return (
     <div className="landing">
@@ -333,24 +324,6 @@ function Landing({ goApp }){
               <div className="feat-go muted">open →</div>
             </a>
           ))}
-        </div>
-      </section>
-
-      {/* ── THE LUCO LIBRARY ── */}
-      <section className="panel" style={{ marginTop: 22, padding: 24 }}>
-        <div className="section-head" style={{ textAlign: 'center' }}>
-          <h2 style={{ margin: 0, color: 'var(--gold)' }}>The Luco Library — the Sacred Forest</h2>
-          <p className="muted" style={{ maxWidth: 640, margin: '6px auto 0' }}>
-            <i>Luco</i>, from Latin <i>lucus</i> — the sacred grove of Roman Hispania. A BibleGateway-style search across the primary sources behind the project: Avesta, the Qur'an, Nag Hammadi, the Rig Veda, the Hermetic sermons, the Book of the Dead, the I Ching, the Popol Vuh, Josephus, 1 Enoch, the Sefer Yetzirah and Ramban's commentary, and the Sufi &amp; gematria references.
-          </p>
-        </div>
-        <form className="controls" style={{ maxWidth: 560, margin: '16px auto 0', justifyContent: 'center' }} action="/library" method="get" onSubmit={submitLib}>
-          <input type="text" name="q" className="lib-search" placeholder="Search the library — e.g. Poimandres, watchmen, Marduk, gematria…"
-            value={libQuery} onChange={e => setLibQuery(e.target.value)} style={{ flex: 1, minWidth: 220 }} aria-label="Search the library"/>
-          <button type="submit" className="btn-cta"><Fa n="magnifying-glass" c="txt" size=".95rem"/> &nbsp;Search</button>
-        </form>
-        <div style={{ textAlign: 'center', marginTop: 12 }}>
-          <a href="/library" style={{ color: 'var(--violet)', fontSize: '.9rem' }}>Browse all books →</a>
         </div>
       </section>
 
