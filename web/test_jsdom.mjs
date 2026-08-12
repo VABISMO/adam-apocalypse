@@ -145,12 +145,19 @@ try {
 } catch (e) { check('WarningModal renders', false, String(e.message)); }
 
 // --- /app route maps to the app shell (SSR: lex null → "Loading lexicon…") ---
+// The global jsdom `window` (installed above for the mount test) would make
+// parseRoute read window.location.pathname ('/') and ignore __ROUTE_PATH__, so
+// the app shell never gets exercised. Temporarily drop window so the SSR render
+// resolves the route from __ROUTE_PATH__ (as the hook intends), then restore.
 try {
   globalThis.__ROUTE_PATH__ = '/app';
+  const savedWin = globalThis.window;
+  delete globalThis.window;
   const html = renderToStaticMarkup(React.createElement(App));
+  globalThis.window = savedWin;
   check('route /app: renders app shell (not landing)', /Loading lexicon/.test(html) && !/hero-title/.test(html));
   delete globalThis.__ROUTE_PATH__;
-} catch (e) { check('route /app renders', false, String(e.message)); delete globalThis.__ROUTE_PATH__; }
+} catch (e) { check('route /app renders', false, String(e.message)); globalThis.window = window; delete globalThis.__ROUTE_PATH__; }
 
 const passed = results.filter((r) => r.ok).length;
 const failed = results.filter((r) => !r.ok);

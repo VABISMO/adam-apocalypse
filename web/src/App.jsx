@@ -35,7 +35,7 @@ const MAGE_BY_SLUG = new Map(MAGES.map((m) => [slugify(m.name), m]));
 // The academic paper — served on the same domain at /paper (no external redirect).
 const PAPER_URL = '/paper';
 function PaperTab() {
-  return <a className="tab" style={{ textDecoration: 'none', borderColor: 'var(--line)' }} href={PAPER_URL} title="The academic paper">Paper →</a>;
+  return <a className="tab" role="tab" style={{ textDecoration: 'none', borderColor: 'var(--line)' }} href={PAPER_URL} title="The academic paper">Paper →</a>;
 }
 
 const TABS = [
@@ -200,11 +200,22 @@ function App(){
   function step(n){ const d=parseDate(effDate); if(!d) return; d.setUTCDate(d.getUTCDate()+n); setDate(fmtDate(d)); }
   function stepYear(n){ setGenYear(genYear+n); }
 
-  if(lexErr) return <div className="panel app-panel"><h2>Error</h2><p>Could not load the lexicon. Please refresh the page; if the problem persists, the data may be unavailable right now.</p></div>;
-  if(!lex) return <div className="panel app-panel"><h2>Loading lexicon…</h2><p>Reading the lexicon (6045 consonantal roots).</p></div>;
-
   const setSubTab = (g)=>(id)=>setSub(s=>({...s,[g]:id}));
   const goTab = (id)=>{ const p=(typeof window!=='undefined')?window.location.pathname:'/'; if(p!=='/app') navigate('/app'); setActive(id); };
+
+  // Loading / error states keep the route chrome (TabsBar + Footer) so the layout is
+  // stable while the lexicon fetches — this is what holds CLS down on /app. Landing and
+  // About do not read the lexicon, so they render fully at once.
+  if(lexErr){
+    if(route.name==='landing') return <div><Landing goApp={()=>navigate('/app')}/><Footer/></div>;
+    if(route.name==='about') return <div><About/><Footer/></div>;
+    return <div><TabsBar goTab={goTab}/><section className="panel app-panel" style={{minHeight:'55vh'}}><h2>Error</h2><p>Could not load the lexicon. Please refresh the page; if the problem persists, the data may be unavailable right now.</p></section><Footer/></div>;
+  }
+  if(!lex){
+    if(route.name==='landing') return <div><Landing goApp={()=>navigate('/app')}/><Footer/></div>;
+    if(route.name==='about') return <div><About/><Footer/></div>;
+    return <div><TabsBar goTab={goTab}/><section className="panel app-panel" style={{minHeight:'55vh'}}><h2>Loading lexicon…</h2><p>Reading the lexicon (6045 consonantal roots).</p></section><Footer/></div>;
+  }
 
   // Path-based dedicated pages (full-page routes for SEO / deep links).
   if(route.name==='landing') return <div><Landing goApp={()=>navigate('/app')}/><Footer/></div>;
