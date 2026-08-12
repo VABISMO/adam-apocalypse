@@ -5,7 +5,7 @@ Local copies of the primary source texts mined for the **Revelations** and
 extractions (`.txt`). These are reference copies only — page refs / URLs in the
 app cite the original sources.
 
-## Folders (273 plain-text files total + Gaffarel)
+## Folders (273 plain-text files total + Gaffarel + 6 new source-text folders)
 
 - `nag-hammadi/` — Nag Hammadi Library (gnosis.org, 70 texts). Key:
   `adam.txt` (Apocalypse of Adam — 13 kingdoms + kingless generation = 14
@@ -55,6 +55,37 @@ app cite the original sources.
   direction West→East good / North ill (Jer 1:14). Two folding plates:
   constellations expressed in Hebrew characters. Directly attests the
   thesis (stars = Hebrew letters = celestial writing).
+- `sefer-yetzirah/` — **Nachmanides (Ramban of Gerona) commentary on
+  Sefer Yetzirah** (the version whose commentaries most align with this
+  project), from Sefaria (Warsaw 1884 ed., Public Domain): clean Hebrew
+  commentary text (`ramban_on_sefer_yetzirah.he.txt`, 3 ch / 28 mishnayot
+  / 105 comments, «...» marks the Sefer Yetzirah lemma glossed) + base
+  Sefer Yetzirah text (`sefer_yetzirah_base.txt`, he+en) + raw JSON.
+  Attribution debated (Chavel, *Kitvei Ramban* II p.451; Scholem links the
+  long recension to the Girona school — 'Ezra/'Azriel of Gerona).
+- `hermetica/` — Corpus Hermeticum (G. R. S. Mead, *Thrice-Greatest
+  Hermes*, 1906, 3 vols, Public Domain). archive.org DjVuTXT. Vol II =
+  the Sermons (Corpus Hermeticum: Poimandres etc.). Frames Hermes
+  Trismegistus (a mage-ficha figure) and the Hermetic lineage.
+- `book-of-the-dead/` — The Egyptian Book of the Dead (Budge, Gutenberg
+  #1808 / archive.org `thebookofthedead07145gut`). Clean plain text
+  (manually transcribed, not OCR). The Egyptian funerary corpus (§15c
+  Egyptian layer).
+- `i-ching/` — Yi King / I Ching (James Legge, SBE vol. XVI pt. 2, 1882,
+  Public Domain). archive.org `in.gov.ignca.20915` DjVuTXT. The 64
+  hexagrams + Wing commentaries (§15c Chinese layer: 28 xiu, 12
+  branches, 64 hexagrams).
+- `popol-vuh/` — The Popol Vuh (Lewis Spence, 1908, Public Domain).
+  archive.org `popolvuhmythica00spengoog` DjVuTXT. The Kiché-Maya
+  creation myth + hero cycles (§15c Maya layer: 260-day Tzolkin, Long
+  Count, 13 numbers).
+- `josephus/` — Flavius Josephus, Complete Works (Whiston, 1905, Public
+  Domain). archive.org `completeworksoff05jose` DjVuTXT. Includes the
+  **Seth two-pillars passage** (Antiquities 1.2): Seth's descendants
+  invent the astronomical science and inscribe it on two pillars (brick
+  + stone) to survive fire and flood — the passage the Seth
+  prophet-ficha references. Focused excerpt:
+  `seth-two-pillars-antiquities-1.2.txt`.
 
 ## Extraction notes
 - All HTML stripped to UTF-8 plain text (tags removed, entities decoded,
@@ -62,10 +93,18 @@ app cite the original sources.
 - Nag Hammadi HTML was iso-8859-1; converted to UTF-8.
 - Quran = Pickthall (public domain). Rig Veda = Griffith (public domain).
   Avesta = Sacred Books of the East (Darmesteter/Mills, public domain).
+- The six new folders (sefer-yetzirah, hermetica, book-of-the-dead,
+  i-ching, popol-vuh, josephus) use **archive.org** plain-text downloads
+  (DjVuTXT OCR, or Gutenberg clean text) per the user's directive —
+  archive.org is the standard source for plain-format copies. The
+  Nachmanides Sefer Yetzirah commentary comes from **Sefaria** instead
+  (clean Public-Domain Hebrew, far better than Hebrew OCR). All Public
+  Domain; OCR files may carry minor recognition errors (noted per folder).
 - Class tags used in the app: **(a)** verifiable astronomy · **(b)**
   eschatological/prophecy · **(c)** cosmological-doctrine · **(u)**
   unverified/late/pseudepigraphic.
 - Boundary respected: Rig Veda Samhita vs Brahmana/Upanishadic; Gathas vs
   later Young Avestan/Pahlavi; Quran text vs hadith vs later Sufi doctrine.
 
-Built 2026-08-10.
+Built 2026-08-10; expanded 2026-08-12 (+ sefer-yetzirah, hermetica,
+book-of-the-dead, i-ching, popol-vuh, josephus).

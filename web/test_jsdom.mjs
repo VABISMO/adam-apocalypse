@@ -80,9 +80,9 @@ try {
 
 try {
   const html = renderToStaticMarkup(React.createElement(MagesPage));
-  check('route /mages: h1 renders', /Magi — from Daniel to Felipe II/.test(html));
+  check('route /mages: h1 renders', /Magi — from Daniel to Aleister Crowley/.test(html));
   check('route /mages: timeline svg', /timeline-wrap/.test(html));
-  check('route /mages: Felipe II marked', /Felipe II/.test(html));
+  check('route /mages: Crowley marked', /Aleister Crowley/.test(html));
   check('route /mages: Llull card renders', /Ramon Llull/.test(html));
   check('route /mages: cards link to fichas', /href="\/mage\//.test(html));
 } catch (e) { check('route /mages renders', false, String(e.message)); }

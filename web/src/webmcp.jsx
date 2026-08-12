@@ -127,7 +127,7 @@ export function registerWebMCPTools({ lex, angelMap }){
 
   reg({
     name: 'prophet_info',
-    description: 'Return the prophet/mage lineage entry by name (e.g. "Daniel", "Jacob Frank"), or the full list of 33 prophetic figures from Adam to Jacob Frank if no name is given. Each entry has years, region, role, and thread.',
+    description: 'Return the prophet/mage lineage entry by name (e.g. "Daniel", "Jacob Frank"), or the full list of 61 prophetic figures from Adam to Jacob Frank if no name is given. Each entry has years, region, role, and thread.',
     inputSchema: { type:'object', properties:{ name:{ type:'string', description:'Prophet name (case-insensitive); omit for the full list' } } },
     execute: async ({ name }) => {
       if(!name) return j({ count:PROPHETS.length, prophets:PROPHETS.map(p=>({name:p.name, years:p.years, role:p.role, thread:p.thread, endpoint:!!p.endpoint})) });
@@ -139,7 +139,7 @@ export function registerWebMCPTools({ lex, angelMap }){
 
   reg({
     name: 'mage_info',
-    description: 'Return the magi lineage entry by name (e.g. "Ramon Llull", "Alfonso X of Castile", "Felipe II of Spain"), with a 2-3 paragraph Wikipedia-grounded biography and a profile (table) of the mage\'s most important works. Omit name for the full list of 24 magi from Daniel to Felipe II.',
+    description: 'Return the magi lineage entry by name (e.g. "Ramon Llull", "Alfonso X of Castile", "Aleister Crowley"), with a 2-3 paragraph Wikipedia-grounded biography and a profile (table) of the mage\'s most important works. Omit name for the full list of 40 magi from Adapa to Aleister Crowley.',
     inputSchema: { type:'object', properties:{ name:{ type:'string', description:'Mage name (case-insensitive); omit for the full list' } } },
     execute: async ({ name }) => {
       if(!name) return j({ count:MAGES.length, mages:MAGES.map(m=>({name:m.name, years:m.years, region:m.region, role:m.role, endpoint:!!m.endpoint})) });

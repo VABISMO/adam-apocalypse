@@ -3,10 +3,24 @@
 const POINTED = /[֑-ֽֿׁ-ׇׅ]/g;
 const RAW = [
   {name:"Adam",he:"אָדָם",era:"BCE",y0:-4000,y1:-4000,region:"Eden (legendary)",role:"First human in Genesis; paradigmatic figure of creation and fall.",thread:"biblical"},
+  {name:"Seth",he:"שֵׁת",era:"BCE",y0:-3870,y1:-2960,region:"Antediluvian (legendary)",role:"Adam's appointed son; per Josephus, his descendants invented the astronomical science and inscribed it on two pillars — one of brick, one of stone — to survive flood and fire.",thread:"biblical"},
   {name:"Enoch",he:"חֲנוֹךְ",era:"BCE",y0:-3400,y1:-3350,region:"Antediluvian (legendary)",role:"Patriarch who 'walked with God'; eponym of the Enochic apocalyptic literature (1 Enoch).",thread:"biblical"},
   {name:"Noah",he:"נֹחַ",era:"BCE",y0:-3000,y1:-2400,region:"Antediluvian (legendary)",role:"Righteous survivor of the Flood; bridge between antediluvian and postdiluvian eras.",thread:"biblical"},
+  {name:"Hud",he:"",era:"BCE",y0:-2500,y1:-2400,region:"Arabia (people of 'Ad, legendary)",role:"Quranic prophet sent to the ancient people of 'Ad; preached monotheism amid their pride.",thread:"islamic"},
+  {name:"Saleh",he:"",era:"BCE",y0:-2050,y1:-1950,region:"Hijaz (people of Thamud, legendary)",role:"Quranic prophet to Thamud; the she-camel of God a sign they hamstrung.",thread:"islamic"},
   {name:"Abraham",he:"אַבְרָהָם",era:"BCE",y0:-2000,y1:-1820,region:"Mesopotamia/Canaan",role:"Patriarch of the covenant; counted as a proto-prophet in biblical and Quranic texts.",thread:"biblical"},
+  {name:"Lot",he:"לוֹט",era:"BCE",y0:-1900,y1:-1820,region:"Sodom / Jordan valley",role:"Abraham's nephew; Quranic prophet to the cities of the plain.",thread:"islamic"},
+  {name:"Ishmael",he:"יִשְׁמָעֵאל",era:"BCE",y0:-1900,y1:-1820,region:"Arabia / Paran",role:"Abraham's first son; Quranic prophet and, with Abraham, raiser of the Ka'ba's foundations.",thread:"islamic"},
+  {name:"Isaac",he:"יִצְחָק",era:"BCE",y0:-1850,y1:-1760,region:"Canaan",role:"Son of Abraham and Sarah; Quranic prophet of the covenant line.",thread:"islamic"},
+  {name:"Jacob",he:"יַעֲקֹב",era:"BCE",y0:-1800,y1:-1650,region:"Canaan / Egypt",role:"Isaac's son; Quranic prophet, father of the twelve tribes.",thread:"islamic"},
+  {name:"Joseph",he:"יוֹסֵף",era:"BCE",y0:-1740,y1:-1640,region:"Canaan / Egypt",role:"Jacob's son; Quranic prophet whose sura recounts his rise from well to vizier.",thread:"islamic"},
+  {name:"Shu'ayb",he:"",era:"BCE",y0:-1600,y1:-1500,region:"Midian / Madyan",role:"Quranic prophet to Midian; preacher of honest measure and strict monotheism.",thread:"islamic"},
+  {name:"Job",he:"אִיּוֹב",era:"BCE",y0:-1520,y1:-1400,region:"Uz (legendary)",role:"Quranic prophet of patient endurance (Ayyub); tried in body, family and goods, restored by God.",thread:"islamic"},
+  {name:"Dhul-Kifl",he:"",era:"BCE",y0:-1500,y1:-1450,region:"Mesopotamia (uncertain)",role:"Quranic prophet named twice among the patient; traditions variously identify him with Ezekiel or a sage.",thread:"islamic"},
+  {name:"Khidr",he:"",era:"BCE",y0:-1450,y1:-1300,region:"Quranic (legendary)",role:"Mysterious immortal guide who instructs Moses in the inward meanings of events (Quran 18).",thread:"islamic"},
   {name:"Moses",he:"מֹשֶׁה",era:"BCE",y0:-1391,y1:-1271,region:"Egypt/Sinai",role:"Lawgiver and paradigmatic prophet of Sinai; mediator of the Torah.",thread:"biblical"},
+  {name:"Aaron",he:"אַהֲרֹן",era:"BCE",y0:-1394,y1:-1271,region:"Egypt/Sinai",role:"Moses' brother; Quranic prophet and spokesman, partner in the mission to Pharaoh.",thread:"islamic"},
+  {name:"David",he:"דָּוִד",era:"BCE",y0:-1040,y1:-970,region:"Israel/Judah",role:"King and Quranic prophet; the Psalms (Zabur) revealed to him.",thread:"islamic"},
   {name:"Elijah",he:"אֵלִיָּהוּ",era:"BCE",y0:-860,y1:-850,region:"Northern Kingdom",role:"Northern-kingdom prophet; archetypal wonder-worker and eschatological forerunner.",thread:"biblical"},
   {name:"Elisha",he:"אֱלִישָׁע",era:"BCE",y0:-850,y1:-800,region:"Northern Kingdom",role:"Successor to Elijah; wonder-working prophet of the Northern Kingdom cycles.",thread:"biblical"},
   {name:"Joel",he:"יוֹאֵל",era:"BCE",y0:-800,y1:-750,region:"Judah",role:"Prophet (dating disputed); locust-plague oracles and outpouring-of-Spirit eschatology.",thread:"biblical"},
@@ -27,14 +41,28 @@ const RAW = [
   {name:"Zechariah",he:"זְכַרְיָה",era:"BCE",y0:-520,y1:-480,region:"Jerusalem",role:"Post-exilic prophet of apocalyptic visions; temple restoration and two-messiah traditions.",thread:"biblical"},
   {name:"Ezra",he:"עֶזְרָא",era:"BCE",y0:-480,y1:-440,region:"Babylon/Jerusalem",role:"Priest-scribe of the Persian-period return; Torah restoration and canon.",thread:"second-temple"},
   {name:"Malachi",he:"מַלְאָכִי",era:"BCE",y0:-460,y1:-420,region:"Jerusalem",role:"Last of the Twelve Minor Prophets; post-exilic covenant and purity oracles.",thread:"biblical"},
+  {name:"Dhul-Qarnayn",he:"",era:"BCE",y0:-336,y1:-323,region:"Quranic (legendary)",role:"Quranic figure 'the two-horned one' who journeys to the ends of the earth; often identified with Alexander.",thread:"islamic"},
+  {name:"Zakariyya",he:"זְכַרְיָה",era:"BCE",y0:-50,y1:-6,region:"Judea (temple)",role:"Quranic priest-prophet; father of Yahya (John the Baptist) by a late-life miracle.",thread:"islamic"},
   {name:"John the Baptist",he:"",era:"CE",y0:27,y1:30,region:"Judea",role:"Apocalyptic wilderness preacher and forerunner figure in early 1st-c. CE Judea.",thread:"apocalyptic"},
   {name:"Jesus of Nazareth",he:"",era:"CE",y0:28,y1:30,region:"Galilee/Judea",role:"Galilean prophet-teacher; central figure of early Christianity, crucified c. 30 CE.",thread:"apocalyptic"},
   {name:"John of Patmos",he:"",era:"CE",y0:95,y1:100,region:"Anatolia (exile)",role:"Visionary author of the Book of Revelation, the early Christian apocalyptic text.",thread:"apocalyptic"},
   {name:"Shimon bar Yochai",he:"",era:"CE",y0:132,y1:160,region:"Roman Judea",role:"Tannaitic sage; legendary attribution of the Zohar, key merkabah-mysticism figure.",thread:"mystical"},
+  {name:"Muhammad",he:"",era:"CE",y0:570,y1:632,region:"Mecca/Medina",role:"Seal of the prophets in Islamic tradition; recipient of the Quran (610-632 CE).",thread:"islamic"},
+  {name:"Rabi'a al-Adawiyya",he:"",era:"CE",y0:716,y1:801,region:"Basra",role:"Early female Sufi saint; teacher of disinterested love of God apart from fear or hope of reward.",thread:"sufi"},
+  {name:"Bayazid Bastami",he:"",era:"CE",y0:804,y1:874,region:"Persia (Bastam)",role:"Early ecstatic Sufi; sayings of self-annihilation (fana') and union.",thread:"sufi"},
+  {name:"Junayd al-Baghdadi",he:"",era:"CE",y0:830,y1:910,region:"Baghdad",role:"Sober Sufi theologian; codified fana' and baqa' in a systematic Sufi ethics.",thread:"sufi"},
+  {name:"Mansur al-Hallaj",he:"",era:"CE",y0:858,y1:922,region:"Persia/Baghdad",role:"Sufi martyr; his cry 'Ana al-Haqq' (I am the Truth) led to his execution in Baghdad, 922 CE.",thread:"sufi"},
+  {name:"Al-Ghazali",he:"",era:"CE",y0:1058,y1:1111,region:"Persia (Tus)",role:"Sunni theologian and Sufi; revived the religious sciences and wedded mysticism to orthodoxy.",thread:"sufi"},
+  {name:"Farid al-Din Attar",he:"",era:"CE",y0:1145,y1:1221,region:"Nishapur",role:"Persian Sufi poet; the Conference of the Birds — thirty birds through seven valleys to the Simorgh.",thread:"sufi"},
+  {name:"Suhrawardi",he:"",era:"CE",y0:1154,y1:1191,region:"Persia (Aleppo)",role:"Persian philosopher-mystic; founder of Illuminationism (hikmat al-ishraq) — the metaphysics of light in which the cosmos is a hierarchy of governing lights.",thread:"sufi"},
+  {name:"Ibn Arabi",he:"",era:"CE",y0:1165,y1:1240,region:"Andalusia/Mecca/Damascus",role:"Sufi metaphysician 'the Greatest Master'; unity of being (wahdat al-wujud), the Bezels of Wisdom.",thread:"sufi"},
+  {name:"Ibn al-Farid",he:"",era:"CE",y0:1181,y1:1235,region:"Cairo",role:"Arabic Sufi poet; the Wine Ode and the Great T-poem on divine love and the stations of realization.",thread:"sufi"},
+  {name:"Jalaluddin Rumi",he:"",era:"CE",y0:1207,y1:1273,region:"Balkh/Konya",role:"Persian Sufi poet; the Masnavi and the turn toward the Beloved; eponym of the Mevlevi order.",thread:"sufi"},
   {name:"Abraham Abulafia",he:"",era:"CE",y0:1240,y1:1291,region:"Spain/Italy",role:"Medieval prophetic Kabbalist; ecstatic practices and messianic self-claims (13th c.).",thread:"mystical"},
+  {name:"Shah Nimatullah Wali",he:"",era:"CE",y0:1330,y1:1431,region:"Persia (Kerman/Mahan)",role:"Sufi poet and eponym of the Nimatullahi order; astrological and cosmological mystical works.",thread:"sufi"},
   {name:"Sabbatai Tsevi",he:"",era:"CE",y0:1626,y1:1676,region:"Smyrna/Ottoman lands",role:"Smyrna-born messianic claimant; center of the 1665–66 Sabbatean movement.",thread:"sabbatean-frankist"},
   {name:"Nathan of Gaza",he:"",era:"CE",y0:1644,y1:1680,region:"Ottoman Gaza",role:"Sabbatai Tsevi's prophet; theological architect of Sabbatean messianism.",thread:"sabbatean-frankist"},
-  {name:"Jacob Frank",he:"",era:"CE",y0:1726,y1:1791,region:"Poland/Ottoman",role:"Polish Sabbatean successor; founder of the Frankist movement, cast by his own doctrine as the Antichrist — the antinomian messianic counterpart who abolishes the old law.",thread:"sabbatean-frankist",endpoint:true,designation:"Antichrist"}
+  {name:"Jacob Frank",he:"",era:"CE",y0:1726,y1:1791,region:"Poland/Ottoman",role:"Polish Sabbatean successor; founder of the Frankist movement, who cast himself as the antinomian messianic counterpart abolishing the old law.",thread:"sabbatean-frankist",endpoint:true}
 ];
 // PROPHECIES — key prophetic utterances / visions attributed to each figure, with
 // sources (Hebrew Bible refs for the biblical prophets; pseudepigrapha, rabbinic, or
@@ -44,6 +72,10 @@ const PROPHECIES = {
   "Adam": [
     { t:"The seed of the woman shall bruise the serpent's head", r:"Gen 3:15" },
     { t:"Eve named 'mother of all living'", r:"Gen 3:20" },
+  ],
+  "Seth": [
+    { t:"Adam's son in his own likeness, after his image; the godly line through Seth", r:"Gen 4:25; 5:3" },
+    { t:"His descendants discovered the astronomical science and inscribed it on two pillars — brick and stone — lest it be lost to flood or fire", r:"Josephus, Antiquities 1.2.3" },
   ],
   "Enoch": [
     { t:"Enoch walked with God; and he was not, for God took him", r:"Gen 5:24" },
@@ -207,6 +239,118 @@ const PROPHECIES = {
   "Jacob Frank": [
     { t:"Declares himself the reincarnation of Sabbatai Tsevi and the Antichrist", r:"Frankist sources" },
     { t:"Abolition of the old law; 'the holy religion of Edom'", r:"Book of the Words of the Lord" },
+  ],
+  "Hud": [
+    { t:"O my people, serve God; you have no god but Him — 'Ad denied their Lord", r:"Quran 11:50-60" },
+    { t:"The blasting wind destroyed a people who would not believe", r:"Quran 69:6-7" },
+  ],
+  "Saleh": [
+    { t:"The she-camel of God is a trial for you; harm her not", r:"Quran 7:73" },
+    { t:"The thunderbolt took them as they lay face down", r:"Quran 11:67" },
+  ],
+  "Lot": [
+    { t:"The cities overturned; a rain of stones as the dawn broke", r:"Quran 11:82" },
+    { t:"His wife remained behind, among those destroyed", r:"Quran 15:60" },
+  ],
+  "Ishmael": [
+    { t:"Abraham and Ishmael raise the foundations of the House at Mecca", r:"Quran 2:127" },
+    { t:"A nation from Ishmael; a messenger from among them reciting God's signs", r:"Quran 62:2-3" },
+  ],
+  "Isaac": [
+    { t:"The angels announce a wise son, Isaac; Sarah marvels", r:"Quran 11:71" },
+    { t:"We blessed him and Isaac; among his progeny the good-doer and the wrongdoer", r:"Quran 37:112-113" },
+  ],
+  "Jacob": [
+    { t:"You shall worship none but God; the creed of your fathers Abraham and Ishmael and Isaac", r:"Quran 2:133" },
+    { t:"We revealed to the prophets of the tribes: establish worship and give charity", r:"Quran 19:58" },
+  ],
+  "Joseph": [
+    { t:"The sun, the moon and eleven stars bow to you — the dream of rulership", r:"Quran 12:4" },
+    { t:"God shall make you judge over the land; the dream fulfilled at the throne", r:"Quran 12:100" },
+  ],
+  "Shu'ayb": [
+    { t:"Give full measure; diminish not the people's goods", r:"Quran 11:85" },
+    { t:"The shock seized those who wronged; they lay prostrate in their dwellings", r:"Quran 11:94" },
+  ],
+  "Job": [
+    { t:"The Lord gave, the Lord has taken away; blessed be the name of the Lord", r:"Job 1:21" },
+    { t:"Though he slay me, yet will I trust in him", r:"Job 13:15" },
+    { t:"I know that my Redeemer lives, and at last he shall stand upon the earth", r:"Job 19:25" },
+    { t:"Excellent in heart is the servant of God (Ayyub); most patient — Quran 38:44", r:"Quran 38:41-44" },
+  ],
+  "Dhul-Kifl": [
+    { t:"Remember Our servant Dhul-Kifl — he was of the patient", r:"Quran 38:48" },
+    { t:"And Ishmael, Dhul-Kifl and Elisha — each among the good", r:"Quran 38:48" },
+  ],
+  "Khidr": [
+    { t:"How can you bear with what you cannot comprehend? — Moses and the servant of God", r:"Quran 18:67-72" },
+    { t:"I did it not of my own will: the boat, the wall, the orphan — the outward and the inward", r:"Quran 18:79-82" },
+  ],
+  "Aaron": [
+    { t:"Send Aaron with me as a minister of my people; he is more eloquent", r:"Quran 25:35 / 26:13" },
+    { t:"My people, you are only being tested by it — Aaron warns against the calf", r:"Quran 20:90" },
+  ],
+  "David": [
+    { t:"The Psalms (Zabur) given to David; the hills and birds echo God's praise with him", r:"Quran 34:10 / 38:18" },
+    { t:"Judgment between disputing parties; David falls down in repentance", r:"Quran 38:21-24" },
+  ],
+  "Dhul-Qarnayn": [
+    { t:"He reaches the setting of the sun in a muddy spring, and its rising", r:"Quran 18:86,90" },
+    { t:"Gog and Magog spread corruption; a rampart of iron and brass built against them", r:"Quran 18:94-98" },
+  ],
+  "Zakariyya": [
+    { t:"A son, Yahya, granted in old age; the name none bore before", r:"Quran 19:7" },
+    { t:"Three nights of silence; he gestures: glorify God morning and evening", r:"Quran 19:10-11" },
+  ],
+  "Muhammad": [
+    { t:"Recite! in the name of your Lord who created — the Night of Power at Hira", r:"Quran 96:1 / 97" },
+    { t:"We have not sent you except as a mercy to the worlds", r:"Quran 21:107" },
+    { t:"The Hour and its signs: when the sun is folded up and the stars darkened", r:"Quran 81:1-2 / 82:17-19" },
+  ],
+  "Rabi'a al-Adawiyya": [
+    { t:"I love God for Himself alone — not from fear of Hell nor desire for Paradise", r:"Rabi'a, hikam" },
+    { t:"I would set the fire of Paradise and quench the flame of Hell", r:"Rabi'a, hikam" },
+  ],
+  "Bayazid Bastami": [
+    { t:"I am You, undoubtedly You — the self stripped away in fana'", r:"Bayazid, ecstatic sayings" },
+    { t:"Glory be to me! how great is my majesty — the intoxicated speech of annihilation", r:"Bayazid, shatahat" },
+  ],
+  "Junayd al-Baghdadi": [
+    { t:"Sufism is that God makes you die to your self and live in Him", r:"Junayd, Rasail" },
+    { t:"The true return (baqa') is to abide after annihilation, witnessing the One", r:"Junayd, Rasail" },
+  ],
+  "Mansur al-Hallaj": [
+    { t:"Ana al-Haqq — I am the Truth; the self dissolved in the Real", r:"Hallaj, Kitab al-Tawasin" },
+    { t:"Crucified for the unity-claim at Baghdad, 922 CE — 'the Beloved slays and quickens'", r:"Hallaj, akhbar" },
+  ],
+  "Al-Ghazali": [
+    { t:"The Revival of the Religious Sciences — outward law wedded to inward light", r:"Ihya Ulum al-Din" },
+    { t:"The Alchemy of Happiness: the heart polished to reflect the divine", r:"Kimiya-yi Sa'adat" },
+  ],
+  "Farid al-Din Attar": [
+    { t:"Thirty birds (si-morgh) reach the Simorgh — themselves reflected as the king", r:"Mantiq al-Tayr" },
+    { t:"Seven valleys of the quest: quest, love, knowledge, detachment, unity, bewilderment, annihilation", r:"Mantiq al-Tayr" },
+  ],
+  "Suhrawardi": [
+    { t:"The Philosophy of Illumination — being is light upon light; darkness is mere privation, not a thing", r:"Hikmat al-Ishraq" },
+    { t:"The cosmos is a hierarchy of lights; the planets and stars are governing lights that image the supreme Light of Lights", r:"Hikmat al-Ishraq" },
+  ],
+  "Ibn Arabi": [
+    { t:"The Real is the creation and the creation is the Real — wahdat al-wujud, the oneness of being", r:"Fusus al-Hikam" },
+    { t:"Each prophet a bezel of divine wisdom; Muhammad the synthesis of all", r:"Fusus al-Hikam" },
+    { t:"The Meccan Revelations: the cosmos as the self-disclosure of the divine names", r:"al-Futuhat al-Makkiyya" },
+  ],
+  "Ibn al-Farid": [
+    { t:"In remembrance of the Beloved we drank a wine — drunk before the vine was created", r:"Qasidat al-Khamriyya" },
+    { t:"The Great T-poem: the mystic's ascent through the stations to union", r:"al-Ta'iyya al-Kubra" },
+  ],
+  "Jalaluddin Rumi": [
+    { t:"Listen to the reed, how it tells of separation — longing for its origin", r:"Masnavi, opening" },
+    { t:"Beyond ideas of right-doing and wrongdoing there is a field; I will meet you there", r:"Masnavi" },
+  ],
+  "Shah Nimatullah Wali": [
+    { t:"The diwan of the spheres; the mystic reads the stars as letters of the Beloved", r:"Diwan-i Nimatullah" },
+    { t:"I was a drop; in the ocean of unity I became the sea", r:"Diwan-i Nimatullah" },
   ],
 };
 

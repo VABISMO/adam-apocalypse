@@ -16247,10 +16247,24 @@ var import_react2 = __toESM(require_react());
 var POINTED = /[֑-ֽֿׁ-ׇׅ]/g;
 var RAW = [
   { name: "Adam", he: "\u05D0\u05B8\u05D3\u05B8\u05DD", era: "BCE", y0: -4e3, y1: -4e3, region: "Eden (legendary)", role: "First human in Genesis; paradigmatic figure of creation and fall.", thread: "biblical" },
+  { name: "Seth", he: "\u05E9\u05B5\u05C1\u05EA", era: "BCE", y0: -3870, y1: -2960, region: "Antediluvian (legendary)", role: "Adam's appointed son; per Josephus, his descendants invented the astronomical science and inscribed it on two pillars \u2014 one of brick, one of stone \u2014 to survive flood and fire.", thread: "biblical" },
   { name: "Enoch", he: "\u05D7\u05B2\u05E0\u05D5\u05B9\u05DA\u05B0", era: "BCE", y0: -3400, y1: -3350, region: "Antediluvian (legendary)", role: "Patriarch who 'walked with God'; eponym of the Enochic apocalyptic literature (1 Enoch).", thread: "biblical" },
   { name: "Noah", he: "\u05E0\u05B9\u05D7\u05B7", era: "BCE", y0: -3e3, y1: -2400, region: "Antediluvian (legendary)", role: "Righteous survivor of the Flood; bridge between antediluvian and postdiluvian eras.", thread: "biblical" },
+  { name: "Hud", he: "", era: "BCE", y0: -2500, y1: -2400, region: "Arabia (people of 'Ad, legendary)", role: "Quranic prophet sent to the ancient people of 'Ad; preached monotheism amid their pride.", thread: "islamic" },
+  { name: "Saleh", he: "", era: "BCE", y0: -2050, y1: -1950, region: "Hijaz (people of Thamud, legendary)", role: "Quranic prophet to Thamud; the she-camel of God a sign they hamstrung.", thread: "islamic" },
   { name: "Abraham", he: "\u05D0\u05B7\u05D1\u05B0\u05E8\u05B8\u05D4\u05B8\u05DD", era: "BCE", y0: -2e3, y1: -1820, region: "Mesopotamia/Canaan", role: "Patriarch of the covenant; counted as a proto-prophet in biblical and Quranic texts.", thread: "biblical" },
+  { name: "Lot", he: "\u05DC\u05D5\u05B9\u05D8", era: "BCE", y0: -1900, y1: -1820, region: "Sodom / Jordan valley", role: "Abraham's nephew; Quranic prophet to the cities of the plain.", thread: "islamic" },
+  { name: "Ishmael", he: "\u05D9\u05B4\u05E9\u05B0\u05C1\u05DE\u05B8\u05E2\u05B5\u05D0\u05DC", era: "BCE", y0: -1900, y1: -1820, region: "Arabia / Paran", role: "Abraham's first son; Quranic prophet and, with Abraham, raiser of the Ka'ba's foundations.", thread: "islamic" },
+  { name: "Isaac", he: "\u05D9\u05B4\u05E6\u05B0\u05D7\u05B8\u05E7", era: "BCE", y0: -1850, y1: -1760, region: "Canaan", role: "Son of Abraham and Sarah; Quranic prophet of the covenant line.", thread: "islamic" },
+  { name: "Jacob", he: "\u05D9\u05B7\u05E2\u05B2\u05E7\u05B9\u05D1", era: "BCE", y0: -1800, y1: -1650, region: "Canaan / Egypt", role: "Isaac's son; Quranic prophet, father of the twelve tribes.", thread: "islamic" },
+  { name: "Joseph", he: "\u05D9\u05D5\u05B9\u05E1\u05B5\u05E3", era: "BCE", y0: -1740, y1: -1640, region: "Canaan / Egypt", role: "Jacob's son; Quranic prophet whose sura recounts his rise from well to vizier.", thread: "islamic" },
+  { name: "Shu'ayb", he: "", era: "BCE", y0: -1600, y1: -1500, region: "Midian / Madyan", role: "Quranic prophet to Midian; preacher of honest measure and strict monotheism.", thread: "islamic" },
+  { name: "Job", he: "\u05D0\u05B4\u05D9\u05BC\u05D5\u05B9\u05D1", era: "BCE", y0: -1520, y1: -1400, region: "Uz (legendary)", role: "Quranic prophet of patient endurance (Ayyub); tried in body, family and goods, restored by God.", thread: "islamic" },
+  { name: "Dhul-Kifl", he: "", era: "BCE", y0: -1500, y1: -1450, region: "Mesopotamia (uncertain)", role: "Quranic prophet named twice among the patient; traditions variously identify him with Ezekiel or a sage.", thread: "islamic" },
+  { name: "Khidr", he: "", era: "BCE", y0: -1450, y1: -1300, region: "Quranic (legendary)", role: "Mysterious immortal guide who instructs Moses in the inward meanings of events (Quran 18).", thread: "islamic" },
   { name: "Moses", he: "\u05DE\u05B9\u05E9\u05B6\u05C1\u05D4", era: "BCE", y0: -1391, y1: -1271, region: "Egypt/Sinai", role: "Lawgiver and paradigmatic prophet of Sinai; mediator of the Torah.", thread: "biblical" },
+  { name: "Aaron", he: "\u05D0\u05B7\u05D4\u05B2\u05E8\u05B9\u05DF", era: "BCE", y0: -1394, y1: -1271, region: "Egypt/Sinai", role: "Moses' brother; Quranic prophet and spokesman, partner in the mission to Pharaoh.", thread: "islamic" },
+  { name: "David", he: "\u05D3\u05B8\u05BC\u05D5\u05B4\u05D3", era: "BCE", y0: -1040, y1: -970, region: "Israel/Judah", role: "King and Quranic prophet; the Psalms (Zabur) revealed to him.", thread: "islamic" },
   { name: "Elijah", he: "\u05D0\u05B5\u05DC\u05B4\u05D9\u05B8\u05BC\u05D4\u05D5\u05BC", era: "BCE", y0: -860, y1: -850, region: "Northern Kingdom", role: "Northern-kingdom prophet; archetypal wonder-worker and eschatological forerunner.", thread: "biblical" },
   { name: "Elisha", he: "\u05D0\u05B1\u05DC\u05B4\u05D9\u05E9\u05B8\u05C1\u05E2", era: "BCE", y0: -850, y1: -800, region: "Northern Kingdom", role: "Successor to Elijah; wonder-working prophet of the Northern Kingdom cycles.", thread: "biblical" },
   { name: "Joel", he: "\u05D9\u05D5\u05B9\u05D0\u05B5\u05DC", era: "BCE", y0: -800, y1: -750, region: "Judah", role: "Prophet (dating disputed); locust-plague oracles and outpouring-of-Spirit eschatology.", thread: "biblical" },
@@ -16271,19 +16285,37 @@ var RAW = [
   { name: "Zechariah", he: "\u05D6\u05B0\u05DB\u05B7\u05E8\u05B0\u05D9\u05B8\u05D4", era: "BCE", y0: -520, y1: -480, region: "Jerusalem", role: "Post-exilic prophet of apocalyptic visions; temple restoration and two-messiah traditions.", thread: "biblical" },
   { name: "Ezra", he: "\u05E2\u05B6\u05D6\u05B0\u05E8\u05B8\u05D0", era: "BCE", y0: -480, y1: -440, region: "Babylon/Jerusalem", role: "Priest-scribe of the Persian-period return; Torah restoration and canon.", thread: "second-temple" },
   { name: "Malachi", he: "\u05DE\u05B7\u05DC\u05B0\u05D0\u05B8\u05DB\u05B4\u05D9", era: "BCE", y0: -460, y1: -420, region: "Jerusalem", role: "Last of the Twelve Minor Prophets; post-exilic covenant and purity oracles.", thread: "biblical" },
+  { name: "Dhul-Qarnayn", he: "", era: "BCE", y0: -336, y1: -323, region: "Quranic (legendary)", role: "Quranic figure 'the two-horned one' who journeys to the ends of the earth; often identified with Alexander.", thread: "islamic" },
+  { name: "Zakariyya", he: "\u05D6\u05B0\u05DB\u05B7\u05E8\u05B0\u05D9\u05B8\u05D4", era: "BCE", y0: -50, y1: -6, region: "Judea (temple)", role: "Quranic priest-prophet; father of Yahya (John the Baptist) by a late-life miracle.", thread: "islamic" },
   { name: "John the Baptist", he: "", era: "CE", y0: 27, y1: 30, region: "Judea", role: "Apocalyptic wilderness preacher and forerunner figure in early 1st-c. CE Judea.", thread: "apocalyptic" },
   { name: "Jesus of Nazareth", he: "", era: "CE", y0: 28, y1: 30, region: "Galilee/Judea", role: "Galilean prophet-teacher; central figure of early Christianity, crucified c. 30 CE.", thread: "apocalyptic" },
   { name: "John of Patmos", he: "", era: "CE", y0: 95, y1: 100, region: "Anatolia (exile)", role: "Visionary author of the Book of Revelation, the early Christian apocalyptic text.", thread: "apocalyptic" },
   { name: "Shimon bar Yochai", he: "", era: "CE", y0: 132, y1: 160, region: "Roman Judea", role: "Tannaitic sage; legendary attribution of the Zohar, key merkabah-mysticism figure.", thread: "mystical" },
+  { name: "Muhammad", he: "", era: "CE", y0: 570, y1: 632, region: "Mecca/Medina", role: "Seal of the prophets in Islamic tradition; recipient of the Quran (610-632 CE).", thread: "islamic" },
+  { name: "Rabi'a al-Adawiyya", he: "", era: "CE", y0: 716, y1: 801, region: "Basra", role: "Early female Sufi saint; teacher of disinterested love of God apart from fear or hope of reward.", thread: "sufi" },
+  { name: "Bayazid Bastami", he: "", era: "CE", y0: 804, y1: 874, region: "Persia (Bastam)", role: "Early ecstatic Sufi; sayings of self-annihilation (fana') and union.", thread: "sufi" },
+  { name: "Junayd al-Baghdadi", he: "", era: "CE", y0: 830, y1: 910, region: "Baghdad", role: "Sober Sufi theologian; codified fana' and baqa' in a systematic Sufi ethics.", thread: "sufi" },
+  { name: "Mansur al-Hallaj", he: "", era: "CE", y0: 858, y1: 922, region: "Persia/Baghdad", role: "Sufi martyr; his cry 'Ana al-Haqq' (I am the Truth) led to his execution in Baghdad, 922 CE.", thread: "sufi" },
+  { name: "Al-Ghazali", he: "", era: "CE", y0: 1058, y1: 1111, region: "Persia (Tus)", role: "Sunni theologian and Sufi; revived the religious sciences and wedded mysticism to orthodoxy.", thread: "sufi" },
+  { name: "Farid al-Din Attar", he: "", era: "CE", y0: 1145, y1: 1221, region: "Nishapur", role: "Persian Sufi poet; the Conference of the Birds \u2014 thirty birds through seven valleys to the Simorgh.", thread: "sufi" },
+  { name: "Suhrawardi", he: "", era: "CE", y0: 1154, y1: 1191, region: "Persia (Aleppo)", role: "Persian philosopher-mystic; founder of Illuminationism (hikmat al-ishraq) \u2014 the metaphysics of light in which the cosmos is a hierarchy of governing lights.", thread: "sufi" },
+  { name: "Ibn Arabi", he: "", era: "CE", y0: 1165, y1: 1240, region: "Andalusia/Mecca/Damascus", role: "Sufi metaphysician 'the Greatest Master'; unity of being (wahdat al-wujud), the Bezels of Wisdom.", thread: "sufi" },
+  { name: "Ibn al-Farid", he: "", era: "CE", y0: 1181, y1: 1235, region: "Cairo", role: "Arabic Sufi poet; the Wine Ode and the Great T-poem on divine love and the stations of realization.", thread: "sufi" },
+  { name: "Jalaluddin Rumi", he: "", era: "CE", y0: 1207, y1: 1273, region: "Balkh/Konya", role: "Persian Sufi poet; the Masnavi and the turn toward the Beloved; eponym of the Mevlevi order.", thread: "sufi" },
   { name: "Abraham Abulafia", he: "", era: "CE", y0: 1240, y1: 1291, region: "Spain/Italy", role: "Medieval prophetic Kabbalist; ecstatic practices and messianic self-claims (13th c.).", thread: "mystical" },
+  { name: "Shah Nimatullah Wali", he: "", era: "CE", y0: 1330, y1: 1431, region: "Persia (Kerman/Mahan)", role: "Sufi poet and eponym of the Nimatullahi order; astrological and cosmological mystical works.", thread: "sufi" },
   { name: "Sabbatai Tsevi", he: "", era: "CE", y0: 1626, y1: 1676, region: "Smyrna/Ottoman lands", role: "Smyrna-born messianic claimant; center of the 1665\u201366 Sabbatean movement.", thread: "sabbatean-frankist" },
   { name: "Nathan of Gaza", he: "", era: "CE", y0: 1644, y1: 1680, region: "Ottoman Gaza", role: "Sabbatai Tsevi's prophet; theological architect of Sabbatean messianism.", thread: "sabbatean-frankist" },
-  { name: "Jacob Frank", he: "", era: "CE", y0: 1726, y1: 1791, region: "Poland/Ottoman", role: "Polish Sabbatean successor; founder of the Frankist movement, cast by his own doctrine as the Antichrist \u2014 the antinomian messianic counterpart who abolishes the old law.", thread: "sabbatean-frankist", endpoint: true, designation: "Antichrist" }
+  { name: "Jacob Frank", he: "", era: "CE", y0: 1726, y1: 1791, region: "Poland/Ottoman", role: "Polish Sabbatean successor; founder of the Frankist movement, who cast himself as the antinomian messianic counterpart abolishing the old law.", thread: "sabbatean-frankist", endpoint: true }
 ];
 var PROPHECIES = {
   "Adam": [
     { t: "The seed of the woman shall bruise the serpent's head", r: "Gen 3:15" },
     { t: "Eve named 'mother of all living'", r: "Gen 3:20" }
+  ],
+  "Seth": [
+    { t: "Adam's son in his own likeness, after his image; the godly line through Seth", r: "Gen 4:25; 5:3" },
+    { t: "His descendants discovered the astronomical science and inscribed it on two pillars \u2014 brick and stone \u2014 lest it be lost to flood or fire", r: "Josephus, Antiquities 1.2.3" }
   ],
   "Enoch": [
     { t: "Enoch walked with God; and he was not, for God took him", r: "Gen 5:24" },
@@ -16447,6 +16479,118 @@ var PROPHECIES = {
   "Jacob Frank": [
     { t: "Declares himself the reincarnation of Sabbatai Tsevi and the Antichrist", r: "Frankist sources" },
     { t: "Abolition of the old law; 'the holy religion of Edom'", r: "Book of the Words of the Lord" }
+  ],
+  "Hud": [
+    { t: "O my people, serve God; you have no god but Him \u2014 'Ad denied their Lord", r: "Quran 11:50-60" },
+    { t: "The blasting wind destroyed a people who would not believe", r: "Quran 69:6-7" }
+  ],
+  "Saleh": [
+    { t: "The she-camel of God is a trial for you; harm her not", r: "Quran 7:73" },
+    { t: "The thunderbolt took them as they lay face down", r: "Quran 11:67" }
+  ],
+  "Lot": [
+    { t: "The cities overturned; a rain of stones as the dawn broke", r: "Quran 11:82" },
+    { t: "His wife remained behind, among those destroyed", r: "Quran 15:60" }
+  ],
+  "Ishmael": [
+    { t: "Abraham and Ishmael raise the foundations of the House at Mecca", r: "Quran 2:127" },
+    { t: "A nation from Ishmael; a messenger from among them reciting God's signs", r: "Quran 62:2-3" }
+  ],
+  "Isaac": [
+    { t: "The angels announce a wise son, Isaac; Sarah marvels", r: "Quran 11:71" },
+    { t: "We blessed him and Isaac; among his progeny the good-doer and the wrongdoer", r: "Quran 37:112-113" }
+  ],
+  "Jacob": [
+    { t: "You shall worship none but God; the creed of your fathers Abraham and Ishmael and Isaac", r: "Quran 2:133" },
+    { t: "We revealed to the prophets of the tribes: establish worship and give charity", r: "Quran 19:58" }
+  ],
+  "Joseph": [
+    { t: "The sun, the moon and eleven stars bow to you \u2014 the dream of rulership", r: "Quran 12:4" },
+    { t: "God shall make you judge over the land; the dream fulfilled at the throne", r: "Quran 12:100" }
+  ],
+  "Shu'ayb": [
+    { t: "Give full measure; diminish not the people's goods", r: "Quran 11:85" },
+    { t: "The shock seized those who wronged; they lay prostrate in their dwellings", r: "Quran 11:94" }
+  ],
+  "Job": [
+    { t: "The Lord gave, the Lord has taken away; blessed be the name of the Lord", r: "Job 1:21" },
+    { t: "Though he slay me, yet will I trust in him", r: "Job 13:15" },
+    { t: "I know that my Redeemer lives, and at last he shall stand upon the earth", r: "Job 19:25" },
+    { t: "Excellent in heart is the servant of God (Ayyub); most patient \u2014 Quran 38:44", r: "Quran 38:41-44" }
+  ],
+  "Dhul-Kifl": [
+    { t: "Remember Our servant Dhul-Kifl \u2014 he was of the patient", r: "Quran 38:48" },
+    { t: "And Ishmael, Dhul-Kifl and Elisha \u2014 each among the good", r: "Quran 38:48" }
+  ],
+  "Khidr": [
+    { t: "How can you bear with what you cannot comprehend? \u2014 Moses and the servant of God", r: "Quran 18:67-72" },
+    { t: "I did it not of my own will: the boat, the wall, the orphan \u2014 the outward and the inward", r: "Quran 18:79-82" }
+  ],
+  "Aaron": [
+    { t: "Send Aaron with me as a minister of my people; he is more eloquent", r: "Quran 25:35 / 26:13" },
+    { t: "My people, you are only being tested by it \u2014 Aaron warns against the calf", r: "Quran 20:90" }
+  ],
+  "David": [
+    { t: "The Psalms (Zabur) given to David; the hills and birds echo God's praise with him", r: "Quran 34:10 / 38:18" },
+    { t: "Judgment between disputing parties; David falls down in repentance", r: "Quran 38:21-24" }
+  ],
+  "Dhul-Qarnayn": [
+    { t: "He reaches the setting of the sun in a muddy spring, and its rising", r: "Quran 18:86,90" },
+    { t: "Gog and Magog spread corruption; a rampart of iron and brass built against them", r: "Quran 18:94-98" }
+  ],
+  "Zakariyya": [
+    { t: "A son, Yahya, granted in old age; the name none bore before", r: "Quran 19:7" },
+    { t: "Three nights of silence; he gestures: glorify God morning and evening", r: "Quran 19:10-11" }
+  ],
+  "Muhammad": [
+    { t: "Recite! in the name of your Lord who created \u2014 the Night of Power at Hira", r: "Quran 96:1 / 97" },
+    { t: "We have not sent you except as a mercy to the worlds", r: "Quran 21:107" },
+    { t: "The Hour and its signs: when the sun is folded up and the stars darkened", r: "Quran 81:1-2 / 82:17-19" }
+  ],
+  "Rabi'a al-Adawiyya": [
+    { t: "I love God for Himself alone \u2014 not from fear of Hell nor desire for Paradise", r: "Rabi'a, hikam" },
+    { t: "I would set the fire of Paradise and quench the flame of Hell", r: "Rabi'a, hikam" }
+  ],
+  "Bayazid Bastami": [
+    { t: "I am You, undoubtedly You \u2014 the self stripped away in fana'", r: "Bayazid, ecstatic sayings" },
+    { t: "Glory be to me! how great is my majesty \u2014 the intoxicated speech of annihilation", r: "Bayazid, shatahat" }
+  ],
+  "Junayd al-Baghdadi": [
+    { t: "Sufism is that God makes you die to your self and live in Him", r: "Junayd, Rasail" },
+    { t: "The true return (baqa') is to abide after annihilation, witnessing the One", r: "Junayd, Rasail" }
+  ],
+  "Mansur al-Hallaj": [
+    { t: "Ana al-Haqq \u2014 I am the Truth; the self dissolved in the Real", r: "Hallaj, Kitab al-Tawasin" },
+    { t: "Crucified for the unity-claim at Baghdad, 922 CE \u2014 'the Beloved slays and quickens'", r: "Hallaj, akhbar" }
+  ],
+  "Al-Ghazali": [
+    { t: "The Revival of the Religious Sciences \u2014 outward law wedded to inward light", r: "Ihya Ulum al-Din" },
+    { t: "The Alchemy of Happiness: the heart polished to reflect the divine", r: "Kimiya-yi Sa'adat" }
+  ],
+  "Farid al-Din Attar": [
+    { t: "Thirty birds (si-morgh) reach the Simorgh \u2014 themselves reflected as the king", r: "Mantiq al-Tayr" },
+    { t: "Seven valleys of the quest: quest, love, knowledge, detachment, unity, bewilderment, annihilation", r: "Mantiq al-Tayr" }
+  ],
+  "Suhrawardi": [
+    { t: "The Philosophy of Illumination \u2014 being is light upon light; darkness is mere privation, not a thing", r: "Hikmat al-Ishraq" },
+    { t: "The cosmos is a hierarchy of lights; the planets and stars are governing lights that image the supreme Light of Lights", r: "Hikmat al-Ishraq" }
+  ],
+  "Ibn Arabi": [
+    { t: "The Real is the creation and the creation is the Real \u2014 wahdat al-wujud, the oneness of being", r: "Fusus al-Hikam" },
+    { t: "Each prophet a bezel of divine wisdom; Muhammad the synthesis of all", r: "Fusus al-Hikam" },
+    { t: "The Meccan Revelations: the cosmos as the self-disclosure of the divine names", r: "al-Futuhat al-Makkiyya" }
+  ],
+  "Ibn al-Farid": [
+    { t: "In remembrance of the Beloved we drank a wine \u2014 drunk before the vine was created", r: "Qasidat al-Khamriyya" },
+    { t: "The Great T-poem: the mystic's ascent through the stations to union", r: "al-Ta'iyya al-Kubra" }
+  ],
+  "Jalaluddin Rumi": [
+    { t: "Listen to the reed, how it tells of separation \u2014 longing for its origin", r: "Masnavi, opening" },
+    { t: "Beyond ideas of right-doing and wrongdoing there is a field; I will meet you there", r: "Masnavi" }
+  ],
+  "Shah Nimatullah Wali": [
+    { t: "The diwan of the spheres; the mystic reads the stars as letters of the Beloved", r: "Diwan-i Nimatullah" },
+    { t: "I was a drop; in the ocean of unity I became the sea", r: "Diwan-i Nimatullah" }
   ]
 };
 var PROPHETS = RAW.map((p) => ({ ...p, he: (p.he || "").replace(POINTED, ""), prophecies: PROPHECIES[p.name] || null }));
@@ -16532,6 +16676,125 @@ var wiki_content_default = {
       {
         title: "Usage of the name",
         note: `The Bible uses the word \u05D0\u05B8\u05D3\u05B8\u05DD ( 'adam ) in all of its senses: collectively ("mankind", Genesis 1:27), individually (a "man", Genesis 2:7), gender nonspecific ("man and woman", Genesis 5:1\u20132), and male (Genesis 2:23\u201324).`
+      }
+    ]
+  },
+  Seth: {
+    title: "Seth",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Seth",
+    description: "Seth is the third son of Adam and Eve within the Abrahamic religions. The Hebrew Bible names two of his siblings as Cain and Abel. According to Genesis 4:25, Seth was born after Abel's murder by Cain, and Eve believed that God had appointed him as a replacement for Abel.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Spas_na_Ilyine_-_Patriarch_Seth_2_%28cropped%29.jpg/330px-Spas_na_Ilyine_-_Patriarch_Seth_2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "3982 BC"
+      },
+      {
+        label: "Died",
+        value: "3070 BC (aged 912)"
+      },
+      {
+        label: "Spouse",
+        value: "Azura (his sister)"
+      },
+      {
+        label: "Children",
+        value: "In Genesis: Enos, In The Book of Jubilees: Noam (Jubilees 4:13)"
+      },
+      {
+        label: "Parents",
+        value: "Adam (father)Eve (mother)"
+      },
+      {
+        label: "Relatives",
+        value: "In Genesis:, Abel (brother), Cain (brother), Enos (son), Kenan (grandson), Mahalalel (great-grandson), Jared (great-great-grandson), Enoch (great-great-great-grandson), Methuselah (great-great-great-great-grandson), Lamech (great-great-great-great-great-grandson), According to later traditions:, Aclima (sister), Azura (sister)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biblical information",
+        summary: `According to the Book of Genesis, Seth was born when Adam was 130 years old (according to the Masoretic Text), or 230 years old (according to the Septuagint), "a son in his likeness and image". Genesis 5:4-5 states that Adam fathered "other sons and daughters" before his death, when he was 930 years old. According to the same account, Seth died at the age of 912 (that is, 14 years before Noah's birth).`,
+        items: []
+      },
+      {
+        heading: "Jewish tradition",
+        summary: 'Seth figures in the biblical texts of the Life of Adam and Eve (the Apocalypse of Moses). It recounts the lives of Adam and Eve from after their expulsion from the Garden of Eden to their deaths. While the surviving versions were composed from the early third to the fifth century, the literary units in the work are considered to be older and predominantly of Jewish origin. There is wide agreement that the original was composed in a Semitic language in the first century AD/CE. In the Greek versions, Seth and Eve travelled to the doors of the Garden to beg for some oil of the Tree of Mercy (i.e. the Tree of Life). On the way, Seth was attacked and bitten by a wild beast, which went away when ordered by Seth. Michael refused to give them the oil at that time, but promised to give it at the end of time, when all flesh will be raised up, the delights of paradise will be given to the holy people and God will be in their midst. On their return, Adam said to Eve: "What hast thou done? Thou hast brought upon us great wrath which is death." (chapters 5\u201314) Later, only Seth could witness the taking-up of Adam at his funeral in a divine chariot, which deposited him in the Garden of Eden.',
+        items: []
+      },
+      {
+        heading: "Josephus",
+        summary: `In the Antiquities of the Jews, Josephus refers to Seth as virtuous and of excellent character, and reports that his descendants invented the wisdom of the heavenly bodies, and built the "pillars of the sons of Seth", two pillars inscribed with many scientific discoveries and inventions, notably in astronomy. They were built by Seth's descendants based on Adam's prediction that the world would be destroyed at one time by fire and another time by global flood, in order to protect the discoveries and be remembered after the destruction. One was composed of brick, and the other of stone, so that if the pillar of brick should be destroyed, the pillar of stone would remain, both reporting the ancient discoveries, and informing humankind that a pillar of brick was also erected. Josephus reports that the pillar of stone remained in the land of Siriad in his day.`,
+        items: []
+      },
+      {
+        heading: "Christianity",
+        summary: "The second-century BC Book of Jubilees, regarded as noncanonical except in the Oriental Orthodox Churches, also dates his birth to 130 after creation (AM). According to it, in 231 AM Seth married his sister, Azura, who was four years younger than he was. In the year 235 AM, Azura gave birth to Enos.",
+        items: []
+      },
+      {
+        heading: "Islam",
+        summary: `The Quran makes no mention of \u0160hee\u1E6Fh ibn \u0100dam (Arabic: \u0634\u0650\u064A\u062B \u0671\u0628\u0652\u0646 \u0622\u062F\u0645\u200E, romanized:\xA0Shith ibn adm). He is respected within Islamic traditions as the third and righteous son of Adam and Eve and seen as the gift bestowed on Adam after the death of Abel. The Sunni scholar and historian ibn Kathir in his tarikh (book of history), Al-Bid\u0101ya wa-n-nih\u0101ya (\u0627\u0644\u0628\u062F\u0627\u064A\u0629 \u0648\u0627\u0644\u0646\u0647\u0627\u064A\u0629), records that Seth, a prophet like his father Adam, transfers God's Law to mankind after the death of Adam, and places him among the exalted antediluvian patriarchs of the Generations of Adam. Some sources say that Seth was the receiver of scriptures. These scriptures are said to be the "first scriptures" mentioned in the Quran 87:18. Medieval historian and exegete al-Tabari and other scholars say that Seth buried Adam and the secret texts in the tomb of Adam, i.e., the "Cave of Treasures".`,
+        items: []
+      },
+      {
+        heading: "Mandaeism",
+        summary: "According to the Mandaean scriptures, including the Qulasta, the Mandaean Book of John and Genz\u0101 Rabb\u0101, Seth is cognate with the angelic soteriological figure Shitil (Classical Mandaic: \u0854\u0849\u0855\u0849\u084B, romanized:\xA0\u0160itil), a son of Adam Kadmaya who taught John the Baptist with his brothers Anush (Enosh) and Hibil (Abel). He is variously spoken of as a son of Adam, a brother or son of Hibil, and the brother or father of Anush. Shitil is one of the revealers of Mandaeism and a prophet, identified as the biblical Seth.",
+        items: []
+      },
+      {
+        heading: "Yazidism",
+        summary: "In Yazidism, Seth is known as Shehid ibn Jerr.",
+        items: []
+      },
+      {
+        heading: "Shrines",
+        summary: "On July 26, 2014, forces of the Islamic State of Iraq and the Levant (ISIL) blew up the Nabi Shiyt (Prophet Seth) shrine in Mosul, Iraq.",
+        items: [
+          "The purported grave of Seth in a village of the same name in the Levant",
+          "The purported grave of Seth in Bashshit, modern-day Israel",
+          "The purported grave of Seth in Mosul, Iraq"
+        ]
+      },
+      {
+        heading: "Bibliography",
+        summary: "",
+        items: [
+          "A. F. J. Klijn, Seth in Jewish, Christian and Gnostic Literature. Supplements to Novum Testamentum 46. Leiden: E. J. Brill, 1977."
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Biblical information",
+        note: 'According to the Book of Genesis, Seth was born when Adam was 130 years old (according to the Masoretic Text), or 230 years old (according to the Septuagint), "a son in his likeness and image".'
+      },
+      {
+        title: "Jewish tradition",
+        note: "Seth figures in the biblical texts of the Life of Adam and Eve (the Apocalypse of Moses)."
+      },
+      {
+        title: "Josephus",
+        note: 'In the Antiquities of the Jews, Josephus refers to Seth as virtuous and of excellent character, and reports that his descendants invented the wisdom of the heavenly bodies, and built the "pillars of the sons of Seth", two pillars inscribed with many scientific discoveries and inventions, notably in astronomy.'
+      },
+      {
+        title: "Christianity",
+        note: "The second-century BC Book of Jubilees, regarded as noncanonical except in the Oriental Orthodox Churches, also dates his birth to 130 after creation (AM)."
+      },
+      {
+        title: "Islam",
+        note: "The Quran makes no mention of \u0160hee\u1E6Fh ibn \u0100dam (Arabic: \u0634\u0650\u064A\u062B \u0671\u0628\u0652\u0646 \u0622\u062F\u0645\u200E, romanized:\xA0Shith ibn adm)."
+      },
+      {
+        title: "Mandaeism",
+        note: "According to the Mandaean scriptures, including the Qulasta, the Mandaean Book of John and Genz\u0101 Rabb\u0101, Seth is cognate with the angelic soteriological figure Shitil (Classical Mandaic: \u0854\u0849\u0855\u0849\u084B, romanized:\xA0\u0160itil), a son of Adam Kadmaya who taught John the Baptist with his brothers Anush (Enosh) and Hibil (Abel)."
+      },
+      {
+        title: "Yazidism",
+        note: "In Yazidism, Seth is known as Shehid ibn Jerr."
+      },
+      {
+        title: "Shrines",
+        note: "On July 26, 2014, forces of the Islamic State of Iraq and the Levant (ISIL) blew up the Nabi Shiyt (Prophet Seth) shrine in Mosul, Iraq."
       }
     ]
   },
@@ -16656,7 +16919,7 @@ var wiki_content_default = {
     sections: [
       {
         heading: "Biblical narrative",
-        summary: 'According to the genealogical account in Genesis 5, Noah was the tenth and final antediluvian (pre-flood) patriarch, the son of Lamech and a mother whose name is unmentioned, Lamech was 182 years old when Noah was born, and Noah was 500 years old when his sons Shem, Ham and Japheth were born. Lamech anticipated that Noah would "bring relief from our work and from the painful toil of our hands".',
+        summary: 'According to the genealogical account in Genesis 5, Noah is the tenth and final antediluvian (pre-flood) patriarch, known simply according to the tradition of patrilineal descent as the son of Lamech, with no record of a mother having been included. Lamech is 182 years old when Noah is born, and Noah is 500 years old when his sons Shem, Ham and Japheth are born. Lamech anticipated that Noah would "bring relief from our work and from the painful toil of our hands".',
         items: []
       },
       {
@@ -16678,7 +16941,7 @@ var wiki_content_default = {
     works: [
       {
         title: "Biblical narrative",
-        note: "According to the genealogical account in Genesis 5, Noah was the tenth and final antediluvian (pre-flood) patriarch, the son of Lamech and a mother whose name is unmentioned, Lamech was 182 years old when Noah was born, and Noah was 500 years old when his sons Shem, Ham and Japheth were born."
+        note: "According to the genealogical account in Genesis 5, Noah is the tenth and final antediluvian (pre-flood) patriarch, known simply according to the tradition of patrilineal descent as the son of Lamech, with no record of a mother having been included."
       },
       {
         title: "Other accounts",
@@ -16691,6 +16954,155 @@ var wiki_content_default = {
       {
         title: "Comparative mythology",
         note: "Indian and Greek flood-myths also exist, although there is little evidence that they were derived from the Mesopotamian flood-myth that underlies the biblical account."
+      }
+    ]
+  },
+  Hud: {
+    title: "Hud (prophet)",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Hud_(prophet)",
+    description: "H\u016Bd is believed in Islam to have been a messenger sent to ancient Arabia before Muhammad. Hud is repeatedly mentioned in the Quran whose eleventh chapter is also named after him.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Hud_causes_two_kings_of_Ad_to_be_tossed_up_in_the_air.jpg/330px-Hud_causes_two_kings_of_Ad_to_be_tossed_up_in_the_air.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Preceded by",
+        value: "Nuh"
+      },
+      {
+        label: "Succeeded by",
+        value: "Saleh"
+      },
+      {
+        label: "Resting\xA0place",
+        value: "Possibly Qabr An-Nabi Hud in Hadhramaut Governorate, Yemen"
+      },
+      {
+        label: "Religion",
+        value: "Islam"
+      }
+    ],
+    sections: [
+      {
+        heading: "Historical context",
+        summary: "Hud has sometimes been identified with Eber, an ancestor of the Ishmaelites and the Israelites who is mentioned in the Old Testament.",
+        items: []
+      },
+      {
+        heading: "Narrative in the Quran",
+        summary: "This is a brief summary of Hud's narrative, with emphasis on two particular verses:",
+        items: []
+      },
+      {
+        heading: "In the hadith",
+        summary: "There are several hadiths from various chains that became supporting materials regarding Calamity that has fallen upon the \u02BF\u0100d peoples, such as:",
+        items: [
+          `Abd al-Aziz al-Tarifi commented in the Aqida al-Khurasaniyya on a hadith narrated by Abu Sa'id al-Khudri, in which Muhammad warned about the Kharijites: "From this one's lineage, there will emerge people who recite the Quran, but it will not go beyond their throats. They will separate themselves from Islam and leave the idol worshippers unharmed; if I live to see them, I will surely kill them as \u02BF\u0100d were killed (by Hud)." This hadith is recorded in Sahih al-Bukhari, Sahih Muslim, Al-Nasa'i, and Sunan Abi Dawud, and was graded authentic by Al-Albani (d. 1999). "They will separate themselves from Islam and leave the idol worshippers unharmed; if I live to see them, I will surely kill them as \u02BF\u0100d were killed (by Hud)."`,
+          `Another mention of the calamity of 'Ad from Hadith came from the narration of Ibn Abbas and recorded in Sahih al-Bukhari and Sahih Muslim during the Battle of the Trench, when the Quraysh's coalition army encampment were struck by storm, that Muhammad as said: "I have been made victorious with as-Saba (easterly wind) and the people of 'Ad were destroyed by ad-Dabur (westerly wind)."`
+        ]
+      },
+      {
+        heading: "Place of burial",
+        summary: "Several sites are revered as the tomb of Hud. The most noted site, Qabr Hud, is located in a village in Hadhramaut, Yemen, and is a place of frequent Muslim pilgrimage. Robert Bertram Serjeant, in his study of the pilgrimage rite to the tomb of Hud, verified on the spot the facts related by Al-Harawi, who described, at the gate of the Mosque, on the west side, the rock onto which Hud climbed to make the call to prayer, and mentioned the grotto of Balhut at the bottom of the ravine. Around the tomb and neighborhood, various ancient ruins and inscriptions have been found. However, as is often the case with the graves of prophets, other locations have been listed. A possible location for his qabr (Arabic: \u0642\u064E\u0628\u0652\u0631\u200E, romanized:\xA0grave) is said to be near the Zamzam Well in Saudi Arabia, or in the south wall of the Umayyad Mosque in Syria. Some scholars have added that the Masjid has an inscription stating: Ha\u1E0F\u0101 Maq\u0101m H\u016Bd (Arabic: \u0647\u064E\u0670\u0630\u064E\u0627 \u0645\u064E\u0642\u064E\u0627\u0645 \u0647\u064F\u0648\u0652\u062F\u200E, romanized:\xA0This is (the) Tomb of Hud); others, however, suggest that this belief is a local tradition spewing from the reverence the locals have for Hud.",
+        items: [
+          "Qabr Hud in the governorate of Hadhramaut, Yemen",
+          "Maqam of Hud in Jordan, the Levant"
+        ]
+      },
+      {
+        heading: "In other religions",
+        summary: 'Hud is referred to in the Bah\xE1\u02BC\xED Faith as a Prophet who appeared after Noah and prior to Abraham, who exhorted the people to abandon idolatry and practice monotheism. His endeavors to save His people resulted in their "willful blindness" and His rejection.',
+        items: []
+      },
+      {
+        heading: "Bibliography",
+        summary: "",
+        items: [
+          "\u02BF\u0100d people built their land: 7:69, 26:133-134, 89:7-8",
+          "Arrogance of the \u02BF\u0100d people: 41:15, 26:128-129,",
+          "Hud's prophecy: 7:65-72, 11:50-57, 23:32 26:124-127, 26:131-132, 26:135, 46:21-23",
+          "Persecution of Hud: 7:66-67, 11:53-55, 14:9, 26:136-137 38:12, 46:21, 50:13, 54:18",
+          "Destruction of \u02BF\u0100d: 7:72, 11:58, 11:89, 23:41, 25:38, 26:139, 29:38, 29:40, 40:31, 41:13, 41:16, 46:24-25, 51:41-42, 53:50, 54:19-20, 69:6-8, 89:6"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Historical context",
+        note: "Hud has sometimes been identified with Eber, an ancestor of the Ishmaelites and the Israelites who is mentioned in the Old Testament."
+      },
+      {
+        title: "Narrative in the Quran",
+        note: "This is a brief summary of Hud's narrative, with emphasis on two particular verses:"
+      },
+      {
+        title: "In the hadith",
+        note: "There are several hadiths from various chains that became supporting materials regarding Calamity that has fallen upon the \u02BF\u0100d peoples, such as:"
+      },
+      {
+        title: "Place of burial",
+        note: "Several sites are revered as the tomb of Hud."
+      },
+      {
+        title: "In other religions",
+        note: "Hud is referred to in the Bah\xE1\u02BC\xED Faith as a Prophet who appeared after Noah and prior to Abraham, who exhorted the people to abandon idolatry and practice monotheism."
+      }
+    ]
+  },
+  Saleh: {
+    title: "Saleh (prophet)",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Salih",
+    description: "Salih or Saleh is a prophet mentioned in the Qur'an who prophesied to the tribe of Thamud in ancient Arabia, before the lifetime of Muhammad. The story of Salih is linked to that of the she-camel of God, a gift from God to the people of Thamud when they sought a miracle to confirm that Salih was a prophet.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Saleh_leads_she-camel_crop.jpg/330px-Saleh_leads_she-camel_crop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Preceded by",
+        value: "Hud"
+      },
+      {
+        label: "Succeeded by",
+        value: "Abraham"
+      },
+      {
+        label: "Resting\xA0place",
+        value: "Hasik (present day Oman)"
+      },
+      {
+        label: "Relatives",
+        value: "Thamud"
+      },
+      {
+        label: "Religion",
+        value: "Islam"
+      }
+    ],
+    sections: [
+      {
+        heading: "Historical context",
+        summary: "The Thamud were a tribal confederation in the northwestern region of the Arabian Peninsula mentioned in Akkadian literature during the reign of Sargon II of the Neo-Assyrian Empire. The tribe's name continues to appear in documents into the fourth century, but by the sixth century, they were regarded as a group that had vanished long ago.",
+        items: []
+      },
+      {
+        heading: "In Islam",
+        summary: "According to Muslim tradition, the people of Thamud relied on Salih for support. He was chosen by God as a prophet and sent to preach against the selfishness of the wealthy and to condemn the practice of shirk (polytheism). Although Saleh preached for a sustained period, the people of Thamud refused to heed his warning and instead asked him to perform a miracle for them. They said: \u201CO \u1E62\u0101li\u1E25! We truly had high hopes in you before this. How dare you forbid us to worship what our forefathers had worshipped? We are certainly in alarming doubt about what you are inviting us to.\u201D",
+        items: []
+      },
+      {
+        heading: "In the Bah\xE1\u02BC\xED Faith",
+        summary: "The founder of the Bah\xE1\u02BC\xED Faith, Bah\xE1'u'll\xE1h, briefly mentioned the story of the hamstrung she-camel in the Lawh-i-Burh\xE1n, and commented also upon Saleh's ministry in the Kit\xE1b-i-\xCDq\xE1n. 'Abdu'l-Bah\xE1 states that the she-camel symbolizes the holy spirit of Saleh and the camel's milk refers to the spiritual food that he offered to his people.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Historical context",
+        note: "The Thamud were a tribal confederation in the northwestern region of the Arabian Peninsula mentioned in Akkadian literature during the reign of Sargon II of the Neo-Assyrian Empire."
+      },
+      {
+        title: "In Islam",
+        note: "According to Muslim tradition, the people of Thamud relied on Salih for support."
+      },
+      {
+        title: "In the Bah\xE1\u02BC\xED Faith",
+        note: "The founder of the Bah\xE1\u02BC\xED Faith, Bah\xE1'u'll\xE1h, briefly mentioned the story of the hamstrung she-camel in the Lawh-i-Burh\xE1n, and commented also upon Saleh's ministry in the Kit\xE1b-i-\xCDq\xE1n."
       }
     ]
   },
@@ -16717,8 +17129,8 @@ var wiki_content_default = {
         value: "Oldest to youngest: Ishmael (son, with Hagar) Isaac (son, with Sarah) Zimran (son, with Keturah) Jokshan (son, with Keturah) Medan (son, with Keturah) Midian (son, with Keturah) Ishbak (son, with Keturah) Shuah (son, with Keturah)"
       },
       {
-        label: "Parents",
-        value: "Terah (father)Amathlai (mother)"
+        label: "Parent",
+        value: "Terah (father)"
       },
       {
         label: "Known\xA0for",
@@ -16771,6 +17183,802 @@ var wiki_content_default = {
       {
         title: "Artistic depictions",
         note: "Paintings on the life of Abraham tend to focus on only a few incidents: the sacrifice of Isaac; meeting Melchizedek; entertaining the three angels; Hagar in the desert; and a few others."
+      }
+    ]
+  },
+  Lot: {
+    title: "Lot in Islam",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Lot_in_Islam",
+    description: "Lut ibn Haran is a prophet and messenger of God who was mentioned in the Quran. According to Islamic tradition, Lut was born to Haran and spent his younger years in Ur, later migrating to Canaan with his uncle Abraham. He was sent to the cities of Sodom and Gomorrah as a prophet, and was commanded to preach to their inhabitants on monotheism.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Lut_and_his_daughters_with_Jibril_near_Sodom.jpg/330px-Lut_and_his_daughters_with_Jibril_near_Sodom.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Preceded by",
+        value: "Ibrahim"
+      },
+      {
+        label: "Succeeded by",
+        value: "Ismail"
+      },
+      {
+        label: "Born",
+        value: "Lut ibn Haran, Ur Kasdim"
+      },
+      {
+        label: "Died",
+        value: "Bani Na'im"
+      },
+      {
+        label: "Children",
+        value: "Lot's daughters"
+      },
+      {
+        label: "Parent",
+        value: "Haran"
+      },
+      {
+        label: "Relatives",
+        value: "Ibr\u0101h\u012Bm (uncle), Ism\u0101\u2019\u012Bl (cousin), Ish\u0101q (cousin)"
+      },
+      {
+        label: "Religion",
+        value: "Islam"
+      }
+    ],
+    sections: [
+      {
+        heading: "Family",
+        summary: "Muslim tradition is debated about who Abraham's father is. Some maintain that his father was Terah and his uncle was Azar (Arabic: \u0622\u0632\u0631, romanized:\xA0\u0100zar), which could be derived from the Syriac Athar. Other's believe that Azar was Abraham's father and the same person as Terah. Abraham had two children, Isaac and Ismael, who both later became prophets. Abraham's nephew is said to have been the prophet Lut, who was one of the other people who migrated with Abraham out of their community. Abraham himself is said to have been a descendant of Nuh through his son Shem.",
+        items: []
+      },
+      {
+        heading: "Quranic narrative",
+        summary: `The Quran states that one day, a group of angels visited Abraham as guests in the guise of men in order to inform him of the fact that his wife Sarah was pregnant with Isaac. While there, they also told him that they had been sent by God to the "guilty people" of Lut to destroy them with "a shower of stones of clay". Lut and those who believed in him, were to be spared, but his wife was to die in the destruction, with the angels stating that "she is of those who lag behind". The Quran also draws upon Lot's wife as an "example for the unbelievers" as she was married to a righteous man but refused to believe in his message and was thus condemned to Hell.`,
+        items: []
+      },
+      {
+        heading: "Other mentions in the Quran",
+        summary: "Lut is referenced a relatively large number of times in the Quran. Many of these passages place the narrative of Lut in a line of successive prophets including Noah, Hud, Salih and Shuayb. Islamic scholars have stated that these particular prophets represent the early cycle of prophecy as described in the Quran. These narratives typically follow similar patterns: a prophet is sent to a community; the community pays no heed to his warnings but instead threatens him with punishment; God asks the prophet to leave with his followers and the community and its people are subsequently destroyed in a punishment. Elsewhere in the Quran, Lut is mentioned alongside Ismael, Elisha and Jonah as men whom God favored above the nations (Arabic: \u0671\u0644\u0652\u0639\u064E\u0640\u0670\u0644\u064E\u0645\u0650\u064A\u0646\u064E, romanized:\xA0al-'aalameen, lit.\u2009'the worlds').",
+        items: []
+      },
+      {
+        heading: "Homosexuality",
+        summary: "Many schools of Islamic jurisprudence state that homosexual sex is a sin, based in part on the story of Lot. Because the Quran states that Lot berated his people for sexually pursuing men, in addition to attempting to assault strangers, the incident is traditionally seen as demonstrating Islam's disapproval of both rape and homosexuality. Lot's struggle with the people of the twin cities is seen as either concerning homosexuality in general or specifically homosexual anal sex. These interpretations have sometimes widened to condemn homosexuality beyond the physical act, including psychological and social dispositions.",
+        items: []
+      },
+      {
+        heading: "Monument",
+        summary: "Many Muslims believe that Bani Na'im (Arabic: \u0628\u0646\u064A \u0646\u0639\u064A\u0645, romanized:\xA0Ban\u012B Na\u02BE\u012Bm, lit.\u2009'children of bliss') in Palestine houses the tomb of Lot in the center of the town. The tomb is located within a rectangular mosque with an inner court and minaret. The lintel of the mosque's northern gate is built from stones dating to the Byzantine era when a church had possibly stood at the site. Bani Na'im's association with Lot predates Islam, as the works of the Catholic scholar Jerome in the 4th century CE state that the tomb is located in a town named Capharbaricha, which is likely the former name of Bani Na'im.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Family",
+        note: "Muslim tradition is debated about who Abraham's father is."
+      },
+      {
+        title: "Quranic narrative",
+        note: "The Quran states that one day, a group of angels visited Abraham as guests in the guise of men in order to inform him of the fact that his wife Sarah was pregnant with Isaac."
+      },
+      {
+        title: "Other mentions in the Quran",
+        note: "Lut is referenced a relatively large number of times in the Quran."
+      },
+      {
+        title: "Homosexuality",
+        note: "Many schools of Islamic jurisprudence state that homosexual sex is a sin, based in part on the story of Lot."
+      },
+      {
+        title: "Monument",
+        note: "Many Muslims believe that Bani Na'im (Arabic: \u0628\u0646\u064A \u0646\u0639\u064A\u0645, romanized:\xA0Ban\u012B Na\u02BE\u012Bm, lit."
+      }
+    ]
+  },
+  Ishmael: {
+    title: "Ishmael",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Ishmael",
+    description: "In the biblical Book of Genesis, Ishmael was the first son of Abraham. His mother was Hagar, the handmaiden of Abraham's wife Sarah. He died at the age of 137.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Oldtestamentthre0001unse_0096_%28cropped%29.jpg/330px-Oldtestamentthre0001unse_0096_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Children",
+        value: "See descendants"
+      },
+      {
+        label: "Parents",
+        value: "Abraham (father)Hagar (mother)"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Being the forefather of the Ishmaelites"
+      },
+      {
+        label: "Religion",
+        value: "Judaism, Christianity, Islam"
+      }
+    ],
+    sections: [
+      {
+        heading: "Etymology",
+        summary: `The name "Yishma'el" existed in various ancient Semitic cultures, including early Babylonian and Min\xE6an. In the Amorite language, it is attested as ya\u015Bma\u02BF-\u02BEel. It is a theophoric name translated literally as "God (El) has hearkened", suggesting that "a child so named was regarded as the fulfillment of a divine promise".`,
+        items: []
+      },
+      {
+        heading: "Genesis narrative",
+        summary: "The Genesis narrative sees the account of Ishmael's life through Chapters 16, 17, 21, and 25.",
+        items: []
+      },
+      {
+        heading: "In various traditions",
+        summary: "Historians and academics in the field of source criticism believe that the stories of Ishmael belong to the three strata of J, or Yahwist source, the P, or Priestly source, and the E, or Elohist source (See Documentary hypothesis). For example, the narration in Genesis 16 is of J type and the narration in Genesis 21:8\u201321 is of E type. Genesis 25 would have been added during the Persian Period by the Priestly source, who attributed the known Ishmaelite (Shumu'ilu) Tribes as the names of the sons of Ishmael, although the narrative and name of Ishmael himself preceded this.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Etymology",
+        note: `The name "Yishma'el" existed in various ancient Semitic cultures, including early Babylonian and Min\xE6an.`
+      },
+      {
+        title: "Genesis narrative",
+        note: "The Genesis narrative sees the account of Ishmael's life through Chapters 16, 17, 21, and 25."
+      },
+      {
+        title: "In various traditions",
+        note: "Historians and academics in the field of source criticism believe that the stories of Ishmael belong to the three strata of J, or Yahwist source, the P, or Priestly source, and the E, or Elohist source (See Documentary hypothesis)."
+      }
+    ]
+  },
+  Isaac: {
+    title: "Isaac",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Isaac",
+    description: "Isaac is the second Hebrew patriarch in Judaism and an important figure in the Abrahamic religions, including Samaritanism, Christianity, Islam, the Bah\xE1\u02BC\xED Faith, and Rastafari. Isaac first appears in the Torah, in which he is the son of Abraham and Sarah, the father of Jacob and Esau, and the grandfather of the twelve tribes of Israel.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Isaac_Blessing_Jacob_MET_DP145918_%28cropped_2%29.jpg/330px-Isaac_Blessing_Jacob_MET_DP145918_%28cropped_2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Spouse",
+        value: "Rebecca (also spelled Rebekah)"
+      },
+      {
+        label: "Children",
+        value: "Esau (older twin son)\nJacob (younger twin son)"
+      },
+      {
+        label: "Parents",
+        value: "Abraham (father)Sarah (mother)"
+      },
+      {
+        label: "Family",
+        value: "Ishmael (half-brother, first born of Abraham, son of Hagar)\nZimran (half-brother)\nJokshan (half-brother)\nMedan (half-brother)\nMidian (half-brother)\nIshbak (half-brother)\nShuah (half-brother)\nTerah (grandfather)\nHaran (uncle)\nNahor (uncle)\nMilcah (cousin)\nLot (cousin)\nBethuel (cousin/father-in-law)\nLaban (brother-in-law)\nLeah (daughter-in-law)\nRachel (daughter-in-law)\nTwelve Tribes of Israel (grandsons)\nDinah (granddaughter)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Etymology",
+        summary: `The anglicized name "Isaac" is a transliteration of the Biblical Hebrew: \u05D9\u05B4\u05E6\u05B0\u05D7\u05B8\u05E7, romanized:\xA0Yi\u1E63\u1E25\u0101q, which literally means "He laughs/will laugh". Ugaritic texts dating from the 13th century BCE refer to the benevolent smile of the Canaanite deity El. Genesis ascribes the laughter to Isaac's parents, Abraham and Sarah, instead. According to the biblical narrative, Abraham fell on his face and laughed when God (Hebrew, Elohim) imparted the news of their son's eventual birth. He laughed because Sarah was past the age of childbearing; both she and Abraham were advanced in age. Later, when Sarah overheard three messengers of the Lord renew the promise, she laughed inwardly for the same reason. Sarah denied laughing when God questioned Abraham about it.`,
+        items: []
+      },
+      {
+        heading: "Genesis narrative",
+        summary: "After God changes Abram and Sarai's names to Abraham and Sarah, he tells Abraham that he will bear a second son by Sarah named Isaac, with whom a new covenant would be established. In response, Abraham began to laugh, as both he and Sarah were well beyond natural child-bearing age. Some time later, three men who Abraham identifies as messengers of God visit him and Sarah, and Abraham treats them to food and niceties. They repeat the prophecy that Sarah would bear a child, promising Isaac's birth within a year's time, at which point Sarah laughs in disbelief. God questions why the pair laughed in disbelief at his words, and if it is because they believe such things were not within his power. Now afraid, they futilely deny ever having laughed at God's words.",
+        items: []
+      },
+      {
+        heading: "Traditional information",
+        summary: "The servant sent by Abraham to find a wife for Isaac is traditionally held to be Eliezer of Damascus, who in Genesis 15 is Abraham's steward and, at that time, his heir-apparent. He is not named in the narrative concerning Isaac.",
+        items: []
+      },
+      {
+        heading: "Jewish views",
+        summary: `While the Book of Genesis does not tell the age of Isaac at the time of binding, some Talmudic sages take it to be thirty seven, likely based on the next biblical story, which is of Sarah's death at 127 years, being 90 when Isaac was born, attributing this to her hearing the news of his intended sacrifice. The sacrifice of Isaac is cited in appeals for the mercy of God in later Jewish traditions. The post-biblical Jewish interpretations often elaborate the role of Isaac beyond the biblical description and primarily focus on Abraham's intended sacrifice of Isaac, called the aqedah ("binding"). According to a version of these interpretations, Isaac died in the sacrifice and was revived. According to many accounts of Aggadah, unlike the Bible, it is Satan who is testing Isaac as an agent of God. Isaac's willingness to follow God's command at the cost of his death has been a model for many Jews who preferred martyrdom to violation of the Jewish law.`,
+        items: []
+      },
+      {
+        heading: "Christian views",
+        summary: `The early Christian church continued and developed the New Testament theme of Isaac as a type of Christ and the Church being both "the son of the promise" and the "father of the faithful". Tertullian draws a parallel between Isaac's bearing the wood for the sacrificial fire with Christ's carrying his cross. and there was a general agreement that, while all the sacrifices of the Old Law were anticipations of that on Calvary, the sacrifice of Isaac was so "in a pre-eminent way".`,
+        items: []
+      },
+      {
+        heading: "Islamic views",
+        summary: "Islam considers Isaac (Arabic: \u0625\u0633\u062D\u0627\u0642, romanized:\xA0Is\u1E25\u0101q) a prophet, and describes him as the father of the Israelites and a righteous servant of God.",
+        items: []
+      },
+      {
+        heading: "Academic views",
+        summary: 'Some scholars have described Isaac as "a legendary figure" or "as a figure representing tribal history," or "as a seminomadic leader".',
+        items: []
+      },
+      {
+        heading: "In art",
+        summary: "The earliest Christian portrayal of Isaac is found in the Roman catacomb frescoes. Excluding the fragments, Alison Moore Smith classifies these artistic works in three categories:",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Etymology",
+        note: 'The anglicized name "Isaac" is a transliteration of the Biblical Hebrew: \u05D9\u05B4\u05E6\u05B0\u05D7\u05B8\u05E7, romanized:\xA0Yi\u1E63\u1E25\u0101q, which literally means "He laughs/will laugh".'
+      },
+      {
+        title: "Genesis narrative",
+        note: "After God changes Abram and Sarai's names to Abraham and Sarah, he tells Abraham that he will bear a second son by Sarah named Isaac, with whom a new covenant would be established."
+      },
+      {
+        title: "Traditional information",
+        note: "The servant sent by Abraham to find a wife for Isaac is traditionally held to be Eliezer of Damascus, who in Genesis 15 is Abraham's steward and, at that time, his heir-apparent."
+      },
+      {
+        title: "Jewish views",
+        note: "While the Book of Genesis does not tell the age of Isaac at the time of binding, some Talmudic sages take it to be thirty seven, likely based on the next biblical story, which is of Sarah's death at 127 years, being 90 when Isaac was born, attributing this to her hearing the news of his intended sacrifice."
+      },
+      {
+        title: "Christian views",
+        note: 'The early Christian church continued and developed the New Testament theme of Isaac as a type of Christ and the Church being both "the son of the promise" and the "father of the faithful".'
+      },
+      {
+        title: "Islamic views",
+        note: "Islam considers Isaac (Arabic: \u0625\u0633\u062D\u0627\u0642, romanized:\xA0Is\u1E25\u0101q) a prophet, and describes him as the father of the Israelites and a righteous servant of God."
+      },
+      {
+        title: "Academic views",
+        note: 'Some scholars have described Isaac as "a legendary figure" or "as a figure representing tribal history," or "as a seminomadic leader".'
+      },
+      {
+        title: "In art",
+        note: "The earliest Christian portrayal of Isaac is found in the Roman catacomb frescoes."
+      }
+    ]
+  },
+  Jacob: {
+    title: "Jacob",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Jacob",
+    description: "Jacob, later given the name Israel, is the third Hebrew patriarch in Judaism and an important figure in the Abrahamic religions. He first appears in the Torah, where he is described in the Book of Genesis as a son of Isaac and Rebecca. Accordingly, alongside his older fraternal twin brother Esau, Jacob's paternal grandparents are Abraham and Sarah and his maternal grandfather is Bethuel, whose wife is not mentioned. He is said to have bought Esau's birthright and, with his mother's help, deceived his aging father to bless him instead of Esau. Then, following a severe drought in his homeland Canaan, Jacob and his descendants migrated to neighbouring Egypt through the efforts of his son Joseph, who had become a confidant of the pharaoh. After dying in Egypt at the age of 147, he is supposed to have been buried in the Cave of Machpelah in Hebron.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Jan_Victors_-_Jacob_Seeking_the_Forgiveness_of_Esau_-_79.330_-_Indianapolis_Museum_of_Art_%28cropped%29.jpg/330px-Jan_Victors_-_Jacob_Seeking_the_Forgiveness_of_Esau_-_79.330_-_Indianapolis_Museum_of_Art_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Resting place",
+        value: "Cave of Machpelah, Hebron, Canaan (traditional), 31\xB031\u203229\u2033N 35\xB006\u203239\u2033E / 31.5247\xB0N 35.1107\xB0E / 31.5247; 35.1107"
+      },
+      {
+        label: "Other\xA0name",
+        value: "Israel (\u05D9\u05B4\u05E9\u05B0\u05C2\u05E8\u05B8\u05D0\u05B5\u05DC)"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Being the third Hebrew patriarch and the forefather of the Israelites"
+      },
+      {
+        label: "Spouse(s)",
+        value: "Leah, Rachel"
+      },
+      {
+        label: "Partner(s)",
+        value: "Bilhah, Zilpah"
+      },
+      {
+        label: "Children",
+        value: "Oldest to youngest, per woman: With Leah\nReuben\nSimeon\nLevi\nJudah\nIssachar\nZebulun\nDinah (daughter)\nWith Rachel\nJoseph\nBenjamin\nWith Bilhah\nDan\nNaphtali\nWith Zilpah\nGad\nAsher"
+      },
+      {
+        label: "Parents",
+        value: "Isaac (father)Rebecca (mother)"
+      },
+      {
+        label: "Relatives",
+        value: "Abraham (paternal grandfather)\nSarah (paternal grandmother)\nBethuel (maternal grandfather)\nIshmael (paternal half-uncle)\nEsau (fraternal twin brother)\nLaban (maternal uncle, father-in-law)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Etymology",
+        summary: `According to the folk etymology found in Genesis 25:26, the name Ya\u02BFaq\u014Dv \u05D9\u05E2\u05E7\u05D1 is derived from \u02BFaqev \u05E2\u05B8\u05E7\u05B5\u05D1 "heel", as Jacob was born grasping the heel of his twin brother Esau. The historical origin of the name is uncertain, although similar names have been recorded. Yaqub-Har is recorded as a place name in a list by Thutmose III (15th century BC), and later as the nomen of a Hyksos pharaoh. The hieroglyphs are ambiguous, and can be read as "Yaqub-Har", "Yaqubaal", or "Yaqub El". The same name is recorded earlier still, in c.\u20091800 BC, in cuneiform inscriptions (spelled ya-ah-qu-ub-el, ya-qu-ub-el). The suggestion that the personal name may be shortened from this compound name, which would translate to "may El protect", originates with Bright (1960). In the Amorite language, parallel forms of Jacob's name are attested as ia-a\u1E2B-q\xFA-ub-DINGIR and ia-a\u1E2B-q\xFA-bu-um.`,
+        items: []
+      },
+      {
+        heading: "Genesis narrative",
+        summary: "The biblical account of the life of Jacob is found in the Book of Genesis, chapters 25\u201350.",
+        items: []
+      },
+      {
+        heading: "Religious perspectives",
+        summary: "There are two opinions in the Midrash as to how old Rebecca was at the time of her marriage and, consequently, at the twins' birth. According to the traditional counting cited by Rashi, Isaac was 37 years old at the time of the Binding of Isaac, and news of Rebecca's birth reached Abraham immediately after that event. In that case, since Isaac was 60 when Jacob and Esau were born and they had been married for 20 years, then Isaac was 40 years old when he married Rebecca (Gen. 25:20), making Rebecca three years old at the time of her marriage, and 23 years old at the birth of Jacob and Esau. According to the second opinion, Rebecca was 14 years old at the time of their marriage, and 34 years old at the birth of Jacob and Esau. In either case, Isaac and Rebecca were married for 20 years before Jacob and Esau were born. The Midrash says that during Rebecca's pregnancy whenever she would pass a house of Torah study, Jacob would struggle to come out; whenever she would pass a house of idolatry, Esau would agitate to come out.",
+        items: []
+      },
+      {
+        heading: "Historicity",
+        summary: `Although archaeologist and biblical scholar William F. Albright maintained (c. 1961) that the narratives of Abraham and Jacob could be dated to about the 19th century BCE, John J. Bimson wrote in 1980: "Since then... there has been a strong reaction against the use of archaeological evidence in support of the biblical traditions, and Albright's comment could not be repeated with any truth today." Nahum M. Sarna (1978) noted that an inability to date the narratives of the patriarchs does not necessarily invalidate their historicity, a view supported by Bimson, who admitted that "Our knowledge of the centuries around 2000 BCE is very small, and our ignorance very great."`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Etymology",
+        note: 'According to the folk etymology found in Genesis 25:26, the name Ya\u02BFaq\u014Dv \u05D9\u05E2\u05E7\u05D1 is derived from \u02BFaqev \u05E2\u05B8\u05E7\u05B5\u05D1 "heel", as Jacob was born grasping the heel of his twin brother Esau.'
+      },
+      {
+        title: "Genesis narrative",
+        note: "The biblical account of the life of Jacob is found in the Book of Genesis, chapters 25\u201350."
+      },
+      {
+        title: "Religious perspectives",
+        note: "There are two opinions in the Midrash as to how old Rebecca was at the time of her marriage and, consequently, at the twins' birth."
+      },
+      {
+        title: "Historicity",
+        note: "Although archaeologist and biblical scholar William F."
+      }
+    ]
+  },
+  Joseph: {
+    title: "Joseph (son of Jacob)",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Joseph_(Genesis)",
+    description: "Joseph was a dream interpreter and considered an important Hebrew figure in the Bible's Book of Genesis.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Joseph_%28Francisco_de_Zurbar%C3%A1n%29.jpg/330px-Joseph_%28Francisco_de_Zurbar%C3%A1n%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "Paddan Aram, Aram-Naharaim, (present-day Harran, Turkey)"
+      },
+      {
+        label: "Died",
+        value: "Ancient Egypt"
+      },
+      {
+        label: "Resting place",
+        value: "Joseph's Tomb, Nablus, West Bank (disputed), 32\xB012\u203247\u2033N 35\xB016\u203258\u2033E / 32.2130268\xB0N 35.2829153\xB0E / 32.2130268; 35.2829153"
+      },
+      {
+        label: "Other\xA0name",
+        value: "Zaphnath-Paaneah (\u05E6\u05B8\u05E4\u05B0\u05E0\u05B7\u05EA \u05E4\u05B7\u05BC\u05E2\u05B0\u05E0\u05B5\u05D7\u05B7)"
+      },
+      {
+        label: "Spouse",
+        value: "Asenath"
+      },
+      {
+        label: "Children",
+        value: "Manasseh (son)\nEphraim (son)"
+      },
+      {
+        label: "Parents",
+        value: "Jacob (father)Rachel (mother)"
+      },
+      {
+        label: "Relatives",
+        value: "Reuben (half-brother)\nSimeon (half-brother)\nLevi (half-brother)\nJudah (half-brother)\nDan (half-brother)\nNaphtali (half-brother)\nGad (half-brother)\nAsher (half-brother)\nIssachar (half-brother)\nZebulun (half-brother)\nDinah (half-sister)\nBenjamin (brother)\nAbraham (great-grandfather)\nSarah (great-grandmother)\nPotipherah (father-in-law)\nIsaac (grandfather)\nRebecca (grandmother)\nEsau (uncle)\nIshmael (great half-uncle)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Etymology",
+        summary: 'The Bible offers two explanations of the name Yos\u0113f: first, it is compared to the triliteral \u05D0\u05BE\u05E1\u05BE\u05E3 (\u02BE-s-p), meaning "to gather, remove, take away": "And she conceived, and bore a son; and said, God hath taken away my reproach" (Genesis 30:23); Yos\u0113f is then identified with the similar root \u05D9\u05E1\u05E3 (y-s-p), meaning "to add": "And she called his name Joseph; and said, The LORD shall add to me another son." (Genesis 30:24).',
+        items: []
+      },
+      {
+        heading: "Biblical narrative",
+        summary: `Joseph, son of Jacob and Rachel, lived in the land of Canaan with ten half-brothers, one full brother, and at least one half-sister. He was Rachel's firstborn and Jacob's eleventh son. Of all the sons, Joseph was preferred by his father, who gave him a "long coat of many colors". When Joseph was seventeen years old, he shared with his brothers two dreams he had: in the first dream, Joseph and his brothers gathered bundles of grain, of which those his brothers gathered, bowed to his own. In the second dream, the Sun (father), the Moon (mother), and eleven stars (brothers) bowed to Joseph himself. These dreams, implying his supremacy, angered his brothers (Genesis 37:1\u201311) and made the brothers plot his demise.`,
+        items: [
+          "Joseph's dream of grain",
+          "Joseph's dream of stars"
+        ]
+      },
+      {
+        heading: "Composition and literary motifs",
+        summary: "In 1970, Donald B. Redford argued that the composition of the story could be dated to the period between the 7th century BCE and the third quarter of the 5th century BCE. By the early 1990s, a majority of modern scholars agreed that the Joseph story was a Wisdom novella constructed by a single author and that it reached its current form in the 5th century BCE at the earliest\u2014with Soggin suggesting the possibility of a first or early second century BCE date. Some scholars argue that the core of the story could be traced back to a 2nd millennium BCE context. Thomas R\xF6mer argues that \u201CThe date of the original narrative can be the late Persian period, and while there are several passages that fit better into a Greek, Ptolemaic context, most of these passages belong to later revisions.\u201D Camille Guerin indicated the agrarian and political situation that most closely matches the biblical text is the Saite period.",
+        items: []
+      },
+      {
+        heading: "Jewish tradition",
+        summary: `In the midrash, the selling of Joseph was part of God's divine plan for him to save his tribes. The favoritism Israel showed Joseph and the plot against him by his brothers were divine means of getting him into Egypt. Maimonides comments that even the villager in Shechem, about whom Joseph inquired his brother's whereabouts, was a "divine messenger" working behind the scene.`,
+        items: []
+      },
+      {
+        heading: "Christian tradition",
+        summary: 'Joseph is mentioned in the New Testament as an example of faith (Hebrews 11:22). Joseph is commemorated as one of the Holy Forefathers in the Calendar of Saints of the Armenian Apostolic Church on 26 July. In the Eastern Orthodox Church and those Eastern Catholic Churches which follow the Byzantine Rite, he is known as "Joseph the all-comely", a reference not only to his physical appearance, but more importantly to the beauty of his spiritual life. They commemorate him on the Sunday of the Holy Forefathers (two Sundays before Christmas) and on Holy and Great Monday (Monday of Holy Week). In icons, he is sometimes depicted wearing the nemes headdress of an Egyptian vizier. The Lutheran Church\u2013Missouri Synod commemorates him as a patriarch on 31 March.',
+        items: []
+      },
+      {
+        heading: "Islamic tradition",
+        summary: `Joseph (Arabic: \u064A\u0648\u0633\u064F\u0641, Y\u016Bsuf) is regarded by the Quran as a prophet (Quran 6:84), and a whole chapter Surah Yusuf 12 is devoted to him, the only instance in the Quran in which an entire chapter is devoted to a complete story of a person. It is described in the Quran as the 'best of stories'. Joseph is said to have been extremely handsome, which attracted his Egyptian master's wife to attempt to seduce him. Muhammad is believed to have once said, "One half of all the beauty God apportioned for mankind went to Joseph and his mother; the other one half went to the rest of mankind." The story has a lot in common with the biblical narrative, but with certain differences. In the Quran the brothers ask Jacob ("Yaqub") to let Joseph go with them. Joseph is thrown into a well, and was taken as a slave by a passing caravan. When the brothers claimed to the father that a wolf had eaten Joseph, he observed patience.`,
+        items: []
+      },
+      {
+        heading: "Baha'i tradition",
+        summary: `There are numerous mentions of Joseph in Bah\xE1'\xED writings. These come in the forms of allusions written by the B\xE1b and Bah\xE1'u'll\xE1h. In the Kit\xE1b-i-Aqdas, Bah\xE1'u'll\xE1h states that "from my laws, the sweet-smelling savour of my garment can be smelled" and, in the Four Valleys, states that "the fragrance of his garment blowing from the Egypt of Baha," referring to Joseph.`,
+        items: []
+      },
+      {
+        heading: "Literature and culture",
+        summary: "",
+        items: [
+          "Somnium morale Pharaonis (13th century), by Cistercian monk Jean de Limoges, is a collection of fictional letters exchanged between the Pharaoh, Joseph, and other characters of the narrative regarding the interpretation of the Pharaoh's dream.",
+          "Joseph and his Brethren, 1743, an oratorio by George Frideric Handel.",
+          "Josephslegende (The Legend of Joseph) is a 1914 work by Richard Strauss for the Ballets Russes.",
+          "Joseph and His Brothers (1933\u20131943), a four-novel omnibus by Thomas Mann, retells the Genesis stories surrounding Joseph, identifying Joseph with the figure of Osarseph known from Josephus, and the pharaoh with Akhenaten.",
+          "Prophet Joseph (2008\u20132009) is a popular Iranian television series, directed by Farajollah Salahshoor, which tells the story of Prophet Joseph based on the Quran.",
+          "In the 1961 Yugoslavian/Italian film, The Story of Joseph and His Brethren (Giuseppe Venduto dai Fratelli) Joseph is played by Geoffrey Horne.",
+          "In the 1974 film, The Story of Jacob and Joseph he is portrayed by Tony Lo Bianco.",
+          "The 1979, New Media Bible Genesis Project (TV)-cap. Joseph And His Brothers",
+          "The long-running musical Joseph and the Amazing Technicolor Dreamcoat by Andrew Lloyd Webber and Tim Rice is based on the biblical story of Joseph, up through Genesis chapter 46. It was adapted into the 1999 film of the same name.",
+          "In 1995, Turner Network Television released the made-for-television film Joseph starring Ben Kingsley as Potiphar, Lesley Ann Warren as Potiphar's wife, Paul Mercurio as Joseph and Martin Landau as Jacob.",
+          "In 2000, DreamWorks Animation released a direct-to-video animated musical film based on the life of Joseph, titled Joseph: King of Dreams. American actor Ben Affleck provided the speaking voice of Joseph, and the Australian singer David Campbell doubled as singing voice of Joseph and the singing narrator of the film",
+          "The 2003 VeggieTales children's video The Ballad of Little Joe retells Joseph's Genesis stories in the style and setting of an American Western film.",
+          "The cultural impact of the Joseph story in early-modern times is discussed in Lang 2009.",
+          "Rappresentatione di Giuseppe e i suoi Fratelli/Joseph and his Brethren - a musical drama in three acts composed by Elam Rotem for ensemble Profeti della Quinta (2013, Pan Classics).",
+          "The Red Tent is a 1997 novel by Anita Diamant focused on Joseph's half-sister Dinah. It was addapted for television as a two-part miniseries of the same name in 2014. Joseph himself appears as a secondary character in both the book and its addaptation and is portrayed in the series by Will Tudor.",
+          "The 2015 animated film Joseph: Beloved Son, Rejected Slave, Exalted Ruler is based on the life of Joseph. American voice actor Mike McFarland provides the speaking voice of Joseph.",
+          "Jos\xE9 do Egito (English: Joseph of Egypt) is a Brazilian miniseries produced and broadcast by RecordTV. It premiered on January 30, 2013, and ended on October 9, 2013. It is based on the biblical account of the book of Genesis that deals with the patriarch Joseph, son of Jacob. Joseph is played by \xC2ngelo Paes Leme as an adult and by Ricky Tavares in his younger years.",
+          "The 2019 novel Joseph and the Way of Forgiveness by Stephen Mitchell retells the story of Joseph in the form of a midrash with emphasis on the thoughts and beliefs of a flawed Joseph.",
+          "G\xEAnesis (English: Genesis) is a Brazilian telenovela produced and broadcast by RecordTV. Divided into seven phases or parts, the series tells the story of the entire biblical book of Genesis, focusing specifically on Joseph in the last one, subtitled Jos\xE9 do Egito (English: Joseph of Egypt). Joseph is played by Juliano Laham as an adult and by Jo\xE3o Guilherme Chaseliov as a child."
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Etymology",
+        note: 'The Bible offers two explanations of the name Yos\u0113f: first, it is compared to the triliteral \u05D0\u05BE\u05E1\u05BE\u05E3 (\u02BE-s-p), meaning "to gather, remove, take away": "And she conceived, and bore a son; and said, God hath taken away my reproach" (Genesis 30:23); Yos\u0113f is then identified with the similar root \u05D9\u05E1\u05E3 (y-s-p), meaning "to add": "And she called his name Joseph; and said, The LORD shall add to me another son." (Genesis 30:24).'
+      },
+      {
+        title: "Biblical narrative",
+        note: "Joseph, son of Jacob and Rachel, lived in the land of Canaan with ten half-brothers, one full brother, and at least one half-sister."
+      },
+      {
+        title: "Jewish tradition",
+        note: "In the midrash, the selling of Joseph was part of God's divine plan for him to save his tribes."
+      },
+      {
+        title: "Christian tradition",
+        note: "Joseph is mentioned in the New Testament as an example of faith (Hebrews 11:22)."
+      },
+      {
+        title: "Islamic tradition",
+        note: "Joseph (Arabic: \u064A\u0648\u0633\u064F\u0641, Y\u016Bsuf) is regarded by the Quran as a prophet (Quran 6:84), and a whole chapter Surah Yusuf 12 is devoted to him, the only instance in the Quran in which an entire chapter is devoted to a complete story of a person."
+      },
+      {
+        title: "Baha'i tradition",
+        note: "There are numerous mentions of Joseph in Bah\xE1'\xED writings."
+      }
+    ]
+  },
+  "Shu'ayb": {
+    title: "Shuaib",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Shuaib",
+    description: `Shuaib, Shoaib, Shuayb or Shu\u02BFayb is an ancient Midianite prophet in Islam and the most revered prophet in the Druze faith. Shuaib is sometimes identified with the Hebrew biblical Jethro, Moses's father-in-law. Shuaib is mentioned in the Quran 11 times. He is believed to have lived after Ibrahim (Abraham), and Muslims believe that he was sent as a prophet to the Midianites, who are also known as the A\u1E63\u1E25\u0101b al-Aykah for their worship of a large tree. To the Midianites, Shuaib proclaimed the "straight path", warning them to end their fraudulent ways. When the community did not repent, God destroyed the community.`,
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Chester_Beatty_T_414_fol_90_r_Shuaib_in_prayer_while_the_people_are_punished_by_God.jpg/330px-Chester_Beatty_T_414_fol_90_r_Shuaib_in_prayer_while_the_people_are_punished_by_God.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Preceded by",
+        value: "Ayyub"
+      },
+      {
+        label: "Succeeded by",
+        value: "Musa"
+      },
+      {
+        label: "Relatives",
+        value: "Issachar (grandfather)"
+      },
+      {
+        label: "Religion",
+        value: "Islam"
+      }
+    ],
+    sections: [
+      {
+        heading: "Historical context",
+        summary: "The area to which Shu\u02BFayb was sent to is named Madyan in the Qur'an, known in English as Midian, which is frequently referred to in the Hebrew Bible. The Midianites were said to be of Arab descent, though being neighbors of the Biblical Canaanites, they intermixed with them. It is said they were a wandering tribe, and that their principal territory at the time of Moses was the Sinai Peninsula. The historical region of Midian roughly corresponds to what is now province of Tabuk in Saudi Arabia.",
+        items: [
+          "A map of Midian, the area where Shu\u02BFayb was sent to prophesy, in Islamic belief",
+          "Maghayir Shu'ayb in what is now Tabuk Province in Saudi Arabia",
+          "The historical castle of Tabuk"
+        ]
+      },
+      {
+        heading: "Narrative in the Quran",
+        summary: "The Qur'an states that Shuaib was appointed by God to be a prophet to the people of Midian. The people of this land were said to be especially notorious for cheating others through dishonesty and for idolatry. Shu\u02BFayb's prophecy mainly involved calling the Midianites to the correct path of God, and forbidding them to worship false gods.",
+        items: []
+      },
+      {
+        heading: "Parallels with other prophets",
+        summary: "Shuayb's mission is often mentioned in the Qur'an with the mission of Noah, Hud, Saleh and Lot. Scholars have pointed out that these five prophets exemplify the early prophetic missions: The prophet would be sent to his community; the community would pay no attention to his warning and would instead threaten him with punishment; after years of preaching, God would ask him to leave his community, while his people were subsequently destroyed in a punishment. Scholars chronologically interpret the listing of the five prophets, so Shu\u02BFayb was a descendant of Ibrahim (Abraham) and Nuh (Noah).",
+        items: []
+      },
+      {
+        heading: "Claimed burial places of Shuayb",
+        summary: "One claimed tomb of Shuayb is found in Jordan, 2\xA0km (1.2\xA0mi) west of the town of Mahis, in an area called W\u0101d\u012B Shu\u02BFayb (Arabic: \u0648\u064E\u0627\u062F\u0650\u064A \u0634\u064F\u0639\u064E\u064A\u0652\u0628).",
+        items: [
+          "One of the claimed shrines of Shuayb, which is the Prophet Shu'ayb Mosque in Wadi Shu\u02BFayb, Jordan, the Levant",
+          "The shrine of Shuayb, as believed by the Druze and some Muslims, near Hittin in the Galilee"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Historical context",
+        note: "The area to which Shu\u02BFayb was sent to is named Madyan in the Qur'an, known in English as Midian, which is frequently referred to in the Hebrew Bible."
+      },
+      {
+        title: "Narrative in the Quran",
+        note: "The Qur'an states that Shuaib was appointed by God to be a prophet to the people of Midian."
+      },
+      {
+        title: "Parallels with other prophets",
+        note: "Shuayb's mission is often mentioned in the Qur'an with the mission of Noah, Hud, Saleh and Lot."
+      },
+      {
+        title: "Claimed burial places of Shuayb",
+        note: "One claimed tomb of Shuayb is found in Jordan, 2\xA0km (1.2\xA0mi) west of the town of Mahis, in an area called W\u0101d\u012B Shu\u02BFayb (Arabic: \u0648\u064E\u0627\u062F\u0650\u064A \u0634\u064F\u0639\u064E\u064A\u0652\u0628)."
+      }
+    ]
+  },
+  Job: {
+    title: "Job (biblical figure)",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Job_(biblical_figure)",
+    description: "Job is the central figure of the Book of Job in the Bible. In Islam, Job is also considered a prophet.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/L%C3%A9on_Bonnat_-_Job.jpg/330px-L%C3%A9on_Bonnat_-_Job.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Venerated\xA0in",
+        value: "Judaism, Christianity, Islam, Druze, Bah\xE1\u02BC\xED Faith, Rastafari"
+      },
+      {
+        label: "Major shrine",
+        value: "Tomb of Job"
+      },
+      {
+        label: "Feast",
+        value: "April 27 (Coptic Orthodox Church)\nMay 6 (Eastern Orthodox Church & Armenian Apostolic Church)\nMay 9 (Lutheran Church\u2013Missouri Synod)\nMay 10 (Catholic Church)\nAugust 29 (Coptic Orthodox Church)\nDecember 26 (Armenian Apostolic Church)"
+      },
+      {
+        label: "Attributes",
+        value: "Often depicted as a man tested by God"
+      },
+      {
+        label: "Patronage",
+        value: "Despairsufferers of depressionlepers"
+      },
+      {
+        label: "Major works",
+        value: "Book of Job"
+      }
+    ],
+    sections: [
+      {
+        heading: "In the Hebrew Book of Job",
+        summary: 'The Hebrew Book of Job is part of Ketuvim ("Writings") of the Hebrew Bible. Not much is known about Job based on the Masoretic Text.',
+        items: []
+      },
+      {
+        heading: "In the Greek Old Testament Book of Job",
+        summary: "The Septuagint, an ancient Greek translation of the Hebrew Old Testament, has a revised and updated final verse that claims Job's genealogy, asserting him to be a grandson of Esau and a ruler of Edom.",
+        items: []
+      },
+      {
+        heading: "In other religious texts",
+        summary: "The Quran describes Job as a righteous servant of Allah, who was afflicted by suffering for a lengthy period of time. However, it clearly states that Job never lost faith in God and forever called to God in prayer, asking Him to remove his affliction:",
+        items: [
+          "He is mentioned in the Book of Ezekiel.",
+          'He is cited as someone "who held fast to all the ways of justice" in the deuterocanonical Book of Sirach.',
+          "He is praised for his perseverance in the Christian Epistle of James.",
+          "He is the protagonist of a pseudepigraphal book called the Testament of Job.",
+          "He is mentioned in the Doctrine and Covenants, one of the four sacred texts of the Church of Jesus Christ of Latter-day Saints (LDS Church).",
+          "He is discussed as a prophet in the Quran by the name of Ay\u016Bb.",
+          "In the writings of the Bah\xE1\u02BC\xED Faith: A lengthy tablet was written by Bah\xE1'u'll\xE1h, the first part of which is focused on Job. The Tablet is often referred to as the Tablet of Patience or the Tablet of Job."
+        ]
+      },
+      {
+        heading: "Job in Judaism",
+        summary: "A clear majority of rabbis saw Job as having in fact existed as a historically factual figure.",
+        items: [
+          "Job's resignation to his fate.",
+          "When Job was prosperous, anyone who associated with him even to buy from him or sell to him, was blessed.",
+          "Job's reward for being generous.",
+          "David, Job and Ezekiel described the Torah's length without putting a number to it.",
+          "Job was in fact one of three advisors that Pharaoh consulted, prior to taking action against the increasingly multiplying Israelites in the Book of Exodus. As described in the Talmud: Balaam urged Pharaoh to kill the Hebrew new-born boys; Jethro opposed this decree; and Job, though personally opposed to the decree, kept silent and did not protest it. It is for Job's silence that God subsequently punishes him with his bitter afflictions. However, the Book of Job itself contains no indication of this, and to the prophet Ezekiel, Yahweh refers to Job as a righteous man of the same calibre as Noah and Daniel."
+        ]
+      },
+      {
+        heading: "Christian views",
+        summary: "Christianity accepts the Book of Job as canon in its Old Testament. In addition, Job is mentioned in the New Testament of the Christian Bible: the Epistle of James (James 5:11) paraphrases Job as an example of patience in suffering.",
+        items: []
+      },
+      {
+        heading: "Islamic views and Quranic account",
+        summary: `In the Qur'an, Job (Arabic: \u0623\u064A\u0651\u0648\u0628, romanized:\xA0Ayy\u016Bb) is considered a prophet in Islam. The narrative frame of Job's story in Islam is similar to the Hebrew Bible story but, in Islam, the emphasis is paid to Job remaining steadfast to God and there is no record of his despair, or mention of discussions with friends. Some Muslim commentators also spoke of Job as being the ancestor of the Romans. Muslim literature also comments on Job's time and place of prophecy, saying that he came after Joseph in the prophetic series and that he preached to his own people rather than being sent to a specified community. Tradition further recounts that Job will be the leader of the group of "those who patiently endured" in Heaven.`,
+        items: []
+      },
+      {
+        heading: "Local traditions regarding Job",
+        summary: "There are at least two locations that claim to be the place of Job's ordeal, and at least three that claim to have his tomb.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "In the Hebrew Book of Job",
+        note: 'The Hebrew Book of Job is part of Ketuvim ("Writings") of the Hebrew Bible.'
+      },
+      {
+        title: "In the Greek Old Testament Book of Job",
+        note: "The Septuagint, an ancient Greek translation of the Hebrew Old Testament, has a revised and updated final verse that claims Job's genealogy, asserting him to be a grandson of Esau and a ruler of Edom."
+      },
+      {
+        title: "In other religious texts",
+        note: "The Quran describes Job as a righteous servant of Allah, who was afflicted by suffering for a lengthy period of time."
+      },
+      {
+        title: "Job in Judaism",
+        note: "A clear majority of rabbis saw Job as having in fact existed as a historically factual figure."
+      },
+      {
+        title: "Christian views",
+        note: "Christianity accepts the Book of Job as canon in its Old Testament."
+      },
+      {
+        title: "Islamic views and Quranic account",
+        note: "In the Qur'an, Job (Arabic: \u0623\u064A\u0651\u0648\u0628, romanized:\xA0Ayy\u016Bb) is considered a prophet in Islam."
+      },
+      {
+        title: "Local traditions regarding Job",
+        note: "There are at least two locations that claim to be the place of Job's ordeal, and at least three that claim to have his tomb."
+      }
+    ]
+  },
+  "Dhul-Kifl": {
+    title: "Dhul-Kifl",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Dhu'l-Kifl",
+    description: `Dhu'l-Kifl, also spelled Dhu al-Kifl, Dhu l-Kifl, Dhul-Kifl, Zu al-Kifl, Zul Kifl, or Zu l-Kifl, is an Islamic prophet. Although his identity is unknown, his identity has been theorised and identified as various Hebrew Bible prophets and other figures, most commonly Ezekiel. Dhu'l-Kifl is believed to have been raised by Allah to a high station in life and is chronicled in the Qur'an as a man of the "Company of the Good". Although not much is known of Dhu'l-Kifl from other historical sources, all the writings from classical commentators, such as Ibn Ishaq and Ibn Kathir, speak of Dhu'l-Kifl as a prophetic, saintly man who remained faithful in daily prayer and worship.`,
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Chester_Beatty_T_414_fol_72v_Dhu_al-Kifl_leading_prayer.jpg/330px-Chester_Beatty_T_414_fol_72v_Dhu_al-Kifl_leading_prayer.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Preceded by",
+        value: "Irmiyyah"
+      },
+      {
+        label: "Succeeded by",
+        value: "Zechariah"
+      },
+      {
+        label: "Religion",
+        value: "Islam"
+      }
+    ],
+    sections: [
+      {
+        heading: "Etymology",
+        summary: `The name Dhu'l-Kifl literally means "the possessor of kifl\u2009", using a type of name where \u0630\u064F\u0648 dh\u016B ("possessor of") precedes some characteristically associated feature. Such names were used of other notable figures in the Quran, for example Dhu'l-Qarnayn (Arabic: \u0630\u064F\u0648 \u0671\u0644\u0652\u0642\u064E\u0631\u0652\u0646\u064E\u064A\u0652\u0646, lit.\u2009'He of the Two Horns/He of the Two Times'), and Dhu'l-Nun (Arabic: \u0630\u064F\u0648 \u0671\u0644\u0652\u0646\u064F\u0651\u0648\u0646, lit.\u2009'the One with the Fish'), referring to Yunus. Kifl (Arabic: \u0643\u0650\u0641\u0652\u0644) is an archaic Arabic word meaning "double" or "duplicate", from the root ka-fa-la (\u0643-\u0641-\u0644) meaning "to double" or "to fold"; it was also used for a fold of cloth. The name is generally understood to mean "one of a double portion." Some scholars have suggested that the name means "the man with the double recompense" or rather "the man who received recompense twice over", that is to say that it is a title for Job, as his family was returned to him according to the Qur'an and the Book of Job.`,
+        items: []
+      },
+      {
+        heading: "In the Qur'an",
+        summary: "Dhu'l-Kifl has been mentioned twice in the Qur'an, in the following verses:",
+        items: []
+      },
+      {
+        heading: "Identifications",
+        summary: `Some identify Dhu'l-Kifl is Ezekiel. When the exile, monarchy, and state were annihilated, political and national life was no longer possible. In conformity with the two parts of his book, his personality and his preaching are alike, and the title Dhu'l-Kifl means "the one to double" or "to fold."`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Etymology",
+        note: `The name Dhu'l-Kifl literally means "the possessor of kifl\u2009", using a type of name where \u0630\u064F\u0648 dh\u016B ("possessor of") precedes some characteristically associated feature.`
+      },
+      {
+        title: "In the Qur'an",
+        note: "Dhu'l-Kifl has been mentioned twice in the Qur'an, in the following verses:"
+      },
+      {
+        title: "Identifications",
+        note: "Some identify Dhu'l-Kifl is Ezekiel."
+      }
+    ]
+  },
+  Khidr: {
+    title: "Al-Khidr",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Khidr",
+    description: "Khidr is a Qur'anic figure of Islam. He is described in Surah al-Kahf as a righteous servant of God possessing great wisdom or mystic knowledge. In various Islamic and non-Islamic traditions, Khidr is described as an angel, prophet, or wali (saint), who guards the sea, teaches secret knowledge and aids those in distress. He prominently figures as patron of the Islamic saint Ibn Arabi. The figure of al-Khidr has been syncretized over time with various other figures including D\u016Brao\u0161a and Sor\u016Bsh in Iran, Sargis the General and Saint George in Asia Minor and the Levant, Elijah in Judaism and among the Druze, John the Baptist in Armenia, and Jhulelal in Sindh and Punjab in South Asia. He is commemorated on the holiday of H\u0131d\u0131rellez.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Mid_17th_century_Mughal_depiction_of_Khidr.jpg/330px-Mid_17th_century_Mughal_depiction_of_Khidr.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Venerated\xA0in",
+        value: "Islam, Druze"
+      },
+      {
+        label: "Predecessor",
+        value: "Yusha bin Nun"
+      },
+      {
+        label: "Successor",
+        value: "Luqman"
+      }
+    ],
+    sections: [
+      {
+        heading: "Etymology",
+        summary: `The name al-Khi\u1E0Dr shares exactly the same triliteral root as the Arabic al-akh\u1E0Dar or al-kha\u1E0Dra, a root found in several Semitic languages meaning "green" or "verdant" (as in al-Qubbah al-Kha\u1E0Dr\u0101\u2019 or the Green Dome). Therefore, the meaning of the name has traditionally been taken to be "the Green One" or "the Verdant One". Some contemporary scholars have disagreed with this assessment; however, some others point to a possible reference to the Mesopotamian figure Utnapishtim from the Epic of Gilgamesh through the Arabization of his nickname, Hasisatra. According to another view, the name Khidr is not an Arabic variant or an abbreviation of Hasisatra, but it may have been derived from the name of the Canaanite god Kothar-wa-Khasis and later it may have been assimilated to the Arabic al-akh\u1E0Dar. Finally, it has been suggested that the name of Khidr is derived from Arabic ha\u1E0Dara, a verb meaning 'to be present' or 'be in the presence', and it was explained over time by a similar Arabic word meaning 'green'.`,
+        items: []
+      },
+      {
+        heading: "Quranic narrative",
+        summary: 'In the Quran 18:65\u201382, Moses meets the Servant of God, referred to in the Quran as "one of our slaves whom We had granted mercy from Us and whom We had taught knowledge from Ourselves". Muslim scholars identify him as Khi\u1E0Dr, although he is not explicitly named in the Quran and there is no reference to him being immortal or being especially associated with esoteric knowledge or fertility. These associations come in later scholarship on al-Khi\u1E0Dr.',
+        items: []
+      },
+      {
+        heading: "Reports in the Hadith",
+        summary: "Al-Khi\u1E0Dr is a figure in Islamic tradition who is believed to have the appearance of a young adult but with a long, white beard. According to some authors, al-Khi\u1E0Dr is Xerxes, a 6th-century Sasanian prince who disappeared after finding the fountain of life and sought to live his remaining life in service of God. There are several reported proofs of the life of al-Khi\u1E0Dr, including one where Muhammad is said to have stated that the prophet Elijah and al-Khi\u1E0Dr meet every year and spend the month of Ramadan in Jerusalem. Another report states that a man seen walking with Umar II was actually al-Khi\u1E0Dr. It is also narrated that Al-Khi\u1E0Dr met with Ali by the Kaaba. It is also told that during the time when the false Messiah appears, a believer will challenge him, who will be sliced into two pieces and rejoined, making it appear that he caused him to die and be resurrected, and this person will be al-Khi\u1E0Dr.",
+        items: []
+      },
+      {
+        heading: "Islamic perspectives",
+        summary: `In Sunni Islam
+Persian scholar, historian and exegete of the Qur'an Muhammad ibn Jarir al-Tabari, writes about Khidr in a chapter of his The History of al-Tabari, called "The Tale of al-Khi\u1E0Dr and His History; and the History of Moses and His Servant Joshua." Al-Tabari describes several versions of the traditional story surrounding al-Khi\u1E0Dr. At the beginning of the chapter, al-Tabari explains that in some variations, al-Khi\u1E0Dr is a contemporary of the mythical Persian king Afridun, who was a contemporary of Abraham, and lived before the days of Moses. Al-Khi\u1E0Dr is also said to have been appointed to be over the vanguard of the king Dhul-Qarnayn the Elder, who in this version is identified as the king Afridun. In this specific version, al-Khi\u1E0Dr comes across the River of Life and, unaware of its properties, drinks from it and becomes immortal. Al-Tabari also recounts that al-Khi\u1E0Dr is said to have been the son of a man who believed in Abraham, and who emigrated with Abraham when he left Babylon.`,
+        items: []
+      },
+      {
+        heading: "In Druze faith",
+        summary: 'Druze venerate Elijah, and he is considered a central figure in Druzism. The Druze regard the Cave of Elijah as holy, and they identify Elijah as "El-Khidr", the green prophet who symbolizes water and life, a miracle who cures the sick. The Druze typically view El Khidr, John the Baptist and Saint George as one and the same, successive reincarnation of one soul, in keeping with their beliefs in these concepts.',
+        items: []
+      },
+      {
+        heading: "In Zoroastrianism",
+        summary: 'There are many figures in Iran whose place Khidr took by the Islamization process. One of them is paradoxically a female figure, Anahita. The most popular shrine in Yazd is dedicated to Anahita. Among the Zoroastrians, for the pilgrims to Yazd, the most important of the six pir is Pir-e Sabz ("the green shrine"). The name of the shrine derives from the greenness of the foliage growing around the sanctuary. It is still a functional temple and the holiest site for present-day Zoroastrians living in Iran.',
+        items: []
+      },
+      {
+        heading: "Theories on origin",
+        summary: "The source of the Quranic episode of Moses' journey with al-Khi\u1E0Dr has been the subject of different opinions of various scholars. Like some other scholars, Brannon notes that the story does not appear to have any direct Christian or Jewish antecedent.",
+        items: []
+      },
+      {
+        heading: "Comparative mythology",
+        summary: "In various accounts al-Khidr has been linked to the figure of Dhu al-Qarnayn, who is commonly identified as Alexander the Great, although many Islamic scholars have rejected this claim as Alexander the Great was a polytheist. In one version, al-Khidr and Dhu al-Qarnayn cross the Land of Darkness to find the Water of Life. Dhu al-Qarnayn gets lost looking for the spring but al-Khidr finds it and gains eternal life. According to Wahb ibn Munabbih, quoted by Ibn Hisham, King Sa'b was given the epithet Dhu al-Qarnayn by al-Khidr after meeting him in Jerusalem. There are also several versions of the Alexander Romance in which al-Khidr figures as a servant of Alexander the Great. In the Eskandarn\u0101ma by an anonymous author, al-Khidr is asked by Dhu al-Qarnayn to lead him and his armies to the Water of Life. Al-Khidr agrees, and eventually stumbles upon the Water of Life on his own. Khidr's role is expanded in the 13th-century Sirat al-Iskandar, where he is Alexander's companion throughout.",
+        items: []
+      },
+      {
+        heading: "Bibliography",
+        summary: "",
+        items: [
+          "Michelangelo Chasseur: Oriental Elements in Surat al Kahf. Annali di Scienze Religiose 1, Brepols Publishers 2008, ISSN\xA02031-5929, p.\xA0255-289 (Brepols Journals Online[link removed])",
+          "Oliver Leaman: The Qur'an: An Encyclopedia. Taylor & Francis 2006, ISBN\xA00-415-32639-7, p.\xA0343\u2013345 ([1], p. 343, at Google Books)"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Etymology",
+        note: 'The name al-Khi\u1E0Dr shares exactly the same triliteral root as the Arabic al-akh\u1E0Dar or al-kha\u1E0Dra, a root found in several Semitic languages meaning "green" or "verdant" (as in al-Qubbah al-Kha\u1E0Dr\u0101\u2019 or the Green Dome).'
+      },
+      {
+        title: "Quranic narrative",
+        note: 'In the Quran 18:65\u201382, Moses meets the Servant of God, referred to in the Quran as "one of our slaves whom We had granted mercy from Us and whom We had taught knowledge from Ourselves".'
+      },
+      {
+        title: "Reports in the Hadith",
+        note: "Al-Khi\u1E0Dr is a figure in Islamic tradition who is believed to have the appearance of a young adult but with a long, white beard."
+      },
+      {
+        title: "Islamic perspectives",
+        note: `In Sunni Islam
+Persian scholar, historian and exegete of the Qur'an Muhammad ibn Jarir al-Tabari, writes about Khidr in a chapter of his The History of al-Tabari, called "The Tale of al-Khi\u1E0Dr and His History; and the History of Moses and His Servant Joshua." Al-Tabari describes several versions of the traditional story surrounding al-Khi\u1E0Dr.`
+      },
+      {
+        title: "In Druze faith",
+        note: "Druze venerate Elijah, and he is considered a central figure in Druzism."
+      },
+      {
+        title: "In Zoroastrianism",
+        note: "There are many figures in Iran whose place Khidr took by the Islamization process."
+      },
+      {
+        title: "Theories on origin",
+        note: "The source of the Quranic episode of Moses' journey with al-Khi\u1E0Dr has been the subject of different opinions of various scholars."
+      },
+      {
+        title: "Comparative mythology",
+        note: "In various accounts al-Khidr has been linked to the figure of Dhu al-Qarnayn, who is commonly identified as Alexander the Great, although many Islamic scholars have rejected this claim as Alexander the Great was a polytheist."
       }
     ]
   },
@@ -16898,6 +18106,227 @@ var wiki_content_default = {
       {
         title: "Criticism of Moses",
         note: "In the late eighteenth century, the deist Thomas Paine commented at length on Moses' Laws in The Age of Reason (1794, 1795, and 1807)."
+      }
+    ]
+  },
+  Aaron: {
+    title: "Aaron",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Aaron",
+    description: "According to the Old Testament of the Bible, Aaron was an Israelite prophet, high priest, and the elder brother of Moses. Information about Aaron comes exclusively from religious texts, such as the Hebrew Bible, the New Testament, and the Quran.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/El_sumo_sacerdote_Aar%C3%B3n_%28Museo_del_Prado%29_%28cropped%29.jpg/330px-El_sumo_sacerdote_Aar%C3%B3n_%28Museo_del_Prado%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Venerated\xA0in",
+        value: "Judaism, Christianity, Islam, Samaritanism, Bah\xE1\u02BC\xED Faith, Rastafari"
+      },
+      {
+        label: "Feast",
+        value: "Latin Church: July 1, The Sunday before Nativity (Sunday of the Holy Fathers of the Old Testament) (Eastern Orthodox Church), Maronite Church: September 4"
+      },
+      {
+        label: "Title",
+        value: "Prophet\nHigh Priest"
+      },
+      {
+        label: "Born",
+        value: "Goshen, Lower Egypt, Ancient Egypt"
+      },
+      {
+        label: "Died",
+        value: "Mount Hor, near the border of Edom, Transjordan, or Moseroth, near Edom (aged 123 in Jewish traditions)"
+      },
+      {
+        label: "Spouse",
+        value: "Elisheba"
+      },
+      {
+        label: "Children",
+        value: "Nadab\nAbihu\nEleazar\nIthamar"
+      },
+      {
+        label: "Parents",
+        value: "Amram (father)\nJochebed (mother)"
+      },
+      {
+        label: "Relatives",
+        value: "Levi (grandfather)\nMiriam (sister)\nMoses (brother)\nZipporah (sister-in-law)\nGershom (nephew)\nEliezer (nephew)\nAmminadab (father-in-law)\nNahshon (brother-in-law)"
+      },
+      {
+        label: "Religion",
+        value: "Abrahamic religions"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biblical narrative",
+        summary: `According to the Book of Exodus, Aaron first functioned as Moses' assistant. Because Moses complained that he could not speak well, God appointed Aaron as Moses' "prophet". At the command of Moses, he let his rod turn into a snake. Then he stretched out his rod in order to bring on the first three plagues. After that, Moses tended to act and speak for himself.`,
+        items: []
+      },
+      {
+        heading: "Historicity",
+        summary: "Thomas R\xF6mer argues that external evidence and biblical texts suggest the Pentateuch reflects tensions among three groups: (1) a lay group aligned with Moses, (2) a priestly group linked to Aaron, and (3) the Levites. These tensions, particularly evident during the Persian and early Hellenistic periods, are seen in conflicting narratives concerning the roles of both Moses and Aaron. Compromises are evident in texts like Exodus and Leviticus, where Moses and Aaron work together, though Moses is dominant. Disagreements persisted, with some texts emphasizing Moses's superiority and others elevating Aaron's status. The Pentateuch ultimately preserves these unresolved conflicts while portraying Moses as the unparalleled mediator of the Torah (Deut. 34:10\u201312).",
+        items: []
+      },
+      {
+        heading: "In religious traditions",
+        summary: 'The older prophets and prophetical writers beheld in their priests the representatives of a religious form inferior to the prophetic truth; men without the spirit of God and lacking the willpower requisite to resist the multitude in its idolatrous proclivities. Thus Aaron, the first priest, ranks below Moses: he is his mouthpiece, and the executor of the will of God revealed through Moses, although it is written fifteen times in the Torah that "the Lord spoke to Moses and Aaron."',
+        items: []
+      },
+      {
+        heading: "In art",
+        summary: "Aaron appears paired with Moses frequently in Jewish and Christian art, especially in the illustrations of manuscript and printed Bibles. He can usually be distinguished by his priestly vestments, especially his turban or miter and jeweled breastplate. He frequently holds a censer or, sometimes, his flowering rod. Aaron also appears in scenes depicting the wilderness Tabernacle and its altar, as already in the third-century frescos in the synagogue at Dura-Europos in Syria. An eleventh-century portable silver altar from Fulda, Germany depicts Aaron with his censor, and is located in the Mus\xE9e de Cluny in Paris. This is also how he appears in the frontispieces of early printed Passover Haggadot and occasionally in church sculptures. Aaron has rarely been the subject of portraits, such as those by Anton Kern [1710\u20131747] and by Pier Francesco Mola [c.\u20091650]. Christian artists sometimes portray Aaron as a prophet holding a scroll, as in a twelfth-century sculpture from the Cathedral of Noyon in the Metropolitan Museum of Art, New York and often in Eastern Orthodox icons. Illustrations of the Golden Calf story usually include him as well \u2013 most notably in Nicolas Poussin's The Adoration of the Golden Calf (c.\u20091633\u201334, National Gallery, London). Finally, some artists interested in validating later priesthoods have painted the ordination of Aaron and his sons (Leviticus 8). Harry Anderson's realistic portrayal is often reproduced in the literature of the Latter Day Saints.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biblical narrative",
+        note: "According to the Book of Exodus, Aaron first functioned as Moses' assistant."
+      },
+      {
+        title: "Historicity",
+        note: "Thomas R\xF6mer argues that external evidence and biblical texts suggest the Pentateuch reflects tensions among three groups: (1) a lay group aligned with Moses, (2) a priestly group linked to Aaron, and (3) the Levites."
+      },
+      {
+        title: "In religious traditions",
+        note: "The older prophets and prophetical writers beheld in their priests the representatives of a religious form inferior to the prophetic truth; men without the spirit of God and lacking the willpower requisite to resist the multitude in its idolatrous proclivities."
+      },
+      {
+        title: "In art",
+        note: "Aaron appears paired with Moses frequently in Jewish and Christian art, especially in the illustrations of manuscript and printed Bibles."
+      }
+    ]
+  },
+  David: {
+    title: "David",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/David",
+    description: "David was, originally, leader of the Tribe of Judah who became the second king of the united Kingdom of Israel, according to the Hebrew Bible and Old Testament.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/King_David%2C_the_King_of_Israel.jpg/330px-King_David%2C_the_King_of_Israel.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Reign",
+        value: "between 10th century BC and 9th century BC[dubious \u2013 discuss]"
+      },
+      {
+        label: "Predecessor",
+        value: "Ish-bosheth"
+      },
+      {
+        label: "Successor",
+        value: "Solomon"
+      },
+      {
+        label: "Consort",
+        value: "at least 8 wives:\nMichal Ahinoam Abigail Maachah Haggith Abital Eglah Bathsheba"
+      },
+      {
+        label: "Issue",
+        value: "18+ children, including:\nAmnon Chileab Absalom Adonijah Shephatiah Ithream\nUnnamed son with Bathsheba Shammua Shobab Nathan Solomon Ibhar Elishua Eliphalet Nogah Nepheg Japhia Elishama Elyada Jerimoth Tamar"
+      },
+      {
+        label: "House",
+        value: "House of David"
+      },
+      {
+        label: "Father",
+        value: "Jesse"
+      },
+      {
+        label: "Mother",
+        value: "Nitzevet (Talmud)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biblical account",
+        summary: "The First Book of Samuel and the First Book of Chronicles both identify David as the son of Jesse, the Bethlehemite, the youngest of eight sons. He also had at least two sisters: Zeruiah, whose sons all went on to serve in David's army, and Abigail, whose son Amasa served in Absalom's army, Absalom being one of David's younger sons. While the Bible does not name his mother, the Talmud identifies her as Nitzevet, a daughter of a man named Adael, and the Book of Ruth claims him as the great-grandson of Ruth, the Moabite, by Boaz.",
+        items: []
+      },
+      {
+        heading: "Interpretation in Abrahamic tradition",
+        summary: "David is an important figure in Rabbinic Judaism, with many legends about him. According to one tradition, David was raised as the son of his father Jesse and spent his early years herding his father's sheep in the wilderness while his brothers were in school.",
+        items: []
+      },
+      {
+        heading: "Historicity",
+        summary: `The only sources directly attesting to David's life are from biblical literature. Some scholars have concluded that this was likely compiled from contemporary records of the 11th and 10th centuries BC, but that there is no clear historical basis for determining the exact date of compilation. Other scholars believe that the Books of Samuel were substantially composed during the time of Josiah, king of Judah, at the end of the 7th century BC, extended during the Babylonian captivity and substantially complete by about 550 BC. Old Testament scholar A. Graeme Auld contends that further editing was done even after then\u2014the silver quarter-shekel Saul's servant offers to Samuel in 1 Samuel 9:8 "almost certainly fixes the date of the story in the Persian or Hellenistic period" because a quarter-shekel was known to exist in Hasmonean times. The authors and editors of Samuel drew on many earlier sources, including, for their history of David, the "history of David's rise" and the "succession narrative". The Books of Chronicles, which tells the story from a different point of view, was probably composed in the period 350\u2013300 BC, and uses Samuel and Kings as its source.`,
+        items: []
+      },
+      {
+        heading: "Art and culture",
+        summary: "David has been depicted several times in films; these include:",
+        items: [
+          `1517 The Davidiad is a Neo-Latin epic poem by the Croatian national poet, Catholic priest, and Renaissance humanist Marko Maruli\u0107 (whose name is sometimes Latinized as "Marcus Marulus"). In addition to the small portions that attempt to recall the epics of Homer, The Davidiad is heavily modelled upon Virgil's Aeneid. This is so much the case that Maruli\u0107's contemporaries called him the "Christian Virgil from Split." The philologist Miroslav Marcovich also detects "the influence of Ovid, Lucan, and Statius" in the work.`,
+          "1681\u201382 Dryden's long poem Absalom and Achitophel is an allegory that uses the story of the rebellion of Absalom against King David as the basis for his satire of the contemporary political situation, including events such as the Monmouth Rebellion (1685), the Popish Plot (1678) and the Exclusion Crisis.",
+          '1893 Sir Arthur Conan Doyle may have used the story of David and Bathsheba as a foundation for the Sherlock Holmes story The Adventure of the Crooked Man. Holmes mentions "the small affair of Uriah and Bathsheba" at the end of the story.',
+          `1928 Elmer Davis's novel Giant Killer retells and embellishes the biblical story of David, casting David as primarily a poet who managed always to find others to do the "dirty work" of heroism and kingship. In the novel, Elhanan in fact killed Goliath but David claimed the credit; and Joab, David's cousin and general, took it upon himself to make many of the difficult decisions of war and statecraft when David vacillated or wrote poetry instead.`,
+          "1936 William Faulkner's Absalom, Absalom! refers to the story of Absalom, David's son; his rebellion against his father and his death at the hands of David's general, Joab. In addition it parallels Absalom's vengeance for the rape of his sister Tamar by his half-brother, Amnon.",
+          "1946 Gladys Schmitt's novel David the King was a richly embellished biography of David's entire life. The book took a risk, especially for its time, in portraying David's relationship with Jonathan as overtly homoerotic, but was ultimately panned by critics as a bland rendition of the title character.",
+          "1966 Juan Bosch, a Dominican political leader and writer, wrote David: Biography of a King, as a realistic portrayal of David's life and political career.",
+          "1970 Dan Jacobson's The Rape of Tamar is an imagined account, by one of David's courtiers Yonadab, of the rape of Tamar by Amnon.",
+          `1972 Stefan Heym wrote The King David Report in which the historian Ethan compiles upon King Solomon's orders "a true and authoritative report on the life of David, Son of Jesse"\u2014the East German writer's wry depiction of a court historian writing an "authorized" history, many incidents clearly intended as satirical references to the writer's own time.`,
+          "1974 In Thomas Burnett Swann's biblical fantasy novel How are the Mighty Fallen, David and Jonathan are explicitly stated to be lovers. Moreover, Jonathan is a member of a winged semi-human race (possibly nephilim), one of several such races coexisting with humanity but often persecuted by it.",
+          "1980 Malachi Martin's factional novel King of Kings: A Novel of the Life of David relates the life of David, Adonai's champion in his battle with the Philistine deity Dagon.",
+          "1984 Joseph Heller wrote a novel based on David called God Knows, published by Simon & Schuster. Told from the perspective of an ageing David, the humanity\u2014rather than the heroism\u2014of various biblical characters is emphasized. The portrayal of David as a man of flaws such as greed, lust, selfishness, and his alienation from God, the falling apart of his family is a distinctly 20th-century interpretation of the events told in the Bible.",
+          "1993 Madeleine L'Engle's novel Certain Women explores family, the Christian faith, and the nature of God through the story of King David's family and an analogous modern family's saga.",
+          "1995 Allan Massie wrote King David, a novel about David's career that portrays the king's relationship to Jonathan as sexual.",
+          "2015 Geraldine Brooks wrote a novel about David, The Secret Chord, told from the point of view of the prophet Nathan.",
+          "2020 Michael Arditti wrote The Anointed, a novel about David told by three of his wives, Michal, Abigail and Bathsheba.",
+          "1599 Caravaggio David and Goliath",
+          "c.\u20091610 Caravaggio David with the Head of Goliath",
+          "1616 Peter Paul Rubens David Slaying Goliath",
+          "1440? Donatello, David",
+          "1473\u20131475 Verrocchio, David",
+          "1501\u20131504 Michelangelo, David",
+          "1623\u20131624 Gian Lorenzo Bernini, David",
+          "1951 David and Bathsheba, directed by Henry King, with Gregory Peck in the role of David.",
+          "1959 Solomon and Sheba, directed by King Vidor, with Finlay Currie in the role of an aged King David.",
+          "1985 King David, directed by Bruce Beresford, with Richard Gere in the role of David.",
+          "1996 Dave and the Giant Pickle",
+          "2025 David, an animated film directed by Brent Dawes and Phil Chunningham, with Brandon Engman in the role of young David and Phil Wickham in the role of adult David.",
+          "1961 A Story of David, directed by Bob McNaught, with Jeff Chandler in the role of David.",
+          "1976 The Story of David, a made-for-TV film with Timothy Bottoms and Keith Michell as King David at different ages.",
+          "1997 David, a TV-film with Nathaniel Parker as King David and Leonard Nimoy as the Prophet Samuel.",
+          "1997 Solomon, a sequel to David, with Max von Sydow playing an older King David.",
+          "2009 Kings, a re-imagining loosely based on the biblical story, with David played by Christopher Egan.",
+          "King David is the focus of the second episode of History Channel's Battles BC documentary, which detailed all of his military exploits in the bible.",
+          "2012 Rei Davi, a Brazilian miniseries with Leonardo Br\xEDcio as David.",
+          "2013 The Bible, a miniseries with Langley Kirkwood in the role of David.",
+          "2016 Of Kings and Prophets in which David is played by Olly Rix.",
+          "2025 House of David, multi-season series of David's life which Michael Iskander plays the role of David.",
+          "The traditional birthday song Las Ma\xF1anitas mentions King David as the original singer in its lyrics.",
+          `1622 Thomas Tomkins's choral anthem "When David Heard", about David's response to the death of his son Absalom, is published in the anthology Songs of 1622.`,
+          "1738 George Frideric Handel's oratorio Saul features David as one of its main characters.",
+          "1921 Arthur Honegger's oratorio Le Roi David with a libretto by Ren\xE9 Morax, instantly became a staple of the choral repertoire.",
+          "1954 Darius Milhaud's opera David premieres in Jerusalem in celebration of the 3,000th anniversary of the establishment of that city by David.",
+          `1964 Bob Dylan alludes to David in the last line of his song "When The Ship Comes In" ("And like Goliath, they'll be conquered").`,
+          '1965 Leonard Bernstein described the second movement of his Chichester Psalms, which features a setting of Psalm 23, sung by a boy soloist accompanied by a harp, as a "musical evocation of King David, the shepherd-psalmist".',
+          `1983 Bob Dylan refers to David in his song "Jokerman" ("Michelangelo indeed could've carved out your features").`,
+          `1984 Leonard Cohen's song "Hallelujah" has references to David ("there was a secret chord that David played and it pleased the Lord", "The baffled king composing Hallelujah") and Bathsheba ("you saw her bathing on the roof") in its opening verses.`,
+          '1990 The song "One of the Broken" by Paddy McAloon, performed by Prefab Sprout on the album Jordan: The Comeback, has a reference to David ("I remember King David, with his harp and his beautiful, beautiful songs, I answered his prayers, and showed him a place where his music belongs").',
+          `1991 "Mad About You", a song on Sting's album The Soul Cages, explores David's obsession with Bathsheba from David's perspective.`,
+          '2000 The song "Gimme a Stone" appears on the Little Feat album Chinese Work Songs chronicles the duel with Goliath and contains a lament to Absalom as a bridge.',
+          "1997 King David, sometimes described as a modern oratorio, with a book and lyrics by Tim Rice and music by Alan Menken.",
+          "1962 Twilight of a Hero, an Australian radio play that sold to the BBC"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Biblical account",
+        note: "The First Book of Samuel and the First Book of Chronicles both identify David as the son of Jesse, the Bethlehemite, the youngest of eight sons."
+      },
+      {
+        title: "Interpretation in Abrahamic tradition",
+        note: "David is an important figure in Rabbinic Judaism, with many legends about him."
+      },
+      {
+        title: "Historicity",
+        note: "The only sources directly attesting to David's life are from biblical literature."
+      },
+      {
+        title: "Art and culture",
+        note: "David has been depicted several times in films; these include:"
       }
     ]
   },
@@ -18477,6 +19906,147 @@ However, in Nehemiah 8, Nehemiah has Ezra read the Torah to the people. So, they
       }
     ]
   },
+  "Dhul-Qarnayn": {
+    title: "Dhul-Qarnayn",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Dhu'l-Qarnayn",
+    description: "Dhu'l-Qarnayn is a leader who appears in the Qur'an, Surah al-Kahf (18), Ayahs 83\u2013101, as one who travels to the east and west and sets up a barrier between a certain people and Gog and Magog. Elsewhere, the Qur'an tells how the end of the world will be signaled by the release of Gog and Magog from behind the barrier. Other apocalyptic writings predict that their destruction by God in a single night will usher in the Day of Resurrection. Most historians agree that the Quranic story originates from legends of Alexander the Great current in the Middle East, with the Quranic presentation of Dhu al-Qarnayn as a prophet-king reminiscent of the Syriac Alexander Legend.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Iskandar_%28Alexander%29_builds_a_wall_against_Gog_and_Magog_%28CBL_Per._395.1%29.jpg/330px-Iskandar_%28Alexander%29_builds_a_wall_against_Gog_and_Magog_%28CBL_Per._395.1%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [],
+    sections: [
+      {
+        heading: "Quran 18:83\u2013101",
+        summary: "The verses of the chapter reproduced below show Dhu al-Qarnayn traveling first to the Western limit of travel where he sees the sun set in a muddy spring, then to the furthest East where he sees it rise from the ocean, and finally northward to a place in the mountains where he finds a people oppressed by Gog and Magog:",
+        items: []
+      },
+      {
+        heading: "Quranic exegesis",
+        summary: `The story of Dhu al-Qarnayn is related in chapter 18 of the Qur'an, al-Kahf, revealed to Muhammad when his tribe, Al-Quraysh, sent two men to discover whether the Jews, with their superior knowledge of the scriptures, could advise them on whether Muhammad was truly a prophet of God. The rabbis told the Quraysh to ask Muhammad about three things, one of them "about a man who travelled and reached the east and the west of the earth, ask what his story was. If he tells you about these things, then he is a prophet, so follow him, but if he does not tell you, then he is a man who is making things up, so deal with him as you see fit." (Qur'an 18:83-98).`,
+        items: []
+      },
+      {
+        heading: "People identified as Dhu al-Qarnayn",
+        summary: "According to most historians, the story of Dhu al-Qarnayn has its origins in legends of Alexander the Great current in the Middle East, namely the Syriac Alexander Legend. From this derives the Quranic presentation of Dhu al-Qarnayn as a prophet-king who travels the world and calls for belief.The first century Josephus repeats a legend whereby Alexander builds an iron wall at a mountain pass (potentially at the Caucasus Mountains) to prevent an incursion by a barbarian group known as the Scythians, whom elsewhere he identified as Magog. The legend went through much further elaboration in subsequent centuries before eventually finding its way into the Quran through a Syrian version. However, some have questioned whether the Syriac Legend influenced the Quran on the basis of dating inconsistencies and missing key motifs, although others have in turn rebutted these arguments.",
+        items: [
+          "Afr\u012Bqish al-\u1E24imyar\u012B, king of Himyar. Al-Biruni in his book, The Remaining Signs of Past Centuries, listed a number of figures whom people thought to be Dhu al-Qarnayn. He favoured the opinion that Dhu al-Qarnayn was the Yamani prince Afr\u012Bqish, who conquered the Mediterranean and established a city called Afr\u012Bqiah. He was called Dhu al-Qarnayn because he ruled the lands of the rising and setting sun. To support his argument, al-Biruni cited Arabic onomastics, noting that compound names beginning with Dh\u016B, such as Dh\u016B Nuw\u0101s and Dh\u016B Yazan, were common among the kings of Himyar.",
+          "Fereydun. According to al-Tabari's Tarikh, some say Dhu al-Qarnayn the Elder (al-akbar), who lived in the era of Abraham, was the mythical Persian king Fereydun, whose name al-Tabari rendered as Afr\u012Bdh\u016Bn ibn Athfiy\u0101n.",
+          "In an account attributed to Umar bin Khattab, Dhu al-Qarnayn is said to be an angel or part angel.",
+          "Imru'l-Qays (died 328 CE), a prince of the Lakhmids of southern Mesopotamia, an ally first of Persia and then of Rome, celebrated in romance for his exploits.",
+          "Messiah ben Joseph, a fabulous military saviour expected by Yemenite Jews.",
+          "Darius the Great.",
+          "Kisrounis, Parthian king.",
+          "Mustafa Khattab, in his translation of the Quran attributes Dhu al-Qarnayn to be Abu Kuraib Al-\u1E24amiri, a righteous king from Yemen.",
+          "Akhenaten, Pharaoh of Egypt."
+        ]
+      },
+      {
+        heading: "In later literature",
+        summary: "Dhu al-Qarnayn, the traveller, proved a popular subject for later writers. In Al-Andalus, for instance, an Arabic translation of the Syriac Alexander Legend appeared, entitled Qissat Dhulqarnayn. This work explores Dhu al-Qarnayn's life \u2013 his upbringing, journeys, and eventual death. The text identifies Dhu al-Qarnayn with Alexander the Great and portrays him as the first person to complete the Hajj pilgrimage.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Quran 18:83\u2013101",
+        note: "The verses of the chapter reproduced below show Dhu al-Qarnayn traveling first to the Western limit of travel where he sees the sun set in a muddy spring, then to the furthest East where he sees it rise from the ocean, and finally northward to a place in the mountains where he finds a people oppressed by Gog and Magog:"
+      },
+      {
+        title: "Quranic exegesis",
+        note: "The story of Dhu al-Qarnayn is related in chapter 18 of the Qur'an, al-Kahf, revealed to Muhammad when his tribe, Al-Quraysh, sent two men to discover whether the Jews, with their superior knowledge of the scriptures, could advise them on whether Muhammad was truly a prophet of God."
+      },
+      {
+        title: "People identified as Dhu al-Qarnayn",
+        note: "According to most historians, the story of Dhu al-Qarnayn has its origins in legends of Alexander the Great current in the Middle East, namely the Syriac Alexander Legend."
+      },
+      {
+        title: "In later literature",
+        note: "Dhu al-Qarnayn, the traveller, proved a popular subject for later writers."
+      }
+    ]
+  },
+  Zakariyya: {
+    title: "Zechariah (priest)",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Zechariah%2C_father_of_John_the_Baptist",
+    description: "Zechariah was a Jewish priest mentioned in the New Testament and as a prophet in the Quran, and venerated in Christianity and Islam. In the Bible, he is the father of John the Baptist, a priest of the sons of Aaron in the Gospel of Luke, and the husband of Elizabeth who is a relative of the Virgin Mary. In the Quran, his story is mentioned in the initial verse of surah Maryam.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Ribera_-_Saint_Zacharie%2C_1634%2C_1847.3_%28cropped%29.jpg/330px-Ribera_-_Saint_Zacharie%2C_1634%2C_1847.3_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "1st century BC"
+      },
+      {
+        label: "Died",
+        value: "1st century BC (or early 1st century AD), Jerusalem (Matthew 23:35), the Levant"
+      },
+      {
+        label: "Spouse",
+        value: "Elizabeth"
+      },
+      {
+        label: "Children",
+        value: "John the Baptist"
+      },
+      {
+        label: "Religion",
+        value: "Abrahamic religions"
+      },
+      {
+        label: "Zechariah",
+        value: "ZechariahPriest, Prophet, Guardian of Mary,Devotee, MartyrVenerated\xA0inCatholic ChurchEastern Orthodox ChurchOriental Orthodox ChurchAnglicanismLutheranismIslamCanonizedPre-CongregationFeastSeptember 5 \u2013 Eastern Orthodox, September 5 \u2013 Lutheran, September 23 \u2013 Roman Catholic"
+      },
+      {
+        label: "Venerated\xA0in",
+        value: "Catholic ChurchEastern Orthodox ChurchOriental Orthodox ChurchAnglicanismLutheranismIslam"
+      },
+      {
+        label: "Canonized",
+        value: "Pre-Congregation"
+      },
+      {
+        label: "Feast",
+        value: "September 5 \u2013 Eastern Orthodox, September 5 \u2013 Lutheran, September 23 \u2013 Roman Catholic"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biblical account",
+        summary: 'According to the Gospel of Luke, during the reign of King Herod, there was a priest named Zechariah, of the course of Abia, whose wife Elizabeth was also of the priestly family of Aaron. The evangelist states that both the parents were righteous before God, since they were "blameless" in observing the commandments and ordinances of the Lord. When the events related in Luke began, their marriage was still childless, because Elizabeth was "barren", and they were both "well advanced in years" (Luke 1:5\u20137).',
+        items: []
+      },
+      {
+        heading: "Other Christian traditions",
+        summary: "Origen suggested that the Zechariah mentioned in Matthew 23:35 as having been killed between the temple and the altar may be the father of John the Baptist.",
+        items: []
+      },
+      {
+        heading: "In Islam",
+        summary: "Zechariah is also a prophet in Islam, and is mentioned in the Qur'an as the father of Ya\u1E25y\u0101 (John the Baptist). Zechariah is also believed by some Muslims to have been a martyr. An old tradition narrates that Zechariah was sawn in half, in a death which resembles that attributed to Isaiah in Lives of the Prophets.",
+        items: []
+      },
+      {
+        heading: "Unification Church",
+        summary: "Unificationist theologian Young Oon Kim wrote, and some members of the Unification movement believe, that Zechariah was the father of Jesus, based on the work of Leslie Weatherhead, an English Christian theologian in the liberal Protestant tradition.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biblical account",
+        note: "According to the Gospel of Luke, during the reign of King Herod, there was a priest named Zechariah, of the course of Abia, whose wife Elizabeth was also of the priestly family of Aaron."
+      },
+      {
+        title: "Other Christian traditions",
+        note: "Origen suggested that the Zechariah mentioned in Matthew 23:35 as having been killed between the temple and the altar may be the father of John the Baptist."
+      },
+      {
+        title: "In Islam",
+        note: "Zechariah is also a prophet in Islam, and is mentioned in the Qur'an as the father of Ya\u1E25y\u0101 (John the Baptist)."
+      },
+      {
+        title: "Unification Church",
+        note: "Unificationist theologian Young Oon Kim wrote, and some members of the Unification movement believe, that Zechariah was the father of Jesus, based on the work of Leslie Weatherhead, an English Christian theologian in the liberal Protestant tradition."
+      }
+    ]
+  },
   "John the Baptist": {
     title: "John the Baptist",
     wikipediaUrl: "https://en.wikipedia.org/wiki/John_the_Baptist",
@@ -18809,6 +20379,1314 @@ However, in Nehemiah 8, Nehemiah has Ezra read the Torah to the people. So, they
       }
     ]
   },
+  Muhammad: {
+    title: "Muhammad",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Muhammad",
+    description: "Muhammad was an Arab religious, military, and political leader, and the founder of Islam. According to Islam, he was the final prophet of God who was divinely inspired to preach and confirm the monotheistic teachings of Adam, Noah, Abraham, Moses, Jesus, and other prophets in Islam. He is believed by Muslims to be the Seal of the Prophets, and along with the Quran, his teachings and normative examples form the basis for Islamic religious belief.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Al-Masjid_AL-Nabawi_Door.jpg/330px-Al-Masjid_AL-Nabawi_Door.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c.\u2009570\xA0CE (53 BH), Mecca, Hejaz, Arabia"
+      },
+      {
+        label: "Died",
+        value: "(632-06-08)8 June 632 CE (11 AH; aged 61\u201362), Medina, the first Islamic state"
+      },
+      {
+        label: "Resting\xA0place",
+        value: "Green Dome at the Prophet's Mosque, Medina, Arabia, 24\xB028\u203203\u2033N 39\xB036\u203241\u2033E / 24.46750\xB0N 39.61139\xB0E / 24.46750; 39.61139 (Green Dome)"
+      },
+      {
+        label: "Spouse",
+        value: "See Wives of Muhammad"
+      },
+      {
+        label: "Children",
+        value: "See Children of Muhammad"
+      },
+      {
+        label: "Parents",
+        value: "Abdullah ibn Abd al-Muttalib (father)\nAmina bint Wahb (mother)"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Establishing Islam\nMajor prophet in Islam and the Druze faith\nManifestation of God in Bah\xE1\u02BC\xED Faith"
+      },
+      {
+        label: "Other\xA0names",
+        value: "Ras\u016Bl All\u0101h (lit.\u2009'Messenger of God'), See Names and titles of Muhammad"
+      },
+      {
+        label: "Relatives",
+        value: "Ahl al-Bayt (lit.\u2009'People of the House'), See Family tree of Muhammad"
+      },
+      {
+        label: "Personal(Ism)",
+        value: "Mu\u1E25ammad, \u0645\u064F\u062D\u064E\u0645\u064E\u0651\u062F\u200E"
+      },
+      {
+        label: "Patronymic(Nasab)",
+        value: "Ibn \u02BFAbd All\u0101h ibn \u02BFAbd al-Mu\u1E6D\u1E6Dalib ibn H\u0101shim ibn \u02BFAbd Man\u0101f ibn Qu\u1E63ayy ibn Kil\u0101b, \u0671\u0628\u0652\u0646 \u0639\u064E\u0628\u0652\u062F \u0671\u0644\u0644\u064E\u0651\u0670\u0647 \u0628\u0652\u0646 \u0639\u064E\u0628\u0652\u062F \u0671\u0644\u0652\u0645\u064F\u0637\u064E\u0651\u0644\u0650\u0628 \u0628\u0652\u0646 \u0647\u064E\u0627\u0634\u0650\u0645 \u0628\u0652\u0646 \u0639\u064E\u0628\u0652\u062F \u0645\u064E\u0646\u064E\u0627\u0641 \u0628\u0652\u0646 \u0642\u064F\u0635\u064E\u064A\u0651 \u0628\u0652\u0646 \u0643\u0650\u0644\u064E\u0627\u0628\u200E"
+      },
+      {
+        label: "Teknonymic(Kunya)",
+        value: "Ab\u016B al-Q\u0101sim, \u0623\u064E\u0628\u064F\u0648 \u0671\u0644\u0652\u0642\u064E\u0627\u0633\u0650\u0645\u200E"
+      },
+      {
+        label: "Epithet(Laqab)",
+        value: "Kh\u0101tam al-Nabiyy\u012Bn, \u062E\u064E\u0627\u062A\u064E\u0645 \u0671\u0644\u0646\u064E\u0651\u0628\u0650\u064A\u0650\u0651\u064A\u0646\u200E"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biographical sources",
+        summary: "Critical evaluation of sources is of particular importance in uncovering Muhammad's historical existence beyond the myths. Early sources for the life of Muhammad are authors from the 2nd and 3rd centuries AH (8th and 9th centuries\xA0CE), whose works constructed main biographical information to the Muslim traditions regarding his life, but the reliability of this information is contentious in academic circles due to the oral gap between the recorded dates of Muhammad's life and the dates when these writings begin to appear in sources. John Burton summarizes the information provided by the multitude of available sources, from a historian's perspective, and states",
+        items: []
+      },
+      {
+        heading: "Meccan years",
+        summary: `The name Muhammad means "praised" in Arabic and it appears four times in the Quran. He was also known as "al-Amin" (lit.\u2009'Assured') when he was young; however, historians differ as to whether it was given by people as a reflection of his nature or was simply a given name from his parents, i.e., a masculine form of his mother's name "Amina". Muhammad acquired the kunya of Abu al-Qasim later in his life after the birth of his son Qasim, who died two years afterwards.`,
+        items: []
+      },
+      {
+        heading: "Medinan years",
+        summary: `A few days after settling in Medina, Muhammad negotiated for the purchase of a piece of land; upon this plot, the Muslims began constructing a building that would become Muhammad's residence as well as a community gathering place (masjid) for prayer (salat). Tree trunks were used as pillars to hold up the roof, and there was no fancy pulpit; instead, Muhammad stood on top of a small stool to speak to the congregation. The structure was completed after about seven months in April 623, becoming the first Muslim building and mosque; its northern wall had a stone marking the direction of prayer (qibla) which was Jerusalem at that time. Muhammad used the building to host public and political meetings, as well as a place for the poor to gather to receive alms, food, and care. Christians and Jews were also allowed to participate in community worship at the mosque. Initially, Muhammad's religion had no organized way to call the community to prayer in a coordinated manner. To resolve this, Muhammad had considered using a ram's horn (shofar) like the Jews or a wooden clapper like the Christians, but one of the Muslims in the community had a dream where a man in a green cloak told him that someone with a loud booming voice should announce the service by crying out "allahu akbar" ('God is greater') to remind Muslims of their top priority; when Muhammad heard about this dream, he agreed with the idea and selected Bilal, a former Abyssinian slave known for his loud voice.`,
+        items: []
+      },
+      {
+        heading: "Final years",
+        summary: "The truce of Hudaybiyyah was enforced for two years. The tribe of Banu Khuza'ah had good relations with Muhammad, whereas their enemies, the Banu Bakr, had allied with the Meccans. A clan of the Bakr made a night raid against the Khuza'ah, killing a few of them. The Meccans helped the Banu Bakr with weapons and, according to some sources, a few Meccans also took part in the fighting. After this event, Muhammad sent a message to Mecca with three conditions, asking them to accept one of them. These were: either the Meccans would pay blood money for the slain among the Khuza'ah tribe, they disavow themselves of the Banu Bakr, or they should declare the truce of Hudaybiyyah null.",
+        items: []
+      },
+      {
+        heading: "Death",
+        summary: "After praying at the burial site in June 632, Muhammad suffered a dreadful headache that made him cry in pain. He continued to spend the night with each of his wives one by one, but he fainted in Maymunah's hut. He requested his wives to allow him to stay in Aisha's hut. He could not walk there without leaning on Ali and Fadl ibn Abbas, as his legs were trembling. His wives and his uncle al-Abbas fed him an Abyssinian remedy when he was unconscious. When he came to, he inquired about it, and they explained that they were afraid that such a severe fever was a result of pleurisy. He replied that God would not afflict him with such a vile disease, and ordered all the women to also take the remedy. According to various sources, including Sahih al-Bukhari, Muhammad said that he felt his aorta being severed because of the food he ate at Khaybar. On 8 June 632, Muhammad died. In his last moments, he reportedly uttered:",
+        items: []
+      },
+      {
+        heading: "Tomb",
+        summary: "Muhammad was buried where he died in Aisha's house. During the reign of the Umayyad caliph al-Walid I, the Prophet's Mosque was expanded to include the site of Muhammad's tomb. The Green Dome above the tomb was built by the Mamluk sultan Al Mansur Qalawun in the 13th century, although the green color was added in the 16th century, under the reign of Ottoman sultan Suleiman the Magnificent. Among tombs adjacent to that of Muhammad are those of his companions (Sahabah), the first two Muslim caliphs Abu Bakr and Umar, and an empty one that Muslims believe awaits Jesus.",
+        items: []
+      },
+      {
+        heading: "Succession",
+        summary: `With Muhammad's death, disagreement broke out over who his successor would be. Umar ibn al-Khattab, a prominent companion of Muhammad, nominated Abu Bakr, Muhammad's friend and collaborator. With additional support, Abu Bakr was confirmed as the first caliph. This choice was disputed by some of Muhammad's companions, who held that Ali ibn Abi Talib, his cousin and son-in-law, had been designated the successor by Muhammad at Ghadir Khumm. Abu Bakr immediately moved to strike against the forces of the Byzantine Empire because of the previous defeat, although he first had to put down a rebellion by Arab tribes in an event that Muslim historians later referred to as the Ridda wars, or "Wars of Apostasy".`,
+        items: []
+      },
+      {
+        heading: "Household",
+        summary: "Muhammad's conjugal life can defined into two periods: pre-hijra in Mecca (570\u2013622), and post-hijra in Medina (622\u2013632). At the age of 25, Muhammad married the wealthy Khadija, who was 40 years old. The marriage lasted for 25\xA0years and was a happy one. Muhammad did not enter into marriage with another woman during this marriage. After Khadija's death, Khawla bint Hakim suggested to Muhammad that he should marry Sawdah bint Zam'ah, a Muslim widow, or Aisha, daughter of Umm Ruman and Abu Bakr of Mecca. Muhammad is said to have asked for arrangements to marry both. According to classical sources, Muhammad married Aisha when she was 6\u20137 years old; the marriage was consummated later, when she was 9 years old and he was 53 years old.",
+        items: []
+      },
+      {
+        heading: "Legacy",
+        summary: `Following the attestation to the oneness of God, the belief in Muhammad's prophethood is the main aspect of the Islamic faith. Every Muslim proclaims in the Shahada: "I testify that there is no god but God, and I testify that Muhammad is a Messenger of God". The Shahada is the basic creed or tenet of Islam. Islamic belief is that ideally the Shahada is the first words a newborn will hear; children are taught it immediately and it will be recited upon death. Muslims repeat the shahadah in the call to prayer (adhan) and the prayer itself. Non-Muslims wishing to convert to Islam are required to recite the creed.`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biographical sources",
+        note: "Critical evaluation of sources is of particular importance in uncovering Muhammad's historical existence beyond the myths."
+      },
+      {
+        title: "Meccan years",
+        note: 'The name Muhammad means "praised" in Arabic and it appears four times in the Quran.'
+      },
+      {
+        title: "Medinan years",
+        note: "A few days after settling in Medina, Muhammad negotiated for the purchase of a piece of land; upon this plot, the Muslims began constructing a building that would become Muhammad's residence as well as a community gathering place (masjid) for prayer (salat)."
+      },
+      {
+        title: "Final years",
+        note: "The truce of Hudaybiyyah was enforced for two years."
+      },
+      {
+        title: "Death",
+        note: "After praying at the burial site in June 632, Muhammad suffered a dreadful headache that made him cry in pain."
+      },
+      {
+        title: "Tomb",
+        note: "Muhammad was buried where he died in Aisha's house."
+      },
+      {
+        title: "Succession",
+        note: "With Muhammad's death, disagreement broke out over who his successor would be."
+      },
+      {
+        title: "Household",
+        note: "Muhammad's conjugal life can defined into two periods: pre-hijra in Mecca (570\u2013622), and post-hijra in Medina (622\u2013632)."
+      },
+      {
+        title: "Legacy",
+        note: "Following the attestation to the oneness of God, the belief in Muhammad's prophethood is the main aspect of the Islamic faith."
+      }
+    ]
+  },
+  "Rabi'a al-Adawiyya": {
+    title: "Rabia al-Adawiyya",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Rabia_Basri",
+    description: "R\u0101bi\u02BCa al-\u02BCAdawiyya al-Qaysiyya or Rabia Basri was a poet, one of the earliest Sufi mystics and an influential religious figure from Basra. Her full name is said to be R\u0101bi\u02BFa bint Ism\u0101\u02BF\u012Bl; her kunya was Umm \u02BFAmr, her wil\u0101ya was al-\u02BFAtakiyyah, and her nisba was al-\u02BFAdawiyya or al-Qays\u012Byya because she was a freed slave of the tribe of Qays ibn \u02BFAd\u012B. She is regarded as one of the three preeminent Qalandars of the world.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Rabia_al-Adawiyya.jpg/330px-Rabia_al-Adawiyya.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "between 714 and 718\xA0CE"
+      },
+      {
+        label: "Died",
+        value: "801 CE"
+      },
+      {
+        label: "Influences",
+        value: "Hasan of Basra"
+      },
+      {
+        label: "Era",
+        value: "Islamic Golden Age (Umayyad and Abbasid era)"
+      },
+      {
+        label: "Main interests",
+        value: "Asceticism, divine love"
+      },
+      {
+        label: "Notable ideas",
+        value: "Divine love"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: "Very little is known about the life of Rabi\u2018a, notes Rkia Elaroui Cornell.",
+        items: []
+      },
+      {
+        heading: "Early life",
+        summary: 'Her father had three daughters, and R\u0101bi\u02BFa was the fourth. And so they called her R\u0101bi\u02BFa, meaning "the fourth one."',
+        items: []
+      },
+      {
+        heading: "Philosophy and religious contributions",
+        summary: `Often noted as having been the single most famous woman in Islam, Rabi\u02BFa was renowned for her high virtue and piety. A devoted ascetic, when asked why she performed a thousand ritual prostrations both during the day and at night, she is said to have answered, "I desire no reward for it; I do it so that the Messenger of God, may God bless him and give him peace, will delight in it on the day of Resurrection and say to the prophets, 'Take note of what a woman of my community has accomplished.'"`,
+        items: []
+      },
+      {
+        heading: "Poetry and stories",
+        summary: `Much of the poetry attributed to her is of unknown origin. There is no evidence in the historical archive that Rabia ever met Hasan al-Basri; however, the following stories, which first appeared in Attar of Nishapur's Tazkirat al-Awliya, is a common trope in the modern period: After a life of hardship, she spontaneously achieved a state of self-realization. When asked by Hasan al-Basri how she discovered the secret, she responded by stating "you know of the how, but I know of the how-less."`,
+        items: []
+      },
+      {
+        heading: "Legacy",
+        summary: `In a Sufi narrative, Sufi leader Hasan al-Basri explained, "I passed one whole night and day with Rabi'a... it never passed through my mind that I was a man nor did it occur to her that she was a woman... when I saw her I saw myself as bankrupt and Rabi'a as truly sincere."`,
+        items: []
+      },
+      {
+        heading: "In popular culture",
+        summary: "The life of Rabia has been the subject of several motion pictures of Turkish cinema. One of these films, Rabia, released in 1973, was directed by Osman F. Seden, and Fatma Girik played the leading role of Rabia.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "Very little is known about the life of Rabi\u2018a, notes Rkia Elaroui Cornell."
+      },
+      {
+        title: "Early life",
+        note: "Her father had three daughters, and R\u0101bi\u02BFa was the fourth."
+      },
+      {
+        title: "Philosophy and religious contributions",
+        note: "Often noted as having been the single most famous woman in Islam, Rabi\u02BFa was renowned for her high virtue and piety."
+      },
+      {
+        title: "Poetry and stories",
+        note: "Much of the poetry attributed to her is of unknown origin."
+      },
+      {
+        title: "Legacy",
+        note: `In a Sufi narrative, Sufi leader Hasan al-Basri explained, "I passed one whole night and day with Rabi'a...`
+      },
+      {
+        title: "In popular culture",
+        note: "The life of Rabia has been the subject of several motion pictures of Turkish cinema."
+      }
+    ]
+  },
+  "Bayazid Bastami": {
+    title: "Bayazid Bastami",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Bayazid_Bastami",
+    description: "B\u0101yaz\u012Bd Bas\u1E6D\u0101m\u012B,, commonly known as the Sult\u0101n-ul-\u0100rif\u012Bn was a Persian Sufi who became famous for his bold articulation of fan\u0101\u02BE\u2013the Sufi notion of self-annhilation.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/A_polychrome_lacquer_mirror_case%2C_attributed_to_Muhammad_Isma%27il%2C_Persia%2C_Qajar%2C_second_half_19th_century.jpg/330px-A_polychrome_lacquer_mirror_case%2C_attributed_to_Muhammad_Isma%27il%2C_Persia%2C_Qajar%2C_second_half_19th_century.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "804 CE, Bastam, Qumis region, Abbasid Caliphate (modern Bastam, Semnan Province, Iran)"
+      },
+      {
+        label: "Died",
+        value: "874 CE, Bastam, Kumis area, Abbasid Caliphate (Present-day Semnan province of Iran)"
+      },
+      {
+        label: "Era",
+        value: "Abbasid Era (Islamic Golden Age)"
+      },
+      {
+        label: "Region",
+        value: "Western Asia"
+      },
+      {
+        label: "School",
+        value: "Sunni\nSufi Naqshbandi"
+      },
+      {
+        label: "Main interests",
+        value: "Mysticism, Philosophy"
+      },
+      {
+        label: "Notable ideas",
+        value: "Sukr (see\u2192)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Background",
+        summary: `The name Bastami means "from Bastam". Bayazid's grandfather, Sor\u016Bsh\u0101n, was a Zoroastrian who converted to Islam. His grandfather had three sons, who were named: Adam, \u0130sa and Ali. All of them were ascetics. Bayazid was the son of \u0130sa. Not much is known of Bayazid's childhood, but he spent most of his time isolated in his house, and the mosque. Although he remained in isolation from the material world, he did not isolate himself from the Sufi realm. He welcomed people into his house to discuss Islam. Like his father and uncles, Bayazid led a life of asceticism and renounced all worldly pleasures in order to be one with Allah The Exalted. Ultimately, this led Bayazid to a state of "self union" which, according to many Sufi orders, is the only state a person could be in order to attain unity with God.`,
+        items: []
+      },
+      {
+        heading: "Influence",
+        summary: `Bastami's predecessor Dhul-Nun al-Misri (d. CE 859) was a murid "initiate" as well. Al-Misri had formulated the doctrine of ma'rifa (gnosis), presenting a system which helped the murid and the sheikh (guide) to communicate. Bayazid Bastami took this a step further and emphasized the importance of religious ecstasy in Islam, referred to in his words as drunkenness (Sukr or wajd), a means of self-annihilation in the Divine Presence of the Creator. Before him, the Sufi path was mainly based on piety and obedience and he played a major role in placing the concept of divine love at the core of Sufism.`,
+        items: []
+      },
+      {
+        heading: "Shrine in Chittagong, Bangladesh",
+        summary: "There is a Sufi shrine in Chittagong, Bangladesh, dating back to 850 AD, that is said to be Bastami's tomb. Although this may be unlikely, given the fact that Bastami was never known to have visited Bangladesh. However, Sufism spread throughout the Middle East, parts of Asia and Northern Africa, and many Sufi teachers where influenced in the spread of Islam in Bengal. Also, one local legend says that Bastami did visit Chattagong, which might explain the belief of the locals in Chittagong. Nevertheless, Islamic scholars usually attribute the tomb to Bayazid. While there is no recorded evidence of his visit to the region, Chittagong was a major port on the southern silk route connecting India, China and the Middle East, and the first Muslims to travel to China may have used the Chittagong-Burma-Sichuan trade route. Chittagong was a religious city and also a center of Sufism and Muslim merchants in the subcontinent since the 9th century, and it is possible that either Bayazid or his followers visited the port city around the middle of the 9th century.",
+        items: []
+      },
+      {
+        heading: "Gallery",
+        summary: "",
+        items: [
+          "Bayazid Bastami's shrine in Chittagong, Bangladesh",
+          "Interior of Bayazid's Mosque",
+          "Dome of Bayazid's Mosque",
+          "Carving of Bayazid's Mosque"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Background",
+        note: 'The name Bastami means "from Bastam".'
+      },
+      {
+        title: "Influence",
+        note: "Bastami's predecessor Dhul-Nun al-Misri (d."
+      },
+      {
+        title: "Shrine in Chittagong, Bangladesh",
+        note: "There is a Sufi shrine in Chittagong, Bangladesh, dating back to 850 AD, that is said to be Bastami's tomb."
+      }
+    ]
+  },
+  "Junayd al-Baghdadi": {
+    title: "Junayd al-Baghdadi",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Junayd_of_Baghdad",
+    description: "Junayd of Baghdad was a mystic and one of the most famous of the early Islamic saints. He is a central figure in the spiritual lineage of many Sufi orders.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Junayd_Baghd%C4%81d%C4%AB_%28835-910%29_invites_the_Christian_youth_to_accept_Islam_at_the_Sufi_meeting%2C_witnessed_by_Saqati%2C_from_Breaths_of_intimacy_%28Nafa%E1%B8%A5%C4%81t_al-uns%29%2C_by_J%C4%81m%C4%AB_%28d._1492%29.jpg/330px-thumbnail.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Title",
+        value: "Sayyid at-Taifa"
+      },
+      {
+        label: "Born",
+        value: "c.\u2009830, Baghdad, Abbasid Caliphate"
+      },
+      {
+        label: "Died",
+        value: "910 (aged\xA079\u201380), Baghdad, Abbasid Caliphate"
+      },
+      {
+        label: "Main\xA0interest(s)",
+        value: "Sufism, ishq, theology, philosophy, logic, fiqh"
+      },
+      {
+        label: "Notable\xA0idea",
+        value: "Ishq[clarification needed]"
+      },
+      {
+        label: "Religion",
+        value: "Islam"
+      },
+      {
+        label: "Denomination",
+        value: "Sunni"
+      },
+      {
+        label: "Jurisprudence",
+        value: "Shafi'i"
+      }
+    ],
+    sections: [
+      {
+        heading: "Early life and education",
+        summary: "The exact birth date of Abu-l-Q\u0101sim al-Junayd ibn Mu\u1E25ammad ibn al-Junayd al-Khazz\u0101z al-Qaw\u0101r\u012Br\u012B (Arabic: \u0623\u0628\u0648 \u0627\u0644\u0642\u0627\u0633\u0645 \u0627\u0644\u062C\u0646\u064A\u062F \u0628\u0646 \u0645\u062D\u0645\u062F \u0627\u0644\u062E\u0632\u0627\u0632 \u0627\u0644\u0642\u0648\u0627\u0631\u064A\u0631\u064A) is disputed and ranges from 210 to 215 AH according to Abdel-Kader. His death is more certain and ranges from 296 to 298 AH (908 to 910 CE). Junayd was a Persian, with his ancestors originating in Nihawand in modern-day Iran. Al-Junayd was raised by his uncle Sirri Saqti after being orphaned as a boy. Al-Junayd's early education included teachings from Ab\u016B Thawr, Ab\u016B 'Ubayd, al-\u1E24\u0101rith al-Mu\u1E25\xE3sib\u012B, and Sar\u012B ibn Mughallas.",
+        items: []
+      },
+      {
+        heading: "Hagiography",
+        summary: 'As to the hagiography by Attar of Nishapur, the Tazkirat al-Awliya, had felt the pain of divine separation since childhood. Regardless of spiritual sorrow, he was known for his quick understanding and discipline when Sirri Saqti accepted him. According to Attar, Junayd was only seven years of age when Sirri Saqti took him along for the Hajj. In al-Masjid an-Nabawi, there were 400 sheikhs discussing the concept of \u2018thankfulness\u2019 whereby each expounded his own view. When Sirri Saqti told him to present his definition, Junayd said, "Thankfulness means that should not disobey God by means of the favour which he has bestowed upon you nor make of His favour a source of disobedience." The sheikhs unanimously agreed that no other words could define the term better. Sirri Saqti asked Junayd from where he could learn all this. Junayd replied, "From sitting with you."',
+        items: []
+      },
+      {
+        heading: "Spiritual journey",
+        summary: `His traditional hagiography continues by stating that Junayd went back to Baghdad and took up selling glasses. However, he spent most of his time in prayer. Hence, he retired to the porch of Sirri Saqti's house and kept himself away from worldly matters, devoting his thoughts solely to God. People need to "relinquish natural desires, to wipe out human attributes, to discard selfish motives, to cultivate spiritual qualities, to devote oneself to true knowledge, to do what is best in the context of eternity, to wish good for the entire community, to be truly faithful to God, and to follow the Prophet in the matters of the Shari\u2019a." This starts with the practice of asceticism (zuhd) and continues with withdrawal from society, intense concentration on devotion (ibadah) and remembrance (dhikr) of God, sincerity (ikhlas), and contemplation (muraqaba) respectively; contemplation produces fana.`,
+        items: []
+      },
+      {
+        heading: "Works by Junayd",
+        summary: `Junayd helped establish the "sober" school of Sufi thought, which meant that he was very logical and scholarly about his definitions of various virtues, tawhid, etc. Sober Sufism is characterized by people who "experience fana [and] do not subsist in that state of selfless absorption in God but find themselves returned to their senses by God. Such returnees from the experience of selflessness are thus reconstituted as renewed selves," just like an intoxicated person sobering up. For example, Junayd is quoted as saying, "The water takes on the color of the cup." While this might seem rather confusing at first, \u2018Abd al-Hakeem Carney explains it as: "When the water is understood here to refer to the Light of Divine self-disclosure, we are led to the important concept of 'capacity,' whereby the Divine epiphany is received by the heart of any person according to that person\u2019s particular receptive capacity and will be 'colored' by that person\u2019s nature".`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Early life and education",
+        note: "The exact birth date of Abu-l-Q\u0101sim al-Junayd ibn Mu\u1E25ammad ibn al-Junayd al-Khazz\u0101z al-Qaw\u0101r\u012Br\u012B (Arabic: \u0623\u0628\u0648 \u0627\u0644\u0642\u0627\u0633\u0645 \u0627\u0644\u062C\u0646\u064A\u062F \u0628\u0646 \u0645\u062D\u0645\u062F \u0627\u0644\u062E\u0632\u0627\u0632 \u0627\u0644\u0642\u0648\u0627\u0631\u064A\u0631\u064A) is disputed and ranges from 210 to 215 AH according to Abdel-Kader."
+      },
+      {
+        title: "Hagiography",
+        note: "As to the hagiography by Attar of Nishapur, the Tazkirat al-Awliya, had felt the pain of divine separation since childhood."
+      },
+      {
+        title: "Spiritual journey",
+        note: "His traditional hagiography continues by stating that Junayd went back to Baghdad and took up selling glasses."
+      },
+      {
+        title: "Works by Junayd",
+        note: 'Junayd helped establish the "sober" school of Sufi thought, which meant that he was very logical and scholarly about his definitions of various virtues, tawhid, etc.'
+      }
+    ]
+  },
+  "Mansur al-Hallaj": {
+    title: "Mansur al-Hallaj",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Al-Hallaj",
+    description: `Mansour al-Hallaj or Mansour Hallaj was a mystic, poet, and teacher of Sufism. He was best known for his saying "I am the Truth" ("Ana'l-\u1E24aqq"), which many saw as a claim to divinity, while others interpreted it as an instance of annihilation of the ego, which allowed God to speak through him. Al-Hallaj gained a wide following as a preacher before he became implicated in power struggles of the Abbasid court and was executed after a long period of confinement on religious and political charges. Although most of his Sufi contemporaries disapproved of his actions, Hallaj later became a major figure in the Sufi tradition.`,
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Hallaj.jpg/330px-Hallaj.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c. 858 CE, Fars, Abbasid Caliphate, (present-day Iran)"
+      },
+      {
+        label: "Died",
+        value: "March 26, 922(922-03-26) (aged\xA063\u201364) CE, Baghdad, Abbasid Caliphate, (present-day Iraq)"
+      },
+      {
+        label: "Era",
+        value: "Abbasid"
+      },
+      {
+        label: "Religion",
+        value: "Islam"
+      },
+      {
+        label: "Denomination",
+        value: "Sunni"
+      },
+      {
+        label: "Personal (Ism)",
+        value: "\u0627\u0644\u062D\u0633\u064A\u0646, al-\u1E24usayn"
+      },
+      {
+        label: "Patronymic (Nasab)",
+        value: "\u0628\u0646 \u0645\u0646\u0635\u0648\u0631, ibn Man\u1E63\u016Br"
+      },
+      {
+        label: "Teknonymic (Kunya)",
+        value: "\u0627\u0628\u0648 \u0627\u0644\u0645\u063A\u064A\u062B, Ab\u016B 'l-Mu\u0121\u012Bth"
+      },
+      {
+        label: "Epithet (Laqab)",
+        value: "\u0627\u0644\u062D\u0644\u0627\u062C, al-\u1E24all\u0101j, \u0627\u0644\u0628\u064A\u0636\u0627\u0648\u064A\u064F\u0651, Al-Baydaawi"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: `Al-Hallaj was born around 858 in Pars Province of the Abbasid Empire to a cotton-carder (Hallaj means "cotton-carder" in Arabic) in an Arabized town called al-Bay\u1E0D\u0101'. His grandfather was a Zoroastrian magus. His father moved to a town in Wasit famous for its school of Quran reciters. Al-Hallaj memorized the Qur'an before he was 12 years old and would often retreat from worldly pursuits to join other mystics in study at the school of Sahl al-Tustari. During this period al-Hallaj lost his ability to speak Persian and later wrote exclusively in Arabic. Al-Hallaj was a Sunni Muslim.`,
+        items: []
+      },
+      {
+        heading: "Teachings and practices",
+        summary: `Al-Hallaj addressed himself to popular audiences encouraging them to find God inside their own souls, which earned him the title of "the carder of innermost souls" (\u1E25all\u0101j al-asr\u0101r). He preached without the traditional Sufi habit and used language familiar to the local Shi'i population. This may have given the impression that he was a Qarmatian missionary rather than a Sufi. His prayer to God to make him lost and despised can be regarded as typical for a Sufi seeking annihilation in God, although Louis Massignon has interpreted it as an expression of a desire to sacrifice himself as atonement on behalf of all Muslims. When al-Hallaj returned to Baghdad from his last pilgrimage to Mecca, he built a model of the Kaaba in his home for private worship.`,
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "Al-Hallaj's principal works, all written in Arabic, included:",
+        items: [
+          "Twenty-seven Riw\u0101y\u0101t (stories or narratives) collected by his disciples in about 290/902.",
+          "Kit\u0101b al-Taw\u0101s\u012Bn, a series of eleven short works.",
+          "Poems collected in D\u012Bw\u0101n al-Hall\u0101j.",
+          "Pronouncements including those of his last night collected in Akhb\u0101r al-Hall\u0101j."
+        ]
+      },
+      {
+        heading: "Classical era views",
+        summary: "Few figures in Islam provoked as much debate among classical commentators as al-Hallaj. The controversy cut across doctrinal categories. In virtually every major current of juridical and theological thought (Hanafi, Maliki, Shafi'i Hanbali, Maturidi, Ash'ari, and also Jafari) one finds his detractors and others who accepted his legacy completely or justified his statements. His admirers among philosophers included Ibn Tufayl, Suhrawardi, and Mulla Sadra.",
+        items: []
+      },
+      {
+        heading: "Modern views",
+        summary: `The supporters of Mansur have interpreted his statement as meaning, "God has emptied me of everything but Himself. " According to them, Mansur never denied God's oneness and was a strict monotheist. However, he believed that the actions of man, when performed in total accordance with God's pleasure, lead to a blissful unification with Him. Malayalam author Vaikom Muhammad Basheer draws parallel between "An\u0101 al-\u1E24aqq" and Aham Brahmasmi, the Upanishad Mah\u0101v\u0101kya which means 'I am Brahman' (the Ultimate Reality in Hinduism). Basheer uses this term to intend God is found within one's 'self'. There was a belief among European historians that al-Hallaj was secretly a Christian, until the French scholar Louis Massignon presented his legacy in the context of Islamic mysticism in his four-volume work La Passion de Husayn ibn Mans\xFBr Hall\xE2j.`,
+        items: []
+      },
+      {
+        heading: "Influence",
+        summary: "Hallaj highly influenced Adi ibn Musafir. Hallaj was revered in Adawiyya and later highly revered by Yezidis, who composed a few religious hymns devoted to him. Elements of his views expressed in Kitab al-Tawasin can be found in their religion.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: `Al-Hallaj was born around 858 in Pars Province of the Abbasid Empire to a cotton-carder (Hallaj means "cotton-carder" in Arabic) in an Arabized town called al-Bay\u1E0D\u0101'.`
+      },
+      {
+        title: "Teachings and practices",
+        note: 'Al-Hallaj addressed himself to popular audiences encouraging them to find God inside their own souls, which earned him the title of "the carder of innermost souls" (\u1E25all\u0101j al-asr\u0101r).'
+      },
+      {
+        title: "Works",
+        note: "Al-Hallaj's principal works, all written in Arabic, included:"
+      },
+      {
+        title: "Classical era views",
+        note: "Few figures in Islam provoked as much debate among classical commentators as al-Hallaj."
+      },
+      {
+        title: "Modern views",
+        note: 'The supporters of Mansur have interpreted his statement as meaning, "God has emptied me of everything but Himself.'
+      },
+      {
+        title: "Influence",
+        note: "Hallaj highly influenced Adi ibn Musafir."
+      }
+    ]
+  },
+  "Al-Ghazali": {
+    title: "Al-Ghazali",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Al-Ghazali",
+    description: "Al-Ghazali, (Persian: \u0627\u0628\u0648 \u062D\u0627\u0645\u062F \u0645\u062D\u0645\u062F \u0627\u0628\u0646 \u0645\u062D\u0645\u062F \u063A\u0632\u0627\u0644\u06CC \u062A\u0648\u0633\u06CC, romanized:\xA0Ab\u016B \u1E24\u0101mid Mu\u1E25ammad ibn Mu\u1E25ammad Ghaz\u0101l\u012B \u1E6C\u016Bsi, Latinized as Algazelus, was a Shafi'i Sunni Muslim Persian scholar and polymath. He is known as one of the most prominent and influential jurisconsults, legal theoreticians, muftis, philosophers, theologians, logicians and mystics in Islamic history.",
+    thumbnail: null,
+    infobox: [
+      {
+        label: "Title",
+        value: "Hujjat al-Islam ('Proof of Islam')"
+      },
+      {
+        label: "Born",
+        value: "c.\u20091058, Tus, Seljuk Empire"
+      },
+      {
+        label: "Died",
+        value: "19 December 1111(1111-12-19) (aged\xA052\u201353), Tus, Seljuk Empire"
+      },
+      {
+        label: "Era",
+        value: "Islamic Golden Age"
+      },
+      {
+        label: "Region",
+        value: "Seljuk Empire (Nishapur), Abbasid Caliphate (Baghdad), Fatimid Caliphate (Jerusalem) / (Damascus)"
+      },
+      {
+        label: "Main\xA0interest(s)",
+        value: "Sufism, theology (kalam), philosophy, logic, Sharia, Islamic jurisprudence, Principles of Islamic jurisprudence"
+      },
+      {
+        label: "Notable\xA0work(s)",
+        value: "The Revival of Religious Sciences, The Aims of the Philosophers, The Incoherence of the Philosophers, The Alchemy of Happiness, The Moderation in Belief, The Condensed in Imam Shafi\u2019i\u2019s Jurisprudence, On Legal theory of Muslim Jurisprudence"
+      },
+      {
+        label: "Religion",
+        value: "Islam"
+      },
+      {
+        label: "Denomination",
+        value: "Sunni"
+      },
+      {
+        label: "School",
+        value: "Shafi\u2019i"
+      },
+      {
+        label: "Creed",
+        value: "Ash'ari"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: "Al-Ghazali was born in c.\u20091058 in Tus. He was a Muslim scholar of Persian descent. He was born in Tabaran, a town in the district of Tus, Khorasan, not long after Seljuks entered Baghdad and ended Shia Buyid Amir al-umaras. This marked the start of Seljuk influence over Caliphate. While the Seljuk dynasty's influence grew, Abu Suleiman Dawud Chaghri Beg married his daughter, Arslan Khatun Khadija to caliph al-Qa'im in 1056.",
+        items: []
+      },
+      {
+        heading: "School affiliations",
+        summary: "Al-Ghazali contributed significantly to the development of a systematic view of Sufism and its integration and acceptance in mainstream Islam. As a scholar of Islam, he belonged to the Shafi'i school of Islamic jurisprudence and to the Asharite school of theology. Al-Ghazali received many titles such as Zayn al-D\u012Bn (\u0632\u064A\u0646 \u0627\u0644\u062F\u064A\u0646) and \u1E24ujjat al-Isl\u0101m (\u062D\u062C\u0629 \u0627\u0644\u0625\u0633\u0644\u0627\u0645).",
+        items: []
+      },
+      {
+        heading: "Decade of seclusion",
+        summary: "In 1095, at the peak of his academic career as the leading scholar of the most prestigious institution in the Islamic world; Al-Ghaz\u0101l\u012B decided to step down to undertake a journey that would take the next 10 years of his life. It was said that Al-Ghaz\u0101l\u012B was suffering from both emotional and physical difficulties including loss of appetite, indigestion and struggling to even vocally orate his lectures as he would normally. When the leading medical practitioners could not remedy his ailments and all medicines had failed, they determined the cause to be a psychological and internal spiritual one, and therefore its remedy can only be a spiritual one.",
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "A total of about 70 works can be attributed to al-Ghazali. He is also known to have written a fatwa against the Taifa kings of al-Andalus, declaring them to be unprincipled, not fit to rule and that they should be removed from power. This fatwa was used by Yusuf ibn Tashfin to justify his conquest of al-Andalus.",
+        items: []
+      },
+      {
+        heading: "Influence",
+        summary: "During his life, Al-Ghazali wrote over seventy books on science, Islamic philosophy, and Sufism. Al-Ghazali played a major role in integrating Sufism with Shariah. He was also the first to present a formal description of Sufism in his works. His works also strengthened the status of Sunni Islam against other schools. The Batinite (Ismailism) had emerged in Persian territories and were gaining more and more power during al-Ghazali's period, as Nizam al-Mulk was assassinated by the members of Ismailis. In his Fada'ih al-Batiniyya (The Infamies of the Esotericists) al-Ghazali declared them unbelievers whose blood may be spilled. Al-Ghazali succeeded in gaining widespread acceptance for Sufism at the expense of philosophy. At the same time, in his refutation of philosophers he made use of their philosophical categories and thus helped to give them wider circulation.",
+        items: []
+      },
+      {
+        heading: "Number of works",
+        summary: 'Al-Ghazali mentioned the number of his works "more than 70" in one of his letters to Sultan Sanjar in the late years of his life. Some "five dozen" are plausibly identifiable, and several hundred attributed works, many of them duplicates because of varying titles, are doubtful or spurious.',
+        items: []
+      },
+      {
+        heading: "Economic philosophy",
+        summary: "Al-Ghazali's economic philosophy was primarily influenced by his Islamic beliefs. He argued that the importance of economic activity lay both in its benefit to society, as well being necessary for salvation.",
+        items: []
+      },
+      {
+        heading: "Reception of work",
+        summary: 'According to William Montgomery Watt, al-Ghazali was considered to be the mujaddid ("Reviver") of his age. Many, perhaps most, later Muslims concurred and, according to Watt, some have even considered him to be the greatest Muslim after Muhammad.',
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "School affiliations",
+        note: "Al-Ghazali contributed significantly to the development of a systematic view of Sufism and its integration and acceptance in mainstream Islam."
+      },
+      {
+        title: "Decade of seclusion",
+        note: "In 1095, at the peak of his academic career as the leading scholar of the most prestigious institution in the Islamic world; Al-Ghaz\u0101l\u012B decided to step down to undertake a journey that would take the next 10 years of his life."
+      },
+      {
+        title: "Works",
+        note: "A total of about 70 works can be attributed to al-Ghazali."
+      },
+      {
+        title: "Influence",
+        note: "During his life, Al-Ghazali wrote over seventy books on science, Islamic philosophy, and Sufism."
+      },
+      {
+        title: "Number of works",
+        note: 'Al-Ghazali mentioned the number of his works "more than 70" in one of his letters to Sultan Sanjar in the late years of his life.'
+      },
+      {
+        title: "Economic philosophy",
+        note: "Al-Ghazali's economic philosophy was primarily influenced by his Islamic beliefs."
+      },
+      {
+        title: "Reception of work",
+        note: 'According to William Montgomery Watt, al-Ghazali was considered to be the mujaddid ("Reviver") of his age.'
+      }
+    ]
+  },
+  "Farid al-Din Attar": {
+    title: "Attar of Nishapur",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Attar_of_Nishapur",
+    description: "Faridoddin Abu Hamed Mohammad Attar Nishapuri, better known by his pen-names Faridoddin (\u0641\u0631\u06CC\u062F\u0627\u0644\u062F\u06CC\u0646) and Attar of Nishapur, or simply Attar, was a Persian poet, theoretician of Sufism, and hagiographer from Nishapur who had an immense and lasting influence on Persian poetry, on poet Rumi, and on Sufism. He wrote a collection of lyrical poems and number of long poems in the philosophical tradition of Islamic mysticism, as well as a prose work with biographies and sayings of famous Muslim mystics. The Conference of the Birds, Book of the Divine, and Memorial of the Saints are among his best known works.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Miniature_of_Attar_by_Hossein_Behzad.jpg/330px-Miniature_of_Attar_by_Hossein_Behzad.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c.\u20091145, Nishapur, Seljuk Empire"
+      },
+      {
+        label: "Died",
+        value: "c. 1221 (aged\xA075\u201376), Nishapur, Khwarezmian Empire"
+      },
+      {
+        label: "Resting place",
+        value: "Mausoleum of Attar, Nishapur, Iran"
+      },
+      {
+        label: "Venerated\xA0in",
+        value: "Islam, and especially by Sufis"
+      },
+      {
+        label: "Influences",
+        value: "Ferdowsi, Sanai, Khwaja Abdullah Ansari, Mansur Al-Hallaj, Abu-Sa'id Abul-Khayr, Bayazid Bastami"
+      },
+      {
+        label: "Influenced",
+        value: "Rumi, Hafez, Jami, Ali-Shir Nava'i and many other later Sufi Poets"
+      },
+      {
+        label: "Tradition or genre",
+        value: "Mystic poetry"
+      },
+      {
+        label: "Major works",
+        value: "Memorial of the Saints, The Conference of the Birds"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: "Information about Attar's life is scarce and has been mythologised over the centuries. However, Attar was born to a Persian family and he practised the profession of apothecary, and personally attended to a very large number of customers. He is mentioned by only two of his contemporaries, Aufi and Tusi. However, all sources confirm that he was from Nishapur, a major city of medieval Khorasan (now located in northeastern Iran), and according to Aufi, he was a poet of the Seljuk era.",
+        items: []
+      },
+      {
+        heading: "Teachings",
+        summary: "The thoughts depicted in Attar's works reflect the whole evolution of the Sufi movement. The starting point is the idea that the body-bound soul's awaited release and return to its source in the other world can be experienced during the present life in mystic union attainable through inward purification. In explaining his thoughts, Attar uses material not only from specifically Sufi sources but also from older ascetic legacies. Although his heroes are for the most part Sufis and ascetics, he also introduces stories from historical chronicles, collections of anecdotes, and all types of high-esteemed literature. His talent for perception of deeper meanings behind outward appearances enables him to turn details of everyday life into illustrations of his thoughts. The idiosyncrasy of Attar's presentations invalidates his works as sources for study of the historical persons whom he introduces. As sources on the hagiology and phenomenology of Sufism, however, his works have immense value.",
+        items: []
+      },
+      {
+        heading: "Poetry",
+        summary: `According to poet Sholeh Wolpe, the best known translator of Attar's poetry, "His poetry, a luminous reimagining of the mystical path, weaves together themes of divine love, self-discovery, and the connection between the earthly and the transcendent. Attar\u2019s verses are not mere words\u2014they are a mirror to the soul, inviting readers to awaken from the illusion of self and step into the fire of spiritual transformation. His influence shaped iconic poets like Rumi, who called him a master of wisdom and mysticism."
+Attar's most famous poem by far is his Conference of the Birds (Mantiq al-tayr). Like many of his other poems, it is in the mathnawi genre of rhyming couplets. While the mathnawi genre of poetry may use a variety of different metres, Attar adopted a particular meter, that was later imitated by Rumi in his famous Mathnawi-yi Ma\u2019nawi, which then became the mathnawi metre par excellence. The first recorded use of this metre for a mathnawi poem took place at the Nizari Ismaili fortress of Girdkuh between 1131 and 1139. It likely set the stage for later poetry in this style by mystics such as Attar and Rumi.`,
+        items: [
+          "D\u012Bw\u0101n (\u062F\u06CC\u0648\u0627\u0646)",
+          "Asr\u0101r-N\u0101ma (\u0627\u0633\u0631\u0627\u0631\u0646\u0627\u0645\u0647)",
+          "Man\u1E6Diq-u\u1E6D-\u1E6Cayr (\u0645\u0646\u0637\u0642\u200C\u0627\u0644\u0637\u06CC\u0631), also known as Maq\u0101m\u0101t-u\u1E6D-\u1E6Cuy\u016Br (\u0645\u0642\u0627\u0645\u0627\u062A\u200C\u0627\u0644\u0637\u06CC\u0648\u0631)",
+          "Mu\u1E63\u012Bbat-N\u0101ma (\u0645\u0635\u06CC\u0628\u062A\u200C\u0646\u0627\u0645\u0647)",
+          "Il\u0101h\u012B-N\u0101ma (\u0627\u0644\u0647\u06CC\u200C\u0646\u0627\u0645\u0647)",
+          "Jaw\u0101hir-N\u0101ma (\u062C\u0648\u0627\u0647\u0631\u0646\u0627\u0645\u0647)",
+          "\u0160ar\u1E25 al-Qalb (\u0634\u0631\u062D\u200C\u0627\u0644\u0642\u0644\u0628)"
+        ]
+      },
+      {
+        heading: "Legacy",
+        summary: "Attar is one of the most famous mystic poets of Iran. His works were the inspiration of Rumi and many other mystic poets. Attar, along with Sanai were two of the greatest influences on Rumi in his Sufi views. Rumi has mentioned both poets with the highest esteem several times in his poetry. Rumi praises Attar as follows:",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "Information about Attar's life is scarce and has been mythologised over the centuries."
+      },
+      {
+        title: "Teachings",
+        note: "The thoughts depicted in Attar's works reflect the whole evolution of the Sufi movement."
+      },
+      {
+        title: "Poetry",
+        note: `According to poet Sholeh Wolpe, the best known translator of Attar's poetry, "His poetry, a luminous reimagining of the mystical path, weaves together themes of divine love, self-discovery, and the connection between the earthly and the transcendent.`
+      },
+      {
+        title: "Legacy",
+        note: "Attar is one of the most famous mystic poets of Iran."
+      }
+    ]
+  },
+  Suhrawardi: {
+    title: "Shahab al-Din Yahya ibn Habash Suhrawardi",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Shihab_al-Din_Yahya_ibn_Habash_Suhrawardi",
+    description: 'Shih\u0101b al-D\u012Bn Ab\u016B al-Fut\u016B\u1E25 Ya\u1E25y\u0101 ibn \u1E24abash ibn Am\u012Brak al-Suhraward\u012B was a Persian philosopher and founder of the Iranian school of Illuminationism, an important school in Islamic philosophy. The "light" in his "Philosophy of Illumination" is the source of knowledge. He is referred to by the honorific title Shaikh al-\u02BFIshraq "Master of Illumination" and Shaikh al-Maqtul "the Murdered Master", in reference to his execution for heresy. Mulla Sadra, the Persian sage of the Safavid era described Suhrawardi as the "Reviver of the Traces of the Pahlavi (Iranian) Sages", and Suhrawardi, in his magnum opus "The Philosophy of Illumination", thought of himself as a reviver or resuscitator of the ancient tradition of Persian wisdom. Suhrawardi provided a new Platonistic critique of the peripatetic school of Avicenna that was dominant in his time, writing on logic, physics, epistemology, psychology, and metaphysics.',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Shihab_al-Din_Abu_al-Futuh_Ahmad_bin_Habbash_%28Ya%27ish%29_bin_Amirak_al-Suhrawardi_al-Maqtuli_%28d._1191-92%29%3B_Hikmat_al-Ishraq%2C_copied_by_Shams_bin_Jamal_al-Hatani%2C_post-Seljuq_Iran%2C_dated_Tuesday_13_October_1220.jpg/330px-thumbnail.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Title",
+        value: "Shaykh al-Ishraq, Shaykh al-Maqtul"
+      },
+      {
+        label: "Born",
+        value: "1154, Sohrevard, Seljuk Empire"
+      },
+      {
+        label: "Died",
+        value: "1191 (aged\xA036\u201337), Aleppo, Ayyubid Sultanate"
+      },
+      {
+        label: "Other\xA0names",
+        value: "Sohrevardi, Shihab al-Din"
+      },
+      {
+        label: "Religion",
+        value: "Islam, Shafi Sunni"
+      },
+      {
+        label: "School",
+        value: "Illuminationism, Perennial philosophy"
+      },
+      {
+        label: "Based\xA0in",
+        value: "Suhraward"
+      },
+      {
+        label: "Period in\xA0office",
+        value: "12th century"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: "Of Persian stock, Suhrawardi was born in 1154 in Suhraward, a village located between the towns of Zanjan and Bijar Garrus in Iran. He learned wisdom and jurisprudence in the city of Maragheh. His teacher was Majd al-D\u012Bn J\u012Bl\u012B who was also Fakhr al-Din al-Razi\u2019s teacher. He then went to Iraq and Syria for several years and developed his knowledge while he was there.",
+        items: []
+      },
+      {
+        heading: "Influences on Suhrawardi",
+        summary: 'Suhrawardi was a strong defender of Peripatetic philosophy, until he was influenced by those whom he described as those who "have traveled the path of God", like - as noted by Suhrawardi - Plato from the Greek tradition, Hermes (Thoth) from Egypt, and Pythagoras the Phoenician, and also figures in the Persian tradition. His philosophical project aims to revive the lost hikma of east and west.',
+        items: []
+      },
+      {
+        heading: "Teachings",
+        summary: "Arising out of peripatetic philosophy as developed by Ibn Sina (Avicenna), Suhrawardi's illuminationist philosophy is critical of several of Ibn Sina's positions and radically departs from him in creating a symbolic language (mainly derived from ancient Iranian culture or Farhang-e Khosravani) to give expression to his wisdom (hikma).",
+        items: []
+      },
+      {
+        heading: "Influence",
+        summary: "Suhrawardi's Illuminationist project was to have far-reaching consequences for Islamic philosophy in Shi'ite Iran. His teachings had a strong influence on subsequent esoteric Iranian thought and the idea of \u201CDecisive Necessity\u201D is believed to be one of the most important innovations in the history of logical philosophical speculation, stressed by the majority of Muslim logicians and philosophers. In the 17th century, it was to initiate an Illuminationist Zoroastrian revival in the figure of the 16th century sage Azar Kayvan.",
+        items: []
+      },
+      {
+        heading: "Suhrawardi and pre-Islamic Iranian thought",
+        summary: "Suhrawardi thought of himself as a reviver or resuscitator of the ancient Persian wisdom. He states in Hikmat al-'Ishraq that:",
+        items: []
+      },
+      {
+        heading: "Suhrawardi and Illumination school",
+        summary: "According to Hossein Nasr since Sheykh Ishraq was not translated into Western languages in the medieval period, Europeans had little knowledge about Suhrawardi and his philosophy. His school is ignored even now by later scholars. Sheykh Ishraq tried to pose a new perspective on questions like the question of Existence. He not only caused peripatetic philosophers to confront new questions but also gave new life to the body of philosophy after Avicenna.",
+        items: []
+      },
+      {
+        heading: "Scholarly views on Suhrawardi",
+        summary: "There are different and contradictory views regarding the character of Suhrawardi's school. Some scholars such as Hossein Ziai believe that the most important aspects of his thought are his logic and critique of the peripatetic conception of definitions. On the other hand, scholars like Mehdi Hairi and Sayyid Jalal Addin Ashtiyyani, believe that Suhrawardi remained within the framework of peripatetic and neo-Avicennian philosophy. Mehdi Amin Razavi criticises both these groups for ignoring the mystical dimension of Suhrawardi's writings. In turn, scholars such as Henry Corbin and Hossein Nasr view Suhrawardi as a theosophist and focus on the mystical dimension of his work. Viewing in another way, Nadia Maftouni has analysed Suhrawardi's works to figure out the elements of philosophy as a way of life. As she holds, the priority of practical reason to theoretical reason, the emphasis on intuition, taking philosophy as a practice of attaining optional death, and proposing ways to heal mental diseases may well be considered the main elements of philosophy as a way of life in Suhrawardi's allegorical treatises.",
+        items: []
+      },
+      {
+        heading: "Writings",
+        summary: "Suhrawardi left over 50 writings in Persian and Arabic.",
+        items: [
+          'Partaw Nama ("Treatise on Illumination")',
+          'Hayakal al-Nur al-Suhrawardi [Sohravardi, Shihaboddin Yahya] (1154\u201391) Hayakil al-nur ("The Temples of Light"), ed. M.A. Abu Rayyan, Cairo: al-Maktaba al-Tijariyyah al-Kubra, 1957. (The Persian version appears in oeuvres vol. III.)',
+          'Alwah-i Imadi ("The tablets dedicated to Imad al-Din")',
+          'Lughat-i Muran ("The language of Termites")',
+          'Risalat al-Tayr ("The Treatise of the Bird")',
+          'Safir-i Simurgh ("The Calling of the Simurgh")',
+          `Ruzi ba Jama'at Sufiyaan ("A Day with the Community of Sufis")`,
+          'Fi Halat al-Tufulliyah ("On the State of Childhood")',
+          `Awaz-i Par-i Jebrail ("The Chant of Gabriel's Wing")`,
+          'Aql-i Surkh ("The Red Intellect")',
+          `Fi Haqiqat al-'Ishaq ("On the Reality of Love")`,
+          'Bustan al-Qolub ("The Garden of Hearts")',
+          "Kitab al-talwihat",
+          "Kitab al-moqawamat",
+          "Kitab al-mashari' wa'l-motarahat, Arabic texts edited with introduction in French by H. Corbin, Tehran: Imperial Iranian Academy of Philosophy, and Paris: Adrien Maisonneuve, 1976; vol II: I. Le Livre de la Th\xE9osophie oriental",
+          "(Kitab Hikmat al-ishraq) 2. Le Symbole de foi des philosophes. 3. Le R\xE9cit de l'Exil occidental, Arabic texts edited with introduction in French by H. Corbin, Tehran: Imperial Iranian Academy of Philosophy, and Paris: Adrien Maisonneuve, 1977; vol III: oeuvres en persan, Persian texts edited with introduction in Persian by S.H. Nasr, introduction in French by H. Corbin, Tehran: Imperial Iranian Academy of Philosophy, and Paris: Adrien Maisonneuve, 1977. (Only the metaphysics of the three texts in Vol. I were published.) Vol. III contains a Persian version of the Hayakil al-nur, ed. and trans. H. Corbin",
+          "L'Archange empourpr\xE9: quinze trait\xE9s et r\xE9cits mystiques, Paris: Fayard, 1976, contains translations of most of the texts in vol. III of oeuvres philosophiques et mystiques, plus four others. Corbin provides introductions to each treatise, and includes several extracts from commentaries on the texts. W.M. Thackston, Jr, The Mystical and Visionary Treatises of Shihabuddin Yahya Suhrawardi, London: Octagon Press, 1982, provides an English translation of most of the treatises in vol. III of oeuvres philosophiques et mystiques, which eschews all but the most basic annotation; it is therefore less useful than Corbin's translation from a philosophical point of view)",
+          "Mantiq al-talwihat, ed. A.A. Fayyaz, Tehran: Tehran University Press, 1955. The logic of the Kitab al-talwihat (The Intimations)",
+          "Kitab hikmat al-ishraq (The Philosophy of Illumination), trans H. Corbin, ed. and intro. C. Jambet, Le livre de la sagesse orientale: Kitab Hikmat al-Ishraq, Lagrasse: Verdier, 1986. (Corbin's translation of the Prologue and the Second Part (The Divine Lights), together with the introduction of Shams al-Din al-Shahrazuri and liberal extracts from the commentaries of Qutb al-Din al-Shirazi and Mulla Sadra. Published after Corbin's death, this copiously annotated translation gives to the reader without Arabic immediate access to al-Suhrawardi's illuminationist method and language)",
+          "The Philosophy of Illumination: A New Critical Edition of the Text of Hikmat Al-Ishraq, edited by John Walbridge and Hossein Ziai, Provo, Brigham Young University Press, 1999.",
+          "The Shape of Light: Hayakal al-Nur, interpreted by Shaykh Tosun Bayrak al-Jerrahi al-Halveti, Fons Vitae, 1998.",
+          "The Mystical & Visionary Treatises of Suhrawardi, Translated by W.M. Thackson, Jr., London, The Octagon Press, 1982."
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "Of Persian stock, Suhrawardi was born in 1154 in Suhraward, a village located between the towns of Zanjan and Bijar Garrus in Iran."
+      },
+      {
+        title: "Influences on Suhrawardi",
+        note: 'Suhrawardi was a strong defender of Peripatetic philosophy, until he was influenced by those whom he described as those who "have traveled the path of God", like - as noted by Suhrawardi - Plato from the Greek tradition, Hermes (Thoth) from Egypt, and Pythagoras the Phoenician, and also figures in the Persian tradition.'
+      },
+      {
+        title: "Teachings",
+        note: "Arising out of peripatetic philosophy as developed by Ibn Sina (Avicenna), Suhrawardi's illuminationist philosophy is critical of several of Ibn Sina's positions and radically departs from him in creating a symbolic language (mainly derived from ancient Iranian culture or Farhang-e Khosravani) to give expression to his wisdom (hikma)."
+      },
+      {
+        title: "Influence",
+        note: "Suhrawardi's Illuminationist project was to have far-reaching consequences for Islamic philosophy in Shi'ite Iran."
+      },
+      {
+        title: "Suhrawardi and pre-Islamic Iranian thought",
+        note: "Suhrawardi thought of himself as a reviver or resuscitator of the ancient Persian wisdom."
+      },
+      {
+        title: "Suhrawardi and Illumination school",
+        note: "According to Hossein Nasr since Sheykh Ishraq was not translated into Western languages in the medieval period, Europeans had little knowledge about Suhrawardi and his philosophy."
+      },
+      {
+        title: "Scholarly views on Suhrawardi",
+        note: "There are different and contradictory views regarding the character of Suhrawardi's school."
+      },
+      {
+        title: "Writings",
+        note: "Suhrawardi left over 50 writings in Persian and Arabic."
+      }
+    ]
+  },
+  "Ibn Arabi": {
+    title: "Ibn Arabi",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Ibn_Arabi",
+    description: "Ibn 'Arab\u012B was a Sunni Muslim Arab scholar, Sufi mystic, poet, and Muslim philosopher from al-Andalus, who exercised notable influence within Sufi metaphysics and Islamic thought in general. There are 850 works attributed to Ibn 'Arabi, though only 700 of these are considered authentic, and only 400 are extant. His cosmological teachings became a dominant intellectual framework in many regions of the Muslim world.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/%D9%82%D8%A8%D8%B1_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%AD%D9%8A%D9%8A_%D8%A7%D9%84%D8%AF%D9%8A%D9%86_%D8%A8%D9%86_%D8%B9%D8%B1%D8%A8%D9%8A.jpg/330px-%D9%82%D8%A8%D8%B1_%D8%A7%D9%84%D8%B4%D9%8A%D8%AE_%D9%85%D8%AD%D9%8A%D9%8A_%D8%A7%D9%84%D8%AF%D9%8A%D9%86_%D8%A8%D9%86_%D8%B9%D8%B1%D8%A8%D9%8A.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "(1165-07-28)28 July 1165, Murcia, Taifa of Murcia (now Murcia, Region of Murcia, Spain)"
+      },
+      {
+        label: "Died",
+        value: "16 November 1240(1240-11-16) (aged\xA075), Salihiyya, Damascus, Ayyubid Sultanate"
+      },
+      {
+        label: "Resting\xA0place",
+        value: "Mount Qasioun, Damascus, Syria"
+      },
+      {
+        label: "Children",
+        value: "Sa'ad al-Din, Imad al-Din; Sadr al-Din al-Qunawi (stepson)"
+      },
+      {
+        label: "Parent",
+        value: "Ali ibn Muhammad ibn Arabi al-Hatimi al-Tai (father)"
+      },
+      {
+        label: "Era",
+        value: "Medieval philosophy\n12th century philosophy\n13th century philosophy"
+      },
+      {
+        label: "Region",
+        value: "Middle Eastern philosophy\nIslamic philosophy"
+      },
+      {
+        label: "Main\xA0interests",
+        value: "SufismTafsirEpistemologyOntologyPoetryFiqh"
+      },
+      {
+        label: "Notable\xA0work",
+        value: "Al-Futuhat al-Makkiyya"
+      },
+      {
+        label: "Occupation",
+        value: "Mufassir, Muhaddtih, Theologian, Philosopher, Academic, Poet"
+      },
+      {
+        label: "Religion",
+        value: "Islam"
+      },
+      {
+        label: "Denomination",
+        value: "Sunni"
+      },
+      {
+        label: "Jurisprudence",
+        value: "Mujtahid often confused to be a Zahiri"
+      },
+      {
+        label: "Creed",
+        value: "Founder of Akbarism"
+      },
+      {
+        label: "Teacher",
+        value: "Shaykh Ab\u016B \u02BFAbd All\u0101h al-Tam\u012Bm\u012B (Junaydiyya), Shaykh \u02BFAbd al-\u02BFAz\u012Bz al-Mahdaw\u012B (Qadiriyya)"
+      },
+      {
+        label: "Personal (Ism)",
+        value: "Mu\u1E25ammad, \u0645\u062D\u0645\u062F"
+      },
+      {
+        label: "Epithet (Laqab)",
+        value: "Mu\u1E25y\u012B d-D\u012Bn, \u0645\u062D\u064A\u064A \u0627\u0644\u062F\u064A\u0646,"
+      },
+      {
+        label: "Toponymic (Nisba)",
+        value: "al-\u1E24\u0101tim\u012B, \u0627\u0644\u062D\u0627\u062A\u0645\u064A, a\u1E6D-\u1E6C\u0101\u02BE\u012B, \u0627\u0644\u0637\u0627\u0626\u064A"
+      }
+    ],
+    sections: [
+      {
+        heading: "Early life",
+        summary: "Ibn 'Arab\u012B was born in the Taifa of Murcia, in present-day southeastern Spain, on the 17th of Rama\u1E0D\u0101n 560 AH (28 July 1165), although other sources suggest the 27th of Rama\u1E0D\u0101n 560 AH (6 August 1165 AD) as an alternative birthdate. His first name was Muhammad. After the birth of his son, he was known as Ab\u016B \u02BFAbdull\u0101h (the father of Abdull\u0101h), as is common practice for Arabic names. In some of his works, ibn 'Arab\u012B referred to himself with fuller versions of his name, Ab\u016B \u02BBAbd All\u0101h Mu\u1E25ammad ibn \u02BBArab\u012B al-\u1E6C\u0101\u02BC\u012B al-\u1E24\u0101tim\u012B, where the last three names indicate his noble lineage from the tribes of Arabia. His relative \u1E24\u0101tim a\u1E6D-\u1E6C\u0101\u02BCiyy was well-known as a poet of pre-Islamic Arabia of the Qahtanite (South Arabian) tribe of \u1E6Cayyi\u2019.",
+        items: [
+          "Ibn 'Asakir (d. 571/1176), and his son al-Qasim b. 'Ali b. 'Asakir (d. 600/1203)",
+          "Abu Tahir al-Silafi (d. 576/1180)",
+          "Ibn Bashkuwal (d. 578/1183)",
+          "'Abd al-Haqq al-Ishbili (d. 581/1185) the student of Ibn Hazm. Ibn Arabi read all of Ibn Hazm's books while studying under him.",
+          "Abu Zayd al-Suhayli (d. 581/1185)",
+          "Ibn Zarqun (d. 586/1190)",
+          "Ibn al-Jadd (d. 586/1190)",
+          "Abu Madyan (d. 594/1197)",
+          "Ibn Rushd (Averroes) (d. 595/1198)",
+          "Ibn al-Jawzi (d. 597/1201)",
+          "Ibn Abi Jamra (d. 599/1202)",
+          "Abu Shuja' Zahir ibn Rustam al-Isfahani (d. 609/1212) Imam of the Holy Shrine in the Great Mosque of Mecca.",
+          "Jamal al-Din b. al-Harastani (d. 614/1217)",
+          "Ibn Malik (d. 672/1274)",
+          "Badr al-Din al-Habashi (d. 618/1221)",
+          "Ibn al-Farid (d. 632/1235) was considered by 'Abd al-Ghani al-Nabulsi among Ibn Arabi's students.",
+          "Al-Muzaffar Baha' al-Din Ghazi (son of al-'Adil I the Ayyubid) (d. 613/1216 or 635/1237)",
+          "Zakiy al-Din al-Birzali (d. 636/1239)",
+          "Shams al-Din al-Khuwayyi (d. 637/1239)",
+          "Ibn al-Dubaythi (d. 637/1239)",
+          "Ibn al-Najjar (d. 643/1245)",
+          "Diya' al-Din al-Maqdisi (d. 643/1245)",
+          "Isma'il ibn Sawdakin (d. 646/1248)",
+          "Sa'd al-Din al-Hamawi (d. 650/1252)",
+          "Muhyi al-Din Yahya ibn al-Zaki (d. 668/1270) who patronized Ibn Arabi in Damascus, and who arranged that Ibn Arabi be buried in the family cemetery of the Banu al-Zaki. He was a descendant of Zaki al-Din 'Ali b. Muhammad b. al-Zaki (d. 564/1169), the Shafi'i chief qadi of Damascus, who formed a powerful political alliance with the 'Asakir family (Banu 'Asakir), whose members occupied prestigious positions as judges and scholars of the Shafi'i school of Sunni law in Damascus for close to three centuries (late eleventh to early fourteenth centuries).",
+          "Sadr al-Din al-Qunawi (d. 672/1273)",
+          "Baybars (d. 676/1277)"
+        ]
+      },
+      {
+        heading: "Death",
+        summary: "Ibn Arabi died on 22 Rab\u012B' al-Th\u0101n\u012B, 638 AH (16 November 1240), at the age of 75. He was buried in the Banu Zaki cemetery, the family cemetery of the nobles of Damascus, on Qasiyun Hill, Salihiyya, Damascus.",
+        items: []
+      },
+      {
+        heading: "Legacy",
+        summary: "After his death, Ibn Arabi's teachings quickly spread throughout the Islamic world. His writings were not limited to Muslim elites; they spread to other segments of society through the widespread influence of the Sufi orders. Arabi's work also spread widely through works in Persian, Turkish, and Urdu. Many popular poets were trained in the Sufi orders and were inspired by Arabi's concepts.",
+        items: []
+      },
+      {
+        heading: "Islamic law",
+        summary: "Although Ibn Arabi stated on more than one occasion that he did not blindly follow any one of the madhhab (schools of fiqh, Islamic jurisprudence), he was responsible for copying and preserving books of the literalist Zahiri school, to which there is fierce debate over his adherence. Many prominent ibn Arabi scholars, including Claude Addas, Michel Chodkiewicz, Gril, Eric Winkel, and Mahmoud al-Gorab contend that he did not follow any madhhab. Some scholars, such as Hamza Dudgeon and Ignaz Goldziher, reject this notion. Goldziher held that ibn Arabi belonged either to the Zahiri or Hanbali school.",
+        items: []
+      },
+      {
+        heading: "Theoretical mysticism",
+        summary: "Ibn Arabi is considered to be a foundational figure in the development of Islamic mysticism. During his adolescence and early adulthood, he was exposed to numerous mystical currents that informed his writings. In one of his works, he refers to nearly seventy teachers who influenced his spiritual development. Access to such a broad array of thought was enabled by the vibrant philosophical culture of Al-Andalus in the twelfth and thirteenth centuries, with a variety of mystical movements reflecting the influences of figures like Ibn Barrajan, Ibn Arif, Ibn Rushd, and Ibn Qasi. The social and spiritual atmosphere of the Islamic East also influenced this milieu, owing to philosophers and mystics such as Ibn Sina and Suhrawardi.",
+        items: []
+      },
+      {
+        heading: "Reaction",
+        summary: "The reaction of Ibn 'Abd as-Salam, a Muslim scholar respected by both Ibn Arabi's supporters and detractors, has been of note due to disputes over whether he himself was either a supporter or detractor. He was known by the title of Sultan al-'Ulama, the Sultan of scholars, was a famous mujtahid, Ash'ari theologian, jurist and the leading Shafi'i authority of his generation. As such, the figure of Ibn 'Abd al-Salam was claimed by each faction of the Ibn-'Arabi controversy due to his impeccable record as a staunch champion of the Shari'a.",
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "Approximately 800 works are attributed to Ibn Arabi, although only some have been authenticated. Recent research suggests that over 100 of his works have survived in manuscripts, though most printed versions remain unedited and contain many errors. William Chittick, a specialist on Ibn 'Arabi, citing Osman Yahya's definitive bibliography, states that of the 850 works attributed to him, around 700 are authentic, and over 400 remain extant.",
+        items: [
+          "The Meccan Illuminations (Al-Fut\u016B\u1E25\u0101t al-Makkiyya), his largest work in 37 volumes originally and published in 4 or 8 volumes in modern times, discussing a wide range of topics from mystical philosophy to Sufi practices and records of his dreams/visions. It totals 560 chapters. In modern editions, it amounts to some 15,000 pages.",
+          `The Ringstones of Wisdom (also translated as The Bezels of Wisdom), or Fusus al-Hikam. Composed during the later period of Ibn 'Arabi's life, the work is sometimes considered his most important and can be characterized as a summary of his teachings and mystical beliefs. It deals with the role played by various prophets in divine revelation. The attribution of this work (Fusus al-Hikam) to Ibn Arabi is debated and in at least one source is described as a forgery and false attribution to him reasoning that there are 74 books in total attributed to Sheikh Ibn Arabi of which 56 have been mentioned in "Al Futuhat al-Makkiyya" and the rest mentioned in the other books cited therein. However, many other scholars accept the work as genuine.`,
+          "The D\u012Bw\u0101n, his collection of poetry spanning five volumes, mostly unedited. The printed versions available are based on only one volume of the original work.",
+          "The Holy Spirit in the Counselling of the Soul (R\u016B\u1E25 al-quds), a treatise on the soul which includes a summary of his experience from different spiritual masters in the Maghrib. Part of this has been translated as Sufis of Andalusia, reminiscences and spiritual anecdotes about many interesting people whom he met in al-Andalus.",
+          "Contemplation of the Holy Mysteries (Mash\u0101hid al-Asr\u0101r), probably his first major work, consisting of fourteen visions and dialogues with God.",
+          "Divine Sayings (Mishk\u0101t al-Anw\u0101r), an important collection made by Ibn 'Arab\u012B of 101 had\u012Bth quds\u012B",
+          "The Book of Annihilation in Contemplation (K. al-Fan\u0101' fi'l-Mush\u0101hada), a short treatise on the meaning of mystical annihilation (fana).",
+          "Devotional Prayers (Awr\u0101d), a widely read collection of fourteen prayers for each day and night of the week.",
+          'Journey to the Lord of Power (Ris\u0101lat al-Anw\u0101r), a detailed technical manual and roadmap for the "journey without distance".',
+          "The Book of God's Days (Ayy\u0101m al-Sha'n), a work on the nature of time and the different kinds of days experienced by gnostics",
+          "The Astounding Phoenix regarding the Seal of Saints and the Sun of the West (Arabic: \u0639\u0646\u0642\u0627\u0621 \u0645\u063A\u0631\u0628 \u0641\u064A \u0645\u0639\u0631\u0641\u0629 \u062E\u062A\u0645 \u0627\u0644\u0623\u0648\u0644\u064A\u0627\u0621 \u0648\u0634\u0645\u0633 \u0627\u0644\u0645\u063A\u0631\u0628, ALA-LC: \u02BBAnq\u0101\u02BC al-Mughrib f\u012B Ma\u02BBrifat Khatm al-Awliy\u0101\u02BC wa-Shams al-Maghrib), a book on the meaning of sainthood and its culmination in Jesus and the Mahd\u012B",
+          "The Universal Tree and the Four Birds (al-Ittih\u0101d al-Kawn\u012B), a poetic book on the Complete Human and the four principles of existence",
+          "Prayer for Spiritual Elevation and Protection ('al-Dawr al-A'l\u0101), a short prayer which is still widely used in the Muslim world",
+          "The Interpreter of Desires (Tarjum\u0101n al-Ashw\u0101q), a collection of nas\u012Bbs which, in response to critics, Ibn Arabi republished with a commentary explaining the meaning of the poetic symbols. (1215)",
+          "Divine Governance of the Human Kingdom (At-Tadbidrat al-ilahiyyah fi islah al-mamlakat al-insaniyyah).",
+          "The Four Pillars of Spiritual Transformation (Hilyat al-abd\u0101l) a short work on the essentials of the spiritual Path",
+          'Diagram of "Plain of Assembly" (Ard al-Hashr) on the Day of Judgment, from autograph manuscript of Futuhat al-Makkiyya, ca. 1238 (photo: after Futuhat al-Makkiyya, Cairo edition, 1911).',
+          "Diagram of Jannat Futuhat al-Makkiyya, c. 1238 (photo: after Futuhat al-Makkiyya, Cairo edition, 1911).",
+          "Diagram showing world, heaven, hell and barzakh Futuhat al-Makkiyya, c. 1238 (photo: after Futuhat al-Makkiyya, Cairo edition, 1911)."
+        ]
+      },
+      {
+        heading: "In fiction",
+        summary: "In the Turkish television series Dirili\u015F: Ertu\u011Frul, Ibn Arabi was portrayed by Ozman Sirgood. In 2017, Saudi Arabian novelist Mohammed Hasan Alwan won the International Prize for Arabic Fiction for his novel A Small Death, a fictionalized account of Ibn Arabi's life.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Early life",
+        note: "Ibn 'Arab\u012B was born in the Taifa of Murcia, in present-day southeastern Spain, on the 17th of Rama\u1E0D\u0101n 560 AH (28 July 1165), although other sources suggest the 27th of Rama\u1E0D\u0101n 560 AH (6 August 1165 AD) as an alternative birthdate."
+      },
+      {
+        title: "Death",
+        note: "Ibn Arabi died on 22 Rab\u012B' al-Th\u0101n\u012B, 638 AH (16 November 1240), at the age of 75."
+      },
+      {
+        title: "Legacy",
+        note: "After his death, Ibn Arabi's teachings quickly spread throughout the Islamic world."
+      },
+      {
+        title: "Islamic law",
+        note: "Although Ibn Arabi stated on more than one occasion that he did not blindly follow any one of the madhhab (schools of fiqh, Islamic jurisprudence), he was responsible for copying and preserving books of the literalist Zahiri school, to which there is fierce debate over his adherence."
+      },
+      {
+        title: "Theoretical mysticism",
+        note: "Ibn Arabi is considered to be a foundational figure in the development of Islamic mysticism."
+      },
+      {
+        title: "Reaction",
+        note: "The reaction of Ibn 'Abd as-Salam, a Muslim scholar respected by both Ibn Arabi's supporters and detractors, has been of note due to disputes over whether he himself was either a supporter or detractor."
+      },
+      {
+        title: "Works",
+        note: "Approximately 800 works are attributed to Ibn Arabi, although only some have been authenticated."
+      },
+      {
+        title: "In fiction",
+        note: "In the Turkish television series Dirili\u015F: Ertu\u011Frul, Ibn Arabi was portrayed by Ozman Sirgood."
+      }
+    ]
+  },
+  "Ibn al-Farid": {
+    title: "Ibn al-Farid",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Ibn_al-Farid",
+    description: 'Ibn al-Farid or Ibn Farid; was an Arab poet as well as a Sufi waliullah. His name is Arabic for "son of the obligator", as his father was well regarded for his work in the legal sphere. He was born in Cairo to parents from Hama in modern Syria, lived for some time in Mecca, and died in Cairo. His poetry is full of Sufi inspiration and imagery, and he was esteemed as the greatest mystic poet of the Arabs. Some of his poems are said to have been written in ecstasies.',
+    thumbnail: null,
+    infobox: [
+      {
+        label: "Native name",
+        value: "\u0639\u0645\u0631 \u0628\u0646 \u0639\u0644\u064A \u0628\u0646 \u0627\u0644\u0641\u0627\u0631\u0636"
+      },
+      {
+        label: "Born",
+        value: "\u02BFUmar ibn \u02BFAl\u012B ibn al-F\u0101ri\u1E0D,, 22 March 1181, Cairo, Ayyubid Egypt, now Egypt"
+      },
+      {
+        label: "Died",
+        value: "1235 (aged 54-55), Al-Azhar Mosque, Cairo, Ayyubid Sultanate, now Egypt"
+      },
+      {
+        label: "Resting place",
+        value: "Mokattam Hills, now City of the Dead (Cairo) southeastern Cairo, Egypt"
+      },
+      {
+        label: "Occupation",
+        value: "Arabic poet, writer, philosopher"
+      },
+      {
+        label: "Notable works",
+        value: "D\u012Bw\u0101n Ibn al-F\u0101ri\u1E0D \u062F\u06CC\u0648\u0627\u0646 \u0627\u0628\u0646 \u0627\u0644\u0641\u0627\u0631\u0636"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: "Ibn al-Farid's father moved from his native town, Hama in Syria, to Cairo where Umar was born. Some sources say that his father was a respected farid (an advocate for women's causes) and others say that his profession was the allocation of shares (fur\u016B\u1E0D) in cases of inheritance. These two can be reconciled, however, by interpreting his name to mean that he often represented women in cases of inheritance. Whichever is the case, Ibn al-Farid's father was a knowledgeable scholar and gave his son a good foundation in belles lettres.",
+        items: []
+      },
+      {
+        heading: "Ecstasies",
+        summary: "During the later part of his life, Ibn al-farid was known to enter into spiritual raptures known as jadhabat in Arabic, a common occurrence in sufism.",
+        items: []
+      },
+      {
+        heading: "Legacy",
+        summary: `Every Friday, Cairenes gather at Ibn al-Farid's tomb to listen to readings of his poems. There was once a Sufi order in Egypt in the sixteenth century C.E. called "al-F\u0101ri\u1E0D\u012Byah". It supposedly originated from ibn al-Farid, but is no longer in existence. Due to the subject matter of his poems and the beauty of the verse, Ibn al-Farid later became referred to as "sultan al-ashiqin" ("the sultan of lovers").`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "Ibn al-Farid's father moved from his native town, Hama in Syria, to Cairo where Umar was born."
+      },
+      {
+        title: "Ecstasies",
+        note: "During the later part of his life, Ibn al-farid was known to enter into spiritual raptures known as jadhabat in Arabic, a common occurrence in sufism."
+      },
+      {
+        title: "Legacy",
+        note: "Every Friday, Cairenes gather at Ibn al-Farid's tomb to listen to readings of his poems."
+      }
+    ]
+  },
+  "Jalaluddin Rumi": {
+    title: "Rumi",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Rumi",
+    description: "Jal\u0101l al-D\u012Bn Mu\u1E25ammad R\u016Bm\u012B, commonly known as Rumi, was a Sufi mystic, poet, and founder of the Islamic brotherhood known as the Mevlevi Order. His family hailed from Balkh. Rumi is an influential figure in Sufism, and his thought and works loom large both in Persian literature and mystic poetry in general. Today, his translated works are enjoyed all over the world.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/%D9%85%D9%88%D9%84%D8%A7%D9%86%D8%A7_%D8%A7%D8%AB%D8%B1_%D8%AD%D8%B3%DB%8C%D9%86_%D8%A8%D9%87%D8%B2%D8%A7%D8%AF_%28cropped%29.jpg/330px-%D9%85%D9%88%D9%84%D8%A7%D9%86%D8%A7_%D8%A7%D8%AB%D8%B1_%D8%AD%D8%B3%DB%8C%D9%86_%D8%A8%D9%87%D8%B2%D8%A7%D8%AF_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Title",
+        value: "Jalaluddin, jal\u0101l al-Din, Mevlana, Mawlana"
+      },
+      {
+        label: "Born",
+        value: "30 September 1207, Wakhsh, Khwarezmian Empire, (present-day Tajikistan)"
+      },
+      {
+        label: "Died",
+        value: "17 December 1273 (aged 66), Konya, Sultanate of Rum, (present-day Turkey)"
+      },
+      {
+        label: "Resting\xA0place",
+        value: "Tomb of Mevlana Rumi, Mevlana Museum, Konya, Turkey"
+      },
+      {
+        label: "Spouse",
+        value: "Gevher KhatunKarra Khatun"
+      },
+      {
+        label: "Children",
+        value: "Sultan WaladAmir Alim ChelebiMalike Khatun"
+      },
+      {
+        label: "Parents",
+        value: "Baha al-Din Valad (father)Mo'mena Khatun (mother)"
+      },
+      {
+        label: "Era",
+        value: "Mongol conquests"
+      },
+      {
+        label: "Main\xA0interest",
+        value: "Sufi literature"
+      },
+      {
+        label: "Notable\xA0idea(s)",
+        value: "Sufi whirling, Muraqaba"
+      },
+      {
+        label: "Notable\xA0work(s)",
+        value: "Mathnaw\u012B-\u012B ma'naw\u012B, D\u012Bw\u0101n-\u012B Shams-\u012B Tabr\u012Bz\u012B, F\u012Bhi m\u0101 f\u012Bhi"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Inspiring the Mevlevi Sufi order, composing Mathnawi poetry"
+      },
+      {
+        label: "Religion",
+        value: "Islam"
+      },
+      {
+        label: "Denomination",
+        value: "Sunni"
+      },
+      {
+        label: "Order",
+        value: "Sufi"
+      },
+      {
+        label: "Philosophy",
+        value: "Sufism, Mysticism"
+      },
+      {
+        label: "Jurisprudence",
+        value: "Hanafi"
+      },
+      {
+        label: "Tariqa",
+        value: "Mevlevi"
+      },
+      {
+        label: "Creed",
+        value: "Maturidi"
+      },
+      {
+        label: "Predecessor",
+        value: "Shams-i Tabrizi and Baha-ud-din Zakariya"
+      },
+      {
+        label: "Successor",
+        value: "Husam al-Din Chalabi, Sultan Walad"
+      },
+      {
+        label: "Personal (Ism)",
+        value: "Mu\u1E25ammad, \u0645\u062D\u0645\u062F"
+      },
+      {
+        label: "Patronymic (Nasab)",
+        value: "ibn Mu\u1E25ammad ibn al-\u1E24usayn ibn A\u1E25mad, \u0628\u0646 \u0645\u062D\u0645\u062F \u0628\u0646 \u0627\u0644\u062D\u0633\u064A\u0646 \u0628\u0646 \u0623\u062D\u0645\u062F"
+      },
+      {
+        label: "Epithet (Laqab)",
+        value: "Jal\u0101l ad-D\u012Bn, \u062C\u0644\u0627\u0644\u200C\u0627\u0644\u062F\u06CC\u0646"
+      },
+      {
+        label: "Toponymic (Nisba)",
+        value: "ar-R\u016Bm\u012B, \u0627\u0644\u0631\u0648\u0645\u064A, al-Kha\u1E6D\u012Bb\u012B, \u0627\u0644\u062E\u0637\u064A\u0628\u064A, al-Balkh\u012B, \u0627\u0644\u0628\u0644\u062E\u064A, al-Bakr\u012B, \u0627\u0644\u0628\u0643\u0631\u064A"
+      }
+    ],
+    sections: [
+      {
+        heading: "Name",
+        summary: 'He is most commonly called Rumi in English. His full name is given by his contemporary Faridun bin Ahmad Sipahsalar as Muhammad bin Muhammad bin al-Husayn al-Khatibi al-Balkhi al-Bakri (Arabic: \u0645\u062D\u0645\u062F \u0628\u0646 \u0645\u062D\u0645\u062F \u0628\u0646 \u0627\u0644\u062D\u0633\u064A\u0646 \u0627\u0644\u062E\u0637\u064A\u0628\u064A \u0627\u0644\u0628\u0644\u062E\u064A \u0627\u0644\u0628\u0643\u0631\u064A). He is more commonly known as Mawl\u0101n\u0101 Jal\u0101l ad-D\u012Bn Mu\u1E25ammad R\u016Bm\u012B (\u0645\u0648\u0644\u0627\u0646\u0627 \u062C\u0644\u0627\u0644\u200C\u0627\u0644\u062F\u06CC\u0646 \u0645\u062D\u0645\u062F \u0631\u0648\u0645\u06CC). Jalal ad-Din is an Arabic name meaning "Glory of the Faith". Balkh\u012B and R\u016Bm\u012B are his nisbas, meaning, respectively, "from Balkh" and "from R\xFBm", as he was from the Sultanate of R\xFBm in Anatolia.',
+        items: []
+      },
+      {
+        heading: "Life",
+        summary: "Rumi was born to Persian parents, in Wakhsh, a village on the East bank of the Wakhsh River known as Sangtuda in present-day Tajikistan. The area, culturally adjacent to Balkh, is where Mawl\xE2n\xE2's father, Bah\xE2' udd\xEEn Walad, was a preacher and jurist. He lived and worked there until 1212, when Rumi was aged around five and the family moved to Samarkand.",
+        items: []
+      },
+      {
+        heading: "Teachings",
+        summary: `Like other mystic and Sufi poets of Persian literature, Rumi's poetry speaks of love which infuses the world. Rumi's teachings also express the tenets summarized in the Quranic verse which Shams-e Tabrizi cited as the essence of prophetic guidance: "Know that \u2018There is no god but He,\u2019 and ask forgiveness for your sin" (Q. 47:19).`,
+        items: []
+      },
+      {
+        heading: "Major works",
+        summary: "Rumi's poetry is often divided into various categories: the quatrains (rubay\u0101t) and odes (ghazal) of the Divan, the six books of the Masnavi. The prose works are divided into The Discourses, The Letters, and the Seven Sermons.",
+        items: [
+          `Rumi's best-known work is the Masnavi (Spiritual Couplets; \u0645\u062B\u0646\u0648\u06CC \u0645\u0639\u0646\u0648\u06CC). The six-volume poem holds a distinguished place within the rich tradition of Persian Sufi literature, and has been commonly called "the Quran in Persian". Many commentators have regarded it as the greatest mystical poem in world literature. It contains approximately 27,000 lines, each consisting of a couplet with an internal rhyme. While the mathnawi genre of poetry may use a variety of different metres, after Rumi composed his poem, the metre he used became the mathnawi metre par excellence. The first recorded use of this metre for a mathnawi poem took place at the Nizari Ismaili fortress of Girdkuh between 1131 and 1139. It likely set the stage for later poetry in this style by mystics such as Attar and Rumi.`,
+          "Rumi's other major work is the D\u012Bw\u0101n-e Kab\u012Br (Great Work) or D\u012Bw\u0101n-e Shams-e Tabr\u012Bz\u012B (The Works of Shams of Tabriz; \u062F\u06CC\u0648\u0627\u0646 \u0634\u0645\u0633 \u062A\u0628\u0631\u06CC\u0632\u06CC), named in honour of Rumi's master Shams. Besides approximately 35000 Persian couplets and 2000 Persian quatrains, the Divan contains 90 Ghazals and 19 quatrains in Arabic, a couple of dozen or so couplets in Turkish (mainly macaronic poems of mixed Persian and Turkish) and 14 couplets in Greek (all of them in three macaronic poems of Greek-Persian).",
+          "Fihi Ma Fihi (It is what It is, Persian: \u0641\u06CC\u0647 \u0645\u0627 \u0641\u06CC\u0647) provides a record of seventy-one talks and lectures given by Rumi on various occasions to his disciples. It was compiled from the notes of his various disciples, so Rumi did not author the work directly. An English translation from the Persian was first published by A.J. Arberry as Discourses of Rumi (New York: Samuel Weiser, 1972), and a translation of the second book by Wheeler Thackston, Sign of the Unseen (Putney, VT: Threshold Books, 1994). The style of the Fihi ma fihi is colloquial and meant for middle-class men and women, and lack the sophisticated wordplay.",
+          "Maj\u0101les-e Sab'a (Seven Sessions, Persian: \u0645\u062C\u0627\u0644\u0633 \u0633\u0628\u0639\u0647) contains seven Persian sermons (as the name implies) or lectures given in seven different assemblies. The sermons themselves give a commentary on the deeper meaning of Qur'an and Hadith. The sermons also include quotations from poems of Sana'i, 'Attar, and other poets, including Rumi himself. As Aflak\u012B relates, after Shams-e Tabr\u012Bz\u012B, Rumi gave sermons at the request of notables, especially Sal\u0101h al-D\u012Bn Zark\u016Bb. The style of Persian is rather simple, but quotation of Arabic and knowledge of history and the Hadith show Rumi's knowledge in the Islamic sciences. His style is typical of the genre of lectures given by Sufis and spiritual teachers.",
+          "Makatib (The Letters, Persian: \u0645\u06A9\u0627\u062A\u06CC\u0628) or Maktubat (\u0645\u06A9\u062A\u0648\u0628\u0627\u062A) is the collection of letters written in Persian by Rumi to his disciples, family members, and men of state and of influence. The letters testify that Rumi kept very busy helping family members and administering a community of disciples that had grown up around them. Unlike the Persian style of the previous two mentioned works (which are lectures and sermons), the letters are consciously sophisticated and epistolary in style, which is in conformity with the expectations of correspondence directed to nobles, statesmen and kings."
+        ]
+      },
+      {
+        heading: "Religious outlook",
+        summary: "Despite references to other religions, Rumi clearly holds the superiority of Islam. As Muslim, Rumi praises the Quran, not only as sacred book of Muslims, but also as tool to distinguish truth from falsehood. As such, the Quran features as guidebook for humanity and those who want to understand the reality of the world.",
+        items: []
+      },
+      {
+        heading: "Language",
+        summary: "Rumi's works are written in his mother tongue, Persian. He occasionally used the Arabic language and single Turkish and Greek words in his verse. Rumi's influence has transcended national borders and ethnic divisions: Iranians, Afghans, Tajiks, Turks, Kurds, Greeks, Central Asian Muslims, as well as Muslims of the Indian subcontinent have greatly appreciated his spiritual legacy for the past seven centuries. His poetry influenced not only Persian literature, but also the literary traditions of the Ottoman Turkish, Chagatai, Pashto, Kurdish, Urdu, and Bengali languages.",
+        items: []
+      },
+      {
+        heading: "Legacy",
+        summary: "Rumi's work has been translated into many of the world's languages, including Russian, German, Urdu, Turkish, Arabic, Bengali, French, Italian, Spanish, Telugu and Kannada and is being presented in a growing number of formats, including concerts, workshops, readings, dance performances, and other artistic creations. The English interpretations of Rumi's poetry by Coleman Barks have sold more than half a million copies worldwide, and Rumi is one of the most widely read poets in the United States. There is a famous landmark in Northern India, known as Rumi Gate, situated in Lucknow (the capital of Uttar Pradesh) named for Rumi. Indian filmmaker Muzaffar Ali who is from Lucknow made a documentary, titled Rumi in the Land of Khusrau (2001), which presents concerts based on the works of Rumi and Amir Khusrau and highlights parallels between the lives of the poets.",
+        items: []
+      },
+      {
+        heading: "In popular culture",
+        summary: "The life and teachings of Rumi have significantly influenced contemporary literature and media. His relationship with his mentor, Shams Tabrizi, serves as a primary narrative motif in modern adaptations, frequently explored to examine themes of spiritual devotion and divine love.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Name",
+        note: "He is most commonly called Rumi in English."
+      },
+      {
+        title: "Life",
+        note: "Rumi was born to Persian parents, in Wakhsh, a village on the East bank of the Wakhsh River known as Sangtuda in present-day Tajikistan."
+      },
+      {
+        title: "Teachings",
+        note: "Like other mystic and Sufi poets of Persian literature, Rumi's poetry speaks of love which infuses the world."
+      },
+      {
+        title: "Major works",
+        note: "Rumi's poetry is often divided into various categories: the quatrains (rubay\u0101t) and odes (ghazal) of the Divan, the six books of the Masnavi."
+      },
+      {
+        title: "Religious outlook",
+        note: "Despite references to other religions, Rumi clearly holds the superiority of Islam."
+      },
+      {
+        title: "Language",
+        note: "Rumi's works are written in his mother tongue, Persian."
+      },
+      {
+        title: "Legacy",
+        note: "Rumi's work has been translated into many of the world's languages, including Russian, German, Urdu, Turkish, Arabic, Bengali, French, Italian, Spanish, Telugu and Kannada and is being presented in a growing number of formats, including concerts, workshops, readings, dance performances, and other artistic creations."
+      },
+      {
+        title: "In popular culture",
+        note: "The life and teachings of Rumi have significantly influenced contemporary literature and media."
+      }
+    ]
+  },
   "Abraham Abulafia": {
     title: "Abraham Abulafia",
     wikipediaUrl: "https://en.wikipedia.org/wiki/Abraham_Abulafia",
@@ -18898,6 +21776,81 @@ However, in Nehemiah 8, Nehemiah has Ezra read the Torah to the people. So, they
       {
         title: "Influence",
         note: "Abulafia's subterranean influence is evident in the large number of manuscripts of his major meditation manuals that flourished down to the present day until all his works were finally published in Mea Shearim in Jerusalem during the 1990s."
+      }
+    ]
+  },
+  "Shah Nimatullah Wali": {
+    title: "Shah Nimatullah Wali",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Shah_Nimatullah_Wali",
+    description: "Sh\u0101h Ni'matull\u0101h Wali, was a Persian Sufi master and spiritual leader of the Ni'matullahi order in Iran from the 14th and 15th centuries. He is revered by Sunni Islam as a saint and by the Ni'matull\u0101h\u012B tariqa, who consider him their founder.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/0/03/Portrait_of_Shah_Nematollah_Vali.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    infobox: [
+      {
+        label: "Born",
+        value: "1330 (1330), Aleppo, Mamluk Sultanate (present-day Syria)"
+      },
+      {
+        label: "Died",
+        value: "1431 (aged\xA0100\u2013101), Mahan, Timurid Empire (present-day Iran)"
+      },
+      {
+        label: "Resting\xA0place",
+        value: "Shah Nematollah Vali Shrine"
+      },
+      {
+        label: "Religion",
+        value: "Islam"
+      },
+      {
+        label: "Denomination",
+        value: "Sunni"
+      },
+      {
+        label: "Tariqa",
+        value: "Nimatullahi (founder)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Biography",
+        summary: "Born in Aleppo, Syria (or in Kuhbanan, Iran according to some historians), Ni\u2019matullah traced his own descent from the sixth Imam Ja'far al-Sadiq in both a poetic work as well as an epistle reproduced by his biographers \u2018Abd al-Razz\u0101q Kirm\u0101n\u012B and \u2018Abd al-\u2018Az\u012Bz W\u0101\u2019i\u1E93. Ni'matullah travelled widely through the Muslim world, learning the philosophies of many masters, but not finding a personal teacher he could dedicate himself to. Ni'matullah studied the writings of the great Sufi philosopher and mystic Ibn \u02BFArab\u012B.",
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "Shah N'imatullah Wali has a collected diwan in Persian that includes qasidas, ghazals, tarj\u012B\u2018\u0101t, mathnawis, do-bayt\u012Bs, rub\u0101\u02BFiy\u0101t, and more.",
+        items: [
+          "Shar\u1E25-e Lama\u2018\u0101t: consisting of a preface and commentaries on Lama\u2018\u0101t by Fakhr al-Din Ibrahim Iraqi.",
+          "Treatises of Shah Nimatullah Wali: a collection of 97 treatises."
+        ]
+      },
+      {
+        heading: "Shrine",
+        summary: "The shrine of Shah Ni'matullah Wali is a historical complex located in Mahan, Kerman Province, Iran, which contains his mausoleum. In 1436, a shrine was erected in his honor and became a pilgrimage site, with the attention of successive rulers contributing various additions over the centuries. The shrine complex comprises four courtyards, a reflecting pool, a mosque and twin minarets covered with turquoise tiles from the bottom up to the cupola.",
+        items: []
+      },
+      {
+        heading: "Tomb",
+        summary: `Shah Khalilullah's tomb is located outside Bidar fort and known as "chokundi". Today it is under the authority of the Archaeological Survey of India. Shah Khalilullah was succeeded by numerous other qutbs (masters) including Shah Mir Mahmud Deccani, Shams al Din Deccani and Reza Ali Shah Deccani. The silsilah moved back to Iran after the Sufi master Reza Ali Shah Deccani's ordered his disciple Ali Shah Deccani in the year 1194 AH, nearing the end of Karim Khan Zand's dynasty to depart to Iran with his family and entered Shiraz. Not long after the establishment of the Safawid state, the Ni\u2019matullahi order publicly declared itself Shia. His tomb is located in Kerman, Iran. It is a beautiful work of art, Natural plant colors decorate the walls of his private chamber, the place where he would stay and fast for 40 days and nights. It is also the place from which he would get inspiration to write his predictions.`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Biography",
+        note: "Born in Aleppo, Syria (or in Kuhbanan, Iran according to some historians), Ni\u2019matullah traced his own descent from the sixth Imam Ja'far al-Sadiq in both a poetic work as well as an epistle reproduced by his biographers \u2018Abd al-Razz\u0101q Kirm\u0101n\u012B and \u2018Abd al-\u2018Az\u012Bz W\u0101\u2019i\u1E93."
+      },
+      {
+        title: "Works",
+        note: "Shah N'imatullah Wali has a collected diwan in Persian that includes qasidas, ghazals, tarj\u012B\u2018\u0101t, mathnawis, do-bayt\u012Bs, rub\u0101\u02BFiy\u0101t, and more."
+      },
+      {
+        title: "Shrine",
+        note: "The shrine of Shah Ni'matullah Wali is a historical complex located in Mahan, Kerman Province, Iran, which contains his mausoleum."
+      },
+      {
+        title: "Tomb",
+        note: `Shah Khalilullah's tomb is located outside Bidar fort and known as "chokundi".`
       }
     ]
   },
@@ -19128,6 +22081,187 @@ However, in Nehemiah 8, Nehemiah has Ezra read the Torah to the people. So, they
       }
     ]
   },
+  Adapa: {
+    title: "Adapa",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Adapa",
+    description: 'Adapa was a Mesopotamian mythical figure who unknowingly refused the gift of immortality. The story, commonly known as "Adapa and the South Wind", is known from fragmentary tablets from Tell el-Amarna in Egypt and from finds from the Library of Ashurbanipal, Assyria. The oldest tradition about him is from Me-Turan/Tell Haddad tablets, which is written in Sumerian.',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Chaos_Monster_and_Sun_God.png/330px-Chaos_Monster_and_Sun_God.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [],
+    sections: [
+      {
+        heading: "Overview",
+        summary: "Adapa's story was initially known from a find at Amarna in Egypt from the archives of Egyptian King Amenophis IV (1377\u20131361 BC). By 1912, three finds from the Library of Ashurbanipal (668\u2013626 BC) had been interpreted and found to contain parts of the story. As of 2001 five fragments from the library are known. There are differences in several of the known versions of the text.",
+        items: []
+      },
+      {
+        heading: "Interpretation",
+        summary: `The name Adapa has also been used for the first Apkallu, sometimes known as Uanna (in the Greek work by Berossus called Oannes). The accounts of the two are different, and (Uanna) the Apkallu is half-fish, while Adapa is a fisherman. However, there may be a connection. One potential explanation for the occurrence of the two names together is that the cuneiform for 'adapa' was also used as an appellative for "wise" (the Apkallu being wisdom giving beings).`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Overview",
+        note: "Adapa's story was initially known from a find at Amarna in Egypt from the archives of Egyptian King Amenophis IV (1377\u20131361 BC)."
+      },
+      {
+        title: "Interpretation",
+        note: "The name Adapa has also been used for the first Apkallu, sometimes known as Uanna (in the Greek work by Berossus called Oannes)."
+      }
+    ]
+  },
+  Imhotep: {
+    title: "Imhotep",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Imhotep",
+    description: "Imhotep was an Egyptian chancellor to the King Djoser, possible architect of Djoser's step pyramid, and high priest of the sun god Ra at Heliopolis. Very little is known of Imhotep as a historical figure, but in the 3,000\xA0years following his death, he was gradually glorified and deified.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Imhotep%2C_donated_by_Padisu_MET_DP164134.jpg/330px-Imhotep%2C_donated_by_Padisu_MET_DP164134.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Burial place",
+        value: "Saqqara (probable)"
+      },
+      {
+        label: "Other\xA0name",
+        value: "Asclepius (name in Greek) Imouthes (also name in Greek)"
+      },
+      {
+        label: "Occupations",
+        value: "chancellor to the King Djoser and High Priest of Ra"
+      },
+      {
+        label: "Years\xA0active",
+        value: "c.\u200927th century BC"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Being the architect of Djoser's step pyramid"
+      },
+      {
+        label: "Relatives",
+        value: "Djoser (possible brother; disputed)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Historicity",
+        summary: "Imhotep's historicity is confirmed by two contemporary inscriptions made during his lifetime on the base or pedestal of one of Djoser's statues (Cairo JE 49889) and also by a graffito on the enclosure wall surrounding Sekhemkhet's unfinished step pyramid. The latter inscription suggests that Imhotep outlived Djoser by a few years and went on to serve in the construction of King Sekhemkhet's pyramid, which was abandoned due to this ruler's brief reign.",
+        items: []
+      },
+      {
+        heading: "Deification",
+        summary: "Two thousand years after his death, Imhotep's status had risen to that of a god of medicine and healing. Eventually, Imhotep was equated with Thoth, the god of architecture, mathematics, and medicine, and patron of scribes: Imhotep's cult was merged with that of his own former tutelary god.",
+        items: []
+      },
+      {
+        heading: "In popular culture",
+        summary: "Imhotep's name is shared by the antagonist of the 1932 film The Mummy, along with its 1999 remake and the latter's 2001 sequel.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Historicity",
+        note: "Imhotep's historicity is confirmed by two contemporary inscriptions made during his lifetime on the base or pedestal of one of Djoser's statues (Cairo JE 49889) and also by a graffito on the enclosure wall surrounding Sekhemkhet's unfinished step pyramid."
+      },
+      {
+        title: "Deification",
+        note: "Two thousand years after his death, Imhotep's status had risen to that of a god of medicine and healing."
+      },
+      {
+        title: "In popular culture",
+        note: "Imhotep's name is shared by the antagonist of the 1932 film The Mummy, along with its 1999 remake and the latter's 2001 sequel."
+      }
+    ]
+  },
+  Enheduanna: {
+    title: "Enheduanna",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Enheduanna",
+    description: "Enheduanna was the entu (high) priestess of the moon god Nanna (S\u012Bn) in the Sumerian city-state of Ur in the reign of her father, Sargon of Akkad. She was likely appointed by her father as the leader of the religious group at Ur to cement ties between the Akkadian religion of her father and the native Sumerian religion. Enheduanna has been celebrated as the earliest known named author in world history.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Enheduanna%2C_daughter_of_Sargon_of_Akkad.jpg/330px-Enheduanna%2C_daughter_of_Sargon_of_Akkad.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Occupation",
+        value: "EN priestess"
+      },
+      {
+        label: "Language",
+        value: "Old Sumerian"
+      },
+      {
+        label: "Nationality",
+        value: "Akkadian Empire"
+      },
+      {
+        label: "Genre",
+        value: "Hymn"
+      },
+      {
+        label: "Subject",
+        value: "Nanna, Inanna"
+      },
+      {
+        label: "Years\xA0active",
+        value: "c. 2300 BC"
+      },
+      {
+        label: "Notable works",
+        value: "Exaltation of InannaTemple Hymns"
+      },
+      {
+        label: "Parents",
+        value: "Sargon of Akkad, Tashlultum"
+      }
+    ],
+    sections: [
+      {
+        heading: "Background",
+        summary: `Enheduanna's father was Sargon of Akkad, founder of the Akkadian Empire. In a surviving inscription Sargon styles himself "Sargon, king of Akkad, overseer (mashkim) of Inanna, king of Kish, anointed (guda) of Anu, king of the land [Mesopotamia], governor (ensi) of Enlil". The inscription celebrates the conquest of Uruk and the defeat of Lugal-zage-si, whom Sargon brought "in a collar to the gate of Enlil": Sargon then conquered Ur and "laid waste" the territory from Lagash to the sea, ultimately conquering at least 34 cities in total.`,
+        items: []
+      },
+      {
+        heading: "Archaeological artifact",
+        summary: `In 1927, as part of excavations at Ur, British archaeologist Sir Leonard Woolley discovered an alabaster disk shattered into several pieces, which has since been reconstructed. The reverse side of the disk identifies Enheduanna as the wife of Nanna and daughter of Sargon of Akkad. The front side shows the high priestess standing in worship as what has been interpreted as a nude male figure pours a libation. Irene Winter states that "given the placement and attention to detail" of the central figure, "she has been identified as Enheduanna". The disc is now a major artifact in the Middle East Galleries at the Penn Museum. Museum staff have shown the disc to the museum's special guests, such as Neil Gaiman. Together with other items related to the priestess, it went on display for the 2022-2023 exhibit centered on her, She Who Wrote: Enheduanna and Women of Mesopotamia.`,
+        items: []
+      },
+      {
+        heading: "Attributed works",
+        summary: `The first person to connect the disk and seals with literary works excavated in Nippur was Adam Falkenstein, who observed that the Temple Hymns and two hymns to Inanna: The Exaltation of Inanna and another "Hymn to Inanna" (at the time not yet reconstructed) contained references to Enheduanna. Falkenstein suggested that this might be evidence of Enheduanna's authorship, but acknowledged that the hymns are only known from the later Old Babylonian period and that more work would need to be done constructing and analyzing the received texts before any conclusions could be made. In 1989, Westenholz suggested that Inanna and Ebih and two other hymns, to Nanna at Ur, might also have been written by her.`,
+        items: []
+      },
+      {
+        heading: "Authorship debate",
+        summary: `The question of Enheduanna's authorship of poems has been subject to significant debate. While Hallo and \xC5ke Sj\xF6berg were the first to definitively assert Enheduanna's authorship of the works attributed to her, other Assyriologists including Miguel Civil and Jeremy Black have put forth arguments rejecting or doubting Enheduanna's authorship. Civil has raised the possibility that "Enheduanna" refers not to the name, but instead the station of EN-priestess that the daughter of Sargon of Akkad held.`,
+        items: []
+      },
+      {
+        heading: "Influence and legacy",
+        summary: 'In 1976, American anthropologist Marta Weigle introduced Enheduanna to an audience of feminist scholars as "the first known author in world literature" with her introductory essay "Women as Verbal Artists: Reclaiming the Sisters of Enheduanna".',
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Background",
+        note: "Enheduanna's father was Sargon of Akkad, founder of the Akkadian Empire."
+      },
+      {
+        title: "Archaeological artifact",
+        note: "In 1927, as part of excavations at Ur, British archaeologist Sir Leonard Woolley discovered an alabaster disk shattered into several pieces, which has since been reconstructed."
+      },
+      {
+        title: "Attributed works",
+        note: 'The first person to connect the disk and seals with literary works excavated in Nippur was Adam Falkenstein, who observed that the Temple Hymns and two hymns to Inanna: The Exaltation of Inanna and another "Hymn to Inanna" (at the time not yet reconstructed) contained references to Enheduanna.'
+      },
+      {
+        title: "Authorship debate",
+        note: "The question of Enheduanna's authorship of poems has been subject to significant debate."
+      },
+      {
+        title: "Influence and legacy",
+        note: 'In 1976, American anthropologist Marta Weigle introduced Enheduanna to an audience of feminist scholars as "the first known author in world literature" with her introductory essay "Women as Verbal Artists: Reclaiming the Sisters of Enheduanna".'
+      }
+    ]
+  },
   "Hermes Trismegistus": {
     title: "Hermes Trismegistus",
     wikipediaUrl: "https://en.wikipedia.org/wiki/Hermes_Trismegistus",
@@ -19139,13 +22273,13 @@ However, in Nehemiah 8, Nehemiah has Ezra read the Torah to the people. So, they
         heading: "Origin and identity",
         summary: "Hermes Trismegistus may be associated with the Greek god Hermes and the Egyptian god Thoth. Greeks in the Ptolemaic Kingdom of Egypt identified Thoth with Hermes through the interpretatio graeca. Consequently, the two gods were worshiped as one, in what had been the Temple of Thoth in Khemenu, which was known in the Hellenistic period as Hermopolis.",
         items: [
-          '"fourth Mercury (Hermes) was the son of the Nile, whose name may not be spoken by the Egyptians"',
-          '"the fifth, who is worshiped by the people of Pheneus [in Arcadia], is said to have killed Argus Panoptes, and for this reason to have fled to Egypt, and to have given the Egyptians their laws and alphabet: It is him whom the Egyptians call Theyt"'
+          '"fourth Mercury (Hermes) was the son of the Nile, whose name may not be spoken by the Egyptians".',
+          '"the fifth, who is worshiped by the people of Pheneus [in Arcadia], is said to have killed Argus Panoptes, and for this reason to have fled to Egypt, and to have given the Egyptians their laws and alphabet: It is him whom the Egyptians call Theyt".'
         ]
       },
       {
         heading: 'The epithet "thrice great"',
-        summary: 'Fowden asserts that the first datable occurrences of the epithet "thrice great" are in the Legatio of Athenagoras of Athens and in a fragment from Philo of Byblos, c.\u200964\u2013141 ce. However, in a later work, Copenhaver reports that this epithet is first found in the minutes of a meeting of the council of the Ibis cult, held in 172 BCE near Memphis in Egypt. Hart explains that the epithet is derived from an epithet of Thoth found at the Temple of Esna, "Thoth the great, the great, the great."',
+        summary: 'Fowden asserts that the first datable occurrences of the epithet "thrice great" are in the Legatio of Athenagoras of Athens and in a fragment from Philo of Byblos c.\u200964\u2013141 CE. However, in a later work, Copenhaver reports that this epithet is first found in the minutes of a meeting of the council of the Ibis cult, held in 172 BCE near Memphis, Egypt. Hart explains that the epithet is derived from an epithet of Thoth found at the Temple of Esna: "Thoth the great, the great, the great."',
         items: []
       },
       {
@@ -19171,7 +22305,7 @@ However, in Nehemiah 8, Nehemiah has Ezra read the Torah to the people. So, they
       },
       {
         title: 'The epithet "thrice great"',
-        note: 'Fowden asserts that the first datable occurrences of the epithet "thrice great" are in the Legatio of Athenagoras of Athens and in a fragment from Philo of Byblos, c.'
+        note: 'Fowden asserts that the first datable occurrences of the epithet "thrice great" are in the Legatio of Athenagoras of Athens and in a fragment from Philo of Byblos c.'
       },
       {
         title: "Hermetic writings",
@@ -19184,6 +22318,71 @@ However, in Nehemiah 8, Nehemiah has Ezra read the Torah to the people. So, they
       {
         title: "Bah\xE1\u02BC\xED writings",
         note: "Bah\xE1'u'll\xE1h, founder of the Bah\xE1\u02BC\xED Faith, identifies Idris with Hermes in his Tablet on the Uncompounded Reality."
+      }
+    ]
+  },
+  "Jannes and Jambres": {
+    title: "Jannes and Jambres",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Jannes_and_Jambres",
+    description: "In Jewish and Christian traditions, Jannes and Jambres are the names given to magicians mentioned in the Book of Exodus. This naming tradition is well-attested in ancient and medieval literature. In Latin manuscripts of the New Testament, and in Latin writing traditions, their names are known as Jamnes and Mambres.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/The_Rods_of_Moses_and_the_Magicians_Turned_into_Serpents_%285752932%29.jpg/330px-The_Rods_of_Moses_and_the_Magicians_Turned_into_Serpents_%285752932%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [],
+    sections: [
+      {
+        heading: "Hebrew Bible",
+        summary: 'Jannes and Jambres are not specifically mentioned in the Tanakh ("Hebrew Bible"), but the Egyptian "wise men and sorcerers" (two of whom were identified with Jannes and Jambres in Jewish and Christian traditions) are mentioned in Exodus 7:10-12 (KJV)',
+        items: []
+      },
+      {
+        heading: "New Testament and Second Temple literature",
+        summary: "The names Jannes and Jambres (Greek: \u1F38\u03AC\u03BD\u03BD\u03B7\u03C2, \u1F38\u03B1\u03BC\u03B2\u03C1\u1FC6\u03C2; Iann\u0113s, Iambr\u0113s) appear in 2 Timothy in the New Testament. Origen says that there was an apocryphal book called The Book of Jannes and Jambres, containing details of their exploits, and that Paul the Apostle was quoting from it. This book, known as The Apocryphon of Jannes and Jambres the magicians, exists in some Greek fragments present in the Chester Beatty Papyri No XVI (which has been edited and translated by Albert Pietersma), and in an extensive Ethiopic fragment which was discovered in 2014. It was also probably known to the Qumran community, since the Qumran community refers to one of the magicians by the name of Jannes. The Testament of Solomon also refers to the magicians by the name of Jannes and Jambres.",
+        items: []
+      },
+      {
+        heading: "Greco-Roman literature",
+        summary: "The name of Jannes not as that of a magical opponent of Moses, but as the originator of a branch of magic alongside Moses and Lotapea (or Lotapes), occurs in Pliny the Elder's Natural History (XXX, II, 11), where they are grouped together as a sect of magicians and are seen as coming after Zoroaster; Pliny's citation is also referred to in Apuleius, with Moses being mentioned with other sorcerers such as Carmendas, Damigeron, Apollobex, and Dardanus. Numenius of Apamea, a Neopythagorean philosopher, refers to Jannes and Jambres as sacred Egyptian scribes.",
+        items: []
+      },
+      {
+        heading: "Rabbinic literature",
+        summary: `The Babylonian Talmud names "Johana and Mamre" as two of Pharaoh's sorcerers. "Jannis and Jambres" are mentioned several times by name in Targum Pseudo-Jonathan. Jewish traditions in the Targums preserve other legendary lore about the pair. They are called the sons of Balaam, the unwitting non-Jewish prophet of Peor. It was also claimed that they converted to Judaism, and that they left Egypt at the Exodus to accompany Moses and the Israelites; however, they perished on the way, either at the Red Sea, or the destruction of the Golden Calf, or at the slaughter of Korah and his followers.`,
+        items: []
+      },
+      {
+        heading: "League with the Devil",
+        summary: 'The earliest mention of "Jannes and his brother" is in the Damascus Document, which states that the two were in league with "Belial", who would later be personified as the devil in Christian texts. In the Testament of Solomon, a demon who has some connections with "the Red Sea" replies to the king: "I am who was called upon by Jannes and Jambres who fought against Moses in Egypt" (25:4). Similarly, in the later text of the Questions of St. Bartholomew (6th-7th century), Satan says that "Simon Magus, Zaro\xEBs, Arfaxir, and Jannes and Mambres are my brothers" (Lat. 2, 4:50). In the Penitence of Cyprian (5th century?), the great magician of Antioch relates how the Devil called him "a clever lad, a new Jambres, trained for service, and worthy of fellowship with himself". In his Lausiac History (5th century), Palladius relates that Macarius of Alexandria (4th century) once visited the garden-tomb of Jannes and Jambres, and upon arrival was met by seventy demons who resided there.',
+        items: []
+      },
+      {
+        heading: "In popular culture",
+        summary: "",
+        items: [
+          "In the film The Ten Commandments (1956), Douglass Dumbrille plays Jannes as a constantly fretful and pompous High Priest of Egypt and a devoted follower of the Nile God Khnum, as well as Court Mage and one of the Pharaoh's top advisers.",
+          "The Prince of Egypt, a 1998 animated DreamWorks film, has Steve Martin and Martin Short provide the voices of Hotep and Huy, characters who were based on Jannes and Jambres. They are somewhat comical characters, despite the movie's overall serious tone.",
+          "In the 2014 film Exodus: Gods and Kings, Indira Varma plays an Egyptian high priestess whose character is roughly parallel to the role of Jannes and Jambres."
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Hebrew Bible",
+        note: 'Jannes and Jambres are not specifically mentioned in the Tanakh ("Hebrew Bible"), but the Egyptian "wise men and sorcerers" (two of whom were identified with Jannes and Jambres in Jewish and Christian traditions) are mentioned in Exodus 7:10-12 (KJV)'
+      },
+      {
+        title: "New Testament and Second Temple literature",
+        note: "The names Jannes and Jambres (Greek: \u1F38\u03AC\u03BD\u03BD\u03B7\u03C2, \u1F38\u03B1\u03BC\u03B2\u03C1\u1FC6\u03C2; Iann\u0113s, Iambr\u0113s) appear in 2 Timothy in the New Testament."
+      },
+      {
+        title: "Greco-Roman literature",
+        note: "The name of Jannes not as that of a magical opponent of Moses, but as the originator of a branch of magic alongside Moses and Lotapea (or Lotapes), occurs in Pliny the Elder's Natural History (XXX, II, 11), where they are grouped together as a sect of magicians and are seen as coming after Zoroaster; Pliny's citation is also referred to in Apuleius, with Moses being mentioned with other sorcerers such as Carmendas, Damigeron, Apollobex, and Dardanus."
+      },
+      {
+        title: "Rabbinic literature",
+        note: `The Babylonian Talmud names "Johana and Mamre" as two of Pharaoh's sorcerers.`
+      },
+      {
+        title: "League with the Devil",
+        note: 'The earliest mention of "Jannes and his brother" is in the Damascus Document, which states that the two were in league with "Belial", who would later be personified as the devil in Christian texts.'
       }
     ]
   },
@@ -19844,6 +23043,156 @@ However, in Nehemiah 8, Nehemiah has Ezra read the Torah to the people. So, they
       }
     ]
   },
+  Pythagoras: {
+    title: "Pythagoras",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Pythagoras",
+    description: "Pythagoras of Samos was an ancient Ionian Greek philosopher, polymath, and the eponymous founder of Pythagoreanism. His political and religious teachings were well known in Magna Graecia and influenced the philosophies of Plato, Aristotle, and, through them, Western philosophy. Modern scholars disagree regarding Pythagoras's education and influences, but most agree that he travelled to Croton in southern Italy around 530 BC, where he founded a school in which initiates were allegedly sworn to secrecy and lived a communal, ascetic lifestyle.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pythagoras_in_the_Roman_Forum%2C_Colosseum.jpg/330px-Pythagoras_in_the_Roman_Forum%2C_Colosseum.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c.\u2009570\xA0BC, Samos"
+      },
+      {
+        label: "Died",
+        value: "c.\u2009495\xA0BC (aged around 75), either Croton or Metapontum"
+      },
+      {
+        label: "Era",
+        value: "Pre-Socratic philosophy"
+      },
+      {
+        label: "Region",
+        value: "Western philosophy"
+      },
+      {
+        label: "School",
+        value: "Pythagoreanism"
+      },
+      {
+        label: "Main interests",
+        value: "EthicsMathematicsMetaphysicsMusic theoryMysticismPoliticsReligion"
+      },
+      {
+        label: "Notable ideas",
+        value: "CommunalismMetempsychosisMusica universalis, Attributed ideas: Five climatic zonesFive regular solidsProportionsPythagorean theoremPythagorean tuningSphericity of the EarthVegetarianism"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: "No authentic writings of Pythagoras have survived, and almost nothing is known for certain about his life. The earliest sources on Pythagoras's life, from Xenophanes, Heraclitus, Empedocles, Ion of Chios, and Herodotus are brief, ambiguous, and often satirical. The major sources on Pythagoras's life are three biographies from late antiquity written by Diogenes La\xEBrtius, Porphyry, and Iamblichus, all of which are filled primarily with myths and legends and which become longer and more fantastic in their descriptions of Pythagoras's achievements the more removed they are from Pythagoras's times. However, Porphyry and Iamblichus also used some material taken from earlier writings in the 4th century BC by Aristotle's students Dicaearchus, Aristoxenus, and Heraclides Ponticus, which, when it can be identified, is generally considered to be the most reliable.",
+        items: []
+      },
+      {
+        heading: "Teachings",
+        summary: "Although the exact details of Pythagoras's teachings are uncertain, it is possible to reconstruct a general outline of his main ideas. Aristotle writes at length about the teachings of the Pythagoreans, but without mentioning Pythagoras directly. One of Pythagoras's main doctrines appears to have been metempsychosis, the belief that all souls are immortal and that, after death, a soul is transferred into a new body. This teaching is referenced by Xenophanes, Ion of Chios, and Herodotus. The earliest source on Pythagoras's metempsychosis is a satirical poem probably written after his death by the Greek philosopher Xenophanes of Colophon (c.\u2009570\xA0\u2013 c.\u2009478\xA0BC), who had been one of his contemporaries, in which Xenophanes describes Pythagoras interceding on behalf of a dog that is being beaten, professing to recognize in its cries the voice of a departed friend. Nothing whatsoever, however, is known about the nature or mechanism by which Pythagoras believed metempsychosis to occur.",
+        items: []
+      },
+      {
+        heading: "Pythagoreanism",
+        summary: 'Both Plato and Isocrates state that, above all else, Pythagoras was known as the founder of a new way of life. The organization Pythagoras founded at Croton was called a "school", but, in many ways, resembled a monastery. The adherents were bound by a vow to Pythagoras and each other, for the purpose of pursuing the religious and ascetic observances, and of studying his religious and philosophical theories. The members of the sect shared all their possessions in common and were devoted to each other to the exclusion of outsiders. Ancient sources record that the Pythagoreans ate meals in common after the manner of the Spartans. One Pythagorean maxim was "koin\xE0 t\xE0 ph\xEDl\u014Dn" ("All things in common among friends"). Both Iamblichus and Porphyry provide detailed accounts of the organization of the school, although the primary interest of both writers is not historical accuracy, but rather to present Pythagoras as a divine figure, sent by the gods to benefit mankind. Iamblichus, in particular, presents the "Pythagorean Way of Life" as a pagan alternative to the Christian monastic communities of his own time. For Pythagoreans, the highest reward humans could attain was for their soul to join in the life of the gods and thus escape the cycle of reincarnation.',
+        items: []
+      },
+      {
+        heading: "Legends",
+        summary: 'Within his own lifetime, Pythagoras was already the subject of elaborate hagiographic legends. Aristotle described Pythagoras as a wonder-worker and somewhat of a supernatural figure. In a fragment, Aristotle writes that Pythagoras had a golden thigh, which he publicly exhibited at the Olympic Games and showed to Abaris the Hyperborean as proof of his identity as the "Hyperborean Apollo". Supposedly, the priest of Apollo gave Pythagoras a magic arrow, which he used to fly over long distances and perform ritual purifications. He was supposedly once seen at both Metapontum and Croton at the same time. When Pythagoras crossed the river Kosas (the modern-day Basento), "several witnesses" reported that they heard it greet him by name. In Roman times, a legend claimed that Pythagoras was the son of Apollo.',
+        items: []
+      },
+      {
+        heading: "Attributed discoveries",
+        summary: 'Although Pythagoras is most famous today for his alleged mathematical discoveries, classical historians dispute whether he himself ever actually made any significant contributions to the field. Many mathematical and scientific discoveries were attributed to Pythagoras, including the famous theorem named for him, as well as discoveries in the fields of music, astronomy, and medicine. Since at least the first century BC, Pythagoras has commonly been given credit for discovering the Pythagorean theorem, a theorem in geometry that states that "in a right-angled triangle the square of the hypotenuse is equal [to the sum of] the squares of the two other sides"\u2014that is, a 2 + b 2 = c 2 {\\displaystyle a^{2}+b^{2}=c^{2}}. According to a popular legend, after he discovered this theorem, Pythagoras sacrificed an ox, or possibly even a whole hecatomb, to the gods. Cicero rejected this story as spurious because of the much more widely held belief that Pythagoras forbade blood sacrifices. Porphyry attempted to explain the story by asserting that the ox was actually made of dough.',
+        items: []
+      },
+      {
+        heading: "Later influence in antiquity",
+        summary: `Sizeable Pythagorean communities existed in Magna Graecia, Phlius, and Thebes during the early fourth century BC. Around the same time, the Pythagorean philosopher Archytas was highly influential on the politics of the city of Tarentum in Magna Graecia. According to later tradition, Archytas was elected as strategos ("general") seven times, even though others were prohibited from serving more than a year. Archytas was also a renowned mathematician and musician. He was a close friend of Plato and he is quoted in Plato's Republic. Aristotle states that the philosophy of Plato was heavily dependent on the teachings of the Pythagoreans. Cicero repeats this statement, remarking that Platonem ferunt didicisse Pythagorea omnia ("They say Plato learned all things Pythagorean"). According to Charles H. Kahn, Plato's middle dialogues, including Meno, Phaedo, and The Republic, have a strong "Pythagorean coloring", and his last few dialogues (particularly Philebus and Timaeus) are extremely Pythagorean in character.`,
+        items: []
+      },
+      {
+        heading: "Influence after antiquity",
+        summary: "During the Middle Ages, Pythagoras was revered as the founder of mathematics and music, two of the Seven Liberal Arts. He appears in numerous medieval depictions, in illuminated manuscripts and in the relief sculptures on the portal of the Cathedral of Chartres. The Timaeus was the only dialogue of Plato to survive in Latin translation in western Europe, which led William of Conches (c. 1080\u20131160) to declare that Plato was Pythagorean. In the 1430s, the Camaldolese friar Ambrose Traversari translated Diogenes La\xEBrtius's Lives and Opinions of Eminent Philosophers from Greek into Latin and, in the 1460s, the philosopher Marsilio Ficino translated Porphyry and Iamblichus's Lives of Pythagoras into Latin as well, thereby allowing them to be read and studied by western scholars. In 1494, the Greek Neopythagorean scholar Constantine Lascaris published The Golden Verses of Pythagoras, translated into Latin, with a printed edition of his Grammatica, thereby bringing them to a widespread audience. In 1499, he published the first Renaissance biography of Pythagoras in his work Vitae illustrium philosophorum siculorum et calabrorum, issued in Messina.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "No authentic writings of Pythagoras have survived, and almost nothing is known for certain about his life."
+      },
+      {
+        title: "Teachings",
+        note: "Although the exact details of Pythagoras's teachings are uncertain, it is possible to reconstruct a general outline of his main ideas."
+      },
+      {
+        title: "Pythagoreanism",
+        note: "Both Plato and Isocrates state that, above all else, Pythagoras was known as the founder of a new way of life."
+      },
+      {
+        title: "Legends",
+        note: "Within his own lifetime, Pythagoras was already the subject of elaborate hagiographic legends."
+      },
+      {
+        title: "Attributed discoveries",
+        note: "Although Pythagoras is most famous today for his alleged mathematical discoveries, classical historians dispute whether he himself ever actually made any significant contributions to the field."
+      },
+      {
+        title: "Later influence in antiquity",
+        note: "Sizeable Pythagorean communities existed in Magna Graecia, Phlius, and Thebes during the early fourth century BC."
+      },
+      {
+        title: "Influence after antiquity",
+        note: "During the Middle Ages, Pythagoras was revered as the founder of mathematics and music, two of the Seven Liberal Arts."
+      }
+    ]
+  },
+  Berossus: {
+    title: "Berossus",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Berossus",
+    description: "Berossus or Berosus was an early-3rd-century BCE Hellenistic-era Babylonian writer, priest of Bel Marduk, and astronomer who wrote in the Koine Greek language.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Beroso.png/330px-Beroso.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [],
+    sections: [
+      {
+        heading: "Name",
+        summary: 'The name "Berossus" likely originates from a theophoric name whose first component was Bel, meaning "Lord," which was a common title for Marduk. The original name was either B\u0113l-r\u0113\u2019\xFB\u0161unu, meaning "the god Bel is their shepherd," or B\u0113l-u\u1E63ur\u0161u, meaning "O Bel watch over him!"',
+        items: []
+      },
+      {
+        heading: "Life and work",
+        summary: "Using ancient Babylonian records and texts that are now lost, Berossus published the Babyloniaca (hereafter, History of Babylonia) in three books some time around 290\u2013278 BCE, by the patronage of the Macedonian/Seleucid king Antiochus I Soter (during the third year of his reign, according to Tatian, Oratio ad Graecos 36.). Certain astrological fragments recorded by Pliny the Elder, Censorinus, Flavius Josephus, and Marcus Vitruvius Pollio are also attributed to Berossus, but are of unknown provenance, or indeed are uncertain as to where they might fit into his History. Vitruvius credits him with the invention of a semi-circular sundial hollowed out of a cubical block. A statue of him was erected in Athens, perhaps attesting to his fame and scholarship as historian and astronomer-astrologer.",
+        items: []
+      },
+      {
+        heading: "Babyloniaca (History of Babylonia)",
+        summary: `Versions of the remains of Berossos' lost Babyloniaca are given by two later Greek epitomes that were used by the Christian Eusebius of Caesarea for his Chronological Canons, the Greek manuscripts of which have been lost, but which can be largely recovered by the Latin translation and continuation of Jerome and a surviving Armenian translation. The reasons why Berossus wrote the History have not survived, though contemporaneous Greek historians generally did give reasons for the publication of their own histories. It is suggested that it was commissioned by Antiochus I, perhaps desiring a history of one of his newly acquired lands, or by priesthood of the Great Temple of Marduk, seeking justification for the worship of Marduk in Seleucid lands. Pure history writing per se was not a Babylonian concern, and Josephus testifies to Berossus' reputation as an astrologer. The excerpts quoted recount mythology and history that relate to Old Testament concerns. As historian and archaeologist W.G. Lambert observes: "Of course Berossus may have written other works which are not quoted by Josephus and Eusebius because they lacked any Biblical interest". Lambert finds some statements in the Latin writers so clearly erroneous that it renders doubtful whether the writers had first-hand knowledge of Berossus' text.`,
+        items: []
+      },
+      {
+        heading: "Memory",
+        summary: "In later centuries, Berossus was remembered as a great astronomer, prophet, sage, and historiographer. For example, Pliny the Elder reports that a statue of Berossus was put up by the inhabitants of Athens due to the accuracy of his future-predictions. Another figure, Pausanias, says that Berossus was the father of the Hebrew Sibyl.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Name",
+        note: 'The name "Berossus" likely originates from a theophoric name whose first component was Bel, meaning "Lord," which was a common title for Marduk.'
+      },
+      {
+        title: "Life and work",
+        note: "Using ancient Babylonian records and texts that are now lost, Berossus published the Babyloniaca (hereafter, History of Babylonia) in three books some time around 290\u2013278 BCE, by the patronage of the Macedonian/Seleucid king Antiochus I Soter (during the third year of his reign, according to Tatian, Oratio ad Graecos 36.)."
+      },
+      {
+        title: "Babyloniaca (History of Babylonia)",
+        note: "Versions of the remains of Berossos' lost Babyloniaca are given by two later Greek epitomes that were used by the Christian Eusebius of Caesarea for his Chronological Canons, the Greek manuscripts of which have been lost, but which can be largely recovered by the Latin translation and continuation of Jerome and a surviving Armenian translation."
+      },
+      {
+        title: "Memory",
+        note: "In later centuries, Berossus was remembered as a great astronomer, prophet, sage, and historiographer."
+      }
+    ]
+  },
   "The Magi of Matthew 2": {
     title: "Biblical Magi",
     wikipediaUrl: "https://en.wikipedia.org/wiki/Biblical_Magi",
@@ -19936,6 +23285,483 @@ However, in Nehemiah 8, Nehemiah has Ezra read the Torah to the people. So, they
       {
         title: "Cultural depictions",
         note: "Most depictions of the Magi in European art focus on their visit to Jesus."
+      }
+    ]
+  },
+  "Apollonius of Tyana": {
+    title: "Apollonius of Tyana",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Apollonius_of_Tyana",
+    description: 'Apollonius of Tyana was a Greek philosopher and religious leader from the town of Tyana, Cappadocia in Roman Anatolia, who spent his life travelling and teaching in the Middle East, North Africa and India. He is a central figure in Neopythagoreanism and was one of the most famous "miracle workers" of his day.',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Philosopher%2C_probably_Apollonius_of_Tyana%2C_marble%2C_ca_200_AD%2C_from_Gortys%2C_AMH%2C_145418.jpg/330px-Philosopher%2C_probably_Apollonius_of_Tyana%2C_marble%2C_ca_200_AD%2C_from_Gortys%2C_AMH%2C_145418.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c.\u2009AD 15 (disputed), Tyana, Cappadocia, Anatolia (Roman Empire), (now Kemerhisar, Ni\u011Fde, Turkey)"
+      },
+      {
+        label: "Died",
+        value: "c.\u2009AD 100 (aged c. 85)"
+      },
+      {
+        label: "Occupations",
+        value: "Sage, orator, philosopher"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Divination, miracle-work"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life dates",
+        summary: "Apollonius was born into a respected and wealthy aristocratic Greek household. His primary biographer, Philostratus the Elder (c.\u2009170\xA0\u2013 c.\u2009247), places him c.\u20093\xA0BC\xA0\u2013 c.\u2009AD 97, however, the Roman historian Cassius Dio (c.\u2009AD 155\xA0\u2013 c.\u2009235) writes that Apollonius was in his 40s or 50s in the 90s AD, from which the scholar Maria Dzielska gives a birth year of about AD 40.",
+        items: []
+      },
+      {
+        heading: "Biography",
+        summary: "With the exception of the Adana Inscription from the 3rd or 4th century AD, little can be derived from sources other than Philostratus.",
+        items: []
+      },
+      {
+        heading: "Writings",
+        summary: "Several writings and many letters have been ascribed to Apollonius, but some of them are lost; others have only been preserved in parts or fragments of disputed authenticity. Porphyry and Iamblichus refer to a biography of Pythagoras by Apollonius, which has not survived; it is also mentioned in the Suda. Apollonius wrote a treatise, On sacrifices, of which only a short, probably authentic fragment has come down to us.",
+        items: []
+      },
+      {
+        heading: "Impact",
+        summary: "In the 2nd\xA0century the satirist Lucian of Samosata was a sharp critic of Neo-Pythagoreanism. After AD\xA0180 he wrote a pamphlet wherein he attacked Alexander of Abonoteichus, a student of one of Apollonius's students, as a charlatan and suggested that the whole school was based on fraud. From this we can infer that Apollonius really had students and that his school survived at least until Lucian's time. One of Philostratus's foremost aims was to oppose this view. Although he related various miraculous feats of Apollonius, he emphasized at the same time that his hero was not a magician but a serious philosopher and a champion of traditional Greek values.",
+        items: [
+          "Hierocles, governor of Lower Egypt during the reign of Diocletian, attempted to downplay the significance of Jesus' miracles by citing the miracles of Apollonius. He also argued for the superiority of pagan wisdom in view of Apollonius' followers refraining from elevating Apollonoius to the rank of God.",
+          "Porphyry made similar use of Apollonius' miracles in his disputations with Christians, as well as contrasting Apollonius' bold defiance of Domitian to the humiliation of Christ at the hands of Pilate.",
+          "In 1680, Charles Blount, a radical English deist, published the first English translation of the first two books of Philostratus's Life with an anti-Church introduction.",
+          "In the Marquis de Sade's Dialogue Between a Priest and a Dying Man, the Dying Man compares Jesus to Apollonius as a false prophet.",
+          "In his 1909 book The Christ, John Remsburg postulated that the religion of Apollonius disappeared because the proper conditions for its development did not exist. Buddhism, Christianity, and Islam thrived, however, because the existing conditions were favorable.",
+          'Some early- to mid-20th-century Theosophists, notably C. W. Leadbeater, Alice A. Bailey, and Benjamin Creme, have maintained that Apollonius of Tyana was the reincarnation of the being they call the Master Jesus. Helena Blavatsky in 1881 refers to Apollonius of Tyana as "the great thaumaturgist of the second century AD".',
+          "In the mid 20th century, the American expatriate poet Ezra Pound evoked Apollonius in his later Cantos as a figure associated with sun-worship and as a messianic rival to Christ. Pound identified him as Aryan within an antisemitic mythology, and celebrated his Sun worship and aversion to ancient Jewish animal sacrifice.",
+          "In Gerald Messadi\xE9's The Man Who Became God, Apollonius appeared as a wandering philosopher and magician of about the same age as Jesus.",
+          'Edward Gibbon compared Apollonius to Jesus in the footnotes to The Decline and Fall of the Roman Empire, saying "Apollonius of Tyana was born about the same time as Jesus Christ. His life (that of the former) is related in so fabulous a manner by his disciples, that we are at a loss to discover whether he was a sage, an imposter, or a fanatic." This led to controversy, as critics believed Gibbon was alluding to Jesus being a fanatic.',
+          "Biblical scholar Bart D. Ehrman relates that he begins his introductory class on the New Testament, by describing an important figure from the first century without first revealing he is talking about the stories attached to Apollonius of Tyana.",
+          "Erkki Koskenniemi has stated that Apollonius of Tyana is not a representative of a Hellenistic divine man."
+        ]
+      },
+      {
+        heading: "Editions",
+        summary: "",
+        items: [
+          "Philostratus: Apollonius of Tyana. Letters of Apollonius, Ancient Testimonia, Eusebius's Reply to Hierocles, ed. Christopher P. Jones, Harvard University Press, Cambridge (Mass.) 2006 (Loeb Classical Library no. 458), ISBN\xA00-674-99617-8 (Greek texts and English translations)",
+          "Philostratus: The Life of Apollonius of Tyana, ed. Christopher P. Jones, vol. 1 (Books I\u2013IV) and 2 (Books V\u2013VIII), Harvard University Press, Cambridge (Mass.) 2005 (Loeb Classical Library no. 16 and no. 17), ISBN\xA00-674-99613-5 and ISBN\xA00-674-99614-3 (Greek text and English translation)"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Life dates",
+        note: "Apollonius was born into a respected and wealthy aristocratic Greek household."
+      },
+      {
+        title: "Biography",
+        note: "With the exception of the Adana Inscription from the 3rd or 4th century AD, little can be derived from sources other than Philostratus."
+      },
+      {
+        title: "Writings",
+        note: "Several writings and many letters have been ascribed to Apollonius, but some of them are lost; others have only been preserved in parts or fragments of disputed authenticity."
+      },
+      {
+        title: "Impact",
+        note: "In the 2nd\xA0century the satirist Lucian of Samosata was a sharp critic of Neo-Pythagoreanism."
+      }
+    ]
+  },
+  Iamblichus: {
+    title: "Iamblichus",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Iamblichus",
+    description: 'Iamblichus was a Syrian Arab Neoplatonic philosopher who determined a direction later taken by Neoplatonism. Iamblichus was also the biographer of the Greek mystic, philosopher, and mathematician Pythagoras. In addition to his philosophical contributions, his Protrepticus is important for the study of the sophists because it preserved about ten pages of an otherwise unknown sophist, whose name is not mentioned and who is currently known as "Anonymus Iamblichi".',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Iamblichus.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    infobox: [
+      {
+        label: "Born",
+        value: "c.\u2009245, Chalcis ad Belum, Coele Syria, Roman Empire"
+      },
+      {
+        label: "Died",
+        value: "c.\u2009325 (aged c. 80)"
+      },
+      {
+        label: "Other\xA0names",
+        value: "Iamblichus Chalcidensis, Iamblichus of Chalcis, Iamblichus of Apamea"
+      },
+      {
+        label: "Academic advisors",
+        value: "Anatolius of Laodicea, Porphyry"
+      },
+      {
+        label: "Era",
+        value: "Ancient philosophy"
+      },
+      {
+        label: "Region",
+        value: "Western philosophy"
+      },
+      {
+        label: "School",
+        value: "Neoplatonism"
+      },
+      {
+        label: "Notable students",
+        value: "Aedesius, Dexippus, Sopater of Apamea, Theodorus of Asine"
+      },
+      {
+        label: "Main interests",
+        value: "Metaphysics, philosophical cosmology"
+      },
+      {
+        label: "Notable works",
+        value: "On the Egyptian Mysteries"
+      },
+      {
+        label: "Notable ideas",
+        value: "Theurgy"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: "According to the Suda and Iamblichus's biographer, Eunapius, Iamblichus was born in Chalcis (later called Qinna\u0161r\u012Bn) in Coele Syria, now in northwest Syria. Iamblichus was descended from the Emesene dynasty. He initially studied under Anatolius of Laodicea and later studied under Porphyry, a pupil of Plotinus (the founder of Neoplatonism). Iamblichus disagreed with Porphyry about theurgy, reportedly responding to Porphyry's criticism of the practice in On the Mysteries of the Egyptians, Chaldeans, and Assyrians.",
+        items: []
+      },
+      {
+        heading: "Philosophy",
+        summary: "Iamblichus detailed Plotinus's Neoplatonic formal divisions, applied Pythagorean number symbolism more systematically, and (influenced by other Asian systems) interpreted Neoplatonic concepts mythically. Unlike Plotinus, who broke from platonic tradition by positing a separate soul, Iamblichus re-affirmed the soul's embodiment in matter and believed that matter was as divine as the rest of the cosmos.",
+        items: []
+      },
+      {
+        heading: "Reception",
+        summary: `Iamblichus was praised by his followers, and contemporaries credited him with miraculous powers. The Roman emperor Julian, not content with Eunapius's modest eulogy that Iamblichus was inferior to Porphyry only in style, regarded him as second only to Plato and said that he would give all the gold in Lydia for one of his letters. During the 15th- and 16th-century revival of interest in his philosophy, Iamblichus's name was rarely mentioned without the epithet "divine" or "most divine".`,
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "Only a fraction of Iamblichus's books have survived; knowledge of his system is preserved in fragments of writings preserved by Stobaeus and others: notes by his successors (especially Proclus), his five extant books and sections of his work on Pythagoreanism. In addition to these, Proclus attributed to him the On the Mysteries of the Egyptians, Chaldeans, and Assyrians, also known as The Theurgia or On the Egyptian Mysteries. Although stylistic and doctrinal differences exist between this book and Iamblichus's other works, it originated from his school at least. Iamblichus also completed a coherent polytheist theological system under the Egyptian pseudonym Abammon.",
+        items: [
+          "On the Mysteries (De mysteriis), ed. Gustav Parthey, Teubner, 1857; ed. Edouard des Places, Collection Bud\xE9, 1989.\nEnglish translations: Thomas Taylor, 1821; Alexander Wilder, 1911; Emma C. Clarke, John M. Dillon, and Jackson P. Hershbell, 2003, ISBN\xA01-58983-058-X.",
+          "The Life of Pythagoras\nEnglish translation: Thomas Taylor, 1818",
+          "On the Pythagorean Way of Life (De vita pythagorica), ed. Theophil Kie\xDFling, Leipzig, 1816; ed. August Nauck, St. Petersburg, 1884; ed. Ludwig Deubner, Teubner, 1937 (rev. Ulrich Klein, 1975).\nEnglish translations: Gillian Clark, 1989, ISBN\xA00-85323-326-8; John M. Dillon and Jackson Hershbell, 1991, ISBN\xA01-55540-523-1",
+          "On General Mathematical Science (\u03A0\u03B5\u03C1\u1F76 \u03C4\u1FC6\u03C2 \u03BA\u03BF\u03B9\u03BD\u1FC6\u03C2 \u03BC\u03B1\u03B8\u03B7\u03BC\u03B1\u03C4\u03B9\u03BA\u1FC6\u03C2 \u1F10\u03C0\u03B9\u03C3\u03C4\u03AE\u03BC\u03B7\u03C2, De communi mathematica scientia), ed. Nicola Festa, Teubner, 1891 (reprint 1975)\nEnglish translations: John M. Dillon & J. O. Urmson (2021; Bloomsbury Publishing)",
+          "Protrepticus, ed. Ermenegildo Pistelli, Teubner, 1888 (repr. 1975); ed. des Places, Bud\xE9, 1989.\nEnglish translation: Thomas Moore Johnson, Iamblichus' Exhortation to the Study of Philosophy, Osceola, Mo., 1907 (repr. 1988, ISBN\xA00-933999-63-1).",
+          "In Nicomachi arithmeticam introductionem, Teubner, ed. Pistelli, Teubner, 1894 (rev. Klein, 1975)",
+          "Letters: John M. Dillon and Wolfgang Polleichtner, Iamblichus of Chalcis: The Letters, 2009, ISBN\xA01-58983-161-6.",
+          "John F. Finamore and John M. Dillon, Iamblichus' De Anima: Text, Translation, and Commentary, Leiden: Brill, 2002, ISBN\xA01-58983-468-2.",
+          "Fragmentary commentaries on Plato\nBent Dalsgaard Larsen, Jamblique de Chalcis: Ex\xE9g\xE8te et philosophe (vol. 2, appendix: Testimonia et fragmenta exegetica), Universitetsforlaget i Aarhus, 1972 (Greek texts only).\nJohn M. Dillon (ed. and trans.), Iamblichi Chalcidensis in Platonis dialogos commentariorum fragmenta, Leiden: Brill, 1973.",
+          "Theological Principles of Arithmetic (Theologumena arithmeticae, an anonymous work ascribed to Iamblichus or Anatolius of Laodicea), ed. Friedrich Ast, Leipzig, 1817; ed. Vittorio de Falco, Teubner, 1922.\nEnglish translation: Robin Waterfield, Pseudo-Iamblichus: The Theology of Arithmetic, translation, introduction, notes; foreword by K. Critchlow, Phanes Press, 1988, ISBN\xA00-933999-72-0."
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "According to the Suda and Iamblichus's biographer, Eunapius, Iamblichus was born in Chalcis (later called Qinna\u0161r\u012Bn) in Coele Syria, now in northwest Syria."
+      },
+      {
+        title: "Philosophy",
+        note: "Iamblichus detailed Plotinus's Neoplatonic formal divisions, applied Pythagorean number symbolism more systematically, and (influenced by other Asian systems) interpreted Neoplatonic concepts mythically."
+      },
+      {
+        title: "Reception",
+        note: "Iamblichus was praised by his followers, and contemporaries credited him with miraculous powers."
+      },
+      {
+        title: "Works",
+        note: "Only a fraction of Iamblichus's books have survived; knowledge of his system is preserved in fragments of writings preserved by Stobaeus and others: notes by his successors (especially Proclus), his five extant books and sections of his work on Pythagoreanism."
+      }
+    ]
+  },
+  "Saint Cyprian of Antioch": {
+    title: "Cyprian of Antioch",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Cyprian_and_Justina",
+    description: "Saints Cyprian and Justina are honored in the Catholic Church, Eastern Orthodox Church and Oriental Orthodoxy as Christians of Antioch, who in 304, during the Diocletianic Persecution, suffered martyrdom at Nicomedia on September 26. According to Roman Catholic sources, no Bishop of Antioch bore the name of Cyprian.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Svjashhennomuchenik-Kiprian-i-Iustina.jpg/330px-Svjashhennomuchenik-Kiprian-i-Iustina.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "3rd century AD"
+      },
+      {
+        label: "Died",
+        value: "September 26, 304, Nicomedia, Bithynia, Asia Minor, Roman Empire, (modern-day \u0130zmit, Kocaeli, Turkey)"
+      },
+      {
+        label: "Venerated\xA0in",
+        value: "Oriental Orthodoxy, Eastern Orthodox Church, Roman Catholic Church"
+      },
+      {
+        label: "Feast",
+        value: "September 26,, October 2 (Eastern Orthodox Church),\n21 Thout (Coptic Orthodox Church)"
+      }
+    ],
+    sections: [
+      {
+        heading: "Origin",
+        summary: "The story must have arisen as early as the 4th century, as it is mentioned by both St. Gregory Nazianzen and Prudentius; both, nevertheless, have conflated Cyprian with St. Cyprian of Carthage, a mistake often repeated. The legend is given in Greek and Latin in Acta SS. September, VII. Ancient Syriac and Ethiopic versions of it have been published. Their story is told in the Golden Legend.",
+        items: []
+      },
+      {
+        heading: "Legend",
+        summary: 'Cyprian, known by the title of "the Magician", to distinguish him from Cyprian, Bishop of Carthage, received a liberal education in his youth, and particularly applied himself to astrology; after which he traveled for improvement through Greece, Egypt, India, etc. Cyprian was a magician in Antioch and dealt in sorcery.',
+        items: []
+      },
+      {
+        heading: "Veneration and liturgical celebration",
+        summary: "Their feast day appeared in the General Roman Calendar of Roman Rite from the thirteenth century until it was deleted in 1969 because of the lack of historical evidence of their existence. Their names were also removed from the 2001 revision of the Roman Martyrology, the official but professedly incomplete list of saints recognized by the Roman Catholic Church. The Roman Martyrology, however, includes five other saints called Cyprian and two named Justina. Some traditionalist Catholics continue to observe their feast based on pre-1970 versions of the Roman Calendar.",
+        items: []
+      },
+      {
+        heading: "In popular culture",
+        summary: "The Spanish author, Pedro Calder\xF3n de la Barca, took the story as the basis of a drama: El m\xE1gico prodigioso. In 2005, American author Tono Rondone published a novel, The Martyrs, which is a continuation of this tradition.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Origin",
+        note: "The story must have arisen as early as the 4th century, as it is mentioned by both St."
+      },
+      {
+        title: "Legend",
+        note: 'Cyprian, known by the title of "the Magician", to distinguish him from Cyprian, Bishop of Carthage, received a liberal education in his youth, and particularly applied himself to astrology; after which he traveled for improvement through Greece, Egypt, India, etc.'
+      },
+      {
+        title: "Veneration and liturgical celebration",
+        note: "Their feast day appeared in the General Roman Calendar of Roman Rite from the thirteenth century until it was deleted in 1969 because of the lack of historical evidence of their existence."
+      },
+      {
+        title: "In popular culture",
+        note: "The Spanish author, Pedro Calder\xF3n de la Barca, took the story as the basis of a drama: El m\xE1gico prodigioso."
+      }
+    ]
+  },
+  "Abu Ma'shar": {
+    title: "Abu Ma'shar al-Balkhi",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Abu_Ma'shar_al-Balkhi",
+    description: "Abu Ma\u2018shar al-Balkhi, Latinized as Albumasar, was an early Persian Muslim astrologer, thought to be the greatest astrologer of the Abbasid court in Baghdad. While he was not a major innovator, his practical manuals for training astrologers profoundly influenced Muslim intellectual history and, through translations, that of western Europe and Byzantium.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Abu_Ma%27shar%28Ibn_Balkhi%29-850AD.png/330px-Abu_Ma%27shar%28Ibn_Balkhi%29-850AD.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "10 August 787, Balkh, Khurasan"
+      },
+      {
+        label: "Died",
+        value: "9 March 886 (aged 98), W\u0101si\u1E6D, Iraq, Abbasid Caliphate"
+      },
+      {
+        label: "Influences",
+        value: "Aristotle and Ptolemy"
+      },
+      {
+        label: "Era",
+        value: "Islamic Golden Age, (Abbasid era)"
+      },
+      {
+        label: "Main interests",
+        value: "Astrology, Astronomy"
+      },
+      {
+        label: "Influenced",
+        value: "Al-Sijzi, Albertus Magnus, Roger Bacon, Pierre d'Ailly, Pico della Mirandola."
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: "Ab\u016B Ma\u02BFshar was a native of Balkh, a town in the Balkh province of Afghanistan, approximately 74 kilometres (46\xA0mi) south of the Amu Darya, one of the main bases of support of the Abbasid revolt in the early 8th century. Its population, as was generally the case in the frontier areas of the Arab conquest of Persia, remained culturally dedicated to its Sasanian and Hellenistic heritage. He probably came to Baghdad in the early years of the caliphate of al-Ma\u02BEm\u016Bn (r. 813\u2013833). According to al-Nadim's Al-Fihrist (10th century), he lived on the west side of Baghdad, near Bab Khurasan, the northeast gate of the original city on the west bank of the Tigris.",
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "His work Kit\u0101b al-madkhal al-kab\u012Br (English: The Great Introduction to the Science of Astrology) provides an introduction to astrology which received many translations to Latin and Greek starting from the 11th century.",
+        items: [
+          "Kit\u0101b mukhta\u1E63ar al-madkhal, an abridged version of the above, later translated to Latin by Adelard of Bath.",
+          `Kit\u0101b al-milal wa-\u02BEl-duwal ("Book on religions and dynasties"), probably his most important work, commented on in the major works of Roger Bacon, Pierre d'Ailly, and Pico della Mirandola.`,
+          'F\u012B dhikr ma tadullu \u02BFalayhi al-ashkh\u0101\u1E63 al-\u02BFulwiyya ("On the indications of the celestial objects"),',
+          'Kit\u0101b al-dal\u0101l\u0101t \u02BFal\u0101 al-itti\u1E63\u0101l\u0101t wa-qir\u0101n\u0101t al-kaw\u0101kib ("Book of the indications of the planetary conjunctions"),',
+          'Kit\u0101b al-ul\u016Bf ("Book of thousands"), preserved only in summaries by Sijz\u012B.',
+          "Kit\u0101b ta\u1E25\u0101w\u012Bl sin\u012B al-\u02BF\u0101lam (Flowers of Abu Ma'shar), uses horoscopes to examine months and days of the year. It was a manual for astrologers. It was translated in the 12th century by John of Seville.",
+          'Kit\u0101b ta\u1E25\u0101wil sin\u012B al-maw\u0101l\u012Bd ("Book of the revolutions of the years of nativities"). translated into Greek in 1000, and from that translation into Latin in the 13th century.',
+          'Kit\u0101b maw\u0101l\u012Bd al-rij\u0101l wa-\u02BEl-nis\u0101\u02BE ("Book of nativities of men and women"), which was widely circulated in the Islamic world. \u02BBAbd al-\u1E24asan I\u1E63f\u0101h\u0101n\u012B copied excerpts into the 14th century illustrated manuscript the Kitab al-Bulhan (ca.1390).',
+          "De magnis coniunctionibus, ed. K. Yamamoto, Ch. Burnett, Leiden, 2000, 2 vols. (Arabic & Latin text).",
+          "De revolutionibus nativitatum, ed. D. Pingree, Leipzig, 1968 (Greek text).",
+          "Liber florum ed. James Herschel Holden in Five Medieval Astrologers (Tempe, Az.: A.F.A., Inc., 2008): 13\u201366.",
+          "Introductorium maius, ed. R. Lemay, Napoli, 1995\u20131996, 9 vols. (Arabic text & two Latin translations).",
+          "Ysagoga minor, ed. Ch. Burnett, K. Yamamoto, M. Yano, Leiden-New York, 1994 (Arabic & Latin text).",
+          "The Great Introduction to Astrology, The Arabic Original and English Translation. Edited and translated by Keiji Yamamoto, Charles Burnett, Leiden-Boston, Brill, 2019. ISBN\xA0978-90-04-38123-0https://youtu.be/uX_jcHISOCE?si=1ZMKjTy2Yu5sZ5C5"
+        ]
+      },
+      {
+        heading: "Bibliography",
+        summary: "",
+        items: [
+          "(PDF version)",
+          "{{cite book}}: CS1 maint: location missing publisher (link)"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "Ab\u016B Ma\u02BFshar was a native of Balkh, a town in the Balkh province of Afghanistan, approximately 74 kilometres (46\xA0mi) south of the Amu Darya, one of the main bases of support of the Abbasid revolt in the early 8th century."
+      },
+      {
+        title: "Works",
+        note: "His work Kit\u0101b al-madkhal al-kab\u012Br (English: The Great Introduction to the Science of Astrology) provides an introduction to astrology which received many translations to Latin and Greek starting from the 11th century."
+      }
+    ]
+  },
+  "Al-Kindi": {
+    title: "Al-Kindi",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Al-Kindi",
+    description: 'Ab\u016B Y\u016Bsuf Ya\u02BBq\u016Bb ibn \u02BCIs\u1E25\u0101q a\u1E63-\u1E62abb\u0101\u1E25 al-Kind\u012B was an Arab polymath who was active as a philosopher, mathematician, physician, and music theorist. Al-Kindi was the first of the Islamic peripatetic philosophers, and is hailed as the "father of Arab philosophy".',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Stamp_IQ_1962_6f.jpg/330px-Stamp_IQ_1962_6f.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "c.\u2009801, Kufa, Abbasid Caliphate"
+      },
+      {
+        label: "Died",
+        value: "c.\u2009873 (aged approximately 72), Baghdad, Abbasid Caliphate"
+      },
+      {
+        label: "Era",
+        value: "Islamic Golden Age"
+      },
+      {
+        label: "Region",
+        value: "Islamic philosophy"
+      },
+      {
+        label: "School",
+        value: "Aristotelianism"
+      },
+      {
+        label: "Main interests",
+        value: "Philosophy, Islamic theology (kalam), logic, ethics, mathematics, cryptography, physics, chemistry, psychology, pharmacology, medicine, metaphysics, cosmology, astrology, music theory"
+      },
+      {
+        label: "Notable works",
+        value: "Manuscript on Deciphering Cryptographic Messages, Epistle on Informative Parts on Music, De radiis, De aspectibus"
+      },
+      {
+        label: "Religion",
+        value: "Islam"
+      },
+      {
+        label: "Denomination",
+        value: "Mu'tazila"
+      }
+    ],
+    sections: [
+      {
+        heading: "Early life",
+        summary: "Al-Kindi was born in Kufa to an aristocratic family of the Arabian tribe of the Kinda, descended from the chieftain al-Ash'ath ibn Qays, a contemporary of Muhammad. His was among the most prominent families of the tribal nobility of Kufa in the early Islamic period, until it lost much of its power following the revolt of Abd al-Rahman ibn Muhammad ibn al-Ash'ath. His father Ishaq was the governor of Basra and al-Kindi received his preliminary education there. He later went to complete his studies in Baghdad, where he was patronized by the Abbasid caliphs al-Ma'mun (r.\u2009813\u2013833) and al-Mu'tasim (r.\u2009833\u2013842). On account of his learning and aptitude for study, al-Ma'mun appointed him to the House of Wisdom, a recently established center for the translation of Greek philosophical and scientific texts, in Baghdad. He was also well known for his beautiful calligraphy, and at one point was employed as a calligrapher by Caliph al-Mutawakkil (r.\u2009847\u2013861).",
+        items: []
+      },
+      {
+        heading: "Accomplishments",
+        summary: "According to Arab bibliographer Ibn al-Nadim, al-Kindi wrote at least two hundred and sixty books, contributing heavily to geometry (thirty-two books), medicine and philosophy (twenty-two books each), logic (nine books), and physics (twelve books). Although most of his books have been lost over the centuries, a few have survived in the form of Latin translations by Gerard of Cremona, and others have been rediscovered in Arabic manuscripts; most importantly, twenty-four of his lost works were located in the mid-twentieth century in a Turkish library.",
+        items: [
+          "The Book of the Judgement of the Stars, including The Forty Chapters, on questions and elections.",
+          "On the Stellar Rays (spurious)",
+          'Several epistles on weather and meteorology, including De mutatione temporum, ("On the Changing of the Weather").',
+          "Treatise on the Judgement of Eclipses.",
+          "Treatise on the Dominion of the Arabs and its Duration (used to predict the end of Arab rule).",
+          "The Choices of Days (on elections).",
+          "On the Revolutions of the Years (on mundane astrology and natal revolutions).",
+          "De Signis Astronomiae Applicitis as Mediciam 'On the Signs of Astronomy as applied to Medicine'",
+          "Treatise on the Spirituality of the Planets.",
+          "Stringed Instruments from One String to Ten Strings.",
+          "Epistle on Informative Parts on Music.",
+          "Epistle on Modes and Tones.",
+          "Epistle on the Knowledge of the Composition of Melodies."
+        ]
+      },
+      {
+        heading: "Philosophical thought",
+        summary: "While Muslim intellectuals were already acquainted with Greek philosophy (especially logic), al-Kindi is credited with being the first real Muslim philosopher. His own thought was largely influenced by the Neo-Platonic philosophy of Proclus, Plotinus and John Philoponus, amongst others, although he does appear to have borrowed ideas from other Hellenistic schools as well. He makes many references to Aristotle in his writings, but these are often unwittingly re-interpreted in a Neo-Platonic framework. This trend is most obvious in areas such as metaphysics and the nature of God as a causal entity. Experts have suggested that he was influenced by the Mutazilite school of theology, because of the mutual concern both he and they demonstrated for maintaining the singularity (tawhid) of God. A minority view however holds that such agreements are considered incidental.",
+        items: []
+      },
+      {
+        heading: "Legacy",
+        summary: "Al-Kindi was a master of many different areas of thought and was held to be one of the greatest philosophers. His influence in the fields of physics, mathematics, medicine, philosophy, and music were far-reaching and lasted for several centuries. Ibn al-Nadim in his Kitab al-Fihrist praised al-Kindi and his work stating:",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Early life",
+        note: "Al-Kindi was born in Kufa to an aristocratic family of the Arabian tribe of the Kinda, descended from the chieftain al-Ash'ath ibn Qays, a contemporary of Muhammad."
+      },
+      {
+        title: "Accomplishments",
+        note: "According to Arab bibliographer Ibn al-Nadim, al-Kindi wrote at least two hundred and sixty books, contributing heavily to geometry (thirty-two books), medicine and philosophy (twenty-two books each), logic (nine books), and physics (twelve books)."
+      },
+      {
+        title: "Philosophical thought",
+        note: "While Muslim intellectuals were already acquainted with Greek philosophy (especially logic), al-Kindi is credited with being the first real Muslim philosopher."
+      },
+      {
+        title: "Legacy",
+        note: "Al-Kindi was a master of many different areas of thought and was held to be one of the greatest philosophers."
+      }
+    ]
+  },
+  "Maslama al-Qurtubi": {
+    title: "Picatrix",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Picatrix",
+    description: "Picatrix is a 400-page Arabic book of magic and astrology, which most scholars assume was originally written in the middle of the 11th century, though an argument for composition in the first half of the 10th century has been made. The work was translated into Spanish and then into Latin during the 13th century, at which time it got the Latin title Picatrix. The title Picatrix is also sometimes used to refer to the book's author.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/17th_century_Picatrix_title_Istanbul%2C_Hagia_Sophia_2443_crop.png/330px-17th_century_Picatrix_title_Istanbul%2C_Hagia_Sophia_2443_crop.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [],
+    sections: [
+      {
+        heading: "Content and sources",
+        summary: 'The work is divided into four books, which exhibit a marked absence of systematic exposition. Jean Seznec observed, "Picatrix prescribes propitious times and places and the attitude and gestures of the suppliant; he also indicates what terms must be used in petitioning the stars." As an example, Seznec then reproduces a prayer to Saturn from the work, noting that Fritz Saxl has pointed out that this invocation exhibits "the accent and even the very terms of a Greek astrological prayer to Kronos. This is one indication that the sources of Picatrix are in large part Hellenistic.":',
+        items: []
+      },
+      {
+        heading: "Authorship and significance of title",
+        summary: "The Arab historian, Ibn Khaldun, in his Muqaddimah, ascribed authorship of Picatrix (referring to the original Arabic version, under the title \u0120\u0101yat al-\u1E24ak\u012Bm \u063A\u0627\u064A\u0629 \u0627\u0644\u062D\u0643\u064A\u0645 ) to the astronomer and mathematician Maslama Al-Majriti, who died between 1005 CE and 1008 CE (398 AH). This attribution is problematic: the author of the Arabic original states in its introduction that he completed the book on 348 AH, which is ~ 959 CE. Moreover, the author states that he started writing the Picatrix after he completed his previous book, Rutbat al-\u1E24ak\u012Bm \u0631\u062A\u0628\u0629 \u0627\u0644\u062D\u0643\u064A\u0645 in 343 AH (~ 954 CE). This makes the authoring more than five decades before Al-Majriti's death, and if his estimated birth year is to be accepted, he would have only been around 5 years old when he started writing it. As well, according to Holmyard, the earliest manuscript attribution of the work to Maslama al-Majriti was made by the alchemist al-Jildaki, who died shortly after 1360, while Ibn Khaldun died some 20 years later. However, no biography of al-Majriti mentions him as the author of this work.",
+        items: []
+      },
+      {
+        heading: "Anticipation of experimental method",
+        summary: "Martin Plessner suggests that a translator of the Picatrix established a medieval definition of scientific experiment by changing a passage in the Hebrew translation of the Arabic original, establishing a theoretical basis for the experimental method:",
+        items: []
+      },
+      {
+        heading: "Editions",
+        summary: "",
+        items: [
+          "\u063A\u0627\u064A\u0629 \u0627\u0644\u062D\u0643\u064A\u0645 Gh\u0101yat al-\u1E24ak\u012Bm: An edition of the text in Arabic, edited by Hellmut Ritter (from the Warburg Institute)",
+          "Picatrix: Das Ziel des Weisen von Pseudo-Magriti, aus dem Arabischen ins Deutsche \xFCbersetzt von Hellmut Ritter und Martin Plessner [Picatrix: The Goal of the Wise Man by Pseudo-Magriti, translated from Arabic into German by Ritter and Plessner]. London: Warburg Institute, 1962 (=Studies of the Warburg Institute 27).",
+          "David Pingree, The Latin Version of the Ghayat al-hakim, Studies of the Warburg Institute, University of London (1986), ISBN\xA00-85481-069-2",
+          "Ouroboros Press has published the first English translation available in two volumes, Ouroborous Press (2002 Vol. 1 ASIN: B0006S6LAO) and (2008 Vol. 2) [2]",
+          "B\xE9atrice Bakhouche, Fr\xE9d\xE9ric Fauquier, Brigitte P\xE9rez-Jean, Picatrix: Un Traite De Magie Medieval, Brepols Pub (2003), 388 p., ISBN\xA0978-2-503-51068-2.",
+          "The Complete Picatrix: The Occult Classic Of Astrological Magic, Renaissance Astrology Press (2011), 310 p., ISBN\xA01-257-76785-2, English translation from Pingree's Latin critical edition by John Michael Greer & Christopher Warnock.",
+          "Picatrix: A Medieval Treatise on Astral Magic, translated with an introduction by Dan Attrell and David Porreca, 384 p., Penn State University Press, 2019."
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Content and sources",
+        note: "The work is divided into four books, which exhibit a marked absence of systematic exposition."
+      },
+      {
+        title: "Authorship and significance of title",
+        note: "The Arab historian, Ibn Khaldun, in his Muqaddimah, ascribed authorship of Picatrix (referring to the original Arabic version, under the title \u0120\u0101yat al-\u1E24ak\u012Bm \u063A\u0627\u064A\u0629 \u0627\u0644\u062D\u0643\u064A\u0645 ) to the astronomer and mathematician Maslama Al-Majriti, who died between 1005 CE and 1008 CE (398 AH)."
+      },
+      {
+        title: "Anticipation of experimental method",
+        note: "Martin Plessner suggests that a translator of the Picatrix established a medieval definition of scientific experiment by changing a passage in the Hebrew translation of the Arabic original, establishing a theoretical basis for the experimental method:"
       }
     ]
   },
@@ -21485,6 +25311,331 @@ Little else is known about his childhood, although there is a persistent traditi
         note: "Philip was married four times and had children with three of his wives."
       }
     ]
+  },
+  "Eliphas Levi": {
+    title: "Eliphas Levi",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/%C3%89liphas_L%C3%A9vi",
+    description: "\xC9liphas L\xE9vi Zahed, born Alphonse Louis Constant, was a French esotericist, occultist, poet, and writer. Initially pursuing an ecclesiastical career in the Catholic Church, he abandoned the priesthood in his mid-twenties and became a ceremonial magician. At the age of 40, he began professing knowledge of the occult. He wrote over 20 books on magic, Kabbalah, alchemical studies, and occultism.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Eliphas_Levi.png/330px-Eliphas_Levi.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "Alphonse Louis Constant, (1810-02-08)8 February 1810, Paris, First French Empire"
+      },
+      {
+        label: "Died",
+        value: "31 May 1875(1875-05-31) (aged\xA065), Paris, Third French Republic"
+      },
+      {
+        label: "Resting place",
+        value: "Ivry Cemetery, Ivry-sur-Seine (later disinterred and placed in a common grave)"
+      },
+      {
+        label: "Spouse",
+        value: "Marie-No\xE9mi Cadiot \u200B \u200B(m.\xA01846; ann.\xA01865)\u200B"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: "Born Alphonse Louis Constant, he was the son of a shoemaker in Paris. In 1832 he entered the seminary of Saint Sulpice to study to enter the Roman Catholic priesthood. As a sub-deacon he was responsible for catechism. Later he was ordained a deacon, remaining a cleric for the rest of his life. One week before being ordained to the priesthood, he decided to leave the priestly path; however, the spirit of charity and the life he had in the seminary stayed with him through the rest of his life. Later he wrote that he had acquired an understanding of faith and science without conflicts.",
+        items: []
+      },
+      {
+        heading: "As a ceremonial magus",
+        summary: 'Of his initial experience with British esotericists, in 1854, Levi wrote: "I had undertaken a journey to London, that I might escape from internal disquietude and devote myself, without interruption, to science. [...] They asked me forthwith to work wonders, as if I were a charlatan, and I was somewhat discouraged, for, to speak frankly, far from being inclined to initiate others into the mysteries of Ceremonial Magic, I had shrunk all along from its illusions and weariness. Moreover, such ceremonies necessitated an equipment which would be expensive and hard to collect. I buried myself therefore in the study of the transcendent Kabbalah, and troubled no further about English adepts."',
+        items: []
+      },
+      {
+        heading: "Theory of magic",
+        summary: "In the preface to The History of Magic, translator A. E. Waite enumerates what he believed to be the nine key tenets of magic as codified in Levi's earlier work, Doctrine and Ritual of Transcendental Magic.\nThey are:",
+        items: []
+      },
+      {
+        heading: "Socialist background",
+        summary: "It was long believed that the socialist Constant disappeared with the demise of the Second Republic and gave way to the occultist \xC9liphas L\xE9vi. However, according to historian of religions Julian Strube, who wrote his doctoral dissertation on Constant, this narrative was constructed at the end of the 19th century in occultist circles and was uncritically adopted by later scholars. Strube argues that Constant not only developed his occultism as a direct consequence of his socialist and post-clergical ideas, but he continued to propagate the realization of socialism throughout his entire life.",
+        items: []
+      },
+      {
+        heading: "Gallery",
+        summary: "",
+        items: [
+          "Chariot of Hermes",
+          "Addha-Nari",
+          "Solomon's symbol",
+          "Bathomet of Mendes"
+        ]
+      },
+      {
+        heading: "Selected writings",
+        summary: "",
+        items: [
+          "Includes material on alchemy"
+        ]
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "Born Alphonse Louis Constant, he was the son of a shoemaker in Paris."
+      },
+      {
+        title: "As a ceremonial magus",
+        note: 'Of his initial experience with British esotericists, in 1854, Levi wrote: "I had undertaken a journey to London, that I might escape from internal disquietude and devote myself, without interruption, to science.'
+      },
+      {
+        title: "Theory of magic",
+        note: "In the preface to The History of Magic, translator A."
+      },
+      {
+        title: "Socialist background",
+        note: "It was long believed that the socialist Constant disappeared with the demise of the Second Republic and gave way to the occultist \xC9liphas L\xE9vi."
+      }
+    ]
+  },
+  "S.L. Mathers": {
+    title: "Samuel Liddell MacGregor Mathers",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Samuel_Liddell_MacGregor_Mathers",
+    description: 'Samuel Liddell MacGregor Mathers, born Samuel Liddell Mathers, was a British occultist and member of the S.R.I.A. He is primarily known as one of the three founders of the Hermetic Order of the Golden Dawn, a ceremonial magic order of which offshoots still exist. He became so synonymous with the order that Golden Dawn scholar Israel Regardie observed in retrospect that "the Golden Dawn was MacGregor Mathers."',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/77/Samuel_Liddell_MacGregor_Mathers_in_Egyptian_getup.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    infobox: [
+      {
+        label: "Born",
+        value: "8 January 1854, Hackney, London, England"
+      },
+      {
+        label: "Died",
+        value: "5 or 20 November 1918 (aged 64), Paris, France"
+      },
+      {
+        label: "Alma\xA0mater",
+        value: "Bedford School"
+      },
+      {
+        label: "Occupation",
+        value: "Occultist"
+      },
+      {
+        label: "Known\xA0for",
+        value: "Hermetic Order of the Golden Dawn"
+      },
+      {
+        label: "Spouse",
+        value: "Moina Mathers"
+      },
+      {
+        label: "Parent",
+        value: "William M. Mathers"
+      }
+    ],
+    sections: [
+      {
+        heading: "Early life",
+        summary: "Mathers was born on 8 January 1854 in Hackney, London, England. His father, William M. Mathers, a commercial clerk, died while he was still a boy. He lived with his widowed mother (whose maiden name was Collins) in Bournemouth, until her death in 1885. Mathers attended Bedford Grammar School and subsequently worked as a clerk, before moving to King's Cross in London, following the death of his mother.",
+        items: []
+      },
+      {
+        heading: "Lifestyle",
+        summary: "Mathers was a practicing vegetarian, or (according to some accounts) vegan, an outspoken anti-vivisectionist, and a non-smoker. He was also a supporter of women's rights and he had little interest in money. It is known that his main interests were magic, military tactics and warfare, his first book being a translation of a French military manual, Practical Instruction in Infantry Campaigning Exercise (1884). He was also a keen student of boxing and fencing.",
+        items: []
+      },
+      {
+        heading: "Criticism",
+        summary: "In addition to many supporters, he had many enemies and critics. One of his most notable enemies was one-time friend and pupil Aleister Crowley, who portrayed Mathers as a villain named SRMD in his 1917 novel Moonchild.",
+        items: []
+      },
+      {
+        heading: "Decline and death",
+        summary: "Mathers died on 5 or 20 November 1918 in Paris, during the Spanish influenza pandemic. His death certificate (now lost) listed no cause of death and for many years his burial site remained unknown, leading some to claim he did not die and had achieved immortality. The grave has since been found in Paris. Aleister Crowley, in his Confessions, wrote of the decline of the Hermetic Order of the Golden Dawn, as well as that of MacGregor Mathers. He lamented what he saw as the irredeemable changes by Waite in his order and MacGregor Mathers's legacy of well-meaning but low-quality leadership in his last years.",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Early life",
+        note: "Mathers was born on 8 January 1854 in Hackney, London, England."
+      },
+      {
+        title: "Lifestyle",
+        note: "Mathers was a practicing vegetarian, or (according to some accounts) vegan, an outspoken anti-vivisectionist, and a non-smoker."
+      },
+      {
+        title: "Criticism",
+        note: "In addition to many supporters, he had many enemies and critics."
+      },
+      {
+        title: "Decline and death",
+        note: "Mathers died on 5 or 20 November 1918 in Paris, during the Spanish influenza pandemic."
+      }
+    ]
+  },
+  "Aleister Crowley": {
+    title: "Aleister Crowley",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Aleister_Crowley",
+    description: 'Aleister Crowley was an English occultist, ceremonial magician, poet, novelist, mountaineer, and painter. As the founder of the religion of Thelema in the early 20th century, he identified as its prophet, entrusted with guiding humanity into the \xC6on of Horus. A prolific writer, he published widely\u2014composing the "Libri" of Thelema\u2014over the course of his life.',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Aleister_Crowley%2C_thinker.jpg/330px-Aleister_Crowley%2C_thinker.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "Edward Alexander Crowley, (1875-10-12)12 October 1875, Leamington Spa, Warwickshire, England"
+      },
+      {
+        label: "Died",
+        value: "1 December 1947(1947-12-01) (aged\xA072), Hastings, Sussex, England"
+      },
+      {
+        label: "Resting place",
+        value: "Ashes buried in Hampton, New\xA0Jersey"
+      },
+      {
+        label: "Education",
+        value: "Malvern College\nTonbridge School\nEastbourne College\nTrinity College, Cambridge"
+      },
+      {
+        label: "Occupations",
+        value: "Occultistpoetnovelistmountaineer"
+      },
+      {
+        label: "Spouses",
+        value: "Rose Edith Kelly \u200B \u200B(m.\xA01903; div.\xA01909)\u200B Maria Teresa Sanchez \u200B \u200B(m.\xA01929)\u200B"
+      },
+      {
+        label: "Children",
+        value: "5, including Randall Gair Doherty"
+      }
+    ],
+    sections: [
+      {
+        heading: "Early life",
+        summary: `Crowley was born Edward Alexander Crowley at 30 Clarendon Square in Royal Leamington Spa, Warwickshire, England, on 12 October 1875. His father, Edward Crowley (1829\u20131887), was trained as an engineer, but his share in a lucrative family brewing business, Crowley's Alton Ales, allowed him to retire before his son was born. His mother, Emily Bertha Bishop (1848\u20131917), came from a Devonshire-Somerset family and had a strained relationship with her son; she described him as "the Beast", a name that he revelled in. The couple had been married at London's Kensington and Chelsea Register Office in November 1874, and were evangelical Christians. Crowley's father was born a Quaker, but converted to the Exclusive Brethren, a faction of a Christian fundamentalist group known as the Plymouth Brethren; Emily likewise converted upon marriage. Crowley's father was particularly devout, spending his time as a travelling preacher for the sect and reading a chapter from the Bible to his wife and son after breakfast every day. Following the death of their baby daughter in 1880, in 1881 the Crowleys moved to Redhill, Surrey. At the age of 8, Crowley was sent to H. T. Habershon's evangelical Christian boarding school in Hastings, and then to Ebor preparatory school in Cambridge, run by the Reverend Henry d'Arcy Champney, whom Crowley considered a sadist.`,
+        items: []
+      },
+      {
+        heading: "Developing Thelema",
+        summary: `In February 1904, Crowley and Rose arrived in Cairo. Pretending to be a prince and princess, they rented an apartment in which Crowley set up a temple room and began invoking ancient Egyptian deities, while studying Islamic mysticism and Arabic. According to Crowley's later account, Rose regularly became delirious and informed him that "they are waiting for you." On 18 March, she explained that "they" were the god Horus, and on 20 March she proclaimed that "the Equinox of the Gods has come". She led him to a nearby museum, where she showed him a seventh-century BCE mortuary stele known as the Stele of Ankh-ef-en-Khonsu; Crowley thought it important that the exhibit's number was 666, the Number of the Beast in Christian belief, and in later years termed the artefact the "Stele of Revealing".`,
+        items: []
+      },
+      {
+        heading: "Later life",
+        summary: `Crowley and Hirsig went to Tunis, where, dogged by continuing poor health, he unsuccessfully tried again to give up heroin, and began writing what he termed his "autohagiography", The Confessions of Aleister Crowley. They were joined in Tunis by the Thelemite Norman Mudd, who became Crowley's public relations consultant. Employing a local boy, Mohammad ben Brahim, as his servant, Crowley went with him on a retreat to Nefta, where they performed sex magic together. In January 1924, Crowley travelled to Nice, France, where he met with Frank Harris, underwent a series of nasal operations, and visited the Institute for the Harmonious Development of Man, developing a positive opinion of its founder George Gurdjieff. Destitute, he took on a wealthy student, Alexander Zu Zolar, before taking on another American follower, Dorothy Olsen. Crowley took Olsen back to Tunisia for a magical retreat in Nefta, where he also wrote To Man (1924), a declaration of his own status as a prophet entrusted with bringing Thelema to humanity. After spending the winter in Paris, in early 1925 Crowley and Olsen returned to Tunis, where he wrote The Heart of the Master (1938) as an account of a vision he experienced in a trance. In March Olsen became pregnant, and Hirsig was called to take care of her; she miscarried, following which Crowley took Olsen back to France. Hirsig later distanced herself from Crowley, who then denounced her.`,
+        items: []
+      },
+      {
+        heading: "Beliefs and thought",
+        summary: `Crowley's belief system, Thelema, has been described by scholars as a religion, and more specifically as both a new religious movement, and as a "magico-religious doctrine". Although holding The Book of the Law\u2014which was composed in 1904\u2014as its central text, Thelema took shape as a complete system in the years after 1904.`,
+        items: []
+      },
+      {
+        heading: "Image and opinions",
+        summary: `Crowley considered himself to be one of the outstanding figures of his time. Hutton stated that in Crowley's youth, he was "a self-indulgent and flamboyant young man" who "set about a deliberate flouting and provocation of social and religious norms", while being shielded from an "outraged public opinion" by his inherited wealth. Hutton also described Crowley as having both an "unappeasable desire" to take control of any organisation that he belonged to, and "a tendency to quarrel savagely" with those who challenged him. Crowley biographer Martin Booth asserted that Crowley was "self-confident, brash, eccentric, egotistic, highly intelligent, arrogant, witty, wealthy, and, when it suited him, cruel". Similarly, Richard B. Spence noted that Crowley was "capable of immense physical and emotional cruelty". Biographer Lawrence Sutin noted that Crowley exhibited "courage, skill, dauntless energy, and remarkable focus of will" while at the same time showing a "blind arrogance, petty fits of bile, [and] contempt for the abilities of his fellow men". The Thelemite Lon Milo DuQuette noted that Crowley "was by no means perfect" and "often alienated those who loved him dearest."`,
+        items: []
+      },
+      {
+        heading: "Possible links to British intelligence",
+        summary: "Biographers Richard B. Spence and Tobias Churton have suggested that Crowley was a spy for the British secret services and that among other things he joined the Golden Dawn under their command to monitor the activities of Samuel Liddell MacGregor Mathers, who was known to be a Carlist. Spence suggested that the conflict between Mathers and the London lodge for the temple was part of an intelligence operation to undermine Mathers' authority. Spence has suggested that the purpose of Crowley's trip to Mexico might have been to explore Mexican oil prospects for British intelligence, and that his trip to China was orchestrated as part of a British intelligence scheme to monitor the region's opium trade. Churton suggested that Crowley had travelled to Moscow on the orders of British intelligence to spy on revolutionary elements in the city.",
+        items: []
+      },
+      {
+        heading: "Legacy and influence",
+        summary: `Crowley has remained an influential figure, both amongst occultists and in popular culture, particularly that of Britain, but also of other parts of the world. In 2002, a BBC poll placed Crowley number 73 in a list of the 100 Greatest Britons. Richard Cavendish has written of him that "In native talent, penetrating intelligence and determination, Aleister Crowley was the best-equipped magician to emerge since the seventeenth century." The scholar of esotericism Egil Asprem described him as "one of the most well-known figures in modern occultism". The scholar of esotericism Wouter Hanegraaff asserted that Crowley was an extreme representation of "the dark side of the occult", adding that he was "the most notorious occultist magician of the twentieth century". The philosopher John Moore opined that Crowley stood out as a "Modern Master" when compared with other prominent occult figures like George Gurdjieff, P. D. Ouspensky, Rudolf Steiner, or Helena Blavatsky, and described him as a "living embodiment" of Oswald Spengler's "Faustian Man". Biographer Tobias Churton considered Crowley "a pioneer of consciousness research". Hutton noted that Crowley had "an important place in the history of modern Western responses to Oriental spiritual traditions", while Sutin thought that he had made "distinctly original contributions" to the study of yoga in the West.`,
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Early life",
+        note: "Crowley was born Edward Alexander Crowley at 30 Clarendon Square in Royal Leamington Spa, Warwickshire, England, on 12 October 1875."
+      },
+      {
+        title: "Developing Thelema",
+        note: "In February 1904, Crowley and Rose arrived in Cairo."
+      },
+      {
+        title: "Later life",
+        note: 'Crowley and Hirsig went to Tunis, where, dogged by continuing poor health, he unsuccessfully tried again to give up heroin, and began writing what he termed his "autohagiography", The Confessions of Aleister Crowley.'
+      },
+      {
+        title: "Beliefs and thought",
+        note: `Crowley's belief system, Thelema, has been described by scholars as a religion, and more specifically as both a new religious movement, and as a "magico-religious doctrine".`
+      },
+      {
+        title: "Image and opinions",
+        note: "Crowley considered himself to be one of the outstanding figures of his time."
+      },
+      {
+        title: "Legacy and influence",
+        note: "Crowley has remained an influential figure, both amongst occultists and in popular culture, particularly that of Britain, but also of other parts of the world."
+      }
+    ]
+  },
+  "Athanasius Kircher": {
+    title: "Athanasius Kircher",
+    wikipediaUrl: "https://en.wikipedia.org/wiki/Athanasius_Kircher",
+    description: 'Athanasius Kircher was a German Jesuit scholar and polymath who published around 40\xA0major works of comparative religion, geology, and medicine. Kircher has been compared to fellow Jesuit Roger Joseph Boscovich and to Leonardo da Vinci for his vast range of interests, and has been honoured with the title "Master of a Hundred Arts". He taught for more than 40\xA0years at the Roman College, where he set up a wunderkammer or cabinet of curiosities that would become the Kircherian Museum. A resurgence of interest in Kircher has occurred within the scholarly community in recent decades.',
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Athanasius_Kircher_%28cropped%29.jpg/330px-Athanasius_Kircher_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    infobox: [
+      {
+        label: "Born",
+        value: "2 May 1601/1602, Geisa, Princely Abbey of Fulda"
+      },
+      {
+        label: "Died",
+        value: "27 November 1680 (aged 78 or 79), Rome, Papal States"
+      },
+      {
+        label: "Institutions",
+        value: "University of W\xFCrzburgUniversity of AvignonPontifical Gregorian University"
+      }
+    ],
+    sections: [
+      {
+        heading: "Life",
+        summary: "Kircher was born on 2 May in either 1601 or 1602 (he himself did not know) in Geisa, Buchonia, near Fulda (Hessen, Germany). From his birthplace, he took the epithets Bucho, Buchonius and Fuldensis which he sometimes added to his name. He attended the Jesuit College in Fulda from 1614 to 1618, when he entered the novitiate of the Society.",
+        items: []
+      },
+      {
+        heading: "Works",
+        summary: "Kircher published many substantial books on a wide variety of subjects such as Egyptology, geology, and music theory. His syncretic approach disregarded conventional boundaries between disciplines: his Magnes, for example, ostensibly discussed magnetism, but also explored other modes of attraction such as gravity and love. Perhaps Kircher's best-known work is Oedipus Aegyptiacus (1652\u201354), a vast study of Egyptology and comparative religion.",
+        items: []
+      },
+      {
+        heading: "Legacy",
+        summary: 'For most of his professional life, Kircher was one of the scientific stars of his world: according to historian Paula Findlen, he "had a global reputation that was virtually unsurpassed by any early modern author". His importance was twofold: to the results of his own experiments and research he added information gleaned from his correspondence with over 760 scientists, physicians and above all his fellow Jesuits in all parts of the globe. The Encyclop\xE6dia Britannica calls him a "one-man intellectual clearing house".',
+        items: []
+      },
+      {
+        heading: "In popular culture",
+        summary: "Kircher's life and research are central to the plot of James Rollin's 2015 novel The Bone Labyrinth.",
+        items: []
+      },
+      {
+        heading: "Bibliography",
+        summary: "Kircher's principal works, in chronological order, are:",
+        items: []
+      }
+    ],
+    works: [
+      {
+        title: "Life",
+        note: "Kircher was born on 2 May in either 1601 or 1602 (he himself did not know) in Geisa, Buchonia, near Fulda (Hessen, Germany)."
+      },
+      {
+        title: "Works",
+        note: "Kircher published many substantial books on a wide variety of subjects such as Egyptology, geology, and music theory."
+      },
+      {
+        title: "Legacy",
+        note: 'For most of his professional life, Kircher was one of the scientific stars of his world: according to historian Paula Findlen, he "had a global reputation that was virtually unsurpassed by any early modern author".'
+      },
+      {
+        title: "In popular culture",
+        note: "Kircher's life and research are central to the plot of James Rollin's 2015 novel The Bone Labyrinth."
+      },
+      {
+        title: "Bibliography",
+        note: "Kircher's principal works, in chronological order, are:"
+      }
+    ]
   }
 };
 
@@ -21558,7 +25709,7 @@ function ProphetCard({ p, onOpen }) {
 function ProphetsPage({ onOpen }) {
   const span = `${fmtYear(PROPHETS[0].y0)} \u2013 ${fmtYear(PROPHETS[PROPHETS.length - 1].y1)}`;
   const last = PROPHETS[PROPHETS.length - 1];
-  return /* @__PURE__ */ import_react2.default.createElement("div", null, /* @__PURE__ */ import_react2.default.createElement("h1", null, "Prophets \u2014 from Adam to Jacob Frank"), /* @__PURE__ */ import_react2.default.createElement("p", { className: "muted" }, "A chronology of prophetic and revelatory figures, from the first human ", /* @__PURE__ */ import_react2.default.createElement("span", { className: "he" }, "\u05D0\u05D3\u05DD"), " through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, down to the Sabbatean\u2013Frankist thread whose ", /* @__PURE__ */ import_react2.default.createElement("b", { style: { color: "var(--gold)" } }, last.designation || "final", " figure is ", last.name, " (", fmtYear(last.y0), "\u2013", fmtYear(last.y1), ")"), ". ", PROPHETS.length, " figures across ", span, ". Click a card to open its profile \u2014 a Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table."), /* @__PURE__ */ import_react2.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react2.default.createElement(Timeline, { items: PROPHETS, title: "Prophet timeline \u2014 Adam to Jacob Frank", accent: "#8a05ff" })), /* @__PURE__ */ import_react2.default.createElement("div", { className: "tcards" }, PROPHETS.map((p, i) => /* @__PURE__ */ import_react2.default.createElement(ProphetCard, { key: i, p, onOpen }))));
+  return /* @__PURE__ */ import_react2.default.createElement("div", null, /* @__PURE__ */ import_react2.default.createElement("h1", null, "Prophets \u2014 from Adam to Jacob Frank"), /* @__PURE__ */ import_react2.default.createElement("p", { className: "muted" }, "A chronology of prophetic and revelatory figures, from the first human ", /* @__PURE__ */ import_react2.default.createElement("span", { className: "he" }, "\u05D0\u05D3\u05DD"), " and his son ", /* @__PURE__ */ import_react2.default.createElement("b", null, "Seth"), " \u2014 who, per Josephus, inscribed the astronomical knowledge on two pillars (brick and stone) to outlast the flood \u2014 through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, the ", /* @__PURE__ */ import_react2.default.createElement("b", null, "Islamic prophets"), " (including Job/Ayyub) and the ", /* @__PURE__ */ import_react2.default.createElement("b", null, "Sufi mystics"), " (including the Illuminationist Suhrawardi), down to the Sabbatean\u2013Frankist thread whose ", /* @__PURE__ */ import_react2.default.createElement("b", { style: { color: "var(--gold)" } }, last.designation || "final", " figure is ", last.name, " (", fmtYear(last.y0), "\u2013", fmtYear(last.y1), ")"), ". ", PROPHETS.length, " figures across ", span, ". Click a card to open its profile \u2014 a Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table."), /* @__PURE__ */ import_react2.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react2.default.createElement(Timeline, { items: PROPHETS, title: "Prophet timeline \u2014 Adam to Jacob Frank", accent: "#8a05ff" })), /* @__PURE__ */ import_react2.default.createElement("div", { className: "tcards" }, PROPHETS.map((p, i) => /* @__PURE__ */ import_react2.default.createElement(ProphetCard, { key: i, p, onOpen }))));
 }
 
 // web/src/pages/MagesPage.jsx
@@ -21566,14 +25717,26 @@ var import_react3 = __toESM(require_react());
 
 // web/src/data/mages.js
 var MAGES = [
+  { name: "Adapa", years: "legendary (pre-flood)", y0: -3500, y1: -3450, region: "Mesopotamia (Eridu)", role: "Legendary first of the seven apkallu sages of Eridu; the Sumerian magus-sage archetype who knew the breaking of the south wind's wing.", isIberian: false, isRoyal: false, endpoint: false },
+  { name: "Imhotep", years: "c.-2670\u2013-2600", y0: -2670, y1: -2600, region: "Egypt (Memphis)", role: "Vizier of Djoser, architect and physician; deified as a sage-priest \u2014 the archetypal Egyptian magus-sage.", isIberian: false, isRoyal: false, endpoint: false },
+  { name: "Enheduanna", years: "c.-2285\u2013-2250", y0: -2285, y1: -2250, region: "Mesopotamia (Ur)", role: "High priestess of the moon-god Nanna at Ur; first named author in history and daughter of Sargon of Akkad.", isIberian: false, isRoyal: true, endpoint: false },
   { name: "Hermes Trismegistus", years: "legendary", y0: -1500, y1: -1450, region: "Egypt (legendary)", role: "Legendary thrice-greatest sage; fountainhead of the Hermetic stellar-sapiential tradition.", isIberian: false, isRoyal: false, endpoint: false },
+  { name: "Jannes and Jambres", years: "c.-1391 (Moses' era)", y0: -1391, y1: -1380, region: "Egypt", role: "Pharaoh's court magicians who opposed Moses (2 Timothy 3:8); Jannes the Egyptian magus of Moses' era in the San Cipriano lineage.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "Solomon", years: "-990\u2013-931", y0: -990, y1: -931, region: "Israel/Judah", role: "Legendary wise-king; archetype of the royal sapiential and magical-solomonic tradition.", isIberian: false, isRoyal: true, endpoint: false },
   { name: "Zoroaster", years: "c.-628\u2013-551", y0: -628, y1: -551, region: "Persia (legendary)", role: "Legendary prophet-magus; eponymous founder of the magi as a priestly-sapiential order.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "Daniel", years: "-620\u2013-535", y0: -620, y1: -535, region: "Babylon/Persia", role: "Jewish court-magus and dream-interpreter in the Babylonian and Persian royal courts.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "Shadrach (Hananiah)", years: "-620\u2013-560", y0: -620, y1: -560, region: "Babylon", role: "Daniel's companion; trained in Chaldean lore at Nebuchadnezzar's court.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "Meshach (Mishael)", years: "-620\u2013-560", y0: -620, y1: -560, region: "Babylon", role: "Daniel's companion; initiated in Babylonian court wisdom alongside his fellows.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "Abednego (Azariah)", years: "-620\u2013-560", y0: -620, y1: -560, region: "Babylon", role: "Daniel's companion; recipient of Chaldean court-sapiential training with the magi.", isIberian: false, isRoyal: false, endpoint: false },
+  { name: "Pythagoras", years: "c.-570\u2013-495", y0: -570, y1: -495, region: "Samos / Croton", role: "Greek sage; number as the principle of the cosmos \u2014 the root of letter-number gematria and the prisca-theologia lineage of stellar-mathematical wisdom.", isIberian: false, isRoyal: false, endpoint: false },
+  { name: "Berossus", years: "c.-290\u2013-260", y0: -290, y1: -260, region: "Mesopotamia (Babylon)", role: "Babylonian priest of Bel Marduk and astronomer; transmitted Chaldean astrology and the apkallu tradition to the Hellenistic world.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "The Magi of Matthew 2", years: "c.-7\u2013-4", y0: -7, y1: -4, region: "Persia/East", role: "Star-following eastern magi; Christian archetype of royal-sage astrologers bearing gifts.", isIberian: false, isRoyal: false, endpoint: false },
+  { name: "Apollonius of Tyana", years: "c.15\u2013100", y0: 15, y1: 100, region: "Cappadocia / Roman East", role: "Neo-Pythagorean philosopher-magus; miracle-working ascetic sage compared in antiquity to Jesus, a prisca-theologia figure.", isIberian: false, isRoyal: false, endpoint: false },
+  { name: "Iamblichus", years: "c.245\u2013345", y0: 245, y1: 345, region: "Syria (Apamea)", role: "Neoplatonist theurgist; De Mysteriis systematised ritual magic and the invocation of planetary gods \u2014 the bridge from philosophy to operative stellar magic.", isIberian: false, isRoyal: false, endpoint: false },
+  { name: "Saint Cyprian of Antioch", years: "c.250\u2013304", y0: 250, y1: 304, region: "Antioch / Iberia (legendary)", role: "Antiochene magician converted to Christianity and martyred; the 'San Cipriano' of the Iberian grimoire tradition (Libro de San Cipriano, Drag\xF3n Rojo).", isIberian: false, isRoyal: false, endpoint: false },
+  { name: "Abu Ma'shar", years: "787\u2013886", y0: 787, y1: 886, region: "Persia / Baghdad", role: "The greatest Islamic astrologer ('Albumasar'); his works on planetary conjunctions and world-history transmitted Persian-Arabic astrology to the Latin West.", isIberian: false, isRoyal: false, endpoint: false },
+  { name: "Al-Kindi", years: "c.801\u2013873", y0: 801, y1: 873, region: "Iraq (Baghdad)", role: "Arab philosopher; De radiis stellarum \u2014 on the rays of the stars and how letters and images channel celestial influence into the sublunary world.", isIberian: false, isRoyal: false, endpoint: false },
+  { name: "Maslama al-Qurtubi", years: "c.900\u2013964", y0: 900, y1: 964, region: "Iberia (Cordoba)", role: "Andalusi astronomer-magus; attributed the Picatrix (Ghayat al-Hakim), the defining Arabic astral-magic grimoire of planetary talismans and stellar letters.", isIberian: true, isRoyal: false, endpoint: false },
   { name: "Abraham ibn Ezra", years: "1089\u20131167", y0: 1089, y1: 1167, region: "Iberia (Tudela)", role: "Andalusi-Jewish biblical exegete; integrated astrology, stellar order and Hebrew letters.", isIberian: true, isRoyal: false, endpoint: false },
   { name: "Michael Scot", years: "c.1175\u20131234", y0: 1175, y1: 1234, region: "Scotland/Toledo", role: "Court astrologer-magus to Frederick II and Alfonso X; translator of Arabic stellar lore.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "Alfonso X of Castile", years: "1221\u20131284", y0: 1221, y1: 1284, region: "Iberia (Castile)", role: "Royal-sage king; patron of the Alfonsine astronomical-magical corpus and magic books.", isIberian: true, isRoyal: true, endpoint: false },
@@ -21589,7 +25752,11 @@ var MAGES = [
   { name: "Paracelsus", years: "1493\u20131541", y0: 1493, y1: 1541, region: "Switzerland", role: "Physician-magus; astral-magic cosmology of signatures linking stars, metals and letters.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "Nostradamus", years: "1503\u20131566", y0: 1503, y1: 1566, region: "France", role: "Court astrologer-prophet; consulted by Catherine de M\xE9dicis in the royal-magus mode.", isIberian: false, isRoyal: false, endpoint: false },
   { name: "John Dee", years: "1527\u20131609", y0: 1527, y1: 1609, region: "England", role: "Royal astrologer to Elizabeth I; philosopher of Enochian stellar-angelic letters.", isIberian: false, isRoyal: false, endpoint: false },
-  { name: "Felipe II of Spain", years: "1527\u20131598", y0: 1527, y1: 1598, region: "Iberia (Spain)", role: "Habsburg royal-sage king; patron of astrologers and esoterica \u2014 closes the era of kings.", isIberian: true, isRoyal: true, endpoint: true, designation: "end of the era of kings" }
+  { name: "Felipe II of Spain", years: "1527\u20131598", y0: 1527, y1: 1598, region: "Iberia (Spain)", role: "Habsburg royal-sage king; patron of astrologers and esoterica \u2014 closes the era of kings.", isIberian: true, isRoyal: true, endpoint: false },
+  { name: "Athanasius Kircher", years: "1602\u20131680", y0: 1602, y1: 1680, region: "Germany / Rome (Jesuit)", role: "Jesuit polymath and mage of the Roman College; Oedipus Aegyptiacus (1652\u201355) sought to decode the hieroglyphs as a divinely-given stellar-kabbalistic symbolic language \u2014 the Baroque synthesis of Egyptology, Hermeticism, Kabbalah and astral magic.", isIberian: false, isRoyal: false, isJesuit: true, endpoint: false },
+  { name: "Eliphas Levi", years: "1810\u20131875", y0: 1810, y1: 1875, region: "France", role: "French occultist; revived the Tarot\u2013Qabalah correspondence and the 'Astral Light' as the agent of magic.", isIberian: false, isRoyal: false, endpoint: false },
+  { name: "S.L. Mathers", years: "1854\u20131918", y0: 1854, y1: 1918, region: "England", role: "Golden Dawn chief; translated the Key of Solomon and codified the Hermetic-Kabbalistic ritual system.", isIberian: false, isRoyal: false, endpoint: false },
+  { name: "Aleister Crowley", years: "1875\u20131947", y0: 1875, y1: 1947, region: "England/Italy", role: "English occultist; founder of Thelema and author of Liber AL vel Legis (1904), which he held to have been dictated to him by a praeter-human intelligence; re-read scripture through a stellar-qabalistic lens and codified the Solomonic Goetia.", isIberian: false, isRoyal: false, endpoint: true }
 ];
 
 // web/src/pages/MagesPage.jsx
@@ -21614,14 +25781,14 @@ function MageCard({ m, onOpen }) {
     },
     /* @__PURE__ */ import_react3.default.createElement("div", { className: "the", style: { minHeight: 26 } }, m.name),
     /* @__PURE__ */ import_react3.default.createElement("div", { className: "read" }, dates, " \xB7 ", m.region),
-    /* @__PURE__ */ import_react3.default.createElement("div", { className: "g", style: { display: "flex", flexWrap: "wrap", gap: 4, alignItems: "center" } }, /* @__PURE__ */ import_react3.default.createElement("span", { className: "pill", style: { fontSize: ".7rem" } }, m.role.split(";")[0]), m.isIberian && /* @__PURE__ */ import_react3.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--green)", borderColor: "var(--green)" } }, "Iberian"), m.isRoyal && /* @__PURE__ */ import_react3.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--violet)", borderColor: "var(--violet)" } }, "royal"), pill && /* @__PURE__ */ import_react3.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--gold)", borderColor: "var(--gold)" } }, pill)),
+    /* @__PURE__ */ import_react3.default.createElement("div", { className: "g", style: { display: "flex", flexWrap: "wrap", gap: 4, alignItems: "center" } }, /* @__PURE__ */ import_react3.default.createElement("span", { className: "pill", style: { fontSize: ".7rem" } }, m.role.split(";")[0]), m.isIberian && /* @__PURE__ */ import_react3.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--green)", borderColor: "var(--green)" } }, "Iberian"), m.isRoyal && /* @__PURE__ */ import_react3.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--violet)", borderColor: "var(--violet)" } }, "royal"), m.isJesuit && /* @__PURE__ */ import_react3.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--pink)", borderColor: "var(--pink)" } }, "Jesuit"), pill && /* @__PURE__ */ import_react3.default.createElement("span", { className: "pill", style: { fontSize: ".68rem", color: "var(--gold)", borderColor: "var(--gold)" } }, pill)),
     hasWiki && /* @__PURE__ */ import_react3.default.createElement("div", { className: "simp" }, WIKI[m.name].description.slice(0, 120), "\u2026")
   );
 }
 function MagesPage({ onOpen }) {
   const span = `${fmtYear(MAGES[0].y0)} \u2013 ${fmtYear(MAGES[MAGES.length - 1].y1)}`;
   const last = MAGES[MAGES.length - 1];
-  return /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("h1", null, "Magi \u2014 from Daniel to Felipe II"), /* @__PURE__ */ import_react3.default.createElement("p", { className: "muted" }, "A chronology of ", /* @__PURE__ */ import_react3.default.createElement("b", null, "magi / wise-men / royal-sage occult figures"), ", from the Babylonian court magi (", /* @__PURE__ */ import_react3.default.createElement("b", null, "Daniel, Shadrach, Meshach, Abednego"), ") through the medieval Iberian sages \u2014 ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n"), " \u2014 to the Renaissance Christian-kabbalists and royal astrologers, ending with ", /* @__PURE__ */ import_react3.default.createElement("b", { style: { color: "var(--gold)" } }, last.name, " (", last.years, ")"), ", who closes the era of kings. ", MAGES.length, " figures across ", span, ". Click a card to open its profile \u2014 a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table."), /* @__PURE__ */ import_react3.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react3.default.createElement(Timeline, { items: MAGES, title: "Magi timeline \u2014 Daniel to Felipe II", accent: "#8a05ff" })), /* @__PURE__ */ import_react3.default.createElement("div", { className: "tcards" }, MAGES.map((m, i) => /* @__PURE__ */ import_react3.default.createElement(MageCard, { key: i, m, onOpen }))));
+  return /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("h1", null, "Magi \u2014 from Daniel to Aleister Crowley"), /* @__PURE__ */ import_react3.default.createElement("p", { className: "muted" }, "A chronology of ", /* @__PURE__ */ import_react3.default.createElement("b", null, "magi / wise-men / royal-sage occult figures"), ", opening with the deepest sage-strata \u2014 the Sumerian apkallu ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Adapa"), ", the Egyptian deified sage ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Imhotep"), ", the priestess-poet ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Enheduanna"), ", ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Hermes Trismegistus"), ", and Pharaoh's magicians ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Jannes and Jambres"), " of Moses' era \u2014 through ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Pythagoras"), " (number as the root of the cosmos), the Babylonian court magi (", /* @__PURE__ */ import_react3.default.createElement("b", null, "Daniel, Shadrach, Meshach, Abednego"), "), the priest-astronomer ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Berossus"), ", the star-following ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Magi of Matthew 2"), ", the neo-Pythagorean magus ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Apollonius of Tyana"), ", the theurgist ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Iamblichus"), ", the magician-martyr ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Saint Cyprian of Antioch"), " ('San Cipriano', whose Libro de San Cipriano and Drag\xF3n Rojo transmit the Solomonic-Egyptian magical lineage to Iberia), the Arabic astrologers ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Abu Ma'shar, Al-Kindi"), " (De radiis stellarum) and ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Maslama al-Qurtubi"), " (Picatrix), the medieval Iberian sages \u2014 ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n"), " \u2014 the Renaissance Christian-kabbalists and royal astrologers, the Baroque ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Jesuit mage Athanasius Kircher"), " (", /* @__PURE__ */ import_react3.default.createElement("i", null, "Oedipus Aegyptiacus"), "), and the modern Hermetic line of ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Eliphas L\xE9vi and S.L. Mathers"), ", ending with ", /* @__PURE__ */ import_react3.default.createElement("b", { style: { color: "var(--gold)" } }, last.name, " (", last.years, ")"), ", founder of Thelema, who re-read scripture by the stars and codified the Solomonic Goetia. ", MAGES.length, " figures across ", span, ". Click a card to open its profile \u2014 a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table."), /* @__PURE__ */ import_react3.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react3.default.createElement(Timeline, { items: MAGES, title: "Magi timeline \u2014 Daniel to Aleister Crowley", accent: "#8a05ff" })), /* @__PURE__ */ import_react3.default.createElement("div", { className: "tcards" }, MAGES.map((m, i) => /* @__PURE__ */ import_react3.default.createElement(MageCard, { key: i, m, onOpen }))));
 }
 
 // web/src/pages/AlignmentFicha.jsx
@@ -24855,7 +29022,7 @@ var name_verses_default = {
   },
   abda: {
     ref: "Neh 11:17",
-    he: '\u05D5\u05BC\u05DE\u05B7\u05EA\u05BC\u05B7\u05E0\u05B0\u05D9\u05B8\u05A3\u05D4 \u05D1\u05B6\u05DF\u05BE\u05DE\u05B4\u05A0\u05D9\u05DB\u05B8\u05A0\u05D0 \u05D1\u05BC\u05B6\u05DF\u05BE\u05D6\u05B7\u05D1\u05B0\u05D3\u05BC\u05B4\u05A8\u05D9 \u05D1\u05B6\u05DF\u05BE\u05D0\u05B8\u05E1\u05B8\u059C\u05E3 \u05E8\u05B9\u0597\u05D0\u05E9\u05C1 \u05D4\u05B7\u05EA\u05BC\u05B0\u05D7\u05B4\u05DC\u05BC\u05B8\u05D4\u0599 \u05D9\u05B0\u05D4\u05D5\u05B9\u05D3\u05B6\u05A3\u05D4 \u05DC\u05B7\u05EA\u05BC\u05B0\u05E4\u05B4\u05DC\u05BC\u05B8\u0594\u05D4 \u05D5\u05BC\u05D1\u05B7\u05E7\u05B0\u05D1\u05BC\u05BB\u05E7\u05B0\u05D9\u05B8\u0596\u05D4 \u05DE\u05B4\u05E9\u05C1\u05B0\u05E0\u05B6\u05A3\u05D4 \u05DE\u05B5\u05D0\u05B6\u05D7\u05B8\u0591\u05D9\u05D5 \u05D5\u05B0\u05E2\u05B7\u05D1\u05B0\u05D3\u05BC\u05B8\u05D0\u0599 \u05D1\u05BC\u05B6\u05DF\u05BE\u05E9\u05C1\u05B7\u05DE\u05BC\u0594\u05D5\u05BC\u05E2\u05B7 \u05D1\u05BC\u05B6\u05DF\u05BE\u05D2\u05BC\u05B8\u05DC\u05B8\u0596\u05DC \u05D1\u05BC\u05B6\u05DF\u05BE<span class="mam-kq"><span class="mam-kq-q">[\u05D9\u05B0\u05D3\u05D5\u05BC\u05EA\u05BD\u05D5\u05BC\u05DF]</span> <span class="mam-kq-k">(\u05D9\u05D3\u05D9\u05EA\u05D5\u05DF)</span></span>\u05C3',
+    he: "\u05D5\u05BC\u05DE\u05B7\u05EA\u05BC\u05B7\u05E0\u05B0\u05D9\u05B8\u05A3\u05D4 \u05D1\u05B6\u05DF\u05BE\u05DE\u05B4\u05A0\u05D9\u05DB\u05B8\u05A0\u05D0 \u05D1\u05BC\u05B6\u05DF\u05BE\u05D6\u05B7\u05D1\u05B0\u05D3\u05BC\u05B4\u05A8\u05D9 \u05D1\u05B6\u05DF\u05BE\u05D0\u05B8\u05E1\u05B8\u059C\u05E3 \u05E8\u05B9\u0597\u05D0\u05E9\u05C1 \u05D4\u05B7\u05EA\u05BC\u05B0\u05D7\u05B4\u05DC\u05BC\u05B8\u05D4\u0599 \u05D9\u05B0\u05D4\u05D5\u05B9\u05D3\u05B6\u05A3\u05D4 \u05DC\u05B7\u05EA\u05BC\u05B0\u05E4\u05B4\u05DC\u05BC\u05B8\u0594\u05D4 \u05D5\u05BC\u05D1\u05B7\u05E7\u05B0\u05D1\u05BC\u05BB\u05E7\u05B0\u05D9\u05B8\u0596\u05D4 \u05DE\u05B4\u05E9\u05C1\u05B0\u05E0\u05B6\u05A3\u05D4 \u05DE\u05B5\u05D0\u05B6\u05D7\u05B8\u0591\u05D9\u05D5 \u05D5\u05B0\u05E2\u05B7\u05D1\u05B0\u05D3\u05BC\u05B8\u05D0\u0599 \u05D1\u05BC\u05B6\u05DF\u05BE\u05E9\u05C1\u05B7\u05DE\u05BC\u0594\u05D5\u05BC\u05E2\u05B7 \u05D1\u05BC\u05B6\u05DF\u05BE\u05D2\u05BC\u05B8\u05DC\u05B8\u0596\u05DC \u05D1\u05BC\u05B6\u05DF\u05BE[\u05D9\u05B0\u05D3\u05D5\u05BC\u05EA\u05BD\u05D5\u05BC\u05DF] (\u05D9\u05D3\u05D9\u05EA\u05D5\u05DF)\u05C3",
     en: "Mattaniah son of Micha son of Zabdi son of Asaph was the head; at prayer, he would lead off with praise; and Bakbukiah, one of his brothers, was his second-in-command; and Abda son of Shammua son of Galal son of Jeduthun."
   },
   abner: {
@@ -24866,7 +29033,7 @@ var name_verses_default = {
   abraham: {
     ref: "Gen 17:5",
     he: "\u05D5\u05B0\u05DC\u05B9\u05D0\u05BE\u05D9\u05B4\u05E7\u05BC\u05B8\u05E8\u05B5\u05A5\u05D0 \u05E2\u059B\u05D5\u05B9\u05D3 \u05D0\u05B6\u05EA\u05BE\u05E9\u05C1\u05B4\u05DE\u05B0\u05DA\u05B8\u0596 \u05D0\u05B7\u05D1\u05B0\u05E8\u05B8\u0591\u05DD \u05D5\u05B0\u05D4\u05B8\u05D9\u05B8\u05A4\u05D4 \u05E9\u05C1\u05B4\u05DE\u05B0\u05DA\u05B8\u0599 \u05D0\u05B7\u05D1\u05B0\u05E8\u05B8\u05D4\u05B8\u0594\u05DD \u05DB\u05BC\u05B4\u059B\u05D9 \u05D0\u05B7\u05D1\u05BE\u05D4\u05B2\u05DE\u05A5\u05D5\u05B9\u05DF \u05D2\u05BC\u05D5\u05B9\u05D9\u05B4\u0596\u05DD \u05E0\u05B0\u05EA\u05B7\u05EA\u05BC\u05B4\u05BD\u05D9\u05DA\u05B8\u05C3",
-    en: 'And you shall no longer be called Abram, but your name shall be Abraham,<sup class="footnote-marker">c</sup><i class="footnote"><b>Abraham </b>Understood as \u201Cfather of a multitude.\u201D</i> for I make you the father of a multitude of nations.'
+    en: "And you shall no longer be called Abram, but your name shall be Abraham,cAbraham Understood as \u201Cfather of a multitude.\u201D for I make you the father of a multitude of nations."
   },
   abram: {
     ref: "Gen 11:29",
@@ -24875,7 +29042,7 @@ var name_verses_default = {
   },
   achab: {
     ref: "1 Ki 16:28",
-    he: '\u05D5\u05B7\u05D9\u05BC\u05B4\u05E9\u05C1\u05B0\u05DB\u05BC\u05B7\u05A4\u05D1 \u05E2\u05C7\u05DE\u05B0\u05E8\u05B4\u05D9\u0599 \u05E2\u05B4\u05DD\u05BE\u05D0\u05B2\u05D1\u05B9\u05EA\u05B8\u0594\u05D9\u05D5 \u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05BC\u05B8\u05D1\u05B5\u0596\u05E8 \u05D1\u05BC\u05B0\u05E9\u05C1\u05B9\u05DE\u05B0\u05E8\u0591\u05D5\u05B9\u05DF \u05D5\u05B7\u05D9\u05BC\u05B4\u05DE\u05B0\u05DC\u05B9\u059B\u05DA\u05B0 \u05D0\u05B7\u05D7\u05B0\u05D0\u05B8\u05A5\u05D1 \u05D1\u05BC\u05B0\u05E0\u0596\u05D5\u05B9 \u05EA\u05BC\u05B7\u05D7\u05B0\u05EA\u05BC\u05B8\u05BD\u05D9\u05D5\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05E9\u05C1\u05B0\u05DB\u05BC\u05B7\u05A4\u05D1 \u05E2\u05C7\u05DE\u05B0\u05E8\u05B4\u05D9\u0599 \u05E2\u05B4\u05DD\u05BE\u05D0\u05B2\u05D1\u05B9\u05EA\u05B8\u0594\u05D9\u05D5 \u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05BC\u05B8\u05D1\u05B5\u0596\u05E8 \u05D1\u05BC\u05B0\u05E9\u05C1\u05B9\u05DE\u05B0\u05E8\u0591\u05D5\u05B9\u05DF \u05D5\u05B7\u05D9\u05BC\u05B4\u05DE\u05B0\u05DC\u05B9\u059B\u05DA\u05B0 \u05D0\u05B7\u05D7\u05B0\u05D0\u05B8\u05A5\u05D1 \u05D1\u05BC\u05B0\u05E0\u0596\u05D5\u05B9 \u05EA\u05BC\u05B7\u05D7\u05B0\u05EA\u05BC\u05B8\u05BD\u05D9\u05D5\u05C3",
     en: "Omri rested with his ancestors and was buried in Samaria; and his son Ahab succeeded him as king."
   },
   achashverosh: {
@@ -24895,27 +29062,27 @@ var name_verses_default = {
   },
   achuzzath: {
     ref: "Gen 17:8",
-    he: "\u05D5\u05B0\u05E0\u05B8\u05EA\u05B7\u05EA\u05BC\u05B4\u05A3\u05D9 \u05DC\u05B0\u05A0\u05DA\u05B8\u05A0 \u05D5\u05BC\u05DC\u05B0\u05D6\u05B7\u05E8\u05B0\u05E2\u05B2\u05DA\u05B8\u05A8 \u05D0\u05B7\u05D7\u05B2\u05E8\u05B6\u059C\u05D9\u05DA\u05B8 \u05D0\u05B5\u05A3\u05EA&thinsp;<b>\u05C0</b> \u05D0\u05B6\u05A3\u05E8\u05B6\u05E5 \u05DE\u05B0\u05D2\u05BB\u05E8\u05B6\u0597\u05D9\u05DA\u05B8 \u05D0\u05B5\u059A\u05EA \u05DB\u05BC\u05C7\u05DC\u05BE\u05D0\u05B6\u05A3\u05E8\u05B6\u05E5 \u05DB\u05BC\u05B0\u05E0\u05B7\u0594\u05E2\u05B7\u05DF \u05DC\u05B7\u05D0\u05B2\u05D7\u05BB\u05D6\u05BC\u05B7\u0596\u05EA \u05E2\u05D5\u05B9\u05DC\u05B8\u0591\u05DD \u05D5\u05B0\u05D4\u05B8\u05D9\u05B4\u05A5\u05D9\u05EA\u05B4\u05D9 \u05DC\u05B8\u05D4\u05B6\u0596\u05DD \u05DC\u05B5\u05D0\u05DC\u05B9\u05D4\u05B4\u05BD\u05D9\u05DD\u05C3",
+    he: "\u05D5\u05B0\u05E0\u05B8\u05EA\u05B7\u05EA\u05BC\u05B4\u05A3\u05D9 \u05DC\u05B0\u05A0\u05DA\u05B8\u05A0 \u05D5\u05BC\u05DC\u05B0\u05D6\u05B7\u05E8\u05B0\u05E2\u05B2\u05DA\u05B8\u05A8 \u05D0\u05B7\u05D7\u05B2\u05E8\u05B6\u059C\u05D9\u05DA\u05B8 \u05D0\u05B5\u05A3\u05EA&thinsp;\u05C0 \u05D0\u05B6\u05A3\u05E8\u05B6\u05E5 \u05DE\u05B0\u05D2\u05BB\u05E8\u05B6\u0597\u05D9\u05DA\u05B8 \u05D0\u05B5\u059A\u05EA \u05DB\u05BC\u05C7\u05DC\u05BE\u05D0\u05B6\u05A3\u05E8\u05B6\u05E5 \u05DB\u05BC\u05B0\u05E0\u05B7\u0594\u05E2\u05B7\u05DF \u05DC\u05B7\u05D0\u05B2\u05D7\u05BB\u05D6\u05BC\u05B7\u0596\u05EA \u05E2\u05D5\u05B9\u05DC\u05B8\u0591\u05DD \u05D5\u05B0\u05D4\u05B8\u05D9\u05B4\u05A5\u05D9\u05EA\u05B4\u05D9 \u05DC\u05B8\u05D4\u05B6\u0596\u05DD \u05DC\u05B5\u05D0\u05DC\u05B9\u05D4\u05B4\u05BD\u05D9\u05DD\u05C3",
     en: "I assign the land you sojourn in to you and your offspring to come, all the land of Canaan, as an everlasting holding. I will be their God.\u201D"
   },
   adad: {
     ref: "1 Ki 11:17",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05D1\u05B0\u05E8\u05B7\u05A3\u05D7 \u05D0\u05B2\u05D3\u05B7\u05A1\u05D3 \u05D4\u05D5\u05BC\u05D0\u05A9 \u05D5\u05B7\u05D0\u05B2\u05E0\u05B8\u05E9\u05C1\u05B4\u05A8\u05D9\u05DD \u05D0\u05B2\u05D3\u05B9\u05DE\u05B4\u05D9\u05BC\u05B4\u059C\u05D9\u05DD \u05DE\u05B5\u05E2\u05B7\u05D1\u05B0\u05D3\u05B5\u05A5\u05D9 \u05D0\u05B8\u05D1\u05B4\u059B\u05D9\u05D5 \u05D0\u05B4\u05EA\u05BC\u0596\u05D5\u05B9 \u05DC\u05B8\u05D1\u05A3\u05D5\u05B9\u05D0 \u05DE\u05B4\u05E6\u05B0\u05E8\u05B8\u0591\u05D9\u05B4\u05DD \u05D5\u05B7\u05D4\u05B2\u05D3\u05B7\u0596\u05D3 \u05E0\u05B7\u05A5\u05E2\u05B7\u05E8 \u05E7\u05B8\u05D8\u05B8\u05BD\u05DF\u05C3",
-    en: 'But Hadad,<sup class="footnote-marker">e</sup><i class="footnote"><b>Hadad </b>Heb. \u201CAdad.\u201D</i> together with some Edomites, servants of his father, escaped and headed for Egypt; Hadad was then a young boy.'
+    en: "But Hadad,eHadad Heb. \u201CAdad.\u201D together with some Edomites, servants of his father, escaped and headed for Egypt; Hadad was then a young boy."
   },
   admatha: {
     ref: "Esth 1:14",
-    he: "\u05D5\u05B0\u05D4\u05B7\u05E7\u05BC\u05B8\u05E8\u05B9\u05A3\u05D1 \u05D0\u05B5\u05DC\u05B8\u0597\u05D9\u05D5 \u05DB\u05BC\u05B7\u05E8\u05B0\u05E9\u05C1\u05B0\u05E0\u05B8\u05A4\u05D0 \u05E9\u05C1\u05B5\u05EA\u05B8\u05E8\u0599 \u05D0\u05B7\u05D3\u05B0\u05DE\u05B8\u05A3\u05EA\u05B8\u05D0 \u05EA\u05B7\u05E8\u05B0\u05E9\u05C1\u05B4\u0594\u05D9\u05E9\u05C1 \u05DE\u05B6\u05A5\u05E8\u05B6\u05E1 \u05DE\u05B7\u05E8\u05B0\u05E1\u05B0\u05E0\u05B8\u0596\u05D0 \u05DE\u05B0\u05DE\u05D5\u05BC\u05DB\u05B8\u0591\u05DF \u05E9\u05C1\u05B4\u05D1\u05B0\u05E2\u05B7\u059E\u05EA \u05E9\u05C2\u05B8\u05E8\u05B5\u05A3\u05D9&thinsp;<b>\u05C0</b> \u05E4\u05BC\u05B8\u05E8\u05B7\u05A3\u05E1 \u05D5\u05BC\u05DE\u05B8\u05D3\u05B7\u0597\u05D9 \u05E8\u05B9\u05D0\u05B5\u05D9\u0599 \u05E4\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D4\u05B7\u05DE\u05BC\u05B6\u0594\u05DC\u05B6\u05DA\u05B0 \u05D4\u05B7\u05D9\u05BC\u05B9\u05E9\u05C1\u05B0\u05D1\u05B4\u05A5\u05D9\u05DD \u05E8\u05B4\u05D0\u05E9\u05C1\u05B9\u05E0\u05B8\u0596\u05D4 \u05D1\u05BC\u05B7\u05DE\u05BC\u05B7\u05DC\u05B0\u05DB\u05BD\u05D5\u05BC\u05EA\u05C3",
+    he: "\u05D5\u05B0\u05D4\u05B7\u05E7\u05BC\u05B8\u05E8\u05B9\u05A3\u05D1 \u05D0\u05B5\u05DC\u05B8\u0597\u05D9\u05D5 \u05DB\u05BC\u05B7\u05E8\u05B0\u05E9\u05C1\u05B0\u05E0\u05B8\u05A4\u05D0 \u05E9\u05C1\u05B5\u05EA\u05B8\u05E8\u0599 \u05D0\u05B7\u05D3\u05B0\u05DE\u05B8\u05A3\u05EA\u05B8\u05D0 \u05EA\u05B7\u05E8\u05B0\u05E9\u05C1\u05B4\u0594\u05D9\u05E9\u05C1 \u05DE\u05B6\u05A5\u05E8\u05B6\u05E1 \u05DE\u05B7\u05E8\u05B0\u05E1\u05B0\u05E0\u05B8\u0596\u05D0 \u05DE\u05B0\u05DE\u05D5\u05BC\u05DB\u05B8\u0591\u05DF \u05E9\u05C1\u05B4\u05D1\u05B0\u05E2\u05B7\u059E\u05EA \u05E9\u05C2\u05B8\u05E8\u05B5\u05A3\u05D9&thinsp;\u05C0 \u05E4\u05BC\u05B8\u05E8\u05B7\u05A3\u05E1 \u05D5\u05BC\u05DE\u05B8\u05D3\u05B7\u0597\u05D9 \u05E8\u05B9\u05D0\u05B5\u05D9\u0599 \u05E4\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D4\u05B7\u05DE\u05BC\u05B6\u0594\u05DC\u05B6\u05DA\u05B0 \u05D4\u05B7\u05D9\u05BC\u05B9\u05E9\u05C1\u05B0\u05D1\u05B4\u05A5\u05D9\u05DD \u05E8\u05B4\u05D0\u05E9\u05C1\u05B9\u05E0\u05B8\u0596\u05D4 \u05D1\u05BC\u05B7\u05DE\u05BC\u05B7\u05DC\u05B0\u05DB\u05BD\u05D5\u05BC\u05EA\u05C3",
     en: "His closest advisers were Carshena, Shethar, Admatha, Tarshish, Meres, Marsena, and Memucan, the seven ministers of Persia and Media who had access to the royal presence and occupied the first place in the kingdom.)"
   },
   karshena: {
     ref: "Esth 1:14",
-    he: "\u05D5\u05B0\u05D4\u05B7\u05E7\u05BC\u05B8\u05E8\u05B9\u05A3\u05D1 \u05D0\u05B5\u05DC\u05B8\u0597\u05D9\u05D5 \u05DB\u05BC\u05B7\u05E8\u05B0\u05E9\u05C1\u05B0\u05E0\u05B8\u05A4\u05D0 \u05E9\u05C1\u05B5\u05EA\u05B8\u05E8\u0599 \u05D0\u05B7\u05D3\u05B0\u05DE\u05B8\u05A3\u05EA\u05B8\u05D0 \u05EA\u05B7\u05E8\u05B0\u05E9\u05C1\u05B4\u0594\u05D9\u05E9\u05C1 \u05DE\u05B6\u05A5\u05E8\u05B6\u05E1 \u05DE\u05B7\u05E8\u05B0\u05E1\u05B0\u05E0\u05B8\u0596\u05D0 \u05DE\u05B0\u05DE\u05D5\u05BC\u05DB\u05B8\u0591\u05DF \u05E9\u05C1\u05B4\u05D1\u05B0\u05E2\u05B7\u059E\u05EA \u05E9\u05C2\u05B8\u05E8\u05B5\u05A3\u05D9&thinsp;<b>\u05C0</b> \u05E4\u05BC\u05B8\u05E8\u05B7\u05A3\u05E1 \u05D5\u05BC\u05DE\u05B8\u05D3\u05B7\u0597\u05D9 \u05E8\u05B9\u05D0\u05B5\u05D9\u0599 \u05E4\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D4\u05B7\u05DE\u05BC\u05B6\u0594\u05DC\u05B6\u05DA\u05B0 \u05D4\u05B7\u05D9\u05BC\u05B9\u05E9\u05C1\u05B0\u05D1\u05B4\u05A5\u05D9\u05DD \u05E8\u05B4\u05D0\u05E9\u05C1\u05B9\u05E0\u05B8\u0596\u05D4 \u05D1\u05BC\u05B7\u05DE\u05BC\u05B7\u05DC\u05B0\u05DB\u05BD\u05D5\u05BC\u05EA\u05C3",
+    he: "\u05D5\u05B0\u05D4\u05B7\u05E7\u05BC\u05B8\u05E8\u05B9\u05A3\u05D1 \u05D0\u05B5\u05DC\u05B8\u0597\u05D9\u05D5 \u05DB\u05BC\u05B7\u05E8\u05B0\u05E9\u05C1\u05B0\u05E0\u05B8\u05A4\u05D0 \u05E9\u05C1\u05B5\u05EA\u05B8\u05E8\u0599 \u05D0\u05B7\u05D3\u05B0\u05DE\u05B8\u05A3\u05EA\u05B8\u05D0 \u05EA\u05B7\u05E8\u05B0\u05E9\u05C1\u05B4\u0594\u05D9\u05E9\u05C1 \u05DE\u05B6\u05A5\u05E8\u05B6\u05E1 \u05DE\u05B7\u05E8\u05B0\u05E1\u05B0\u05E0\u05B8\u0596\u05D0 \u05DE\u05B0\u05DE\u05D5\u05BC\u05DB\u05B8\u0591\u05DF \u05E9\u05C1\u05B4\u05D1\u05B0\u05E2\u05B7\u059E\u05EA \u05E9\u05C2\u05B8\u05E8\u05B5\u05A3\u05D9&thinsp;\u05C0 \u05E4\u05BC\u05B8\u05E8\u05B7\u05A3\u05E1 \u05D5\u05BC\u05DE\u05B8\u05D3\u05B7\u0597\u05D9 \u05E8\u05B9\u05D0\u05B5\u05D9\u0599 \u05E4\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D4\u05B7\u05DE\u05BC\u05B6\u0594\u05DC\u05B6\u05DA\u05B0 \u05D4\u05B7\u05D9\u05BC\u05B9\u05E9\u05C1\u05B0\u05D1\u05B4\u05A5\u05D9\u05DD \u05E8\u05B4\u05D0\u05E9\u05C1\u05B9\u05E0\u05B8\u0596\u05D4 \u05D1\u05BC\u05B7\u05DE\u05BC\u05B7\u05DC\u05B0\u05DB\u05BD\u05D5\u05BC\u05EA\u05C3",
     en: "His closest advisers were Carshena, Shethar, Admatha, Tarshish, Meres, Marsena, and Memucan, the seven ministers of Persia and Media who had access to the royal presence and occupied the first place in the kingdom.)"
   },
   marsena: {
     ref: "Esth 1:14",
-    he: "\u05D5\u05B0\u05D4\u05B7\u05E7\u05BC\u05B8\u05E8\u05B9\u05A3\u05D1 \u05D0\u05B5\u05DC\u05B8\u0597\u05D9\u05D5 \u05DB\u05BC\u05B7\u05E8\u05B0\u05E9\u05C1\u05B0\u05E0\u05B8\u05A4\u05D0 \u05E9\u05C1\u05B5\u05EA\u05B8\u05E8\u0599 \u05D0\u05B7\u05D3\u05B0\u05DE\u05B8\u05A3\u05EA\u05B8\u05D0 \u05EA\u05B7\u05E8\u05B0\u05E9\u05C1\u05B4\u0594\u05D9\u05E9\u05C1 \u05DE\u05B6\u05A5\u05E8\u05B6\u05E1 \u05DE\u05B7\u05E8\u05B0\u05E1\u05B0\u05E0\u05B8\u0596\u05D0 \u05DE\u05B0\u05DE\u05D5\u05BC\u05DB\u05B8\u0591\u05DF \u05E9\u05C1\u05B4\u05D1\u05B0\u05E2\u05B7\u059E\u05EA \u05E9\u05C2\u05B8\u05E8\u05B5\u05A3\u05D9&thinsp;<b>\u05C0</b> \u05E4\u05BC\u05B8\u05E8\u05B7\u05A3\u05E1 \u05D5\u05BC\u05DE\u05B8\u05D3\u05B7\u0597\u05D9 \u05E8\u05B9\u05D0\u05B5\u05D9\u0599 \u05E4\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D4\u05B7\u05DE\u05BC\u05B6\u0594\u05DC\u05B6\u05DA\u05B0 \u05D4\u05B7\u05D9\u05BC\u05B9\u05E9\u05C1\u05B0\u05D1\u05B4\u05A5\u05D9\u05DD \u05E8\u05B4\u05D0\u05E9\u05C1\u05B9\u05E0\u05B8\u0596\u05D4 \u05D1\u05BC\u05B7\u05DE\u05BC\u05B7\u05DC\u05B0\u05DB\u05BD\u05D5\u05BC\u05EA\u05C3",
+    he: "\u05D5\u05B0\u05D4\u05B7\u05E7\u05BC\u05B8\u05E8\u05B9\u05A3\u05D1 \u05D0\u05B5\u05DC\u05B8\u0597\u05D9\u05D5 \u05DB\u05BC\u05B7\u05E8\u05B0\u05E9\u05C1\u05B0\u05E0\u05B8\u05A4\u05D0 \u05E9\u05C1\u05B5\u05EA\u05B8\u05E8\u0599 \u05D0\u05B7\u05D3\u05B0\u05DE\u05B8\u05A3\u05EA\u05B8\u05D0 \u05EA\u05B7\u05E8\u05B0\u05E9\u05C1\u05B4\u0594\u05D9\u05E9\u05C1 \u05DE\u05B6\u05A5\u05E8\u05B6\u05E1 \u05DE\u05B7\u05E8\u05B0\u05E1\u05B0\u05E0\u05B8\u0596\u05D0 \u05DE\u05B0\u05DE\u05D5\u05BC\u05DB\u05B8\u0591\u05DF \u05E9\u05C1\u05B4\u05D1\u05B0\u05E2\u05B7\u059E\u05EA \u05E9\u05C2\u05B8\u05E8\u05B5\u05A3\u05D9&thinsp;\u05C0 \u05E4\u05BC\u05B8\u05E8\u05B7\u05A3\u05E1 \u05D5\u05BC\u05DE\u05B8\u05D3\u05B7\u0597\u05D9 \u05E8\u05B9\u05D0\u05B5\u05D9\u0599 \u05E4\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D4\u05B7\u05DE\u05BC\u05B6\u0594\u05DC\u05B6\u05DA\u05B0 \u05D4\u05B7\u05D9\u05BC\u05B9\u05E9\u05C1\u05B0\u05D1\u05B4\u05A5\u05D9\u05DD \u05E8\u05B4\u05D0\u05E9\u05C1\u05B9\u05E0\u05B8\u0596\u05D4 \u05D1\u05BC\u05B7\u05DE\u05BC\u05B7\u05DC\u05B0\u05DB\u05BD\u05D5\u05BC\u05EA\u05C3",
     en: "His closest advisers were Carshena, Shethar, Admatha, Tarshish, Meres, Marsena, and Memucan, the seven ministers of Persia and Media who had access to the royal presence and occupied the first place in the kingdom.)"
   },
   adna: {
@@ -24926,27 +29093,27 @@ var name_verses_default = {
   adoram: {
     ref: "2 Sam 20:24",
     he: "\u05D5\u05B7\u05D0\u05B2\u05D3\u05B9\u05E8\u05B8\u0596\u05DD \u05E2\u05B7\u05DC\u05BE\u05D4\u05B7\u05DE\u05BC\u05B7\u0591\u05E1 \u05D5\u05B4\u05D9\u05D4\u05D5\u05B9\u05E9\u05C1\u05B8\u05E4\u05B8\u05A5\u05D8 \u05D1\u05BC\u05B6\u05DF\u05BE\u05D0\u05B2\u05D7\u05B4\u05D9\u05DC\u0596\u05D5\u05BC\u05D3 \u05D4\u05B7\u05DE\u05BC\u05B7\u05D6\u05B0\u05DB\u05BC\u05B4\u05BD\u05D9\u05E8\u05C3",
-    en: 'Adoram<sup class="footnote-marker">k</sup><i class="footnote"><b>Adoram </b>So in 1 Kings 12.18 and 2 Chron. 10.18 (\u201CHadoram\u201D); elsewhere \u201CAdoniram.\u201D</i> was in charge of forced labor; Jehoshaphat son of Ahilud was recorder;'
+    en: "AdoramkAdoram So in 1 Kings 12.18 and 2 Chron. 10.18 (\u201CHadoram\u201D); elsewhere \u201CAdoniram.\u201D was in charge of forced labor; Jehoshaphat son of Ahilud was recorder;"
   },
   agag: {
     ref: "Num 24:7",
     he: "\u05D9\u05B4\u05BD\u05D6\u05BC\u05B7\u05DC\u05BE\u05DE\u05B7\u0599\u05D9\u05B4\u05DD\u0599 \u05DE\u05B4\u05D3\u05BC\u05B8\u05A3\u05DC\u05B0\u05D9\u05B8\u0594\u05D5 \u05D5\u05B0\u05D6\u05B7\u05E8\u05B0\u05E2\u0596\u05D5\u05B9 \u05D1\u05BC\u05B0\u05DE\u05B7\u05A3\u05D9\u05B4\u05DD \u05E8\u05B7\u05D1\u05BC\u05B4\u0591\u05D9\u05DD \u05D5\u05B0\u05D9\u05B8\u05E8\u05B9\u05A4\u05DD \u05DE\u05B5\u05BD\u05D0\u05B2\u05D2\u05B7\u05D2\u0599 \u05DE\u05B7\u05DC\u05B0\u05DB\u05BC\u0594\u05D5\u05B9 \u05D5\u05B0\u05EA\u05B4\u05E0\u05BC\u05B7\u05E9\u05C2\u05BC\u05B5\u0596\u05D0 \u05DE\u05B7\u05DC\u05B0\u05DB\u05BB\u05EA\u05BD\u05D5\u05B9\u05C3",
-    en: '<span class="poetry indentAll">Their boughs drip with moisture,</span><br><span class="poetry indentAll">Their roots<sup class="footnote-marker">d</sup><i class="footnote"><b>Their roots </b>Lit. \u201Cand its seed.\u201D</i> have abundant water.</span><br><span class="poetry indentAll">Their ruler shall rise above Agag,</span><br><span class="poetry indentAll">Their sovereignty shall be exalted.</span>'
+    en: "Their boughs drip with moisture,Their rootsdTheir roots Lit. \u201Cand its seed.\u201D have abundant water.Their ruler shall rise above Agag,Their sovereignty shall be exalted."
   },
   agur: {
     ref: "Deut 32:27",
-    he: "\u05DC\u05D5\u05BC\u05DC\u05B5\u0597\u05D9 \u05DB\u05BC\u05B7\u05A4\u05E2\u05B7\u05E1 \u05D0\u05D5\u05B9\u05D9\u05B5\u05D1\u0599 \u05D0\u05B8\u05D2\u0594\u05D5\u05BC\u05E8 \u05E4\u05BC\u05B6\u05BD\u05DF\u05BE\u05D9\u05B0\u05E0\u05B7\u05DB\u05BC\u05B0\u05E8\u0596\u05D5\u05BC \u05E6\u05B8\u05E8\u05B5\u0591\u05D9\u05DE\u05D5\u05B9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u05E4\u05BC\u05B6\u05DF\u05BE\u05D9\u05B9\u05BD\u05D0\u05DE\u05B0\u05E8\u05D5\u05BC\u0599 \u05D9\u05B8\u05D3\u05B5\u05A3\u05E0\u05D5\u05BC \u05E8\u05B8\u0594\u05DE\u05B8\u05D4 \u05D5\u05B0\u05DC\u05B9\u05A5\u05D0 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0596\u05D4 \u05E4\u05BC\u05B8\u05E2\u05B7\u05A5\u05DC \u05DB\u05BC\u05C7\u05DC\u05BE\u05D6\u05B9\u05BD\u05D0\u05EA\u05C3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
-    en: '<span class="poetry indentAll">But for fear of the taunts of the foe,</span><br><span class="poetry indentAllDouble">Their enemies who might misjudge</span><br><span class="poetry indentAll">And say, \u201COur own hand has prevailed;</span><br><span class="poetry indentAllDouble">None of this was wrought by G<small>OD</small>!\u201D</span>'
+    he: "\u05DC\u05D5\u05BC\u05DC\u05B5\u0597\u05D9 \u05DB\u05BC\u05B7\u05A4\u05E2\u05B7\u05E1 \u05D0\u05D5\u05B9\u05D9\u05B5\u05D1\u0599 \u05D0\u05B8\u05D2\u0594\u05D5\u05BC\u05E8 \u05E4\u05BC\u05B6\u05BD\u05DF\u05BE\u05D9\u05B0\u05E0\u05B7\u05DB\u05BC\u05B0\u05E8\u0596\u05D5\u05BC \u05E6\u05B8\u05E8\u05B5\u0591\u05D9\u05DE\u05D5\u05B9 \u05E4\u05BC\u05B6\u05DF\u05BE\u05D9\u05B9\u05BD\u05D0\u05DE\u05B0\u05E8\u05D5\u05BC\u0599 \u05D9\u05B8\u05D3\u05B5\u05A3\u05E0\u05D5\u05BC \u05E8\u05B8\u0594\u05DE\u05B8\u05D4 \u05D5\u05B0\u05DC\u05B9\u05A5\u05D0 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0596\u05D4 \u05E4\u05BC\u05B8\u05E2\u05B7\u05A5\u05DC \u05DB\u05BC\u05C7\u05DC\u05BE\u05D6\u05B9\u05BD\u05D0\u05EA\u05C3",
+    en: "But for fear of the taunts of the foe,Their enemies who might misjudgeAnd say, \u201COur own hand has prevailed;None of this was wrought by GOD!\u201D"
   },
   akan: {
     ref: "Josh 7:1",
-    he: '\u05D5\u05B7\u05D9\u05BC\u05B4\u05DE\u05B0\u05E2\u05B2\u05DC\u05A7\u05D5\u05BC \u05D1\u05B0\u05E0\u05B5\u05D9\u05BE\u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u059B\u05DC \u05DE\u05B7\u0596\u05E2\u05B7\u05DC \u05D1\u05BC\u05B7\u05D7\u05B5\u0591\u05E8\u05B6\u05DD \u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05BC\u05B7\u05A1\u05D7 \u05E2\u05B8\u05DB\u05B8\u05A3\u05DF \u05D1\u05BC\u05B6\u05DF\u05BE\u05DB\u05BC\u05B7\u05E8\u05B0\u05DE\u05B4\u05D9\u05A9 \u05D1\u05B6\u05DF\u05BE\u05D6\u05B7\u05D1\u05B0\u05D3\u05BC\u05B4\u05A8\u05D9 \u05D1\u05B6\u05DF\u05BE\u05D6\u05B6\u059C\u05E8\u05B7\u05D7 \u05DC\u05B0\u05DE\u05B7\u05D8\u05BC\u05B5\u05A4\u05D4 \u05D9\u05B0\u05D4\u05D5\u05BC\u05D3\u05B8\u05D4\u0599 \u05DE\u05B4\u05DF\u05BE\u05D4\u05B7\u05D7\u05B5\u0594\u05E8\u05B6\u05DD \u05D5\u05B7\u05D9\u05BC\u05B4\u05BD\u05D7\u05B7\u05E8\u05BE\u05D0\u05B7\u05A5\u05E3 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0596\u05D4 \u05D1\u05BC\u05B4\u05D1\u05B0\u05E0\u05B5\u05A5\u05D9 \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u05BD\u05DC\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
-    en: "The Israelites, however, violated the proscription: Achan son of Carmi son of Zabdi son of Zerah, of the tribe of Judah, took of that which was proscribed, and G<small>OD</small> was incensed with the Israelites."
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05DE\u05B0\u05E2\u05B2\u05DC\u05A7\u05D5\u05BC \u05D1\u05B0\u05E0\u05B5\u05D9\u05BE\u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u059B\u05DC \u05DE\u05B7\u0596\u05E2\u05B7\u05DC \u05D1\u05BC\u05B7\u05D7\u05B5\u0591\u05E8\u05B6\u05DD \u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05BC\u05B7\u05A1\u05D7 \u05E2\u05B8\u05DB\u05B8\u05A3\u05DF \u05D1\u05BC\u05B6\u05DF\u05BE\u05DB\u05BC\u05B7\u05E8\u05B0\u05DE\u05B4\u05D9\u05A9 \u05D1\u05B6\u05DF\u05BE\u05D6\u05B7\u05D1\u05B0\u05D3\u05BC\u05B4\u05A8\u05D9 \u05D1\u05B6\u05DF\u05BE\u05D6\u05B6\u059C\u05E8\u05B7\u05D7 \u05DC\u05B0\u05DE\u05B7\u05D8\u05BC\u05B5\u05A4\u05D4 \u05D9\u05B0\u05D4\u05D5\u05BC\u05D3\u05B8\u05D4\u0599 \u05DE\u05B4\u05DF\u05BE\u05D4\u05B7\u05D7\u05B5\u0594\u05E8\u05B6\u05DD \u05D5\u05B7\u05D9\u05BC\u05B4\u05BD\u05D7\u05B7\u05E8\u05BE\u05D0\u05B7\u05A5\u05E3 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0596\u05D4 \u05D1\u05BC\u05B4\u05D1\u05B0\u05E0\u05B5\u05A5\u05D9 \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u05BD\u05DC\u05C3",
+    en: "The Israelites, however, violated the proscription: Achan son of Carmi son of Zabdi son of Zerah, of the tribe of Judah, took of that which was proscribed, and GOD was incensed with the Israelites."
   },
   amasa: {
     ref: "2 Sam 17:25",
     he: "\u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05E2\u05B2\u05DE\u05B8\u05E9\u05C2\u05B8\u0597\u05D0 \u05E9\u05C2\u05B8\u05A7\u05DD \u05D0\u05B7\u05D1\u05B0\u05E9\u05C1\u05B8\u05DC\u05B9\u059B\u05DD \u05EA\u05BC\u05B7\u05A5\u05D7\u05B7\u05EA \u05D9\u05D5\u05B9\u05D0\u05B8\u0596\u05D1 \u05E2\u05B7\u05DC\u05BE\u05D4\u05B7\u05E6\u05BC\u05B8\u05D1\u05B8\u0591\u05D0 \u05D5\u05B7\u05E2\u05B2\u05DE\u05B8\u05E9\u05C2\u05B8\u05A3\u05D0 \u05D1\u05B6\u05DF\u05BE\u05D0\u05B4\u0597\u05D9\u05E9\u05C1 \u05D5\u05BC\u05E9\u05C1\u05B0\u05DE\u05D5\u05B9\u0599 \u05D9\u05B4\u05EA\u05B0\u05E8\u05B8\u05A3\u05D0 \u05D4\u05B7\u05D9\u05BC\u05B4\u05E9\u05C2\u05B0\u05E8\u05B0\u05D0\u05B5\u05DC\u05B4\u0594\u05D9 \u05D0\u05B2\u05E9\u05C1\u05B6\u05E8\u05BE\u05D1\u05BC\u05B8\u05D0\u0599 \u05D0\u05B6\u05DC\u05BE\u05D0\u05B2\u05D1\u05B4\u05D9\u05D2\u05B7\u05A3\u05DC \u05D1\u05BC\u05B7\u05EA\u05BE\u05E0\u05B8\u05D7\u05B8\u0594\u05E9\u05C1 \u05D0\u05B2\u05D7\u05A5\u05D5\u05B9\u05EA \u05E6\u05B0\u05E8\u05D5\u05BC\u05D9\u05B8\u0596\u05D4 \u05D0\u05B5\u05A5\u05DD \u05D9\u05D5\u05B9\u05D0\u05B8\u05BD\u05D1\u05C3",
-    en: 'Absalom had appointed Amasa army commander in place of Joab; Amasa was the son of a man named Ithra the Israelite, who had married Abigal, daughter of Nahash and sister of Joab\u2019s mother Zeruiah.<sup class="footnote-marker">f</sup><i class="footnote"><b>Israelite \u2026 Zeruiah </b>Some Septuagint mss. and 1 Chron. 2.12\u201317 read \u201CIshmaelite\u201D and give a somewhat different genealogy.</i>'
+    en: "Absalom had appointed Amasa army commander in place of Joab; Amasa was the son of a man named Ithra the Israelite, who had married Abigal, daughter of Nahash and sister of Joab\u2019s mother Zeruiah.fIsraelite \u2026 Zeruiah Some Septuagint mss. and 1 Chron. 2.12\u201317 read \u201CIshmaelite\u201D and give a somewhat different genealogy."
   },
   amram: {
     ref: "Ex 6:18",
@@ -24956,12 +29123,12 @@ var name_verses_default = {
   anath: {
     ref: "Ex 10:3",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B8\u05D1\u05B9\u05A8\u05D0 \u05DE\u05B9\u05E9\u05C1\u05B6\u05A3\u05D4 \u05D5\u05B0\u05D0\u05B7\u05D4\u05B2\u05E8\u05B9\u05DF\u05AE \u05D0\u05B6\u05DC\u05BE\u05E4\u05BC\u05B7\u05E8\u05B0\u05E2\u05B9\u05D4\u0592 \u05D5\u05B7\u05D9\u05BC\u05B9\u05D0\u05DE\u05B0\u05E8\u05A3\u05D5\u05BC \u05D0\u05B5\u05DC\u05B8\u0597\u05D9\u05D5 \u05DB\u05BC\u05B9\u05BD\u05D4\u05BE\u05D0\u05B8\u05DE\u05B7\u05A4\u05E8 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05D4\u0599 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B5\u05A3\u05D9 \u05D4\u05B8\u05BD\u05E2\u05B4\u05D1\u05B0\u05E8\u05B4\u0594\u05D9\u05DD \u05E2\u05B7\u05D3\u05BE\u05DE\u05B8\u05EA\u05B7\u05A3\u05D9 \u05DE\u05B5\u05D0\u05B7\u0594\u05E0\u05B0\u05EA\u05BC\u05B8 \u05DC\u05B5\u05E2\u05B8\u05E0\u05B9\u0596\u05EA \u05DE\u05B4\u05E4\u05BC\u05B8\u05E0\u05B8\u0591\u05D9 \u05E9\u05C1\u05B7\u05DC\u05BC\u05B7\u05A5\u05D7 \u05E2\u05B7\u05DE\u05BC\u05B4\u0596\u05D9 \u05D5\u05B0\u05D9\u05B7\u05BD\u05E2\u05B7\u05D1\u05B0\u05D3\u05BB\u05BD\u05E0\u05B4\u05D9\u05C3",
-    en: "So Moses and Aaron went to Pharaoh and said to him, \u201CThus says the E<small>TERNAL</small>, the God of the Hebrews, \u2018How long will you refuse to humble yourself before Me? Let My people go that they may worship Me."
+    en: "So Moses and Aaron went to Pharaoh and said to him, \u201CThus says the ETERNAL, the God of the Hebrews, \u2018How long will you refuse to humble yourself before Me? Let My people go that they may worship Me."
   },
   ara: {
     ref: "Gen 31:10",
     he: "\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u0597\u05D9 \u05D1\u05BC\u05B0\u05E2\u05B5\u05EA\u0599 \u05D9\u05B7\u05D7\u05B5\u05A3\u05DD \u05D4\u05B7\u05E6\u05BC\u05B9\u0594\u05D0\u05DF \u05D5\u05B8\u05D0\u05B6\u05E9\u05C2\u05BC\u05B8\u05A5\u05D0 \u05E2\u05B5\u05D9\u05E0\u05B7\u059B\u05D9 \u05D5\u05B8\u05D0\u05B5\u0596\u05E8\u05B6\u05D0 \u05D1\u05BC\u05B7\u05D7\u05B2\u05DC\u0591\u05D5\u05B9\u05DD \u05D5\u05B0\u05D4\u05B4\u05E0\u05BC\u05B5\u05A4\u05D4 \u05D4\u05B8\u05BD\u05E2\u05B7\u05EA\u05BC\u05BB\u05D3\u05B4\u05D9\u05DD\u0599 \u05D4\u05B8\u05E2\u05B9\u05DC\u05B4\u05A3\u05D9\u05DD \u05E2\u05B7\u05DC\u05BE\u05D4\u05B7\u05E6\u05BC\u05B9\u0594\u05D0\u05DF \u05E2\u05B2\u05E7\u05BB\u05D3\u05BC\u05B4\u05A5\u05D9\u05DD \u05E0\u05B0\u05E7\u05BB\u05D3\u05BC\u05B4\u0596\u05D9\u05DD \u05D5\u05BC\u05D1\u05B0\u05E8\u05BB\u05D3\u05BC\u05B4\u05BD\u05D9\u05DD\u05C3",
-    en: '\u201COnce, at the mating time of the flocks, I had a dream in which I saw<sup class="footnote-marker">d</sup><i class="footnote"><b>I had a dream in which I saw </b>Lit. \u201CI raised my eyes and saw in a dream, behold.\u201D</i> that the he-goats mating with the flock were streaked, speckled, and mottled.'
+    en: "\u201COnce, at the mating time of the flocks, I had a dream in which I sawdI had a dream in which I saw Lit. \u201CI raised my eyes and saw in a dream, behold.\u201D that the he-goats mating with the flock were streaked, speckled, and mottled."
   },
   aram: {
     ref: "Gen 10:22",
@@ -24986,12 +29153,12 @@ var name_verses_default = {
   arnan: {
     ref: "Num 21:24",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B7\u05DB\u05BC\u05B5\u05A5\u05D4\u05D5\u05BC \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u0596\u05DC \u05DC\u05B0\u05E4\u05B4\u05D9\u05BE\u05D7\u05B8\u0591\u05E8\u05B6\u05D1 \u05D5\u05B7\u05D9\u05BC\u05B4\u05D9\u05E8\u05B7\u05A8\u05E9\u05C1 \u05D0\u05B6\u05EA\u05BE\u05D0\u05B7\u05E8\u05B0\u05E6\u059C\u05D5\u05B9 \u05DE\u05B5\u05BD\u05D0\u05B7\u05E8\u05B0\u05E0\u05B9\u0597\u05DF \u05E2\u05B7\u05D3\u05BE\u05D9\u05B7\u05D1\u05BC\u05B9\u05E7\u0599 \u05E2\u05B7\u05D3\u05BE\u05D1\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05E2\u05B7\u05DE\u05BC\u0594\u05D5\u05B9\u05DF \u05DB\u05BC\u05B4\u05A3\u05D9 \u05E2\u05B7\u0594\u05D6 \u05D2\u05BC\u05B0\u05D1\u0596\u05D5\u05BC\u05DC \u05D1\u05BC\u05B0\u05E0\u05B5\u05A5\u05D9 \u05E2\u05B7\u05DE\u05BC\u05BD\u05D5\u05B9\u05DF\u05C3",
-    en: 'But Israel put them to the sword, and took possession of their land, from the Arnon to the Jabbok, as far as [Az] of the Ammonites, for Az<sup class="footnote-marker">k</sup><i class="footnote"><b>Az </b>Septuagint \u201CJazer,\u201D cf. v. <a class="refLink" data-ref="Numbers 21:32" href="Numbers.21.32">32</a>.</i> marked the boundary of the Ammonites.<sup class="footnote-marker">l</sup><i class="footnote"><b>for Az marked the boundary of the Ammonites </b>In contrast to others \u201Cfor the boundary of the Ammonites was strong.\u201D</i>'
+    en: "But Israel put them to the sword, and took possession of their land, from the Arnon to the Jabbok, as far as [Az] of the Ammonites, for AzkAz Septuagint \u201CJazer,\u201D cf. v. 32. marked the boundary of the Ammonites.lfor Az marked the boundary of the Ammonites In contrast to others \u201Cfor the boundary of the Ammonites was strong.\u201D"
   },
   artachshasta: {
     ref: "Ezra 4:7",
-    he: '\u05D5\u05BC\u05D1\u05B4\u05D9\u05DE\u05B5\u05A3\u05D9 \u05D0\u05B7\u05E8\u05B0\u05EA\u05BC\u05B7\u05D7\u05B0\u05E9\u05C1\u05B7\u0597\u05E9\u05C2\u05B0\u05EA\u05BC\u05B8\u05D0 \u05DB\u05BC\u05B8\u05EA\u05B7\u05A8\u05D1 \u05D1\u05BC\u05B4\u05E9\u05C1\u05B0\u05DC\u05B8\u059C\u05DD \u05DE\u05B4\u05EA\u05B0\u05E8\u05B0\u05D3\u05B8\u05A4\u05EA \u05D8\u05B8\u05BD\u05D1\u05B0\u05D0\u05B5\u05DC\u0599 \u05D5\u05BC\u05E9\u05C1\u05B0\u05D0\u05B8\u05A3\u05E8 \u05DB\u05BC\u05B0\u05E0\u05B8\u05D5\u05BA\u05EA\u05B8\u0594\u05D5 \u05E2\u05B7\u05DC\u05BE\u05D0\u05B7\u05E8\u05B0\u05EA\u05BC\u05B7\u05D7\u05B0\u05E9\u05C1\u05B7\u0596\u05E9\u05C2\u05B0\u05EA\u05BC\u05B0\u05D0 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E4\u05BC\u05B8\u05E8\u05B8\u0591\u05E1 \u05D5\u05BC\u05DB\u05B0\u05EA\u05B8\u05D1\u0599 \u05D4\u05B7\u05BD\u05E0\u05BC\u05B4\u05E9\u05C1\u05B0\u05EA\u05BC\u05B0\u05D5\u05B8\u0594\u05DF \u05DB\u05BC\u05B8\u05EA\u05A5\u05D5\u05BC\u05D1 \u05D0\u05B2\u05E8\u05B8\u05DE\u05B4\u0596\u05D9\u05EA \u05D5\u05BC\u05DE\u05B0\u05EA\u05BB\u05E8\u05B0\u05D2\u05BC\u05B8\u05A5\u05DD \u05D0\u05B2\u05E8\u05B8\u05DE\u05B4\u05BD\u05D9\u05EA\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
-    en: 'And in the time of Artaxerxes, Bishlam, Mithredath, Tabeel, and the rest of their colleagues wrote to King Artaxerxes of Persia, a letter written in Aramaic and translated.<sup class="footnote-marker">a</sup><i class="footnote"><b>translated </b>Cf. below v. <a class="refLink" data-ref="Ezra 4:18" href="Ezra.4.18">18</a> and note there.</i> <br>Aramaic:<sup class="footnote-marker">b</sup><i class="footnote"><b>Aramaic: </b>A note indicating that what follows is in the Aramaic language.</i>'
+    he: "\u05D5\u05BC\u05D1\u05B4\u05D9\u05DE\u05B5\u05A3\u05D9 \u05D0\u05B7\u05E8\u05B0\u05EA\u05BC\u05B7\u05D7\u05B0\u05E9\u05C1\u05B7\u0597\u05E9\u05C2\u05B0\u05EA\u05BC\u05B8\u05D0 \u05DB\u05BC\u05B8\u05EA\u05B7\u05A8\u05D1 \u05D1\u05BC\u05B4\u05E9\u05C1\u05B0\u05DC\u05B8\u059C\u05DD \u05DE\u05B4\u05EA\u05B0\u05E8\u05B0\u05D3\u05B8\u05A4\u05EA \u05D8\u05B8\u05BD\u05D1\u05B0\u05D0\u05B5\u05DC\u0599 \u05D5\u05BC\u05E9\u05C1\u05B0\u05D0\u05B8\u05A3\u05E8 \u05DB\u05BC\u05B0\u05E0\u05B8\u05D5\u05BA\u05EA\u05B8\u0594\u05D5 \u05E2\u05B7\u05DC\u05BE\u05D0\u05B7\u05E8\u05B0\u05EA\u05BC\u05B7\u05D7\u05B0\u05E9\u05C1\u05B7\u0596\u05E9\u05C2\u05B0\u05EA\u05BC\u05B0\u05D0 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E4\u05BC\u05B8\u05E8\u05B8\u0591\u05E1 \u05D5\u05BC\u05DB\u05B0\u05EA\u05B8\u05D1\u0599 \u05D4\u05B7\u05BD\u05E0\u05BC\u05B4\u05E9\u05C1\u05B0\u05EA\u05BC\u05B0\u05D5\u05B8\u0594\u05DF \u05DB\u05BC\u05B8\u05EA\u05A5\u05D5\u05BC\u05D1 \u05D0\u05B2\u05E8\u05B8\u05DE\u05B4\u0596\u05D9\u05EA \u05D5\u05BC\u05DE\u05B0\u05EA\u05BB\u05E8\u05B0\u05D2\u05BC\u05B8\u05A5\u05DD \u05D0\u05B2\u05E8\u05B8\u05DE\u05B4\u05BD\u05D9\u05EA\u05C3",
+    en: "And in the time of Artaxerxes, Bishlam, Mithredath, Tabeel, and the rest of their colleagues wrote to King Artaxerxes of Persia, a letter written in Aramaic and translated.atranslated Cf. below v. 18 and note there. Aramaic:bAramaic: A note indicating that what follows is in the Aramaic language."
   },
   artsa: {
     ref: "1 Ki 16:9",
@@ -25000,7 +29167,7 @@ var name_verses_default = {
   },
   asa: {
     ref: "1 Ki 15:8",
-    he: '\u05D5\u05B7\u05D9\u05BC\u05B4\u05E9\u05C1\u05B0\u05DB\u05BC\u05B7\u05A4\u05D1 \u05D0\u05B2\u05D1\u05B4\u05D9\u05BC\u05B8\u05DD\u0599 \u05E2\u05B4\u05DD\u05BE\u05D0\u05B2\u05D1\u05B9\u05EA\u05B8\u0594\u05D9\u05D5 \u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05B0\u05D1\u05BC\u05B0\u05E8\u05A5\u05D5\u05BC \u05D0\u05B9\u05EA\u0596\u05D5\u05B9 \u05D1\u05BC\u05B0\u05E2\u05B4\u05A3\u05D9\u05E8 \u05D3\u05BC\u05B8\u05D5\u05B4\u0591\u05D3 \u05D5\u05B7\u05D9\u05BC\u05B4\u05DE\u05B0\u05DC\u05B9\u059B\u05DA\u05B0 \u05D0\u05B8\u05E1\u05B8\u05A5\u05D0 \u05D1\u05B0\u05E0\u0596\u05D5\u05B9 \u05EA\u05BC\u05B7\u05D7\u05B0\u05EA\u05BC\u05B8\u05BD\u05D9\u05D5\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05E9\u05C1\u05B0\u05DB\u05BC\u05B7\u05A4\u05D1 \u05D0\u05B2\u05D1\u05B4\u05D9\u05BC\u05B8\u05DD\u0599 \u05E2\u05B4\u05DD\u05BE\u05D0\u05B2\u05D1\u05B9\u05EA\u05B8\u0594\u05D9\u05D5 \u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05B0\u05D1\u05BC\u05B0\u05E8\u05A5\u05D5\u05BC \u05D0\u05B9\u05EA\u0596\u05D5\u05B9 \u05D1\u05BC\u05B0\u05E2\u05B4\u05A3\u05D9\u05E8 \u05D3\u05BC\u05B8\u05D5\u05B4\u0591\u05D3 \u05D5\u05B7\u05D9\u05BC\u05B4\u05DE\u05B0\u05DC\u05B9\u059B\u05DA\u05B0 \u05D0\u05B8\u05E1\u05B8\u05A5\u05D0 \u05D1\u05B0\u05E0\u0596\u05D5\u05B9 \u05EA\u05BC\u05B7\u05D7\u05B0\u05EA\u05BC\u05B8\u05BD\u05D9\u05D5\u05C3",
     en: "Abijam rested with his ancestors; he was buried in the City of David, and his son Asa succeeded him as king."
   },
   asbea: {
@@ -25010,7 +29177,7 @@ var name_verses_default = {
   },
   asenath: {
     ref: "Gen 41:50",
-    he: '\u05D5\u05BC\u05DC\u05B0\u05D9\u05D5\u05B9\u05E1\u05B5\u05A4\u05E3 \u05D9\u05BB\u05DC\u05BC\u05B7\u05D3\u0599 \u05E9\u05C1\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D1\u05B8\u05E0\u05B4\u0594\u05D9\u05DD \u05D1\u05BC\u05B0\u05D8\u05B6\u05A5\u05E8\u05B6\u05DD \u05EA\u05BC\u05B8\u05D1\u0596\u05D5\u05B9\u05D0 \u05E9\u05C1\u05B0\u05E0\u05B7\u05A3\u05EA \u05D4\u05B8\u05E8\u05B8\u05E2\u05B8\u0591\u05D1 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A4\u05E8 \u05D9\u05B8\u05BD\u05DC\u05B0\u05D3\u05B8\u05D4\u05BE\u05DC\u05BC\u05D5\u05B9\u0599 \u05D0\u05B8\u05BD\u05E1\u05B0\u05E0\u05B7\u0594\u05EA \u05D1\u05BC\u05B7\u05EA\u05BE\u05E4\u05BC\u05A5\u05D5\u05B9\u05D8\u05B4\u05D9 \u05E4\u05B6\u0596\u05E8\u05B7\u05E2<sup class="footnote-marker">*</sup><i class="footnote">(\u05D1\u05E1\u05E4\u05E8\u05D9 \u05EA\u05D9\u05DE\u05DF \u05E4\u05BC\u05BD\u05D5\u05B9\u05D8\u05B4\u05D9\u05E4\u05B6\u0596\u05E8\u05B7\u05E2 \u05D1\u05EA\u05D9\u05D1\u05D4 \u05D0\u05D7\u05EA)</i> \u05DB\u05BC\u05B9\u05D4\u05B5\u05A5\u05DF \u05D0\u05BD\u05D5\u05B9\u05DF\u05C3',
+    he: "\u05D5\u05BC\u05DC\u05B0\u05D9\u05D5\u05B9\u05E1\u05B5\u05A4\u05E3 \u05D9\u05BB\u05DC\u05BC\u05B7\u05D3\u0599 \u05E9\u05C1\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D1\u05B8\u05E0\u05B4\u0594\u05D9\u05DD \u05D1\u05BC\u05B0\u05D8\u05B6\u05A5\u05E8\u05B6\u05DD \u05EA\u05BC\u05B8\u05D1\u0596\u05D5\u05B9\u05D0 \u05E9\u05C1\u05B0\u05E0\u05B7\u05A3\u05EA \u05D4\u05B8\u05E8\u05B8\u05E2\u05B8\u0591\u05D1 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A4\u05E8 \u05D9\u05B8\u05BD\u05DC\u05B0\u05D3\u05B8\u05D4\u05BE\u05DC\u05BC\u05D5\u05B9\u0599 \u05D0\u05B8\u05BD\u05E1\u05B0\u05E0\u05B7\u0594\u05EA \u05D1\u05BC\u05B7\u05EA\u05BE\u05E4\u05BC\u05A5\u05D5\u05B9\u05D8\u05B4\u05D9 \u05E4\u05B6\u0596\u05E8\u05B7\u05E2*(\u05D1\u05E1\u05E4\u05E8\u05D9 \u05EA\u05D9\u05DE\u05DF \u05E4\u05BC\u05BD\u05D5\u05B9\u05D8\u05B4\u05D9\u05E4\u05B6\u0596\u05E8\u05B7\u05E2 \u05D1\u05EA\u05D9\u05D1\u05D4 \u05D0\u05D7\u05EA) \u05DB\u05BC\u05B9\u05D4\u05B5\u05A5\u05DF \u05D0\u05BD\u05D5\u05B9\u05DF\u05C3",
     en: "Before the years of famine came, Joseph became the father of two sons, whom Asenath daughter of Poti-phera, priest of On, bore to him."
   },
   ashchur: {
@@ -25021,7 +29188,7 @@ var name_verses_default = {
   asherah: {
     ref: "Deut 16:21",
     he: "\u05DC\u05B9\u05BD\u05D0\u05BE\u05EA\u05B4\u05D8\u05BC\u05B7\u05A5\u05E2 \u05DC\u05B0\u05DA\u05B8\u059B \u05D0\u05B2\u05E9\u05C1\u05B5\u05E8\u05B8\u0596\u05D4 \u05DB\u05BC\u05C7\u05DC\u05BE\u05E2\u05B5\u0591\u05E5 \u05D0\u05B5\u0597\u05E6\u05B6\u05DC \u05DE\u05B4\u05D6\u05B0\u05D1\u05BC\u05B7\u059B\u05D7 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05A5\u05D4 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B6\u0596\u05D9\u05DA\u05B8 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A5\u05E8 \u05EA\u05BC\u05B7\u05E2\u05B2\u05E9\u05C2\u05B6\u05D4\u05BE\u05DC\u05BC\u05B8\u05BD\u05DA\u05B0\u05C3",
-    en: 'You shall not set up a sacred post<sup class="footnote-marker">j</sup><i class="footnote"><b>sacred post </b>See note at <a class="refLink" data-ref="Deuteronomy 7:5" href="Deuteronomy.7.5">7.5</a>.</i>\u2014any kind of pole beside the altar of the E<small>TERNAL</small> your God that you may make\u2014'
+    en: "You shall not set up a sacred postjsacred post See note at 7.5.\u2014any kind of pole beside the altar of the ETERNAL your God that you may make\u2014"
   },
   ashtoreth: {
     ref: "Gen 14:5",
@@ -25030,7 +29197,7 @@ var name_verses_default = {
   },
   baana: {
     ref: "1 Ki 4:12",
-    he: '\u05D1\u05BC\u05B7\u05BD\u05E2\u05B2\u05E0\u05B8\u05D0\u0599 \u05D1\u05BC\u05B6\u05DF\u05BE\u05D0\u05B2\u05D7\u05B4\u05D9\u05DC\u0594\u05D5\u05BC\u05D3 \u05EA\u05BC\u05B7\u05E2\u05B0\u05E0\u05B7\u0596\u05DA\u05B0 \u05D5\u05BC\u05DE\u05B0\u05D2\u05B4\u05D3\u05BC\u0591\u05D5\u05B9 \u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D1\u05BC\u05B5\u05A3\u05D9\u05EA \u05E9\u05C1\u05B0\u05D0\u05B8\u05A1\u05DF \u05D0\u05B2\u05E9\u05C1\u05B6\u05E8\u05A9 \u05D0\u05B5\u05A8\u05E6\u05B6\u05DC \u05E6\u05B8\u05E8\u05B0\u05EA\u05B7\u059C\u05E0\u05B8\u05D4 \u05DE\u05B4\u05EA\u05BC\u05B7\u05A3\u05D7\u05B7\u05EA \u05DC\u05B0\u05D9\u05B4\u05D6\u05B0\u05E8\u05B0\u05E2\u05B6\u0597\u05D0\u05DC \u05DE\u05B4\u05D1\u05BC\u05B5\u05A4\u05D9\u05EA \u05E9\u05C1\u05B0\u05D0\u05B8\u05DF\u0599 \u05E2\u05B7\u059A\u05D3 \u05D0\u05B8\u05D1\u05B5\u05A3\u05DC \u05DE\u05B0\u05D7\u05D5\u05B9\u05DC\u05B8\u0594\u05D4 \u05E2\u05B7\u0596\u05D3 \u05DE\u05B5\u05E2\u05B5\u05A5\u05D1\u05B6\u05E8 \u05DC\u05B0\u05D9\u05C7\u05E7\u05B0\u05DE\u05B0\u05E2\u05B8\u05BD\u05DD\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D1\u05BC\u05B7\u05BD\u05E2\u05B2\u05E0\u05B8\u05D0\u0599 \u05D1\u05BC\u05B6\u05DF\u05BE\u05D0\u05B2\u05D7\u05B4\u05D9\u05DC\u0594\u05D5\u05BC\u05D3 \u05EA\u05BC\u05B7\u05E2\u05B0\u05E0\u05B7\u0596\u05DA\u05B0 \u05D5\u05BC\u05DE\u05B0\u05D2\u05B4\u05D3\u05BC\u0591\u05D5\u05B9 \u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D1\u05BC\u05B5\u05A3\u05D9\u05EA \u05E9\u05C1\u05B0\u05D0\u05B8\u05A1\u05DF \u05D0\u05B2\u05E9\u05C1\u05B6\u05E8\u05A9 \u05D0\u05B5\u05A8\u05E6\u05B6\u05DC \u05E6\u05B8\u05E8\u05B0\u05EA\u05B7\u059C\u05E0\u05B8\u05D4 \u05DE\u05B4\u05EA\u05BC\u05B7\u05A3\u05D7\u05B7\u05EA \u05DC\u05B0\u05D9\u05B4\u05D6\u05B0\u05E8\u05B0\u05E2\u05B6\u0597\u05D0\u05DC \u05DE\u05B4\u05D1\u05BC\u05B5\u05A4\u05D9\u05EA \u05E9\u05C1\u05B0\u05D0\u05B8\u05DF\u0599 \u05E2\u05B7\u059A\u05D3 \u05D0\u05B8\u05D1\u05B5\u05A3\u05DC \u05DE\u05B0\u05D7\u05D5\u05B9\u05DC\u05B8\u0594\u05D4 \u05E2\u05B7\u0596\u05D3 \u05DE\u05B5\u05E2\u05B5\u05A5\u05D1\u05B6\u05E8 \u05DC\u05B0\u05D9\u05C7\u05E7\u05B0\u05DE\u05B0\u05E2\u05B8\u05BD\u05DD\u05C3",
     en: "Baana son of Ahilud [in] Taanach and Megiddo and all Beth-shean, which is beside Zarethan, below Jezreel\u2014from Beth-shean to Abel-meholah as far as the other side of Jokmeam;"
   },
   bakbakkar: {
@@ -25041,7 +29208,7 @@ var name_verses_default = {
   baruk: {
     ref: "Gen 9:26",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B9\u0595\u05D0\u05DE\u05B6\u05E8 \u05D1\u05BC\u05B8\u05E8\u05A5\u05D5\u05BC\u05DA\u05B0 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0596\u05D4 \u05D0\u05B1\u05DC\u05B9\u05A3\u05D4\u05B5\u05D9 \u05E9\u05C1\u05B5\u0591\u05DD \u05D5\u05B4\u05D9\u05D4\u05B4\u05A5\u05D9 \u05DB\u05B0\u05E0\u05B7\u0596\u05E2\u05B7\u05DF \u05E2\u05B6\u05A5\u05D1\u05B6\u05D3 \u05DC\u05B8\u05BD\u05DE\u05D5\u05B9\u05C3",
-    en: 'And he said,<br><span class="poetry indentAll">\u201CBlessed be the E<small>TERNAL</small>,</span><br><span class="poetry indentAll">The God of Shem;</span><br><span class="poetry indentAll">Let Canaan be a slave to them.</span>'
+    en: "And he said,\u201CBlessed be the ETERNAL,The God of Shem;Let Canaan be a slave to them."
   },
   basha: {
     ref: "1 Ki 15:16",
@@ -25071,26 +29238,26 @@ var name_verses_default = {
   beerah: {
     ref: "Gen 46:1",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05E1\u05BC\u05B7\u05A4\u05E2 \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u05DC\u0599 \u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D0\u05B2\u05E9\u05C1\u05B6\u05E8\u05BE\u05DC\u0594\u05D5\u05B9 \u05D5\u05B7\u05D9\u05BC\u05B8\u05D1\u05B9\u0596\u05D0 \u05D1\u05BC\u05B0\u05D0\u05B5\u05A3\u05E8\u05B8\u05D4 \u05E9\u05C1\u05BC\u05B8\u0591\u05D1\u05B7\u05E2 \u05D5\u05B7\u05D9\u05BC\u05B4\u05D6\u05B0\u05D1\u05BC\u05B7\u05A3\u05D7 \u05D6\u05B0\u05D1\u05B8\u05D7\u05B4\u0594\u05D9\u05DD \u05DC\u05B5\u05D0\u05DC\u05B9\u05D4\u05B5\u0596\u05D9 \u05D0\u05B8\u05D1\u05B4\u05A5\u05D9\u05D5 \u05D9\u05B4\u05E6\u05B0\u05D7\u05B8\u05BD\u05E7\u05C3",
-    en: 'So Israel set out with all that was his, and he came to Beer-sheba, where he offered sacrifices to the God of his father Isaac.<sup class="footnote-marker">a</sup><i class="footnote"><b>his father Isaac </b>I.e., Isaac and his household.</i>'
+    en: "So Israel set out with all that was his, and he came to Beer-sheba, where he offered sacrifices to the God of his father Isaac.ahis father Isaac I.e., Isaac and his household."
   },
   "ben-chanan": {
     ref: "1 Chr 4:20",
-    he: '\u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u05A3\u05D9 \u05E9\u05C1\u05B4\u05D9\u05DE\u0594\u05D5\u05B9\u05DF \u05D0\u05B7\u05DE\u05B0\u05E0\u05A3\u05D5\u05B9\u05DF \u05D5\u05B0\u05E8\u05B4\u05E0\u05BC\u05B8\u0594\u05D4 \u05D1\u05BC\u05B6\u05DF\u05BE\u05D7\u05B8\u05E0\u05B8\u0596\u05DF <span class="mam-kq"><span class="mam-kq-k">(\u05D5\u05EA\u05D5\u05DC\u05D5\u05DF)</span> <span class="mam-kq-q">[\u05D5\u05B0\u05EA\u05B4\u05D9\u05DC\u0591\u05D5\u05B9\u05DF]</span></span> \u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D9\u05B4\u05E9\u05C1\u05B0\u05E2\u05B4\u0594\u05D9 \u05D6\u05D5\u05B9\u05D7\u05B5\u0596\u05EA \u05D5\u05BC\u05D1\u05B6\u05DF\u05BE\u05D6\u05D5\u05B9\u05D7\u05B5\u05BD\u05EA\u05C3',
+    he: "\u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u05A3\u05D9 \u05E9\u05C1\u05B4\u05D9\u05DE\u0594\u05D5\u05B9\u05DF \u05D0\u05B7\u05DE\u05B0\u05E0\u05A3\u05D5\u05B9\u05DF \u05D5\u05B0\u05E8\u05B4\u05E0\u05BC\u05B8\u0594\u05D4 \u05D1\u05BC\u05B6\u05DF\u05BE\u05D7\u05B8\u05E0\u05B8\u0596\u05DF (\u05D5\u05EA\u05D5\u05DC\u05D5\u05DF) [\u05D5\u05B0\u05EA\u05B4\u05D9\u05DC\u0591\u05D5\u05B9\u05DF] \u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D9\u05B4\u05E9\u05C1\u05B0\u05E2\u05B4\u0594\u05D9 \u05D6\u05D5\u05B9\u05D7\u05B5\u0596\u05EA \u05D5\u05BC\u05D1\u05B6\u05DF\u05BE\u05D6\u05D5\u05B9\u05D7\u05B5\u05BD\u05EA\u05C3",
     en: "The sons of Shimon: Amnon, Rinnah, Ben-hanan, and Tilon. The sons of Ishi: Zoheth and Ben-zoheth."
   },
   "ben-chesed": {
     ref: "1 Ki 4:10",
-    he: '\u05D1\u05BC\u05B6\u05DF\u05BE\u05D7\u05B6\u0596\u05E1\u05B6\u05D3 \u05D1\u05BC\u05B8\u05D0\u05B2\u05E8\u05BB\u05D1\u05BC\u0591\u05D5\u05B9\u05EA \u05DC\u05A5\u05D5\u05B9 \u05E9\u05C2\u05B9\u05DB\u05B9\u0596\u05D4 \u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D0\u05B6\u05A5\u05E8\u05B6\u05E5 \u05D7\u05B5\u05BD\u05E4\u05B6\u05E8\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D1\u05BC\u05B6\u05DF\u05BE\u05D7\u05B6\u0596\u05E1\u05B6\u05D3 \u05D1\u05BC\u05B8\u05D0\u05B2\u05E8\u05BB\u05D1\u05BC\u0591\u05D5\u05B9\u05EA \u05DC\u05A5\u05D5\u05B9 \u05E9\u05C2\u05B9\u05DB\u05B9\u0596\u05D4 \u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D0\u05B6\u05A5\u05E8\u05B6\u05E5 \u05D7\u05B5\u05BD\u05E4\u05B6\u05E8\u05C3",
     en: "Ben-hesed in Arubboth\u2014he governed Socho and all the Hepher area;"
   },
   arubboth: {
     ref: "1 Ki 4:10",
-    he: '\u05D1\u05BC\u05B6\u05DF\u05BE\u05D7\u05B6\u0596\u05E1\u05B6\u05D3 \u05D1\u05BC\u05B8\u05D0\u05B2\u05E8\u05BB\u05D1\u05BC\u0591\u05D5\u05B9\u05EA \u05DC\u05A5\u05D5\u05B9 \u05E9\u05C2\u05B9\u05DB\u05B9\u0596\u05D4 \u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D0\u05B6\u05A5\u05E8\u05B6\u05E5 \u05D7\u05B5\u05BD\u05E4\u05B6\u05E8\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D1\u05BC\u05B6\u05DF\u05BE\u05D7\u05B6\u0596\u05E1\u05B6\u05D3 \u05D1\u05BC\u05B8\u05D0\u05B2\u05E8\u05BB\u05D1\u05BC\u0591\u05D5\u05B9\u05EA \u05DC\u05A5\u05D5\u05B9 \u05E9\u05C2\u05B9\u05DB\u05B9\u0596\u05D4 \u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D0\u05B6\u05A5\u05E8\u05B6\u05E5 \u05D7\u05B5\u05BD\u05E4\u05B6\u05E8\u05C3",
     en: "Ben-hesed in Arubboth\u2014he governed Socho and all the Hepher area;"
   },
   "ben-geber": {
     ref: "1 Ki 4:13",
-    he: '\u05D1\u05BC\u05B6\u05DF\u05BE\u05D2\u05BC\u05B6\u0596\u05D1\u05B6\u05E8 \u05D1\u05BC\u05B0\u05E8\u05B8\u05DE\u05B9\u05A3\u05EA \u05D2\u05BC\u05B4\u05DC\u05B0\u05E2\u05B8\u0591\u05D3 \u05DC\u05A1\u05D5\u05B9 \u05D7\u05B7\u05D5\u05BC\u05BA\u05EA\u05A9 \u05D9\u05B8\u05D0\u05B4\u05A8\u05D9\u05E8 \u05D1\u05BC\u05B6\u05DF\u05BE\u05DE\u05B0\u05E0\u05B7\u05E9\u05C1\u05BC\u05B6\u059C\u05D4 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A3\u05E8 \u05D1\u05BC\u05B7\u05D2\u05BC\u05B4\u05DC\u05B0\u05E2\u05B8\u0597\u05D3 \u05DC\u059A\u05D5\u05B9 \u05D7\u05B6\u05A4\u05D1\u05B6\u05DC \u05D0\u05B7\u05E8\u05B0\u05D2\u05BC\u05B9\u05D1\u0599 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A3\u05E8 \u05D1\u05BC\u05B7\u05D1\u05BC\u05B8\u05E9\u05C1\u05B8\u0594\u05DF \u05E9\u05C1\u05B4\u05E9\u05C1\u05BC\u05B4\u05D9\u05DD\u0599 \u05E2\u05B8\u05E8\u05B4\u05A3\u05D9\u05DD \u05D2\u05BC\u05B0\u05D3\u05B9\u05DC\u0594\u05D5\u05B9\u05EA \u05D7\u05D5\u05B9\u05DE\u05B8\u0596\u05D4 \u05D5\u05BC\u05D1\u05B0\u05E8\u05B4\u05A5\u05D9\u05D7\u05B7 \u05E0\u05B0\u05D7\u05B9\u05BD\u05E9\u05C1\u05B6\u05EA\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D1\u05BC\u05B6\u05DF\u05BE\u05D2\u05BC\u05B6\u0596\u05D1\u05B6\u05E8 \u05D1\u05BC\u05B0\u05E8\u05B8\u05DE\u05B9\u05A3\u05EA \u05D2\u05BC\u05B4\u05DC\u05B0\u05E2\u05B8\u0591\u05D3 \u05DC\u05A1\u05D5\u05B9 \u05D7\u05B7\u05D5\u05BC\u05BA\u05EA\u05A9 \u05D9\u05B8\u05D0\u05B4\u05A8\u05D9\u05E8 \u05D1\u05BC\u05B6\u05DF\u05BE\u05DE\u05B0\u05E0\u05B7\u05E9\u05C1\u05BC\u05B6\u059C\u05D4 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A3\u05E8 \u05D1\u05BC\u05B7\u05D2\u05BC\u05B4\u05DC\u05B0\u05E2\u05B8\u0597\u05D3 \u05DC\u059A\u05D5\u05B9 \u05D7\u05B6\u05A4\u05D1\u05B6\u05DC \u05D0\u05B7\u05E8\u05B0\u05D2\u05BC\u05B9\u05D1\u0599 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A3\u05E8 \u05D1\u05BC\u05B7\u05D1\u05BC\u05B8\u05E9\u05C1\u05B8\u0594\u05DF \u05E9\u05C1\u05B4\u05E9\u05C1\u05BC\u05B4\u05D9\u05DD\u0599 \u05E2\u05B8\u05E8\u05B4\u05A3\u05D9\u05DD \u05D2\u05BC\u05B0\u05D3\u05B9\u05DC\u0594\u05D5\u05B9\u05EA \u05D7\u05D5\u05B9\u05DE\u05B8\u0596\u05D4 \u05D5\u05BC\u05D1\u05B0\u05E8\u05B4\u05A5\u05D9\u05D7\u05B7 \u05E0\u05B0\u05D7\u05B9\u05BD\u05E9\u05C1\u05B6\u05EA\u05C3",
     en: "Ben-geber, in Ramoth-gilead\u2014he governed the villages of Jair son of Manasseh that are in Gilead, and he also governed the district of Argob that is in Bashan, sixty large towns with walls and bronze bars;"
   },
   bera: {
@@ -25110,8 +29277,8 @@ var name_verses_default = {
   },
   birsha: {
     ref: "Ps 141:4",
-    he: "\u05D0\u05B7\u05DC\u05BE\u05EA\u05BC\u05B7\u05D8\u05BE\u05DC\u05B4\u05D1\u05BC\u05B4\u05A8\u05D9 \u05DC\u05B0\u05D3\u05B8\u05D1\u05B8\u05AA\u05E8&thinsp;<small>\u05C0</small>&thinsp;\u05E8\u05B8\u05A1\u05E2 \u05DC\u05B0\u05D4\u05B4\u05EA\u05B0\u05E2\u0598\u05D5\u05B9\u05DC\u05B5\u05A4\u05DC \u05E2\u05B2\u05DC\u05B4\u05DC\u05A8\u05D5\u05B9\u05EA&thinsp;<b>\u05C0</b> \u05D1\u05BC\u05B0\u05E8\u05B6\u0597\u05E9\u05C1\u05B7\u05E2 \u05D0\u05B6\u05EA\u05BE\u05D0\u05B4\u05D9\u05E9\u05C1\u05B4\u05A5\u05D9\u05DD \u05E4\u05BC\u05B9\u05E2\u05B2\u05DC\u05B5\u05D9\u05BE\u05D0\u05B8\u0591\u05D5\u05B6\u05DF \u05D5\u05BC\u05D1\u05B7\u05DC\u05BE\u05D0\u05B6\u059D\u05DC\u05B0\u05D7\u05B7\u0597\u05DD \u05D1\u05BC\u05B0\u05DE\u05B7\u05E0\u05B0\u05E2\u05B7\u05DE\u05BC\u05B5\u05D9\u05D4\u05B6\u05BD\u05DD\u05C3",
-    en: '<span class="poetry indentAllDouble">let my mind not turn to an evil thing,</span><br><span class="poetry indentAllDouble">to practice deeds of wickedness</span><br><span class="poetry indentAllDouble">with those evildoers;<sup class="footnote-marker">a</sup><i class="footnote"><b>those evildoers </b>Or \u201Cgrandees who do evil\u201D; force of Heb. uncertain.</i> </span><br><span class="poetry indentAllDouble">let me not feast on their dainties.</span>'
+    he: "\u05D0\u05B7\u05DC\u05BE\u05EA\u05BC\u05B7\u05D8\u05BE\u05DC\u05B4\u05D1\u05BC\u05B4\u05A8\u05D9 \u05DC\u05B0\u05D3\u05B8\u05D1\u05B8\u05AA\u05E8&thinsp;\u05C0&thinsp;\u05E8\u05B8\u05A1\u05E2 \u05DC\u05B0\u05D4\u05B4\u05EA\u05B0\u05E2\u0598\u05D5\u05B9\u05DC\u05B5\u05A4\u05DC \u05E2\u05B2\u05DC\u05B4\u05DC\u05A8\u05D5\u05B9\u05EA&thinsp;\u05C0 \u05D1\u05BC\u05B0\u05E8\u05B6\u0597\u05E9\u05C1\u05B7\u05E2 \u05D0\u05B6\u05EA\u05BE\u05D0\u05B4\u05D9\u05E9\u05C1\u05B4\u05A5\u05D9\u05DD \u05E4\u05BC\u05B9\u05E2\u05B2\u05DC\u05B5\u05D9\u05BE\u05D0\u05B8\u0591\u05D5\u05B6\u05DF \u05D5\u05BC\u05D1\u05B7\u05DC\u05BE\u05D0\u05B6\u059D\u05DC\u05B0\u05D7\u05B7\u0597\u05DD \u05D1\u05BC\u05B0\u05DE\u05B7\u05E0\u05B0\u05E2\u05B7\u05DE\u05BC\u05B5\u05D9\u05D4\u05B6\u05BD\u05DD\u05C3",
+    en: "let my mind not turn to an evil thing,to practice deeds of wickednesswith those evildoers;athose evildoers Or \u201Cgrandees who do evil\u201D; force of Heb. uncertain. let me not feast on their dainties."
   },
   bokeru: {
     ref: "Gen 10:15",
@@ -25140,12 +29307,12 @@ var name_verses_default = {
   },
   charsha: {
     ref: "Ezra 2:59",
-    he: '\u05D5\u05B0\u05D0\u05B5\u0597\u05DC\u05BC\u05B6\u05D4 \u05D4\u05B8\u05BD\u05E2\u05B9\u05DC\u05B4\u05D9\u05DD\u0599 \u05DE\u05B4\u05EA\u05BC\u05B5\u05A5\u05DC \u05DE\u05B6\u0599\u05DC\u05B7\u05D7\u0599 \u05EA\u05BC\u05B5\u05A3\u05DC \u05D7\u05B7\u05E8\u05B0\u05E9\u05C1\u05B8\u0594\u05D0 \u05DB\u05BC\u05B0\u05E8\u05A5\u05D5\u05BC\u05D1 \u05D0\u05B7\u05D3\u05BC\u05B8\u0596\u05DF \u05D0\u05B4\u05DE\u05BC\u05B5\u0591\u05E8 \u05D5\u05B0\u05DC\u05B9\u05A3\u05D0 \u05D9\u05B8\u05BD\u05DB\u05B0\u05DC\u0597\u05D5\u05BC \u05DC\u05B0\u05D4\u05B7\u05D2\u05BC\u05B4\u05A4\u05D9\u05D3 \u05D1\u05BC\u05B5\u05D9\u05EA\u05BE\u05D0\u05B2\u05D1\u05D5\u05B9\u05EA\u05B8\u05DD\u0599 \u05D5\u05B0\u05D6\u05B7\u05E8\u05B0\u05E2\u05B8\u0594\u05DD \u05D0\u05B4\u05A5\u05DD \u05DE\u05B4\u05D9\u05BC\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u0596\u05DC \u05D4\u05B5\u05BD\u05DD\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D5\u05B0\u05D0\u05B5\u0597\u05DC\u05BC\u05B6\u05D4 \u05D4\u05B8\u05BD\u05E2\u05B9\u05DC\u05B4\u05D9\u05DD\u0599 \u05DE\u05B4\u05EA\u05BC\u05B5\u05A5\u05DC \u05DE\u05B6\u0599\u05DC\u05B7\u05D7\u0599 \u05EA\u05BC\u05B5\u05A3\u05DC \u05D7\u05B7\u05E8\u05B0\u05E9\u05C1\u05B8\u0594\u05D0 \u05DB\u05BC\u05B0\u05E8\u05A5\u05D5\u05BC\u05D1 \u05D0\u05B7\u05D3\u05BC\u05B8\u0596\u05DF \u05D0\u05B4\u05DE\u05BC\u05B5\u0591\u05E8 \u05D5\u05B0\u05DC\u05B9\u05A3\u05D0 \u05D9\u05B8\u05BD\u05DB\u05B0\u05DC\u0597\u05D5\u05BC \u05DC\u05B0\u05D4\u05B7\u05D2\u05BC\u05B4\u05A4\u05D9\u05D3 \u05D1\u05BC\u05B5\u05D9\u05EA\u05BE\u05D0\u05B2\u05D1\u05D5\u05B9\u05EA\u05B8\u05DD\u0599 \u05D5\u05B0\u05D6\u05B7\u05E8\u05B0\u05E2\u05B8\u0594\u05DD \u05D0\u05B4\u05A5\u05DD \u05DE\u05B4\u05D9\u05BC\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u0596\u05DC \u05D4\u05B5\u05BD\u05DD\u05C3",
     en: "The following were those who came up from Tel-melah, Tel-harsha, Cherub, Addan, and Immer\u2014they were unable to tell whether their father\u2019s house and descent were Israelite:"
   },
   chashshub: {
     ref: "Neh 3:11",
-    he: '\u05DE\u05B4\u05D3\u05BC\u05B8\u05A3\u05D4 \u05E9\u05C1\u05B5\u05E0\u05B4\u0597\u05D9\u05EA \u05D4\u05B6\u05D7\u05B1\u05D6\u05B4\u05D9\u05E7\u0599 \u05DE\u05B7\u05DC\u05B0\u05DB\u05BC\u05B4\u05D9\u05BC\u05B8\u05A3\u05D4 \u05D1\u05B6\u05DF\u05BE\u05D7\u05B8\u05E8\u05B4\u0594\u05DD \u05D5\u05B0\u05D7\u05B7\u05E9\u05C1\u05BC\u0596\u05D5\u05BC\u05D1 \u05D1\u05BC\u05B6\u05DF\u05BE\u05E4\u05BC\u05B7\u05D7\u05B7\u05A3\u05EA \u05DE\u05D5\u05B9\u05D0\u05B8\u0591\u05D1 \u05D5\u05B0\u05D0\u05B5\u0596\u05EA \u05DE\u05B4\u05D2\u05B0\u05D3\u05BC\u05B7\u05A5\u05DC \u05D4\u05B7\u05EA\u05BC\u05B7\u05E0\u05BC\u05D5\u05BC\u05E8\u05B4\u05BD\u05D9\u05DD\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05DE\u05B4\u05D3\u05BC\u05B8\u05A3\u05D4 \u05E9\u05C1\u05B5\u05E0\u05B4\u0597\u05D9\u05EA \u05D4\u05B6\u05D7\u05B1\u05D6\u05B4\u05D9\u05E7\u0599 \u05DE\u05B7\u05DC\u05B0\u05DB\u05BC\u05B4\u05D9\u05BC\u05B8\u05A3\u05D4 \u05D1\u05B6\u05DF\u05BE\u05D7\u05B8\u05E8\u05B4\u0594\u05DD \u05D5\u05B0\u05D7\u05B7\u05E9\u05C1\u05BC\u0596\u05D5\u05BC\u05D1 \u05D1\u05BC\u05B6\u05DF\u05BE\u05E4\u05BC\u05B7\u05D7\u05B7\u05A3\u05EA \u05DE\u05D5\u05B9\u05D0\u05B8\u0591\u05D1 \u05D5\u05B0\u05D0\u05B5\u0596\u05EA \u05DE\u05B4\u05D2\u05B0\u05D3\u05BC\u05B7\u05A5\u05DC \u05D4\u05B7\u05EA\u05BC\u05B7\u05E0\u05BC\u05D5\u05BC\u05E8\u05B4\u05BD\u05D9\u05DD\u05C3",
     en: "Malchijah son of Harim and Hasshub son of Pahath-moab repaired a second stretch, including the Tower of Ovens."
   },
   chashum: {
@@ -25156,22 +29323,22 @@ var name_verses_default = {
   chemdan: {
     ref: "Gen 36:26",
     he: "\u05D5\u05B0\u05D0\u05B5\u0596\u05DC\u05BC\u05B6\u05D4 \u05D1\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D3\u05B4\u05D9\u05E9\u05C1\u05B8\u0591\u05DF \u05D7\u05B6\u05DE\u05B0\u05D3\u05BC\u05B8\u05A5\u05DF \u05D5\u05B0\u05D0\u05B6\u05E9\u05C1\u05B0\u05D1\u05BC\u05B8\u0596\u05DF \u05D5\u05B0\u05D9\u05B4\u05EA\u05B0\u05E8\u05B8\u05A5\u05DF \u05D5\u05BC\u05DB\u05B0\u05E8\u05B8\u05BD\u05DF\u05C3",
-    en: 'The sons of Dishon<sup class="footnote-marker">d</sup><i class="footnote"><b>Dishon </b>Heb. <i>Dishan</i>; cf. vv. <a class="refLink" data-ref="Genesis 36:21" href="Genesis.36.21">21</a>, <a class="refLink" data-ref="Genesis 36:25" href="Genesis.36.25">25</a>, <a class="refLink" data-ref="Genesis 36:28" href="Genesis.36.28">28</a>, and <a class="refLink" data-ref="Genesis 36:30" href="Genesis.36.30">30</a>.</i> were these: Hemdan, Eshban, Ithran, and Cheran.'
+    en: "The sons of DishondDishon Heb. Dishan; cf. vv. 21, 25, 28, and 30. were these: Hemdan, Eshban, Ithran, and Cheran."
   },
   eshban: {
     ref: "Gen 36:26",
     he: "\u05D5\u05B0\u05D0\u05B5\u0596\u05DC\u05BC\u05B6\u05D4 \u05D1\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D3\u05B4\u05D9\u05E9\u05C1\u05B8\u0591\u05DF \u05D7\u05B6\u05DE\u05B0\u05D3\u05BC\u05B8\u05A5\u05DF \u05D5\u05B0\u05D0\u05B6\u05E9\u05C1\u05B0\u05D1\u05BC\u05B8\u0596\u05DF \u05D5\u05B0\u05D9\u05B4\u05EA\u05B0\u05E8\u05B8\u05A5\u05DF \u05D5\u05BC\u05DB\u05B0\u05E8\u05B8\u05BD\u05DF\u05C3",
-    en: 'The sons of Dishon<sup class="footnote-marker">d</sup><i class="footnote"><b>Dishon </b>Heb. <i>Dishan</i>; cf. vv. <a class="refLink" data-ref="Genesis 36:21" href="Genesis.36.21">21</a>, <a class="refLink" data-ref="Genesis 36:25" href="Genesis.36.25">25</a>, <a class="refLink" data-ref="Genesis 36:28" href="Genesis.36.28">28</a>, and <a class="refLink" data-ref="Genesis 36:30" href="Genesis.36.30">30</a>.</i> were these: Hemdan, Eshban, Ithran, and Cheran.'
+    en: "The sons of DishondDishon Heb. Dishan; cf. vv. 21, 25, 28, and 30. were these: Hemdan, Eshban, Ithran, and Cheran."
   },
   keran: {
     ref: "Gen 36:26",
     he: "\u05D5\u05B0\u05D0\u05B5\u0596\u05DC\u05BC\u05B6\u05D4 \u05D1\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D3\u05B4\u05D9\u05E9\u05C1\u05B8\u0591\u05DF \u05D7\u05B6\u05DE\u05B0\u05D3\u05BC\u05B8\u05A5\u05DF \u05D5\u05B0\u05D0\u05B6\u05E9\u05C1\u05B0\u05D1\u05BC\u05B8\u0596\u05DF \u05D5\u05B0\u05D9\u05B4\u05EA\u05B0\u05E8\u05B8\u05A5\u05DF \u05D5\u05BC\u05DB\u05B0\u05E8\u05B8\u05BD\u05DF\u05C3",
-    en: 'The sons of Dishon<sup class="footnote-marker">d</sup><i class="footnote"><b>Dishon </b>Heb. <i>Dishan</i>; cf. vv. <a class="refLink" data-ref="Genesis 36:21" href="Genesis.36.21">21</a>, <a class="refLink" data-ref="Genesis 36:25" href="Genesis.36.25">25</a>, <a class="refLink" data-ref="Genesis 36:28" href="Genesis.36.28">28</a>, and <a class="refLink" data-ref="Genesis 36:30" href="Genesis.36.30">30</a>.</i> were these: Hemdan, Eshban, Ithran, and Cheran.'
+    en: "The sons of DishondDishon Heb. Dishan; cf. vv. 21, 25, 28, and 30. were these: Hemdan, Eshban, Ithran, and Cheran."
   },
   chenadad: {
     ref: "Ezra 3:9",
-    he: '\u05D5\u05B7\u05D9\u05BC\u05B7\u05E2\u05B2\u05DE\u05B9\u05A3\u05D3 \u05D9\u05B5\u05E9\u05C1\u05A1\u05D5\u05BC\u05E2\u05B7 \u05D1\u05BC\u05B8\u05E0\u05B8\u05A3\u05D9\u05D5 \u05D5\u05B0\u05A0\u05D0\u05B6\u05D7\u05B8\u05A0\u05D9\u05D5 \u05E7\u05B7\u05D3\u05B0\u05DE\u05B4\u05D9\u05D0\u05B5\u05A8\u05DC \u05D5\u05BC\u05D1\u05B8\u05E0\u05B8\u05A4\u05D9\u05D5 \u05D1\u05BC\u05B0\u05E0\u05B5\u05BD\u05D9\u05BE\u05D9\u05B0\u05D4\u05D5\u05BC\u05D3\u05B8\u05D4\u0599 \u05DB\u05BC\u05B0\u05D0\u05B6\u05D7\u05B8\u0594\u05D3 \u05DC\u05B0\u05E0\u05B7\u05E6\u05BC\u05B5\u059B\u05D7\u05B7 \u05E2\u05B7\u05DC\u05BE\u05E2\u05B9\u05E9\u05C2\u05B5\u05A5\u05D4 \u05D4\u05B7\u05DE\u05BC\u05B0\u05DC\u05B8\u05D0\u05DB\u05B8\u0596\u05D4 \u05D1\u05BC\u05B0\u05D1\u05B5\u05A3\u05D9\u05EA \u05D4\u05B8\u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u0591\u05D9\u05DD&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u05D1\u05BC\u05B0\u05E0\u05B5\u05D9\u0599 \u05D7\u05B5\u05BD\u05E0\u05B8\u05D3\u05B8\u0594\u05D3 \u05D1\u05BC\u05B0\u05E0\u05B5\u05D9\u05D4\u05B6\u05A5\u05DD \u05D5\u05B7\u05D0\u05B2\u05D7\u05B5\u05D9\u05D4\u05B6\u0596\u05DD \u05D4\u05B7\u05DC\u05B0\u05D5\u05B4\u05D9\u05BC\u05B4\u05BD\u05DD\u05C3',
-    en: 'Jeshua, his sons and brothers, Kadmiel and his sons, the sons of Judah,<sup class="footnote-marker">a</sup><i class="footnote"><b>Judah </b>Known as Hodaviah in <a class="refLink" data-ref="Ezra 2:40" href="Ezra.2.40">2.40</a>.</i> together were appointed in charge of those who did the work in the House of God; also the sons of Henadad, their sons and their Levite kin.'
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B7\u05E2\u05B2\u05DE\u05B9\u05A3\u05D3 \u05D9\u05B5\u05E9\u05C1\u05A1\u05D5\u05BC\u05E2\u05B7 \u05D1\u05BC\u05B8\u05E0\u05B8\u05A3\u05D9\u05D5 \u05D5\u05B0\u05A0\u05D0\u05B6\u05D7\u05B8\u05A0\u05D9\u05D5 \u05E7\u05B7\u05D3\u05B0\u05DE\u05B4\u05D9\u05D0\u05B5\u05A8\u05DC \u05D5\u05BC\u05D1\u05B8\u05E0\u05B8\u05A4\u05D9\u05D5 \u05D1\u05BC\u05B0\u05E0\u05B5\u05BD\u05D9\u05BE\u05D9\u05B0\u05D4\u05D5\u05BC\u05D3\u05B8\u05D4\u0599 \u05DB\u05BC\u05B0\u05D0\u05B6\u05D7\u05B8\u0594\u05D3 \u05DC\u05B0\u05E0\u05B7\u05E6\u05BC\u05B5\u059B\u05D7\u05B7 \u05E2\u05B7\u05DC\u05BE\u05E2\u05B9\u05E9\u05C2\u05B5\u05A5\u05D4 \u05D4\u05B7\u05DE\u05BC\u05B0\u05DC\u05B8\u05D0\u05DB\u05B8\u0596\u05D4 \u05D1\u05BC\u05B0\u05D1\u05B5\u05A3\u05D9\u05EA \u05D4\u05B8\u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u0591\u05D9\u05DD \u05D1\u05BC\u05B0\u05E0\u05B5\u05D9\u0599 \u05D7\u05B5\u05BD\u05E0\u05B8\u05D3\u05B8\u0594\u05D3 \u05D1\u05BC\u05B0\u05E0\u05B5\u05D9\u05D4\u05B6\u05A5\u05DD \u05D5\u05B7\u05D0\u05B2\u05D7\u05B5\u05D9\u05D4\u05B6\u0596\u05DD \u05D4\u05B7\u05DC\u05B0\u05D5\u05B4\u05D9\u05BC\u05B4\u05BD\u05DD\u05C3",
+    en: "Jeshua, his sons and brothers, Kadmiel and his sons, the sons of Judah,aJudah Known as Hodaviah in 2.40. together were appointed in charge of those who did the work in the House of God; also the sons of Henadad, their sons and their Levite kin."
   },
   chupham: {
     ref: "Num 26:39",
@@ -25190,7 +29357,7 @@ var name_verses_default = {
   },
   chushah: {
     ref: "1 Sam 20:38",
-    he: '\u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05B0\u05E8\u05B8\u05A4\u05D0 \u05D9\u05B0\u05D4\u05BD\u05D5\u05B9\u05E0\u05B8\u05EA\u05B8\u05DF\u0599 \u05D0\u05B7\u05D7\u05B2\u05E8\u05B5\u05A3\u05D9 \u05D4\u05B7\u05E0\u05BC\u05B7\u0594\u05E2\u05B7\u05E8 \u05DE\u05B0\u05D4\u05B5\u05E8\u05B8\u05A5\u05D4 \u05D7\u0596\u05D5\u05BC\u05E9\u05C1\u05B8\u05D4 \u05D0\u05B7\u05BD\u05DC\u05BE\u05EA\u05BC\u05B7\u05E2\u05B2\u05DE\u05B9\u0591\u05D3 \u05D5\u05B7\u05D9\u05B0\u05DC\u05B7\u05E7\u05BC\u05B5\u059E\u05D8 \u05E0\u05B7\u05A4\u05E2\u05B7\u05E8 \u05D9\u05B0\u05D4\u05BD\u05D5\u05B9\u05E0\u05B8\u05EA\u05B8\u05DF\u0599 \u05D0\u05B6\u05EA\u05BE<span class="mam-kq"><span class="mam-kq-q">[\u05D4\u05B7\u05A3\u05D7\u05B4\u05E6\u05BC\u05B4\u0594\u05D9\u05DD]</span> <span class="mam-kq-k">(\u05D4\u05D7\u05E6\u05D9)</span></span> \u05D5\u05B7\u05D9\u05BC\u05B8\u05D1\u05B9\u0596\u05D0 \u05D0\u05B6\u05DC\u05BE\u05D0\u05B2\u05D3\u05B9\u05E0\u05B8\u05BD\u05D9\u05D5\u05C3',
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05B0\u05E8\u05B8\u05A4\u05D0 \u05D9\u05B0\u05D4\u05BD\u05D5\u05B9\u05E0\u05B8\u05EA\u05B8\u05DF\u0599 \u05D0\u05B7\u05D7\u05B2\u05E8\u05B5\u05A3\u05D9 \u05D4\u05B7\u05E0\u05BC\u05B7\u0594\u05E2\u05B7\u05E8 \u05DE\u05B0\u05D4\u05B5\u05E8\u05B8\u05A5\u05D4 \u05D7\u0596\u05D5\u05BC\u05E9\u05C1\u05B8\u05D4 \u05D0\u05B7\u05BD\u05DC\u05BE\u05EA\u05BC\u05B7\u05E2\u05B2\u05DE\u05B9\u0591\u05D3 \u05D5\u05B7\u05D9\u05B0\u05DC\u05B7\u05E7\u05BC\u05B5\u059E\u05D8 \u05E0\u05B7\u05A4\u05E2\u05B7\u05E8 \u05D9\u05B0\u05D4\u05BD\u05D5\u05B9\u05E0\u05B8\u05EA\u05B8\u05DF\u0599 \u05D0\u05B6\u05EA\u05BE[\u05D4\u05B7\u05A3\u05D7\u05B4\u05E6\u05BC\u05B4\u0594\u05D9\u05DD] (\u05D4\u05D7\u05E6\u05D9) \u05D5\u05B7\u05D9\u05BC\u05B8\u05D1\u05B9\u0596\u05D0 \u05D0\u05B6\u05DC\u05BE\u05D0\u05B2\u05D3\u05B9\u05E0\u05B8\u05BD\u05D9\u05D5\u05C3",
     en: "And Jonathan called after the boy, \u201CQuick, hurry up. Don\u2019t stop!\u201D So Jonathan\u2019s boy gathered the arrows and came back to his master.\u2014"
   },
   chusham: {
@@ -25205,7 +29372,7 @@ var name_verses_default = {
   },
   dara: {
     ref: "1 Chr 2:6",
-    he: '\u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D6\u05B6\u0597\u05E8\u05B7\u05D7 \u05D6\u05B4\u05A0\u05DE\u05B0\u05E8\u05B4\u05A0\u05D9 \u05D5\u05B0\u05D0\u05B5\u05D9\u05EA\u05B8\u05A7\u05DF \u05D5\u05B0\u05D4\u05B5\u05D9\u05DE\u05B8\u059B\u05DF \u05D5\u05B0\u05DB\u05B7\u05DC\u05B0\u05DB\u05BC\u05B9\u05A5\u05DC \u05D5\u05B8\u05D3\u05B8\u0596\u05E8\u05B7\u05E2 \u05DB\u05BC\u05BB\u05DC\u05BC\u05B8\u05A5\u05DD \u05D7\u05B2\u05DE\u05B4\u05E9\u05C1\u05BC\u05B8\u05BD\u05D4\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D6\u05B6\u0597\u05E8\u05B7\u05D7 \u05D6\u05B4\u05A0\u05DE\u05B0\u05E8\u05B4\u05A0\u05D9 \u05D5\u05B0\u05D0\u05B5\u05D9\u05EA\u05B8\u05A7\u05DF \u05D5\u05B0\u05D4\u05B5\u05D9\u05DE\u05B8\u059B\u05DF \u05D5\u05B0\u05DB\u05B7\u05DC\u05B0\u05DB\u05BC\u05B9\u05A5\u05DC \u05D5\u05B8\u05D3\u05B8\u0596\u05E8\u05B7\u05E2 \u05DB\u05BC\u05BB\u05DC\u05BC\u05B8\u05A5\u05DD \u05D7\u05B2\u05DE\u05B4\u05E9\u05C1\u05BC\u05B8\u05BD\u05D4\u05C3",
     en: "The sons of Zerah: Zimri, Ethan, Heman, Calcol, and Dara, five in all."
   },
   darda: {
@@ -25220,8 +29387,8 @@ var name_verses_default = {
   },
   dodo: {
     ref: "Amos 6:10",
-    he: '\u05D5\u05BC\u05E0\u05B0\u05E9\u05C2\u05B8\u05D0\u059E\u05D5\u05B9 \u05D3\u05BC\u05D5\u05B9\u05D3\u05A3\u05D5\u05B9 \u05D5\u05BC\u05DE\u05B0\u05E1\u05B8\u05BD\u05E8\u05B0\u05E4\u0597\u05D5\u05B9 \u05DC\u05B0\u05D4\u05D5\u05B9\u05E6\u05B4\u05A3\u05D9\u05D0 \u05E2\u05B2\u05E6\u05B8\u05DE\u05B4\u05D9\u05DD\u05AE \u05DE\u05B4\u05DF\u05BE\u05D4\u05B7\u05D1\u05BC\u05B7\u05D9\u05B4\u05EA\u0592 \u05D5\u05B0\u05D0\u05B8\u05DE\u05B7\u059E\u05E8 \u05DC\u05B7\u05D0\u05B2\u05E9\u05C1\u05B6\u05A8\u05E8 \u05D1\u05BC\u05B0\u05D9\u05B7\u05E8\u05B0\u05DB\u05BC\u05B0\u05EA\u05B5\u05A5\u05D9 \u05D4\u05B7\u05D1\u05BC\u05B7\u059B\u05D9\u05B4\u05EA \u05D4\u05B7\u05E2\u05A5\u05D5\u05B9\u05D3 \u05E2\u05B4\u05DE\u05BC\u05B8\u0596\u05DA\u05B0 \u05D5\u05B0\u05D0\u05B8\u05DE\u05B7\u05A3\u05E8 \u05D0\u05B8\u0591\u05E4\u05B6\u05E1 \u05D5\u05B0\u05D0\u05B8\u05DE\u05B7\u05A3\u05E8 \u05D4\u05B8\u0594\u05E1 \u05DB\u05BC\u05B4\u059B\u05D9 \u05DC\u05B9\u05A5\u05D0 \u05DC\u05B0\u05D4\u05B7\u05D6\u05B0\u05DB\u05BC\u05B4\u0596\u05D9\u05E8 \u05D1\u05BC\u05B0\u05E9\u05C1\u05B5\u05A5\u05DD \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05BD\u05D4\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
-    en: 'And if someone\u2019s kinsman\u2014who is to burn incense for one of the deceased<sup class="footnote-marker">g</sup><i class="footnote"><b>who is to burn incense for one of the deceased </b>Or \u201Calong with an embalmer.\u201D</i>\u2014comes to carry the remains out of the house,<sup class="footnote-marker">h</sup><i class="footnote"><b>And if someone\u2019s kinsman \u2026 out of a house </b>Meaning of Heb. uncertain.</i> and he calls to the one at the rear of the house, \u201CAre there any alive besides you?\u201D the answer will be, \u201CNo, none.\u201D And he will say, \u201CHush!\u201D\u2014so that no one may utter G<small>OD</small>\u2019s name.'
+    he: "\u05D5\u05BC\u05E0\u05B0\u05E9\u05C2\u05B8\u05D0\u059E\u05D5\u05B9 \u05D3\u05BC\u05D5\u05B9\u05D3\u05A3\u05D5\u05B9 \u05D5\u05BC\u05DE\u05B0\u05E1\u05B8\u05BD\u05E8\u05B0\u05E4\u0597\u05D5\u05B9 \u05DC\u05B0\u05D4\u05D5\u05B9\u05E6\u05B4\u05A3\u05D9\u05D0 \u05E2\u05B2\u05E6\u05B8\u05DE\u05B4\u05D9\u05DD\u05AE \u05DE\u05B4\u05DF\u05BE\u05D4\u05B7\u05D1\u05BC\u05B7\u05D9\u05B4\u05EA\u0592 \u05D5\u05B0\u05D0\u05B8\u05DE\u05B7\u059E\u05E8 \u05DC\u05B7\u05D0\u05B2\u05E9\u05C1\u05B6\u05A8\u05E8 \u05D1\u05BC\u05B0\u05D9\u05B7\u05E8\u05B0\u05DB\u05BC\u05B0\u05EA\u05B5\u05A5\u05D9 \u05D4\u05B7\u05D1\u05BC\u05B7\u059B\u05D9\u05B4\u05EA \u05D4\u05B7\u05E2\u05A5\u05D5\u05B9\u05D3 \u05E2\u05B4\u05DE\u05BC\u05B8\u0596\u05DA\u05B0 \u05D5\u05B0\u05D0\u05B8\u05DE\u05B7\u05A3\u05E8 \u05D0\u05B8\u0591\u05E4\u05B6\u05E1 \u05D5\u05B0\u05D0\u05B8\u05DE\u05B7\u05A3\u05E8 \u05D4\u05B8\u0594\u05E1 \u05DB\u05BC\u05B4\u059B\u05D9 \u05DC\u05B9\u05A5\u05D0 \u05DC\u05B0\u05D4\u05B7\u05D6\u05B0\u05DB\u05BC\u05B4\u0596\u05D9\u05E8 \u05D1\u05BC\u05B0\u05E9\u05C1\u05B5\u05A5\u05DD \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05BD\u05D4\u05C3",
+    en: "And if someone\u2019s kinsman\u2014who is to burn incense for one of the deceasedgwho is to burn incense for one of the deceased Or \u201Calong with an embalmer.\u201D\u2014comes to carry the remains out of the house,hAnd if someone\u2019s kinsman \u2026 out of a house Meaning of Heb. uncertain. and he calls to the one at the rear of the house, \u201CAre there any alive besides you?\u201D the answer will be, \u201CNo, none.\u201D And he will say, \u201CHush!\u201D\u2014so that no one may utter GOD\u2019s name."
   },
   echud: {
     ref: "1 Chr 8:6",
@@ -25231,11 +29398,11 @@ var name_verses_default = {
   ehud: {
     ref: "Judg 3:16",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B7\u05A9\u05E2\u05B7\u05E9\u05C2\u05A9 \u05DC\u05A8\u05D5\u05B9 \u05D0\u05B5\u05D4\u059C\u05D5\u05BC\u05D3 \u05D7\u05B6\u0597\u05E8\u05B6\u05D1 \u05D5\u05B0\u05DC\u05B8\u059B\u05D4\u05BC \u05E9\u05C1\u05B0\u05E0\u05B5\u05A5\u05D9 \u05E4\u05B5\u05D9\u0596\u05D5\u05B9\u05EA \u05D2\u05BC\u05B9\u05A3\u05DE\u05B6\u05D3 \u05D0\u05C7\u05E8\u05B0\u05DB\u05BC\u05B8\u0591\u05D4\u05BC \u05D5\u05B7\u05D9\u05BC\u05B7\u05D7\u05B0\u05D2\u05BC\u05B9\u05A4\u05E8 \u05D0\u05D5\u05B9\u05EA\u05B8\u05D4\u05BC\u0599 \u05DE\u05B4\u05EA\u05BC\u05B7\u05A3\u05D7\u05B7\u05EA \u05DC\u05B0\u05DE\u05B7\u05D3\u05BC\u05B8\u0594\u05D9\u05D5 \u05E2\u05B7\u0596\u05DC \u05D9\u05B6\u05A5\u05E8\u05B6\u05DA\u05B0 \u05D9\u05B0\u05DE\u05B4\u05D9\u05E0\u05BD\u05D5\u05B9\u05C3",
-    en: "So Ehud made for himself a two-edged dagger, a <i>gomed</i> in length, which he girded on his right side under his cloak."
+    en: "So Ehud made for himself a two-edged dagger, a gomed in length, which he girded on his right side under his cloak."
   },
   ephrath: {
     ref: "Gen 48:7",
-    he: "\u05D5\u05B7\u05D0\u05B2\u05E0\u05B4\u05A3\u05D9&thinsp;<b>\u05C0</b> \u05D1\u05BC\u05B0\u05D1\u05B9\u05D0\u05B4\u05A3\u05D9 \u05DE\u05B4\u05E4\u05BC\u05B7\u05D3\u05BC\u05B8\u0597\u05DF \u05DE\u05B5\u05A9\u05EA\u05B8\u05D4\u05A9 \u05E2\u05B8\u05DC\u05B7\u05A8\u05D9 \u05E8\u05B8\u05D7\u05B5\u059C\u05DC \u05D1\u05BC\u05B0\u05D0\u05B6\u05A4\u05E8\u05B6\u05E5 \u05DB\u05BC\u05B0\u05E0\u05B7\u0599\u05E2\u05B7\u05DF\u0599 \u05D1\u05BC\u05B7\u05D3\u05BC\u05B6\u0594\u05E8\u05B6\u05DA\u05B0 \u05D1\u05BC\u05B0\u05E2\u05A5\u05D5\u05B9\u05D3 \u05DB\u05BC\u05B4\u05D1\u05B0\u05E8\u05B7\u05EA\u05BE\u05D0\u05B6\u0596\u05E8\u05B6\u05E5 \u05DC\u05B8\u05D1\u05B9\u05A3\u05D0 \u05D0\u05B6\u05E4\u05B0\u05E8\u05B8\u0591\u05EA\u05B8\u05D4 \u05D5\u05B8\u05D0\u05B6\u05E7\u05B0\u05D1\u05BC\u05B0\u05E8\u05B6\u05A4\u05D4\u05B8 \u05E9\u05C1\u05BC\u05B8\u05DD\u0599 \u05D1\u05BC\u05B0\u05D3\u05B6\u05A3\u05E8\u05B6\u05DA\u05B0 \u05D0\u05B6\u05E4\u05B0\u05E8\u05B8\u0594\u05EA \u05D4\u05B4\u0596\u05D5\u05D0 \u05D1\u05BC\u05B5\u05A5\u05D9\u05EA \u05DC\u05B8\u05BD\u05D7\u05B6\u05DD\u05C3",
+    he: "\u05D5\u05B7\u05D0\u05B2\u05E0\u05B4\u05A3\u05D9&thinsp;\u05C0 \u05D1\u05BC\u05B0\u05D1\u05B9\u05D0\u05B4\u05A3\u05D9 \u05DE\u05B4\u05E4\u05BC\u05B7\u05D3\u05BC\u05B8\u0597\u05DF \u05DE\u05B5\u05A9\u05EA\u05B8\u05D4\u05A9 \u05E2\u05B8\u05DC\u05B7\u05A8\u05D9 \u05E8\u05B8\u05D7\u05B5\u059C\u05DC \u05D1\u05BC\u05B0\u05D0\u05B6\u05A4\u05E8\u05B6\u05E5 \u05DB\u05BC\u05B0\u05E0\u05B7\u0599\u05E2\u05B7\u05DF\u0599 \u05D1\u05BC\u05B7\u05D3\u05BC\u05B6\u0594\u05E8\u05B6\u05DA\u05B0 \u05D1\u05BC\u05B0\u05E2\u05A5\u05D5\u05B9\u05D3 \u05DB\u05BC\u05B4\u05D1\u05B0\u05E8\u05B7\u05EA\u05BE\u05D0\u05B6\u0596\u05E8\u05B6\u05E5 \u05DC\u05B8\u05D1\u05B9\u05A3\u05D0 \u05D0\u05B6\u05E4\u05B0\u05E8\u05B8\u0591\u05EA\u05B8\u05D4 \u05D5\u05B8\u05D0\u05B6\u05E7\u05B0\u05D1\u05BC\u05B0\u05E8\u05B6\u05A4\u05D4\u05B8 \u05E9\u05C1\u05BC\u05B8\u05DD\u0599 \u05D1\u05BC\u05B0\u05D3\u05B6\u05A3\u05E8\u05B6\u05DA\u05B0 \u05D0\u05B6\u05E4\u05B0\u05E8\u05B8\u0594\u05EA \u05D4\u05B4\u0596\u05D5\u05D0 \u05D1\u05BC\u05B5\u05A5\u05D9\u05EA \u05DC\u05B8\u05BD\u05D7\u05B6\u05DD\u05C3",
     en: "I [do this because], when I was returning from Paddan, Rachel died, to my sorrow, while I was journeying in the land of Canaan, when still some distance short of Ephrath; and I buried her there on the road to Ephrath\u201D\u2014now Bethlehem."
   },
   eran: {
@@ -25246,7 +29413,7 @@ var name_verses_default = {
   eshtemoa: {
     ref: "1 Chr 4:17",
     he: "\u05D5\u05BC\u05D1\u05B6\u05A8\u05DF\u05BE\u05E2\u05B6\u05D6\u05B0\u05E8\u05B8\u0594\u05D4 \u05D9\u05B6\u05A5\u05EA\u05B6\u05E8 \u05D5\u05BC\u05DE\u05B6\u0596\u05E8\u05B6\u05D3 \u05D5\u05B0\u05E2\u05B5\u05A3\u05E4\u05B6\u05E8 \u05D5\u05B0\u05D9\u05B8\u05DC\u0591\u05D5\u05B9\u05DF \u05D5\u05B7\u05EA\u05BC\u05B7\u0599\u05D4\u05B7\u05E8\u0599 \u05D0\u05B6\u05EA\u05BE\u05DE\u05B4\u05E8\u05B0\u05D9\u05B8\u05A3\u05DD \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05E9\u05C1\u05B7\u05DE\u05BC\u05B7\u0594\u05D9 \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05D9\u05B4\u05E9\u05C1\u05B0\u05D1\u05BC\u05B8\u0596\u05D7 \u05D0\u05B2\u05D1\u05B4\u05A5\u05D9 \u05D0\u05B6\u05E9\u05C1\u05B0\u05EA\u05BC\u05B0\u05DE\u05B9\u05BD\u05E2\u05B7\u05C3",
-    en: 'The son[s] of Ezrah: Jether, Mered, Epher, and Jalon. She<sup class="footnote-marker">c</sup><i class="footnote"><b>She </b>Apparently Bithiah; cf. v. <a class="refLink" data-ref="I Chronicles 4:18" href="I_Chronicles.4.18">18</a>.</i> conceived and bore Miriam, Shammai, and Ishbah father of Eshtemoa.'
+    en: "The son[s] of Ezrah: Jether, Mered, Epher, and Jalon. ShecShe Apparently Bithiah; cf. v. 18. conceived and bore Miriam, Shammai, and Ishbah father of Eshtemoa."
   },
   ester: {
     ref: "Gen 4:14",
@@ -25275,8 +29442,8 @@ var name_verses_default = {
   },
   gereshom: {
     ref: "Ex 2:22",
-    he: '\u05D5\u05B7\u05EA\u05BC\u05B5\u05A3\u05DC\u05B6\u05D3 \u05D1\u05BC\u05B5\u0594\u05DF \u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05B0\u05E8\u05B8\u05A5\u05D0 \u05D0\u05B6\u05EA\u05BE\u05E9\u05C1\u05B0\u05DE\u0596\u05D5\u05B9 \u05D2\u05BC\u05B5\u05E8\u05B0\u05E9\u05C1\u05B9\u0591\u05DD \u05DB\u05BC\u05B4\u05A3\u05D9 \u05D0\u05B8\u05DE\u05B7\u0594\u05E8 \u05D2\u05BC\u05B5\u05A3\u05E8 \u05D4\u05B8\u05D9\u05B4\u0594\u05D9\u05EA\u05B4\u05D9 \u05D1\u05BC\u05B0\u05D0\u05B6\u0596\u05E8\u05B6\u05E5 \u05E0\u05C7\u05DB\u05B0\u05E8\u05B4\u05D9\u05BC\u05B8\u05BD\u05D4\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
-    en: 'She bore a son whom he named Gershom,<sup class="footnote-marker">c</sup><i class="footnote"><b>Gershom </b>Associated with <i>ger sham</i>, \u201Ca stranger there.\u201D</i> for he said, \u201CI have been a stranger in a foreign land.\u201D'
+    he: "\u05D5\u05B7\u05EA\u05BC\u05B5\u05A3\u05DC\u05B6\u05D3 \u05D1\u05BC\u05B5\u0594\u05DF \u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05B0\u05E8\u05B8\u05A5\u05D0 \u05D0\u05B6\u05EA\u05BE\u05E9\u05C1\u05B0\u05DE\u0596\u05D5\u05B9 \u05D2\u05BC\u05B5\u05E8\u05B0\u05E9\u05C1\u05B9\u0591\u05DD \u05DB\u05BC\u05B4\u05A3\u05D9 \u05D0\u05B8\u05DE\u05B7\u0594\u05E8 \u05D2\u05BC\u05B5\u05A3\u05E8 \u05D4\u05B8\u05D9\u05B4\u0594\u05D9\u05EA\u05B4\u05D9 \u05D1\u05BC\u05B0\u05D0\u05B6\u0596\u05E8\u05B6\u05E5 \u05E0\u05C7\u05DB\u05B0\u05E8\u05B4\u05D9\u05BC\u05B8\u05BD\u05D4\u05C3",
+    en: "She bore a son whom he named Gershom,cGershom Associated with ger sham, \u201Ca stranger there.\u201D for he said, \u201CI have been a stranger in a foreign land.\u201D"
   },
   geshur: {
     ref: "Josh 13:13",
@@ -25295,12 +29462,12 @@ var name_verses_default = {
   },
   giba: {
     ref: "1 Chr 2:49",
-    he: '\u05D5\u05B7\u05EA\u05BC\u05B5\u0597\u05DC\u05B6\u05D3 \u05E9\u05C1\u05B7\u059A\u05E2\u05B7\u05E3 \u05D0\u05B2\u05D1\u05B4\u05A3\u05D9 \u05DE\u05B7\u05D3\u05B0\u05DE\u05B7\u05E0\u05BC\u05B8\u0594\u05D4 \u05D0\u05B6\u05EA\u05BE\u05E9\u05C1\u05B0\u05D5\u05B8\u059B\u05D0 \u05D0\u05B2\u05D1\u05B4\u05A5\u05D9 \u05DE\u05B7\u05DB\u05B0\u05D1\u05BC\u05B5\u05E0\u05B8\u0596\u05D4 \u05D5\u05B7\u05D0\u05B2\u05D1\u05B4\u05A3\u05D9 \u05D2\u05B4\u05D1\u05B0\u05E2\u05B8\u0591\u05D0 \u05D5\u05BC\u05D1\u05B7\u05EA\u05BE\u05DB\u05BC\u05B8\u05DC\u05B5\u0596\u05D1 \u05E2\u05B7\u05DB\u05B0\u05E1\u05B8\u05BD\u05D4\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D5\u05B7\u05EA\u05BC\u05B5\u0597\u05DC\u05B6\u05D3 \u05E9\u05C1\u05B7\u059A\u05E2\u05B7\u05E3 \u05D0\u05B2\u05D1\u05B4\u05A3\u05D9 \u05DE\u05B7\u05D3\u05B0\u05DE\u05B7\u05E0\u05BC\u05B8\u0594\u05D4 \u05D0\u05B6\u05EA\u05BE\u05E9\u05C1\u05B0\u05D5\u05B8\u059B\u05D0 \u05D0\u05B2\u05D1\u05B4\u05A5\u05D9 \u05DE\u05B7\u05DB\u05B0\u05D1\u05BC\u05B5\u05E0\u05B8\u0596\u05D4 \u05D5\u05B7\u05D0\u05B2\u05D1\u05B4\u05A3\u05D9 \u05D2\u05B4\u05D1\u05B0\u05E2\u05B8\u0591\u05D0 \u05D5\u05BC\u05D1\u05B7\u05EA\u05BE\u05DB\u05BC\u05B8\u05DC\u05B5\u0596\u05D1 \u05E2\u05B7\u05DB\u05B0\u05E1\u05B8\u05BD\u05D4\u05C3",
     en: "She also bore Shaaph father of Madmannah, Sheva father of Machbenah and father of Gibea; the daughter of Caleb was Achsah."
   },
   gishpa: {
     ref: "Neh 11:21",
-    he: '\u05D5\u05B0\u05D4\u05B7\u05E0\u05BC\u05B0\u05EA\u05B4\u05D9\u05E0\u05B4\u0596\u05D9\u05DD \u05D9\u05B9\u05E9\u05C1\u05B0\u05D1\u05B4\u05A3\u05D9\u05DD \u05D1\u05BC\u05B8\u05E2\u05B9\u0591\u05E4\u05B6\u05DC \u05D5\u05B0\u05E6\u05B4\u05D9\u05D7\u05B8\u05A5\u05D0 \u05D5\u05B0\u05D2\u05B4\u05E9\u05C1\u05B0\u05E4\u05BC\u05B8\u0596\u05D0 \u05E2\u05B7\u05DC\u05BE\u05D4\u05B7\u05E0\u05BC\u05B0\u05EA\u05B4\u05D9\u05E0\u05B4\u05BD\u05D9\u05DD\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
+    he: "\u05D5\u05B0\u05D4\u05B7\u05E0\u05BC\u05B0\u05EA\u05B4\u05D9\u05E0\u05B4\u0596\u05D9\u05DD \u05D9\u05B9\u05E9\u05C1\u05B0\u05D1\u05B4\u05A3\u05D9\u05DD \u05D1\u05BC\u05B8\u05E2\u05B9\u0591\u05E4\u05B6\u05DC \u05D5\u05B0\u05E6\u05B4\u05D9\u05D7\u05B8\u05A5\u05D0 \u05D5\u05B0\u05D2\u05B4\u05E9\u05C1\u05B0\u05E4\u05BC\u05B8\u0596\u05D0 \u05E2\u05B7\u05DC\u05BE\u05D4\u05B7\u05E0\u05BC\u05B0\u05EA\u05B4\u05D9\u05E0\u05B4\u05BD\u05D9\u05DD\u05C3",
     en: "The temple servants lived on the Ophel; Ziha and Gishpa were in charge of the temple servants."
   },
   gog: {
@@ -25325,8 +29492,8 @@ var name_verses_default = {
   },
   hashem: {
     ref: "Isa 63:11",
-    he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05D6\u05B0\u05DB\u05BC\u05B9\u05A5\u05E8 \u05D9\u05B0\u05DE\u05B5\u05BD\u05D9\u05BE\u05E2\u05D5\u05B9\u05DC\u05B8\u0596\u05DD \u05DE\u05B9\u05E9\u05C1\u05B6\u05A3\u05D4 \u05E2\u05B7\u05DE\u05BC\u0591\u05D5\u05B9 \u05D0\u05B7\u05D9\u05BC\u05B5\u05A3\u05D4&thinsp;<b>\u05C0</b> \u05D4\u05B7\u05BD\u05DE\u05BC\u05B7\u05E2\u05B2\u05DC\u05B5\u05A3\u05DD \u05DE\u05B4\u05D9\u05BC\u05B8\u0597\u05DD \u05D0\u05B5\u059A\u05EA \u05E8\u05B9\u05E2\u05B5\u05A3\u05D9 \u05E6\u05B9\u05D0\u05E0\u0594\u05D5\u05B9 \u05D0\u05B7\u05D9\u05BC\u05B5\u059B\u05D4 \u05D4\u05B7\u05E9\u05C2\u05BC\u05B8\u05A5\u05DD \u05D1\u05BC\u05B0\u05E7\u05B4\u05E8\u05B0\u05D1\u05BC\u0596\u05D5\u05B9 \u05D0\u05B6\u05EA\u05BE\u05E8\u05A5\u05D5\u05BC\u05D7\u05B7 \u05E7\u05C7\u05D3\u05B0\u05E9\u05C1\u05BD\u05D5\u05B9\u05C3",
-    en: '<span class="poetry indentAll">Then they</span><sup class="footnote-marker">j</sup><i class="footnote"><b>they </b>Heb. \u201Che.\u201D</i> remembered the ancient days,<br><span class="poetry indentAll">The One who pulled</span><sup class="footnote-marker">k</sup><i class="footnote"><b>The One who pulled </b>Heb. <i>moshe</i>, a play on the name Moshe (Moses).</i> a precious<sup class="footnote-marker">l</sup><i class="footnote"><b>a precious </b>Lit. \u201CHis.\u201D</i> people out [of the water]:<br><span class="poetry indentAll">\u201CWhere is the One who brought them up from the Sea</span><br><span class="poetry indentAll">Along with the shepherd</span><sup class="footnote-marker">m</sup><i class="footnote"><b>shepherd </b>So many mss. and ancient versions; other texts \u201Cshepherds.\u201D</i> of this flock?<br><span class="poetry indentAll">Where is the One whose holy spirit</span><br><span class="poetry indentAll">Was placed in their midst,</span>'
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05D6\u05B0\u05DB\u05BC\u05B9\u05A5\u05E8 \u05D9\u05B0\u05DE\u05B5\u05BD\u05D9\u05BE\u05E2\u05D5\u05B9\u05DC\u05B8\u0596\u05DD \u05DE\u05B9\u05E9\u05C1\u05B6\u05A3\u05D4 \u05E2\u05B7\u05DE\u05BC\u0591\u05D5\u05B9 \u05D0\u05B7\u05D9\u05BC\u05B5\u05A3\u05D4&thinsp;\u05C0 \u05D4\u05B7\u05BD\u05DE\u05BC\u05B7\u05E2\u05B2\u05DC\u05B5\u05A3\u05DD \u05DE\u05B4\u05D9\u05BC\u05B8\u0597\u05DD \u05D0\u05B5\u059A\u05EA \u05E8\u05B9\u05E2\u05B5\u05A3\u05D9 \u05E6\u05B9\u05D0\u05E0\u0594\u05D5\u05B9 \u05D0\u05B7\u05D9\u05BC\u05B5\u059B\u05D4 \u05D4\u05B7\u05E9\u05C2\u05BC\u05B8\u05A5\u05DD \u05D1\u05BC\u05B0\u05E7\u05B4\u05E8\u05B0\u05D1\u05BC\u0596\u05D5\u05B9 \u05D0\u05B6\u05EA\u05BE\u05E8\u05A5\u05D5\u05BC\u05D7\u05B7 \u05E7\u05C7\u05D3\u05B0\u05E9\u05C1\u05BD\u05D5\u05B9\u05C3",
+    en: "Then theyjthey Heb. \u201Che.\u201D remembered the ancient days,The One who pulledkThe One who pulled Heb. moshe, a play on the name Moshe (Moses). a preciousla precious Lit. \u201CHis.\u201D people out [of the water]:\u201CWhere is the One who brought them up from the SeaAlong with the shepherdmshepherd So many mss. and ancient versions; other texts \u201Cshepherds.\u201D of this flock?Where is the One whose holy spiritWas placed in their midst,"
   },
   hathak: {
     ref: "Esth 4:5",
@@ -25340,12 +29507,12 @@ var name_verses_default = {
   },
   hodevah: {
     ref: "Neh 7:43",
-    he: '\u05D4\u05B7\u05DC\u05B0\u05D5\u05B4\u05D9\u05BC\u05B4\u0591\u05DD \u05D1\u05BC\u05B0\u05E0\u05B5\u05BD\u05D9\u05BE\u05D9\u05B5\u05E9\u05C1\u05A7\u05D5\u05BC\u05E2\u05B7 \u05DC\u05B0\u05E7\u05B7\u05D3\u05B0\u05DE\u05B4\u05D9\u05D0\u05B5\u059B\u05DC \u05DC\u05B4\u05D1\u05B0\u05E0\u05B5\u05A5\u05D9 \u05DC\u05B0\u05D4\u05D5\u05B9\u05D3\u05B0\u05D5\u05B8\u0596\u05D4 \u05E9\u05C1\u05B4\u05D1\u05B0\u05E2\u05B4\u05A5\u05D9\u05DD \u05D5\u05B0\u05D0\u05B7\u05E8\u05B0\u05D1\u05BC\u05B8\u05E2\u05B8\u05BD\u05D4\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D4\u05B7\u05DC\u05B0\u05D5\u05B4\u05D9\u05BC\u05B4\u0591\u05DD \u05D1\u05BC\u05B0\u05E0\u05B5\u05BD\u05D9\u05BE\u05D9\u05B5\u05E9\u05C1\u05A7\u05D5\u05BC\u05E2\u05B7 \u05DC\u05B0\u05E7\u05B7\u05D3\u05B0\u05DE\u05B4\u05D9\u05D0\u05B5\u059B\u05DC \u05DC\u05B4\u05D1\u05B0\u05E0\u05B5\u05A5\u05D9 \u05DC\u05B0\u05D4\u05D5\u05B9\u05D3\u05B0\u05D5\u05B8\u0596\u05D4 \u05E9\u05C1\u05B4\u05D1\u05B0\u05E2\u05B4\u05A5\u05D9\u05DD \u05D5\u05B0\u05D0\u05B7\u05E8\u05B0\u05D1\u05BC\u05B8\u05E2\u05B8\u05BD\u05D4\u05C3",
     en: "The Levites: the sons of Jeshua: Kadmiel, the sons of Hodeiah\u201474."
   },
   homam: {
     ref: "1 Chr 1:39",
-    he: '\u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u05A5\u05D9 \u05DC\u05D5\u05B9\u05D8\u05B8\u0596\u05DF \u05D7\u05B9\u05E8\u05B4\u05A3\u05D9 \u05D5\u05B0\u05D4\u05D5\u05B9\u05DE\u05B8\u0591\u05DD \u05D5\u05B7\u05D0\u05B2\u05D7\u05A5\u05D5\u05B9\u05EA \u05DC\u05D5\u05B9\u05D8\u05B8\u0596\u05DF \u05EA\u05BC\u05B4\u05DE\u05B0\u05E0\u05B8\u05BD\u05E2\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u05A5\u05D9 \u05DC\u05D5\u05B9\u05D8\u05B8\u0596\u05DF \u05D7\u05B9\u05E8\u05B4\u05A3\u05D9 \u05D5\u05B0\u05D4\u05D5\u05B9\u05DE\u05B8\u0591\u05DD \u05D5\u05B7\u05D0\u05B2\u05D7\u05A5\u05D5\u05B9\u05EA \u05DC\u05D5\u05B9\u05D8\u05B8\u0596\u05DF \u05EA\u05BC\u05B4\u05DE\u05B0\u05E0\u05B8\u05BD\u05E2\u05C3",
     en: "The sons of Lotan: Hori and Homam; and Lotan\u2019s sister was Timna."
   },
   horam: {
@@ -25356,12 +29523,12 @@ var name_verses_default = {
   ibtsan: {
     ref: "Judg 12:8",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05E9\u05C1\u05B0\u05E4\u05BC\u05B9\u05A4\u05D8 \u05D0\u05B7\u05BD\u05D7\u05B2\u05E8\u05B8\u05D9\u05D5\u0599 \u05D0\u05B6\u05EA\u05BE\u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u0594\u05DC \u05D0\u05B4\u05D1\u05B0\u05E6\u05B8\u0596\u05DF \u05DE\u05B4\u05D1\u05BC\u05B5\u05A5\u05D9\u05EA \u05DC\u05B8\u05BD\u05D7\u05B6\u05DD\u05C3",
-    en: 'After him, Ibzan of Bethlehem<sup class="footnote-marker">b</sup><i class="footnote"><b>Bethlehem </b>I.e., Bethlehem in Zebulun; cf. Josh. 19.15.</i> led Israel.'
+    en: "After him, Ibzan of BethlehembBethlehem I.e., Bethlehem in Zebulun; cf. Josh. 19.15. led Israel."
   },
   iddo: {
     ref: "Job 36:27",
     he: "\u05DB\u05BC\u05B4\u05AD\u05D9 \u05D9\u05B0\u05D2\u05B8\u05E8\u05B7\u05A3\u05E2 \u05E0\u05B4\u05D8\u05B0\u05E4\u05B5\u05D9\u05BE\u05DE\u05B8\u0591\u05D9\u05B4\u05DD \u05D9\u05B8\u05D6\u05B9\u0596\u05E7\u05BC\u05D5\u05BC \u05DE\u05B8\u05D8\u05B8\u05A3\u05E8 \u05DC\u05B0\u05D0\u05B5\u05D3\u05BD\u05D5\u05B9\u05C3",
-    en: '<span class="poetry indentAll">Who forms the droplets of water,</span><br><span class="poetry indentAll">Which cluster into rain, from celestial mist.</span>'
+    en: "Who forms the droplets of water,Which cluster into rain, from celestial mist."
   },
   kehath: {
     ref: "Gen 46:11",
@@ -25371,17 +29538,17 @@ var name_verses_default = {
   kemosh: {
     ref: "Judg 11:24",
     he: "\u05D4\u05B2\u05DC\u05B9\u059E\u05D0 \u05D0\u05B5\u05A3\u05EA \u05D0\u05B2\u05E9\u05C1\u05B6\u05A7\u05E8 \u05D9\u05D5\u05B9\u05E8\u05B4\u05BD\u05D9\u05E9\u05C1\u05B0\u05DA\u05B8\u059B \u05DB\u05BC\u05B0\u05DE\u05A5\u05D5\u05B9\u05E9\u05C1 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B6\u0596\u05D9\u05DA\u05B8 \u05D0\u05D5\u05B9\u05EA\u05A3\u05D5\u05B9 \u05EA\u05B4\u05D9\u05E8\u05B8\u0591\u05E9\u05C1 \u05D5\u05B0\u05D0\u05B5\u05EA\u05A9 \u05DB\u05BC\u05C7\u05DC\u05BE\u05D0\u05B2\u05E9\u05C1\u05B6\u05A8\u05E8 \u05D4\u05D5\u05B9\u05E8\u05B4\u059C\u05D9\u05E9\u05C1 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05A7\u05D4 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B5\u059B\u05D9\u05E0\u05D5\u05BC \u05DE\u05B4\u05E4\u05BC\u05B8\u05E0\u05B5\u0596\u05D9\u05E0\u05D5\u05BC \u05D0\u05D5\u05B9\u05EA\u05A5\u05D5\u05B9 \u05E0\u05B4\u05D9\u05E8\u05B8\u05BD\u05E9\u05C1\u05C3",
-    en: "Do you not hold what Chemosh your god gives you to possess? So we will hold on to everything that the E<small>TERNAL</small> our God has given us to possess."
+    en: "Do you not hold what Chemosh your god gives you to possess? So we will hold on to everything that the ETERNAL our God has given us to possess."
   },
   kesed: {
     ref: "Isa 13:6",
     he: "\u05D4\u05B5\u05D9\u05DC\u05B4\u0595\u05D9\u05DC\u05D5\u05BC \u05DB\u05BC\u05B4\u05A5\u05D9 \u05E7\u05B8\u05E8\u0596\u05D5\u05B9\u05D1 \u05D9\u05A3\u05D5\u05B9\u05DD \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0591\u05D4 \u05DB\u05BC\u05B0\u05E9\u05C1\u05B9\u0596\u05D3 \u05DE\u05B4\u05E9\u05C1\u05BC\u05B7\u05D3\u05BC\u05B7\u05A5\u05D9 \u05D9\u05B8\u05D1\u05BD\u05D5\u05B9\u05D0\u05C3",
-    en: '<span class="poetry indentAll">Howl!</span><br><span class="poetry indentAll">For the day of </span> G<small>OD</small> is near;<br><span class="poetry indentAll">It shall come like havoc from Shaddai.</span><sup class="footnote-marker">c</sup><i class="footnote"><b>Shaddai </b>Traditionally rendered \u201Cthe Almighty.\u201D</i>'
+    en: "Howl!For the day of GOD is near;It shall come like havoc from Shaddai.cShaddai Traditionally rendered \u201Cthe Almighty.\u201D"
   },
   koresh: {
     ref: "Isa 44:28",
-    he: '\u05D4\u05B8\u05D0\u05B9\u05DE\u05B5\u05A4\u05E8 \u05DC\u05B0\u05DB\u0599\u05D5\u05B9\u05E8\u05B6\u05E9\u05C1\u0599 \u05E8\u05B9\u05E2\u05B4\u0594\u05D9 \u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D7\u05B6\u05E4\u05B0\u05E6\u05B4\u0596\u05D9 \u05D9\u05B7\u05E9\u05C1\u05B0\u05DC\u05B4\u0591\u05DD \u05D5\u05B0\u05DC\u05B5\u05D0\u05DE\u05B9\u05A4\u05E8 \u05DC\u05B4\u05D9\u05E8\u05D5\u05BC\u05E9\u05C1\u05B8\u05DC\u05B7\u0599\u034F\u05B4\u05DD\u0599 \u05EA\u05BC\u05B4\u05D1\u05BC\u05B8\u05E0\u05B6\u0594\u05D4 \u05D5\u05B0\u05D4\u05B5\u05D9\u05DB\u05B8\u0596\u05DC \u05EA\u05BC\u05B4\u05D5\u05BC\u05B8\u05E1\u05B5\u05BD\u05D3\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
-    en: '<span class="poetry indentAll">Am the same who says of Cyrus, \u201CHe is My shepherd;</span><sup class="footnote-marker">n</sup><i class="footnote"><b>shepherd </b>I.e., the king whom I have designated.</i> <br><span class="poetry indentAll">He shall fulfill all My purposes!</span><br><span class="poetry indentAll">He shall say of Jerusalem, \u2018She shall be rebuilt,\u2019</span><br><span class="poetry indentAll">And to the temple: \u2018You shall be founded again.\u2019\u201D</span>'
+    he: "\u05D4\u05B8\u05D0\u05B9\u05DE\u05B5\u05A4\u05E8 \u05DC\u05B0\u05DB\u0599\u05D5\u05B9\u05E8\u05B6\u05E9\u05C1\u0599 \u05E8\u05B9\u05E2\u05B4\u0594\u05D9 \u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D7\u05B6\u05E4\u05B0\u05E6\u05B4\u0596\u05D9 \u05D9\u05B7\u05E9\u05C1\u05B0\u05DC\u05B4\u0591\u05DD \u05D5\u05B0\u05DC\u05B5\u05D0\u05DE\u05B9\u05A4\u05E8 \u05DC\u05B4\u05D9\u05E8\u05D5\u05BC\u05E9\u05C1\u05B8\u05DC\u05B7\u0599\u034F\u05B4\u05DD\u0599 \u05EA\u05BC\u05B4\u05D1\u05BC\u05B8\u05E0\u05B6\u0594\u05D4 \u05D5\u05B0\u05D4\u05B5\u05D9\u05DB\u05B8\u0596\u05DC \u05EA\u05BC\u05B4\u05D5\u05BC\u05B8\u05E1\u05B5\u05BD\u05D3\u05C3",
+    en: "Am the same who says of Cyrus, \u201CHe is My shepherd;nshepherd I.e., the king whom I have designated. He shall fulfill all My purposes!He shall say of Jerusalem, \u2018She shall be rebuilt,\u2019And to the temple: \u2018You shall be founded again.\u2019\u201D"
   },
   maats: {
     ref: "Gen 2:17",
@@ -25391,16 +29558,16 @@ var name_verses_default = {
   machath: {
     ref: "Deut 12:18",
     he: "\u05DB\u05BC\u05B4\u05A1\u05D9 \u05D0\u05B4\u05DD\u05BE\u05DC\u05B4\u05E4\u05B0\u05E0\u05B5\u05D9\u05A9 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05A8\u05D4 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B6\u059C\u05D9\u05DA\u05B8 \u05EA\u05BC\u05B9\u05D0\u05DB\u05B0\u05DC\u05B6\u0597\u05E0\u05BC\u05D5\u05BC \u05D1\u05BC\u05B7\u05DE\u05BC\u05B8\u05E7\u05D5\u05B9\u05DD\u0599 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A8\u05E8 \u05D9\u05B4\u05D1\u05B0\u05D7\u05B7\u059C\u05E8 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05A3\u05D4 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B6\u0598\u05D9\u05DA\u05B8\u05AE \u05D1\u05BC\u05D5\u05B9\u0592 \u05D0\u05B7\u05EA\u05BC\u05B8\u05A8\u05D4 \u05D5\u05BC\u05D1\u05B4\u05E0\u05B0\u05DA\u05B8\u05A4 \u05D5\u05BC\u05D1\u05B4\u05EA\u05BC\u05B6\u0599\u05DA\u05B8\u0599 \u05D5\u05B0\u05E2\u05B7\u05D1\u05B0\u05D3\u05BC\u05B0\u05DA\u05B8\u05A3 \u05D5\u05B7\u05D0\u05B2\u05DE\u05B8\u05EA\u05B6\u0594\u05DA\u05B8 \u05D5\u05B0\u05D4\u05B7\u05DC\u05BC\u05B5\u05D5\u05B4\u0596\u05D9 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A3\u05E8 \u05D1\u05BC\u05B4\u05E9\u05C1\u05B0\u05E2\u05B8\u05E8\u05B6\u0591\u05D9\u05DA\u05B8 \u05D5\u05B0\u05E9\u05C2\u05B8\u05DE\u05B7\u05D7\u05B0\u05EA\u05BC\u05B8\u0597 \u05DC\u05B4\u05E4\u05B0\u05E0\u05B5\u05D9\u0599 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05A3\u05D4 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B6\u0594\u05D9\u05DA\u05B8 \u05D1\u05BC\u05B0\u05DB\u05B9\u0596\u05DC \u05DE\u05B4\u05E9\u05C1\u05B0\u05DC\u05B7\u05A5\u05D7 \u05D9\u05B8\u05D3\u05B6\u05BD\u05DA\u05B8\u05C3",
-    en: 'These you must consume before the E<small>TERNAL</small> your God in the place that the E<small>TERNAL</small> your God will choose\u2014you<sup class="footnote-marker">k</sup><i class="footnote"><b>you </b>See note at v. <a class="refLink" data-ref="Deuteronomy 12:5" href="Deuteronomy.12.5">5</a>.</i> and your sons and your daughters, your male and female slaves, and the Levite<sup class="footnote-marker">l</sup><i class="footnote"><b>the Levite </b>See the second note at v. <a class="refLink" data-ref="Deuteronomy 12:12" href="Deuteronomy.12.12">12</a>.</i> in your settlements\u2014happy before the E<small>TERNAL</small> your God in all your undertakings.'
+    en: "These you must consume before the ETERNAL your God in the place that the ETERNAL your God will choose\u2014youkyou See note at v. 5. and your sons and your daughters, your male and female slaves, and the Levitelthe Levite See the second note at v. 12. in your settlements\u2014happy before the ETERNAL your God in all your undertakings."
   },
   maroth: {
     ref: "Isa 3:8",
     he: "\u05DB\u05BC\u05B4\u05A4\u05D9 \u05DB\u05B8\u05BD\u05E9\u05C1\u05B0\u05DC\u05B8\u05D4\u0599 \u05D9\u05B0\u05E8\u05A3\u05D5\u05BC\u05E9\u05C1\u05B8\u05DC\u05B7\u0594\u034F\u05B4\u05DD \u05D5\u05B4\u05D9\u05D4\u05D5\u05BC\u05D3\u05B8\u0596\u05D4 \u05E0\u05B8\u05E4\u05B8\u0591\u05DC \u05DB\u05BC\u05B4\u05BD\u05D9\u05BE\u05DC\u05B0\u05E9\u05C1\u05D5\u05B9\u05E0\u05B8\u05A4\u05DD \u05D5\u05BC\u05DE\u05B7\u05BD\u05E2\u05B7\u05DC\u05B0\u05DC\u05B5\u05D9\u05D4\u05B6\u05DD\u0599 \u05D0\u05B6\u05DC\u05BE\u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0594\u05D4 \u05DC\u05B7\u05DE\u05B0\u05E8\u0596\u05D5\u05B9\u05EA \u05E2\u05B5\u05E0\u05B5\u05A5\u05D9 \u05DB\u05B0\u05D1\u05D5\u05B9\u05D3\u05BD\u05D5\u05B9\u05C3",
-    en: '<span class="poetry indentAll">Ah, Jerusalem has stumbled,</span><br><span class="poetry indentAll">And Judah has fallen,</span><br><span class="poetry indentAll">Because by word and deed</span><br><span class="poetry indentAll">They insult </span> G<small>OD</small>,<br><span class="poetry indentAll">Defying God\u2019s majestic glance.</span>'
+    en: "Ah, Jerusalem has stumbled,And Judah has fallen,Because by word and deedThey insult GOD,Defying God\u2019s majestic glance."
   },
   mattattah: {
     ref: "Ezra 10:33",
-    he: '\u05DE\u05B4\u05D1\u05BC\u05B0\u05E0\u05B5\u0596\u05D9 \u05D7\u05B8\u05E9\u05C1\u05BB\u0591\u05DD \u05DE\u05B7\u05EA\u05BC\u05B0\u05E0\u05B7\u05A4\u05D9 \u05DE\u05B7\u05EA\u05BC\u05B7\u05EA\u05BC\u05B8\u05D4\u0599 \u05D6\u05B8\u05D1\u05B8\u05A3\u05D3 \u05D0\u05B1\u05DC\u05B4\u05D9\u05E4\u05B6\u0594\u05DC\u05B6\u05D8 \u05D9\u05B0\u05E8\u05B5\u05DE\u05B7\u05A5\u05D9 \u05DE\u05B0\u05E0\u05B7\u05E9\u05C1\u05BC\u05B6\u0596\u05D4 \u05E9\u05C1\u05B4\u05DE\u05B0\u05E2\u05B4\u05BD\u05D9\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05DE\u05B4\u05D1\u05BC\u05B0\u05E0\u05B5\u0596\u05D9 \u05D7\u05B8\u05E9\u05C1\u05BB\u0591\u05DD \u05DE\u05B7\u05EA\u05BC\u05B0\u05E0\u05B7\u05A4\u05D9 \u05DE\u05B7\u05EA\u05BC\u05B7\u05EA\u05BC\u05B8\u05D4\u0599 \u05D6\u05B8\u05D1\u05B8\u05A3\u05D3 \u05D0\u05B1\u05DC\u05B4\u05D9\u05E4\u05B6\u0594\u05DC\u05B6\u05D8 \u05D9\u05B0\u05E8\u05B5\u05DE\u05B7\u05A5\u05D9 \u05DE\u05B0\u05E0\u05B7\u05E9\u05C1\u05BC\u05B6\u0596\u05D4 \u05E9\u05C1\u05B4\u05DE\u05B0\u05E2\u05B4\u05BD\u05D9\u05C3",
     en: "of the sons of Hashum: Mattenai, Mattattah, Zabad, Eliphelet, Jeremai, Manasseh, and Shimei;"
   },
   menachem: {
@@ -25411,22 +29578,22 @@ var name_verses_default = {
   merab: {
     ref: "Gen 16:10",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B9\u05A4\u05D0\u05DE\u05B6\u05E8 \u05DC\u05B8\u05D4\u05BC\u0599 \u05DE\u05B7\u05DC\u05B0\u05D0\u05B7\u05A3\u05DA\u05B0 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0594\u05D4 \u05D4\u05B7\u05E8\u05B0\u05D1\u05BC\u05B8\u05A5\u05D4 \u05D0\u05B7\u05E8\u05B0\u05D1\u05BC\u05B6\u0596\u05D4 \u05D0\u05B6\u05EA\u05BE\u05D6\u05B7\u05E8\u05B0\u05E2\u05B5\u0591\u05DA\u05B0 \u05D5\u05B0\u05DC\u05B9\u05A5\u05D0 \u05D9\u05B4\u05E1\u05BC\u05B8\u05E4\u05B5\u0596\u05E8 \u05DE\u05B5\u05E8\u05B9\u05BD\u05D1\u05C3",
-    en: 'And the angel of G<small>OD</small> said to her,<br><span class="poetry indentAll">\u201CI will greatly increase your offspring,</span><br><span class="poetry indentAll">And they shall be too many to count.\u201D</span>'
+    en: "And the angel of GOD said to her,\u201CI will greatly increase your offspring,And they shall be too many to count.\u201D"
   },
   meremoth: {
     ref: "Ps 10:7",
-    he: "\u05D0\u05B8\u05DC\u05B8\u05A4\u05D4&thinsp;<b>\u05C0</b> \u05E4\u05BC\u05B4\u05A3\u05D9\u05D4\u05D5\u05BC \u05DE\u05B8\u05AD\u05DC\u05B5\u05D0 \u05D5\u05BC\u05DE\u05B4\u05E8\u05B0\u05DE\u05A3\u05D5\u05B9\u05EA \u05D5\u05B8\u05EA\u05B9\u0591\u05DA\u05B0 \u05EA\u05BC\u05B7\u05A5\u05D7\u05B7\u05EA \u05DC\u05B0\u059D\u05E9\u05C1\u05D5\u05B9\u05E0\u0597\u05D5\u05B9 \u05E2\u05B8\u05DE\u05B8\u05A5\u05DC \u05D5\u05B8\u05D0\u05B8\u05BD\u05D5\u05B6\u05DF\u05C3",
-    en: '<span class="poetry indentAll">Their mouth is full of oaths, deceit, and fraud;</span><br><span class="poetry indentAllDouble">mischief and evil are under their tongue.</span>'
+    he: "\u05D0\u05B8\u05DC\u05B8\u05A4\u05D4&thinsp;\u05C0 \u05E4\u05BC\u05B4\u05A3\u05D9\u05D4\u05D5\u05BC \u05DE\u05B8\u05AD\u05DC\u05B5\u05D0 \u05D5\u05BC\u05DE\u05B4\u05E8\u05B0\u05DE\u05A3\u05D5\u05B9\u05EA \u05D5\u05B8\u05EA\u05B9\u0591\u05DA\u05B0 \u05EA\u05BC\u05B7\u05A5\u05D7\u05B7\u05EA \u05DC\u05B0\u059D\u05E9\u05C1\u05D5\u05B9\u05E0\u0597\u05D5\u05B9 \u05E2\u05B8\u05DE\u05B8\u05A5\u05DC \u05D5\u05B8\u05D0\u05B8\u05BD\u05D5\u05B6\u05DF\u05C3",
+    en: "Their mouth is full of oaths, deceit, and fraud;mischief and evil are under their tongue."
   },
   meres: {
     ref: "Isa 5:20",
-    he: '\u05D4\u05A3\u05D5\u05B9\u05D9 \u05D4\u05B8\u05D0\u05B9\u05DE\u05B0\u05E8\u05B4\u05A5\u05D9\u05DD \u05DC\u05B8\u05E8\u05B7\u059B\u05E2 \u05D8\u0596\u05D5\u05B9\u05D1 \u05D5\u05B0\u05DC\u05B7\u05D8\u05BC\u05A3\u05D5\u05B9\u05D1 \u05E8\u05B8\u0591\u05E2 \u05E9\u05C2\u05B8\u05DE\u05B4\u05A8\u05D9\u05DD \u05D7\u05B9\u05A4\u05E9\u05C1\u05B6\u05DA\u05B0 \u05DC\u05B0\u05D0\u05D5\u05B9\u05E8\u0599 \u05D5\u05B0\u05D0\u05A3\u05D5\u05B9\u05E8 \u05DC\u05B0\u05D7\u05B9\u0594\u05E9\u05C1\u05B6\u05DA\u05B0 \u05E9\u05C2\u05B8\u05DE\u05B4\u05A5\u05D9\u05DD \u05DE\u05B7\u059B\u05E8 \u05DC\u05B0\u05DE\u05B8\u05EA\u0596\u05D5\u05B9\u05E7 \u05D5\u05BC\u05DE\u05B8\u05EA\u05A5\u05D5\u05B9\u05E7 \u05DC\u05B0\u05DE\u05B8\u05BD\u05E8\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
-    en: '<span class="poetry indentAll">Ah,</span><br><span class="poetry indentAll">Those who call evil good</span><br><span class="poetry indentAll">And good evil;</span><br><span class="poetry indentAll">Who present darkness as light</span><br><span class="poetry indentAll">And light as darkness;</span><br><span class="poetry indentAll">Who present bitter as sweet</span><br><span class="poetry indentAll">And sweet as bitter!</span>'
+    he: "\u05D4\u05A3\u05D5\u05B9\u05D9 \u05D4\u05B8\u05D0\u05B9\u05DE\u05B0\u05E8\u05B4\u05A5\u05D9\u05DD \u05DC\u05B8\u05E8\u05B7\u059B\u05E2 \u05D8\u0596\u05D5\u05B9\u05D1 \u05D5\u05B0\u05DC\u05B7\u05D8\u05BC\u05A3\u05D5\u05B9\u05D1 \u05E8\u05B8\u0591\u05E2 \u05E9\u05C2\u05B8\u05DE\u05B4\u05A8\u05D9\u05DD \u05D7\u05B9\u05A4\u05E9\u05C1\u05B6\u05DA\u05B0 \u05DC\u05B0\u05D0\u05D5\u05B9\u05E8\u0599 \u05D5\u05B0\u05D0\u05A3\u05D5\u05B9\u05E8 \u05DC\u05B0\u05D7\u05B9\u0594\u05E9\u05C1\u05B6\u05DA\u05B0 \u05E9\u05C2\u05B8\u05DE\u05B4\u05A5\u05D9\u05DD \u05DE\u05B7\u059B\u05E8 \u05DC\u05B0\u05DE\u05B8\u05EA\u0596\u05D5\u05B9\u05E7 \u05D5\u05BC\u05DE\u05B8\u05EA\u05A5\u05D5\u05B9\u05E7 \u05DC\u05B0\u05DE\u05B8\u05BD\u05E8\u05C3",
+    en: "Ah,Those who call evil goodAnd good evil;Who present darkness as lightAnd light as darkness;Who present bitter as sweetAnd sweet as bitter!"
   },
   merodak: {
     ref: "2 Ki 25:27",
     he: "\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9\u05A9 \u05D1\u05B4\u05E9\u05C1\u05B0\u05DC\u05B9\u05E9\u05C1\u05B4\u05A8\u05D9\u05DD \u05D5\u05B8\u05E9\u05C1\u05B6\u059C\u05D1\u05B7\u05E2 \u05E9\u05C1\u05B8\u05E0\u05B8\u0597\u05D4 \u05DC\u05B0\u05D2\u05B8\u05DC\u05D5\u05BC\u05EA\u0599 \u05D9\u05B0\u05D4\u05D5\u05B9\u05D9\u05B8\u05DB\u05B4\u05A3\u05D9\u05DF \u05DE\u05B6\u05BD\u05DC\u05B6\u05DA\u05B0\u05BE\u05D9\u05B0\u05D4\u05D5\u05BC\u05D3\u05B8\u0594\u05D4 \u05D1\u05BC\u05B4\u05E9\u05C1\u05B0\u05E0\u05B5\u05A4\u05D9\u05DD \u05E2\u05B8\u05E9\u05C2\u05B8\u05E8\u0599 \u05D7\u05B9\u0594\u05D3\u05B6\u05E9\u05C1 \u05D1\u05BC\u05B0\u05E2\u05B6\u05E9\u05C2\u05B0\u05E8\u05B4\u05A5\u05D9\u05DD \u05D5\u05B0\u05E9\u05C1\u05B4\u05D1\u05B0\u05E2\u05B8\u0596\u05D4 \u05DC\u05B7\u05D7\u05B9\u0591\u05D3\u05B6\u05E9\u05C1 \u05E0\u05B8\u05E9\u05C2\u05B8\u05A1\u05D0 \u05D0\u05B1\u05D5\u05B4\u05A3\u05D9\u05DC \u05DE\u05B0\u05E8\u05B9\u05D3\u05B7\u05DA\u05B0\u05A9 \u05DE\u05B6\u05A8\u05DC\u05B6\u05DA\u05B0 \u05D1\u05BC\u05B8\u05D1\u05B6\u059C\u05DC \u05D1\u05BC\u05B4\u05E9\u05C1\u05B0\u05E0\u05B7\u05A3\u05EA \u05DE\u05C7\u05DC\u05B0\u05DB\u0597\u05D5\u05B9 \u05D0\u05B6\u05EA\u05BE\u05E8\u05B9\u059B\u05D0\u05E9\u05C1 \u05D9\u05B0\u05D4\u05D5\u05B9\u05D9\u05B8\u05DB\u05B4\u05A5\u05D9\u05DF \u05DE\u05B6\u05DC\u05B6\u05DA\u05B0\u05BE\u05D9\u05B0\u05D4\u05D5\u05BC\u05D3\u05B8\u0596\u05D4 \u05DE\u05B4\u05D1\u05BC\u05B5\u05A5\u05D9\u05EA \u05DB\u05BC\u05B6\u05BD\u05DC\u05B6\u05D0\u05C3",
-    en: 'In the thirty-seventh year of the exile of King Jehoiachin of Judah, on the twenty-seventh day of the twelfth month, King Evil-merodach of Babylon, in the year he became king, took note of<sup class="footnote-marker">g</sup><i class="footnote"><b>took note of </b>Lit. \u201Craised the head of.\u201D</i> King Jehoiachin of Judah and released him from prison.'
+    en: "In the thirty-seventh year of the exile of King Jehoiachin of Judah, on the twenty-seventh day of the twelfth month, King Evil-merodach of Babylon, in the year he became king, took note ofgtook note of Lit. \u201Craised the head of.\u201D King Jehoiachin of Judah and released him from prison."
   },
   meshobab: {
     ref: "1 Chr 4:34",
@@ -25445,8 +29612,8 @@ var name_verses_default = {
   },
   mispereth: {
     ref: "Neh 7:7",
-    he: '\u05D4\u05B7\u05D1\u05BC\u05B8\u05D0\u05B4\u05A3\u05D9\u05DD \u05E2\u05B4\u05DD\u05BE\u05D6\u05B0\u05E8\u05BB\u05D1\u05BC\u05B8\u05D1\u05B6\u0597\u05DC \u05D9\u05B5\u05E9\u05C1\u05A1\u05D5\u05BC\u05E2\u05B7 \u05E0\u05B0\u05D7\u05B6\u05DE\u05B0\u05D9\u05B8\u05A1\u05D4 \u05E2\u05B2\u05A0\u05D6\u05B7\u05E8\u05B0\u05D9\u05B8\u05A0\u05D4 \u05E8\u05B7\u05BD\u05E2\u05B7\u05DE\u05B0\u05D9\u05B8\u05A8\u05D4 \u05E0\u05B7\u05D7\u05B2\u05DE\u05B8\u059C\u05E0\u05B4\u05D9 \u05DE\u05C7\u05E8\u05B0\u05D3\u05BC\u05B3\u05DB\u05B7\u05A5\u05D9 \u05D1\u05BC\u05B4\u05DC\u05B0\u05E9\u05C1\u05B8\u059B\u05DF \u05DE\u05B4\u05E1\u05B0\u05E4\u05BC\u05B6\u05A5\u05E8\u05B6\u05EA \u05D1\u05BC\u05B4\u05D2\u05B0\u05D5\u05B7\u0596\u05D9 \u05E0\u05B0\u05D7\u05A3\u05D5\u05BC\u05DD \u05D1\u05BC\u05B7\u05E2\u05B2\u05E0\u05B8\u0591\u05D4 \u05DE\u05B4\u05E1\u05B0\u05E4\u05BC\u05B7\u0595\u05E8 \u05D0\u05B7\u05E0\u05B0\u05E9\u05C1\u05B5\u0596\u05D9 \u05E2\u05B7\u05A5\u05DD \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u05BD\u05DC\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
-    en: "who came with Zerubbabel, Jeshua, Nehemiah, Azariah, Raamiah, Nahamani, Mordecai, Bilshan, Mispereth, Bigvai, Nehum, Baanah.<br>The list of participants from among the people of Israel:"
+    he: "\u05D4\u05B7\u05D1\u05BC\u05B8\u05D0\u05B4\u05A3\u05D9\u05DD \u05E2\u05B4\u05DD\u05BE\u05D6\u05B0\u05E8\u05BB\u05D1\u05BC\u05B8\u05D1\u05B6\u0597\u05DC \u05D9\u05B5\u05E9\u05C1\u05A1\u05D5\u05BC\u05E2\u05B7 \u05E0\u05B0\u05D7\u05B6\u05DE\u05B0\u05D9\u05B8\u05A1\u05D4 \u05E2\u05B2\u05A0\u05D6\u05B7\u05E8\u05B0\u05D9\u05B8\u05A0\u05D4 \u05E8\u05B7\u05BD\u05E2\u05B7\u05DE\u05B0\u05D9\u05B8\u05A8\u05D4 \u05E0\u05B7\u05D7\u05B2\u05DE\u05B8\u059C\u05E0\u05B4\u05D9 \u05DE\u05C7\u05E8\u05B0\u05D3\u05BC\u05B3\u05DB\u05B7\u05A5\u05D9 \u05D1\u05BC\u05B4\u05DC\u05B0\u05E9\u05C1\u05B8\u059B\u05DF \u05DE\u05B4\u05E1\u05B0\u05E4\u05BC\u05B6\u05A5\u05E8\u05B6\u05EA \u05D1\u05BC\u05B4\u05D2\u05B0\u05D5\u05B7\u0596\u05D9 \u05E0\u05B0\u05D7\u05A3\u05D5\u05BC\u05DD \u05D1\u05BC\u05B7\u05E2\u05B2\u05E0\u05B8\u0591\u05D4 \u05DE\u05B4\u05E1\u05B0\u05E4\u05BC\u05B7\u0595\u05E8 \u05D0\u05B7\u05E0\u05B0\u05E9\u05C1\u05B5\u0596\u05D9 \u05E2\u05B7\u05A5\u05DD \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u05BD\u05DC\u05C3",
+    en: "who came with Zerubbabel, Jeshua, Nehemiah, Azariah, Raamiah, Nahamani, Mordecai, Bilshan, Mispereth, Bigvai, Nehum, Baanah.The list of participants from among the people of Israel:"
   },
   mithkah: {
     ref: "Num 33:28",
@@ -25455,12 +29622,12 @@ var name_verses_default = {
   },
   mithredath: {
     ref: "Ezra 1:8",
-    he: '\u05D5\u05B7\u05D9\u05BC\u05BD\u05D5\u05B9\u05E6\u05B4\u05D9\u05D0\u05B5\u0597\u05DD \u05DB\u05BC\u059A\u05D5\u05B9\u05E8\u05B6\u05E9\u05C1 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E4\u05BC\u05B8\u05E8\u05B7\u0594\u05E1 \u05E2\u05B7\u05DC\u05BE\u05D9\u05B7\u0596\u05D3 \u05DE\u05B4\u05EA\u05B0\u05E8\u05B0\u05D3\u05B8\u05A3\u05EA \u05D4\u05B7\u05D2\u05BC\u05B4\u05D6\u05B0\u05D1\u05BC\u05B8\u0591\u05E8 \u05D5\u05B7\u05BD\u05D9\u05BC\u05B4\u05E1\u05B0\u05E4\u05BC\u05B0\u05E8\u05B5\u05DD\u0599 \u05DC\u05B0\u05E9\u05C1\u05B5\u05E9\u05C1\u05B0\u05D1\u05BC\u05B7\u05E6\u05BC\u05B7\u0594\u05E8 \u05D4\u05B7\u05E0\u05BC\u05B8\u05E9\u05C2\u05B4\u0596\u05D9\u05D0 \u05DC\u05B4\u05D9\u05D4\u05D5\u05BC\u05D3\u05B8\u05BD\u05D4\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D5\u05B7\u05D9\u05BC\u05BD\u05D5\u05B9\u05E6\u05B4\u05D9\u05D0\u05B5\u0597\u05DD \u05DB\u05BC\u059A\u05D5\u05B9\u05E8\u05B6\u05E9\u05C1 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E4\u05BC\u05B8\u05E8\u05B7\u0594\u05E1 \u05E2\u05B7\u05DC\u05BE\u05D9\u05B7\u0596\u05D3 \u05DE\u05B4\u05EA\u05B0\u05E8\u05B0\u05D3\u05B8\u05A3\u05EA \u05D4\u05B7\u05D2\u05BC\u05B4\u05D6\u05B0\u05D1\u05BC\u05B8\u0591\u05E8 \u05D5\u05B7\u05BD\u05D9\u05BC\u05B4\u05E1\u05B0\u05E4\u05BC\u05B0\u05E8\u05B5\u05DD\u0599 \u05DC\u05B0\u05E9\u05C1\u05B5\u05E9\u05C1\u05B0\u05D1\u05BC\u05B7\u05E6\u05BC\u05B7\u0594\u05E8 \u05D4\u05B7\u05E0\u05BC\u05B8\u05E9\u05C2\u05B4\u0596\u05D9\u05D0 \u05DC\u05B4\u05D9\u05D4\u05D5\u05BC\u05D3\u05B8\u05BD\u05D4\u05C3",
     en: "These King Cyrus of Persia released through the office of Mithredath the treasurer, who gave an inventory of them to Sheshbazzar the prince of Judah."
   },
   sheshbatstsar: {
     ref: "Ezra 1:8",
-    he: '\u05D5\u05B7\u05D9\u05BC\u05BD\u05D5\u05B9\u05E6\u05B4\u05D9\u05D0\u05B5\u0597\u05DD \u05DB\u05BC\u059A\u05D5\u05B9\u05E8\u05B6\u05E9\u05C1 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E4\u05BC\u05B8\u05E8\u05B7\u0594\u05E1 \u05E2\u05B7\u05DC\u05BE\u05D9\u05B7\u0596\u05D3 \u05DE\u05B4\u05EA\u05B0\u05E8\u05B0\u05D3\u05B8\u05A3\u05EA \u05D4\u05B7\u05D2\u05BC\u05B4\u05D6\u05B0\u05D1\u05BC\u05B8\u0591\u05E8 \u05D5\u05B7\u05BD\u05D9\u05BC\u05B4\u05E1\u05B0\u05E4\u05BC\u05B0\u05E8\u05B5\u05DD\u0599 \u05DC\u05B0\u05E9\u05C1\u05B5\u05E9\u05C1\u05B0\u05D1\u05BC\u05B7\u05E6\u05BC\u05B7\u0594\u05E8 \u05D4\u05B7\u05E0\u05BC\u05B8\u05E9\u05C2\u05B4\u0596\u05D9\u05D0 \u05DC\u05B4\u05D9\u05D4\u05D5\u05BC\u05D3\u05B8\u05BD\u05D4\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D5\u05B7\u05D9\u05BC\u05BD\u05D5\u05B9\u05E6\u05B4\u05D9\u05D0\u05B5\u0597\u05DD \u05DB\u05BC\u059A\u05D5\u05B9\u05E8\u05B6\u05E9\u05C1 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E4\u05BC\u05B8\u05E8\u05B7\u0594\u05E1 \u05E2\u05B7\u05DC\u05BE\u05D9\u05B7\u0596\u05D3 \u05DE\u05B4\u05EA\u05B0\u05E8\u05B0\u05D3\u05B8\u05A3\u05EA \u05D4\u05B7\u05D2\u05BC\u05B4\u05D6\u05B0\u05D1\u05BC\u05B8\u0591\u05E8 \u05D5\u05B7\u05BD\u05D9\u05BC\u05B4\u05E1\u05B0\u05E4\u05BC\u05B0\u05E8\u05B5\u05DD\u0599 \u05DC\u05B0\u05E9\u05C1\u05B5\u05E9\u05C1\u05B0\u05D1\u05BC\u05B7\u05E6\u05BC\u05B7\u0594\u05E8 \u05D4\u05B7\u05E0\u05BC\u05B8\u05E9\u05C2\u05B4\u0596\u05D9\u05D0 \u05DC\u05B4\u05D9\u05D4\u05D5\u05BC\u05D3\u05B8\u05BD\u05D4\u05C3",
     en: "These King Cyrus of Persia released through the office of Mithredath the treasurer, who gave an inventory of them to Sheshbazzar the prince of Judah."
   },
   nechushta: {
@@ -25475,28 +29642,28 @@ var name_verses_default = {
   },
   ner: {
     ref: "Ex 27:20",
-    he: "\u05D5\u05B0\u05D0\u05B7\u05EA\u05BC\u05B8\u059E\u05D4 \u05EA\u05BC\u05B0\u05E6\u05B7\u05D5\u05BC\u05B6\u05A3\u05D4&thinsp;<b>\u05C0</b> \u05D0\u05B6\u05EA\u05BE\u05D1\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u0597\u05DC \u05D5\u05B0\u05D9\u05B4\u05E7\u05B0\u05D7\u05A8\u05D5\u05BC \u05D0\u05B5\u05DC\u05B6\u059C\u05D9\u05DA\u05B8 \u05E9\u05C1\u05B6\u05A3\u05DE\u05B6\u05DF \u05D6\u05B7\u05A5\u05D9\u05B4\u05EA \u05D6\u05B8\u059B\u05DA\u05B0 \u05DB\u05BC\u05B8\u05EA\u05B4\u0596\u05D9\u05EA \u05DC\u05B7\u05DE\u05BC\u05B8\u05D0\u0591\u05D5\u05B9\u05E8 \u05DC\u05B0\u05D4\u05B7\u05E2\u05B2\u05DC\u05B9\u05A5\u05EA \u05E0\u05B5\u0596\u05E8 \u05EA\u05BC\u05B8\u05DE\u05B4\u05BD\u05D9\u05D3\u05C3",
+    he: "\u05D5\u05B0\u05D0\u05B7\u05EA\u05BC\u05B8\u059E\u05D4 \u05EA\u05BC\u05B0\u05E6\u05B7\u05D5\u05BC\u05B6\u05A3\u05D4&thinsp;\u05C0 \u05D0\u05B6\u05EA\u05BE\u05D1\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u0597\u05DC \u05D5\u05B0\u05D9\u05B4\u05E7\u05B0\u05D7\u05A8\u05D5\u05BC \u05D0\u05B5\u05DC\u05B6\u059C\u05D9\u05DA\u05B8 \u05E9\u05C1\u05B6\u05A3\u05DE\u05B6\u05DF \u05D6\u05B7\u05A5\u05D9\u05B4\u05EA \u05D6\u05B8\u059B\u05DA\u05B0 \u05DB\u05BC\u05B8\u05EA\u05B4\u0596\u05D9\u05EA \u05DC\u05B7\u05DE\u05BC\u05B8\u05D0\u0591\u05D5\u05B9\u05E8 \u05DC\u05B0\u05D4\u05B7\u05E2\u05B2\u05DC\u05B9\u05A5\u05EA \u05E0\u05B5\u0596\u05E8 \u05EA\u05BC\u05B8\u05DE\u05B4\u05BD\u05D9\u05D3\u05C3",
     en: "You shall further instruct the Israelites to bring you clear oil of beaten olives for lighting, for kindling lamps regularly."
   },
   nisrok: {
     ref: "2 Ki 19:37",
-    he: '\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9\u05A9 \u05D4\u05A8\u05D5\u05BC\u05D0 \u05DE\u05B4\u05BD\u05E9\u05C1\u05B0\u05EA\u05BC\u05B7\u05D7\u05B2\u05D5\u05B6\u059C\u05D4 \u05D1\u05BC\u05B5\u05A3\u05D9\u05EA&thinsp;<b>\u05C0</b> \u05E0\u05B4\u05E1\u05B0\u05E8\u05B9\u05A3\u05DA\u05B0 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B8\u0597\u05D9\u05D5 \u05D5\u05B0\u05BD\u05D0\u05B7\u05D3\u05B0\u05E8\u05B7\u05DE\u05BC\u05B6\u05A8\u05DC\u05B6\u05DA\u05B0 \u05D5\u05B0\u05E9\u05C2\u05B7\u05E8\u05B0\u05D0\u05B6\u05A4\u05E6\u05B6\u05E8 <span class="mam-kq-q">[\u05D1\u05BC\u05B8\u05E0\u05B8\u05D9\u05D5\u0599]</span> \u05D4\u05B4\u05DB\u05BC\u05BB\u05A3\u05D4\u05D5\u05BC \u05D1\u05B7\u05D7\u05B6\u0594\u05E8\u05B6\u05D1 \u05D5\u05B0\u05D4\u05B5\u05A5\u05DE\u05BC\u05B8\u05D4 \u05E0\u05B4\u05DE\u05B0\u05DC\u05B0\u05D8\u0596\u05D5\u05BC \u05D0\u05B6\u05A3\u05E8\u05B6\u05E5 \u05D0\u05B2\u05E8\u05B8\u05E8\u05B8\u0591\u05D8 \u05D5\u05B7\u05D9\u05BC\u05B4\u05DE\u05B0\u05DC\u05B9\u059B\u05DA\u05B0 \u05D0\u05B5\u05E1\u05B7\u05E8\u05BE\u05D7\u05B7\u05D3\u05BC\u05B9\u05A5\u05DF \u05D1\u05BC\u05B0\u05E0\u0596\u05D5\u05B9 \u05EA\u05BC\u05B7\u05D7\u05B0\u05EA\u05BC\u05B8\u05BD\u05D9\u05D5\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
+    he: "\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9\u05A9 \u05D4\u05A8\u05D5\u05BC\u05D0 \u05DE\u05B4\u05BD\u05E9\u05C1\u05B0\u05EA\u05BC\u05B7\u05D7\u05B2\u05D5\u05B6\u059C\u05D4 \u05D1\u05BC\u05B5\u05A3\u05D9\u05EA&thinsp;\u05C0 \u05E0\u05B4\u05E1\u05B0\u05E8\u05B9\u05A3\u05DA\u05B0 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B8\u0597\u05D9\u05D5 \u05D5\u05B0\u05BD\u05D0\u05B7\u05D3\u05B0\u05E8\u05B7\u05DE\u05BC\u05B6\u05A8\u05DC\u05B6\u05DA\u05B0 \u05D5\u05B0\u05E9\u05C2\u05B7\u05E8\u05B0\u05D0\u05B6\u05A4\u05E6\u05B6\u05E8 [\u05D1\u05BC\u05B8\u05E0\u05B8\u05D9\u05D5\u0599] \u05D4\u05B4\u05DB\u05BC\u05BB\u05A3\u05D4\u05D5\u05BC \u05D1\u05B7\u05D7\u05B6\u0594\u05E8\u05B6\u05D1 \u05D5\u05B0\u05D4\u05B5\u05A5\u05DE\u05BC\u05B8\u05D4 \u05E0\u05B4\u05DE\u05B0\u05DC\u05B0\u05D8\u0596\u05D5\u05BC \u05D0\u05B6\u05A3\u05E8\u05B6\u05E5 \u05D0\u05B2\u05E8\u05B8\u05E8\u05B8\u0591\u05D8 \u05D5\u05B7\u05D9\u05BC\u05B4\u05DE\u05B0\u05DC\u05B9\u059B\u05DA\u05B0 \u05D0\u05B5\u05E1\u05B7\u05E8\u05BE\u05D7\u05B7\u05D3\u05BC\u05B9\u05A5\u05DF \u05D1\u05BC\u05B0\u05E0\u0596\u05D5\u05B9 \u05EA\u05BC\u05B7\u05D7\u05B0\u05EA\u05BC\u05B8\u05BD\u05D9\u05D5\u05C3",
     en: "While he was worshiping in the temple of his god Nisroch, his sons Adrammelech and Sarezer struck him down with the sword. They fled to the land of Ararat, and his son Esarhaddon succeeded him as king."
   },
   sharetser: {
     ref: "2 Ki 19:37",
-    he: '\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9\u05A9 \u05D4\u05A8\u05D5\u05BC\u05D0 \u05DE\u05B4\u05BD\u05E9\u05C1\u05B0\u05EA\u05BC\u05B7\u05D7\u05B2\u05D5\u05B6\u059C\u05D4 \u05D1\u05BC\u05B5\u05A3\u05D9\u05EA&thinsp;<b>\u05C0</b> \u05E0\u05B4\u05E1\u05B0\u05E8\u05B9\u05A3\u05DA\u05B0 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B8\u0597\u05D9\u05D5 \u05D5\u05B0\u05BD\u05D0\u05B7\u05D3\u05B0\u05E8\u05B7\u05DE\u05BC\u05B6\u05A8\u05DC\u05B6\u05DA\u05B0 \u05D5\u05B0\u05E9\u05C2\u05B7\u05E8\u05B0\u05D0\u05B6\u05A4\u05E6\u05B6\u05E8 <span class="mam-kq-q">[\u05D1\u05BC\u05B8\u05E0\u05B8\u05D9\u05D5\u0599]</span> \u05D4\u05B4\u05DB\u05BC\u05BB\u05A3\u05D4\u05D5\u05BC \u05D1\u05B7\u05D7\u05B6\u0594\u05E8\u05B6\u05D1 \u05D5\u05B0\u05D4\u05B5\u05A5\u05DE\u05BC\u05B8\u05D4 \u05E0\u05B4\u05DE\u05B0\u05DC\u05B0\u05D8\u0596\u05D5\u05BC \u05D0\u05B6\u05A3\u05E8\u05B6\u05E5 \u05D0\u05B2\u05E8\u05B8\u05E8\u05B8\u0591\u05D8 \u05D5\u05B7\u05D9\u05BC\u05B4\u05DE\u05B0\u05DC\u05B9\u059B\u05DA\u05B0 \u05D0\u05B5\u05E1\u05B7\u05E8\u05BE\u05D7\u05B7\u05D3\u05BC\u05B9\u05A5\u05DF \u05D1\u05BC\u05B0\u05E0\u0596\u05D5\u05B9 \u05EA\u05BC\u05B7\u05D7\u05B0\u05EA\u05BC\u05B8\u05BD\u05D9\u05D5\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
+    he: "\u05D5\u05B7\u05D9\u05B0\u05D4\u05B4\u05D9\u05A9 \u05D4\u05A8\u05D5\u05BC\u05D0 \u05DE\u05B4\u05BD\u05E9\u05C1\u05B0\u05EA\u05BC\u05B7\u05D7\u05B2\u05D5\u05B6\u059C\u05D4 \u05D1\u05BC\u05B5\u05A3\u05D9\u05EA&thinsp;\u05C0 \u05E0\u05B4\u05E1\u05B0\u05E8\u05B9\u05A3\u05DA\u05B0 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B8\u0597\u05D9\u05D5 \u05D5\u05B0\u05BD\u05D0\u05B7\u05D3\u05B0\u05E8\u05B7\u05DE\u05BC\u05B6\u05A8\u05DC\u05B6\u05DA\u05B0 \u05D5\u05B0\u05E9\u05C2\u05B7\u05E8\u05B0\u05D0\u05B6\u05A4\u05E6\u05B6\u05E8 [\u05D1\u05BC\u05B8\u05E0\u05B8\u05D9\u05D5\u0599] \u05D4\u05B4\u05DB\u05BC\u05BB\u05A3\u05D4\u05D5\u05BC \u05D1\u05B7\u05D7\u05B6\u0594\u05E8\u05B6\u05D1 \u05D5\u05B0\u05D4\u05B5\u05A5\u05DE\u05BC\u05B8\u05D4 \u05E0\u05B4\u05DE\u05B0\u05DC\u05B0\u05D8\u0596\u05D5\u05BC \u05D0\u05B6\u05A3\u05E8\u05B6\u05E5 \u05D0\u05B2\u05E8\u05B8\u05E8\u05B8\u0591\u05D8 \u05D5\u05B7\u05D9\u05BC\u05B4\u05DE\u05B0\u05DC\u05B9\u059B\u05DA\u05B0 \u05D0\u05B5\u05E1\u05B7\u05E8\u05BE\u05D7\u05B7\u05D3\u05BC\u05B9\u05A5\u05DF \u05D1\u05BC\u05B0\u05E0\u0596\u05D5\u05B9 \u05EA\u05BC\u05B7\u05D7\u05B0\u05EA\u05BC\u05B8\u05BD\u05D9\u05D5\u05C3",
     en: "While he was worshiping in the temple of his god Nisroch, his sons Adrammelech and Sarezer struck him down with the sword. They fled to the land of Ararat, and his son Esarhaddon succeeded him as king."
   },
   noach: {
     ref: "Gen 5:29",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05B0\u05E8\u05B8\u05A7\u05D0 \u05D0\u05B6\u05EA\u05BE\u05E9\u05C1\u05B0\u05DE\u059B\u05D5\u05B9 \u05E0\u05B9\u0596\u05D7\u05B7 \u05DC\u05B5\u05D0\u05DE\u05B9\u0591\u05E8 \u05D6\u05B6\u059E\u05A0\u05D4 \u05D9\u05B0\u05E0\u05B7\u05D7\u05B2\u05DE\u05B5\u05A4\u05E0\u05D5\u05BC \u05DE\u05B4\u05BD\u05DE\u05BC\u05B7\u05E2\u05B2\u05E9\u05C2\u05B5\u0599\u05E0\u05D5\u05BC\u0599 \u05D5\u05BC\u05DE\u05B5\u05E2\u05B4\u05E6\u05BC\u05B0\u05D1\u05A3\u05D5\u05B9\u05DF \u05D9\u05B8\u05D3\u05B5\u0594\u05D9\u05E0\u05D5\u05BC \u05DE\u05B4\u05DF\u05BE\u05D4\u05B8\u05A3\u05D0\u05B2\u05D3\u05B8\u05DE\u05B8\u0594\u05D4 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A5\u05E8 \u05D0\u05B5\u05BD\u05E8\u05B0\u05E8\u05B8\u0596\u05D4\u05BC \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05BD\u05D4\u05C3",
-    en: 'And he named him Noah, saying, \u201CThis one will provide us relief<sup class="footnote-marker">a</sup><i class="footnote"><b>relief </b>Connecting Noah (Heb. <i>noa\u1E25</i>) with Heb. <i>ni\u1E25am</i> \u201Cto comfort\u201D; cf. <a class="refLink" data-ref="Genesis 9:20" href="Genesis.9.20">9.20ff</a>.</i> from our work and from the toil of our hands, out of the very soil that G<small>OD</small> placed under a curse.\u201D'
+    en: "And he named him Noah, saying, \u201CThis one will provide us reliefarelief Connecting Noah (Heb. noa\u1E25) with Heb. ni\u1E25am \u201Cto comfort\u201D; cf. 9.20ff. from our work and from the toil of our hands, out of the very soil that GOD placed under a curse.\u201D"
   },
   ohad: {
     ref: "Gen 46:10",
     he: "\u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u05A3\u05D9 \u05E9\u05C1\u05B4\u05DE\u05B0\u05E2\u0597\u05D5\u05B9\u05DF \u05D9\u05B0\u05DE\u05D5\u05BC\u05D0\u05B5\u05A7\u05DC \u05D5\u05B0\u05D9\u05B8\u05DE\u05B4\u059B\u05D9\u05DF \u05D5\u05B0\u05D0\u05B9\u0596\u05D4\u05B7\u05D3 \u05D5\u05B0\u05D9\u05B8\u05DB\u05B4\u05A3\u05D9\u05DF \u05D5\u05B0\u05E6\u05B9\u0591\u05D7\u05B7\u05E8 \u05D5\u05B0\u05E9\u05C1\u05B8\u05D0\u0596\u05D5\u05BC\u05DC \u05D1\u05BC\u05B6\u05DF\u05BE\u05D4\u05B7\u05BD\u05DB\u05BC\u05B0\u05E0\u05B7\u05E2\u05B2\u05E0\u05B4\u05BD\u05D9\u05EA\u05C3",
-    en: 'Simeon\u2019s sons: Jemuel, Jamin, Ohad, Jachin, Zohar, and Saul<sup class="footnote-marker">d</sup><i class="footnote"><b>Saul </b>Or \u201CShaul.\u201D</i> the son of a Canaanite woman.'
+    en: "Simeon\u2019s sons: Jemuel, Jamin, Ohad, Jachin, Zohar, and SauldSaul Or \u201CShaul.\u201D the son of a Canaanite woman."
   },
   osnappar: {
     ref: "Ezra 4:10",
@@ -25510,7 +29677,7 @@ var name_verses_default = {
   },
   parpar: {
     ref: "2 Ki 5:12",
-    he: '\u05D4\u05B2\u05DC\u05B9\u05A1\u05D0 \u05D8\u05D5\u05B9\u05D1\u05A9 <span class="mam-kq"><span class="mam-kq-k">(\u05D0\u05D1\u05E0\u05D4)</span> <span class="mam-kq-q">[\u05D0\u05B2\u05DE\u05B8\u05E0\u05B8\u05A8\u05D4]</span></span> \u05D5\u05BC\u05E4\u05B7\u05E8\u05B0\u05E4\u05BC\u05B7\u059C\u05E8 \u05E0\u05B7\u05D4\u05B2\u05E8\u05A3\u05D5\u05B9\u05EA \u05D3\u05BC\u05B7\u05DE\u05BC\u05B6\u0597\u05E9\u05C2\u05B6\u05E7 \u05DE\u05B4\u05DB\u05BC\u05B9\u05DC\u0599 \u05DE\u05B5\u05D9\u05DE\u05B5\u05A3\u05D9 \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u0594\u05DC \u05D4\u05B2\u05DC\u05B9\u05BD\u05D0\u05BE\u05D0\u05B6\u05E8\u05B0\u05D7\u05B7\u05A5\u05E5 \u05D1\u05BC\u05B8\u05D4\u05B6\u0596\u05DD \u05D5\u05B0\u05D8\u05B8\u05D4\u05B8\u0591\u05E8\u05B0\u05EA\u05BC\u05B4\u05D9 \u05D5\u05B7\u05D9\u05BC\u05B4\u0596\u05E4\u05B6\u05DF \u05D5\u05B7\u05D9\u05BC\u05B5\u05A5\u05DC\u05B6\u05DA\u05B0 \u05D1\u05BC\u05B0\u05D7\u05B5\u05DE\u05B8\u05BD\u05D4\u05C3',
+    he: "\u05D4\u05B2\u05DC\u05B9\u05A1\u05D0 \u05D8\u05D5\u05B9\u05D1\u05A9 (\u05D0\u05D1\u05E0\u05D4) [\u05D0\u05B2\u05DE\u05B8\u05E0\u05B8\u05A8\u05D4] \u05D5\u05BC\u05E4\u05B7\u05E8\u05B0\u05E4\u05BC\u05B7\u059C\u05E8 \u05E0\u05B7\u05D4\u05B2\u05E8\u05A3\u05D5\u05B9\u05EA \u05D3\u05BC\u05B7\u05DE\u05BC\u05B6\u0597\u05E9\u05C2\u05B6\u05E7 \u05DE\u05B4\u05DB\u05BC\u05B9\u05DC\u0599 \u05DE\u05B5\u05D9\u05DE\u05B5\u05A3\u05D9 \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u0594\u05DC \u05D4\u05B2\u05DC\u05B9\u05BD\u05D0\u05BE\u05D0\u05B6\u05E8\u05B0\u05D7\u05B7\u05A5\u05E5 \u05D1\u05BC\u05B8\u05D4\u05B6\u0596\u05DD \u05D5\u05B0\u05D8\u05B8\u05D4\u05B8\u0591\u05E8\u05B0\u05EA\u05BC\u05B4\u05D9 \u05D5\u05B7\u05D9\u05BC\u05B4\u0596\u05E4\u05B6\u05DF \u05D5\u05B7\u05D9\u05BC\u05B5\u05A5\u05DC\u05B6\u05DA\u05B0 \u05D1\u05BC\u05B0\u05D7\u05B5\u05DE\u05B8\u05BD\u05D4\u05C3",
     en: "Are not the Amanah and the Pharpar, the rivers of Damascus, better than all the waters of Israel? I could bathe in them and be pure!\u201D And he stalked off in a rage."
   },
   pasak: {
@@ -25521,7 +29688,7 @@ var name_verses_default = {
   pashchur: {
     ref: "Jer 20:1",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05E9\u05C1\u05B0\u05DE\u05B7\u05A4\u05E2 \u05E4\u05BC\u05B7\u05E9\u05C1\u05B0\u05D7\u05D5\u05BC\u05E8\u0599 \u05D1\u05BC\u05B6\u05DF\u05BE\u05D0\u05B4\u05DE\u05BC\u05B5\u05A3\u05E8 \u05D4\u05B7\u05DB\u05BC\u05B9\u05D4\u05B5\u0594\u05DF \u05D5\u05B0\u05D4\u05D5\u05BC\u05D0\u05BE\u05E4\u05B8\u05E7\u05B4\u05A5\u05D9\u05D3 \u05E0\u05B8\u05D2\u05B4\u0596\u05D9\u05D3 \u05D1\u05BC\u05B0\u05D1\u05B5\u05A3\u05D9\u05EA \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0591\u05D4 \u05D0\u05B6\u05BD\u05EA\u05BE\u05D9\u05B4\u05E8\u05B0\u05DE\u05B0\u05D9\u05B8\u0594\u05D4\u05D5\u05BC \u05E0\u05B4\u05D1\u05BC\u05B8\u0596\u05D0 \u05D0\u05B6\u05EA\u05BE\u05D4\u05B7\u05D3\u05BC\u05B0\u05D1\u05B8\u05E8\u05B4\u05A5\u05D9\u05DD \u05D4\u05B8\u05D0\u05B5\u05BD\u05DC\u05BC\u05B6\u05D4\u05C3",
-    en: "Pashhur son of Immer, the priest who was chief officer of the House of G<small>OD</small>, heard Jeremiah prophesy these things."
+    en: "Pashhur son of Immer, the priest who was chief officer of the House of GOD, heard Jeremiah prophesy these things."
   },
   perath: {
     ref: "Gen 2:14",
@@ -25540,23 +29707,23 @@ var name_verses_default = {
   },
   puah: {
     ref: "1 Chr 7:1",
-    he: '\u05D5\u05B0\u05DC\u05B4\u05D1\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D9\u05B4\u05E9\u05C2\u05BC\u05B8\u05E9\u05DB\u05B8\u0597\u05E8 \u05EA\u05BC\u05D5\u05B9\u05DC\u05B8\u05A7\u05E2 \u05D5\u05BC\u05E4\u05D5\u05BC\u05D0\u05B8\u059B\u05D4 <span class="mam-kq"><span class="mam-kq-k">(\u05D9\u05E9\u05D9\u05D1)</span> <span class="mam-kq-q">[\u05D9\u05B8\u05E9\u05C1\u05A5\u05D5\u05BC\u05D1]</span></span> \u05D5\u05B0\u05E9\u05C1\u05B4\u05DE\u05B0\u05E8\u0596\u05D5\u05B9\u05DF \u05D0\u05B7\u05E8\u05B0\u05D1\u05BC\u05B8\u05E2\u05B8\u05BD\u05D4\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D5\u05B0\u05DC\u05B4\u05D1\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D9\u05B4\u05E9\u05C2\u05BC\u05B8\u05E9\u05DB\u05B8\u0597\u05E8 \u05EA\u05BC\u05D5\u05B9\u05DC\u05B8\u05A7\u05E2 \u05D5\u05BC\u05E4\u05D5\u05BC\u05D0\u05B8\u059B\u05D4 (\u05D9\u05E9\u05D9\u05D1) [\u05D9\u05B8\u05E9\u05C1\u05A5\u05D5\u05BC\u05D1] \u05D5\u05B0\u05E9\u05C1\u05B4\u05DE\u05B0\u05E8\u0596\u05D5\u05B9\u05DF \u05D0\u05B7\u05E8\u05B0\u05D1\u05BC\u05B8\u05E2\u05B8\u05BD\u05D4\u05C3",
     en: "The sons of Issachar: Tola, Puah, Jashub, and Shimron\u2014four."
   },
   ram: {
     ref: "Gen 9:20",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B8\u05A5\u05D7\u05B6\u05DC \u05E0\u05B9\u0596\u05D7\u05B7 \u05D0\u05B4\u05A3\u05D9\u05E9\u05C1 \u05D4\u05B8\u05BD\u05D0\u05B2\u05D3\u05B8\u05DE\u05B8\u0591\u05D4 \u05D5\u05B7\u05D9\u05BC\u05B4\u05D8\u05BC\u05B7\u0596\u05E2 \u05DB\u05BC\u05B8\u05BD\u05E8\u05B6\u05DD\u05C3",
-    en: 'Noah, the tiller of the soil,<sup class="footnote-marker">a</sup><i class="footnote"><b>the tiller of the soil </b>Or \u201Ca man of the soil.\u201D</i> was the first to plant a vineyard.'
+    en: "Noah, the tiller of the soil,athe tiller of the soil Or \u201Ca man of the soil.\u201D was the first to plant a vineyard."
   },
   raphu: {
     ref: "Isa 19:22",
-    he: '\u05D5\u05B0\u05E0\u05B8\u05D2\u05B7\u05A7\u05E3 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u059B\u05D4 \u05D0\u05B6\u05EA\u05BE\u05DE\u05B4\u05E6\u05B0\u05E8\u05B7\u0596\u05D9\u05B4\u05DD \u05E0\u05B8\u05D2\u05B9\u05A3\u05E3 \u05D5\u05B0\u05E8\u05B8\u05E4\u0591\u05D5\u05B9\u05D0 \u05D5\u05B0\u05E9\u05C1\u05B8\u0599\u05D1\u05D5\u05BC\u0599 \u05E2\u05B7\u05D3\u05BE\u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0594\u05D4 \u05D5\u05B0\u05E0\u05B6\u05E2\u05B0\u05EA\u05BC\u05B7\u05A5\u05E8 \u05DC\u05B8\u05D4\u05B6\u0596\u05DD \u05D5\u05BC\u05E8\u05B0\u05E4\u05B8\u05D0\u05B8\u05BD\u05DD\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
-    en: "G<small>OD</small> will first afflict and then heal the Egyptians: when they turn back, G<small>OD</small> will respond to their entreaties and heal them."
+    he: "\u05D5\u05B0\u05E0\u05B8\u05D2\u05B7\u05A7\u05E3 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u059B\u05D4 \u05D0\u05B6\u05EA\u05BE\u05DE\u05B4\u05E6\u05B0\u05E8\u05B7\u0596\u05D9\u05B4\u05DD \u05E0\u05B8\u05D2\u05B9\u05A3\u05E3 \u05D5\u05B0\u05E8\u05B8\u05E4\u0591\u05D5\u05B9\u05D0 \u05D5\u05B0\u05E9\u05C1\u05B8\u0599\u05D1\u05D5\u05BC\u0599 \u05E2\u05B7\u05D3\u05BE\u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0594\u05D4 \u05D5\u05B0\u05E0\u05B6\u05E2\u05B0\u05EA\u05BC\u05B7\u05A5\u05E8 \u05DC\u05B8\u05D4\u05B6\u0596\u05DD \u05D5\u05BC\u05E8\u05B0\u05E4\u05B8\u05D0\u05B8\u05BD\u05DD\u05C3",
+    en: "GOD will first afflict and then heal the Egyptians: when they turn back, GOD will respond to their entreaties and heal them."
   },
   rechum: {
     ref: "Ex 34:6",
-    he: "\u05D5\u05B7\u05D9\u05BC\u05B7\u05E2\u05B2\u05D1\u05B9\u05A8\u05E8 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05A5\u05D4&thinsp;<small>\u05C0</small>&thinsp;\u05E2\u05B7\u05DC\u05BE\u05E4\u05BC\u05B8\u05E0\u05B8\u05D9\u05D5\u05AE \u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05B0\u05E8\u05B8\u05D0\u0592 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05A3\u05D4&thinsp;<small>\u05C0</small>&thinsp;\u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0594\u05D4 \u05D0\u05B5\u05A5\u05DC \u05E8\u05B7\u05D7\u0596\u05D5\u05BC\u05DD \u05D5\u05B0\u05D7\u05B7\u05E0\u05BC\u0591\u05D5\u05BC\u05DF \u05D0\u05B6\u05A5\u05E8\u05B6\u05DA\u05B0 \u05D0\u05B7\u05E4\u05BC\u05B7\u0596\u05D9\u05B4\u05DD \u05D5\u05B0\u05E8\u05B7\u05D1\u05BE\u05D7\u05B6\u05A5\u05E1\u05B6\u05D3 \u05D5\u05B6\u05D0\u05B1\u05DE\u05B6\u05BD\u05EA\u05C3",
-    en: 'The E<small>TERNAL</small> passed before him and proclaimed: \u201CG<small>OD</small>! G<small>OD</small>!<sup class="footnote-marker">b</sup><i class="footnote"><b>and proclaimed: \u201CG<small>OD</small>! G<small>OD</small>!\u2026\u201D </b>Or \u201Cand G<small>OD</small> proclaimed: \u2018G<small>OD</small>! a Deity compassionate\u2026\u2019\u201D; cf. <a class="refLink" data-ref="Numbers 14:17-18" href="Numbers.14.17-18">Num. 14.17\u201318</a>.</i> a Deity compassionate and gracious, slow to anger, abounding in kindness and faithfulness,'
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B7\u05E2\u05B2\u05D1\u05B9\u05A8\u05E8 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05A5\u05D4&thinsp;\u05C0&thinsp;\u05E2\u05B7\u05DC\u05BE\u05E4\u05BC\u05B8\u05E0\u05B8\u05D9\u05D5\u05AE \u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05B0\u05E8\u05B8\u05D0\u0592 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05A3\u05D4&thinsp;\u05C0&thinsp;\u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0594\u05D4 \u05D0\u05B5\u05A5\u05DC \u05E8\u05B7\u05D7\u0596\u05D5\u05BC\u05DD \u05D5\u05B0\u05D7\u05B7\u05E0\u05BC\u0591\u05D5\u05BC\u05DF \u05D0\u05B6\u05A5\u05E8\u05B6\u05DA\u05B0 \u05D0\u05B7\u05E4\u05BC\u05B7\u0596\u05D9\u05B4\u05DD \u05D5\u05B0\u05E8\u05B7\u05D1\u05BE\u05D7\u05B6\u05A5\u05E1\u05B6\u05D3 \u05D5\u05B6\u05D0\u05B1\u05DE\u05B6\u05BD\u05EA\u05C3",
+    en: "The ETERNAL passed before him and proclaimed: \u201CGOD! GOD!band proclaimed: \u201CGOD! GOD!\u2026\u201D Or \u201Cand GOD proclaimed: \u2018GOD! a Deity compassionate\u2026\u2019\u201D; cf. Num. 14.17\u201318. a Deity compassionate and gracious, slow to anger, abounding in kindness and faithfulness,"
   },
   rephach: {
     ref: "1 Chr 7:25",
@@ -25565,7 +29732,7 @@ var name_verses_default = {
   },
   reumah: {
     ref: "Gen 22:24",
-    he: '\u05D5\u05BC\u05E4\u05B4\u05BD\u05D9\u05DC\u05B7\u05D2\u05B0\u05E9\u05C1\u0596\u05D5\u05B9 \u05D5\u05BC\u05E9\u05C1\u05B0\u05DE\u05B8\u05A3\u05D4\u05BC \u05E8\u05B0\u05D0\u05D5\u05BC\u05DE\u05B8\u0591\u05D4 \u05D5\u05B7\u05EA\u05BC\u05B5\u05A4\u05DC\u05B6\u05D3 \u05D2\u05BC\u05B7\u05DD\u05BE\u05D4\u05B4\u05D5\u05D0\u0599 \u05D0\u05B6\u05EA\u05BE\u05D8\u05B6\u05A3\u05D1\u05B7\u05D7 \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05D2\u05BC\u05B7\u0594\u05D7\u05B7\u05DD \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05EA\u05BC\u05B7\u0596\u05D7\u05B7\u05E9\u05C1 \u05D5\u05B0\u05D0\u05B6\u05BD\u05EA\u05BE\u05DE\u05B7\u05E2\u05B2\u05DB\u05B8\u05BD\u05D4\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
+    he: "\u05D5\u05BC\u05E4\u05B4\u05BD\u05D9\u05DC\u05B7\u05D2\u05B0\u05E9\u05C1\u0596\u05D5\u05B9 \u05D5\u05BC\u05E9\u05C1\u05B0\u05DE\u05B8\u05A3\u05D4\u05BC \u05E8\u05B0\u05D0\u05D5\u05BC\u05DE\u05B8\u0591\u05D4 \u05D5\u05B7\u05EA\u05BC\u05B5\u05A4\u05DC\u05B6\u05D3 \u05D2\u05BC\u05B7\u05DD\u05BE\u05D4\u05B4\u05D5\u05D0\u0599 \u05D0\u05B6\u05EA\u05BE\u05D8\u05B6\u05A3\u05D1\u05B7\u05D7 \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05D2\u05BC\u05B7\u0594\u05D7\u05B7\u05DD \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05EA\u05BC\u05B7\u0596\u05D7\u05B7\u05E9\u05C1 \u05D5\u05B0\u05D0\u05B6\u05BD\u05EA\u05BE\u05DE\u05B7\u05E2\u05B2\u05DB\u05B8\u05BD\u05D4\u05C3",
     en: "And his concubine, whose name was Reumah, also bore [sons]\u2014Tebah, Gaham, and Tahash\u2014and [a daughter,] Maacah."
   },
   ribkah: {
@@ -25580,17 +29747,17 @@ var name_verses_default = {
   },
   rohagah: {
     ref: "1 Chr 7:34",
-    he: '\u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u0596\u05D9 \u05E9\u05C1\u05B8\u0591\u05DE\u05B6\u05E8 \u05D0\u05B2\u05D7\u05B4\u05A5\u05D9 <span class="mam-kq"><span class="mam-kq-k">(\u05D5\u05E8\u05D5\u05D4\u05D2\u05D4)</span> <span class="mam-kq-q">[\u05D5\u05B0\u05E8\u05C7\u05D4\u05B0\u05D2\u05BC\u05B8\u0596\u05D4]</span></span> <span class="mam-kq"><span class="mam-kq-k">(\u05D9\u05D7\u05D1\u05D4)</span> <span class="mam-kq-q">[\u05D5\u05B0\u05D7\u05BB\u05D1\u05BC\u05B8\u05A5\u05D4]</span></span> \u05D5\u05B7\u05D0\u05B2\u05E8\u05B8\u05BD\u05DD\u05C3',
+    he: "\u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u0596\u05D9 \u05E9\u05C1\u05B8\u0591\u05DE\u05B6\u05E8 \u05D0\u05B2\u05D7\u05B4\u05A5\u05D9 (\u05D5\u05E8\u05D5\u05D4\u05D2\u05D4) [\u05D5\u05B0\u05E8\u05C7\u05D4\u05B0\u05D2\u05BC\u05B8\u0596\u05D4] (\u05D9\u05D7\u05D1\u05D4) [\u05D5\u05B0\u05D7\u05BB\u05D1\u05BC\u05B8\u05A5\u05D4] \u05D5\u05B7\u05D0\u05B2\u05E8\u05B8\u05BD\u05DD\u05C3",
     en: "The sons of Shemer: Ahi, Rohgah, Hubbah, and Aram."
   },
   ruth: {
     ref: "Gen 37:20",
-    he: "\u05D5\u05B0\u05E2\u05B7\u05EA\u05BC\u05B8\u05A3\u05D4&thinsp;<b>\u05C0</b> \u05DC\u05B0\u05DB\u05A3\u05D5\u05BC \u05D5\u05B0\u05E0\u05B7\u05BD\u05D4\u05B7\u05E8\u05B0\u05D2\u05B5\u0597\u05D4\u05D5\u05BC \u05D5\u05B0\u05E0\u05B7\u05E9\u05C1\u05B0\u05DC\u05B4\u05DB\u05B5\u0599\u05D4\u05D5\u05BC\u0599 \u05D1\u05BC\u05B0\u05D0\u05B7\u05D7\u05B7\u05A3\u05D3 \u05D4\u05B7\u05D1\u05BC\u05B9\u05E8\u0594\u05D5\u05B9\u05EA \u05D5\u05B0\u05D0\u05B8\u05DE\u05B7\u0595\u05E8\u05B0\u05E0\u05D5\u05BC \u05D7\u05B7\u05D9\u05BC\u05B8\u05A5\u05D4 \u05E8\u05B8\u05E2\u05B8\u0596\u05D4 \u05D0\u05B2\u05DB\u05B8\u05DC\u05B8\u0591\u05EA\u05B0\u05D4\u05D5\u05BC \u05D5\u05B0\u05E0\u05B4\u05E8\u05B0\u05D0\u05B6\u0595\u05D4 \u05DE\u05B7\u05D4\u05BE\u05D9\u05BC\u05B4\u05D4\u05B0\u05D9\u0596\u05D5\u05BC \u05D7\u05B2\u05DC\u05B9\u05DE\u05B9\u05EA\u05B8\u05BD\u05D9\u05D5\u05C3",
+    he: "\u05D5\u05B0\u05E2\u05B7\u05EA\u05BC\u05B8\u05A3\u05D4&thinsp;\u05C0 \u05DC\u05B0\u05DB\u05A3\u05D5\u05BC \u05D5\u05B0\u05E0\u05B7\u05BD\u05D4\u05B7\u05E8\u05B0\u05D2\u05B5\u0597\u05D4\u05D5\u05BC \u05D5\u05B0\u05E0\u05B7\u05E9\u05C1\u05B0\u05DC\u05B4\u05DB\u05B5\u0599\u05D4\u05D5\u05BC\u0599 \u05D1\u05BC\u05B0\u05D0\u05B7\u05D7\u05B7\u05A3\u05D3 \u05D4\u05B7\u05D1\u05BC\u05B9\u05E8\u0594\u05D5\u05B9\u05EA \u05D5\u05B0\u05D0\u05B8\u05DE\u05B7\u0595\u05E8\u05B0\u05E0\u05D5\u05BC \u05D7\u05B7\u05D9\u05BC\u05B8\u05A5\u05D4 \u05E8\u05B8\u05E2\u05B8\u0596\u05D4 \u05D0\u05B2\u05DB\u05B8\u05DC\u05B8\u0591\u05EA\u05B0\u05D4\u05D5\u05BC \u05D5\u05B0\u05E0\u05B4\u05E8\u05B0\u05D0\u05B6\u0595\u05D4 \u05DE\u05B7\u05D4\u05BE\u05D9\u05BC\u05B4\u05D4\u05B0\u05D9\u0596\u05D5\u05BC \u05D7\u05B2\u05DC\u05B9\u05DE\u05B9\u05EA\u05B8\u05BD\u05D9\u05D5\u05C3",
     en: "Come now, let us kill him and throw him into one of the pits; and we can say, \u2018A savage beast devoured him.\u2019 We shall see what comes of his dreams!\u201D"
   },
   sabta: {
     ref: "1 Chr 1:9",
-    he: '\u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u05A3\u05D9 \u05DB\u0594\u05D5\u05BC\u05E9\u05C1 \u05E1\u05B0\u05D1\u05B8\u05D0\u0599 \u05D5\u05B7\u05BD\u05D7\u05B2\u05D5\u05B4\u05D9\u05DC\u05B8\u0594\u05D4 \u05D5\u05B0\u05E1\u05B7\u05D1\u05B0\u05EA\u05BC\u05B8\u05A5\u05D0 \u05D5\u05B0\u05E8\u05B7\u05E2\u05B0\u05DE\u05B8\u0596\u05D0 \u05D5\u05B0\u05E1\u05B7\u05D1\u05B0\u05EA\u05BC\u05B0\u05DB\u05B8\u0591\u05D0 \u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u05A5\u05D9 \u05E8\u05B7\u05E2\u05B0\u05DE\u05B8\u0596\u05D0 \u05E9\u05C1\u05B0\u05D1\u05B8\u05A5\u05D0 \u05D5\u05BC\u05D3\u05B0\u05D3\u05B8\u05BD\u05DF\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u05A3\u05D9 \u05DB\u0594\u05D5\u05BC\u05E9\u05C1 \u05E1\u05B0\u05D1\u05B8\u05D0\u0599 \u05D5\u05B7\u05BD\u05D7\u05B2\u05D5\u05B4\u05D9\u05DC\u05B8\u0594\u05D4 \u05D5\u05B0\u05E1\u05B7\u05D1\u05B0\u05EA\u05BC\u05B8\u05A5\u05D0 \u05D5\u05B0\u05E8\u05B7\u05E2\u05B0\u05DE\u05B8\u0596\u05D0 \u05D5\u05B0\u05E1\u05B7\u05D1\u05B0\u05EA\u05BC\u05B0\u05DB\u05B8\u0591\u05D0 \u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u05A5\u05D9 \u05E8\u05B7\u05E2\u05B0\u05DE\u05B8\u0596\u05D0 \u05E9\u05C1\u05B0\u05D1\u05B8\u05A5\u05D0 \u05D5\u05BC\u05D3\u05B0\u05D3\u05B8\u05BD\u05DF\u05C3",
     en: "The sons of Cush: Seba, Havilah, Sabta, Raama, and Sabteca. The sons of Raama: Sheba and Dedan."
   },
   sabteca: {
@@ -25610,8 +29777,8 @@ var name_verses_default = {
   },
   segub: {
     ref: "1 Ki 16:34",
-    he: '\u05D1\u05BC\u05B0\u05D9\u05B8\u05DE\u05B8\u059E\u05D9\u05D5 \u05D1\u05BC\u05B8\u05E0\u05B8\u05A5\u05D4 \u05D7\u05B4\u05D9\u05D0\u05B5\u059B\u05DC \u05D1\u05BC\u05B5\u05A5\u05D9\u05EA \u05D4\u05B8\u05D0\u05B1\u05DC\u05B4\u0596\u05D9 \u05D0\u05B6\u05EA\u05BE\u05D9\u05B0\u05E8\u05B4\u05D9\u05D7\u05B9\u0591\u05D4 \u05D1\u05BC\u05B7\u05D0\u05B2\u05D1\u05B4\u05D9\u05E8\u05B8\u05A8\u05DD \u05D1\u05BC\u05B0\u05DB\u05B9\u05E8\u059C\u05D5\u05B9 \u05D9\u05B4\u05E1\u05BC\u05B0\u05D3\u05B8\u0597\u05D4\u05BC <span class="mam-kq"><span class="mam-kq-k">(\u05D5\u05D1\u05E9\u05D2\u05D9\u05D1)</span> <span class="mam-kq-q">[\u05D5\u05BC\u05D1\u05B4\u05E9\u05C2\u05B0\u05D2\u05A4\u05D5\u05BC\u05D1]</span></span> \u05E6\u05B0\u05E2\u05B4\u05D9\u05E8\u05D5\u05B9\u0599 \u05D4\u05B4\u05E6\u05BC\u05B4\u05A3\u05D9\u05D1 \u05D3\u05BC\u05B0\u05DC\u05B8\u05EA\u05B6\u0594\u05D9\u05D4\u05B8 \u05DB\u05BC\u05B4\u05D3\u05B0\u05D1\u05B7\u05A3\u05E8 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0594\u05D4 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A3\u05E8 \u05D3\u05BC\u05B4\u05D1\u05BC\u05B6\u0594\u05E8 \u05D1\u05BC\u05B0\u05D9\u05B7\u0596\u05D3 \u05D9\u05B0\u05D4\u05D5\u05B9\u05E9\u05C1\u05BB\u05A5\u05E2\u05B7 \u05D1\u05BC\u05B4\u05DF\u05BE\u05E0\u05BD\u05D5\u05BC\u05DF\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
-    en: 'During his reign, Hiel the Bethelite fortified Jericho. He laid its foundations at the cost of Abiram his first-born, and set its gates in place at the cost of Segub his youngest, in accordance with the words that G<small>OD</small> had spoken through Joshua son of Nun.<sup class="footnote-marker">d</sup><i class="footnote"><b>that G<small>OD</small> had spoken through Joshua son of Nun </b>Cf. Josh. 6.26.</i>'
+    he: "\u05D1\u05BC\u05B0\u05D9\u05B8\u05DE\u05B8\u059E\u05D9\u05D5 \u05D1\u05BC\u05B8\u05E0\u05B8\u05A5\u05D4 \u05D7\u05B4\u05D9\u05D0\u05B5\u059B\u05DC \u05D1\u05BC\u05B5\u05A5\u05D9\u05EA \u05D4\u05B8\u05D0\u05B1\u05DC\u05B4\u0596\u05D9 \u05D0\u05B6\u05EA\u05BE\u05D9\u05B0\u05E8\u05B4\u05D9\u05D7\u05B9\u0591\u05D4 \u05D1\u05BC\u05B7\u05D0\u05B2\u05D1\u05B4\u05D9\u05E8\u05B8\u05A8\u05DD \u05D1\u05BC\u05B0\u05DB\u05B9\u05E8\u059C\u05D5\u05B9 \u05D9\u05B4\u05E1\u05BC\u05B0\u05D3\u05B8\u0597\u05D4\u05BC (\u05D5\u05D1\u05E9\u05D2\u05D9\u05D1) [\u05D5\u05BC\u05D1\u05B4\u05E9\u05C2\u05B0\u05D2\u05A4\u05D5\u05BC\u05D1] \u05E6\u05B0\u05E2\u05B4\u05D9\u05E8\u05D5\u05B9\u0599 \u05D4\u05B4\u05E6\u05BC\u05B4\u05A3\u05D9\u05D1 \u05D3\u05BC\u05B0\u05DC\u05B8\u05EA\u05B6\u0594\u05D9\u05D4\u05B8 \u05DB\u05BC\u05B4\u05D3\u05B0\u05D1\u05B7\u05A3\u05E8 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0594\u05D4 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A3\u05E8 \u05D3\u05BC\u05B4\u05D1\u05BC\u05B6\u0594\u05E8 \u05D1\u05BC\u05B0\u05D9\u05B7\u0596\u05D3 \u05D9\u05B0\u05D4\u05D5\u05B9\u05E9\u05C1\u05BB\u05A5\u05E2\u05B7 \u05D1\u05BC\u05B4\u05DF\u05BE\u05E0\u05BD\u05D5\u05BC\u05DF\u05C3",
+    en: "During his reign, Hiel the Bethelite fortified Jericho. He laid its foundations at the cost of Abiram his first-born, and set its gates in place at the cost of Segub his youngest, in accordance with the words that GOD had spoken through Joshua son of Nun.dthat GOD had spoken through Joshua son of Nun Cf. Josh. 6.26."
   },
   serach: {
     ref: "Gen 46:17",
@@ -25640,12 +29807,12 @@ var name_verses_default = {
   },
   shamgar: {
     ref: "Judg 3:31",
-    he: '\u05D5\u05B0\u05D0\u05B7\u05D7\u05B2\u05E8\u05B8\u05A4\u05D9\u05D5 \u05D4\u05B8\u05D9\u05B8\u05D4\u0599 \u05E9\u05C1\u05B7\u05DE\u05B0\u05D2\u05BC\u05B7\u05A3\u05E8 \u05D1\u05BC\u05B6\u05DF\u05BE\u05E2\u05B2\u05E0\u05B8\u0594\u05EA \u05D5\u05B7\u05D9\u05BC\u05B7\u05A4\u05DA\u05B0 \u05D0\u05B6\u05EA\u05BE\u05E4\u05BC\u05B0\u05DC\u05B4\u05E9\u05C1\u05B0\u05EA\u05BC\u05B4\u05D9\u05DD\u0599 \u05E9\u05C1\u05B5\u05BD\u05E9\u05C1\u05BE\u05DE\u05B5\u05D0\u05A3\u05D5\u05B9\u05EA \u05D0\u05B4\u0594\u05D9\u05E9\u05C1 \u05D1\u05BC\u05B0\u05DE\u05B7\u05DC\u05B0\u05DE\u05B7\u0596\u05D3 \u05D4\u05B7\u05D1\u05BC\u05B8\u05E7\u05B8\u0591\u05E8 \u05D5\u05B7\u05D9\u05BC\u05A5\u05D5\u05B9\u05E9\u05C1\u05B7\u05E2 \u05D2\u05BC\u05B7\u05DD\u05BE\u05D4\u0596\u05D5\u05BC\u05D0 \u05D0\u05B6\u05EA\u05BE\u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u05BD\u05DC\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
-    en: 'After him came Shamgar son of Anath,<sup class="footnote-marker">j</sup><i class="footnote"><b>son of Anath </b>Or \u201Cthe Beth-anathite.\u201D</i> who slew six hundred Philistines with an oxgoad. He too was a champion of Israel.'
+    he: "\u05D5\u05B0\u05D0\u05B7\u05D7\u05B2\u05E8\u05B8\u05A4\u05D9\u05D5 \u05D4\u05B8\u05D9\u05B8\u05D4\u0599 \u05E9\u05C1\u05B7\u05DE\u05B0\u05D2\u05BC\u05B7\u05A3\u05E8 \u05D1\u05BC\u05B6\u05DF\u05BE\u05E2\u05B2\u05E0\u05B8\u0594\u05EA \u05D5\u05B7\u05D9\u05BC\u05B7\u05A4\u05DA\u05B0 \u05D0\u05B6\u05EA\u05BE\u05E4\u05BC\u05B0\u05DC\u05B4\u05E9\u05C1\u05B0\u05EA\u05BC\u05B4\u05D9\u05DD\u0599 \u05E9\u05C1\u05B5\u05BD\u05E9\u05C1\u05BE\u05DE\u05B5\u05D0\u05A3\u05D5\u05B9\u05EA \u05D0\u05B4\u0594\u05D9\u05E9\u05C1 \u05D1\u05BC\u05B0\u05DE\u05B7\u05DC\u05B0\u05DE\u05B7\u0596\u05D3 \u05D4\u05B7\u05D1\u05BC\u05B8\u05E7\u05B8\u0591\u05E8 \u05D5\u05B7\u05D9\u05BC\u05A5\u05D5\u05B9\u05E9\u05C1\u05B7\u05E2 \u05D2\u05BC\u05B7\u05DD\u05BE\u05D4\u0596\u05D5\u05BC\u05D0 \u05D0\u05B6\u05EA\u05BE\u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u05BD\u05DC\u05C3",
+    en: "After him came Shamgar son of Anath,json of Anath Or \u201Cthe Beth-anathite.\u201D who slew six hundred Philistines with an oxgoad. He too was a champion of Israel."
   },
   shamhuth: {
     ref: "1 Chr 27:8",
-    he: '\u05D4\u05B7\u05D7\u05B2\u05DE\u05B4\u05D9\u05E9\u05C1\u05B4\u05D9\u0599 \u05DC\u05B7\u05D7\u05B9\u05A3\u05D3\u05B6\u05E9\u05C1 \u05D4\u05B7\u05D7\u05B2\u05DE\u05B4\u05D9\u05E9\u05C1\u05B4\u0594\u05D9 \u05D4\u05B7\u05E9\u05C2\u05BC\u05B7\u0596\u05E8 \u05E9\u05C1\u05B7\u05DE\u05B0\u05D4\u05A3\u05D5\u05BC\u05EA \u05D4\u05B7\u05D9\u05BC\u05B4\u05D6\u05B0\u05E8\u05B8\u0591\u05D7 \u05D5\u05B0\u05E2\u05B7\u05DC\u0599 \u05DE\u05B7\u05D7\u05B2\u05DC\u05BB\u05E7\u05B0\u05EA\u05BC\u0594\u05D5\u05B9 \u05E2\u05B6\u05E9\u05C2\u05B0\u05E8\u05B4\u05A5\u05D9\u05DD \u05D5\u05B0\u05D0\u05B7\u05E8\u05B0\u05D1\u05BC\u05B8\u05E2\u05B8\u0596\u05D4 \u05D0\u05B8\u05BD\u05DC\u05B6\u05E3\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D4\u05B7\u05D7\u05B2\u05DE\u05B4\u05D9\u05E9\u05C1\u05B4\u05D9\u0599 \u05DC\u05B7\u05D7\u05B9\u05A3\u05D3\u05B6\u05E9\u05C1 \u05D4\u05B7\u05D7\u05B2\u05DE\u05B4\u05D9\u05E9\u05C1\u05B4\u0594\u05D9 \u05D4\u05B7\u05E9\u05C2\u05BC\u05B7\u0596\u05E8 \u05E9\u05C1\u05B7\u05DE\u05B0\u05D4\u05A3\u05D5\u05BC\u05EA \u05D4\u05B7\u05D9\u05BC\u05B4\u05D6\u05B0\u05E8\u05B8\u0591\u05D7 \u05D5\u05B0\u05E2\u05B7\u05DC\u0599 \u05DE\u05B7\u05D7\u05B2\u05DC\u05BB\u05E7\u05B0\u05EA\u05BC\u0594\u05D5\u05B9 \u05E2\u05B6\u05E9\u05C2\u05B0\u05E8\u05B4\u05A5\u05D9\u05DD \u05D5\u05B0\u05D0\u05B7\u05E8\u05B0\u05D1\u05BC\u05B8\u05E2\u05B8\u0596\u05D4 \u05D0\u05B8\u05BD\u05DC\u05B6\u05E3\u05C3",
     en: "The fifth, for the fifth month, the officer Shamhut the Izrahite; his division had 24,000."
   },
   shammoth: {
@@ -25655,8 +29822,8 @@ var name_verses_default = {
   },
   shamur: {
     ref: "Deut 5:12",
-    he: "\u05E9\u05C1\u05B8\u05DE\u059B\u05A3\u05D5\u05B9\u05E8 \u05D0\u05B6\u05EA\u05BE\u05D9\u05A5\u05D5\u05B9\u05DD\u05A9 \u05D4\u05B7\u05E9\u05C1\u05BC\u05B7\u05D1\u05BC\u05B8\u0596\u05A8\u05EA \u05DC\u05B0\u05E7\u05B7\u05D3\u05BC\u05B0\u05E9\u05C1\u0591\u059C\u05D5\u05B9 \u05DB\u05BC\u05B7\u05D0\u05B2\u05E9\u05C1\u05B6\u05A5\u05E8 \u05E6\u05B4\u05D5\u05BC\u05B0\u05DA\u05B8\u0596\u05A3&thinsp;<b>\u05C0</b> \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05A5\u05A3\u05D4 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B6\u05BD\u0597\u05D9\u05DA\u05B8\u05C3",
-    en: "Observe the sabbath day and keep it holy, as the E<small>TERNAL</small> your God has commanded you."
+    he: "\u05E9\u05C1\u05B8\u05DE\u059B\u05A3\u05D5\u05B9\u05E8 \u05D0\u05B6\u05EA\u05BE\u05D9\u05A5\u05D5\u05B9\u05DD\u05A9 \u05D4\u05B7\u05E9\u05C1\u05BC\u05B7\u05D1\u05BC\u05B8\u0596\u05A8\u05EA \u05DC\u05B0\u05E7\u05B7\u05D3\u05BC\u05B0\u05E9\u05C1\u0591\u059C\u05D5\u05B9 \u05DB\u05BC\u05B7\u05D0\u05B2\u05E9\u05C1\u05B6\u05A5\u05E8 \u05E6\u05B4\u05D5\u05BC\u05B0\u05DA\u05B8\u0596\u05A3&thinsp;\u05C0 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05A5\u05A3\u05D4 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B6\u05BD\u0597\u05D9\u05DA\u05B8\u05C3",
+    en: "Observe the sabbath day and keep it holy, as the ETERNAL your God has commanded you."
   },
   shashak: {
     ref: "1 Chr 8:14",
@@ -25671,16 +29838,16 @@ var name_verses_default = {
   shebna: {
     ref: "2 Ki 2:2",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B9\u05A9\u05D0\u05DE\u05B6\u05E8\u05A9 \u05D0\u05B5\u05DC\u05B4\u05D9\u05BC\u05B8\u05A8\u05D4\u05D5\u05BC \u05D0\u05B6\u05DC\u05BE\u05D0\u05B1\u05DC\u05B4\u05D9\u05E9\u05C1\u05B8\u059C\u05E2 \u05E9\u05C1\u05B5\u05BD\u05D1\u05BE\u05E0\u05B8\u05A3\u05D0 \u05E4\u05B9\u0597\u05D4 \u05DB\u05BC\u05B4\u05A4\u05D9 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05D4\u0599 \u05E9\u05C1\u05B0\u05DC\u05B8\u05D7\u05B7\u05A3\u05E0\u05B4\u05D9 \u05E2\u05B7\u05D3\u05BE\u05D1\u05BC\u05B5\u05BD\u05D9\u05EA\u05BE\u05D0\u05B5\u0594\u05DC \u05D5\u05B7\u05D9\u05BC\u05B9\u05A3\u05D0\u05DE\u05B6\u05E8 \u05D0\u05B1\u05DC\u05B4\u05D9\u05E9\u05C1\u05B8\u0594\u05E2 \u05D7\u05B7\u05D9\u05BE\u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05A5\u05D4 \u05D5\u05B0\u05D7\u05B5\u05BD\u05D9\u05BE\u05E0\u05B7\u05E4\u05B0\u05E9\u05C1\u05B0\u05DA\u05B8\u0596 \u05D0\u05B4\u05DD\u05BE\u05D0\u05B6\u05E2\u05B6\u05D6\u05B0\u05D1\u05B6\u0591\u05DA\u05BC\u05B8 \u05D5\u05B7\u05D9\u05BC\u05B5\u05E8\u05B0\u05D3\u0596\u05D5\u05BC \u05D1\u05BC\u05B5\u05BD\u05D9\u05EA\u05BE\u05D0\u05B5\u05BD\u05DC\u05C3",
-    en: "Elijah said to Elisha, \u201CStay here, for G<small>OD</small> has sent me on to Bethel.\u201D \u201CAs G<small>OD</small> lives and as you live,\u201D said Elisha, \u201CI will not leave you.\u201D So they went down to Bethel."
+    en: "Elijah said to Elisha, \u201CStay here, for GOD has sent me on to Bethel.\u201D \u201CAs GOD lives and as you live,\u201D said Elisha, \u201CI will not leave you.\u201D So they went down to Bethel."
   },
   shemeber: {
     ref: "Gen 14:2",
-    he: '\u05E2\u05B8\u05E9\u05C2\u05A3\u05D5\u05BC \u05DE\u05B4\u05DC\u05B0\u05D7\u05B8\u05DE\u05B8\u0597\u05D4 \u05D0\u05B6\u05EA\u05BE\u05D1\u05BC\u05B6\u0599\u05E8\u05B7\u05E2\u0599 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E1\u05B0\u05D3\u05B9\u0594\u05DD \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05D1\u05BC\u05B4\u05E8\u05B0\u05E9\u05C1\u05B7\u0596\u05E2 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E2\u05B2\u05DE\u05B9\u05E8\u05B8\u0591\u05D4 \u05E9\u05C1\u05B4\u05E0\u05B0\u05D0\u05B8\u05A3\u05D1&thinsp;<b>\u05C0</b> \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05D0\u05B7\u05D3\u05B0\u05DE\u05B8\u0597\u05D4 \u05D5\u05B0\u05E9\u05C1\u05B6\u05DE\u05B0\u05D0\u05B5\u0599\u05D1\u05B6\u05E8\u0599 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 <span class="mam-kq"><span class="mam-kq-k">(\u05E6\u05D1\u05D9\u05D9\u05DD)</span> <span class="mam-kq-q">[\u05E6\u05B0\u05D1\u05D5\u05B9\u05D9\u05B4\u0594\u05DD]</span></span> \u05D5\u05BC\u05DE\u05B6\u05A5\u05DC\u05B6\u05DA\u05B0 \u05D1\u05BC\u05B6\u0596\u05DC\u05B7\u05E2 \u05D4\u05B4\u05D9\u05D0\u05BE\u05E6\u05B9\u05BD\u05E2\u05B7\u05E8\u05C3',
+    he: "\u05E2\u05B8\u05E9\u05C2\u05A3\u05D5\u05BC \u05DE\u05B4\u05DC\u05B0\u05D7\u05B8\u05DE\u05B8\u0597\u05D4 \u05D0\u05B6\u05EA\u05BE\u05D1\u05BC\u05B6\u0599\u05E8\u05B7\u05E2\u0599 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E1\u05B0\u05D3\u05B9\u0594\u05DD \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05D1\u05BC\u05B4\u05E8\u05B0\u05E9\u05C1\u05B7\u0596\u05E2 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E2\u05B2\u05DE\u05B9\u05E8\u05B8\u0591\u05D4 \u05E9\u05C1\u05B4\u05E0\u05B0\u05D0\u05B8\u05A3\u05D1&thinsp;\u05C0 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05D0\u05B7\u05D3\u05B0\u05DE\u05B8\u0597\u05D4 \u05D5\u05B0\u05E9\u05C1\u05B6\u05DE\u05B0\u05D0\u05B5\u0599\u05D1\u05B6\u05E8\u0599 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 (\u05E6\u05D1\u05D9\u05D9\u05DD) [\u05E6\u05B0\u05D1\u05D5\u05B9\u05D9\u05B4\u0594\u05DD] \u05D5\u05BC\u05DE\u05B6\u05A5\u05DC\u05B6\u05DA\u05B0 \u05D1\u05BC\u05B6\u0596\u05DC\u05B7\u05E2 \u05D4\u05B4\u05D9\u05D0\u05BE\u05E6\u05B9\u05BD\u05E2\u05B7\u05E8\u05C3",
     en: "made war on King Bera of Sodom, King Birsha of Gomorrah, King Shinab of Admah, King Shemeber of Zeboiim, and the king of Bela, which is Zoar,"
   },
   shinab: {
     ref: "Gen 14:2",
-    he: '\u05E2\u05B8\u05E9\u05C2\u05A3\u05D5\u05BC \u05DE\u05B4\u05DC\u05B0\u05D7\u05B8\u05DE\u05B8\u0597\u05D4 \u05D0\u05B6\u05EA\u05BE\u05D1\u05BC\u05B6\u0599\u05E8\u05B7\u05E2\u0599 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E1\u05B0\u05D3\u05B9\u0594\u05DD \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05D1\u05BC\u05B4\u05E8\u05B0\u05E9\u05C1\u05B7\u0596\u05E2 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E2\u05B2\u05DE\u05B9\u05E8\u05B8\u0591\u05D4 \u05E9\u05C1\u05B4\u05E0\u05B0\u05D0\u05B8\u05A3\u05D1&thinsp;<b>\u05C0</b> \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05D0\u05B7\u05D3\u05B0\u05DE\u05B8\u0597\u05D4 \u05D5\u05B0\u05E9\u05C1\u05B6\u05DE\u05B0\u05D0\u05B5\u0599\u05D1\u05B6\u05E8\u0599 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 <span class="mam-kq"><span class="mam-kq-k">(\u05E6\u05D1\u05D9\u05D9\u05DD)</span> <span class="mam-kq-q">[\u05E6\u05B0\u05D1\u05D5\u05B9\u05D9\u05B4\u0594\u05DD]</span></span> \u05D5\u05BC\u05DE\u05B6\u05A5\u05DC\u05B6\u05DA\u05B0 \u05D1\u05BC\u05B6\u0596\u05DC\u05B7\u05E2 \u05D4\u05B4\u05D9\u05D0\u05BE\u05E6\u05B9\u05BD\u05E2\u05B7\u05E8\u05C3',
+    he: "\u05E2\u05B8\u05E9\u05C2\u05A3\u05D5\u05BC \u05DE\u05B4\u05DC\u05B0\u05D7\u05B8\u05DE\u05B8\u0597\u05D4 \u05D0\u05B6\u05EA\u05BE\u05D1\u05BC\u05B6\u0599\u05E8\u05B7\u05E2\u0599 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E1\u05B0\u05D3\u05B9\u0594\u05DD \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05D1\u05BC\u05B4\u05E8\u05B0\u05E9\u05C1\u05B7\u0596\u05E2 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E2\u05B2\u05DE\u05B9\u05E8\u05B8\u0591\u05D4 \u05E9\u05C1\u05B4\u05E0\u05B0\u05D0\u05B8\u05A3\u05D1&thinsp;\u05C0 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05D0\u05B7\u05D3\u05B0\u05DE\u05B8\u0597\u05D4 \u05D5\u05B0\u05E9\u05C1\u05B6\u05DE\u05B0\u05D0\u05B5\u0599\u05D1\u05B6\u05E8\u0599 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 (\u05E6\u05D1\u05D9\u05D9\u05DD) [\u05E6\u05B0\u05D1\u05D5\u05B9\u05D9\u05B4\u0594\u05DD] \u05D5\u05BC\u05DE\u05B6\u05A5\u05DC\u05B6\u05DA\u05B0 \u05D1\u05BC\u05B6\u0596\u05DC\u05B7\u05E2 \u05D4\u05B4\u05D9\u05D0\u05BE\u05E6\u05B9\u05BD\u05E2\u05B7\u05E8\u05C3",
     en: "made war on King Bera of Sodom, King Birsha of Gomorrah, King Shinab of Admah, King Shemeber of Zeboiim, and the king of Bela, which is Zoar,"
   },
   shenatstsar: {
@@ -25711,7 +29878,7 @@ var name_verses_default = {
   shimath: {
     ref: "Gen 18:10",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B9\u0597\u05D0\u05DE\u05B6\u05E8 \u05E9\u05C1\u05A3\u05D5\u05B9\u05D1 \u05D0\u05B8\u05E9\u05C1\u05A4\u05D5\u05BC\u05D1 \u05D0\u05B5\u05DC\u05B6\u0599\u05D9\u05DA\u05B8\u0599 \u05DB\u05BC\u05B8\u05E2\u05B5\u05A3\u05EA \u05D7\u05B7\u05D9\u05BC\u05B8\u0594\u05D4 \u05D5\u05B0\u05D4\u05B4\u05E0\u05BC\u05B5\u05D4\u05BE\u05D1\u05B5\u0596\u05DF \u05DC\u05B0\u05E9\u05C2\u05B8\u05E8\u05B8\u05A3\u05D4 \u05D0\u05B4\u05E9\u05C1\u05B0\u05EA\u05BC\u05B6\u0591\u05DA\u05B8 \u05D5\u05B0\u05E9\u05C2\u05B8\u05E8\u05B8\u05A5\u05D4 \u05E9\u05C1\u05B9\u05DE\u05B7\u059B\u05E2\u05B7\u05EA \u05E4\u05BC\u05B6\u05A5\u05EA\u05B7\u05D7 \u05D4\u05B8\u05D0\u05B9\u0596\u05D4\u05B6\u05DC \u05D5\u05B0\u05D4\u05A5\u05D5\u05BC\u05D0 \u05D0\u05B7\u05D7\u05B2\u05E8\u05B8\u05BD\u05D9\u05D5\u05C3",
-    en: 'Then one said, \u201CI will return to you next year,<sup class="footnote-marker">e</sup><i class="footnote"><b>next year </b>Heb. <i>ka-\u02BBet \u1E25ayyah</i>; cf. <a class="refLink" data-ref="Genesis 17:21" href="Genesis.17.21">17.21</a>; <a class="refLink" data-ref="II Kings 4:16-17" href="II_Kings.4.16-17">2 Kings 4.16\u201317</a>.</i> and your wife Sarah shall have a son!\u201D Sarah was listening at the entrance of the tent, which was behind him.'
+    en: "Then one said, \u201CI will return to you next year,enext year Heb. ka-\u02BBet \u1E25ayyah; cf. 17.21; 2 Kings 4.16\u201317. and your wife Sarah shall have a son!\u201D Sarah was listening at the entrance of the tent, which was behind him."
   },
   shimrath: {
     ref: "Ex 12:6",
@@ -25726,12 +29893,12 @@ var name_verses_default = {
   shophak: {
     ref: "Job 12:21",
     he: "\u05E9\u05C1\u05D5\u05B9\u05E4\u05B5\u05A3\u05DA\u05B0 \u05D1\u05BC\u05AD\u05D5\u05BC\u05D6 \u05E2\u05B7\u05DC\u05BE\u05E0\u05B0\u05D3\u05B4\u05D9\u05D1\u05B4\u0591\u05D9\u05DD \u05D5\u05BC\u05DE\u05B0\u05D6\u05B4\u0596\u05D9\u05D7\u05B7 \u05D0\u05B2\u05E4\u05B4\u05D9\u05E7\u05B4\u05A3\u05D9\u05DD \u05E8\u05B4\u05E4\u05BC\u05B8\u05BD\u05D4\u05C3",
-    en: '<span class="poetry indentAll">Pours disgrace upon nobles</span><br><span class="poetry indentAll">And loosens the belt of the mighty;</span>'
+    en: "Pours disgrace upon noblesAnd loosens the belt of the mighty;"
   },
   shucham: {
     ref: "Num 26:42",
     he: "\u05D0\u05B5\u05A4\u05DC\u05BC\u05B6\u05D4 \u05D1\u05B0\u05E0\u05B5\u05D9\u05BE\u05D3\u05B8\u05DF\u0599 \u05DC\u05B0\u05DE\u05B4\u05E9\u05C1\u05B0\u05E4\u05BC\u05B0\u05D7\u05B9\u05EA\u05B8\u0594\u05DD \u05DC\u05B0\u05E9\u05C1\u05D5\u05BC\u05D7\u05B8\u0595\u05DD \u05DE\u05B4\u05E9\u05C1\u05B0\u05E4\u05BC\u05B7\u0596\u05D7\u05B7\u05EA \u05D4\u05B7\u05E9\u05C1\u05BC\u05D5\u05BC\u05D7\u05B8\u05DE\u05B4\u0591\u05D9 \u05D0\u05B5\u059B\u05DC\u05BC\u05B6\u05D4 \u05DE\u05B4\u05E9\u05C1\u05B0\u05E4\u05BC\u05B0\u05D7\u05B9\u05A5\u05EA \u05D3\u05BC\u05B8\u0596\u05DF \u05DC\u05B0\u05DE\u05B4\u05E9\u05C1\u05B0\u05E4\u05BC\u05B0\u05D7\u05B9\u05EA\u05B8\u05BD\u05DD\u05C3",
-    en: '<sup class="footnote-marker">f</sup><i class="footnote">Meaning of parts of this verse uncertain.</i> These are the descendants of Dan by their clans: Of Shuham, the clan of the Shuhamites. Those are the clans of Dan, by their clans.'
+    en: "fMeaning of parts of this verse uncertain. These are the descendants of Dan by their clans: Of Shuham, the clan of the Shuhamites. Those are the clans of Dan, by their clans."
   },
   sophereth: {
     ref: "Lev 25:8",
@@ -25745,7 +29912,7 @@ var name_verses_default = {
   },
   tabor: {
     ref: "Josh 19:22",
-    he: '\u05D5\u05BC\u05E4\u05B8\u05D2\u05B7\u05E2\u05A9 \u05D4\u05B7\u05D2\u05BC\u05B0\u05D1\u05A8\u05D5\u05BC\u05DC \u05D1\u05BC\u05B0\u05EA\u05B8\u05D1\u05A4\u05D5\u05B9\u05E8 <span class="mam-kq"><span class="mam-kq-k">(\u05D5\u05E9\u05D7\u05E6\u05D5\u05DE\u05D4)</span> <span class="mam-kq-q">[\u05D5\u05B0\u05E9\u05C1\u05B7\u05D7\u05B2\u05E6\u05B4\u0599\u05D9\u05DE\u05B8\u05D4\u0599]</span></span> \u05D5\u05BC\u05D1\u05B5\u05A3\u05D9\u05EA \u05E9\u05C1\u05B6\u0594\u05DE\u05B6\u05E9\u05C1 \u05D5\u05B0\u05D4\u05B8\u05D9\u059B\u05D5\u05BC \u05EA\u05BC\u05B9\u05E6\u05B0\u05D0\u05A5\u05D5\u05B9\u05EA \u05D2\u05BC\u05B0\u05D1\u05D5\u05BC\u05DC\u05B8\u0596\u05DD \u05D4\u05B7\u05D9\u05BC\u05B7\u05E8\u05B0\u05D3\u05BC\u05B5\u0591\u05DF \u05E2\u05B8\u05E8\u05B4\u05A5\u05D9\u05DD \u05E9\u05C1\u05B5\u05E9\u05C1\u05BE\u05E2\u05B6\u05E9\u05C2\u05B0\u05E8\u05B5\u0596\u05D4 \u05D5\u05B0\u05D7\u05B7\u05E6\u05B0\u05E8\u05B5\u05D9\u05D4\u05B6\u05BD\u05DF\u05C3',
+    he: "\u05D5\u05BC\u05E4\u05B8\u05D2\u05B7\u05E2\u05A9 \u05D4\u05B7\u05D2\u05BC\u05B0\u05D1\u05A8\u05D5\u05BC\u05DC \u05D1\u05BC\u05B0\u05EA\u05B8\u05D1\u05A4\u05D5\u05B9\u05E8 (\u05D5\u05E9\u05D7\u05E6\u05D5\u05DE\u05D4) [\u05D5\u05B0\u05E9\u05C1\u05B7\u05D7\u05B2\u05E6\u05B4\u0599\u05D9\u05DE\u05B8\u05D4\u0599] \u05D5\u05BC\u05D1\u05B5\u05A3\u05D9\u05EA \u05E9\u05C1\u05B6\u0594\u05DE\u05B6\u05E9\u05C1 \u05D5\u05B0\u05D4\u05B8\u05D9\u059B\u05D5\u05BC \u05EA\u05BC\u05B9\u05E6\u05B0\u05D0\u05A5\u05D5\u05B9\u05EA \u05D2\u05BC\u05B0\u05D1\u05D5\u05BC\u05DC\u05B8\u0596\u05DD \u05D4\u05B7\u05D9\u05BC\u05B7\u05E8\u05B0\u05D3\u05BC\u05B5\u0591\u05DF \u05E2\u05B8\u05E8\u05B4\u05A5\u05D9\u05DD \u05E9\u05C1\u05B5\u05E9\u05C1\u05BE\u05E2\u05B6\u05E9\u05C2\u05B0\u05E8\u05B5\u0596\u05D4 \u05D5\u05B0\u05D7\u05B7\u05E6\u05B0\u05E8\u05B5\u05D9\u05D4\u05B6\u05BD\u05DF\u05C3",
     en: "The boundary touched Tabor, Shahazimah, and Beth-shemesh; and their boundary ran to the Jordan: 16 towns, with their villages."
   },
   tachan: {
@@ -25755,7 +29922,7 @@ var name_verses_default = {
   },
   timna: {
     ref: "Gen 36:12",
-    he: "\u05D5\u05B0\u05EA\u05B4\u05DE\u05B0\u05E0\u05B7\u05A3\u05E2&thinsp;<b>\u05C0</b> \u05D4\u05B8\u05D9\u05B0\u05EA\u05B8\u05A3\u05D4 \u05E4\u05B4\u05D9\u05DC\u05B6\u0597\u05D2\u05B6\u05E9\u05C1 \u05DC\u05B6\u05BD\u05D0\u05B1\u05DC\u05B4\u05D9\u05E4\u05B7\u05D6\u0599 \u05D1\u05BC\u05B6\u05DF\u05BE\u05E2\u05B5\u05E9\u05C2\u05B8\u0594\u05D5 \u05D5\u05B7\u05EA\u05BC\u05B5\u05A5\u05DC\u05B6\u05D3 \u05DC\u05B6\u05D0\u05B1\u05DC\u05B4\u05D9\u05E4\u05B7\u0596\u05D6 \u05D0\u05B6\u05EA\u05BE\u05E2\u05B2\u05DE\u05B8\u05DC\u05B5\u0591\u05E7 \u05D0\u05B5\u0595\u05DC\u05BC\u05B6\u05D4 \u05D1\u05BC\u05B0\u05E0\u05B5\u05A5\u05D9 \u05E2\u05B8\u05D3\u05B8\u0596\u05D4 \u05D0\u05B5\u05A5\u05E9\u05C1\u05B6\u05EA \u05E2\u05B5\u05E9\u05C2\u05B8\u05BD\u05D5\u05C3",
+    he: "\u05D5\u05B0\u05EA\u05B4\u05DE\u05B0\u05E0\u05B7\u05A3\u05E2&thinsp;\u05C0 \u05D4\u05B8\u05D9\u05B0\u05EA\u05B8\u05A3\u05D4 \u05E4\u05B4\u05D9\u05DC\u05B6\u0597\u05D2\u05B6\u05E9\u05C1 \u05DC\u05B6\u05BD\u05D0\u05B1\u05DC\u05B4\u05D9\u05E4\u05B7\u05D6\u0599 \u05D1\u05BC\u05B6\u05DF\u05BE\u05E2\u05B5\u05E9\u05C2\u05B8\u0594\u05D5 \u05D5\u05B7\u05EA\u05BC\u05B5\u05A5\u05DC\u05B6\u05D3 \u05DC\u05B6\u05D0\u05B1\u05DC\u05B4\u05D9\u05E4\u05B7\u0596\u05D6 \u05D0\u05B6\u05EA\u05BE\u05E2\u05B2\u05DE\u05B8\u05DC\u05B5\u0591\u05E7 \u05D0\u05B5\u0595\u05DC\u05BC\u05B6\u05D4 \u05D1\u05BC\u05B0\u05E0\u05B5\u05A5\u05D9 \u05E2\u05B8\u05D3\u05B8\u0596\u05D4 \u05D0\u05B5\u05A5\u05E9\u05C1\u05B6\u05EA \u05E2\u05B5\u05E9\u05C2\u05B8\u05BD\u05D5\u05C3",
     en: "Timna was a concubine of Esau\u2019s son Eliphaz; she bore Amalek to Eliphaz. Those were the descendants of Esau\u2019s wife Adah."
   },
   togarmah: {
@@ -25765,7 +29932,7 @@ var name_verses_default = {
   },
   tsereth: {
     ref: "Gen 42:21",
-    he: "\u05D5\u05B7\u05D9\u05BC\u05B9\u05D0\u05DE\u05B0\u05E8\u059E\u05D5\u05BC \u05D0\u05B4\u05A3\u05D9\u05E9\u05C1 \u05D0\u05B6\u05DC\u05BE\u05D0\u05B8\u05D7\u05B4\u0597\u05D9\u05D5 \u05D0\u05B2\u05D1\u05B8\u05DC\u05AE \u05D0\u05B2\u05E9\u05C1\u05B5\u05DE\u05B4\u05A3\u05D9\u05DD&thinsp;<small>\u05C0</small>&thinsp;\u05D0\u05B2\u05E0\u05B7\u0598\u05D7\u05B0\u05E0\u05D5\u05BC\u05AE \u05E2\u05B7\u05DC\u05BE\u05D0\u05B8\u05D7\u05B4\u0592\u05D9\u05E0\u05D5\u05BC\u0592 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A8\u05E8 \u05E8\u05B8\u05D0\u05B4\u059C\u05D9\u05E0\u05D5\u05BC \u05E6\u05B8\u05E8\u05B7\u05A5\u05EA \u05E0\u05B7\u05E4\u05B0\u05E9\u05C1\u059B\u05D5\u05B9 \u05D1\u05BC\u05B0\u05D4\u05B4\u05EA\u05B0\u05D7\u05B7\u05BD\u05E0\u05B0\u05E0\u05A5\u05D5\u05B9 \u05D0\u05B5\u05DC\u05B5\u0596\u05D9\u05E0\u05D5\u05BC \u05D5\u05B0\u05DC\u05B9\u05A3\u05D0 \u05E9\u05C1\u05B8\u05DE\u05B8\u0591\u05E2\u05B0\u05E0\u05D5\u05BC \u05E2\u05B7\u05DC\u05BE\u05DB\u05BC\u05B5\u05DF\u0599 \u05D1\u05BC\u05B8\u05A3\u05D0\u05B8\u05D4 \u05D0\u05B5\u05DC\u05B5\u0594\u05D9\u05E0\u05D5\u05BC \u05D4\u05B7\u05E6\u05BC\u05B8\u05E8\u05B8\u0596\u05D4 \u05D4\u05B7\u05D6\u05BC\u05B9\u05BD\u05D0\u05EA\u05C3",
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B9\u05D0\u05DE\u05B0\u05E8\u059E\u05D5\u05BC \u05D0\u05B4\u05A3\u05D9\u05E9\u05C1 \u05D0\u05B6\u05DC\u05BE\u05D0\u05B8\u05D7\u05B4\u0597\u05D9\u05D5 \u05D0\u05B2\u05D1\u05B8\u05DC\u05AE \u05D0\u05B2\u05E9\u05C1\u05B5\u05DE\u05B4\u05A3\u05D9\u05DD&thinsp;\u05C0&thinsp;\u05D0\u05B2\u05E0\u05B7\u0598\u05D7\u05B0\u05E0\u05D5\u05BC\u05AE \u05E2\u05B7\u05DC\u05BE\u05D0\u05B8\u05D7\u05B4\u0592\u05D9\u05E0\u05D5\u05BC\u0592 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A8\u05E8 \u05E8\u05B8\u05D0\u05B4\u059C\u05D9\u05E0\u05D5\u05BC \u05E6\u05B8\u05E8\u05B7\u05A5\u05EA \u05E0\u05B7\u05E4\u05B0\u05E9\u05C1\u059B\u05D5\u05B9 \u05D1\u05BC\u05B0\u05D4\u05B4\u05EA\u05B0\u05D7\u05B7\u05BD\u05E0\u05B0\u05E0\u05A5\u05D5\u05B9 \u05D0\u05B5\u05DC\u05B5\u0596\u05D9\u05E0\u05D5\u05BC \u05D5\u05B0\u05DC\u05B9\u05A3\u05D0 \u05E9\u05C1\u05B8\u05DE\u05B8\u0591\u05E2\u05B0\u05E0\u05D5\u05BC \u05E2\u05B7\u05DC\u05BE\u05DB\u05BC\u05B5\u05DF\u0599 \u05D1\u05BC\u05B8\u05A3\u05D0\u05B8\u05D4 \u05D0\u05B5\u05DC\u05B5\u0594\u05D9\u05E0\u05D5\u05BC \u05D4\u05B7\u05E6\u05BC\u05B8\u05E8\u05B8\u0596\u05D4 \u05D4\u05B7\u05D6\u05BC\u05B9\u05BD\u05D0\u05EA\u05C3",
     en: "They said to one another, \u201CAlas, we are being punished on account of our brother, because we looked on at his anguish, yet paid no heed as he pleaded with us. That is why this distress has come upon us.\u201D"
   },
   zaza: {
@@ -25775,27 +29942,27 @@ var name_verses_default = {
   },
   zeresh: {
     ref: "Esth 5:14",
-    he: '\u05D5\u05B7\u05EA\u05BC\u05B9\u05A3\u05D0\u05DE\u05B6\u05E8 \u05DC\u05D5\u05B9\u05A9 \u05D6\u05B6\u05A8\u05E8\u05B6\u05E9\u05C1 \u05D0\u05B4\u05E9\u05C1\u05B0\u05EA\u05BC\u059C\u05D5\u05B9 \u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D0\u05B9\u05BD\u05D4\u05B2\u05D1\u05B8\u0597\u05D9\u05D5 \u05D9\u05B7\u05BD\u05E2\u05B2\u05E9\u05C2\u05D5\u05BC\u05BE\u05E2\u05B5\u05E5\u05AE \u05D2\u05BC\u05B8\u05D1\u05B9\u05A3\u05D4\u05BC\u05B7 \u05D7\u05B2\u05DE\u05B4\u05E9\u05C1\u05BC\u05B4\u05A3\u05D9\u05DD \u05D0\u05B7\u05DE\u05BC\u05B8\u05D4\u0592 \u05D5\u05BC\u05D1\u05B7\u05D1\u05BC\u05B9\u05A3\u05E7\u05B6\u05E8&thinsp;<b>\u05C0</b> \u05D0\u05B1\u05DE\u05B9\u05A3\u05E8 \u05DC\u05B7\u05DE\u05BC\u05B6\u0597\u05DC\u05B6\u05DA\u05B0 \u05D5\u05B0\u05D9\u05B4\u05EA\u05B0\u05DC\u05A4\u05D5\u05BC \u05D0\u05B6\u05BD\u05EA\u05BE\u05DE\u05C7\u05E8\u05B0\u05D3\u05BC\u05B3\u05DB\u05B7\u05D9\u0599 \u05E2\u05B8\u05DC\u05B8\u0594\u05D9\u05D5 \u05D5\u05BC\u05D1\u05B9\u05BD\u05D0\u05BE\u05E2\u05B4\u05DD\u05BE\u05D4\u05B7\u05DE\u05BC\u05B6\u05A5\u05DC\u05B6\u05DA\u05B0 \u05D0\u05B6\u05DC\u05BE\u05D4\u05B7\u05DE\u05BC\u05B4\u05E9\u05C1\u05B0\u05EA\u05BC\u05B6\u0596\u05D4 \u05E9\u05C2\u05B8\u05DE\u05B5\u0591\u05D7\u05B7 \u05D5\u05B7\u05D9\u05BC\u05B4\u05D9\u05D8\u05B7\u05A7\u05D1 \u05D4\u05B7\u05D3\u05BC\u05B8\u05D1\u05B8\u059B\u05E8 \u05DC\u05B4\u05E4\u05B0\u05E0\u05B5\u05A5\u05D9 \u05D4\u05B8\u05DE\u05B8\u0596\u05DF \u05D5\u05B7\u05D9\u05BC\u05B7\u05A5\u05E2\u05B7\u05E9\u05C2 \u05D4\u05B8\u05E2\u05B5\u05BD\u05E5\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D5\u05B7\u05EA\u05BC\u05B9\u05A3\u05D0\u05DE\u05B6\u05E8 \u05DC\u05D5\u05B9\u05A9 \u05D6\u05B6\u05A8\u05E8\u05B6\u05E9\u05C1 \u05D0\u05B4\u05E9\u05C1\u05B0\u05EA\u05BC\u059C\u05D5\u05B9 \u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D0\u05B9\u05BD\u05D4\u05B2\u05D1\u05B8\u0597\u05D9\u05D5 \u05D9\u05B7\u05BD\u05E2\u05B2\u05E9\u05C2\u05D5\u05BC\u05BE\u05E2\u05B5\u05E5\u05AE \u05D2\u05BC\u05B8\u05D1\u05B9\u05A3\u05D4\u05BC\u05B7 \u05D7\u05B2\u05DE\u05B4\u05E9\u05C1\u05BC\u05B4\u05A3\u05D9\u05DD \u05D0\u05B7\u05DE\u05BC\u05B8\u05D4\u0592 \u05D5\u05BC\u05D1\u05B7\u05D1\u05BC\u05B9\u05A3\u05E7\u05B6\u05E8&thinsp;\u05C0 \u05D0\u05B1\u05DE\u05B9\u05A3\u05E8 \u05DC\u05B7\u05DE\u05BC\u05B6\u0597\u05DC\u05B6\u05DA\u05B0 \u05D5\u05B0\u05D9\u05B4\u05EA\u05B0\u05DC\u05A4\u05D5\u05BC \u05D0\u05B6\u05BD\u05EA\u05BE\u05DE\u05C7\u05E8\u05B0\u05D3\u05BC\u05B3\u05DB\u05B7\u05D9\u0599 \u05E2\u05B8\u05DC\u05B8\u0594\u05D9\u05D5 \u05D5\u05BC\u05D1\u05B9\u05BD\u05D0\u05BE\u05E2\u05B4\u05DD\u05BE\u05D4\u05B7\u05DE\u05BC\u05B6\u05A5\u05DC\u05B6\u05DA\u05B0 \u05D0\u05B6\u05DC\u05BE\u05D4\u05B7\u05DE\u05BC\u05B4\u05E9\u05C1\u05B0\u05EA\u05BC\u05B6\u0596\u05D4 \u05E9\u05C2\u05B8\u05DE\u05B5\u0591\u05D7\u05B7 \u05D5\u05B7\u05D9\u05BC\u05B4\u05D9\u05D8\u05B7\u05A7\u05D1 \u05D4\u05B7\u05D3\u05BC\u05B8\u05D1\u05B8\u059B\u05E8 \u05DC\u05B4\u05E4\u05B0\u05E0\u05B5\u05A5\u05D9 \u05D4\u05B8\u05DE\u05B8\u0596\u05DF \u05D5\u05B7\u05D9\u05BC\u05B7\u05A5\u05E2\u05B7\u05E9\u05C2 \u05D4\u05B8\u05E2\u05B5\u05BD\u05E5\u05C3",
     en: "Then his wife Zeresh and all his friends said to him, \u201CLet a stake be put up, fifty cubits high, and in the morning ask the king to have Mordecai impaled on it. Then you can go gaily with the king to the feast.\u201D The proposal pleased Haman, and he had the stake put up."
   },
   zetham: {
     ref: "1 Chr 23:8",
-    he: '\u05D1\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05DC\u05B7\u05E2\u05B0\u05D3\u05BC\u05B8\u0597\u05DF \u05D4\u05B8\u05E8\u05B9\u05A7\u05D0\u05E9\u05C1 \u05D9\u05B0\u05D7\u05B4\u05D9\u05D0\u05B5\u059B\u05DC \u05D5\u05B0\u05D6\u05B5\u05EA\u05B8\u05A5\u05DD \u05D5\u05B0\u05D9\u05D5\u05B9\u05D0\u05B5\u0596\u05DC \u05E9\u05C1\u05B0\u05DC\u05B9\u05E9\u05C1\u05B8\u05BD\u05D4\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D1\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05DC\u05B7\u05E2\u05B0\u05D3\u05BC\u05B8\u0597\u05DF \u05D4\u05B8\u05E8\u05B9\u05A7\u05D0\u05E9\u05C1 \u05D9\u05B0\u05D7\u05B4\u05D9\u05D0\u05B5\u059B\u05DC \u05D5\u05B0\u05D6\u05B5\u05EA\u05B8\u05A5\u05DD \u05D5\u05B0\u05D9\u05D5\u05B9\u05D0\u05B5\u0596\u05DC \u05E9\u05C1\u05B0\u05DC\u05B9\u05E9\u05C1\u05B8\u05BD\u05D4\u05C3",
     en: "The sons of Ladan: Jehiel the chief, Zetham, and Joel\u20143."
   },
   accad: {
     ref: "Gen 10:10",
     he: "\u05D5\u05B7\u05EA\u05BC\u05B0\u05D4\u05B4\u05A8\u05D9 \u05E8\u05B5\u05D0\u05E9\u05C1\u05B4\u05A4\u05D9\u05EA \u05DE\u05B7\u05DE\u05B0\u05DC\u05B7\u05DB\u05B0\u05EA\u05BC\u05D5\u05B9\u0599 \u05D1\u05BC\u05B8\u05D1\u05B6\u0594\u05DC \u05D5\u05B0\u05D0\u05B6\u0596\u05E8\u05B6\u05DA\u05B0 \u05D5\u05B0\u05D0\u05B7\u05DB\u05BC\u05B7\u05A3\u05D3 \u05D5\u05B0\u05DB\u05B7\u05DC\u05B0\u05E0\u05B5\u0591\u05D4 \u05D1\u05BC\u05B0\u05D0\u05B6\u0596\u05E8\u05B6\u05E5 \u05E9\u05C1\u05B4\u05E0\u05B0\u05E2\u05B8\u05BD\u05E8\u05C3",
-    en: 'The mainstays of his kingdom were Babylon, Erech, Accad, and Calneh<sup class="footnote-marker">c</sup><i class="footnote"><b>and Calneh </b>Heb. <i>we-khalneh</i>, better vocalized <i>we-khullanah</i> \u201Call of them being.\u201D</i> in the land of Shinar.'
+    en: "The mainstays of his kingdom were Babylon, Erech, Accad, and Calnehcand Calneh Heb. we-khalneh, better vocalized we-khullanah \u201Call of them being.\u201D in the land of Shinar."
   },
   shinar: {
     ref: "Gen 10:10",
     he: "\u05D5\u05B7\u05EA\u05BC\u05B0\u05D4\u05B4\u05A8\u05D9 \u05E8\u05B5\u05D0\u05E9\u05C1\u05B4\u05A4\u05D9\u05EA \u05DE\u05B7\u05DE\u05B0\u05DC\u05B7\u05DB\u05B0\u05EA\u05BC\u05D5\u05B9\u0599 \u05D1\u05BC\u05B8\u05D1\u05B6\u0594\u05DC \u05D5\u05B0\u05D0\u05B6\u0596\u05E8\u05B6\u05DA\u05B0 \u05D5\u05B0\u05D0\u05B7\u05DB\u05BC\u05B7\u05A3\u05D3 \u05D5\u05B0\u05DB\u05B7\u05DC\u05B0\u05E0\u05B5\u0591\u05D4 \u05D1\u05BC\u05B0\u05D0\u05B6\u0596\u05E8\u05B6\u05E5 \u05E9\u05C1\u05B4\u05E0\u05B0\u05E2\u05B8\u05BD\u05E8\u05C3",
-    en: 'The mainstays of his kingdom were Babylon, Erech, Accad, and Calneh<sup class="footnote-marker">c</sup><i class="footnote"><b>and Calneh </b>Heb. <i>we-khalneh</i>, better vocalized <i>we-khullanah</i> \u201Call of them being.\u201D</i> in the land of Shinar.'
+    en: "The mainstays of his kingdom were Babylon, Erech, Accad, and Calnehcand Calneh Heb. we-khalneh, better vocalized we-khullanah \u201Call of them being.\u201D in the land of Shinar."
   },
   achmetha: {
     ref: "Ezra 6:2",
-    he: '\u05D5\u05B0\u05D4\u05B4\u05E9\u05C1\u05B0\u05EA\u05BC\u05B0\u05DB\u05B7\u05A3\u05D7 \u05D1\u05BC\u05B0\u05D0\u05B7\u05D7\u05B0\u05DE\u05B0\u05EA\u05B8\u0597\u05D0 \u05D1\u05BC\u05B0\u05D1\u05B4\u05A5\u05D9\u05E8\u05B0\u05EA\u05B8\u059B\u05D0 \u05D3\u05BC\u05B4\u059B\u05D9 \u05D1\u05BC\u05B0\u05DE\u05B8\u05D3\u05B7\u05A5\u05D9 \u05DE\u05B0\u05D3\u05B4\u05D9\u05E0\u05B0\u05EA\u05BC\u05B8\u0596\u05D0 \u05DE\u05B0\u05D2\u05B4\u05DC\u05BC\u05B8\u05A3\u05D4 \u05D7\u05B2\u05D3\u05B8\u0591\u05D4 \u05D5\u05B0\u05DB\u05B5\u05DF\u05BE\u05DB\u05BC\u05B0\u05EA\u05B4\u05A5\u05D9\u05D1 \u05D1\u05BC\u05B0\u05D2\u05B7\u05D5\u05BC\u05B7\u0596\u05D4\u05BC \u05D3\u05BC\u05B4\u05DB\u05B0\u05E8\u05D5\u05B9\u05E0\u05B8\u05BD\u05D4\u05BF\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
+    he: "\u05D5\u05B0\u05D4\u05B4\u05E9\u05C1\u05B0\u05EA\u05BC\u05B0\u05DB\u05B7\u05A3\u05D7 \u05D1\u05BC\u05B0\u05D0\u05B7\u05D7\u05B0\u05DE\u05B0\u05EA\u05B8\u0597\u05D0 \u05D1\u05BC\u05B0\u05D1\u05B4\u05A5\u05D9\u05E8\u05B0\u05EA\u05B8\u059B\u05D0 \u05D3\u05BC\u05B4\u059B\u05D9 \u05D1\u05BC\u05B0\u05DE\u05B8\u05D3\u05B7\u05A5\u05D9 \u05DE\u05B0\u05D3\u05B4\u05D9\u05E0\u05B0\u05EA\u05BC\u05B8\u0596\u05D0 \u05DE\u05B0\u05D2\u05B4\u05DC\u05BC\u05B8\u05A3\u05D4 \u05D7\u05B2\u05D3\u05B8\u0591\u05D4 \u05D5\u05B0\u05DB\u05B5\u05DF\u05BE\u05DB\u05BC\u05B0\u05EA\u05B4\u05A5\u05D9\u05D1 \u05D1\u05BC\u05B0\u05D2\u05B7\u05D5\u05BC\u05B7\u0596\u05D4\u05BC \u05D3\u05BC\u05B4\u05DB\u05B0\u05E8\u05D5\u05B9\u05E0\u05B8\u05BD\u05D4\u05BF\u05C3",
     en: "But it was in the citadel of Ecbatana, in the province of Media, that a scroll was found in which the following was written: \u201CMemorandum:"
   },
   acshaph: {
@@ -25810,8 +29977,8 @@ var name_verses_default = {
   },
   ahava: {
     ref: "Deut 32:34",
-    he: "\u05D4\u05B2\u05DC\u05B9\u05D0\u05BE\u05D4\u0596\u05D5\u05BC\u05D0 \u05DB\u05BC\u05B8\u05DE\u05BB\u05A3\u05E1 \u05E2\u05B4\u05DE\u05BC\u05B8\u05D3\u05B4\u0591\u05D9 \u05D7\u05B8\u05EA\u0596\u05D5\u05BC\u05DD \u05D1\u05BC\u05B0\u05D0\u05D5\u05B9\u05E6\u05B0\u05E8\u05B9\u05EA\u05B8\u05BD\u05D9\u05C3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
-    en: '<span class="poetry indentAll">Lo, I have it all put away,</span><br><span class="poetry indentAllDouble">Sealed up in My storehouses,</span>'
+    he: "\u05D4\u05B2\u05DC\u05B9\u05D0\u05BE\u05D4\u0596\u05D5\u05BC\u05D0 \u05DB\u05BC\u05B8\u05DE\u05BB\u05A3\u05E1 \u05E2\u05B4\u05DE\u05BC\u05B8\u05D3\u05B4\u0591\u05D9 \u05D7\u05B8\u05EA\u0596\u05D5\u05BC\u05DD \u05D1\u05BC\u05B0\u05D0\u05D5\u05B9\u05E6\u05B0\u05E8\u05B9\u05EA\u05B8\u05BD\u05D9\u05C3",
+    en: "Lo, I have it all put away,Sealed up in My storehouses,"
   },
   amad: {
     ref: "Josh 19:26",
@@ -25836,7 +30003,7 @@ var name_verses_default = {
   anem: {
     ref: "2 Sam 22:42",
     he: "\u05D9\u05B4\u05E9\u05C1\u05B0\u05E2\u0596\u05D5\u05BC \u05D5\u05B0\u05D0\u05B5\u05A3\u05D9\u05DF \u05DE\u05B9\u05E9\u05C1\u05B4\u0591\u05D9\u05E2\u05B7 \u05D0\u05B6\u05DC\u05BE\u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0596\u05D4 \u05D5\u05B0\u05DC\u05B9\u05A5\u05D0 \u05E2\u05B8\u05E0\u05B8\u05BD\u05DD\u05C3",
-    en: '<span class="poetry indentAll">They looked,</span><sup class="footnote-marker">s</sup><i class="footnote"><b>looked </b>Cf. Ps. 18.42 \u201Ccried out.\u201D</i> but there was none to deliver;<br><span class="poetry indentAll">To </span> G<small>OD</small>, who did not answer them.'
+    en: "They looked,slooked Cf. Ps. 18.42 \u201Ccried out.\u201D but there was none to deliver;To GOD, who did not answer them."
   },
   aner: {
     ref: "Gen 14:13",
@@ -25845,7 +30012,7 @@ var name_verses_default = {
   },
   aphekah: {
     ref: "Josh 15:53",
-    he: '<span class="mam-kq"><span class="mam-kq-k">(\u05D5\u05D9\u05E0\u05D9\u05DD)</span> <span class="mam-kq-q">[\u05D5\u05B0\u05D9\u05B8\u05E0\u05A5\u05D5\u05BC\u05DD]</span></span> \u05D5\u05BC\u05D1\u05B5\u05D9\u05EA\u05BE\u05EA\u05BC\u05B7\u05E4\u05BC\u0596\u05D5\u05BC\u05D7\u05B7 \u05D5\u05B7\u05D0\u05B2\u05E4\u05B5\u05BD\u05E7\u05B8\u05D4\u05C3',
+    he: "(\u05D5\u05D9\u05E0\u05D9\u05DD) [\u05D5\u05B0\u05D9\u05B8\u05E0\u05A5\u05D5\u05BC\u05DD] \u05D5\u05BC\u05D1\u05B5\u05D9\u05EA\u05BE\u05EA\u05BC\u05B7\u05E4\u05BC\u0596\u05D5\u05BC\u05D7\u05B7 \u05D5\u05B7\u05D0\u05B2\u05E4\u05B5\u05BD\u05E7\u05B8\u05D4\u05C3",
     en: "Janum, Beth-tappuah, Aphekah,"
   },
   ar: {
@@ -25856,7 +30023,7 @@ var name_verses_default = {
   arad: {
     ref: "Num 33:40",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05E9\u05C1\u05B0\u05DE\u05B7\u0597\u05E2 \u05D4\u05B7\u05BD\u05DB\u05BC\u05B0\u05E0\u05B7\u05E2\u05B2\u05E0\u05B4\u05D9\u0599 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05E2\u05B2\u05E8\u05B8\u0594\u05D3 \u05D5\u05B0\u05D4\u05BD\u05D5\u05BC\u05D0\u05BE\u05D9\u05B9\u05E9\u05C1\u05B5\u05A5\u05D1 \u05D1\u05BC\u05B7\u05E0\u05BC\u05B6\u0596\u05D2\u05B6\u05D1 \u05D1\u05BC\u05B0\u05D0\u05B6\u05A3\u05E8\u05B6\u05E5 \u05DB\u05BC\u05B0\u05E0\u05B8\u0591\u05E2\u05B7\u05DF \u05D1\u05BC\u05B0\u05D1\u05B9\u0596\u05D0 \u05D1\u05BC\u05B0\u05E0\u05B5\u05A5\u05D9 \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u05BD\u05DC\u05C3",
-    en: 'And the Canaanite, king of Arad, who dwelt in the Negeb, in the land of Canaan, learned of the coming of the Israelites.<sup class="footnote-marker">d</sup><i class="footnote"><b>learned of the coming of the Israelites </b>See <a class="refLink" data-ref="Numbers 21:1-3" href="Numbers.21.1-3">21.1\u20133</a>.</i>'
+    en: "And the Canaanite, king of Arad, who dwelt in the Negeb, in the land of Canaan, learned of the coming of the Israelites.dlearned of the coming of the Israelites See 21.1\u20133."
   },
   argob: {
     ref: "Deut 3:4",
@@ -25866,12 +30033,12 @@ var name_verses_default = {
   arpad: {
     ref: "2 Ki 18:34",
     he: "\u05D0\u05B7\u05D9\u05BC\u05B5\u05D4\u05A9 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B5\u05A8\u05D9 \u05D7\u05B2\u05DE\u05B8\u059C\u05EA \u05D5\u05B0\u05D0\u05B7\u05E8\u05B0\u05E4\u05BC\u05B8\u0597\u05D3 \u05D0\u05B7\u05D9\u05BC\u05B5\u059B\u05D4 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B5\u05A5\u05D9 \u05E1\u05B0\u05E4\u05B7\u05E8\u05B0\u05D5\u05B7\u0596\u05D9\u05B4\u05DD \u05D4\u05B5\u05E0\u05B7\u05A3\u05E2 \u05D5\u05B0\u05E2\u05B4\u05D5\u05BC\u05B8\u0591\u05D4 \u05DB\u05BC\u05B4\u05D9\u05BE\u05D4\u05B4\u05E6\u05BC\u05B4\u05A5\u05D9\u05DC\u05D5\u05BC \u05D0\u05B6\u05EA\u05BE\u05E9\u05C1\u05B9\u05DE\u05B0\u05E8\u0596\u05D5\u05B9\u05DF \u05DE\u05B4\u05D9\u05BC\u05B8\u05D3\u05B4\u05BD\u05D9\u05C3",
-    en: 'Where were the gods of Hamath and Arpad? Where were the gods of Sepharvaim, Hena, and Ivvah? [And] did they<sup class="footnote-marker">j</sup><i class="footnote"><b>they </b>I.e., the gods of Samaria.</i> save Samaria from me?'
+    en: "Where were the gods of Hamath and Arpad? Where were the gods of Sepharvaim, Hena, and Ivvah? [And] did theyjthey I.e., the gods of Samaria. save Samaria from me?"
   },
   arumah: {
     ref: "Judg 9:41",
-    he: '\u05D5\u05B7\u05D9\u05BC\u05B5\u05A5\u05E9\u05C1\u05B6\u05D1 \u05D0\u05B2\u05D1\u05B4\u05D9\u05DE\u05B6\u0596\u05DC\u05B6\u05DA\u05B0 \u05D1\u05BC\u05B8\u05BD\u05D0\u05E8\u05D5\u05BC\u05DE\u05B8\u0591\u05D4 \u05D5\u05B7\u05D9\u05B0\u05D2\u05B8\u05A7\u05E8\u05B6\u05E9\u05C1 \u05D6\u05B0\u05D1\u05BB\u059B\u05DC \u05D0\u05B6\u05EA\u05BE\u05D2\u05BC\u05B7\u05A5\u05E2\u05B7\u05DC \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05D0\u05B6\u05D7\u05B8\u0596\u05D9\u05D5 \u05DE\u05B4\u05E9\u05C1\u05BC\u05B6\u05A5\u05D1\u05B6\u05EA \u05D1\u05BC\u05B4\u05E9\u05C1\u05B0\u05DB\u05B6\u05BD\u05DD\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
-    en: 'Then Abimelech stayed in Arumah,<sup class="footnote-marker">h</sup><i class="footnote"><b>Arumah </b>Cf. \u201CTormah\u201D in v. 31.</i> while Zebul expelled Gaal and his companions and kept them out of Shechem.'
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B5\u05A5\u05E9\u05C1\u05B6\u05D1 \u05D0\u05B2\u05D1\u05B4\u05D9\u05DE\u05B6\u0596\u05DC\u05B6\u05DA\u05B0 \u05D1\u05BC\u05B8\u05BD\u05D0\u05E8\u05D5\u05BC\u05DE\u05B8\u0591\u05D4 \u05D5\u05B7\u05D9\u05B0\u05D2\u05B8\u05A7\u05E8\u05B6\u05E9\u05C1 \u05D6\u05B0\u05D1\u05BB\u059B\u05DC \u05D0\u05B6\u05EA\u05BE\u05D2\u05BC\u05B7\u05A5\u05E2\u05B7\u05DC \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05D0\u05B6\u05D7\u05B8\u0596\u05D9\u05D5 \u05DE\u05B4\u05E9\u05C1\u05BC\u05B6\u05A5\u05D1\u05B6\u05EA \u05D1\u05BC\u05B4\u05E9\u05C1\u05B0\u05DB\u05B6\u05BD\u05DD\u05C3",
+    en: "Then Abimelech stayed in Arumah,hArumah Cf. \u201CTormah\u201D in v. 31. while Zebul expelled Gaal and his companions and kept them out of Shechem."
   },
   arvad: {
     ref: "Num 26:17",
@@ -25890,8 +30057,8 @@ var name_verses_default = {
   },
   baca: {
     ref: "Ps 84:7",
-    he: "\u05E2\u05B9\u05D1\u05B0\u05E8\u05B5\u05A4\u05D9&thinsp;<b>\u05C0</b> \u05D1\u05BC\u05B0\u05E2\u05B5\u05A3\u05DE\u05B6\u05E7 \u05D4\u05B7\u05AD\u05D1\u05BC\u05B8\u05DB\u05B8\u05D0 \u05DE\u05B7\u05E2\u05B0\u05D9\u05B8\u05A3\u05DF \u05D9\u05B0\u05E9\u05C1\u05B4\u05D9\u05EA\u0591\u05D5\u05BC\u05D4\u05D5\u05BC \u05D2\u05BC\u05B7\u05DD\u05BE\u05D1\u05BC\u05B0\u059D\u05E8\u05B8\u05DB\u0597\u05D5\u05B9\u05EA \u05D9\u05B7\u05E2\u05B0\u05D8\u05B6\u05A5\u05D4 \u05DE\u05D5\u05B9\u05E8\u05B6\u05BD\u05D4\u05C3",
-    en: '<span class="poetry indentAll">They pass through the Valley of Baca,</span><br><span class="poetry indentAllDouble">regarding it as a place of springs,</span><br><span class="poetry indentAllDouble">as if the early rain had covered it with blessing.<sup class="footnote-marker">a</sup><i class="footnote"><b>regarding it \u2026 blessing </b>Meaning of Heb. uncertain.</i> </span>'
+    he: "\u05E2\u05B9\u05D1\u05B0\u05E8\u05B5\u05A4\u05D9&thinsp;\u05C0 \u05D1\u05BC\u05B0\u05E2\u05B5\u05A3\u05DE\u05B6\u05E7 \u05D4\u05B7\u05AD\u05D1\u05BC\u05B8\u05DB\u05B8\u05D0 \u05DE\u05B7\u05E2\u05B0\u05D9\u05B8\u05A3\u05DF \u05D9\u05B0\u05E9\u05C1\u05B4\u05D9\u05EA\u0591\u05D5\u05BC\u05D4\u05D5\u05BC \u05D2\u05BC\u05B7\u05DD\u05BE\u05D1\u05BC\u05B0\u059D\u05E8\u05B8\u05DB\u0597\u05D5\u05B9\u05EA \u05D9\u05B7\u05E2\u05B0\u05D8\u05B6\u05A5\u05D4 \u05DE\u05D5\u05B9\u05E8\u05B6\u05BD\u05D4\u05C3",
+    en: "They pass through the Valley of Baca,regarding it as a place of springs,as if the early rain had covered it with blessing.aregarding it \u2026 blessing Meaning of Heb. uncertain."
   },
   bamoth: {
     ref: "Gen 21:16",
@@ -25920,38 +30087,38 @@ var name_verses_default = {
   },
   chabor: {
     ref: "2 Ki 17:6",
-    he: '\u05D1\u05BC\u05B4\u05E9\u05C1\u05B0\u05E0\u05B7\u05A8\u05EA \u05D4\u05B7\u05EA\u05BC\u05B0\u05E9\u05C1\u05B4\u05E2\u05B4\u059C\u05D9\u05EA \u05DC\u05B0\u05D4\u05D5\u05B9\u05E9\u05C1\u05B5\u0597\u05E2\u05B7 \u05DC\u05B8\u05DB\u05B7\u05A4\u05D3 \u05DE\u05B6\u05BD\u05DC\u05B6\u05DA\u05B0\u05BE\u05D0\u05B7\u05E9\u05C1\u05BC\u05D5\u05BC\u05E8\u0599 \u05D0\u05B6\u05EA\u05BE\u05E9\u05C1\u05B9\u05A3\u05DE\u05B0\u05E8\u0594\u05D5\u05B9\u05DF \u05D5\u05B7\u05D9\u05BC\u05B6\u05A5\u05D2\u05B6\u05DC \u05D0\u05B6\u05EA\u05BE\u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u0596\u05DC \u05D0\u05B7\u05E9\u05C1\u05BC\u0591\u05D5\u05BC\u05E8\u05B8\u05D4 \u05D5\u05B7\u05D9\u05BC\u05B9\u05A8\u05E9\u05C1\u05B6\u05D1 \u05D0\u05D5\u05B9\u05EA\u05B8\u059C\u05DD \u05D1\u05BC\u05B7\u05D7\u05B0\u05DC\u05B7\u05A7\u05D7 \u05D5\u05BC\u05D1\u05B0\u05D7\u05B8\u05D1\u059B\u05D5\u05B9\u05E8 \u05E0\u05B0\u05D4\u05B7\u05A5\u05E8 \u05D2\u05BC\u05D5\u05B9\u05D6\u05B8\u0596\u05DF \u05D5\u05B0\u05E2\u05B8\u05E8\u05B5\u05A5\u05D9 \u05DE\u05B8\u05D3\u05B8\u05BD\u05D9\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
+    he: "\u05D1\u05BC\u05B4\u05E9\u05C1\u05B0\u05E0\u05B7\u05A8\u05EA \u05D4\u05B7\u05EA\u05BC\u05B0\u05E9\u05C1\u05B4\u05E2\u05B4\u059C\u05D9\u05EA \u05DC\u05B0\u05D4\u05D5\u05B9\u05E9\u05C1\u05B5\u0597\u05E2\u05B7 \u05DC\u05B8\u05DB\u05B7\u05A4\u05D3 \u05DE\u05B6\u05BD\u05DC\u05B6\u05DA\u05B0\u05BE\u05D0\u05B7\u05E9\u05C1\u05BC\u05D5\u05BC\u05E8\u0599 \u05D0\u05B6\u05EA\u05BE\u05E9\u05C1\u05B9\u05A3\u05DE\u05B0\u05E8\u0594\u05D5\u05B9\u05DF \u05D5\u05B7\u05D9\u05BC\u05B6\u05A5\u05D2\u05B6\u05DC \u05D0\u05B6\u05EA\u05BE\u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u0596\u05DC \u05D0\u05B7\u05E9\u05C1\u05BC\u0591\u05D5\u05BC\u05E8\u05B8\u05D4 \u05D5\u05B7\u05D9\u05BC\u05B9\u05A8\u05E9\u05C1\u05B6\u05D1 \u05D0\u05D5\u05B9\u05EA\u05B8\u059C\u05DD \u05D1\u05BC\u05B7\u05D7\u05B0\u05DC\u05B7\u05A7\u05D7 \u05D5\u05BC\u05D1\u05B0\u05D7\u05B8\u05D1\u059B\u05D5\u05B9\u05E8 \u05E0\u05B0\u05D4\u05B7\u05A5\u05E8 \u05D2\u05BC\u05D5\u05B9\u05D6\u05B8\u0596\u05DF \u05D5\u05B0\u05E2\u05B8\u05E8\u05B5\u05A5\u05D9 \u05DE\u05B8\u05D3\u05B8\u05BD\u05D9\u05C3",
     en: "In the ninth year of Hoshea, the king of Assyria captured Samaria. He deported the Israelites to Assyria and settled them in Halah, at the [River] Habor, at the River Gozan, and in the towns of Media."
   },
   chadashah: {
     ref: "Lev 23:16",
     he: "\u05E2\u05B7\u05A3\u05D3 \u05DE\u05B4\u05BD\u05DE\u05BC\u05C7\u05D7\u05B3\u05E8\u05B7\u05A4\u05EA \u05D4\u05B7\u05E9\u05C1\u05BC\u05B7\u05D1\u05BC\u05B8\u05EA\u0599 \u05D4\u05B7\u05E9\u05C1\u05BC\u05B0\u05D1\u05B4\u05D9\u05E2\u05B4\u0594\u05EA \u05EA\u05BC\u05B4\u05E1\u05B0\u05E4\u05BC\u05B0\u05E8\u0596\u05D5\u05BC \u05D7\u05B2\u05DE\u05B4\u05E9\u05C1\u05BC\u05B4\u05A3\u05D9\u05DD \u05D9\u0591\u05D5\u05B9\u05DD \u05D5\u05B0\u05D4\u05B4\u05E7\u05B0\u05E8\u05B7\u05D1\u05B0\u05EA\u05BC\u05B6\u059B\u05DD \u05DE\u05B4\u05E0\u05B0\u05D7\u05B8\u05A5\u05D4 \u05D7\u05B2\u05D3\u05B8\u05E9\u05C1\u05B8\u0596\u05D4 \u05DC\u05B7\u05D9\u05D4\u05B9\u05D5\u05B8\u05BD\u05D4\u05C3",
-    en: "you must count until the day after the seventh week\u2014fifty days; then you shall bring an offering of new grain to G<small>OD</small>."
+    en: "you must count until the day after the seventh week\u2014fifty days; then you shall bring an offering of new grain to GOD."
   },
   chadrak: {
     ref: "Zech 9:1",
     he: "\u05DE\u05B7\u05E9\u05C2\u05BC\u05B8\u05A4\u05D0 \u05D3\u05B0\u05D1\u05B7\u05E8\u05BE\u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05D4\u0599 \u05D1\u05BC\u05B0\u05D0\u05B6\u05A3\u05E8\u05B6\u05E5 \u05D7\u05B7\u05D3\u05B0\u05E8\u05B8\u0594\u05DA\u05B0 \u05D5\u05B0\u05D3\u05B7\u05DE\u05BC\u05B6\u0596\u05E9\u05C2\u05B6\u05E7 \u05DE\u05B0\u05E0\u05BB\u05D7\u05B8\u05EA\u0591\u05D5\u05B9 \u05DB\u05BC\u05B4\u05A4\u05D9 \u05DC\u05B7\u05BD\u05D9\u05D4\u05B9\u05D5\u05B8\u05D4\u0599 \u05E2\u05B5\u05A3\u05D9\u05DF \u05D0\u05B8\u05D3\u05B8\u0594\u05DD \u05D5\u05B0\u05DB\u05B9\u0596\u05DC \u05E9\u05C1\u05B4\u05D1\u05B0\u05D8\u05B5\u05A5\u05D9 \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u05BD\u05DC\u05C3",
-    en: 'A pronouncement: The word of G<small>OD</small>.<br><span class="poetry indentAll">[God] will reside in the land of Hadrach and Damascus;</span><br><span class="poetry indentAll">For mortals will turn their eyes to </span> G<small>OD</small>\u2014<br><span class="poetry indentAll">Like all the tribes of Israel\u2014</span>'
+    en: "A pronouncement: The word of GOD.[God] will reside in the land of Hadrach and Damascus;For mortals will turn their eyes to GOD\u2014Like all the tribes of Israel\u2014"
   },
   chanes: {
     ref: "Isa 30:4",
     he: "\u05DB\u05BC\u05B4\u05BD\u05D9\u05BE\u05D4\u05B8\u05D9\u05A5\u05D5\u05BC \u05D1\u05B0\u05E6\u05B9\u0596\u05E2\u05B7\u05DF \u05E9\u05C2\u05B8\u05E8\u05B8\u0591\u05D9\u05D5 \u05D5\u05BC\u05DE\u05B7\u05DC\u05B0\u05D0\u05B8\u05DB\u05B8\u0596\u05D9\u05D5 \u05D7\u05B8\u05E0\u05B5\u05A5\u05E1 \u05D9\u05B7\u05D2\u05BC\u05B4\u05BD\u05D9\u05E2\u05D5\u05BC\u05C3",
-    en: '<span class="poetry indentAll">Though his officers are present in Zoan,</span><sup class="footnote-marker">a</sup><i class="footnote"><b>Zoan </b>Or \u201CTanis.\u201D</i> <br><span class="poetry indentAll">And his messengers</span><sup class="footnote-marker">b</sup><i class="footnote"><b>messengers </b>Emendation yields \u201Ckings\u201D; cf. 19.2 with note.</i> reach as far as Hanes,'
+    en: "Though his officers are present in Zoan,aZoan Or \u201CTanis.\u201D And his messengersbmessengers Emendation yields \u201Ckings\u201D; cf. 19.2 with note. reach as far as Hanes,"
   },
   channathon: {
     ref: "Josh 19:14",
     he: "\u05D5\u05B0\u05E0\u05B8\u05E1\u05B7\u05A4\u05D1 \u05D0\u05B9\u05EA\u05D5\u05B9\u0599 \u05D4\u05B7\u05D2\u05BC\u05B0\u05D1\u0594\u05D5\u05BC\u05DC \u05DE\u05B4\u05E6\u05BC\u05B0\u05E4\u0596\u05D5\u05B9\u05DF \u05D7\u05B7\u05E0\u05BC\u05B8\u05EA\u05B9\u0591\u05DF \u05D5\u05B0\u05D4\u05B8\u05D9\u05D5\u05BC\u0599 \u05EA\u05BC\u05B9\u05E6\u05B0\u05D0\u05B9\u05EA\u05B8\u0594\u05D9\u05D5 \u05D2\u05BC\u05B5\u0596\u05D9 \u05D9\u05B4\u05E4\u05B0\u05EA\u05BC\u05B7\u05D7\u05BE\u05D0\u05B5\u05BD\u05DC\u05C3",
-    en: 'Then it turned\u2014that is, the boundary on the north\u2014to Hannathon. Its extreme limits<sup class="footnote-marker">d</sup><i class="footnote"><b>extreme limits </b>I.e., the northwest corner, opposite the starting point, Sarid.</i> were the Valley of Iphtah-el,'
+    en: "Then it turned\u2014that is, the boundary on the north\u2014to Hannathon. Its extreme limitsdextreme limits I.e., the northwest corner, opposite the starting point, Sarid. were the Valley of Iphtah-el,"
   },
   charan: {
     ref: "Gen 12:4",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B5\u05A3\u05DC\u05B6\u05DA\u05B0 \u05D0\u05B7\u05D1\u05B0\u05E8\u05B8\u0597\u05DD \u05DB\u05BC\u05B7\u05D0\u05B2\u05E9\u05C1\u05B6\u05A8\u05E8 \u05D3\u05BC\u05B4\u05D1\u05BC\u05B6\u05A4\u05E8 \u05D0\u05B5\u05DC\u05B8\u05D9\u05D5\u0599 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0594\u05D4 \u05D5\u05B7\u05D9\u05BC\u05B5\u05A5\u05DC\u05B6\u05DA\u05B0 \u05D0\u05B4\u05EA\u05BC\u0596\u05D5\u05B9 \u05DC\u0591\u05D5\u05B9\u05D8 \u05D5\u05B0\u05D0\u05B7\u05D1\u05B0\u05E8\u05B8\u0597\u05DD \u05D1\u05BC\u05B6\u05DF\u05BE\u05D7\u05B8\u05DE\u05B5\u05A4\u05E9\u05C1 \u05E9\u05C1\u05B8\u05E0\u05B4\u05D9\u05DD\u0599 \u05D5\u05B0\u05E9\u05C1\u05B4\u05D1\u05B0\u05E2\u05B4\u05A3\u05D9\u05DD \u05E9\u05C1\u05B8\u05E0\u05B8\u0594\u05D4 \u05D1\u05BC\u05B0\u05E6\u05B5\u05D0\u05EA\u0596\u05D5\u05B9 \u05DE\u05B5\u05D7\u05B8\u05E8\u05B8\u05BD\u05DF\u05C3",
-    en: "Abram went forth as G<small>OD</small> had commanded him, and Lot went with him. Abram was seventy-five years old when he left Haran."
+    en: "Abram went forth as GOD had commanded him, and Lot went with him. Abram was seventy-five years old when he left Haran."
   },
   chormah: {
     ref: "Josh 12:14",
-    he: "\u05DE\u05B6\u05A4\u05DC\u05B6\u05DA\u05B0 \u05D7\u05C7\u05E8\u05B0\u05DE\u05B8\u05D4\u0599 \u05D0\u05B6\u05D7\u05B8\u0594\u05D3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\u05DE\u05B6\u05A5\u05DC\u05B6\u05DA\u05B0 \u05E2\u05B2\u05E8\u05B8\u0596\u05D3 \u05D0\u05B6\u05D7\u05B8\u05BD\u05D3\u05C3",
-    en: '<span class="poetry indentAll">the king of Hormah 1<br>the king of Arad 1</span>'
+    he: "\u05DE\u05B6\u05A4\u05DC\u05B6\u05DA\u05B0 \u05D7\u05C7\u05E8\u05B0\u05DE\u05B8\u05D4\u0599 \u05D0\u05B6\u05D7\u05B8\u0594\u05D3 \u05DE\u05B6\u05A5\u05DC\u05B6\u05DA\u05B0 \u05E2\u05B2\u05E8\u05B8\u0596\u05D3 \u05D0\u05B6\u05D7\u05B8\u05BD\u05D3\u05C3",
+    en: "the king of Hormah 1the king of Arad 1"
   },
   cozeba: {
     ref: "1 Chr 4:22",
@@ -25966,7 +30133,7 @@ var name_verses_default = {
   cuth: {
     ref: "Gen 8:21",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B8\u05A3\u05E8\u05B7\u05D7 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u05D4\u05AE \u05D0\u05B6\u05EA\u05BE\u05E8\u05B5\u05A3\u05D9\u05D7\u05B7 \u05D4\u05B7\u05E0\u05BC\u05B4\u05D9\u05D7\u05B9\u0592\u05D7\u05B7\u0592 \u05D5\u05B7\u05D9\u05BC\u05B9\u05A8\u05D0\u05DE\u05B6\u05E8 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u059C\u05D4 \u05D0\u05B6\u05DC\u05BE\u05DC\u05B4\u05D1\u05BC\u0597\u05D5\u05B9 \u05DC\u05B9\u05BD\u05D0\u05BE\u05D0\u05B9\u05A0\u05E1\u05B4\u05A0\u05E3 \u05DC\u05B0\u05E7\u05B7\u05DC\u05BC\u05B5\u05A8\u05DC \u05E2\u05A4\u05D5\u05B9\u05D3 \u05D0\u05B6\u05EA\u05BE\u05D4\u05B8\u05BD\u05D0\u05B2\u05D3\u05B8\u05DE\u05B8\u05D4\u0599 \u05D1\u05BC\u05B7\u05E2\u05B2\u05D1\u05A3\u05D5\u05BC\u05E8 \u05D4\u05B8\u05BD\u05D0\u05B8\u05D3\u05B8\u0594\u05DD \u05DB\u05BC\u05B4\u05A0\u05D9 \u05D9\u05B5\u05A3\u05E6\u05B6\u05E8 \u05DC\u05B5\u05A7\u05D1 \u05D4\u05B8\u05D0\u05B8\u05D3\u05B8\u059B\u05DD \u05E8\u05B7\u0596\u05E2 \u05DE\u05B4\u05E0\u05BC\u05B0\u05E2\u05BB\u05E8\u05B8\u0591\u05D9\u05D5 \u05D5\u05B0\u05DC\u05B9\u05BD\u05D0\u05BE\u05D0\u05B9\u05E1\u05B4\u05A5\u05E3 \u05E2\u059B\u05D5\u05B9\u05D3 \u05DC\u05B0\u05D4\u05B7\u05DB\u05BC\u05A5\u05D5\u05B9\u05EA \u05D0\u05B6\u05EA\u05BE\u05DB\u05BC\u05C7\u05DC\u05BE\u05D7\u05B7\u0596\u05D9 \u05DB\u05BC\u05B7\u05BD\u05D0\u05B2\u05E9\u05C1\u05B6\u05A5\u05E8 \u05E2\u05B8\u05E9\u05C2\u05B4\u05BD\u05D9\u05EA\u05B4\u05D9\u05C3",
-    en: "G<small>OD</small> smelled the pleasing odor, and G<small>OD</small> resolved: \u201CNever again will I doom the earth because of humankind, since the devisings of the human mind are evil from youth; nor will I ever again destroy every living being, as I have done."
+    en: "GOD smelled the pleasing odor, and GOD resolved: \u201CNever again will I doom the earth because of humankind, since the devisings of the human mind are evil from youth; nor will I ever again destroy every living being, as I have done."
   },
   daberath: {
     ref: "Gen 18:5",
@@ -25991,7 +30158,7 @@ var name_verses_default = {
   ebron: {
     ref: "Josh 19:28",
     he: "\u05D5\u05B0\u05E2\u05B6\u05D1\u05B0\u05E8\u05B9\u05A5\u05DF \u05D5\u05BC\u05E8\u05B0\u05D7\u05B9\u0596\u05D1 \u05D5\u05B0\u05D7\u05B7\u05DE\u05BC\u05A3\u05D5\u05B9\u05DF \u05D5\u05B0\u05E7\u05B8\u05E0\u05B8\u0591\u05D4 \u05E2\u05B7\u0596\u05D3 \u05E6\u05B4\u05D9\u05D3\u05A5\u05D5\u05B9\u05DF \u05E8\u05B7\u05D1\u05BC\u05B8\u05BD\u05D4\u05C3",
-    en: 'Ebron,<sup class="footnote-marker">h</sup><i class="footnote"><b>Ebron </b>Some Heb. mss., as well as Josh. 21.30 and 1 Chron. 6.59, read \u201CAbdon.\u201D</i> Rehob, Hammon, and Kanah, up to Great Sidon.'
+    en: "Ebron,hEbron Some Heb. mss., as well as Josh. 21.30 and 1 Chron. 6.59, read \u201CAbdon.\u201D Rehob, Hammon, and Kanah, up to Great Sidon."
   },
   eshan: {
     ref: "Josh 15:52",
@@ -26010,18 +30177,18 @@ var name_verses_default = {
   },
   geba: {
     ref: "Josh 18:24",
-    he: '\u05D5\u05BC\u05DB\u05B0\u05E4\u05B7\u05A7\u05E8 <span class="mam-kq"><span class="mam-kq-k">(\u05D4\u05E2\u05DE\u05E0\u05D9)</span> <span class="mam-kq-q">[\u05D4\u05B8\u05E2\u05B7\u05DE\u05BC\u05B9\u05E0\u05B8\u059B\u05D4]</span></span> \u05D5\u05B0\u05D4\u05B8\u05E2\u05C7\u05E4\u05B0\u05E0\u05B4\u0596\u05D9 \u05D5\u05B8\u05D2\u05B8\u0591\u05D1\u05B7\u05E2 \u05E2\u05B8\u05E8\u05B4\u05A5\u05D9\u05DD \u05E9\u05C1\u05B0\u05EA\u05BC\u05B5\u05D9\u05DD\u05BE\u05E2\u05B6\u05E9\u05C2\u05B0\u05E8\u05B5\u0596\u05D4 \u05D5\u05B0\u05D7\u05B7\u05E6\u05B0\u05E8\u05B5\u05D9\u05D4\u05B6\u05BD\u05DF\u05C3',
+    he: "\u05D5\u05BC\u05DB\u05B0\u05E4\u05B7\u05A7\u05E8 (\u05D4\u05E2\u05DE\u05E0\u05D9) [\u05D4\u05B8\u05E2\u05B7\u05DE\u05BC\u05B9\u05E0\u05B8\u059B\u05D4] \u05D5\u05B0\u05D4\u05B8\u05E2\u05C7\u05E4\u05B0\u05E0\u05B4\u0596\u05D9 \u05D5\u05B8\u05D2\u05B8\u0591\u05D1\u05B7\u05E2 \u05E2\u05B8\u05E8\u05B4\u05A5\u05D9\u05DD \u05E9\u05C1\u05B0\u05EA\u05BC\u05B5\u05D9\u05DD\u05BE\u05E2\u05B6\u05E9\u05C2\u05B0\u05E8\u05B5\u0596\u05D4 \u05D5\u05B0\u05D7\u05B7\u05E6\u05B0\u05E8\u05B5\u05D9\u05D4\u05B6\u05BD\u05DF\u05C3",
     en: "Chephar-ammonah, Ophni, and Geba\u201412 towns, with their villages."
   },
   gederoth: {
     ref: "Josh 15:41",
-    he: '\u05D5\u05BC\u05D2\u05B0\u05D3\u05B5\u05E8\u0595\u05D5\u05B9\u05EA \u05D1\u05BC\u05B5\u05D9\u05EA\u05BE\u05D3\u05BC\u05B8\u05D2\u05A5\u05D5\u05B9\u05DF \u05D5\u05B0\u05E0\u05B7\u05E2\u05B2\u05DE\u05B8\u0596\u05D4 \u05D5\u05BC\u05DE\u05B7\u05E7\u05BC\u05B5\u05D3\u05B8\u0591\u05D4 \u05E2\u05B8\u05E8\u05B4\u05A5\u05D9\u05DD \u05E9\u05C1\u05B5\u05E9\u05C1\u05BE\u05E2\u05B6\u05E9\u05C2\u05B0\u05E8\u05B5\u0596\u05D4 \u05D5\u05B0\u05D7\u05B7\u05E6\u05B0\u05E8\u05B5\u05D9\u05D4\u05B6\u05BD\u05DF\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D5\u05BC\u05D2\u05B0\u05D3\u05B5\u05E8\u0595\u05D5\u05B9\u05EA \u05D1\u05BC\u05B5\u05D9\u05EA\u05BE\u05D3\u05BC\u05B8\u05D2\u05A5\u05D5\u05B9\u05DF \u05D5\u05B0\u05E0\u05B7\u05E2\u05B2\u05DE\u05B8\u0596\u05D4 \u05D5\u05BC\u05DE\u05B7\u05E7\u05BC\u05B5\u05D3\u05B8\u0591\u05D4 \u05E2\u05B8\u05E8\u05B4\u05A5\u05D9\u05DD \u05E9\u05C1\u05B5\u05E9\u05C1\u05BE\u05E2\u05B6\u05E9\u05C2\u05B0\u05E8\u05B5\u0596\u05D4 \u05D5\u05B0\u05D7\u05B7\u05E6\u05B0\u05E8\u05B5\u05D9\u05D4\u05B6\u05BD\u05DF\u05C3",
     en: "Gederoth, Beth-dagon, Naamah, and Makkedah: 16 towns, with their villages."
   },
   gibath: {
     ref: "Gen 49:26",
-    he: '\u05D1\u05BC\u05B4\u05E8\u05B0\u05DB\u05B9\u05A3\u05EA \u05D0\u05B8\u05D1\u05B4\u0597\u05D9\u05DA\u05B8 \u05D2\u05BC\u05B8\u05BD\u05D1\u05B0\u05E8\u05D5\u05BC\u0599 \u05E2\u05B7\u05DC\u05BE\u05D1\u05BC\u05B4\u05E8\u05B0\u05DB\u05B9\u05A3\u05EA \u05D4\u05D5\u05B9\u05E8\u05B7\u0594\u05D9 \u05E2\u05B7\u05BD\u05D3\u05BE\u05EA\u05BC\u05B7\u05D0\u05B2\u05D5\u05B7\u0596\u05EA \u05D2\u05BC\u05B4\u05D1\u05B0\u05E2\u05B9\u05A3\u05EA \u05E2\u05D5\u05B9\u05DC\u05B8\u0591\u05DD \u05EA\u05BC\u05B4\u05BD\u05D4\u05B0\u05D9\u05B6\u0599\u05D9\u05DF\u05B8\u0599 \u05DC\u05B0\u05E8\u05B9\u05A3\u05D0\u05E9\u05C1 \u05D9\u05D5\u05B9\u05E1\u05B5\u0594\u05E3 \u05D5\u05BC\u05DC\u05B0\u05E7\u05C7\u05D3\u05B0\u05E7\u05B9\u0596\u05D3 \u05E0\u05B0\u05D6\u05B4\u05A5\u05D9\u05E8 \u05D0\u05B6\u05D7\u05B8\u05BD\u05D9\u05D5\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
-    en: '<span class="poetry indentAll">The blessings of your father</span><br><span class="poetry indentAll">Surpass the blessings of my ancestors,</span><br><span class="poetry indentAll">To the utmost bounds of the eternal hills.<sup class="footnote-marker">i</sup><i class="footnote"><b>The blessings of your father \u2026 hills </b>Meaning of Heb. uncertain.</i> </span><br><span class="poetry indentAll">May they rest on the head of Joseph,</span><br><span class="poetry indentAll">On the brow of the elect of his brothers.</span>'
+    he: "\u05D1\u05BC\u05B4\u05E8\u05B0\u05DB\u05B9\u05A3\u05EA \u05D0\u05B8\u05D1\u05B4\u0597\u05D9\u05DA\u05B8 \u05D2\u05BC\u05B8\u05BD\u05D1\u05B0\u05E8\u05D5\u05BC\u0599 \u05E2\u05B7\u05DC\u05BE\u05D1\u05BC\u05B4\u05E8\u05B0\u05DB\u05B9\u05A3\u05EA \u05D4\u05D5\u05B9\u05E8\u05B7\u0594\u05D9 \u05E2\u05B7\u05BD\u05D3\u05BE\u05EA\u05BC\u05B7\u05D0\u05B2\u05D5\u05B7\u0596\u05EA \u05D2\u05BC\u05B4\u05D1\u05B0\u05E2\u05B9\u05A3\u05EA \u05E2\u05D5\u05B9\u05DC\u05B8\u0591\u05DD \u05EA\u05BC\u05B4\u05BD\u05D4\u05B0\u05D9\u05B6\u0599\u05D9\u05DF\u05B8\u0599 \u05DC\u05B0\u05E8\u05B9\u05A3\u05D0\u05E9\u05C1 \u05D9\u05D5\u05B9\u05E1\u05B5\u0594\u05E3 \u05D5\u05BC\u05DC\u05B0\u05E7\u05C7\u05D3\u05B0\u05E7\u05B9\u0596\u05D3 \u05E0\u05B0\u05D6\u05B4\u05A5\u05D9\u05E8 \u05D0\u05B6\u05D7\u05B8\u05BD\u05D9\u05D5\u05C3",
+    en: "The blessings of your fatherSurpass the blessings of my ancestors,To the utmost bounds of the eternal hills.iThe blessings of your father \u2026 hills Meaning of Heb. uncertain. May they rest on the head of Joseph,On the brow of the elect of his brothers."
   },
   goshen: {
     ref: "Gen 46:28",
@@ -26031,7 +30198,7 @@ var name_verses_default = {
   gudgodah: {
     ref: "Deut 10:7",
     he: "\u05DE\u05B4\u05E9\u05C1\u05BC\u05B8\u05A5\u05DD \u05E0\u05B8\u05E1\u05B0\u05E2\u0596\u05D5\u05BC \u05D4\u05B7\u05D2\u05BC\u05BB\u05D3\u05B0\u05D2\u05BC\u05B9\u0591\u05D3\u05B8\u05D4 \u05D5\u05BC\u05DE\u05B4\u05DF\u05BE\u05D4\u05B7\u05D2\u05BC\u05BB\u05D3\u05B0\u05D2\u05BC\u05B9\u05A3\u05D3\u05B8\u05D4 \u05D9\u05C7\u05D8\u05B0\u05D1\u05B8\u0594\u05EA\u05B8\u05D4 \u05D0\u05B6\u0596\u05E8\u05B6\u05E5 \u05E0\u05B7\u05A5\u05D7\u05B2\u05DC\u05B5\u05D9 \u05DE\u05B8\u05BD\u05D9\u05B4\u05DD\u05C3",
-    en: 'From there they marched to Gudgod,<sup class="footnote-marker">b</sup><i class="footnote"><b>Gudgod </b>\u201CHor-haggidgad\u201D in <a class="refLink" data-ref="Numbers 33:32-33" href="Numbers.33.32-33">Num. 33.32\u201333</a>.</i> and from Gudgod to Jotbath, a region of running brooks.'
+    en: "From there they marched to Gudgod,bGudgod \u201CHor-haggidgad\u201D in Num. 33.32\u201333. and from Gudgod to Jotbath, a region of running brooks."
   },
   ham: {
     ref: "Gen 1:28",
@@ -26040,18 +30207,18 @@ var name_verses_default = {
   },
   hara: {
     ref: "1 Chr 5:26",
-    he: '\u05D5\u05B7\u05D9\u05BC\u05B8\u05A9\u05E2\u05B7\u05E8\u05A9 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B5\u05A8\u05D9 \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u059C\u05DC \u05D0\u05B6\u05EA\u05BE\u05E8\u05A3\u05D5\u05BC\u05D7\u05B7&thinsp;<b>\u05C0</b> \u05E4\u05BC\u05A3\u05D5\u05BC\u05DC \u05DE\u05B6\u05DC\u05B6\u05DA\u05B0\u05BE\u05D0\u05B7\u05E9\u05C1\u05BC\u0597\u05D5\u05BC\u05E8 \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05E8\u0599\u05D5\u05BC\u05D7\u05B7\u0599 \u05EA\u05BC\u05B4\u05DC\u05BC\u05B0\u05D2\u05B7\u05A4\u05EA \u05E4\u05BC\u05B4\u05DC\u05B0\u05E0\u05B6\u0599\u05E1\u05B6\u05E8\u0599 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05D0\u05B7\u05E9\u05C1\u05BC\u0594\u05D5\u05BC\u05E8 \u05D5\u05B7\u05D9\u05BC\u05B7\u05D2\u05B0\u05DC\u05B5\u05DD\u0599 \u05DC\u05B8\u05E8\u05D0\u05D5\u05BC\u05D1\u05B5\u05E0\u05B4\u05A3\u05D9 \u05D5\u05B0\u05DC\u05B7\u05D2\u05BC\u05B8\u05D3\u05B4\u0594\u05D9 \u05D5\u05B0\u05DC\u05B7\u05D7\u05B2\u05E6\u05B4\u0596\u05D9 \u05E9\u05C1\u05B5\u05A3\u05D1\u05B6\u05D8 \u05DE\u05B0\u05E0\u05B7\u05E9\u05C1\u05BC\u05B6\u0591\u05D4 \u05D5\u05B7\u05A0\u05D9\u05B0\u05D1\u05B4\u05D9\u05D0\u05B5\u05A0\u05DD \u05DC\u05B7\u05D7\u05B0\u05DC\u05B7\u05A8\u05D7 \u05D5\u05B0\u05D7\u05B8\u05D1\u05A4\u05D5\u05B9\u05E8 \u05D5\u05B0\u05D4\u05B8\u05E8\u05B8\u05D0\u0599 \u05D5\u05BC\u05E0\u05B0\u05D4\u05B7\u05A3\u05E8 \u05D2\u05BC\u05D5\u05B9\u05D6\u05B8\u0594\u05DF \u05E2\u05B7\u0596\u05D3 \u05D4\u05B7\u05D9\u05BC\u05A5\u05D5\u05B9\u05DD \u05D4\u05B7\u05D6\u05BC\u05B6\u05BD\u05D4\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B8\u05A9\u05E2\u05B7\u05E8\u05A9 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B5\u05A8\u05D9 \u05D9\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u059C\u05DC \u05D0\u05B6\u05EA\u05BE\u05E8\u05A3\u05D5\u05BC\u05D7\u05B7&thinsp;\u05C0 \u05E4\u05BC\u05A3\u05D5\u05BC\u05DC \u05DE\u05B6\u05DC\u05B6\u05DA\u05B0\u05BE\u05D0\u05B7\u05E9\u05C1\u05BC\u0597\u05D5\u05BC\u05E8 \u05D5\u05B0\u05D0\u05B6\u05EA\u05BE\u05E8\u0599\u05D5\u05BC\u05D7\u05B7\u0599 \u05EA\u05BC\u05B4\u05DC\u05BC\u05B0\u05D2\u05B7\u05A4\u05EA \u05E4\u05BC\u05B4\u05DC\u05B0\u05E0\u05B6\u0599\u05E1\u05B6\u05E8\u0599 \u05DE\u05B6\u05A3\u05DC\u05B6\u05DA\u05B0 \u05D0\u05B7\u05E9\u05C1\u05BC\u0594\u05D5\u05BC\u05E8 \u05D5\u05B7\u05D9\u05BC\u05B7\u05D2\u05B0\u05DC\u05B5\u05DD\u0599 \u05DC\u05B8\u05E8\u05D0\u05D5\u05BC\u05D1\u05B5\u05E0\u05B4\u05A3\u05D9 \u05D5\u05B0\u05DC\u05B7\u05D2\u05BC\u05B8\u05D3\u05B4\u0594\u05D9 \u05D5\u05B0\u05DC\u05B7\u05D7\u05B2\u05E6\u05B4\u0596\u05D9 \u05E9\u05C1\u05B5\u05A3\u05D1\u05B6\u05D8 \u05DE\u05B0\u05E0\u05B7\u05E9\u05C1\u05BC\u05B6\u0591\u05D4 \u05D5\u05B7\u05A0\u05D9\u05B0\u05D1\u05B4\u05D9\u05D0\u05B5\u05A0\u05DD \u05DC\u05B7\u05D7\u05B0\u05DC\u05B7\u05A8\u05D7 \u05D5\u05B0\u05D7\u05B8\u05D1\u05A4\u05D5\u05B9\u05E8 \u05D5\u05B0\u05D4\u05B8\u05E8\u05B8\u05D0\u0599 \u05D5\u05BC\u05E0\u05B0\u05D4\u05B7\u05A3\u05E8 \u05D2\u05BC\u05D5\u05B9\u05D6\u05B8\u0594\u05DF \u05E2\u05B7\u0596\u05D3 \u05D4\u05B7\u05D9\u05BC\u05A5\u05D5\u05B9\u05DD \u05D4\u05B7\u05D6\u05BC\u05B6\u05BD\u05D4\u05C3",
     en: "So the God of Israel roused the spirit of King Pul of Assyria\u2014the spirit of King Tillegath-pilneser of Assyria\u2014and he carried them away, namely, the Reubenites, the Gadites, and the half-tribe of Manasseh, and brought them to Halah, Habor, Hara, and the river Gozan, to this day."
   },
   hodu: {
     ref: "Ps 107:1",
     he: "\u05D4\u05B9\u05D3\u05A3\u05D5\u05BC \u05DC\u05B7\u05D9\u05D4\u05B9\u05D5\u05B8\u05A3\u05D4 \u05DB\u05BC\u05B4\u05D9\u05BE\u05D8\u0591\u05D5\u05B9\u05D1 \u05DB\u05BC\u05B4\u0596\u05D9 \u05DC\u05B0\u05E2\u05D5\u05B9\u05DC\u05B8\u05A3\u05DD \u05D7\u05B7\u05E1\u05B0\u05D3\u05BC\u05BD\u05D5\u05B9\u05C3",
-    en: '<span class="poetry indentAll">\u201CPraise G<small>OD</small>, who is good\u2014</span><br><span class="poetry indentAllDouble">whose steadfast love is eternal!\u201D</span>'
+    en: "\u201CPraise GOD, who is good\u2014whose steadfast love is eternal!\u201D"
   },
   karkor: {
     ref: "Num 24:17",
     he: "\u05D0\u05B6\u05E8\u05B0\u05D0\u05B6\u0599\u05E0\u05BC\u05D5\u05BC\u0599 \u05D5\u05B0\u05DC\u05B9\u05A3\u05D0 \u05E2\u05B7\u05EA\u05BC\u05B8\u0594\u05D4 \u05D0\u05B2\u05E9\u05C1\u05D5\u05BC\u05E8\u05B6\u0596\u05E0\u05BC\u05D5\u05BC \u05D5\u05B0\u05DC\u05B9\u05A3\u05D0 \u05E7\u05B8\u05E8\u0591\u05D5\u05B9\u05D1 \u05D3\u05BC\u05B8\u05E8\u05B7\u05A8\u05DA\u05B0 \u05DB\u05BC\u05D5\u05B9\u05DB\u05B8\u059C\u05D1 \u05DE\u05B4\u05BD\u05D9\u05BC\u05B7\u05E2\u05B2\u05E7\u05B9\u0597\u05D1 \u05D5\u05B0\u05E7\u05B8\u05A5\u05DD \u05E9\u05C1\u05B5\u0599\u05D1\u05B6\u05D8\u0599 \u05DE\u05B4\u05D9\u05BC\u05B4\u05E9\u05C2\u05B0\u05E8\u05B8\u05D0\u05B5\u0594\u05DC \u05D5\u05BC\u05DE\u05B8\u05D7\u05B7\u05E5\u0599 \u05E4\u05BC\u05B7\u05D0\u05B2\u05EA\u05B5\u05A3\u05D9 \u05DE\u05D5\u05B9\u05D0\u05B8\u0594\u05D1 \u05D5\u05B0\u05E7\u05B7\u05E8\u05B0\u05E7\u05B7\u0596\u05E8 \u05DB\u05BC\u05C7\u05DC\u05BE\u05D1\u05BC\u05B0\u05E0\u05B5\u05D9\u05BE\u05E9\u05C1\u05B5\u05BD\u05EA\u05C3",
-    en: '<span class="poetry indentAll">What I see for them is not yet,</span><br><span class="poetry indentAll">What I behold will not be soon:</span><br><span class="poetry indentAll">A star rises from Jacob,</span><br><span class="poetry indentAll">A scepter comes forth from Israel;</span><br><span class="poetry indentAll">It smashes the brow of Moab,</span><br><span class="poetry indentAll">The foundation of<sup class="footnote-marker">h</sup><i class="footnote"><b>The foundation of </b>Samaritan \u201Cthe pate of,\u201D cf. <a class="refLink" data-ref="Jeremiah 48:45" href="Jeremiah.48.45">Jer. 48.45</a>; in contrast to others \u201CAnd breaks down.\u201D</i> all children of Seth.</span>'
+    en: "What I see for them is not yet,What I behold will not be soon:A star rises from Jacob,A scepter comes forth from Israel;It smashes the brow of Moab,The foundation ofhThe foundation of Samaritan \u201Cthe pate of,\u201D cf. Jer. 48.45; in contrast to others \u201CAnd breaks down.\u201D all children of Seth."
   },
   kenaan: {
     ref: "Gen 9:18",
@@ -26060,13 +30227,13 @@ var name_verses_default = {
   },
   kimham: {
     ref: "2 Sam 19:38",
-    he: '\u05D9\u05B8\u05E9\u05C1\u05C7\u05D1\u05BE\u05E0\u05B8\u05A4\u05D0 \u05E2\u05B7\u05D1\u05B0\u05D3\u05BC\u05B0\u05DA\u05B8\u0599 \u05D5\u05B0\u05D0\u05B8\u05DE\u05BB\u05A3\u05EA \u05D1\u05BC\u05B0\u05E2\u05B4\u05D9\u05E8\u05B4\u0594\u05D9 \u05E2\u05B4\u059B\u05DD \u05E7\u05B6\u05A5\u05D1\u05B6\u05E8 \u05D0\u05B8\u05D1\u05B4\u0596\u05D9 \u05D5\u05B0\u05D0\u05B4\u05DE\u05BC\u05B4\u0591\u05D9 \u05D5\u05B0\u05D4\u05B4\u05E0\u05BC\u05B5\u05A3\u05D4&thinsp;<b>\u05C0</b> \u05E2\u05B7\u05D1\u05B0\u05D3\u05BC\u05B0\u05DA\u05B8\u05A3 \u05DB\u05B4\u05DE\u05B0\u05D4\u05B8\u0597\u05DD \u05D9\u05B7\u05BD\u05E2\u05B2\u05D1\u05B9\u05E8\u0599 \u05E2\u05B4\u05DD\u05BE\u05D0\u05B2\u05D3\u05B9\u05E0\u05B4\u05A3\u05D9 \u05D4\u05B7\u05DE\u05BC\u05B6\u0594\u05DC\u05B6\u05DA\u05B0 \u05D5\u05B7\u05E2\u05B2\u05E9\u05C2\u05B5\u05D4\u05BE\u05DC\u0595\u05D5\u05B9 \u05D0\u05B5\u05A5\u05EA \u05D0\u05B2\u05E9\u05C1\u05B6\u05E8\u05BE\u05D8\u0596\u05D5\u05B9\u05D1 \u05D1\u05BC\u05B0\u05E2\u05B5\u05D9\u05E0\u05B6\u05BD\u05D9\u05DA\u05B8\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D9\u05B8\u05E9\u05C1\u05C7\u05D1\u05BE\u05E0\u05B8\u05A4\u05D0 \u05E2\u05B7\u05D1\u05B0\u05D3\u05BC\u05B0\u05DA\u05B8\u0599 \u05D5\u05B0\u05D0\u05B8\u05DE\u05BB\u05A3\u05EA \u05D1\u05BC\u05B0\u05E2\u05B4\u05D9\u05E8\u05B4\u0594\u05D9 \u05E2\u05B4\u059B\u05DD \u05E7\u05B6\u05A5\u05D1\u05B6\u05E8 \u05D0\u05B8\u05D1\u05B4\u0596\u05D9 \u05D5\u05B0\u05D0\u05B4\u05DE\u05BC\u05B4\u0591\u05D9 \u05D5\u05B0\u05D4\u05B4\u05E0\u05BC\u05B5\u05A3\u05D4&thinsp;\u05C0 \u05E2\u05B7\u05D1\u05B0\u05D3\u05BC\u05B0\u05DA\u05B8\u05A3 \u05DB\u05B4\u05DE\u05B0\u05D4\u05B8\u0597\u05DD \u05D9\u05B7\u05BD\u05E2\u05B2\u05D1\u05B9\u05E8\u0599 \u05E2\u05B4\u05DD\u05BE\u05D0\u05B2\u05D3\u05B9\u05E0\u05B4\u05A3\u05D9 \u05D4\u05B7\u05DE\u05BC\u05B6\u0594\u05DC\u05B6\u05DA\u05B0 \u05D5\u05B7\u05E2\u05B2\u05E9\u05C2\u05B5\u05D4\u05BE\u05DC\u0595\u05D5\u05B9 \u05D0\u05B5\u05A5\u05EA \u05D0\u05B2\u05E9\u05C1\u05B6\u05E8\u05BE\u05D8\u0596\u05D5\u05B9\u05D1 \u05D1\u05BC\u05B0\u05E2\u05B5\u05D9\u05E0\u05B6\u05BD\u05D9\u05DA\u05B8\u05C3",
     en: "Let your servant go back, and let me die in my own town, near the graves of my father and mother. But here is your servant Chimham; let him cross with my lord the king, and do for him as you see fit.\u201D"
   },
   kub: {
     ref: "Ezek 30:5",
-    he: '\u05DB\u05BC\u05A3\u05D5\u05BC\u05E9\u05C1 \u05D5\u05BC\u05E4\u05A4\u05D5\u05BC\u05D8 \u05D5\u05B0\u05DC\u05D5\u05BC\u05D3\u0599 \u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D4\u05B8\u05E2\u05B6\u05A3\u05E8\u05B6\u05D1 \u05D5\u05B0\u05DB\u0594\u05D5\u05BC\u05D1 \u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u0596\u05D9 \u05D0\u05B6\u05A3\u05E8\u05B6\u05E5 \u05D4\u05B7\u05D1\u05BC\u05B0\u05E8\u05B4\u0591\u05D9\u05EA \u05D0\u05B4\u05EA\u05BC\u05B8\u0596\u05DD \u05D1\u05BC\u05B7\u05D7\u05B6\u05A5\u05E8\u05B6\u05D1 \u05D9\u05B4\u05E4\u05BC\u05B9\u05BD\u05DC\u05D5\u05BC\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
-    en: 'Cush, Put, and Lud, and all the mixed populations,<sup class="footnote-marker">a</sup><i class="footnote"><b>the mixed populations </b>Meaning of Heb. uncertain.</i> and Cub, and the inhabitants of the allied countries shall fall by the sword with them.'
+    he: "\u05DB\u05BC\u05A3\u05D5\u05BC\u05E9\u05C1 \u05D5\u05BC\u05E4\u05A4\u05D5\u05BC\u05D8 \u05D5\u05B0\u05DC\u05D5\u05BC\u05D3\u0599 \u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D4\u05B8\u05E2\u05B6\u05A3\u05E8\u05B6\u05D1 \u05D5\u05B0\u05DB\u0594\u05D5\u05BC\u05D1 \u05D5\u05BC\u05D1\u05B0\u05E0\u05B5\u0596\u05D9 \u05D0\u05B6\u05A3\u05E8\u05B6\u05E5 \u05D4\u05B7\u05D1\u05BC\u05B0\u05E8\u05B4\u0591\u05D9\u05EA \u05D0\u05B4\u05EA\u05BC\u05B8\u0596\u05DD \u05D1\u05BC\u05B7\u05D7\u05B6\u05A5\u05E8\u05B6\u05D1 \u05D9\u05B4\u05E4\u05BC\u05B9\u05BD\u05DC\u05D5\u05BC\u05C3",
+    en: "Cush, Put, and Lud, and all the mixed populations,athe mixed populations Meaning of Heb. uncertain. and Cub, and the inhabitants of the allied countries shall fall by the sword with them."
   },
   maarath: {
     ref: "Gen 50:13",
@@ -26080,8 +30247,8 @@ var name_verses_default = {
   },
   mamre: {
     ref: "Gen 13:18",
-    he: '\u05D5\u05B7\u05D9\u05BC\u05B6\u05D0\u05B1\u05D4\u05B7\u05A3\u05DC \u05D0\u05B7\u05D1\u05B0\u05E8\u05B8\u0597\u05DD \u05D5\u05B7\u05D9\u05BC\u05B8\u05D1\u05B9\u059B\u05D0 \u05D5\u05B7\u05D9\u05BC\u05B5\u059B\u05E9\u05C1\u05B6\u05D1 \u05D1\u05BC\u05B0\u05D0\u05B5\u05DC\u05B9\u05E0\u05B5\u05A5\u05D9 \u05DE\u05B7\u05DE\u05B0\u05E8\u05B5\u0596\u05D0 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A3\u05E8 \u05D1\u05BC\u05B0\u05D7\u05B6\u05D1\u05B0\u05E8\u0591\u05D5\u05B9\u05DF \u05D5\u05B7\u05D9\u05BC\u05B4\u05BD\u05D1\u05B6\u05DF\u05BE\u05E9\u05C1\u05B8\u05A5\u05DD \u05DE\u05B4\u05D6\u05B0\u05D1\u05BC\u05B5\u0596\u05D7\u05B7 \u05DC\u05B7\u05BD\u05D9\u05D4\u05B9\u05D5\u05B8\u05BD\u05D4\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
-    en: "And Abram moved his tent, and came to dwell at the terebinths of Mamre, which are in Hebron; and he built an altar there to G<small>OD</small>."
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B6\u05D0\u05B1\u05D4\u05B7\u05A3\u05DC \u05D0\u05B7\u05D1\u05B0\u05E8\u05B8\u0597\u05DD \u05D5\u05B7\u05D9\u05BC\u05B8\u05D1\u05B9\u059B\u05D0 \u05D5\u05B7\u05D9\u05BC\u05B5\u059B\u05E9\u05C1\u05B6\u05D1 \u05D1\u05BC\u05B0\u05D0\u05B5\u05DC\u05B9\u05E0\u05B5\u05A5\u05D9 \u05DE\u05B7\u05DE\u05B0\u05E8\u05B5\u0596\u05D0 \u05D0\u05B2\u05E9\u05C1\u05B6\u05A3\u05E8 \u05D1\u05BC\u05B0\u05D7\u05B6\u05D1\u05B0\u05E8\u0591\u05D5\u05B9\u05DF \u05D5\u05B7\u05D9\u05BC\u05B4\u05BD\u05D1\u05B6\u05DF\u05BE\u05E9\u05C1\u05B8\u05A5\u05DD \u05DE\u05B4\u05D6\u05B0\u05D1\u05BC\u05B5\u0596\u05D7\u05B7 \u05DC\u05B7\u05BD\u05D9\u05D4\u05B9\u05D5\u05B8\u05BD\u05D4\u05C3",
+    en: "And Abram moved his tent, and came to dwell at the terebinths of Mamre, which are in Hebron; and he built an altar there to GOD."
   },
   masrekah: {
     ref: "Gen 36:36",
@@ -26100,7 +30267,7 @@ var name_verses_default = {
   },
   mikmas: {
     ref: "Ezra 2:27",
-    he: '\u05D0\u05B7\u05E0\u05B0\u05E9\u05C1\u05B5\u05A3\u05D9 \u05DE\u05B4\u05DB\u05B0\u05DE\u05B8\u0594\u05E1 \u05DE\u05B5\u05D0\u05B8\u0596\u05D4 \u05E2\u05B6\u05E9\u05C2\u05B0\u05E8\u05B4\u05A5\u05D9\u05DD \u05D5\u05BC\u05E9\u05C1\u05B0\u05E0\u05B8\u05BD\u05D9\u05B4\u05DD\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D0\u05B7\u05E0\u05B0\u05E9\u05C1\u05B5\u05A3\u05D9 \u05DE\u05B4\u05DB\u05B0\u05DE\u05B8\u0594\u05E1 \u05DE\u05B5\u05D0\u05B8\u0596\u05D4 \u05E2\u05B6\u05E9\u05C2\u05B0\u05E8\u05B4\u05A5\u05D9\u05DD \u05D5\u05BC\u05E9\u05C1\u05B0\u05E0\u05B8\u05BD\u05D9\u05B4\u05DD\u05C3",
     en: "the participants from Michmas\u2014122;"
   },
   mikmethath: {
@@ -26111,11 +30278,11 @@ var name_verses_default = {
   moab: {
     ref: "Gen 19:37",
     he: "\u05D5\u05B7\u05EA\u05BC\u05B5\u05A4\u05DC\u05B6\u05D3 \u05D4\u05B7\u05D1\u05BC\u05B0\u05DB\u05B4\u05D9\u05E8\u05B8\u05D4\u0599 \u05D1\u05BC\u05B5\u0594\u05DF \u05D5\u05B7\u05EA\u05BC\u05B4\u05E7\u05B0\u05E8\u05B8\u05A5\u05D0 \u05E9\u05C1\u05B0\u05DE\u0596\u05D5\u05B9 \u05DE\u05D5\u05B9\u05D0\u05B8\u0591\u05D1 \u05D4\u05A5\u05D5\u05BC\u05D0 \u05D0\u05B2\u05D1\u05B4\u05BD\u05D9\u05BE\u05DE\u05D5\u05B9\u05D0\u05B8\u0596\u05D1 \u05E2\u05B7\u05D3\u05BE\u05D4\u05B7\u05D9\u05BC\u05BD\u05D5\u05B9\u05DD\u05C3",
-    en: 'The older one bore a son and named him Moab;<sup class="footnote-marker">j</sup><i class="footnote"><b>Moab </b>As though <i>me-\u02BCab</i> \u201Cfrom (my) father.\u201D</i> he is the father of the Moabites of today.'
+    en: "The older one bore a son and named him Moab;jMoab As though me-\u02BCab \u201Cfrom (my) father.\u201D he is the father of the Moabites of today."
   },
   moph: {
     ref: "Gen 6:4",
-    he: '\u05D4\u05B7\u05E0\u05BC\u05B0\u05E4\u05B4\u05DC\u05B4\u059E\u05D9\u05DD \u05D4\u05B8\u05D9\u05A3\u05D5\u05BC \u05D1\u05B8\u05D0\u05B8\u0598\u05E8\u05B6\u05E5\u05AE \u05D1\u05BC\u05B7\u05D9\u05BC\u05B8\u05DE\u05B4\u05A3\u05D9\u05DD \u05D4\u05B8\u05D4\u05B5\u05DD\u0592 \u05D5\u05B0\u05D2\u05B7\u05A3\u05DD \u05D0\u05B7\u05BD\u05D7\u05B2\u05E8\u05B5\u05D9\u05BE\u05DB\u05B5\u0597\u05DF \u05D0\u05B2\u05E9\u05C1\u05B6\u05A8\u05E8 \u05D9\u05B8\u05D1\u05B9\u059C\u05D0\u05D5\u05BC \u05D1\u05BC\u05B0\u05E0\u05B5\u05A4\u05D9 \u05D4\u05B8\u05BD\u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u05D9\u05DD\u0599 \u05D0\u05B6\u05DC\u05BE\u05D1\u05BC\u05B0\u05E0\u05A3\u05D5\u05B9\u05EA \u05D4\u05B8\u05BD\u05D0\u05B8\u05D3\u05B8\u0594\u05DD \u05D5\u05B0\u05D9\u05B8\u05DC\u05B0\u05D3\u0596\u05D5\u05BC \u05DC\u05B8\u05D4\u05B6\u0591\u05DD \u05D4\u05B5\u05A7\u05DE\u05BC\u05B8\u05D4 \u05D4\u05B7\u05D2\u05BC\u05B4\u05D1\u05BC\u05B9\u05E8\u05B4\u059B\u05D9\u05DD \u05D0\u05B2\u05E9\u05C1\u05B6\u05A5\u05E8 \u05DE\u05B5\u05E2\u05D5\u05B9\u05DC\u05B8\u0596\u05DD \u05D0\u05B7\u05E0\u05B0\u05E9\u05C1\u05B5\u05A5\u05D9 \u05D4\u05B7\u05E9\u05C1\u05BC\u05B5\u05BD\u05DD\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
+    he: "\u05D4\u05B7\u05E0\u05BC\u05B0\u05E4\u05B4\u05DC\u05B4\u059E\u05D9\u05DD \u05D4\u05B8\u05D9\u05A3\u05D5\u05BC \u05D1\u05B8\u05D0\u05B8\u0598\u05E8\u05B6\u05E5\u05AE \u05D1\u05BC\u05B7\u05D9\u05BC\u05B8\u05DE\u05B4\u05A3\u05D9\u05DD \u05D4\u05B8\u05D4\u05B5\u05DD\u0592 \u05D5\u05B0\u05D2\u05B7\u05A3\u05DD \u05D0\u05B7\u05BD\u05D7\u05B2\u05E8\u05B5\u05D9\u05BE\u05DB\u05B5\u0597\u05DF \u05D0\u05B2\u05E9\u05C1\u05B6\u05A8\u05E8 \u05D9\u05B8\u05D1\u05B9\u059C\u05D0\u05D5\u05BC \u05D1\u05BC\u05B0\u05E0\u05B5\u05A4\u05D9 \u05D4\u05B8\u05BD\u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u05D9\u05DD\u0599 \u05D0\u05B6\u05DC\u05BE\u05D1\u05BC\u05B0\u05E0\u05A3\u05D5\u05B9\u05EA \u05D4\u05B8\u05BD\u05D0\u05B8\u05D3\u05B8\u0594\u05DD \u05D5\u05B0\u05D9\u05B8\u05DC\u05B0\u05D3\u0596\u05D5\u05BC \u05DC\u05B8\u05D4\u05B6\u0591\u05DD \u05D4\u05B5\u05A7\u05DE\u05BC\u05B8\u05D4 \u05D4\u05B7\u05D2\u05BC\u05B4\u05D1\u05BC\u05B9\u05E8\u05B4\u059B\u05D9\u05DD \u05D0\u05B2\u05E9\u05C1\u05B6\u05A5\u05E8 \u05DE\u05B5\u05E2\u05D5\u05B9\u05DC\u05B8\u0596\u05DD \u05D0\u05B7\u05E0\u05B0\u05E9\u05C1\u05B5\u05A5\u05D9 \u05D4\u05B7\u05E9\u05C1\u05BC\u05B5\u05BD\u05DD\u05C3",
     en: "It was then, and later too, that the Nephilim appeared on earth\u2014when divine beings cohabited with the human women, who bore them offspring. Such were the heroes of old, the men of renown."
   },
   naaran: {
@@ -26126,16 +30293,16 @@ var name_verses_default = {
   nibshan: {
     ref: "Josh 15:62",
     he: "\u05D5\u05B0\u05D4\u05B7\u05E0\u05BC\u05B4\u05D1\u05B0\u05E9\u05C1\u05B8\u05A5\u05DF \u05D5\u05B0\u05E2\u05B4\u05D9\u05E8\u05BE\u05D4\u05B7\u05DE\u05BC\u05B6\u0596\u05DC\u05B7\u05D7 \u05D5\u05B0\u05E2\u05B5\u05A3\u05D9\u05DF \u05D2\u05BC\u05B6\u0591\u05D3\u05B4\u05D9 \u05E2\u05B8\u05E8\u05B4\u05A5\u05D9\u05DD \u05E9\u05C1\u05B5\u0596\u05E9\u05C1 \u05D5\u05B0\u05D7\u05B7\u05E6\u05B0\u05E8\u05B5\u05D9\u05D4\u05B6\u05BD\u05DF\u05C3",
-    en: 'Nibshan, Ir-melah,<sup class="footnote-marker">o</sup><i class="footnote"><b>Ir-melah </b>Or \u201Cthe City of Salt.\u201D</i> and En-gedi: 6 towns, with their villages.'
+    en: "Nibshan, Ir-melah,oIr-melah Or \u201Cthe City of Salt.\u201D and En-gedi: 6 towns, with their villages."
   },
   nob: {
     ref: "1 Sam 22:11",
-    he: '\u05D5\u05B7\u05D9\u05BC\u05B4\u05E9\u05C1\u05B0\u05DC\u05B7\u05A3\u05D7 \u05D4\u05B7\u05DE\u05BC\u05B6\u05A1\u05DC\u05B6\u05DA\u05B0 \u05DC\u05B4\u05E7\u05B0\u05E8\u05B9\u05D0\u05A9 \u05D0\u05B6\u05EA\u05BE\u05D0\u05B2\u05D7\u05B4\u05D9\u05DE\u05B6\u05A8\u05DC\u05B6\u05DA\u05B0 \u05D1\u05BC\u05B6\u05DF\u05BE\u05D0\u05B2\u05D7\u05B4\u05D9\u05D8\u059C\u05D5\u05BC\u05D1 \u05D4\u05B7\u05DB\u05BC\u05B9\u05D4\u05B5\u0597\u05DF \u05D5\u05B0\u05D0\u05B5\u05A8\u05EA \u05DB\u05BC\u05C7\u05DC\u05BE\u05D1\u05BC\u05B5\u05A5\u05D9\u05EA \u05D0\u05B8\u05D1\u05B4\u059B\u05D9\u05D5 \u05D4\u05B7\u05DB\u05BC\u05B9\u05D4\u05B2\u05E0\u05B4\u0596\u05D9\u05DD \u05D0\u05B2\u05E9\u05C1\u05B6\u05A3\u05E8 \u05D1\u05BC\u05B0\u05E0\u05B9\u0591\u05D1 \u05D5\u05B7\u05D9\u05BC\u05B8\u05D1\u05B9\u05A5\u05D0\u05D5\u05BC \u05DB\u05BB\u05DC\u05BC\u05B8\u0596\u05DD \u05D0\u05B6\u05DC\u05BE\u05D4\u05B7\u05DE\u05BC\u05B6\u05BD\u05DC\u05B6\u05DA\u05B0\u05C3&nbsp;<span class="mam-spi-samekh">{\u05E1}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05E9\u05C1\u05B0\u05DC\u05B7\u05A3\u05D7 \u05D4\u05B7\u05DE\u05BC\u05B6\u05A1\u05DC\u05B6\u05DA\u05B0 \u05DC\u05B4\u05E7\u05B0\u05E8\u05B9\u05D0\u05A9 \u05D0\u05B6\u05EA\u05BE\u05D0\u05B2\u05D7\u05B4\u05D9\u05DE\u05B6\u05A8\u05DC\u05B6\u05DA\u05B0 \u05D1\u05BC\u05B6\u05DF\u05BE\u05D0\u05B2\u05D7\u05B4\u05D9\u05D8\u059C\u05D5\u05BC\u05D1 \u05D4\u05B7\u05DB\u05BC\u05B9\u05D4\u05B5\u0597\u05DF \u05D5\u05B0\u05D0\u05B5\u05A8\u05EA \u05DB\u05BC\u05C7\u05DC\u05BE\u05D1\u05BC\u05B5\u05A5\u05D9\u05EA \u05D0\u05B8\u05D1\u05B4\u059B\u05D9\u05D5 \u05D4\u05B7\u05DB\u05BC\u05B9\u05D4\u05B2\u05E0\u05B4\u0596\u05D9\u05DD \u05D0\u05B2\u05E9\u05C1\u05B6\u05A3\u05E8 \u05D1\u05BC\u05B0\u05E0\u05B9\u0591\u05D1 \u05D5\u05B7\u05D9\u05BC\u05B8\u05D1\u05B9\u05A5\u05D0\u05D5\u05BC \u05DB\u05BB\u05DC\u05BC\u05B8\u0596\u05DD \u05D0\u05B6\u05DC\u05BE\u05D4\u05B7\u05DE\u05BC\u05B6\u05BD\u05DC\u05B6\u05DA\u05B0\u05C3",
     en: "Thereupon the king sent for the priest Ahimelech son of Ahitub and for all the priests belonging to his father\u2019s house at Nob. They all came to the king,"
   },
   noph: {
     ref: "Gen 1:21",
-    he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05D1\u05B0\u05E8\u05B8\u05A3\u05D0 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u0594\u05D9\u05DD \u05D0\u05B6\u05EA\u05BE\u05D4\u05B7\u05EA\u05BC\u05B7\u05E0\u05BC\u05B4\u05D9\u05E0\u05B4\u0596\u05DD \u05D4\u05B7\u05D2\u05BC\u05B0\u05D3\u05B9\u05DC\u05B4\u0591\u05D9\u05DD \u05D5\u05B0\u05D0\u05B5\u05A3\u05EA \u05DB\u05BC\u05C7\u05DC\u05BE\u05E0\u05B6\u05A3\u05E4\u05B6\u05E9\u05C1 \u05D4\u05B7\u05BD\u05D7\u05B7\u05D9\u05BC\u05B8\u05A3\u05D4&thinsp;<small>\u05C0</small>&thinsp;\u05D4\u05B8\u05BD\u05E8\u05B9\u05DE\u05B6\u05A1\u05E9\u05C2\u05B6\u05EA \u05D0\u05B2\u05E9\u05C1\u05B6\u05E8\u05A9 \u05E9\u05C1\u05B8\u05E8\u05B0\u05E6\u05A8\u05D5\u05BC \u05D4\u05B7\u05DE\u05BC\u05B7\u059C\u05D9\u05B4\u05DD \u05DC\u05B0\u05DE\u05B4\u05BD\u05D9\u05E0\u05B5\u05D4\u05B6\u0597\u05DD \u05D5\u05B0\u05D0\u05B5\u05A8\u05EA \u05DB\u05BC\u05C7\u05DC\u05BE\u05E2\u05A4\u05D5\u05B9\u05E3 \u05DB\u05BC\u05B8\u05E0\u05B8\u05E3\u0599 \u05DC\u05B0\u05DE\u05B4\u05D9\u05E0\u05B5\u0594\u05D4\u05D5\u05BC \u05D5\u05B7\u05D9\u05BC\u05B7\u05A5\u05E8\u05B0\u05D0 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u0596\u05D9\u05DD \u05DB\u05BC\u05B4\u05D9\u05BE\u05D8\u05BD\u05D5\u05B9\u05D1\u05C3",
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05D1\u05B0\u05E8\u05B8\u05A3\u05D0 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u0594\u05D9\u05DD \u05D0\u05B6\u05EA\u05BE\u05D4\u05B7\u05EA\u05BC\u05B7\u05E0\u05BC\u05B4\u05D9\u05E0\u05B4\u0596\u05DD \u05D4\u05B7\u05D2\u05BC\u05B0\u05D3\u05B9\u05DC\u05B4\u0591\u05D9\u05DD \u05D5\u05B0\u05D0\u05B5\u05A3\u05EA \u05DB\u05BC\u05C7\u05DC\u05BE\u05E0\u05B6\u05A3\u05E4\u05B6\u05E9\u05C1 \u05D4\u05B7\u05BD\u05D7\u05B7\u05D9\u05BC\u05B8\u05A3\u05D4&thinsp;\u05C0&thinsp;\u05D4\u05B8\u05BD\u05E8\u05B9\u05DE\u05B6\u05A1\u05E9\u05C2\u05B6\u05EA \u05D0\u05B2\u05E9\u05C1\u05B6\u05E8\u05A9 \u05E9\u05C1\u05B8\u05E8\u05B0\u05E6\u05A8\u05D5\u05BC \u05D4\u05B7\u05DE\u05BC\u05B7\u059C\u05D9\u05B4\u05DD \u05DC\u05B0\u05DE\u05B4\u05BD\u05D9\u05E0\u05B5\u05D4\u05B6\u0597\u05DD \u05D5\u05B0\u05D0\u05B5\u05A8\u05EA \u05DB\u05BC\u05C7\u05DC\u05BE\u05E2\u05A4\u05D5\u05B9\u05E3 \u05DB\u05BC\u05B8\u05E0\u05B8\u05E3\u0599 \u05DC\u05B0\u05DE\u05B4\u05D9\u05E0\u05B5\u0594\u05D4\u05D5\u05BC \u05D5\u05B7\u05D9\u05BC\u05B7\u05A5\u05E8\u05B0\u05D0 \u05D0\u05B1\u05DC\u05B9\u05D4\u05B4\u0596\u05D9\u05DD \u05DB\u05BC\u05B4\u05D9\u05BE\u05D8\u05BD\u05D5\u05B9\u05D1\u05C3",
     en: "God created the great sea monsters, and all the living creatures of every kind that creep, which the waters brought forth in swarms, and all the winged birds of every kind. And God saw that this was good."
   },
   oboth: {
@@ -26171,37 +30338,37 @@ var name_verses_default = {
   rakkath: {
     ref: "Ex 28:17",
     he: "\u05D5\u05BC\u05DE\u05B4\u05DC\u05BC\u05B5\u05D0\u05EA\u05B8\u05A5 \u05D1\u05D5\u05B9\u0599 \u05DE\u05B4\u05DC\u05BC\u05BB\u05A3\u05D0\u05B7\u05EA \u05D0\u05B6\u0594\u05D1\u05B6\u05DF \u05D0\u05B7\u05E8\u05B0\u05D1\u05BC\u05B8\u05E2\u05B8\u0596\u05D4 \u05D8\u05D5\u05BC\u05E8\u05B4\u05A3\u05D9\u05DD \u05D0\u05B8\u0591\u05D1\u05B6\u05DF \u05D8\u0597\u05D5\u05BC\u05E8 \u05D0\u05B9\u05A4\u05D3\u05B6\u05DD \u05E4\u05BC\u05B4\u05D8\u05B0\u05D3\u05B8\u05D4\u0599 \u05D5\u05BC\u05D1\u05B8\u05E8\u05B6\u0594\u05E7\u05B6\u05EA \u05D4\u05B7\u05D8\u05BC\u0596\u05D5\u05BC\u05E8 \u05D4\u05B8\u05D0\u05B6\u05D7\u05B8\u05BD\u05D3\u05C3",
-    en: 'Set in it mounted stones, in four rows of stones. The first row shall be a row of<sup class="footnote-marker">d</sup><i class="footnote"><b>carnelian, chrysolite,\u2026 </b>The identity of several of the following twelve stones is uncertain.</i> carnelian, chrysolite, and emerald;'
+    en: "Set in it mounted stones, in four rows of stones. The first row shall be a row ofdcarnelian, chrysolite,\u2026 The identity of several of the following twelve stones is uncertain. carnelian, chrysolite, and emerald;"
   },
   ramoth: {
     ref: "Prov 24:7",
     he: "\u05E8\u05B8\u05D0\u05DE\u05A3\u05D5\u05B9\u05EA \u05DC\u05B6\u05D0\u05B1\u05D5\u05B4\u05A3\u05D9\u05DC \u05D7\u05C7\u05DB\u05B0\u05DE\u0591\u05D5\u05B9\u05EA \u05D1\u05BC\u05B7\u059D\u05E9\u05C1\u05BC\u05B7\u0597\u05E2\u05B7\u05E8 \u05DC\u05B9\u05A3\u05D0 \u05D9\u05B4\u05E4\u05B0\u05EA\u05BC\u05B7\u05D7\u05BE\u05E4\u05BC\u05B4\u05BD\u05D9\u05D4\u05D5\u05BC\u05C3",
-    en: '<span class="poetry indentAll">Wisdom is too lofty for an ignoramus;</span><br><span class="poetry indentAll">He does not open his mouth in the gate.</span>'
+    en: "Wisdom is too lofty for an ignoramus;He does not open his mouth in the gate."
   },
   "ramoth-negeb": {
     ref: "Jer 31:40",
-    he: '\u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D4\u05B8\u05E2\u05B5\u05A3\u05DE\u05B6\u05E7 \u05D4\u05B7\u05E4\u05BC\u05B0\u05D2\u05B8\u05E8\u05B4\u05A3\u05D9\u05DD&thinsp;<small>\u05C0</small>&thinsp;\u05D5\u05B0\u05D4\u05B7\u05D3\u05BC\u05B6\u05A1\u05E9\u05C1\u05B6\u05DF \u05D5\u05B0\u05DB\u05C7\u05BD\u05DC\u05BE<span class="mam-kq"><span class="mam-kq-q">[\u05D4\u05B7\u05E9\u05C1\u05BC\u05B0\u05D3\u05B5\u05DE\u05D5\u05B9\u05EA\u05A9]</span> <span class="mam-kq-k">(\u05D4\u05E9\u05E8\u05DE\u05D5\u05EA)</span></span> \u05E2\u05B7\u05D3\u05BE\u05E0\u05B7\u05A8\u05D7\u05B7\u05DC \u05E7\u05B4\u05D3\u05B0\u05E8\u059C\u05D5\u05B9\u05DF \u05E2\u05B7\u05D3\u05BE\u05E4\u05BC\u05B4\u05E0\u05BC\u05B7\u05A8\u05EA \u05E9\u05C1\u05B7\u05A4\u05E2\u05B7\u05E8 \u05D4\u05B7\u05E1\u05BC\u05D5\u05BC\u05E1\u05B4\u05D9\u05DD\u0599 \u05DE\u05B4\u05D6\u05B0\u05E8\u05B8\u0594\u05D7\u05B8\u05D4 \u05E7\u05B9\u0596\u05D3\u05B6\u05E9\u05C1 \u05DC\u05B7\u05D9\u05D4\u05B9\u05D5\u05B8\u0591\u05D4 \u05DC\u05B9\u05D0\u05BE\u05D9\u05B4\u05E0\u05BC\u05B8\u05EA\u05B5\u05A7\u05E9\u05C1 \u05D5\u05B0\u05BD\u05DC\u05B9\u05D0\u05BE\u05D9\u05B5\u05D4\u05B8\u05E8\u05B5\u059B\u05E1 \u05E2\u0596\u05D5\u05B9\u05D3 \u05DC\u05B0\u05E2\u05D5\u05B9\u05DC\u05B8\u05BD\u05DD\u05C3&nbsp;<span class="mam-spi-pe">{\u05E4}</span><br>',
-    en: "And the entire Valley of the Corpses and Ashes, and all the fields as far as the Wadi Kidron, and the corner of the Horse Gate on the east, shall be holy to G<small>OD</small>. They shall never again be uprooted or overthrown."
+    he: "\u05D5\u05B0\u05DB\u05C7\u05DC\u05BE\u05D4\u05B8\u05E2\u05B5\u05A3\u05DE\u05B6\u05E7 \u05D4\u05B7\u05E4\u05BC\u05B0\u05D2\u05B8\u05E8\u05B4\u05A3\u05D9\u05DD&thinsp;\u05C0&thinsp;\u05D5\u05B0\u05D4\u05B7\u05D3\u05BC\u05B6\u05A1\u05E9\u05C1\u05B6\u05DF \u05D5\u05B0\u05DB\u05C7\u05BD\u05DC\u05BE[\u05D4\u05B7\u05E9\u05C1\u05BC\u05B0\u05D3\u05B5\u05DE\u05D5\u05B9\u05EA\u05A9] (\u05D4\u05E9\u05E8\u05DE\u05D5\u05EA) \u05E2\u05B7\u05D3\u05BE\u05E0\u05B7\u05A8\u05D7\u05B7\u05DC \u05E7\u05B4\u05D3\u05B0\u05E8\u059C\u05D5\u05B9\u05DF \u05E2\u05B7\u05D3\u05BE\u05E4\u05BC\u05B4\u05E0\u05BC\u05B7\u05A8\u05EA \u05E9\u05C1\u05B7\u05A4\u05E2\u05B7\u05E8 \u05D4\u05B7\u05E1\u05BC\u05D5\u05BC\u05E1\u05B4\u05D9\u05DD\u0599 \u05DE\u05B4\u05D6\u05B0\u05E8\u05B8\u0594\u05D7\u05B8\u05D4 \u05E7\u05B9\u0596\u05D3\u05B6\u05E9\u05C1 \u05DC\u05B7\u05D9\u05D4\u05B9\u05D5\u05B8\u0591\u05D4 \u05DC\u05B9\u05D0\u05BE\u05D9\u05B4\u05E0\u05BC\u05B8\u05EA\u05B5\u05A7\u05E9\u05C1 \u05D5\u05B0\u05BD\u05DC\u05B9\u05D0\u05BE\u05D9\u05B5\u05D4\u05B8\u05E8\u05B5\u059B\u05E1 \u05E2\u0596\u05D5\u05B9\u05D3 \u05DC\u05B0\u05E2\u05D5\u05B9\u05DC\u05B8\u05BD\u05DD\u05C3",
+    en: "And the entire Valley of the Corpses and Ashes, and all the fields as far as the Wadi Kidron, and the corner of the Horse Gate on the east, shall be holy to GOD. They shall never again be uprooted or overthrown."
   },
   rechoboth: {
     ref: "Gen 26:22",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B7\u05E2\u05B0\u05EA\u05BC\u05B5\u05A3\u05E7 \u05DE\u05B4\u05E9\u05C1\u05BC\u05B8\u0597\u05DD \u05D5\u05B7\u05D9\u05BC\u05B7\u05D7\u05B0\u05E4\u05BC\u05B9\u05E8\u0599 \u05D1\u05BC\u05B0\u05D0\u05B5\u05A3\u05E8 \u05D0\u05B7\u05D7\u05B6\u0594\u05E8\u05B6\u05EA \u05D5\u05B0\u05DC\u05B9\u05A5\u05D0 \u05E8\u05B8\u05D1\u0596\u05D5\u05BC \u05E2\u05B8\u05DC\u05B6\u0591\u05D9\u05D4\u05B8 \u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05B0\u05E8\u05B8\u05A4\u05D0 \u05E9\u05C1\u05B0\u05DE\u05B8\u05D4\u05BC\u0599 \u05E8\u05B0\u05D7\u05B9\u05D1\u0594\u05D5\u05B9\u05EA \u05D5\u05B7\u05D9\u05BC\u05B9\u0597\u05D0\u05DE\u05B6\u05E8 \u05DB\u05BC\u05B4\u05BD\u05D9\u05BE\u05E2\u05B7\u05EA\u05BC\u05B8\u059E\u05D4 \u05D4\u05B4\u05E8\u05B0\u05D7\u05B4\u05A7\u05D9\u05D1 \u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u059B\u05D4 \u05DC\u05B8\u0596\u05E0\u05D5\u05BC \u05D5\u05BC\u05E4\u05B8\u05E8\u05B4\u05A5\u05D9\u05E0\u05D5\u05BC \u05D1\u05B8\u05D0\u05B8\u05BD\u05E8\u05B6\u05E5\u05C3",
-    en: 'He moved from there and dug yet another well, and they did not quarrel over it; so he called it Rehoboth, saying, \u201CNow at last G<small>OD</small> has granted us ample space<sup class="footnote-marker">d</sup><i class="footnote"><b>ample space </b>Heb. <i>hir\u1E25ib</i>, connected with \u201CRehoboth.\u201D</i> to increase in the land.\u201D'
+    en: "He moved from there and dug yet another well, and they did not quarrel over it; so he called it Rehoboth, saying, \u201CNow at last GOD has granted us ample spacedample space Heb. hir\u1E25ib, connected with \u201CRehoboth.\u201D to increase in the land.\u201D"
   },
   rekah: {
     ref: "Gen 12:2",
     he: "\u05D5\u05B0\u05D0\u05B6\u05BD\u05E2\u05B6\u05E9\u05C2\u05B0\u05DA\u05B8\u0599 \u05DC\u05B0\u05D2\u05A3\u05D5\u05B9\u05D9 \u05D2\u05BC\u05B8\u05D3\u0594\u05D5\u05B9\u05DC \u05D5\u05B7\u05D0\u05B2\u05D1\u05B8\u05A3\u05E8\u05B6\u05DB\u05B0\u05DA\u05B8\u0594 \u05D5\u05B7\u05D0\u05B2\u05D2\u05B7\u05D3\u05BC\u05B0\u05DC\u05B8\u0596\u05D4 \u05E9\u05C1\u05B0\u05DE\u05B6\u0591\u05DA\u05B8 \u05D5\u05B6\u05D4\u05B0\u05D9\u05B5\u0596\u05D4 \u05D1\u05BC\u05B0\u05E8\u05B8\u05DB\u05B8\u05BD\u05D4\u05C3",
-    en: '<span class="poetry indentAll">I will make of you a great nation,</span><br><span class="poetry indentAll">And I will bless you;</span><br><span class="poetry indentAll">I will make your name great,</span><br><span class="poetry indentAll">And you shall be a blessing.<sup class="footnote-marker">a</sup><i class="footnote"><b>a blessing </b>I.e., a standard by which blessing is invoked; cf. v. <a class="refLink" data-ref="Genesis 12:3" href="Genesis.12.3">3</a> end.</i> </span>'
+    en: "I will make of you a great nation,And I will bless you;I will make your name great,And you shall be a blessing.aa blessing I.e., a standard by which blessing is invoked; cf. v. 3 end."
   },
   remeth: {
     ref: "Num 31:28",
     he: "\u05D5\u05B7\u05D4\u05B2\u05E8\u05B5\u05DE\u05B9\u05EA\u05B8\u05A8 \u05DE\u05B6\u059C\u05DB\u05B6\u05E1 \u05DC\u05B7\u05BD\u05D9\u05D4\u05B9\u05D5\u05B8\u0597\u05D4 \u05DE\u05B5\u05D0\u05B5\u059E\u05EA \u05D0\u05B7\u05E0\u05B0\u05E9\u05C1\u05B5\u05A4\u05D9 \u05D4\u05B7\u05DE\u05BC\u05B4\u05DC\u05B0\u05D7\u05B8\u05DE\u05B8\u05D4\u0599 \u05D4\u05B7\u05D9\u05BC\u05B9\u05E6\u05B0\u05D0\u05B4\u05A3\u05D9\u05DD \u05DC\u05B7\u05E6\u05BC\u05B8\u05D1\u05B8\u0594\u05D0 \u05D0\u05B6\u05D7\u05B8\u05A3\u05D3 \u05E0\u05B6\u0594\u05E4\u05B6\u05E9\u05C1 \u05DE\u05B5\u05D7\u05B2\u05DE\u05B5\u0596\u05E9\u05C1 \u05D4\u05B7\u05DE\u05BC\u05B5\u05D0\u0591\u05D5\u05B9\u05EA \u05DE\u05B4\u05DF\u05BE\u05D4\u05B8\u05D0\u05B8\u05D3\u05B8\u05DD\u0599 \u05D5\u05BC\u05DE\u05B4\u05DF\u05BE\u05D4\u05B7\u05D1\u05BC\u05B8\u05E7\u05B8\u0594\u05E8 \u05D5\u05BC\u05DE\u05B4\u05DF\u05BE\u05D4\u05B7\u05D7\u05B2\u05DE\u05B9\u05E8\u05B4\u0596\u05D9\u05DD \u05D5\u05BC\u05DE\u05B4\u05DF\u05BE\u05D4\u05B7\u05E6\u05BC\u05B9\u05BD\u05D0\u05DF\u05C3",
-    en: "You shall exact a levy for G<small>OD</small>: in the case of the warriors who engaged in the campaign, one item in five hundred, of persons, oxen, donkeys, and sheep,"
+    en: "You shall exact a levy for GOD: in the case of the warriors who engaged in the campaign, one item in five hundred, of persons, oxen, donkeys, and sheep,"
   },
   sedom: {
     ref: "Gen 13:13",
     he: "\u05D5\u05B0\u05D0\u05B7\u05E0\u05B0\u05E9\u05C1\u05B5\u05A3\u05D9 \u05E1\u05B0\u05D3\u05B9\u0594\u05DD \u05E8\u05B8\u05E2\u05B4\u0596\u05D9\u05DD \u05D5\u05B0\u05D7\u05B7\u05D8\u05BC\u05B8\u05D0\u05B4\u0591\u05D9\u05DD \u05DC\u05B7\u05D9\u05D4\u05B9\u05D5\u05B8\u0596\u05D4 \u05DE\u05B0\u05D0\u05B9\u05BD\u05D3\u05C3",
-    en: "Now the inhabitants of Sodom were very wicked sinners against G<small>OD</small>."
+    en: "Now the inhabitants of Sodom were very wicked sinners against GOD."
   },
   seku: {
     ref: "Ex 12:21",
@@ -26210,18 +30377,18 @@ var name_verses_default = {
   },
   sepharad: {
     ref: "Gen 4:13",
-    he: '\u05D5\u05B7\u05D9\u05BC\u05B9\u05A5\u05D0\u05DE\u05B6\u05E8 \u05E7\u05B7\u0596\u05D9\u05B4\u05DF \u05D0\u05B6\u05DC\u05BE\u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0591\u05D4 \u05D2\u05BC\u05B8\u05D3\u05A5\u05D5\u05B9\u05DC \u05E2\u05B2\u05D5\u05BA\u05E0\u05B4\u0596\u05D9 \u05DE\u05B4\u05E0\u05BC\u05B0\u05E9\u05C2\u05B9\u05BD\u05D0<sup class="footnote-marker">*</sup><i class="footnote">(\u05D1\u05E1\u05E4\u05E8\u05D9 \u05E1\u05E4\u05E8\u05D3 \u05D5\u05D0\u05E9\u05DB\u05E0\u05D6 \u05DE\u05B4\u05E0\u05BC\u05B0\u05E9\u05C2\u05BD\u05D5\u05B9\u05D0)</i>\u05C3',
-    en: "Cain said to G<small>OD</small>, \u201CMy punishment is too great to bear!"
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B9\u05A5\u05D0\u05DE\u05B6\u05E8 \u05E7\u05B7\u0596\u05D9\u05B4\u05DF \u05D0\u05B6\u05DC\u05BE\u05D9\u05B0\u05D4\u05B9\u05D5\u05B8\u0591\u05D4 \u05D2\u05BC\u05B8\u05D3\u05A5\u05D5\u05B9\u05DC \u05E2\u05B2\u05D5\u05BA\u05E0\u05B4\u0596\u05D9 \u05DE\u05B4\u05E0\u05BC\u05B0\u05E9\u05C2\u05B9\u05BD\u05D0*(\u05D1\u05E1\u05E4\u05E8\u05D9 \u05E1\u05E4\u05E8\u05D3 \u05D5\u05D0\u05E9\u05DB\u05E0\u05D6 \u05DE\u05B4\u05E0\u05BC\u05B0\u05E9\u05C2\u05BD\u05D5\u05B9\u05D0)\u05C3",
+    en: "Cain said to GOD, \u201CMy punishment is too great to bear!"
   },
   shepham: {
     ref: "Num 34:11",
     he: "\u05D5\u05B0\u05D9\u05B8\u05E8\u05B7\u05A8\u05D3 \u05D4\u05B7\u05D2\u05BC\u05B0\u05D1\u05BB\u05A7\u05DC \u05DE\u05B4\u05E9\u05C1\u05BC\u05B0\u05E4\u05B8\u059B\u05DD \u05D4\u05B8\u05E8\u05B4\u05D1\u05B0\u05DC\u05B8\u0596\u05D4 \u05DE\u05B4\u05E7\u05BC\u05B6\u05A3\u05D3\u05B6\u05DD \u05DC\u05B8\u05E2\u05B8\u0591\u05D9\u05B4\u05DF \u05D5\u05B0\u05D9\u05B8\u05E8\u05B7\u05A3\u05D3 \u05D4\u05B7\u05D2\u05BC\u05B0\u05D1\u05BB\u0594\u05DC \u05D5\u05BC\u05DE\u05B8\u05D7\u05B8\u059B\u05D4 \u05E2\u05B7\u05DC\u05BE\u05DB\u05BC\u05B6\u05A5\u05EA\u05B6\u05E3 \u05D9\u05B8\u05DD\u05BE\u05DB\u05BC\u05B4\u05E0\u05BC\u05B6\u0596\u05E8\u05B6\u05EA \u05E7\u05B5\u05BD\u05D3\u05B0\u05DE\u05B8\u05D4\u05C3",
-    en: 'From Shepham the boundary shall descend to Riblah on the east side of Ain; from there the boundary shall continue downward and abut on the eastern slopes of the Sea of Chinnereth.<sup class="footnote-marker">d</sup><i class="footnote"><b>Sea of Chinnereth </b>I.e., the Sea (or Lake) of Galilee.</i>'
+    en: "From Shepham the boundary shall descend to Riblah on the east side of Ain; from there the boundary shall continue downward and abut on the eastern slopes of the Sea of Chinnereth.dSea of Chinnereth I.e., the Sea (or Lake) of Galilee."
   },
   sheshak: {
     ref: "Jer 25:26",
-    he: "\u05D5\u05B0\u05D0\u05B5\u05A3\u05EA&thinsp;<b>\u05C0</b> \u05DB\u05BC\u05C7\u05DC\u05BE\u05DE\u05B7\u05DC\u05B0\u05DB\u05B5\u05A3\u05D9 \u05D4\u05B7\u05E6\u05BC\u05B8\u05E4\u0597\u05D5\u05B9\u05DF \u05D4\u05B7\u05E7\u05BC\u05B0\u05E8\u05B9\u05D1\u05B4\u05A4\u05D9\u05DD \u05D5\u05B0\u05D4\u05B8\u05E8\u05B0\u05D7\u05B9\u05E7\u05B4\u05D9\u05DD\u0599 \u05D0\u05B4\u05A3\u05D9\u05E9\u05C1 \u05D0\u05B6\u05DC\u05BE\u05D0\u05B8\u05D7\u05B4\u0594\u05D9\u05D5 \u05D5\u05B0\u05D0\u05B5\u05EA\u0599 \u05DB\u05BC\u05C7\u05DC\u05BE\u05D4\u05B7\u05DE\u05BC\u05B7\u05DE\u05B0\u05DC\u05B0\u05DB\u05A3\u05D5\u05B9\u05EA \u05D4\u05B8\u05D0\u05B8\u0594\u05E8\u05B6\u05E5 \u05D0\u05B2\u05E9\u05C1\u05B6\u0596\u05E8 \u05E2\u05B7\u05DC\u05BE\u05E4\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D4\u05B8\u05D0\u05B2\u05D3\u05B8\u05DE\u05B8\u0591\u05D4 \u05D5\u05BC\u05DE\u05B6\u05A5\u05DC\u05B6\u05DA\u05B0 \u05E9\u05C1\u05B5\u05E9\u05C1\u05B7\u0596\u05DA\u05B0 \u05D9\u05B4\u05E9\u05C1\u05B0\u05EA\u05BC\u05B6\u05A5\u05D4 \u05D0\u05B7\u05D7\u05B2\u05E8\u05B5\u05D9\u05D4\u05B6\u05BD\u05DD\u05C3",
-    en: 'all the kings of the north, whether far from or close to each other\u2014all the royal lands that are on the earth.<sup class="footnote-marker">h</sup><i class="footnote"><b>royal lands that are on the earth </b>Meaning of Heb. uncertain.</i> And last of all, the king of Sheshach<sup class="footnote-marker">i</sup><i class="footnote"><b>Sheshach </b>A cipher for <i>Babel</i> \u201CBabylon.\u201D</i> shall drink.'
+    he: "\u05D5\u05B0\u05D0\u05B5\u05A3\u05EA&thinsp;\u05C0 \u05DB\u05BC\u05C7\u05DC\u05BE\u05DE\u05B7\u05DC\u05B0\u05DB\u05B5\u05A3\u05D9 \u05D4\u05B7\u05E6\u05BC\u05B8\u05E4\u0597\u05D5\u05B9\u05DF \u05D4\u05B7\u05E7\u05BC\u05B0\u05E8\u05B9\u05D1\u05B4\u05A4\u05D9\u05DD \u05D5\u05B0\u05D4\u05B8\u05E8\u05B0\u05D7\u05B9\u05E7\u05B4\u05D9\u05DD\u0599 \u05D0\u05B4\u05A3\u05D9\u05E9\u05C1 \u05D0\u05B6\u05DC\u05BE\u05D0\u05B8\u05D7\u05B4\u0594\u05D9\u05D5 \u05D5\u05B0\u05D0\u05B5\u05EA\u0599 \u05DB\u05BC\u05C7\u05DC\u05BE\u05D4\u05B7\u05DE\u05BC\u05B7\u05DE\u05B0\u05DC\u05B0\u05DB\u05A3\u05D5\u05B9\u05EA \u05D4\u05B8\u05D0\u05B8\u0594\u05E8\u05B6\u05E5 \u05D0\u05B2\u05E9\u05C1\u05B6\u0596\u05E8 \u05E2\u05B7\u05DC\u05BE\u05E4\u05BC\u05B0\u05E0\u05B5\u05A3\u05D9 \u05D4\u05B8\u05D0\u05B2\u05D3\u05B8\u05DE\u05B8\u0591\u05D4 \u05D5\u05BC\u05DE\u05B6\u05A5\u05DC\u05B6\u05DA\u05B0 \u05E9\u05C1\u05B5\u05E9\u05C1\u05B7\u0596\u05DA\u05B0 \u05D9\u05B4\u05E9\u05C1\u05B0\u05EA\u05BC\u05B6\u05A5\u05D4 \u05D0\u05B7\u05D7\u05B2\u05E8\u05B5\u05D9\u05D4\u05B6\u05BD\u05DD\u05C3",
+    en: "all the kings of the north, whether far from or close to each other\u2014all the royal lands that are on the earth.hroyal lands that are on the earth Meaning of Heb. uncertain. And last of all, the king of SheshachiSheshach A cipher for Babel \u201CBabylon.\u201D shall drink."
   },
   sokoh: {
     ref: "Josh 15:35",
@@ -26235,8 +30402,8 @@ var name_verses_default = {
   },
   tachpanches: {
     ref: "Jer 2:16",
-    he: '\u05D2\u05BC\u05B7\u05DD\u05BE\u05D1\u05BC\u05B0\u05E0\u05B5\u05D9\u05BE\u05E0\u05B9\u0596\u05E3 <span class="mam-kq"><span class="mam-kq-k">(\u05D5\u05EA\u05D7\u05E4\u05E0\u05E1)</span> <span class="mam-kq-q">[\u05D5\u05B0\u05EA\u05B7\u05D7\u05B0\u05E4\u05BC\u05B7\u05E0\u05B0\u05D7\u05B5\u0591\u05E1]</span></span> \u05D9\u05B4\u05E8\u05B0\u05E2\u0596\u05D5\u05BC\u05DA\u05B0 \u05E7\u05C7\u05D3\u05B0\u05E7\u05B9\u05BD\u05D3\u05C3',
-    en: '<span class="poetry indentAll">Those, too, in Noph and Tahpanhes</span><sup class="footnote-marker">b</sup><i class="footnote"><b>Noph and Tahpanhes </b>Cities in Egypt. The Egyptians, like the Assyrians, will prove a disappointment; cf. v. 36.</i> <br><span class="poetry indentAll">Will lay bare</span><sup class="footnote-marker">c</sup><i class="footnote"><b>Will lay bare </b>Meaning of Heb. uncertain.</i> your head.'
+    he: "\u05D2\u05BC\u05B7\u05DD\u05BE\u05D1\u05BC\u05B0\u05E0\u05B5\u05D9\u05BE\u05E0\u05B9\u0596\u05E3 (\u05D5\u05EA\u05D7\u05E4\u05E0\u05E1) [\u05D5\u05B0\u05EA\u05B7\u05D7\u05B0\u05E4\u05BC\u05B7\u05E0\u05B0\u05D7\u05B5\u0591\u05E1] \u05D9\u05B4\u05E8\u05B0\u05E2\u0596\u05D5\u05BC\u05DA\u05B0 \u05E7\u05C7\u05D3\u05B0\u05E7\u05B9\u05BD\u05D3\u05C3",
+    en: "Those, too, in Noph and TahpanhesbNoph and Tahpanhes Cities in Egypt. The Egyptians, like the Assyrians, will prove a disappointment; cf. v. 36. Will lay barecWill lay bare Meaning of Heb. uncertain. your head."
   },
   tebets: {
     ref: "Judg 9:50",
@@ -26251,11 +30418,11 @@ var name_verses_default = {
   "timnath-cheres": {
     ref: "Judg 2:9",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05B0\u05D1\u05BC\u05B0\u05E8\u05A4\u05D5\u05BC \u05D0\u05D5\u05B9\u05EA\u05D5\u05B9\u0599 \u05D1\u05BC\u05B4\u05D2\u05B0\u05D1\u05A3\u05D5\u05BC\u05DC \u05E0\u05B7\u05D7\u05B2\u05DC\u05B8\u05EA\u0594\u05D5\u05B9 \u05D1\u05BC\u05B0\u05EA\u05B4\u05DE\u05B0\u05E0\u05B7\u05EA\u05BE\u05D7\u05B6\u0596\u05E8\u05B6\u05E1 \u05D1\u05BC\u05B0\u05D4\u05B7\u05A3\u05E8 \u05D0\u05B6\u05E4\u05B0\u05E8\u05B8\u0591\u05D9\u05B4\u05DD \u05DE\u05B4\u05E6\u05BC\u05B0\u05E4\u0596\u05D5\u05B9\u05DF \u05DC\u05B0\u05D4\u05B7\u05E8\u05BE\u05D2\u05BC\u05B8\u05BD\u05E2\u05B7\u05E9\u05C1\u05C3",
-    en: 'and was buried on his own property, at Timnath-heres<sup class="footnote-marker">e</sup><i class="footnote"><b>Timnath-heres </b>Some mss. read \u201CTimnath-serah\u201D; cf. Josh. 24.30.</i> in the hill country of Ephraim, north of Mount Gaash.'
+    en: "and was buried on his own property, at Timnath-hereseTimnath-heres Some mss. read \u201CTimnath-serah\u201D; cf. Josh. 24.30. in the hill country of Ephraim, north of Mount Gaash."
   },
   tiphsach: {
     ref: "1 Ki 5:4",
-    he: "\u05DB\u05BC\u05B4\u05D9\u05BE\u05D4\u059E\u05D5\u05BC\u05D0 \u05E8\u05B9\u05D3\u05B6\u05A3\u05D4&thinsp;<b>\u05C0</b> \u05D1\u05BC\u05B0\u05DB\u05C7\u05DC\u05BE\u05E2\u05B5\u05A3\u05D1\u05B6\u05E8 \u05D4\u05B7\u05E0\u05BC\u05B8\u05D4\u05B8\u0597\u05E8 \u05DE\u05B4\u05EA\u05BC\u05B4\u05E4\u05B0\u05E1\u05B7\u05D7\u0599 \u05D5\u05B0\u05E2\u05B7\u05D3\u05BE\u05E2\u05B7\u05D6\u05BC\u05B8\u0594\u05D4 \u05D1\u05BC\u05B0\u05DB\u05C7\u05DC\u05BE\u05DE\u05B7\u05DC\u05B0\u05DB\u05B5\u0596\u05D9 \u05E2\u05B5\u05A3\u05D1\u05B6\u05E8 \u05D4\u05B7\u05E0\u05BC\u05B8\u05D4\u05B8\u0591\u05E8 \u05D5\u05B0\u05E9\u05C1\u05B8\u05DC\u0597\u05D5\u05B9\u05DD \u05D4\u05B8\u05A5\u05D9\u05B8\u05D4 \u05DC\u059B\u05D5\u05B9 \u05DE\u05B4\u05DB\u05BC\u05C7\u05DC\u05BE\u05E2\u05B2\u05D1\u05B8\u05E8\u05B8\u0596\u05D9\u05D5 \u05DE\u05B4\u05E1\u05BC\u05B8\u05D1\u05B4\u05BD\u05D9\u05D1\u05C3",
+    he: "\u05DB\u05BC\u05B4\u05D9\u05BE\u05D4\u059E\u05D5\u05BC\u05D0 \u05E8\u05B9\u05D3\u05B6\u05A3\u05D4&thinsp;\u05C0 \u05D1\u05BC\u05B0\u05DB\u05C7\u05DC\u05BE\u05E2\u05B5\u05A3\u05D1\u05B6\u05E8 \u05D4\u05B7\u05E0\u05BC\u05B8\u05D4\u05B8\u0597\u05E8 \u05DE\u05B4\u05EA\u05BC\u05B4\u05E4\u05B0\u05E1\u05B7\u05D7\u0599 \u05D5\u05B0\u05E2\u05B7\u05D3\u05BE\u05E2\u05B7\u05D6\u05BC\u05B8\u0594\u05D4 \u05D1\u05BC\u05B0\u05DB\u05C7\u05DC\u05BE\u05DE\u05B7\u05DC\u05B0\u05DB\u05B5\u0596\u05D9 \u05E2\u05B5\u05A3\u05D1\u05B6\u05E8 \u05D4\u05B7\u05E0\u05BC\u05B8\u05D4\u05B8\u0591\u05E8 \u05D5\u05B0\u05E9\u05C1\u05B8\u05DC\u0597\u05D5\u05B9\u05DD \u05D4\u05B8\u05A5\u05D9\u05B8\u05D4 \u05DC\u059B\u05D5\u05B9 \u05DE\u05B4\u05DB\u05BC\u05C7\u05DC\u05BE\u05E2\u05B2\u05D1\u05B8\u05E8\u05B8\u0596\u05D9\u05D5 \u05DE\u05B4\u05E1\u05BC\u05B8\u05D1\u05B4\u05BD\u05D9\u05D1\u05C3",
     en: "For he controlled the whole region west of the Euphrates\u2014all the kings west of the Euphrates, from Tiphsah to Gaza\u2014and he had peace on all his borders round about."
   },
   tophteh: {
@@ -26265,8 +30432,8 @@ var name_verses_default = {
   },
   tsarethan: {
     ref: "Josh 3:16",
-    he: '\u05D5\u05B7\u05D9\u05BC\u05B7\u05BD\u05E2\u05B7\u05DE\u05B0\u05D3\u05A1\u05D5\u05BC \u05D4\u05B7\u05DE\u05BC\u05B7\u05A9\u05D9\u05B4\u05DD\u05A9 \u05D4\u05B7\u05D9\u05BC\u05B9\u05E8\u05B0\u05D3\u05B4\u05A8\u05D9\u05DD \u05DE\u05B4\u05DC\u05B0\u05DE\u05B7\u059C\u05E2\u05B0\u05DC\u05B8\u05D4 \u05E7\u05B8\u05A3\u05DE\u05D5\u05BC \u05E0\u05B5\u05D3\u05BE\u05D0\u05B6\u05D7\u05B8\u0597\u05D3 \u05D4\u05B7\u05E8\u05B0\u05D7\u05B5\u05A8\u05E7 \u05DE\u05B0\u05D0\u05B9\u059C\u05D3 <span class="mam-kq"><span class="mam-kq-k">(\u05D1\u05D0\u05D3\u05DD)</span> <span class="mam-kq-q">[\u05DE\u05B5\u05BD\u05D0\u05B8\u05D3\u05B8\u05A4\u05DD]</span></span> \u05D4\u05B8\u05E2\u05B4\u05D9\u05E8\u0599 \u05D0\u05B2\u05E9\u05C1\u05B6\u05E8\u0599 \u05DE\u05B4\u05E6\u05BC\u05B7\u05A3\u05D3 \u05E6\u05B8\u05BD\u05E8\u05B0\u05EA\u05B8\u0594\u05DF \u05D5\u05B0\u05D4\u05B7\u05D9\u05BC\u05B9\u05E8\u05B0\u05D3\u05B4\u0597\u05D9\u05DD \u05E2\u05B7\u05A3\u05DC \u05D9\u05B8\u05A7\u05DD \u05D4\u05B8\u05E2\u05B2\u05E8\u05B8\u05D1\u05B8\u059B\u05D4 \u05D9\u05B8\u05DD\u05BE\u05D4\u05B7\u05DE\u05BC\u05B6\u0596\u05DC\u05B7\u05D7 \u05EA\u05BC\u05B7\u05A3\u05DE\u05BC\u05D5\u05BC \u05E0\u05B4\u05DB\u05B0\u05E8\u05B8\u0591\u05EA\u05D5\u05BC \u05D5\u05B0\u05D4\u05B8\u05E2\u05B8\u05A5\u05DD \u05E2\u05B8\u05D1\u05B0\u05E8\u0596\u05D5\u05BC \u05E0\u05B6\u05A5\u05D2\u05B6\u05D3 \u05D9\u05B0\u05E8\u05B4\u05D9\u05D7\u05BD\u05D5\u05B9\u05C3',
-    en: 'the waters coming down from upstream piled up in a single heap a great way off, at<sup class="footnote-marker">b</sup><i class="footnote"><b>at </b>So <i>kethib</i>; <i>qere</i> \u201Cfrom.\u201D</i> Adam, the town next to Zarethan; and those flowing away downstream to the Sea of the Arabah (the Dead Sea) ran out completely. So the people crossed near Jericho.'
+    he: "\u05D5\u05B7\u05D9\u05BC\u05B7\u05BD\u05E2\u05B7\u05DE\u05B0\u05D3\u05A1\u05D5\u05BC \u05D4\u05B7\u05DE\u05BC\u05B7\u05A9\u05D9\u05B4\u05DD\u05A9 \u05D4\u05B7\u05D9\u05BC\u05B9\u05E8\u05B0\u05D3\u05B4\u05A8\u05D9\u05DD \u05DE\u05B4\u05DC\u05B0\u05DE\u05B7\u059C\u05E2\u05B0\u05DC\u05B8\u05D4 \u05E7\u05B8\u05A3\u05DE\u05D5\u05BC \u05E0\u05B5\u05D3\u05BE\u05D0\u05B6\u05D7\u05B8\u0597\u05D3 \u05D4\u05B7\u05E8\u05B0\u05D7\u05B5\u05A8\u05E7 \u05DE\u05B0\u05D0\u05B9\u059C\u05D3 (\u05D1\u05D0\u05D3\u05DD) [\u05DE\u05B5\u05BD\u05D0\u05B8\u05D3\u05B8\u05A4\u05DD] \u05D4\u05B8\u05E2\u05B4\u05D9\u05E8\u0599 \u05D0\u05B2\u05E9\u05C1\u05B6\u05E8\u0599 \u05DE\u05B4\u05E6\u05BC\u05B7\u05A3\u05D3 \u05E6\u05B8\u05BD\u05E8\u05B0\u05EA\u05B8\u0594\u05DF \u05D5\u05B0\u05D4\u05B7\u05D9\u05BC\u05B9\u05E8\u05B0\u05D3\u05B4\u0597\u05D9\u05DD \u05E2\u05B7\u05A3\u05DC \u05D9\u05B8\u05A7\u05DD \u05D4\u05B8\u05E2\u05B2\u05E8\u05B8\u05D1\u05B8\u059B\u05D4 \u05D9\u05B8\u05DD\u05BE\u05D4\u05B7\u05DE\u05BC\u05B6\u0596\u05DC\u05B7\u05D7 \u05EA\u05BC\u05B7\u05A3\u05DE\u05BC\u05D5\u05BC \u05E0\u05B4\u05DB\u05B0\u05E8\u05B8\u0591\u05EA\u05D5\u05BC \u05D5\u05B0\u05D4\u05B8\u05E2\u05B8\u05A5\u05DD \u05E2\u05B8\u05D1\u05B0\u05E8\u0596\u05D5\u05BC \u05E0\u05B6\u05A5\u05D2\u05B6\u05D3 \u05D9\u05B0\u05E8\u05B4\u05D9\u05D7\u05BD\u05D5\u05B9\u05C3",
+    en: "the waters coming down from upstream piled up in a single heap a great way off, atbat So kethib; qere \u201Cfrom.\u201D Adam, the town next to Zarethan; and those flowing away downstream to the Sea of the Arabah (the Dead Sea) ran out completely. So the people crossed near Jericho."
   },
   tsenan: {
     ref: "Josh 15:37",
@@ -26276,17 +30443,17 @@ var name_verses_default = {
   tsephath: {
     ref: "Judg 1:17",
     he: "\u05D5\u05B7\u05D9\u05BC\u05B5\u05A4\u05DC\u05B6\u05DA\u05B0 \u05D9\u05B0\u05D4\u05D5\u05BC\u05D3\u05B8\u05D4\u0599 \u05D0\u05B6\u05EA\u05BE\u05E9\u05C1\u05B4\u05DE\u05B0\u05E2\u05A3\u05D5\u05B9\u05DF \u05D0\u05B8\u05D7\u05B4\u0594\u05D9\u05D5 \u05D5\u05B7\u05D9\u05BC\u05B7\u05DB\u05BC\u0595\u05D5\u05BC \u05D0\u05B6\u05EA\u05BE\u05D4\u05B7\u05BD\u05DB\u05BC\u05B0\u05E0\u05B7\u05E2\u05B2\u05E0\u05B4\u0596\u05D9 \u05D9\u05D5\u05B9\u05E9\u05C1\u05B5\u05A3\u05D1 \u05E6\u05B0\u05E4\u05B7\u0591\u05EA \u05D5\u05B7\u05D9\u05BC\u05B7\u05D7\u05B2\u05E8\u05B4\u05A3\u05D9\u05DE\u05D5\u05BC \u05D0\u05D5\u05B9\u05EA\u05B8\u0594\u05D4\u05BC \u05D5\u05B7\u05D9\u05BC\u05B4\u05E7\u05B0\u05E8\u05B8\u05A5\u05D0 \u05D0\u05B6\u05EA\u05BE\u05E9\u05C1\u05B5\u05DD\u05BE\u05D4\u05B8\u05E2\u05B4\u0596\u05D9\u05E8 \u05D7\u05C7\u05E8\u05B0\u05DE\u05B8\u05BD\u05D4\u05C3",
-    en: 'And Judah with its brother-tribe Simeon went on and defeated the Canaanites who dwelt in Zephath. They proscribed it, and so the town was named Hormah.<sup class="footnote-marker">e</sup><i class="footnote"><b>Hormah </b>I.e., \u201CProscribed.\u201D Cf. notes at Num. 21.2\u20133.</i>'
+    en: "And Judah with its brother-tribe Simeon went on and defeated the Canaanites who dwelt in Zephath. They proscribed it, and so the town was named Hormah.eHormah I.e., \u201CProscribed.\u201D Cf. notes at Num. 21.2\u20133."
   },
   tsin: {
     ref: "Ezek 23:24",
     he: "\u05D5\u05BC\u05D1\u05B8\u05A3\u05D0\u05D5\u05BC \u05E2\u05B8\u05DC\u05B7\u05A1\u05D9\u05B4\u05DA\u05B0 \u05D4\u05B9\u05A0\u05E6\u05B6\u05DF \u05E8\u05B6\u05A4\u05DB\u05B6\u05D1 \u05D5\u05B0\u05D2\u05B7\u05DC\u05B0\u05D2\u05BC\u05B7\u05DC\u0599 \u05D5\u05BC\u05D1\u05B4\u05E7\u05B0\u05D4\u05B7\u05A3\u05DC \u05E2\u05B7\u05DE\u05BC\u05B4\u0594\u05D9\u05DD \u05E6\u05B4\u05E0\u05BC\u05B8\u05A4\u05D4 \u05D5\u05BC\u05DE\u05B8\u05D2\u05B5\u05DF\u0599 \u05D5\u05B0\u05E7\u05D5\u05B9\u05D1\u05B7\u0594\u05E2 \u05D9\u05B8\u05E9\u05C2\u05B4\u05A5\u05D9\u05DE\u05D5\u05BC \u05E2\u05B8\u05DC\u05B7\u0596\u05D9\u05B4\u05DA\u05B0 \u05E1\u05B8\u05D1\u05B4\u0591\u05D9\u05D1 \u05D5\u05B0\u05E0\u05B8\u05EA\u05B7\u05EA\u05BC\u05B4\u05A4\u05D9 \u05DC\u05B4\u05E4\u05B0\u05E0\u05B5\u05D9\u05D4\u05B6\u05DD\u0599 \u05DE\u05B4\u05E9\u05C1\u05B0\u05E4\u05BC\u05B8\u0594\u05D8 \u05D5\u05BC\u05E9\u05C1\u05B0\u05E4\u05B8\u05D8\u0596\u05D5\u05BC\u05DA\u05B0 \u05D1\u05BC\u05B0\u05DE\u05B4\u05E9\u05C1\u05B0\u05E4\u05BC\u05B0\u05D8\u05B5\u05D9\u05D4\u05B6\u05BD\u05DD\u05C3",
-    en: 'They shall attack you with fleets<sup class="footnote-marker">h</sup><i class="footnote"><b>fleets </b>Meaning of Heb. uncertain.</i> of wheeled chariots and a host of troops; they shall set themselves against you on all sides with bucklers, shields, and helmets. And I will entrust your punishment to them, and they shall inflict their punishments on you.'
+    en: "They shall attack you with fleetshfleets Meaning of Heb. uncertain. of wheeled chariots and a host of troops; they shall set themselves against you on all sides with bucklers, shields, and helmets. And I will entrust your punishment to them, and they shall inflict their punishments on you."
   },
   zaanan: {
     ref: "Mic 1:11",
     he: "\u05E2\u05B4\u05D1\u05B0\u05E8\u05B4\u05A5\u05D9 \u05DC\u05B8\u05DB\u05B6\u059B\u05DD \u05D9\u05D5\u05B9\u05E9\u05C1\u05B6\u05A5\u05D1\u05B6\u05EA \u05E9\u05C1\u05B8\u05E4\u05B4\u0596\u05D9\u05E8 \u05E2\u05B6\u05E8\u05B0\u05D9\u05B8\u05D4\u05BE\u05D1\u05B9\u0591\u05E9\u05C1\u05B6\u05EA \u05DC\u05B9\u05A4\u05D0 \u05D9\u05B8\u05BD\u05E6\u05B0\u05D0\u05B8\u05D4\u0599 \u05D9\u05D5\u05B9\u05E9\u05C1\u05B6\u05A3\u05D1\u05B6\u05EA \u05E6\u05B7\u05BD\u05D0\u05B2\u05E0\u05B8\u0594\u05DF \u05DE\u05B4\u05E1\u05B0\u05E4\u05BC\u05B7\u05D3\u0599 \u05D1\u05BC\u05B5\u05A3\u05D9\u05EA \u05D4\u05B8\u05D0\u05B5\u0594\u05E6\u05B6\u05DC \u05D9\u05B4\u05E7\u05BC\u05B7\u05A5\u05D7 \u05DE\u05B4\u05DB\u05BC\u05B6\u0596\u05DD \u05E2\u05B6\u05DE\u05B0\u05D3\u05BC\u05B8\u05EA\u05BD\u05D5\u05B9\u05C3",
-    en: '<span class="poetry indentAll">Pass on, inhabitants of Shaphir!</span><br><span class="poetry indentAll">Did not the inhabitants of Zaanan</span><br><span class="poetry indentAll">Have to go forth naked in shame?</span><br><span class="poetry indentAll">There is lamentation in Beth-ezel\u2014</span><br><span class="poetry indentAll">It will withdraw its support from you.</span>'
+    en: "Pass on, inhabitants of Shaphir!Did not the inhabitants of ZaananHave to go forth naked in shame?There is lamentation in Beth-ezel\u2014It will withdraw its support from you."
   },
   zered: {
     ref: "Num 21:12",
@@ -26697,7 +30864,7 @@ function Footer() {
       goInternal(href);
     }
   };
-  return /* @__PURE__ */ import_react16.default.createElement("footer", { className: "site-footer", onClick }, /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react16.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react16.default.createElement(L, { href: PAPER }, "The paper \u2014 The Reader of the Sky \u2192"), /* @__PURE__ */ import_react16.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Felipe II"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/patriarchs" }, "Patriarchs/Conquest \u2014 names readable in the sky"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/places" }, "Places \u2014 biblical toponyms readable in the sky"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments" }, "Stellar alignments (267 fiches)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/app" }, "Sky reader app")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react16.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react16.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react16.default.createElement("span", null, "\xA9 ", year, " ", /* @__PURE__ */ import_react16.default.createElement("a", { href: "https://medium.com/@ancientencoder/sons-of-stars-269765bda7db", target: "_blank", rel: "noreferrer" }, "AncientEncoder"), " and BartMan \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react16.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react16.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
+  return /* @__PURE__ */ import_react16.default.createElement("footer", { className: "site-footer", onClick }, /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react16.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react16.default.createElement(L, { href: PAPER }, "The paper \u2014 The Reader of the Sky \u2192"), /* @__PURE__ */ import_react16.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Aleister Crowley"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/patriarchs" }, "Patriarchs/Conquest \u2014 names readable in the sky"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/places" }, "Places \u2014 biblical toponyms readable in the sky"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments" }, "Stellar alignments (267 fiches)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/app" }, "Sky reader app")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react16.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react16.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react16.default.createElement("span", null, "\xA9 ", year, " ", /* @__PURE__ */ import_react16.default.createElement("a", { href: "https://medium.com/@ancientencoder/sons-of-stars-269765bda7db", target: "_blank", rel: "noreferrer" }, "AncientEncoder"), " and BartMan \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react16.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react16.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
 }
 
 // web/src/pages/Landing.jsx
@@ -27085,18 +31252,18 @@ var jsonldWebApp = JSON.stringify({
 });
 writeHtml("prophets/index.html", shell({
   title: "Prophets timeline \u2014 Adam to Jacob Frank | Apocalypse of Adam",
-  desc: "A chronology of prophetic and revelatory figures from Adam through the biblical prophets, the apocalyptic writers, and the Sabbatean\u2013Frankist thread, ending at Jacob Frank (1726\u20131791).",
-  keywords: "prophets timeline, Adam to Jacob Frank, biblical prophets, apocalyptic writers, Sabbateanism, Frankism, revelation chronology, merkabah mysticism, Apocalypse of Adam",
+  desc: "A chronology of prophetic and revelatory figures from Adam and Seth (the astronomical knowledge inscribed on two pillars to survive the flood) through the biblical prophets, the Islamic prophets and Sufi mystics, the apocalyptic writers, and the Sabbatean\u2013Frankist thread, ending at Jacob Frank (1726\u20131791).",
+  keywords: "prophets timeline, Adam to Jacob Frank, Seth two pillars, biblical prophets, Islamic prophets, Sufi mystics, apocalyptic writers, Sabbateanism, Frankism, revelation chronology, merkabah mysticism, Apocalypse of Adam",
   path: "/prophets",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Prophets \u2014 Adam to Jacob Frank", url: SITE + "/prophets" }),
   body: appBody(/* @__PURE__ */ import_react21.default.createElement(ProphetsPage, null))
 }));
 writeHtml("mages/index.html", shell({
-  title: "Magi timeline \u2014 Daniel to Felipe II | Apocalypse of Adam",
-  desc: "A chronology of magi and royal-sage occult figures from the Babylonian court magi (Daniel, Shadrach, Meshach, Abednego) through Ramon Llull, Alfonso X and Felipe II, with Wikipedia bios and a profile of their works.",
-  keywords: "magi timeline, Daniel magi, Shadrach Meshach Abednego, Ramon Llull Ars Magna, Alfonso X, Felipe II, Christian Kabbalah, Hermeticism, Renaissance magic, Apocalypse of Adam",
+  title: "Magi timeline \u2014 Daniel to Aleister Crowley | Apocalypse of Adam",
+  desc: "A chronology of magi and royal-sage occult figures: the Sumerian apkallu Adapa, the Egyptian sage Imhotep, the priestess Enheduanna, Hermes Trismegistus, Jannes and Jambres of Moses' era, Pythagoras, the Babylonian court magi (Daniel, Shadrach, Meshach, Abednego), the priest-astronomer Berossus, the Magi of Matthew 2, Apollonius of Tyana, the theurgist Iamblichus, Saint Cyprian of Antioch (San Cipriano), the Arabic astrologers Abu Ma'shar, Al-Kindi (De radiis stellarum) and Maslama al-Qurtubi (Picatrix), the medieval Iberian sages (Ramon Llull, Alfonso X, Arnaldus de Villanova, Moses de Le\xF3n), the Renaissance magi, the Baroque Jesuit mage Athanasius Kircher (Oedipus Aegyptiacus), and the modern Hermetic line of Eliphas L\xE9vi, S.L. Mathers and Aleister Crowley \u2014 with Wikipedia bios and a profile of their works.",
+  keywords: "magi timeline, Adapa apkallu, Imhotep, Enheduanna, Hermes Trismegistus, Jannes and Jambres, Pythagoras, Daniel magi, Shadrach Meshach Abednego, Berossus, Biblical Magi, Apollonius of Tyana, Iamblichus theurgy, San Cipriano, Saint Cyprian of Antioch, Abu Ma'shar, Al-Kindi, De radiis stellarum, Maslama al-Qurtubi, Picatrix, Drag\xF3n Rojo, Ramon Llull Ars Magna, Alfonso X, Felipe II, Athanasius Kircher, Oedipus Aegyptiacus, Jesuit mage, Eliphas Levi, Mathers, Aleister Crowley, Thelema, Goetia, Christian Kabbalah, Hermeticism, Renaissance magic, Apocalypse of Adam",
   path: "/mages",
-  jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Magi \u2014 Daniel to Felipe II", url: SITE + "/mages" }),
+  jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Magi \u2014 Daniel to Aleister Crowley", url: SITE + "/mages" }),
   body: appBody(/* @__PURE__ */ import_react21.default.createElement(MagesPage, null))
 }));
 writeHtml("patriarchs/index.html", shell({
@@ -27369,8 +31536,8 @@ var llmsTxt = `# The Apocalypse of Adam
 - [Sky reader app](${SITE}/app) \u2014 interactive calculators (11 tabs: Cycles, Sky Map, Reader, Reading, Time, Gematria, Sigils, Revelations, Psalms, Codes, Methodology)
 - [About](${SITE}/about) \u2014 what the project is, how a reading works, authors and sources.
 - [Paper \u2014 The Reader of the Sky](${SITE}/paper) \u2014 the long-form academic article (served on this domain).
-- [Prophets timeline \u2014 Adam to Jacob Frank](${SITE}/prophets) \u2014 33 prophet fiches (/prophet/<slug>)
-- [Magi timeline \u2014 Daniel to Felipe II](${SITE}/mages) \u2014 24 magus fiches (/mage/<slug>)
+- [Prophets timeline \u2014 Adam to Jacob Frank](${SITE}/prophets) \u2014 61 prophet fiches (/prophet/<slug>)
+- [Magi timeline \u2014 Daniel to Aleister Crowley](${SITE}/mages) \u2014 40 magus fiches (/mage/<slug>)
 - [Patriarchs/Conquest \u2014 names readable in the sky](${SITE}/patriarchs) \u2014 185 biblical-name fiches (/patriarch/<slug>)
 - [Places \u2014 biblical toponyms readable in the sky](${SITE}/places) \u2014 108 biblical-place fiches (/place/<slug>)
 - [Stellar alignments](${SITE}/alignments) \u2014 267 rare-alignment fiches (/align/<date>)
@@ -27378,7 +31545,7 @@ var llmsTxt = `# The Apocalypse of Adam
 
 ## Machine-readable
 - [llms-full.txt](${SITE}/llms-full.txt) \u2014 full site description + WebMCP tool catalogue
-- [sitemap.xml](${SITE}/sitemap.xml) \u2014 index to all sub-sitemaps (hub + 267 alignments + 6045 glosses + 57 prophet/mage + 293 patriarch/place fiches)
+- [sitemap.xml](${SITE}/sitemap.xml) \u2014 index to all sub-sitemaps (hub + 267 alignments + 6045 glosses + 101 prophet/mage + 293 patriarch/place fiches)
 - [robots.txt](${SITE}/robots.txt)
 - [site.webmanifest](${SITE}/site.webmanifest)
 - JSON datasets: [/alignments.json](${SITE}/alignments.json) \xB7 [/lexicon.json](${SITE}/lexicon.json) \xB7 [/angels72.json](${SITE}/angels72.json) \xB7 [/name_refs.json](${SITE}/name_refs.json)
@@ -27398,8 +31565,8 @@ For any Gregorian date (BCE supported as -YYYY-MM-DD), the app computes the geoc
 
 ## Hub pages
 - [Sky reader app](${SITE}/) \u2014 11 tabs: Cycles (Alignments/Saros/Ayanamsa/Lunar-Solar/Week), Sky Map, Reader (glossary + per-word profile), Reading (Reading Rule / YHVH / Genesis 1:1), Time (Predictor / Ages), Gematria (Hebrew/Greek/Arabic/Indian + Aiq Bekar), Sigils (Sigil Forge / Kameot / 72 Angels), Revelations (9 cultures), Psalms (by date), Codes (ELS / Temurah / Ziruph), Methodology.
-- [Prophets](${SITE}/prophets) \u2014 33 prophetic/revelatory figures Adam \u2192 Jacob Frank (biblical, apocalyptic, mystical, Sabbatean-Frankist), with a timeline.
-- [Magi](${SITE}/mages) \u2014 24 magi and royal-sage figures (Daniel, Shadrach, Meshach, Abednego \u2192 Ramon Llull \u2192 Alfonso X \u2192 Felipe II), each with a Wikipedia-grounded biography and a profile of their most important works.
+- [Prophets](${SITE}/prophets) \u2014 61 prophetic/revelatory figures Adam \u2192 Jacob Frank (biblical, Islamic, Sufi, apocalyptic, mystical, Sabbatean-Frankist), with a timeline.
+- [Magi](${SITE}/mages) \u2014 40 magi and royal-sage figures (Adapa, Imhotep, Enheduanna \u2192 Pythagoras \u2192 Daniel \u2192 Apollonius, Iamblichus \u2192 Saint Cyprian of Antioch \u2192 Abu Ma'shar, Al-Kindi, Maslama al-Qurtubi \u2192 Ramon Llull \u2192 Athanasius Kircher \u2192 Aleister Crowley), each with a Wikipedia-grounded biography and a profile of their most important works.
 - [Patriarchs/Conquest](${SITE}/patriarchs) \u2014 185 biblical persons whose names the stellar reading surfaces across the 12 dated rare conjunctions; each profile at /patriarch/<slug> has the Hebrew, gematria, stellar letters, and the conjunctions where it reads.
 - [Places](${SITE}/places) \u2014 108 biblical toponyms the stellar reading surfaces across the 12 dated rare conjunctions; each profile at /place/<slug> has the Hebrew, gematria, stellar letters, and the conjunctions where it reads.
 - [Stellar alignments](${SITE}/alignments) \u2014 index of 267 rare century/millennium conjunctions; each fiche at /align/<date> has a sky map, alignment metrics (max-in-sign, tightest arc, era), and the top readable names.
