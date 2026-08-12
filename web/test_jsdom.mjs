@@ -36,7 +36,7 @@ window.fetch = globalThis.fetch;
 const results = [];
 const check = (name, cond, extra) => results.push({ name, ok: !!cond, extra: extra || '' });
 
-const { App, ProphetsPage, MagesPage, AlignmentFicha, ProphetFicha, MageFicha, PatriarchFicha, PlaceFicha, PatriarchsPage, PlacesPage, Landing, About, WarningModal } = await import('./test-entry.bundle.mjs');
+const { App, ProphetsPage, MagesPage, AlignmentFicha, ProphetFicha, MageFicha, PatriarchFicha, PlaceFicha, PatriarchsPage, PlacesPage, Landing, About, WarningModal, LibraryApp } = await import('./test-entry.bundle.mjs');
 
 // --- mount App ---
 const root = window.document.getElementById('root');
@@ -80,7 +80,7 @@ try {
 
 try {
   const html = renderToStaticMarkup(React.createElement(MagesPage));
-  check('route /mages: h1 renders', /Magi — from Daniel to Aleister Crowley/.test(html));
+  check('route /mages: h1 renders', /Magi — from Adapa to Aleister Crowley/.test(html));
   check('route /mages: timeline svg', /timeline-wrap/.test(html));
   check('route /mages: Crowley marked', /Aleister Crowley/.test(html));
   check('route /mages: Llull card renders', /Ramon Llull/.test(html));
@@ -171,6 +171,24 @@ try {
   check('WarningModal: self-check questions', /self-check/.test(html) && /Yes/.test(html));
   check('WarningModal: crisis resource', /988|crisis/i.test(html));
 } catch (e) { check('WarningModal renders', false, String(e.message)); }
+
+// --- Luco Library (SSR with a fake catalog; no fetch needed via initialCatalog prop) ---
+try {
+  const fakeCatalog = { books: [
+    { slug:'test-book', title:'Test Book', author:'Tester', year:1900, lang:'en', genre:'test', description:'A test book for the suite.', segments:3, words:1000, originalFiles:['/library/original/test-book/test.txt'] },
+    { slug:'multi-file', title:'Multi File Book', author:'M', year:1901, lang:'en', genre:'test', description:'A multi-source book.', segments:2, words:500, originalFiles:['/library/original/multi-file/a.txt','/library/original/multi-file/b.txt'] }
+  ]};
+  const html = renderToStaticMarkup(React.createElement(LibraryApp, { initialCatalog: fakeCatalog }));
+  check('Library: Luco title renders', /The Luco Library/.test(html));
+  check('Library: lucus etymology note', /lucus/.test(html) && /sacred grove/.test(html));
+  check('Library: search bar renders', /lib-search/.test(html) && /Search the library/.test(html));
+  check('Library: book cards render', /Test Book/.test(html) && /Multi File Book/.test(html));
+  const cardCount = (html.match(/feat-card lib-card/g) || []).length;
+  check('Library: 2 book cards', cardCount === 2, `found ${cardCount}`);
+  check('Library: discreet download button', /Download original/.test(html));
+  check('Library: multi-file card links to listing', /Download original \(2 files\)/.test(html));
+  check('Library: section/word pills', /sections/.test(html) && /words/.test(html));
+} catch (e) { check('Library renders', false, String(e.message)); }
 
 // --- /app route maps to the app shell (SSR: lex null → "Loading lexicon…") ---
 // The global jsdom `window` (installed above for the mount test) would make

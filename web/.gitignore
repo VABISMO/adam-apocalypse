@@ -21,6 +21,9 @@ places/
 app/
 about/
 paper/
+library/index.html
+library/data/
+library/original/
 alignments/index.html
 readings/index.html
 sitemap.xml

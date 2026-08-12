@@ -52,7 +52,7 @@ function Footer(){
 
       <Col title="Hub pages">
         <L href="/prophets">Prophets timeline — Adam to Jacob Frank</L>
-        <L href="/mages">Magi timeline — Daniel to Aleister Crowley</L>
+        <L href="/mages">Magi timeline — Adapa to Aleister Crowley</L>
         <L href="/patriarchs">Patriarchs/Conquest — names readable in the sky</L>
         <L href="/places">Places — biblical toponyms readable in the sky</L>
         <L href="/alignments">Stellar alignments (267 fiches)</L>

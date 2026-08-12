@@ -904,12 +904,12 @@ var require_react_development = __commonJS({
         var SEPARATOR = ".";
         var SUBSEPARATOR = ":";
         function escape(key) {
-          var escapeRegex = /[=:]/g;
+          var escapeRegex2 = /[=:]/g;
           var escaperLookup = {
             "=": "=0",
             ":": "=2"
           };
-          var escapedString = key.replace(escapeRegex, function(match) {
+          var escapedString = key.replace(escapeRegex2, function(match) {
             return escaperLookup[match];
           });
           return "$" + escapedString;
@@ -1356,7 +1356,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher.useContext(Context);
         }
-        function useState7(initialState) {
+        function useState8(initialState) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState);
         }
@@ -1364,11 +1364,11 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useReducer(reducer, initialArg, init);
         }
-        function useRef4(initialValue) {
+        function useRef5(initialValue) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
-        function useEffect6(create, deps) {
+        function useEffect7(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useEffect(create, deps);
         }
@@ -1380,11 +1380,11 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useLayoutEffect(create, deps);
         }
-        function useCallback2(callback, deps) {
+        function useCallback3(callback, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useCallback(callback, deps);
         }
-        function useMemo6(create, deps) {
+        function useMemo7(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useMemo(create, deps);
         }
@@ -2147,19 +2147,19 @@ var require_react_development = __commonJS({
         exports2.memo = memo;
         exports2.startTransition = startTransition;
         exports2.unstable_act = act;
-        exports2.useCallback = useCallback2;
+        exports2.useCallback = useCallback3;
         exports2.useContext = useContext;
         exports2.useDebugValue = useDebugValue;
         exports2.useDeferredValue = useDeferredValue;
-        exports2.useEffect = useEffect6;
+        exports2.useEffect = useEffect7;
         exports2.useId = useId;
         exports2.useImperativeHandle = useImperativeHandle;
         exports2.useInsertionEffect = useInsertionEffect;
         exports2.useLayoutEffect = useLayoutEffect;
-        exports2.useMemo = useMemo6;
+        exports2.useMemo = useMemo7;
         exports2.useReducer = useReducer;
-        exports2.useRef = useRef4;
-        exports2.useState = useState7;
+        exports2.useRef = useRef5;
+        exports2.useState = useState8;
         exports2.useSyncExternalStore = useSyncExternalStore;
         exports2.useTransition = useTransition;
         exports2.version = ReactVersion;
@@ -5426,10 +5426,10 @@ var require_react_dom_server_legacy_node_development = __commonJS({
     if (process.env.NODE_ENV !== "production") {
       (function() {
         "use strict";
-        var React22 = require_react();
+        var React23 = require_react();
         var stream = require("stream");
         var ReactVersion = "18.3.1";
-        var ReactSharedInternals = React22.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React23.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function warn(format) {
           {
             {
@@ -7324,7 +7324,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
         }
         function flattenOptionChildren(children) {
           var content = "";
-          React22.Children.forEach(children, function(child) {
+          React23.Children.forEach(children, function(child) {
             if (child == null) {
               return;
             }
@@ -9317,7 +9317,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
         function basicStateReducer(state, action) {
           return typeof action === "function" ? action(state) : action;
         }
-        function useState7(initialState) {
+        function useState8(initialState) {
           {
             currentHookNameInDev = "useState";
           }
@@ -9382,7 +9382,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             return [workInProgressHook.memoizedState, _dispatch];
           }
         }
-        function useMemo6(nextCreate, deps) {
+        function useMemo7(nextCreate, deps) {
           currentlyRenderingComponent = resolveCurrentlyRenderingComponent();
           workInProgressHook = createWorkInProgressHook();
           var nextDeps = deps === void 0 ? null : deps;
@@ -9407,7 +9407,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           workInProgressHook.memoizedState = [nextValue, nextDeps];
           return nextValue;
         }
-        function useRef4(initialValue) {
+        function useRef5(initialValue) {
           currentlyRenderingComponent = resolveCurrentlyRenderingComponent();
           workInProgressHook = createWorkInProgressHook();
           var previousRef = workInProgressHook.memoizedState;
@@ -9455,8 +9455,8 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             }
           }
         }
-        function useCallback2(callback, deps) {
-          return useMemo6(function() {
+        function useCallback3(callback, deps) {
+          return useMemo7(function() {
             return callback;
           }, deps);
         }
@@ -9496,13 +9496,13 @@ var require_react_dom_server_legacy_node_development = __commonJS({
         var Dispatcher = {
           readContext: readContext$1,
           useContext,
-          useMemo: useMemo6,
+          useMemo: useMemo7,
           useReducer,
-          useRef: useRef4,
-          useState: useState7,
+          useRef: useRef5,
+          useState: useState8,
           useInsertionEffect: noop,
           useLayoutEffect,
-          useCallback: useCallback2,
+          useCallback: useCallback3,
           // useImperativeHandle is not run in the server environment
           useImperativeHandle: noop,
           // Effects are not run in the server environment.
@@ -10830,10 +10830,10 @@ var require_react_dom_server_node_development = __commonJS({
     if (process.env.NODE_ENV !== "production") {
       (function() {
         "use strict";
-        var React22 = require_react();
+        var React23 = require_react();
         var util = require("util");
         var ReactVersion = "18.3.1";
-        var ReactSharedInternals = React22.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React23.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function warn(format) {
           {
             {
@@ -12825,7 +12825,7 @@ var require_react_dom_server_node_development = __commonJS({
         }
         function flattenOptionChildren(children) {
           var content = "";
-          React22.Children.forEach(children, function(child) {
+          React23.Children.forEach(children, function(child) {
             if (child == null) {
               return;
             }
@@ -14754,7 +14754,7 @@ var require_react_dom_server_node_development = __commonJS({
         function basicStateReducer(state, action) {
           return typeof action === "function" ? action(state) : action;
         }
-        function useState7(initialState) {
+        function useState8(initialState) {
           {
             currentHookNameInDev = "useState";
           }
@@ -14819,7 +14819,7 @@ var require_react_dom_server_node_development = __commonJS({
             return [workInProgressHook.memoizedState, _dispatch];
           }
         }
-        function useMemo6(nextCreate, deps) {
+        function useMemo7(nextCreate, deps) {
           currentlyRenderingComponent = resolveCurrentlyRenderingComponent();
           workInProgressHook = createWorkInProgressHook();
           var nextDeps = deps === void 0 ? null : deps;
@@ -14844,7 +14844,7 @@ var require_react_dom_server_node_development = __commonJS({
           workInProgressHook.memoizedState = [nextValue, nextDeps];
           return nextValue;
         }
-        function useRef4(initialValue) {
+        function useRef5(initialValue) {
           currentlyRenderingComponent = resolveCurrentlyRenderingComponent();
           workInProgressHook = createWorkInProgressHook();
           var previousRef = workInProgressHook.memoizedState;
@@ -14892,8 +14892,8 @@ var require_react_dom_server_node_development = __commonJS({
             }
           }
         }
-        function useCallback2(callback, deps) {
-          return useMemo6(function() {
+        function useCallback3(callback, deps) {
+          return useMemo7(function() {
             return callback;
           }, deps);
         }
@@ -14933,13 +14933,13 @@ var require_react_dom_server_node_development = __commonJS({
         var Dispatcher = {
           readContext: readContext$1,
           useContext,
-          useMemo: useMemo6,
+          useMemo: useMemo7,
           useReducer,
-          useRef: useRef4,
-          useState: useState7,
+          useRef: useRef5,
+          useState: useState8,
           useInsertionEffect: noop,
           useLayoutEffect,
-          useCallback: useCallback2,
+          useCallback: useCallback3,
           // useImperativeHandle is not run in the server environment
           useImperativeHandle: noop,
           // Effects are not run in the server environment.
@@ -16234,10 +16234,10 @@ var require_server_node = __commonJS({
 });
 
 // web/scripts/prerender.jsx
-var import_node_fs = __toESM(require("node:fs"));
-var import_node_path = __toESM(require("node:path"));
+var import_node_fs2 = __toESM(require("node:fs"));
+var import_node_path2 = __toESM(require("node:path"));
 var import_node_url = require("node:url");
-var import_react21 = __toESM(require_react());
+var import_react22 = __toESM(require_react());
 var import_server = __toESM(require_server_node());
 
 // web/src/pages/ProphetsPage.jsx
@@ -25788,7 +25788,7 @@ function MageCard({ m, onOpen }) {
 function MagesPage({ onOpen }) {
   const span = `${fmtYear(MAGES[0].y0)} \u2013 ${fmtYear(MAGES[MAGES.length - 1].y1)}`;
   const last = MAGES[MAGES.length - 1];
-  return /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("h1", null, "Magi \u2014 from Daniel to Aleister Crowley"), /* @__PURE__ */ import_react3.default.createElement("p", { className: "muted" }, "A chronology of ", /* @__PURE__ */ import_react3.default.createElement("b", null, "magi / wise-men / royal-sage occult figures"), ", opening with the deepest sage-strata \u2014 the Sumerian apkallu ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Adapa"), ", the Egyptian deified sage ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Imhotep"), ", the priestess-poet ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Enheduanna"), ", ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Hermes Trismegistus"), ", and Pharaoh's magicians ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Jannes and Jambres"), " of Moses' era \u2014 through ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Pythagoras"), " (number as the root of the cosmos), the Babylonian court magi (", /* @__PURE__ */ import_react3.default.createElement("b", null, "Daniel, Shadrach, Meshach, Abednego"), "), the priest-astronomer ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Berossus"), ", the star-following ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Magi of Matthew 2"), ", the neo-Pythagorean magus ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Apollonius of Tyana"), ", the theurgist ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Iamblichus"), ", the magician-martyr ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Saint Cyprian of Antioch"), " ('San Cipriano', whose Libro de San Cipriano and Drag\xF3n Rojo transmit the Solomonic-Egyptian magical lineage to Iberia), the Arabic astrologers ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Abu Ma'shar, Al-Kindi"), " (De radiis stellarum) and ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Maslama al-Qurtubi"), " (Picatrix), the medieval Iberian sages \u2014 ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n"), " \u2014 the Renaissance Christian-kabbalists and royal astrologers, the Baroque ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Jesuit mage Athanasius Kircher"), " (", /* @__PURE__ */ import_react3.default.createElement("i", null, "Oedipus Aegyptiacus"), "), and the modern Hermetic line of ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Eliphas L\xE9vi and S.L. Mathers"), ", ending with ", /* @__PURE__ */ import_react3.default.createElement("b", { style: { color: "var(--gold)" } }, last.name, " (", last.years, ")"), ", founder of Thelema, who re-read scripture by the stars and codified the Solomonic Goetia. ", MAGES.length, " figures across ", span, ". Click a card to open its profile \u2014 a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table."), /* @__PURE__ */ import_react3.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react3.default.createElement(Timeline, { items: MAGES, title: "Magi timeline \u2014 Daniel to Aleister Crowley", accent: "#8a05ff" })), /* @__PURE__ */ import_react3.default.createElement("div", { className: "tcards" }, MAGES.map((m, i) => /* @__PURE__ */ import_react3.default.createElement(MageCard, { key: i, m, onOpen }))));
+  return /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("h1", null, "Magi \u2014 from Adapa to Aleister Crowley"), /* @__PURE__ */ import_react3.default.createElement("p", { className: "muted" }, "A chronology of ", /* @__PURE__ */ import_react3.default.createElement("b", null, "magi / wise-men / royal-sage occult figures"), ", opening with the deepest sage-strata \u2014 the Sumerian apkallu ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Adapa"), ", the Egyptian deified sage ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Imhotep"), ", the priestess-poet ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Enheduanna"), ", ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Hermes Trismegistus"), ", and Pharaoh's magicians ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Jannes and Jambres"), " of Moses' era \u2014 through ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Pythagoras"), " (number as the root of the cosmos), the Babylonian court magi (", /* @__PURE__ */ import_react3.default.createElement("b", null, "Daniel, Shadrach, Meshach, Abednego"), "), the priest-astronomer ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Berossus"), ", the star-following ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Magi of Matthew 2"), ", the neo-Pythagorean magus ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Apollonius of Tyana"), ", the theurgist ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Iamblichus"), ", the magician-martyr ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Saint Cyprian of Antioch"), " ('San Cipriano', whose Libro de San Cipriano and Drag\xF3n Rojo transmit the Solomonic-Egyptian magical lineage to Iberia), the Arabic astrologers ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Abu Ma'shar, Al-Kindi"), " (De radiis stellarum) and ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Maslama al-Qurtubi"), " (Picatrix), the medieval Iberian sages \u2014 ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de Le\xF3n"), " \u2014 the Renaissance Christian-kabbalists and royal astrologers, the Baroque ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Jesuit mage Athanasius Kircher"), " (", /* @__PURE__ */ import_react3.default.createElement("i", null, "Oedipus Aegyptiacus"), "), and the modern Hermetic line of ", /* @__PURE__ */ import_react3.default.createElement("b", null, "Eliphas L\xE9vi and S.L. Mathers"), ", ending with ", /* @__PURE__ */ import_react3.default.createElement("b", { style: { color: "var(--gold)" } }, last.name, " (", last.years, ")"), ", founder of Thelema, who re-read scripture by the stars and codified the Solomonic Goetia. ", MAGES.length, " figures across ", span, ". Click a card to open its profile \u2014 a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table."), /* @__PURE__ */ import_react3.default.createElement("div", { className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react3.default.createElement(Timeline, { items: MAGES, title: "Magi timeline \u2014 Adapa to Aleister Crowley", accent: "#8a05ff" })), /* @__PURE__ */ import_react3.default.createElement("div", { className: "tcards" }, MAGES.map((m, i) => /* @__PURE__ */ import_react3.default.createElement(MageCard, { key: i, m, onOpen }))));
 }
 
 // web/src/pages/AlignmentFicha.jsx
@@ -30864,7 +30864,7 @@ function Footer() {
       goInternal(href);
     }
   };
-  return /* @__PURE__ */ import_react16.default.createElement("footer", { className: "site-footer", onClick }, /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react16.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react16.default.createElement(L, { href: PAPER }, "The paper \u2014 The Reader of the Sky \u2192"), /* @__PURE__ */ import_react16.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Aleister Crowley"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/patriarchs" }, "Patriarchs/Conquest \u2014 names readable in the sky"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/places" }, "Places \u2014 biblical toponyms readable in the sky"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments" }, "Stellar alignments (267 fiches)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/app" }, "Sky reader app")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react16.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react16.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react16.default.createElement("span", null, "\xA9 ", year, " ", /* @__PURE__ */ import_react16.default.createElement("a", { href: "https://medium.com/@ancientencoder/sons-of-stars-269765bda7db", target: "_blank", rel: "noreferrer" }, "AncientEncoder"), " and BartMan \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react16.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react16.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
+  return /* @__PURE__ */ import_react16.default.createElement("footer", { className: "site-footer", onClick }, /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react16.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react16.default.createElement(L, { href: PAPER }, "The paper \u2014 The Reader of the Sky \u2192"), /* @__PURE__ */ import_react16.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Adapa to Aleister Crowley"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/patriarchs" }, "Patriarchs/Conquest \u2014 names readable in the sky"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/places" }, "Places \u2014 biblical toponyms readable in the sky"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments" }, "Stellar alignments (267 fiches)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/app" }, "Sky reader app")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react16.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react16.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react16.default.createElement("span", null, "\xA9 ", year, " ", /* @__PURE__ */ import_react16.default.createElement("a", { href: "https://medium.com/@ancientencoder/sons-of-stars-269765bda7db", target: "_blank", rel: "noreferrer" }, "AncientEncoder"), " and BartMan \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react16.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react16.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
 }
 
 // web/src/pages/Landing.jsx
@@ -31053,7 +31053,7 @@ function Slides({ rows: rows2, occ: occ2 }) {
       icon: "music",
       iconColor: "gold",
       title: "Psalms",
-      body: "A Psalm is appointed to each day, read alongside the sky of that date \u2014 one hundred and fifty songs laid over the turning year. The stellar alphabet spells its names; the Psalms answer them back, a second voice in the same key."
+      body: "A Psalm calculated from the gematria of a name and a date \u2014 the sum sets an equidistant-letter-sequence step over Genesis, and the value of that string is matched to the shortest Hebrew phrase in the one hundred and fifty songs. A gematria calculator \u2014 not a reading of the sky."
     }
   ];
 }
@@ -31072,24 +31072,42 @@ function Slider({ rows: rows2, occ: occ2 }) {
   return /* @__PURE__ */ import_react19.default.createElement("div", { className: "slider", onMouseEnter: () => setPaused(true), onMouseLeave: () => setPaused(false), role: "region", "aria-label": "Concept slider" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "slide" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "slide-graphic" }, s.graphic), /* @__PURE__ */ import_react19.default.createElement("div", { className: "slide-copy" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "slide-icon" }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: s.icon, c: s.iconColor, size: "1.6rem" })), /* @__PURE__ */ import_react19.default.createElement("h3", { style: { margin: "6px 0 8px", color: "var(--gold)", fontSize: "1.15rem" } }, s.title), /* @__PURE__ */ import_react19.default.createElement("p", { className: "muted", style: { fontSize: ".92rem", lineHeight: 1.6 } }, s.body))), /* @__PURE__ */ import_react19.default.createElement("div", { className: "slider-ctrl" }, /* @__PURE__ */ import_react19.default.createElement("button", { onClick: prev, "aria-label": "Previous slide" }, "\u25C0"), /* @__PURE__ */ import_react19.default.createElement("div", { className: "slider-dots" }, slides.map((x, j) => /* @__PURE__ */ import_react19.default.createElement("button", { key: x.key, className: "dot" + (j === i ? " active" : ""), onClick: () => setI(j), "aria-label": `Go to slide ${j + 1}` }))), /* @__PURE__ */ import_react19.default.createElement("button", { onClick: next, "aria-label": "Next slide" }, "\u25B6")));
 }
 var FEATURES = [
-  { n: "star", c: "gold", t: "Sky map", d: "Real planet positions in the 12 zodiac signs \u2014 the 12 simple letters lit up today.", go: "/app" },
+  { n: "star", c: "gold", t: "Sky map", d: "Real planet positions in the 12 zodiac signs \u2014 the 12 simple letters lit up today.", go: "/app?tab=sky" },
   { n: "compass", c: "violet", t: "Rare alignments", d: "267 century & millennium conjunctions \u2014 planets concentrated in a single sign.", go: "/alignments" },
-  { n: "book-open", c: "green", t: "Reader", d: "The Hebrew names and words the occupied signs spell on a given date.", go: "/app" },
-  { n: "clock", c: "teal", t: "Time", d: "The day predictor and the precessional ages \u2014 deep time of the stellar alphabet.", go: "/app" },
-  { n: "hashtag", c: "violet", t: "Gematria", d: "Hebrew, Greek, Arabic and Indian numerology \u2014 Aiq Bekar and digital roots.", go: "/app" },
-  { n: "wand-magic", c: "gold", t: "Sigils", d: "The sigil forge, the Kameot magic squares, and the 72 angels of the Shem HaMephorash.", go: "/app" },
-  { n: "barcode", c: "brand", t: "Codes", d: "Equidistant letter sequences, Temurah / Atbash and Ziruph on the source texts.", go: "/app" },
-  { n: "music", c: "gold", t: "Psalms", d: "A Psalm appointed to each day, read alongside the sky of that date.", go: "/app" }
+  { n: "book-open", c: "green", t: "Reader", d: "The Hebrew names and words the occupied signs spell on a given date.", go: "/app?tab=translator" },
+  { n: "clock", c: "teal", t: "Time", d: "The day predictor and the precessional ages \u2014 deep time of the stellar alphabet.", go: "/app?tab=time" },
+  { n: "hashtag", c: "violet", t: "Gematria", d: "Hebrew, Greek, Arabic and Indian numerology \u2014 Aiq Bekar and digital roots.", go: "/app?tab=gematria" },
+  { n: "wand-magic", c: "gold", t: "Sigils", d: "The sigil forge, the Kameot magic squares, and the 72 angels of the Shem HaMephorash.", go: "/app?tab=sigils" },
+  { n: "barcode", c: "brand", t: "Codes", d: "Equidistant letter sequences, Temurah / Atbash and Ziruph on the source texts.", go: "/app?tab=codes" },
+  { n: "music", c: "gold", t: "Psalms", d: "A Psalm calculated from the gematria of a given input \u2014 a number-match into the one hundred and fifty songs.", go: "/app?tab=psalms" }
 ];
 function Landing({ goApp }) {
   const rows2 = (0, import_react19.useMemo)(() => skyAt(REF_DATE), []);
   const occ2 = (0, import_react19.useMemo)(() => occupiedLetters(skyAt7(REF_DATE)), []);
   const [warnOpen, setWarnOpen] = (0, import_react19.useState)(false);
+  const [libQuery, setLibQuery] = (0, import_react19.useState)("");
   const enterApp = () => {
     setWarnOpen(false);
     goApp && goApp();
   };
-  return /* @__PURE__ */ import_react19.default.createElement("div", { className: "landing" }, /* @__PURE__ */ import_react19.default.createElement("section", { className: "hero" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-copy" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-eyebrow" }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "star-of-life", c: "gold", size: "1rem" }), " Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet"), /* @__PURE__ */ import_react19.default.createElement("h1", { className: "hero-title" }, "The Apocalypse ", /* @__PURE__ */ import_react19.default.createElement("span", { style: { color: "var(--gold)" } }, "of Adam")), /* @__PURE__ */ import_react19.default.createElement("blockquote", { className: "hero-tag", style: { borderLeft: "3px solid var(--gold)", paddingLeft: 14, fontStyle: "italic", color: "var(--dim)" } }, "\u201CAnd the thirteenth kingdom says of him that every birth of their ruler is a word. And this word received a mandate there. He received glory and power. And thus he came to the water, in order that the desire of those powers might be satisfied.\u201D", /* @__PURE__ */ import_react19.default.createElement("cite", { style: { display: "block", marginTop: 10, fontStyle: "normal", fontSize: ".82rem", color: "var(--dim)" } }, "\u2014 The Apocalypse of Adam \xB7 the thirteenth kingdom")), /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-cta" }, /* @__PURE__ */ import_react19.default.createElement("button", { className: "btn-cta", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "compass", c: "txt", size: "1rem" }), " \xA0Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react19.default.createElement("a", { className: "hero-ghost", href: "/paper" }, "Read the paper \u2192")), /* @__PURE__ */ import_react19.default.createElement("button", { className: "hero-note-link", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".85rem" }), " \xA0Content notice \u2014 for visitors with psychosis, mania, or schizophrenia")), /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-sky panel" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-sky-label muted" }, "Sky of ", REF_DATE, " \xB7 ", occ2.size, " of 12 signs occupied"), /* @__PURE__ */ import_react19.default.createElement(SkyMap, { rows: rows2, occ: occ2 }))), /* @__PURE__ */ import_react19.default.createElement("section", { className: "panel", style: { padding: 18, marginTop: 18 } }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { margin: 0 } }, "The grammar of the sky")), /* @__PURE__ */ import_react19.default.createElement(Slider, { rows: rows2, occ: occ2 })), /* @__PURE__ */ import_react19.default.createElement("section", { style: { marginTop: 22 } }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { margin: 0 } }, "What you can do in the app")), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-grid" }, FEATURES.map((f, idx) => /* @__PURE__ */ import_react19.default.createElement("a", { key: idx, className: "feat-card", href: f.go }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-icon" }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: f.n, c: f.c, size: "1.5rem" })), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-t" }, f.t), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-d muted" }, f.d), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-go muted" }, "open \u2192"))))), /* @__PURE__ */ import_react19.default.createElement("section", { className: "panel entry-cta", style: { marginTop: 26, padding: 28, textAlign: "center", borderColor: "var(--brand)" } }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { marginTop: 0 } }, "Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react19.default.createElement("p", { className: "muted", style: { maxWidth: 620, margin: "0 auto 16px" } }, "Learn a few simple things about the ancients, then read the sky for yourself. A short content notice opens first \u2014 for visitors diagnosed with psychosis or schizophrenia."), /* @__PURE__ */ import_react19.default.createElement("button", { className: "btn-cta", style: { fontSize: "1.1rem", padding: "14px 34px" }, onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "compass", c: "txt", size: "1.1rem" }), " \xA0Enter the app"), /* @__PURE__ */ import_react19.default.createElement("div", { className: "muted", style: { marginTop: 14, fontSize: ".8rem" } }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".9rem" }), " \xA0", /* @__PURE__ */ import_react19.default.createElement("b", null, "Notice:"), " I have schizophrenia \xB7 I am psychotic \xB7 I am manic \u2014 a short self-check is offered before entry.")), /* @__PURE__ */ import_react19.default.createElement(WarningModal, { open: warnOpen, onClose: () => setWarnOpen(false), onProceed: enterApp }));
+  const submitLib = (e) => {
+    e.preventDefault();
+    const q = libQuery.trim();
+    window.location.href = "/library" + (q ? "?q=" + encodeURIComponent(q) : "");
+  };
+  return /* @__PURE__ */ import_react19.default.createElement("div", { className: "landing" }, /* @__PURE__ */ import_react19.default.createElement("section", { className: "hero" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-copy" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-eyebrow" }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "star-of-life", c: "gold", size: "1rem" }), " Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet"), /* @__PURE__ */ import_react19.default.createElement("h1", { className: "hero-title" }, "The Apocalypse ", /* @__PURE__ */ import_react19.default.createElement("span", { style: { color: "var(--gold)" } }, "of Adam")), /* @__PURE__ */ import_react19.default.createElement("blockquote", { className: "hero-tag", style: { borderLeft: "3px solid var(--gold)", paddingLeft: 14, fontStyle: "italic", color: "var(--dim)" } }, "\u201CAnd the thirteenth kingdom says of him that every birth of their ruler is a word. And this word received a mandate there. He received glory and power. And thus he came to the water, in order that the desire of those powers might be satisfied.\u201D", /* @__PURE__ */ import_react19.default.createElement("cite", { style: { display: "block", marginTop: 10, fontStyle: "normal", fontSize: ".82rem", color: "var(--dim)" } }, "\u2014 The Apocalypse of Adam \xB7 the thirteenth kingdom")), /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-cta" }, /* @__PURE__ */ import_react19.default.createElement("button", { className: "btn-cta", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "compass", c: "txt", size: "1rem" }), " \xA0Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react19.default.createElement("a", { className: "hero-ghost", href: "/paper" }, "Read the paper \u2192")), /* @__PURE__ */ import_react19.default.createElement("button", { className: "hero-note-link", onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "triangle-exclamation", c: "warn", size: ".85rem" }), " \xA0Content notice \u2014 for visitors with psychosis, mania, or schizophrenia")), /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-sky panel" }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "hero-sky-label muted" }, "Sky of ", REF_DATE, " \xB7 ", occ2.size, " of 12 signs occupied"), /* @__PURE__ */ import_react19.default.createElement(SkyMap, { rows: rows2, occ: occ2 }))), /* @__PURE__ */ import_react19.default.createElement("section", { className: "panel", style: { padding: 18, marginTop: 18 } }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { margin: 0 } }, "The grammar of the sky")), /* @__PURE__ */ import_react19.default.createElement(Slider, { rows: rows2, occ: occ2 })), /* @__PURE__ */ import_react19.default.createElement("section", { style: { marginTop: 22 } }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "section-head" }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { margin: 0 } }, "What you can do in the app")), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-grid" }, FEATURES.map((f, idx) => /* @__PURE__ */ import_react19.default.createElement("a", { key: idx, className: "feat-card", href: f.go }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-icon" }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: f.n, c: f.c, size: "1.5rem" })), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-t" }, f.t), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-d muted" }, f.d), /* @__PURE__ */ import_react19.default.createElement("div", { className: "feat-go muted" }, "open \u2192"))))), /* @__PURE__ */ import_react19.default.createElement("section", { className: "panel", style: { marginTop: 22, padding: 24 } }, /* @__PURE__ */ import_react19.default.createElement("div", { className: "section-head", style: { textAlign: "center" } }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { margin: 0, color: "var(--gold)" } }, "The Luco Library \u2014 the Sacred Forest"), /* @__PURE__ */ import_react19.default.createElement("p", { className: "muted", style: { maxWidth: 640, margin: "6px auto 0" } }, /* @__PURE__ */ import_react19.default.createElement("i", null, "Luco"), ", from Latin ", /* @__PURE__ */ import_react19.default.createElement("i", null, "lucus"), " \u2014 the sacred grove of Roman Hispania. A BibleGateway-style search across the primary sources behind the project: Avesta, the Qur'an, Nag Hammadi, the Rig Veda, the Hermetic sermons, the Book of the Dead, the I Ching, the Popol Vuh, Josephus, 1 Enoch, the Sefer Yetzirah and Ramban's commentary, and the Sufi & gematria references.")), /* @__PURE__ */ import_react19.default.createElement("form", { className: "controls", style: { maxWidth: 560, margin: "16px auto 0", justifyContent: "center" }, action: "/library", method: "get", onSubmit: submitLib }, /* @__PURE__ */ import_react19.default.createElement(
+    "input",
+    {
+      type: "text",
+      name: "q",
+      className: "lib-search",
+      placeholder: "Search the library \u2014 e.g. Poimandres, watchmen, Marduk, gematria\u2026",
+      value: libQuery,
+      onChange: (e) => setLibQuery(e.target.value),
+      style: { flex: 1, minWidth: 220 },
+      "aria-label": "Search the library"
+    }
+  ), /* @__PURE__ */ import_react19.default.createElement("button", { type: "submit", className: "btn-cta" }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "magnifying-glass", c: "txt", size: ".95rem" }), " \xA0Search")), /* @__PURE__ */ import_react19.default.createElement("div", { style: { textAlign: "center", marginTop: 12 } }, /* @__PURE__ */ import_react19.default.createElement("a", { href: "/library", style: { color: "var(--violet)", fontSize: ".9rem" } }, "Browse all books \u2192"))), /* @__PURE__ */ import_react19.default.createElement("section", { className: "panel entry-cta", style: { marginTop: 26, padding: 28, textAlign: "center", borderColor: "var(--brand)" } }, /* @__PURE__ */ import_react19.default.createElement("h2", { style: { marginTop: 0 } }, "Initiate \u2014 explore the stars"), /* @__PURE__ */ import_react19.default.createElement("p", { className: "muted", style: { maxWidth: 620, margin: "0 auto 16px" } }, "Learn a few simple things about the ancients, then read the sky for yourself. A short content notice opens first \u2014 for visitors diagnosed with psychosis or schizophrenia."), /* @__PURE__ */ import_react19.default.createElement("button", { className: "btn-cta", style: { fontSize: "1.1rem", padding: "14px 34px" }, onClick: () => setWarnOpen(true) }, /* @__PURE__ */ import_react19.default.createElement(Fa, { n: "compass", c: "txt", size: "1.1rem" }), " \xA0Enter the app")), /* @__PURE__ */ import_react19.default.createElement(WarningModal, { open: warnOpen, onClose: () => setWarnOpen(false), onProceed: enterApp }));
 }
 
 // web/src/pages/About.jsx
@@ -31098,16 +31116,1049 @@ function About() {
   return /* @__PURE__ */ import_react20.default.createElement("div", { className: "about-page" }, /* @__PURE__ */ import_react20.default.createElement("h1", { style: { fontSize: "1.9rem", marginBottom: 4 } }, "About ", /* @__PURE__ */ import_react20.default.createElement("span", { style: { color: "var(--gold)" } }, "The Apocalypse of Adam")), /* @__PURE__ */ import_react20.default.createElement("div", { className: "sub", style: { marginBottom: 16 } }, "Hebrew letters read in the sky \u2014 a stellar-alphabet reader behind the paper ", /* @__PURE__ */ import_react20.default.createElement("i", null, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react20.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14 } }, /* @__PURE__ */ import_react20.default.createElement("h2", { style: { marginTop: 0 } }, "What this is"), /* @__PURE__ */ import_react20.default.createElement("p", null, /* @__PURE__ */ import_react20.default.createElement("i", null, "Apocalypse"), " means ", /* @__PURE__ */ import_react20.default.createElement("b", { style: { color: "var(--gold)" } }, "revelation"), " \u2014 the unveiling of knowledge, not something sinister. This project reads the sky as the ancients did: real planet positions (computed live by ", /* @__PURE__ */ import_react20.default.createElement("a", { href: "https://github.com/cosinekitty/astronomy-engine", target: "_blank", rel: "noreferrer" }, "astronomy-engine"), ") map the ", /* @__PURE__ */ import_react20.default.createElement("b", null, "12 zodiac signs"), " to the ", /* @__PURE__ */ import_react20.default.createElement("b", null, "12 simple letters"), " of the ", /* @__PURE__ */ import_react20.default.createElement("a", { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", target: "_blank", rel: "noreferrer" }, "Sefer Yetzirah"), ". Every date spells a set of readable Hebrew names \u2014 a stellar alphabet that no one can erase, encoded across the only medium that survives the malice of men."), /* @__PURE__ */ import_react20.default.createElement("p", null, "The app is a calculator suite: a live ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Sky Map"), ", a ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Reader"), " of every readable word, the ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Reading Rule"), " (YHVH, Genesis 1:1), a ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Time"), " predictor and precessional ages, ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Gematria"), " (Hebrew / Greek / Arabic / Indian), the ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Sigil"), " forge, the ", /* @__PURE__ */ import_react20.default.createElement("b", null, "72"), " Shem HaMephorash angels, ", /* @__PURE__ */ import_react20.default.createElement("b", null, "ELS / Torah codes"), ", Temurah, Ziruph, rare stellar ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Alignments"), ", a 9-culture ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Revelations"), " survey, and ", /* @__PURE__ */ import_react20.default.createElement("b", null, "Psalms"), " by date.")), /* @__PURE__ */ import_react20.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14 } }, /* @__PURE__ */ import_react20.default.createElement("h2", { style: { marginTop: 0 } }, "The Prophecy of Adam"), /* @__PURE__ */ import_react20.default.createElement("p", null, "Welcome to ", /* @__PURE__ */ import_react20.default.createElement("i", null, "The Apocalypse of Adam"), " \u2014 and do not worry, there is nothing sinister here. ", /* @__PURE__ */ import_react20.default.createElement("i", null, "Apocalypse"), " is the word used to reveal the knowledge and science of God. Since the last coming of the Antichrist's followers (Jacob Frank, 1666), things have only gone from bad to worse. But do not fear: the days when all religions and dogmas will live together are at hand \u2014 and the best of it is, nothing need be done to make it so. They have already done a thorough job of breaking the world, sinking it to ashes in every respect, and preparing our arrival. Greed and unconscious individualism have reached their end; our past spirits, roles, and ideas prepared everything well, so that when the right moment came the religions could be unified, the greedy and warlike kingdoms could be brought down \u2014 destroyed by their own pride and greed \u2014 and society could organize itself to build a coming era of peace and prosperity."), /* @__PURE__ */ import_react20.default.createElement("p", null, "For centuries they have sold us systems of organization promising infinite growth and abundance; but, brothers, we all know that believing that fallacy is the mark of fools. They have set us against one another for millennia to increase their power, under the spell of Yaldabaoth / SATAN / the Demiurge \u2014 a very potent conjuration, forged in antiquity at the beginning of time, that dominates the minds and bodies of nearly every person."), /* @__PURE__ */ import_react20.default.createElement("p", null, "But how can we believe ourselves? Why do you have a favorite color? Why do you like a certain band, why do you defend the ideas of some low-level sorcerer by the FALLACY OF AUTHORITY? Are you truly original in anything? Have you contributed something to society it did not already know? Have you invented something unique? And even if you had \u2014 what makes you think someone did not do it before, and you simply do not remember? Or that a MAN possessed by his EGO did not erase it from history to secure his dominion and control over the population? A little humility, please."), /* @__PURE__ */ import_react20.default.createElement("p", null, "We are all copies of copies of copies \u2014 of the people you admire, the philosophers you like, even footballers and every kind of nonsense. The truth is that since oral, and above all written, language has existed, very little about us is original. But do not fear, do not feel sad: you are still unique. We are like a swarm of bees, or an artificial intelligence \u2014 instead of many servers and cores, we have many bodies, but there is only one being made of Word, our computational language. We are like an agent that remains unique \u2014 by its EMOTION, its own weights, its own rules forged from its environment, the permutations of its teachers, what it learned over the course of its life, its SOUL. And that is all we have: the SOUL, the most precious and immortal thing. And that soul, statistically, will live again and again; it will never die, it will always return to life \u2014 only most do not remember, nor will they, until their deepest parts awaken through VISION, DREAM, or logical thought."), /* @__PURE__ */ import_react20.default.createElement("p", null, "It sounds beautiful, does it not? And you cannot yet imagine how much so. For our ancestors, the ancestral souls, devised the means so that when the day came the world would be ready to understand the truth. They took great care to hide all the signs in plain sight \u2014 all the philosophical, astronomical, mathematical, physical, and chemical teaching. And how could they do that? How can we be sure the information has not been manipulated over time, like the scriptures of every religion, rewritten by men and never by the true prophets and scientific mages? In truth, they have tried: they have flooded our cities with so much light that it no longer occurs to anyone to look at the stars. What better medium to encode all knowledge across the centuries than the stars, through their permutations? Is it not the only medium no one can erase?"), /* @__PURE__ */ import_react20.default.createElement("p", null, "It may seem MAD. But in truth it is very simple and elegant once it is built \u2014 though building the encoding must have taken at least tens of thousands of years of observation and development of the ART (all the sciences). But wait \u2014 did we not begin this centuries ago? Are not the first temples of antiquity stellar observatories? And those are only the ones we know, the ones that survived the malice of man."), /* @__PURE__ */ import_react20.default.createElement("p", null, "Imagine: once oral language had developed, the ancients looked up at the sky and saw it turn with a perfection and synchrony that could not be found on the earth \u2014 chaotic, errant, full of danger. The universe was always in order, turning at constant speed, repeating its cycles to infinity. The planets, though they seemed to contradict the motion of the other stars and to move against the current, after many millennia of observation revealed the patterns they followed."), /* @__PURE__ */ import_react20.default.createElement("p", null, "The ancients simply looked at the sky, grouped the stars separated by empty spaces, drew lines between the clusters, marked them, and gave them a name. Each name was unique, a single syllable. With the sky-symbols they had created and their names, they could now represent their ideas in writing, and keep notes to understand how the cosmos worked."), /* @__PURE__ */ import_react20.default.createElement("p", null, "EVE realized this and explained it to ADAM \u2014 for she was a woman, and in the age when we were still nearly animals, males subjugated females... well, nearly as in all of history. But it was truly EVE who understood how to compose language, and she beguiled ADAM with her \u201Cmagic,\u201D so that he would bear all the consequences \u2014 condemning men and women to labor and be slaves through all of history, down to the present. Because yes, make no mistake: you are a SLAVE, and none of it would have happened if the celestial Father (THE UNIVERSE), through its perfect synchrony, had not allowed intelligence to develop far enough to CREATE writing."), /* @__PURE__ */ import_react20.default.createElement("p", null, "So then: this project is about that. By explaining the origin of writing, we will unveil the mysteries of antiquity elegantly \u2014 no fables, no lies \u2014 elegantly. Nothing need be forced to fit, for all the past SOULS already saw to that. We will only follow the instructions they left us for the thirteenth kingdom, the 13th kingdom. A kingdom without kings \u2014 and that, my friends, IS THE PROPHECY OF ADAM.")), /* @__PURE__ */ import_react20.default.createElement("div", { className: "grid2" }, /* @__PURE__ */ import_react20.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react20.default.createElement("h2", { style: { marginTop: 0 } }, "How a reading works"), /* @__PURE__ */ import_react20.default.createElement("p", { className: "muted" }, "The ", /* @__PURE__ */ import_react20.default.createElement("b", null, "3 mothers"), " (\u05D0 \u05DE \u05E9) sit on a fixed circumpolar axis. The ", /* @__PURE__ */ import_react20.default.createElement("b", null, "7 doubles"), " (\u05D1 \u05D2 \u05D3 \u05DB \u05E4 \u05E8 \u05EA) are the 7 moving bodies. The ", /* @__PURE__ */ import_react20.default.createElement("b", null, "12 simples"), " are the 12 signs. A word is readable on a date when every simple it needs sits in an ", /* @__PURE__ */ import_react20.default.createElement("b", null, "occupied"), " sign (S\u2286O). Rare alignments concentrate the planets \u2014 fewer letters, fewer words, a sharper reading.")), /* @__PURE__ */ import_react20.default.createElement("div", { className: "panel", style: { padding: 16 } }, /* @__PURE__ */ import_react20.default.createElement("h2", { style: { marginTop: 0 } }, "The numbers, briefly"), /* @__PURE__ */ import_react20.default.createElement("ul", { className: "muted", style: { margin: "6px 0 0", paddingLeft: 20 } }, /* @__PURE__ */ import_react20.default.createElement("li", null, /* @__PURE__ */ import_react20.default.createElement("b", { style: { color: "var(--gold)" } }, "6,045"), " consonantal Hebrew roots in the lexicon."), /* @__PURE__ */ import_react20.default.createElement("li", null, /* @__PURE__ */ import_react20.default.createElement("b", { style: { color: "var(--gold)" } }, "267"), " rare century/millennium alignments catalogued."), /* @__PURE__ */ import_react20.default.createElement("li", null, /* @__PURE__ */ import_react20.default.createElement("b", { style: { color: "var(--gold)" } }, "72"), " Shem HaMephorash triplets (Exodus 14:19\u201321)."), /* @__PURE__ */ import_react20.default.createElement("li", null, "Precessional age length \u2248 ", /* @__PURE__ */ import_react20.default.createElement("b", null, AGE.toFixed(0)), " years; full cycle \u2248 ", /* @__PURE__ */ import_react20.default.createElement("b", null, (FULL || 0).toFixed(0)), " years.")))), /* @__PURE__ */ import_react20.default.createElement("div", { className: "panel", style: { padding: 18, marginTop: 14 } }, /* @__PURE__ */ import_react20.default.createElement("h2", { style: { marginTop: 0 } }, "Authors & sources"), /* @__PURE__ */ import_react20.default.createElement("p", { className: "muted" }, "By ", /* @__PURE__ */ import_react20.default.createElement("b", null, /* @__PURE__ */ import_react20.default.createElement("a", { href: "https://medium.com/@ancientencoder/sons-of-stars-269765bda7db", target: "_blank", rel: "noreferrer", style: { color: "inherit", textDecoration: "none" } }, "AncientEncoder")), " & ", /* @__PURE__ */ import_react20.default.createElement("b", null, "BartMan"), " \xB7 Source on ", /* @__PURE__ */ import_react20.default.createElement("a", { href: "https://github.com/VABISMO/adam-apocalypse", target: "_blank", rel: "noreferrer" }, "GitHub"), " \xB7 Paper: ", /* @__PURE__ */ import_react20.default.createElement("a", { href: "/paper" }, "The Reader of the Sky"), "."), /* @__PURE__ */ import_react20.default.createElement("p", { className: "muted" }, "Ephemerides: astronomy-engine. Frame: Sefer Yetzirah. Lexicon: Strong Hebrew lexicon (OpenScriptures). No content on this site is medical, financial, or doctrinal advice \u2014 it is a reading of symbols and astronomy."), /* @__PURE__ */ import_react20.default.createElement("div", { style: { marginTop: 12 } }, /* @__PURE__ */ import_react20.default.createElement("a", { className: "btn-cta", href: "/app", style: { display: "inline-block", textDecoration: "none" } }, "Open the app \u2192"))));
 }
 
-// web/scripts/prerender.jsx
+// web/src/library/LibraryApp.jsx
+var import_react21 = __toESM(require_react());
+var DATA = "/library/data/";
+var ORIG = "/library/original/";
+var _fetch = typeof fetch !== "undefined" ? fetch : null;
+function tokenize(s) {
+  if (!s) return [];
+  const d = s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  return d.match(/[a-z0-9֐-׿]{3,}/g) || [];
+}
+function escapeRegex(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+function snippetFor(text, terms) {
+  const low = text.toLowerCase();
+  let idx = -1;
+  for (const t of terms) {
+    const i = low.indexOf(t);
+    if (i >= 0 && (idx < 0 || i < idx)) idx = i;
+  }
+  if (idx < 0) return text.slice(0, 150);
+  const start = Math.max(0, idx - 70), end = Math.min(text.length, idx + 70);
+  return (start > 0 ? "\u2026" : "") + text.slice(start, end) + (end < text.length ? "\u2026" : "");
+}
+function Highlighted({ text, terms }) {
+  if (!terms || !terms.length) return /* @__PURE__ */ import_react21.default.createElement("span", null, text);
+  const re = new RegExp("(" + terms.map(escapeRegex).join("|") + ")", "gi");
+  const low = terms.map((t) => t.toLowerCase());
+  const parts = text.split(re);
+  return /* @__PURE__ */ import_react21.default.createElement(import_react21.default.Fragment, null, parts.map((p, i) => low.indexOf(p.toLowerCase()) >= 0 ? /* @__PURE__ */ import_react21.default.createElement("mark", { key: i, className: "lib-mark" }, p) : /* @__PURE__ */ import_react21.default.createElement("span", { key: i }, p)));
+}
+function DownloadOriginal({ book }) {
+  const files = book.originalFiles || [];
+  if (!files.length) return null;
+  if (files.length === 1) {
+    const f = files[0];
+    return /* @__PURE__ */ import_react21.default.createElement("a", { className: "lib-dl", href: f, download: true }, "\u2B07 Download original");
+  }
+  return /* @__PURE__ */ import_react21.default.createElement("a", { className: "lib-dl", href: ORIG + book.slug + "/" }, "\u2B07 Download original (", files.length, " files)");
+}
+function BookCard({ book, onOpen }) {
+  return /* @__PURE__ */ import_react21.default.createElement(
+    "div",
+    {
+      className: "feat-card lib-card",
+      role: "button",
+      tabIndex: 0,
+      onClick: () => onOpen(book.slug),
+      onKeyDown: (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onOpen(book.slug);
+        }
+      },
+      style: { textAlign: "left", cursor: "pointer", width: "100%" }
+    },
+    /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", justifyContent: "space-between", gap: 10, alignItems: "baseline" } }, /* @__PURE__ */ import_react21.default.createElement("h3", { style: { margin: 0, color: "var(--violet)", fontSize: "1.05rem" } }, book.title), /* @__PURE__ */ import_react21.default.createElement("span", { className: "pill" }, book.lang)),
+    /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted", style: { margin: "6px 0 8px" } }, book.author, book.year ? " \xB7 " + book.year : ""),
+    /* @__PURE__ */ import_react21.default.createElement("p", { style: { margin: "0 0 10px", fontSize: ".9rem", color: "var(--txt)" } }, book.description),
+    /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" } }, /* @__PURE__ */ import_react21.default.createElement("span", { className: "pill" }, book.segments, " sections"), /* @__PURE__ */ import_react21.default.createElement("span", { className: "pill" }, (book.words / 1e3).toFixed(0), "k words"), /* @__PURE__ */ import_react21.default.createElement("span", { className: "pill" }, book.genre)),
+    /* @__PURE__ */ import_react21.default.createElement("div", { style: { marginTop: 12 }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react21.default.createElement(DownloadOriginal, { book }))
+  );
+}
+function Reader({ book, bookJson, activeSeg, terms, onPickSeg, onBack }) {
+  const segs = bookJson ? bookJson.segments : [];
+  const active = segs.find((s) => s.id === activeSeg) || segs[0] || null;
+  const rtl = bookJson && bookJson.meta && bookJson.meta.rtl;
+  const mainRef = (0, import_react21.useRef)(null);
+  (0, import_react21.useEffect)(() => {
+    if (mainRef.current) mainRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [activeSeg]);
+  return /* @__PURE__ */ import_react21.default.createElement("section", { className: "panel", style: { padding: 20 } }, /* @__PURE__ */ import_react21.default.createElement("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 10, flexWrap: "wrap" } }, /* @__PURE__ */ import_react21.default.createElement("div", null, /* @__PURE__ */ import_react21.default.createElement("button", { className: "lib-back", onClick: onBack }, "\u2190 Library"), /* @__PURE__ */ import_react21.default.createElement("h2", { style: { margin: "4px 0 2px", color: "var(--gold)" } }, book.title), /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted", style: { margin: 0 } }, book.author, book.year ? " \xB7 " + book.year : "", " \xB7 ", book.source)), /* @__PURE__ */ import_react21.default.createElement(DownloadOriginal, { book })), /* @__PURE__ */ import_react21.default.createElement("div", { className: "lib-reader" }, /* @__PURE__ */ import_react21.default.createElement("nav", { className: "lib-segnav" }, segs.map((s) => /* @__PURE__ */ import_react21.default.createElement("button", { key: s.id, className: "lib-segitem" + (active && s.id === active.id ? " active" : ""), onClick: () => onPickSeg(s.id), title: s.label }, s.label))), /* @__PURE__ */ import_react21.default.createElement("div", { className: "lib-segmain", ref: mainRef }, active ? /* @__PURE__ */ import_react21.default.createElement(import_react21.default.Fragment, null, /* @__PURE__ */ import_react21.default.createElement("h3", { style: { color: "var(--violet)", marginTop: 0 } }, active.label), /* @__PURE__ */ import_react21.default.createElement("div", { className: "lib-text", dir: rtl ? "rtl" : "ltr", style: { whiteSpace: "pre-wrap", lineHeight: 1.7 } }, /* @__PURE__ */ import_react21.default.createElement(Highlighted, { text: active.text, terms }))) : /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted" }, "No sections."))));
+}
+function LibraryApp(props) {
+  const initialCatalog = props && props.initialCatalog || null;
+  const [catalog, setCatalog] = (0, import_react21.useState)(initialCatalog ? initialCatalog.books || initialCatalog : null);
+  const [wordsMap, setWordsMap] = (0, import_react21.useState)(null);
+  const [query, setQuery] = (0, import_react21.useState)("");
+  const [results, setResults] = (0, import_react21.useState)(null);
+  const [searching, setSearching] = (0, import_react21.useState)(false);
+  const [activeBookSlug, setActiveBookSlug] = (0, import_react21.useState)(null);
+  const [activeSeg, setActiveSeg] = (0, import_react21.useState)(null);
+  const [bookCache, setBookCache] = (0, import_react21.useState)({});
+  const [loadingBook, setLoadingBook] = (0, import_react21.useState)(false);
+  const debounceRef = (0, import_react21.useRef)(null);
+  (0, import_react21.useEffect)(() => {
+    if (catalog) return;
+    if (!_fetch) return;
+    _fetch(DATA + "catalog.json").then((r) => r.json()).then((c) => setCatalog(c.books || c)).catch(() => setCatalog([]));
+  }, []);
+  (0, import_react21.useEffect)(() => {
+    if (typeof window === "undefined" || !window.location) return;
+    const sp = new URLSearchParams(window.location.search);
+    const q = sp.get("q") || "";
+    const bk = sp.get("book");
+    const s = sp.get("s");
+    if (q) {
+      setQuery(q);
+    }
+    if (bk) {
+      setActiveBookSlug(bk);
+      if (s) setActiveSeg(s);
+    }
+  }, []);
+  const terms = (0, import_react21.useMemo)(() => tokenize(query), [query]);
+  const runSearch = (0, import_react21.useCallback)(async (q) => {
+    const t = tokenize(q);
+    if (!t.length) {
+      setResults(null);
+      return;
+    }
+    if (!_fetch || !catalog) {
+      return;
+    }
+    setSearching(true);
+    try {
+      let wm = wordsMap;
+      if (!wm) {
+        const wj = await _fetch(DATA + "catalog.words.json").then((r) => r.json());
+        wm = {};
+        for (const k of Object.keys(wj)) wm[k] = new Set(wj[k].split(" "));
+        setWordsMap(wm);
+      }
+      const candidates = catalog.filter((b) => {
+        const set = wm[b.slug];
+        return set && t.every((term) => set.has(term));
+      });
+      const perBook = await Promise.all(candidates.map(async (b) => {
+        let json = bookCache[b.slug];
+        if (!json) {
+          json = await _fetch(DATA + b.slug + ".json").then((r) => r.json());
+          setBookCache((prev) => ({ ...prev, [b.slug]: json }));
+        }
+        const hits = [];
+        for (const seg of json.segments) {
+          const toks = tokenize(seg.text);
+          if (t.every((term) => toks.includes(term))) {
+            const hitCount = t.reduce((n, term) => n + toks.filter((x) => x === term).length, 0);
+            hits.push({ slug: b.slug, bookTitle: b.title, segId: seg.id, label: seg.label, snippet: snippetFor(seg.text, t), hitCount });
+          }
+        }
+        return hits;
+      }));
+      const flat = perBook.flat().sort((a, b) => b.hitCount - a.hitCount);
+      setResults(flat);
+    } catch (e) {
+      setResults([]);
+    } finally {
+      setSearching(false);
+    }
+  }, [catalog, wordsMap, bookCache]);
+  (0, import_react21.useEffect)(() => {
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    if (!query.trim()) {
+      setResults(null);
+      return;
+    }
+    debounceRef.current = setTimeout(() => {
+      runSearch(query);
+    }, 280);
+    return () => {
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+    };
+  }, [query, runSearch]);
+  const openBook = (0, import_react21.useCallback)(async (slug, segId) => {
+    setActiveBookSlug(slug);
+    setActiveSeg(segId || null);
+    if (bookCache[slug]) return;
+    if (!_fetch) return;
+    setLoadingBook(true);
+    try {
+      const json = await _fetch(DATA + slug + ".json").then((r) => r.json());
+      setBookCache((prev) => ({ ...prev, [slug]: json }));
+    } catch (e) {
+    } finally {
+      setLoadingBook(false);
+    }
+  }, [bookCache]);
+  const activeBook = activeBookSlug && catalog ? catalog.find((b) => b.slug === activeBookSlug) : null;
+  const activeBookJson = activeBookSlug ? bookCache[activeBookSlug] : null;
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    runSearch(query);
+  };
+  const pickSeg = (id) => setActiveSeg(id);
+  const back = () => {
+    setActiveBookSlug(null);
+    setActiveSeg(null);
+  };
+  return /* @__PURE__ */ import_react21.default.createElement("div", { className: "lib" }, /* @__PURE__ */ import_react21.default.createElement("header", { className: "lib-head" }, /* @__PURE__ */ import_react21.default.createElement("h1", { style: { margin: "0 0 4px", color: "var(--gold)", fontSize: "1.7rem", letterSpacing: ".3px" } }, "The Luco Library"), /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted", style: { margin: 0, maxWidth: 620 } }, "the Sacred Forest \u2014 ", /* @__PURE__ */ import_react21.default.createElement("i", null, "Luco"), ", from Latin ", /* @__PURE__ */ import_react21.default.createElement("i", null, "lucus"), ", the sacred grove of Roman Hispania. Search the primary sources behind the project \u2014 scripture, Hermetic sermons, the Sefer Yetzirah, Enoch, Josephus, and more."), /* @__PURE__ */ import_react21.default.createElement("form", { className: "controls", style: { marginTop: 14, maxWidth: 620 }, onSubmit }, /* @__PURE__ */ import_react21.default.createElement(
+    "input",
+    {
+      type: "text",
+      className: "lib-search",
+      placeholder: "Search the library \u2014 e.g. Poimandres, Marduk, watchmen, gematria\u2026",
+      value: query,
+      onChange: (e) => setQuery(e.target.value),
+      style: { flex: 1, minWidth: 220 },
+      "aria-label": "Search the library"
+    }
+  ), /* @__PURE__ */ import_react21.default.createElement("button", { type: "submit", className: "btn-cta", disabled: searching }, searching ? "Searching\u2026" : "Search"))), activeBook ? activeBookJson ? /* @__PURE__ */ import_react21.default.createElement(Reader, { book: activeBook, bookJson: activeBookJson, activeSeg, terms, onPickSeg: pickSeg, onBack: back }) : /* @__PURE__ */ import_react21.default.createElement("section", { className: "panel" }, /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted" }, loadingBook ? "Loading\u2026" : "")) : terms.length && results ? /* @__PURE__ */ import_react21.default.createElement("section", { className: "panel", style: { padding: 18 } }, /* @__PURE__ */ import_react21.default.createElement("h2", { style: { marginTop: 0, color: "var(--violet)" } }, results.length, " result", results.length === 1 ? "" : "s", " for \u201C", query, "\u201D"), results.length === 0 ? /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted" }, "No matches. Try a shorter or different term.") : /* @__PURE__ */ import_react21.default.createElement("ul", { className: "lib-results" }, results.map((r, i) => /* @__PURE__ */ import_react21.default.createElement("li", { key: i, className: "lib-result" }, /* @__PURE__ */ import_react21.default.createElement("button", { className: "lib-result-btn", onClick: () => openBook(r.slug, r.segId) }, /* @__PURE__ */ import_react21.default.createElement("span", { className: "lib-result-meta" }, /* @__PURE__ */ import_react21.default.createElement("b", null, r.bookTitle), " \xB7 ", r.label, " \xB7 ", r.hitCount, " hit", r.hitCount === 1 ? "" : "s"), /* @__PURE__ */ import_react21.default.createElement("span", { className: "lib-result-snip" }, /* @__PURE__ */ import_react21.default.createElement(Highlighted, { text: r.snippet, terms }))))))) : /* @__PURE__ */ import_react21.default.createElement("section", null, /* @__PURE__ */ import_react21.default.createElement("h2", { style: { color: "var(--violet)", margin: "18px 0 10px" } }, catalog ? catalog.length + " books" : "Loading books\u2026"), /* @__PURE__ */ import_react21.default.createElement("div", { className: "lib-grid" }, catalog && catalog.map((b) => /* @__PURE__ */ import_react21.default.createElement(BookCard, { key: b.slug, book: b, onOpen: (slug) => openBook(slug) })))));
+}
+
+// web/scripts/library_build.js
+var import_node_fs = __toESM(require("node:fs"));
+var import_node_path = __toESM(require("node:path"));
+
+// web/src/data/library_manifest.js
+var MANIFEST = [
+  // ── sacred-texts per-chapter splits (English translations) ──────────────────
+  {
+    slug: "avesta",
+    title: "Avesta \u2014 Zoroastrian Scriptures",
+    author: "James Darmesteter et al. (Sacred Books of the East)",
+    year: 1898,
+    lang: "en",
+    source: "sacred-texts.com",
+    license: "public domain",
+    description: "The Zoroastrian scriptures: the Vendidad (22 Fargards), the Yashts (hymns to the yazatas), and the Yasna (sacred liturgy).",
+    genre: "scripture",
+    parser: "sacred-texts-chapter",
+    files: ["avesta/vendidad_vd1sbe.txt", "avesta/vendidad_vd2sbe.txt", "avesta/vendidad_vd3sbe.txt", "avesta/vendidad_vd4sbe.txt", "avesta/vendidad_vd5sbe.txt", "avesta/vendidad_vd6sbe.txt", "avesta/vendidad_vd7sbe.txt", "avesta/vendidad_vd8sbe.txt", "avesta/vendidad_vd9sbe.txt", "avesta/vendidad_vd10sbe.txt", "avesta/vendidad_vd11sbe.txt", "avesta/vendidad_vd12sbe.txt", "avesta/vendidad_vd13sbe.txt", "avesta/vendidad_vd14sbe.txt", "avesta/vendidad_vd15sbe.txt", "avesta/vendidad_vd16sbe.txt", "avesta/vendidad_vd17sbe.txt", "avesta/vendidad_vd18sbe.txt", "avesta/vendidad_vd19sbe.txt", "avesta/vendidad_vd20sbe.txt", "avesta/vendidad_vd21sbe.txt", "avesta/vendidad_vd22sbe.txt", "avesta/yasht_yt5sbe.txt", "avesta/yasht_yt6sbe.txt", "avesta/yasht_yt7sbe.txt", "avesta/yasht_yt8sbe.txt", "avesta/yasht_yt9sbe.txt", "avesta/yasht_yt10sbe.txt", "avesta/yasht_yt11sbe.txt", "avesta/yasht_yt12sbe.txt", "avesta/yasht_yt13sbe.txt", "avesta/yasht_yt14sbe.txt", "avesta/yasht_yt15sbe.txt", "avesta/yasht_yt16sbe.txt", "avesta/yasht_yt17sbe.txt", "avesta/yasht_yt18sbe.txt", "avesta/yasht_yt19sbe.txt", "avesta/yasht_yt21sbe.txt", "avesta/yasna_y0to8.txt", "avesta/yasna_y9to11.txt", "avesta/yasna_y12.txt", "avesta/yasna_y13to27.txt", "avesta/yasna_y28to34.txt", "avesta/yasna_y35to42.txt", "avesta/yasna_y43to46.txt", "avesta/yasna_y47to50.txt", "avesta/yasna_y51.txt", "avesta/yasna_y52.txt", "avesta/yasna_y53.txt", "avesta/yasna_y54to72.txt"],
+    options: { labelFirstLine: true }
+  },
+  {
+    slug: "quran",
+    title: "The Qur'an (Pickthall)",
+    author: "M.M. Pickthall",
+    year: 1930,
+    lang: "en",
+    source: "sacred-texts.com",
+    license: "public domain",
+    description: "The Meaning of the Glorious Qur'an, M.M. Pickthall's English translation \u2014 114 surahs.",
+    genre: "scripture",
+    parser: "sacred-texts-chapter",
+    files: Array.from({ length: 114 }, (_, i) => "quran/surah_" + String(i + 1).padStart(3, "0") + ".txt"),
+    options: { labelRegex: "^\\s*\\d+\\.\\s+al-" }
+  },
+  {
+    slug: "nag-hammadi",
+    title: "The Nag Hammadi Library",
+    author: "Various translators (Robinson edition)",
+    year: 1978,
+    lang: "en",
+    source: "sacred-texts.com",
+    license: "public domain",
+    description: "The Gnostic scriptures found near Nag Hammadi in 1945 \u2014 Gospel of Thomas, Gospel of Truth, Thunder Perfect Mind, the Apocryphon of John, and other tractates.",
+    genre: "gnostic",
+    parser: "sacred-texts-chapter",
+    files: ["nag-hammadi/1ja.txt", "nag-hammadi/2ja.txt", "nag-hammadi/2seth.txt", "nag-hammadi/actp.txt", "nag-hammadi/adam.txt", "nag-hammadi/anoi.txt", "nag-hammadi/apocjn.txt", "nag-hammadi/apopet.txt", "nag-hammadi/ascp.txt", "nag-hammadi/autho.txt", "nag-hammadi/bapta.txt", "nag-hammadi/baptb.txt", "nag-hammadi/bookt-jdt.txt", "nag-hammadi/cgp.txt", "nag-hammadi/dialog.txt", "nag-hammadi/discorse.txt", "nag-hammadi/eucha.txt", "nag-hammadi/euchb.txt", "nag-hammadi/eugn.txt", "nag-hammadi/exe.txt", "nag-hammadi/gop.txt", "nag-hammadi/gosthom.txt", "nag-hammadi/gostruth.txt", "nag-hammadi/got.txt", "nag-hammadi/gthlamb.txt", "nag-hammadi/hyphis.txt", "nag-hammadi/hypostas.txt", "nag-hammadi/intpr.txt", "nag-hammadi/jam.txt", "nag-hammadi/jam2.txt", "nag-hammadi/letpet.txt", "nag-hammadi/marsanes.txt", "nag-hammadi/nore.txt", "nag-hammadi/origin.txt", "nag-hammadi/para_shem.txt", "nag-hammadi/plato.txt", "nag-hammadi/prat.txt", "nag-hammadi/prayp.txt", "nag-hammadi/res.txt", "nag-hammadi/sent.txt", "nag-hammadi/sjc.txt", "nag-hammadi/steles.txt", "nag-hammadi/thunder.txt", "nag-hammadi/trimorph.txt", "nag-hammadi/valex.txt", "nag-hammadi/zostr.txt"],
+    options: { titleAfter: "The Nag Hammadi Library", bodyAfter: "Translated by" }
+  },
+  {
+    slug: "rig-veda",
+    title: "Rig Veda \u2014 Selected Hymns (Griffith)",
+    author: "Ralph T.H. Griffith",
+    year: 1896,
+    lang: "en",
+    source: "sacred-texts.com",
+    license: "public domain",
+    description: "Selected hymns of the Rig Veda in Griffith\u2019s translation \u2014 including the Nasadiya (creation), Purusha (cosmic man), Vac (speech), the Year-Wheel (1.164), and hymns to Agni, Surya, Visvakarman, and the Adityas.",
+    genre: "scripture",
+    parser: "sacred-texts-chapter",
+    files: ["rig-veda/hymn_adityas_10-72.txt", "rig-veda/hymn_agni_1-1.txt", "rig-veda/hymn_nasadiya_10-129.txt", "rig-veda/hymn_purusha_10-90.txt", "rig-veda/hymn_surya_1-50.txt", "rig-veda/hymn_vac_10-125.txt", "rig-veda/hymn_visvakarman_1-73.txt", "rig-veda/hymn_yearwheel_1-164.txt"],
+    options: { labelRegex: "^\\s*HYMN\\s+[IVXLCDM]+\\." }
+  },
+  // ── DjVu OCR prose (archive.org) ────────────────────────────────────────────
+  {
+    slug: "hermetica-vol1",
+    title: "Thrice-Greatest Hermes, Vol. I (Prolegomena)",
+    author: "G.R.S. Mead",
+    year: 1906,
+    lang: "en",
+    source: "archive.org (DjVuTXT)",
+    license: "public domain",
+    description: "Mead\u2019s Prolegomena to the Hermetic literature: the remains of the Trismegistic literature, the history of opinion, and Thoth as Master of Wisdom.",
+    genre: "hermetic",
+    parser: "djvu-prose",
+    files: ["hermetica/thrice-greatest-hermes-vol1.djvu.txt"],
+    options: { skipUntil: "I. THE REMAINS", headingRegex: "^([IVX]+\\.[A-Z].*)$", stripLines: ["^>.*$", "^[\\divxlcdm]+$", "^\\s*[\\u2022\\*]\xA0"] }
+  },
+  {
+    slug: "hermetica-vol2",
+    title: "Corpus Hermeticum (Mead, Vol. II)",
+    author: "G.R.S. Mead",
+    year: 1906,
+    lang: "en",
+    source: "archive.org (DjVuTXT)",
+    license: "public domain",
+    description: "The Corpus Hermeticum \u2014 the Hermetic sermons (Poimandres, the Asclepius dialogue, etc.) in Mead\u2019s translation.",
+    genre: "hermetic",
+    parser: "djvu-prose",
+    files: ["hermetica/thrice-greatest-hermes-vol2.djvu.txt"],
+    // Body sermon headers are OCR-garbled variants of "CORPUS HERMETICUM" (COKPUS/COEPUS/CORPUS + HEKMETICUM/HERMETICUM/HEEMETICUM).
+    // The TOC line (48) starts with "/", the part-divider (301) is lowercase "Corpus Hermeticum" — neither matches this
+    // uppercase-anchored regex, so front matter is auto-dropped (cur stays null until the first real sermon at line 307).
+    // labelReplacements de-garbles the captured header into a clean "Corpus Hermeticum <roman>" label.
+    options: { headingRegex: "^(C[O0][RKPEU]+S\\s+H[A-Z]*METICUM.*)$", labelReplacements: [["^C[O0][RKPEU]+S\\s+H[A-Z]*METICUM", "Corpus Hermeticum"]], stripLines: ["^\\*{3,}$", "^\\d{1,4}$"] }
+  },
+  {
+    slug: "hermetica-vol3",
+    title: "Thrice-Greatest Hermes, Vol. III (Excursions)",
+    author: "G.R.S. Mead",
+    year: 1906,
+    lang: "en",
+    source: "archive.org (DjVuTXT)",
+    license: "public domain",
+    description: "Mead\u2019s Excursions: the Hermetic fragments and supporting essays.",
+    genre: "hermetic",
+    parser: "djvu-prose",
+    files: ["hermetica/thrice-greatest-hermes-vol3.djvu.txt"],
+    options: { skipUntil: "FRAGMENT", headingRegex: "^(FRAGMENT[^\n]*)$", stripLines: ["^\\d{1,4}$"] }
+  },
+  {
+    slug: "book-of-the-dead",
+    title: "The Book of the Dead (Budge)",
+    author: "E.A. Wallis Budge",
+    year: 1895,
+    lang: "en",
+    source: "Project Gutenberg #1808",
+    license: "public domain",
+    description: "The Egyptian Book of the Dead \u2014 Budge\u2019s translation of the Theban recension, with chapters and vignettes.",
+    genre: "egyptian",
+    parser: "gutenberg",
+    files: ["book-of-the-dead/book-of-the-dead.gutenberg.txt"],
+    options: { encoding: "latin1", headingRegex: "^(CHAPTER\\s+[IVXLC]+\\.?.*)$" }
+  },
+  {
+    slug: "i-ching",
+    title: "I Ching (Legge, SBE vol. XVI)",
+    author: "James Legge",
+    year: 1882,
+    lang: "en",
+    source: "archive.org (DjVuTXT)",
+    license: "public domain",
+    description: "The Book of Changes \u2014 Legge\u2019s translation of the 64 hexagrams and the Wing commentaries. (OCR on hexagram headings is partly degraded; the full text remains searchable.)",
+    genre: "chinese",
+    parser: "djvu-prose",
+    files: ["i-ching/yi-king-legge-sbe16.djvu.txt"],
+    options: { skipUntil: "I. The Khien Hexagram", headingRegex: "^([IVXLCDM]+\\. The .* Hexagram\\.)$", stripLines: ["^\\d{1,4}$"] }
+  },
+  {
+    slug: "popol-vuh",
+    title: "Popol Vuh (Spence)",
+    author: "Lewis Spence",
+    year: 1908,
+    lang: "en",
+    source: "archive.org (DjVuTXT)",
+    license: "public domain",
+    description: "The sacred book of the Quich\xE9 Maya \u2014 Spence\u2019s translation of the creation epic in four books.",
+    genre: "maya",
+    parser: "djvu-prose",
+    files: ["popol-vuh/popol-vuh-spence-1908.djvu.txt"],
+    options: { skipUntil: "PREFACE", headingRegex: "^(The (First|Second|Third|Fourth) Book.*)$", fuzzyHeadings: true, stripLines: ["^\\s*\\d+\\s*$", "^[0-9]+\\s+THE POPOL VUH$"] }
+  },
+  {
+    slug: "josephus",
+    title: "The Complete Works of Flavius Josephus (Whiston)",
+    author: "Flavius Josephus (tr. William Whiston)",
+    year: 1905,
+    lang: "en",
+    source: "archive.org (DjVuTXT)",
+    license: "public domain",
+    description: "Josephus\u2019 complete works \u2014 Antiquities of the Jews, Wars of the Jews, Life, and Against Apion \u2014 segmented by Work > Book > Chapter.",
+    genre: "history",
+    parser: "josephus",
+    files: ["josephus/josephus-complete-works-1905.djvu.txt"]
+  },
+  // ── Wikisource sectioned ────────────────────────────────────────────────────
+  {
+    slug: "enoch",
+    title: "The Book of Enoch (1 Enoch, Charles)",
+    author: "R.H. Charles",
+    year: 1917,
+    lang: "en",
+    source: "Wikisource",
+    license: "public domain",
+    description: "1 Enoch in Charles\u2019 1917 translation \u2014 the Book of Watchers, the Parables, the Astronomical Enoch, the Dream Visions, and the Epistle of Enoch.",
+    genre: "pseudepigrapha",
+    parser: "wikisource-section",
+    files: ["enoch/1enoch_charles.txt"]
+  },
+  // ── Sefaria JSON (clean PD Hebrew) ───────────────────────────────────────────
+  {
+    slug: "sefer-yetzirah",
+    title: "Sefer Yetzirah (Hebrew)",
+    author: "Anonymous (Sefaria source)",
+    year: null,
+    lang: "he",
+    source: "Sefaria",
+    license: "public domain",
+    description: "The Book of Formation \u2014 the Hebrew source text, 6 chapters / 48 mishnayot. The stellar-alphabet root text of the project.",
+    genre: "kabbalah",
+    parser: "sefaria-json",
+    files: ["sefer-yetzirah/sefer_yetzirah_base.v3.json"],
+    options: { depth: 2, rtl: true }
+  },
+  {
+    slug: "sefer-yetzirah-ramban",
+    title: "Ramban on Sefer Yetzirah (Hebrew commentary)",
+    author: "Nachmanides (Ramban of Girona) \u2014 Girona-school attribution",
+    year: 1884,
+    lang: "he",
+    source: "Sefaria (Warsaw 1884 ed.)",
+    license: "public domain",
+    description: "The Ramban commentary on Sefer Yetzirah \u2014 3 chapters / 28 mishnayot / 105 comments. \xAB\u2026\xBB marks the dibur hamatchil (the lemma being glossed).",
+    genre: "kabbalah",
+    parser: "sefaria-json",
+    files: ["sefer-yetzirah/ramban_on_sefer_yetzirah.v3.json"],
+    options: { depth: 3, rtl: true, lemmaRegex: "^<b>(.+?)</b>" }
+  },
+  // ── Wikipedia reference dumps (secondary literature) ────────────────────────
+  {
+    slug: "sufi-references",
+    title: "Sufi & Islamic-esoteric references",
+    author: "Wikipedia / Encyclop\xE6dia Iranica articles",
+    year: null,
+    lang: "en",
+    source: "Wikipedia, Encyclop\xE6dia Iranica",
+    license: "CC-BY-SA / fair-use research excerpt",
+    description: "Reference articles on abjad numerals, the Hurufiyya, Ibn Arabi\u2019s astrology and the seven weekdays, the Ikhwat al-Safa, jafr, and Shams al-Din al-Kubra.",
+    genre: "reference",
+    parser: "wiki-ref",
+    files: ["sufi/ref_abjad_wiki.txt", "sufi/ref_hurufi_iranica.txt", "sufi/ref_ibnalarabi_astro.txt", "sufi/ref_ibnalarabi_week.txt", "sufi/ref_ikhwan_stanford.txt", "sufi/ref_jaafar_esoteric_iranica.txt", "sufi/ref_jafr_iranica.txt", "sufi/ref_jawdanname_iranica.txt", "sufi/ref_shams_kubra_wiki.txt"],
+    options: { dedupeGroup: "wiki-ref" }
+  },
+  {
+    slug: "gematria-references",
+    title: "Gematria & numerology references",
+    author: "Wikipedia articles",
+    year: null,
+    lang: "en",
+    source: "Wikipedia",
+    license: "CC-BY-SA / fair-use research excerpt",
+    description: "Reference articles on gematria, isopsephy, the abjad and katapayadi systems, Hebrew/Greek/Coptic/Cyrillic numerals, and the Number of the Beast.",
+    genre: "reference",
+    parser: "wiki-ref",
+    files: ["gematria/ref_abjad_numerals_wiki.txt", "gematria/ref_aryabhata_numeration_wiki.txt", "gematria/ref_coptic_numerals_wiki.txt", "gematria/ref_cyrillic_numerals_wiki.txt", "gematria/ref_gematria_wiki.txt", "gematria/ref_greek_numerals_wiki.txt", "gematria/ref_hebrew_numerals_wiki.txt", "gematria/ref_isopsephy_wiki.txt", "gematria/ref_katapayadi_wiki.txt", "gematria/ref_number_beast_wiki.txt", "gematria/ref_roman_numerals_wiki.txt"],
+    options: { dedupeGroup: "wiki-ref" }
+  },
+  // ── Gaffarel (clean excerpt; raw OCR blob skipped) ──────────────────────────
+  {
+    slug: "gaffarel",
+    title: "Jacques Gaffarel \u2014 Reading of the Stars (1650, excerpt)",
+    author: "Jacques Gaffarel",
+    year: 1650,
+    lang: "en",
+    source: "archive.org (clean excerpt)",
+    license: "public domain",
+    description: "An excerpt from Gaffarel\u2019s 1650 work on the reading of the stars and its structure. (The raw 754 KB OCR blob is too degraded to index.)",
+    genre: "renaissance-magic",
+    parser: "plain",
+    files: ["gaffarel/gaffarel_1650_part4_reading_of_stars.txt", "gaffarel/gaffarel_1650_structure.txt", "gaffarel/_idx.md"],
+    options: { labelPrefix: "gaffarel" }
+  }
+];
+
+// web/scripts/library_build.js
 var import_meta = {};
-var __here = typeof __dirname !== "undefined" ? __dirname : import_node_path.default.dirname((0, import_node_url.fileURLToPath)(import_meta.url));
+var ENTITIES = { "&acirc;": "\xE2", "&Acirc;": "\xC2", "&atilde;": "\xE3", "&ccedil;": "\xE7", "&eacute;": "\xE9", "&egrave;": "\xE8", "&auml;": "\xE4", "&ouml;": "\xF6", "&uuml;": "\xFC", "&ntilde;": "\xF1", "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&apos;": "'", "&nbsp;": " ", "&shy;": "", "&hellip;": "\u2026", "&mdash;": "\u2014", "&ndash;": "\u2013", "&middot;": "\xB7", "&bull;": "\u2022", "&frac12;": "\xBD", "&frac14;": "\xBC", "&frac34;": "\xBE", "&rsquo;": "'", "&lsquo;": "'", "&ldquo;": '"', "&rdquo;": '"', "&laquo;": "\xAB", "&raquo;": "\xBB", "&copy;": "\xA9", "&sect;": "\xA7", "&para;": "\xB6", "&deg;": "\xB0" };
+function decodeEntities(s) {
+  if (!s) return s;
+  return s.replace(/&[a-z]+;|&#\d+;/gi, (m) => {
+    if (/^&#\d+$/.test(m)) return String.fromCodePoint(+m.slice(2, -1));
+    return ENTITIES[m] || m;
+  });
+}
+function stripHtml(s) {
+  if (!s) return "";
+  return decodeEntities(s.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
+}
+function deaccent(s) {
+  return s.normalize("NFKD").replace(/[̀-ͯ]/g, "");
+}
+function tokenize2(s) {
+  const d = deaccent(s).toLowerCase();
+  return d.match(/[a-z0-9֐-׿]{3,}/g) || [];
+}
+function humanize(rel) {
+  let b = import_node_path.default.basename(rel, import_node_path.default.extname(rel));
+  b = b.replace(/sbe$/i, "").replace(/_+/g, " ").replace(/\s+/g, " ").trim();
+  return b.replace(/\b\w/g, (c) => c.toUpperCase());
+}
+function slugish(s) {
+  return s.toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60) || "seg";
+}
+function hashStr(s) {
+  let h = 5381;
+  for (let i = 0; i < s.length; i++) h = (h << 5) + h + s.charCodeAt(i) | 0;
+  return (h >>> 0).toString(36);
+}
+function escapeRe(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+function titleCaseAllCaps(s) {
+  return s.replace(/\b[A-Z]{2,}\b/g, (w) => w[0] + w.slice(1).toLowerCase());
+}
+function romanTo(s) {
+  const v = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1e3 };
+  let n = 0, pre = 0;
+  const u = s.toUpperCase().replace(/[^IVXLCDM]/g, "");
+  for (let i = u.length - 1; i >= 0; i--) {
+    const c = v[u[i]] || 0;
+    if (c < pre) n -= c;
+    else {
+      n += c;
+      pre = c;
+    }
+  }
+  return n || null;
+}
+function cleanBody(lines) {
+  const joined = [];
+  for (let i = 0; i < lines.length; i++) {
+    let l = lines[i].replace(/\s+$/, "");
+    if (l && joined.length && /-[a-zA-Z]$/.test(joined[joined.length - 1]) && /^[a-zA-Z]/.test(l.trim())) {
+      joined[joined.length - 1] = joined[joined.length - 1].slice(0, -1) + l.trimStart();
+    } else {
+      joined.push(l);
+    }
+  }
+  const paras = [];
+  let cur = [];
+  for (const l of joined) {
+    if (l.trim() === "") {
+      if (cur.length) {
+        paras.push(cur.join(" "));
+        cur = [];
+      }
+    } else {
+      const t = l.replace(/\s+/g, " ").trim();
+      if (t) cur.push(t);
+    }
+  }
+  if (cur.length) paras.push(cur.join(" "));
+  return paras.filter(Boolean).join("\n\n");
+}
+var ST_BOILER = [
+  /^(Home|Contents|Prev|Next|Index|Avestan|Glossary|English|Sanskrit)$/,
+  /^Avesta -- Zoroastrian Archives$/,
+  /^Hypertext Quran$/i,
+  /^Unicode Quran$/i,
+  /^Palmer Part I/i,
+  /^Yusuf Ali/i,
+  /Internet Sacred Text Archive/i,
+  /sacred-texts\.com/i,
+  /Buy this Book at Amazon\.com/i,
+  /^The Nag Hammadi Library$/i,
+  /^Visit the Bookstore/i,
+  /^\(Above image/i,
+  /^The Rig Veda$/i,
+  /^Ralph T\.?\s*H\.?\s*Griffith,? Translator$/i,
+  /^Book\s+\d+$/,
+  /^Next: HYMN/i,
+  /^Avesta: Khorda Avesta$/i,
+  /^Avesta: Yasna$/i,
+  /^This digital edition/i,
+  /^Translated by/i,
+  /^Based on edition of/i,
+  /^Compare this chapter/i,
+  /^The Meaning of the Glorious/i,
+  /^\d+\s+al-/i
+];
+function isStBoiler(s) {
+  return ST_BOILER.some((re) => re.test(s));
+}
+function cleanAvestaTitle(s) {
+  return titleCaseAllCaps(s.replace(/^AVESTA:\s*/i, "").replace(/^KHORDA AVESTA\s*/i, "").replace(/\s*\(English\)\s*:?\s*/i, ", ").replace(/\s*\(English\)\s*$/i, "").replace(/^YASNA\s*:?\s*/i, "Yasna, ").replace(/,\s*$/, "").replace(/\.$/, "").replace(/\s+/g, " ").trim());
+}
+function parseSacredTextsChapter(book, libRoot) {
+  const out = [];
+  const labelRe = book.options.labelRegex ? new RegExp(book.options.labelRegex) : null;
+  for (const rel of book.files) {
+    let raw;
+    try {
+      raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, rel), "utf8");
+    } catch (e) {
+      continue;
+    }
+    const lines = raw.replace(/\r\n/g, "\n").split("\n").map(decodeEntities);
+    let label = null, bodyStart = 0;
+    if (book.options.titleAfter) {
+      const idx = lines.findIndex((l) => l.trim() === book.options.titleAfter);
+      if (idx >= 0) {
+        for (let i = idx + 1; i < lines.length; i++) {
+          const t = lines[i].trim();
+          if (t && !isStBoiler(t) && !/^\(Above image/.test(t)) {
+            label = t;
+            bodyStart = i + 1;
+            break;
+          }
+        }
+      }
+    } else if (labelRe) {
+      const idx = lines.findIndex((l) => labelRe.test(l.trim()));
+      if (idx >= 0) {
+        label = lines[idx].trim();
+        bodyStart = idx + 1;
+      }
+    } else if (book.options.labelFirstLine) {
+      const idx = lines.findIndex((l) => {
+        const t = l.trim();
+        return t && !isStBoiler(t);
+      });
+      if (idx >= 0) {
+        label = cleanAvestaTitle(lines[idx].trim());
+        bodyStart = idx + 1;
+      }
+    }
+    if (!label) label = humanize(rel);
+    let body = lines.slice(bodyStart);
+    if (book.options.bodyAfter) {
+      const re = new RegExp("^\\s*" + escapeRe(book.options.bodyAfter));
+      const idx = body.findIndex((l) => re.test(l));
+      if (idx >= 0) body = body.slice(idx + 1);
+    }
+    const labLow = label.toLowerCase();
+    body = body.filter((l) => {
+      const t = l.trim();
+      return t && !isStBoiler(t) && t.toLowerCase() !== labLow;
+    });
+    const text = cleanBody(body);
+    if (text.trim().length < 20) continue;
+    out.push({ id: import_node_path.default.basename(rel, import_node_path.default.extname(rel)), label, ref: rel, text });
+  }
+  return out;
+}
+function applyStrip(lines, stripLines) {
+  if (!stripLines || !stripLines.length) return lines;
+  const res = stripLines.map((s) => new RegExp(s));
+  return lines.filter((l) => !res.some((re) => re.test(l)));
+}
+function cleanLabel(lab, reps) {
+  if (!reps || !reps.length) return lab;
+  let s = lab;
+  for (const [find, repl] of reps) {
+    s = s.replace(new RegExp(find, "g"), repl);
+  }
+  return s.replace(/\s+/g, " ").trim();
+}
+function parseDjvuProse(book, libRoot) {
+  let raw;
+  try {
+    raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, book.files[0]), "utf8");
+  } catch (e) {
+    return [];
+  }
+  let lines = raw.replace(/\r\n/g, "\n").split("\n");
+  if (book.options.skipUntil) {
+    const re = new RegExp(escapeRe(book.options.skipUntil));
+    const idx = lines.findIndex((l) => re.test(l));
+    if (idx >= 0) lines = lines.slice(idx);
+  }
+  lines = applyStrip(lines, book.options.stripLines);
+  const headingRe = book.options.headingRegex ? new RegExp(book.options.headingRegex) : null;
+  const segs = [];
+  let cur = null, buf = [];
+  const flush = () => {
+    if (cur && buf.length) {
+      const t = cleanBody(buf);
+      if (t.trim().length > 20) segs.push({ ...cur, text: t });
+    }
+    buf = [];
+  };
+  for (const l of lines) {
+    if (headingRe && headingRe.test(l.trim())) {
+      flush();
+      const m = l.trim().match(headingRe);
+      const lab = cleanLabel((m && m[1] || l.trim()).replace(/\s+/g, " ").trim(), book.options.labelReplacements);
+      cur = { id: slugish(lab), label: lab, ref: book.files[0] };
+      continue;
+    }
+    if (cur) buf.push(l);
+  }
+  flush();
+  if (!segs.length) {
+    const t = cleanBody(applyStrip(lines, book.options.stripLines));
+    if (t.trim().length > 20) segs.push({ id: slugish(book.slug), label: book.title, ref: book.files[0], text: t });
+  }
+  return segs;
+}
+function parseGutenberg(book, libRoot) {
+  const enc = book.options.encoding || "utf8";
+  let raw;
+  try {
+    raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, book.files[0]), enc);
+  } catch (e) {
+    return [];
+  }
+  raw = raw.replace(/\r\n/g, "\n");
+  const startM = raw.match(/\*\*\*\s*START[^]*?\*\*\*/);
+  if (startM) raw = raw.slice(startM.index + startM[0].length);
+  const endIdx = raw.search(/\*\*\*\s*END/);
+  if (endIdx >= 0) raw = raw.slice(0, endIdx);
+  let lines = raw.split("\n").map(decodeEntities);
+  lines = applyStrip(lines, book.options.stripLines);
+  const headingRe = book.options.headingRegex ? new RegExp(book.options.headingRegex) : null;
+  const segs = [];
+  let cur = null, buf = [];
+  const flush = () => {
+    if (cur && buf.length) {
+      const t = cleanBody(buf);
+      if (t.trim().length > 20) segs.push({ ...cur, text: t });
+    }
+    buf = [];
+  };
+  for (const l of lines) {
+    if (headingRe && headingRe.test(l.trim())) {
+      flush();
+      const m = l.trim().match(headingRe);
+      const lab = (m && m[1] || l.trim()).replace(/\s+/g, " ").trim();
+      cur = { id: slugish(lab), label: lab, ref: book.files[0] };
+      continue;
+    }
+    if (cur) buf.push(l);
+  }
+  flush();
+  if (!segs.length) {
+    const t = cleanBody(lines);
+    if (t.trim().length > 20) segs.push({ id: book.slug, label: book.title, ref: book.files[0], text: t });
+  }
+  return segs;
+}
+function parseWikisourceSection(book, libRoot) {
+  let raw;
+  try {
+    raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, book.files[0]), "utf8");
+  } catch (e) {
+    return [];
+  }
+  let lines = raw.replace(/\r\n/g, "\n").split("\n").map(decodeEntities);
+  lines = applyStrip(lines, book.options.stripLines || ["^\\d{1,5}$", "^[\u2190\u2192]", "^\\s*\u2190", "^\\s*\u2192", "^\\s*\\d+\\s*$"]);
+  const segs = [];
+  let cur = null, buf = [];
+  const flush = () => {
+    if (cur) {
+      const t = cleanBody(buf);
+      if (t.trim().length > 20) segs.push({ ...cur, text: t });
+    }
+    buf = [];
+  };
+  for (const l of lines) {
+    const m = l.match(/^=====\s*(.+?)\s*=====$/);
+    if (m) {
+      flush();
+      cur = { id: slugish(m[1]), label: m[1].trim(), ref: book.files[0] };
+    } else if (cur) buf.push(l);
+  }
+  flush();
+  return segs;
+}
+function parseSefariaJson(book, libRoot) {
+  let j;
+  try {
+    j = JSON.parse(import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, book.files[0]), "utf8"));
+  } catch (e) {
+    return [];
+  }
+  const text = j.versions && j.versions[0] && j.versions[0].text;
+  if (!text) return [];
+  const depth = book.options.depth || 2;
+  const rtl = !!book.options.rtl;
+  const lemmaRe = book.options.lemmaRegex ? new RegExp(book.options.lemmaRegex) : null;
+  const segs = [];
+  const walk = (arr, pref, depthLeft, emit) => {
+    for (let i = 0; i < arr.length; i++) {
+      const v = arr[i];
+      if (Array.isArray(v)) walk(v, pref + (pref ? ":" : "") + (i + 1), depthLeft - 1, emit);
+      else if (typeof v === "string" && depthLeft <= 1) {
+        emit(pref + (pref ? ":" : "") + (i + 1), v);
+      } else if (typeof v === "string" && depthLeft > 1) {
+        emit(pref + (pref ? ":" : "") + (i + 1), v);
+      }
+    }
+  };
+  if (depth === 2) {
+    for (let c = 0; c < text.length; c++) for (let m = 0; m < (text[c] ? text[c].length : 0); m++) {
+      const s = stripHtml(text[c][m]);
+      if (s && s.trim().length > 5) segs.push({ id: `${c + 1}:${m + 1}`, label: `${c + 1}:${m + 1}`, ref: `${book.title} ${c + 1}:${m + 1}`, text: s, rtl });
+    }
+  } else if (depth === 3) {
+    for (let c = 0; c < text.length; c++) for (let m = 0; m < (text[c] ? text[c].length : 0); m++) for (let k = 0; k < (text[c][m] ? text[c][m].length : 0); k++) {
+      const r = text[c][m][k];
+      if (!r) continue;
+      let body = stripHtml(r);
+      let label = `${c + 1}:${m + 1} #${k + 1}`;
+      if (lemmaRe) {
+        const mm = body.match(lemmaRe);
+        if (mm) {
+          label = `\xAB${stripHtml(mm[1]).trim()}\xBB`;
+          body = body.slice(mm.index + mm[0].length).trim();
+        }
+      }
+      if (body.trim().length > 5) segs.push({ id: `${c + 1}:${m + 1}-${k + 1}`, label, ref: `${book.title} ${c + 1}:${m + 1} #${k + 1}`, text: body, rtl });
+    }
+  }
+  return segs;
+}
+var WIKI_CRUFT = [
+  /^Jump to content$/i,
+  /^From Wikipedia, the free encyclopedia$/i,
+  /^From Wikipedia$/i,
+  /Learn how and when to remove/i,
+  /^\(Learn how/i,
+  /Find sources/i,
+  /^This article has/i,
+  /^This article needs/i,
+  /^Part of a series on/i,
+  /^Wikipedia:/i,
+  /^For other uses/i,
+  /^Contents$/i,
+  /^\[edit\]$/i,
+  /^\[.*\]$/i,
+  /^Navigation menu$/i,
+  /^References$/i,
+  /^External links$/i,
+  /^See also$/i,
+  /^Further reading$/i,
+  /^Citations$/i,
+  /^Sources$/i,
+  /^^Hidden categories:/i,
+  /^Categories:/i,
+  /^This box:/i,
+  /^v\s*t\s*e/i,
+  /^Academia\.edu/i,
+  /^\^\s*\d+$/i,
+  /^Jump to search$/i
+];
+function isWikiCruft(s) {
+  return WIKI_CRUFT.some((re) => re.test(s.trim())) || /^\s*\^\s*$/.test(s);
+}
+function parseWikiRef(book, libRoot, dedupeSets) {
+  const group = book.options.dedupeGroup;
+  const seen = group ? dedupeSets[group] || (dedupeSets[group] = /* @__PURE__ */ new Set()) : null;
+  const out = [];
+  for (const rel of book.files) {
+    let raw;
+    try {
+      raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, rel), "utf8");
+    } catch (e) {
+      continue;
+    }
+    const lines = raw.replace(/\r\n/g, "\n").split("\n").map(decodeEntities);
+    let title = (lines[0] || "").trim().replace(/\s*[-–—]\s*(Wikipedia|Encyclop[ae]dia Iranica).*$/i, "").replace(/\|.*$/, "").trim();
+    if (!title) title = humanize(rel);
+    const body = cleanBody(lines.filter((l) => !isWikiCruft(l)));
+    if (body.trim().length < 40) continue;
+    const h = hashStr(body);
+    if (seen && seen.has(h)) continue;
+    if (seen) seen.add(h);
+    out.push({ id: import_node_path.default.basename(rel, ".txt"), label: title, ref: rel, text: body });
+  }
+  return out;
+}
+function normalizeWork(s) {
+  if (/ANTIQUIT/i.test(s)) return "Antiquities";
+  if (/WARS/i.test(s)) return "Wars";
+  if (/LIFE/i.test(s)) return "Life";
+  if (/APION/i.test(s)) return "Against Apion";
+  return s;
+}
+function parseJosephus(book, libRoot) {
+  let raw;
+  try {
+    raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, book.files[0]), "utf8");
+  } catch (e) {
+    return [];
+  }
+  const lines = raw.replace(/\r\n/g, "\n").split("\n");
+  const HEADER = /^(ANTIQUITIES OF THE JEWS|WARS OF THE JEWS)$/i;
+  const WORK = /^(ANTIQUITIES OF THE JEWS|WARS OF THE JEWS|LIFE OF FLAVIUS JOSEPHUS|THE LIFE|THE WARS|AGAINST APION)/i;
+  const BOOK = /^BOOK\s+([IVXLCDM]+)/i;
+  const CHAP = /^CHAPTER\s+([IVXLCDM]+)/i;
+  let work = "Josephus", bookNo = null;
+  const segs = [];
+  let cur = null, buf = [];
+  const flush = () => {
+    if (cur && buf.length) {
+      const t = cleanBody(buf);
+      if (t.trim().length > 40) segs.push({ ...cur, text: t });
+    }
+    buf = [];
+  };
+  for (const l of lines) {
+    const t = l.trim();
+    if (HEADER.test(t)) continue;
+    if (/^CONTENTS\.?$/i.test(t)) continue;
+    if (/^\d{1,4}$/.test(t)) continue;
+    let m;
+    if (m = t.match(WORK)) {
+      work = normalizeWork(m[1]);
+      bookNo = null;
+      continue;
+    }
+    if (m = t.match(BOOK)) {
+      bookNo = romanTo(m[1]) || m[1];
+      continue;
+    }
+    if (m = t.match(CHAP)) {
+      flush();
+      const ch = romanTo(m[1]) || m[1];
+      const label = `${work} Book ${bookNo || "?"} Chapter ${ch}`;
+      cur = { id: slugish(label), label, ref: book.files[0] };
+      continue;
+    }
+    if (cur) buf.push(l);
+  }
+  flush();
+  return segs;
+}
+function parsePlain(book, libRoot) {
+  const out = [];
+  for (const rel of book.files) {
+    let raw;
+    try {
+      raw = import_node_fs.default.readFileSync(import_node_path.default.join(libRoot, rel), "utf8");
+    } catch (e) {
+      continue;
+    }
+    const text = cleanBody(raw.replace(/\r\n/g, "\n").split("\n").map(decodeEntities));
+    if (text.trim().length < 10) continue;
+    out.push({ id: import_node_path.default.basename(rel, import_node_path.default.extname(rel)), label: humanize(rel), ref: rel, text });
+  }
+  return out;
+}
+function writeOriginalIndex(origDir, book, originalFiles) {
+  const items = originalFiles.map((f) => `        <li><a href="${import_node_path.default.basename(f)}" download>\u2B07 ${import_node_path.default.basename(f)}</a> <span class="sz">(${(import_node_fs.default.statSync(import_node_path.default.join(origDir, import_node_path.default.basename(f))).size / 1024).toFixed(0)} KB)</span></li>`).join("\n");
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${book.title} \u2014 original files | The Luco Library</title>
+<style>:root{--bg:#000;--panel:#0f0f15;--line:#2a2a38;--txt:#f4f4f7;--dim:#9ca3af;--violet:#c29eff;--gold:#e8c87a}body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.6 -apple-system,Segoe UI,Helvetica,Arial,sans-serif}.w{max-width:760px;margin:0 auto;padding:32px 18px}h1{font-size:1.4rem;color:var(--gold);margin:0 0 4px}p.m{color:var(--dim);margin:0 0 18px;font-size:.9rem}a{color:var(--violet);text-decoration:none}a:hover{text-decoration:underline}li{list-style:none;padding:7px 0;border-bottom:1px solid var(--line)}.sz{color:var(--dim);font-size:.8rem}.bk{font-size:.8rem;color:var(--dim)}code{color:var(--violet)}</style></head>
+<body><div class="w"><p class="bk"><a href="/library/">\u2190 The Luco Library</a></p><h1>${book.title}</h1><p class="m">Original source file${originalFiles.length > 1 ? "s" : ""} \u2014 as downloaded (${book.source}). Right-click \u2192 \u201CSave link as\u2026\u201D to keep the file.</p><ul>
+${items}
+      </ul></div></body></html>`;
+  import_node_fs.default.writeFileSync(import_node_path.default.join(origDir, "index.html"), html);
+}
+function buildLibrary(webDir) {
+  const libRoot = import_node_path.default.resolve(webDir, "..", "library");
+  const outData = import_node_path.default.join(webDir, "library", "data");
+  const outOrig = import_node_path.default.join(webDir, "library", "original");
+  import_node_fs.default.mkdirSync(outData, { recursive: true });
+  import_node_fs.default.mkdirSync(outOrig, { recursive: true });
+  const dedupeSets = {};
+  const catalog = [];
+  const wordsMap = {};
+  let totalSegs = 0, totalWords = 0;
+  for (const book of MANIFEST) {
+    book.options = book.options || {};
+    let segs = [];
+    try {
+      switch (book.parser) {
+        case "sacred-texts-chapter":
+          segs = parseSacredTextsChapter(book, libRoot);
+          break;
+        case "djvu-prose":
+          segs = parseDjvuProse(book, libRoot);
+          break;
+        case "gutenberg":
+          segs = parseGutenberg(book, libRoot);
+          break;
+        case "wikisource-section":
+          segs = parseWikisourceSection(book, libRoot);
+          break;
+        case "sefaria-json":
+          segs = parseSefariaJson(book, libRoot);
+          break;
+        case "wiki-ref":
+          segs = parseWikiRef(book, libRoot, dedupeSets);
+          break;
+        case "josephus":
+          segs = parseJosephus(book, libRoot);
+          break;
+        case "plain":
+          segs = parsePlain(book, libRoot);
+          break;
+        default:
+          console.warn("[library] unknown parser", book.parser, "for", book.slug);
+      }
+    } catch (e) {
+      console.warn("[library] parse FAILED for", book.slug, "-", e.message);
+      segs = [];
+    }
+    if (!segs.length) {
+      console.warn("[library] NO segments for", book.slug, "(skipping)");
+      continue;
+    }
+    const origDir = import_node_path.default.join(outOrig, book.slug);
+    import_node_fs.default.mkdirSync(origDir, { recursive: true });
+    const originalFiles = [];
+    for (const rel of book.files) {
+      const src = import_node_path.default.join(libRoot, rel);
+      if (!import_node_fs.default.existsSync(src)) {
+        console.warn("[library] missing source", rel);
+        continue;
+      }
+      const base = import_node_path.default.basename(rel);
+      import_node_fs.default.copyFileSync(src, import_node_path.default.join(origDir, base));
+      originalFiles.push(`/library/original/${book.slug}/${base}`);
+    }
+    try {
+      writeOriginalIndex(origDir, book, originalFiles);
+    } catch (e) {
+    }
+    const words = /* @__PURE__ */ new Set();
+    let wc = 0;
+    for (const s of segs) {
+      const toks = tokenize2(s.text);
+      for (const w of toks) words.add(w);
+      wc += toks.length;
+    }
+    const rtl = !!(book.options && book.options.rtl);
+    import_node_fs.default.writeFileSync(import_node_path.default.join(outData, book.slug + ".json"), JSON.stringify({
+      slug: book.slug,
+      title: book.title,
+      meta: { author: book.author, year: book.year, lang: book.lang, source: book.source, license: book.license, description: book.description, genre: book.genre, rtl },
+      originalFiles,
+      segments: segs.map((s) => ({ id: s.id, label: s.label, ref: s.ref, text: s.text, rtl: rtl && s.rtl !== false }))
+    }));
+    wordsMap[book.slug] = [...words].sort().join(" ");
+    catalog.push({ slug: book.slug, title: book.title, author: book.author, year: book.year, lang: book.lang, genre: book.genre, description: book.description, segments: segs.length, words: wc, originalFiles });
+    totalSegs += segs.length;
+    totalWords += wc;
+    console.log(`[library] ${book.slug}: ${segs.length} segs, ${wc} words, ${originalFiles.length} originals`);
+  }
+  import_node_fs.default.writeFileSync(import_node_path.default.join(outData, "catalog.json"), JSON.stringify({ books: catalog }, null, 2));
+  import_node_fs.default.writeFileSync(import_node_path.default.join(outData, "catalog.words.json"), JSON.stringify(wordsMap));
+  console.log(`[library] DONE \u2014 ${catalog.length} books, ${totalSegs} segments, ${totalWords} words total.`);
+  return { books: catalog };
+}
+if (import_meta.url === `file://${process.argv[1]}`) {
+  const webDir = import_node_path.default.resolve(import_node_path.default.dirname(new URL(".", import_meta.url).pathname), "..");
+  buildLibrary(webDir);
+}
+
+// web/scripts/prerender.jsx
+var import_meta2 = {};
+var __here = typeof __dirname !== "undefined" ? __dirname : import_node_path2.default.dirname((0, import_node_url.fileURLToPath)(import_meta2.url));
 function findWeb(start) {
   let dir = start;
   for (let i = 0; i < 6; i++) {
-    if (import_node_fs.default.existsSync(import_node_path.default.join(dir, "index.html")) && import_node_fs.default.existsSync(import_node_path.default.join(dir, "lexicon.json"))) return dir;
-    dir = import_node_path.default.dirname(dir);
+    if (import_node_fs2.default.existsSync(import_node_path2.default.join(dir, "index.html")) && import_node_fs2.default.existsSync(import_node_path2.default.join(dir, "lexicon.json"))) return dir;
+    dir = import_node_path2.default.dirname(dir);
   }
-  return import_node_path.default.resolve(__here, "..");
+  return import_node_path2.default.resolve(__here, "..");
 }
 var WEB = findWeb(__here);
 var OUT = WEB;
@@ -31129,16 +32180,17 @@ var SIGN_ES2EN = {
 };
 var ERA_ES2EN = { Piscis: "Pisces", Acuario: "Aquarius", Capricornio: "Capricorn", Sagitario: "Sagittarius", Escorpio: "Scorpio", Libra: "Libra", Virgo: "Virgo", Leo: "Leo", C\u00E1ncer: "Cancer", G\u00E9minis: "Gemini", Tauro: "Taurus", Aries: "Aries" };
 var signEN = (s) => SIGN_ES2EN[s] || ERA_ES2EN[s] || s;
-var lexicon = JSON.parse(import_node_fs.default.readFileSync(import_node_path.default.join(WEB, "lexicon.json"), "utf8"));
-var angels = JSON.parse(import_node_fs.default.readFileSync(import_node_path.default.join(WEB, "angels72.json"), "utf8"));
-var alignments = JSON.parse(import_node_fs.default.readFileSync(import_node_path.default.join(WEB, "alignments.json"), "utf8"));
-var nameRefs = JSON.parse(import_node_fs.default.readFileSync(import_node_path.default.join(WEB, "name_refs.json"), "utf8"));
+var lexicon = JSON.parse(import_node_fs2.default.readFileSync(import_node_path2.default.join(WEB, "lexicon.json"), "utf8"));
+var angels = JSON.parse(import_node_fs2.default.readFileSync(import_node_path2.default.join(WEB, "angels72.json"), "utf8"));
+var alignments = JSON.parse(import_node_fs2.default.readFileSync(import_node_path2.default.join(WEB, "alignments.json"), "utf8"));
+var nameRefs = JSON.parse(import_node_fs2.default.readFileSync(import_node_path2.default.join(WEB, "name_refs.json"), "utf8"));
 var LEX = lexicon.lexicon;
 var angelMap = (() => {
   const m = /* @__PURE__ */ new Map();
   angels.triplets.forEach((t, i) => m.set(norm(t), { el: angels.angelsEL[i], yh: angels.angelsYH[i] }));
   return m;
 })();
+var libraryCatalog = buildLibrary(WEB);
 function scanYear(y) {
   const nDays = y % 4 === 0 && (y % 100 !== 0 || y % 400 === 0) ? 366 : 365;
   const dayOccs = [];
@@ -31151,12 +32203,12 @@ function scanYear(y) {
 var genData = scanYear(2026);
 var rows = skyAt(REF_DATE2);
 var occ = occupiedLetters(rows);
-var indexHtml = import_node_fs.default.readFileSync(import_node_path.default.join(WEB, "index.html"), "utf8");
+var indexHtml = import_node_fs2.default.readFileSync(import_node_path2.default.join(WEB, "index.html"), "utf8");
 var CSS = (indexHtml.match(/<style>([\s\S]*?)<\/style>/) || ["", ""])[1];
 function esc(s) {
   return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
-function shell({ title, desc, keywords, path: routePath, jsonld, body }) {
+function shell({ title, desc, keywords, path: routePath, jsonld, body, scriptSrc = "/app.bundle.js" }) {
   const url = SITE + routePath;
   return `<!DOCTYPE html>
 <html lang="en">
@@ -31216,28 +32268,29 @@ ${CSS}
       <a href="/app" data-s="app">App</a>
       <a href="/about" data-s="about">About</a>
       <a href="/paper" data-s="paper">Paper</a>
+      <a href="/library" data-s="library">Library</a>
     </nav>
   </div>
 </header>
-<script>(function(){var p=(location.pathname||'/').replace(/\\/\\+$/,'')||'/';var s='home';if(p==='/about')s='about';else if(p==='/paper')s='paper';else if(p!=='/')s='app';var a=document.querySelector('.site-nav a[data-s="'+s+'"]');if(a)a.classList.add('active');})();</script>
+<script>(function(){var p=(location.pathname||'/').replace(/\\/\\+$/,'')||'/';var s='home';if(p==='/about')s='about';else if(p==='/paper')s='paper';else if(p==='/library')s='library';else if(p!=='/')s='app';var a=document.querySelector('.site-nav a[data-s="'+s+'"]');if(a)a.classList.add('active');})();</script>
 <div class="wrap"><main id="root" class="app-panel">${body}</main></div>
-<script type="module" src="/app.bundle.js"></script>
+<script type="module" src="${scriptSrc}"></script>
 </body>
 </html>
 `;
 }
 function writeHtml(relPath, html) {
-  const full = import_node_path.default.join(OUT, relPath);
-  import_node_fs.default.mkdirSync(import_node_path.default.dirname(full), { recursive: true });
-  import_node_fs.default.writeFileSync(full, html);
+  const full = import_node_path2.default.join(OUT, relPath);
+  import_node_fs2.default.mkdirSync(import_node_path2.default.dirname(full), { recursive: true });
+  import_node_fs2.default.writeFileSync(full, html);
 }
 var R = (el) => (0, import_server.renderToStaticMarkup)(el);
 var TAB_LABELS = ["Cycles", "Sky Map", "Reader", "Reading", "Time", "Gematria", "Sigils", "Revelations", "Psalms", "Codes", "Methodology"];
 function TabsBarStatic() {
-  return /* @__PURE__ */ import_react21.default.createElement("div", { className: "tabs", role: "tablist" }, TAB_LABELS.map((label) => /* @__PURE__ */ import_react21.default.createElement("div", { key: label, className: "tab", role: "tab" }, label)));
+  return /* @__PURE__ */ import_react22.default.createElement("div", { className: "tabs", role: "tablist" }, TAB_LABELS.map((label) => /* @__PURE__ */ import_react22.default.createElement("div", { key: label, className: "tab", role: "tab" }, label)));
 }
 function appBody(page) {
-  return R(/* @__PURE__ */ import_react21.default.createElement("div", null, /* @__PURE__ */ import_react21.default.createElement(TabsBarStatic, null), /* @__PURE__ */ import_react21.default.createElement("section", { className: "panel app-panel" }, page), /* @__PURE__ */ import_react21.default.createElement(Footer, null)));
+  return R(/* @__PURE__ */ import_react22.default.createElement("div", null, /* @__PURE__ */ import_react22.default.createElement(TabsBarStatic, null), /* @__PURE__ */ import_react22.default.createElement("section", { className: "panel app-panel" }, page), /* @__PURE__ */ import_react22.default.createElement(Footer, null)));
 }
 var jsonldWebApp = JSON.stringify({
   "@context": "https://schema.org",
@@ -31256,15 +32309,15 @@ writeHtml("prophets/index.html", shell({
   keywords: "prophets timeline, Adam to Jacob Frank, Seth two pillars, biblical prophets, Islamic prophets, Sufi mystics, apocalyptic writers, Sabbateanism, Frankism, revelation chronology, merkabah mysticism, Apocalypse of Adam",
   path: "/prophets",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Prophets \u2014 Adam to Jacob Frank", url: SITE + "/prophets" }),
-  body: appBody(/* @__PURE__ */ import_react21.default.createElement(ProphetsPage, null))
+  body: appBody(/* @__PURE__ */ import_react22.default.createElement(ProphetsPage, null))
 }));
 writeHtml("mages/index.html", shell({
-  title: "Magi timeline \u2014 Daniel to Aleister Crowley | Apocalypse of Adam",
+  title: "Magi timeline \u2014 Adapa to Aleister Crowley | Apocalypse of Adam",
   desc: "A chronology of magi and royal-sage occult figures: the Sumerian apkallu Adapa, the Egyptian sage Imhotep, the priestess Enheduanna, Hermes Trismegistus, Jannes and Jambres of Moses' era, Pythagoras, the Babylonian court magi (Daniel, Shadrach, Meshach, Abednego), the priest-astronomer Berossus, the Magi of Matthew 2, Apollonius of Tyana, the theurgist Iamblichus, Saint Cyprian of Antioch (San Cipriano), the Arabic astrologers Abu Ma'shar, Al-Kindi (De radiis stellarum) and Maslama al-Qurtubi (Picatrix), the medieval Iberian sages (Ramon Llull, Alfonso X, Arnaldus de Villanova, Moses de Le\xF3n), the Renaissance magi, the Baroque Jesuit mage Athanasius Kircher (Oedipus Aegyptiacus), and the modern Hermetic line of Eliphas L\xE9vi, S.L. Mathers and Aleister Crowley \u2014 with Wikipedia bios and a profile of their works.",
   keywords: "magi timeline, Adapa apkallu, Imhotep, Enheduanna, Hermes Trismegistus, Jannes and Jambres, Pythagoras, Daniel magi, Shadrach Meshach Abednego, Berossus, Biblical Magi, Apollonius of Tyana, Iamblichus theurgy, San Cipriano, Saint Cyprian of Antioch, Abu Ma'shar, Al-Kindi, De radiis stellarum, Maslama al-Qurtubi, Picatrix, Drag\xF3n Rojo, Ramon Llull Ars Magna, Alfonso X, Felipe II, Athanasius Kircher, Oedipus Aegyptiacus, Jesuit mage, Eliphas Levi, Mathers, Aleister Crowley, Thelema, Goetia, Christian Kabbalah, Hermeticism, Renaissance magic, Apocalypse of Adam",
   path: "/mages",
-  jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Magi \u2014 Daniel to Aleister Crowley", url: SITE + "/mages" }),
-  body: appBody(/* @__PURE__ */ import_react21.default.createElement(MagesPage, null))
+  jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Magi \u2014 Adapa to Aleister Crowley", url: SITE + "/mages" }),
+  body: appBody(/* @__PURE__ */ import_react22.default.createElement(MagesPage, null))
 }));
 writeHtml("patriarchs/index.html", shell({
   title: "Patriarchs/Conquest \u2014 names readable in the sky | Apocalypse of Adam",
@@ -31272,7 +32325,7 @@ writeHtml("patriarchs/index.html", shell({
   keywords: "biblical names, patriarchs, Hebrew gematria, stellar letters, Sefer Yetzirah, zodiac simple letters, rare conjunctions, sky reading, Apocalypse of Adam",
   path: "/patriarchs",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Patriarchs/Conquest \u2014 names readable in the sky", url: SITE + "/patriarchs", numberOfItems: PATRIARCHS.length }),
-  body: appBody(/* @__PURE__ */ import_react21.default.createElement(PatriarchsPage, null))
+  body: appBody(/* @__PURE__ */ import_react22.default.createElement(PatriarchsPage, null))
 }));
 writeHtml("places/index.html", shell({
   title: "Places \u2014 biblical toponyms readable in the sky | Apocalypse of Adam",
@@ -31280,11 +32333,11 @@ writeHtml("places/index.html", shell({
   keywords: "biblical places, toponyms, Hebrew gematria, stellar letters, Sefer Yetzirah, zodiac simple letters, rare conjunctions, sky reading, Apocalypse of Adam",
   path: "/places",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Places \u2014 biblical toponyms readable in the sky", url: SITE + "/places", numberOfItems: PLACES.length }),
-  body: appBody(/* @__PURE__ */ import_react21.default.createElement(PlacesPage, null))
+  body: appBody(/* @__PURE__ */ import_react22.default.createElement(PlacesPage, null))
 }));
 function AlignmentsIndex() {
   const rowsA = alignments.scanA;
-  return /* @__PURE__ */ import_react21.default.createElement("div", null, /* @__PURE__ */ import_react21.default.createElement("h1", null, "Stellar alignments \u2014 rare century & millennium conjunctions"), /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted" }, "Every rare stellar alignment from a 7-classical scan (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn): the planets concentrated in a single zodiac sign, with the tightest enclosing arc and the precessional era. ", rowsA.length, " alignments. Each links to its fiche with a sky map, alignment metrics, and the top readable Hebrew names."), /* @__PURE__ */ import_react21.default.createElement("table", { style: { width: "100%", fontSize: ".86rem" } }, /* @__PURE__ */ import_react21.default.createElement("thead", null, /* @__PURE__ */ import_react21.default.createElement("tr", null, ["Date", "Max in one sign", "Sign", "Span (\xB0)", "Era", "Fiche"].map((h, i) => /* @__PURE__ */ import_react21.default.createElement("th", { key: i, style: { textAlign: i === 0 || i === 5 ? "left" : "right", padding: "4px 8px" } }, h)))), /* @__PURE__ */ import_react21.default.createElement("tbody", null, rowsA.map((e, i) => /* @__PURE__ */ import_react21.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react21.default.createElement("td", { style: { padding: "4px 8px" } }, e.date), /* @__PURE__ */ import_react21.default.createElement("td", { style: { padding: "4px 8px", textAlign: "right" } }, e.maxInSign), /* @__PURE__ */ import_react21.default.createElement("td", { style: { padding: "4px 8px" } }, signEN(e.sign)), /* @__PURE__ */ import_react21.default.createElement("td", { style: { padding: "4px 8px", textAlign: "right" }, className: "deg" }, e.span.toFixed(1)), /* @__PURE__ */ import_react21.default.createElement("td", { style: { padding: "4px 8px" } }, signEN(e.era)), /* @__PURE__ */ import_react21.default.createElement("td", { style: { padding: "4px 8px" } }, /* @__PURE__ */ import_react21.default.createElement("a", { href: `/align/${e.date}` }, "view fiche \u2192")))))));
+  return /* @__PURE__ */ import_react22.default.createElement("div", null, /* @__PURE__ */ import_react22.default.createElement("h1", null, "Stellar alignments \u2014 rare century & millennium conjunctions"), /* @__PURE__ */ import_react22.default.createElement("p", { className: "muted" }, "Every rare stellar alignment from a 7-classical scan (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn): the planets concentrated in a single zodiac sign, with the tightest enclosing arc and the precessional era. ", rowsA.length, " alignments. Each links to its fiche with a sky map, alignment metrics, and the top readable Hebrew names."), /* @__PURE__ */ import_react22.default.createElement("table", { style: { width: "100%", fontSize: ".86rem" } }, /* @__PURE__ */ import_react22.default.createElement("thead", null, /* @__PURE__ */ import_react22.default.createElement("tr", null, ["Date", "Max in one sign", "Sign", "Span (\xB0)", "Era", "Fiche"].map((h, i) => /* @__PURE__ */ import_react22.default.createElement("th", { key: i, style: { textAlign: i === 0 || i === 5 ? "left" : "right", padding: "4px 8px" } }, h)))), /* @__PURE__ */ import_react22.default.createElement("tbody", null, rowsA.map((e, i) => /* @__PURE__ */ import_react22.default.createElement("tr", { key: i }, /* @__PURE__ */ import_react22.default.createElement("td", { style: { padding: "4px 8px" } }, e.date), /* @__PURE__ */ import_react22.default.createElement("td", { style: { padding: "4px 8px", textAlign: "right" } }, e.maxInSign), /* @__PURE__ */ import_react22.default.createElement("td", { style: { padding: "4px 8px" } }, signEN(e.sign)), /* @__PURE__ */ import_react22.default.createElement("td", { style: { padding: "4px 8px", textAlign: "right" }, className: "deg" }, e.span.toFixed(1)), /* @__PURE__ */ import_react22.default.createElement("td", { style: { padding: "4px 8px" } }, signEN(e.era)), /* @__PURE__ */ import_react22.default.createElement("td", { style: { padding: "4px 8px" } }, /* @__PURE__ */ import_react22.default.createElement("a", { href: `/align/${e.date}` }, "view fiche \u2192")))))));
 }
 writeHtml("alignments/index.html", shell({
   title: "Stellar alignments \u2014 rare century & millennium conjunctions | Apocalypse of Adam",
@@ -31292,13 +32345,13 @@ writeHtml("alignments/index.html", shell({
   keywords: "stellar alignments, planetary conjunctions, rare astronomy, zodiac concentration, precession, tightest arc, 7-classical conjunction, Hebrew sky reading, Apocalypse of Adam",
   path: "/alignments",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Stellar alignments", url: SITE + "/alignments", numberOfItems: alignments.scanA.length }),
-  body: appBody(/* @__PURE__ */ import_react21.default.createElement(AlignmentsIndex, null))
+  body: appBody(/* @__PURE__ */ import_react22.default.createElement(AlignmentsIndex, null))
 }));
 function ReadingsIndex() {
-  return /* @__PURE__ */ import_react21.default.createElement("div", null, /* @__PURE__ */ import_react21.default.createElement("h1", null, "Sky readings \u2014 Hebrew words readable in the stars"), /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted" }, "Every consonantal Hebrew root in the lexicon (", LEX.length, " entries) has a reading fiche: its Hebrew letters, transliteration, gloss, gematria, the zodiac simple letters it requires, and its year-legibility timeline. Each links to its single-reading page."), /* @__PURE__ */ import_react21.default.createElement("div", { className: "tcards" }, LEX.map((row, i) => {
+  return /* @__PURE__ */ import_react22.default.createElement("div", null, /* @__PURE__ */ import_react22.default.createElement("h1", null, "Sky readings \u2014 Hebrew words readable in the stars"), /* @__PURE__ */ import_react22.default.createElement("p", { className: "muted" }, "Every consonantal Hebrew root in the lexicon (", LEX.length, " entries) has a reading fiche: its Hebrew letters, transliteration, gloss, gematria, the zodiac simple letters it requires, and its year-legibility timeline. Each links to its single-reading page."), /* @__PURE__ */ import_react22.default.createElement("div", { className: "tcards" }, LEX.map((row, i) => {
     const [cons, trans, gloss, pos] = row;
     const enc = encodeURIComponent(cons);
-    return /* @__PURE__ */ import_react21.default.createElement("a", { key: i, href: `/reader/${enc}`, className: "tcard", style: { textDecoration: "none", display: "block" } }, /* @__PURE__ */ import_react21.default.createElement("div", { className: "the" }, /* @__PURE__ */ import_react21.default.createElement("span", { className: "he", style: { fontSize: "1.3rem" } }, cons)), /* @__PURE__ */ import_react21.default.createElement("div", { className: "read" }, trans), /* @__PURE__ */ import_react21.default.createElement("div", { className: "trans" }, gloss), /* @__PURE__ */ import_react21.default.createElement("div", { className: "g muted", style: { fontSize: ".78rem" } }, pos || "\u2014"));
+    return /* @__PURE__ */ import_react22.default.createElement("a", { key: i, href: `/reader/${enc}`, className: "tcard", style: { textDecoration: "none", display: "block" } }, /* @__PURE__ */ import_react22.default.createElement("div", { className: "the" }, /* @__PURE__ */ import_react22.default.createElement("span", { className: "he", style: { fontSize: "1.3rem" } }, cons)), /* @__PURE__ */ import_react22.default.createElement("div", { className: "read" }, trans), /* @__PURE__ */ import_react22.default.createElement("div", { className: "trans" }, gloss), /* @__PURE__ */ import_react22.default.createElement("div", { className: "g muted", style: { fontSize: ".78rem" } }, pos || "\u2014"));
   })));
 }
 writeHtml("readings/index.html", shell({
@@ -31307,7 +32360,7 @@ writeHtml("readings/index.html", shell({
   keywords: "Hebrew readings, sky reading glossary, consonantal roots, Hebrew gematria, zodiac simple letters, Sefer Yetzirah, 72 angels, lexicon, Apocalypse of Adam",
   path: "/readings",
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", name: "Sky readings", url: SITE + "/readings", numberOfItems: LEX.length }),
-  body: appBody(/* @__PURE__ */ import_react21.default.createElement(ReadingsIndex, null))
+  body: appBody(/* @__PURE__ */ import_react22.default.createElement(ReadingsIndex, null))
 }));
 writeHtml("about/index.html", shell({
   title: "About \u2014 The Apocalypse of Adam | Hebrew sky reader",
@@ -31315,7 +32368,7 @@ writeHtml("about/index.html", shell({
   keywords: "About, Apocalypse of Adam, Sefer Yetzirah, stellar alphabet, Hebrew sky reading, astronomy-engine, authors, methodology",
   path: "/about",
   jsonld: jsonldWebApp,
-  body: R(/* @__PURE__ */ import_react21.default.createElement(import_react21.default.Fragment, null, /* @__PURE__ */ import_react21.default.createElement(About, null), /* @__PURE__ */ import_react21.default.createElement(Footer, null)))
+  body: R(/* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, null, /* @__PURE__ */ import_react22.default.createElement(About, null), /* @__PURE__ */ import_react22.default.createElement(Footer, null)))
 }));
 writeHtml("app/index.html", shell({
   title: "Sky reader app \u2014 Cycles, Sky Map, Reader, Gematria, Alignments | Apocalypse of Adam",
@@ -31323,7 +32376,17 @@ writeHtml("app/index.html", shell({
   keywords: "Sefer Yetzirah, Hebrew letters, zodiac, stellar alphabet, gematria, 72 angels, ELS, Torah codes, Temurah, Ziruph, alignments, sky reader, Apocalypse of Adam",
   path: "/app",
   jsonld: jsonldWebApp,
-  body: appBody(/* @__PURE__ */ import_react21.default.createElement("div", { style: { minHeight: "55vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" } }, /* @__PURE__ */ import_react21.default.createElement("h2", { style: { margin: 0 } }, "Loading the app\u2026"), /* @__PURE__ */ import_react21.default.createElement("p", { className: "muted", style: { marginTop: 8 } }, "Reading the lexicon (6045 consonantal roots).")))
+  body: appBody(/* @__PURE__ */ import_react22.default.createElement("div", { style: { minHeight: "55vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" } }, /* @__PURE__ */ import_react22.default.createElement("h2", { style: { margin: 0 } }, "Loading the app\u2026"), /* @__PURE__ */ import_react22.default.createElement("p", { className: "muted", style: { marginTop: 8 } }, "Reading the lexicon (6045 consonantal roots).")))
+}));
+var libDesc = "The Luco Library \u2014 the Sacred Forest (Luco, from Latin lucus, the sacred grove of Roman Hispania). Search the primary sources behind the project: Avesta, the Qur'an, Nag Hammadi, Rig Veda, the Hermetic sermons (Corpus Hermeticum), the Book of the Dead, I Ching, Popol Vuh, Josephus, 1 Enoch, Sefer Yetzirah (Hebrew) + Ramban commentary, Sufi & gematria reference articles.";
+writeHtml("library/index.html", shell({
+  title: "The Luco Library \u2014 the Sacred Forest | Apocalypse of Adam",
+  desc: libDesc,
+  keywords: "primary source library, BibleGateway search, Avesta, Quran, Nag Hammadi, Rig Veda, Corpus Hermeticum, Poimandres, Book of the Dead, I Ching, Popol Vuh, Josephus, 1 Enoch, Sefer Yetzirah, Ramban, gematria, Sufism, sacred texts, Apocalypse of Adam",
+  path: "/library",
+  jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "Library", name: "The Luco Library \u2014 the Sacred Forest", url: SITE + "/library", description: libDesc }),
+  scriptSrc: "/library.bundle.js",
+  body: R(/* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, null, /* @__PURE__ */ import_react22.default.createElement(LibraryApp, { initialCatalog: libraryCatalog }), /* @__PURE__ */ import_react22.default.createElement(Footer, null)))
 }));
 var nProphet = 0;
 for (const p of PROPHETS) {
@@ -31344,7 +32407,7 @@ for (const p of PROPHETS) {
     nationality: p.region,
     sameAs: w.wikipediaUrl || null
   });
-  writeHtml("prophet/" + slug + "/index.html", shell({ title, desc, keywords, path: "/prophet/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react21.default.createElement(ProphetFicha, { slug })) }));
+  writeHtml("prophet/" + slug + "/index.html", shell({ title, desc, keywords, path: "/prophet/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react22.default.createElement(ProphetFicha, { slug })) }));
   nProphet++;
 }
 var nMage = 0;
@@ -31366,7 +32429,7 @@ for (const m of MAGES) {
     nationality: m.region,
     sameAs: w.wikipediaUrl || null
   });
-  writeHtml("mage/" + slug + "/index.html", shell({ title, desc, keywords, path: "/mage/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react21.default.createElement(MageFicha, { slug })) }));
+  writeHtml("mage/" + slug + "/index.html", shell({ title, desc, keywords, path: "/mage/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react22.default.createElement(MageFicha, { slug })) }));
   nMage++;
 }
 var nPatriarch = 0;
@@ -31385,7 +32448,7 @@ for (const p of PATRIARCHS) {
     url: SITE + "/patriarch/" + slug,
     nationality: "ancient Israel"
   });
-  writeHtml("patriarch/" + slug + "/index.html", shell({ title, desc, keywords, path: "/patriarch/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react21.default.createElement(PatriarchFicha, { slug })) }));
+  writeHtml("patriarch/" + slug + "/index.html", shell({ title, desc, keywords, path: "/patriarch/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react22.default.createElement(PatriarchFicha, { slug })) }));
   nPatriarch++;
 }
 var nPlace = 0;
@@ -31402,7 +32465,7 @@ for (const p of PLACES) {
     description: `Biblical toponym (${p.period}) readable in the sky on ${p.dates.length} of the 12 dated rare conjunctions.`,
     url: SITE + "/place/" + slug
   });
-  writeHtml("place/" + slug + "/index.html", shell({ title, desc, keywords, path: "/place/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react21.default.createElement(PlaceFicha, { slug })) }));
+  writeHtml("place/" + slug + "/index.html", shell({ title, desc, keywords, path: "/place/" + slug, jsonld, body: appBody(/* @__PURE__ */ import_react22.default.createElement(PlaceFicha, { slug })) }));
   nPlace++;
 }
 var nAlign = 0;
@@ -31434,7 +32497,7 @@ for (const e of alignments.scanA) {
     url: SITE + `/align/${date}`,
     location: { "@type": "Place", name: `Zodiac sign ${meta.sign}` }
   });
-  const body = appBody(import_react21.default.createElement(AlignmentFicha, { date, lex: lexicon, angelMap, onBack: () => {
+  const body = appBody(import_react22.default.createElement(AlignmentFicha, { date, lex: lexicon, angelMap, onBack: () => {
   }, nameRefs }));
   writeHtml(`align/${date}/index.html`, shell({ title, desc, keywords, path: `/align/${date}`, jsonld, body }));
   nAlign++;
@@ -31457,7 +32520,7 @@ for (const row of LEX) {
     url: SITE + `/reader/${encodeURIComponent(he)}`,
     inDefinedTermSet: "Hebrew Sky-Reading Lexicon"
   });
-  const body = appBody(import_react21.default.createElement(GlossPage, { word: w, date: REF_DATE2, rows, occ, genData, onBack: () => {
+  const body = appBody(import_react22.default.createElement(GlossPage, { word: w, date: REF_DATE2, rows, occ, genData, onBack: () => {
   }, nameRefs }));
   writeHtml(`reader/${he}/index.html`, shell({ title, desc, keywords, path: `/reader/${encodeURIComponent(he)}`, jsonld, body }));
   nGloss++;
@@ -31472,14 +32535,14 @@ var sAlign = [
   ...alignments.scanA.map((e) => urlEntry(`${SITE}/align/${e.date}`, "monthly", "0.7")),
   "</urlset>"
 ].join("\n");
-import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "sitemap_alignments.xml"), sAlign);
+import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "sitemap_alignments.xml"), sAlign);
 var sRead = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
   ...LEX.map((row) => urlEntry(`${SITE}/reader/${encodeURIComponent(row[0])}`, "monthly", "0.5")),
   "</urlset>"
 ].join("\n");
-import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "sitemap_readings.xml"), sRead);
+import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "sitemap_readings.xml"), sRead);
 var sFig = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -31489,7 +32552,7 @@ var sFig = [
   ...PLACES.map((p) => urlEntry(`${SITE}/place/${p.slug}`, "monthly", "0.5")),
   "</urlset>"
 ].join("\n");
-import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "sitemap_figures.xml"), sFig);
+import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "sitemap_figures.xml"), sFig);
 var sIndex = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -31499,7 +32562,7 @@ var sIndex = [
   `  <sitemap><loc>${SITE}/sitemap_figures.xml</loc><lastmod>${today}</lastmod></sitemap>`,
   "</sitemapindex>"
 ].join("\n");
-import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "sitemap.xml"), sIndex);
+import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "sitemap.xml"), sIndex);
 var sHub = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -31507,6 +32570,7 @@ var sHub = [
   urlEntry(`${SITE}/app`, "weekly", "0.9"),
   urlEntry(`${SITE}/about`, "monthly", "0.7"),
   urlEntry(`${SITE}/paper`, "monthly", "0.9"),
+  urlEntry(`${SITE}/library`, "monthly", "0.8"),
   urlEntry(`${SITE}/prophets`, "monthly", "0.8"),
   urlEntry(`${SITE}/mages`, "monthly", "0.8"),
   urlEntry(`${SITE}/patriarchs`, "monthly", "0.8"),
@@ -31515,9 +32579,9 @@ var sHub = [
   urlEntry(`${SITE}/readings`, "monthly", "0.8"),
   "</urlset>"
 ].join("\n");
-import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "sitemap_hub.xml"), sHub);
-import_node_fs.default.writeFileSync(
-  import_node_path.default.join(OUT, "robots.txt"),
+import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "sitemap_hub.xml"), sHub);
+import_node_fs2.default.writeFileSync(
+  import_node_path2.default.join(OUT, "robots.txt"),
   `User-agent: *
 Allow: /
 Sitemap: ${SITE}/sitemap.xml
@@ -31536,8 +32600,9 @@ var llmsTxt = `# The Apocalypse of Adam
 - [Sky reader app](${SITE}/app) \u2014 interactive calculators (11 tabs: Cycles, Sky Map, Reader, Reading, Time, Gematria, Sigils, Revelations, Psalms, Codes, Methodology)
 - [About](${SITE}/about) \u2014 what the project is, how a reading works, authors and sources.
 - [Paper \u2014 The Reader of the Sky](${SITE}/paper) \u2014 the long-form academic article (served on this domain).
+- [The Luco Library \u2014 the Sacred Forest](${SITE}/library) \u2014 BibleGateway-style search across the primary sources (Avesta, Qur'an, Nag Hammadi, Rig Veda, Corpus Hermeticum, Book of the Dead, I Ching, Popol Vuh, Josephus, 1 Enoch, Sefer Yetzirah + Ramban, Sufi & gematria references).
 - [Prophets timeline \u2014 Adam to Jacob Frank](${SITE}/prophets) \u2014 61 prophet fiches (/prophet/<slug>)
-- [Magi timeline \u2014 Daniel to Aleister Crowley](${SITE}/mages) \u2014 40 magus fiches (/mage/<slug>)
+- [Magi timeline \u2014 Adapa to Aleister Crowley](${SITE}/mages) \u2014 40 magus fiches (/mage/<slug>)
 - [Patriarchs/Conquest \u2014 names readable in the sky](${SITE}/patriarchs) \u2014 185 biblical-name fiches (/patriarch/<slug>)
 - [Places \u2014 biblical toponyms readable in the sky](${SITE}/places) \u2014 108 biblical-place fiches (/place/<slug>)
 - [Stellar alignments](${SITE}/alignments) \u2014 267 rare-alignment fiches (/align/<date>)
@@ -31555,7 +32620,7 @@ var llmsTxt = `# The Apocalypse of Adam
 - Authors: AncientEncoder & BartMan. Source: https://github.com/VABISMO/adam-apocalypse. AncientEncoder: https://medium.com/@ancientencoder/sons-of-stars-269765bda7db
 - Paper: ${SITE}/paper
 `;
-import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "llms.txt"), llmsTxt);
+import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "llms.txt"), llmsTxt);
 var llmsFull = `# The Apocalypse of Adam \u2014 full site description for LLMs
 
 > Hebrew letters read in the sky: real planet positions (astronomy-engine) map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable Hebrew names. The reuse rule S\u2286O (a word's required simple letters must be among the signs occupied by the planets) decides what is readable on each date. This is the live computational engine behind the paper "The Reader of the Sky".
@@ -31596,7 +32661,7 @@ Available to browser AI agents when the API is present (Chrome origin trial). Al
 - Source: https://github.com/VABISMO/adam-apocalypse
 - Authors: AncientEncoder & BartMan. AncientEncoder: https://medium.com/@ancientencoder/sons-of-stars-269765bda7db
 `;
-import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "llms-full.txt"), llmsFull);
+import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "llms-full.txt"), llmsFull);
 var ICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23000'/%3E%3Ctext x='12' y='18' text-anchor='middle' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23e8c87a'%3EA%3C/text%3E%3C/svg%3E";
 var manifest = {
   name: "The Apocalypse of Adam \u2014 Hebrew Sky Reader",
@@ -31613,23 +32678,23 @@ var manifest = {
     { src: ICON, sizes: "192x192 512x512", type: "image/svg+xml", purpose: "any" }
   ]
 };
-import_node_fs.default.writeFileSync(import_node_path.default.join(OUT, "site.webmanifest"), JSON.stringify(manifest, null, 2));
+import_node_fs2.default.writeFileSync(import_node_path2.default.join(OUT, "site.webmanifest"), JSON.stringify(manifest, null, 2));
 writeHtml("index.html", shell({
   title: "The Apocalypse of Adam \u2014 Hebrew letters in the stars \xB7 stellar alphabet & sky reader",
   desc: "Apocalypse means revelation. The thirteenth kingdom says every birth of their ruler is a word. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells readable Hebrew names. Sky map, alignments, reader, time, gematria, sigils, codes and psalms.",
   keywords: "Sefer Yetzirah, Hebrew letters, zodiac, stellar alphabet, Hebrew gematria, 72 angels, ELS, Torah codes, Temurah, Ziruph, ayanamsa, saros, precession, Apocalypse of Adam, Revelation gematria, psalms by date",
   path: "/",
   jsonld: jsonldWebApp,
-  body: R(/* @__PURE__ */ import_react21.default.createElement(import_react21.default.Fragment, null, /* @__PURE__ */ import_react21.default.createElement(Landing, { goApp: () => {
-  } }), /* @__PURE__ */ import_react21.default.createElement(Footer, null)))
+  body: R(/* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, null, /* @__PURE__ */ import_react22.default.createElement(Landing, { goApp: () => {
+  } }), /* @__PURE__ */ import_react22.default.createElement(Footer, null)))
 }));
 (() => {
-  const src = import_node_path.default.join(WEB, "..", "paper", "index.html");
-  if (import_node_fs.default.existsSync(src)) {
-    const dst = import_node_path.default.join(OUT, "paper", "index.html");
-    import_node_fs.default.mkdirSync(import_node_path.default.dirname(dst), { recursive: true });
-    import_node_fs.default.copyFileSync(src, dst);
-    console.log(`paper served same-domain: /paper/ (${import_node_fs.default.statSync(src).size} bytes)`);
+  const src = import_node_path2.default.join(WEB, "..", "paper", "index.html");
+  if (import_node_fs2.default.existsSync(src)) {
+    const dst = import_node_path2.default.join(OUT, "paper", "index.html");
+    import_node_fs2.default.mkdirSync(import_node_path2.default.dirname(dst), { recursive: true });
+    import_node_fs2.default.copyFileSync(src, dst);
+    console.log(`paper served same-domain: /paper/ (${import_node_fs2.default.statSync(src).size} bytes)`);
   } else {
     console.log("WARN: paper/index.html not found at", src, "\u2014 /paper/ not written");
   }

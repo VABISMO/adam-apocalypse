@@ -225,7 +225,7 @@ function Slides({ rows, occ }){
       graphic: <PsalmsGrid/>,
       icon: 'music', iconColor: 'gold',
       title: 'Psalms',
-      body: 'A Psalm is appointed to each day, read alongside the sky of that date — one hundred and fifty songs laid over the turning year. The stellar alphabet spells its names; the Psalms answer them back, a second voice in the same key.'
+      body: 'A Psalm calculated from the gematria of a name and a date — the sum sets an equidistant-letter-sequence step over Genesis, and the value of that string is matched to the shortest Hebrew phrase in the one hundred and fifty songs. A gematria calculator — not a reading of the sky.'
     }
   ];
 }
@@ -265,21 +265,30 @@ function Slider({ rows, occ }){
 
 // ── feature blocks ──
 const FEATURES = [
-  { n: 'star', c: 'gold', t: 'Sky map', d: 'Real planet positions in the 12 zodiac signs — the 12 simple letters lit up today.', go: '/app' },
+  { n: 'star', c: 'gold', t: 'Sky map', d: 'Real planet positions in the 12 zodiac signs — the 12 simple letters lit up today.', go: '/app?tab=sky' },
   { n: 'compass', c: 'violet', t: 'Rare alignments', d: '267 century & millennium conjunctions — planets concentrated in a single sign.', go: '/alignments' },
-  { n: 'book-open', c: 'green', t: 'Reader', d: 'The Hebrew names and words the occupied signs spell on a given date.', go: '/app' },
-  { n: 'clock', c: 'teal', t: 'Time', d: 'The day predictor and the precessional ages — deep time of the stellar alphabet.', go: '/app' },
-  { n: 'hashtag', c: 'violet', t: 'Gematria', d: 'Hebrew, Greek, Arabic and Indian numerology — Aiq Bekar and digital roots.', go: '/app' },
-  { n: 'wand-magic', c: 'gold', t: 'Sigils', d: 'The sigil forge, the Kameot magic squares, and the 72 angels of the Shem HaMephorash.', go: '/app' },
-  { n: 'barcode', c: 'brand', t: 'Codes', d: 'Equidistant letter sequences, Temurah / Atbash and Ziruph on the source texts.', go: '/app' },
-  { n: 'music', c: 'gold', t: 'Psalms', d: 'A Psalm appointed to each day, read alongside the sky of that date.', go: '/app' }
+  { n: 'book-open', c: 'green', t: 'Reader', d: 'The Hebrew names and words the occupied signs spell on a given date.', go: '/app?tab=translator' },
+  { n: 'clock', c: 'teal', t: 'Time', d: 'The day predictor and the precessional ages — deep time of the stellar alphabet.', go: '/app?tab=time' },
+  { n: 'hashtag', c: 'violet', t: 'Gematria', d: 'Hebrew, Greek, Arabic and Indian numerology — Aiq Bekar and digital roots.', go: '/app?tab=gematria' },
+  { n: 'wand-magic', c: 'gold', t: 'Sigils', d: 'The sigil forge, the Kameot magic squares, and the 72 angels of the Shem HaMephorash.', go: '/app?tab=sigils' },
+  { n: 'barcode', c: 'brand', t: 'Codes', d: 'Equidistant letter sequences, Temurah / Atbash and Ziruph on the source texts.', go: '/app?tab=codes' },
+  { n: 'music', c: 'gold', t: 'Psalms', d: 'A Psalm calculated from the gematria of a given input — a number-match into the one hundred and fifty songs.', go: '/app?tab=psalms' }
 ];
 
 function Landing({ goApp }){
   const rows = useMemo(() => skyAt(REF_DATE), []);                  // 7 classical bodies (sky-map dots)
   const occ = useMemo(() => occupiedLetters(skyAt7(REF_DATE)), []);  // 7 classical bodies (reading / lit sectors)
   const [warnOpen, setWarnOpen] = useState(false);
+  const [libQuery, setLibQuery] = useState('');
   const enterApp = () => { setWarnOpen(false); goApp && goApp(); };
+  // home search bar → hand the query to the separate Library app (/library?q=…).
+  // /library is a full page load (its own bundle), not an SPA route, so a plain
+  // navigation is correct. The <form action="/library" method="get"> is the no-JS fallback.
+  const submitLib = (e) => {
+    e.preventDefault();
+    const q = libQuery.trim();
+    window.location.href = '/library' + (q ? ('?q=' + encodeURIComponent(q)) : '');
+  };
 
   return (
     <div className="landing">
@@ -327,14 +336,29 @@ function Landing({ goApp }){
         </div>
       </section>
 
+      {/* ── THE LUCO LIBRARY ── */}
+      <section className="panel" style={{ marginTop: 22, padding: 24 }}>
+        <div className="section-head" style={{ textAlign: 'center' }}>
+          <h2 style={{ margin: 0, color: 'var(--gold)' }}>The Luco Library — the Sacred Forest</h2>
+          <p className="muted" style={{ maxWidth: 640, margin: '6px auto 0' }}>
+            <i>Luco</i>, from Latin <i>lucus</i> — the sacred grove of Roman Hispania. A BibleGateway-style search across the primary sources behind the project: Avesta, the Qur'an, Nag Hammadi, the Rig Veda, the Hermetic sermons, the Book of the Dead, the I Ching, the Popol Vuh, Josephus, 1 Enoch, the Sefer Yetzirah and Ramban's commentary, and the Sufi &amp; gematria references.
+          </p>
+        </div>
+        <form className="controls" style={{ maxWidth: 560, margin: '16px auto 0', justifyContent: 'center' }} action="/library" method="get" onSubmit={submitLib}>
+          <input type="text" name="q" className="lib-search" placeholder="Search the library — e.g. Poimandres, watchmen, Marduk, gematria…"
+            value={libQuery} onChange={e => setLibQuery(e.target.value)} style={{ flex: 1, minWidth: 220 }} aria-label="Search the library"/>
+          <button type="submit" className="btn-cta"><Fa n="magnifying-glass" c="txt" size=".95rem"/> &nbsp;Search</button>
+        </form>
+        <div style={{ textAlign: 'center', marginTop: 12 }}>
+          <a href="/library" style={{ color: 'var(--violet)', fontSize: '.9rem' }}>Browse all books →</a>
+        </div>
+      </section>
+
       {/* ── ENTRY CTA ── */}
       <section className="panel entry-cta" style={{ marginTop: 26, padding: 28, textAlign: 'center', borderColor: 'var(--brand)' }}>
         <h2 style={{ marginTop: 0 }}>Initiate — explore the stars</h2>
         <p className="muted" style={{ maxWidth: 620, margin: '0 auto 16px' }}>Learn a few simple things about the ancients, then read the sky for yourself. A short content notice opens first — for visitors diagnosed with psychosis or schizophrenia.</p>
         <button className="btn-cta" style={{ fontSize: '1.1rem', padding: '14px 34px' }} onClick={() => setWarnOpen(true)}><Fa n="compass" c="txt" size="1.1rem"/> &nbsp;Enter the app</button>
-        <div className="muted" style={{ marginTop: 14, fontSize: '.8rem' }}>
-          <Fa n="triangle-exclamation" c="warn" size=".9rem"/> &nbsp;<b>Notice:</b> I have schizophrenia · I am psychotic · I am manic — a short self-check is offered before entry.
-        </div>
       </section>
 
       <WarningModal open={warnOpen} onClose={() => setWarnOpen(false)} onProceed={enterApp}/>

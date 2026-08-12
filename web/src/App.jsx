@@ -165,7 +165,7 @@ function App(){
       t='Prophets timeline — Adam to Jacob Frank | Apocalypse of Adam';
       d='A chronology of prophetic and revelatory figures from Adam through the biblical prophets, the apocalyptic writers, and the Sabbatean–Frankist thread, ending at Jacob Frank (1726–1791).';
     } else if(route.name==='mages'){
-      t='Magi timeline — Daniel to Aleister Crowley | Apocalypse of Adam';
+      t='Magi timeline — Adapa to Aleister Crowley | Apocalypse of Adam';
       d='A chronology of magi and royal-sage occult figures from the Babylonian court magi (Daniel, Shadrach, Meshach, Abednego) through Ramon Llull, Alfonso X and Felipe II, with Wikipedia bios and a profile of their works.';
     } else if(route.name==='prophet'){
       const p = PROPHET_BY_SLUG.get(route.slug);

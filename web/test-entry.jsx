@@ -13,3 +13,4 @@ export { PlacesPage } from './src/pages/PlacesPage.jsx';
 export { Landing } from './src/pages/Landing.jsx';
 export { About } from './src/pages/About.jsx';
 export { WarningModal } from './src/components/WarningModal.jsx';
+export { LibraryApp } from './src/library/LibraryApp.jsx';
