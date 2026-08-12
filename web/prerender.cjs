@@ -1356,7 +1356,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher.useContext(Context);
         }
-        function useState6(initialState) {
+        function useState7(initialState) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState);
         }
@@ -1368,7 +1368,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
-        function useEffect5(create, deps) {
+        function useEffect6(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useEffect(create, deps);
         }
@@ -1384,7 +1384,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useCallback(callback, deps);
         }
-        function useMemo5(create, deps) {
+        function useMemo6(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useMemo(create, deps);
         }
@@ -2151,15 +2151,15 @@ var require_react_development = __commonJS({
         exports2.useContext = useContext;
         exports2.useDebugValue = useDebugValue;
         exports2.useDeferredValue = useDeferredValue;
-        exports2.useEffect = useEffect5;
+        exports2.useEffect = useEffect6;
         exports2.useId = useId;
         exports2.useImperativeHandle = useImperativeHandle;
         exports2.useInsertionEffect = useInsertionEffect;
         exports2.useLayoutEffect = useLayoutEffect;
-        exports2.useMemo = useMemo5;
+        exports2.useMemo = useMemo6;
         exports2.useReducer = useReducer;
         exports2.useRef = useRef4;
-        exports2.useState = useState6;
+        exports2.useState = useState7;
         exports2.useSyncExternalStore = useSyncExternalStore;
         exports2.useTransition = useTransition;
         exports2.version = ReactVersion;
@@ -9317,7 +9317,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
         function basicStateReducer(state, action) {
           return typeof action === "function" ? action(state) : action;
         }
-        function useState6(initialState) {
+        function useState7(initialState) {
           {
             currentHookNameInDev = "useState";
           }
@@ -9382,7 +9382,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
             return [workInProgressHook.memoizedState, _dispatch];
           }
         }
-        function useMemo5(nextCreate, deps) {
+        function useMemo6(nextCreate, deps) {
           currentlyRenderingComponent = resolveCurrentlyRenderingComponent();
           workInProgressHook = createWorkInProgressHook();
           var nextDeps = deps === void 0 ? null : deps;
@@ -9456,7 +9456,7 @@ var require_react_dom_server_legacy_node_development = __commonJS({
           }
         }
         function useCallback2(callback, deps) {
-          return useMemo5(function() {
+          return useMemo6(function() {
             return callback;
           }, deps);
         }
@@ -9496,10 +9496,10 @@ var require_react_dom_server_legacy_node_development = __commonJS({
         var Dispatcher = {
           readContext: readContext$1,
           useContext,
-          useMemo: useMemo5,
+          useMemo: useMemo6,
           useReducer,
           useRef: useRef4,
-          useState: useState6,
+          useState: useState7,
           useInsertionEffect: noop,
           useLayoutEffect,
           useCallback: useCallback2,
@@ -14754,7 +14754,7 @@ var require_react_dom_server_node_development = __commonJS({
         function basicStateReducer(state, action) {
           return typeof action === "function" ? action(state) : action;
         }
-        function useState6(initialState) {
+        function useState7(initialState) {
           {
             currentHookNameInDev = "useState";
           }
@@ -14819,7 +14819,7 @@ var require_react_dom_server_node_development = __commonJS({
             return [workInProgressHook.memoizedState, _dispatch];
           }
         }
-        function useMemo5(nextCreate, deps) {
+        function useMemo6(nextCreate, deps) {
           currentlyRenderingComponent = resolveCurrentlyRenderingComponent();
           workInProgressHook = createWorkInProgressHook();
           var nextDeps = deps === void 0 ? null : deps;
@@ -14893,7 +14893,7 @@ var require_react_dom_server_node_development = __commonJS({
           }
         }
         function useCallback2(callback, deps) {
-          return useMemo5(function() {
+          return useMemo6(function() {
             return callback;
           }, deps);
         }
@@ -14933,10 +14933,10 @@ var require_react_dom_server_node_development = __commonJS({
         var Dispatcher = {
           readContext: readContext$1,
           useContext,
-          useMemo: useMemo5,
+          useMemo: useMemo6,
           useReducer,
           useRef: useRef4,
-          useState: useState6,
+          useState: useState7,
           useInsertionEffect: noop,
           useLayoutEffect,
           useCallback: useCallback2,
@@ -24297,6 +24297,536 @@ var BY_SLUG3 = /* @__PURE__ */ new Map([
 
 // web/src/components/NameFicha.jsx
 var import_react9 = __toESM(require_react());
+
+// web/src/data/name_wiki.json
+var name_wiki_default = {
+  abagtha: {
+    title: "Abagtha",
+    description: "",
+    extract: "Abagtha was a court official of King Ahasuerus. He is mentioned once in the Book of Esther. According to this narrative, King Ahasuerus commanded Abagtha and six other officials to parade the Queen Vashti before the king and his ministers in the crown jewels. Her refusal led to her demise and the selection of Esther as the new queen of the Persian Empire.",
+    thumbnail: null,
+    url: "https://en.wikipedia.org/wiki/Abagtha",
+    type: "standard"
+  },
+  abner: {
+    title: "Abner",
+    description: "Biblical character",
+    extract: 'In the Hebrew Bible, Abner was the cousin of King Saul and the commander-in-chief of his army. His name also appears as \u05D0\u05D1\u05D9\u05E0\u05E8 \u05D1\u05DF \u05E0\u05E8 "Abiner son of Ner", where the longer form Abiner means "my father is Ner".',
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Maciejowski_Bible_Leaf_37_3.jpg/330px-Maciejowski_Bible_Leaf_37_3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 396
+    },
+    url: "https://en.wikipedia.org/wiki/Abner",
+    type: "standard"
+  },
+  abraham: {
+    title: "Abraham",
+    description: "Namesake of the Abrahamic religions",
+    extract: "Abraham is widely revered as a foundational legendary figure among adherents of the eponymous Abrahamic religions. In Judaism, he is the ethnic ancestor and first Hebrew patriarch who began the covenantal relationship between the Jewish people and God; in Christianity, he is regarded as the forebear of Jesus and the spiritual ancestor of all Christians; and in Islam, he is a link in the chain of Islamic prophets that begins with Adam and culminates in Muhammad. Abraham is revered in all other Abrahamic religions, such as the Bah\xE1\u02BC\xED Faith and the Druze faith. He is regarded as the common forefather of both the Arab people through his son Ishmael and the Jewish people through his son Isaac.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Guercino_Abramo_ripudia_Agar_%28cropped_2%29.jpg/330px-Guercino_Abramo_ripudia_Agar_%28cropped_2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 413
+    },
+    url: "https://en.wikipedia.org/wiki/Abraham",
+    type: "standard"
+  },
+  abram: {
+    title: "Abraham",
+    description: "Namesake of the Abrahamic religions",
+    extract: "Abraham is widely revered as a foundational legendary figure among adherents of the eponymous Abrahamic religions. In Judaism, he is the ethnic ancestor and first Hebrew patriarch who began the covenantal relationship between the Jewish people and God; in Christianity, he is regarded as the forebear of Jesus and the spiritual ancestor of all Christians; and in Islam, he is a link in the chain of Islamic prophets that begins with Adam and culminates in Muhammad. Abraham is revered in all other Abrahamic religions, such as the Bah\xE1\u02BC\xED Faith and the Druze faith. He is regarded as the common forefather of both the Arab people through his son Ishmael and the Jewish people through his son Isaac.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Guercino_Abramo_ripudia_Agar_%28cropped_2%29.jpg/330px-Guercino_Abramo_ripudia_Agar_%28cropped_2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 413
+    },
+    url: "https://en.wikipedia.org/wiki/Abraham",
+    type: "standard"
+  },
+  achashverosh: {
+    title: "Ahasuerus",
+    description: "Name of various rulers in the Hebrew Bible",
+    extract: 'Ahasuerus is a name applied in the Hebrew Bible to three rulers of Ancient Persia and to a Babylonian official first appearing in the Tanakh in the Book of Esther and later in the Book of Tobit. It is a transliteration of either "Xerxes" or "Artaxerxes;" both are names of multiple Achaemenid dynasty Persian kings.',
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Esther_before_Ahasuerus_%281547-48%29%3B_Tintoretto%2C_Jacopo.jpg/330px-Esther_before_Ahasuerus_%281547-48%29%3B_Tintoretto%2C_Jacopo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 251
+    },
+    url: "https://en.wikipedia.org/wiki/Ahasuerus",
+    type: "standard"
+  },
+  adad: {
+    title: "Hadad",
+    description: "Semitic storm god",
+    extract: 'Hadad, Haddad, Adad, or I\u0161kur (Sumerian) was the storm- and rain-god in the Canaanite and ancient Mesopotamian religions.\nHe was attested in Ebla as "Hadda" in c. 2500 BCE.',
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Ramman.png/330px-Ramman.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 395
+    },
+    url: "https://en.wikipedia.org/wiki/Hadad",
+    type: "standard"
+  },
+  adoram: {
+    title: "Adoniram",
+    description: "Tax collector in 1 Kings",
+    extract: `Adoniram, the son of Abda, was the tax collector in the United Kingdom of Israel for over forty years, from the late years of King David's reign until the reign of Rehoboam. In the language of the Tanakh, he was "over the tribute", i.e. the levy or forced labor.`,
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Adoniram_stoned_-_Weigel_%2834134334%29_%28cropped%29.jpg/330px-Adoniram_stoned_-_Weigel_%2834134334%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 408
+    },
+    url: "https://en.wikipedia.org/wiki/Adoniram",
+    type: "standard"
+  },
+  agag: {
+    title: "Agag",
+    description: "Northwest Semitic name or title applied to a biblical king",
+    extract: 'Agag is a Northwest Semitic name or title applied to a biblical king. It has been suggested that "Agag" was a dynastic name of the kings of Amalek, just as Pharaoh was used as a dynastic name for the ancient Egyptians. The etymology is uncertain, according to John L. McKenzie (1995), while Cox (1884) suggested "High."',
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Morte_Agag_%2889398513%29.jpg/330px-Morte_Agag_%2889398513%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 412
+    },
+    url: "https://en.wikipedia.org/wiki/Agag",
+    type: "standard"
+  },
+  agur: {
+    title: "Agur",
+    description: "Biblical sage",
+    extract: "Agur ben Jakeh was a sage and a compiler of a collection of proverbs found in Proverbs 30, which is sometimes known as the Book of Agur or Sayings of Agur.",
+    thumbnail: null,
+    url: "https://en.wikipedia.org/wiki/Agur",
+    type: "standard"
+  },
+  amasa: {
+    title: "Amasa",
+    description: "Biblical nephew of King David and military commander of Israel",
+    extract: `Amasa (\u05E2\u05DE\u05E9\u05D0) or Amessai 
+is a person mentioned in the Hebrew Bible. His mother was Abigail, a sister of King David. Hence, Amasa was a nephew of David, and cousin of Joab, David's military commander, as well as a cousin of Absalom, David's son. David calls him "my bone and my flesh". Amasa's father was Jether who was also called Ithra. Jether had dual-nationality, being an Ishmaelite and Israelite, although it might be a case of an assimilated Ishmaelite living in Israel.`,
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Amasa_as_he_is_portrayed_in_the_Liber_Chronicalum.jpg/330px-Amasa_as_he_is_portrayed_in_the_Liber_Chronicalum.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 359
+    },
+    url: "https://en.wikipedia.org/wiki/Amasa",
+    type: "standard"
+  },
+  amram: {
+    title: "Amram",
+    description: "Father of Moses, Aaron and Miriam in the Bible",
+    extract: "In the Book of Exodus, Amram is the husband of Jochebed and father of Aaron, Moses and Miriam.",
+    thumbnail: null,
+    url: "https://en.wikipedia.org/wiki/Amram",
+    type: "standard"
+  },
+  anath: {
+    title: "Anat",
+    description: "Ancient Mesopotamian, Ugaritic and Egyptian war goddess",
+    extract: "Anat, Anatu, classically Anath was a goddess associated with warfare and hunting, best known from the Ugaritic texts. Most researchers assume that she originated in the Amorite culture of Bronze Age upper Mesopotamia, and that the goddess \u1E2Aanat, attested in the texts from Mari and worshiped in a city sharing her name located in Suhum, should be considered her forerunner.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Anat_goddess.svg/330px-Anat_goddess.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 495
+    },
+    url: "https://en.wikipedia.org/wiki/Anat",
+    type: "standard"
+  },
+  asenath: {
+    title: "Asenath",
+    description: "Biblical figure",
+    extract: "Asenath is a minor figure in the Book of Genesis. Asenath was a high-born, aristocratic Egyptian woman. She was the wife of Joseph and the mother of his sons, Manasseh and Ephraim.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Asenath.jpg/330px-Asenath.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 333
+    },
+    url: "https://en.wikipedia.org/wiki/Asenath",
+    type: "standard"
+  },
+  asherah: {
+    title: "Asherah",
+    description: "Ancient Semitic goddess",
+    extract: `Asherah was a goddess in ancient Semitic religions. She also appears in Hittite writings as A\u0161erdu(\u0161) or A\u0161ertu(\u0161), and as Athirat in Ugarit as the consort of \u02BEEl. Asherah was a major goddess in ancient Northwest Semitic cultures, often associated with fertility, motherhood, and sacred trees. Asherah was the goddess of the sea while "her husband El" was the god of 'heaven.'`,
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Hecht_Museum%2C_Israel_%E2%80%93_figurines_010.JPG/330px-Hecht_Museum%2C_Israel_%E2%80%93_figurines_010.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 440
+    },
+    url: "https://en.wikipedia.org/wiki/Asherah",
+    type: "standard"
+  },
+  ashtoreth: {
+    title: "Astarte",
+    description: "Middle Eastern goddess, worshipped from the Bronze Age through classical antiquity",
+    extract: "Astarte is the Hellenized form of the Ancient Near Eastern goddess \u02BFA\u1E6Ftart. \u02BFA\u1E6Ftart was the Northwest Semitic equivalent of the East Semitic goddess Ishtar.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Astarte_-_7th_cent_AD_-_Museo_Arqueol%C3%B3gico_de_Sevilla-2.jpg/330px-Astarte_-_7th_cent_AD_-_Museo_Arqueol%C3%B3gico_de_Sevilla-2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 495
+    },
+    url: "https://en.wikipedia.org/wiki/Astarte",
+    type: "standard"
+  },
+  baana: {
+    title: "Baana",
+    description: "Rail-trail in Finland",
+    extract: "Baana is a former railway, which has been transformed into a pedestrian and cycling path as an urban renewal project in Helsinki, replacing the Helsinki harbour railway. Its length is about 1.3 kilometers, starting from Kiasma. It is used annually by approximately 700\xA0000 cyclists.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Baana%2C_a_bicycle_lane_in_the_center_of_Helsinki_20120626.jpg/330px-Baana%2C_a_bicycle_lane_in_the_center_of_Helsinki_20120626.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 220
+    },
+    url: "https://en.wikipedia.org/wiki/Baana",
+    type: "standard"
+  },
+  baruk: {
+    title: "Barouk",
+    description: "Municipality in Mount Lebanon",
+    extract: "Barouk is a village in the Chouf District of Mount Lebanon Governorate in Lebanon. Barouk is located 52 kilometers southeast of Beirut. Its average elevation is 1000 to 1200 meters above sea level and its total land area consists of 2,762 hectares. The village had 5,197 registered voters in 2010. Its inhabitants are predominantly Druze and Maronite and Melkite Christians.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/View_from_the_Barouk_Forest.jpg/330px-View_from_the_Barouk_Forest.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 248
+    },
+    url: "https://en.wikipedia.org/wiki/Barouk",
+    type: "standard"
+  },
+  bedan: {
+    title: "Bedan",
+    description: "Biblical deliverer of the Israelites",
+    extract: "Bedan is named as one of the deliverer of Israelites in 1 Samuel 12:11.",
+    thumbnail: null,
+    url: "https://en.wikipedia.org/wiki/Bedan",
+    type: "standard"
+  },
+  beera: {
+    title: "Hypolytrum",
+    description: "Genus of grass-like plants",
+    extract: "Hypolytrum is a genus of plant in the family Cyperaceae. It contains approximately 60\u201370 species, native to tropical Africa, Asia, Australia, Latin America and various oceanic islands.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Hypolytrum_bullatum_C.B.Clarke_%288211273889%29.jpg/330px-Hypolytrum_bullatum_C.B.Clarke_%288211273889%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 186
+    },
+    url: "https://en.wikipedia.org/wiki/Hypolytrum",
+    type: "standard"
+  },
+  bigthan: {
+    title: "Bigthan and Teresh",
+    description: "Two eunuchs in service of the Persian king Ahasuerus, in the Book of Esther",
+    extract: `Bigthan and Teresh were two eunuchs in service of the Persian king Ahasuerus, according to the chapter 2 of the Book of Esther. According to the deuterocanonical/apocryphal additions to the Book of Esther available in the Greek Septuagint translation of the Bible, they were known as Gabatha and Tharra. Bigthan's name is also spelled "Bigtan" or "Bigthana". It is a Persian name which means "Gift of God".`,
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bigthana_and_Teresh_by_Caron.jpg/330px-Bigthana_and_Teresh_by_Caron.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 264
+    },
+    url: "https://en.wikipedia.org/wiki/Bigthan_and_Teresh",
+    type: "standard"
+  },
+  birsha: {
+    title: "Battle of Siddim",
+    description: "Biblical battle",
+    extract: "The Battle of the Vale of Siddim, also often called the War of Nine Kings or the Slaughter of Chedorlaomer, is an event reported in the Hebrew Bible's Book of Genesis, portrayed as taking place during the days of Abram and Lot. The Vale of Siddim was the battleground for the cities of the Jordan River plain which had rebelled against Mesopotamian rule.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Tempesta_Abraham_Makes_the_Enemies_Flee_Who_Hold_His_Nephew.jpg/330px-Tempesta_Abraham_Makes_the_Enemies_Flee_Who_Hold_His_Nephew.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 233
+    },
+    url: "https://en.wikipedia.org/wiki/Battle_of_Siddim",
+    type: "standard"
+  },
+  dara: {
+    title: "Dara",
+    description: "Name in various languages",
+    extract: "Dara are several given names used for both men and women in different languages.",
+    thumbnail: null,
+    url: "https://en.wikipedia.org/wiki/Dara",
+    type: "standard"
+  },
+  dathan: {
+    title: "Dathan",
+    description: "Biblical figure",
+    extract: "Dathan was an Israelite mentioned in the Old Testament as a participant of the Exodus.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Dore_Death_of_Korah%2C_Dathan_and_Abiram.jpg/330px-Dore_Death_of_Korah%2C_Dathan_and_Abiram.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 509
+    },
+    url: "https://en.wikipedia.org/wiki/Dathan",
+    type: "standard"
+  },
+  dodo: {
+    title: "Dodo",
+    description: "Extinct species of bird",
+    extract: "The dodo is an extinct flightless bird that was endemic to Mauritius, an island east of Madagascar in the Indian Ocean. The dodo's closest relative was the also-extinct and flightless Rodrigues solitaire. The two formed the subtribe Raphina, a clade of extinct flightless birds that are a part of the group that includes pigeons and doves. The closest living relative of the dodo is the Nicobar pigeon. A white dodo was once thought to have existed on the nearby island of R\xE9union, but it is now believed that this assumption was merely confusion based on the also-extinct R\xE9union ibis and paintings of white dodos.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oxford_Dodo_display.jpg/330px-Oxford_Dodo_display.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 218
+    },
+    url: "https://en.wikipedia.org/wiki/Dodo",
+    type: "standard"
+  },
+  ehud: {
+    title: "Ehud",
+    description: "Israelite described in the biblical Book of Judges",
+    extract: "Ehud ben\u2011Gera is described in the biblical Book of Judges chapter 3 as a judge who was sent by God to deliver the Israelites from Moabite domination. He is described as being left-handed and a member of the Tribe of Benjamin.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/19_Ehud_kills_Eglon_-_Judges_3_21_-_Ford_Madox_Brown.jpg/330px-19_Ehud_kills_Eglon_-_Judges_3_21_-_Ford_Madox_Brown.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 229
+    },
+    url: "https://en.wikipedia.org/wiki/Ehud",
+    type: "standard"
+  },
+  ephrath: {
+    title: "Ephrath",
+    description: "Historical name for Bethlehem",
+    extract: "Ephrath, Ephrathah and Ephratah are variant spellings of the same Hebrew name mentioned in the Bible. \nEphrath usually refers to the ancient name for Bethlehem in Judah. \nIt originally referred to the region around Bethlehem and was later identified with the town itself.. A person from Ephrath is called an Ephrathite.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Gush_Etzion_Well%27s_Aqueduct.jpg/330px-Gush_Etzion_Well%27s_Aqueduct.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 440
+    },
+    url: "https://en.wikipedia.org/wiki/Ephrath",
+    type: "standard"
+  },
+  eran: {
+    title: "Eran",
+    description: "Ancient town and archaeological site in the Sagar district of Madhya Pradesh",
+    extract: "Eran is an ancient town and archaeological site in the Sagar district of Madhya Pradesh, India. It was one of the ancient mints for Indian dynasties, as evidenced by the diverse coins excavated here. The site has 5th and 6th-century Gupta era temples and monuments, particularly the colossal stone boar with sages, and scholars depicted on the body of the sculpture. The inscription stones found at Eran are important for reconstructing the chronology of the Gupta Empire's history. Eran or Erakina was the capital of Erakina (Airikina) Pradesha or Airkina Vishaya, an administrative division of the Gupta Empire.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Vishnu_temple_mandapa_at_Eran%2C_Madhya_Pradesh.jpg/330px-Vishnu_temple_mandapa_at_Eran%2C_Madhya_Pradesh.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 440
+    },
+    url: "https://en.wikipedia.org/wiki/Eran",
+    type: "standard"
+  },
+  eshtemoa: {
+    title: "Eshtemoa",
+    description: "Town of ancient Judea",
+    extract: "Eshtemoa, also transcribed Ashtemoe, Eshtemo, and Esthama, was an ancient city in the Judaean Mountains, specifically in the southern Hebron Hills, mentioned several times in the Hebrew Bible. It is identified with the modern site of As-Samu'.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Eshtemou_2013.jpg/330px-Eshtemou_2013.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 182
+    },
+    url: "https://en.wikipedia.org/wiki/Eshtemoa",
+    type: "standard"
+  },
+  ester: {
+    title: "Ester",
+    description: "Compound derived from an acid",
+    extract: "In chemistry, an ester is a compound derived from an acid in which the hydrogen atom (H) of at least one acidic hydroxyl group of that acid is replaced by an organyl group. These compounds contain a distinctive functional group. Analogues derived from oxygen replaced by other chalcogens belong to the ester category as well. According to some authors, organyl derivatives of acidic hydrogen of other acids are esters as well, but not according to the IUPAC.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Ester-general.svg/330px-Ester-general.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 253
+    },
+    url: "https://en.wikipedia.org/wiki/Ester",
+    type: "standard"
+  },
+  gera: {
+    title: "Gera",
+    description: "City in Thuringia, Germany",
+    extract: "Gera is a city in the German state of Thuringia. With around 93,000 inhabitants, it is the third-largest city in Thuringia after Erfurt and Jena as well as the easternmost city of the Th\xFCringer St\xE4dtekette, an almost straight string of cities consisting of the six largest Thuringian cities from Eisenach in the west, via Gotha, Erfurt, Weimar and Jena to Gera in the east. Gera is the largest city in the Vogtland, and one of its historical capitals along with Plauen, Greiz and Weida. The city lies in the East Thuringian Hill Country, in the wide valley of the White Elster, between Greiz (upstream) and Leipzig (downstream). Gera is located in the Central German Metropolitan Region, approximately 60 kilometres south of Saxony's largest city of Leipzig, 80\xA0km east of Thuringia's capital Erfurt, 120\xA0km west of Saxony's capital Dresden and 90\xA0km north of Bavaria's city of Hof (Saale).",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Blick_vom_Rathausturm_%C3%BCber_Gera.jpg/330px-Blick_vom_Rathausturm_%C3%BCber_Gera.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 248
+    },
+    url: "https://en.wikipedia.org/wiki/Gera",
+    type: "standard"
+  },
+  gereshom: {
+    title: "Gershom",
+    description: "Biblical character",
+    extract: `According to the Bible, Gershom was the firstborn son of Moses and Zipporah. The name means "a stranger there" in Hebrew, which the text argues was a reference to Moses' flight from Egypt. Biblical scholars regard the name as being essentially the same as Gershon and in the Book of Chronicles the progenitor of one of the principal Levite clans is sometimes identified as Gershom, sometimes as Gershon.`,
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/ZipporahByCornelisHolsteyn.png/330px-ZipporahByCornelisHolsteyn.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 244
+    },
+    url: "https://en.wikipedia.org/wiki/Gershom",
+    type: "standard"
+  },
+  geshur: {
+    title: "Geshur",
+    description: "Place mentioned in the Hebrew Bible",
+    extract: "Geshur was a territory in the ancient Levant mentioned in the early books of the Hebrew Bible and possibly in several other ancient sources, located in the region of the modern-day Golan Heights. Some scholars suggest it was established as an independent city-state during the early Iron Age from the middle of the tenth century BCE, maintaining its autonomy for about a century until it was annexed in the third quarter of the eighth century by Tiglath-Pileser III, the king of Assyria.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Early-Historical-Israel-Dan-Beersheba-Judea.png/330px-Early-Historical-Israel-Dan-Beersheba-Judea.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 464
+    },
+    url: "https://en.wikipedia.org/wiki/Geshur",
+    type: "standard"
+  },
+  gether: {
+    title: "Gether",
+    description: "",
+    extract: "According to the Table of Nations in the Book of Genesis in the Hebrew Bible, Gether was the third son of Aram, son of Shem. He appears only twice in the Hebrew Bible, and both times is only mentioned in passing in genealogical lists. In the Table of Nations, he is identified as a son of Aram, while in 1 Chronicles 1:17, he is listed among the sons of Shem.",
+    thumbnail: null,
+    url: "https://en.wikipedia.org/wiki/Gether",
+    type: "standard"
+  },
+  giba: {
+    title: "Giba",
+    description: "Brazilian volleyball player",
+    extract: "Gilberto Amauri de Godoy Filho, known as Giba, is a Brazilian former professional volleyball player who played as an outside hitter. For much of the 2000s, he was widely regarded as one of the best volleyball players in the world. During his professional career he played in Brazil, Italy, Russia, Argentina and briefly in the United Arab Emirates. He is mostly remembered for his successes with the national team.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/World_League_Final_2011_%285927183473%29.jpg/330px-World_League_Final_2011_%285927183473%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 608
+    },
+    url: "https://en.wikipedia.org/wiki/Giba",
+    type: "standard"
+  },
+  hadad: {
+    title: "Hadad",
+    description: "Semitic storm god",
+    extract: 'Hadad, Haddad, Adad, or I\u0161kur (Sumerian) was the storm- and rain-god in the Canaanite and ancient Mesopotamian religions.\nHe was attested in Ebla as "Hadda" in c. 2500 BCE.',
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Ramman.png/330px-Ramman.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 395
+    },
+    url: "https://en.wikipedia.org/wiki/Hadad",
+    type: "standard"
+  },
+  hagar: {
+    title: "Hagar",
+    description: "Biblical character",
+    extract: "According to the Book of Genesis, Hagar is an Egyptian Woman, wife of Abraham. Abraham's firstborn son through Hagar, Ishmael, became the progenitor of the Ishmaelites, generally taken to be the Arabs. Various commentators have connected her to the Hagrites, perhaps claiming her as their eponymous ancestor. Hagar is alluded to, although not named, in the Quran, and Islam considers her Abraham's second wife.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Fran%C3%A7ois-Joseph_Navez_-_Agar_et_Isma%C3%ABl_dans_le_d%C3%A9sert_%28cropped%29.jpg/330px-Fran%C3%A7ois-Joseph_Navez_-_Agar_et_Isma%C3%ABl_dans_le_d%C3%A9sert_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 440
+    },
+    url: "https://en.wikipedia.org/wiki/Hagar",
+    type: "standard"
+  },
+  hashem: {
+    title: "Hashem",
+    description: "Name list",
+    extract: "HaShem is a title used in Judaism to refer to God.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/1929massacre-safed.jpg/330px-1929massacre-safed.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 248
+    },
+    url: "https://en.wikipedia.org/wiki/Hashem",
+    type: "standard"
+  },
+  hege: {
+    title: "Hege",
+    description: "Name list",
+    extract: "Hege may be a given name or a surname. Its given name version is the short form of Helga.",
+    thumbnail: null,
+    url: "https://en.wikipedia.org/wiki/Hege",
+    type: "standard"
+  },
+  horam: {
+    title: "Horam",
+    description: "Village in East Sussex, England",
+    extract: "Horam is a village, electoral ward and civil parish in the Wealden District of East Sussex, situated three miles (4.8\xA0km) south of Heathfield. Included in the parish are the settlements of Vines Cross and Burlow.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Horam_B2203.jpg/330px-Horam_B2203.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 220
+    },
+    url: "https://en.wikipedia.org/wiki/Horam",
+    type: "standard"
+  },
+  kehath: {
+    title: "Kehath",
+    description: "Biblical character",
+    extract: "According to the Torah, Kehath or Kohath was the second of the sons of Levi and the patriarchal founder of the Kehathites, one of the four main divisions of the Levites in biblical times. In some apocryphal texts, such as the Testament of Levi and the Book of Jubilees, Levi's wife, Kehath's mother, is Milkah, a daughter of Aram.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Caath_and_Amram.jpg/330px-Caath_and_Amram.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 429
+    },
+    url: "https://en.wikipedia.org/wiki/Kehath",
+    type: "standard"
+  },
+  kemosh: {
+    title: "Chemosh",
+    description: "God of the Moabites, mentioned in Bible",
+    extract: "Chemosh is a Canaanite deity worshipped by Ancient Semitic-speaking peoples who occupied the region known as Moab, in modern-day Jordan east of the Dead Sea, during the Levantine Bronze and Iron Ages.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Warrior_Moab_Louvre_AO5055.jpg/330px-Warrior_Moab_Louvre_AO5055.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 518
+    },
+    url: "https://en.wikipedia.org/wiki/Chemosh",
+    type: "standard"
+  },
+  maroth: {
+    title: "Maroth",
+    description: "Municipality in Rhineland-Palatinate, Germany",
+    extract: "Maroth is an Ortsgemeinde \u2013 a community belonging to a Verbandsgemeinde \u2013 in the Westerwaldkreis in Rhineland-Palatinate, Germany.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Maroth1.jpg/330px-Maroth1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 220
+    },
+    url: "https://en.wikipedia.org/wiki/Maroth",
+    type: "standard"
+  },
+  menachem: {
+    title: "Menahem",
+    description: "Biblical character",
+    extract: "Menahem or Menachem was the sixteenth king of the northern Israelite Kingdom of Israel. He was the son of Gadi, and the founder of the dynasty known as the House of Gadi or House of Menahem.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Menahem.png/330px-Menahem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 331
+    },
+    url: "https://en.wikipedia.org/wiki/Menahem",
+    type: "standard"
+  },
+  merab: {
+    title: "Merab",
+    description: "Elder daughter of Saul",
+    extract: "Merab is a character in the Hebrew Bible, mentioned in the Book of Samuel. She is the eldest daughter of Saul, and older sister to Michal.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Saul_presenting_his_daughter_Merab%2C_to_David.jpg/330px-Saul_presenting_his_daughter_Merab%2C_to_David.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 468
+    },
+    url: "https://en.wikipedia.org/wiki/Merab",
+    type: "standard"
+  },
+  mispereth: {
+    title: "Mizpar",
+    description: "",
+    extract: "Mizpar was a Jewish exile in Babylon who accompanied Zerubbabel back to Jerusalem / Judah.References: Ezra 2:1-2; Nehemiah 7:7\nMeaning: number",
+    thumbnail: null,
+    url: "https://en.wikipedia.org/wiki/Mizpar",
+    type: "standard"
+  },
+  mithkah: {
+    title: "Stations of the Exodus",
+    description: "Locations Israelites visited after Exodus",
+    extract: "The Stations of the Exodus are the locations visited by the Israelites following their exodus from Egypt, according to the Hebrew Bible. In the itinerary given in Numbers 33, forty-two stations are listed, although this list differs slightly from the narrative account of the journey found in Exodus and Deuteronomy.",
+    thumbnail: {
+      source: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/H%C3%A6c_chorographia_pr%C3%A6pocapiti_33._libri_numer_Responsibility%2C_G._Postel%2C_1555.jpg/330px-H%C3%A6c_chorographia_pr%C3%A6pocapiti_33._libri_numer_Responsibility%2C_G._Postel%2C_1555.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      width: 330,
+      height: 280
+    },
+    url: "https://en.wikipedia.org/wiki/Stations_of_the_Exodus",
+    type: "standard"
+  }
+};
+
+// web/src/data/name_wiki.js
+var NAME_WIKI = name_wiki_default;
+
+// web/src/components/NameFicha.jsx
 function NameFicha({ figure, kind, backHref, backLabel }) {
   if (!figure) return /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel" }, /* @__PURE__ */ import_react9.default.createElement("h2", null, "Not found"), /* @__PURE__ */ import_react9.default.createElement("p", null, "No name matches this path."));
   const isPlace = kind === "place";
@@ -24306,7 +24836,8 @@ function NameFicha({ figure, kind, backHref, backLabel }) {
     return { ch, sign, name: sm ? sm[1] : null };
   });
   const refLink = refUrl(figure.ref);
-  return /* @__PURE__ */ import_react9.default.createElement("div", { className: "ficha" }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("a", { href: backHref }, "\u25C0 ", backLabel), /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { marginLeft: "auto", color: "var(--gold)", borderColor: "var(--gold)" } }, isPlace ? "biblical place" : "patriarchs/conquest")), /* @__PURE__ */ import_react9.default.createElement("h1", { style: { marginBottom: 4 } }, figure.name, figure.he && /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { marginLeft: 12, color: "var(--gold)" } }, figure.he)), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 12, fontSize: ".92rem" } }, figure.translit, figure.translit && " \xB7 ", figure.period), /* @__PURE__ */ import_react9.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "In the Bible"), /* @__PURE__ */ import_react9.default.createElement("p", { style: { lineHeight: 1.6, marginBottom: 6 } }, isPlace ? /* @__PURE__ */ import_react9.default.createElement("span", null, "A biblical toponym \u2014 ", /* @__PURE__ */ import_react9.default.createElement("b", null, figure.name), " \u2014 attested in ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: "var(--gold)" } }, figure.ref), figure.refN != null && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, " (", figure.refN, " occurrence", figure.refN === 1 ? "" : "s", " in the Hebrew Bible)"), ".") : /* @__PURE__ */ import_react9.default.createElement("span", null, "A biblical ", figure.theophoric ? "theophoric " : "", "personal name \u2014 ", /* @__PURE__ */ import_react9.default.createElement("b", null, figure.name), " (", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, figure.he), ") \u2014 attested in ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: "var(--gold)" } }, figure.ref), figure.refN != null && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, " (", figure.refN, " occurrence", figure.refN === 1 ? "" : "s", " in the Hebrew Bible)"), ".")), refLink && /* @__PURE__ */ import_react9.default.createElement("a", { href: refLink, target: "_blank", rel: "noreferrer" }, "Read ", figure.ref, " on Sefaria \u2192")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "Facts"), /* @__PURE__ */ import_react9.default.createElement("table", { style: { fontSize: ".88rem" } }, /* @__PURE__ */ import_react9.default.createElement("tbody", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)", width: "42%", verticalAlign: "top" } }, "Type"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, isPlace ? "place (toponym)" : "person")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)" } }, "Biblical period"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, figure.period)), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)" } }, "Gematria"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, figure.gem)), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)" } }, "Letters"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, figure.len, " consonants")), !isPlace && /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)" } }, "Theophoric"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, figure.theophoric ? "yes (contains a divine element)" : "no")))))), stars.length > 0 && /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "Stellar letters"), /* @__PURE__ */ import_react9.default.createElement("p", { className: "muted", style: { fontSize: ".84rem", marginTop: 0 } }, "The ", figure.len, "-consonant name needs its ", stars.length, " distinct simple-letter", stars.length === 1 ? "" : "s", " to be occupied in the sky. The 7 classical bodies open a sign \u2192 its Hebrew simple letter; this name reads only when the planets sit in exactly these signs."), /* @__PURE__ */ import_react9.default.createElement("div", { style: { display: "flex", flexWrap: "wrap", gap: 10, marginTop: 6 } }, stars.map((s) => /* @__PURE__ */ import_react9.default.createElement("span", { key: s.ch, className: "panel", style: { padding: "8px 12px", textAlign: "center" } }, /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { fontSize: "1.6rem", color: "var(--gold)" } }, s.ch), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { fontSize: ".72rem", marginTop: 2 } }, s.sign, " \xB7 ", s.name))))), /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "Readable on these rare conjunctions"), /* @__PURE__ */ import_react9.default.createElement("p", { className: "muted", style: { fontSize: ".84rem", marginTop: 0 } }, figure.name, " appears in the stellar reading on ", figure.dates.length, " of the 12 dated rare conjunctions (proofs.json). Open any date in the Reader to verify it on that sky."), /* @__PURE__ */ import_react9.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "40%" } }, "Date"), /* @__PURE__ */ import_react9.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "24%" } }, "Precessional era"), /* @__PURE__ */ import_react9.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px" } }, "Occupied letters |O|"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, figure.dates.map((d) => /* @__PURE__ */ import_react9.default.createElement("tr", { key: d.date }, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "6px 8px" } }, /* @__PURE__ */ import_react9.default.createElement("a", { href: `/app?date=${d.date}&tab=translator` }, displayDate(d.date))), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, d.era), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, d.O)))))));
+  const wiki = NAME_WIKI[figure.slug] || null;
+  return /* @__PURE__ */ import_react9.default.createElement("div", { className: "ficha" }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("a", { href: backHref }, "\u25C0 ", backLabel), /* @__PURE__ */ import_react9.default.createElement("span", { className: "pill", style: { marginLeft: "auto", color: "var(--gold)", borderColor: "var(--gold)" } }, isPlace ? "biblical place" : "patriarchs/conquest")), /* @__PURE__ */ import_react9.default.createElement("h1", { style: { marginBottom: 4 } }, figure.name, figure.he && /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { marginLeft: 12, color: "var(--gold)" } }, figure.he)), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 12, fontSize: ".92rem" } }, figure.translit, figure.translit && " \xB7 ", figure.period), /* @__PURE__ */ import_react9.default.createElement("div", { className: "grid2", style: { alignItems: "start" } }, /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "In the Bible"), /* @__PURE__ */ import_react9.default.createElement("p", { style: { lineHeight: 1.6, marginBottom: 6 } }, isPlace ? /* @__PURE__ */ import_react9.default.createElement("span", null, "A biblical toponym \u2014 ", /* @__PURE__ */ import_react9.default.createElement("b", null, figure.name), " \u2014 attested in ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: "var(--gold)" } }, figure.ref), figure.refN != null && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, " (", figure.refN, " occurrence", figure.refN === 1 ? "" : "s", " in the Hebrew Bible)"), ".") : /* @__PURE__ */ import_react9.default.createElement("span", null, "A biblical ", figure.theophoric ? "theophoric " : "", "personal name \u2014 ", /* @__PURE__ */ import_react9.default.createElement("b", null, figure.name), " (", /* @__PURE__ */ import_react9.default.createElement("span", { className: "he" }, figure.he), ") \u2014 attested in ", /* @__PURE__ */ import_react9.default.createElement("b", { style: { color: "var(--gold)" } }, figure.ref), figure.refN != null && /* @__PURE__ */ import_react9.default.createElement(import_react9.default.Fragment, null, " (", figure.refN, " occurrence", figure.refN === 1 ? "" : "s", " in the Hebrew Bible)"), ".")), refLink && /* @__PURE__ */ import_react9.default.createElement("a", { href: refLink, target: "_blank", rel: "noreferrer" }, "Read ", figure.ref, " on Sefaria \u2192")), /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "Facts"), /* @__PURE__ */ import_react9.default.createElement("table", { style: { fontSize: ".88rem" } }, /* @__PURE__ */ import_react9.default.createElement("tbody", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)", width: "42%", verticalAlign: "top" } }, "Type"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, isPlace ? "place (toponym)" : "person")), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)" } }, "Biblical period"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, figure.period)), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)" } }, "Gematria"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, figure.gem)), /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)" } }, "Letters"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, figure.len, " consonants")), !isPlace && /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px", color: "var(--dim)" } }, "Theophoric"), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "5px 8px" } }, figure.theophoric ? "yes (contains a divine element)" : "no")))))), wiki && /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "Wikipedia \u2014 ", wiki.title), /* @__PURE__ */ import_react9.default.createElement("div", { style: { display: "flex", gap: 14, flexWrap: "wrap", alignItems: "flex-start" } }, wiki.thumbnail && /* @__PURE__ */ import_react9.default.createElement("img", { src: wiki.thumbnail.source, alt: wiki.title, style: { maxWidth: 200, maxHeight: 260, borderRadius: 8, border: "1px solid var(--line)" }, loading: "lazy" }), /* @__PURE__ */ import_react9.default.createElement("div", { style: { flex: "1 1 320px" } }, wiki.description && /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { marginBottom: 6 } }, wiki.description), wiki.extract && /* @__PURE__ */ import_react9.default.createElement("p", { style: { lineHeight: 1.6, marginBottom: 0 } }, wiki.extract), /* @__PURE__ */ import_react9.default.createElement("div", { style: { marginTop: 8 } }, /* @__PURE__ */ import_react9.default.createElement("a", { href: wiki.url, target: "_blank", rel: "noreferrer" }, "Read more on Wikipedia \u2192"))))), stars.length > 0 && /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "Stellar letters"), /* @__PURE__ */ import_react9.default.createElement("p", { className: "muted", style: { fontSize: ".84rem", marginTop: 0 } }, "The ", figure.len, "-consonant name needs its ", stars.length, " distinct simple-letter", stars.length === 1 ? "" : "s", " to be occupied in the sky. The 7 classical bodies open a sign \u2192 its Hebrew simple letter; this name reads only when the planets sit in exactly these signs."), /* @__PURE__ */ import_react9.default.createElement("div", { style: { display: "flex", flexWrap: "wrap", gap: 10, marginTop: 6 } }, stars.map((s) => /* @__PURE__ */ import_react9.default.createElement("span", { key: s.ch, className: "panel", style: { padding: "8px 12px", textAlign: "center" } }, /* @__PURE__ */ import_react9.default.createElement("span", { className: "he", style: { fontSize: "1.6rem", color: "var(--gold)" } }, s.ch), /* @__PURE__ */ import_react9.default.createElement("div", { className: "muted", style: { fontSize: ".72rem", marginTop: 2 } }, s.sign, " \xB7 ", s.name))))), /* @__PURE__ */ import_react9.default.createElement("div", { className: "panel", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react9.default.createElement("h2", { style: { marginTop: 0 } }, "Readable on these rare conjunctions"), /* @__PURE__ */ import_react9.default.createElement("p", { className: "muted", style: { fontSize: ".84rem", marginTop: 0 } }, figure.name, " appears in the stellar reading on ", figure.dates.length, " of the 12 dated rare conjunctions (proofs.json). Open any date in the Reader to verify it on that sky."), /* @__PURE__ */ import_react9.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react9.default.createElement("thead", null, /* @__PURE__ */ import_react9.default.createElement("tr", null, /* @__PURE__ */ import_react9.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "40%" } }, "Date"), /* @__PURE__ */ import_react9.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "24%" } }, "Precessional era"), /* @__PURE__ */ import_react9.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px" } }, "Occupied letters |O|"))), /* @__PURE__ */ import_react9.default.createElement("tbody", null, figure.dates.map((d) => /* @__PURE__ */ import_react9.default.createElement("tr", { key: d.date }, /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "6px 8px" } }, /* @__PURE__ */ import_react9.default.createElement("a", { href: `/app?date=${d.date}&tab=translator` }, displayDate(d.date))), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, d.era), /* @__PURE__ */ import_react9.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, d.O)))))));
 }
 
 // web/src/pages/PatriarchFicha.jsx
@@ -24444,17 +24975,66 @@ var import_react13 = __toESM(require_react());
 
 // web/src/components/NameIndexPage.jsx
 var import_react12 = __toESM(require_react());
-var PERIOD_ORDER = ["Patriarchs/Conquest", "Monarchy (David/Solomon)", "Exile/Prophets", "Post-exile/Writings"];
-function NameIndexPage({ title, intro, kind, items, basePath }) {
-  const byPeriod = {};
-  for (const it of items) (byPeriod[it.period] = byPeriod[it.period] || []).push(it);
-  const ordered = PERIOD_ORDER.filter((p) => byPeriod[p]).map((p) => [p, byPeriod[p]]);
+var PAGE_SIZE = 48;
+function NameIndexPage({ title, intro, kind, items, basePath, onOpen }) {
+  const [q, setQ] = (0, import_react12.useState)("");
+  const [page, setPage] = (0, import_react12.useState)(0);
+  const [period, setPeriod] = (0, import_react12.useState)("all");
+  const qn = q.trim().toLowerCase();
+  const periods = (0, import_react12.useMemo)(() => {
+    const s = /* @__PURE__ */ new Set();
+    for (const it of items) s.add(it.period);
+    return ["all", ...[...s].sort()];
+  }, [items]);
+  const filtered = (0, import_react12.useMemo)(() => {
+    let r = items;
+    if (qn) r = r.filter((it) => (it.name || "").toLowerCase().includes(qn) || (it.translit || "").toLowerCase().includes(qn) || (it.ref || "").toLowerCase().includes(qn) || (it.he || "").includes(q.trim()));
+    if (period !== "all") r = r.filter((it) => it.period === period);
+    return r;
+  }, [items, qn, period]);
+  (0, import_react12.useEffect)(() => {
+    setPage(0);
+  }, [qn, period]);
+  const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const cur = Math.min(page, pages - 1);
+  const slice = filtered.slice(cur * PAGE_SIZE, cur * PAGE_SIZE + PAGE_SIZE);
+  const isPlace = kind === "place";
   const href = (slug) => basePath + slug;
-  return /* @__PURE__ */ import_react12.default.createElement("div", null, /* @__PURE__ */ import_react12.default.createElement("h1", null, title), /* @__PURE__ */ import_react12.default.createElement("p", { className: "muted" }, intro), ordered.map(([period, group]) => /* @__PURE__ */ import_react12.default.createElement("div", { key: period, className: "panel", style: { padding: 14, marginBottom: 14 } }, /* @__PURE__ */ import_react12.default.createElement("h2", { style: { marginTop: 0 } }, period, " ", /* @__PURE__ */ import_react12.default.createElement("span", { className: "muted", style: { fontSize: ".8rem", fontWeight: 400 } }, "\xB7 ", group.length, " name", group.length === 1 ? "" : "s")), /* @__PURE__ */ import_react12.default.createElement("table", { style: { width: "100%", fontSize: ".9rem" } }, /* @__PURE__ */ import_react12.default.createElement("thead", null, /* @__PURE__ */ import_react12.default.createElement("tr", null, /* @__PURE__ */ import_react12.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "26%" } }, "Name"), /* @__PURE__ */ import_react12.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "14%" } }, "Hebrew"), /* @__PURE__ */ import_react12.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "12%" } }, "Gematria"), /* @__PURE__ */ import_react12.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px", width: "22%" } }, "Reference"), /* @__PURE__ */ import_react12.default.createElement("th", { style: { textAlign: "left", padding: "6px 8px" } }, "On conjunctions"))), /* @__PURE__ */ import_react12.default.createElement("tbody", null, group.map((it) => /* @__PURE__ */ import_react12.default.createElement("tr", { key: it.slug }, /* @__PURE__ */ import_react12.default.createElement("td", { style: { padding: "6px 8px" } }, /* @__PURE__ */ import_react12.default.createElement("a", { href: href(it.slug) }, it.name), it.theophoric && kind === "person" && /* @__PURE__ */ import_react12.default.createElement("span", { className: "muted", style: { fontSize: ".74rem", marginLeft: 5 } }, "theoph.")), /* @__PURE__ */ import_react12.default.createElement("td", { style: { padding: "6px 8px" }, className: "he" }, it.he), /* @__PURE__ */ import_react12.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, it.gem), /* @__PURE__ */ import_react12.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, it.ref), /* @__PURE__ */ import_react12.default.createElement("td", { style: { padding: "6px 8px" }, className: "muted" }, it.dates.length, "/12"))))))));
+  return /* @__PURE__ */ import_react12.default.createElement("div", null, /* @__PURE__ */ import_react12.default.createElement("h1", { style: { marginTop: 0 } }, title), /* @__PURE__ */ import_react12.default.createElement("p", { className: "muted" }, intro), /* @__PURE__ */ import_react12.default.createElement("div", { className: "controls", style: { marginBottom: 8, flexWrap: "wrap", alignItems: "center" } }, /* @__PURE__ */ import_react12.default.createElement("input", { type: "text", placeholder: "search by name, transliteration, or Bible ref\u2026", value: q, onChange: (e) => setQ(e.target.value), style: { flex: "1 1 240px" }, "aria-label": "Search names" }), /* @__PURE__ */ import_react12.default.createElement("select", { value: period, onChange: (e) => setPeriod(e.target.value), "aria-label": "Filter by biblical period" }, periods.map((p) => /* @__PURE__ */ import_react12.default.createElement("option", { key: p, value: p }, p === "all" ? "all periods" : p))), /* @__PURE__ */ import_react12.default.createElement("span", { className: "muted", style: { fontSize: ".82rem" } }, filtered.length, " of ", items.length, " names \xB7 ", PAGE_SIZE, "/page")), /* @__PURE__ */ import_react12.default.createElement("div", { className: "tcards" }, slice.map((it, i) => /* @__PURE__ */ import_react12.default.createElement(
+    "a",
+    {
+      key: it.slug + i,
+      className: "tcard",
+      href: href(it.slug),
+      style: { textDecoration: "none", color: "inherit", cursor: "pointer", transition: "border-color .12s,transform .12s" },
+      title: `Open the ficha for ${it.name}`,
+      onClick: onOpen ? (e) => {
+        e.preventDefault();
+        onOpen(href(it.slug));
+      } : void 0,
+      onMouseEnter: (e) => {
+        e.currentTarget.style.borderColor = "var(--brand)";
+        e.currentTarget.style.transform = "translateY(-1px)";
+      },
+      onMouseLeave: (e) => {
+        e.currentTarget.style.borderColor = "";
+        e.currentTarget.style.transform = "";
+      }
+    },
+    /* @__PURE__ */ import_react12.default.createElement("div", { className: "the" }, it.he),
+    /* @__PURE__ */ import_react12.default.createElement("div", { className: "read" }, it.name),
+    /* @__PURE__ */ import_react12.default.createElement("div", { className: "trans" }, it.translit),
+    /* @__PURE__ */ import_react12.default.createElement("div", { className: "g" }, it.len, " letters \xB7 gematria ", it.gem),
+    /* @__PURE__ */ import_react12.default.createElement("div", { className: "simp" }, it.period, " \xB7 ", it.ref, " \xB7 ", it.dates.length, "/12"),
+    /* @__PURE__ */ import_react12.default.createElement("div", { style: { marginTop: 4, display: "flex", flexWrap: "wrap", gap: 4 } }, !isPlace && it.theophoric && /* @__PURE__ */ import_react12.default.createElement("span", { className: "pill", style: { color: "var(--gold)", borderColor: "var(--gold)" } }, "theophoric"), isPlace && /* @__PURE__ */ import_react12.default.createElement("span", { className: "pill", style: { color: "var(--green)", borderColor: "var(--green)" }, title: "A biblical PLACE \u2014 proper locative noun in Strong (city, mountain, region\u2026)" }, "place"))
+  ))), filtered.length === 0 && /* @__PURE__ */ import_react12.default.createElement("div", { className: "muted", style: { padding: "18px 0" } }, "No names match. Clear the search or pick another period."), filtered.length > PAGE_SIZE && /* @__PURE__ */ import_react12.default.createElement("div", { className: "controls", style: { marginTop: 12 } }, /* @__PURE__ */ import_react12.default.createElement("button", { onClick: () => setPage((p) => Math.max(0, p - 1)), disabled: cur === 0 }, "\u25C0 prev"), /* @__PURE__ */ import_react12.default.createElement("span", { className: "pill" }, "page ", cur + 1, " / ", pages, " \xB7 ", filtered.length, " names \xB7 ", PAGE_SIZE, "/page"), /* @__PURE__ */ import_react12.default.createElement("button", { onClick: () => setPage((p) => Math.min(pages - 1, p + 1)), disabled: cur >= pages - 1 }, "next \u25B6"), /* @__PURE__ */ import_react12.default.createElement("span", { className: "muted" }, "jump:"), /* @__PURE__ */ import_react12.default.createElement("input", { type: "number", min: "1", max: pages, value: cur + 1, onChange: (e) => {
+    const n = parseInt(e.target.value, 10);
+    if (!isNaN(n)) setPage(Math.max(0, Math.min(pages - 1, n - 1)));
+  }, style: { width: 64 }, "aria-label": "Jump to page" })));
 }
 
 // web/src/pages/PatriarchsPage.jsx
-function PatriarchsPage() {
+function PatriarchsPage({ onOpen }) {
   return /* @__PURE__ */ import_react13.default.createElement(
     NameIndexPage,
     {
@@ -24462,14 +25042,15 @@ function PatriarchsPage() {
       intro: /* @__PURE__ */ import_react13.default.createElement(import_react13.default.Fragment, null, "The ", PATRIARCHS.length, " distinct biblical persons whose names the stellar reading surfaces across the 12 dated rare conjunctions (proofs.json). The dominant period is Patriarchs/Conquest, but names from every biblical period appear as the alignment's occupied letters select them. Click a name for its ficha \u2014 Hebrew, gematria, the stellar letters it needs, and the conjunctions where it reads."),
       kind: "person",
       items: PATRIARCHS,
-      basePath: "/patriarch/"
+      basePath: "/patriarch/",
+      onOpen
     }
   );
 }
 
 // web/src/pages/PlacesPage.jsx
 var import_react14 = __toESM(require_react());
-function PlacesPage() {
+function PlacesPage({ onOpen }) {
   return /* @__PURE__ */ import_react14.default.createElement(
     NameIndexPage,
     {
@@ -24477,7 +25058,8 @@ function PlacesPage() {
       intro: /* @__PURE__ */ import_react14.default.createElement(import_react14.default.Fragment, null, "The ", PLACES.length, " distinct biblical places (toponyms) the stellar reading surfaces across the 12 dated rare conjunctions (proofs.json). A place appears when the alignment's occupied letters spell its consonants. Click a place for its ficha \u2014 Hebrew, gematria, the stellar letters it needs, and the conjunctions where it reads."),
       kind: "place",
       items: PLACES,
-      basePath: "/place/"
+      basePath: "/place/",
+      onOpen
     }
   );
 }
@@ -24614,6 +25196,13 @@ function GlossPage({ word, date, rows: rows2, occ: occ2, genData: genData2, onBa
 var import_react16 = __toESM(require_react());
 var GITHUB = "https://github.com/VABISMO/adam-apocalypse";
 var PAPER = "/paper";
+var SPA_RE = /^\/(prophet|mage|patriarch|place|align|reader)(\/|$)|^\/(prophets|mages|patriarchs|places|alignments|readings|app|about|)$/;
+function goInternal(href) {
+  if (typeof window === "undefined") return;
+  window.history.pushState({}, "", href);
+  window.dispatchEvent(new PopStateEvent("popstate"));
+  window.scrollTo(0, 0);
+}
 function Col({ title, children }) {
   return /* @__PURE__ */ import_react16.default.createElement("section", { className: "ft-col" }, /* @__PURE__ */ import_react16.default.createElement("h4", { className: "ft-h" }, title), children);
 }
@@ -24622,7 +25211,17 @@ function L({ href, children, ext = false }) {
 }
 function Footer() {
   const year = 2026;
-  return /* @__PURE__ */ import_react16.default.createElement("footer", { className: "site-footer" }, /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react16.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react16.default.createElement(L, { href: PAPER }, "The paper \u2014 The Reader of the Sky \u2192"), /* @__PURE__ */ import_react16.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Felipe II"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments" }, "Stellar alignments (267 fiches)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/" }, "Sky reader app")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react16.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react16.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react16.default.createElement("span", null, "\xA9 ", year, " ", /* @__PURE__ */ import_react16.default.createElement("a", { href: "https://medium.com/@ancientencoder/sons-of-stars-269765bda7db", target: "_blank", rel: "noreferrer" }, "AncientEncoder"), " and BartMan \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react16.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react16.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
+  const onClick = (e) => {
+    if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const a = e.target.closest("a.ft-a");
+    if (!a) return;
+    const href = a.getAttribute("href") || "";
+    if (SPA_RE.test(href)) {
+      e.preventDefault();
+      goInternal(href);
+    }
+  };
+  return /* @__PURE__ */ import_react16.default.createElement("footer", { className: "site-footer", onClick }, /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react16.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react16.default.createElement(L, { href: PAPER }, "The paper \u2014 The Reader of the Sky \u2192"), /* @__PURE__ */ import_react16.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Daniel to Felipe II"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/patriarchs" }, "Patriarchs/Conquest \u2014 names readable in the sky"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/places" }, "Places \u2014 biblical toponyms readable in the sky"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments" }, "Stellar alignments (267 fiches)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/app" }, "Sky reader app")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react16.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react16.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react16.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react16.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react16.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react16.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react16.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react16.default.createElement("span", null, "\xA9 ", year, " ", /* @__PURE__ */ import_react16.default.createElement("a", { href: "https://medium.com/@ancientencoder/sons-of-stars-269765bda7db", target: "_blank", rel: "noreferrer" }, "AncientEncoder"), " and BartMan \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react16.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react16.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
 }
 
 // web/src/pages/Landing.jsx

@@ -2,11 +2,14 @@
 // sky (a Patriarchs/Conquest-section person or a Places-section place). Renders: back
 // link, header (name + Hebrew + transliteration), a facts panel (type, biblical period,
 // gematria, letter-count, theophoric, occurrences), the biblical reference with a Sefaria
-// link, a "readable on these rare conjunctions" list (each date → Reader on that date),
-// and a stellar-letters line (the name's required simple letters → their zodiac signs).
-// Presentational — renders identically server-side and client-side. No Wikipedia.
+// link, a Wikipedia panel (image + description + extract, baked at build time from the
+// REST summary API, present when an article exists), a "readable on these rare
+// conjunctions" list (each date → Reader on that date), and a stellar-letters line (the
+// name's required simple letters → their zodiac signs). Presentational — renders
+// identically server-side and client-side.
 import React from 'react';
 import { SIMPLE, LETTER_TO_SIGN, refUrl, displayDate } from '../core.jsx';
+import { NAME_WIKI } from '../data/name_wiki.js';
 
 function NameFicha({ figure, kind, backHref, backLabel }) {
   if (!figure) return <div className="panel"><h2>Not found</h2><p>No name matches this path.</p></div>;
@@ -17,6 +20,7 @@ function NameFicha({ figure, kind, backHref, backLabel }) {
     return { ch, sign, name: sm ? sm[1] : null };
   });
   const refLink = refUrl(figure.ref);
+  const wiki = NAME_WIKI[figure.slug] || null;
   return <div className="ficha">
     <div className="controls" style={{ marginBottom: 14 }}>
       <a href={backHref}>◀ {backLabel}</a>
@@ -51,6 +55,18 @@ function NameFicha({ figure, kind, backHref, backLabel }) {
         </table>
       </div>
     </div>
+
+    {wiki && <div className="panel" style={{ marginBottom: 14 }}>
+      <h2 style={{ marginTop: 0 }}>Wikipedia — {wiki.title}</h2>
+      <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'flex-start' }}>
+        {wiki.thumbnail && <img src={wiki.thumbnail.source} alt={wiki.title} style={{ maxWidth: 200, maxHeight: 260, borderRadius: 8, border: '1px solid var(--line)' }} loading="lazy" />}
+        <div style={{ flex: '1 1 320px' }}>
+          {wiki.description && <div className="muted" style={{ marginBottom: 6 }}>{wiki.description}</div>}
+          {wiki.extract && <p style={{ lineHeight: 1.6, marginBottom: 0 }}>{wiki.extract}</p>}
+          <div style={{ marginTop: 8 }}><a href={wiki.url} target="_blank" rel="noreferrer">Read more on Wikipedia →</a></div>
+        </div>
+      </div>
+    </div>}
 
     {stars.length > 0 && <div className="panel" style={{ marginBottom: 14 }}>
       <h2 style={{ marginTop: 0 }}>Stellar letters</h2>

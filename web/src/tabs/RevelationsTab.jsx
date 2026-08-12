@@ -2,6 +2,7 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate } from '../core.jsx';
 import { SkyMap, KameaGrid, Fig, DateEntry, YearInput, SubTabs } from '../ui.jsx';
+import { PATRIARCHS } from '../data/patriarchs.js';
 
 const PHRASES = [
   ['The sky vanished like a scroll that is rolled up, and every mountain and island was removed','Rev 6:14','The zodiac <b>is the scroll</b>: 12 signs inscribed, rolled along the ecliptic. Echoes Isa 34:4.'],
@@ -36,7 +37,6 @@ function RevelationHebrewTab({date, rows, occ, words, genData, genYear}){
   const hebrew = /[א-ת]/.test(inp) ? gematria(norm(inp)) : null;
   const nameCount = (words||[]).filter(w=>w.name).length;
   const angelCount = (words||[]).filter(w=>w.angel).length;
-  const genDays = genData && genData.list ? genData.list.length : null;
   return <>
     <h2>Revelation — the sky as a sealed scroll (§15c) · isopsephy</h2>
     <div className="muted" style={{marginBottom:10}}>A structural reading, not a confessional exegesis. Revelation (c. 95 CE) shares the late-Jewish symbolic cosmos (merkabah + creator-letters + 360/7/12) with the textualised Sefer Yetzirah — they <b>converge without borrowing</b>. Rev 13:18 is the only NT verse that <b>commands a gematria calculation</b>.</div>
@@ -61,11 +61,11 @@ function RevelationHebrewTab({date, rows, occ, words, genData, genYear}){
         <tr><td><i>“los signos del zodíaco en el orden perpetuo”</i></td><td>12 signs × 30°, fixed order. Today <b>{(occ||new Set()).size}</b> occupied: <b style={{color:'var(--gold)'}}>{[...(occ||[])].sort().join(' ')||'none'}</b>.</td></tr>
         <tr><td><i>“ve con la luz”</i></td><td>“See, with the light” — the planets' longitude is the light; the signs they touch are the readable letters. Today <b>{(occ||new Set()).size}</b>/12 signs are lit.</td></tr>
         <tr><td><i>“Calcula en orden para ver las generaciones”</i></td><td>The Reader enumerates every readable name today: <b style={{color:'var(--gold)'}}>{(words||[]).length}</b> names (the generations <i>now</i>) — incl. <b>{nameCount}</b> proper names and <b>{angelCount}</b> Shem HaMephorash angel-roots (word + suffix <span className="he">אל</span>/<span className="he">יה</span>).</td></tr>
-        <tr><td><i>“Prepara para verlos desde el principio hasta el final”</i></td><td>The Predictor scans the whole year {genYear} (beginning → end): <b style={{color:'var(--gold)'}}>{genDays!=null ? genDays : '…'}</b> days where Genesis 1:1 is legible = the generations across time.</td></tr>
+        <tr><td><i>“Prepara para verlos desde el principio hasta el final”</i></td><td>The curated scan spans ~10 millennia (−8267 BCE → 1962 CE): <b style={{color:'var(--gold)'}}>12 dated rare conjunctions</b> across five precessional eras, each enumerating its own readable generations — <b>the patriarchs and the men of the Conquest</b>, <b style={{color:'var(--gold)'}}>{PATRIARCHS.length}</b> distinct biblical persons readable from beginning to end. <a href="/patriarchs" style={{color:'var(--violet)'}}>→ all {PATRIARCHS.length}</a></td></tr>
         <tr><td><i>“decreta sobre cada uno… entre el bien y el mal”</i></td><td>Revelation's judgment: the sky read as a decree on each — the sealed scroll opened (Rev 5–8), the same letters that name the generations now judging them.</td></tr>
       </tbody>
     </table>
-    <div className="note" style={{marginBottom:12}}>Verdict: the Raziel instruction is not metaphor. <b>Calculate the planets</b> = astronomy-engine longitudes; <b>the signs in perpetual order</b> = the 12 simples; <b>see the generations from beginning to end</b> = the Reader (today's names) + the Predictor (the year's legible days). The “names of the ancestors and those to come” are the readable names of any date — past or future — and the apparatus enumerates them.</div>
+    <div className="note" style={{marginBottom:12}}>Verdict: the Raziel instruction is not metaphor. <b>Calculate the planets</b> = astronomy-engine longitudes of the seven classical bodies; <b>the signs in perpetual order</b> = the 12 simples; <b>see the generations from beginning to end</b> = the Reader (today's names) + the curated scan (the readable conjunctions across ten millennia — the patriarchs and men of the Conquest, {PATRIARCHS.length} biblical persons, from the ancestors to those to come). The “names of the ancestors and those to come” are the readable names of any date — past or future — and the apparatus enumerates them.</div>
     <h3>15c.9 · The two registers of the Name — the eternal and the temporal</h3>
     <p className="muted">The reading rule opens a theological contrast the apparatus makes measurable. 3 <i>mothers</i> (aleph, mem, shin — primordial elements, fixed) + 7 <i>doubles</i> (bet, gimel, dalet, kaf, pe, resh, tav — the 7 planets, always available) do not depend on the zodiac; the 12 <i>simples</i> do. A word of only mothers+doubles is <b>always readable</b> — it transcends the sky. A word of simples is <b>gated</b> — readable only when its signs are occupied, i.e. in time.</p>
     <p className="muted">The always-readable tier holds the theological anchors:</p>

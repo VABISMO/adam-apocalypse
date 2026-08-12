@@ -1,9 +1,25 @@
 // Footer.jsx — professional multi-column site footer.
 // Columns by type: the project, hub pages, data & sources, machine-readable endpoints.
+// Internal SPA-route links navigate client-side (pushState + popstate) instead of a full
+// page reload — the click is delegated here so no onNav prop needs threading through every
+// render site. External links and static-file links (/paper, *.json, *.xml, *.txt) keep the
+// browser default. The <a href> stays intact as the no-JS fallback.
 import React from 'react';
 
 const GITHUB = 'https://github.com/VABISMO/adam-apocalypse';
 const PAPER = '/paper';
+
+// Routes the SPA owns (handled by parseRoute in App.jsx). Everything else starting with '/'
+// (notably /paper and the *.json/*.xml/*.txt machine endpoints) does a normal navigation.
+const SPA_RE = /^\/(prophet|mage|patriarch|place|align|reader)(\/|$)|^\/(prophets|mages|patriarchs|places|alignments|readings|app|about|)$/;
+
+function goInternal(href){
+  if(typeof window==='undefined') return;
+  window.history.pushState({}, '', href);
+  window.dispatchEvent(new PopStateEvent('popstate'));
+  // scroll the ficha/hub page to the top on navigation (no flash, no full reload)
+  window.scrollTo(0, 0);
+}
 
 function Col({ title, children }){
   return <section className="ft-col">
@@ -17,7 +33,16 @@ function L({ href, children, ext=false }){
 
 function Footer(){
   const year = 2026;
-  return <footer className="site-footer">
+  // delegated click handler: if the clicked anchor is an internal SPA route, navigate
+  // client-side instead of letting the browser do a full reload.
+  const onClick = (e) => {
+    if(e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const a = e.target.closest('a.ft-a');
+    if(!a) return;
+    const href = a.getAttribute('href') || '';
+    if(SPA_RE.test(href)){ e.preventDefault(); goInternal(href); }
+  };
+  return <footer className="site-footer" onClick={onClick}>
     <div className="ft-grid">
       <Col title="The Apocalypse of Adam">
         <p className="ft-blurb">Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names — the stellar alphabet behind the paper.</p>
@@ -28,9 +53,11 @@ function Footer(){
       <Col title="Hub pages">
         <L href="/prophets">Prophets timeline — Adam to Jacob Frank</L>
         <L href="/mages">Magi timeline — Daniel to Felipe II</L>
+        <L href="/patriarchs">Patriarchs/Conquest — names readable in the sky</L>
+        <L href="/places">Places — biblical toponyms readable in the sky</L>
         <L href="/alignments">Stellar alignments (267 fiches)</L>
         <L href="/readings">Sky readings (6045 glosses)</L>
-        <L href="/">Sky reader app</L>
+        <L href="/app">Sky reader app</L>
       </Col>
 
       <Col title="Data & sources">
