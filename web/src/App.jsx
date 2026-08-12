@@ -33,11 +33,7 @@ const PROPHET_BY_SLUG = new Map(PROPHETS.map((p) => [slugify(p.name), p]));
 const MAGE_BY_SLUG = new Map(MAGES.map((m) => [slugify(m.name), m]));
 
 // The academic paper — served on the same domain at /paper (no external redirect).
-const PAPER_URL = '/paper';
-function PaperTab() {
-  return <a className="tab" role="tab" style={{ textDecoration: 'none', borderColor: 'var(--line)' }} href={PAPER_URL} title="The academic paper">Paper →</a>;
-}
-
+// Linked from the Footer (every page) and the Landing hero, so no Paper tab in the tab bar.
 const TABS = [
   ['cycles','Cycles'],['sky','Sky Map'],['translator','Reader'],['reading','Reading'],['time','Time'],
   ['gematria','Gematria'],['sigils','Sigils'],['revelation','Revelations'],['psalms','Psalms'],['codes','Codes'],['method','Methodology'],
@@ -232,7 +228,6 @@ function App(){
     <div>
       <div className="tabs" role="tablist">
         {TABS.map(([id,label])=> <div key={id} role="tab" aria-selected={active===id} className={'tab'+(active===id?' active':'')} onClick={()=>goTab(id)}>{label}</div>)}
-        <PaperTab/>
       </div>
 
       <section className="panel app-panel">
@@ -297,7 +292,6 @@ function App(){
 function TabsBar({goTab}){
   return <div className="tabs" role="tablist">
     {TABS.map(([id,label])=> <div key={id} role="tab" className="tab" onClick={()=>goTab(id)}>{label}</div>)}
-    <PaperTab/>
   </div>;
 }
 
