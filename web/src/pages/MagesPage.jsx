@@ -1,7 +1,7 @@
 // pages/MagesPage.jsx — /mages: an INDEX of the magi lineage Daniel → Felipe II.
 // Shows the timeline graphic + a compact card grid; each card links to the figure's
-// detail ficha at /mage/<slug> (Wikipedia biography, facts, and a works table). The
-// full bios live on the fichas, not here — this page is a scannable index, not a feed.
+// detail profile at /mage/<slug> (Wikipedia biography, facts, and a works table). The
+// full bios live on the profiles, not here — this page is a scannable index, not a feed.
 // Presentational (renders identically server & client).
 import React from 'react';
 import { MAGES } from '../data/mages.js';
@@ -35,7 +35,7 @@ function MagesPage({ onOpen }) {
   const last = MAGES[MAGES.length - 1];
   return <div>
     <h1>Magi — from Daniel to Felipe II</h1>
-    <p className="muted">A chronology of <b>magi / wise-men / royal-sage occult figures</b>, from the Babylonian court magi (<b>Daniel, Shadrach, Meshach, Abednego</b>) through the medieval Iberian sages — <b>Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de León</b> — to the Renaissance Christian-kabbalists and royal astrologers, ending with <b style={{ color: 'var(--gold)' }}>{last.name} ({last.years})</b>, who closes the era of kings. {MAGES.length} figures across {span}. Click a card to open its ficha — a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table.</p>
+    <p className="muted">A chronology of <b>magi / wise-men / royal-sage occult figures</b>, from the Babylonian court magi (<b>Daniel, Shadrach, Meshach, Abednego</b>) through the medieval Iberian sages — <b>Ramon Llull, Alfonso X the Wise, Arnaldus de Villanova, Moses de León</b> — to the Renaissance Christian-kabbalists and royal astrologers, ending with <b style={{ color: 'var(--gold)' }}>{last.name} ({last.years})</b>, who closes the era of kings. {MAGES.length} figures across {span}. Click a card to open its profile — a Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions table.</p>
     <div className="panel" style={{ padding: 14, marginBottom: 14 }}>
       <Timeline items={MAGES} title="Magi timeline — Daniel to Felipe II" accent="#8a05ff" />
     </div>

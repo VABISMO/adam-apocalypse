@@ -1,4 +1,4 @@
-// pages/PlaceFicha.jsx — /place/<slug>: ficha for one biblical place readable in the sky
+// pages/PlaceFicha.jsx — /place/<slug>: profile for one biblical place readable in the sky
 // (the Places section). Resolves by slug over PLACES, renders the shared <NameFicha>.
 import React from 'react';
 import { PLACES, BY_SLUG } from '../data/places.js';

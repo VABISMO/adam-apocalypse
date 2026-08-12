@@ -17,7 +17,7 @@ function goInternal(href){
   if(typeof window==='undefined') return;
   window.history.pushState({}, '', href);
   window.dispatchEvent(new PopStateEvent('popstate'));
-  // scroll the ficha/hub page to the top on navigation (no flash, no full reload)
+  // scroll the profile/hub page to the top on navigation (no flash, no full reload)
   window.scrollTo(0, 0);
 }
 

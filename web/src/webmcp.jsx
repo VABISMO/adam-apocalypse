@@ -139,7 +139,7 @@ export function registerWebMCPTools({ lex, angelMap }){
 
   reg({
     name: 'mage_info',
-    description: 'Return the magi lineage entry by name (e.g. "Ramon Llull", "Alfonso X of Castile", "Felipe II of Spain"), with a 2-3 paragraph Wikipedia-grounded biography and a ficha (table) of the mage\'s most important works. Omit name for the full list of 24 magi from Daniel to Felipe II.',
+    description: 'Return the magi lineage entry by name (e.g. "Ramon Llull", "Alfonso X of Castile", "Felipe II of Spain"), with a 2-3 paragraph Wikipedia-grounded biography and a profile (table) of the mage\'s most important works. Omit name for the full list of 24 magi from Daniel to Felipe II.',
     inputSchema: { type:'object', properties:{ name:{ type:'string', description:'Mage name (case-insensitive); omit for the full list' } } },
     execute: async ({ name }) => {
       if(!name) return j({ count:MAGES.length, mages:MAGES.map(m=>({name:m.name, years:m.years, region:m.region, role:m.role, endpoint:!!m.endpoint})) });

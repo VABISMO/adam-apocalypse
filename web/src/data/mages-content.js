@@ -1,4 +1,4 @@
-// data/mages-content.js — Wikipedia-grounded bios + works ficha per mage, keyed by name.
+// data/mages-content.js — Wikipedia-grounded bios + works profile per mage, keyed by name.
 // Render merges this into MAGES by name. Bios are 2-3 paragraphs (\n\n separated);
 // works is a table of {title, note}. Sourced from en.wikipedia.org summaries.
 const MAGES_CONTENT = {

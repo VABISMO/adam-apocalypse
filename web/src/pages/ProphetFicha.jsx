@@ -1,5 +1,5 @@
-// pages/ProphetFicha.jsx — /prophet/<slug>: the detail ficha for one prophet figure.
-// Resolves the prophet by URL slug (over PROPHETS), pulls its Wikipedia ficha, and
+// pages/ProphetFicha.jsx — /prophet/<slug>: the detail profile for one prophet figure.
+// Resolves the prophet by URL slug (over PROPHETS), pulls its Wikipedia profile, and
 // renders the shared <Ficha> on the prophet-lineage axis. Presentational.
 import React from 'react';
 import { PROPHETS } from '../data/prophets.js';

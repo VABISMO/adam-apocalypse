@@ -1,4 +1,4 @@
-// components/NameFicha.jsx — shared detail ficha for a biblical name readable in the
+// components/NameFicha.jsx — shared detail profile for a biblical name readable in the
 // sky (a Patriarchs/Conquest-section person or a Places-section place). Renders: back
 // link, header (name + Hebrew + transliteration), a facts panel (type, biblical period,
 // gematria, letter-count, theophoric, occurrences), the biblical reference with a Sefaria
@@ -10,6 +10,7 @@
 import React from 'react';
 import { SIMPLE, LETTER_TO_SIGN, refUrl, displayDate } from '../core.jsx';
 import { NAME_WIKI } from '../data/name_wiki.js';
+import { nameVerse } from '../data/name_verses.js';
 
 function NameFicha({ figure, kind, backHref, backLabel }) {
   if (!figure) return <div className="panel"><h2>Not found</h2><p>No name matches this path.</p></div>;
@@ -21,6 +22,7 @@ function NameFicha({ figure, kind, backHref, backLabel }) {
   });
   const refLink = refUrl(figure.ref);
   const wiki = NAME_WIKI[figure.slug] || null;
+  const verse = nameVerse(figure.slug);
   return <div className="ficha">
     <div className="controls" style={{ marginBottom: 14 }}>
       <a href={backHref}>◀ {backLabel}</a>
@@ -32,8 +34,8 @@ function NameFicha({ figure, kind, backHref, backLabel }) {
       {figure.translit}{figure.translit && ' · '}{figure.period}
     </div>
 
-    <div className="grid2" style={{ alignItems: 'start' }}>
-      <div className="panel" style={{ marginBottom: 14 }}>
+    <div className="grid2" style={{ alignItems: 'stretch' }}>
+      <div className="panel" style={{ marginBottom: 14, display: 'flex', flexDirection: 'column' }}>
         <h2 style={{ marginTop: 0 }}>In the Bible</h2>
         <p style={{ lineHeight: 1.6, marginBottom: 6 }}>
           {isPlace
@@ -41,6 +43,11 @@ function NameFicha({ figure, kind, backHref, backLabel }) {
             : <span>A biblical {figure.theophoric ? 'theophoric ' : ''}personal name — <b>{figure.name}</b> (<span className="he">{figure.he}</span>) — attested in <b style={{ color: 'var(--gold)' }}>{figure.ref}</b>{figure.refN != null && <> ({figure.refN} occurrence{figure.refN === 1 ? '' : 's'} in the Hebrew Bible)</>}.</span>}
         </p>
         {refLink && <a href={refLink} target="_blank" rel="noreferrer">Read {figure.ref} on Sefaria →</a>}
+        {verse && (verse.he || verse.en) && <div style={{ marginTop: 12, paddingTop: 12, borderTop: '1px solid var(--line)' }}>
+          <div className="muted" style={{ fontSize: '.72rem', textTransform: 'uppercase', letterSpacing: '.08em', marginBottom: 6 }}>{figure.ref}</div>
+          {verse.he && <p className="he" dir="rtl" style={{ fontSize: '1.05rem', lineHeight: 1.9, margin: '0 0 8px', textAlign: 'right' }}>{verse.he}</p>}
+          {verse.en && <p style={{ fontSize: '.86rem', lineHeight: 1.6, margin: 0, color: 'var(--dim)', fontStyle: 'italic' }}>{verse.en}</p>}
+        </div>}
       </div>
       <div className="panel" style={{ marginBottom: 14 }}>
         <h2 style={{ marginTop: 0 }}>Facts</h2>

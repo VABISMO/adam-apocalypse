@@ -33,8 +33,8 @@ import { MAGES } from './data/mages.js';
 import { PATRIARCHS, BY_SLUG as PATRIARCH_BY } from './data/patriarchs.js';
 import { PLACES, BY_SLUG as PLACE_BY } from './data/places.js';
 
-// slug → figure, for client-side <title>/<meta> on ficha routes (the prerendered
-// deep links carry the precise per-ficha meta; this is for in-app navigation).
+// slug → figure, for client-side <title>/<meta> on profile routes (the prerendered
+// deep links carry the precise per-profile meta; this is for in-app navigation).
 const PROPHET_BY_SLUG = new Map(PROPHETS.map((p) => [slugify(p.name), p]));
 const MAGE_BY_SLUG = new Map(MAGES.map((m) => [slugify(m.name), m]));
 const PATRIARCH_BY_SLUG = PATRIARCH_BY;
@@ -166,29 +166,29 @@ function App(){
       d='A chronology of prophetic and revelatory figures from Adam through the biblical prophets, the apocalyptic writers, and the Sabbatean–Frankist thread, ending at Jacob Frank (1726–1791).';
     } else if(route.name==='mages'){
       t='Magi timeline — Daniel to Felipe II | Apocalypse of Adam';
-      d='A chronology of magi and royal-sage occult figures from the Babylonian court magi (Daniel, Shadrach, Meshach, Abednego) through Ramon Llull, Alfonso X and Felipe II, with Wikipedia bios and a ficha of their works.';
+      d='A chronology of magi and royal-sage occult figures from the Babylonian court magi (Daniel, Shadrach, Meshach, Abednego) through Ramon Llull, Alfonso X and Felipe II, with Wikipedia bios and a profile of their works.';
     } else if(route.name==='prophet'){
       const p = PROPHET_BY_SLUG.get(route.slug);
-      t = p ? `${p.name} — prophet ficha | Apocalypse of Adam` : 'Prophet ficha | Apocalypse of Adam';
-      d = p ? `${p.name} (${p.region}, ${p.y0===p.y1?p.y0:p.y0+'–'+p.y1}): Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table. ${p.role}` : 'Prophet detail ficha with Wikipedia biography and a summary table.';
+      t = p ? `${p.name} — prophet profile | Apocalypse of Adam` : 'Prophet profile | Apocalypse of Adam';
+      d = p ? `${p.name} (${p.region}, ${p.y0===p.y1?p.y0:p.y0+'–'+p.y1}): Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table. ${p.role}` : 'Prophet detail profile with Wikipedia biography and a summary table.';
     } else if(route.name==='mage'){
       const m2 = MAGE_BY_SLUG.get(route.slug);
-      t = m2 ? `${m2.name} — magus ficha | Apocalypse of Adam` : 'Magus ficha | Apocalypse of Adam';
-      d = m2 ? `${m2.name} (${m2.region}, ${m2.years}): Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions summary table. ${m2.role}` : 'Magus detail ficha with Wikipedia biography and a works table.';
+      t = m2 ? `${m2.name} — magus profile | Apocalypse of Adam` : 'Magus profile | Apocalypse of Adam';
+      d = m2 ? `${m2.name} (${m2.region}, ${m2.years}): Wikipedia-sourced biography, an infobox of facts, and a works-and-contributions summary table. ${m2.role}` : 'Magus detail profile with Wikipedia biography and a works table.';
     } else if(route.name==='patriarchs'){
       t='Patriarchs/Conquest — biblical names readable in the sky | Apocalypse of Adam';
-      d='The biblical persons whose names the stellar reading surfaces on the 12 dated rare conjunctions, grouped by biblical period. Each name links to a ficha: Hebrew, gematria, the stellar letters it needs, and the conjunctions where it reads.';
+      d='The biblical persons whose names the stellar reading surfaces on the 12 dated rare conjunctions, grouped by biblical period. Each name links to a profile: Hebrew, gematria, the stellar letters it needs, and the conjunctions where it reads.';
     } else if(route.name==='places'){
       t='Places — biblical toponyms readable in the sky | Apocalypse of Adam';
-      d='The biblical places (toponyms) the stellar reading surfaces on the 12 dated rare conjunctions, grouped by biblical period. Each place links to a ficha: Hebrew, gematria, the stellar letters it needs, and the conjunctions where it reads.';
+      d='The biblical places (toponyms) the stellar reading surfaces on the 12 dated rare conjunctions, grouped by biblical period. Each place links to a profile: Hebrew, gematria, the stellar letters it needs, and the conjunctions where it reads.';
     } else if(route.name==='patriarch'){
       const p = PATRIARCH_BY_SLUG.get(route.slug);
-      t = p ? `${p.name} — patriarch ficha | Apocalypse of Adam` : 'Patriarch ficha | Apocalypse of Adam';
-      d = p ? `${p.name} (${p.translit}, ${p.ref}): a biblical person readable in the sky. Gematria ${p.gem}, ${p.len} consonants, ${p.period}, readable on ${p.dates.length} of the 12 dated rare conjunctions.` : 'Patriarch detail ficha.';
+      t = p ? `${p.name} — patriarch profile | Apocalypse of Adam` : 'Patriarch profile | Apocalypse of Adam';
+      d = p ? `${p.name} (${p.translit}, ${p.ref}): a biblical person readable in the sky. Gematria ${p.gem}, ${p.len} consonants, ${p.period}, readable on ${p.dates.length} of the 12 dated rare conjunctions.` : 'Patriarch detail profile.';
     } else if(route.name==='place'){
       const p = PLACE_BY_SLUG.get(route.slug);
-      t = p ? `${p.name} — place ficha | Apocalypse of Adam` : 'Place ficha | Apocalypse of Adam';
-      d = p ? `${p.name} (${p.translit}, ${p.ref}): a biblical toponym readable in the sky. Gematria ${p.gem}, ${p.len} consonants, ${p.period}, readable on ${p.dates.length} of the 12 dated rare conjunctions.` : 'Place detail ficha.';
+      t = p ? `${p.name} — place profile | Apocalypse of Adam` : 'Place profile | Apocalypse of Adam';
+      d = p ? `${p.name} (${p.translit}, ${p.ref}): a biblical toponym readable in the sky. Gematria ${p.gem}, ${p.len} consonants, ${p.period}, readable on ${p.dates.length} of the 12 dated rare conjunctions.` : 'Place detail profile.';
     } else if(route.name==='alignments'){
       t='Stellar alignments — rare century & millennium conjunctions | Apocalypse of Adam';
       d='All rare stellar alignments (planets concentrated in one zodiac sign): dates, tightest arc, precessional era, and the readable names of each alignment day.';

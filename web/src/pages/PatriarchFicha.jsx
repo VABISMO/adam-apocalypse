@@ -1,4 +1,4 @@
-// pages/PatriarchFicha.jsx — /patriarch/<slug>: ficha for one biblical person readable
+// pages/PatriarchFicha.jsx — /patriarch/<slug>: profile for one biblical person readable
 // in the sky (the Patriarchs/Conquest section). Resolves the entry by slug over
 // PATRIARCHS, renders the shared <NameFicha>. Presentational.
 import React from 'react';

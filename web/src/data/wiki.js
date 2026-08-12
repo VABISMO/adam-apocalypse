@@ -1,6 +1,6 @@
-// data/wiki.js — loader for the Wikipedia ficha content (scraped by
+// data/wiki.js — loader for the Wikipedia profile content (scraped by
 // scripts/scrape_wikipedia.mjs into wiki_content.json, keyed by figure name).
-// Bundled at build time (esbuild JSON import) so ficha pages render immediately,
+// Bundled at build time (esbuild JSON import) so profile pages render immediately,
 // server-side and client-side, with no async load.
 import WIKI_JSON from './wiki_content.json';
 

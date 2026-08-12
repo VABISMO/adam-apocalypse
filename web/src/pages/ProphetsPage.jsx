@@ -1,6 +1,6 @@
 // pages/ProphetsPage.jsx — /prophets: an INDEX of the prophet lineage Adam → Jacob Frank.
 // Shows the timeline graphic + a compact card grid; each card links to the figure's
-// detail ficha at /prophet/<slug> (Wikipedia biography, facts, and a summary table).
+// detail profile at /prophet/<slug> (Wikipedia biography, facts, and a summary table).
 // Presentational (renders identically server & client).
 import React from 'react';
 import { PROPHETS } from '../data/prophets.js';
@@ -29,7 +29,7 @@ function ProphetsPage({ onOpen }) {
   const last = PROPHETS[PROPHETS.length - 1];
   return <div>
     <h1>Prophets — from Adam to Jacob Frank</h1>
-    <p className="muted">A chronology of prophetic and revelatory figures, from the first human <span className="he">אדם</span> through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, down to the Sabbatean–Frankist thread whose <b style={{ color: 'var(--gold)' }}>{last.designation || 'final'} figure is {last.name} ({fmtYear(last.y0)}–{fmtYear(last.y1)})</b>. {PROPHETS.length} figures across {span}. Click a card to open its ficha — a Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table.</p>
+    <p className="muted">A chronology of prophetic and revelatory figures, from the first human <span className="he">אדם</span> through the biblical prophets, the second-temple and apocalyptic writers, the early-Christian and merkabah-mystical tradition, down to the Sabbatean–Frankist thread whose <b style={{ color: 'var(--gold)' }}>{last.designation || 'final'} figure is {last.name} ({fmtYear(last.y0)}–{fmtYear(last.y1)})</b>. {PROPHETS.length} figures across {span}. Click a card to open its profile — a Wikipedia-sourced biography, an infobox of facts, and a life-and-work summary table.</p>
     <div className="panel" style={{ padding: 14, marginBottom: 14 }}>
       <Timeline items={PROPHETS} title="Prophet timeline — Adam to Jacob Frank" accent="#8a05ff" />
     </div>

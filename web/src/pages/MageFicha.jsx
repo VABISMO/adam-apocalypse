@@ -1,5 +1,5 @@
-// pages/MageFicha.jsx — /mage/<slug>: the detail ficha for one magi figure.
-// Resolves the mage by URL slug (over MAGES), pulls its Wikipedia ficha, and renders
+// pages/MageFicha.jsx — /mage/<slug>: the detail profile for one magi figure.
+// Resolves the mage by URL slug (over MAGES), pulls its Wikipedia profile, and renders
 // the shared <Ficha> on the magi-lineage axis. Presentational.
 import React from 'react';
 import { MAGES } from '../data/mages.js';

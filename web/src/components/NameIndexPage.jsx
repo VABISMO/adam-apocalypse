@@ -1,6 +1,6 @@
 // components/NameIndexPage.jsx — shared index page for the Patriarchs/Conquest (persons)
 // and Places sections. Renders the names as a paginated, searchable card grid in the
-// same "gloss" style as the Reader tab (.tcards/.tcard), each card linking to its ficha
+// same "gloss" style as the Reader tab (.tcards/.tcard), each card linking to its profile
 // (/patriarch/<slug> or /place/<slug>). onOpen (when provided by the live SPA) navigates
 // client-side without a full reload; the <a href> stays as the no-JS fallback. 48/page.
 import React, { useState, useMemo, useEffect } from 'react';
@@ -49,7 +49,7 @@ function NameIndexPage({ title, intro, kind, items, basePath, onOpen }) {
     <div className="tcards">
       {slice.map((it, i) => (
         <a key={it.slug + i} className="tcard" href={href(it.slug)} style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer', transition: 'border-color .12s,transform .12s' }}
-          title={`Open the ficha for ${it.name}`}
+          title={`Open the profile for ${it.name}`}
           onClick={onOpen ? (e => { e.preventDefault(); onOpen(href(it.slug)); }) : undefined}
           onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
           onMouseLeave={e => { e.currentTarget.style.borderColor = ''; e.currentTarget.style.transform = ''; }}>
