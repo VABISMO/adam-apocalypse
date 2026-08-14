@@ -33621,12 +33621,15 @@ ${CSS}
           ${NAV_GROUPS.map((g) => `<div class="nav-drop-group"><div class="nav-drop-label">${g.label}</div>${g.items.map((it) => `<a href="${it[1]}" role="menuitem">${it[0]}</a>`).join("")}</div>`).join("")}
         </div>
       </div>
+      <a href="/prophets" data-s="prophets">Prophets</a>
+      <a href="/patriarchs" data-s="patriarchs">Patriarchs</a>
+      <a href="/mages" data-s="mages">Mages</a>
       <a href="/about" data-s="about">About</a>
       <a href="/paper" data-s="paper">Paper</a>
     </nav>
   </div>
 </header>
-<script>(function(){var p=(location.pathname||'/').replace(/\\/\\+$/,'')||'/';var s='home';if(p==='/about')s='about';else if(p==='/paper')s='paper';else if(p!=='/')s='app';var a=document.querySelector('.site-nav a[data-s="'+s+'"]');if(a)a.classList.add('active');})();</script>
+<script>(function(){var p=(location.pathname||"/").replace(/\\/\\+$/,"")||"/";var s="home";if(p==="/about")s="about";else if(p==="/paper")s="paper";else if(p.indexOf("/prophet")===0)s="prophets";else if(p.indexOf("/patriarch")===0)s="patriarchs";else if(p.indexOf("/mage")===0)s="mages";else if(p!=="/")s="app";var a=document.querySelector(".site-nav a[data-s="+s+"]");if(a)a.classList.add("active");})();</script>
 <script>(function(){var d=document.querySelector(".nav-drop");if(!d)return;var t=d.querySelector(".nav-drop-toggle");t.addEventListener("click",function(e){if(window.matchMedia("(hover:none)").matches&&!d.classList.contains("open")){e.preventDefault();d.classList.add("open");t.setAttribute("aria-expanded","true");}});document.addEventListener("click",function(e){if(!d.contains(e.target)){d.classList.remove("open");t.setAttribute("aria-expanded","false");}});d.addEventListener("click",function(e){if(e.target.closest(".nav-drop-menu a")){d.classList.remove("open");t.setAttribute("aria-expanded","false");}});})();</script>
 <div class="wrap"><main id="root" class="app-panel">${body}</main></div>
 <script type="module" src="${scriptSrc}"></script>
