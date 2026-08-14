@@ -33197,13 +33197,13 @@ var LIBRARY_BOOKS = [
   },
   {
     slug: "ibn-ezra",
-    title: "Sefer ha-Mispar (the Book of the Number)",
+    title: "Sefer ha-Shem (the Book of the Name)",
     author: "Abraham ibn Ezra",
-    year: "1147 / 1895 ed.",
+    year: "1148 / 1834 ed.",
     lang: "Hebrew",
     kind: "book",
-    summary: 'Abraham ibn Ezra (1089\u20131167), the Andalusian-Jewish biblical exegete, mathematician and astrologer, wrote on gematria, the divine names, the mazzalot, the 28 lunar mansions, and the theory of precession. Sefer ha-Mispar ("Book of the Number") is his Hebrew treatise on arithmetic and the Hebrew numerals \u2014 the 1895 edition is hosted here.',
-    relevance: "A primary Hebrew source for the gematria conventions (\u05D0=1\u2026\u05EA=400) the paper\u2019s calculations rely on, and for the 28-lunar-mansion / precession substrate of the letter-mansion correspondence (\xA79).",
+    summary: 'Abraham ibn Ezra (1089-1167), the Andalusian-Jewish exegete, mathematician and astrologer, wrote on the Hebrew letters, the divine names, gematria, the mazzalot, the 28 lunar mansions and the theory of precession. Sefer ha-Shem ("Book of the Name," 1148) is his treatise on the divine Name and the properties of the Hebrew letters; the complete Furth 1834 edition (PDF scan, 83 pp.) is hosted here. (His astronomical Reshit Hokhmah is not available as a complete free edition and is cited in the paper Sec.12.2 rather than hosted.)',
+    relevance: "A primary Hebrew source for the letter-attribute and divine-name material the paper\u2019s theophoric-name analysis rests on, and for Ibn Ezra\u2019s mazzalot / 28-mansion / precession substrate (Sec.9, historic-sourcing).",
     folder: "ibn-ezra"
   },
   {
@@ -33238,6 +33238,193 @@ var LIBRARY_BOOKS = [
     summary: "The Report of the Calendar Reform Committee (CSIR, Government of India, 1955) \u2014 the basis of the Indian National Calendar and the Lahiri (Chitrapaksha) ayan\u0101\u1E43\u015Ba, the sidereal zero-point convention that fixes the offset (~24.18\xB0 today) between the tropical and sidereal zodiacs. The complete 1955 report is hosted here.",
     relevance: "The reference ayan\u0101\u1E43\u015Ba the Ages / Ayanamsa tabs report. The paper dates the precessional ages by tropical sign occupation (ayan\u0101\u1E43\u015Ba-independent) but cites the Lahiri value for the sidereal frame.",
     folder: "lahiri"
+  },
+  {
+    slug: "sefer-raziel",
+    title: "Sefer Raziel ha-Malakh (Book of Raziel the Angel)",
+    author: "Anonymous",
+    year: "c. 13th c. CE",
+    lang: "Hebrew (+ Spanish ed.)",
+    kind: "book",
+    summary: 'Sefer Raziel ha-Malakh ("Book of the Angel Raziel") is a medieval Jewish angelological and cosmological compendium, circulating from the 13th century. It gives the 22-letter gematria (aleph=1 ... tav=400), the triangular numbers, the 12 letters mapped to the 12 zodiac signs, the 72 names drawn from Genesis 1:1, the 73 divine names, and the 28 Malachim of the lunar month. The folder holds the Hebrew edition and a Spanish edition (both image-scan PDFs).',
+    relevance: "The single richest Hebrew source for the letter-astronomy the paper mines: the explicit 22-letter gematria, the 12-letter/sign correspondence, the 72 names from Gen 1:1, 73 divine names, 28 lunar-mansion angels/month, the planetary periods and the fixed (tropical) signs - the documented-construction backbone (Sec.6, Sec.9, Raziel findings).",
+    folder: "sefer-raziel"
+  },
+  {
+    slug: "bahir",
+    title: "Sefer ha-Bahir (Book of Brightness)",
+    author: "Anonymous",
+    year: "c. 1174 / 1651 ed.",
+    lang: "Hebrew",
+    kind: "book",
+    summary: 'Sefer ha-Bahir ("Book of Brightness") is the earliest surviving kabbalistic text, composed in 12th-century Provence. It introduces the sefirotic theology and the letter-mysticism that descends from Sefer Yetzirah, reading the Hebrew letters as the instruments of creation. The Amsterdam 1651 edition (PDF scan, 23 pp.) is hosted here.',
+    relevance: "The conduit from Sefer Yetzirah to the Zohar: the first kabbalistic text to expound the divine letters and the sefirot together - the bridge text of the Hebrew letter-tradition the paper traces (Sec.6).",
+    folder: "bahir"
+  },
+  {
+    slug: "saadia-sy-commentary",
+    title: "Commentaries on Sefer Yetzirah (incl. Saadia Gaon)",
+    author: "Saadia Gaon et al.",
+    year: "1806 ed.",
+    lang: "Hebrew",
+    kind: "book",
+    summary: "Saadia Gaon (882-942), the foremost Gaon of the early medieval period, wrote the earliest surviving Jewish commentary on Sefer Yetzirah, defending and expounding its 3-mothers / 7-doubles / 12-simples letter-cosmology and its letter-planet-zodiac correspondence. The Grodno 1806 edition collects five commentaries on Sefer Yetzirah including Saadia\u2019s (PDF scan, 170 pp.) and is hosted here.",
+    relevance: "The historic-sourcing anchor of the paper: the earliest attested Jewish exegesis that records the Sefer Yetzirah letter-luminary mapping as a fixed tradition - the documentary proof that the letter-astronomy is old and recorded, not a modern retrojection (Sec.6, historic-sourcing).",
+    folder: "saadia-sy-commentary"
+  },
+  {
+    slug: "al-buni",
+    title: "Shams al-Ma\u02BF\u0101rif al-Kubr\u0101 (The Sun of the Familiar Spirits)",
+    author: "Sharaf al-D\u012Bn al-B\u016Bn\u012B",
+    year: "c. 1225",
+    lang: "Arabic",
+    kind: "book",
+    summary: "Shams al-Ma\u02BF\u0101rif al-Kubr\u0101 by Sharaf al-D\u012Bn al-B\u016Bn\u012B (d. 1225) is the classical Arabic grimoire of letter-magic - the 28-letter Arabic abjad mapped to the 7 planets, the 12 signs and the 28 lunar mansions, with the divine-name talismans and the jafr divination. The complete Arabic facsimile (604 pp.) is hosted as four page-range PDF parts (under the repo file-size limit).",
+    relevance: 'The Arabic \u02BFilm al-\u1E25ur\u016Bf ("science of letters") sibling of the Hebrew letter-tradition: the same 7 / 12 / 28 / 72 apparatus in the Islamic idiom, the cross-cultural witness that the letter-astronomy is a Mediterranean-wide technical tradition, not a Hebrew-only one (Revelations, historic-sourcing).',
+    folder: "al-buni"
+  },
+  {
+    slug: "zohar",
+    title: "The Kabbalah Unveiled (selected portions of the Zohar)",
+    author: "tr. S. L. MacGregor Mathers",
+    year: "1887",
+    lang: "English (from Aramaic/Hebrew)",
+    kind: "book",
+    summary: 'The Zohar ("Splendor") is the central text of medieval Kabbalah, composed in late-13th-century Castile (Moses de Leon). Mathers\u2019 1887 The Kabbalah Unveiled presents his English translation of the project\u2019s core selections - the Book of Concealed Mystery, the Greater Holy Assembly and the Lesser Holy Assembly (the Idra texts) - complete with index. Caveat: this is Mathers\u2019 SELECTIONS (the three Idra books), not the complete Zohar; the complete modern translations (Soncino, Pritzker) are copyrighted and excluded.',
+    relevance: "The sefirotic cosmology and the letter-mysticism that descends from the Bahir; the Idra texts on the divine names and the configuration of the letters - the medieval flowering of the Hebrew letter-tradition (Sec.6, mages: Moses de Leon).",
+    folder: "zohar"
+  },
+  {
+    slug: "iamblichus",
+    title: "De Mysteriis (On the Mysteries of the Egyptians)",
+    author: "Iamblichus (tr. Thomas Taylor)",
+    year: "~300 CE / 1821 ed.",
+    lang: "English (from Greek)",
+    kind: "book",
+    summary: "De Mysteriis Aegyptiorum by the Neoplatonist Iamblichus (c. 245-325 CE) is the foundational theurgic treatise - the doctrine of the divine names, the invocation of the planetary archangels, the rites of ascent through the seven spheres, and the theological defence of ritual as the soul\u2019s return to the One. Thomas Taylor\u2019s complete 1821 English translation is hosted here.",
+    relevance: 'The late-antique source of the "the divine names have operative power" theology that underlies the whole letter-tradition: the names are not labels but theurgic instruments - the philosophical frame behind Sefer Yetzirah, Raziel and the letter-magic lineage (mages: Iamblichus).',
+    folder: "iamblichus"
+  },
+  {
+    slug: "abu-mashar",
+    title: "De Magnis Coniunctionibus (On the Great Conjunctions)",
+    author: "Abu Ma\u02BFshar (Latin tr. Johannes Hispalensis)",
+    year: "1489",
+    lang: "Latin",
+    kind: "book",
+    summary: "De Magnis Coniunctionibus by Abu Ma\u02BFshar al-Balkh\u012B (787-886) is the classical treatise on planetary great conjunctions - the Jupiter-Saturn conjunctions that frame world-history, the triplicity shifts, and the precessional world-periods. The Latin translation by Johannes Hispalensis (John of Seville), printed by Erhard Ratdolt at Augsburg in 1489 (incunabulum, all eight tractatus + colophon), is hosted here.",
+    relevance: 'The historical source of the great-conjunction / precessional-age framework: Abu Ma\u02BFshar\u2019s Jupiter-Saturn conjunction periods are the medieval astronomical engine behind the "world-ages" idea the paper\u2019s precession sections (Sec.5) sit alongside the Sefer Yetzirah scheme (mages: Abu Ma\u02BFshar).',
+    folder: "abu-mashar"
+  },
+  {
+    slug: "paracelsus",
+    title: "The Hermetic and Alchemical Writings of Paracelsus",
+    author: "Paracelsus (tr. A. E. Waite)",
+    year: "c. 1530 / 1894 ed.",
+    lang: "English (from German/Latin)",
+    kind: "book",
+    summary: 'Theophrastus von Hohenheim, "Paracelsus" (1493-1541), reformed Renaissance medicine on the hermetic macrocosm-microcosm correspondence: the 7 planets mapped to 7 metals and 7 body-organs, the astral body (the sidereal corpus), and the signature doctrine. Waite\u2019s complete two-volume 1894 English edition is hosted here.',
+    relevance: 'The astral-medicine strand of the letter-astronomy: the 7-planet / 7-metal / 7-organ isomorphism is the bodily reflex of the Sefer Yetzirah 7 doubles, and Paracelsus\u2019 signature doctrine the medical cousin of "the stars are ranged as Hebrew letters" (mages: Paracelsus).',
+    folder: "paracelsus"
+  },
+  {
+    slug: "john-dee",
+    title: "Monas Hieroglyphica + A True and Faithful Relation",
+    author: "John Dee (Meric Casaubon, ed.)",
+    year: "1564 / 1659",
+    lang: "Latin / English",
+    kind: "book",
+    summary: "John Dee (1527-1608), the Elizabethan mathematician and magus, sought the celestial language of the angels. The Monas Hieroglyphica (1564) is his own Latin treatise on a single glyph synthesising the seven planets; A True and Faithful Relation (ed. Casaubon, 1659) records his Enochian angel-conversations. Both are hosted here (the Monas as Latin text + scan; the Relation as text).",
+    relevance: 'The late-Renaissance astral-linguistic project - the Enochian "celestial language" is the most explicit historical attempt to recover a sky-born alphabet, the direct cousin of the stellar-alphabet thesis; the Monas condenses the 7 planets into one letter-glyph (mages: John Dee).',
+    folder: "john-dee"
+  },
+  {
+    slug: "llull",
+    title: "Ars Magna (Ars Generalis Ultima)",
+    author: "Ramon Llull",
+    year: "c. 1305 / 1517 ed.",
+    lang: "Latin",
+    kind: "book",
+    summary: "The Ars Magna of Ramon Llull (1232-1316) is the medieval combinatorial art - rotating letter-wheels whose letters (B-K standing for the divine attributes) generate every possible true proposition by mechanical combination. The 1517 print of the Ars Generalis Ultima (the final form, composed c. 1305) is hosted here.",
+    relevance: "The medieval precursor to combinatorial letter-generation: Llull\u2019s wheels are the historical precedent for the idea that the letters generate the cosmos\u2019s structure - the combinatorial logic the Sefer Yetzirah 231 gates and the paper\u2019s generation schemes share (mages: Llull).",
+    folder: "llull"
+  },
+  {
+    slug: "mathers",
+    title: "The Key of Solomon the King (Clavicula Salomonis)",
+    author: "tr. S. L. MacGregor Mathers",
+    year: "1888",
+    lang: "English (from Hebrew/Latin MSS)",
+    kind: "book",
+    summary: "The Key of Solomon (Clavicula Salomonis) is the medieval grimoire of Solomonic operative magic - the planetary pentacles, the consecrated magic circles, the divine-name sigils, and the invocations by hour and planet. Mathers\u2019 complete 1888 edition (Book I + Book II + the mystical alphabets appendix) is hosted here.",
+    relevance: "The Hermetic Order of the Golden Dawn\u2019s operative source: the planetary pentacles and the divine-name sigils are the practical reflex of the Sefer Yetzirah letter-astronomy in the Western grimoire tradition - the sigil forge\u2019s practical lineage (mages: Mathers, Sec.6.3 / Sec.15b.3).",
+    folder: "mathers"
+  },
+  {
+    slug: "eliphas-levi",
+    title: "Transcendental Magic (Dogme et Rituel de la Haute Magie)",
+    author: "Eliphas L\xE9vi (tr. A. E. Waite)",
+    year: "1854-56 / 1896 ed.",
+    lang: "English (from French)",
+    kind: "book",
+    summary: "Transcendental Magic by Eliphas L\xE9vi (Alphonse-Louis Constant, 1810-1875) is the 19th-century re-synthesis of the Western magical tradition - the Sefer Yetzirah letter-astrology, the Tarot-astronomy correspondence, the Astral Light and the Baphomet sigil. Waite\u2019s complete 1896 English translation (Dogme + Rituel, both parts) is hosted here.",
+    relevance: "The conduit from the Renaissance (Agrippa) to the Golden Dawn: L\xE9vi re-united the letter-astronomy, the Tarot and the planetary sigils into the modern magical synthesis the mage-lineage descends from (mages: Eliphas L\xE9vi).",
+    folder: "eliphas-levi"
+  },
+  {
+    slug: "crowley",
+    title: "Liber AL vel Legis + Magick in Theory and Practice",
+    author: "Aleister Crowley",
+    year: "1904 / 1929",
+    lang: "English",
+    kind: "book",
+    summary: "Aleister Crowley (1875-1947) is the modern endpoint of the ceremonial-magic lineage (L\xE9vi to Mathers to Crowley). Two works are hosted here: (a) Liber AL vel Legis (The Book of the Law, 1904) - its three chapters (Nuit, Hadit, Ra-Hoor-Khuit) and the Thelema current; (b) Magick in Theory and Practice (1929), the complete systematic exposition of his system.",
+    relevance: "The modern close of the mage-lineage: the Thelema current and the ceremonial framework that inherits the Sefer Yetzirah / Golden Dawn letter-astronomy; a cross-cultural witness to the persistence of the letter-as-power theology into the 20th century (mages: Crowley).",
+    folder: "crowley"
+  },
+  {
+    slug: "kircher",
+    title: "Oedipus Aegyptiacus",
+    author: "Athanasius Kircher",
+    year: "1652-1654",
+    lang: "Latin",
+    kind: "book",
+    summary: "Oedipus Aegyptiacus by the Jesuit polymath Athanasius Kircher (1602-1680) is the 17th-century encyclopaedia of Egyptian hieroglyphics - Kircher\u2019s vast attempt to read the hieroglyphs as a sacred symbolic alphabet encoding all ancient wisdom. The complete three folio volumes (Tomus I 1652, II 1653, III 1654, Rome: Mascardi) are hosted as three image-scan PDFs.",
+    relevance: 'The early-modern "alphabet from the sky" project in its own idiom: Kircher treats the hieroglyph as a celestial-symbolic script - the closest historical cousin to the thesis that the sky is read as an alphabet; the mage figure (mages: Kircher).',
+    folder: "kircher"
+  },
+  {
+    slug: "ibn-arabi",
+    title: "al-Fut\u016B\u1E25\u0101t al-Makkiyya (The Meccan Revelations)",
+    author: "Mu\u1E25y\u012B al-D\u012Bn ibn \u02BFArab\u012B",
+    year: "c. 1230",
+    lang: "Arabic",
+    kind: "book",
+    summary: "al-Fut\u016B\u1E25\u0101t al-Makkiyya by Ibn \u02BFArab\u012B (1165-1240) is the Sufi master\u2019s encyclopaedia of mystical cosmology. Among its approximately 1,500 chapters, chapter 198 sets out the 28-letter Arabic alphabet mapped onto the 12 zodiac signs and the 7 planets, the letters as the substance of creation. The complete nine-volume edition (D\u0101r al-Kutub al-\u02BFIlmiyya) is hosted as nine image-scan PDFs.",
+    relevance: "The closest non-Hebrew sibling of the Sefer Yetzirah letter-astronomy in the Sufi idiom: chapter 198\u2019s 28-letter / 12-sign / 7-planet cosmology is the Islamic mirror of the 3-mothers / 7-doubles / 12-simples - the Revelations cross-cultural witness (Revelations: Sufi).",
+    folder: "ibn-arabi"
+  },
+  {
+    slug: "hebrew-bible",
+    title: "The Masoretic Text (Open Scriptures Hebrew Bible / WLC)",
+    author: "Anonymous (Masoretes)",
+    year: "c. 1008 CE / WLC",
+    lang: "Hebrew",
+    kind: "reference",
+    summary: "The Westminster Leningrad Codex (WLC) - the machine-readable Masoretic Text from the Open Scriptures Hebrew Bible: the complete consonantal text with vowels and cantillation marks, one OSIS XML file per book (39 books + VerseMap), with lemma and morphology. This is the exact pointed text the Aleppo and Leningrad codexes preserve, rendered as data.",
+    relevance: "The text the Reader computes over: every Hebrew word-value, theophoric name, toponym and reading in the paper is resolved against this pointed Masoretic text - the dataset behind the gematria, the name lists and the biblical-book concordances (Sec.9, Sec.13).",
+    folder: "hebrew-bible"
+  },
+  {
+    slug: "aleppo-leningrad-codex",
+    title: "The Aleppo Codex (Keter Aram Tzova) - Facsimile",
+    author: "Scribe: Shlomo ben Buya\u02BFa; vocalizer: Aaron ben Asher",
+    year: "c. 920 CE",
+    lang: "Hebrew (manuscript scan)",
+    kind: "reference",
+    summary: "The Aleppo Codex (Keter Aram Tzova), c. 920-930 CE, scribed by Shlomo ben Buya\u02BFa and vocalized by Aaron ben Asher - the most authoritative Masoretic codex, the text Maimonides trusted as the standard. The complete facsimile of all surviving leaves (the Torah was lost in the 1947 fire; Nevi\u2019im, most of Ketuvim and the Masoretic notes survive) is hosted as four 150-pp image-scan PDF parts (598 pp., 150 dpi).",
+    relevance: "The manuscript authority behind the machine-readable Masoretic text (the hebrew-bible entry): the codex that fixed the vowel and cantillation system the paper\u2019s pointed text is computed from - the documentary anchor of the Hebrew letter-tradition.",
+    folder: "aleppo-leningrad-codex"
   }
 ];
 var _BY_SLUG = new Map(LIBRARY_BOOKS.map((b) => [b.slug, b]));
@@ -33416,7 +33603,7 @@ ${CSS}
     <h1 class="site-brand"><a href="/"><img src="/logo_adam_apocalypse.png" alt="The Apocalypse of Adam \u2014 Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet" class="site-logo" width="1774" height="887" /></a></h1>
     <nav class="site-nav" aria-label="Primary">
       <a href="/" data-s="home">Home</a>
-      <a href="/app" data-s="app">App</a>
+      <a href="/app" data-s="app">Kabbalah</a>
       <a href="/about" data-s="about">About</a>
       <a href="/paper" data-s="paper">Paper</a>
     </nav>

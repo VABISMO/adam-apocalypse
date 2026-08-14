@@ -66,8 +66,8 @@ if (mountErr) {
   check('footer renders', !!doc.querySelector('.site-footer'));
   check('footer: column grid renders', !!doc.querySelector('.ft-grid'));
   const ftH = doc.querySelectorAll('.ft-h').length;
-  check('footer: 4 column headers', ftH === 4, `found ${ftH}`);
-  check('footer: machine-readable section (llms.txt/sitemap)', /llms\.txt|sitemap/i.test(doc.body.textContent||''));
+  check('footer: 3 column headers (3-column footer)', ftH === 3, `found ${ftH}`);
+  check('footer: Luco Library + 3 column titles present', /Luco Library/.test(doc.body.textContent||'') && /Browse the corpus/.test(doc.body.textContent||'') && /Reader & tools/.test(doc.body.textContent||''));
 }
 
 // --- dedicated path pages via SSR (presentational) ---
