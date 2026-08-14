@@ -33546,6 +33546,18 @@ var CSS = (indexHtml.match(/<style>([\s\S]*?)<\/style>/) || ["", ""])[1];
 function esc(s) {
   return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
+var NAV_GROUPS = [
+  { label: "Cycles", items: [["Alignments", "/alignments"], ["Saros", "/cycles/saros"], ["Ayanamsa", "/cycles/ayanamsa"], ["Lunar-Solar", "/cycles/lunarsolar"], ["Week", "/cycles/week"]] },
+  { label: "Sky Map", items: [["Sky map", "/sky-map"]] },
+  { label: "Reader", items: [["Reader", "/readings"]] },
+  { label: "Reading", items: [["Reading rule", "/reading"]] },
+  { label: "Time", items: [["Predictor", "/time"], ["Ages", "/time/ages"]] },
+  { label: "Gematria", items: [["Gematria", "/gematria"]] },
+  { label: "Sigils", items: [["Sigil forge", "/sigils"], ["Kameot", "/sigils/kameot"], ["72 angels", "/sigils/angels"]] },
+  { label: "Revelations", items: [["Hebrew \xB7 Christian", "/revelations"], ["Raziel", "/revelations/raziel"], ["Gnostic", "/revelations/gnostic"], ["Vedic", "/revelations/vedic"], ["Persian", "/revelations/persian"], ["Sufi", "/revelations/sufi"], ["Egyptian", "/revelations/egyptian"], ["Maya", "/revelations/maya"], ["Chinese", "/revelations/chinese"]] },
+  { label: "Psalms", items: [["Psalms", "/psalms"]] },
+  { label: "Codes", items: [["ELS grid", "/codes"], ["Temurah / Atbash", "/codes/temurah"], ["Ziruph", "/codes/ziruph"]] }
+];
 function shell({ title, desc, keywords, path: routePath, jsonld, body, scriptSrc = "/app.bundle.js" }) {
   const url = SITE + routePath;
   return `<!DOCTYPE html>
@@ -33603,13 +33615,19 @@ ${CSS}
     <h1 class="site-brand"><a href="/"><img src="/logo_adam_apocalypse.png" alt="The Apocalypse of Adam \u2014 Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet" class="site-logo" width="1774" height="887" /></a></h1>
     <nav class="site-nav" aria-label="Primary">
       <a href="/" data-s="home">Home</a>
-      <a href="/app" data-s="app">Kabbalah</a>
+      <div class="nav-drop">
+        <a href="/app" class="nav-drop-toggle" data-s="app" aria-haspopup="true" aria-expanded="false">Kabbalah <span class="nav-caret" aria-hidden="true">\u25BE</span></a>
+        <div class="nav-drop-menu" role="menu">
+          ${NAV_GROUPS.map((g) => `<div class="nav-drop-group"><div class="nav-drop-label">${g.label}</div>${g.items.map((it) => `<a href="${it[1]}" role="menuitem">${it[0]}</a>`).join("")}</div>`).join("")}
+        </div>
+      </div>
       <a href="/about" data-s="about">About</a>
       <a href="/paper" data-s="paper">Paper</a>
     </nav>
   </div>
 </header>
 <script>(function(){var p=(location.pathname||'/').replace(/\\/\\+$/,'')||'/';var s='home';if(p==='/about')s='about';else if(p==='/paper')s='paper';else if(p!=='/')s='app';var a=document.querySelector('.site-nav a[data-s="'+s+'"]');if(a)a.classList.add('active');})();</script>
+<script>(function(){var d=document.querySelector(".nav-drop");if(!d)return;var t=d.querySelector(".nav-drop-toggle");t.addEventListener("click",function(e){if(window.matchMedia("(hover:none)").matches&&!d.classList.contains("open")){e.preventDefault();d.classList.add("open");t.setAttribute("aria-expanded","true");}});document.addEventListener("click",function(e){if(!d.contains(e.target)){d.classList.remove("open");t.setAttribute("aria-expanded","false");}});d.addEventListener("click",function(e){if(e.target.closest(".nav-drop-menu a")){d.classList.remove("open");t.setAttribute("aria-expanded","false");}});})();</script>
 <div class="wrap"><main id="root" class="app-panel">${body}</main></div>
 <script type="module" src="${scriptSrc}"></script>
 </body>
