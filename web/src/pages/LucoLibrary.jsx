@@ -17,7 +17,7 @@ function LucoLibraryPage({all}){
   const qn=q.trim().toLowerCase();
   const filtered=useMemo(()=> LIBRARY_BOOKS.filter(b=>{
     if(!qn) return true;
-    return (b.title+' '+b.author+' '+(b.desc||'')+' '+(b.kind||'')+' '+(b.lang||'')).toLowerCase().includes(qn);
+    return (b.title+' '+b.author+' '+(b.summary||'')+' '+(b.relevance||'')+' '+(b.kind||'')+' '+(b.lang||'')).toLowerCase().includes(qn);
   }),[qn]);
   const pages=Math.max(1,Math.ceil(filtered.length/PER_PAGE));
   const cur=Math.min(page,pages-1);
@@ -26,18 +26,18 @@ function LucoLibraryPage({all}){
   const slice = all ? filtered : filtered.slice(cur*PER_PAGE,cur*PER_PAGE+PER_PAGE);
   return <>
     <h1>Luco Library — the source books</h1>
-    <p className="muted" style={{marginBottom:14}}>The bibliography behind <i>The Alphabet from the Sky</i>: every book that grounded a claim in the paper, here as a ficha (title, author, year, a one-line description). Each links to a <b>complete English translation</b> of the primary text on <b>archive.org</b> where one is in the public domain; modern copyrighted critical editions link to the publisher or WorldCat with an honest note that no free complete edition exists. Complete primary texts — not third-party commentaries or fragments.</p>
+    <p className="muted" style={{marginBottom:14}}>The bibliography behind <i>The Alphabet from the Sky</i>: every book that grounded a claim in the paper, here as a ficha with a summary of the book and the specific findings this project draws from it. Each links to a <b>complete source on archive.org</b> — a full English translation where one is in the public domain, otherwise a complete facsimile in the original language or a lending copy of the printed book. Complete primary texts, not third-party commentaries or fragments.</p>
     <div className="controls" style={{marginBottom:14}}>
-      <input type="text" value={q} onChange={e=>{setQ(e.target.value); setPage(0);}} placeholder="search title · author · description…" style={{flex:'1 1 280px'}} aria-label="Filter the Luco Library"/>
+      <input type="text" value={q} onChange={e=>{setQ(e.target.value); setPage(0);}} placeholder="search title · author · summary…" style={{flex:'1 1 280px'}} aria-label="Filter the Luco Library"/>
       <span className="pill">{filtered.length} of {LIBRARY_BOOKS.length} books{all?'':' · page '+(cur+1)+'/'+pages}</span>
     </div>
-    <div className="tcards" style={{gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))'}}>
+    <div className="tcards lib-cards" style={{gridTemplateColumns:'repeat(auto-fill,minmax(270px,1fr))'}}>
       {slice.map(b=>(
-        <a key={b.slug} href={`/library/${b.slug}`} className="tcard" style={{textDecoration:'none',display:'block'}}>
-          <div className="the" style={{fontSize:'.98rem',lineHeight:1.25}}>{b.title}</div>
-          <div className="read">{b.author}{b.year?` · ${b.year}`:''}</div>
-          <div className="trans" style={{WebkitLineClamp:3,display:'-webkit-box',WebkitBoxOrient:'vertical',overflow:'hidden'}}>{b.desc}</div>
-          <div className="g muted" style={{fontSize:'.76rem'}}>{b.kind==='reference'?'reference':(b.lang||'')}</div>
+        <a key={b.slug} href={`/library/${b.slug}`} className="tcard lib-card" style={{textDecoration:'none'}}>
+          <div className="lib-title">{b.title}</div>
+          <div className="lib-author">{b.author}{b.year?` · ${b.year}`:''}</div>
+          <div className="lib-summary">{b.summary}</div>
+          <div className="lib-kind">{b.kind==='reference'?'reference':(b.lang||'')}</div>
         </a>
       ))}
     </div>
@@ -59,17 +59,24 @@ function BookFicha({slug}){
   return <>
     <div className="controls" style={{marginBottom:14}}><a href="/library" className="linkish">◀ Luco Library</a></div>
     <h1 style={{fontSize:'1.7rem',marginBottom:4}}>{b.title}</h1>
-    <div className="muted" style={{marginBottom:14}}>{b.author}{b.year?` · ${b.year}`:''}{b.lang?` · ${b.lang}`:''}{b.kind==='reference'?' · reference':''}</div>
-    <div className="panel" style={{padding:18,marginBottom:14,lineHeight:1.65}}>{b.desc}</div>
-    {b.url && <div className="panel" style={{padding:18,marginBottom:14}}>
-      <h3 style={{marginTop:0}}>Read the book</h3>
-      <p style={{marginBottom:8}}><a href={b.url} target="_blank" rel="noreferrer" style={{fontWeight:600}}>Open the complete text ↗</a></p>
-      {b.urlNote && <div className="note">{b.urlNote}</div>}
-    </div>}
-    {!b.url && <div className="panel" style={{padding:18,marginBottom:14}}>
-      <h3 style={{marginTop:0}}>Read the book</h3>
-      <div className="note">{b.urlNote || 'No free online edition is currently linked for this title.'}</div>
-    </div>}
+    <div className="muted" style={{marginBottom:16}}>{b.author}{b.year?` · ${b.year}`:''}{b.lang?` · ${b.lang}`:''}{b.kind==='reference'?' · reference':''}</div>
+    <div className="lib-ficha">
+      <div className="panel lib-panel">
+        <h3 style={{marginTop:0}}>About this book</h3>
+        <p className="lib-prose">{b.summary}</p>
+      </div>
+      <div className="panel lib-panel">
+        <h3 style={{marginTop:0}}>Relevance to this project</h3>
+        <p className="lib-prose">{b.relevance}</p>
+      </div>
+      <div className="panel lib-panel">
+        <h3 style={{marginTop:0}}>Read the complete book</h3>
+        {b.url
+          ? <p style={{marginBottom:8}}><a href={b.url} target="_blank" rel="noreferrer" style={{fontWeight:600}}>Open the complete source on archive.org ↗</a></p>
+          : <p style={{marginBottom:8}} className="muted">No complete edition of this title is available on archive.org.</p>}
+        {b.urlNote && <div className="note">{b.urlNote}</div>}
+      </div>
+    </div>
   </>;
 }
 

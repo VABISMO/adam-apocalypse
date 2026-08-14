@@ -26477,7 +26477,7 @@ function setRouteMeta(title, desc) {
 var import_react2 = __toESM(require_react());
 var GITHUB = "https://github.com/VABISMO/adam-apocalypse";
 var PAPER = "/paper";
-var SPA_RE = /^\/(prophet|mage|patriarch|place|align|reader|library)(\/|$)|^\/(prophets|mages|patriarchs|places|alignments|readings|app|about|library)$/;
+var SPA_RE = /^\/(prophet|mage|patriarch|place|align|reader|library|sky-map|reading|time|gematria|sigils|cycles|revelations|psalms|codes|prophets|mages|patriarchs|places|alignments|readings|app|about)(\/|$)/;
 function goInternal(href) {
   if (typeof window === "undefined") return;
   window.history.pushState({}, "", href);
@@ -26502,7 +26502,7 @@ function Footer() {
       goInternal(href);
     }
   };
-  return /* @__PURE__ */ import_react2.default.createElement("footer", { className: "site-footer", onClick }, /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react2.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react2.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react2.default.createElement(L, { href: PAPER }, "The paper \u2014 The Alphabet from the Sky \u2192"), /* @__PURE__ */ import_react2.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Hub pages" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Adapa to Aleister Crowley"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/patriarchs" }, "Patriarchs/Conquest \u2014 names readable in the sky"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/places" }, "Places \u2014 biblical toponyms readable in the sky"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/alignments" }, "Stellar alignments (267 fiches)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/library" }, "Luco Library \u2014 source books"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/app" }, "Sky reader app")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Data & sources" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://github.com/cosinekitty/astronomy-engine", ext: true }, "astronomy-engine \u2014 ephemerides \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://en.wikipedia.org/wiki/Sefer_Yetirah", ext: true }, "Sefer Yetzirah \u2014 the frame \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "https://github.com/openscriptures/HebrewLexicon", ext: true }, "Strong Hebrew lexicon \u2197"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/angels72.json" }, "72 Shem HaMephorash angels (JSON)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/alignments.json" }, "Rare alignments dataset (JSON)")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "For search & AI" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/sitemap.xml" }, "Sitemap index"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/llms.txt" }, "llms.txt \u2014 guide for LLMs"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/robots.txt" }, "robots.txt"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/site.webmanifest" }, "Web app manifest"), /* @__PURE__ */ import_react2.default.createElement("p", { className: "ft-note" }, "This page exposes ", /* @__PURE__ */ import_react2.default.createElement("b", null, "WebMCP"), " tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via ", /* @__PURE__ */ import_react2.default.createElement("code", null, "document.modelContext"), "."))), /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react2.default.createElement("span", null, "\xA9 ", year, " ", /* @__PURE__ */ import_react2.default.createElement("a", { href: "https://medium.com/@ancientencoder/sons-of-stars-269765bda7db", target: "_blank", rel: "noreferrer" }, "AncientEncoder"), " \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react2.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react2.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
+  return /* @__PURE__ */ import_react2.default.createElement("footer", { className: "site-footer", onClick }, /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-grid" }, /* @__PURE__ */ import_react2.default.createElement(Col, { title: "The Apocalypse of Adam" }, /* @__PURE__ */ import_react2.default.createElement("p", { className: "ft-blurb" }, "Hebrew letters read in the sky. Real planet positions map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah, so every date spells a set of readable names \u2014 the stellar alphabet behind the paper."), /* @__PURE__ */ import_react2.default.createElement(L, { href: PAPER }, "The paper \u2014 The Alphabet from the Sky \u2192"), /* @__PURE__ */ import_react2.default.createElement(L, { href: GITHUB, ext: true }, "Source on GitHub \u2197")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Browse the corpus" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/prophets" }, "Prophets timeline \u2014 Adam to Jacob Frank"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/mages" }, "Magi timeline \u2014 Adapa to Aleister Crowley"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/patriarchs" }, "Patriarchs/Conquest \u2014 names readable in the sky"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/places" }, "Places \u2014 biblical toponyms readable in the sky"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/alignments" }, "Stellar alignments (267 fiches)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/readings" }, "Sky readings (6045 glosses)")), /* @__PURE__ */ import_react2.default.createElement(Col, { title: "Reader & tools" }, /* @__PURE__ */ import_react2.default.createElement(L, { href: "/library" }, "Luco Library \u2014 source books"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/sky-map" }, "Sky map"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/time" }, "Time predictor \xB7 precessional ages"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/gematria" }, "Gematria"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/sigils" }, "Sigils \xB7 kameot \xB7 72 angels"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/revelations" }, "Revelations (9 cultures)"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/codes" }, "Codes \u2014 ELS \xB7 temurah \xB7 ziruph"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/psalms" }, "Psalms by date"), /* @__PURE__ */ import_react2.default.createElement(L, { href: "/app" }, "Sky reader app"))), /* @__PURE__ */ import_react2.default.createElement("div", { className: "ft-bottom" }, /* @__PURE__ */ import_react2.default.createElement("span", null, "\xA9 ", year, " ", /* @__PURE__ */ import_react2.default.createElement("a", { href: "https://medium.com/@ancientencoder/sons-of-stars-269765bda7db", target: "_blank", rel: "noreferrer" }, "AncientEncoder"), " \xB7 The Apocalypse of Adam"), /* @__PURE__ */ import_react2.default.createElement("span", { className: "ft-sep" }, "\xB7"), /* @__PURE__ */ import_react2.default.createElement("span", null, "Hebrew letters in the stars \xB7 Sefer Yetzirah stellar alphabet")));
 }
 
 // src/data/prophets.js
@@ -40887,20 +40887,22 @@ var LIBRARY_BOOKS = [
     year: "~200\u2013900 CE",
     kind: "book",
     lang: "English",
-    desc: "The frame text of this whole project: 3 mothers / 7 doubles / 12 simples; the letter\u2194luminary mapping; the 231 gates = C(22,2); AB+BA = ABBA. Commonly dated ~200\u2013900 CE. The 22 letters, the 7 planets and the 12 zodiac signs are the apparatus the Reader computes.",
+    summary: 'Sefer Yetzirah ("Book of Formation") is the earliest surviving Hebrew cosmological treatise, composed anonymously between roughly the 2nd and 9th centuries CE. In fewer than two thousand words it describes the creation of the universe through 22 Hebrew letters \u2014 3 mother letters (air, water, fire), 7 double letters, and 12 simple letters \u2014 which it maps onto the 7 planets and the 12 zodiac signs, and arranges into the 231 two-letter gates. It is the foundational text of Jewish letter-mysticism and the direct ancestor of the later Kabbalah; virtually every medieval Hebrew alphabet-astronomy commentary, from Saadia to the Sefer Raziel, takes it as its starting point. The 1893 Westcott edition reprinted here (following the Rittangelius 1642 Hebrew) also appends the related "Thirty-Two Paths of Wisdom".',
+    relevance: "The frame text of this whole project: 3 mothers / 7 doubles / 12 simples; the letter\u2194luminary mapping; the 231 gates = C(22,2); AB+BA = ABBA. The 22 letters, the 7 planets and the 12 zodiac signs are the apparatus the Reader computes.",
     url: "https://archive.org/details/sepheryetzirahb00rittgoog",
-    urlNote: "W. W. Westcott\u2019s 1893 public-domain translation (Sepher Yetzirah, from the Rittangelius 1642 Hebrew text + the 32 Paths of Wisdom) \u2014 a complete English edition on archive.org. The modern critical editions cited in the paper (Hayman 2004, Kaplan 1990) are copyrighted and have no free complete edition."
+    urlNote: 'W. Wynn Westcott, "Sepher Yetzirah" (Theosophical Publishing Society, 1893) \u2014 the complete public-domain English edition incl. the 32 Paths of Wisdom supplement (imagecount=53). A modern lending backup (Aryeh Kaplan 1997) is at archive.org/details/sefer-yetzirah-the-book-of-creation-1997-aryeh-kaplan.'
   },
   {
     slug: "sefer-raziel",
     title: "Sefer Raziel HaMalakh (Book of the Angel Raziel)",
-    author: "Anonymous (ed. M. Margalioth)",
-    year: "medieval",
+    author: "Anonymous (medieval Hebrew compilation)",
+    year: "12th\u201313th c. CE",
     kind: "book",
-    lang: "Hebrew / Spanish",
-    desc: "The older sibling of the Sefer Yetzirah in this register: a medieval treatise on letter permutation and the construction of names/angels. Decimal gematria \u05D0=1\u2026\u05EA=400 (p. 95); triangulars T(2..9); 12 letters\u219412 signs; 72 from Genesis 1:1; 73 names of God (p. 72); 28 Malachim/month; fixed zodiac; the Book of the Vestments (275 angel names, 4 seasons); \u201Ccalculate the planets and the signs\u2026 to see the generations\u201D (pp. 143\u2013144).",
-    url: "https://commons.wikimedia.org/wiki/File:Sefer_Raziel_HaMalakh._18th_century.pdf",
-    urlNote: "No complete English translation of the Sefer Raziel HaMalakh is freely available. Linked is a free Hebrew facsimile (18th-c. manuscript, public domain). Note: the archive.org \u201CMargalioth\u201D item is Sefer ha-Razim, a different text \u2014 not the Sefer Raziel. The English reception runs through the academic articles listed below (Idel / Rebiger)."
+    lang: "Hebrew",
+    summary: 'Sefer Raziel HaMalakh ("Book of the Angel Raziel") is a medieval Jewish compendium of practical Kabbalah, compiled in the 12th\u201313th centuries from older late-antique material. Presented as a book given to Adam by the angel Raziel, it covers angelology, the divine names, gematria, the 72-Name tradition, and explicit instructions to "calculate the planets and the signs" from the letters. The Book of the Vestments within it lists 275 angel names arranged across the four seasons. The 1701 Amsterdam edition became the most widely printed Hebrew grimoire.',
+    relevance: 'The older sibling of the Sefer Yetzirah in this register. Decimal gematria \u05D0=1\u2026\u05EA=400 (p. 95); triangulars T(2..9); 12 letters\u219412 signs; 72 from Genesis 1:1; 73 names of God (p. 72); 28 Malachim/month; fixed zodiac; the Book of the Vestments (275 angel names, 4 seasons); "calculate the planets and the signs\u2026 to see the generations" (pp. 143\u2013144).',
+    url: "",
+    urlNote: 'No complete Sefer Raziel HaMalakh is on archive.org. The archive.org "Margalioth" item is Sefer ha-Razim, a DIFFERENT text, and the one uploader-marked "Raziel" item is an incomplete JPEG dump. The real Hebrew facsimiles (Amsterdam 1701, Hamburg Cod. hebr. 156) are not on archive.org. See the Idel / Rebiger entries for the scholarly English reception.'
   },
   {
     slug: "saadia-commentary-sefer-yetzirah",
@@ -40909,9 +40911,10 @@ var LIBRARY_BOOKS = [
     year: "c. 931 CE",
     kind: "book",
     lang: "Hebrew / Arabic",
-    desc: "The first explicit assignment of the 7 doubles \u2192 7 planets (geocentric order) and the 12 simples \u2192 12 signs \u2014 the mapping the Reader implements. Saadia\u2019s commentary is the earliest systematic reading of the Sefer Yetzirah as a literal letter-astronomy.",
-    url: "https://hdl.handle.net/2027/hvd.32044012602587",
-    urlNote: "No free complete English translation. Linked is the HathiTrust scan of Mayer Lambert\u2019s 1891 critical edition (Arabic text in Hebrew characters + French translation). English excerpts (Thompson & Marson 1985) circulate online; the Hebrew text is on Sefaria (Rasag on Sefer Yetzirah)."
+    summary: "Saadia Gaon (882\u2013942), the foremost early medieval Jewish philosopher, wrote the first systematic commentary on the Sefer Yetzirah around 931 CE, in Judeo-Arabic. He reads the text\u2019s 7 double letters as the 7 classical planets in their geocentric order and the 12 simple letters as the 12 zodiac signs, giving the earliest explicit letter-astronomy assignment. Mayer Lambert\u2019s 1891 critical edition (Arabic text + Hebrew + French translation) remains the scholarly standard.",
+    relevance: "The first explicit assignment of the 7 doubles \u2192 7 planets (geocentric order) and the 12 simples \u2192 12 signs \u2014 the mapping the Reader implements. Saadia\u2019s commentary is the earliest systematic reading of the Sefer Yetzirah as a literal letter-astronomy.",
+    url: "",
+    urlNote: "No complete edition on archive.org. The Mayer Lambert 1891 critical edition (Arabic + Hebrew + French, Biblioth\xE8que de l\u2019EPHE) lives only on HathiTrust and the Deutsche Digitale Bibliothek, both excluded by the archive.org-only rule."
   },
   {
     slug: "ibn-ezra-sefer-ha-shem",
@@ -40920,9 +40923,10 @@ var LIBRARY_BOOKS = [
     year: "1147\u20131148",
     kind: "book",
     lang: "Hebrew",
-    desc: "Ibn Ezra\u2019s Hebrew treatises on the gematria of the Tetragrammaton and on astronomy/astrology \u2014 the mazzalot, the 28 lunar mansions, and precession/trepidation. The 28-mansion and precession anchors in the paper\u2019s eclipse mnemonics (\xA79) trace here.",
-    url: "https://www.deutsche-digitale-bibliothek.de/item/7I5V3ZVMIPHNC4XGXJEPXQCZXCE6UKUL",
-    urlNote: "No free complete English translation. Linked is a Hebrew facsimile of the 1834 F\xFCrth edition of Sefer ha-Shem (Deutsche Digitale Bibliothek / Bayerische Staatsbibliothek). Ibn Ezra\u2019s astronomical works circulate in Hebrew; consult a research library for critical editions."
+    summary: 'Abraham ibn Ezra (1089\u20131167) was a peripatetic Andalusian-Jewish biblical exegete, mathematician, and astrologer. His Hebrew astronomical treatises \u2014 Sefer ha-Shem ("Book of the Name"), Sefer ha-Olam ("Book of the World") and Reshit Hokhmah ("Beginning of Wisdom") \u2014 treat the gematria of the divine names, the mazzalot, the 28 lunar mansions, and the theory of precession. They were a major conduit by which astronomy reached medieval Hebrew readers.',
+    relevance: "The gematria of the Tetragrammaton and the 28-mansion / precession anchors in the paper\u2019s eclipse mnemonics (\xA79) trace here. The 28 lunar mansions and the precession/trepidation theory are the astronomical substrate the letter-mansion correspondence rests on.",
+    url: "https://archive.org/details/seferhamispar00ezragoog",
+    urlNote: 'Fallback: the three named works (Sefer ha-Shem / Sefer ha-Olam / Reshit Hokhmah) are not on archive.org as complete items \u2014 the items under those names are by different authors (Eleazar of Worms, Elijah de Vidas). Linked is Ibn Ezra\u2019s Sefer ha-Mispar ("Book of the Number", 1895 ed., imagecount=229, complete), a genuine Ibn Ezra Hebrew work on the same number/letter themes. Other Ibn Ezra Hebrew works on archive.org include Sefer Tsafenat Pa\u2019neach and Sefer ha-E\u1E25ad.'
   },
   {
     slug: "abulafia-tzerufim",
@@ -40931,9 +40935,10 @@ var LIBRARY_BOOKS = [
     year: "13th c.",
     kind: "book",
     lang: "Hebrew",
-    desc: "The prophetic combination of letters (tzerufim) \u2014 Abulafia\u2019s ecstatic kabbalah of permuting the divine letters to reach prophecy. The tzerufim tradition is one of the documented-construction sources for the letter-permutation reading (\xA72). See also Idel, M., The Mystical Experience in Abraham Abulafia.",
-    url: "https://he.wikisource.org/wiki/%D7%A1%D7%A4%D7%A8_%D7%97%D7%99%D7%99_%D7%94%D7%A2%D7%95%D7%9C%D7%9D_%D7%94%D7%91%D7%90",
-    urlNote: "No free complete English translation of Abulafia\u2019s Hebrew prophetic works. Linked is the full Hebrew text of Chayei ha-Olam ha-Ba on Hebrew Wikisource (also a PDF at HebrewBooks.org, Jerusalem 2001 ed.). Moshe Idel\u2019s studies (copyrighted) are the English reception; consult a research library for the Hebrew texts."
+    summary: 'Abraham Abulafia (1240\u2013c.1292) was the founder of ecstatic Kabbalah. His prophetic method, the tzerufim, combines Hebrew letters in rhythmic permutations with breath-work to induce a state of prophecy. His treatises Chayei Ha-Olam Ha-Ba ("Life of the World to Come") and Or Ha-Sekhel ("Light of the Intellect") are manuals of this letter-combination meditation, predating the later Lurianic system by centuries.',
+    relevance: "The prophetic combination of letters (tzerufim) \u2014 Abulafia\u2019s ecstatic kabbalah of permuting the divine letters to reach prophecy. The tzerufim tradition is a documented-construction source for the letter-permutation reading (\xA72).",
+    url: "https://archive.org/details/VAT597",
+    urlNote: 'Or Ha-Sekhel (1285 CE), Abraham Abulafia \u2014 Vatican Library MS Vat. ebr. 597, a complete manuscript facsimile (imagecount=254, with PDF + JP2 ZIP + DjVu). The authoritative text-specific source. (A user-compiled "Abulafia Complete Writings Hebrew" also exists but is an unattributed compilation.)'
   },
   {
     slug: "shem-ha-mephorash",
@@ -40941,10 +40946,11 @@ var LIBRARY_BOOKS = [
     author: "Tradition (Bahir, Zohar, Abulafia)",
     year: "medieval",
     kind: "book",
-    lang: "Hebrew",
-    desc: "The 72 triplets of Exodus 14:19\u201321 \u2014 the Shem HaMephorash that the app extracts (triplets[i] = v19[i] + v20[71\u2212i] + v21[i]) and decorates with the -El / -Yah suffixes. The tradition runs through the Bahir, the Zohar, and Abulafia; the app\u2019s mechanical extraction is medieval (Rashi, 11th c.).",
-    url: "https://www.sefaria.org/Sefer_HaBahir",
-    urlNote: "The Shem HaMephorash is not a single book but a tradition across the Bahir, Zohar and Abulafia. Linked is the free English Sefer HaBahir on Sefaria, which carries the Name-of-72 material; the Zohar (Sefaria English) is the other main witness."
+    lang: "English",
+    summary: 'The Shem HaMephorash ("the explicit name") is the tradition of the 72-fold divine name derived by reading the three consecutive verses of Exodus 14:19\u201321 in interleaved triplets (72 verses of three letters each = 216 letters). It is attested in the Sefer HaBahir, the Zohar, and Abulafia, and the mechanical extraction of the triplets is already medieval (Rashi, 11th c.).',
+    relevance: "The 72 triplets of Exodus 14:19\u201321 \u2014 the Shem HaMephorash the app extracts (triplets[i] = v19[i] + v20[71\u2212i] + v21[i]) and decorates with the -El / -Yah suffixes. The tradition runs through the Bahir, the Zohar, and Abulafia.",
+    url: "https://archive.org/details/bahironeofo00nehu",
+    urlNote: "The Bahir, translated with introduction & commentary by Aryeh Kaplan (Samuel Weiser, 1989) \u2014 a complete lending-library scan (imagecount=278) carrying the 72-Name material. The Bahir is the cleanest complete single-volume source for the 72-Name tradition on archive.org (the Zohar items are partial single volumes or 12-vol lending sets)."
   },
   {
     slug: "al-buni-shams-al-maarif",
@@ -40953,9 +40959,10 @@ var LIBRARY_BOOKS = [
     year: "13th c.",
     kind: "book",
     lang: "Arabic",
-    desc: "Magic squares, the 99 Names, and the abjad isopsephy \u2014 the Islamic analogue of practical Kabbalah. The 28-letter \u2194 28-lunar-mansion correspondence (the Sufi / Arabic parallel of the letter\u2194star map) is received through this tradition. Cited in the paper as \u201Creceived Shams al-kubra\u201D (pseudepigraphic Ottoman compilation, not by al-Buni himself).",
-    url: "https://archive.org/details/al-buni",
-    urlNote: "The Shams al-Ma\u02BF\u0101rif al-Kubr\u0101 circulates in Arabic; no free complete English translation exists (partial English: Inloes 2022, copyrighted). Linked is the best available free Arabic facsimile, with a scholarly Spanish introduction (Coullaut Cordero 2009). Note the authorship caveat in the paper: the famous received compilation is pseudepigraphic."
+    summary: 'Ahmad al-Buni (d. 622 AH/1225 CE) was a North-African Sufi scholar of the occult sciences. His Shams al-Ma\u2019arif al-Kubra ("The Great Sun of Gnosis") is the most influential Arabic manual of the esoteric sciences \u2014 magic squares, the 99 Names of God, abjad isopsephy, and the abjad-mansions correspondence. It is the Islamic analogue of practical Kabbalah and the conduit by which the 28-letter \u2194 28-lunar-mansion correspondence reached Arabic readers.',
+    relevance: 'Magic squares, the 99 Names, and the abjad isopsephy \u2014 the Islamic analogue of practical Kabbalah. The 28-letter \u2194 28-lunar-mansion correspondence (the Sufi / Arabic parallel of the letter\u2194star map) is received through this tradition. The paper cites it as "received Shams al-kubra" (pseudepigraphic Ottoman compilation, not by al-Buni himself).',
+    url: "https://archive.org/details/McGillLibrary-131812-5180",
+    urlNote: "Complete Arabic facsimile of Shams al-Ma\u2019arif al-Kubra (Mi\u1E63\u1E6Daf\xE1 al-B\u0101b\u012B al-\u1E24alab\u012B, Cairo, 1345 AH / ~1926 CE, 4 vols bound in 1, imagecount=604), public domain. A second complete copy is at archive.org/details/shams_al_maarif (616 pp, 2006 Beirut 2nd ed.). No complete English translation exists; partial English (Inloes 2022) is copyrighted."
   },
   {
     slug: "ibn-arabi-futuhat",
@@ -40964,9 +40971,10 @@ var LIBRARY_BOOKS = [
     year: "13th c.",
     kind: "book",
     lang: "Arabic",
-    desc: "The Sufi parallel of the letter\u2194star correspondence: 28 Arabic letters \u2194 28 lunar mansions \u2194 7 planets (Fut\u016B\u1E25\u0101t ch. 198). Ibn \u02BFArab\u012B maps the 14 luminous (undotted) letters to the 14 waxing phases and the 14 dark to the 14 waning \u2014 a complete lunar-letter isomorphism independent of the Hebrew tradition.",
-    url: "https://archive.org/details/Al-FutuhatAl-makkiya",
-    urlNote: "No free complete English translation of the Fut\u016B\u1E25\u0101t (~10,000 pages). Linked is the complete Arabic text (Bulaq edition, 4 vols, 1852) on archive.org. The ch. 198 letter-mansion material is partially translated in academic studies (Chodkiewicz, Morris; copyrighted). Consult the Ibn \u02BFArab\u012B Society for the English reception."
+    summary: 'Muhyiddin Ibn \u02BFArab\u012B (1165\u20131240) was the greatest Sufi mystical philosopher. His al-Fut\u016B\u1E25\u0101t al-Makkiyya ("Meccan Revelations"), written ~1230, runs to ~10,000 pages in modern print and is a summa of Sufi metaphysics and cosmology. Chapter 198 maps the 28 Arabic letters onto the 28 lunar mansions and the 7 planets, and is the Arabic parallel of the Sefer Yetzirah letter-astronomy. The 1999 Beirut 9-volume edition is the complete text archived here.',
+    relevance: "The Sufi parallel of the letter\u2194star correspondence: 28 Arabic letters \u2194 28 lunar mansions \u2194 7 planets (Fut\u016B\u1E25\u0101t ch. 198). Ibn \u02BFArab\u012B maps the 14 luminous (undotted) letters to the 14 waxing phases and the 14 dark to the 14 waning \u2014 a complete lunar-letter isomorphism independent of the Hebrew tradition.",
+    url: "https://archive.org/details/FTMAKIA",
+    urlNote: "Complete Arabic Fut\u016B\u1E25\u0101t al-Makkiyya, 9 volumes (Dar al-Kutub al-Ilmiyya, Beirut, 1999, ed. Ahmad Shams al-Din, ~4,178 pp) \u2014 contains ch. 198. The older archive.org/details/Al-FutuhatAl-makkiya item is INCOMPLETE (only vols I\u2013IV) and was rejected; use FTMAKIA. No complete English translation of the Fut\u016B\u1E25\u0101t exists."
   },
   {
     slug: "agrippa-occulta-philosophia",
@@ -40975,9 +40983,10 @@ var LIBRARY_BOOKS = [
     year: "1531/33",
     kind: "book",
     lang: "English",
-    desc: "The first attestation of the sigil-on-kamea method and of the Aiq Bekar table in Christian-Renaissance Kabbalah. The paper\u2019s sigil forge (\xA76.3 / \xA715b.3) is documented as Renaissance (Agrippa, 1531), not medieval Jewish \u2014 Agrippa is the citation for that boundary.",
-    url: "https://en.wikisource.org/wiki/File:Three_Books_of_Occult_Philosophy_(De_Occulta_Philosophia)_(1651).djvu",
-    urlNote: "The complete 1651 English translation by \u201CJ.F.\u201D (Three Books of Occult Philosophy) \u2014 public domain. The 1651 facsimile is on Wikisource (linked) and the Wellcome Collection; the archive.org items are the 1993 Tyson modern edition, not the 1651 facsimile. Book III carries the sigil-kamea and Aiq Bekar material cited in the paper."
+    summary: 'Heinrich Cornelius Agrippa von Nettesheim (1486\u20131535) was a German humanist and occult philosopher. His De occulta philosophia (1531/1533) is the most influential Renaissance compendium of Western esotericism, its third book dedicated to celestial Kabbalah. The 1651 English translation "by J.F." (John French) reprinted here is the first attestation of the sigil-on-kamea method and the Aiq Bekar table in Christian Kabbalah.',
+    relevance: "The first attestation of the sigil-on-kamea method and of the Aiq Bekar table in Christian-Renaissance Kabbalah. The paper\u2019s sigil forge (\xA76.3 / \xA715b.3) is documented as Renaissance (Agrippa, 1531), not medieval Jewish \u2014 Agrippa is the citation for that boundary.",
+    url: "https://archive.org/details/bim_early-english-books-1641-1700_three-books-of-occult-ph_agrippa-henricus-cornel_1651",
+    urlNote: 'The complete 1651 "J.F." English translation (London, printed by R.W. for Gregory Moule), imagecount=625 = the full 1651 edition, all 3 books present (Book III has the sigil/kamea material). A freely-downloadable 1898 reprint of the same translation is at archive.org/details/cu31924028928236.'
   },
   {
     slug: "gaffarel-unheard-curiosities",
@@ -40986,9 +40995,10 @@ var LIBRARY_BOOKS = [
     year: "1650",
     kind: "book",
     lang: "English",
-    desc: "The Persian magi read the heavens as a text of Hebrew letters; the stars are ranged in the heavens \u201Cin the form of Hebrew letters,\u201D and the sky is a book (Isa 34:4). The ethnographic attestation of the stellar-alphabet reading as a living practice \u2014 the closest historical witness to what this app does. Reading instrument = the 3 Cabala: Gematria / Notaricon / Temurah.",
+    summary: "Jacques Gaffarel (1601\u20131681) was a French scholar, astrologer, and librarian to Cardinal Richelieu. His Curiositez inouyes (Paris, 1629) is an ethnographic study of Eastern astrology and magic, including the chapter on Persian magi who read the heavens as a text of Hebrew letters \u2014 the closest historical witness to the stellar-alphabet reading as a living practice. The 1650 Chilmead English translation (Unheard-of Curiosities) is the archive.org edition.",
+    relevance: 'The Persian magi read the heavens as a text of Hebrew letters; the stars are ranged in the heavens "in the form of Hebrew letters," and the sky is a book (Isa 34:4). The ethnographic attestation of the stellar-alphabet reading as a living practice \u2014 the closest historical witness to what this app does. Reading instrument = the 3 Cabala: Gematria / Notaricon / Temurah.',
     url: "https://archive.org/details/b30333817",
-    urlNote: "The 1650 Chilmead English translation (Curiositez inouyes, Paris 1629 \u2192 Unheard-of Curiosities, London 1650) \u2014 archive.org b30333817 is the complete English edition cited in the paper (public domain, Wellcome Library scan)."
+    urlNote: "The 1650 Chilmead English translation (London, printed by G.D. for H. Moseley) \u2014 archive.org b30333817, the complete English edition cited in the paper (imagecount=490 = 433 pp text + front/folded matter), public domain."
   },
   {
     slug: "idel-raziel-conduit",
@@ -40997,9 +41007,10 @@ var LIBRARY_BOOKS = [
     year: "2005\u20132024",
     kind: "book",
     lang: "English / German",
-    desc: "The modern academic reception of the Sefer Raziel: Idel\u2019s article on Raziel as a conduit of medieval Ashkenazi culture, and Rebiger\u2019s redaction-history study. These are the scholarly anchors for treating the Raziel as a late-antique/early-medieval letter-astronomy manual (not a Renaissance fabrication).",
-    url: "https://www.degruyter.com/document/doi/10.1515/asch-2024-2017/pdf?licenseType=open-access",
-    urlNote: "Idel\u2019s \u201CSefer Razi\u2019el ha-Mal\u2019akh \u2014 A Conduit of Medieval Ashkenazi Culture\u201D (Aschkenas 34/2, 2024) \u2014 open access (CC-BY 4.0), full PDF free from De Gruyter (linked). Rebiger\u2019s FJB 32 (2005) redaction-history study is not freely available; consult the journal or a research library."
+    summary: "Moshe Idel and Bernd Rebiger are the modern academic scholars who have reconstructed the redaction history of the Sefer Raziel HaMalakh. Idel\u2019s article treats Raziel as a conduit of medieval Ashkenazi culture; Rebiger\u2019s Frankfurter Judaistische Beitr\xE4ge study traces the text\u2019s sources and layers. Their work is the scholarly anchor for treating Raziel as a late-antique/early-medieval letter-astronomy manual, not a Renaissance fabrication.",
+    relevance: "The modern academic reception of the Sefer Raziel: Idel on Raziel as a conduit of medieval Ashkenazi culture, and Rebiger\u2019s redaction-history study. These are the scholarly anchors for treating the Raziel as a late-antique/early-medieval letter-astronomy manual (not a Renaissance fabrication).",
+    url: "",
+    urlNote: 'No archive.org source. Idel\u2019s "Sefer Razi\u2019el ha-Mal\u2019akh \u2014 A Conduit of Medieval Ashkenazi Culture" (Aschkenas 34/2, 2024) is a recent peer-reviewed journal article, not a book on archive.org. (Idel\u2019s related "Studies in Ecstatic Kabbalah" on archive.org is about Abulafia, not Raziel.)'
   },
   {
     slug: "book-of-the-luminaries",
@@ -41008,9 +41019,10 @@ var LIBRARY_BOOKS = [
     year: "~3rd c. BCE \u2013 1st c. CE",
     kind: "book",
     lang: "English",
-    desc: "The calendrical substrate and the sky-as-text image: a 364-day year (72:32; 74:12; 82:6), twelve gates of the sun (ch. 72), 360 days (82:11), stars that transgress (80:6\u20137), heavenly tablets (81:1\u20132; 93; 103; 108). Broader than Qumran (attested at Masada, terminus ante quem 73 CE). Neugebauer\u2019s Astronomical Chapters of the Book of Enoch (1981) is the technical commentary.",
+    summary: "The Book of the Luminaries (1 Enoch chs 72\u201382), also called the Astronomical Book of Enoch, is the oldest layer of Enochic literature (~3rd c. BCE). It describes a 364-day solar calendar, the twelve gates of the sun, the 360-day year, the stars that transgress, and the heavenly tablets. It is attested at Masada (terminus ante quem 73 CE), showing it circulated widely beyond Qumran.",
+    relevance: "The calendrical substrate and the sky-as-text image: a 364-day year (72:32; 74:12; 82:6), twelve gates of the sun (ch. 72), 360 days (82:11), stars that transgress (80:6\u20137), heavenly tablets (81:1\u20132; 93; 103; 108). Broader than Qumran (attested at Masada, terminus ante quem 73 CE).",
     url: "https://archive.org/details/bookofenochor1en00char",
-    urlNote: "The Book of the Luminaries = 1 Enoch chs. 72\u201382, included in the complete 1 Enoch (R. H. Charles 1917, public domain) linked here. Neugebauer\u2019s 1981 monograph on the astronomical chapters is copyrighted (Brill)."
+    urlNote: 'R. H. Charles, "The Book of Enoch, or 1 Enoch" (Oxford Clarendon Press, 1912) \u2014 the complete unabridged critical edition (imagecount=458) containing all 108 chapters including chs 72\u201382, with Greek fragments. The fuller scholarly superset of the 1917 SPCK compact edition. Neugebauer\u2019s 1981 monograph on the astronomical chapters is copyrighted (Brill).'
   },
   {
     slug: "1-enoch",
@@ -41019,9 +41031,10 @@ var LIBRARY_BOOKS = [
     year: "~3rd c. BCE \u2013 1st c. CE",
     kind: "book",
     lang: "English",
-    desc: "The 364-day calendar and Enochic astronomy (\xA713): the Book of the Luminaries, the heavenly tablets, the Watchers. The Charles 1917 translation is the free public-domain English edition; Nickelsburg & VanderKam (Hermeneia, 2012) and Ben-Dov, Head of All Years (Brill, 2008) are the modern copyrighted critical editions.",
-    url: "https://archive.org/details/bookofenochor1en00char",
-    urlNote: "R. H. Charles, The Book of Enoch (1917) \u2014 a complete public-domain English translation on archive.org. The modern critical editions (Nickelsburg/VanderKam 2012, Ben-Dov 2008) are copyrighted (Hermeneia / Brill)."
+    summary: "1 Enoch (the Ethiopic Book of Enoch) is a Jewish apocalyptic work composed from the 3rd century BCE onward and preserved in Ge\u2019ez in the Ethiopian Orthodox canon. It collects the Book of the Watchers, the Book of the Luminaries, the Animal Apocalypse, and the Apocalypse of Weeks, among other sections, and is the source of the 364-day calendar and the heavenly-tablet imagery the paper uses in \xA713. R. H. Charles\u2019s 1917 translation is the public-domain English edition.",
+    relevance: "The 364-day calendar and Enochic astronomy (\xA713): the Book of the Luminaries, the heavenly tablets, the Watchers. The Charles 1917 translation is the free public-domain English edition.",
+    url: "https://archive.org/details/bookofenoch0000unse",
+    urlNote: 'R. H. Charles, "The Book of Enoch" (SPCK, 1917) \u2014 a complete public-domain English translation on archive.org (imagecount=162, all 108 chapters). The fuller 1912 Clarendon critical edition (bookofenochor1en00char, 458 pp, with Greek fragments) is also on archive.org.'
   },
   {
     slug: "2-enoch",
@@ -41030,9 +41043,10 @@ var LIBRARY_BOOKS = [
     year: "~1st c. CE",
     kind: "book",
     lang: "English",
-    desc: "Enoch\u2019s 365 years (2 Enoch 1:2; cf. Gen 5:23, Philo De post. Caini) \u2014 the 365-day echo in the Enochic literature. The Slavonic Enoch is the late-antique apocalyptic text carrying the solar-year motif alongside the 364-day calendar of 1 Enoch.",
+    summary: "2 Enoch (the Slavonic Book of the Secrets of Enoch) is a late-antique Jewish apocalyptic text preserved in Old Church Slavonic. It describes Enoch\u2019s ascension through the seven heavens and gives his 365 years (echoing the solar-year 365 motif alongside the 364-day calendar of 1 Enoch). The 1896 Morfill and Charles English translation is the archive.org edition.",
+    relevance: "Enoch\u2019s 365 years (2 Enoch 1:2; cf. Gen 5:23, Philo De post. Caini) \u2014 the 365-day echo in the Enochic literature. The Slavonic Enoch is the late-antique apocalyptic text carrying the solar-year motif alongside the 364-day calendar of 1 Enoch.",
     url: "https://archive.org/details/bookofsecretsofe00morf",
-    urlNote: "The Morfill & Charles 1896 English translation (The Book of the Secrets of Enoch) \u2014 public domain, the free complete English edition on archive.org. Also in Charles\u2019s Apocrypha and Pseudepigrapha of the Old Testament."
+    urlNote: 'The Morfill & Charles 1896 English translation (Oxford Clarendon Press, "The Book of the Secrets of Enoch") \u2014 public domain, the complete English edition on archive.org (imagecount=168). Backup copies: booksecretsenoc00morfgoog, bookofsecretsofe0000unse.'
   },
   {
     slug: "3-enoch-odeberg",
@@ -41040,10 +41054,11 @@ var LIBRARY_BOOKS = [
     author: "Anonymous (trans. Hugo Odeberg 1928)",
     year: "~5th\u201310th c. CE",
     kind: "book",
-    lang: "English",
-    desc: "Creation by letters including \u201Cthe planets and the constellations\u201D (13:1); Metatron the \u201Clesser YHWH\u201D and the seventy names. The Hebrew Enoch is the merkabah-stratum text carrying the creator-letter theology and the 70-name motif (\xA713).",
+    lang: "English / Hebrew",
+    summary: '3 Enoch (the Hebrew Book of Enoch) is a merkabah-mysticism text, a product of the late-antique to early-medieval Heikhalot literature (~5th\u201310th c. CE). It narrates Rabbi Ishmael\u2019s ascent to the divine chariot and his encounter with Metatron, "the lesser YHWH," and describes creation by letters, including "the planets and the constellations." Hugo Odeberg\u2019s 1928 edition (English + Hebrew + commentary) is the archive.org source.',
+    relevance: 'Creation by letters including "the planets and the constellations" (13:1); Metatron the "lesser YHWH" and the seventy names. The Hebrew Enoch is the merkabah-stratum text carrying the creator-letter theology and the 70-name motif (\xA713).',
     url: "https://archive.org/details/ksigaxiienochorthehebrewbookofenoch_202012",
-    urlNote: "Hugo Odeberg\u2019s 1928 edition (3 Enoch, or the Hebrew Book of Enoch) \u2014 English translation + Hebrew text + commentary, public domain (1928+95=2023). The complete edition on archive.org (linked); otherwise in print from Ktav / Bloch."
+    urlNote: 'Hugo Odeberg\u2019s 1928 edition (Cambridge University Press, "3 Enoch, or the Hebrew Book of Enoch") \u2014 English translation + Hebrew text + commentary, public domain (1928+95=2023). The complete edition on archive.org (imagecount=504, matching the ~481-pp book).'
   },
   {
     slug: "apocalypse-of-adam",
@@ -41052,31 +41067,34 @@ var LIBRARY_BOOKS = [
     year: "~1st\u20132nd c. CE",
     kind: "book",
     lang: "English",
-    desc: "The thirteenth kingdom: \u201Cevery birth of their ruler is a word\u201D \u2014 the closest the Nag Hammadi corpus comes to the creator-word / Sefer Yetzirah letter-theology, and the source of the project\u2019s framing (\xA71). The 13 false oracles + the 14th kingless generation that speaks the truth.",
-    url: "http://gnosis.org/naghamm/adam.html",
-    urlNote: "The Apocalypse of Adam (NHC V,5) is in Robinson\u2019s Nag Hammadi Library in English (copyrighted, 4th ed. 1996). A free complete English translation by George W. MacRae is hosted at gnosis.org (linked); the Barnstone translation is also there."
+    summary: 'The Apocalypse of Adam is a Gnostic text among the Nag Hammadi codices (NHC V,5), probably composed in the 1st\u20132nd century CE. It recounts Adam\u2019s revelation to Seth and, in its thirteenth kingdom, describes "every birth of their ruler is a word" \u2014 the closest the Nag Hammadi corpus comes to the Sefer Yetzirah letter-theology. George MacRae\u2019s translation is in the Robinson Nag Hammadi Library in English, the complete corpus archived here.',
+    relevance: 'The thirteenth kingdom: "every birth of their ruler is a word" \u2014 the closest the Nag Hammadi corpus comes to the creator-word / Sefer Yetzirah letter-theology, and the source of the project\u2019s framing (\xA71). The 13 false oracles + the 14th kingless generation that speaks the truth.',
+    url: "https://archive.org/details/naghammadilibrar0000unse_y5r7",
+    urlNote: 'The Apocalypse of Adam (NHC V,5, trans. G. W. MacRae) is contained in Robinson\u2019s "Nag Hammadi Library in English" \u2014 the complete corpus (1996 Brill 4th rev. ed., xiv+549 pp, imagecount=578, lending/print-disabled). The metadata TOC confirms the full tractate list. See also the separate complete Nag Hammadi Library entry.'
   },
   {
     slug: "aleppo-leningrad-codex",
     title: "Aleppo Codex & Leningrad Codex (the Masoretic Text)",
-    author: "Masoretic scribes",
+    author: "Masoretic scribes (ben Asher family)",
     year: "920 & 1008/9 CE",
     kind: "book",
     lang: "Hebrew (facsimile)",
-    desc: "The Masoretic (MT) base of the consonantal count of Exodus 14:19\u201321 \u2014 the 216 letters whose 72 triplets the Shem HaMephorash reads. The Aleppo Codex (c. 920) and the Leningrad Codex (1008/9) are the two authoritative MT manuscripts; the app\u2019s lexicon and Genesis corpus are built on this consonantal base.",
-    url: "https://archive.org/details/Leningrad_Codex_Color_Images",
-    urlNote: "Facsimiles of both codices are freely available on archive.org: the Leningrad Codex color images (linked, 921 pp, the oldest complete Hebrew Bible, basis of BHS/BHQ) and the Aleppo Codex (archive.org/details/Aleppo_Codex, c. 920, many Torah pages lost in 1947). These are Hebrew manuscripts \u2014 the source text itself, no English translation."
+    summary: "The Aleppo Codex (c. 920\u2013930 CE) and the Leningrad Codex (1008/9 CE) are the two most authoritative manuscripts of the Masoretic Text of the Hebrew Bible. Both were written by scribes of the ben Asher family; the Aleppo Codex was the master model for centuries until nearly all its Torah pages were lost in the 1947 Aleppo riots, while the Leningrad Codex remains the oldest complete Hebrew Bible manuscript and is the textual base of the Biblia Hebraica Stuttgartensia. Their consonantal text is the base from which the app reads the 216 letters of Exodus 14:19\u201321.",
+    relevance: "The Masoretic (MT) base of the consonantal count of Exodus 14:19\u201321 \u2014 the 216 letters whose 72 triplets the Shem HaMephorash reads. The app\u2019s lexicon and Genesis corpus are built on this consonantal base.",
+    url: "https://archive.org/details/aleppo-codex-tanakh-full-scan-images",
+    urlNote: "The Aleppo Codex full scan (c. 920 CE, photographed by Ardon Bar-Hama, 596 images of all extant folios incl. appended now-lost Torah page photos) \u2014 linked. The Leningrad Codex (1008/9 CE, the oldest complete Hebrew Bible, basis of BHS/BHQ) is also a complete facsimile at archive.org/details/Leningrad_Codex_Color_Images. These are Hebrew manuscripts \u2014 the source text itself, no English translation."
   },
   {
     slug: "yeivin-tiberian-masorah",
     title: "Introduction to the Tiberian Masorah",
-    author: "Israel Yeivin",
+    author: "Israel Yeivin (trans. E. J. Revell)",
     year: "1980",
     kind: "book",
     lang: "English",
-    desc: "The Masoretic count of letters/words/verses \u2014 the central word darosh darash (Lev 10:16) \u2014 and the apparatus that preserved the consonantal text the app reads. Yeivin is the standard English handbook of the Tiberian Masorah.",
-    url: "https://search.worldcat.org/title/5750606",
-    urlNote: "Copyrighted (SBL / Scholars Press, 1980). No free complete edition \u2014 the link is the WorldCat record for the printed book. Consult a research library for the physical copy."
+    summary: "Israel Yeivin\u2019s Introduction to the Tiberian Masorah (1980, English translation by E. J. Revell) is the standard English handbook of the Tiberian Masoretic apparatus \u2014 the marginal notes that recorded the exact count of letters, words and verses and preserved the consonantal text. It includes the central-word and middle-letter counts the paper cites (darosh darash, Lev 10:16).",
+    relevance: "The Masoretic count of letters/words/verses \u2014 the central word darosh darash (Lev 10:16) \u2014 and the apparatus that preserved the consonantal text the app reads. Yeivin is the standard English handbook of the Tiberian Masorah.",
+    url: "",
+    urlNote: "No archive.org source. Copyrighted (SBL / Scholars Press, Masoretic Studies 5, 1980, x+324 pp); no lending scan exists on archive.org. The only Yeivin items on archive.org are his 1968 Aleppo Codex study and a catalogue \u2014 not this book."
   },
   {
     slug: "domination-codex",
@@ -41085,9 +41103,10 @@ var LIBRARY_BOOKS = [
     year: "\u2014",
     kind: "book",
     lang: "\u2014",
-    desc: "A hermeneutical source cited in \xA76.3 of the paper: the same 231 / ABBA / Abulafia arithmetic, but with no null tests. Cited critically \u2014 not as an independent corroborating witness \u2014 because it carries the letter arithmetic without the statistical controls this project applies.",
+    summary: "The Domination Codex is a hermeneutical/allegorical serial work that reproduces the same 231-gate and ABBA letter arithmetic as the Sefer Yetzirah and Abulafia traditions, but presents it without any statistical controls. The paper cites it in \xA76.3 only as a parallelistic source, not as a corroborating witness.",
+    relevance: "The same 231 / ABBA / Abulafia arithmetic, but with no null tests (\xA76.3). Cited critically \u2014 not as an independent corroborating witness \u2014 because it carries the letter arithmetic without the statistical controls this project applies.",
     url: "",
-    urlNote: "Obscure / hermeneutical source. No free online edition is currently linked; cited in the paper as a parallelistic source, not a primary text."
+    urlNote: "No archive.org source. The Domination Codex is web-published serial fiction, not a book; no archive.org item exists. Cited in the paper as a parallelistic source only."
   },
   {
     slug: "tenen-meru",
@@ -41096,9 +41115,10 @@ var LIBRARY_BOOKS = [
     year: "2011",
     kind: "book",
     lang: "English",
-    desc: "A self-published geometric treatment of the Genesis 1:1 letter sequence: a base-3 mirror-pairing into a 7-turn toroidal pattern, independent of gematria and astronomy. Cited as a convergent but non-peer-reviewed parallelistic source \u2014 a different route to the same Genesis-1:1 structure, not an independent corroborating witness.",
-    url: "https://www.meru.org/",
-    urlNote: "Copyrighted (North Atlantic Books, 2011). No free complete edition. The MERU Foundation site (meru.org) carries the project\u2019s free research writings, lecture videos and graphics; the printed book is available from the publisher."
+    summary: "Stan Tenen (1938\u20132022) was an independent geometric researcher who, in The Alphabet That Changed the World (2011), argued that the Genesis 1:1 letter sequence can be folded, via base-3 mirror-pairing, into a 7-turn toroidal pattern that suggests hand-gestures behind the Hebrew letters. The work is self-published and non-peer-reviewed; the paper cites it as a convergent parallelistic source \u2014 a different route to the same Genesis-1:1 structure rather than an independent witness.",
+    relevance: "A base-3 mirror-pairing of the Genesis 1:1 letter sequence into a 7-turn toroidal pattern, independent of gematria and astronomy. Cited as a convergent but non-peer-reviewed parallelistic source \u2014 a different route to the same Genesis-1:1 structure, not an independent corroborating witness.",
+    url: "https://archive.org/details/kupdf.net_stan-tenen-the-alphabet-that-changed-the-world",
+    urlNote: 'Complete community upload of Stan Tenen, "The Alphabet That Changed the World" (North Atlantic Books, 2011, imagecount=319 = full book), with PDF + EPUB + DjVu derivatives. Provenance caveat: the "kupdf.net" prefix marks it as a community upload, not a publisher/library deposit.'
   },
   {
     slug: "pingala-chandahsastra",
@@ -41106,21 +41126,23 @@ var LIBRARY_BOOKS = [
     author: "Pi\u1E45gala (comm. Hal\u0101yudha, 10th c.)",
     year: "c. 2nd c. BCE",
     kind: "book",
-    lang: "English / Sanskrit",
-    desc: "The Meru prast\u0101ra (the binomial triangle = Pascal\u2019s) and the Lagakriy\u0101 (binomial coefficients \u207FC\u1D63), with Hal\u0101yudha\u2019s 10th-c. M\u1E5Btasa\xF1j\u012Bvan\u012B commentary fixing the triangular construction and the recurrence \u207FC\u1D63 = \u207F\u207B\xB9C\u1D63\u208B\u2081 + \u207F\u207B\xB9C\u1D63 \u2014 ~1800 years before Pascal. The triangular-number structure behind the 28 lunar mansions (T(7)=28).",
-    url: "https://www.indica.today/quick-reads/pingalas-algorithm-meru-prastaar/",
-    urlNote: "Not a single archive.org book. The Meru prast\u0101ra (binomial triangle) and the Lagakriy\u0101 (binomial coefficients) are explained in English at the linked Indica Today article; the University of Hyderabad \u201CAlgorithms in Ancient India\u201D PDF also carries the Sanskrit + Hal\u0101yudha commentary material."
+    lang: "Sanskrit",
+    summary: "The Chanda\u1E25\u015B\u0101stra of Pi\u1E45gala (~2nd c. BCE) is the foundational Sanskrit treatise on prosody and metrics, the study of syllabic meters. In its eighth chapter it gives the Meru prast\u0101ra (the binomial triangle, long known in Europe as Pascal\u2019s triangle) and the Lagakriy\u0101 (the recurrence that generates binomial coefficients \u207FC\u1D63) \u2014 roughly 1800 years before Pascal. Hal\u0101yudha\u2019s 10th-century M\u1E5Btasa\xF1j\u012Bvan\u012B commentary fixes and explains the construction.",
+    relevance: "The Meru prast\u0101ra (the binomial triangle = Pascal\u2019s) and the Lagakriy\u0101 (binomial coefficients \u207FC\u1D63), with Hal\u0101yudha\u2019s commentary fixing the recurrence \u207FC\u1D63 = \u207F\u207B\xB9C\u1D63\u208B\u2081 + \u207F\u207B\xB9C\u1D63 \u2014 ~1800 years before Pascal. The triangular-number structure behind the 28 lunar mansions (T(7)=28).",
+    url: "https://archive.org/details/chandahsutram00pinguoft",
+    urlNote: 'The "Chandahs\u016Btram" of Pi\u1E45gala with the M\u1E5Btasa\xF1j\u012Bvan\u012B commentary of Hal\u0101yudha (Asiatic Society of Bengal, 1874) \u2014 a complete Sanskrit facsimile incl. the Hal\u0101yudha commentary (imagecount=262), public domain.'
   },
   {
     slug: "meeus-astronomical-algorithms",
-    title: "Astronomical Algorithms (2nd ed.)",
+    title: "Astronomical Algorithms",
     author: "Jean Meeus",
-    year: "1998",
+    year: "1991 / 1998",
     kind: "book",
     lang: "English",
-    desc: "The reference for the eclipse cycles (Saros, Inex, Meton) the Saros tab and \xA715b.6 / \xA79 use. Meeus is the standard practitioner\u2019s handbook for the algorithmic astronomy the app relies on (via astronomy-engine).",
-    url: "https://www.amazon.com/dp/0943396611",
-    urlNote: "Copyrighted (Willmann-Bell, 1998). No free complete edition \u2014 the link is the publisher listing for the 2nd edition. Open-source algorithm implementations (PyMeeus, Naughter C++) exist, but the book itself is not free."
+    summary: "Jean Meeus\u2019s Astronomical Algorithms (1991, 2nd ed. 1998) is the standard practitioner\u2019s handbook of computational astronomy. It collects the formulae for solar and lunar positions, eclipses, planetary longitudes, and the eclipse cycles (Saros, Inex, Meton) that the app\u2019s Cycles and Saros tabs implement (via astronomy-engine).",
+    relevance: "The reference for the eclipse cycles (Saros, Inex, Meton) the Saros tab and \xA715b.6 / \xA79 use. Meeus is the standard practitioner\u2019s handbook for the algorithmic astronomy the app relies on (via astronomy-engine).",
+    url: "https://archive.org/details/astronomicalalgorithmsjeanmeeus1991",
+    urlNote: 'Complete community upload of Jean Meeus, "Astronomical Algorithms" (imagecount=435 = full book). NOTE: this is the 1991 1st edition, not the 1998 2nd edition \u2014 the 2nd ed. is not on archive.org. The 1st ed. is the complete usable Meeus for the eclipse-cycle and position formulae the app uses.'
   },
   {
     slug: "standish-plan404",
@@ -41129,20 +41151,22 @@ var LIBRARY_BOOKS = [
     year: "1992",
     kind: "reference",
     lang: "English (dataset)",
-    desc: "The underlying planetary ephemeris for the planetary longitudes. The app computes geocentric ecliptic longitudes via astronomy-engine; the planetary series trace back to JPL ephemerides of the Standish lineage.",
-    url: "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
-    urlNote: "A technical ephemeris dataset (JPL/Caltech), not a book. The JPL Solar System Dynamics site hosts the ephemerides (Approximate Positions of the Planets, linked); astronomy-engine packages a subset. High-precision SPK files at ssd.jpl.nasa.gov/ephem.html."
+    summary: "The JPL planetary ephemerides (Standish and successors) are the numerical tables of planetary positions produced by the Jet Propulsion Laboratory. The PLAN404 series is the long-term subset used by lightweight astronomy engines; the app computes geocentric ecliptic longitudes via astronomy-engine, which packages these series.",
+    relevance: "The underlying planetary ephemeris for the planetary longitudes. The app computes geocentric ecliptic longitudes via astronomy-engine; the planetary series trace back to JPL ephemerides of the Standish lineage.",
+    url: "",
+    urlNote: "No archive.org source \u2014 a numerical dataset, not a book. Only web snapshots of the JPL Solar System Dynamics pages exist; no archive.org/details item applies."
   },
   {
     slug: "lahiri-ayanamsa",
     title: "Lahiri ayanamsa (Chitrapaksha)",
-    author: "N. C. Lahiri",
+    author: "N. C. Lahiri / Calendar Reform Committee",
     year: "1955",
     kind: "reference",
-    lang: "English (standard)",
-    desc: "The ayanamsa the Ages/Ayanamsa tabs use (24.18\xB0 today): the sidereal zero-point convention that fixes the precessional-era boundaries. The paper dates ages by tropical sign occupation (ayanamsa-independent) but reports the Lahiri value for the sidereal frame.",
-    url: "https://archive.org/details/HistoryOfCalendarPanchangaCommittee",
-    urlNote: "A calendrical standard, not a single book. The Lahiri (Chitrapaksha) ayanamsa was adopted in the Calendar Reform Committee Report (Saha & Lahiri, CSIR, 1955) \u2014 free PDF on archive.org (linked). The Indian Astronomical Ephhemeris (using Lahiri) is published annually with free PDFs from the IMD."
+    lang: "English",
+    summary: "The Lahiri ayanamsa (also Chitrapaksha) is the sidereal zero-point convention adopted by India\u2019s Calendar Reform Committee in 1955 (CSIR report) and the official Indian national calendar standard since. It defines the offset (about 24.18\xB0 today) between the tropical and sidereal zodiacs, fixing the precessional-era boundaries the paper\u2019s Ages/Ayanamsa tabs reference.",
+    relevance: "The ayanamsa the Ages/Ayanamsa tabs use (24.18\xB0 today): the sidereal zero-point convention that fixes the precessional-era boundaries. The paper dates ages by tropical sign occupation (ayanamsa-independent) but reports the Lahiri value for the sidereal frame.",
+    url: "https://archive.org/details/dli.csl.963",
+    urlNote: 'Calendar Reform Committee, "Report of the Calendar Reform Committee" (CSIR, Government of India, 1955) \u2014 the complete 1955 CSIR report that defines the Lahiri (Chitrapaksha) ayanamsa (imagecount=292, Digital Library of India scan).'
   },
   {
     slug: "jaspers-axial-age",
@@ -41150,10 +41174,11 @@ var LIBRARY_BOOKS = [
     author: "Karl Jaspers",
     year: "1949",
     kind: "book",
-    lang: "English / German",
-    desc: "The Axial Age thesis \u2014 the ~800\u2013200 BCE window in which several civilizations independently turned to abstract, universal thought. The cross-cultural convergence of the letter/cosmology constants (7/12/28/72/360) sits in this frame.",
-    url: "https://archive.org/details/origingoalofhist0000jasp_q8t5",
-    urlNote: "Copyrighted (Yale UP / Routledge & Kegan Paul, 1953 English ed.). No free complete edition \u2014 the archive.org scan is lending/print-disabled only; the link is the Internet Archive catalog record for borrowing the physical book."
+    lang: "English",
+    summary: 'Karl Jaspers\u2019s Vom Ursprung und Ziel der Geschichte (1949, English: The Origin and Goal of History, 1953) introduced the "Axial Age" thesis \u2014 the ~800\u2013200 BCE window in which several civilizations independently turned to abstract, universal thought. The paper uses this frame to contextualize the independent cross-cultural convergence of the cosmological constants (7/12/28/72/360).',
+    relevance: "The Axial Age thesis \u2014 the ~800\u2013200 BCE window in which several civilizations independently turned to abstract, universal thought. The cross-cultural convergence of the letter/cosmology constants (7/12/28/72/360) sits in this frame.",
+    url: "https://archive.org/details/origingoalofhist0000jasp",
+    urlNote: 'Karl Jaspers, "The Origin and Goal of History" (English tr. Michael Bullock, Routledge & K. Paul / Yale UP, 1953) \u2014 a complete lending/print-disabled scan (imagecount=322 = xvi + 294 pp). (The _q8t5 copy has missing pp xi\u2013xii and was avoided.)'
   },
   {
     slug: "jenkins-other-bible-code",
@@ -41162,9 +41187,10 @@ var LIBRARY_BOOKS = [
     year: "1999\u20132010",
     kind: "book",
     lang: "English",
-    desc: "The 37/73 structure of Genesis 1:1 (2701 = 37\xD773), cited critically in the paper. Jenkins\u2019s independent gematria study of Genesis 1:1 is a parallelistic source; the paper\u2019s own 37/73 results are tested against nulls, not asserted from Jenkins.",
-    url: "https://www.creation.xtn.co/zzz/other-bible-code/",
-    urlNote: "Self-published on the web (not a formally published book). Jenkins\u2019s \u201COther Bible Code\u201D \u2014 the 37\xD773 = 2701 structure of Genesis 1:1 \u2014 is freely readable at the link. Cited critically in the paper, not as a primary text."
+    summary: "Vernon Jenkins\u2019s The Other Bible Code was a self-published web study (otherbiblecode.com, 1999\u20132010) of the gematria of Genesis 1:1, especially the 37\xD773 = 2701 factorization. The paper cites it critically in \xA713: Jenkins\u2019s independent study is a parallelistic source, while the paper\u2019s own 37/73 results are tested against null distributions, not asserted from Jenkins.",
+    relevance: "The 37/73 structure of Genesis 1:1 (2701 = 37\xD773), cited critically in the paper. Jenkins\u2019s independent gematria study of Genesis 1:1 is a parallelistic source; the paper\u2019s own 37/73 results are tested against nulls, not asserted from Jenkins.",
+    url: "",
+    urlNote: "No archive.org source. The Other Bible Code was web-published (otherbiblecode.com / whatabeginning.com), never issued as a book, and is not on archive.org. Cited in the paper critically, not as a primary text."
   },
   {
     slug: "khalifa-computer-manifests",
@@ -41173,20 +41199,22 @@ var LIBRARY_BOOKS = [
     year: "1982",
     kind: "book",
     lang: "English",
-    desc: "The 19-letters / 114-suras facts of the Quran (74:30 \u201CAbove it are nineteen\u201D). Khalifa\u2019s computer study of the Quranic 19 is the source of the Islamic-distinctive 19 cited in the Revelations/Sufi tab; the paper cites it for the arithmetic, with the disputed interpretive claims flagged.",
-    url: "https://docs.quraniclabs.com/library/books/the-computer-speaks.pdf",
-    urlNote: "The Computer Speaks: God\u2019s Message to the World (Islamic Productions, Tucson, 1982) \u2014 Khalifa\u2019s computer study of the Quranic 19. Distributed free by the Submitters community (linked PDF). Cited in the paper for the arithmetic, with the disputed interpretive claims flagged."
+    summary: 'Rashad Khalifa (1935\u20131990) was an Egyptian-American biochemist who in The Computer Speaks: God\u2019s Message to the World (1982) published a computer analysis of the Quran\u2019s "19" pattern (the 19 of Quran 74:30), counting 114 suras and other 19-fold counts. The paper cites it for the arithmetic only, with his disputed interpretive claims flagged; it is the source of the Islamic-distinctive 19 in the Revelations/Sufi tab.',
+    relevance: 'The 19-letters / 114-suras facts of the Quran (74:30 "Above it are nineteen"). Khalifa\u2019s computer study of the Quranic 19 is the source of the Islamic-distinctive 19 cited in the Revelations/Sufi tab; the paper cites it for the arithmetic, with the disputed interpretive claims flagged.',
+    url: "",
+    urlNote: 'No archive.org source. "The Computer Speaks" (Islamic Productions, Tucson, 1981/82) is not on archive.org; it exists only on the author\u2019s organization site (masjidtucson.org). Cited in the paper for the arithmetic only.'
   },
   {
     slug: "strong-hebrew-lexicon",
-    title: "Strong Hebrew Lexicon (OpenScriptures)",
-    author: "James Strong / OpenScriptures",
-    year: "1890 / ongoing",
+    title: "Strong Exhaustive Concordance (Hebrew & Greek dictionaries)",
+    author: "James Strong",
+    year: "1890",
     kind: "reference",
-    lang: "English / Hebrew (dataset)",
-    desc: "The 6045-consonantal-root lexicon the Reader and the gloss fiches are built on, with the biblical proper names (n-pr / n-pr-loc = persons and cities). The OpenScriptures GitHub version is the machine-readable base; Strong\u2019s 1890 lexicon is the public-domain original.",
-    url: "https://github.com/openscriptures/HebrewLexicon",
-    urlNote: "OpenScriptures HebrewLexicon on GitHub (the machine-readable base the app uses, open license) \u2014 linked. The 1890 Strong\u2019s Exhaustive Concordance (public domain, with the full Hebrew/Chaldee + Greek dictionaries) is also on archive.org as the printed original."
+    lang: "English / Hebrew",
+    summary: "James Strong\u2019s Exhaustive Concordance of the Bible (1890) was the first exhaustive concordance of the King James Version, with a complete Hebrew and Chaldee dictionary and a complete Greek dictionary keyed to a numbering system (the Strong numbers) still in universal use. The OpenScriptures machine-readable lexicon the app uses is built on the public-domain 1890 original.",
+    relevance: "The 6045-consonantal-root lexicon the Reader and the gloss fiches are built on, with the biblical proper names (n-pr / n-pr-loc = persons and cities). Strong\u2019s 1890 lexicon is the public-domain original.",
+    url: "https://archive.org/details/exhaustiveconcor1890stro",
+    urlNote: 'James Strong, "The Exhaustive Concordance of the Bible" (Hunt & Eaton / Cranston & Curts, 1890, first edition) \u2014 complete (imagecount=1832 = main concordance + comparative concordance + Hebrew dictionary + Greek dictionary + front/back matter), Brigham Young University / americana scan.'
   },
   {
     slug: "sefaria-api",
@@ -41195,9 +41223,10 @@ var LIBRARY_BOOKS = [
     year: "ongoing",
     kind: "reference",
     lang: "English / Hebrew (API)",
-    desc: "The Genesis corpus (1533 verses + Exodus 14:19\u201321, consonantal) and the Bible-reference pills on the gloss/alignment fiches are fetched via the Sefaria API. The source text is the Masoretic Hebrew; the app strips to consonants for the ELS and reading layers.",
-    url: "https://www.sefaria.org/api",
-    urlNote: "A free open API (Sefaria.org) \u2014 not a book. The API serves the Hebrew Tanakh and English translations under an open license; the app fetches the consonantal text and name references from it."
+    summary: "The Sefaria API is a free REST API from Sefaria.org serving the Hebrew Tanakh and its English translations under an open license. The app fetches the consonantal Genesis corpus (1533 verses + Exodus 14:19\u201321) and the Bible-reference pills on the gloss and alignment fiches from it, stripping the text to consonants for the ELS and reading layers.",
+    relevance: "The Genesis corpus (1533 verses + Exodus 14:19\u201321, consonantal) and the Bible-reference pills on the gloss/alignment fiches are fetched via the Sefaria API. The source text is the Masoretic Hebrew; the app strips to consonants for the ELS and reading layers.",
+    url: "",
+    urlNote: "No archive.org source \u2014 a live REST API (sefaria.org/api), not a published book. No archive.org item exists or applies."
   },
   {
     slug: "astronomy-engine",
@@ -41206,9 +41235,22 @@ var LIBRARY_BOOKS = [
     year: "ongoing",
     kind: "reference",
     lang: "English (software)",
-    desc: "The ephemerides engine: real geocentric ecliptic longitudes of the 7 classical bodies (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn) for any date, BCE included \u2014 the astronomy the whole reading is computed from. Vendored at v2.1.19 (MIT).",
-    url: "https://github.com/cosinekitty/astronomy-engine",
-    urlNote: "Open-source (MIT) on GitHub by cosinekitty (Don Rowell). The app vendors v2.1.19; the reading uses GeoVector \u2192 Ecliptic.elon at noon UT, with tropical signs floor(lon/30)%12."
+    summary: "astronomy-engine is an open-source ephemerides library (MIT license, by cosinekitty / Don Rowell) computing real geocentric ecliptic longitudes of the seven classical bodies \u2014 Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn \u2014 for any historical date including BCE. The app vendors v2.1.19 and computes every reading from it (GeoVector \u2192 Ecliptic longitude, tropical signs floor(lon/30)%12).",
+    relevance: "Real geocentric ecliptic longitudes of the 7 classical bodies (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn) for any date, BCE included \u2014 the astronomy the whole reading is computed from. Vendored at v2.1.19 (MIT).",
+    url: "",
+    urlNote: "No archive.org source \u2014 open-source software (MIT) hosted in its repository, not a book. No archive.org item exists or applies."
+  },
+  {
+    slug: "nag-hammadi-library",
+    title: "The Nag Hammadi Library in English",
+    author: "James M. Robinson (ed.)",
+    year: "1977",
+    kind: "book",
+    lang: "English",
+    summary: 'The Nag Hammadi Library is the cache of 45 Gnostic Christian texts in 4th-century Coptic, discovered in 1945 buried in a sealed jar near Nag Hammadi, Egypt. James M. Robinson\u2019s "Nag Hammadi Library in English" (1977, revised 1988/1996) is the standard complete English edition of the whole corpus, including the Gospel of Thomas, the Gospel of Philip, the Apocryphon of John, and the Apocalypse of Adam. The 1977 first edition archived here is the complete corpus (xv+493 pp).',
+    relevance: 'The complete Gnostic corpus: 45 tractates in Coptic, including the Apocalypse of Adam whose 13th kingdom ("every birth of their ruler is a word") is the project\u2019s framing source (\xA71). The complete corpus contextualizes the Apocalypse of Adam among the creator-word / letter-theology texts and supplies the 13 false oracles + the 14th kingless generation that speaks the truth.',
+    url: "https://archive.org/details/naghammadilibrar0000unse_y4x7",
+    urlNote: 'Robinson (ed.), "The Nag Hammadi Library in English" (Harper & Row, 1977 1st ed., xv+493 pp, ISBN 0060669292) \u2014 a complete lending/print-disabled scan (imagecount=522). Completeness confirmed via the metadata TOC: all 45 tractates present incl. Apocryphon of John, Gospel of Thomas, Gospel of Philip, Apocalypse of Adam, plus BG 8502 (Gospel of Mary, Act of Peter). Access-restricted (IA controlled lending). A backup complete copy is at archive.org/details/naghammadilibrar0000unse_k3v2 (1988 revised ed., xiv+549 pp).'
   }
 ];
 var _BY_SLUG = new Map(LIBRARY_BOOKS.map((b) => [b.slug, b]));
@@ -41224,20 +41266,20 @@ function LucoLibraryPage({ all }) {
   const qn = q.trim().toLowerCase();
   const filtered = (0, import_react29.useMemo)(() => LIBRARY_BOOKS.filter((b) => {
     if (!qn) return true;
-    return (b.title + " " + b.author + " " + (b.desc || "") + " " + (b.kind || "") + " " + (b.lang || "")).toLowerCase().includes(qn);
+    return (b.title + " " + b.author + " " + (b.summary || "") + " " + (b.relevance || "") + " " + (b.kind || "") + " " + (b.lang || "")).toLowerCase().includes(qn);
   }), [qn]);
   const pages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
   const cur = Math.min(page, pages - 1);
   const slice = all ? filtered : filtered.slice(cur * PER_PAGE, cur * PER_PAGE + PER_PAGE);
-  return /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, /* @__PURE__ */ import_react29.default.createElement("h1", null, "Luco Library \u2014 the source books"), /* @__PURE__ */ import_react29.default.createElement("p", { className: "muted", style: { marginBottom: 14 } }, "The bibliography behind ", /* @__PURE__ */ import_react29.default.createElement("i", null, "The Alphabet from the Sky"), ": every book that grounded a claim in the paper, here as a ficha (title, author, year, a one-line description). Each links to a ", /* @__PURE__ */ import_react29.default.createElement("b", null, "complete English translation"), " of the primary text on ", /* @__PURE__ */ import_react29.default.createElement("b", null, "archive.org"), " where one is in the public domain; modern copyrighted critical editions link to the publisher or WorldCat with an honest note that no free complete edition exists. Complete primary texts \u2014 not third-party commentaries or fragments."), /* @__PURE__ */ import_react29.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react29.default.createElement("input", { type: "text", value: q, onChange: (e) => {
+  return /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, /* @__PURE__ */ import_react29.default.createElement("h1", null, "Luco Library \u2014 the source books"), /* @__PURE__ */ import_react29.default.createElement("p", { className: "muted", style: { marginBottom: 14 } }, "The bibliography behind ", /* @__PURE__ */ import_react29.default.createElement("i", null, "The Alphabet from the Sky"), ": every book that grounded a claim in the paper, here as a ficha with a summary of the book and the specific findings this project draws from it. Each links to a ", /* @__PURE__ */ import_react29.default.createElement("b", null, "complete source on archive.org"), " \u2014 a full English translation where one is in the public domain, otherwise a complete facsimile in the original language or a lending copy of the printed book. Complete primary texts, not third-party commentaries or fragments."), /* @__PURE__ */ import_react29.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react29.default.createElement("input", { type: "text", value: q, onChange: (e) => {
     setQ(e.target.value);
     setPage(0);
-  }, placeholder: "search title \xB7 author \xB7 description\u2026", style: { flex: "1 1 280px" }, "aria-label": "Filter the Luco Library" }), /* @__PURE__ */ import_react29.default.createElement("span", { className: "pill" }, filtered.length, " of ", LIBRARY_BOOKS.length, " books", all ? "" : " \xB7 page " + (cur + 1) + "/" + pages)), /* @__PURE__ */ import_react29.default.createElement("div", { className: "tcards", style: { gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))" } }, slice.map((b) => /* @__PURE__ */ import_react29.default.createElement("a", { key: b.slug, href: `/library/${b.slug}`, className: "tcard", style: { textDecoration: "none", display: "block" } }, /* @__PURE__ */ import_react29.default.createElement("div", { className: "the", style: { fontSize: ".98rem", lineHeight: 1.25 } }, b.title), /* @__PURE__ */ import_react29.default.createElement("div", { className: "read" }, b.author, b.year ? ` \xB7 ${b.year}` : ""), /* @__PURE__ */ import_react29.default.createElement("div", { className: "trans", style: { WebkitLineClamp: 3, display: "-webkit-box", WebkitBoxOrient: "vertical", overflow: "hidden" } }, b.desc), /* @__PURE__ */ import_react29.default.createElement("div", { className: "g muted", style: { fontSize: ".76rem" } }, b.kind === "reference" ? "reference" : b.lang || "")))), !all && pages > 1 && /* @__PURE__ */ import_react29.default.createElement("div", { className: "controls", style: { marginTop: 12 } }, /* @__PURE__ */ import_react29.default.createElement("button", { onClick: () => setPage((p) => Math.max(0, p - 1)), disabled: cur === 0 }, "\u25C0 prev"), /* @__PURE__ */ import_react29.default.createElement("span", { className: "pill" }, "page ", cur + 1, " / ", pages), /* @__PURE__ */ import_react29.default.createElement("button", { onClick: () => setPage((p) => Math.min(pages - 1, p + 1)), disabled: cur >= pages - 1 }, "next \u25B6")));
+  }, placeholder: "search title \xB7 author \xB7 summary\u2026", style: { flex: "1 1 280px" }, "aria-label": "Filter the Luco Library" }), /* @__PURE__ */ import_react29.default.createElement("span", { className: "pill" }, filtered.length, " of ", LIBRARY_BOOKS.length, " books", all ? "" : " \xB7 page " + (cur + 1) + "/" + pages)), /* @__PURE__ */ import_react29.default.createElement("div", { className: "tcards lib-cards", style: { gridTemplateColumns: "repeat(auto-fill,minmax(270px,1fr))" } }, slice.map((b) => /* @__PURE__ */ import_react29.default.createElement("a", { key: b.slug, href: `/library/${b.slug}`, className: "tcard lib-card", style: { textDecoration: "none" } }, /* @__PURE__ */ import_react29.default.createElement("div", { className: "lib-title" }, b.title), /* @__PURE__ */ import_react29.default.createElement("div", { className: "lib-author" }, b.author, b.year ? ` \xB7 ${b.year}` : ""), /* @__PURE__ */ import_react29.default.createElement("div", { className: "lib-summary" }, b.summary), /* @__PURE__ */ import_react29.default.createElement("div", { className: "lib-kind" }, b.kind === "reference" ? "reference" : b.lang || "")))), !all && pages > 1 && /* @__PURE__ */ import_react29.default.createElement("div", { className: "controls", style: { marginTop: 12 } }, /* @__PURE__ */ import_react29.default.createElement("button", { onClick: () => setPage((p) => Math.max(0, p - 1)), disabled: cur === 0 }, "\u25C0 prev"), /* @__PURE__ */ import_react29.default.createElement("span", { className: "pill" }, "page ", cur + 1, " / ", pages), /* @__PURE__ */ import_react29.default.createElement("button", { onClick: () => setPage((p) => Math.min(pages - 1, p + 1)), disabled: cur >= pages - 1 }, "next \u25B6")));
 }
 function BookFicha({ slug }) {
   const b = bookBySlug(slug);
   if (!b) return /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, /* @__PURE__ */ import_react29.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react29.default.createElement("a", { href: "/library", className: "linkish" }, "\u25C0 Luco Library")), /* @__PURE__ */ import_react29.default.createElement("h2", null, "Book not found"), /* @__PURE__ */ import_react29.default.createElement("div", { className: "muted" }, "No book in the Luco Library matches \u201C", slug, "\u201D. ", /* @__PURE__ */ import_react29.default.createElement("a", { href: "/library" }, "Browse the full library \u2192")));
-  return /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, /* @__PURE__ */ import_react29.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react29.default.createElement("a", { href: "/library", className: "linkish" }, "\u25C0 Luco Library")), /* @__PURE__ */ import_react29.default.createElement("h1", { style: { fontSize: "1.7rem", marginBottom: 4 } }, b.title), /* @__PURE__ */ import_react29.default.createElement("div", { className: "muted", style: { marginBottom: 14 } }, b.author, b.year ? ` \xB7 ${b.year}` : "", b.lang ? ` \xB7 ${b.lang}` : "", b.kind === "reference" ? " \xB7 reference" : ""), /* @__PURE__ */ import_react29.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14, lineHeight: 1.65 } }, b.desc), b.url && /* @__PURE__ */ import_react29.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14 } }, /* @__PURE__ */ import_react29.default.createElement("h3", { style: { marginTop: 0 } }, "Read the book"), /* @__PURE__ */ import_react29.default.createElement("p", { style: { marginBottom: 8 } }, /* @__PURE__ */ import_react29.default.createElement("a", { href: b.url, target: "_blank", rel: "noreferrer", style: { fontWeight: 600 } }, "Open the complete text \u2197")), b.urlNote && /* @__PURE__ */ import_react29.default.createElement("div", { className: "note" }, b.urlNote)), !b.url && /* @__PURE__ */ import_react29.default.createElement("div", { className: "panel", style: { padding: 18, marginBottom: 14 } }, /* @__PURE__ */ import_react29.default.createElement("h3", { style: { marginTop: 0 } }, "Read the book"), /* @__PURE__ */ import_react29.default.createElement("div", { className: "note" }, b.urlNote || "No free online edition is currently linked for this title.")));
+  return /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, /* @__PURE__ */ import_react29.default.createElement("div", { className: "controls", style: { marginBottom: 14 } }, /* @__PURE__ */ import_react29.default.createElement("a", { href: "/library", className: "linkish" }, "\u25C0 Luco Library")), /* @__PURE__ */ import_react29.default.createElement("h1", { style: { fontSize: "1.7rem", marginBottom: 4 } }, b.title), /* @__PURE__ */ import_react29.default.createElement("div", { className: "muted", style: { marginBottom: 16 } }, b.author, b.year ? ` \xB7 ${b.year}` : "", b.lang ? ` \xB7 ${b.lang}` : "", b.kind === "reference" ? " \xB7 reference" : ""), /* @__PURE__ */ import_react29.default.createElement("div", { className: "lib-ficha" }, /* @__PURE__ */ import_react29.default.createElement("div", { className: "panel lib-panel" }, /* @__PURE__ */ import_react29.default.createElement("h3", { style: { marginTop: 0 } }, "About this book"), /* @__PURE__ */ import_react29.default.createElement("p", { className: "lib-prose" }, b.summary)), /* @__PURE__ */ import_react29.default.createElement("div", { className: "panel lib-panel" }, /* @__PURE__ */ import_react29.default.createElement("h3", { style: { marginTop: 0 } }, "Relevance to this project"), /* @__PURE__ */ import_react29.default.createElement("p", { className: "lib-prose" }, b.relevance)), /* @__PURE__ */ import_react29.default.createElement("div", { className: "panel lib-panel" }, /* @__PURE__ */ import_react29.default.createElement("h3", { style: { marginTop: 0 } }, "Read the complete book"), b.url ? /* @__PURE__ */ import_react29.default.createElement("p", { style: { marginBottom: 8 } }, /* @__PURE__ */ import_react29.default.createElement("a", { href: b.url, target: "_blank", rel: "noreferrer", style: { fontWeight: 600 } }, "Open the complete source on archive.org \u2197")) : /* @__PURE__ */ import_react29.default.createElement("p", { style: { marginBottom: 8 }, className: "muted" }, "No complete edition of this title is available on archive.org."), b.urlNote && /* @__PURE__ */ import_react29.default.createElement("div", { className: "note" }, b.urlNote))));
 }
 
 // src/App.jsx

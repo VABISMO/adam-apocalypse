@@ -1,17 +1,18 @@
-// Footer.jsx — professional multi-column site footer.
-// Columns by type: the project, hub pages, data & sources, machine-readable endpoints.
-// Internal SPA-route links navigate client-side (pushState + popstate) instead of a full
-// page reload — the click is delegated here so no onNav prop needs threading through every
-// render site. External links and static-file links (/paper, *.json, *.xml, *.txt) keep the
-// browser default. The <a href> stays intact as the no-JS fallback.
+// Footer.jsx — site footer.
+// Three columns: the project, the corpus browser, and the reader/tools. Internal SPA-route
+// links navigate client-side (pushState + popstate) instead of a full page reload — the
+// click is delegated here so no onNav prop needs threading through every render site.
+// External links (/paper, GitHub) keep the browser default. The <a href> stays intact as the
+// no-JS fallback.
 import React from 'react';
 
 const GITHUB = 'https://github.com/VABISMO/adam-apocalypse';
 const PAPER = '/paper';
 
 // Routes the SPA owns (handled by parseRoute in App.jsx). Everything else starting with '/'
-// (notably /paper and the *.json/*.xml/*.txt machine endpoints) does a normal navigation.
-const SPA_RE = /^\/(prophet|mage|patriarch|place|align|reader|library)(\/|$)|^\/(prophets|mages|patriarchs|places|alignments|readings|app|about|library)$/;
+// (notably /paper) does a normal navigation. Matches a top-level segment + '/' or end, so it
+// covers sub-routes too (/cycles/saros, /revelations/raziel, /library/<slug>, /time/ages…).
+const SPA_RE = /^\/(prophet|mage|patriarch|place|align|reader|library|sky-map|reading|time|gematria|sigils|cycles|revelations|psalms|codes|prophets|mages|patriarchs|places|alignments|readings|app|about)(\/|$)/;
 
 function goInternal(href){
   if(typeof window==='undefined') return;
@@ -50,31 +51,25 @@ function Footer(){
         <L href={GITHUB} ext>Source on GitHub ↗</L>
       </Col>
 
-      <Col title="Hub pages">
+      <Col title="Browse the corpus">
         <L href="/prophets">Prophets timeline — Adam to Jacob Frank</L>
         <L href="/mages">Magi timeline — Adapa to Aleister Crowley</L>
         <L href="/patriarchs">Patriarchs/Conquest — names readable in the sky</L>
         <L href="/places">Places — biblical toponyms readable in the sky</L>
         <L href="/alignments">Stellar alignments (267 fiches)</L>
         <L href="/readings">Sky readings (6045 glosses)</L>
+      </Col>
+
+      <Col title="Reader & tools">
         <L href="/library">Luco Library — source books</L>
+        <L href="/sky-map">Sky map</L>
+        <L href="/time">Time predictor · precessional ages</L>
+        <L href="/gematria">Gematria</L>
+        <L href="/sigils">Sigils · kameot · 72 angels</L>
+        <L href="/revelations">Revelations (9 cultures)</L>
+        <L href="/codes">Codes — ELS · temurah · ziruph</L>
+        <L href="/psalms">Psalms by date</L>
         <L href="/app">Sky reader app</L>
-      </Col>
-
-      <Col title="Data & sources">
-        <L href="https://github.com/cosinekitty/astronomy-engine" ext>astronomy-engine — ephemerides ↗</L>
-        <L href="https://en.wikipedia.org/wiki/Sefer_Yetirah" ext>Sefer Yetzirah — the frame ↗</L>
-        <L href="https://github.com/openscriptures/HebrewLexicon" ext>Strong Hebrew lexicon ↗</L>
-        <L href="/angels72.json">72 Shem HaMephorash angels (JSON)</L>
-        <L href="/alignments.json">Rare alignments dataset (JSON)</L>
-      </Col>
-
-      <Col title="For search & AI">
-        <L href="/sitemap.xml">Sitemap index</L>
-        <L href="/llms.txt">llms.txt — guide for LLMs</L>
-        <L href="/robots.txt">robots.txt</L>
-        <L href="/site.webmanifest">Web app manifest</L>
-        <p className="ft-note">This page exposes <b>WebMCP</b> tools (read_sky, alignment_metrics, word_gloss, search_words, gematria_value, prophet_info, mage_info) for browser AI agents via <code>document.modelContext</code>.</p>
       </Col>
     </div>
 
