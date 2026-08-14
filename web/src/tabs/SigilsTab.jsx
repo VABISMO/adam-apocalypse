@@ -159,11 +159,11 @@ function AngelsCircle({triplets}){
   </svg>;
 }
 
-function AngelsTab(){
-  const [data,setData]=useState(null);
+function AngelsTab({initialData}){
+  const [data,setData]=useState(initialData||null);
   const [err,setErr]=useState(null);
   const [q,setQ]=useState('');
-  useEffect(()=>{ fetch('/angels72.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setData).catch(e=>setErr(e.message)); },[]);
+  useEffect(()=>{ if(initialData) return; fetch('/angels72.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setData).catch(e=>setErr(e.message)); },[initialData]);
   if(err) return <div className="panel app-panel"><h2>72 Angels</h2><p>Could not load the 72-angel data. Please refresh the page; if the problem persists, the data may be unavailable right now.</p></div>;
   if(!data) return <div className="muted">Loading the 72 Shem HaMephorash triplets…</div>;
   const qn=q.trim().toLowerCase();

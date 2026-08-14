@@ -15,7 +15,6 @@ import { SarosTab, AyanamsaTab, LunarSolarTab, AlignmentsTab, WeekTab } from './
 import { RevelationsTab } from './tabs/RevelationsTab.jsx';
 import { PsalmsTab } from './tabs/PsalmsTab.jsx';
 import { CodesTab } from './tabs/CodesTab.jsx';
-import { MethodTab } from './tabs/MethodTab.jsx';
 import { ProphetsPage } from './pages/ProphetsPage.jsx';
 import { MagesPage } from './pages/MagesPage.jsx';
 import { AlignmentFicha } from './pages/AlignmentFicha.jsx';
@@ -27,6 +26,7 @@ import { PatriarchsPage } from './pages/PatriarchsPage.jsx';
 import { PlacesPage } from './pages/PlacesPage.jsx';
 import { Landing } from './pages/Landing.jsx';
 import { About } from './pages/About.jsx';
+import { LucoLibraryPage, BookFicha } from './pages/LucoLibrary.jsx';
 import { slugify } from './data/wiki.js';
 import { PROPHETS } from './data/prophets.js';
 import { MAGES } from './data/mages.js';
@@ -48,7 +48,7 @@ function qp(k){ if(typeof window==='undefined') return null; return new URLSearc
 // Linked from the Footer (every page) and the Landing hero, so no Paper tab in the tab bar.
 const TABS = [
   ['cycles','Cycles'],['sky','Sky Map'],['translator','Reader'],['reading','Reading'],['time','Time'],
-  ['gematria','Gematria'],['sigils','Sigils'],['revelation','Revelations'],['psalms','Psalms'],['codes','Codes'],['method','Methodology'],
+  ['gematria','Gematria'],['sigils','Sigils'],['revelation','Revelations'],['psalms','Psalms'],['codes','Codes'],
 ];
 const SUB = {
   time:[['predictor','Predictor'],['ages','Ages']],
@@ -56,6 +56,41 @@ const SUB = {
   cycles:[['alignments','Alignments'],['saros','Saros'],['ayanamsa','Ayanamsa'],['lunarsolar','Lunar-Solar'],['week','Week']],
   revelation:[['hebrew','Hebrew · Christian'],['raziel','Raziel'],['gnostic','Gnostic / Nag Hammadi'],['vedic','Indian / Vedic'],['persian','Persian / Avestan'],['sufi','Islamic / Sufi'],['egyptian','Egyptian'],['maya','Maya'],['chinese','Chinese']],
   codes:[['els','ELS grid'],['temurah','Temurah / Atbash'],['ziruph','Ziruph']],
+};
+
+// ---- Friendly deep-link slugs (one canonical URL per tab + per subtab) ----
+// A tab's root URL is its default subtab's slug (no separate root page → no duplicate
+// content). /alignments and /readings are the existing canonical hub URLs for the
+// Cycles and Reader tabs (kept, not broken — they are the rich SSR index pages).
+const TAB_SLUG = {
+  cycles:'alignments', sky:'sky-map', translator:'readings', reading:'reading', time:'time',
+  gematria:'gematria', sigils:'sigils', revelation:'revelations', psalms:'psalms', codes:'codes',
+};
+const SUB_SLUG = {
+  time:{predictor:'time',ages:'time/ages'},
+  sigils:{sigil:'sigils',kameot:'sigils/kameot',angels:'sigils/angels'},
+  cycles:{alignments:'alignments',saros:'cycles/saros',ayanamsa:'cycles/ayanamsa',lunarsolar:'cycles/lunarsolar',week:'cycles/week'},
+  revelation:{hebrew:'revelations',raziel:'revelations/raziel',gnostic:'revelations/gnostic',vedic:'revelations/vedic',persian:'revelations/persian',sufi:'revelations/sufi',egyptian:'revelations/egyptian',maya:'revelations/maya',chinese:'revelations/chinese'},
+  codes:{els:'codes',temurah:'codes/temurah',ziruph:'codes/ziruph'},
+};
+// reverse lookups: slug path (no leading slash) → {tab, sub}
+const PATH_TO_TAB = {};
+for(const [id,slug] of Object.entries(TAB_SLUG)) PATH_TO_TAB[slug]={tab:id, sub:defaultSub(id)};
+for(const [tab,subs] of Object.entries(SUB_SLUG)) for(const [sub,slug] of Object.entries(subs)) PATH_TO_TAB[slug]={tab, sub};
+function defaultSub(tab){ const s=SUB[tab]; return s? s[0][0] : null; }
+function tabPath(tab, sub){ const ss=SUB_SLUG[tab]; if(sub && ss && ss[sub]) return '/'+ss[sub]; return '/'+TAB_SLUG[tab]; }
+// per-tab client SEO (the prerender carries the precise per-subtab meta for indexing).
+const TAB_META = {
+  cycles:['Stellar alignments — rare conjunctions | Apocalypse of Adam','All rare stellar alignments (planets in one zodiac sign): dates, arc, era, readable names — plus the Saros, Ayanamsa, Lunar-Solar and Week cycle calculators.'],
+  sky:['Sky map — live planet positions → Hebrew letters | Apocalypse of Adam','A live sky map: real planet positions (astronomy-engine) map the 12 zodiac signs to the 12 simple letters of the Sefer Yetzirah for any date, BCE included.'],
+  translator:['Sky readings — Hebrew words readable in the stars | Apocalypse of Adam','Every Hebrew word readable from the zodiac signs occupied by the planets: a glossary of consonantal roots, gematria, and the stellar letters that spell each name.'],
+  reading:['Reading rule — the reuse rule & mother-gate | Apocalypse of Adam','How the sky reads: the 3 mothers, 7 doubles and 12 simples, the reuse rule (S⊆O), and the geometric mother-gate that makes rare alignments reductive.'],
+  time:['Time predictor & precessional ages | Apocalypse of Adam','Predict which Hebrew words are readable on each day of a year (one square per day), and the precessional ages of the equinox through the 12 signs.'],
+  gematria:['Gematria calculator — Hebrew, Greek, Arabic, Indian | Apocalypse of Adam','Gematria of any word in four scripts (Hebrew 22-letter, Greek isopsephy, Arabic abjad, Indian katapayadi), with Aiq Bekar reduction.'],
+  sigils:['Sigil forge, kameot & 72 angels | Apocalypse of Adam','Trace a name\'s sigil on the Lo Shu and the 7 planetary kameot, and the 72 Shem HaMephorash angel triplets from Exodus 14:19-21.'],
+  revelation:['Revelations — cross-cultural constants | Apocalypse of Adam','The constants (gematria, cosmology, prophecy) carried independently across 9 cultures: Hebrew, Raziel, Gnostic, Vedic, Persian, Sufi, Egyptian, Maya, Chinese.'],
+  psalms:['Daily Psalms — name & date → Genesis ELS → Psalm | Apocalypse of Adam','A JavaScript port of the daily-psalms-api: the gematria of a name + date sets a Genesis ELS step, matched to the shortest Hebrew phrase in the Psalms.'],
+  codes:['Codes — ELS, Temurah, Ziruph | Apocalypse of Adam','Three kabbalistic ciphers in the browser: ELS (Torah codes), Temurah / Atbash, and Ziruph substitution — ported from their original Python.'],
 };
 
 // path/hash → route. Server (prerender) has no window; the route path is injected via
@@ -78,10 +113,19 @@ function parseRoute(){
   if(path==='/mages') return {name:'mages'};
   if(path==='/patriarchs') return {name:'patriarchs'};
   if(path==='/places') return {name:'places'};
-  if(path==='/alignments') return {name:'alignments'};
-  if(path==='/readings') return {name:'readings'};
-  if(path==='/app') return {name:'app'};
   if(path==='/about') return {name:'about'};
+  if(path==='/app') return {name:'app'};
+  // Luco Library — bibliography hub + per-book ficha
+  if(path==='/library') return {name:'luco'};
+  if((m=/^\/library\/(.+)$/.exec(path))){ return {name:'book', slug:decodeURIComponent(m[1])}; }
+  // friendly tab/subtab deep links: /sky-map, /cycles/saros, /revelations/raziel, …
+  // (also covers the existing /alignments → cycles/alignments and /readings → translator)
+  const segs = path==='/' ? [] : path.split('/').filter(Boolean);
+  if(segs.length>=1){
+    const slug2 = segs.slice(0,2).join('/');
+    if(PATH_TO_TAB[slug2]) return {name:'apptab', tab:PATH_TO_TAB[slug2].tab, sub:PATH_TO_TAB[slug2].sub};
+    if(PATH_TO_TAB[segs[0]]) return {name:'apptab', tab:PATH_TO_TAB[segs[0]].tab, sub:PATH_TO_TAB[segs[0]].sub};
+  }
   if((m=/^#\/reader\/(.+)$/.exec(hash))){ try{ return {name:'gloss', he:decodeURIComponent(m[1])}; }catch(e){ return {name:'landing'}; } }
   return {name:'landing'};
 }
@@ -91,8 +135,17 @@ function App(){
   // The app opens on the cited example alignment (-6352-10-21): a millennium-grade
   // stellar constriction whose readable layer is verse-attested biblical names + cities.
   const DEFAULT_DATE='-6352-10-21';
-  const [active,setActive]=useState(()=>{ const t=qp('tab'); return t && TABS.some(([id])=>id===t) ? t : 'cycles'; });
-  const [sub,setSub]=useState({reading:'rule',time:'predictor',sigils:'sigil',cycles:'alignments',revelation:'hebrew',codes:'els'});
+  const [active,setActive]=useState(()=>{
+    const r=parseRoute();
+    if(r.tab && TABS.some(([id])=>id===r.tab)) return r.tab;
+    const t=qp('tab'); return t && TABS.some(([id])=>id===t) ? t : 'cycles';
+  });
+  const [sub,setSub]=useState(()=>{
+    const base={reading:'rule',time:'predictor',sigils:'sigil',cycles:'alignments',revelation:'hebrew',codes:'els'};
+    const r=parseRoute();
+    if(r.tab && r.sub!=null && base[r.tab]!==undefined) base[r.tab]=r.sub;
+    return base;
+  });
   const [lex,setLex]=useState(null);
   const [lexErr,setLexErr]=useState(null);
   const [angels,setAngels]=useState(null);
@@ -144,6 +197,13 @@ function App(){
   const year = (()=>{ const d=parseDate(effDate); return d ? d.getUTCFullYear() : 2026; })();
 
   const route = useMemo(()=>parseRoute(),[loc]);
+  // back/forward (popstate) restores the tab+subtab from the friendly URL. Also runs on
+  // boot, where it is a no-op (active/sub were already initialised from the same route).
+  useEffect(()=>{
+    if(route.name!=='apptab' || !route.tab || !TABS.some(([id])=>id===route.tab)) return;
+    setActive(route.tab);
+    if(route.sub!=null) setSub(s=> s[route.tab]===route.sub ? s : { ...s, [route.tab]: route.sub });
+  },[route]);
   const glossWord = useMemo(()=>{
     if(route.name!=='gloss' || !lex) return null;
     return words.find(x=>x.he===route.he) || findWord(route.he, lex.lexicon, ANGEL72);
@@ -204,6 +264,14 @@ function App(){
     } else if(route.name==='app'){
       t='Sky reader app — Cycles, Sky Map, Reader, Gematria, Alignments | Apocalypse of Adam';
       d='The interactive calculators: live sky map, readable-word reader, reading rule, time predictor, gematria, sigils, 72 angels, ELS codes, rare alignments, revelations, psalms.';
+    } else if(route.name==='apptab' && route.tab && TAB_META[route.tab]){
+      [t,d]=TAB_META[route.tab];
+    } else if(route.name==='luco'){
+      t='Luco Library — source books | Apocalypse of Adam';
+      d='The bibliography behind The Alphabet from the Sky: each book as a ficha (title, author, description) linking to a complete English translation on archive.org where freely available.';
+    } else if(route.name==='book'){
+      t='Luco Library — book ficha | Apocalypse of Adam';
+      d='A book from the Luco Library bibliography: title, author, description, and a link to a complete English translation where freely available.';
     }
     setRouteMeta(t, d);
   },[route,glossWord,effDate]);
@@ -229,8 +297,11 @@ function App(){
   function step(n){ const d=parseDate(effDate); if(!d) return; d.setUTCDate(d.getUTCDate()+n); setDate(fmtDate(d)); }
   function stepYear(n){ setGenYear(genYear+n); }
 
-  const setSubTab = (g)=>(id)=>setSub(s=>({...s,[g]:id}));
-  const goTab = (id)=>{ const p=(typeof window!=='undefined')?window.location.pathname:'/'; if(p!=='/app') navigate('/app'); setActive(id); };
+  // Clicking a tab/subtab navigates to its friendly URL (deep-linkable + indexable).
+  // setSubTab is also passed into RevelationsTab / CodesTab, whose internal subtab bars
+  // call it → the URL updates to /revelations/<sub> or /codes/<sub>.
+  const setSubTab = (g)=>(id)=>{ setSub(s=>({...s,[g]:id})); navigate(tabPath(g,id)); };
+  const goTab = (id)=>{ setActive(id); navigate(tabPath(id)); };
 
   // Loading / error states keep the route chrome (TabsBar + Footer) so the layout is
   // stable while the lexicon fetches — this is what holds CLS down on /app. Landing and
@@ -258,8 +329,9 @@ function App(){
   if(route.name==='mage') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><MageFicha slug={route.slug}/></section><Footer/></div>;
   if(route.name==='patriarch') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><PatriarchFicha slug={route.slug}/></section><Footer/></div>;
   if(route.name==='place') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><PlaceFicha slug={route.slug}/></section><Footer/></div>;
-  if(route.name==='alignments') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><AlignmentsTab setDate={setDate} goReader={(d)=>{ setDate(d); setActive('translator'); navigate('/'); }} lex={lex} angelMap={ANGEL72} genData={genData} nameRefs={nameRefs}/></section><Footer/></div>;
-  if(route.name==='readings') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><TranslatorTab date={effDate} occ={occ} words={words} q={q} setQ={setQ} genData={genData} onOpen={openGloss} nameRefs={nameRefs}/></section><Footer/></div>;
+  // Luco Library — bibliography hub (/library) + per-book ficha (/library/<slug>)
+  if(route.name==='luco') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><LucoLibraryPage/></section><Footer/></div>;
+  if(route.name==='book') return <div><TabsBar goTab={goTab}/><section className="panel app-panel"><BookFicha slug={route.slug}/></section><Footer/></div>;
 
   return (
     <div>
@@ -306,14 +378,13 @@ function App(){
           {sub.cycles==='saros' && <SarosTab/>}
           {sub.cycles==='ayanamsa' && <AyanamsaTab/>}
           {sub.cycles==='lunarsolar' && <LunarSolarTab/>}
-          {sub.cycles==='alignments' && <AlignmentsTab setDate={setDate} goReader={(d)=>{ setDate(d); setActive('translator'); }} lex={lex} angelMap={ANGEL72} genData={genData} nameRefs={nameRefs}/>}
+          {sub.cycles==='alignments' && <AlignmentsTab setDate={setDate} goReader={(d)=>{ setDate(d); setActive('translator'); navigate('/readings'); }} lex={lex} angelMap={ANGEL72} genData={genData} nameRefs={nameRefs}/>}
           {sub.cycles==='week' && <WeekTab date={effDate} rows={rows}/>}
         </>}
 
         {active==='revelation' && <RevelationsTab sub={sub.revelation} setSubTab={setSubTab('revelation')} date={effDate} rows={rows} occ={occ} words={words} genData={genData} genYear={genYear}/>}
         {active==='psalms' && <PsalmsTab/>}
         {active==='codes' && <CodesTab sub={sub.codes} setSubTab={setSubTab('codes')}/>}
-        {active==='method' && <MethodTab esGlossCount={Object.keys(lex.esGloss||{}).length}/>}
         </>}
       </section>
 

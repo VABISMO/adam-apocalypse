@@ -11,7 +11,7 @@ const PAPER = '/paper';
 
 // Routes the SPA owns (handled by parseRoute in App.jsx). Everything else starting with '/'
 // (notably /paper and the *.json/*.xml/*.txt machine endpoints) does a normal navigation.
-const SPA_RE = /^\/(prophet|mage|patriarch|place|align|reader)(\/|$)|^\/(prophets|mages|patriarchs|places|alignments|readings|app|about|)$/;
+const SPA_RE = /^\/(prophet|mage|patriarch|place|align|reader|library)(\/|$)|^\/(prophets|mages|patriarchs|places|alignments|readings|app|about|library)$/;
 
 function goInternal(href){
   if(typeof window==='undefined') return;
@@ -57,6 +57,7 @@ function Footer(){
         <L href="/places">Places — biblical toponyms readable in the sky</L>
         <L href="/alignments">Stellar alignments (267 fiches)</L>
         <L href="/readings">Sky readings (6045 glosses)</L>
+        <L href="/library">Luco Library — source books</L>
         <L href="/app">Sky reader app</L>
       </Col>
 
@@ -78,7 +79,7 @@ function Footer(){
     </div>
 
     <div className="ft-bottom">
-      <span>© {year} <a href="https://medium.com/@ancientencoder/sons-of-stars-269765bda7db" target="_blank" rel="noreferrer">AncientEncoder</a> and BartMan · The Apocalypse of Adam</span>
+      <span>© {year} <a href="https://medium.com/@ancientencoder/sons-of-stars-269765bda7db" target="_blank" rel="noreferrer">AncientEncoder</a> · The Apocalypse of Adam</span>
       <span className="ft-sep">·</span>
       <span>Hebrew letters in the stars · Sefer Yetzirah stellar alphabet</span>
     </div>

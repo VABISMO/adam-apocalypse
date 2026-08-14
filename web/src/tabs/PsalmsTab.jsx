@@ -298,6 +298,7 @@ function PsalmsTab(){
   return <>
     <h2>Daily Psalms — name &amp; date → Genesis ELS → Psalm</h2>
     <div className="muted" style={{marginBottom:10}}>A JavaScript port of the <i>daily-psalms-api</i> pipeline (<code>gitlab.com/ch-zz/daily-psalms-api</code>, route <code>/api/psalm</code>). The gematria of your <b>name + the date written out in words</b> sets an Equidistant-Letter-Sequence step over <b>Genesis</b>; the gematria of that ELS string is then matched to the <b>shortest Hebrew phrase in the Psalms</b> with the same value (falling back through octave sub-harmonics ÷2, ÷4 … ÷128). All data is bundled — the phrase index is built in your browser, so nothing depends on a server or a database upload.</div>
+    <div className="note" style={{marginBottom:14}}>Psalms algorithm by <b>BartMan</b> (<code>gitlab.com/ch-zz/daily-psalms-api</code>); ported to in-browser JavaScript here.</div>
 
     <div className="controls" style={{marginBottom:10}}>
       <input type="text" value={name} onChange={e=>setName(e.target.value)} placeholder="Name (Latin / Hebrew / Greek / Arabic)" style={{flex:'1 1 260px'}}/>
