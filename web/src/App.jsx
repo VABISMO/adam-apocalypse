@@ -7,7 +7,7 @@ import { Footer } from './Footer.jsx';
 import { registerWebMCPTools } from './webmcp.jsx';
 import { SkyTab } from './tabs/SkyTab.jsx';
 import { TranslatorTab, GlossPage, findWord } from './tabs/ReaderTab.jsx';
-import { RuleTab, YhvhTab, GenesisTab } from './tabs/ReadingTab.jsx';
+import { RuleTab } from './tabs/ReadingTab.jsx';
 import { PredictorTab, AgesTab } from './tabs/TimeTab.jsx';
 import { GematriaTab } from './tabs/GematriaTab.jsx';
 import { SigilTab, KameotTab, AngelsTab } from './tabs/SigilsTab.jsx';
@@ -51,7 +51,6 @@ const TABS = [
   ['gematria','Gematria'],['sigils','Sigils'],['revelation','Revelations'],['psalms','Psalms'],['codes','Codes'],['method','Methodology'],
 ];
 const SUB = {
-  reading:[['rule','Reading Rule'],['yhvh','YHVH'],['genesis','Genesis 1:1']],
   time:[['predictor','Predictor'],['ages','Ages']],
   sigils:[['sigil','Sigil Forge'],['kameot','Kameot'],['angels','72 Angels']],
   cycles:[['alignments','Alignments'],['saros','Saros'],['ayanamsa','Ayanamsa'],['lunarsolar','Lunar-Solar'],['week','Week']],
@@ -204,7 +203,7 @@ function App(){
       d='About The Apocalypse of Adam: a stellar-alphabet reader that maps real planet positions to the 12 simple letters of the Sefer Yetzirah. Authors, sources, and how a reading works.';
     } else if(route.name==='app'){
       t='Sky reader app — Cycles, Sky Map, Reader, Gematria, Alignments | Apocalypse of Adam';
-      d='The interactive calculators: live sky map, readable-word reader, reading rule (YHVH, Genesis), time predictor, gematria, sigils, 72 angels, ELS codes, rare alignments, revelations, psalms.';
+      d='The interactive calculators: live sky map, readable-word reader, reading rule, time predictor, gematria, sigils, 72 angels, ELS codes, rare alignments, revelations, psalms.';
     }
     setRouteMeta(t, d);
   },[route,glossWord,effDate]);
@@ -284,10 +283,7 @@ function App(){
         {active==='translator' && <TranslatorTab date={effDate} occ={occ} words={words} q={q} setQ={setQ} genData={genData} onOpen={openGloss} nameRefs={nameRefs}/>}
 
         {active==='reading' && <>
-          <SubTabs items={SUB.reading} active={sub.reading} onChange={setSubTab('reading')}/>
-          {sub.reading==='rule' && <RuleTab occ={occ}/>}
-          {sub.reading==='yhvh' && <YhvhTab date={effDate} occ={occ} yhvhOk={yhvhOk} bs={bs}/>}
-          {sub.reading==='genesis' && <GenesisTab date={effDate} occ={occ} moms={moms} genesisOk={genesisOk}/>}
+          <RuleTab occ={occ}/>
         </>}
 
         {active==='time' && <>
