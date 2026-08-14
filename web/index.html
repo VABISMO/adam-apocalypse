@@ -133,6 +133,7 @@
 
 
 
+
   :root{
     /* ── Dark palette (designer system) ───────────────────────────────────────
        Surfaces: near-black with a faint cool tint (NOT flat) — depth comes from
@@ -373,8 +374,12 @@
   .site-nav a:hover{color:#fff;background:var(--panel2)}
   .site-nav a.active{color:#fff;border-color:var(--brand);background:rgba(138,5,255,.10)}
   @media(max-width:560px){.site-nav{margin-left:0;width:100%;justify-content:center}}
-  /* Kabbalah dropdown — mega-menu of every app tab/subtab deep-link */
-  .nav-drop{position:relative}
+  /* Kabbalah dropdown — mega-menu of every app tab/subtab deep-link.
+     .site-nav is the positioning ancestor (position:relative) and .nav-drop is
+     static, so the menu anchors to the NAV's right edge (desktop) / full width
+     (mobile) — never to the narrow toggle, which would overflow a narrow viewport. */
+  .site-nav{position:relative}
+  .nav-drop{position:static}
   .nav-drop-toggle{display:inline-flex;align-items:center;gap:5px}
   .nav-caret{font-size:.7em;opacity:.65;transition:transform .15s}
   .nav-drop-menu{position:absolute;top:100%;right:0;margin-top:6px;background:#0a0a0c;border:1px solid rgba(194,158,255,.22);border-radius:12px;padding:10px 14px;display:grid;grid-template-columns:repeat(3,minmax(148px,1fr));gap:4px 22px;box-shadow:0 18px 50px rgba(0,0,0,.62);opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .15s,transform .15s,visibility .15s;z-index:60;max-width:min(94vw,760px)}
@@ -385,7 +390,7 @@
   .nav-drop-menu a{padding:5px 8px;border-radius:6px;font-size:.84rem;border:0;font-weight:500;white-space:nowrap}
   .nav-drop-menu a:hover{background:rgba(194,158,255,.16);color:#fff}
   @media(max-width:720px){.nav-drop-menu{grid-template-columns:repeat(2,minmax(140px,1fr))}}
-  @media(max-width:560px){.nav-drop-menu{right:auto;left:50%;transform:translate(-50%,6px);grid-template-columns:1fr;max-height:68vh;overflow:auto}.nav-drop:hover .nav-drop-menu,.nav-drop:focus-within .nav-drop-menu,.nav-drop.open .nav-drop-menu{transform:translate(-50%,0)}}
+  @media(max-width:560px){.nav-drop-menu{left:0;right:0;transform:none;grid-template-columns:1fr;max-width:none;max-height:70vh;overflow:auto;border-radius:0 0 12px 12px}.nav-drop-menu a{padding:10px 12px;font-size:.9rem}.nav-drop-label{padding:8px 12px 4px}}
 
   /* ── Landing page ──────────────────────────────────────────────────── */
   .landing{margin-top:6px}
@@ -475,6 +480,7 @@
   .lib-result-meta b{color:var(--violet);font-weight:600}
   .lib-result-snip{font-size:.9rem;line-height:1.55;color:var(--txt)}
   .lib-mark{background:rgba(240,171,252,.28);color:inherit;border-radius:3px;padding:0 2px}
+
 
 
 
