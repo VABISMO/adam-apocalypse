@@ -1,8 +1,8 @@
-// pages/LucoLibrary.jsx — the Luco Library: a bibliography of the source books behind
-// "The Alphabet from the Sky", with one ficha per book. Footer-linked hub at /library
-// + per-book ficha at /library/<slug>. Each ficha links to a COMPLETE English translation
-// of the primary text (archive.org preferred) where one is freely available; modern
-// copyrighted critical editions link to the publisher/WorldCat with an honest note.
+// pages/LucoLibrary.jsx — the Luco Library: the complete primary-text source books
+// behind "The Alphabet from the Sky", HOSTED ON THIS SITE and downloadable as a ZIP.
+// Footer-linked hub at /library + per-book ficha at /library/<slug>. Each ficha carries a
+// summary of the book, the findings this project draws from it, and a Download button for
+// the complete text packaged as a ZIP from the repo `library/<slug>/` folder.
 //
 // The paginate + search pattern mirrors the long-list hubs (prophets/mages/…): the SSR
 // bakes the full grid (crawlable), and the client enhances it with filter + search.
@@ -26,7 +26,7 @@ function LucoLibraryPage({all}){
   const slice = all ? filtered : filtered.slice(cur*PER_PAGE,cur*PER_PAGE+PER_PAGE);
   return <>
     <h1>Luco Library — the source books</h1>
-    <p className="muted" style={{marginBottom:14}}>The bibliography behind <i>The Alphabet from the Sky</i>: every book that grounded a claim in the paper, here as a ficha with a summary of the book and the specific findings this project draws from it. Each links to a <b>complete source on archive.org</b> — a full English translation where one is in the public domain, otherwise a complete facsimile in the original language or a lending copy of the printed book. Complete primary texts, not third-party commentaries or fragments.</p>
+    <p className="muted" style={{marginBottom:14}}>The source books behind <i>The Alphabet from the Sky</i>: every complete primary text that grounded a claim in the paper — the Hebrew letter-tradition sources and the cross-cultural scriptures (Avesta, Ṛg Veda, Qur’an, Nag Hammadi, Book of the Dead, I Ching, Popol Vuh). Each is hosted <b>complete on this site</b> and downloadable as a ZIP from its ficha. Complete primary texts, not third-party commentaries or fragments.</p>
     <div className="controls" style={{marginBottom:14}}>
       <input type="text" value={q} onChange={e=>{setQ(e.target.value); setPage(0);}} placeholder="search title · author · summary…" style={{flex:'1 1 280px'}} aria-label="Filter the Luco Library"/>
       <span className="pill">{filtered.length} of {LIBRARY_BOOKS.length} books{all?'':' · page '+(cur+1)+'/'+pages}</span>
@@ -70,11 +70,9 @@ function BookFicha({slug}){
         <p className="lib-prose">{b.relevance}</p>
       </div>
       <div className="panel lib-panel">
-        <h3 style={{marginTop:0}}>Read the complete book</h3>
-        {b.url
-          ? <p style={{marginBottom:8}}><a href={b.url} target="_blank" rel="noreferrer" style={{fontWeight:600}}>Open the complete source on archive.org ↗</a></p>
-          : <p style={{marginBottom:8}} className="muted">No complete edition of this title is available on archive.org.</p>}
-        {b.urlNote && <div className="note">{b.urlNote}</div>}
+        <h3 style={{marginTop:0}}>Download the complete book</h3>
+        <a className="lib-download" href={`/library/original/${b.slug}/${b.slug}.zip`} download={`${b.slug}.zip`}>⬇ Download the complete text (ZIP)</a>
+        <div className="note" style={{marginTop:10}}>The complete text of this book, hosted on this site and packaged as a ZIP from the source files in the project repository.</div>
       </div>
     </div>
   </>;

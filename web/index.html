@@ -130,6 +130,7 @@
 
 
 
+
   :root{
     /* ── Dark palette (designer system) ───────────────────────────────────────
        Surfaces: near-black with a faint cool tint (NOT flat) — depth comes from
@@ -215,6 +216,10 @@
   .lib-ficha{display:flex;flex-direction:column;gap:14px;min-height:62vh}
   .lib-panel{padding:18px}
   .lib-prose{line-height:1.7;margin:0;white-space:pre-line}
+  .lib-download{display:inline-block;padding:12px 20px;background:var(--panel2);border:1px solid var(--violet);
+    border-radius:8px;color:var(--violet);font-weight:600;text-decoration:none;letter-spacing:.3px;
+    transition:background .15s,color .15s,border-color .15s}
+  .lib-download:hover{background:var(--violet);color:#000;border-color:var(--violet)}
   .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
   @media(max-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
   .card{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:12px;text-align:center}
@@ -455,6 +460,7 @@
   .lib-result-meta b{color:var(--violet);font-weight:600}
   .lib-result-snip{font-size:.9rem;line-height:1.55;color:var(--txt)}
   .lib-mark{background:rgba(240,171,252,.28);color:inherit;border-radius:3px;padding:0 2px}
+
 
 
 
