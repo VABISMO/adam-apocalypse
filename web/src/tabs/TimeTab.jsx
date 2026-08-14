@@ -1,6 +1,6 @@
 // tabs/TimeTab.jsx — Predictor + Ages
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate } from '../core.jsx';
+import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate, motherSet } from '../core.jsx';
 import { SkyMap, KameaGrid, Fig, DateEntry, YearInput, SubTabs } from '../ui.jsx';
 
 function PredictorTab({date, setDate, genYear, setGenYear, genData, loading, scanYear, year, stepYear}){
@@ -13,7 +13,8 @@ function PredictorTab({date, setDate, genYear, setGenYear, genData, loading, sca
     if(d.getUTCFullYear()!==genYear) return -1;
     return Math.floor((d.getTime()-makeDate(genYear,1,1).getTime())/86400000);
   },[date,genYear]);
-  // presets: spread from always-readable (no simples) to rare
+  // presets: spread from the temporal Name (simples, time-gated) to the eternal tier (no
+  // zodiac sign — doubles + mothers, gated only by the fixed mother-axis, not the turning sky)
   const presets=[
     ['יהוה','YHVH · the temporal Name'],
     ['אהיה','Ehyeh · I am'],
@@ -22,17 +23,20 @@ function PredictorTab({date, setDate, genYear, setGenYear, genData, loading, sca
     ['ישראל','Israel'],
     ['אלהים','Elohim'],
     ['בראשית','Bereshit · Genesis 1:1'],
-    ['אמת','Emet · truth (always)'],
-    ['שבת','Shabbat · rest (always)'],
+    ['אמת','Emet · truth (eternal)'],
+    ['שבת','Shabbat · rest (eternal)'],
   ];
   function wordDoyList(word){
-    // returns array of day-of-year indices where `word` is readable, computed from dayOccs
+    // returns array of day-of-year indices where `word` is readable: required simples occupied
+    // (S⊆O) AND required mothers geometrically available (motherSet ⊆ availableMothers). From dayOccs + dayMoms.
     if(!genData || !genData.dayOccs) return [];
     const req=simpleSet(norm(word));
+    const moms=motherSet(norm(word));
     const out=[];
     for(let i=0;i<genData.dayOccs.length;i++){
       let ok=true;
       for(const c of req){ if(!genData.dayOccs[i].has(c)){ ok=false; break; } }
+      if(ok && genData.dayMoms) for(const m of moms){ if(!genData.dayMoms[i].has(m)){ ok=false; break; } }
       if(ok) out.push(i);
     }
     return out;

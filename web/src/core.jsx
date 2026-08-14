@@ -1,5 +1,6 @@
 // core.jsx — constants & pure helpers (no React, no JSX).
 import * as Astronomy from 'astronomy-engine';
+import { ALL_ALIGN_YEARS, ALL_ALIGN_OM } from './align_data.mjs';
 
 // ====== Sefer Yetzirah (English keys) ======
 const SIGNS = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'];
@@ -31,13 +32,19 @@ const WEEK = [['Sunday','Sun'],['Monday','Moon'],['Tuesday','Mars'],['Wednesday'
 const FIN2REG = {'ן':'נ','ץ':'צ','ך':'כ','ם':'מ','ף':'פ'};
 const REG2FIN = {'נ':'ן','צ':'ץ','כ':'ך','מ':'ם','פ':'ף'};
 const SIMPLE_LETTERS = new Set(Object.values(SIMPLE).map(x=>x[0]));
+const MOTHER_LETTERS = new Set(MOTHERS.map(m=>m[0]));
 const GV = {א:1,ב:2,ג:3,ד:4,ה:5,ו:6,ז:7,ח:8,ט:9,י:10,כ:20,ל:30,מ:40,נ:50,ס:60,ע:70,פ:80,צ:90,ק:100,ר:200,ש:300,ת:400};
 
 function norm(s){ return [...s].map(c=>FIN2REG[c]||c).join(''); }
 function displayHe(s){ if(!s) return s; const last=s[s.length-1]; const f=REG2FIN[last]; return f ? s.slice(0,-1)+f : s; }
 function gematria(s){ return [...s].reduce((a,c)=>a+(GV[c]||0),0); }
 function simpleSet(cons){ const s=new Set(); for(const c of norm(cons)) if(SIMPLE_LETTERS.has(c)) s.add(c); return s; }
-function formable(cons, occ){ for(const c of simpleSet(cons)) if(!occ.has(c)) return false; return true; }
+function motherSet(cons){ const s=new Set(); for(const c of norm(cons)) if(MOTHER_LETTERS.has(c)) s.add(c); return s; }
+// A word reads on a sky iff its simple-letters ⊆ occupied simples AND (when `moms` is
+// passed) its mother-letters ⊆ the geometrically-available mothers. `moms` is OPTIONAL
+// for backward compatibility: omitted → mothers unconstrained (the pre-gate behaviour).
+// Genesis 1:1 / יהוה contain only simples, so callers that never pass `moms` are unaffected.
+function formable(cons, occ, moms){ for(const c of simpleSet(cons)) if(!occ.has(c)) return false; if(moms){ for(const c of motherSet(cons)) if(!moms.has(c)) return false; } return true; }
 function isPalindrome(cons){ const n=norm(cons); return n.length>=2 && n===[...n].reverse().join(''); }
 // Curated lexicon of known angel names in Hebrew consonants, across traditions.
 // The Strong lexicon covers biblical Hebrew proper names, so biblical angels
@@ -107,16 +114,17 @@ export const SEFARIA_TITLE = {
 // "1 Ki 4:14" -> "https://www.sefaria.org/I_Kings.4:14"  (Sefaria accepts title.chap:verse)
 export function refUrl(ref){ const li=String(ref).lastIndexOf(' '); const book=ref.slice(0,li), cv=ref.slice(li+1); const t=SEFARIA_TITLE[book]; return t ? `https://www.sefaria.org/${t}.${cv}` : null; }
 
-function readableWords(occ, LEX, angelMap){
+function readableWords(occ, LEX, angelMap, moms){
   const res=[], seen=new Set();
   for(const [cons,trans,gloss,pos] of LEX){
     if(seen.has(cons)) continue;
-    if(formable(cons, occ)){
+    if(formable(cons, occ, moms)){
       seen.add(cons);
       const simp=[...simpleSet(cons)].sort().join('');
       const am = angelMap ? angelMap.get(norm(cons)) : null;
       const an = ANGEL_NAME_MAP.get(norm(cons));
       res.push({he:cons, disp:displayHe(cons), translit:trans, gloss, pos, len:cons.length, gem:gematria(cons), simp,
+        moms:[...motherSet(cons)].sort(),
         pal:isPalindrome(cons), m37:gematria(cons)%37===0,
         name: (pos||'').startsWith('n-pr'),
         person: /n-pr-m|n-pr-f/.test(pos||'') || ((pos||'').startsWith('n-pr') && !/loc/.test(pos||'')),
@@ -131,11 +139,12 @@ function readableWords(occ, LEX, angelMap){
   for(const [he,en,src] of ANGEL_LEXICON){
     if(seen.has(he)) continue;
     const n=norm(he);   // final letters (ן/ץ/ך/ם/ף) must count as their base value — norm first
-    if(formable(n, occ)){
+    if(formable(n, occ, moms)){
       seen.add(he);
       const gem=gematria(n);
       const simp=[...simpleSet(n)].sort().join('');
       res.push({he, disp:displayHe(he), translit:en, gloss:'angel — '+en, pos:'n-pr', len:he.length, gem, simp,
+        moms:[...motherSet(n)].sort(),
         pal:isPalindrome(he), m37:gem%37===0,
         name:true, person:true, place:false, theo:/אל|יה/.test(he), compound:false,
         angel: angelMap?angelMap.get(n):null, angelName:{en,src}});
@@ -197,13 +206,27 @@ function skyAtSet(dateStr, bodies){
 function skyAt(dateStr){ return skyAtSet(dateStr, BODIES); }
 function skyAt7(dateStr){ return skyAtSet(dateStr, BODIES7); }
 function occupiedLetters(rows){ const s=new Set(); rows.forEach(r=>s.add(SIMPLE[r.sign][0])); return s; }
+function occupiedSigns(rows){ const s=new Set(); rows.forEach(r=>s.add(r.sign)); return s; }
 function bySign(rows){ const m={}; rows.forEach(r=>{(m[r.sign]=m[r.sign]||[]).push(r)}); return m; }
+
+// Geometric mother-gate (Sefer Yetzirah reading rule). The three mothers sit at fixed
+// ecliptic longitudes (ש Cassiopea 38°, מ Ursa Minor 89°, א Draco 268°). A mother is
+// available on a sky iff its constellation is the nearest mother to an occupied sign's
+// centre (Voronoi). One occupied sign → exactly one mother. Two consecutive signs
+// straddling a mother-zone boundary (Taurus–Gemini ~60°, Virgo–Libra ~180°,
+// Aquarius–Pisces ~330°) → two mothers. Any other consecutive pair → one mother; a
+// wide span → up to three. Doubles are always lit; only the mothers are gated.
+const MOTHER_LON = {}; MOTHERS.forEach(([h,,,lon])=>{ MOTHER_LON[h]=lon; });
+function _angDist(a,b){ let d=Math.abs(a-b)%360; return d>180?360-d:d; }
+function nearestMother(lon){ let best=null,bd=Infinity; for(const [h,,,mlon] of MOTHERS){ const d=_angDist(lon,mlon); if(d<bd){bd=d;best=h;} } return best; }
+function signCenterLon(sign){ const i=SIGNS.indexOf(sign); return i<0?NaN:i*30+15; }
+function availableMothers(occupiedSigns){ const m=new Set(); for(const s of occupiedSigns){ const c=signCenterLon(s); if(!isNaN(c)) m.add(nearestMother(c)); } return m; }
 
 const GENESIS = [
   ['בראשית','In the beginning'],['ברא','created'],['אלהים','God'],['את','(object marker)'],
   ['השמים','the heavens'],['ואת','and (object marker)'],['הארץ','the earth']
 ];
-function genesisReadable(occ){ return GENESIS.every(([w])=>formable(norm(w), occ)); }
+function genesisReadable(occ, moms){ return GENESIS.every(([w])=>formable(norm(w), occ, moms)); }
 const GEN_TOTAL = 2701;
 const GEN_VALUES = GENESIS.map(([w])=>gematria(norm(w))); // 913,203,86,401,395,407,296
 
@@ -350,15 +373,134 @@ function displayDate(ds){
 
 const MONTHNAMES=['January','February','March','April','May','June','July','August','September','October','November','December'];
 
+// ── All rare alignments (maxInSign ≥ 5: the 5-, 6-, and 7-body clusterings) over the full ──
+// 22,000-yr scan — 12,505 deduped events from web/alignments.json (scanA+scanB), recomputed
+// per event so the REAL reading rule applies: a word reads at an alignment iff every simple
+// sits in an occupied sign AND every mother is geometrically available (doubles always free).
+// The 51 maxInSign===7 grand conjunctions were a single-sign proxy for this; the full 5/6/7 set
+// is the honest stellar-recurrence census — multi-sign words (e.g. יהוה, simples י+ה) now get
+// a real alignment recurrence (they read when both their signs are occupied), instead of being
+// dismissed as "ordinary-only" because no single-sign conjunction can light two simples.
+//   ALL_ALIGN_YEARS[i] = integer year (BCE negative), sorted ascending
+//   ALL_ALIGN_OM[i]    = (occupied-simple bitmask, bit j = SIGNS[j]'s letter) |
+//                        (available-mother bitmask << 12,  א=bit12 מ=bit13 ש=bit14)
+// Generated by web/build_align_bake.jsx (run once; baked here so the Reader shows the gap with
+// no runtime scan). Planet periods are secularly stable, so the alignment cadence is fixed.
+const _ALIGN_SIMPLE_BITS = SIGNS.map(s => SIMPLE[s][0]);   // ['ה','ו','ז','ח','ט','י','ל','נ','ס','ע','צ','ק']
+const _ALIGN_MOM_BITS = MOTHERS.map(m => m[0]);             // ['א','מ','ש']
+function _alignOccMask(om){ return om & 0xFFF; }
+function _alignMomMask(om){ return (om >>> 12) & 0x7; }
+
+// ── Baked 2026 ordinary-day scan ── the everyday recurrence gap for EVERY word, instantly ──
+// ORD_OCC[i] = bitmask of occupied SIMPLE letters on day i of 2026 (bit j = SIGNS[j]'s letter,
+// i.e. bit 0=ה Aries … bit 11=ק Pisces). ORD_MOM[i] = bitmask of geometrically-available MOTHERS
+// (bit 0=א, bit 1=מ, bit 2=ש). Generated by web/build_ord_bake.jsx, which mirrors App.jsx scanYear
+// exactly (skyAt7(fmtDate(makeDate(2026,1,1+i))) → occupiedLetters + availableMothers). Planet
+// periods are stable, so the everyday cadence is year-independent; the live scanYear result
+// (when loaded) overrides for the exact year, but this baked reference lets the Reader show
+// the "how often can I read it again" gap before the scan finishes and on the prerendered snapshot.
+const ORD_YEAR = 2026;
+const ORD_OCC = [2828,2572,2568,2568,2584,2584,2600,2600,2632,2632,2696,2696,2696,2824,2824,2568,2568,3592,3592,3592,3592,3592,3080,3081,3081,3082,3082,3084,3084,3080,3080,3096,3096,3112,3112,3144,3144,3144,3208,3208,3336,3336,3336,3592,3593,3081,3081,3081,3081,3081,3081,3081,3083,3083,3085,3085,3081,3081,3097,3097,3097,3097,2089,2089,2121,2121,2185,2185,2185,2313,2313,2569,2569,2569,3081,3081,2057,2057,2057,2057,2059,2059,2061,2061,2057,2057,2057,2073,2073,2089,2091,2123,2123,2123,2187,2187,2315,2315,2315,2571,2571,3083,3083,2059,2059,2059,11,11,11,11,15,15,11,11,31,31,47,47,79,79,79,143,143,271,271,271,527,527,1039,1039,1039,2063,2063,15,15,15,15,15,15,15,15,31,31,47,47,47,79,79,143,143,143,271,271,527,527,527,1039,1039,2063,2063,15,15,15,15,31,31,31,31,31,31,31,63,59,91,91,155,155,155,283,283,541,541,541,1053,1053,2077,2077,2077,29,29,31,63,61,61,61,61,61,61,61,61,125,125,125,189,189,317,317,317,573,573,1085,1085,1085,2109,2109,61,61,63,63,93,93,93,93,89,89,121,121,121,89,89,217,217,345,345,345,633,633,1145,1145,1145,2169,2169,121,121,123,123,125,125,125,121,121,121,121,185,249,249,249,249,249,249,505,505,761,761,761,1273,1241,2265,2265,217,217,209,211,211,213,213,217,217,209,209,241,241,209,209,209,209,209,465,465,465,721,721,1233,1233,1233,2257,2193,145,209,211,211,213,213,217,217,209,209,241,241,241,209,209,209,209,465,465,465,721,721,1233,1233,1233,2257,2257,209,209,467,467,469,469,505,505,497,497,497,497,497,497,497,433,433,433,433,433,945,945,945,1457,1457,2481,2481,2481,433,433,435,435,949,949,953,953,689,689,689,689,753];
+const ORD_MOM = [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7];
+const ORD_SIMPLE_BITS = SIGNS.map(s => SIMPLE[s][0]);   // ['ה','ו','ז','ח','ט','י','ל','נ','ס','ע','צ','ק']  bit 0..11
+const ORD_MOM_BITS = MOTHERS.map(m => m[0]);              // ['א','מ','ש']  bit 0..2
+function _ordMaskToSet(mask, bits){ const s=new Set(); for(let i=0;i<bits.length;i++) if(mask&(1<<i)) s.add(bits[i]); return s; }
+let _bakedOrdCache = null;
+// Baked 2026 genData, built once: per-day occupied-simple Sets + available-mother Sets, the same
+// shape scanYear produces. Used by ordinaryRecurrence when no live scan is loaded yet.
+function _bakedOrdGenData(){
+  if(_bakedOrdCache) return _bakedOrdCache;
+  const dayOccs = ORD_OCC.map(m => _ordMaskToSet(m, ORD_SIMPLE_BITS));
+  const dayMoms = ORD_MOM.map(m => _ordMaskToSet(m, ORD_MOM_BITS));
+  _bakedOrdCache = { year:ORD_YEAR, dayOccs, dayMoms, nDays:dayOccs.length };
+  return _bakedOrdCache;
+}
+
+// How often a word reads at a stellar ALIGNMENT — over all 12,505 rare alignments (maxInSign
+// ≥ 5: the 5-, 6-, and 7-body clusterings) catalogued across the 22,000-yr scan. A word reads
+// at alignment i iff every simple ⊆ occupiedSigns(i) AND every mother ⊆ availableMothers(i)
+// (the 7 doubles are always free) — the SAME rule readableWords applies on any given date, so
+// this is the honest stellar recurrence, not a single-sign proxy. Returns one of three regimes
+// + the alignment years the word reads at + gap stats, so the Reader can show "how rare" each
+// word's stellar reading is (the user's "π de frecuencia"): a one-simple word reads at most
+// alignments (short gap); a multi-simple word reads only when all its signs coincide (long gap).
+function alignmentRecurrence(he, simp, refYear=0){
+  const cons = (typeof he==='string') ? norm(he) : he;
+  const moms = motherSet(cons);                 // Set of mother letters
+  const ss = (simp && simp.size) ? simp : simpleSet(cons);  // Set of simple letters
+  // required simple-bitmask + mother-bitmask (the reading rule, as bit tests)
+  let simpReq = 0; for(const c of ss){ const b = 1 << _ALIGN_SIMPLE_BITS.indexOf(c); if(b>0) simpReq |= b; }
+  let momReq = 0;  for(const c of moms){ const b = 1 << _ALIGN_MOM_BITS.indexOf(c); if(b>0) momReq |= b; }
+  // scan every baked alignment; keep the years where the word reads
+  const years = [];
+  for(let i=0;i<ALL_ALIGN_YEARS.length;i++){
+    const om = ALL_ALIGN_OM[i];
+    if(((_alignOccMask(om)) & simpReq) !== simpReq) continue;   // simples ⊆ occupiedSigns
+    if(((_alignMomMask(om)) & momReq) !== momReq) continue;     // mothers ⊆ availableMothers
+    years.push(ALL_ALIGN_YEARS[i]);
+  }
+  // gap stats (year granularity; 0 = two alignments in the same year)
+  let gaps=[], min=0, median=0, max=0;
+  if(years.length>=2){ for(let i=1;i<years.length;i++) gaps.push(years[i]-years[i-1]); const g=[...gaps].sort((a,b)=>a-b); min=g[0]; median=g[Math.floor(g.length/2)]; max=g[g.length-1]; }
+  // nearest prev/next to refYear
+  let prev=null, next=null;
+  for(const y of years){ if(y<=refYear) prev=y; else if(next===null) next=y; }
+  // regime: no simples → eternal (reads at every alignment whose mothers allow it; with no
+  // mothers, all 12,505). ≥1 simple and ≥1 readable alignment → alignment. ≥1 simple but the
+  // sign-combination never occurs in any scanned alignment → ordinary (only scattered days).
+  const regime = ss.size ? (years.length ? 'alignment' : 'ordinary') : 'eternal';
+  const signsReq = [...ss].map(c => LETTER_TO_SIGN[c]).filter(Boolean);
+  return { regime, signs:signsReq, simples:[...ss], mothers:[...moms], years, gaps, min, median, max, prev, next, n:years.length, total:ALL_ALIGN_YEARS.length };
+}
+
+// ── Ordinary-day recurrence: how often a word reads AGAIN on the scattered (everyday) ──
+// timescale — the answer to "cada cuánto se puede volver a leer". This is the complement of
+// alignmentRecurrence: the alignment gap is years→centuries (the rare stellar-reading scale);
+// the ordinary-day gap is days→weeks (the noise floor every word sits on, including alignment
+// and eternal words, which also read whenever any planet transits their sign).
+// Computed from a precomputed 365-day scan (genData from scanYear: per-day occupied simples
+// dayOccs[i] + available mothers dayMoms[i]). A word reads on day i iff every simple ⊆ dayOccs[i]
+// AND every mother ⊆ dayMoms[i] (the 7 doubles are always free). Returns within-year stats:
+// count of readable days, the gap distribution (min/median/max, with year wrap-around), and the
+// average cadence (nDays/count ≈ "every ~G days"). Returns null when no scan is available so the
+// UI can degrade to the regime label alone.
+function ordinaryRecurrence(he, simp, genData){
+  // Always available: the live scanYear result (exact year) when loaded, else the baked 2026
+  // reference (everyday cadence is year-independent). So the Reader shows the everyday gap
+  // for every word instantly — before the scan finishes and on the prerendered SSG snapshot.
+  const gd = (genData && genData.dayOccs && genData.dayMoms) ? genData : _bakedOrdGenData();
+  const cons = (typeof he==='string') ? norm(he) : he;
+  const ss = (simp && simp.size) ? simp : simpleSet(cons);
+  const moms = motherSet(cons);
+  const occs = gd.dayOccs, ms = gd.dayMoms, nDays = occs.length;
+  const days = [];
+  for(let i=0;i<nDays;i++){
+    const o = occs[i], av = ms[i];
+    let ok = true;
+    if(ss.size){ for(const c of ss){ if(!o.has(c)){ ok=false; break; } } }
+    if(ok && moms.size){ for(const m of moms){ if(!av.has(m)){ ok=false; break; } } }
+    if(ok) days.push(i);
+  }
+  if(!days.length) return { count:0, nDays, pct:0, days:[], gaps:[], min:0, median:0, max:0, avg:0, year:gd.year };
+  const gaps=[];
+  for(let i=1;i<days.length;i++) gaps.push(days[i]-days[i-1]);
+  gaps.push(days[0]+nDays-days[days.length-1]);   // wrap the year so the last→first gap is counted
+  const g=[...gaps].sort((a,b)=>a-b);
+  const median = g.length%2 ? g[(g.length-1)/2] : g[g.length/2];
+  return { count:days.length, nDays, pct:days.length/nDays, days, gaps,
+    min:g[0], median, max:g[g.length-1], avg:nDays/days.length, year:gd.year };
+}
+
 export {
   SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK,
-  FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome,
+  FIN2REG, REG2FIN, SIMPLE_LETTERS, MOTHER_LETTERS, GV, norm, displayHe, gematria, simpleSet, motherSet, formable, isPalindrome,
   ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords,
-  daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign,
+  daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, occupiedSigns, bySign, availableMothers, MOTHER_LON,
   GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES,
   PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON,
   ageBoundaries, eraForYear, yrLabel, ERA_WINDOWS,
   FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT,
   GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset,
-  MON, MONTHNAMES, displayDate
+  MON, MONTHNAMES, displayDate,
+  ALL_ALIGN_YEARS, ALL_ALIGN_OM, alignmentRecurrence, ordinaryRecurrence
 };

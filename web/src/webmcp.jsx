@@ -8,7 +8,7 @@
 // is bit-identical to what a human sees on screen. No-op when the API is absent (older
 // browsers, SSR prerender in Node) — registration is feature-gated.
 import {
-  skyAt, skyAt7, occupiedLetters, bySign, eraForYear, readableWords, genesisReadable,
+  skyAt, skyAt7, occupiedLetters, bySign, eraForYear, readableWords, genesisReadable, availableMothers,
   gematria, simpleSet, norm, displayHe, displayDate, isopsephy, abjad, katapayadi,
   ANGEL_NAME_MAP, SIMPLE, SIGNS
 } from './core.jsx';
@@ -58,9 +58,10 @@ export function registerWebMCPTools({ lex, angelMap }){
     execute: async ({ date }) => {
       const rows = skyAt7(date);   // 7 classical bodies — the only bodies that occupy letters in the reading
       const occ = occupiedLetters(rows);
-      const words = LEX ? readableWords(occ, LEX, angelMap) : [];
+      const moms = availableMothers(new Set(rows.map(r=>r.sign))); // geometric mother-gate
+      const words = LEX ? readableWords(occ, LEX, angelMap, moms) : [];
       const top = words.slice(0,20).map(w=>({ he:w.disp, translit:w.translit, gloss:w.gloss, gematria:w.gem, letters:w.len, name:!!w.name, angel:!!w.angelName }));
-      return j({ date:displayDate(date), nBodies:rows.length, occupiedSigns:[...new Set(rows.map(r=>r.sign))], readableSimples:[...occ].sort(), era:eraForYear(parseInt(String(date).slice(0,4),10)||2026), genesisLegible: genesisReadable(occ), readableCount: words.length, topNames: top });
+      return j({ date:displayDate(date), nBodies:rows.length, occupiedSigns:[...new Set(rows.map(r=>r.sign))], readableSimples:[...occ].sort(), era:eraForYear(parseInt(String(date).slice(0,4),10)||2026), genesisLegible: genesisReadable(occ, moms), readableCount: words.length, topNames: top });
     }
   });
 

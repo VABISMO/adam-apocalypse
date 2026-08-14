@@ -1,6 +1,6 @@
 // tabs/ReadingTab.jsx — Rule / YHVH / Genesis 1:1
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate } from '../core.jsx';
+import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate, motherSet } from '../core.jsx';
 import { SkyMap, KameaGrid, Fig, DateEntry, YearInput, SubTabs } from '../ui.jsx';
 
 function RuleTab({occ}){
@@ -9,12 +9,12 @@ function RuleTab({occ}){
     <table>
       <thead><tr><th>Class</th><th>Letters</th><th>Assigned to</th><th>Position-dependent?</th><th>Reusable?</th></tr></thead>
       <tbody>
-        <tr><td>3 mothers</td><td>א מ ש</td><td>elements · Draco / Ursa Minor / Cassiopea (fixed)</td><td>no</td><td>yes, always</td></tr>
+        <tr><td>3 mothers</td><td>א מ ש</td><td>elements · Draco / Ursa Minor / Cassiopea (fixed circumpolar axis)</td><td><b>yes — nearest-mother zone of the occupied sign(s)</b></td><td>gated: 1 per single sign; 2 only at a sign-pair boundary</td></tr>
         <tr><td>7 doubles</td><td>ב ג ד כ פ ר ת</td><td>the 7 planets (identity of the planet)</td><td>no</td><td>yes, always</td></tr>
         <tr><td>12 simples</td><td>ה ו ז ח ט י ל נ ס ע צ ק</td><td>the 12 zodiac signs</td><td><b>yes — if its sign is occupied</b></td><td>yes (membership)</td></tr>
       </tbody>
     </table>
-    <div className="muted" style={{marginTop:10}}>Read the simple of the occupied sign. Repeating a simple needs no conjunction. Words using only mothers+doubles (<span className="he">ברא</span>, <span className="he">אב</span>, <span className="he">שבת</span>, <span className="he">אמת</span>) are always readable.</div>
+    <div className="muted" style={{marginTop:10}}>Read the simple of the occupied sign. Repeating a simple needs no conjunction. The 7 doubles are always lit, so words of doubles only (<span className="he">ברת</span>) always read. A word that also uses a mother is readable only when the sky spans that mother's zone: on an ordinary scattered day all three mother-zones are covered, so mothers+doubles words (<span className="he">ברא</span>, <span className="he">אב</span>, <span className="he">שבת</span>, <span className="he">אמת</span>) read — but a grand conjunction (all seven bodies in one sign) narrows even this to a single mother, and a word needing a different mother does not read.</div>
     <div style={{marginTop:10}}><span className="muted">Simples today: </span>{SIGNS.map(s=>{const he=SIMPLE[s][0]; return <span key={s} className={'key '+(occ.has(he)?'on':'off')}>{he} {s}</span>;})}</div>
     <div className="note">Empty today: {SIGNS.filter(s=>!occ.has(SIMPLE[s][0])).map(s=>SIMPLE[s][0]+' ('+s+')').join(', ')||'none'}.</div>
     <Fig n={2} doc="From the article (§3): the tripartite mapping of the Sefer Yetzirah over the real sky. Outer ring: 12 simples = 12 signs. Middle ring: the 7 doubles = the 7 planets at their longitudes. Centre: the 3 mothers on the fixed circumpolar axis that does not precess. A highlighted sector = an occupied sign = a simple legible that day — this is the reading rule, drawn."/>
@@ -71,21 +71,23 @@ function YhvhTab({date, occ, yhvhOk, bs}){
   </>;
 }
 
-function GenesisTab({date, occ, genesisOk}){
+function GenesisTab({date, occ, moms, genesisOk}){
   const lengths=[6,3,5,2,5,3,4];
   const words37=GEN_VALUES.filter(v=>v%37===0).length;
   const sub37=countSubset(GEN_VALUES,37);
   const totalLetters=lengths.reduce((a,b)=>a+b,0);
   return <>
     <h2>Genesis 1:1 · <span className="he">בראשית ברא אלהים את השמים ואת הארץ</span> <span className={'pill '+(genesisOk?'ok':'no')}>{genesisOk?`readable on ${date}`:`not readable on ${date}`}</span></h2>
-    <div className="muted" style={{marginBottom:8}}>The 7 words together use the simples <b>י ה ל ו צ</b> (Virgo, Aries, Libra, Taurus, Aquarius). Readable only when all 5 signs are occupied by the 7 classical bodies at once — a rare conjunction with no fixed cadence.</div>
-    {GENESIS.map(([w,en],i)=>{const c=norm(w); const ss=[...simpleSet(c)].sort(); const ok=formable(c,occ); const m37=GEN_VALUES[i]%37===0; return (
+    <div className="muted" style={{marginBottom:8}}>The 7 words together use the simples <b>י ה ל ו צ</b> (Virgo, Aries, Libra, Taurus, Aquarius) <i>and</i> all three mothers <b>א מ ש</b> (Draco, Ursa Minor, Cassiopea). Readable only when all 5 simple-signs are occupied by the 7 classical bodies at once <i>and</i> the sky spans all three mother-zones — a rare conjunction with no fixed cadence.</div>
+    {GENESIS.map(([w,en],i)=>{const c=norm(w); const ss=[...simpleSet(c)].sort(); const mm=[...motherSet(c)].sort(); const ok=formable(c,occ,moms); const m37=GEN_VALUES[i]%37===0; return (
       <div key={i} className={'gw '+(ok?'ok':'no')}>
         <span className="w">{displayHe(c)}</span>
         <span className="es" style={{color:ok?'var(--green)':'var(--red)'}}>{en}</span>
         <span className="muted">· gematria {GEN_VALUES[i]}{m37?` = ${GEN_VALUES[i]/37}×37`:''}</span>
         <span style={{marginLeft:'auto'}}>
-          {ss.length===0 ? <span style={{color:'var(--violet)'}}>no simples → always</span> : ss.map(l=> <span key={l} className={'key '+(occ.has(l)?'on':'off')} style={{marginLeft:2}}>{l} {LETTER_TO_SIGN[l]}</span>)}
+          {ss.length===0
+            ? <span style={{color:'var(--violet)'}}>mothers {mm.length?mm.join(' '):'· doubles only'}</span>
+            : ss.map(l=> <span key={l} className={'key '+(occ.has(l)?'on':'off')} style={{marginLeft:2}}>{l} {LETTER_TO_SIGN[l]}</span>)}
         </span>
       </div>
     );})}

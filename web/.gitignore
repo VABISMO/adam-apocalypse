@@ -35,3 +35,6 @@ robots.txt
 llms.txt
 llms-full.txt
 site.webmanifest
+# one-off bake build artifacts (sources: build_ord_bake.jsx, build_align_bake.jsx)
+build_ord_bake.mjs
+build_align_bake.mjs

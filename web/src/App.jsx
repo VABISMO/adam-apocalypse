@@ -1,6 +1,6 @@
 // App.jsx — root component: app state, SPA routing (path + hash), tab switching.
 import React, { useState, useMemo, useEffect } from 'react';
-import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate } from './core.jsx';
+import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, occupiedSigns, bySign, availableMothers, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate } from './core.jsx';
 import { SubTabs } from './ui.jsx';
 import { BASE_TITLE, BASE_DESC, setRouteMeta } from './seo.jsx';
 import { Footer } from './Footer.jsx';
@@ -131,15 +131,16 @@ function App(){
   const rows7=useMemo(()=>skyAt7(effDate),[effDate]);
   const occ=useMemo(()=>occupiedLetters(rows7),[rows7]);
   const occSigns=useMemo(()=>new Set(rows7.map(r=>r.sign)),[rows7]);
+  const moms=useMemo(()=>availableMothers(occSigns),[occSigns]);
   const bs=useMemo(()=>bySign(rows7),[rows7]);
   const yhvhOk=occ.has('י')&&occ.has('ה')&&occ.has('ו');
-  const genesisOk=genesisReadable(occ);
+  const genesisOk=genesisReadable(occ, moms);
   const ANGEL72=useMemo(()=>{ const m=new Map(); if(angels) angels.triplets.forEach((t,i)=>{ m.set(norm(t), {el:angels.angelsEL[i], yh:angels.angelsYH[i]}); }); return m; },[angels]);
   // Expose the app's stellar computation to browser AI agents via WebMCP
   // (document.modelContext). No-op where the API is absent. Registered once the lexicon is
   // loaded so word/search tools have data; re-registration is idempotent + best-effort.
   useEffect(()=>{ if(lex) registerWebMCPTools({ lex, angelMap: ANGEL72 }); },[lex,ANGEL72]);
-  const words=useMemo(()=> lex?readableWords(occ,lex.lexicon,ANGEL72):[],[occ,lex,ANGEL72]);
+  const words=useMemo(()=> lex?readableWords(occ,lex.lexicon,ANGEL72,moms):[],[occ,lex,ANGEL72,moms]);
   const sentence=rows7.map(r=>SIMPLE[r.sign][0]).join(' ');
   const year = (()=>{ const d=parseDate(effDate); return d ? d.getUTCFullYear() : 2026; })();
 
@@ -211,15 +212,18 @@ function App(){
   function scanYear(y){
     setLoading(true);
     setTimeout(()=>{
-      const days=[], dayOccs=[];
+      const days=[], dayOccs=[], dayMoms=[];
       const nDays=(y%4===0&&(y%100!==0||y%400===0))?366:365;
       for(let i=0;i<nDays;i++){
         const ds=fmtDate(makeDate(y,1,1+i));
-        const o=occupiedLetters(skyAt7(ds));
+        const rows=skyAt7(ds);
+        const o=occupiedLetters(rows);
+        const m=availableMothers(occupiedSigns(rows));   // geometric mother-gate per day
         dayOccs.push(o);
-        if(genesisReadable(o)) days.push(ds);
+        dayMoms.push(m);
+        if(genesisReadable(o, m)) days.push(ds);          // Genesis legible = simples + mothers both satisfied
       }
-      setGenData({year:y,days:new Set(days),list:days,dayOccs}); setLoading(false);
+      setGenData({year:y,days:new Set(days),list:days,dayOccs,dayMoms}); setLoading(false);
     },20);
   }
   useEffect(()=>{ if(lex) scanYear(genYear); },[genYear,lex]);
@@ -266,7 +270,7 @@ function App(){
 
       <section className="panel app-panel">
         {route.name==='gloss' && glossWord && (
-          <GlossPage word={glossWord} date={effDate} rows={rows} occ={occ} genData={genData} onBack={backHome} nameRefs={nameRefs}/>
+          <GlossPage word={glossWord} date={effDate} rows={rows} occ={occ} moms={moms} genData={genData} onBack={backHome} nameRefs={nameRefs}/>
         )}
         {route.name==='gloss' && !glossWord && (
           <div>
@@ -283,7 +287,7 @@ function App(){
           <SubTabs items={SUB.reading} active={sub.reading} onChange={setSubTab('reading')}/>
           {sub.reading==='rule' && <RuleTab occ={occ}/>}
           {sub.reading==='yhvh' && <YhvhTab date={effDate} occ={occ} yhvhOk={yhvhOk} bs={bs}/>}
-          {sub.reading==='genesis' && <GenesisTab date={effDate} occ={occ} genesisOk={genesisOk}/>}
+          {sub.reading==='genesis' && <GenesisTab date={effDate} occ={occ} moms={moms} genesisOk={genesisOk}/>}
         </>}
 
         {active==='time' && <>

@@ -36,7 +36,7 @@ window.fetch = globalThis.fetch;
 const results = [];
 const check = (name, cond, extra) => results.push({ name, ok: !!cond, extra: extra || '' });
 
-const { App, ProphetsPage, MagesPage, AlignmentFicha, ProphetFicha, MageFicha, PatriarchFicha, PlaceFicha, PatriarchsPage, PlacesPage, Landing, About, WarningModal, LibraryApp } = await import('./test-entry.bundle.mjs');
+const { App, ProphetsPage, MagesPage, AlignmentFicha, ProphetFicha, MageFicha, PatriarchFicha, PlaceFicha, PatriarchsPage, PlacesPage, Landing, About, WarningModal, LibraryApp, GlossPage, findWord } = await import('./test-entry.bundle.mjs');
 
 // --- mount App ---
 const root = window.document.getElementById('root');
@@ -144,6 +144,46 @@ try {
   check('route /align/<date>: metrics table', /Alignment metrics/.test(html));
   check('route /align/<date>: produces markup', html.length > 500, `${html.length} chars`);
 } catch (e) { check('route /align/<date> renders', false, String(e.message)); }
+
+// --- Reader gloss page: stellar-alignment recurrence indicator (all rare alignments, maxInSign ≥ 5) ---
+// GlossPage renders the recurrence section (alignment/ordinary/eternal) over ALL 12,505 rare
+// alignments (the 5/6/7-body clusterings), using the real reading rule (simples ⊆ occupiedSigns
+// AND mothers ⊆ availableMothers). Esther (אסתר, simple ס=Sagittarius, mother א) → alignment,
+// reads at 2838 of 12,505 alignments (median 5 yr). גד (doubles only) → eternal, all 12,505.
+// YHVH (יהוה, simples י+ה+ו = Virgo+Aries+Taurus) → alignment, reads at only 45 (median 297 yr) —
+// a multi-sign word is genuinely rarer. The baked 2026 ordinary-day scan still supplies the
+// everyday cadence row even with genData=null.
+try {
+  const lex = JSON.parse(readFileSync(new URL('lexicon.json', import.meta.url), 'utf8'));
+  const LEX = lex.lexicon;
+  const angelMap = new Map();
+  const esther = findWord('אסתר', LEX, angelMap);
+  const estherHtml = renderToStaticMarkup(React.createElement(GlossPage, {
+    word: esther, date: '2026-08-08', rows: [], occ: new Set(), moms: new Set(),
+    genData: null, onBack: () => {}, nameRefs: {}
+  }));
+  check('GlossPage Esther: recurrence section renders', /Recurrence — how often/.test(estherHtml));
+  check('GlossPage Esther: no old Year-legibility grid', !/Year legibility/.test(estherHtml) && !/year legibility/.test(estherHtml));
+  check('GlossPage Esther: ◆ alignment / Sagittarius / n=2838 of 12505', /◆/.test(estherHtml) && /Sagittarius/.test(estherHtml) && /Rare alignments read at<\/th><td><b>2838<\/b> of 12505/.test(estherHtml));
+  check('GlossPage Esther: median 5 yr gap', /median 5 yr/.test(estherHtml));
+  check('GlossPage Esther: honest "no fixed cadence" caveat', /no fixed cadence/i.test(estherHtml));
+
+  const gd = findWord('גד', LEX, angelMap);
+  const gdHtml = renderToStaticMarkup(React.createElement(GlossPage, {
+    word: gd, date: '2026-08-08', rows: [], occ: new Set(), moms: new Set(),
+    genData: null, onBack: () => {}, nameRefs: {}
+  }));
+  check('GlossPage גד (doubles-only): ✦ eternal, all 12,505 alignments', /eternal/.test(gdHtml) && /all 12,505/.test(gdHtml));
+
+  const yhvh = findWord('יהוה', LEX, angelMap);
+  const yhvhHtml = renderToStaticMarkup(React.createElement(GlossPage, {
+    word: yhvh, date: '2026-08-08', rows: [], occ: new Set(), moms: new Set(),
+    genData: null, onBack: () => {}, nameRefs: {}
+  }));
+  check('GlossPage YHVH: ◆ alignment / Virgo+Aries+Taurus / n=45', /◆/.test(yhvhHtml) && /Virgo/.test(yhvhHtml) && /Aries/.test(yhvhHtml) && /Taurus/.test(yhvhHtml) && /Rare alignments read at<\/th><td><b>45<\/b> of 12505/.test(yhvhHtml));
+  check('GlossPage YHVH: median 297 yr (multi-sign rarity)', /median 297 yr/.test(yhvhHtml));
+  check('GlossPage YHVH: baked everyday cadence shows even with genData=null', /Ordinary-day cadence<\/th><td>/.test(yhvhHtml));
+} catch (e) { check('GlossPage recurrence renders', false, String(e && e.message)); }
 
 // --- Landing page (SSR) ---
 try {

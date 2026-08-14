@@ -7,7 +7,7 @@ function About(){
   return (
     <div className="about-page">
       <h1 style={{fontSize:'1.9rem',marginBottom:4}}>About <span style={{color:'var(--gold)'}}>The Apocalypse of Adam</span></h1>
-      <div className="sub" style={{marginBottom:16}}>Hebrew letters read in the sky — a stellar-alphabet reader behind the paper <i>The Reader of the Sky</i>.</div>
+      <div className="sub" style={{marginBottom:16}}>Hebrew letters read in the sky — a stellar-alphabet reader behind the paper <i>The Alphabet from the Sky</i>.</div>
 
       <div className="panel" style={{padding:18,marginBottom:14}}>
         <h2 style={{marginTop:0}}>What this is</h2>
@@ -47,7 +47,7 @@ function About(){
 
       <div className="panel" style={{padding:18,marginTop:14}}>
         <h2 style={{marginTop:0}}>Authors &amp; sources</h2>
-        <p className="muted">By <b><a href="https://medium.com/@ancientencoder/sons-of-stars-269765bda7db" target="_blank" rel="noreferrer" style={{color:'inherit',textDecoration:'none'}}>AncientEncoder</a></b> &amp; <b>BartMan</b> · Source on <a href="https://github.com/VABISMO/adam-apocalypse" target="_blank" rel="noreferrer">GitHub</a> · Paper: <a href="/paper">The Reader of the Sky</a>.</p>
+        <p className="muted">By <b><a href="https://medium.com/@ancientencoder/sons-of-stars-269765bda7db" target="_blank" rel="noreferrer" style={{color:'inherit',textDecoration:'none'}}>AncientEncoder</a></b> &amp; <b>BartMan</b> · Source on <a href="https://github.com/VABISMO/adam-apocalypse" target="_blank" rel="noreferrer">GitHub</a> · Paper: <a href="/paper">The Alphabet from the Sky</a>.</p>
         <p className="muted">Ephemerides: astronomy-engine. Frame: Sefer Yetzirah. Lexicon: Strong Hebrew lexicon (OpenScriptures). No content on this site is medical, financial, or doctrinal advice — it is a reading of symbols and astronomy.</p>
         <div style={{marginTop:12}}><a className="btn-cta" href="/app" style={{display:'inline-block',textDecoration:'none'}}>Open the app →</a></div>
       </div>

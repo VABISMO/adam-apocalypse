@@ -4,7 +4,7 @@
 // {date, lex, angelMap}. Presentational (renders identically server & client).
 import React, { useMemo } from 'react';
 import { SkyMap } from '../ui.jsx';
-import { SIMPLE, BODIES, GLYPH, skyAt, skyAt7, occupiedLetters, bySign, readableWords, displayDate, makeDate, fmtDate, eraForYear, refUrl } from '../core.jsx';
+import { SIMPLE, BODIES, GLYPH, skyAt, skyAt7, occupiedLetters, bySign, readableWords, availableMothers, displayDate, makeDate, fmtDate, eraForYear, refUrl } from '../core.jsx';
 
 const SIGN_EN = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'];
 
@@ -29,8 +29,9 @@ function AlignmentFicha({date, lex, angelMap, onBack, nameRefs}){
   const rows7 = useMemo(()=>skyAt7(date),[date]);
   const occ = useMemo(()=>occupiedLetters(rows7),[rows7]);
   const occSigns = useMemo(()=>new Set(rows7.map(r=>r.sign)),[rows7]);
+  const moms = useMemo(()=>availableMothers(occSigns),[occSigns]);
   const bs = useMemo(()=>bySign(rows7),[rows7]);
-  const words = useMemo(()=> lex?readableWords(occ,lex.lexicon,angelMap):[],[occ,lex,angelMap]);
+  const words = useMemo(()=> lex?readableWords(occ,lex.lexicon,angelMap,moms):[],[occ,lex,angelMap,moms]);
   const meta = useMemo(()=>{
     let best=null;
     for(const [sign,list] of Object.entries(bs)){ if(!best || list.length>best.list.length) best={sign,list}; }

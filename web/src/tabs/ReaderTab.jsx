@@ -1,12 +1,41 @@
 // tabs/ReaderTab.jsx — Reader list + individual gloss detail page
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate, SEFARIA_TITLE, refUrl } from '../core.jsx';
+import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate, motherSet, SEFARIA_TITLE, refUrl, ALL_ALIGN_YEARS, ALL_ALIGN_OM, alignmentRecurrence, ordinaryRecurrence } from '../core.jsx';
 import { SkyMap, KameaGrid, Fig, DateEntry, YearInput, SubTabs } from '../ui.jsx';
 
 const PAGE_SIZE = 48;
 
 function FilterChip({active, count, label, title, onToggle}){
   return <button className={active?'on':''} onClick={onToggle} title={title} aria-pressed={active}>{label} ({count})</button>;
+}
+
+// Compact recurrence badge for the list card + gloss page. Returns {symbol, text, cls, style, title}.
+// regime: 'alignment' (reads at ≥1 rare alignment, ◆ green), 'ordinary' (only scattered days, ○ dim),
+// 'eternal' (no zodiac simple, reads at every alignment, ✦ violet). The optional `ord` is the
+// ordinary-day recurrence (ordinaryRecurrence): for ordinary-regime words it supplies the everyday
+// "how often it reads again" gap (days), which the old badge lacked — every word now shows a gap.
+// "Rare alignment" = maxInSign ≥ 5 (the 5-, 6-, and 7-body clusterings): 12,505 events over 22,000 yr.
+function recurrenceHint(r, ord){
+  if(!r) return null;
+  if(r.regime==='alignment'){
+    const gap = r.median>=1000 ? '~'+Math.round(r.median/1000)+'k yr' : (r.median?r.median+' yr':'single event');
+    const signLabel = r.signs && r.signs.length===1 ? r.signs[0] : (r.signs?r.signs.length+' signs':'align');
+    return { symbol:'◆', text:`${signLabel} · ${gap}`, cls:'ok', style:null,
+      title:`Reads at ${r.n} of ${r.total} rare alignments (maxInSign 5/6/7) where {${r.signs?r.signs.join(' / '):'—'}} are all occupied. Gap ${r.min}–${r.max} yr, median ${r.median} yr — the stellar-recurrence "frequency constant": a one-simple word reads at most alignments (short gap); a multi-simple word reads only when all its signs coincide (long gap). It also reads on ordinary transit days (not shown).` };
+  }
+  if(r.regime==='eternal'){
+    return { symbol:'✦', text:'eternal', cls:null, style:{color:'var(--violet)'},
+      title:`No zodiac simple (doubles${r.mothers&&r.mothers.length?' + mother '+r.mothers.join(''):''}) — reads at ${r.n} of ${r.total} rare alignments across every sign. Gaps ${r.min}–${r.max} yr, median ${r.median} yr; no fixed cadence.` };
+  }
+  // ordinary regime: the sign-combination never occurs in any of the 12,505 scanned alignments,
+  // so the everyday-day gap IS the only recurrence. Show it when a scan is available.
+  const why = `its required sign-combination {${(r.signs||[]).join(' / ')||'—'}} never coincides in any of the ${r.total} rare alignments`;
+  if(ord && ord.count){
+    return { symbol:'○', text:`${ord.count} d/yr · ~${ord.median} d gap`, cls:null, style:{color:'var(--dim)'},
+      title:`Reads on ${ord.count} of ${ord.nDays} ordinary days (≈${Math.round(ord.pct*100)}%), roughly every ~${ord.median} days (gap range ${ord.min}–${ord.max} d). Never at a rare alignment (${why}).` };
+  }
+  return { symbol:'○', text:'ordinary only', cls:null, style:{color:'var(--dim)'},
+    title:`Reads only on scattered ordinary days — never at a rare alignment (${why}). No stellar-alignment recurrence.` };
 }
 
 function TranslatorTab({date, occ, words, q, setQ, genData, onOpen, nameRefs}){
@@ -19,25 +48,24 @@ function TranslatorTab({date, occ, words, q, setQ, genData, onOpen, nameRefs}){
   const [minLen,setMinLen] = useState(1);
   const qn = q.trim().toLowerCase();
   const PROPS = {date:'simp', pal:'pal', g37:'m37', angel:'angelName', name:'name', place:'place', comp:'compound'};
-  const CATS = ['special','frequent','common'];   // legibility-category filters (from probsAll)
+  const CATS = ['alignment','ordinary','eternal'];   // stellar-alignment recurrence-regime filters
   const toggle=(id)=>setSel(prev=>{const n=new Set(prev); n.has(id)?n.delete(id):n.add(id); return n;});
-  // Per-word legibility over the scanned Predictor year, for ALL readable words (not just
-  // the page) so the special/frequent/common filters can select on it. Empirical S⊆O count,
-  // no independence assumption, no fixed q. Low % = special/rare (green); high % = common (red).
-  const probsAll = useMemo(()=>{
+  // Per-word stellar-alignment recurrence — the "significant" reading: at how many of the 12,505
+  // rare alignments (maxInSign ≥ 5: the 5-, 6-, and 7-body clusterings) this word reads, and the
+  // gap (years) between them. This REPLACES the former within-year % badge: that % measured
+  // ordinary-day transit legibility (the noise floor), so rare-alignment signatures like Esther
+  // read on 98/365 ordinary days and got labelled "frequent" — the wrong timescale. The alignment
+  // gap (years→centuries, no fixed cadence) is the honest rarity metric: a one-simple word reads
+  // at most alignments (short gap); a multi-simple word reads only when all its signs coincide
+  // (long gap). Computed once over all readable words so the alignment/ordinary/eternal filters
+  // can select on it. See alignmentRecurrence in core.jsx.
+  const recAll = useMemo(()=>{
     const m=new Map();
-    if(!genData?.dayOccs) return m;
-    const n=genData.dayOccs.length || 1;
-    for(const w of words){
-      const req = w.simp ? [...w.simp] : [];
-      if(!req.length){ m.set(w.he,1); continue; }
-      let c=0; for(const o of genData.dayOccs) if(req.every(x=>o.has(x))) c++;
-      m.set(w.he, c/n);
-    }
+    for(const w of words){ m.set(w.he, alignmentRecurrence(w.he, w.simp)); }
     return m;
-  },[words,genData]);
-  const wordCat=(w)=>{ const p=probsAll.get(w.he); if(p==null) return null; return p>=0.5?'common':p>=0.2?'frequent':'special'; };
-  const matchFilter=(w,id)=> CATS.includes(id) ? wordCat(w)===id : !!w[PROPS[id]];
+  },[words]);
+  const wordRegime=(w)=>{ const r=recAll.get(w.he); return r?r.regime:null; };
+  const matchFilter=(w,id)=> CATS.includes(id) ? wordRegime(w)===id : !!w[PROPS[id]];
   const filtered = useMemo(()=>{
     let r = words;
     if(qn) r = r.filter(w => (w.gloss||'').toLowerCase().includes(qn) || w.translit.toLowerCase().includes(qn) || w.disp.includes(q.trim()));
@@ -48,7 +76,7 @@ function TranslatorTab({date, occ, words, q, setQ, genData, onOpen, nameRefs}){
     }
     if(minLen>1) r = r.filter(w=>w.len>=minLen);
     return r;
-  }, [words, qn, sel, mode, minLen, probsAll]);
+  }, [words, qn, sel, mode, minLen, recAll]);
   useEffect(()=>{ setPage(0); }, [qn, date, sel, mode, minLen]);
   const dateCount = useMemo(()=>words.filter(w=>w.simp).length,[words]);
   const alwaysCount = useMemo(()=>words.filter(w=>!w.simp).length,[words]);
@@ -58,21 +86,21 @@ function TranslatorTab({date, occ, words, q, setQ, genData, onOpen, nameRefs}){
   const nameCount = useMemo(()=>words.filter(w=>w.name).length,[words]);
   const placeCount = useMemo(()=>words.filter(w=>w.place).length,[words]);
   const compCount = useMemo(()=>words.filter(w=>w.compound).length,[words]);
-  const specialCount = useMemo(()=>words.filter(w=>wordCat(w)==='special').length,[words,probsAll]);
-  const frequentCount = useMemo(()=>words.filter(w=>wordCat(w)==='frequent').length,[words,probsAll]);
-  const commonCount = useMemo(()=>words.filter(w=>wordCat(w)==='common').length,[words,probsAll]);
+  const alignmentCount = useMemo(()=>words.filter(w=>wordRegime(w)==='alignment').length,[words,recAll]);
+  const ordinaryCount = useMemo(()=>words.filter(w=>wordRegime(w)==='ordinary').length,[words,recAll]);
+  const eternalCount = useMemo(()=>words.filter(w=>wordRegime(w)==='eternal').length,[words,recAll]);
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const cur = Math.min(page, pages-1);
   const slice = filtered.slice(cur*PAGE_SIZE, cur*PAGE_SIZE + PAGE_SIZE);
   return <>
-    <h2>Reader — everything readable on {date} <span className="pill">{words.length} words</span> <span className="muted" style={{fontSize:'.78rem'}}>· click a gloss for its single-reading page (sky map · year timeline · Wikipedia)</span></h2>
+    <h2>Reader — everything readable on {date} <span className="pill">{words.length} words</span> <span className="muted" style={{fontSize:'.78rem'}}>· click a gloss for its single-reading page (sky map · stellar-alignment recurrence · Wikipedia)</span></h2>
     <div className="controls" style={{marginBottom:8}}>
       <input type="text" placeholder="search by gloss or transliteration…" value={q} onChange={e=>setQ(e.target.value)} style={{flex:'1 1 240px'}} autoFocus aria-label="Search readable words"/>
     </div>
     <div className="muted" style={{marginBottom:6, fontSize:'.8rem'}}>Select filters, then choose a mode. <b>Include ✓</b> keeps only words matching <b>all</b> selected filters; <b>Exclude ✗</b> drops words matching <b>any</b> selected filter. With no filter selected, all words show. Glosses are Strong's English.</div>
     <div className="controls" style={{marginBottom:8, flexWrap:'wrap', alignItems:'center'}}>
       <span className="muted" style={{fontSize:'.8rem'}}>filters:</span>
-      <FilterChip active={sel.has('date')} count={dateCount} label="date-specific" title="Words with zodiac simples (date signal). Include = only date-specific; exclude = only always-readable" onToggle={()=>toggle('date')}/>
+      <FilterChip active={sel.has('date')} count={dateCount} label="date-specific" title="Words with zodiac simples (date signal). Include = only date-specific; exclude = only the eternal tier (no zodiac sign, mother-gated)" onToggle={()=>toggle('date')}/>
       <FilterChip active={sel.has('pal')} count={palCount} label="palindrome" title="Consonant palindrome (reads the same backwards)" onToggle={()=>toggle('pal')}/>
       <FilterChip active={sel.has('g37')} count={g37Count} label="gematria ×37" title="Gematria is a multiple of 37" onToggle={()=>toggle('g37')}/>
       <FilterChip active={sel.has('angel')} count={angelCount} label="angel name" title="A known angel name in Hebrew — Bible, Apocrypha, 1 Enoch watchers, Kabbalah, Islamic/Judeo-Arabic (Michael, Gabriel, Raphael, Uriel, Metatron, Sandalphon, Raziel, Azrael, the Watchers…). Matched by consonants, not suffix." onToggle={()=>toggle('angel')}/>
@@ -80,9 +108,9 @@ function TranslatorTab({date, occ, words, q, setQ, genData, onOpen, nameRefs}){
       <FilterChip active={sel.has('place')} count={placeCount} label="place (LUGAR)" title="The word is a biblical PLACE — a proper locative noun in Strong (n-pr-loc): city, mountain, region, etc." onToggle={()=>toggle('place')}/>
       <FilterChip active={sel.has('comp')} count={compCount} label="compound" title="Concatenated multi-root entry whose gloss is truncated (e.g. 'dove of')" onToggle={()=>toggle('comp')}/>
       <span className="muted" style={{fontSize:'.8rem',marginLeft:4}}>·</span>
-      <FilterChip active={sel.has('special')} count={specialCount} label="special" title="Empirically rare this year: required simples co-occupied < 20% of days (green). Include = only rare/special words" onToggle={()=>toggle('special')}/>
-      <FilterChip active={sel.has('frequent')} count={frequentCount} label="frequent" title="Empirically moderate this year: required simples co-occupied 20–50% of days (rose)" onToggle={()=>toggle('frequent')}/>
-      <FilterChip active={sel.has('common')} count={commonCount} label="common" title="Empirically common this year: required simples co-occupied ≥ 50% of days (red) — incl. always-readable words (no simples)" onToggle={()=>toggle('common')}/>
+      <FilterChip active={sel.has('alignment')} count={alignmentCount} label="alignment" title="Reads at ≥1 rare alignment (maxInSign 5/6/7) — the significant stellar reading. A one-simple word reads at most alignments (short gap); a multi-simple word reads only when all its signs coincide (long gap). ◆ green" onToggle={()=>toggle('alignment')}/>
+      <FilterChip active={sel.has('ordinary')} count={ordinaryCount} label="ordinary only" title="Reads only on scattered ordinary days — its required sign-combination never coincides in any of the 12,505 rare alignments. ○ dim" onToggle={()=>toggle('ordinary')}/>
+      <FilterChip active={sel.has('eternal')} count={eternalCount} label="eternal" title="No zodiac simple (doubles-only, ±a mother): reads at every rare alignment across all signs — the widest recurrence. ✦ violet" onToggle={()=>toggle('eternal')}/>
       <span className="muted" style={{fontSize:'.8rem', marginLeft:6}}>mode:</span>
       <button className={mode==='include'?'on':''} onClick={()=>setMode('include')} title="Keep only words matching ALL selected filters" aria-pressed={mode==='include'}>✓ include</button>
       <button className={mode==='exclude'?'ex':''} onClick={()=>setMode('exclude')} title="Drop words matching ANY selected filter" aria-pressed={mode==='exclude'}>✗ exclude</button>
@@ -91,10 +119,10 @@ function TranslatorTab({date, occ, words, q, setQ, genData, onOpen, nameRefs}){
     <div className="controls" style={{marginBottom:8, flexWrap:'wrap', alignItems:'center'}}>
       <span className="muted">min length</span>
       <input type="number" min="1" max="12" value={minLen} onChange={e=>{const n=parseInt(e.target.value,10); setMinLen(isNaN(n)||n<1?1:n);}} style={{width:56}} aria-label="Minimum word length"/>
-      <span className="muted">{filtered.length} shown · {alwaysCount} always-readable</span>
+      <span className="muted">{filtered.length} shown · {alwaysCount} eternal-tier (no zodiac sign)</span>
     </div>
     <div className="muted" style={{marginBottom:8}}>
-      Reading rule applied: every <b>simple (zodiac) letter</b> in a word must sit in an <b>occupied sign</b> today. Mothers + doubles are always available. Available today: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>. <span style={{color:'var(--violet)'}}>violet</span> = always readable (no simples). Badges: <span style={{color:'var(--gold)'}}>palindrome</span> · <span style={{color:'var(--green)'}}>×37</span> · <span style={{color:'var(--violet)'}}>angel name</span> · <span style={{color:'var(--brand-hi)'}}>name</span> · <span style={{color:'var(--warn)'}}>compound</span>. <span className="prob ok">%</span> = empirical legibility over the scanned year (computed from astronomy-engine, not hardcoded): <span className="prob ok">green</span> special (rare), <span className="prob mid">rose</span> frequent, <span className="prob spec">red</span> common. <b>This within-year % measures only how often a word's required simples are co-occupied as the planets drift this year — it is NOT the recurrence of a specific stellar alignment.</b> A particular sky configuration recurs over years → centuries → millennia (the precalculated rare grand conjunctions in the <b>Alignments</b> subtab, §15c.11); a reading during such a rare alignment is the significant one, while ordinary readability is the common noise floor (~1 day in 9, ~2031 names/day). Sorted: longest first.
+      Reading rule applied: every <b>simple (zodiac) letter</b> in a word must sit in an <b>occupied sign</b> today, and every <b>mother</b> must be geometrically available — its fixed circumpolar constellation the nearest mother to an occupied sign (all three zones covered on an ordinary scattered sky; a grand conjunction narrows to one). The 7 doubles are always lit. Available simples today: <b style={{color:'var(--gold)'}}>{[...occ].sort().join(' ')||'none'}</b>. <span style={{color:'var(--violet)'}}>violet</span> = no zodiac sign (doubles-only, always readable). Badges: <span style={{color:'var(--gold)'}}>palindrome</span> · <span style={{color:'var(--green)'}}>×37</span> · <span style={{color:'var(--violet)'}}>angel name</span> · <span style={{color:'var(--brand-hi)'}}>name</span> · <span style={{color:'var(--warn)'}}>compound</span>. <b>Recurrence badge</b> = the gap between the rare <b>stellar alignments</b> (maxInSign ≥ 5 — the 5-, 6-, and 7-body clusterings) that make this word legible — the significant reading, recurring over years→centuries with <b>no fixed cadence</b> (12,505 such alignments across the 22,000-year scan). It is the stellar-recurrence "frequency constant": a one-simple word reads at most alignments (short gap, e.g. every few years); a multi-simple word reads only when all its signs coincide (long gap, e.g. centuries). <span className="prob ok">◆ green</span> reads at ≥1 rare alignment (years→centuries gap); <span style={{color:'var(--dim)'}}>○ ordinary only</span> reads only on scattered days — its required sign-combination never coincides in any alignment, so its badge shows the everyday gap (N days/yr · ~G-day gap); <span style={{color:'var(--violet)'}}>✦ eternal</span> reads at every alignment (no zodiac simple). <b>This is NOT an annual frequency:</b> a word also reads on ordinary transit days (the noise floor), and every word's gloss page shows that ordinary-day recurrence — how often it can be read again — alongside the rare-alignment gap. See the <b>Alignments</b> subtab for the full alignment list. Sorted: longest first.
     </div>
     <div className="tcards">
       {slice.map((w,i)=>(
@@ -111,10 +139,10 @@ function TranslatorTab({date, occ, words, q, setQ, genData, onOpen, nameRefs}){
               {nameRefs && nameRefs[w.he] && nameRefs[w.he].n>0 && (()=>{ const r=nameRefs[w.he]; return <span className="pill" style={{color:'var(--violet)',borderColor:'var(--violet)'}} title={'Where this name appears in the Hebrew Bible (Sefaria): '+r.refs.join(', ')}>📖 {r.refs[0]}{r.n>1?' · +'+(r.n-1):''}</span>; })()}
             </div>
           )}
-          {probsAll.has(w.he) && (()=>{ const p=probsAll.get(w.he); const n=genData.dayOccs.length; const pct = p<0.001 ? '<0.1' : (p*100).toFixed(p<0.1?1:0); const cls = p>=0.5 ? 'spec' : p>=0.2 ? 'mid' : 'ok'; const tag = p>=0.5 ? 'common' : p>=0.2 ? 'frequent' : 'special'; return <span className={'prob '+cls} title={`Empirical legibility over ${n} days of ${genData.year}: ${pct}% of days this word's required simples are all occupied (S⊆O, computed from astronomy-engine — not hardcoded). This is a within-year rate, NOT the recurrence of a specific stellar alignment: a particular sky configuration recurs over years→centuries→millennia (rare grand conjunctions, §15c.11). Low % = special/rare (green); high % = common (red).`}>{pct}% · {tag}</span>; })()}
+          {(() => { const reg = recAll.get(w.he); const ord = (reg && reg.regime==='ordinary') ? ordinaryRecurrence(w.he, w.simp, genData) : null; const h = recurrenceHint(reg, ord); if(!h) return null; return <span className={h.cls?('prob '+h.cls):'prob'} style={h.style||{}} title={h.title}>{h.symbol} {h.text}</span>; })()}
           {w.angelName && <div className="simp" style={{color:'var(--violet)'}}>angel: {w.angelName.en} <span style={{color:'var(--dim)'}}>· {w.angelName.src}</span></div>}
           {w.angel && <div className="simp" style={{color:'var(--violet)'}}>Shem triplet +אל → <span className="he" style={{fontSize:'.95rem'}}>{w.angel.el}</span> · +יה → <span className="he" style={{fontSize:'.95rem'}}>{w.angel.yh}</span></div>}
-          <div className="simp">{w.simp ? ('simples: '+[...w.simp].join(' ')) : 'no simples (always)'}</div>
+          <div className="simp">{w.simp ? ('simples: '+[...w.simp].join(' ')) : (w.moms && w.moms.length ? 'eternal tier · mothers '+[...w.moms].join(' ') : 'no zodiac sign · doubles only')}</div>
         </div>
       ))}
     </div>
@@ -163,20 +191,29 @@ function findWord(he, LEX, angelMap){
 // Source: en.wikipedia.org/api/rest_v1/page/summary/{title}. Returns extract + thumbnail + link.
 function wikiCleanTitle(s){ return (s||'').replace(/\s*\([^)]*\)\s*/g,' ').split(',')[0].trim(); }
 
-function GlossPage({word, date, rows, occ, genData, onBack, nameRefs}){
+function GlossPage({word, date, rows, occ, moms, genData, onBack, nameRefs}){
   const w = word;
   const req = w.simp ? [...w.simp] : [];
-  // Year legibility timeline: which days of the scanned Predictor year this word's
-  // required simples are all occupied (S⊆O). Empirical, from astronomy-engine dayOccs.
-  const tl = useMemo(()=>{
-    if(!genData || !genData.dayOccs || !req.length) return null;
-    const n=genData.dayOccs.length;
-    const onDays=[];
-    for(let i=0;i<n;i++){ let ok=true; for(const c of req){ if(!genData.dayOccs[i].has(c)){ ok=false; break; } } if(ok) onDays.push(i); }
-    const curDoy = (()=>{ const d=parseDate(date); if(!d||d.getUTCFullYear()!==genData.year) return -1;
-      return Math.floor((d.getTime()-Date.UTC(d.getUTCFullYear(),0,1,12))/86400000); })();
-    return { n, onDays, daySet:new Set(onDays), curDoy };
-  },[genData,date,w]);
+  const wMoms = [...motherSet(w.he)];                 // geometric mother-gate: this word's required mother letters
+  const onlyDoubles = !req.length && !wMoms.length;   // no zodiac sign AND no mother → truly always readable
+  // Stellar-alignment recurrence: the rare, "significant" reading timescale. A word reads
+  // at a rare alignment (maxInSign ≥ 5: a 5-, 6-, or 7-body clustering) iff its simples ⊆
+  // occupiedSigns AND its mothers ⊆ availableMothers (doubles always free) — the SAME rule
+  // readableWords applies on any date. alignmentRecurrence returns how many of the 12,505
+  // alignments the word reads at, the years (over the 22,000-yr scan), gap stats, and the
+  // nearest alignment before/after the selected date. This REPLACES the former within-year %
+  // badge: that % measured ordinary-day transit legibility (the noise floor), so rare
+  // signatures like Esther read on 98/365 ordinary days and got labelled "frequent" — the
+  // wrong timescale. The alignment gap (years→centuries, no fixed cadence) is the honest
+  // rarity metric. See core.jsx alignmentRecurrence + ALL_ALIGN_YEARS/ALL_ALIGN_OM.
+  const refYear = (parseDate(date) && parseDate(date).getUTCFullYear()) || 0;
+  const rec = useMemo(()=> alignmentRecurrence(w.he, w.simp, refYear), [w, refYear]);
+  // Ordinary-day recurrence — "cada cuánto se puede volver a leer" on the everyday timescale.
+  // Every word (alignment, eternal, ordinary) also reads on scattered ordinary transit days;
+  // this is that frequency from the 365-day scan (genData). Computed for every gloss page so
+  // the "how often can I read it again" answer appears in ANY reading, not only the rare
+  // stellar alignments. Degrades to null when no scan is loaded.
+  const ord = useMemo(()=> ordinaryRecurrence(w.he, w.simp, genData), [w, genData]);
 
   // Wikipedia lookup — proper names + angel names only.
   const wikiTitle = (w.name || w.angelName) ? wikiCleanTitle(w.angelName?w.angelName.en:w.translit) : null;
@@ -194,14 +231,17 @@ function GlossPage({word, date, rows, occ, genData, onBack, nameRefs}){
 
   const occArr=[...occ].sort();
   const missing = req.filter(c=>!occ.has(c));
-  const readableNow = !req.length ? true : missing.length===0;
-  const probsAll = (()=>{ if(!tl||!req.length) return null; const pct=(tl.onDays.length/tl.n*100); return pct; })();
-  // KPI derivations: empirical within-year legibility rate + traffic-light category, matching
-  // the inline card's prob badge (green=special/rare, rose=frequent, red=common).
-  const prob = (tl && req.length) ? tl.onDays.length/tl.n : 1;
-  const pctStr = req.length ? (prob<0.001?'<0.1':(prob*100).toFixed(prob<0.1?1:0)) : '100';
-  const cat = req.length ? (prob>=0.5?'common':prob>=0.2?'frequent':'special') : 'always';
-  const catCls = req.length ? (prob>=0.5?'spec':prob>=0.2?'mid':'ok') : 'ok';
+  const momsNow = moms || new Set();
+  const missingMoms = wMoms.filter(m=>!momsNow.has(m));
+  const readableNow = onlyDoubles ? true : (missing.length===0 && missingMoms.length===0);
+  const hint = recurrenceHint(rec, ord);   // compact badge reused in the KPI row (ord→everyday gap)
+  // characteristic frequency ("π de frecuencia") for the KPI: the gap that defines this word's rarity
+  const freqKPI = (() => {
+    if(!rec) return '—';
+    if(rec.regime==='alignment') return rec.median>=1000 ? '~'+Math.round(rec.median/1000)+'k yr' : (rec.median? rec.median+' yr':'1 event');
+    if(rec.regime==='eternal') return 'always';
+    return ord ? '~'+Math.round(ord.median)+' d' : '—';
+  })();
 
   return <>
     <div className="controls" style={{marginBottom:14}}>
@@ -217,29 +257,25 @@ function GlossPage({word, date, rows, occ, genData, onBack, nameRefs}){
       <div className={'kpi '+(readableNow?'ok':'no')}>
         <div className="v">{readableNow?'●':'○'}</div>
         <div className="l">{displayDate(date)}</div>
-        <div className="sub">{readableNow?'readable — all simples occupied':'missing '+missing.join(' ')}</div>
+        <div className="sub">{readableNow?'readable — all required letters occupied':'missing '+[...missing,...missingMoms].join(' ')}</div>
       </div>
       <div className="kpi">
         <div className="v">{w.len}</div>
-        <div className="l">consonants</div>
+        <div className="l">letters</div>
       </div>
       <div className="kpi">
         <div className="v" style={{color:'var(--gold)'}}>{w.gem}</div>
         <div className="l">gematria{w.m37?' · ×37':''}</div>
       </div>
-      <div className={'kpi '+catCls}>
-        <div className="v">{pctStr}{req.length?'%':''}</div>
-        <div className="l">year legibility</div>
-        <div className="sub">{cat}</div>
-      </div>
-      <div className="kpi">
-        <div className="v">{tl? `${tl.onDays.length}/${tl.n}`:'—'}</div>
-        <div className="l">readable days</div>
+      <div className={'kpi '+(hint&&hint.cls?hint.cls:'')} style={hint&&!hint.cls?hint.style:null}>
+        <div className="v">{hint? `${hint.symbol} ${freqKPI}` : '—'}</div>
+        <div className="l">recurrence</div>
+        <div className="sub">{hint? hint.text : '—'}</div>
       </div>
       <div className="kpi">
         <div className="v" style={{color: req.length?'var(--violet)':'var(--green)'}}>{req.length? req.length : '0'}</div>
         <div className="l">simple letters</div>
-        <div className="sub">{req.length? [...w.simp].join(' ') : 'none · always'}</div>
+        <div className="sub">{req.length? [...w.simp].join(' ') : (onlyDoubles?'none · always':'none · mother-gated')}</div>
       </div>
     </div>
 
@@ -247,8 +283,8 @@ function GlossPage({word, date, rows, occ, genData, onBack, nameRefs}){
       <div className="panel" style={{padding:14}}>
         <div className="muted" style={{marginBottom:8,fontSize:'.8rem'}}>
           {readableNow
-            ? <span style={{color:'var(--green)'}}>● readable on {displayDate(date)} — all required simples occupied</span>
-            : <span style={{color:'var(--red)'}}>○ not readable on {displayDate(date)} — missing: <b style={{color:'var(--gold)'}}>{missing.join(' ')}</b></span>}
+            ? <span style={{color:'var(--green)'}}>● readable on {displayDate(date)} — all required letters occupied</span>
+            : <span style={{color:'var(--red)'}}>○ not readable on {displayDate(date)} — missing: <b style={{color:'var(--gold)'}}>{[...missing,...missingMoms].join(' ')}</b>{missingMoms.length? <span className="muted"> (mother-zone not spanned)</span>:null}</span>}
         </div>
         <SkyMap rows={rows} occ={occ} hl={req.length?new Set(req):null}/>
         <div className="legend">Gold sectors = the simple (zodiac) letters this word needs. Lavender = occupied today but not required by this word.</div>
@@ -262,9 +298,9 @@ function GlossPage({word, date, rows, occ, genData, onBack, nameRefs}){
             <tr><th>Transliteration</th><td><b>{w.translit}</b></td></tr>
             <tr><th>Gloss</th><td>{w.gloss}</td></tr>
             <tr><th>Part of speech</th><td>{w.pos||'—'}</td></tr>
-            <tr><th>Length</th><td>{w.len} consonants</td></tr>
+            <tr><th>Length</th><td>{w.len} letters</td></tr>
             <tr><th>Gematria</th><td><b style={{color:'var(--gold)'}}>{w.gem}</b>{w.m37 && <span style={{color:'var(--green)'}}> · multiple of 37</span>}</td></tr>
-            <tr><th>Simple letters</th><td>{w.simp ? <span style={{color:'var(--blue)'}}>{[...w.simp].join(' ')}</span> : <span style={{color:'var(--violet)'}}>none (always readable)</span>}</td></tr>
+            <tr><th>Simple letters</th><td>{w.simp ? <span style={{color:'var(--blue)'}}>{[...w.simp].join(' ')}</span> : <span style={{color:'var(--violet)'}}>none ({onlyDoubles?'always readable · doubles only':'no zodiac sign · mother-gated'})</span>}</td></tr>
             <tr><th>Badges</th><td>
               {w.pal && <span className="pill" style={{color:'var(--gold)',borderColor:'var(--gold)'}}>palindrome</span>}
               {w.m37 && <span className="pill ok">×37</span>}
@@ -283,26 +319,67 @@ function GlossPage({word, date, rows, occ, genData, onBack, nameRefs}){
     </div>
 
     <div className="panel" style={{marginTop:14,padding:16}}>
-      <h3 style={{marginTop:0}}>Year legibility — when {w.disp} is readable in {genData?genData.year:'the scanned year'}</h3>
-      <div className="muted" style={{marginBottom:10,fontSize:'.82rem'}}>
-        Each cell = one day of the scanned Predictor year (computed from astronomy-engine, not hardcoded). <span style={{color:'var(--gold)'}}>gold</span> = the required simples are all occupied that day (S⊆O); <span style={{color:'var(--green)'}}>green outline</span> = {displayDate(date)}.
-        {req.length===0 && ' This word has no simple letters, so it is always readable — every day is gold.'}
-      </div>
-      {tl ? (
-        <>
-          <div className="tl" role="img" aria-label={`${w.translit}: ${tl.onDays.length} readable days in ${genData.year}`}>
-            {Array.from({length:tl.n},(_,i)=>{
-              const on=tl.daySet.has(i);
-              return <div key={i} className={'d'+(on?' on':'')+(i===tl.curDoy?' cur':'')} title={`${genData.year}-${String(i+1).padStart(3,'0')} (day ${i+1})${on?' · readable':''}${i===tl.curDoy?' · current':''}`}></div>;
-            })}
+      <h3 style={{marginTop:0}}>Recurrence — how often {w.disp} reads</h3>
+      {(() => {
+        if(!rec) return <div className="muted">—</div>;
+        const yrLabel = y => y<0 ? Math.abs(y)+' BCE' : (y===0?'1 BCE':y+' CE');
+        // the everyday cadence (baked 2026 reference, or the live scan when loaded) — always present now
+        const ordLine = ord ? `${ord.count} of ${ord.nDays} days · gap ${ord.min}–${ord.max} d · ~every ${Math.round(ord.avg)} d` : null;
+        if(rec.regime==='alignment'){
+          const gap = rec.median>=1000 ? '~'+Math.round(rec.median/1000)+'k years' : (rec.median? rec.median+' years':'a single recorded event');
+          const yrs = rec.years;
+          const yrsCell = yrs.length<=24 ? yrs.map(y=>yrLabel(y)).join(' · ')
+            : `${yrs.slice(0,8).map(yrLabel).join(' · ')} … ${yrs.slice(-4).map(yrLabel).join(' · ')} (${yrs.length} total)`;
+          return <>
+            <div style={{marginBottom:10,fontSize:'1.05rem'}}>
+              <span style={{color:'var(--green)'}}>◆ {gap}</span> between the rare alignments that make {w.disp} legible — the significant stellar reading, recurring over years→centuries with no fixed cadence.{ordLine ? <> It also reads on ordinary days ({ordLine}).</> : null}
+            </div>
+            <table style={{marginBottom:10}}>
+              <tbody>
+                <tr><th>Required sign(s) / simple(s)</th><td><b>{rec.signs.join(' / ')}</b> · <span style={{color:'var(--blue)'}}>{rec.simples.join(' ')}</span>{rec.mothers&&rec.mothers.length?<> · mother <span style={{color:'var(--violet)'}}>{rec.mothers.join(' ')}</span></>:null}</td></tr>
+                <tr><th>Rare alignments read at</th><td><b>{rec.n}</b> of {rec.total} (maxInSign 5/6/7, across 22,000 yr)</td></tr>
+                <tr><th>Years</th><td>{yrsCell}</td></tr>
+                <tr><th>Gap between alignments</th><td>{rec.min}–{rec.max} yr · median {rec.median} yr</td></tr>
+                <tr><th>Nearest to {displayDate(date)}</th><td>{rec.prev!=null?`${yrLabel(rec.prev)} (${refYear-rec.prev} yr ago)`:'—'} · next {rec.next!=null?`${yrLabel(rec.next)} (in ${rec.next-refYear} yr)`:'none recorded'}</td></tr>
+                {ord && <tr><th>Ordinary-day cadence</th><td>{ordLine}</td></tr>}
+              </tbody>
+            </table>
+            <div className="muted" style={{fontSize:'.82rem'}}>The alignment gap is the rare, significant reading — the stellar-recurrence "frequency constant": a one-simple word reads at most alignments (short gap, e.g. every few years); a multi-simple word reads only when all its signs coincide (long gap). The ordinary-day cadence is the noise floor every word also sits on (when any planet transits its sign). Planet periods are stable, so the everyday cadence is the same in any year.</div>
+          </>;
+        }
+        if(rec.regime==='eternal'){
+          return <>
+            <div style={{marginBottom:10,fontSize:'1.05rem'}}>
+              <span style={{color:'var(--violet)'}}>✦ always</span> — {w.disp} uses no zodiac simple ({onlyDoubles?'doubles only':'doubles + mother '+(rec.mothers||[]).join(' ')}), so it reads at every rare alignment regardless of sign{ordLine ? <>, and on most ordinary days ({ordLine})</> : null}.
+            </div>
+            <table style={{marginBottom:10}}>
+              <tbody>
+                <tr><th>Rare alignments read at</th><td><b>{rec.n}</b> of {rec.total} (all 12,505, across every sign)</td></tr>
+                <tr><th>Gap between alignments</th><td>{rec.min}–{rec.max} yr · median {rec.median} yr</td></tr>
+                {ord && <tr><th>Ordinary-day cadence</th><td>{ordLine}</td></tr>}
+              </tbody>
+            </table>
+            <div className="muted" style={{fontSize:'.82rem'}}>Not gated to any sign, so it reads at all {rec.total} rare alignments across the 22,000-yr scan (and most ordinary days). The gaps are between successive alignments of any sign — no fixed cadence.</div>
+          </>;
+        }
+        // ordinary regime — the sign-combination never occurs in any scanned alignment, so the
+        // everyday-day gap IS the only recurrence.
+        const why = `its required sign-combination {${(rec.signs||[]).join(' / ')||'—'}} never coincides in any of the ${rec.total} rare alignments`;
+        const ordGap = ord ? '~'+Math.round(ord.median)+' d' : 'scattered days';
+        return <>
+          <div style={{marginBottom:10,fontSize:'1.05rem'}}>
+            <span style={{color:'var(--dim)'}}>○ {ordGap}</span> — {w.disp} reads only on scattered ordinary days, never at a rare alignment, so this everyday cadence is its only recurrence.
           </div>
-          <div className="legend">
-            {req.length===0
-              ? <>every day · {tl.n} days</>
-              : <>{tl.onDays.length} of {tl.n} days ({probsAll!=null?probsAll.toFixed(probsAll<1?1:0):'?'}%) · first {tl.onDays.length?displayDate(fmtDate(makeDate(genData.year,1,1+tl.onDays[0]))):'—'} · last {tl.onDays.length?displayDate(fmtDate(makeDate(genData.year,1,1+tl.onDays[tl.onDays.length-1]))):'—'}</>}
-          </div>
-        </>
-      ) : <div className="muted">Run the Predictor scan for this year to see the day-by-day timeline.</div>}
+          <table style={{marginBottom:10}}>
+            <tbody>
+              {ord && <><tr><th>Readable days / year</th><td><b>{ord.count}</b> of {ord.nDays} (≈{Math.round(ord.pct*100)}%)</td></tr>
+              <tr><th>Gap between readable days</th><td>{ord.min}–{ord.max} d · median {ord.median} d</td></tr>
+              <tr><th>Average cadence</th><td>roughly every ~{Math.round(ord.avg)} days</td></tr></>}
+            </tbody>
+          </table>
+          <div className="muted" style={{fontSize:'.82rem'}}>Why no rare-alignment recurrence: {why}. This is the everyday timescale — the noise floor every word sits on. The years→centuries alignment gap does not apply here because the word's required signs never all coincide at any of the scanned alignments. (Everyday cadence from the {ord?ord.year:'2026'} reference scan; planet periods are stable, so it is the same in any year.)</div>
+        </>;
+      })()}
     </div>
 
     {wikiTitle && (

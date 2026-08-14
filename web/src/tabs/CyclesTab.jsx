@@ -1,7 +1,7 @@
 // tabs/CyclesTab.jsx — Saros / Ayanamsa / Lunar-Solar / Alignments / Week + diagrams
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import * as Astronomy from 'astronomy-engine';
-import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate, refUrl } from '../core.jsx';
+import { SIGNS, SIMPLE, LETTER_TO_SIGN, DOUBLES, MOTHERS, BODIES, GLYPH, WEEK, FIN2REG, REG2FIN, SIMPLE_LETTERS, GV, norm, displayHe, gematria, simpleSet, formable, isPalindrome, ANGEL_LEXICON, ANGEL_NAME_MAP, readableWords, daysInMonth, makeDate, parseDate, fmtDate, BODIES7, skyAtSet, skyAt, skyAt7, occupiedLetters, bySign, GENESIS, genesisReadable, GEN_TOTAL, GEN_VALUES, PREC, AGE, FULL, AYANAMSIS, SYN, DRAC, ANOM, TROP, ECLY, HALAKIM_DAY, MOLAD, EQUINOX_LON, ageBoundaries, yrLabel, ERA_WINDOWS, FINALS, letterVal, reduce9, LO_SHU, LO_POS, sigilPath, aiqGroups, siamese, doublyEven, singlyEven, buildMagic, isMagic, KAMEOT, GREEK, isopsephy, ABJAD, ABJAD_NAME, abjad, KTP, katapayadi, countSubset, MON, MONTHNAMES, displayDate, refUrl, availableMothers, occupiedSigns, motherSet } from '../core.jsx';
 import { SkyMap, KameaGrid, Fig, DateEntry, YearInput, SubTabs } from '../ui.jsx';
 
 // ====== Cycles tab — graphical representations (inline SVG, self-contained) ======
@@ -381,6 +381,7 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData, nameRefs}){
   const [topView,setTopView]=useState('date'); // 'date' (this sky) | 'always' (every day)
   const mapRef=useRef(null);
   const [dayOccs7,setDayOccs7]=useState(null); // 7-classical occupied-sets over a reference year (top-8 legibility %)
+  const [dayMoms7,setDayMoms7]=useState(null); // ...matching geometric mother-gate per day (top-8 legibility %)
   useEffect(()=>{ fetch('/alignments.json').then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(setData).catch(e=>setErr(e.message)); },[]);
   // default to the tightest classical grand conjunction once data is in
   useEffect(()=>{ if(data && !sel){ const t=[...data.scanB].filter(e=>e.maxInSign>=7).sort((a,b)=>a.span-b.span); if(t.length){ setSel(t[0].date); setSelSet('B'); } } },[data,sel]);
@@ -394,8 +395,8 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData, nameRefs}){
     let cancelled=false;
     setTimeout(()=>{
       const y=2026, nDays=(y%4===0&&(y%100!==0||y%400===0))?366:365;
-      const occs=[]; for(let i=0;i<nDays;i++) occs.push(occupiedLetters(skyAt7(fmtDate(makeDate(y,1,1+i)))));
-      if(!cancelled) setDayOccs7(occs);
+      const occs=[], moms=[]; for(let i=0;i<nDays;i++){ const rows=skyAt7(fmtDate(makeDate(y,1,1+i))); occs.push(occupiedLetters(rows)); moms.push(availableMothers(occupiedSigns(rows))); }
+      if(!cancelled){ setDayOccs7(occs); setDayMoms7(moms); }
     },20);
     return ()=>{ cancelled=true; };
   },[lex]);
@@ -404,13 +405,14 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData, nameRefs}){
   const probs=useMemo(()=>{
     if(!lex) return null;
     const dayOccs = selSet==='A' ? (genData&&genData.dayOccs) : dayOccs7;
+    const dayMoms = selSet==='A' ? (genData&&genData.dayMoms) : dayMoms7;
     if(!dayOccs) return null;
     const m=new Map(), n=dayOccs.length||1;
-    const frac=(cons)=>{ const req=[...simpleSet(cons)]; if(!req.length){ m.set(cons,1); return; } let c=0; for(const o of dayOccs){ let ok=true; for(const x of req) if(!o.has(x)){ ok=false; break; } if(ok) c++; } m.set(cons,c/n); };
+    const frac=(cons)=>{ const req=[...simpleSet(cons)]; const moms=[...motherSet(cons)]; if(!req.length && !moms.length){ m.set(cons,1); return; } let c=0; for(let i=0;i<dayOccs.length;i++){ let ok=true; for(const x of req) if(!dayOccs[i].has(x)){ ok=false; break; } if(ok && dayMoms) for(const mc of moms) if(!dayMoms[i].has(mc)){ ok=false; break; } if(ok) c++; } m.set(cons,c/n); };
     for(const [cons] of lex.lexicon) frac(cons);
     for(const [he] of ANGEL_LEXICON) if(!m.has(he)) frac(he);
     return { map:m, n:dayOccs.length, year: selSet==='A' ? ((genData&&genData.year)||2026) : 2026, bodies: '7 classical' };
-  },[lex,selSet,genData,dayOccs7]);
+  },[lex,selSet,genData,dayOccs7,dayMoms7]);
   const pick=(d,set='B')=>{ setSel(d); setSelSet(set); if(setDate) setDate(d);
     // Anchor to the sky-map + top reading so the user sees what changed on that alignment.
     setTimeout(()=>{ if(mapRef.current) mapRef.current.scrollIntoView({behavior:'smooth', block:'start'}); }, 60); };
@@ -426,7 +428,9 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData, nameRefs}){
   const tightGap=tight.length>=2 ? Math.abs((parseDate(tight[0].date)-parseDate(tight[1].date))/86400000/365.25) : null;
   const ev = (selSet==='A'?data.scanA:data.scanB).find(e=>e.date===sel);
   const rows = sel ? skyAt(sel) : [];                          // 7 classical bodies (sky-map dots)
-  const occ = sel ? occupiedLetters(skyAt7(sel)) : new Set();  // 7 classical bodies (reading) — same set
+  const rows7sel = sel ? skyAt7(sel) : [];                     // 7 classical bodies (reading) — same set
+  const occ = sel ? occupiedLetters(rows7sel) : new Set();     // 7 classical bodies (reading) — same set
+  const moms = sel ? availableMothers(new Set(rows7sel.map(r=>r.sign))) : new Set(); // geometric mother-gate
   // client-side stellar reading for the selected alignment (no precomputed reading
   // in the JSON — keeps alignments.json lean even with ~10⁴ deep events). Plain const,
   // NOT a hook: a useMemo here would sit after the early returns above and break the
@@ -435,17 +439,18 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData, nameRefs}){
   // "Importance" ranking: proper names (biblical people/places) first, then longest, then
   // lowest gematria — so the top surfaces the notable biblical names that occur on this sky.
   const r = (sel && lex) ? (() => {
-    const names = readableWords(occ, lex.lexicon, angelMap);
+    const names = readableWords(occ, lex.lexicon, angelMap, moms);
     const byImp=(a,b)=>((b.name?1:0)-(a.name?1:0))||(b.len-a.len)||(a.gem-b.gem);
     return {
-      genesisLegible: genesisReadable(occ),
+      genesisLegible: genesisReadable(occ, moms),
       occupied: [...occ].sort().join(''),
       readableCount: names.length,
       properNames: names.filter(n=>n.name).length,
       angels: names.filter(n=>n.angel).map(n=>n.he),
       // date-specific: ≥1 zodiac simple → readable BECAUSE of this alignment's sky (changes with date)
       topDate: names.filter(n=>n.simp).sort(byImp).slice(0,8),
-      // always-readable: no zodiac simples (mothers+doubles only) → readable every day (never changes)
+      // eternal tier: no zodiac simples (mothers+doubles only) → not time-gated by the turning
+      // zodiac, but still bounded by the geometric mother-gate (already applied via `moms` above)
       topAlways: names.filter(n=>!n.simp).sort(byImp).slice(0,8),
     };
   })() : null;
@@ -501,13 +506,13 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData, nameRefs}){
           <div className="controls" style={{marginTop:6, marginBottom:4}}>
             <span className="muted" style={{fontSize:'.82rem'}}>top readable names:</span>
             <button className={topView==='date'?'on':''} onClick={()=>setTopView('date')} aria-pressed={topView==='date'}>this sky ({r.topDate.length})</button>
-            <button className={topView==='always'?'on':''} onClick={()=>setTopView('always')} aria-pressed={topView==='always'}>always-readable ({r.topAlways.length})</button>
+            <button className={topView==='always'?'on':''} onClick={()=>setTopView('always')} aria-pressed={topView==='always'}>eternal tier ({r.topAlways.length})</button>
             {!probs && <span className="muted" style={{fontSize:'.78rem'}}>· computing legibility %…</span>}
             {probs && <span className="muted" style={{fontSize:'.76rem'}}>· % = empirical legibility over {probs.n} days of {probs.year} ({probs.bodies}): <span className="prob ok">green</span>=special/rare · <span className="prob mid">rose</span>=frequent · <span className="prob spec">red</span>=common</span>}
           </div>
           <div className="muted" style={{marginBottom:6,fontSize:'.82rem'}}>{topView==='date'
             ? <>Date-specific — the most important names whose zodiac letters are among <b>this alignment's</b> occupied signs, so the list changes with the alignment. Proper names first, then longest.</>
-            : <>Always-readable — words with no zodiac letters (mothers + doubles only), readable on <b>every</b> day, so this list never changes (e.g. <span className="he">ארפכשד</span> Arphaxad, <span className="he">פרמשתא</span> Parmashta, <span className="he">שמאבר</span> Shem-eber). Proper names first, then longest.</>}</div>
+            : <>Eternal tier — words with no zodiac letters (mothers + doubles only), not bound to the turning zodiac. They are still bounded by the geometric mother-gate: on a single-sign grand conjunction only the one available mother lights, so this list <b>does</b> narrow with the alignment (e.g. <span className="he">ארפכשד</span> Arphaxad, <span className="he">פרמשתא</span> Parmashta, <span className="he">שמאבר</span> Shem-eber). Proper names first, then longest.</>}</div>
           <div className="tcards" style={{gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))'}}>{(topView==='date'?r.topDate:r.topAlways).map((n,i)=>(
             <div key={i} className={'tcard'+(n.simp?'':' always')}>
               <div className="the">{n.disp||n.he}</div>
@@ -525,7 +530,7 @@ function AlignmentsTab({setDate, goReader, lex, angelMap, genData, nameRefs}){
               {probs && probs.map.has(n.he) && (()=>{ const p=probs.map.get(n.he); const pct = p<0.001 ? '<0.1' : (p*100).toFixed(p<0.1?1:0); const cls = p>=0.5 ? 'spec' : p>=0.2 ? 'mid' : 'ok'; const tag = p>=0.5 ? 'common' : p>=0.2 ? 'frequent' : 'special'; return <span className={'prob '+cls} title={`Empirical legibility over ${probs.n} days of ${probs.year} (${probs.bodies}): ${pct}% of days this word's required simples are all occupied (S⊆O, computed from astronomy-engine — not hardcoded). A within-year rate, NOT the recurrence of a specific stellar alignment (which recurs over centuries→millennia, §15c.11). Low % = special/rare (green); high % = common (red).`}>{pct}% · {tag}</span>; })()}
               {n.angelName && <div className="simp" style={{color:'var(--violet)'}}>angel: {n.angelName.en} <span style={{color:'var(--dim)'}}>· {n.angelName.src}</span></div>}
               {n.angel && <div className="simp" style={{color:'var(--violet)'}}>Shem triplet +אל → <span className="he" style={{fontSize:'.95rem'}}>{n.angel.el}</span> · +יה → <span className="he" style={{fontSize:'.95rem'}}>{n.angel.yh}</span></div>}
-              <div className="simp">{n.simp ? ('simples: '+[...n.simp].join(' ')) : 'no simples (always)'}</div>
+              <div className="simp">{n.simp ? ('simples: '+[...n.simp].join(' ')) : 'no zodiac sign · eternal tier'}</div>
             </div>
           ))}</div>
         </>}

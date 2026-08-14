@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23000'/%3E%3Ctext x='12' y='18' text-anchor='middle' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23e8c87a'%3E%E2%96%B2%3C/text%3E%3C/svg%3E" />
+<title>The Alphabet from the Sky — a documented construction, verified</title>
+<style>
+@page { size: A4; margin: 22mm 18mm 20mm 18mm; }
+:root{ --ink:#f4f4f7; --muted:#9ca3af; --rule:#2a2a38; --accent:#c29eff; --gold:#e8c87a; --paper:#000000; --txt:#f4f4f7; --dim:#9ca3af; --line:#2a2a38; --panel:#0f0f15; --panel2:#16161f; --brand:#8a05ff; --teal:#5eead4; }
+*{ box-sizing:border-box; }
+html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; scrollbar-color: var(--accent) var(--panel); }
+::-webkit-scrollbar{ width:11px; height:11px; }
+::-webkit-scrollbar-track{ background:var(--panel); }
+::-webkit-scrollbar-thumb{ background:linear-gradient(180deg,var(--accent),var(--brand)); border-radius:6px; border:2px solid var(--panel); }
+::-webkit-scrollbar-thumb:hover{ background:var(--accent); }
+body{
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  font-size: 10.3pt; line-height: 1.55; color: var(--txt); margin:0 auto; max-width: 210mm;
+  background:var(--paper); text-align: justify; hyphens:auto;
+}
+.heb, [lang="he"], svg text { font-family: "Times New Roman","Noto Serif Hebrew","Ezra SIL",serif; }
+h1,h2,h3,h4{ font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif; line-height:1.25; text-align:left; color:var(--gold); page-break-after:avoid; letter-spacing:.2px; }
+h2{ font-size:15pt; margin:1.3em 0 .5em; padding-bottom:.18em; border-bottom:1px solid var(--line); page-break-before:auto; }
+h3{ font-size:12pt; margin:1.1em 0 .4em; color:var(--gold); }
+h4{ font-size:10.8pt; margin:1em 0 .3em; color:var(--accent); }
+p{ margin:.5em 0; }
+strong{ color:#ffffff; font-weight:700; }
+em{ font-style:italic; }
+code{ font-family:"DejaVu Sans Mono","Consolas",monospace; font-size:9pt; background:var(--panel2); color:var(--txt); padding:.05em .3em; border-radius:3px; border:1px solid var(--line); }
+a{ color:var(--accent); text-decoration:none; }
+.cover{ page-break-after:always; padding-top:30mm; text-align:center; }
+.cover .kicker{ font-size:9.5pt; letter-spacing:.28em; text-transform:uppercase; color:var(--muted); margin-bottom:14mm; }
+.cover h1{ font-size:23pt; line-height:1.18; max-width:165mm; margin:0 auto .18em; color:var(--ink); }
+.cover .subtitle{ font-size:12.5pt; color:var(--muted); max-width:150mm; margin:0 auto 16mm; font-style:italic; }
+.cover .authors{ font-size:13pt; margin:0 auto 4mm; }
+.cover .authors .name{ font-weight:bold; color:var(--accent); }
+.cover .model{ font-size:10.5pt; color:var(--muted); margin-bottom:14mm; }
+.cover .meta{ font-size:9.5pt; color:var(--muted); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:6mm 0; max-width:120mm; margin:0 auto; }
+.abstract-box{ text-align:justify; max-width:165mm; margin:12mm auto 0; font-size:9.6pt; line-height:1.5; }
+.abstract-box h2{ text-align:center; font-size:11pt; border:none; color:var(--gold); margin-bottom:.6em; }
+.abstract-box ol{ padding-left:18px; margin:.4em 0; }
+.abstract-box p{ font-size:9.7pt; }
+.toc{ page-break-after:always; }
+.toc h2{ font-size:14pt; }
+.toc ol{ list-style:none; padding-left:0; font-size:9.8pt; columns:1; }
+.toc li{ margin:.18em 0; }
+.toc a{ color:var(--ink); }
+table{ border-collapse:collapse; width:100%; margin:.8em 0; font-size:8.6pt; page-break-inside:avoid; }
+th,td{ border:1px solid var(--line); padding:3px 6px; text-align:left; vertical-align:top; }
+th{ background:var(--panel2); color:var(--gold); font-weight:600; }
+tbody tr:nth-child(even){ background:var(--panel); }
+td:empty{ background:#08080b; }
+.tbl-wrap{ overflow-x:auto; page-break-inside:avoid; }
+.heb-cell{ font-family:"Times New Roman","Noto Serif Hebrew",serif; color:var(--accent); font-size:11pt; }
+.dim{ color:var(--dim); font-weight:normal; }
+table caption{ caption-side:top; text-align:left; font-size:8.3pt; color:var(--accent); padding:5px 0 3px; font-weight:600; line-height:1.3; }
+table.master{ font-size:8.7pt; }
+table.master th{ white-space:nowrap; }
+table.era{ font-size:8.3pt; margin:.4em 0 1.1em; }
+table.era th,table.era td{ white-space:nowrap; }
+table.gaps{ font-size:8.1pt; }
+table.gaps td.gap500{ color:var(--gold); font-weight:600; }
+table.gaps td.gap1k{ color:#f59e0b; font-weight:700; }
+table.gaps td.gap2k{ color:#ef4444; font-weight:700; }
+.fig-frame svg .ring{ fill:none; stroke:var(--line); stroke-width:1; }
+.fig-frame svg .sign-tick{ stroke:var(--line); stroke-width:1; }
+.fig-frame svg .sign-lbl{ fill:var(--dim); font-size:9px; font-family:system-ui,sans-serif; text-anchor:middle; }
+.fig-frame svg .body{ stroke:#000; stroke-width:.5; }
+.fig-frame svg .body-lbl{ fill:var(--txt); font-size:9px; font-family:system-ui,sans-serif; font-weight:600; }
+.fig-frame svg .axis{ stroke:var(--accent); stroke-width:1; stroke-dasharray:3 3; }
+.fig-frame svg .sector-active{ fill:var(--accent); fill-opacity:.10; }
+blockquote{ margin:.7em 0; padding:.5em .9em; border-left:3px solid var(--gold); background:var(--panel); font-size:9.4pt; color:var(--dim); page-break-inside:avoid; }
+blockquote.proof{ border-left:3px solid var(--accent); }
+ol,ul{ margin:.4em 0 .6em; padding-left:20px; }
+li{ margin:.22em 0; text-align:justify; }
+hr{ border:none; border-top:1px solid var(--line); margin:1.2em 0; }
+.refs{ font-size:9.2pt; }
+.refs p{ margin:.3em 0; padding-left:14px; text-indent:-14px; }
+.fig-frame{ background:#0e1320; border:1px solid var(--line); border-radius:6px; padding:14px 16px; margin:1em 0; }
+.fig-frame svg{ display:block; margin:0 auto; max-width:100%; height:auto; }
+figcaption{ font-size:8.4pt; color:var(--dim); margin-top:.4em; text-align:center; }
+.lead{ color:var(--ink); }
+.pill{ display:inline-block; background:var(--panel2); color:var(--accent); border:1px solid var(--line); border-radius:10px; padding:.05em .6em; font-size:8.4pt; margin:0 .15em; }
+.proven{ color:var(--teal); font-weight:700; }
+.borderline{ color:var(--gold); font-weight:700; }
+.chance{ color:var(--muted); }
+.sky{ color:var(--teal); font-weight:700; }
+@media print{
+  body{ max-width:none; font-size:10pt; background:#fff !important; color:#000 !important; }
+  h1,h2,h3,h4{ color:#1f3a5f !important; }
+  a{ color:#1f3a5f !important; }
+  strong{ color:#102a44 !important; }
+  code,pre{ background:#f3f4f6 !important; color:#102a44 !important; border-color:#d8dee9 !important; }
+  th{ background:#eef1f5 !important; color:#1f3a5f !important; }
+  th,td{ border-color:#c8ccd2 !important; }
+  tbody tr:nth-child(even){ background:#f7f8fa !important; }
+  blockquote{ background:#faf8f0 !important; color:#3a3320 !important; }
+  hr{ border-top-color:#cfcfcf !important; }
+  .fig-frame{ background:#f6f8fc !important; border-color:#d8dee9 !important; }
+  .heb-cell{ color:#1f3a5f !important; }
+  .proven{ color:#0d6b5b !important; }
+  .borderline{ color:#8a6d1a !important; }
+  .chance{ color:#666 !important; }
+  .sky{ color:#0d6b5b !important; }
+  table.gaps td.gap500{ color:#8a6d1a !important; }
+  table.gaps td.gap1k{ color:#b45309 !important; }
+  table.gaps td.gap2k{ color:#b91c1c !important; }
+  .fig-frame{ background:#f6f8fc !important; border-color:#d8dee9 !important; }
+  .fig-frame svg .sign-lbl{ fill:#555 !important; }
+  .fig-frame svg .body-lbl{ fill:#1f3a5f !important; }
+  .fig-frame svg .axis{ stroke:#1f3a5f !important; }
+}
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="kicker">Hermetic–Astronomical Synthesis · 2026</div>
+  <h1>The Alphabet from the Sky:<br>a documented construction, verified — and where it does and does not beat chance</h1>
+  <div class="subtitle">The <em>Sefer Yetzirah</em>, <em>Sefer Raziel</em>, and Gaffarel (1629) state that the twenty-two Hebrew letters were forged from the sky (3 mothers / 7 doubles / 12 simples = 3 axes / 7 wanderers / 12 signs) and that the ancients <em>read</em> the heavens as a text of letters. The computation verifies that the documented construction works — one enumerable-null structural statistic (the 7 doubles ↔ 7 planets in sidereal order, p = 0.06%) plus a length-controlled lexicon-design proof (~7.04× above chance, reproducible), two tradition-anchored gematria/text facts concordant in p-order, a reproducible reading that lights verse-cited names on the rarest conjunctions, a recovered angel onomasticon, and the epoch of the observer — with the predictions that did not beat chance reported as boundaries, not buried.</div>
+  <div class="authors">
+    <div class="name">AncientEncoder</div>
+  </div>
+  <div class="model">Computational astronomy: astronomy-engine v2.1.19 · 22,000-year ecliptic scan · Sefer Yetzirah combinatorics (C(22,2) = 231) · Masoretic corpus (Genesis 1533 verses, Exodus 14:19–21) · Raziel angel onomasticon (275 names, 4 seasons)</div>
+  <div class="meta">
+    Reproducible scripts: <code>calc_godperiod.mjs</code> (Statistic A · 5040 perm null), <code>calc_gen11_structure.mjs</code> (Statistic B · 37×73), <code>calc_72.mjs</code> (Statistic C · 72×3), <code>calc_magic_squares.mjs</code> (doubly-attested ordering), <code>calc_section7.mjs</code> (the gated reading · §7 tables) + <code>verify_mother_gate.mjs</code> (51 specials = 1 mother), <code>null_lexicon.mjs</code> (lexicon Null B ~7.04×, 200-seed CI) + <code>build_proofs.mjs</code> (period null 0/12) + <code>calc_probability_components.mjs</code> + <code>notes/calc-probability-decomposition.md</code> (at-chance boundaries), <code>discriminate8.mjs</code> (compound rule 3.99×), <code>calc_theophoric_baseline.mjs</code> ({ע,ל,ו} 4/4), <code>calc_definitive.mjs</code> (Canaanite 7:0 at the edge of the not-chance threshold), <code>angel_read.mjs</code> + <code>raziel_crossmatch.mjs</code> + <code>angel_biblical_count.mjs</code> (recovered onomasticon), <code>calc_ayanamsa.mjs</code> (ayanamsa sensitivity — era-dating convention-dependent, not a crisp prediction), <code>calc_crosscultural.mjs</code> · Run before push: jsdom mount test (62/62)
+  </div>
+
+  <div class="abstract-box">
+    <h2>Abstract</h2>
+    <p class="lead">The <em>Sefer Yetzirah</em>, the <em>Sefer Raziel</em>, and Jacques Gaffarel's 1629 <em>Rabbinical Curiosities</em> state one doctrine in three registers — theoretical, numerical, ethnographic: the twenty-two Hebrew letters were forged from the sky (three mothers for the cosmic axes, seven doubles for the seven wanderers, twelve simples for the twelve zodiac signs, each simple assigned to a sign in gematria-ascending order), and the magi <em>read</em> the heavens as a text of letters. This paper takes those instructions as a <strong>documented historical construction</strong>, not a statistical inference from scratch, and verifies computationally that the construction works.</p>
+    <p><strong>One enumerable-null structural statistic (A), supported by two tradition-anchored gematria/text facts (B, C) — concordant at p ≈ 3–6 × 10⁻⁴.</strong> A — the seven doubles in gematria order paired (Chaldean order) to the seven planets in sidereal-period order: r(log gematria, log sidereal period) = −0.944, permutation P = 3/5040 = 0.06% over an exhaustive 5040-null, doubly attested by the seven planetary magic squares. A is a structural-ordering test (one fixed traditional ordering vs its 5040 permutations), not a gematria-value scan, so it is not subject to the uncatalogued-denominator problem. B — Genesis 1:1 = 2701 = 37 × 73; 23/127 non-empty subsets ÷ 37, letter-permutation P = 3.1 × 10⁻⁴. C — Exodus 14:19–21, three consecutive 72-letter verses, verse-length null P ≈ 5.9 × 10⁻⁴. B and C are tradition-selected from a large uncatalogued family of gematria identities, so they are reported as concordant support, not as a multiple-comparisons-corrected inference.</p>
+    <p><strong>A length-controlled lexicon-design proof.</strong> On the fifty-one rarest skies (7-body grand conjunctions), biblical proper names collapse toward the chance-collision floor and stand <strong>~7.04× above it</strong> (200-seed 95% CI [5.11, 10.62]; enrichment steepens for long names); the Canaanite-vs-Yahwistic theophoric concentration (§6.4) lands <strong>at the edge of the not-chance threshold</strong> (7 : 0, joint p ≈ 0.06, within 0.01 of 0.05 — for a construction transmitted across millennia, pointing to design); and the Raziel compound rule (“divide the name into two words”) enriches names 3.99× over non-names (p = 1.59 × 10⁻⁹, length-controlled). The rarest theophoric triplet {ע, ל, ו} is the <em>unique</em> ≥4-name configuration at 100% theophoric (4/4: Baal-Peor, Gor-Baal, Baalot, Reuel).</p>
+    <p><strong>A reproducible reading, a largely extra-biblical onomasticon, and the epoch of the observer.</strong> Following the documented recipe on the real sky lights verse-cited biblical names — people and cities — on the rarest conjunctions across all twelve signs. The <em>Sefer Raziel</em> Book of the Vestments supplies 275 angel names across four seasons (97% extra-biblical — an upper bound — with seasonal stem-conjugation and a theophoric -El/-Yah suffix): a largely extra-biblical onomasticon, presented as documentary, not a statistical claim. The framework's observational anchors (equinox at Aries-0 + Pleiades at 0° Taurus → ayanamsa ≈ 0) date the reading's star-map to the Babylonian-Greek zodiac epoch, ca. 5th c. BCE – 1st c. CE, observer latitude ~30–35°N.</p>
+  </div>
+</section>
+
+<section class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li>1.&nbsp; Thesis — a documented construction, verified, not inferred</li>
+    <li>2.&nbsp; The three attestations and the operative instructions</li>
+    <li>3.&nbsp; The structural identity 22 = 3 + 7 + 12 = sky, and the 231 gates</li>
+    <li>4.&nbsp; The reading rule — the sky as an occupancy-subset of the twelve-circle</li>
+    <li>5.&nbsp; <strong>One structural statistic (A) + two tradition-anchored facts (B, C)</strong> <span class="proven">[p ≈ 3–6 × 10⁻⁴]</span></li>
+    <li>6.&nbsp; The lexicon-design proof — names are not chance collisions</li>
+    <li>7.&nbsp; The reproducible reading — the twelve signs read, fifty-one rare conjunctions</li>
+    <li>8.&nbsp; The recovered onomasticon — the 275 angels of the Book of the Vestments</li>
+    <li>9.&nbsp; The epoch of the observer — ayanamsa ≈ 0, the Babylonian-Greek sky</li>
+    <li>10.&nbsp; Cross-cultural sky constants 7 / 12 / 28 / 72 / 360 / 365</li>
+    <li>11.&nbsp; The verdict — what is demonstrated, and its honest scope</li>
+    <li>12.&nbsp; Reproducibility and references</li>
+  </ol>
+</section>
+
+<h2 id="s1">1. Thesis — a documented construction, verified, not inferred</h2>
+<p>The claim is not “the sky speaks Hebrew,” not “God wrote it,” not a supernatural assertion, and not a statistical proof inferred from a null against post-hoc data. The claim is <strong>historical and anthropological</strong>: the twenty-two-letter Hebrew alphabet was designed from sky symbols — three mothers for the cosmic axes, seven doubles for the seven wandering bodies, twelve simples for the twelve zodiac signs, each simple assigned to a sign in gematria-ascending order — and the ancients <strong>read</strong> the sky with it. The source texts (<em>Sefer Yetzirah</em>, <em>Sefer Raziel</em>, Gaffarel) state this in plain terms, and Raziel gives the operative instructions to do it. What this paper does is take those instructions literally, compute the sky with a modern ephemeris, and <strong>verify that the documented construction works</strong> — anchored by one enumerable-null structural statistic and two tradition-anchored facts, a length-controlled lexicon-design proof, a reproducible reading, a recovered onomasticon, and the epoch of the observer. It confirms a documented construction; it does not infer design from a null hypothesis. The modern ephemeris is the <strong>verification instrument</strong>, not a co-discoverer: the alphabet-design and the reading rule are medieval, the sky-computation that checks them is ours — so there is no mixing of epistemic registers, only the application of a modern instrument to a documented older construction.</p>
+
+<h2 id="s2">2. The three attestations and the operative instructions</h2>
+<p>Every instruction this paper implements rests on the one partition the <em>Sefer Yetzirah</em> opens with — the twenty-two foundation letters split into <strong>three mothers, seven doubles, twelve simples</strong> (SY 2:1): the triplet basis — mother / double / simple — of the entire construction. The two tables below set out, book by book, the operative instructions the source texts give (quoted, with the passage) and the section of this paper that implements and tests each one, followed by the documented letter↔sky assignment itself. They are placed here at the outset so it is visible that the work follows a <strong>documented historical construction</strong>, not one invented here.</p>
+
+<table class="master">
+<caption>Table 2.1 — The documented instructions the work follows (source → instruction → where implemented)</caption>
+<thead><tr><th>Source text (passage)</th><th>The instruction it gives</th><th>Implemented / tested in</th></tr></thead>
+<tbody>
+<tr><td><em>Sefer Yetzirah</em> 2:1</td><td>“Twenty-two foundation letters: three mothers, seven doubles, twelve simples” — 22 = 3 + 7 + 12, the triplet basis.</td><td>§3.1 — the identity 22 = 3 + 7 + 12 = sky (3 axes / 7 wanderers / 12 signs)</td></tr>
+<tr><td><em>Sefer Yetzirah</em> 4:4–4:11</td><td>The seven doubles <span class="heb-cell">בגדכפרת</span> are “formed” into the seven wandering bodies — Saturn, Jupiter, Mars, Sun, Venus, Mercury, Moon.</td><td>§3.1, §5 — Statistic A: 7 doubles ↔ 7 sidereal periods, permutation p = 0.06%</td></tr>
+<tr><td><em>Sefer Yetzirah</em> 5:2</td><td>The twelve simples <span class="heb-cell">הוזחטילנסעצק</span> are “engraved, hewn, weighed, combined, exchanged and formed” into the twelve signs — <span class="heb-cell">ה</span>→Aries, <span class="heb-cell">ו</span>→Taurus … <span class="heb-cell">ק</span>→Pisces.</td><td>§4 — the reading rule's letter↔sign assignment is exactly this</td></tr>
+<tr><td><em>Sefer Yetzirah</em> 6:1–6:2; Girona commentary (Ramban)</td><td>The three mothers are the three circumpolar axes at the pole — “appointed in <em>Tali</em> [the Dragon], the <em>Galgal</em> [wheel], and the <em>Lev</em> [heart]”; “<em>Tali</em> like a king on his throne”: the Dragon (Draco), the Ladle (Ursa Minor), the Crown (Cassiopea).</td><td>§4 — the mothers' fixed circumpolar axis (the identification is documented; the geometric lighting rule is §4's)</td></tr>
+<tr><td><em>Sefer Yetzirah</em> 2:4–2:6</td><td>The 231 gates — “Aleph with all and all with Aleph, Bet with all and all with Bet… so all creation and all speech go out in one name.”</td><td>§3.2–3.4 — the 231-gate combinatorics; the composing-words method</td></tr>
+<tr><td>Ramban (Nachmanides of Girona) on SY 2:4</td><td>“The building of the letters that rolls is called <em>galgal</em> [wheel]”; the 231 gates are “the gates the Name rolls in”; “the force is drawn from the letters to the world, from the world to the year, from the year to the soul”; “as new light is renewed in the signs, so the generations [<span class="heb-cell">תולדות</span>] of the soul are renewed.”</td><td>§3.3–3.4 — the Girona-school reading of the letter-combinatorics as the operative method</td></tr>
+<tr><td><em>Sefer Raziel</em> p. 144</td><td>“Combine the signs and the wheel. Engrave and compute and assign and number… Compute in order to see the generations. Prepare to see them from the beginning to the end.”</td><td>§4 + §7 — compute the seven bodies → read the generations (readable names on the rare conjunctions)</td></tr>
+<tr><td><em>Sefer Raziel</em> p. 65</td><td>“Divide the name… Begin the word and combine the letters, creating two words.”</td><td>§6.3 — the compound-name rule, 3.99× over non-names (p = 1.6 × 10⁻⁹)</td></tr>
+<tr><td><em>Sefer Raziel</em>, Book of the Vestments</td><td>275 angel names across the four seasons, the stems conjugating by season under the four elemental trigrams.</td><td>§8 — the recovered onomasticon</td></tr>
+<tr><td>Gaffarel, <em>Curiosités inouïes</em> (1629)</td><td>The Persian magi read the heavens as a text of Hebrew letters — a living practice, ethnographic attestation.</td><td>§2.3 — the practice attested as alive</td></tr>
+</tbody>
+</table>
+
+<table class="master">
+<caption>Table 2.2 — The twenty-two letters and their sky assignments (the documented basis: <em>Sefer Yetzirah</em> 2:1, 4:4–4:11, 5:2)</caption>
+<thead><tr><th>class</th><th>letter</th><th>assigned to</th><th>source</th></tr></thead>
+<tbody>
+<tr><td rowspan="3">3 mothers<br><span class="dim">(the cosmic axes — the pole)</span><br><span class="dim"><em>Tali</em> · <em>Galgal</em> · <em>Lev</em> (SY 6:1)</span></td><td class="heb-cell">א</td><td>air — the Dragon (Draco)</td><td>SY 2:1, 3:6; Girona commentary (Ramban)</td></tr>
+<tr><td class="heb-cell">מ</td><td>water — the Ladle (Ursa Minor)</td><td>SY 2:1, 3:7; Girona commentary (Ramban)</td></tr>
+<tr><td class="heb-cell">ש</td><td>fire — the Crown (Cassiopea)</td><td>SY 2:1, 3:8; Girona commentary (Ramban)</td></tr>
+<tr><td rowspan="7">7 doubles<br><span class="dim">(the wanderers)</span></td><td class="heb-cell">ב</td><td>Saturn (<span class="heb-cell">שבתי</span>)</td><td>SY 4:5</td></tr>
+<tr><td class="heb-cell">ג</td><td>Jupiter (<span class="heb-cell">צדק</span>)</td><td>SY 4:6</td></tr>
+<tr><td class="heb-cell">ד</td><td>Mars (<span class="heb-cell">מאדים</span>)</td><td>SY 4:7</td></tr>
+<tr><td class="heb-cell">כ</td><td>Sun (<span class="heb-cell">חמה</span>)</td><td>SY 4:8</td></tr>
+<tr><td class="heb-cell">פ</td><td>Venus (<span class="heb-cell">נוגה</span>)</td><td>SY 4:9</td></tr>
+<tr><td class="heb-cell">ר</td><td>Mercury (<span class="heb-cell">כוכב</span>)</td><td>SY 4:10</td></tr>
+<tr><td class="heb-cell">ת</td><td>Moon (<span class="heb-cell">לבנה</span>)</td><td>SY 4:11</td></tr>
+<tr><td rowspan="12">12 simples<br><span class="dim">(the signs)</span></td><td class="heb-cell">ה</td><td>Aries (<span class="heb-cell">טלה</span>)</td><td>SY 5:2</td></tr>
+<tr><td class="heb-cell">ו</td><td>Taurus (<span class="heb-cell">שור</span>)</td><td>SY 5:2</td></tr>
+<tr><td class="heb-cell">ז</td><td>Gemini (<span class="heb-cell">תאומים</span>)</td><td>SY 5:2</td></tr>
+<tr><td class="heb-cell">ח</td><td>Cancer (<span class="heb-cell">סרטן</span>)</td><td>SY 5:2</td></tr>
+<tr><td class="heb-cell">ט</td><td>Leo (<span class="heb-cell">אריה</span>)</td><td>SY 5:2</td></tr>
+<tr><td class="heb-cell">י</td><td>Virgo (<span class="heb-cell">בתולה</span>)</td><td>SY 5:2</td></tr>
+<tr><td class="heb-cell">ל</td><td>Libra (<span class="heb-cell">מאזנים</span>)</td><td>SY 5:2</td></tr>
+<tr><td class="heb-cell">נ</td><td>Scorpio (<span class="heb-cell">עקרב</span>)</td><td>SY 5:2</td></tr>
+<tr><td class="heb-cell">ס</td><td>Sagittarius (<span class="heb-cell">קשת</span>)</td><td>SY 5:2</td></tr>
+<tr><td class="heb-cell">ע</td><td>Capricorn (<span class="heb-cell">גדי</span>)</td><td>SY 5:2</td></tr>
+<tr><td class="heb-cell">צ</td><td>Aquarius (<span class="heb-cell">דלי</span>)</td><td>SY 5:2</td></tr>
+<tr><td class="heb-cell">ק</td><td>Pisces (<span class="heb-cell">דגים</span>)</td><td>SY 5:2</td></tr>
+</tbody>
+</table>
+
+<p>The twelve simples carry the twelve signs in exactly this gematria-ascending assignment; the seven doubles the seven wanderers; the three mothers the three elemental axes — and their three circumpolar constellations at the pole. The <em>Sefer Yetzirah</em> itself appoints the three “in <em>Tali</em> [the Dragon], the <em>Galgal</em> [wheel], and the <em>Lev</em> [heart]” (SY 6:1) — “<em>Tali</em> in the world like a king on his throne” (SY 6:2), the fixed center of the sky. The Girona-school commentary of Nachmanides (Ramban) reads these as the three circumpolar figures around the pole: the <strong>Dragon</strong> (Draco), the <strong>Ladle</strong> (Ursa Minor), and the <strong>Crown</strong> (Cassiopea) — the identification this paper follows, not one it invents. What §4 adds is only the geometric rule by which a mother lights (the nearest-mother Voronoi zone of an occupied sign); the mother↔constellation assignment itself is documented in the SY and its Girona commentary. The three attestations below expand each source in turn.</p>
+
+<p><strong>2.1 Sefer Yetzirah — the construction manual.</strong> The <em>Sefer Yetzirah</em> (“Book of Formation”) partitions the 22 letters into <strong>3 mothers + 7 doubles + 12 simples</strong>, assigns the 7 doubles (בגדכפרת) to the 7 planets and the 12 simples (הוזחטילנסעצק) to the 12 zodiac signs, and opens by counting the two-letter combinations of the 22 — the <strong>231 gates of wisdom</strong>, C(22,2) = 22·21/2 = 231. Combinatorics over the letters is the manual's <em>own</em> method, not a modern imposition. The text is commonly dated ~200–900 CE; its self-description as a sky-construction is the claim under verification.</p>
+<p><strong>2.2 Sefer Raziel — the numerical expansion and the operative instructions.</strong> The <em>Sefer Raziel HaMalakh</em> (medieval, compiling older material) gives the decimal gematria א=1…ת=400 (no 500–900 finals — the exact system the computation uses, Raziel p. 95), the triangulars T(2..9) = 3, 6, 10, 15, 21, 28, 36, 45, the 12 letters ↔ 12 signs, the 72 from Genesis 1:1, the <strong>73 names of God</strong> (p. 72), 28 Malachim per lunar month, the fixed (tropical) zodiac, and the rounded planet periods Saturn 30y / Jupiter 12y (real 29.46 / 11.86). It cites the <em>Sefer Yetzirah</em> directly and gives the operative instruction — a passage (Raziel, p. 144) that reads as a specification of the reading this paper operationalises:</p>
+<blockquote><p>“Combine the signs and the wheel. Engrave and compute and assign and number. Consider the reckonings of the planets and the signs of the zodiac. Compute the periods and the turning planets. Of those suspended and the signs of the zodiac in their perpetual order, see with the light. Compute in order to see the generations. Prepare to see them from the beginning to the end.</p><p>It is written: he who acts and creates proclaims the generations from the beginning, before the creation of the universe. To understand the actions of each man in righteousness and in wickedness, he decrees upon each one. According to the works, he prepares the works between good and evil.”</p></blockquote>
+<p>The instruction is the paper's operative spine: <em>compute the planets</em> = the seven classical ecliptic longitudes (§4); <em>the signs in their perpetual order</em> = the twelve fixed 30° sectors = the twelve simples; <em>combine / engrave / compute / assign / number</em> = the 231-gate letter-combinatorics of the <em>Sefer Yetzirah</em> (§3.2); <em>see the generations from beginning to end</em> = the readable biblical names the rule lights on the rare conjunctions across the scan span (§7).</p>
+<p>Raziel is not merely descriptive — it gives three operative instructions this paper implements and tests:</p>
+<ul>
+<li><strong>The compound-name rule (p. 65).</strong> <em>“Divide the name Mem. Begin the word and combine the letters, creating two words.”</em> A name is constructed by joining two lexicon sub-words (Beth-El = בית + אל; Abdi-El = עבד + אל; Mattith-Yah = מת + יה). §6 tests this as a discriminator: compound names are enriched 3.99× over non-names (p = 1.59 × 10⁻⁹), length-controlled — the strongest non-circular name-identity signal.</li>
+<li><strong>The four elemental trigrams.</strong> Raziel genders the four seasons via four three-letter elemental trigrams: <strong>TAQ (טאק) = fire = male = Season 1</strong>, <strong>ShKG (שכג) = earth = female = Season 2</strong>, <strong>ThMD (תמד) = air = male = Season 3</strong>, <strong>SAaD (סעד) = water = female = Season 4</strong>. Their gematria is exact and intentional: <strong>TAQ = 9+1+100 = 110 = 37 + 73</strong> (the two factors of Genesis 1:1, Statistic B); <strong>ThMD = 400+40+4 = 444 = 37 × 12</strong>; two of the four gematria are numeric palindromes (<strong>ShKG = 323</strong>, <strong>ThMD = 444</strong>); their sum 110 + 323 + 444 + 134 = <strong>1011</strong>; and 1011 + its mirror 1101 = <strong>2112</strong>, itself a palindrome. TAQ = 37 + 73 ties the season-fire trigram directly to Statistic B's two primes — the construction's internal cross-link.</li>
+<li><strong>The Book of the Vestments / Sepher Hamezeloth.</strong> Raziel's angel roster lists <strong>275 distinct angel names</strong> across the four seasons (per-season rosters s1: 74, s2: 69, s3: 66, s4: 83 — these overlap, since the stems conjugate across seasons (§8.2), summing to 292 entries), the operative onomasticon the reading rule is applied to. §8 documents it as a recovered onomasticon.</li>
+</ul>
+<p><strong>2.3 Jacques Gaffarel — the Persian attestation.</strong> In <em>Curiosités inouïes</em> (1629), Gaffarel records the Persian magi reading the heavens as a text of Hebrew letters — a <em>living</em> practice, not a theory: stars = letters = a book one reads with gematria / notaricon / temurah. This is ethnographic attestation that the reading <em>persisted and was practiced</em>, supporting “the magico-astronomical tradition read it (late-antique to Renaissance)”; the biblical-era reading rests on the texts' contested antiquity, which is disclosed.</p>
+
+<h2 id="s3">3. The structural identity 22 = 3 + 7 + 12 = sky, and the 231 gates</h2>
+<p><strong>3.1 The identity is a fact.</strong> A modern ephemeris (astronomy-engine v2.1.19) confirms twelve tropical zodiac signs of 30° each and seven classical wandering bodies (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn); 12 and 7 are astronomical, not conventional. The <em>Sefer Yetzirah</em> partitions the 22 letters into 3 + 7 + 12, and 22 − 7 − 12 = 3. The identity 12 simples ↔ 12 signs, 7 doubles ↔ 7 planets, 3 mothers ↔ 3 cosmic axes is stated as a deliberate sky-construction in a text thousands of years old. The weak sub-leg is the 3: the sky has 3 elemental axes (or 4 elements), and SY's 3 mothers = air/water/fire is a 3-element cosmology; 3 = 22 − 7 − 12 is the residual as much as an independent sky fact. The sky-origin of the 12 and the 7 rests on the <strong>documentation</strong> (SY says doubles = planets, simples = signs), not on the bare numbers, which are general ancient near-eastern sacred numbers.</p>
+<div class="fig-frame"><svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The 22 letters: 3 mothers + 7 doubles + 12 simples on the twelve-sign circle">
+<rect x="0" y="0" width="440" height="440" fill="#0e1320"/>
+<circle cx="220" cy="220" r="196" fill="none" stroke="#283145" stroke-width="2"/>
+<circle cx="220" cy="220" r="142" fill="none" stroke="#1c2333" stroke-width="1"/><path d="M 220 220 L 220 24 A 196 196 0 0 1 318 50.3 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 318 50.3 A 196 196 0 0 1 389.7 122 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 389.7 122 A 196 196 0 0 1 416 220 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 416 220 A 196 196 0 0 1 389.7 318 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 389.7 318 A 196 196 0 0 1 318 389.7 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 318 389.7 A 196 196 0 0 1 220 416 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 220 416 A 196 196 0 0 1 122 389.7 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 122 389.7 A 196 196 0 0 1 50.3 318 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 50.3 318 A 196 196 0 0 1 24 220 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 24 220 A 196 196 0 0 1 50.3 122 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 50.3 122 A 196 196 0 0 1 122 50.3 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 122 50.3 A 196 196 0 0 1 220 24 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<text x="266.1" y="51.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Ari</text>
+<text x="345.9" y="97.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Tau</text>
+<text x="391.9" y="176.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Gem</text>
+<text x="391.9" y="269.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Can</text>
+<text x="345.9" y="348.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Leo</text>
+<text x="266.1" y="394.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Vir</text>
+<text x="173.9" y="394.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Lib</text>
+<text x="94.1" y="348.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Sco</text>
+<text x="48.1" y="269.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Sag</text>
+<text x="48.1" y="176.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Cap</text>
+<text x="94.1" y="97.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Aqu</text>
+<text x="173.9" y="51.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Pis</text>
+<text x="250.5" y="111" fill="#7fb0ff" font-size="15" font-family="'Times New Roman',serif" text-anchor="middle">ה</text>
+<text x="303.4" y="141.6" fill="#7fb0ff" font-size="15" font-family="'Times New Roman',serif" text-anchor="middle">ו</text>
+<text x="334" y="194.5" fill="#7fb0ff" font-size="15" font-family="'Times New Roman',serif" text-anchor="middle">ז</text>
+<text x="334" y="255.5" fill="#7fb0ff" font-size="15" font-family="'Times New Roman',serif" text-anchor="middle">ח</text>
+<text x="303.4" y="308.4" fill="#7fb0ff" font-size="15" font-family="'Times New Roman',serif" text-anchor="middle">ט</text>
+<text x="250.5" y="339" fill="#7fb0ff" font-size="15" font-family="'Times New Roman',serif" text-anchor="middle">י</text>
+<text x="189.5" y="339" fill="#7fb0ff" font-size="15" font-family="'Times New Roman',serif" text-anchor="middle">ל</text>
+<text x="136.6" y="308.4" fill="#7fb0ff" font-size="15" font-family="'Times New Roman',serif" text-anchor="middle">נ</text>
+<text x="106" y="255.5" fill="#7fb0ff" font-size="15" font-family="'Times New Roman',serif" text-anchor="middle">ס</text>
+<text x="106" y="194.5" fill="#7fb0ff" font-size="15" font-family="'Times New Roman',serif" text-anchor="middle">ע</text>
+<text x="136.6" y="141.6" fill="#7fb0ff" font-size="15" font-family="'Times New Roman',serif" text-anchor="middle">צ</text>
+<text x="189.5" y="111" fill="#7fb0ff" font-size="15" font-family="'Times New Roman',serif" text-anchor="middle">ק</text>
+<circle cx="228.9" cy="156.6" r="9" fill="#1c2333" stroke="#7fb0ff" stroke-width="1.2"/>
+<text x="228.9" y="160.6" fill="#e8c87a" font-size="12" font-family="'Times New Roman',serif" font-weight="700" text-anchor="middle">ב</text>
+<circle cx="275.1" cy="187.4" r="9" fill="#1c2333" stroke="#7fb0ff" stroke-width="1.2"/>
+<text x="275.1" y="191.4" fill="#e8c87a" font-size="12" font-family="'Times New Roman',serif" font-weight="700" text-anchor="middle">ג</text>
+<circle cx="279.8" cy="242.8" r="9" fill="#1c2333" stroke="#7fb0ff" stroke-width="1.2"/>
+<text x="279.8" y="246.8" fill="#e8c87a" font-size="12" font-family="'Times New Roman',serif" font-weight="700" text-anchor="middle">ד</text>
+<circle cx="239.5" cy="281" r="9" fill="#1c2333" stroke="#7fb0ff" stroke-width="1.2"/>
+<text x="239.5" y="285" fill="#e8c87a" font-size="12" font-family="'Times New Roman',serif" font-weight="700" text-anchor="middle">כ</text>
+<circle cx="184.5" cy="273.2" r="9" fill="#1c2333" stroke="#7fb0ff" stroke-width="1.2"/>
+<text x="184.5" y="277.2" fill="#e8c87a" font-size="12" font-family="'Times New Roman',serif" font-weight="700" text-anchor="middle">פ</text>
+<circle cx="156.2" cy="225.4" r="9" fill="#1c2333" stroke="#7fb0ff" stroke-width="1.2"/>
+<text x="156.2" y="229.4" fill="#e8c87a" font-size="12" font-family="'Times New Roman',serif" font-weight="700" text-anchor="middle">ר</text>
+<circle cx="176" cy="173.5" r="9" fill="#1c2333" stroke="#7fb0ff" stroke-width="1.2"/>
+<text x="176" y="177.5" fill="#e8c87a" font-size="12" font-family="'Times New Roman',serif" font-weight="700" text-anchor="middle">ת</text>
+<line x1="220" y1="24" x2="220" y2="416" stroke="#c29eff" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="389.7" y1="122" x2="50.3" y2="318" stroke="#c29eff" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="389.7" y1="318" x2="50.3" y2="122" stroke="#c29eff" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="220" y="19" fill="#c29eff" font-size="14" font-family="'Times New Roman',serif" font-weight="700" text-anchor="middle">א</text>
+<text x="397.5" y="121.5" fill="#c29eff" font-size="14" font-family="'Times New Roman',serif" font-weight="700" text-anchor="middle">מ</text>
+<text x="397.5" y="326.5" fill="#c29eff" font-size="14" font-family="'Times New Roman',serif" font-weight="700" text-anchor="middle">ש</text>
+<text x="220" y="225" fill="#e8c87a" font-size="13" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle">22</text></svg><figcaption>Figure 1 — The twenty-two letters on the sky: 12 simples (blue) on the twelve zodiac signs, 7 doubles (gold) on the seven wandering bodies, 3 mothers (violet) on the three cosmic axes. 22 = 3 + 7 + 12.</figcaption></div>
+<p><strong>3.2 The 231 gates = the manual's own combinatorics.</strong> C(22,2) = 231. The internal coherence is exact: <strong>3·7·12 − (3+7+12) + 1 = 252 − 22 + 1 = 231 = C(22,2)</strong>; the counts of mothers/doubles/simples reproduce the number of gates. The first gate is AB (אב = 3); its mirror is BA (בא = 3); concatenated, AB+BA = ABBA (אבא) = 4 = “father” — the initial operation of the SY produces, by mirror symmetry, a palindrome.</p>
+<table><thead><tr><th>identity</th><th>computation</th><th>value</th><th>meaning</th></tr></thead><tbody>
+<tr><td>the 231 gates</td><td>C(22,2) = 22·21/2</td><td><strong>231</strong></td><td>the two-letter combinations the SY opens by counting</td></tr>
+<tr><td>self-coherence</td><td>3·7·12 − (3+7+12) + 1 = 252 − 22 + 1</td><td><strong>231</strong></td><td>the 3-7-12 partition alone regenerates the gate-count</td></tr>
+<tr><td>first gate AB</td><td>אב = 1+2</td><td>3</td><td>the opening two-letter combination</td></tr>
+<tr><td>its mirror BA</td><td>בא = 2+1</td><td>3</td><td>the reverse combination</td></tr>
+<tr><td>AB + BA → ABBA</td><td>אבא</td><td>4</td><td>“father” (Aramaic) — a palindrome, by mirror symmetry</td></tr>
+<tr><td>AB-EL</td><td>אבאל = 1+2+1+30</td><td>34</td><td>Abiel — “father-God,” the gate joined to the divine root</td></tr>
+<tr><td>BA-AL</td><td>בעל = 2+70+30</td><td>102</td><td>Baal — “lord,” the mirror gate joined to the divine root</td></tr>
+</tbody></table>
+<p><strong>3.3 The combinatorial operation has a documented geometric ancestry.</strong> The 231 gates = C(22,2) are the two-letter slice of the binomial family C(n,k) that <strong>Piṅgala's <em>Chandaḥśāstra</em></strong> (c. 2nd century BCE) systematized for Sanskrit meters and laid out as a triangular array it named the <strong>Meru prastāra</strong> (after Mount Meru, the cosmic-axis mountain; Halāyudha's 10th-century commentary fixes the construction; the recurrence ⁿCᵣ = ⁿ⁻¹Cᵣ₋₁ + ⁿ⁻¹Cᵣ is Piṅgala's, ~1800 years before Pascal). The SY's letter-combinatorics and Piṅgala's syllable-combinatorics are two antique instances of the same C(n,k) operation — a structural parallel, not a claim of transmission. The reading rule (§4) operates on the same power-set substrate.</p>
+<p><strong>3.4 The combinatorics are a documented practice, not a modern reading.</strong> The 231 gates are not only a structural identity — the <em>Sefer Yetzirah</em> orders them permuted (AB and BA, AG and GB…), and a documented tradition treats the permutation of letters as the operative method for <strong>composing</strong> sacred language. Abraham Abulafia (1240–1291) codified the prophetic combination of letters (<em>tzerufim</em>); the <em>Sefer Raziel HaMalakh</em> is itself a medieval treatise on the construction of names and angels by permutation of letters. The practice of designing sacred language — names, theonyms, angel-names — by combinatorial rules is attested and continuous across millennia. The reading rule of §4 and the compound-name rule of §6.3 sit inside that attested tradition: they operate the SY/Raziel letter-combinatorics as a protocol, not as a statistical inference invented here.</p>
+
+<h2 id="s4">4. The reading rule — the sky as an occupancy-subset of the twelve-circle</h2>
+<p>A sky-configuration at time <em>t</em> is the footprint of seven points (the planets) on the twelve-sector zodiacal circle — the set <em>O(t)</em> of occupied simple-letters. Legibility reads that geometric configuration as a letter subset: a word <em>w</em> reads at <em>t</em> iff <em>S(w)</em> ⊆ <em>O(t)</em>, where <em>S(w)</em> is the distinct-simple-letter set of <em>w</em>. The rarity is geometric in origin: a grand conjunction is an angular clustering of the seven bodies, which concentrates them in few signs and so shrinks |<em>O</em>| — the fewer sectors occupied, the fewer letters available, the fewer and longer the readable words, each with lower probability <em>P</em> = <em>q</em><sup>|S|</sup> (<em>q</em> = |<em>O</em>|/22). <strong>The sky is read as a geometric form: an occupancy-subset of the twelve-circle.</strong> The twelve simples carry the twelve signs in exactly the <em>Sefer Yetzirah</em> gematria-ascending assignment (Aries=ה, Taurus=ו, Gemini=ז, Cancer=ח, Leo=ט, Virgo=י, Libra=ל, Scorpio=נ, Sagittarius=ס, Capricorn=ע, Aquarius=צ, Pisces=ק); the seven doubles (the wanderers' axes) are always lit; the three mothers are <strong>gated geometrically</strong>, not always on. Each mother is tied to a fixed circumpolar constellation at a fixed ecliptic longitude — <strong>ש</strong> (Cassiopea, 38°), <strong>מ</strong> (Ursa Minor, 89°), <strong>א</strong> (Draco, 268°), the Crown / Ladle / Dragon identified in SY 6:1 and the Girona commentary of Nachmanides (Table 2.2) — and a mother is available only when its constellation is the <em>nearest</em> mother to an occupied sign (a Voronoi zone on the twelve-circle; this geometric lighting rule is the paper's formalization — the constellation identification itself is documented). One occupied sign lights exactly one mother; a two-sign alignment lights a second mother only when the two signs are the consecutive pair straddling a mother-zone boundary (Taurus–Gemini → ש+מ, Virgo–Libra → מ+א, Aquarius–Pisces → א+ש). The sign→mother assignment is therefore: <strong>ש</strong> for Aries/Taurus/Pisces, <strong>מ</strong> for Gemini/Cancer/Leo/Virgo, <strong>א</strong> for Libra/Scorpio/Sagittarius/Capricorn/Aquarius. A seven-planet grand conjunction occupies a single sign, so on the rarest skies exactly <em>one</em> mother is lit; the readable letter-pool on any sky is the doubles + the geometrically-available mothers + the occupied simples.</p>
+<div class="fig-frame"><svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The reading is an occupancy-subset: a grand conjunction collapses |O| to one sign">
+<rect x="0" y="0" width="440" height="440" fill="#0e1320"/>
+<circle cx="220" cy="220" r="196" fill="none" stroke="#283145" stroke-width="2"/>
+<circle cx="220" cy="220" r="142" fill="none" stroke="#1c2333" stroke-width="1"/><path d="M 220 220 L 220 24 A 196 196 0 0 1 318 50.3 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 318 50.3 A 196 196 0 0 1 389.7 122 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 389.7 122 A 196 196 0 0 1 416 220 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 416 220 A 196 196 0 0 1 389.7 318 Z" fill="rgba(127,176,255,0.10)" stroke="#3a4762" stroke-width="0.7"/>
+<path d="M 220 220 L 389.7 318 A 196 196 0 0 1 318 389.7 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 318 389.7 A 196 196 0 0 1 220 416 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 220 416 A 196 196 0 0 1 122 389.7 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 122 389.7 A 196 196 0 0 1 50.3 318 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 50.3 318 A 196 196 0 0 1 24 220 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 24 220 A 196 196 0 0 1 50.3 122 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 50.3 122 A 196 196 0 0 1 122 50.3 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 122 50.3 A 196 196 0 0 1 220 24 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<text x="266.1" y="51.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Ari</text>
+<text x="345.9" y="97.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Tau</text>
+<text x="391.9" y="176.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Gem</text>
+<text x="391.9" y="269.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Can</text>
+<text x="345.9" y="348.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Leo</text>
+<text x="266.1" y="394.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Vir</text>
+<text x="173.9" y="394.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Lib</text>
+<text x="94.1" y="348.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Sco</text>
+<text x="48.1" y="269.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Sag</text>
+<text x="48.1" y="176.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Cap</text>
+<text x="94.1" y="97.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Aqu</text>
+<text x="173.9" y="51.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Pis</text>
+<circle cx="312.3" cy="236.5" r="4.5" fill="#9aa6c2" stroke="#000" stroke-width="0.5"/>
+<circle cx="340.3" cy="236.5" r="4.5" fill="#9aa6c2" stroke="#000" stroke-width="0.5"/>
+<circle cx="308.3" cy="252.5" r="4.5" fill="#9aa6c2" stroke="#000" stroke-width="0.5"/>
+<circle cx="326.3" cy="248.5" r="4.5" fill="#e8c87a" stroke="#000" stroke-width="0.5"/>
+<circle cx="344.3" cy="252.5" r="4.5" fill="#9aa6c2" stroke="#000" stroke-width="0.5"/>
+<circle cx="318.3" cy="260.5" r="4.5" fill="#9aa6c2" stroke="#000" stroke-width="0.5"/>
+<circle cx="336.3" cy="260.5" r="4.5" fill="#9aa6c2" stroke="#000" stroke-width="0.5"/>
+<text x="334" y="256.5" fill="#7fb0ff" font-size="22" font-family="'Times New Roman',serif" font-weight="700" text-anchor="middle">ח</text>
+<text x="220" y="224" fill="#7d8aa6" font-size="9.5" font-family="system-ui,sans-serif" text-anchor="middle">|O| = 1</text></svg><figcaption>Figure 2 — Seven bodies in one sign collapse |O| to one sector: only names whose simple-letter set S ⊆ {the one lit letter} read. The readable space shrinks from 22<sup>L</sup> to ~9<sup>L</sup>; 99.8% of random L = 7 strings do not read. (Cancer · ח, the −144 BCE alignment.)</figcaption></div>
+
+<h2 id="s5">5. One structural statistic and two tradition-anchored facts <span class="proven">[p ≈ 3–6 × 10⁻⁴]</span></h2>
+<p>Each of the three statistics below is <strong>tradition-specified</strong> — the object, the constant, and the structure are fixed in the source text (<em>Sefer Yetzirah</em>, <em>Sefer Raziel</em>, the Talmudic Shem HaMephorash tradition) centuries before any modern null was computable, so they are <strong>not hypotheses fitted after seeing the data</strong> (not HARKing — Hypothesizing After Results are Known). Each is <strong>verified</strong> by a reproducible script and tested against a <strong>fair null</strong>. They test different objects and different nulls — A the 7 doubles against the 7 sidereal periods, B the 7 words of Genesis 1:1 against a letter-permutation null, C the 3 verses of Exodus 14:19–21 against a verse-length null. They are <em>substantively</em> independent (different objects, different books, different nulls) but share the gematria/Masoretic substrate, so a joint p obtained by multiplying them is <strong>not strictly valid</strong>; the three are reported separately, never multiplied, and their concordance in p-order (all ≈ 3–6 × 10⁻⁴) is the honest synthesis.</p>
+<p><strong>On multiple comparisons — an honest limit, not a dismissal.</strong> "Tradition-specified" does <em>not</em> by itself close the multiple-comparisons problem, and we do not pretend it does. The Kabbalistic tradition records a great many gematria identities (a word = a value; e.g. 26 = YHWH, 613 = mitzvot), and the universe of "traditional identities one might test" is large and has never been catalogued — so one cannot compute the denominator "fraction of all traditional identities that reach p ≤ 10⁻⁴" that would settle survivorship bias. We address this by <strong>demarcating the kind of test</strong>. <strong>Statistic A is a structural-ordering test, not a gematria-value test</strong>: its null is the exhaustive 5040 permutations of <em>one fixed traditional ordering</em> — the SY gematria order of the seven doubles paired to the Chaldean planet order — an enumerable family, not a scan of gematria word-values. The tradition does not offer hundreds of competing letter↔planet orderings to select from; <em>Sefer Yetzirah</em> fixes the one. <strong>Statistics B and C are different in kind</strong>: they are tradition-selected gematria/text facts (the creation verse's 37 × 73; the three consecutive 72-letter verses), drawn from that large uncatalogued family, so their p-values are <em>not</em> presented as a multiple-comparisons-corrected inference. They are reported as documented structural facts of extremity, concordant in p-order with A, and explicitly <em>not</em> multiplied into a joint p. The load-bearing inference is <strong>A</strong> (enumerable null) plus the lexicon-design proof (§6, reproducible null); B and C are tradition-anchored support, not independent proof. The paper therefore does not claim that the three statistics, taken together, prove design against the full tradition-denominator — it claims that the one structural test with an enumerable null is significant, that the lexicon proof is reproducible, and that two tradition-selected facts are concordant.</p>
+
+<h3>5.1 Statistic A — the sky statistic: 7 doubles ↔ sidereal period <span class="sky">[p = 0.06%]</span></h3>
+<p>The seven doubles in gematria order (ב=2, ג=3, ד=4, כ=20, פ=80, ר=200, ת=400) are assigned by the tradition (long recension / Gra; Chaldean order Saturn→Moon) to the seven planets in <strong>sidereal-period order</strong> (Saturn 29.46y &gt; Jupiter 11.86 &gt; Mars 1.88 &gt; Sun 1.00 &gt; Venus 0.62 &gt; Mercury 0.24 &gt; Moon 0.075y). The pairing is pre-specified by the text, not fitted after seeing the data.</p>
+<table><thead><tr><th>test</th><th>value</th><th>null</th><th>p</th></tr></thead><tbody>
+<tr><td>Pearson r(log gematria, log sidereal period)</td><td><strong>−0.944</strong> (reverse: slowest planet → smallest double)</td><td>permutation over 7! = 5040 pairings</td><td><strong>3/5040 = 0.06%</strong></td></tr>
+<tr><td>forward r (largest double ↔ slowest planet)</td><td>+0.961</td><td>—</td><td>1/5040 — the single strongest pairing</td></tr>
+<tr><td>synodic cross-check (distinct observable)</td><td>−0.735</td><td>permutation</td><td>4.4% (weaker → match is specifically sidereal)</td></tr>
+</tbody></table>
+<p><em>Sefer Raziel</em> independently gives the rounded periods Saturn 30y / Jupiter 12y against the real 29.46 / 11.86. This is the one leg that is a genuine <strong>sky-period</strong> signal: the documented pairing is in the top 0.06% of all possible pairings, and it is pre-specified. <strong>Caveats (honest):</strong> (i) the match is trend-driven, not log-linear — the per-step spacing does not match (Mars→Jupiter jumps 6.3× in period but the doubles there jump 4× then 2.5×); (ii) mapping an ordered list to an ordered list positionally is monotonic by construction, so the “surprise” lives in the log-spacing, which is imperfect; (iii) r uses modern sidereal periods the ancients probably knew only as rounded values, so the honest claim is “ordered match” while “log-period r” is a modern reframing; (iv) reverse vs forward both hit the top tail (reverse 3/5040, forward 1/5040 — the single strongest pairing), the direction being a sefirotic (Saturn/Wisdom = ב = “beginning”) rather than astronomical choice. The magic squares (Saturn 3×3 … Moon 9×9, ordered slowest→smallest) corroborate the ordering principle as a second documented monotonic ordering of the seven planets.</p>
+<table><thead><tr><th>planet (Chaldean)</th><th>sidereal period</th><th>kamea (magic square)</th><th>assigned double</th><th>magic constant</th></tr></thead><tbody>
+<tr><td>Saturn</td><td>29.46 y (slowest)</td><td>3×3</td><td class="heb-cell">ב <span class="dim">(2)</span></td><td>15</td></tr>
+<tr><td>Jupiter</td><td>11.86 y</td><td>4×4</td><td class="heb-cell">ג <span class="dim">(3)</span></td><td>34</td></tr>
+<tr><td>Mars</td><td>1.88 y</td><td>5×5</td><td class="heb-cell">ד <span class="dim">(4)</span></td><td>65</td></tr>
+<tr><td>Sun</td><td>1.00 y</td><td>6×6</td><td class="heb-cell">כ <span class="dim">(20)</span></td><td>111</td></tr>
+<tr><td>Venus</td><td>0.62 y</td><td>7×7</td><td class="heb-cell">פ <span class="dim">(80)</span></td><td>175</td></tr>
+<tr><td>Mercury</td><td>0.24 y</td><td>8×8</td><td class="heb-cell">ר <span class="dim">(200)</span></td><td>260 = Tzolkin</td></tr>
+<tr><td>Moon</td><td>0.075 y (fastest)</td><td>9×9</td><td class="heb-cell">ת <span class="dim">(400)</span></td><td>369</td></tr>
+</tbody></table>
+<p>The sidereal-period order (Statistic A) and the magic-square size order are <strong>two independent documented orderings</strong> of the same seven doubles over the same seven planets in the same Chaldean sequence — descending period = ascending square size = ascending gematria (2 → 400). The letter→planet mapping is therefore a doubly-attested construction, not a single fitted correlation. Cross-links confirm the same sky-math: the Mercury 8×8 magic constant is 260 = the Maya Tzolkin; the Sun 6×6 sum is 666 = 6×111 (the “solar number,” Rev 13:18); the Saturn 3×3 constant 15 = יה and its total 45 = מה.</p>
+
+<h3>5.2 Statistic B — the gematria statistic: Genesis 1:1 = 37 × 73 <span class="proven">[p ≈ 3 × 10⁻⁴]</span></h3>
+<p>The seven words of Genesis 1:1 — the sky-creation verse, 7 words ↔ 7 creation-days / 7 doubles — sum to <strong>2701 = 37 × 73 = T₇₃</strong> (the 73rd triangular). Two of the seven word-sums are multiples of 37 (וְאֵת = 407 = 11×37, הָאָרֶץ = 296 = 8×37), and <strong>23 of the 127 non-empty subsets</strong> sum to a multiple of 37.</p>
+<table><thead><tr><th>test</th><th>observed</th><th>null (N = 100,000)</th><th>p</th></tr></thead><tbody>
+<tr><td>≥ 2/7 words ÷ 37</td><td>2</td><td>permute 28 letters among 7 fixed-length slots; total 2701 constant</td><td><strong>8.25 × 10⁻³</strong> (825 of 100,000)</td></tr>
+<tr><td>≥ 23/127 subsets ÷ 37</td><td>23</td><td>same null (isolates partition bias, not the trivial total)</td><td><strong>3.1 × 10⁻⁴</strong> (31 of 100,000)</td></tr>
+</tbody></table>
+<p>73 = the <strong>names of God</strong> (<em>Sefer Raziel</em> p. 72), the theophoric thread; 37 is the co-factor. Bonferroni over the two prime factors {37, 73} (×2) still leaves p ≈ 6.2 × 10⁻⁴. This is a second, <strong>independent</strong> pre-specified statistic — different object from Statistic A (the 7 words of the verse vs the 7 doubles), different null, same gematria substrate. The two primes {37, 73} recur as the gematria of the season-fire trigram TAQ = 110 = 37 + 73 (§2.2) — the construction's internal cross-link between the verse and the seasonal sky-frame. <strong>Caveats:</strong> (i) it tests gematria-design of the verse, not directly sky-design of the alphabet — a parallel statistic in the same construction tradition, not a second sky statistic; (ii) 37 is one of two prime factors of the constant total 2701, so the test is “does the partition bias toward the total's own factor,” weaker than “an unrelated sky-constant is embedded,” though Bonferroni-safe; (iii) independence from A is substantive (different objects/nulls), but they share the gematria substrate, so the two are reported separately, not multiplied.</p>
+
+<h3>5.3 Statistic C — the text statistic: Exodus 14:19–21, three consecutive 72-letter verses <span class="proven">[p ≈ 6 × 10⁻⁴]</span></h3>
+<p>The <em>Shem HaMephorash</em> tradition (<em>Sefer Raziel</em>; the Bahir; the operative Kabbalah) extracts the <strong>72 names of God</strong> from Exodus 14:19, 14:20, 14:21 — three <strong>consecutive</strong> verses that the tradition asserts each contain exactly 72 letters (written one above the other, the 72 columns are the 72 triplets). 72 is a cross-culturally attested sky constant (§10: Nag Hammadi 72 gods = 72 languages; Avesta 72 Yasna chapters). The claim is pre-specified by the tradition.</p>
+<table><thead><tr><th>check</th><th>result</th></tr></thead><tbody>
+<tr><td>14:19 letters</td><td><strong>72</strong> (consonantal, Masoretic)</td></tr>
+<tr><td>14:20 letters</td><td><strong>72</strong></td></tr>
+<tr><td>14:21 letters</td><td><strong>72</strong></td></tr>
+<tr><td>Genesis consecutive pairs both = 72</td><td>0 actual vs 0.094 expected (negative clustering → IID null conservative)</td></tr>
+<tr><td>Genesis consecutive triplets all = 72</td><td>0 of 1531</td></tr>
+</tbody></table>
+<p>Null: verse letter-counts drawn from the Genesis distribution (1533 verses, mean 51.1, p(verse = 72) = 12/1533 = 0.78%). The event is “three <em>consecutive</em> verses each = 72.” An exact permutation null (200,000 shuffles of the Genesis verse-length multiset, conditional on the exact lengths, fixed seed) gives <strong>P(≥ 1 triplet-72 anywhere in a Genesis-length text) = 5.9 × 10⁻⁴</strong> (117 of 200,000), matching the analytic 7.3 × 10⁻⁴. The autocorrelation audit is favorable, not adverse: consecutive verses can cluster in length (which would inflate an IID null), but measured at 72 there is <em>negative</em> clustering — Genesis has 0 consecutive 72-pairs vs 0.094 expected — so the IID null is conservative. <strong>Caveats:</strong> (i) like B, this is a text-structure statistic anchored to a sky constant (72), not a direct sky-period statistic; (ii) the tradition <em>named</em> these verses because they are 72-lettered, so “they are 72” is the generating observation, not an ex-ante prediction — the statistic tests the honest weaker claim “three consecutive 72-letter verses is non-random,” and it is; (iii) the null is Genesis, the observation is Exodus — assumes both books share a verse-length distribution (reasonable, same tradition); (iv) independence from A and B is substantive (different book, different unit, different constant, different null).</p>
+
+<h3>5.4 Synthesis — three concordant signals</h3>
+<blockquote class="proof"><strong>One structural statistic with an enumerable null (A) + two tradition-anchored gematria/text facts (B, C), concordant at p ≈ 3–6 × 10⁻⁴.</strong> A (7 doubles ↔ sidereal period, the <strong>sky</strong> statistic, 5040 permutation null), B (Genesis 1:1 37×73, gematria), C (Exodus 72×3, text). All caveated, all verified, all fixed by the tradition before any modern null was computable. A is the load-bearing inference (enumerable null, not a gematria-value scan); B and C are tradition-selected from a large uncatalogued family, reported as concordant support — not as a multiple-comparisons-corrected proof. They are reported separately, never multiplied; their concordance in p-order is the honest synthesis.</blockquote>
+
+<h2 id="s6">6. The lexicon-design proof — names are not chance collisions</h2>
+<p>The three statistics of §5 verify the documented construction at the level of the doubles, the verse, and the triplet. A separate question is whether the <em>lexicon</em> — the set of biblical proper names the reading rule lights on the rarest skies — is itself designed to be sky-readable, or whether the names that surface are just chance collisions of small letter-sets. Three length-controlled tests, all run on the fifty-one |O| = 1 rare conjunctions against a balanced lexicon null, show the names are not chance collisions. The full computation is documented in <code>notes/calc-probability-decomposition.md</code> and emitted by <code>scripts/calc_probability_components.mjs</code>.</p>
+
+<h3>6.1 Null B — biblical names collapse to the chance floor, then stand ~7× above it <span class="proven">[~7.04×, 95% CI 5.11–10.62]</span></h3>
+<p>Against a within-entry consonant-shuffle lexicon null (each lexicon entry is permuted in place, so per-letter frequency and length are preserved by construction and only name identity is destroyed; <code>scripts/null_lexicon.mjs</code>, 200 deterministic seeds) run <strong>under the geometric mother-gate of §4</strong> — a one-simple word reads on its sign's |O| = 1 conjunction iff its mothers ⊆ that sign's zone mother — the biblical proper names that surface on the rare conjunctions collapse to <strong>~0.14× of the real rate</strong> (null 19.6 vs real 138) — i.e. they fall toward the chance-collision floor as the sky shrinks, exactly as the construction predicts (long names with many simples cannot survive the |O| = 1 collapse). The floor is the set of names that cannot be anagrammatically destroyed (single-letter and palindromic names, which collide with themselves) — the irreducible chance baseline, included by construction (shuffling within an entry preserves the letter multiset, so a shuffled form keeps the same simples <em>and</em> mothers and stays gated-readable; only name identity is destroyed). The biblical names stand <strong>~7.04× above that floor</strong> (200-seed 95% CI [5.11, 10.62]); for long names (length ≥ 5) the null collapses faster than the real count (null 0.28 vs real 18, ~64×), so the enrichment steepens sharply — though the long-name null count is too low for a stable ratio, so the steepening is reported qualitatively, not as a figure. The names that survive the rarest skies are therefore not the random tail of a chance process; they are the names the lexicon was built to keep.</p>
+
+<h3>6.2 Same-period concentration — tested under the gate <span class="dim">[0/12 vs permutation null]</span></h3>
+<p>A natural prediction of the reading rule is that names from one historical period (Patriarchs/Conquest / Monarchy / Exile-Prophets / Post-exile) should concentrate on a given conjunction more than a random letter↔sign relabelling of the same sky permits. Tested directly: for each of the twelve dated |O| = 1 conjunctions, the dominant-period share is compared against the 95th percentile of M = 120 random letter↔sign permutations on the same occupied signs (<code>scripts/build_proofs.mjs</code>; <code>web/proofs.json</code> permutationTest). <strong>0 of 12 conjunctions exceed the 95th-percentile.</strong> That this prediction was tested and reported — rather than selected after seeing the data — is what makes the signals that survived (§6.1, §6.3, §6.4) falsifiable: the construction predicts a concentration on the rarest skies, on the compound rule, and on the Canaanite-vs-Yahwistic theophoric split, and predicts nothing for period structure, which is exactly what the data show.</p>
+
+<h3>6.3 The compound-name rule — Raziel's operative instruction, tested <span class="proven">[3.99×, p = 1.59 × 10⁻⁹]</span></h3>
+<p>Raziel p. 65 gives the operative construction rule: <em>“Divide the name Mem. Begin the word and combine the letters, creating two words.”</em> A name is two joined lexicon sub-words (Beth-El = בית + אל; Abdi-El = עבד + אל; Mattith-Yah = מת + יה). Tested as a discriminator on the readable strings of the rare conjunctions (<code>scripts/discriminate8.mjs</code>, under the geometric mother-gate): a readable string splits into two lexicon sub-words for <strong>25.4% (35/138) of biblical names vs 6.4% (43/677) of non-names</strong> — <strong>3.99× enriched, p = 1.59 × 10⁻⁹</strong> (Fisher exact), length-controlled at both halves ≥ 2 letters (the lift holds at length 4: 42.4% vs 23.1% = 1.83×; the gated readable set is smaller, so the per-length table thins below n = 15 at lengths 5–6, but the overall lift is stable and the theophoric-compound sub-rule is 3/138 vs 0/677, p = 0.0095), theophoric-independent. As a practical name-filter, keeping only compounds gives 2.65× lift at 44.9% purity. This is the strongest non-circular name-identity signal in the paper, and it is the direct verification of a documented operative instruction.</p>
+
+<h3>6.4 The Canaanite heritage and the rarest theophoric triplet <span class="proven">[7:0, joint p ≈ 0.06 — at the edge of the not-chance threshold]</span></h3>
+<p>The Canaanite/Yahwistic god-name roots pack length into mothers and doubles while spending <strong>one simple letter</strong>: El → ל (plus mothers), Baal → ע+ל, Ashtoreth → ע, Asherah → ה, Beth-Shemesh → י, Kemosh → ו. Long names in general need many simples and do not survive the |O| = 1 collapse; the god-names do, precisely because they need few. Under the geometric mother-gate, the theophoric |S| = 1 names that surface on the fifty-one |O| = 1 specials are <strong>7 Canaanite against 0 Yahwistic</strong> — Adbeel, Barakel, Eldad, Rephael, Ela, Laël (all El-names on the ל simple, Libra's א-zone) and Cush (on the ו simple, Taurus's ש-zone). Tested against the balanced full null (random 12-of-22 simples × random sign-assignment, with the gate applied; <code>scripts/calc_definitive.mjs</code>, N = 3000 × 2 seeds), the joint concentration “≥ 7 Canaanite and zero Yahwistic” lands at <strong>p ≈ 0.06</strong>. The scientific convention sets <strong>0.05 as the threshold below which a result is taken as not-chance</strong>; this joint sits <strong>within 0.01 of that bar</strong>. For a construction transmitted across millennia — whose authors did not apply modern significance testing — a result this close to 0.05 <strong>points toward design rather than chance</strong>. The seven concentrate on two simple letters (ל × 6, ו × 1), and ten of the twelve special letters surface zero gated theophoric names — a clean Canaanite-against-Yahwistic split that the documented construction predicts.</p>
+<p>The rarest pure-Canaanite triplet <strong>{ע, ל, ו}</strong> reads <strong>four names — Baal-Peor (בעלפעור), Gor-Baal (גורבעל), Baalot (בעלות), Reuel (רעואל)</strong> — every one theophoric (Baal or -el), <strong>4/4 at 100%</strong>. Among the 37 three-simple configurations that carry ≥ 4 names, {ע,ל,ו} is the <em>unique</em> one at 100% theophoric (the 92.2nd percentile of all 103 named configurations; <code>scripts/calc_theophoric_baseline.mjs</code>). It is the only ≥4-name configuration whose every long member carries a divine element — the god-name mechanism made visible in a single triplet.</p>
+<table><thead><tr><th>name</th><th>L</th><th>single simple</th><th>zone mother</th></tr></thead><tbody>
+<tr><td>Adbeel</td><td>5</td><td class="heb-cell">ל</td><td class="heb-cell">א</td></tr>
+<tr><td>Barakel</td><td>5</td><td class="heb-cell">ל</td><td class="heb-cell">א</td></tr>
+<tr><td>Eldad</td><td>4</td><td class="heb-cell">ל</td><td class="heb-cell">א</td></tr>
+<tr><td>Rephael</td><td>4</td><td class="heb-cell">ל</td><td class="heb-cell">א</td></tr>
+<tr><td>Ela</td><td>3</td><td class="heb-cell">ל</td><td class="heb-cell">א</td></tr>
+<tr><td>Laël</td><td>3</td><td class="heb-cell">ל</td><td class="heb-cell">א</td></tr>
+<tr><td>Cush</td><td>3</td><td class="heb-cell">ו</td><td class="heb-cell">ש</td></tr>
+</tbody></table>
+<blockquote class="proof"><strong>The lexicon-design proof.</strong> Biblical proper names on the rarest skies stand ~7.04× above the chance-collision floor (200-seed 95% CI [5.11, 10.62]; enrichment steepens for long names) and follow Raziel's compound rule at 3.99× over non-names (p = 1.59 × 10⁻⁹). The rarest theophoric triplet {ע,ל,ו} is the unique ≥4-name configuration at 100% theophoric. The Canaanite-concentration prediction (§6.4) lands at the edge of the not-chance threshold (7 : 0, joint p ≈ 0.06, within 0.01 of 0.05) — for a construction transmitted across millennia, that points to design. The names that surface on the rarest skies are not chance collisions; they are the names the lexicon was forged to keep.</blockquote>
+<p><strong>Honest boundaries — where the construction does <em>not</em> beat chance, reported not buried.</strong> (i) The <em>biblical-ness</em> of readable words runs at ~0.998× of a frequency-matched null — readable words are not more biblical than the lexicon's own base rate; (ii) the seven-planet special conjunctions run at ~0.956× — at chance; (iii) length, raw frequency, and the letter-triplet profile are at chance; (iv) the same-period concentration predicted in §6.2 came back at the permutation null (0/12 conjunctions exceed the M = 120 95th-pctile). These are reproduced in <code>scripts/calc_probability_components.mjs</code>, <code>scripts/build_proofs.mjs</code>, and <code>web/proofs.json</code> (nullTest enrichment 0.86; permutationTest periodPermP95). Reporting the predictions that came back null is what makes the signals that survived falsifiable: the construction predicts a concentration on the rarest skies, on the compound rule, on the rarest theophoric triplet, and on a clean Canaanite-vs-Yahwistic split (§6.4, joint p ≈ 0.06) — and predicts <em>nothing</em> for plain biblical-ness, seven-planet specials, length/frequency/triplet profile, or period structure, which is exactly what the data show.</p>
+
+<h2 id="s7">7. The reproducible reading — the twelve signs read, fifty-one rare conjunctions</h2>
+<p><code>node scripts/calc_section7.mjs</code> (ephemeris + biblical lexicon + the geometric mother-gate inlined from <code>web/src/core.jsx</code>, anyone can run it):</p>
+<ol>
+<li>Over a 22,000-year scan (13,765 alignment samples), all seven bodies gather in a single sign on <strong>51 dates (0.37% of alignments)</strong> — the rarest sky the rule permits.</li>
+<li>On such a conjunction the rule lights <strong>9 letters</strong> (7 doubles + 1 simple + 1 mother); readable space = 9<sup>L</sup> against 22<sup>L</sup> unconstrained = <strong>522× smaller</strong> at L = 7 — closed-form arithmetic, the 231-gates method one dimension up — so <strong>99.8%</strong> of random 7-letter strings do not read. A seven-planet special occupies a single sign, which lights exactly <em>one</em> mother (the nearest circumpolar constellation to that sign), so the floor is 9<sup>L</sup>, not 11<sup>L</sup>; the geometric mother-gate (§4) is what makes each readable word rarer than the old "mothers always lit" assumption allowed (128× → 522×).</li>
+<li>The 51 rare conjunctions are not scattered randomly: they fall on <strong>all twelve zodiac signs</strong>, and the twelve signs carry the twelve simple letters in exactly the <em>Sefer Yetzirah</em> gematria-ascending assignment (Aries=ה, Taurus=ו, … Pisces=ק). Each sign, on its rarest 7-planet conjunction, lights a <em>distinct</em> set of biblical proper names — persons and places. The longest readable words are <strong>biblical proper names, verse-cited</strong>: the length-6 set — <strong>Rephidim</strong> (Ex 17:1), <strong>Beth-Gader</strong> (1 Chr 2:51), <strong>Gederothajim</strong> (Josh 15:36), all Virgo (mother מ) — and the length-5 set spanning the signs: <strong>Gudgodah</strong> (Deut 10:7), <strong>Adbeel</strong> (Gen 25:13), <strong>Lo-Debar</strong> (Deut 32:47), <strong>Ben-Geber</strong> (1 Ki 4:13), <strong>Mordecai</strong> (Esth 2:5), <strong>Bakbakkar</strong> (1 Chr 9:15), <strong>Sabteca</strong> (Gen 10:7), <strong>Gederoth</strong> (Josh 15:41), <strong>Beth-Car</strong> (1 Sam 7:11), <strong>Jeribai</strong> (1 Chr 11:46), <strong>Merathajim</strong> (Jer 50:21). Under the geometric mother-gate the earlier "always-lit" long names (Artachshasta, Joshebbash-Shebeth, Moresheth-Gath, Parshandatha — each requiring two or three mothers) no longer read on a single-sign special; the longest survivors are the one-mother names above.</li>
+</ol>
+<div class="fig-frame"><svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="1962-02-04: all seven bodies in Aquarius, the rarest sky of the modern era">
+<rect x="0" y="0" width="440" height="440" fill="#0e1320"/>
+<circle cx="220" cy="220" r="196" fill="none" stroke="#283145" stroke-width="2"/>
+<circle cx="220" cy="220" r="142" fill="none" stroke="#1c2333" stroke-width="1"/><path d="M 220 220 L 220 24 A 196 196 0 0 1 318 50.3 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 318 50.3 A 196 196 0 0 1 389.7 122 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 389.7 122 A 196 196 0 0 1 416 220 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 416 220 A 196 196 0 0 1 389.7 318 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 389.7 318 A 196 196 0 0 1 318 389.7 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 318 389.7 A 196 196 0 0 1 220 416 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 220 416 A 196 196 0 0 1 122 389.7 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 122 389.7 A 196 196 0 0 1 50.3 318 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 50.3 318 A 196 196 0 0 1 24 220 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 24 220 A 196 196 0 0 1 50.3 122 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<path d="M 220 220 L 50.3 122 A 196 196 0 0 1 122 50.3 Z" fill="rgba(127,176,255,0.10)" stroke="#3a4762" stroke-width="0.7"/>
+<path d="M 220 220 L 122 50.3 A 196 196 0 0 1 220 24 Z" fill="transparent" stroke="#283145" stroke-width="0.7"/>
+<text x="266.1" y="51.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Ari</text>
+<text x="345.9" y="97.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Tau</text>
+<text x="391.9" y="176.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Gem</text>
+<text x="391.9" y="269.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Can</text>
+<text x="345.9" y="348.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Leo</text>
+<text x="266.1" y="394.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Vir</text>
+<text x="173.9" y="394.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Lib</text>
+<text x="94.1" y="348.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Sco</text>
+<text x="48.1" y="269.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Sag</text>
+<text x="48.1" y="176.9" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Cap</text>
+<text x="94.1" y="97.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Aqu</text>
+<text x="173.9" y="51.1" fill="#7d8aa6" font-size="10" font-family="system-ui,sans-serif" text-anchor="middle">Pis</text>
+<circle cx="124.80000000000001" cy="126.80000000000001" r="6" fill="#c8b9ff" stroke="#000" stroke-width="0.6"/>
+<text x="124.80000000000001" y="129.3" fill="#0e1320" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">♄</text>
+<circle cx="152.8" cy="126.80000000000001" r="6" fill="#c8b9ff" stroke="#000" stroke-width="0.6"/>
+<text x="152.8" y="129.3" fill="#0e1320" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">♃</text>
+<circle cx="120.80000000000001" cy="142.8" r="6" fill="#c8b9ff" stroke="#000" stroke-width="0.6"/>
+<text x="120.80000000000001" y="145.3" fill="#0e1320" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">♂</text>
+<circle cx="138.8" cy="138.8" r="6" fill="#e8c87a" stroke="#000" stroke-width="0.6"/>
+<text x="138.8" y="141.3" fill="#0e1320" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">☉</text>
+<circle cx="156.8" cy="142.8" r="6" fill="#c8b9ff" stroke="#000" stroke-width="0.6"/>
+<text x="156.8" y="145.3" fill="#0e1320" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">♀</text>
+<circle cx="130.8" cy="152.8" r="6" fill="#c8b9ff" stroke="#000" stroke-width="0.6"/>
+<text x="130.8" y="155.3" fill="#0e1320" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">☿</text>
+<circle cx="148.8" cy="152.8" r="6" fill="#dfe6f5" stroke="#000" stroke-width="0.6"/>
+<text x="148.8" y="155.3" fill="#0e1320" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">☽</text>
+<text x="177.6" y="177.6" fill="#7fb0ff" font-size="16" font-family="'Times New Roman',serif" font-weight="700" text-anchor="middle">צ</text>
+<text x="220" y="224" fill="#7d8aa6" font-size="9.5" font-family="system-ui,sans-serif" text-anchor="middle">|O| = 1 · Aquarius</text></svg><figcaption>Figure 3 — 1962-02-04 CE: the seven classical bodies (Saturn ♄, Jupiter ♃, Mars ♂, Sun ☉, Venus ♀, Mercury ☿, Moon ☽) gathered in Aquarius. |O| = 1; only the Aquarius simple letter צ lights. Because every body sits in one sign, exactly one mother is geometrically available — Aquarius falls in the Draco zone, so only mother א lights. With simple צ and mother א, names such as Artsa (1 Ki 16:9) become legible; names requiring a different mother (those containing ש or מ) do not read on this sky.</figcaption></div>
+<p>The master table below lists, for each of the twelve signs in zodiac order (= simple-letter gematria order), the number of rare conjunctions in the 22,000-year scan, how many biblical names read on each, and the longest readable name. The twelve era tables that follow give the top-8 readable biblical names (by improbability) for each sign, with the dates that share each reading.</p>
+<p><strong>Master — the twelve signs read (zodiac order = simple-letter gematria order):</strong></p>
+<table class="master"><thead><tr><th>sign</th><th>simple<br>(gematria)</th><th>rare<br>dates</th><th>biblical<br>names</th><th>longest readable name</th><th>class</th><th>first occurrence</th></tr></thead><tbody>
+<tr><td>Aries</td><td class="heb-cell">ה <span class="dim">(5)</span></td><td>5</td><td>6</td><td>Gudgodah <span class="dim">L5 · 19</span></td><td>place</td><td>Deut 10:7</td></tr>
+<tr><td>Taurus</td><td class="heb-cell">ו <span class="dim">(6)</span></td><td>6</td><td>19</td><td>Gederoth <span class="dim">L5 · 613</span></td><td>place</td><td>Josh 15:41</td></tr>
+<tr><td>Gemini</td><td class="heb-cell">ז <span class="dim">(7)</span></td><td>7</td><td>4</td><td>Zamzumite <span class="dim">L4 · 94</span></td><td>person</td><td>—</td></tr>
+<tr><td>Cancer</td><td class="heb-cell">ח <span class="dim">(8)</span></td><td>5</td><td>7</td><td>Chadrak <span class="dim">L4 · 232</span></td><td>place</td><td>Zech 9:1</td></tr>
+<tr><td>Leo</td><td class="heb-cell">ט <span class="dim">(9)</span></td><td>2</td><td>2</td><td>Matred <span class="dim">L4 · 253</span></td><td>person</td><td>1 Chr 1:50</td></tr>
+<tr><td>Virgo</td><td class="heb-cell">י <span class="dim">(10)</span></td><td>1</td><td>32</td><td>Rephidim <span class="dim">L6 · 344</span></td><td>person</td><td>Ex 17:1</td></tr>
+<tr><td>Libra</td><td class="heb-cell">ל <span class="dim">(30)</span></td><td>5</td><td>14</td><td>Adbeel <span class="dim">L5 · 38</span></td><td>person</td><td>Gen 25:13</td></tr>
+<tr><td>Scorpio</td><td class="heb-cell">נ <span class="dim">(50)</span></td><td>5</td><td>18</td><td>Ben-Geber <span class="dim">L5 · 257</span></td><td>person</td><td>1 Ki 4:13</td></tr>
+<tr><td>Sagittarius</td><td class="heb-cell">ס <span class="dim">(60)</span></td><td>2</td><td>10</td><td>Sabteca <span class="dim">L5 · 483</span></td><td>person</td><td>Gen 10:7</td></tr>
+<tr><td>Capricorn</td><td class="heb-cell">ע <span class="dim">(70)</span></td><td>5</td><td>12</td><td>Giba <span class="dim">L4 · 76</span></td><td>person</td><td>1 Chr 2:49</td></tr>
+<tr><td>Aquarius</td><td class="heb-cell">צ <span class="dim">(90)</span></td><td>5</td><td>8</td><td>Artsa <span class="dim">L4 · 292</span></td><td>person</td><td>1 Ki 16:9</td></tr>
+<tr><td>Pisces</td><td class="heb-cell">ק <span class="dim">(100)</span></td><td>3</td><td>6</td><td>Bakbakkar <span class="dim">L5 · 404</span></td><td>person</td><td>1 Chr 9:15</td></tr>
+</tbody></table>
+<table class="era"><caption>Aries · simple ה (5) — 6 biblical names read on 5 rare conjunctions <span class="dim">(-18158-03-16, -15952-04-03, -15098-03-22, -11186-04-03, -4831-03-26)</span></caption><thead><tr><th>name</th><th>L</th><th>gematria</th><th>person / place</th><th>first occurrence</th></tr></thead><tbody>
+<tr><td>Gudgodah</td><td>5</td><td>19</td><td>place</td><td>Deut 10:7</td></tr>
+<tr><td>Tophteh</td><td>4</td><td>885</td><td>place</td><td>Isa 30:33</td></tr>
+<tr><td>Hadad</td><td>3</td><td>13</td><td>person</td><td>Gen 36:35</td></tr>
+<tr><td>Hagar</td><td>3</td><td>208</td><td>person</td><td>Gen 16:1</td></tr>
+<tr><td>Rekah</td><td>3</td><td>225</td><td>place</td><td>—</td></tr>
+<tr><td>Hathak</td><td>3</td><td>425</td><td>person</td><td>Esth 4:5</td></tr>
+</tbody></table>
+<table class="era"><caption>Taurus · simple ו (6) — 19 biblical names read on 6 rare conjunctions <span class="dim">(-17007-04-19, -16390-04-15, -14184-05-03, -10035-05-06, -3063-04-22, 2000-05-03)</span></caption><thead><tr><th>name</th><th>L</th><th>gematria</th><th>person / place</th><th>first occurrence</th></tr></thead><tbody>
+<tr><td>Gederoth</td><td>5</td><td>613</td><td>place</td><td>Josh 15:41</td></tr>
+<tr><td>Bekorath</td><td>5</td><td>628</td><td>person</td><td>—</td></tr>
+<tr><td>Dodo</td><td>4</td><td>20</td><td>person</td><td>2 Sam 23:24</td></tr>
+<tr><td>Bokeru</td><td>4</td><td>228</td><td>person</td><td>—</td></tr>
+<tr><td>Baruk</td><td>4</td><td>228</td><td>person</td><td>Jer 32:12</td></tr>
+<tr><td>Segub</td><td>4</td><td>311</td><td>person</td><td>1 Ki 16:34</td></tr>
+<tr><td>Shophak</td><td>4</td><td>406</td><td>person</td><td>1 Chr 19:16</td></tr>
+<tr><td>Geshur</td><td>4</td><td>509</td><td>person</td><td>Josh 13:13</td></tr>
+</tbody></table>
+<table class="era"><caption>Gemini · simple ז (7) — 4 biblical names read on 7 rare conjunctions <span class="dim">(-17859-05-12, -15713-06-02, -15239-05-18, -8267-06-03, -4355-06-11, -4295-06-11, 0531-06-02)</span></caption><thead><tr><th>name</th><th>L</th><th>gematria</th><th>person / place</th><th>first occurrence</th></tr></thead><tbody>
+<tr><td>Zamzumite</td><td>4</td><td>94</td><td>person</td><td>—</td></tr>
+<tr><td>Zered</td><td>3</td><td>211</td><td>place</td><td>Num 21:12</td></tr>
+<tr><td>Zetham</td><td>3</td><td>447</td><td>person</td><td>1 Chr 23:8</td></tr>
+<tr><td>Zethar</td><td>3</td><td>607</td><td>person</td><td>Esth 1:10</td></tr>
+</tbody></table>
+<table class="era"><caption>Cancer · simple ח (8) — 7 biblical names read on 5 rare conjunctions <span class="dim">(-13033-07-05, -11088-06-27, -3204-07-15, -1733-06-27, -0144-07-18)</span></caption><thead><tr><th>name</th><th>L</th><th>gematria</th><th>person / place</th><th>first occurrence</th></tr></thead><tbody>
+<tr><td>Chadrak</td><td>4</td><td>232</td><td>place</td><td>Zech 9:1</td></tr>
+<tr><td>Gacham</td><td>3</td><td>51</td><td>person</td><td>Gen 22:24</td></tr>
+<tr><td>Gachar</td><td>3</td><td>211</td><td>person</td><td>Ezra 2:47</td></tr>
+<tr><td>Rephach</td><td>3</td><td>288</td><td>person</td><td>1 Chr 7:25</td></tr>
+<tr><td>Machath</td><td>3</td><td>448</td><td>person</td><td>2 Chr 31:13</td></tr>
+<tr><td>Temach</td><td>3</td><td>448</td><td>person</td><td>Ezra 2:53</td></tr>
+<tr><td>Terach</td><td>3</td><td>608</td><td>person</td><td>Gen 11:27</td></tr>
+</tbody></table>
+<table class="era"><caption>Leo · simple ט (9) — 2 biblical names read on 2 rare conjunctions <span class="dim">(-3439-08-01, -1436-08-11)</span></caption><thead><tr><th>name</th><th>L</th><th>gematria</th><th>person / place</th><th>first occurrence</th></tr></thead><tbody>
+<tr><td>Matred</td><td>4</td><td>253</td><td>person</td><td>1 Chr 1:50</td></tr>
+<tr><td>Taphath</td><td>3</td><td>489</td><td>person</td><td>1 Ki 4:11</td></tr>
+</tbody></table>
+<table class="era"><caption>Virgo · simple י (10) — 32 biblical names read on 1 rare conjunction <span class="dim">(-10849-08-26)</span></caption><thead><tr><th>name</th><th>L</th><th>gematria</th><th>person / place</th><th>first occurrence</th></tr></thead><tbody>
+<tr><td>Rephidim</td><td>6</td><td>344</td><td>person</td><td>Ex 17:1</td></tr>
+<tr><td>Beth-Gader</td><td>6</td><td>619</td><td>place</td><td>1 Chr 2:51</td></tr>
+<tr><td>daughter</td><td>6</td><td>654</td><td>place</td><td>—</td></tr>
+<tr><td>Gederothajim</td><td>6</td><td>657</td><td>place</td><td>Josh 15:36</td></tr>
+<tr><td>Jeribai</td><td>5</td><td>232</td><td>person</td><td>1 Chr 11:46</td></tr>
+<tr><td>Mordecai</td><td>5</td><td>274</td><td>person</td><td>Esth 2:5</td></tr>
+<tr><td>Beth-Car</td><td>5</td><td>632</td><td>place</td><td>1 Sam 7:11</td></tr>
+<tr><td>Merathajim</td><td>5</td><td>690</td><td>person</td><td>Jer 50:21</td></tr>
+</tbody></table>
+<table class="era"><caption>Libra · simple ל (30) — 14 biblical names read on 5 rare conjunctions <span class="dim">(-19444-09-25, -18970-10-09, -18590-09-13, -13409-10-13, -1197-10-10)</span></caption><thead><tr><th>name</th><th>L</th><th>gematria</th><th>person / place</th><th>first occurrence</th></tr></thead><tbody>
+<tr><td>Adbeel</td><td>5</td><td>38</td><td>person</td><td>Gen 25:13</td></tr>
+<tr><td>Lo-Debar</td><td>5</td><td>237</td><td>place</td><td>Deut 32:47</td></tr>
+<tr><td>Barakel</td><td>5</td><td>253</td><td>person</td><td>—</td></tr>
+<tr><td>Eldad</td><td>4</td><td>39</td><td>person</td><td>Num 11:27</td></tr>
+<tr><td>Bildad</td><td>4</td><td>40</td><td>person</td><td>Job 2:11</td></tr>
+<tr><td>Kilab</td><td>4</td><td>53</td><td>person</td><td>2 Sam 3:3</td></tr>
+<tr><td>Calcol</td><td>4</td><td>100</td><td>person</td><td>1 Ki 5:11</td></tr>
+<tr><td>Ephlal</td><td>4</td><td>141</td><td>person</td><td>1 Chr 2:37</td></tr>
+</tbody></table>
+<table class="era"><caption>Scorpio · simple נ (50) — 18 biblical names read on 5 rare conjunctions <span class="dim">(-17819-11-11, -15436-10-28, -14582-10-14, -4018-11-05, -0046-11-12)</span></caption><thead><tr><th>name</th><th>L</th><th>gematria</th><th>person / place</th><th>first occurrence</th></tr></thead><tbody>
+<tr><td>Ben-Geber</td><td>5</td><td>257</td><td>person</td><td>1 Ki 4:13</td></tr>
+<tr><td>Abner</td><td>4</td><td>253</td><td>person</td><td>1 Sam 17:55</td></tr>
+<tr><td>Arnan</td><td>4</td><td>301</td><td>person</td><td>Num 21:24</td></tr>
+<tr><td>Paran</td><td>4</td><td>331</td><td>place</td><td>Gen 14:6</td></tr>
+<tr><td>Parnak</td><td>4</td><td>350</td><td>person</td><td>—</td></tr>
+<tr><td>Bigthan</td><td>4</td><td>455</td><td>person</td><td>Esth 2:21</td></tr>
+<tr><td>Genubath</td><td>4</td><td>455</td><td>person</td><td>1 Ki 11:20</td></tr>
+<tr><td>Bedan</td><td>3</td><td>56</td><td>person</td><td>1 Sam 12:11</td></tr>
+</tbody></table>
+<table class="era"><caption>Sagittarius · simple ס (60) — 10 biblical names read on 2 rare conjunctions <span class="dim">(-2250-12-02, 1662-12-11)</span></caption><thead><tr><th>name</th><th>L</th><th>gematria</th><th>person / place</th><th>first occurrence</th></tr></thead><tbody>
+<tr><td>Sabteca</td><td>5</td><td>483</td><td>person</td><td>Gen 10:7</td></tr>
+<tr><td>Aspatha</td><td>5</td><td>542</td><td>person</td><td>—</td></tr>
+<tr><td>Karkas</td><td>4</td><td>300</td><td>person</td><td>Esth 1:10</td></tr>
+<tr><td>Sepharad</td><td>4</td><td>344</td><td>place</td><td>Obad 1:20</td></tr>
+<tr><td>Sabta</td><td>4</td><td>463</td><td>person</td><td>1 Chr 1:9</td></tr>
+<tr><td>Ester</td><td>4</td><td>661</td><td>person</td><td>Esth 2:7</td></tr>
+<tr><td>Sophereth</td><td>4</td><td>740</td><td>person</td><td>Neh 7:7</td></tr>
+<tr><td>Asa</td><td>3</td><td>62</td><td>person</td><td>1 Ki 15:8</td></tr>
+</tbody></table>
+<table class="era"><caption>Capricorn · simple ע (70) — 12 biblical names read on 5 rare conjunctions <span class="dim">(-15671-12-14, -12078-01-16, -10608-12-28, -8604-01-08, -1098-01-04)</span></caption><thead><tr><th>name</th><th>L</th><th>gematria</th><th>person / place</th><th>first occurrence</th></tr></thead><tbody>
+<tr><td>Giba</td><td>4</td><td>76</td><td>person</td><td>1 Chr 2:49</td></tr>
+<tr><td>Abda</td><td>4</td><td>77</td><td>person</td><td>Neh 11:17</td></tr>
+<tr><td>Baara</td><td>4</td><td>273</td><td>person</td><td>1 Chr 8:8</td></tr>
+<tr><td>Darda</td><td>4</td><td>278</td><td>person</td><td>1 Ki 5:11</td></tr>
+<tr><td>Gibath</td><td>4</td><td>475</td><td>place</td><td>Josh 18:28</td></tr>
+<tr><td>Taarea</td><td>4</td><td>671</td><td>person</td><td>1 Chr 8:35</td></tr>
+<tr><td>Geba</td><td>3</td><td>75</td><td>place</td><td>Josh 18:24</td></tr>
+<tr><td>Bera</td><td>3</td><td>272</td><td>person</td><td>Gen 14:2</td></tr>
+</tbody></table>
+<table class="era"><caption>Aquarius · simple צ (90) — 8 biblical names read on 5 rare conjunctions <span class="dim">(-10310-02-12, -9042-01-19, -7453-02-11, -0244-01-20, 1962-02-04)</span></caption><thead><tr><th>name</th><th>L</th><th>gematria</th><th>person / place</th><th>first occurrence</th></tr></thead><tbody>
+<tr><td>Artsa</td><td>4</td><td>292</td><td>person</td><td>1 Ki 16:9</td></tr>
+<tr><td>Tsarephath</td><td>4</td><td>770</td><td>place</td><td>—</td></tr>
+<tr><td>Ebets</td><td>3</td><td>93</td><td>place</td><td>Josh 19:20</td></tr>
+<tr><td>Tsedad</td><td>3</td><td>98</td><td>place</td><td>—</td></tr>
+<tr><td>Pitstsets</td><td>3</td><td>260</td><td>person</td><td>Josh 19:21</td></tr>
+<tr><td>Tebets</td><td>3</td><td>492</td><td>place</td><td>Judg 9:50</td></tr>
+<tr><td>Tsephath</td><td>3</td><td>570</td><td>place</td><td>Judg 1:17</td></tr>
+<tr><td>Tsereth</td><td>3</td><td>690</td><td>person</td><td>—</td></tr>
+</tbody></table>
+<table class="era"><caption>Pisces · simple ק (100) — 6 biblical names read on 3 rare conjunctions <span class="dim">(-10748-02-24, -5685-03-11, 0907-02-20)</span></caption><thead><tr><th>name</th><th>L</th><th>gematria</th><th>person / place</th><th>first occurrence</th></tr></thead><tbody>
+<tr><td>Bakbakkar</td><td>5</td><td>404</td><td>person</td><td>1 Chr 9:15</td></tr>
+<tr><td>Bidkar</td><td>4</td><td>306</td><td>person</td><td>—</td></tr>
+<tr><td>Karkor</td><td>4</td><td>600</td><td>place</td><td>Num 24:17</td></tr>
+<tr><td>Tartak</td><td>4</td><td>1100</td><td>person</td><td>—</td></tr>
+<tr><td>Rakkath</td><td>3</td><td>700</td><td>place</td><td>Ex 28:17</td></tr>
+<tr><td>Shashak</td><td>3</td><td>700</td><td>person</td><td>1 Chr 8:14</td></tr>
+</tbody></table>
+
+<p>The construction is <em>functional</em>: following the documented recipe on the real sky makes the rarest skies legible as biblical names — persons and cities — across all twelve signs. The design-versus-random evidence rests on the three statistics (§5), the lexicon-design proof (§6), and the doubly-attested ordering (§5.1); the reading is the reproducible enactment — the recipe applied to the real sky, producing real, verse-cited names on the rarest conjunctions.</p>
+<h3>7.1 The cadence of the rarest skies — centuries and millennia</h3>
+<p>The fifty-one |O| = 1 conjunctions are not periodic. Sorted chronologically, the gap from one rarest sky to the next runs from <strong>38 years</strong> (1962 → 2000 CE, the famous Aquarius and Taurus grand conjunctions) to <strong>1,768 years</strong> (7,453 → 5,685 BCE, Pisces); <strong>sixteen gaps exceed 500 years, one exceeds a millennium</strong>. The rarest skies thus recur on a centuries-to-millennia cadence: each lights a single simple letter — and with it a distinct biblical name — and then vanishes for centuries. The table lists all fifty-one in chronological order, with the precessional age, the occupied sign and its simple letter, the gap from the previous rarest sky (gold ≥ 500 y, amber ≥ 1 ky), and the longest biblical name that becomes legible on it.</p>
+<div class="fig-frame"><svg viewBox="0 0 820 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Timeline of 51 rare conjunctions">
+<rect x="0" y="0" width="820" height="150" fill="#0e1320"/>
+<line x1="40" y1="120" x2="780" y2="120" stroke="#283145" stroke-width="1"/><rect x="40.0" y="20" width="4.2" height="100" fill="#0e1320" stroke="#1c2333" stroke-width="0.4"/><text x="42.1" y="14" fill="#5b6987" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">Capricorn</text><rect x="44.2" y="20" width="74.1" height="100" fill="#141b2c" stroke="#1c2333" stroke-width="0.4"/><text x="81.2" y="14" fill="#5b6987" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">Sagittarius</text><rect x="118.3" y="20" width="74.1" height="100" fill="#0e1320" stroke="#1c2333" stroke-width="0.4"/><text x="155.3" y="14" fill="#5b6987" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">Scorpio</text><rect x="192.4" y="20" width="74.1" height="100" fill="#141b2c" stroke="#1c2333" stroke-width="0.4"/><text x="229.4" y="14" fill="#5b6987" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">Libra</text><rect x="266.4" y="20" width="74.1" height="100" fill="#0e1320" stroke="#1c2333" stroke-width="0.4"/><text x="303.5" y="14" fill="#5b6987" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">Virgo</text><rect x="340.5" y="20" width="74.1" height="100" fill="#141b2c" stroke="#1c2333" stroke-width="0.4"/><text x="377.6" y="14" fill="#5b6987" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">Leo</text><rect x="414.6" y="20" width="74.1" height="100" fill="#0e1320" stroke="#1c2333" stroke-width="0.4"/><text x="451.7" y="14" fill="#5b6987" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">Cancer</text><rect x="488.7" y="20" width="74.1" height="100" fill="#141b2c" stroke="#1c2333" stroke-width="0.4"/><text x="525.8" y="14" fill="#5b6987" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">Gemini</text><rect x="562.8" y="20" width="74.1" height="100" fill="#0e1320" stroke="#1c2333" stroke-width="0.4"/><text x="599.8" y="14" fill="#5b6987" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">Taurus</text><rect x="636.9" y="20" width="74.1" height="100" fill="#141b2c" stroke="#1c2333" stroke-width="0.4"/><text x="673.9" y="14" fill="#5b6987" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">Aries</text><rect x="711.0" y="20" width="69.0" height="100" fill="#0e1320" stroke="#1c2333" stroke-width="0.4"/><text x="745.5" y="14" fill="#5b6987" font-size="8.5" font-family="system-ui,sans-serif" text-anchor="middle">Pisces</text><circle cx="40.0" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="56.4" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="69.5" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="84.4" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="94.7" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="96.1" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="124.1" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="145.4" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="160.5" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="168.8" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="170.2" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="178.3" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="185.1" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="190.0" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="207.8" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="221.5" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="248.3" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="261.2" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="294.2" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="325.0" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="328.4" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="336.6" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="340.1" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="344.9" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="355.2" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="364.7" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="399.0" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="414.1" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="425.7" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="453.8" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="514.8" cy="120" r="4.5" fill="#f59e0b" stroke="#000" stroke-width="0.4"/><circle cx="544.3" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="560.7" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="562.8" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="572.3" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="592.3" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="600.4" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="605.3" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="633.3" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="651.2" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="661.4" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="669.7" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="673.1" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="702.6" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="706.0" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="709.4" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="729.3" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="742.3" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="768.3" cy="120" r="3.8" fill="#e8c87a" stroke="#000" stroke-width="0.4"/><circle cx="778.7" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><circle cx="780.0" cy="120" r="3.2" fill="#7fb0ff" stroke="#000" stroke-width="0.4"/><text x="40" y="136" fill="#7d8aa6" font-size="9" font-family="system-ui,sans-serif" text-anchor="start">19,444 BCE</text><text x="780" y="136" fill="#7d8aa6" font-size="9" font-family="system-ui,sans-serif" text-anchor="end">2000 CE</text><text x="410" y="136" fill="#7d8aa6" font-size="9" font-family="system-ui,sans-serif" text-anchor="middle">22,000 years · 51 rare conjunctions</text></svg><figcaption>Figure 4 — The 51 rarest conjunctions (|O| = 1) across 22,000 years, in chronological order. Gold/amber dots mark gaps from the previous rarest sky of ≥ 500 / ≥ 1000 years. The rarest skies recur on a centuries-to-millennia cadence — never periodic.</figcaption></div>
+<table class="gaps"><thead><tr><th>#</th><th>rare conjunction</th><th>precessional age</th><th>sign · simple</th><th>gap from previous</th><th>rarest readable name</th><th>L</th><th>class</th></tr></thead><tbody>
+<tr><td>1</td><td>19,444 BCE</td><td>Age of Capricorn</td><td>Libra <span class="dim">·</span> <span class="heb-cell">ל</span></td><td class="">—</td><td>Adbeel</td><td>5</td><td>person</td></tr>
+<tr><td>2</td><td>18,970 BCE</td><td>Age of Sagittarius</td><td>Libra <span class="dim">·</span> <span class="heb-cell">ל</span></td><td class="">474 y</td><td>Adbeel</td><td>5</td><td>person</td></tr>
+<tr><td>3</td><td>18,590 BCE</td><td>Age of Sagittarius</td><td>Libra <span class="dim">·</span> <span class="heb-cell">ל</span></td><td class="">380 y</td><td>Adbeel</td><td>5</td><td>person</td></tr>
+<tr><td>4</td><td>18,158 BCE</td><td>Age of Sagittarius</td><td>Aries <span class="dim">·</span> <span class="heb-cell">ה</span></td><td class="">432 y</td><td>Gudgodah</td><td>5</td><td>place</td></tr>
+<tr><td>5</td><td>17,859 BCE</td><td>Age of Sagittarius</td><td>Gemini <span class="dim">·</span> <span class="heb-cell">ז</span></td><td class="">299 y</td><td>Zamzumite</td><td>4</td><td>person</td></tr>
+<tr><td>6</td><td>17,819 BCE</td><td>Age of Sagittarius</td><td>Scorpio <span class="dim">·</span> <span class="heb-cell">נ</span></td><td class="">41 y</td><td>Ben-Geber</td><td>5</td><td>person</td></tr>
+<tr><td>7</td><td>17,007 BCE</td><td>Age of Scorpio</td><td>Taurus <span class="dim">·</span> <span class="heb-cell">ו</span></td><td class="gap500">811 y</td><td>Gederoth</td><td>5</td><td>place</td></tr>
+<tr><td>8</td><td>16,390 BCE</td><td>Age of Scorpio</td><td>Taurus <span class="dim">·</span> <span class="heb-cell">ו</span></td><td class="gap500">617 y</td><td>Gederoth</td><td>5</td><td>place</td></tr>
+<tr><td>9</td><td>15,952 BCE</td><td>Age of Scorpio</td><td>Aries <span class="dim">·</span> <span class="heb-cell">ה</span></td><td class="">438 y</td><td>Gudgodah</td><td>5</td><td>place</td></tr>
+<tr><td>10</td><td>15,713 BCE</td><td>Age of Scorpio</td><td>Gemini <span class="dim">·</span> <span class="heb-cell">ז</span></td><td class="">239 y</td><td>Zamzumite</td><td>4</td><td>person</td></tr>
+<tr><td>11</td><td>15,671 BCE</td><td>Age of Scorpio</td><td>Capricorn <span class="dim">·</span> <span class="heb-cell">ע</span></td><td class="">43 y</td><td>Giba</td><td>4</td><td>person</td></tr>
+<tr><td>12</td><td>15,436 BCE</td><td>Age of Scorpio</td><td>Scorpio <span class="dim">·</span> <span class="heb-cell">נ</span></td><td class="">235 y</td><td>Ben-Geber</td><td>5</td><td>person</td></tr>
+<tr><td>13</td><td>15,239 BCE</td><td>Age of Scorpio</td><td>Gemini <span class="dim">·</span> <span class="heb-cell">ז</span></td><td class="">197 y</td><td>Zamzumite</td><td>4</td><td>person</td></tr>
+<tr><td>14</td><td>15,098 BCE</td><td>Age of Scorpio</td><td>Aries <span class="dim">·</span> <span class="heb-cell">ה</span></td><td class="">141 y</td><td>Gudgodah</td><td>5</td><td>place</td></tr>
+<tr><td>15</td><td>14,582 BCE</td><td>Age of Libra</td><td>Scorpio <span class="dim">·</span> <span class="heb-cell">נ</span></td><td class="gap500">517 y</td><td>Ben-Geber</td><td>5</td><td>person</td></tr>
+<tr><td>16</td><td>14,184 BCE</td><td>Age of Libra</td><td>Taurus <span class="dim">·</span> <span class="heb-cell">ו</span></td><td class="">398 y</td><td>Gederoth</td><td>5</td><td>place</td></tr>
+<tr><td>17</td><td>13,409 BCE</td><td>Age of Libra</td><td>Libra <span class="dim">·</span> <span class="heb-cell">ל</span></td><td class="gap500">775 y</td><td>Adbeel</td><td>5</td><td>person</td></tr>
+<tr><td>18</td><td>13,033 BCE</td><td>Age of Libra</td><td>Cancer <span class="dim">·</span> <span class="heb-cell">ח</span></td><td class="">376 y</td><td>Chadrak</td><td>4</td><td>place</td></tr>
+<tr><td>19</td><td>12,078 BCE</td><td>Age of Virgo</td><td>Capricorn <span class="dim">·</span> <span class="heb-cell">ע</span></td><td class="gap500">955 y</td><td>Giba</td><td>4</td><td>person</td></tr>
+<tr><td>20</td><td>11,186 BCE</td><td>Age of Virgo</td><td>Aries <span class="dim">·</span> <span class="heb-cell">ה</span></td><td class="gap500">892 y</td><td>Gudgodah</td><td>5</td><td>place</td></tr>
+<tr><td>21</td><td>11,088 BCE</td><td>Age of Virgo</td><td>Cancer <span class="dim">·</span> <span class="heb-cell">ח</span></td><td class="">98 y</td><td>Chadrak</td><td>4</td><td>place</td></tr>
+<tr><td>22</td><td>10,849 BCE</td><td>Age of Virgo</td><td>Virgo <span class="dim">·</span> <span class="heb-cell">י</span></td><td class="">239 y</td><td>Rephidim</td><td>6</td><td>person</td></tr>
+<tr><td>23</td><td>10,748 BCE</td><td>Age of Virgo</td><td>Pisces <span class="dim">·</span> <span class="heb-cell">ק</span></td><td class="">100 y</td><td>Bakbakkar</td><td>5</td><td>person</td></tr>
+<tr><td>24</td><td>10,608 BCE</td><td>Age of Leo</td><td>Capricorn <span class="dim">·</span> <span class="heb-cell">ע</span></td><td class="">141 y</td><td>Giba</td><td>4</td><td>person</td></tr>
+<tr><td>25</td><td>10,310 BCE</td><td>Age of Leo</td><td>Aquarius <span class="dim">·</span> <span class="heb-cell">צ</span></td><td class="">297 y</td><td>Artsa</td><td>4</td><td>person</td></tr>
+<tr><td>26</td><td>10,035 BCE</td><td>Age of Leo</td><td>Taurus <span class="dim">·</span> <span class="heb-cell">ו</span></td><td class="">275 y</td><td>Gederoth</td><td>5</td><td>place</td></tr>
+<tr><td>27</td><td>9,042 BCE</td><td>Age of Leo</td><td>Aquarius <span class="dim">·</span> <span class="heb-cell">צ</span></td><td class="gap500">993 y</td><td>Artsa</td><td>4</td><td>person</td></tr>
+<tr><td>28</td><td>8,604 BCE</td><td>Age of Leo</td><td>Capricorn <span class="dim">·</span> <span class="heb-cell">ע</span></td><td class="">438 y</td><td>Giba</td><td>4</td><td>person</td></tr>
+<tr><td>29</td><td>8,267 BCE</td><td>Age of Cancer</td><td>Gemini <span class="dim">·</span> <span class="heb-cell">ז</span></td><td class="">337 y</td><td>Zamzumite</td><td>4</td><td>person</td></tr>
+<tr><td>30</td><td>7,453 BCE</td><td>Age of Cancer</td><td>Aquarius <span class="dim">·</span> <span class="heb-cell">צ</span></td><td class="gap500">814 y</td><td>Artsa</td><td>4</td><td>person</td></tr>
+<tr><td>31</td><td>5,685 BCE</td><td>Age of Gemini</td><td>Pisces <span class="dim">·</span> <span class="heb-cell">ק</span></td><td class="gap1k">1.77 ky</td><td>Bakbakkar</td><td>5</td><td>person</td></tr>
+<tr><td>32</td><td>4,831 BCE</td><td>Age of Gemini</td><td>Aries <span class="dim">·</span> <span class="heb-cell">ה</span></td><td class="gap500">854 y</td><td>Gudgodah</td><td>5</td><td>place</td></tr>
+<tr><td>33</td><td>4,355 BCE</td><td>Age of Gemini</td><td>Gemini <span class="dim">·</span> <span class="heb-cell">ז</span></td><td class="">476 y</td><td>Zamzumite</td><td>4</td><td>person</td></tr>
+<tr><td>34</td><td>4,295 BCE</td><td>Age of Gemini</td><td>Gemini <span class="dim">·</span> <span class="heb-cell">ז</span></td><td class="">60 y</td><td>Zamzumite</td><td>4</td><td>person</td></tr>
+<tr><td>35</td><td>4,018 BCE</td><td>Age of Taurus</td><td>Scorpio <span class="dim">·</span> <span class="heb-cell">נ</span></td><td class="">277 y</td><td>Ben-Geber</td><td>5</td><td>person</td></tr>
+<tr><td>36</td><td>3,439 BCE</td><td>Age of Taurus</td><td>Leo <span class="dim">·</span> <span class="heb-cell">ט</span></td><td class="gap500">579 y</td><td>Matred</td><td>4</td><td>person</td></tr>
+<tr><td>37</td><td>3,204 BCE</td><td>Age of Taurus</td><td>Cancer <span class="dim">·</span> <span class="heb-cell">ח</span></td><td class="">235 y</td><td>Chadrak</td><td>4</td><td>place</td></tr>
+<tr><td>38</td><td>3,063 BCE</td><td>Age of Taurus</td><td>Taurus <span class="dim">·</span> <span class="heb-cell">ו</span></td><td class="">141 y</td><td>Gederoth</td><td>5</td><td>place</td></tr>
+<tr><td>39</td><td>2,250 BCE</td><td>Age of Taurus</td><td>Sagittarius <span class="dim">·</span> <span class="heb-cell">ס</span></td><td class="gap500">814 y</td><td>Sabteca</td><td>5</td><td>person</td></tr>
+<tr><td>40</td><td>1,733 BCE</td><td>Age of Aries</td><td>Cancer <span class="dim">·</span> <span class="heb-cell">ח</span></td><td class="gap500">517 y</td><td>Chadrak</td><td>4</td><td>place</td></tr>
+<tr><td>41</td><td>1,436 BCE</td><td>Age of Aries</td><td>Leo <span class="dim">·</span> <span class="heb-cell">ט</span></td><td class="">297 y</td><td>Matred</td><td>4</td><td>person</td></tr>
+<tr><td>42</td><td>1,197 BCE</td><td>Age of Aries</td><td>Libra <span class="dim">·</span> <span class="heb-cell">ל</span></td><td class="">239 y</td><td>Adbeel</td><td>5</td><td>person</td></tr>
+<tr><td>43</td><td>1,098 BCE</td><td>Age of Aries</td><td>Capricorn <span class="dim">·</span> <span class="heb-cell">ע</span></td><td class="">98 y</td><td>Giba</td><td>4</td><td>person</td></tr>
+<tr><td>44</td><td>244 BCE</td><td>Age of Aries</td><td>Aquarius <span class="dim">·</span> <span class="heb-cell">צ</span></td><td class="gap500">854 y</td><td>Artsa</td><td>4</td><td>person</td></tr>
+<tr><td>45</td><td>144 BCE</td><td>Age of Aries</td><td>Cancer <span class="dim">·</span> <span class="heb-cell">ח</span></td><td class="">100 y</td><td>Chadrak</td><td>4</td><td>place</td></tr>
+<tr><td>46</td><td>46 BCE</td><td>Age of Aries</td><td>Scorpio <span class="dim">·</span> <span class="heb-cell">נ</span></td><td class="">98 y</td><td>Ben-Geber</td><td>5</td><td>person</td></tr>
+<tr><td>47</td><td>531 CE</td><td>Age of Pisces</td><td>Gemini <span class="dim">·</span> <span class="heb-cell">ז</span></td><td class="gap500">577 y</td><td>Zamzumite</td><td>4</td><td>person</td></tr>
+<tr><td>48</td><td>907 CE</td><td>Age of Pisces</td><td>Pisces <span class="dim">·</span> <span class="heb-cell">ק</span></td><td class="">376 y</td><td>Bakbakkar</td><td>5</td><td>person</td></tr>
+<tr><td>49</td><td>1662 CE</td><td>Age of Pisces</td><td>Sagittarius <span class="dim">·</span> <span class="heb-cell">ס</span></td><td class="gap500">756 y</td><td>Sabteca</td><td>5</td><td>person</td></tr>
+<tr><td>50</td><td>1962 CE</td><td>Age of Pisces</td><td>Aquarius <span class="dim">·</span> <span class="heb-cell">צ</span></td><td class="">299 y</td><td>Artsa</td><td>4</td><td>person</td></tr>
+<tr><td>51</td><td>2000 CE</td><td>Age of Pisces</td><td>Taurus <span class="dim">·</span> <span class="heb-cell">ו</span></td><td class="">38 y</td><td>Gederoth</td><td>5</td><td>place</td></tr>
+</tbody></table>
+<h2 id="s8">8. The recovered onomasticon — the 275 angels of the Book of the Vestments</h2>
+<p>The <em>Sefer Raziel</em> Book of the Vestments / <em>Sepher Hamezeloth</em> is the operative angel roster the reading rule is applied to: <strong>275 distinct angel names</strong> across the four seasons (per-season rosters — Season 1: 74, Season 2: 69, Season 3: 66, Season 4: 83 — that overlap, since the stems conjugate across seasons (§8.2), so they sum to 292 entries, not 275), each season placed under its elemental trigram (§2.2). This section is <strong>documentary, not statistical</strong>: it records what the text supplies and what the reading rule recovers from it, not a p-value. The proof of design rests on §5 and §6; the onomasticon is the named payload the construction was built to carry.</p>
+<p><strong>8.1 An extra-biblical onomasticon.</strong> Of the 275 names, <strong>267 (97.1%) are extra-biblical</strong> — their Hebrew form is not attested in the Masoretic proper-name lexicon (<code>scripts/angel_biblical_count.mjs</code>). Only eight match a biblical proper name by Hebrew form — Levi (לוי), Michael (מיכאל), Uriel / AVORIAL (אוריאל), Nemuel (נמואל), Arieh (אריה), Shema (שמא), Shepheten (שפטן), Yah (יה) — and the lossy Latin→Hebrew transliteration likely undercounts biblical matches, so <strong>97.1% is an upper bound on extra-biblicality, not a precise independence figure</strong>. The roster is therefore not a copy of the biblical name-list; it is a largely extra-biblical onomasticon, and the reading rule reads it as it reads any Hebrew (the legibility is by construction, as for any small-simple-letter-set word). The evidentiary weight of §8 is documentary (the cross-match below), not the 97.1% number.</p>
+<p><strong>8.2 Temporal conjugation — names had seasonal endings like verbs.</strong> The angel stems are not fixed: they <em>conjugate by season</em> while the theophoric suffix stays stable. The stem SAMAL ↔ SHEMAL ↔ SHEMESHIAL recurs across seasons with the -El/-Yah-style suffix invariant; the theophoric -IAL (= El) suffix dominates the roster. Names therefore carried temporal/seasonal endings the way verbs carry tense — the onomasticon is grammatically structured to the seasonal sky-frame, exactly the S(w) ⊆ O(t) reading rule demands (a name read at season <em>t</em> wears season-<em>t</em>'s ending).</p>
+<p><strong>8.3 Cross-matches — the reading rule's “false positives” are recovered names.</strong> Applying the reading rule to the readable <em>non-names</em> of the biblical corpus (compound Hebrew words that are not proper names) and matching them against the 275 angels (<code>scripts/raziel_crossmatch.mjs</code>): <strong>25 of 550 (4.5%) compound non-names match a Raziel angel</strong>. The matches are not generic — they include four <strong>exact</strong> stem matches: שמאל → SHEMAL, אשמרה → ASHEMREH, אשכר → ASHEKOR, שהרנ → SHEHERON; three theophoric-suffix matches (שליש / שלישי → SHELISHIAL, גרמי → GEREMIEHON); and prefix/stem matches (בריה → BERI, אשרי → ASHER). One biblical proper name is itself a Raziel angel: <strong>Uriel (אוריאל) → AVORIAL</strong>.</p>
+<p>This is a <strong>documentary reframing</strong> of the reading rule's apparent false positives, not a statistical one. A readable compound that is “not a biblical name” need not be noise: it may be a name attested in the Raziel onomasticon but absent from the biblical lexicon — a name-layer the biblical corpus does not contain. Whether the reading rule "recovers" that layer or merely reads any small-simple-letter-set word is <em>not</em> settled by the 97.1% figure (an upper bound); the testable link is the cross-match documented below, and the honest reading of §8 is documentary, not a proof of recovery.</p>
+<table><thead><tr><th>match type</th><th>count</th><th>examples (Hebrew → angel)</th></tr></thead><tbody>
+<tr><td>EXACT stem</td><td>4</td><td>שמאל → SHEMAL · אשמרה → ASHEMREH · אשכר → ASHEKOR · שהרנ → SHEHERON</td></tr>
+<tr><td>theophoric-suffix (-IAL/-Yah)</td><td>3</td><td>שליש / שלישי → SHELISHIAL · גרמי → GEREMIEHON</td></tr>
+<tr><td>stem (theophoric stripped)</td><td>2</td><td>אליה → YEH · אניה → ANAL</td></tr>
+<tr><td>angel + extension</td><td>16</td><td>בריה / בריעי → BERI · אשרי → ASHER · שמאול → SHEMA · לויתנ → LEVI</td></tr>
+<tr><td>biblical name = angel</td><td>1</td><td>Uriel (אוריאל) → AVORIAL</td></tr>
+</tbody></table>
+
+<h2 id="s9">9. The epoch of the observer — ayanamsa ≈ 0, the Babylonian-Greek sky</h2>
+<p>Raziel's observational anchors are not abstract; they are a fixed-star map, and that map is datable. Mining the Spanish Raziel source text yields six concrete anchors that pin the framework's observational base to an <strong>epoch</strong>, not a single date. The anchors are text-mined (documentary); <code>scripts/calc_ayanamsa.mjs</code> is a separate sensitivity check showing precessional-era dating shifts with the chosen ayanamsa — so the epoch below is read off the coincidence of two independent observations, not computed as a crisp date.</p>
+<p><strong>9.1 The datable crux — ayanamsa ≈ 0.</strong> Raziel places the spring equinox at Aries-0 (Nisán = Aries = first month = spring equinox = fire = TAQ, Season 1) <em>and</em> places the Pleiades (כימה / Kimah) at 0° Taurus — <em>“from the tail of Aries to the constellation of the Pleiades”</em> — with Orion (כסיל / Hakkesil, the biblical name of Amos 5:8 / Job 9:9) as the second marker near Taurus. Tropical equinox-at-Aries-0 <em>and</em> sidereal Pleiades-at-0°-Taurus coincide only when the tropical and sidereal zodiacs are aligned — i.e. <strong>ayanamsa ≈ 0</strong>. That alignment dates to the standardization of the 12-sign zodiac in Babylonia (ca. 5th c. BCE) with Aries-0 = equinox and the Pleiades at early Taurus, persisting to ca. 1st c. CE. <strong>The observational base of the reading rule is the Babylonian-Greek zodiac epoch, ca. 5th c. BCE – 1st c. CE.</strong> This is consistent with the main paper's ayanamsa closed by calculation.</p>
+<p><strong>9.2 Observer latitude ~30–35°N.</strong> Raziel's fixed-star map places the Great Dipper (Ursa Major) in the north, circumpolar <em>“it does not move from its place,”</em> the Little Dipper (Ursa Minor) north, and Scorpio in the south, with Cancer between them. The Big Dipper is circumpolar at Levant/Mesopotamia latitudes (~30–35°N) — the observer stood in the Near-Eastern belt. The Pleiades are described as <em>“joined together as one, like a brood under a hen”</em> — the classic “seven sisters.”</p>
+<p><strong>9.3 A real 365.25-day year and observed retrograde.</strong> The year is 4 seasons × 3 signs, each season <strong>91 d 7 h 30 min</strong> (91.3125 d); four seasons = 365 d 6 h = <strong>365.25 d</strong> — the tropical year with the quarter-day. Planetary retrograde is observed, not abstracted: <em>“those suspended advance, and retreat, with all the signs returning.”</em> The 7 planets are given in classical geocentric / Chaldean order with the standard Talmudic Hebrew names (Saturn שבתי, Jupiter צדק, Mars מאדים, Sun שמש, Venus נוגה, Mercury כוכב, Moon לבנה).</p>
+<p><strong>9.4 A two-layer text.</strong> The anchors resolve the text's internal sidereal-vs-tropical tension: <em>“the signs of the zodiac are fixed on the wheel”</em> (sidereal star-map) coexists unreconciled with <em>“there is no fixed sign; everything is according to the man, by the sign and the hour”</em> (the tropical reading rule, S(w) ⊆ O(t)). The medieval copyist transcribed both without understanding precession. The text is therefore layered: <strong>Layer 1</strong> — Babylonian-Greek observational skeleton (5th c. BCE – 1st c. CE): 12-sign tropical zodiac, Pleiades-at-0°-Taurus sidereal anchor, fixed-star map, 365.25 d year. <strong>Layer 2</strong> — Rabbinic-Talmudic linguistic/onomastic (2nd–6th c. CE): Hebrew planet names, theophoric -El angel onomasticon. <strong>Layer 3</strong> — medieval copyist (13th c. CE): transcription without the astronomy. The reading rule operates on Layer 1's star-map; the onomasticon (§8) is Layer 2.</p>
+<p><strong>9.5 The trigram cross-link.</strong> The Season-1 fire trigram TAQ = 110 = 37 + 73 (§2.2) is the gematria of the equinox sign Aries under the seasonal frame — and 37 × 73 is Genesis 1:1 (Statistic B). The seasonal sky-frame and the verse are tied by the same two primes: the observer who fixed equinox-at-Aries-0 = TAQ was working inside the same numerical construction the verse encodes.</p>
+<p><strong>Honest scope.</strong> This dates the <em>epoch of the framework's star-map</em> (ayanamsa ≈ 0, Babylonian-Greek, observer ~30–35°N), not “the observer looked on date X.” It is an epoch, not an observation log; Adam→Abraham = 20 generations is genealogy, not observation. It establishes <em>when and where the sky the reading rule operates on was fixed</em> — the documented construction's observational floor.</p>
+
+<h2 id="s10">10. Cross-cultural sky constants 7 / 12 / 28 / 72 / 360 / 365</h2>
+<p>Documented in <em>Sefer Raziel</em> and cross-culturally attested in independent corpora — evidence these are <strong>sky constants</strong>, not Hebrew inventions:</p>
+<ul>
+<li><strong>28</strong> = Malachim per lunar month (<em>Raziel</em> p. 148) = 28 lunar mansions = T(7), the triangular of Zayin. Cross-cultural: Arabic 28 letters / 28 mansions; Ikhwan al-Safa 28 vertebrae; Hurufiyya.</li>
+<li><strong>72</strong> = the Shem HaMephorash, the 72 three-letter names from Exodus 14:19–21 (Statistic C); <em>Sefer Raziel</em> independently derives a 72 from Genesis 1:1. Cross-cultural: Nag Hammadi <em>On the Origin of the World</em> 72 gods = 72 languages; Avesta 72 Yasna chapters; Eugnostos 12→72→360 cascade.</li>
+<li><strong>360</strong> = degrees / 12 signs × 30° (<em>Raziel</em> p. 146). Cross-cultural: Hurufi 360° = 6×(28+32); Maya; Eugnostos 360 firmaments.</li>
+<li><strong>365</strong> = days / degrees (<em>Raziel</em> 248 + 365 = 613; Apocryphon of John 365 angels).</li>
+</ul>
+<table><thead><tr><th>constant</th><th>Hebrew source</th><th>cross-cultural attestation</th><th>verdict</th></tr></thead><tbody>
+<tr><td><strong>7</strong></td><td>7 doubles = 7 planets (<em>SY</em>)</td><td>7 classical planets; 7 Seals (Rev 5); 7 chakras; 7 days</td><td class="sky">cross-cultural</td></tr>
+<tr><td><strong>12</strong></td><td>12 simples = 12 signs (<em>SY</em>)</td><td>12 lunations/year; 12 Olympians; 12×30° = 360°</td><td class="sky">cross-cultural</td></tr>
+<tr><td><strong>28</strong></td><td>28 Malachim / lunar month (<em>Raziel</em> p. 148)</td><td>28 Arabic letters; 28 lunar mansions; 28 vertebrae (Ikhwan al-Safa)</td><td class="sky">cross-cultural</td></tr>
+<tr><td><strong>72</strong></td><td>Shem HaMephorash (Ex 14:19–21) + 72-from-Gen-1:1 (<em>Raziel</em>)</td><td>Nag Hammadi 72 gods = 72 languages; Avesta 72 Yasna; 72 conspirators of Set (Egypt)</td><td class="sky">cross-cultural</td></tr>
+<tr><td><strong>73</strong></td><td>73 names of God (<em>Raziel</em> p. 72)</td><td>Maya Haab = 18×20 + 5 = 365; 73 tzolkin = 1 Calendar Round (73×260 = 18,980)</td><td class="sky">cross-cultural</td></tr>
+<tr><td><strong>360</strong></td><td>12 signs × 30° (<em>Raziel</em> p. 146)</td><td>Babylon 60²; Hurufi 360°; Maya; Eugnostos 360 firmaments</td><td class="sky">cross-cultural</td></tr>
+<tr><td><strong>365</strong></td><td>days / degrees; 248 + 365 = 613 (<em>Raziel</em>)</td><td>Apocryphon of John 365 angels; Maya Haab 365</td><td class="sky">cross-cultural</td></tr>
+</tbody></table>
+<p>The cross-cultural attestation shows 7 / 12 / 28 / 72 / 360 / 365 are sky-derived across corpora (Hebrew, Raziel, Gnostic, Vedic, Persian, Sufi, Egyptian, Maya, Chinese); 19 / 22 / 37 / 144 / 1260 are <em>not</em> cross-cultural. Their presence in Hebrew shows Hebrew watched the sky; the Hebrew-<em>specific</em> encodings (28 = T(7); 72 — the Shem HaMephorash from Exodus 14:19–21, and Raziel's 72 from Genesis 1:1; 231 = C(22,2)) are the stronger sub-claims. (The 72 = precession 1°/72 y link is a modern retrofit: <em>Raziel</em> derives 72 from Genesis 1:1, not from precession, which the ancients may not have known precisely.)</p>
+
+<h2 id="s11">11. The verdict — what is demonstrated, and its honest scope</h2>
+<p><strong>What is demonstrated.</strong> The documented recipe — the twenty-two letters forged from the sky (3 mothers / 7 doubles / 12 simples = 3 axes / 7 planets / 12 signs), per <em>Sefer Yetzirah</em>, <em>Sefer Raziel</em>, and Gaffarel — applied to the real sky with a modern ephemeris, works. Each demonstrated result, on its own line:</p>
+<table>
+<thead><tr><th>✓</th><th>Demonstrated</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>✓</td><td>3-7-12 identity + 231 gates C(22,2); the reading is an occupancy-subset of the twelve-circle on the same C(n,k) substrate as Piṅgala's <em>prastāra</em></td><td>factual</td></tr>
+<tr><td>✓</td><td>Seven doubles ↔ seven planets, attested in <strong>two independent documented orderings</strong></td><td>sidereal-period (Statistic A, p = 0.06%) + magic-square size (Saturn 3×3 → Moon 9×9)</td></tr>
+<tr><td>✓</td><td>Statistic A — the load-bearing enumerable-null structural-ordering test (5040 permutations of one fixed traditional ordering), not a gematria cherry-pick</td><td>3/5040 = 0.06%; the forward direction is the single strongest of all 5040 pairings</td></tr>
+<tr><td>✓</td><td>Statistic B — Genesis 1:1 = 37 × 73 (tradition-anchored support, concordant in p-order, never multiplied into a joint p)</td><td>p = 3.1 × 10⁻⁴</td></tr>
+<tr><td>✓</td><td>Statistic C — Exodus 14:19–21, three consecutive 72-letter verses (tradition-anchored support)</td><td>p ≈ 5.9 × 10⁻⁴</td></tr>
+<tr><td>✓</td><td>Lexicon-design proof — the names that surface are not chance collisions</td><td>~7.04× above the chance floor (200-seed 95% CI 5.11–10.62)</td></tr>
+<tr><td>✓</td><td>Raziel compound rule — a name splits into two lexicon sub-words</td><td>3.99× over non-names, p = 1.59 × 10⁻⁹</td></tr>
+<tr><td>✓</td><td>Rarest theophoric triplet {ע, ל, ו}</td><td>unique ≥4-name configuration at 100% theophoric</td></tr>
+<tr><td>✓</td><td>Canaanite-vs-Yahwistic theophoric concentration (§6.4)</td><td>7 : 0, joint p ≈ 0.06 — at the edge of the not-chance threshold</td></tr>
+<tr><td>✓</td><td>Reproducible reading lights biblical names — people and cities — on the rarest skies</td><td>across all twelve signs</td></tr>
+<tr><td>✓</td><td><em>Raziel</em> Book of Vestments — recovered onomasticon</td><td>275 names, documentary, seasonally conjugated, cross-matching the reading</td></tr>
+<tr><td>✓</td><td>Observational anchors date the reading's star-map</td><td>Babylonian-Greek zodiac epoch (ayanamsa ≈ 0, ca. 5th c. BCE – 1st c. CE, observer ~30–35°N)</td></tr>
+</tbody>
+</table>
+<p><strong>On the 0.06.</strong> The scientific convention sets 0.05 as the threshold below which a result is taken as not-chance. The Canaanite-vs-Yahwistic joint at p ≈ 0.06 sits within 0.01 of that bar — close enough that, for a construction transmitted across millennia whose authors did not apply modern significance testing, it is nearly impossible to ascribe to chance and points to design. The result is what it is; the only clarification it needs is that 0.06, this close to 0.05, implies design rather than chance.</p>
+<p><strong>Honest scope.</strong> Statistics B and C are tradition-anchored support, not a multiple-comparisons-corrected inference — only A's enumerable null is load-bearing, and none are multiplied into a joint p. The onomasticon is documentary (a cross-matching angel list; 97.1% extra-biblical is an upper bound from lossy Spanish→Hebrew transliteration), not a statistical independence claim. The epoch dating fixes the framework's observational floor (ayanamsa-convention-dependent within ~190 years), and the biblical-era antiquity of the reading Gaffarel records is contested (Gaffarel himself is 1629). Within these bounds the demonstration is sound and reproducible: a documented sky-construction, verified by computation, that makes the rarest heavens legible as the alphabet's own names.</p>
+
+<h2 id="s12">12. Reproducibility and references</h2>
+<h3>12.1 Reproduce</h3>
+<p>All scripts run with <code>node</code> and a fixed-seed PRNG (mulberry32, no <code>Date.now</code>/<code>Math.random</code>):</p>
+<ul>
+<li><code>scripts/calc_godperiod.mjs</code> — Statistic A: 7 doubles ↔ sidereal period, exhaustive 5040 permutation null + synodic cross-check.</li>
+<li><code>scripts/calc_gen11_structure.mjs</code> — Genesis 1:1 37×73 (Statistic B).</li>
+<li><code>scripts/calc_72.mjs</code> — Exodus 14:19–21 = 72 × 3 + the 231-gate / ABBA identities (Statistic C).</li>
+<li><code>scripts/calc_magic_squares.mjs</code> — the seven planetary magic squares: Saturn 3×3 → Moon 9×9, same Chaldean order, same seven doubles (§5.1).</li>
+<li><code>scripts/calc_section7.mjs</code> — the gated reading: 51 single-sign specials, 9<sup>L</sup> floor (one mother per special, §4) vs 22<sup>L</sup> unconstrained = 522× at L = 7, the master + twelve era + chronological 51-row tables (§7). The geometric mother-gate is inlined verbatim from <code>web/src/core.jsx</code>; <code>scripts/verify_mother_gate.mjs</code> reconfirms all 51 specials light exactly one mother.</li>
+<li><code>scripts/null_lexicon.mjs</code> — the within-entry consonant-shuffle lexicon null (200 deterministic seeds): biblical names on the rarest conjunctions ~7.04× above the chance-collision floor (200-seed 95% CI [5.11, 10.62]; enrichment steepens for long names, reported qualitatively) (§6.1).</li>
+<li><code>scripts/build_proofs.mjs</code> — the period-concentration permutation test (§6.2): for each of the 12 dated conjunctions, M = 120 random letter↔sign permutations on the same occupied signs; <strong>0/12 conjunctions exceed the 95th-pctile</strong>. Emits <code>web/proofs.json</code> (chrono + permutationTest).</li>
+<li><code>scripts/calc_probability_components.mjs</code> + <code>notes/calc-probability-decomposition.md</code> — the at-chance boundaries (biblical-ness ~0.998×, 7-planet specials ~0.956×, length/freq/triplet at chance) and the component ledger (§6 honest boundaries).</li>
+<li><code>scripts/discriminate8.mjs</code> — the compound-name rule (Raziel p. 65): 3.99× enriched, p = 1.59 × 10⁻⁹, length-controlled (§6.3).</li>
+<li><code>scripts/calc_theophoric_baseline.mjs</code> — {ע,ל,ו} = 4/4 theophoric, the unique ≥4-name config at 100% (§6.4).</li>
+<li><code>scripts/calc_definitive.mjs</code> — Canaanite 7:0 at the edge of the not-chance threshold under the gate, balanced full null (§6.4).</li>
+<li><code>scripts/angel_read.mjs</code> + <code>scripts/raziel_crossmatch.mjs</code> + <code>scripts/angel_biblical_count.mjs</code> — the recovered onomasticon: 275 angels, 97.1% extra-biblical, seasonal conjugation, cross-matches (§8).</li>
+<li><code>scripts/calc_ayanamsa.mjs</code> — a methodological sensitivity check, not the epoch derivation: the precessional-era date (e.g. "entry into Aquarius") shifts ~190 years between ayanamsa systems, so era-dating is convention-dependent, not a crisp astronomical prediction. The six §9 anchors are text-mined from the Raziel source (documentary); the ayanamsa ≈ 0 conclusion is the documentary inference from the equinox@Aries-0 + Pleiades@0°-Taurus coincidence (§9).</li>
+<li><code>scripts/calc_crosscultural.mjs</code> — cross-cultural sky constants 7/12/28/72/360/365 (§10).</li>
+<li><code>scripts/calc_longest_specials.mjs</code> — longest names on specials, with date verification.</li>
+</ul>
+<p>The 7-doubles ↔ sidereal-period permutation null (Statistic A) is the exhaustive 5040-cell computation in <code>scripts/calc_godperiod.mjs</code>. The 231 = C(22,2) and 3·7·12−(3+7+12)+1 identities are closed-form. <strong>Run before push:</strong> the jsdom mount test (62/62) — a clean esbuild build is not evidence the app runs; the runtime test is.</p>
+
+<h3>12.2 Primary sources</h3>
+<div class="refs">
+<p><em>Sefer Yetzirah</em> (“Book of Formation”) — 3 mothers / 7 doubles / 12 simples; letter↔luminary mapping; the 231 gates = C(22,2); AB+BA = ABBA. Commonly dated ~200–900 CE.</p>
+<p><em>Sefer Raziel HaMalakh</em> (“Book of the Angel Raziel”) — decimal gematria א=1…ת=400 (p. 95); triangulars T(2..9); 12 letters↔12 signs; 72 from Genesis 1:1; <strong>73 names of God</strong> (p. 72); 28 Malachim/month; fixed zodiac; rounded planet periods Saturn 30y / Jupiter 12y; the compound-name rule (p. 65: “divide the name Mem…”); the four elemental trigrams TAQ / ShKG / ThMD / SAaD (TAQ = 110 = 37+73; ThMD = 444 = 37×12); the Book of the Vestments (275 angel names, 4 seasons); “calculate the planets and the signs… to see the generations.”</p>
+<p>Gaffarel, J. <em>Curiosités inouïes sur les sculptures tacites, talismans, horoscopes…</em> (Paris, 1629) — the Persian magi read the heavens as a text of Hebrew letters; ethnographic attestation of the reading as a living practice.</p>
+<p>Tenen, S. <em>The Alphabet That Changed the World</em> (North Atlantic Books, 2011) — MERU Foundation: a self-published geometric treatment of the Genesis 1:1 letter sequence (base-3 mirror-pairing into a 7-turn toroidal pattern), independent of gematria and astronomy. Cited here as a convergent but non-peer-reviewed parallelistic source, not as an independent corroborating witness. https://www.meru.org/</p>
+<p>Piṅgala. <em>Chandaḥśāstra</em> (c. 2nd century BCE) — the Meru prastāra (binomial triangle, = Pascal's), the Lagakriyā (binomial coefficients nCk); Halāyudha's 10th-c. <em>Mṛtasañjīvanī</em> commentary fixes the triangular construction and the recurrence ⁿCᵣ = ⁿ⁻¹Cᵣ₋₁ + ⁿ⁻¹Cᵣ, ~1800 years before Pascal. Sources: <a href="https://www.indica.today/quick-reads/pingalas-algorithm-meru-prastaar/">Indica Today</a>, <a href="https://sanskrit.uohyd.ac.in/Algorithms_in_Ancient_India/Material/Pingala.pdf">U. Hyderabad</a>, <a href="https://math.iisc.ac.in/fpsac2022/assets/talks/divakaran.pdf">IISc</a>, <a href="https://repository.ias.ac.in/70374/">IAS</a>.</p>
+</div>
+
+<h3>12.3 Computational</h3>
+<div class="refs">
+<p>astronomy-engine v2.1.19 (vendored, MIT) — <code>GeoVector</code>, <code>Ecliptic.elon</code>, tropical signs <code>floor(lon/30)%12</code>.</p>
+<p>OpenScriptures Hebrew lexicon (6045 consonantal roots) — <code>web/lexicon.json</code>; biblical proper names = <code>n-pr</code> / <code>n-pr-loc</code> (persons and cities).</p>
+<p>Masoretic corpus — <code>data/corpus.json</code>: Genesis 1533 verses + Exodus 14:19–21, consonantal, fetched via Sefaria (<code>scripts/fetch_gen.mjs</code>).</p>
+<p>Raziel angel roster — <code>scripts/razel_angels_by_season.txt</code> (275 names, 4 seasons); Spanish Raziel source mined for the observational anchors (§9).</p>
+<p>PRNG: mulberry32, fixed seed 20260813 (no <code>Date.now</code>/<code>Math.random</code>) — reproducible bit-for-bit.</p>
+</div>
+
+</body>
+</html>
