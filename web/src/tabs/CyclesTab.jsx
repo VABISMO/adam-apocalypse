@@ -184,7 +184,7 @@ function SarosTab(){
       <li>Full enumeration (5000 years, all new moons, |β| &lt; 1.6°): <b>152 complete series, lengths 54–87, median 72</b> — the empirical member count of a saros series.</li>
     </ul>
     <h3>Hebrew stellar-alphabet mnemonics for eclipse seasons</h3>
-    <div className="muted" style={{marginBottom:8}}>The <i>Sefer Yetzirah</i> does not predict eclipses, and the <i>Sefer Raziel</i> (p.144: “combina los signos y la rueda… calcula los períodos… calcula para ver las generaciones”) gives the letter-astronomy scaffold but no eclipse algorithm. The real engine is the Hebrew calendar, and its constants are the SY's constants:</div>
+    <div className="muted" style={{marginBottom:8}}>The <i>Sefer Yetzirah</i> does not predict eclipses, and the <i>Sefer Raziel</i> (p.144: “combine the signs and the wheel… compute the periods… compute in order to see the generations”) gives the letter-astronomy scaffold but no eclipse algorithm. The real engine is the Hebrew calendar, and its constants are the SY's constants:</div>
     <table>
       <thead><tr><th>Astronomy</th><th>Stellar alphabet (SY)</th></tr></thead>
       <tbody>
