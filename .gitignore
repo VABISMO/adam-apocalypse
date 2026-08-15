@@ -1,4 +1,37 @@
-scripts/
+# reproducibility scripts: ignore everything EXCEPT the cited keep-set
+# (the §12.1 reproducibility suite, their shared deps, and the data they read)
+scripts/*
+!scripts/angel_biblical_count.mjs
+!scripts/angel_read.mjs
+!scripts/astronomy-engine.mjs
+!scripts/calc_72.mjs
+!scripts/calc_alignments_tiers.mjs
+!scripts/calc_ayanamsa.mjs
+!scripts/calc_crosscultural.mjs
+!scripts/calc_gen11_structure.mjs
+!scripts/calc_godperiod.mjs
+!scripts/calc_longest_specials.mjs
+!scripts/calc_magic_squares.mjs
+!scripts/calc_negative_control.mjs
+!scripts/calc_null_by_tier.mjs
+!scripts/calc_phonotactic_null.mjs
+!scripts/calc_probability_components.mjs
+!scripts/calc_section7.mjs
+!scripts/calc_threat_b_jongeling.mjs
+!scripts/calc_wordclass_control.mjs
+!scripts/discriminate8.mjs
+!scripts/fetch_gen.mjs
+!scripts/null_lexicon.mjs
+!scripts/raziel_crossmatch.mjs
+!scripts/verify_mother_gate.mjs
+!scripts/lib.mjs
+!scripts/tests.mjs
+!scripts/scan_10k.mjs
+!scripts/scan_10k.json
+!scripts/razel_angels_by_season.txt
+!scripts/lexicon.json
+!scripts/corpus.json
+!scripts/name_refs.json
 backups/
 article/
 patches/
@@ -16,5 +49,6 @@ mount-figs.mjs
 mount-tabs.mjs
 paper/index.html.bak
 
-# unpublished working notes (demonstrated-vs-not checktable, not-demonstrated material for later review)
-notes/
+# unpublished working notes — ignore all EXCEPT the cited probability ledger
+notes/*
+!notes/calc-probability-decomposition.md

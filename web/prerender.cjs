@@ -34436,6 +34436,54 @@ writeHtml("index.html", shell({
     console.log("WARN: paper/documented-construction/index.html not found at", src, "\u2014 /paper/ not written");
   }
 })();
+(() => {
+  const srcDir = import_node_path.default.join(WEB, "..", "scripts");
+  const dstDir = import_node_path.default.join(OUT, "scripts");
+  if (!import_node_fs.default.existsSync(srcDir)) {
+    console.log("WARN: scripts/ not found \u2014 /scripts/ not written");
+  } else {
+    import_node_fs.default.mkdirSync(dstDir, { recursive: true });
+    const GITHUB = "https://github.com/VABISMO/adam-apocalypse";
+    const keep = (name) => /\.(mjs|txt)$/.test(name) || name === "scan_10k.json";
+    const firstComment = (p) => { try { const t = import_node_fs.default.readFileSync(p, "utf8"); const m = t.match(/\/\/\s*(.+)/); return m ? m[1].trim().replace(/\s*\u2014\s*.*$/, "") : ""; } catch { return ""; } };
+    const files = import_node_fs.default.readdirSync(srcDir).filter(keep).sort();
+    const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const rows = files.map((f) => {
+      const desc = f.endsWith(".mjs") ? firstComment(import_node_path.default.join(srcDir, f)) : f === "scan_10k.json" ? "aggregated alignment peaks (the data read by calc_probability_components.mjs)" : "275 Raziel angel names across four seasons";
+      return `      <li><a href="${esc(f)}"><code>${esc(f)}</code></a>${desc ? " \u2014 " + esc(desc) : ""}</li>`;
+    }).join("\n");
+    const html = `<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reproducibility scripts \u2014 The Apocalypse of Adam</title>
+<style>
+  :root{--bg:#0a0a0a;--panel:#141414;--line:#2a2a2a;--txt:#e8e8e8;--dim:#9a9a9a;--violet:#c29eff;--gold:#d4af37}
+  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:880px;margin:0 auto;padding:32px 20px 64px}
+  h1{font-size:1.5rem;margin:0 0 4px}h2{font-size:1.05rem;color:var(--gold);margin:28px 0 10px}
+  .sub{color:var(--dim);margin:0 0 20px;font-size:.95rem}
+  a{color:var(--violet);text-decoration:none}a:hover{text-decoration:underline}
+  code{background:var(--panel);border:1px solid var(--line);padding:1px 5px;border-radius:4px;font-size:.9rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  pre{background:var(--panel);border:1px solid var(--line);padding:14px;border-radius:8px;overflow-x:auto;font-size:.85rem}
+  ul{list-style:none;padding:0;margin:0}li{padding:7px 0;border-bottom:1px solid var(--line);word-break:break-word}
+  li a code{background:transparent;border:0;padding:0}.note{color:var(--dim);font-size:.9rem}
+</style></head><body><div class="wrap">
+<h1>Reproducibility scripts</h1>
+<p class="sub">The \xA712.1 reproducibility suite for <a href="/paper/"><i>The Alphabet from the Sky</i></a> \xB7 source <a href="${GITHUB}" target="_blank" rel="noreferrer">on GitHub</a></p>
+<p class="note">Every script runs with <code>node</code> and a fixed-seed PRNG (mulberry32 \u2014 no <code>Date.now</code> / <code>Math.random</code>), so each result is reproducible bit-for-bit. Clone the <a href="${GITHUB}" target="_blank" rel="noreferrer">repository</a> and run <code>node scripts/&lt;name&gt;.mjs</code>; the lexicon, alignments, name-refs and ephemeris are committed alongside the scripts.</p>
+<h2>Run the assertion suite</h2>
+<pre>node scripts/tests.mjs   # 106 assertions, all passing</pre>
+<h2>The scripts</h2>
+<ul>
+${rows}
+</ul>
+<p class="note" style="margin-top:24px">See the paper's <a href="/paper/#s12">\xA712.1 Reproduce</a> for what each script verifies and which claim it anchors.</p>
+</div></body></html>`;
+    for (const f of files) import_node_fs.default.copyFileSync(import_node_path.default.join(srcDir, f), import_node_path.default.join(dstDir, f));
+    import_node_fs.default.writeFileSync(import_node_path.default.join(dstDir, "index.html"), html);
+    console.log(`reproducibility scripts served: /scripts/ (${files.length} files + index)`);
+  }
+})();
 console.log(`prerender done: ${nAlign} alignment fiches, ${nGloss} gloss fiches, ${nProphet} prophet fiches, ${nMage} mage fiches, ${nPatriarch} patriarch fiches, ${nPlace} place fiches, landing + about + app + 6 hub pages, ${nBooks} library fiches + ${nZips} downloadable ZIPs${nZipSkipped ? ` (${nZipSkipped} skipped)` : ""}, sitemaps + robots.txt + llms.txt + llms-full.txt + site.webmanifest`);
 /**
     @preserve
