@@ -14,13 +14,13 @@ mined (see project memory: Raziel verified findings).
 
 ## Source
 
-These files already existed in the repository at `pdf/raziel-hebrew.pdf` and
-`pdf/razielbook.pdf` (the source the project mined). They were copied verbatim into this
-folder; no download was performed.
+This folder is the canonical home of the Raziel source PDFs in the repository.
+The project originally held them at `pdf/`; that folder has been removed and the
+PDFs now live here verbatim (no download was performed — they are the project's
+pre-existing files).
 
-- Original repo paths:
-  - `pdf/raziel-hebrew.pdf` (7,393,498 bytes, 90 pages)
-  - `pdf/razielbook.pdf` (1,502,006 bytes, 322 pages)
+- `raziel-hebrew.pdf` (7,393,498 bytes, 90 pages)
+- `razielbook.pdf` (1,502,006 bytes, 322 pages)
 
 ## Edition / year
 

@@ -411,12 +411,12 @@ function RevelationGnosticTab(){
 
 function RevelationRazielTab(){
   const rsrc=[
-    ['Sefer Raziel HaMalakh — Spanish ed. (322pp, source PDF)','pdf/razielbook.pdf'],
-    ['Sefer Raziel HaMalakh — Hebrew ed. (90pp, source PDF)','pdf/raziel-hebrew.pdf'],
+    ['Sefer Raziel HaMalakh — Spanish ed. (322pp, in the library ZIP)','/library/sefer-raziel'],
+    ['Sefer Raziel HaMalakh — Hebrew ed. (90pp, in the library ZIP)','/library/sefer-raziel'],
   ];
   return <>
     <h2>Sefer Raziel HaMalakh — the indisputable findings (§9.6)</h2>
-    <div className="muted" style={{marginBottom:10}}>The <i>Sefer Raziel HaMalakh</i> (Book of the Angel Raziel) is the older sibling of the <i>Sefer Yetzirah</i> in this register: a late-antique / early-medieval manual of letter-astronomy that tells the reader to <b>compute the planets and the fixed zodiacal signs to read the generations</b>. Mined 2026-08-10 from the two source PDFs in <code>pdf/</code> — the Spanish <i>Sepher Raziel Hamelach</i> (322pp, clean text) and the Hebrew edition (90pp, OCR-garbled but cross-confirming). Page refs = Spanish PDF. Only findings verified against the text are listed; loose coincidences are flagged at the end.</div>
+    <div className="muted" style={{marginBottom:10}}>The <i>Sefer Raziel HaMalakh</i> (Book of the Angel Raziel) is the older sibling of the <i>Sefer Yetzirah</i> in this register: a late-antique / early-medieval manual of letter-astronomy that tells the reader to <b>compute the planets and the fixed zodiacal signs to read the generations</b>. Mined 2026-08-10 from the two source PDFs — the Spanish <i>Sepher Raziel Hamelach</i> (322pp, clean text) and the Hebrew edition (90pp, OCR-garbled but cross-confirming), both hosted in the Luco Library at <code>/library/sefer-raziel</code> (downloadable as a ZIP). Page refs = Spanish PDF. Only findings verified against the text are listed; loose coincidences are flagged at the end.</div>
 
     <Section name="1 · Alphabet ↔ astronomy (the core thesis — strongest validation)" rows={[
       ['22-letter gematria explicit, א=1 … ת=400, NO 500–900 finals','22','(a)','p.95: "Aleph es 1, Beth es 2 … Qoph 100, Resh 200, Shin 300, Tau 400." = the SAME ancient system this app uses (not Mispar Gadol).'],
