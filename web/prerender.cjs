@@ -34432,6 +34432,17 @@ writeHtml("index.html", shell({
     import_node_fs.default.mkdirSync(import_node_path.default.dirname(dst), { recursive: true });
     import_node_fs.default.copyFileSync(src, dst);
     console.log(`paper served same-domain: /paper/ (${import_node_fs.default.statSync(src).size} bytes)`);
+    const assetsDir = import_node_path.default.join(import_node_path.default.dirname(src), "assets");
+    if (import_node_fs.default.existsSync(assetsDir)) {
+      const dstAssets = import_node_path.default.join(OUT, "paper", "assets");
+      import_node_fs.default.mkdirSync(dstAssets, { recursive: true });
+      for (const f of import_node_fs.default.readdirSync(assetsDir)) {
+        const af = import_node_path.default.join(assetsDir, f);
+        if (import_node_fs.default.statSync(af).isFile())
+          import_node_fs.default.copyFileSync(af, import_node_path.default.join(dstAssets, f));
+      }
+      console.log(`paper assets served: /paper/assets/ (${import_node_fs.default.readdirSync(dstAssets).length} files)`);
+    }
   } else {
     console.log("WARN: paper/documented-construction/index.html not found at", src, "\u2014 /paper/ not written");
   }
