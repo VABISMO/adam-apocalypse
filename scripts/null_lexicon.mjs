@@ -32,7 +32,7 @@ const LEX=JSON.parse(readFileSync(ROOT+'web/lexicon.json','utf8')).lexicon;
 const entries=LEX.map(([cons,,gloss,pos])=>{const c=norm(cons);const simples=[...new Set([...c].filter(ch=>SIMPSET.has(ch)))];const mothers=[...new Set([...c].filter(ch=>MLET.has(ch)))];return{c,pos,isBib:isBibPos(pos),simples,mothers,len:c.length};});
 const bibSet=new Set(entries.filter(e=>e.isBib).map(e=>e.c));
 console.log('lexicon entries: '+entries.length+'  biblical proper (n-pr): '+bibSet.size);
-const N=200;
+const N=parseInt(process.argv[2],10)||200;
 const SEEDS=Array.from({length:N},(_,i)=>20260813+i*101);
 const pct=(arr,q)=>{const s=[...arr].sort((a,b)=>a-b);return s[Math.min(s.length-1,Math.floor(q*(s.length-1)))];};
 function run(minLen){

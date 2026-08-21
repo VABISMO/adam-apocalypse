@@ -71,7 +71,7 @@ console.log(`readable |S|=1 on 51 specials: NAMES ${rNames.length}, WORDS ${rWor
 
 // ── Null B: within-entry consonant shuffle, collision with the class's own set ──
 function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
-const NSEEDS=200;
+const NSEEDS=parseInt(process.argv[2],10)||200;
 const SEEDS=Array.from({length:NSEEDS},(_,i)=>20260815+i*101);
 const pct=(arr,q)=>{const s=[...arr].sort((a,b)=>a-b);return s[Math.min(s.length-1,Math.floor(q*(s.length-1)))];};
 function nullB(readable,targetSet){

@@ -91,7 +91,7 @@ function readableSge1(tier){
 }
 
 // ── §6.1 shuffle-collision null on a readable set (null_lexicon protocol) ──
-const N=200;
+const N=parseInt(process.argv[2],10)||200;
 const SEEDS=Array.from({length:N},(_,i)=>20260813+i*101);
 const pct=(arr,q)=>{const s=[...arr].sort((a,b)=>a-b);return s[Math.min(s.length-1,Math.floor(q*(s.length-1)))];};
 function nullB(readable){
